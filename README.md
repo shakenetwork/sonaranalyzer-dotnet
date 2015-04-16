@@ -1,4 +1,4 @@
-# SonarQube Code Analysis for C# 
+# SonarQube C# Code Analysis
 A subset of [SonarQube](http://www.sonarqube.org) rules to identify code quality issues in C# source code.
 
 ## Description
