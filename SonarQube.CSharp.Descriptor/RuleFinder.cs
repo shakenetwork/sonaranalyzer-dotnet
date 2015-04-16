@@ -57,7 +57,17 @@ namespace SonarQube.CSharp.CodeAnalysis.Descriptor
                 .ToList();
         }
 
-        public IEnumerable<FullRuleDescriptor> GetRuleDescriptors()
+        public IEnumerable<Type> GetParameterlessAnalyzerTypes()
+        {
+            return diagnosticAnalyzers
+                .Where(analyzerType =>
+                    !analyzerType.GetCustomAttributes<RuleAttribute>().First().Template)
+                .Where(analyzerType =>
+                    !analyzerType.GetProperties()
+                        .Any(p => p.GetCustomAttributes<RuleParameterAttribute>().Any()));
+        }
+
+        internal IEnumerable<FullRuleDescriptor> GetRuleDescriptors()
         {
             return diagnosticAnalyzers.Select(GetRuleDescriptor);
         }

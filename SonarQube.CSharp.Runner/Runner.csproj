@@ -104,6 +104,10 @@
       <Project>{d1ae804f-ae78-4883-b3d6-9e3c4026def6}</Project>
       <Name>CodeAnalysis</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SonarQube.CSharp.Descriptor\Descriptor.csproj">
+      <Project>{E4D5FF22-C1A4-4CAD-B068-E47817F25848}</Project>
+      <Name>SonarQube.CodeAnalysis.Descriptor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

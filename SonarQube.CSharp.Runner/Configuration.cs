@@ -25,44 +25,15 @@ using System.Linq;
 using System.Xml.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
+using SonarQube.CSharp.CodeAnalysis.Descriptor;
 using SonarQube.CSharp.CodeAnalysis.Rules;
 
 namespace SonarQube.CSharp.CodeAnalysis.Runner
 {
     public class Configuration
     {
-        private readonly ImmutableArray<DiagnosticAnalyzer> parameterLessAnalyzers = ImmutableArray.Create<DiagnosticAnalyzer>(
-            new SwitchWithoutDefault(),
-            new AtLeastThreeCasesInSwitch(),
-            new BreakOutsideSwitch(),
-            new UnnecessaryBooleanLiteral(),
-            new IfConditionalAlwaysTrueOrFalse(),
-            new AsyncAwaitIdentifier(),
-            new AssignmentInsideSubExpression(),
-            new ElseIfWithoutElse(),
-            new EmptyStatement(),
-            new UseCurlyBraces(),
-            new RightCurlyBraceStartsLine(),
-            new TabCharacter(),
-            new EmptyMethod(),
-            new ForLoopCounterChanged(),
-            new EmptyNestedBlock(),
-            new ParameterAssignedTo(),
-            new CommentedOutCode(),
-            new ObjectCreatedDropped(),
-            new ConditionalStructureSameCondition(),
-            new ConditionalStructureSameImplementation(),
-            new MultilineBlocksWithoutBrace(),
-            new IdenticalExpressionsInBinaryOp(),
-            new SelfAssignedVariables(),
-            new CatchRethrow(),
-            new EmptyCatch(),
-            new StaticFieldInGenericClass(),
-            new ShortCircuitNullPointerDereference(),
-            new ForLoopCounterCondition(),
-            new UnusedLocalVariable(),
-            new SequentialSameContition()
-        );
+        private readonly ImmutableArray<DiagnosticAnalyzer> parameterLessAnalyzers = 
+            ImmutableArray.Create(GetParameterlessAnalyzers().ToArray());
 
         public bool IgnoreHeaderComments { private set; get; }
         public IImmutableList<string> Files { private set; get; }
@@ -276,6 +247,17 @@ namespace SonarQube.CSharp.CodeAnalysis.Runner
                 Parameters[analyzer.SupportedDiagnostics.Single().Id].Single()["maximumFileLocThreshold"],
                 NumberStyles.None, CultureInfo.InvariantCulture);
             builder.Add(analyzer);
+        }
+
+        #endregion
+
+        #region Discover analyzers without parameters
+
+        private static IEnumerable<DiagnosticAnalyzer> GetParameterlessAnalyzers()
+        {
+            return
+                new RuleFinder().GetParameterlessAnalyzerTypes()
+                    .Select(type => (DiagnosticAnalyzer) Activator.CreateInstance(type));
         }
 
         #endregion

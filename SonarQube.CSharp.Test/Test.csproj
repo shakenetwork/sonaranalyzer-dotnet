@@ -149,6 +149,7 @@
     <Compile Include="Rules\UnnecessaryBooleanLiteralTest.cs" />
     <Compile Include="Rules\UnusedLocalVariableTest.cs" />
     <Compile Include="Rules\UseCurlyBracesTest.cs" />
+    <Compile Include="RuleFinderTest.cs" />
     <Compile Include="RuleTest.cs" />
     <None Include="TestCases\SequentialSameContition.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
