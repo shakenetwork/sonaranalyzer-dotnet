@@ -40,7 +40,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault, true)]
     public class CommentRegularExpression : DiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S124";
+        public const string DiagnosticId = "S124";
         internal const string Description = "Regular expression on comment";
         internal const string MessageFormat = "The regular expression matches this comment";
         internal const string Category = "SonarQube";

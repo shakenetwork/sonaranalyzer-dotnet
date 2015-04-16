@@ -144,13 +144,12 @@ namespace SonarQube.CSharp.CodeAnalysis.Runner
         
         private void AddAnalyzerCommentRegularExpression(ImmutableArray<DiagnosticAnalyzer>.Builder builder)
         {
-            const string analyzedId = "S124";
-            if (!AnalyzerIds.Contains(analyzedId))
+            if (!AnalyzerIds.Contains(CommentRegularExpression.DiagnosticId))
             {
                 return;
             }
             var rules = ImmutableArray.CreateBuilder<CommentRegularExpressionRule>();
-            foreach (var parameters in Parameters[analyzedId])
+            foreach (var parameters in Parameters[CommentRegularExpression.DiagnosticId])
             {
                 rules.Add(
                     new CommentRegularExpressionRule
