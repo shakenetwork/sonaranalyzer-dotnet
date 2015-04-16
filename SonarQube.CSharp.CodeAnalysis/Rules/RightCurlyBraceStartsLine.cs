@@ -52,19 +52,19 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxTreeAction(
                 c =>
                 {
-                    foreach (var closeBraceToken in GetDescendantCloseBraceTokens(c.Node)
-                        .Where(closeBraceToken => 
-                            !StartsLine(closeBraceToken) && 
-                            !IsOnSameLineAsOpenBrace(closeBraceToken) && 
+                    var root = c.Tree.GetRoot();
+                    foreach (var closeBraceToken in GetDescendantCloseBraceTokens(root)
+                        .Where(closeBraceToken =>
+                            !StartsLine(closeBraceToken) &&
+                            !IsOnSameLineAsOpenBrace(closeBraceToken) &&
                             !IsInitializer(closeBraceToken.Parent)))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, closeBraceToken.GetLocation()));
                     }
-                },
-                SyntaxKind.CompilationUnit);
+                });
         }
 
         private static bool StartsLine(SyntaxToken token)

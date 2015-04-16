@@ -53,17 +53,17 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxTreeAction(
                 c =>
                 {
-                    var lines = c.Node.GetLocation().GetLineSpan().EndLinePosition.Line + 1;
+                    var root = c.Tree.GetRoot();
+                    var lines = root.GetLocation().GetLineSpan().EndLinePosition.Line + 1;
 
                     if (lines > Maximum)
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, Location.None, Maximum, lines));
                     }
-                },
-                SyntaxKind.CompilationUnit);
+                });
         }
     }
 }

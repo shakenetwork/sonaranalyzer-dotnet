@@ -62,11 +62,13 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxTreeAction(
                 c =>
                 {
+                    var root = c.Tree.GetRoot();
+
                     var rootExpressions =
-                        c.Node
+                        root
                         .DescendantNodes(e2 => !(e2 is ExpressionSyntax))
                         .Where(
                             e =>
@@ -74,7 +76,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                                 !IsCompoundExpression(e));
 
                     var compoundExpressionsDescendants =
-                        c.Node
+                        root
                         .DescendantNodes()
                         .Where(IsCompoundExpression)
                         .SelectMany(
@@ -113,8 +115,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, complexExpression.Expression.GetLocation(), Maximum, complexExpression.Complexity));
                     }
-                },
-                SyntaxKind.CompilationUnit);
+                });
         }
 
         private bool IsCompoundExpression(SyntaxNode node)
