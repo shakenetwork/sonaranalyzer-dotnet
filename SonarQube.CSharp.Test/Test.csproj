@@ -103,7 +103,8 @@
     <Compile Include="ConfigurationTest.cs" />
     <Compile Include="DiagnosticRunnerTest.cs" />
     <Compile Include="DistrubtionTest.cs" />
-    <Compile Include="Helpers\ConditionalHelperTest.cs" />
+    <Compile Include="Helpers\DiagnosticReportHelperTest.cs" />
+    <Compile Include="Helpers\NavigationHelperTest.cs" />
     <Compile Include="Helpers\EnumHelperTest.cs" />
     <Compile Include="Helpers\EquivalenceCheckerTest.cs" />
     <Compile Include="MetricsTest.cs" />
@@ -116,6 +117,7 @@
     <Compile Include="Rules\ClassNameTest.cs" />
     <Compile Include="Rules\CommentedOutCodeTest.cs" />
     <Compile Include="Rules\CommentRegularExpressionTest.cs" />
+    <Compile Include="Rules\SequentialSameContitionTest.cs" />
     <Compile Include="Rules\ConditionalStructureSameConditionTest.cs" />
     <Compile Include="Rules\ConditionalStructureSameImplementationTest.cs" />
     <Compile Include="Rules\ElseIfWithoutElseTest.cs" />
@@ -148,6 +150,9 @@
     <Compile Include="Rules\UnusedLocalVariableTest.cs" />
     <Compile Include="Rules\UseCurlyBracesTest.cs" />
     <Compile Include="RuleTest.cs" />
+    <None Include="TestCases\SequentialSameContition.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Compile Include="Verifier.cs" />
     <None Include="TestCases\UseCurlyBraces.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

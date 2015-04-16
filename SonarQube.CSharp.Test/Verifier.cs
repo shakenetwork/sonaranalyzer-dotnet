@@ -24,6 +24,7 @@ using FluentAssertions;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarQube.CSharp.CodeAnalysis.Runner;
+using SonarQube.CSharp.CodeAnalysis.Helpers;
 
 namespace SonarQube.CSharp.Test
 {
@@ -44,7 +45,7 @@ namespace SonarQube.CSharp.Test
                     continue;
                 }
 
-                var line = diagnostic.Location.GetLineSpan().StartLinePosition.Line + 1;
+                var line = diagnostic.GetLineNumberToReport();
                 expected.Should().Contain(line);
                 expected.Remove(line);
             }

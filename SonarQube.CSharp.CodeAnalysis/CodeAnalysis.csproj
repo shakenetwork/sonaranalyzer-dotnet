@@ -69,7 +69,8 @@
     <Compile Include="..\AssemblyInfo.Shared.cs">
       <Link>Properties\AssemblyInfo.Shared.cs</Link>
     </Compile>
-    <Compile Include="Helpers\ConditionalHelper.cs" />
+    <Compile Include="Helpers\DiagnosticReportHelper.cs" />
+    <Compile Include="Helpers\NavigationHelper.cs" />
     <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="Helpers\EquivalenceChecker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Rules\BreakOutsideSwitch.cs" />
     <Compile Include="Rules\CatchRethrow.cs" />
     <Compile Include="Rules\CommentedOutCode.cs" />
+    <Compile Include="Rules\SequentialSameContition.cs" />
     <Compile Include="Rules\ConditionalStructureSameCondition.cs" />
     <Compile Include="Rules\ConditionalStructureSameImplementation.cs" />
     <Compile Include="Rules\ElseIfWithoutElse.cs" />
@@ -202,6 +204,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S1125.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S2760.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -60,7 +60,8 @@ namespace SonarQube.CSharp.CodeAnalysis.Runner
             new StaticFieldInGenericClass(),
             new ShortCircuitNullPointerDereference(),
             new ForLoopCounterCondition(),
-            new UnusedLocalVariable()
+            new UnusedLocalVariable(),
+            new SequentialSameContition()
         );
 
         public bool IgnoreHeaderComments { private set; get; }

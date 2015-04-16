@@ -1,0 +1,33 @@
+<p>
+    When the same condition is checked twice in a row, it is either inefficient - why not combine the checks? - or an error - 
+    some other condition should have been checked in the second test.
+    This rule raises an issue when sequential <code>if</code>s or <code>switch</code>es test the same condition.
+</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+if (a == b) { 
+  doTheThing(b);
+}
+if (a == b) {  // Noncompliant; is this really what was intended?
+  doTheThing(c);
+}
+</pre>
+
+<h2>Compliant Solution</h2>
+<pre>
+if (a == b) { 
+  doTheThing(b);
+  doTheThing(c);
+}
+</pre>
+
+or
+
+<pre>
+if (a == b) { 
+  doTheThing(b);
+}
+if (b == c) {
+  doTheThing(c);
+}
+</pre>

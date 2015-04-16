@@ -24,6 +24,7 @@ using System.Text;
 using System.Xml;
 using System.Xml.Linq;
 using Microsoft.CodeAnalysis;
+using SonarQube.CSharp.CodeAnalysis.Helpers;
 
 namespace SonarQube.CSharp.CodeAnalysis.Runner
 {
@@ -119,7 +120,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Runner
                             xmlOut.WriteElementString("Id", diagnostic.Id);
                             if (diagnostic.Location != Location.None)
                             {
-                                xmlOut.WriteElementString("Line", (diagnostic.Location.GetLineSpan().StartLinePosition.Line + 1).ToString(CultureInfo.InvariantCulture));
+                                xmlOut.WriteElementString("Line", (diagnostic.GetLineNumberToReport()).ToString(CultureInfo.InvariantCulture));
                             }
                             xmlOut.WriteElementString("Message", diagnostic.GetMessage());
                             xmlOut.WriteEndElement();

@@ -68,7 +68,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                         c.ReportDiagnostic(Diagnostic.Create(
                             Rule,
                             currentCondition.GetLocation(),
-                            precedingCondition.GetLocation().GetLineSpan().StartLinePosition.Line + 1));
+                            precedingCondition.GetLineNumberToReport()));
                     }
                 },
                 SyntaxKind.IfStatement);
