@@ -9,7 +9,7 @@ SonarQube Code Analysis for C# is a code analysis NuGet package and a Visual Stu
 
 * From the Visual Studio Extensions and Updates window. Select Online/Visual Studio Gallery, and search for ...
 * Download the extension from Visual Studio Gallery: https://visualstudiogallery.msdn.microsoft.com/...
-* From the NuGet package manager console: `Install-Package SonarQube.CodeAnalysis.CSharp -Pre`
+* From the NuGet package manager console: `Install-Package SonarQube.CSharp.CodeAnalysis -Pre`
 
 ## Source code
 
