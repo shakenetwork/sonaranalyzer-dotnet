@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="SonarQube.CSharp.CodeAnalysis.5a69f2bd-2501-4759-b280-e281104abfb7" Version="0.7.0" Language="en-US" Publisher="SonarSource" />
+    <DisplayName>SonarQube C# Code Analysis Pre-release (CTP6)</DisplayName>
+    <Description xml:space="preserve">This extension provides a subset of SonarQube rules to identify code quality issues in C# source code.</Description>
+    <MoreInfo>http://redirect.sonarsource.com/plugins/csharp.html</MoreInfo>
+    <License>License.txt</License>
+    <Icon>sonarsource_icon_BG_white_small.png</Icon>
+    <PreviewImage>sonarsource_icon_BG_white_large.png</PreviewImage>
+    <Tags>C#, CSharp, SonarQube, Code analysis, Roslyn, Compiler, CodeAnalysis</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[14.0,15.0)" />
+    <InstallationTarget Version="[14.0,15.0)" Id="Microsoft.VisualStudio.VSWinExpress" />
+    <InstallationTarget Version="[14.0,15.0)" Id="Microsoft.VisualStudio.VSWinDesktopExpress" />
+    <InstallationTarget Version="[14.0,15.0)" Id="Microsoft.VisualStudio.VWDExpress" />
+    <InstallationTarget Version="[14.0,15.0)" Id="Microsoft.VisualStudio.Community" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.Analyzer" d:Source="Project" d:ProjectName="CodeAnalysis" Path="|CodeAnalysis|" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" Path="|CodeAnalysis|" d:ProjectName="CodeAnalysis" />
+  </Assets>
+</PackageManifest>
