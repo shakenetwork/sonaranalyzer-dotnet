@@ -1,0 +1,19 @@
+<p>
+    When the second and third operands of a ternary operator are the same, the operator will always
+    return the same value regardless of the condition. Either the operator itself is pointless, or a
+    mistake was made in coding it.
+</p>
+
+<h2>Noncompliant Code Example</h2>
+<pre>
+public boolean canVote(Person person) {
+  return person.getAge > 18 ? true : true; // Noncompliant; is this what was intended?
+}
+</pre>
+
+<h2>Compliant Solution</h2>
+<pre>
+public boolean canVote(Person person) {
+  return person.getAge > 18 ? true : false;
+}
+</pre>
