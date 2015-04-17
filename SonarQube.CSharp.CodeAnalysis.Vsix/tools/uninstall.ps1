@@ -1,6 +1,6 @@
 ﻿param($installPath, $toolsPath, $package, $project)
 
-# Uninstall the language agnostic analyzers.
 $analyzersPath = join-path $toolsPath "analyzers"
+$analyzersPath = join-path $analyzersPath "C#"
 $analyzerFilePath = join-path $analyzersPath "SonarQube.CSharp.CodeAnalysis.dll"
 $project.Object.AnalyzerReferences.Remove($analyzerFilePath)
