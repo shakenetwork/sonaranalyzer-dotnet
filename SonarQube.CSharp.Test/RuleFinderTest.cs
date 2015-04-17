@@ -16,7 +16,7 @@ namespace SonarQube.CSharp.Test
         [TestMethod]
         public void GetParameterlessAnalyzerTypes()
         {
-            new RuleFinder().GetParameterlessAnalyzerTypes().Should().HaveCount(33);
+            new RuleFinder().GetParameterlessAnalyzerTypes().Should().HaveCount(34);
         }
     }
 }

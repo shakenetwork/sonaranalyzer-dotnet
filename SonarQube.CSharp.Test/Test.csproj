@@ -119,6 +119,7 @@
     <Compile Include="Rules\ClassNameTest.cs" />
     <Compile Include="Rules\CommentedOutCodeTest.cs" />
     <Compile Include="Rules\CommentRegularExpressionTest.cs" />
+    <Compile Include="Rules\ParametersCorrectOrderTest.cs" />
     <Compile Include="Rules\SequentialSameContitionTest.cs" />
     <Compile Include="Rules\ConditionalStructureSameConditionTest.cs" />
     <Compile Include="Rules\ConditionalStructureSameImplementationTest.cs" />
@@ -166,6 +167,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\BooleanCheckInverted.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\ParametersCorrectOrder.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
