@@ -151,7 +151,7 @@
     <Compile Include="Rules\UnnecessaryBooleanLiteralTest.cs" />
     <Compile Include="Rules\UnusedLocalVariableTest.cs" />
     <Compile Include="Rules\ReversedOperatorsTest.cs" />
-    <Compile Include="Rules\TernaryOperatorPointless.cs" />
+    <Compile Include="Rules\TernaryOperatorPointlessTest.cs" />
     <Compile Include="Rules\BooleanCheckInvertedTest.cs" />
     <Compile Include="Rules\UseCurlyBracesTest.cs" />
     <Compile Include="RuleFinderTest.cs" />
