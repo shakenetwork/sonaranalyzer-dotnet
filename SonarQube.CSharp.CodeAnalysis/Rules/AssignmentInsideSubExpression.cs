@@ -59,6 +59,13 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     if (IsInSubExpression(c.Node))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, c.Node.GetLocation(), c.Node.ChildNodes().First().ToString()));
+                        return;
+                    }
+
+                    if (IsInCondition(c.Node))
+                    {
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, c.Node.GetLocation(), c.Node.ChildNodes().First().ToString()));
+                        return;
                     }
                 },
                 SyntaxKind.SimpleAssignmentExpression,
@@ -80,6 +87,25 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
             return expression != null &&
                    !AllowedParentExpressionKinds.Contains(expression.Kind());
+        }
+
+        private static bool IsInCondition(SyntaxNode node)
+        {
+            var ifStatement = node.Parent.FirstAncestorOrSelf<IfStatementSyntax>(ancestor => ancestor != null);
+
+            if (ifStatement != null)
+            {
+                return ifStatement.Condition == node;
+            }
+
+            var forStatement = node.Parent.FirstAncestorOrSelf<ForStatementSyntax>(ancestor => ancestor != null);
+
+            if (forStatement != null)
+            {
+                return forStatement.Condition == node;
+            }
+
+            return false;
         }
 
         private static IEnumerable<SyntaxKind> AllowedParentExpressionKinds

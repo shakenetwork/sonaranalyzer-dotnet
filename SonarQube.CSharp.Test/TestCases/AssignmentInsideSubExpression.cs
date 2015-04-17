@@ -52,7 +52,16 @@ namespace Tests.Diagnostics
 
             var b = true;
 
-            if (b = false) { } // Not yet covered
+            if (b = false) { } // Noncompliant
+            for (int j = 0; b = false; j++) // Noncompliant
+            {
+                
+            }
+            for (int j = 0; b == false; j++) 
+            {
+
+            }
+
             if (i == 0) i = 2;
 
             string result = "";
