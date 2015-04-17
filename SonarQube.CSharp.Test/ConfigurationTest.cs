@@ -53,7 +53,7 @@ namespace SonarQube.CSharp.Test
                 "S100",
                 "S124");
 
-            var analyzers = conf.Analyzers(null);
+            var analyzers = conf.Analyzers();
             analyzers.OfType<FileLines>().Single().Maximum.ShouldBeEquivalentTo(1000);
             analyzers.OfType<LineLength>().Single().Maximum.ShouldBeEquivalentTo(200);
             analyzers.OfType<TooManyLabelsInSwitch>().Single().Maximum.ShouldBeEquivalentTo(30);

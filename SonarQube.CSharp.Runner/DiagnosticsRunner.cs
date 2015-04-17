@@ -19,9 +19,12 @@
  */
 using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.Linq;
 using System.Threading;
 using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Diagnostics;
+using SonarQube.CodeAnalysis.Descriptor;
 
 namespace SonarQube.CSharp.CodeAnalysis.Runner
 {
@@ -31,14 +34,6 @@ namespace SonarQube.CSharp.CodeAnalysis.Runner
 
         public DiagnosticsRunner(ImmutableArray<DiagnosticAnalyzer> diagnosticAnalyzers)
         {
-            foreach (var analyzer in diagnosticAnalyzers)
-            {
-                foreach (var diagnostic in analyzer.SupportedDiagnostics)
-                {
-                    diagnostic.GetType().GetProperty("IsEnabledByDefault").SetValue(diagnostic, true);
-                }
-            }
-
             this.diagnosticAnalyzers = diagnosticAnalyzers;
         }
 
@@ -48,10 +43,18 @@ namespace SonarQube.CSharp.CodeAnalysis.Runner
             {
                 return new Diagnostic[0];
             }
+            
+            var compilationOptions = new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary);
+            compilationOptions = compilationOptions.WithSpecificDiagnosticOptions(
+                diagnosticAnalyzers.SelectMany(analyzer => analyzer.SupportedDiagnostics)
+                    .Select(diagnostic =>
+                        new KeyValuePair<string, ReportDiagnostic>(diagnostic.Id, ReportDiagnostic.Warn)));
+
+            var modifiedCompilation = compilation.WithOptions(compilationOptions);
 
             using (var tokenSource = new CancellationTokenSource())
             {
-                var compilationWithAnalyzer = new CompilationWithAnalyzers(compilation, diagnosticAnalyzers, null,
+                var compilationWithAnalyzer = modifiedCompilation.WithAnalyzers(diagnosticAnalyzers, null,
                     tokenSource.Token);
 
                 return compilationWithAnalyzer.GetAnalyzerDiagnosticsAsync().Result;

@@ -60,7 +60,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Runner
 
                         var compilation = solution.Projects.First().GetCompilationAsync().Result;
                         var syntaxTree = compilation.SyntaxTrees.First();
-                        var diagnosticsRunner = new DiagnosticsRunner(configuration.Analyzers(solution));
+                        var diagnosticsRunner = new DiagnosticsRunner(configuration.Analyzers());
 
                         var metrics = new Metrics(syntaxTree);
 

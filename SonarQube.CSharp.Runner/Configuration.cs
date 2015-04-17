@@ -86,7 +86,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Runner
             Parameters = builder.ToImmutable();
         }
 
-        public ImmutableArray<DiagnosticAnalyzer> Analyzers(Solution currentSolution)
+        public ImmutableArray<DiagnosticAnalyzer> Analyzers()
         {
             var builder = ImmutableArray.CreateBuilder<DiagnosticAnalyzer>();
 
@@ -253,7 +253,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Runner
 
         #region Discover analyzers without parameters
 
-        private static IEnumerable<DiagnosticAnalyzer> GetParameterlessAnalyzers()
+        public static IEnumerable<DiagnosticAnalyzer> GetParameterlessAnalyzers()
         {
             return
                 new RuleFinder().GetParameterlessAnalyzerTypes()
