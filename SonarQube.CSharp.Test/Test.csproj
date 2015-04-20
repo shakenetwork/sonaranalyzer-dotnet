@@ -150,6 +150,7 @@
     <Compile Include="Rules\TooManyLabelsInSwitchTest.cs" />
     <Compile Include="Rules\TooManyParametersTest.cs" />
     <Compile Include="Rules\UnnecessaryBooleanLiteralTest.cs" />
+    <Compile Include="Rules\UnusedTypeParameterTest.cs" />
     <Compile Include="Rules\UnusedLocalVariableTest.cs" />
     <Compile Include="Rules\ReversedOperatorsTest.cs" />
     <Compile Include="Rules\TernaryOperatorPointlessTest.cs" />
@@ -173,7 +174,10 @@
     <None Include="TestCases\ParametersCorrectOrder.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <Compile Include="TestCases\MethodsWithoutInstanceData.cs">
+    <None Include="TestCases\MethodsWithoutInstanceData.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Compile Include="TestCases\UnusedTypeParameter.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Verifier.cs" />
