@@ -47,18 +47,28 @@ namespace SonarQube.CodeAnalysis.CSharp.Rules
                         return;
                     }
 
-                    var methodDeclaration = methodSymbol.DeclaringSyntaxReferences.First().GetSyntax() as MethodDeclarationSyntax;
+                    var methodDeclaration = methodSymbol.DeclaringSyntaxReferences.FirstOrDefault();
 
                     if (methodDeclaration == null)
                     {
                         return;
                     }
 
-                    var namesInDeclaration =
-                        methodDeclaration.ParameterList.Parameters.Select(parameter => parameter.Identifier.Text).ToList();
+                    var methodDeclarationSyntax = methodDeclaration.GetSyntax() as MethodDeclarationSyntax;
+
+                    if (methodDeclarationSyntax == null)
+                    {
+                        return;
+                    }
+
+                    var namesInDeclaration = methodDeclarationSyntax.ParameterList.Parameters
+                        .Select(parameter => parameter.Identifier.Text)
+                        .ToList();
 
                     var parametersInCall = GetParametersForCall(methodCall);
-                    var namesInCall = parametersInCall.Select(p => p.IdentifierName).ToList();
+                    var namesInCall = parametersInCall
+                        .Select(p => p.IdentifierName)
+                        .ToList();
 
                     if (!namesInDeclaration.Intersect(namesInCall).Any())
                     {
@@ -93,7 +103,7 @@ namespace SonarQube.CodeAnalysis.CSharp.Rules
 
                     if (methodCallHasIssue)
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, methodCall.GetLocation(), methodDeclaration.Identifier.Text));
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, methodCall.GetLocation(), methodDeclarationSyntax.Identifier.Text));
                     }
                 },
                 SyntaxKind.InvocationExpression);
