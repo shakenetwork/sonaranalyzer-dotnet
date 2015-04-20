@@ -154,6 +154,7 @@
     <Compile Include="Rules\ReversedOperatorsTest.cs" />
     <Compile Include="Rules\TernaryOperatorPointlessTest.cs" />
     <Compile Include="Rules\BooleanCheckInvertedTest.cs" />
+    <Compile Include="Rules\MethodsWithoutInstanceDataTest.cs" />
     <Compile Include="Rules\UseCurlyBracesTest.cs" />
     <Compile Include="RuleFinderTest.cs" />
     <Compile Include="RuleTest.cs" />
@@ -172,6 +173,9 @@
     <None Include="TestCases\ParametersCorrectOrder.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Compile Include="TestCases\MethodsWithoutInstanceData.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Verifier.cs" />
     <None Include="TestCases\UseCurlyBraces.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

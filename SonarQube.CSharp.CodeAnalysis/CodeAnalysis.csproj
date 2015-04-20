@@ -76,6 +76,7 @@
     <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="Helpers\EquivalenceChecker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules\MethodsWithoutInstanceData.cs" />
     <Compile Include="Rules\ParametersCorrectOrder.cs" />
     <Compile Include="Rules\BooleanCheckInverted.cs" />
     <Compile Include="Rules\TernaryOperatorPointless.cs" />
@@ -225,6 +226,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S2234.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S2325.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
