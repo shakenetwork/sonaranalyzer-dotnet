@@ -177,9 +177,9 @@
     <None Include="TestCases\MethodsWithoutInstanceData.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <Compile Include="TestCases\UnusedTypeParameter.cs">
+    <None Include="TestCases\UnusedTypeParameter.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
+    </None>
     <Compile Include="Verifier.cs" />
     <None Include="TestCases\UseCurlyBraces.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
