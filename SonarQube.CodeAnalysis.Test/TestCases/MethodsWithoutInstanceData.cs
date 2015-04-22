@@ -46,6 +46,11 @@ namespace Tests.Diagnostics
         public static void Test4(int y)
         {
             MyStaticProperty = y;
-        }        
+        }
+
+        public void Test5()
+        {
+            var o = this;
+        }
     }
 }

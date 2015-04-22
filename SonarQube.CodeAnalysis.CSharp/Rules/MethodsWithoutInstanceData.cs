@@ -75,6 +75,12 @@ namespace SonarQube.CodeAnalysis.CSharp.Rules
                     },
                         SyntaxKind.IdentifierName);
 
+                    cbc.RegisterSyntaxNodeAction(c =>
+                    {
+                        reportShouldBeStatic = false;
+                    },
+                        SyntaxKind.ThisExpression);
+
 
                     cbc.RegisterCodeBlockEndAction(c =>
                     {
