@@ -89,12 +89,9 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         private static void CheckMember(SyntaxToken identifier, TypeSyntax type, IEnumerable<string> typeParameterNames, 
             SyntaxNodeAnalysisContext c)
         {
-            var genericTypeName = type as GenericNameSyntax;
-
-            if (genericTypeName != null &&
-                GetTypeArguments(genericTypeName)
-                    .Intersect(typeParameterNames)
-                    .Any())
+            if (GetUsedTypeNames(type)
+                .Intersect(typeParameterNames)
+                .Any())
             {
                 return;
             }
@@ -102,26 +99,81 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             c.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation()));
         }
 
-        private static IEnumerable<string> GetTypeArguments(GenericNameSyntax genericTypeName)
+        #region GetUsedTypeNames
+        private static IEnumerable<string> GetUsedTypeNames(TypeSyntax type)
+        {
+            #region SimpleNameSyntax
+
+            var identifierNameSyntax = type as IdentifierNameSyntax;
+            if (identifierNameSyntax != null)
+            {
+                return GetUsedTypeNames(identifierNameSyntax);
+            }
+            var genericNameSyntax = type as GenericNameSyntax;
+            if (genericNameSyntax != null)
+            {
+                return GetUsedTypeNames(genericNameSyntax);
+            }
+
+            #endregion
+
+            var qualifiedNameSyntax = type as QualifiedNameSyntax;
+            if (qualifiedNameSyntax != null)
+            {
+                return GetUsedTypeNames(qualifiedNameSyntax);
+            }
+
+            var nullableTypeSyntax = type as NullableTypeSyntax;
+            if (nullableTypeSyntax != null)
+            {
+                return GetUsedTypeNames(nullableTypeSyntax);
+            }
+
+            var arrayTypeSyntax = type as ArrayTypeSyntax;
+            if (arrayTypeSyntax != null)
+            {
+                return GetUsedTypeNames(arrayTypeSyntax);
+            }
+
+            return new string[0];
+        }
+
+        private static IEnumerable<string> GetUsedTypeNames(QualifiedNameSyntax type)
+        {
+            return GetUsedTypeNames(type.Left).Concat(GetUsedTypeNames(type.Right));
+        }
+        private static IEnumerable<string> GetUsedTypeNames(IdentifierNameSyntax type)
+        {
+            return new[] { type.Identifier.Text };
+        }
+        private static IEnumerable<string> GetUsedTypeNames(NullableTypeSyntax type)
+        {
+            return GetUsedTypeNames(type.ElementType);
+        }
+        
+        private static IEnumerable<string> GetUsedTypeNames(ArrayTypeSyntax arrayType)
+        {
+            var elementType = arrayType.ElementType;
+
+            return GetUsedTypeNames(elementType);
+        }
+
+        private static IEnumerable<string> GetUsedTypeNames(GenericNameSyntax genericType)
         {
             var typeParameters = new List<string>();
 
-            var arguments = genericTypeName.TypeArgumentList.Arguments;
+            var arguments = genericType.TypeArgumentList.Arguments;
 
             foreach (var typeSyntax in arguments)
             {
-                var innerGenericTypeName = typeSyntax as GenericNameSyntax;
-                if (innerGenericTypeName != null)
-                {
-                    typeParameters.AddRange(GetTypeArguments(innerGenericTypeName));
-                }
-                else
-                {
-                    typeParameters.Add(typeSyntax.ToString());
-                }
+                typeParameters.AddRange(GetUsedTypeNames(typeSyntax));
             }
+
+            typeParameters.Add(genericType.Identifier.Text);
 
             return typeParameters;
         }
+
+        #endregion
     }
 }

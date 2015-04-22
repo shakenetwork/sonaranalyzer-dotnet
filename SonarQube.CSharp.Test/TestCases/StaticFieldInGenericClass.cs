@@ -8,19 +8,12 @@ namespace Tests.TestCases
 {
     internal class C
     {
-        private static Dictionary<string, List<int>> Dict; 
+        private static Dictionary<string, List<int>> Dict;
     }
 
     class StaticFieldInGenericClass<T/*comment*/, /*comment*/U>
     {
-        private static Dictionary<string, List<T>> Dict; 
+        private static readonly ConditionalWeakTable<T, Task<T>>.CreateValueCallback s_taskCreationCallback = Task.FromResult<T>;
 
-        public static string sProp1 { get; set; } //Noncompliant
-        public /*comment */static string sProp2 { get; set; } //Noncompliant
-        public string sProp3 { get; set; }
-
-        public static T tProp { get; set; } //Noncompliant
-
-        internal static string sField; //Noncompliant
     }
 }
