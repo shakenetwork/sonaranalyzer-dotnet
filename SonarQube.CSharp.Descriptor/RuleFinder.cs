@@ -31,7 +31,7 @@ using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings.Sqale;
 
 namespace SonarQube.CSharp.CodeAnalysis.Descriptor
 {
-    internal class RuleFinder
+    public class RuleFinder
     {
         private readonly List<Type> diagnosticAnalyzers;
         public const string RuleDescriptionPathPattern = "SonarQube.CSharp.CodeAnalysis.Rules.Description.{0}.html";
