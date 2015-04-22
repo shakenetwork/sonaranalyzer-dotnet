@@ -157,6 +157,7 @@
     <Compile Include="Rules\TernaryOperatorPointlessTest.cs" />
     <Compile Include="Rules\BooleanCheckInvertedTest.cs" />
     <Compile Include="Rules\MethodsWithoutInstanceDataTest.cs" />
+    <Compile Include="Rules\InsecureHashAlgorithmTest.cs" />
     <Compile Include="Rules\ValuesUselesslyIncrementedTest.cs" />
     <Compile Include="Rules\UseCurlyBracesTest.cs" />
     <Compile Include="RuleFinderTest.cs" />
@@ -186,6 +187,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\ConsoleLogging.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\InsecureHashAlgorithm.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
