@@ -37,7 +37,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     public class MagicNumber : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S109";
-        internal const string Description = "Magic number should not be used";
+        internal const string Description = "Magic numbers should not be used";
         internal const string MessageFormat = "Assign this magic number {0} to a well-named constant, and use the constant instead.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Minor; 
@@ -46,7 +46,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         internal static DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AMagicNumber");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS109");
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

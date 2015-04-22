@@ -39,16 +39,16 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         internal const string MessageFormat = "Split this {1} characters long line (which is greater than {0} authorized).";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Minor; 
-        internal const bool IsActivatedByDefault = true;
+        internal const bool IsActivatedByDefault = false;
 
         internal static DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3ALineLength");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS103");
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        [RuleParameter("maximumLineLength", PropertyType.Integer, "The maximum authorized line length", "200")]
+        [RuleParameter("maximumLineLength", PropertyType.Integer, "The maximum authorized line length.", "120")]
         public int Maximum { get; set; }
 
         public override void Initialize(AnalysisContext context)

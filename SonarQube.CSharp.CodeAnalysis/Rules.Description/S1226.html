@@ -1,33 +1,63 @@
 <p>
-Parameters variables that are not marked as <code>out</code> or <code>ref</code> should not be assigned to from within a method.
-Those modifications will not impact the caller of the method, which can be confusing.
-Instead, it is better to assign the parameter to a temporary variable.
+    While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results.
+    This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when <code>this</code> was forgotten.
+    Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method.
+    Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them.
+    All parameters should be treated as <code>final</code>.
 </p>
 
-<p>The following code snippet:</p>
+<h2>Noncompliant Code Example</h2>
 
 <pre>
-void foo(int a)
-{
-  a = 42;           // Non-Compliant
+class MyClass {
+  public String name;
+
+  public MyClass(String name) {
+    name = name;                    // Noncompliant - useless identity assignment
+  }
+
+  public int add(int a, int b) {
+    a = a + b;                      // Noncompliant
+
+    /* additional logic */
+
+    return a;                       // Seems like the parameter is returned as is, what is the point?
+  }
+
+  public static void main(String[] args) {
+    MyClass foo = new MyClass();
+    int a = 40;
+    int b = 2;
+    foo.add(a, b);                  // Variable "a" will still hold 40 after this call
+  }
 }
 </pre>
 
-<p>should be refactored into:</p>
+<h2>Compliant Solution</h2>
 
 <pre>
-void foo(int a)
-{
-  int tmp = a;
-  tmp = 42;         // Compliant
+class MyClass {
+  public String name;
+
+  public MyClass(String name) {
+    this.name = name;               // Compliant
+  }
+
+  public int add(int a, int b) {
+    return a + b;                   // Compliant
+  }
+
+  public static void main(String[] args) {
+    MyClass foo = new MyClass();
+    int a = 40;
+    int b = 2;
+    foo.add(a, b);
+  }
 }
 </pre>
 
-<p>or:</p>
+<h2>See</h2>
 
-<pre>
-void foo(out int a) // 'ref' is also allowed
-{
-  a = 42;           // Compliant
-}
-</pre>
+<ul>
+    <li>MISRA C:2012, 17.8 - A function parameter should not be modified</li>
+</ul>

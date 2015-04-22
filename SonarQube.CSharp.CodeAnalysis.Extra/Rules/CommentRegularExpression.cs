@@ -51,7 +51,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         {
             return new DiagnosticDescriptor(diagnosticId, Description, messageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3ACommentRegularExpression");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS124");
         }
 
         public ImmutableArray<CommentRegularExpressionRule> Rules;

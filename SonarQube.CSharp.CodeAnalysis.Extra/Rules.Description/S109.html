@@ -1,17 +1,34 @@
 <p>
-Numbers are not self-explanatory, they only are made of a value, which does not explain their purpose.
-Moreover, if the same number should be consistently used in multiple places, using a constant will ensure that all occurences are updated at once.
+    A magic number is a number that comes out of nowhere, and is directly used in a statement. Magic numbers are often used, for instance to limit the number of iterations of a loops, to test the value of a property, etc.
 </p>
 
-<p>The following code:</p>
+<p>
+    Using magic numbers may seem obvious and straightforward when you're writing a piece of code, but they are much less obvious and straightforward at debugging time.
+</p>
+<p>
+    That is why magic numbers must be demystified by first being assigned to clearly named (variables|constants) before being used.
+</p>
+<p>
+    -1, 0 and 1 are not considered magic numbers.
+</p>
+
+<h2>Noncompliant Code Example</h2>
 
 <pre>
-netSalary = 0.85m * grossSalary;  // Non-Compliant - where does 0.85m come from, what does it mean?
+public static void doSomething() {
+  for(int i = 0; i < 4; i++){ //Non-Compliant, 4 is a magic number
+    ...
+  }
+}
 </pre>
 
-<p>should be refactored into:</p>
+<h2>Compliant Solution</h2>
 
 <pre>
-const decimal Rate = 0.85m;       // Compliant - it's now clear what the 0.85m is
-netSalary = Rate * grossSalary;   // Compliant
+public const int NUMBER_OF_CYCLES = 4;
+public static void doSomething() {
+  for(int i = 0; i < NUMBER_OF_CYCLES ; i++){  //Compliant
+    ...
+  }
+}
 </pre>

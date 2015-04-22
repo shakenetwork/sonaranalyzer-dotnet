@@ -39,6 +39,7 @@ namespace SonarQube.CSharp.CodeAnalysis.SonarQube.Settings.Sqale
         MemoryEfficiency,
         NetworkUse,
         ArchitectureChangeability,
+        DataChangeability,
         LogicChangeability,
         ArchitectureReliability,
         DataReliability,

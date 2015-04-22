@@ -35,7 +35,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     public class FileLines : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S104";
-        internal const string Description = "File should not have too many lines";
+        internal const string Description = "Files should not have too many lines";
         internal const string MessageFormat = "This file has {1} lines, which is greater than {0} authorized. Split it into smaller files.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major; 
@@ -44,11 +44,11 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         internal static DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AFileLoc");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS104");
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        [RuleParameter("maximumFileLocThreshold", PropertyType.Integer, "The maximum number of lines allowed in a file", "1000")]
+        [RuleParameter("Max", PropertyType.Integer, "Maximum authorized lines in a file.", "1000")]
         public int Maximum { get; set; }
 
         public override void Initialize(AnalysisContext context)

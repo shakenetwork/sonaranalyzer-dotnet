@@ -30,7 +30,7 @@ using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings.Sqale;
 namespace SonarQube.CSharp.CodeAnalysis.Rules
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
+    [SqaleSubCharacteristic(SqaleSubCharacteristic.DataChangeability)]
     [SqaleConstantRemediation("30min")]
     [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
     [Tags("brain-overload")]
