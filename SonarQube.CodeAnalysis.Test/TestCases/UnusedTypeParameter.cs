@@ -48,5 +48,26 @@ namespace Tests.Diagnostics
         {
             return a + b;
         }
+
+        public abstract int Do<T>(int a);
+    }
+
+    public class ComplexMath : MoreMath
+    {
+        public override int Do<T>(int a)
+        {
+            //don't use T here, but the method is still compliant because it is an override
+        }
+    }
+
+    public partial class SomeClass<T>
+    {
+        private class Inner : List<T>
+        {
+        }
+    }
+
+    public partial class SomeClass<T>
+    {
     }
 }

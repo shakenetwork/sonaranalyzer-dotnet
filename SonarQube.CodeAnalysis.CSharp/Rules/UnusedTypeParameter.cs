@@ -45,6 +45,19 @@ namespace SonarQube.CodeAnalysis.CSharp.Rules
                         return;
                     }
 
+                    if (methodDeclaration != null &&
+                        methodDeclaration.Modifiers.Any(modifier => ModifiersToSkip.Contains(modifier.Kind())))
+                    {
+                        return;
+                    }
+
+                    var declarationSymbol = c.SemanticModel.GetDeclaredSymbol(c.Node);
+
+                    if (declarationSymbol == null)
+                    {
+                        return;
+                    }
+                    
                     TypeParameterListSyntax typeParameterList;
                     string typeOfContainer;
                     if (classDeclaration == null)
@@ -67,7 +80,9 @@ namespace SonarQube.CodeAnalysis.CSharp.Rules
                         .Select(typeParameter => typeParameter.Identifier.Text)
                         .ToList();
 
-                    var usedTypeParameters = c.Node.DescendantNodes()
+                    var declarations = declarationSymbol.DeclaringSyntaxReferences.Select(reference => reference.GetSyntax());
+
+                    var usedTypeParameters = declarations.SelectMany(declaration => declaration.DescendantNodes())
                         .OfType<IdentifierNameSyntax>()
                         .Select(identifier => c.SemanticModel.GetSymbolInfo(identifier).Symbol)
                         .Where(symbol => symbol != null && symbol.Kind == SymbolKind.TypeParameter)
@@ -85,5 +100,12 @@ namespace SonarQube.CodeAnalysis.CSharp.Rules
                 SyntaxKind.MethodDeclaration,
                 SyntaxKind.ClassDeclaration);
         }
+
+        public static readonly SyntaxKind[] ModifiersToSkip =
+        {
+            SyntaxKind.AbstractKeyword,
+            SyntaxKind.VirtualKeyword,
+            SyntaxKind.OverrideKeyword
+        };
     }
 }
