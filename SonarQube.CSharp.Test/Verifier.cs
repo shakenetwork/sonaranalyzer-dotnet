@@ -17,14 +17,15 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
+
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using FluentAssertions;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
-using SonarQube.CSharp.CodeAnalysis.Runner;
 using SonarQube.CSharp.CodeAnalysis.Helpers;
+using SonarQube.CSharp.CodeAnalysis.Runner;
 
 namespace SonarQube.CSharp.Test
 {
