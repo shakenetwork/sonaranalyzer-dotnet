@@ -111,6 +111,7 @@
     <Compile Include="Helpers\EquivalenceCheckerTest.cs" />
     <Compile Include="MetricsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules\GetHashCodeMutableTest.cs" />
     <Compile Include="Rules\ConsoleLoggingTest.cs" />
     <Compile Include="Rules\AssignmentInsideSubExpressionTest.cs" />
     <Compile Include="Rules\AsyncAwaitIdentifierTest.cs" />
@@ -190,6 +191,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\InsecureHashAlgorithm.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\GetHashCodeMutable.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
