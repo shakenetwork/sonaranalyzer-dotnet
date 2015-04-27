@@ -44,18 +44,16 @@ namespace SonarQube.CodeAnalysis.CSharp.Rules
                         return;
                     }
 
-                    var reportShouldBeStatic = true;
-
                     var methodSymbol = cbc.SemanticModel.GetDeclaredSymbol(methodDeclaration);
 
                     if (methodSymbol == null ||
-                        methodSymbol.IsStatic ||
-                        methodSymbol.IsVirtual ||
-                        methodSymbol.IsOverride)
+                        HasAllowedModifier(methodSymbol) ||
+                        IsInterfaceImplementation(methodSymbol))
                     {
-                        reportShouldBeStatic = false;
+                        return;
                     }
-                    
+
+                    var reportShouldBeStatic = true;
                     cbc.RegisterSyntaxNodeAction(c =>
                     {
                         var identifier = (IdentifierNameSyntax) c.Node;
@@ -91,6 +89,33 @@ namespace SonarQube.CodeAnalysis.CSharp.Rules
                         }
                     });
                 });
+        }
+
+        private static bool HasAllowedModifier(IMethodSymbol methodSymbol)
+        {
+            return methodSymbol.IsStatic ||
+                   methodSymbol.IsVirtual ||
+                   methodSymbol.IsOverride ||
+                   methodSymbol.IsAbstract;
+        }
+
+        private static bool IsInterfaceImplementation(IMethodSymbol methodSymbol)
+        {
+            var containingType = methodSymbol.ContainingType;
+
+            var interfaces = new Queue<INamedTypeSymbol>(containingType.Interfaces);
+            var allInterfaces = new List<INamedTypeSymbol>();
+
+            while (interfaces.Count > 0)
+            {
+                var @interface = interfaces.Dequeue();
+                @interface.Interfaces.ToList().ForEach(interfaces.Enqueue);
+                allInterfaces.Add(@interface);
+            }
+
+            return allInterfaces
+                .SelectMany(interf => interf.GetMembers().OfType<IMethodSymbol>())
+                .Any(interfaceMember => methodSymbol == containingType.FindImplementationForInterfaceMember(interfaceMember));
         }
 
         private static readonly SymbolKind[] PossibleMemberSymbolKinds =

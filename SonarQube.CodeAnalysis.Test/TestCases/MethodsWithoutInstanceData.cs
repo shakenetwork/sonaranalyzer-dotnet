@@ -4,6 +4,21 @@ using System.Collections.Generic;
 
 namespace Tests.Diagnostics
 {
+    public class MethodsWithoutInstanceDataInterface : IEnumerator<K>
+    {
+        void IEnumerator.Reset()
+        {
+            throw new NotSupportedException();
+        }
+    }
+    public class MethodsWithoutInstanceDataInterface2 : IDisposable
+    {
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
     public abstract class MethodsWithoutInstanceDataBase
     {
         public virtual void DoStuff()
