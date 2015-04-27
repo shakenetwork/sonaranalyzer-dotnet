@@ -3,17 +3,20 @@
   <metadata>
     <id>SonarQube.CSharp.CodeAnalysis</id>
     <version>0.7.0-CTP6</version>
-    <title>SonarQube C# Code Analysis Pre-release</title>
+    <title>SonarQube C# Code Analysis</title>
     <authors>SonarSource</authors>
     <owners>SonarSource</owners>
     <licenseUrl>https://raw.githubusercontent.com/SonarSource/sonar-dotnet-codeanalysis/master/LICENSE</licenseUrl>
-    <projectUrl>http://redirect.sonarsource.com/plugins/csharp.html</projectUrl>
+    <projectUrl>http://redirect.sonarsource.com/6</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/SonarSource/sonar-dotnet-codeanalysis/master/SonarQube.CSharp.CodeAnalysis.Vsix/logos/waves-sonarqube-48.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>This package provides a subset of SonarQube rules to identify code quality issues in C# source code.</description>
+    <summary>This package provides a subset of SonarQube rules to identify code quality issues in C# source code.</summary>
+    <description>SonarQube C# Code Analysis is a code analysis package based on the .NET Compiler Platform ("Roslyn"). The package offers reports on bugs, potential bugs, duplicated code, coding standards, comments, and software design. The rules used here are also available in the SonarQube platform.</description>
     <releaseNotes></releaseNotes>
-    <copyright>Copyright SonarSource 2015</copyright>
-    <tags>C# CSharp SonarQube Analysis Roslyn Compiler CodeAnalysis</tags>
+    <language>en-US</language>
+    <copyright>Copyright © SonarSource 2015</copyright>
+    <tags>C# CSharp SonarQube Analysis Roslyn Compiler CodeAnalysis Syntax Semantics Analyzer</tags>
+    <developmentDependency>true</developmentDependency>
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="System" targetFramework="" />
     </frameworkAssemblies>
