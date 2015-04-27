@@ -72,108 +72,58 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                         .ToList();
 
                     fields.ForEach(field =>
-                        field.Declaration.Variables.ToList().ForEach(variable =>
-                            CheckMember(variable.Identifier, field.Declaration.Type, typeParameterNames, c)));
-                    
+                    {
+                        if (HasGenericType(field.Declaration.Type, typeParameterNames, c))
+                        {
+                            return;
+                        }
 
+                        field.Declaration.Variables.ToList().ForEach(variable =>
+                        {
+                            CheckMember(variable, variable.Identifier.GetLocation(), typeParameterNames, c);
+                        });
+                    });
+                    
                     var properties = classDeclaration.Members
                         .OfType<PropertyDeclarationSyntax>()
                         .Where(p => p.Modifiers.Any(m => m.IsKind(SyntaxKind.StaticKeyword)))
                         .ToList();
+                    
+                    properties.ForEach(property =>
+                    {
+                        CheckMember(property, property.Identifier.GetLocation(), typeParameterNames, c);
+                    });
 
-                    properties.ForEach(property => CheckMember(property.Identifier, property.Type, typeParameterNames, c));
                 },
                 SyntaxKind.ClassDeclaration);
         }
 
-        private static void CheckMember(SyntaxToken identifier, TypeSyntax type, IEnumerable<string> typeParameterNames, 
+        private static void CheckMember(SyntaxNode root, Location location, IEnumerable<string> typeParameterNames, 
             SyntaxNodeAnalysisContext c)
         {
-            if (GetUsedTypeNames(type)
-                .Intersect(typeParameterNames)
-                .Any())
+            if (HasGenericType(root, typeParameterNames, c))
             {
                 return;
             }
 
-            c.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation()));
+            c.ReportDiagnostic(Diagnostic.Create(Rule, location));
         }
 
-        #region GetUsedTypeNames
-        private static IEnumerable<string> GetUsedTypeNames(TypeSyntax type)
+        private static bool HasGenericType(SyntaxNode root, IEnumerable<string> typeParameterNames, SyntaxNodeAnalysisContext c)
         {
-            #region SimpleNameSyntax
+            var typeParameters = root.DescendantNodes()
+                            .OfType<IdentifierNameSyntax>()
+                            .Select(identifier => c.SemanticModel.GetSymbolInfo(identifier).Symbol)
+                            .Where(symbol => symbol != null && symbol.Kind == SymbolKind.TypeParameter)
+                            .Select(symbol => symbol.Name)
+                            .ToList();
 
-            var identifierNameSyntax = type as IdentifierNameSyntax;
-            if (identifierNameSyntax != null)
+            if (typeParameters.Intersect(typeParameterNames).Any())
             {
-                return GetUsedTypeNames(identifierNameSyntax);
-            }
-            var genericNameSyntax = type as GenericNameSyntax;
-            if (genericNameSyntax != null)
-            {
-                return GetUsedTypeNames(genericNameSyntax);
+                return true;
             }
 
-            #endregion
-
-            var qualifiedNameSyntax = type as QualifiedNameSyntax;
-            if (qualifiedNameSyntax != null)
-            {
-                return GetUsedTypeNames(qualifiedNameSyntax);
-            }
-
-            var nullableTypeSyntax = type as NullableTypeSyntax;
-            if (nullableTypeSyntax != null)
-            {
-                return GetUsedTypeNames(nullableTypeSyntax);
-            }
-
-            var arrayTypeSyntax = type as ArrayTypeSyntax;
-            if (arrayTypeSyntax != null)
-            {
-                return GetUsedTypeNames(arrayTypeSyntax);
-            }
-
-            return new string[0];
+            return false;
         }
-
-        private static IEnumerable<string> GetUsedTypeNames(QualifiedNameSyntax type)
-        {
-            return GetUsedTypeNames(type.Left).Concat(GetUsedTypeNames(type.Right));
-        }
-        private static IEnumerable<string> GetUsedTypeNames(IdentifierNameSyntax type)
-        {
-            return new[] { type.Identifier.Text };
-        }
-        private static IEnumerable<string> GetUsedTypeNames(NullableTypeSyntax type)
-        {
-            return GetUsedTypeNames(type.ElementType);
-        }
-        
-        private static IEnumerable<string> GetUsedTypeNames(ArrayTypeSyntax arrayType)
-        {
-            var elementType = arrayType.ElementType;
-
-            return GetUsedTypeNames(elementType);
-        }
-
-        private static IEnumerable<string> GetUsedTypeNames(GenericNameSyntax genericType)
-        {
-            var typeParameters = new List<string>();
-
-            var arguments = genericType.TypeArgumentList.Arguments;
-
-            foreach (var typeSyntax in arguments)
-            {
-                typeParameters.AddRange(GetUsedTypeNames(typeSyntax));
-            }
-
-            typeParameters.Add(genericType.Identifier.Text);
-
-            return typeParameters;
-        }
-
-        #endregion
     }
 }
