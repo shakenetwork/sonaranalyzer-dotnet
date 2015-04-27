@@ -4,6 +4,13 @@ using System.Collections.Generic;
 
 namespace Tests.Diagnostics
 {
+    public static class Extensions
+    {
+        public static void Ex(this string self, string v1, string v2)
+        {
+        }
+    }
+
     public partial class ParametersCorrectOrder
     {
         partial void divide(int divisor, int someOther, int dividend, int p = 10, int some = 5, int other2 = 7);
@@ -49,6 +56,12 @@ namespace Tests.Diagnostics
             m(a, b);
             m(b, b); // Compliant
             m(b, a); // Noncompliant
+
+            var v1 = "";
+            var v2 = "";
+
+            "aaaaa".Ex(v1, v2);
+            "aaaaa".Ex(v2, v1); // Noncompliant
         }
     }
     

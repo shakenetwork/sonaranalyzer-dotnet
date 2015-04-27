@@ -40,7 +40,7 @@ namespace SonarQube.CodeAnalysis.CSharp.Rules
                 {
                     var methodCall = (InvocationExpressionSyntax) c.Node;
 
-                    var methodSymbol = c.SemanticModel.GetSymbolInfo(methodCall).Symbol;
+                    var methodSymbol = c.SemanticModel.GetSymbolInfo(methodCall).Symbol as IMethodSymbol;
 
                     if (methodSymbol == null)
                     {
@@ -64,6 +64,11 @@ namespace SonarQube.CodeAnalysis.CSharp.Rules
                     var namesInDeclaration = methodDeclarationSyntax.ParameterList.Parameters
                         .Select(parameter => parameter.Identifier.Text)
                         .ToList();
+
+                    if (methodSymbol.IsExtensionMethod)
+                    {
+                        namesInDeclaration = namesInDeclaration.Skip(1).ToList();
+                    }
 
                     var parametersInCall = GetParametersForCall(methodCall);
                     var namesInCall = parametersInCall
