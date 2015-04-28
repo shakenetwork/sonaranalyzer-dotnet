@@ -64,6 +64,16 @@
     <Rule Id="CA2241" Action="Warning" />
     <Rule Id="CA2242" Action="Warning" />
   </Rules>
+  <Rules AnalyzerId="SonarQube.CSharp.CodeAnalysis" RuleNamespace="SonarQube.CSharp.CodeAnalysis">
+    <Rule Id="S105" Action="Warning" />
+    <Rule Id="S1109" Action="Warning" />
+    <Rule Id="S121" Action="Warning" />
+    <Rule Id="S1227" Action="Warning" />
+    <Rule Id="S126" Action="Warning" />
+    <Rule Id="S1301" Action="Warning" />
+    <Rule Id="S1940" Action="Warning" />
+    <Rule Id="S2070" Action="Warning" />
+  </Rules>
   <Rules AnalyzerId="SonarQube.CodeAnalysis.CSharp" RuleNamespace="SonarQube.CodeAnalysis.CSharp">
     <Rule Id="S105" Action="Warning" />
     <Rule Id="S1109" Action="Warning" />

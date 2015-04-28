@@ -142,5 +142,15 @@ namespace Test
 
             statements[0].GetPrecedingStatement().ShouldBeEquivalentTo(null);
         }
+
+        [TestMethod]
+        public void GetSucceedingStatement()
+        {
+            var statements = switchMethod.Body.Statements.ToList();
+
+            statements[0].GetSucceedingStatement().ShouldBeEquivalentTo(statements[1]);
+
+            statements[1].GetSucceedingStatement().ShouldBeEquivalentTo(null);
+        }
     }
 }
