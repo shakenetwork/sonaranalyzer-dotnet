@@ -3,7 +3,7 @@ A subset of [SonarQube](http://www.sonarqube.org) rules to identify code quality
 
 ## Description
 
-SonarQube Code Analysis for C# is a code analysis NuGet package and a Visual Studio Extension based on the [.NET Compiler Platform ("Roslyn")](https://github.com/dotnet/roslyn). The package offers reports on bugs, potential bugs, duplicated code, coding standards, comments, and software design.
+SonarQube Code Analysis for C# is a code analysis NuGet package and a Visual Studio Extension based on the [.NET Compiler Platform ("Roslyn")](https://github.com/dotnet/roslyn). The package offers reports on bugs, potential bugs, duplicated code, coding standards, comments, and software design. The rules used here are also available in the [SonarQube](http://www.sonarqube.org) platform, offering complete continuity between your in-IDE experience and what's shown by Continuous Inspection.
 
 ## Installation
 
