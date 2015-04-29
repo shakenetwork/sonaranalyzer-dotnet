@@ -147,6 +147,7 @@
     <Compile Include="Rules\RightCurlyBraceStartsLineTest.cs" />
     <Compile Include="Rules\SelfAssignedVariablesTest.cs" />
     <Compile Include="Rules\ShortCircuitNullPointerDereferenceTest.cs" />
+    <Compile Include="Rules\FloatingPointEqualityTest.cs" />
     <Compile Include="Rules\StaticFieldInGenericClassTest.cs" />
     <Compile Include="Rules\SwitchWithoutDefaultTest.cs" />
     <Compile Include="Rules\TabCharacterTest.cs" />
@@ -198,6 +199,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\DeadStores.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\FloatingPointEquality.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
