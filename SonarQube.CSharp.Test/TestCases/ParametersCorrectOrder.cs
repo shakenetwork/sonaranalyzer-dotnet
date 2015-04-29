@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Tests.Diagnostics
 {
@@ -8,6 +9,13 @@ namespace Tests.Diagnostics
     {
         public static void Ex(this string self, string v1, string v2)
         {
+        }
+        public static void Ex(this string self, string v1, string v2, int x)
+        {
+            Ex(self, v1, v2);
+            self.Ex<t>(v1, v2);
+            Extensions.Ex(self, v1, v2);
+            Tests.Diagnostics.Extensions.Ex(self, v1, v2);
         }
     }
 
@@ -44,7 +52,7 @@ namespace Tests.Diagnostics
             divide(divisor, someOther, dividend, other2: some, some: other2); // Noncompliant;
 
             divide(1, 1, 1, other2: some, some: other2); // Noncompliant;
-            divide(1, 1, 1, other2: 1, some: other2); 
+            divide(1, 1, 1, other2: 1, some: other2);
 
             int a, b;
 
@@ -64,5 +72,4 @@ namespace Tests.Diagnostics
             "aaaaa".Ex(v2, v1); // Noncompliant
         }
     }
-    
 }

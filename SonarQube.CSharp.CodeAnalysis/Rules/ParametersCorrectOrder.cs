@@ -84,9 +84,16 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                         .Select(parameter => parameter.Identifier.Text)
                         .ToList();
 
-                    if (methodSymbol.IsExtensionMethod)
+                    var memberAccess = methodCall.Expression as MemberAccessExpressionSyntax;
+
+                    if (methodSymbol.IsExtensionMethod &&
+                        memberAccess != null)
                     {
-                        namesInDeclaration = namesInDeclaration.Skip(1).ToList();
+                        var symbol = c.SemanticModel.GetSymbolInfo(memberAccess.Expression).Symbol as ITypeSymbol;
+                        if (symbol == null || !symbol.IsType)
+                        {
+                            namesInDeclaration = namesInDeclaration.Skip(1).ToList();
+                        }
                     }
 
                     var parametersInCall = GetParametersForCall(methodCall);
