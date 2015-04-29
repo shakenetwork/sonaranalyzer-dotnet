@@ -109,6 +109,12 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
                     if (references.Count == 0)
                     {
+                        if (variableDeclarator.Initializer != null)
+                        {
+                            c.ReportDiagnostic(Diagnostic.Create(Rule, variableDeclarator.Initializer.GetLocation(),
+                                variableDeclarator.Identifier.Text));
+                        }
+
                         return;
                     }
 
@@ -160,7 +166,6 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     }
                 },
                 SyntaxKind.VariableDeclarator);
-            
         }
 
         private static bool MightHaveReferenceBetween(SyntaxNode first, AssignmentExpressionSyntax second, List<IdentifierNameSyntax> references)
