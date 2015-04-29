@@ -114,30 +114,25 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                             c.ReportDiagnostic(Diagnostic.Create(Rule, variableDeclarator.Initializer.GetLocation(),
                                 variableDeclarator.Identifier.Text));
                         }
-
                         return;
                     }
 
-                    var assignments =
-                        declaringBlock.DescendantNodes().OfType<AssignmentExpressionSyntax>()
-                            .Where(assignment =>
-                                c.SemanticModel.GetSymbolInfo(assignment.Left).Symbol.Equals(variableSymbol))
-                            .ToList();
+                    var assignments = declaringBlock.DescendantNodes()
+                        .OfType<AssignmentExpressionSyntax>()
+                        .Where(assignment =>
+                            c.SemanticModel.GetSymbolInfo(assignment.Left).Symbol.Equals(variableSymbol))
+                        .ToList();
 
                     if (assignments.Count == 0)
                     {
                         return;
                     }
 
+                    if (variableDeclarator.Initializer != null &&
+                        !MightHaveReferenceBetween(variableDeclarator.Initializer, assignments.First(), references))
                     {
-                        var first = variableDeclarator.Initializer;
-                        var second = assignments.First();
-                        if (first != null &&
-                            !MightHaveReferenceBetween(first, second, references))
-                        {
-                            c.ReportDiagnostic(Diagnostic.Create(Rule, first.GetLocation(),
-                                variableDeclarator.Identifier.Text));
-                        }
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, variableDeclarator.Initializer.GetLocation(),
+                            variableDeclarator.Identifier.Text));
                     }
 
                     for (var i = 1; i < assignments.Count; i++)
@@ -145,29 +140,26 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                         var first = assignments[i - 1];
                         var second = assignments[i];
                         
-
                         if (MightHaveReferenceBetween(first, second, references))
                         {
                             continue;
                         }
-                        
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, first.GetLocation(),
-                                variableDeclarator.Identifier.Text));
-                    }
 
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, first.GetLocation(),
+                            variableDeclarator.Identifier.Text));
+                    }
+                    
+                    var lastAssignment = assignments.Last();
+                    if (!references.Any(reference => reference.SpanStart > lastAssignment.Span.End) &&
+                        !InLoop(lastAssignment, declaringBlock))
                     {
-                        var currentAssignment = assignments.Last();
-                        if (!references.Any(reference => reference.SpanStart > currentAssignment.Span.End) &&
-                            !InLoop(currentAssignment, declaringBlock))
-                        {
-                            c.ReportDiagnostic(Diagnostic.Create(Rule, currentAssignment.GetLocation(),
-                                variableDeclarator.Identifier.Text));
-                        }
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, lastAssignment.GetLocation(),
+                            variableDeclarator.Identifier.Text));
                     }
                 },
                 SyntaxKind.VariableDeclarator);
         }
-
+        
         private static bool MightHaveReferenceBetween(SyntaxNode first, AssignmentExpressionSyntax second, List<IdentifierNameSyntax> references)
         {
             return !DifferentStatementsWithSameParent(first, second) ||

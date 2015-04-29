@@ -23,28 +23,23 @@ namespace Tests.Diagnostics
     {
         void calculateRate(int a, int b)
         {
-            int ll = doSomething(); // Noncompliant
-
+            int ll = doSomething(); // Noncompliant; variable not used later
 
             int i, j;
-
-            i = a + b;
-            i += i + 2; // Noncompliant
+            i = a + b;  
+            i += i + 2; // Noncompliant; variable is overwritten in the following statement
             i = 5;
-            var j = i;  // Noncompliant
-            i = doSomething();  // Noncompliant; retrieved value not used
+            j = i;
+            i = doSomething();  // Noncompliant; retrieved value overwritten in for loop
             for (i = 0; i < j + 10; i++)
             {
                 //  ...
             }
-            i = doSomething();  // Noncompliant; retrieved value not used
-            i = doSomething();  // Noncompliant; retrieved value not used
-            // ...
 
             if ((i = doSomething()) == 5 ||
-                (i = doSomethingElse()) == 5)
+                (i = doSomethingElse()) == 5)   //special case, where i is overwritten in the same statement (if) many times. All of them is ignored
             {
-                i += 5; // Noncompliant;
+                i += 5; // Noncompliant, last use of i, and we are not in a loop
             }
 
             var resource = new Resource(); // Noncompliant; retrieved value not used
@@ -87,9 +82,9 @@ namespace Tests.Diagnostics
             switch (b)
             {
                 case 6:
-                    b = 5;
+                    b = 5; //compliant, we ignore consecutive statements that are not in the same context (have different parents)
                 case 7:
-                    b = 56;
+                    b = 56; 
             }
 
             b = 7;
