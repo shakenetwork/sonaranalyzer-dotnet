@@ -76,22 +76,20 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     var reportShouldBeStatic = true;
                     cbc.RegisterSyntaxNodeAction(c =>
                     {
-                        var identifier = (IdentifierNameSyntax) c.Node;
+                        var identifierSymbol = c.SemanticModel.GetSymbolInfo(c.Node);
 
-                        var identifierSymbol = c.SemanticModel.GetSymbolInfo(identifier).Symbol;
-
-                        if (identifierSymbol == null)
+                        if (identifierSymbol.Symbol == null)
                         {
                             return;
                         }
 
-                        if (PossibleMemberSymbolKinds.Contains(identifierSymbol.Kind) &&
-                            !identifierSymbol.IsStatic)
+                        if (PossibleMemberSymbolKinds.Contains(identifierSymbol.Symbol.Kind) &&
+                            !identifierSymbol.Symbol.IsStatic)
                         {
                             reportShouldBeStatic = false;
                         }
                     },
-                        SyntaxKind.IdentifierName);
+                        SyntaxKind.IdentifierName, SyntaxKind.GenericName);
 
                     cbc.RegisterSyntaxNodeAction(c =>
                     {

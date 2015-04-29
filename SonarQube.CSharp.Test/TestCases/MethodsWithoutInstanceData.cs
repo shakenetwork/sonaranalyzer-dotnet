@@ -68,4 +68,20 @@ namespace Tests.Diagnostics
             var o = this;
         }
     }
+    
+    public class GenericMethods
+    {
+        public int I { get; set; }
+        public IList<TSource> CreateList<TSource>(string profileName)
+        {
+            return CreateList<TSource>(profileName, null);
+        }
+
+        public IList<TSource> CreateList<TSource>(string profileName, string memberList)
+        {
+            var i = I;
+
+            return null;
+        }
+    }
 }
