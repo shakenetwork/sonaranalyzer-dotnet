@@ -5,6 +5,11 @@ using System.Collections.Generic;
 
 namespace Tests.Diagnostics
 {
+    public interface Interface
+    {
+        int Add<T>(int a, int b); //Compliant
+    }
+
     public class MoreMath<T> // Noncompliant; <T> is ignored
     {
         public int Add<T>(int a, int b) // Noncompliant; <T> is ignored

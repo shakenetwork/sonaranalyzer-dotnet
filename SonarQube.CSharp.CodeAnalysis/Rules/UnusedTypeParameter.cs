@@ -65,7 +65,8 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     }
 
                     if (methodDeclaration != null &&
-                        methodDeclaration.Modifiers.Any(modifier => ModifiersToSkip.Contains(modifier.Kind())))
+                        (methodDeclaration.Modifiers.Any(modifier => ModifiersToSkip.Contains(modifier.Kind())) ||
+                         methodDeclaration.Body == null))
                     {
                         return;
                     }
