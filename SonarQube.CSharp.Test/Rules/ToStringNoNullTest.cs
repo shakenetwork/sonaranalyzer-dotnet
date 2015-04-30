@@ -1,4 +1,4 @@
-/*
+﻿/*
  * SonarQube C# Code Analysis
  * Copyright (C) 2015 SonarSource
  * dev@sonar.codehaus.org
@@ -18,25 +18,18 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarQube.CSharp.CodeAnalysis.Descriptor;
+using SonarQube.CSharp.CodeAnalysis.Rules;
 
-namespace SonarQube.CSharp.Test
+namespace SonarQube.CSharp.Test.Rules
 {
     [TestClass]
-    public class RuleFinderTest
+    public class ToStringNoNullTest
     {
         [TestMethod]
-        public void GetRuleAssemblies()
+        public void ToStringNoNull()
         {
-            RuleFinder.GetRuleAssemblies().Should().HaveCount(2);
-        }
-
-        [TestMethod]
-        public void GetParameterlessAnalyzerTypes()
-        {
-            new RuleFinder().GetParameterlessAnalyzerTypes().Should().HaveCount(43);
+            Verifier.Verify(@"TestCases\ToStringNoNull.cs", new ToStringNoNull());
         }
     }
 }
