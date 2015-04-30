@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.22609.0
+VisualStudioVersion = 14.0.22823.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runner", "SonarQube.CSharp.Runner\Runner.csproj", "{79F0B359-8275-4F3B-B919-82C493B74665}"
 EndProject
@@ -12,10 +12,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0C3E0519-DB5C-47C0-ABB3-9D1FB23DFBAF}"
 	ProjectSection(SolutionItems) = preProject
 		AssemblyInfo.Shared.cs = AssemblyInfo.Shared.cs
-		ChangeVersion.proj = ChangeVersion.proj
-		RegexTransform.tasks = RegexTransform.tasks
+		ReleaseHelper\ChangeVersion.proj = ReleaseHelper\ChangeVersion.proj
+		ReleaseHelper\RegexTransform.tasks = ReleaseHelper\RegexTransform.tasks
 		SonarQube.CodeAnalysis.ruleset = SonarQube.CodeAnalysis.ruleset
-		Version.props = Version.props
+		ReleaseHelper\Version.props = ReleaseHelper\Version.props
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeAnalysis.Extra", "SonarQube.CSharp.CodeAnalysis.Extra\CodeAnalysis.Extra.csproj", "{4C1BB6CE-645F-400B-B491-AF7BB40E5C01}"
