@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Go" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildProjectDirectory)\Version.props" />
+  <Import Project="$(MSBuildProjectDirectory)\RegexTransform.tasks" />
+  <PropertyGroup>
+    <SolutionRoot>$(MSBuildProjectDirectory)</SolutionRoot>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AssemblyVersion Include="$(SolutionRoot)\AssemblyInfo.Shared.cs">
+      <Find>(?&lt;=\[assembly\: AssemblyVersion\(")([^"]*)</Find>
+      <ReplaceWith>$(AssemblyVersion)</ReplaceWith>
+    </AssemblyVersion>
+    <AssemblyFileVersion Include="$(SolutionRoot)\AssemblyInfo.Shared.cs">
+      <Find>(?&lt;=\[assembly\: AssemblyFileVersion\(")([^"]*)</Find>
+      <ReplaceWith>$(AssemblyFileVersion)</ReplaceWith>
+    </AssemblyFileVersion>
+    <AssemblyInformationalVersion Include="$(SolutionRoot)\AssemblyInfo.Shared.cs">
+      <Find>(?&lt;=\[assembly\: AssemblyInformationalVersion\(")([^"]*)</Find>
+      <ReplaceWith>$(AssemblyInformationalVersion)</ReplaceWith>
+    </AssemblyInformationalVersion>
+
+    <VsixVersion Include="$(SolutionRoot)\SonarQube.CSharp.CodeAnalysis.Vsix\source.extension.vsixmanifest">
+      <Find>(?&lt;=Identity.*Version=")([^"]*)</Find>
+      <ReplaceWith>$(VsixVersion)</ReplaceWith>
+    </VsixVersion>
+
+    <NugetAnalyzer Include="$(SolutionRoot)\SonarQube.CSharp.CodeAnalysis.Vsix\Diagnostic.nuspec">
+      <Find>(?&lt;=&lt;version&gt;)([^&lt;]*)</Find>
+      <ReplaceWith>$(NugetVersion)</ReplaceWith>
+    </NugetAnalyzer>
+    <NugetRunner Include="$(SolutionRoot)\SonarQube.CSharp.Runner\Runner.nuspec">
+      <Find>(?&lt;=&lt;version&gt;)([^&lt;]*)</Find>
+      <ReplaceWith>$(NugetVersion)</ReplaceWith>
+    </NugetRunner>
+    <NugetDescriptor Include="$(SolutionRoot)\SonarQube.CSharp.Descriptor\Descriptor.nuspec">
+      <Find>(?&lt;=&lt;version&gt;)([^&lt;]*)</Find>
+      <ReplaceWith>$(NugetVersion)</ReplaceWith>
+    </NugetDescriptor>
+  </ItemGroup>
+
+  <Target Name="Go" DependsOnTargets="UpdateAssemblyVersion">
+  </Target>
+
+  <Target Name="UpdateAssemblyVersion">
+    <RegexTransform Items="@(AssemblyVersion)" />
+    <RegexTransform Items="@(AssemblyFileVersion)" />
+    <RegexTransform Items="@(AssemblyInformationalVersion)" />
+    <RegexTransform Items="@(VsixVersion)" />
+    <RegexTransform Items="@(NugetAnalyzer)" />
+    <RegexTransform Items="@(NugetRunner)" />
+    <RegexTransform Items="@(NugetDescriptor)" />
+  </Target>
+  
+  <!--
+    <Target Name="Build">
+        <MSBuild Projects="$(SolutionRoot)\SonarQube.CSharp.CodeAnalysis.sln" Targets="Build" />
+    </Target>
+	-->
+</Project>

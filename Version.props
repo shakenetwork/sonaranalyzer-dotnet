@@ -1,0 +1,10 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MainVersion>0.8.0</MainVersion>
+    <AssemblyVersion>$(MainVersion).0</AssemblyVersion>
+    <AssemblyFileVersion>$(MainVersion).0</AssemblyFileVersion>
+    <AssemblyInformationalVersion>$(MainVersion)-CTP6</AssemblyInformationalVersion>
+    <NugetVersion>$(AssemblyInformationalVersion)</NugetVersion>
+    <VsixVersion>$(MainVersion)</VsixVersion>
+  </PropertyGroup>
+</Project>
