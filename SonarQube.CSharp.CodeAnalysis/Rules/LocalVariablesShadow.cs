@@ -76,7 +76,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
                     foreach (var parameter in parameters)
                     {
-                        CheckMatch(members, parameter.Identifier.Text, parameter.GetLocation(), c);
+                        CheckMatch(members, parameter.Identifier, c);
                     }
                 },
                 SyntaxKind.MethodDeclaration);
@@ -100,20 +100,20 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                         {
                             members = GetMembers(variableSymbol.ContainingType);
                         }
-                        CheckMatch(members, variable.Identifier.Text, variable.GetLocation(), c);
+                        CheckMatch(members, variable.Identifier, c);
                     }
                 },
                 SyntaxKind.LocalDeclarationStatement);
         }
 
-        private static void CheckMatch(IEnumerable<ISymbol> members, string name, Location errorLocation, SyntaxNodeAnalysisContext c)
+        private static void CheckMatch(IEnumerable<ISymbol> members, SyntaxToken identifier, SyntaxNodeAnalysisContext c)
         {
-            var matchingMember = members.FirstOrDefault(m => m.Name == name);
+            var matchingMember = members.FirstOrDefault(m => m.Name == identifier.Text);
 
             if (matchingMember != null)
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, errorLocation, 
-                    name,
+                c.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(), 
+                    identifier.Text,
                     (matchingMember is IFieldSymbol) ? "field" : "property"));
             }
         }
