@@ -119,6 +119,7 @@
     <Compile Include="Helpers\EquivalenceCheckerTest.cs" />
     <Compile Include="MetricsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules\CollapsibleIfsTest.cs" />
     <Compile Include="Rules\ConsoleLoggingTest.cs" />
     <Compile Include="Rules\HardcodedIpAddressTest.cs" />
     <Compile Include="Rules\ToStringNoNullTest.cs" />
@@ -223,6 +224,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\LocalVariablesShadow.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\CollapsibleIfs.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
