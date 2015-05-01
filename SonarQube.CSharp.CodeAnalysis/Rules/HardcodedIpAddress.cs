@@ -41,7 +41,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     {
         internal const string DiagnosticId = "S1313";
         internal const string Description = "IP addresses should not be hardcoded";
-        internal const string MessageFormat = "Make this IP \"{0}\" address configurable.";
+        internal const string MessageFormat = "Make this IP {0} address configurable.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
@@ -61,8 +61,14 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     var stringLiteral = (LiteralExpressionSyntax)c.Node;
                     var text = stringLiteral.Token.Text;
 
-                    var match = Regex.Match(text, @"(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})");
+                    var match = Regex.Match(text, @"""(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})""");
                     if (!match.Success)
+                    {
+                        return;
+                    }
+
+                    var attribute = stringLiteral.FirstAncestorOrSelf<AttributeSyntax>();
+                    if (attribute != null)
                     {
                         return;
                     }
