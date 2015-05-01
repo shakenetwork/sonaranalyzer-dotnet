@@ -120,7 +120,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     var assignments = declaringBlock.DescendantNodes()
                         .OfType<AssignmentExpressionSyntax>()
                         .Where(assignment =>
-                            c.SemanticModel.GetSymbolInfo(assignment.Left).Symbol.Equals(variableSymbol))
+                            variableSymbol.Equals(c.SemanticModel.GetSymbolInfo(assignment.Left).Symbol))
                         .ToList();
 
                     if (assignments.Count == 0)
