@@ -119,11 +119,12 @@
     <Compile Include="Helpers\EquivalenceCheckerTest.cs" />
     <Compile Include="MetricsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules\ConsoleLoggingTest.cs" />
     <Compile Include="Rules\HardcodedIpAddressTest.cs" />
     <Compile Include="Rules\ToStringNoNullTest.cs" />
     <Compile Include="Rules\DeadStoresTest.cs" />
     <Compile Include="Rules\GetHashCodeMutableTest.cs" />
-    <Compile Include="Rules\ConsoleLoggingTest.cs" />
+    <Compile Include="Rules\LocalVariablesShadowTest.cs" />
     <Compile Include="Rules\AssignmentInsideSubExpressionTest.cs" />
     <Compile Include="Rules\AsyncAwaitIdentifierTest.cs" />
     <Compile Include="Rules\AtLeastThreeCasesInSwitchTest.cs" />
@@ -219,6 +220,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\HardcodedIpAddress.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\LocalVariablesShadow.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />

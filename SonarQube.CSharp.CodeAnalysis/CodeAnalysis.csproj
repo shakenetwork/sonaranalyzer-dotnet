@@ -84,6 +84,7 @@
     <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="Helpers\EquivalenceChecker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules\LocalVariablesShadow.cs" />
     <Compile Include="Rules\HardcodedIpAddress.cs" />
     <Compile Include="Rules\ToStringNoNull.cs" />
     <Compile Include="Rules\FloatingPointEquality.cs" />
@@ -277,6 +278,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S1313.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S1117.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
