@@ -5,6 +5,25 @@ using System.Linq;
 
 namespace Tests.Diagnostics
 {
+    public class Params
+    {
+        public void method(int i, int k = 5, params int[] rest)
+        {
+        }
+
+        public void call()
+        {
+            int i = 0, j = 5, k = 6, l=7;
+            method(i, j, k, l);
+        }
+        public void call2()
+        {
+            int i = 0, j = 5, rest = 6, l = 7;
+            var k = new[] { i, l };
+            method(i, k : rest, rest : k); //Noncompliant
+        }
+    }
+
     public static class Extensions
     {
         public static void Ex(this string self, string v1, string v2)
@@ -13,7 +32,7 @@ namespace Tests.Diagnostics
         public static void Ex(this string self, string v1, string v2, int x)
         {
             Ex(self, v1, v2);
-            self.Ex<t>(v1, v2);
+            self.Ex(v1, v2);
             Extensions.Ex(self, v1, v2);
             Tests.Diagnostics.Extensions.Ex(self, v1, v2);
         }
@@ -28,7 +47,7 @@ namespace Tests.Diagnostics
     {
         partial void divide(int a, int b, int c, int p, int other, int other2)
         {
-            var x = divisor / dividend;
+            var x = a / b;
         }
 
         public void m(int a, int b)
@@ -54,7 +73,7 @@ namespace Tests.Diagnostics
             divide(1, 1, 1, other2: some, some: other2); // Noncompliant;
             divide(1, 1, 1, other2: 1, some: other2);
 
-            int a, b;
+            int a=5, b=6;
 
             m(1, a); // Compliant
             m(1, b);

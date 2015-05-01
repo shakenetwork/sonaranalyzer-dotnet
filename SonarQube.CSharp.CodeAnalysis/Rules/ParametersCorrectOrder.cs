@@ -18,8 +18,10 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.IO;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
@@ -58,7 +60,6 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 c =>
                 {
                     var methodCall = (InvocationExpressionSyntax) c.Node;
-
                     var methodSymbol = c.SemanticModel.GetSymbolInfo(methodCall).Symbol as IMethodSymbol;
 
                     if (methodSymbol == null)
@@ -67,79 +68,89 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     }
 
                     var methodDeclaration = methodSymbol.DeclaringSyntaxReferences.FirstOrDefault();
-
                     if (methodDeclaration == null)
                     {
                         return;
                     }
 
                     var methodDeclarationSyntax = methodDeclaration.GetSyntax() as MethodDeclarationSyntax;
-
                     if (methodDeclarationSyntax == null)
                     {
                         return;
                     }
 
-                    var namesInDeclaration = methodDeclarationSyntax.ParameterList.Parameters
-                        .Select(parameter => parameter.Identifier.Text)
-                        .ToList();
-
-                    var memberAccess = methodCall.Expression as MemberAccessExpressionSyntax;
-
-                    if (methodSymbol.IsExtensionMethod &&
-                        memberAccess != null)
-                    {
-                        var symbol = c.SemanticModel.GetSymbolInfo(memberAccess.Expression).Symbol as ITypeSymbol;
-                        if (symbol == null || !symbol.IsType)
-                        {
-                            namesInDeclaration = namesInDeclaration.Skip(1).ToList();
-                        }
-                    }
+                    var parameterNamesInDeclaration = ParameterNamesInDeclaration(
+                        methodDeclarationSyntax, methodCall, methodSymbol, c.SemanticModel);
 
                     var parametersInCall = GetParametersForCall(methodCall);
                     var namesInCall = parametersInCall
                         .Select(p => p.IdentifierName)
                         .ToList();
 
-                    if (!namesInDeclaration.Intersect(namesInCall).Any())
+                    if (!parameterNamesInDeclaration.Intersect(namesInCall).Any())
                     {
                         return;
                     }
 
                     var methodCallHasIssue = false;
 
-                    for (var i = 0; i < parametersInCall.Count; i++)
+                    for (var i = 0; !methodCallHasIssue && i < parametersInCall.Count; i++)
                     {
-                        if (string.IsNullOrEmpty(namesInCall[i]) ||
-                            !namesInDeclaration.Contains(namesInCall[i]))
+                        if (string.IsNullOrEmpty(parametersInCall[i].IdentifierName) ||
+                            !parameterNamesInDeclaration.Contains(namesInCall[i]))
                         {
                             continue;
                         }
 
                         var positional = parametersInCall[i] as PositionalIdentifierParameter;
-                        if (positional != null && (!namesInCall.Contains(namesInDeclaration[i]) || namesInCall[i] == namesInDeclaration[i]))
+                        if (positional != null &&
+                            (i >= parameterNamesInDeclaration.Count ||
+                             !namesInCall.Contains(parameterNamesInDeclaration[i]) ||
+                             namesInCall[i] == parameterNamesInDeclaration[i]))
                         {
                             continue;
                         }
 
                         var named = parametersInCall[i] as NamedIdentifierParameter;
-                        if (named != null && (!namesInCall.Contains(named.DeclaredName) || named.DeclaredName == named.IdentifierName))
+                        if (named != null &&
+                            (!namesInCall.Contains(named.DeclaredName) || named.DeclaredName == named.IdentifierName))
                         {
                             continue;
                         }
 
                         methodCallHasIssue = true;
-                        break;
                     }
 
                     if (methodCallHasIssue)
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, methodCall.GetLocation(), methodDeclarationSyntax.Identifier.Text));
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, methodCall.GetLocation(),
+                            methodDeclarationSyntax.Identifier.Text));
                     }
                 },
                 SyntaxKind.InvocationExpression);
         }
-        
+
+        private static List<string> ParameterNamesInDeclaration(MethodDeclarationSyntax methodDeclarationSyntax,
+            InvocationExpressionSyntax methodCall, IMethodSymbol methodSymbol, SemanticModel semanticModel)
+        {
+            var namesInDeclaration = methodDeclarationSyntax.ParameterList.Parameters
+                .Select(parameter => parameter.Identifier.Text)
+                .ToList();
+
+            var memberAccess = methodCall.Expression as MemberAccessExpressionSyntax;
+
+            if (methodSymbol.IsExtensionMethod &&
+                memberAccess != null)
+            {
+                var symbol = semanticModel.GetSymbolInfo(memberAccess.Expression).Symbol as ITypeSymbol;
+                if (symbol == null || !symbol.IsType)
+                {
+                    namesInDeclaration = namesInDeclaration.Skip(1).ToList();
+                }
+            }
+            return namesInDeclaration;
+        }
+
         private static List<IdentifierParameter> GetParametersForCall(InvocationExpressionSyntax methodCall)
         {
             return methodCall.ArgumentList.Arguments.ToList()
