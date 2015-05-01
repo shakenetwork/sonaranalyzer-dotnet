@@ -12,6 +12,7 @@ namespace Tests.Diagnostics
 
             ip = "300.0.0.0"; // Compliant, not a valid IP
             ip = "    127.0.0.0    "; // Compliant
+            ip = @"    ""127.0.0.0""    "; // Compliant
         }
     }
 }

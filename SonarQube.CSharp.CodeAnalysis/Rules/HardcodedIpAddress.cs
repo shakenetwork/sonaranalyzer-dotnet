@@ -61,7 +61,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     var stringLiteral = (LiteralExpressionSyntax)c.Node;
                     var text = stringLiteral.Token.Text;
 
-                    var match = Regex.Match(text, @"""(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})""");
+                    var match = Regex.Match(text, @"^""(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})""$");
                     if (!match.Success)
                     {
                         return;
