@@ -37,7 +37,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [Tags("bug", "cwe")]
     public class ToStringNoNull : DiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S1121";
+        internal const string DiagnosticId = "S2225";
         internal const string Description = "Assignments should not be made from within sub-expressions";
         internal const string MessageFormat = "Extract the assignment of \"{0}\" from this expression.";
         internal const string Category = "SonarQube";
