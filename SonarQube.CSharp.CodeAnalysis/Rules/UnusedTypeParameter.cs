@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-
+ 
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
@@ -50,75 +50,93 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3A2326");
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
-        
+
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterSyntaxNodeAction(
-                c =>
-                {
-                    var methodDeclaration = c.Node as MethodDeclarationSyntax;
-                    var classDeclaration = c.Node as ClassDeclarationSyntax;
-
-                    if (methodDeclaration == null && classDeclaration == null)
+            context.RegisterCompilationStartAction(analysisContext =>
+            {
+                analysisContext.RegisterSyntaxNodeAction(
+                    c =>
                     {
-                        return;
-                    }
+                        var methodDeclaration = c.Node as MethodDeclarationSyntax;
+                        var classDeclaration = c.Node as ClassDeclarationSyntax;
 
-                    if (methodDeclaration != null &&
-                        (methodDeclaration.Modifiers.Any(modifier => ModifiersToSkip.Contains(modifier.Kind())) ||
-                         methodDeclaration.Body == null))
-                    {
-                        return;
-                    }
+                        if (methodDeclaration == null && classDeclaration == null)
+                        {
+                            return;
+                        }
 
-                    var declarationSymbol = c.SemanticModel.GetDeclaredSymbol(c.Node);
+                        if (methodDeclaration != null &&
+                            (methodDeclaration.Modifiers.Any(modifier => ModifiersToSkip.Contains(modifier.Kind())) ||
+                             methodDeclaration.Body == null))
+                        {
+                            return;
+                        }
 
-                    if (declarationSymbol == null)
-                    {
-                        return;
-                    }
-                    
-                    TypeParameterListSyntax typeParameterList;
-                    string typeOfContainer;
-                    if (classDeclaration == null)
-                    {
-                        typeParameterList = methodDeclaration.TypeParameterList;
-                        typeOfContainer = "method";
-                    }
-                    else
-                    {
-                        typeParameterList = classDeclaration.TypeParameterList;
-                        typeOfContainer = "class";
-                    }
-                    
-                    if (typeParameterList == null || typeParameterList.Parameters.Count == 0)
-                    {
-                        return;
-                    }
+                        var declarationSymbol = c.SemanticModel.GetDeclaredSymbol(c.Node);
 
-                    var typeParameters = typeParameterList.Parameters
-                        .Select(typeParameter => typeParameter.Identifier.Text)
-                        .ToList();
+                        if (declarationSymbol == null)
+                        {
+                            return;
+                        }
 
-                    var declarations = declarationSymbol.DeclaringSyntaxReferences.Select(reference => reference.GetSyntax());
+                        TypeParameterListSyntax typeParameterList;
+                        string typeOfContainer;
+                        if (classDeclaration == null)
+                        {
+                            typeParameterList = methodDeclaration.TypeParameterList;
+                            typeOfContainer = "method";
+                        }
+                        else
+                        {
+                            typeParameterList = classDeclaration.TypeParameterList;
+                            typeOfContainer = "class";
+                        }
 
-                    var usedTypeParameters = declarations.SelectMany(declaration => declaration.DescendantNodes())
-                        .OfType<IdentifierNameSyntax>()
-                        .Select(identifier => c.SemanticModel.GetSymbolInfo(identifier).Symbol)
-                        .Where(symbol => symbol != null && symbol.Kind == SymbolKind.TypeParameter)
-                        .Select(symbol => symbol.Name)
-                        .ToList();
+                        if (typeParameterList == null || typeParameterList.Parameters.Count == 0)
+                        {
+                            return;
+                        }
 
-                    foreach (var typeParameter in typeParameters.Where(typeParameter => !usedTypeParameters.Contains(typeParameter)))
-                    {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule,
-                            typeParameterList.Parameters.First(tp => tp.Identifier.Text == typeParameter)
-                                .GetLocation(),
-                            typeParameter, typeOfContainer));
-                    }
-                },
-                SyntaxKind.MethodDeclaration,
-                SyntaxKind.ClassDeclaration);
+                        var typeParameters = typeParameterList.Parameters
+                            .Select(typeParameter => typeParameter.Identifier.Text)
+                            .ToList();
+
+                        var declarations =
+                            declarationSymbol.DeclaringSyntaxReferences.Select(reference => reference.GetSyntax());
+
+                        var usedTypeParameters = declarations.SelectMany(declaration => declaration.DescendantNodes())
+                            .OfType<IdentifierNameSyntax>()
+                            .Select(identifier =>
+                            {
+                                var semanticModelOfThisTree = identifier.SyntaxTree == c.Node.SyntaxTree
+                                    ? c.SemanticModel
+                                    : analysisContext.Compilation
+                                        .GetSemanticModel(identifier.SyntaxTree);
+
+                                if (semanticModelOfThisTree == null)
+                                {
+                                    return null;
+                                }
+                                return semanticModelOfThisTree.GetSymbolInfo(identifier).Symbol;
+                            })
+                            .Where(symbol => symbol != null && symbol.Kind == SymbolKind.TypeParameter)
+                            .Select(symbol => symbol.Name)
+                            .ToList();
+
+                        foreach (
+                            var typeParameter in
+                                typeParameters.Where(typeParameter => !usedTypeParameters.Contains(typeParameter)))
+                        {
+                            c.ReportDiagnostic(Diagnostic.Create(Rule,
+                                typeParameterList.Parameters.First(tp => tp.Identifier.Text == typeParameter)
+                                    .GetLocation(),
+                                typeParameter, typeOfContainer));
+                        }
+                    },
+                    SyntaxKind.MethodDeclaration,
+                    SyntaxKind.ClassDeclaration);
+            });
         }
 
         public static readonly SyntaxKind[] ModifiersToSkip =
