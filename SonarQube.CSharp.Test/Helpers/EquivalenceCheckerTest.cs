@@ -61,7 +61,6 @@ namespace Test
         private Solution solution;
         private Compilation compilation;
         private SyntaxTree syntaxTree;
-        private SemanticModel semanticModel;
         private List<MethodDeclarationSyntax> methods;
 
         [TestInitialize]
@@ -71,7 +70,6 @@ namespace Test
 
             compilation = solution.Projects.First().GetCompilationAsync().Result;
             syntaxTree = compilation.SyntaxTrees.First();
-            semanticModel = compilation.GetSemanticModel(syntaxTree);
 
             methods = syntaxTree.GetRoot().DescendantNodes().OfType<MethodDeclarationSyntax>().ToList();
         }

@@ -34,8 +34,6 @@ namespace SonarQube.CSharp.Test
     [TestClass]
     public class RuleTest
     {
-        
-
         private static IList<Type> GetDiagnosticAnalyzerTypes(IList<Assembly> assemblies)
         {
             return assemblies
@@ -69,7 +67,7 @@ namespace SonarQube.CSharp.Test
                     using (var stream = analyzer.Assembly.GetManifestResourceStream(resource))
                     using (var reader = new StreamReader(stream))
                     {
-                        var content = reader.ReadToEnd();
+                        reader.ReadToEnd();
                     }
                 }
                 else

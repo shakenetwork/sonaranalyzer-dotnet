@@ -133,7 +133,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
             return allInterfaces
                 .SelectMany(interf => interf.GetMembers().OfType<IMethodSymbol>())
-                .Any(interfaceMember => methodSymbol == containingType.FindImplementationForInterfaceMember(interfaceMember));
+                .Any(interfaceMember => methodSymbol.Equals(containingType.FindImplementationForInterfaceMember(interfaceMember)));
         }
 
         private static readonly SymbolKind[] PossibleMemberSymbolKinds =

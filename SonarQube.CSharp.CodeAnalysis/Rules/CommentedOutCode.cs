@@ -101,8 +101,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                                         var lineSpan = c.Tree.GetText().Lines[lineNumber].Span;
                                         var commentLineSpan = lineSpan.Intersection(trivia.GetLocation().SourceSpan);
 
-                                        var location = Location.Create(c.Tree,
-                                            commentLineSpan.HasValue ? commentLineSpan.Value : lineSpan);
+                                        var location = Location.Create(c.Tree, commentLineSpan ?? lineSpan);
                                         c.ReportDiagnostic(Diagnostic.Create(Rule, location));
                                         break;
                                     }

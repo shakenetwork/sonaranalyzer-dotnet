@@ -18,10 +18,8 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
-using System.IO;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
@@ -157,7 +155,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 .Select((argument, index) =>
                 {
                     var identifier = argument.Expression as IdentifierNameSyntax;
-                    var identifierName = identifier == null ? (string) null : identifier.Identifier.Text;
+                    var identifierName = identifier == null ? null : identifier.Identifier.Text;
 
                     IdentifierParameter parameter;
                     if (argument.NameColon == null)

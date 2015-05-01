@@ -18,17 +18,16 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarQube.CSharp.CodeAnalysis.Helpers;
 using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings;
 using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings.Sqale;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
-using System.Text.RegularExpressions;
 
 namespace SonarQube.CSharp.CodeAnalysis.Rules
 {
