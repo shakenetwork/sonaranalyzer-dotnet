@@ -38,8 +38,8 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     public class ToStringNoNull : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2225";
-        internal const string Description = "Assignments should not be made from within sub-expressions";
-        internal const string MessageFormat = "Extract the assignment of \"{0}\" from this expression.";
+        internal const string Description = "\"ToString()\" method should not return null";
+        internal const string MessageFormat = "Return empty string instead.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
