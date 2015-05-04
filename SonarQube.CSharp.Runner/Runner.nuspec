@@ -18,5 +18,6 @@
   <files>
     <file src="*.dll" target="assembly\" />
     <file src="*.exe" target="assembly\" />
+    <file src="*.exe.config" target="assembly\" />
   </files>
 </package>
