@@ -114,8 +114,8 @@
       <Name>CodeAnalysis</Name>
     </ProjectReference>
     <ProjectReference Include="..\SonarQube.CSharp.Descriptor\Descriptor.csproj">
-      <Project>{E4D5FF22-C1A4-4CAD-B068-E47817F25848}</Project>
-      <Name>SonarQube.CodeAnalysis.Descriptor</Name>
+      <Project>{e4d5ff22-c1a4-4cad-b068-e47817f25848}</Project>
+      <Name>Descriptor</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
