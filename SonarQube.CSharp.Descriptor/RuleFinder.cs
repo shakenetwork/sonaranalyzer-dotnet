@@ -44,8 +44,8 @@ namespace SonarQube.CSharp.CodeAnalysis.Descriptor
         {
             return new[]
             {
-                Assembly.LoadFrom(RuleAssemblyFileName),
-                Assembly.LoadFrom(RuleExtraAssemblyFileName)
+                Assembly.LoadFrom(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, RuleAssemblyFileName)),
+                Assembly.LoadFrom(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, RuleExtraAssemblyFileName))
             };
         }
 

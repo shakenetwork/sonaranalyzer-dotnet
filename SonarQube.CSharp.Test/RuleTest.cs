@@ -100,7 +100,7 @@ namespace SonarQube.CSharp.Test
         [TestMethod]
         public void VisualStudio_NoRuleTemplates()
         {
-            var analyzers = GetDiagnosticAnalyzerTypes(new[] { Assembly.LoadFrom(RuleFinder.RuleAssemblyFileName) });
+            var analyzers = GetDiagnosticAnalyzerTypes(new[] { Assembly.LoadFrom(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, RuleFinder.RuleAssemblyFileName)) });
 
             foreach (var analyzer in analyzers)
             {
@@ -131,7 +131,7 @@ namespace SonarQube.CSharp.Test
         [TestMethod]
         public void VisualStudio_AllParameterlessRulesNotRuleTemplate()
         {
-            var analyzers = GetDiagnosticAnalyzerTypes(new[] { Assembly.LoadFrom(RuleFinder.RuleExtraAssemblyFileName) });
+            var analyzers = GetDiagnosticAnalyzerTypes(new[] { Assembly.LoadFrom(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, RuleFinder.RuleExtraAssemblyFileName)) });
 
             foreach (var analyzer in analyzers)
             {
