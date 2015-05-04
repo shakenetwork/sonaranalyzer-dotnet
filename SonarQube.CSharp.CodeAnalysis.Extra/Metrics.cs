@@ -146,9 +146,7 @@ namespace SonarQube.CSharp.CodeAnalysis
         {
             return FunctionKinds.Contains(node.Kind());
         }
-
         
-
         public int PublicApi()
         {
             return PublicApiNodes().Count();
@@ -249,70 +247,47 @@ namespace SonarQube.CSharp.CodeAnalysis
 
         #region Kind lists
 
-        private static IEnumerable<SyntaxKind> TriviaKinds
+        private static readonly IEnumerable<SyntaxKind> TriviaKinds = new[]
         {
-            get
-            {
-                return new[]
-                {
-                    SyntaxKind.SingleLineCommentTrivia,
-                    SyntaxKind.MultiLineCommentTrivia, 
-                    SyntaxKind.SingleLineDocumentationCommentTrivia,
-                    SyntaxKind.MultiLineDocumentationCommentTrivia
-                };
-            }
-        }
+            SyntaxKind.SingleLineCommentTrivia,
+            SyntaxKind.MultiLineCommentTrivia,
+            SyntaxKind.SingleLineDocumentationCommentTrivia,
+            SyntaxKind.MultiLineDocumentationCommentTrivia
+        };
 
-        private static IEnumerable<SyntaxKind> AccessorKinds
+        private static readonly IEnumerable<SyntaxKind> AccessorKinds = new[]
         {
-            get
-            {
-                return new[]
-                {
-                    SyntaxKind.GetAccessorDeclaration,
-                    SyntaxKind.SetAccessorDeclaration, 
-                    SyntaxKind.AddAccessorDeclaration,
-                    SyntaxKind.RemoveAccessorDeclaration
-                };
-            }
-        }
-        private static IEnumerable<SyntaxKind> FunctionKinds
-        {
-            get
-            {
-                return new[]
-                {
-                    SyntaxKind.ConstructorDeclaration,
-                    SyntaxKind.DestructorDeclaration, 
-                    SyntaxKind.MethodDeclaration,
-                    SyntaxKind.OperatorDeclaration,
-                    SyntaxKind.GetAccessorDeclaration,
-                    SyntaxKind.SetAccessorDeclaration,
-                    SyntaxKind.AddAccessorDeclaration,
-                    SyntaxKind.RemoveAccessorDeclaration
-                };
-            }
-        }
+            SyntaxKind.GetAccessorDeclaration,
+            SyntaxKind.SetAccessorDeclaration,
+            SyntaxKind.AddAccessorDeclaration,
+            SyntaxKind.RemoveAccessorDeclaration
+        };
 
-        private static IEnumerable<SyntaxKind> ComplexityIncreasingKinds
+        private static readonly IEnumerable<SyntaxKind> FunctionKinds = new[]
         {
-            get
-            {
-                return new[]
-                {
-                    SyntaxKind.IfStatement,
-                    SyntaxKind.SwitchStatement, 
-                    SyntaxKind.LabeledStatement,
-                    SyntaxKind.WhileStatement,
-                    SyntaxKind.DoStatement,
-                    SyntaxKind.ForStatement,
-                    SyntaxKind.ForEachStatement,
-                    SyntaxKind.LogicalAndExpression,
-                    SyntaxKind.LogicalOrExpression,
-                    SyntaxKind.CaseSwitchLabel
-                };
-            }
-        }
+            SyntaxKind.ConstructorDeclaration,
+            SyntaxKind.DestructorDeclaration,
+            SyntaxKind.MethodDeclaration,
+            SyntaxKind.OperatorDeclaration,
+            SyntaxKind.GetAccessorDeclaration,
+            SyntaxKind.SetAccessorDeclaration,
+            SyntaxKind.AddAccessorDeclaration,
+            SyntaxKind.RemoveAccessorDeclaration
+        };
+
+        private static readonly IEnumerable<SyntaxKind> ComplexityIncreasingKinds = new[]
+        {
+            SyntaxKind.IfStatement,
+            SyntaxKind.SwitchStatement,
+            SyntaxKind.LabeledStatement,
+            SyntaxKind.WhileStatement,
+            SyntaxKind.DoStatement,
+            SyntaxKind.ForStatement,
+            SyntaxKind.ForEachStatement,
+            SyntaxKind.LogicalAndExpression,
+            SyntaxKind.LogicalOrExpression,
+            SyntaxKind.CaseSwitchLabel
+        };
 
         #endregion
     }
