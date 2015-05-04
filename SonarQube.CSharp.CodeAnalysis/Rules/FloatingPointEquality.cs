@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-
+ 
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
@@ -64,9 +64,10 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 {
                     var equals = (BinaryExpressionSyntax) c.Node;
                     var equalitySymbol = c.SemanticModel.GetSymbolInfo(equals).Symbol as IMethodSymbol;
-                    
+
                     if (equalitySymbol != null &&
                         equalitySymbol.Name == "op_Equality" &&
+                        equalitySymbol.ContainingType != null &&
                         FloatingPointTypes.Contains(equalitySymbol.ContainingType.SpecialType))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, equals.OperatorToken.GetLocation()));
@@ -77,8 +78,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             context.RegisterSyntaxNodeAction(
                 c =>
                 {
-                    var binaryExpression = (BinaryExpressionSyntax)c.Node;
-
+                    var binaryExpression = (BinaryExpressionSyntax) c.Node;
                     var left = binaryExpression.Left as BinaryExpressionSyntax;
                     var right = binaryExpression.Right as BinaryExpressionSyntax;
 

@@ -8,6 +8,11 @@ namespace Tests.Diagnostics
     {
         void test(float f, Double d)
         {
+            dynamic din = null;
+            if (din == null)
+            {
+            }
+
             if (f == 3.14F) //Noncompliant
             {
             }
