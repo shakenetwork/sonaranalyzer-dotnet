@@ -34,6 +34,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Runner
         public static int Main(string[] args)
         {
             var configuration = new Configuration(XDocument.Load(args[0]));
+            var diagnosticsRunner = new DiagnosticsRunner(configuration.Analyzers());
 
             var xmlOutSettings = new XmlWriterSettings
             {
@@ -61,7 +62,6 @@ namespace SonarQube.CSharp.CodeAnalysis.Runner
 
                         var compilation = solution.Projects.First().GetCompilationAsync().Result;
                         var syntaxTree = compilation.SyntaxTrees.First();
-                        var diagnosticsRunner = new DiagnosticsRunner(configuration.Analyzers());
 
                         var metrics = new Metrics(syntaxTree);
 
