@@ -16,6 +16,10 @@ namespace Tests.Diagnostics
 
             target = -num;  // Compliant; intent to assign inverse value of num is clear
             target += num;
+
+            target += -num;
+            target = 
+                +num;
         }
     }
 }
