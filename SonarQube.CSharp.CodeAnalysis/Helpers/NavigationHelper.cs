@@ -86,15 +86,6 @@ namespace SonarQube.CSharp.CodeAnalysis.Helpers
             return index == 0 ? null : statements[index - 1];
         }
 
-        public static StatementSyntax GetSucceedingStatement(this StatementSyntax currentStatement)
-        {
-            var statements = currentStatement.Parent.ChildNodes().OfType<StatementSyntax>().ToList();
-
-            var index = statements.IndexOf(currentStatement);
-
-            return index == statements.Count-1 ? null : statements[index + 1];
-        }
-
         #endregion
     }
 }
