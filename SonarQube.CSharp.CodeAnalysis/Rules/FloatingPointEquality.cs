@@ -79,8 +79,8 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 c =>
                 {
                     var binaryExpression = (BinaryExpressionSyntax) c.Node;
-                    var left = binaryExpression.Left as BinaryExpressionSyntax;
-                    var right = binaryExpression.Right as BinaryExpressionSyntax;
+                    var left = TryGetBinaryExpression(binaryExpression.Left);
+                    var right = TryGetBinaryExpression(binaryExpression.Right);
 
                     if (right == null || left == null)
                     {
@@ -105,6 +105,17 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 );
         }
 
+        private static BinaryExpressionSyntax TryGetBinaryExpression(ExpressionSyntax expression)
+        {
+            var currentExpression = expression;
+            while (currentExpression is ParenthesizedExpressionSyntax)
+            {
+                currentExpression = ((ParenthesizedExpressionSyntax) currentExpression).Expression;
+            }
+
+            return currentExpression as BinaryExpressionSyntax;
+        }
+
         private static bool IsIndirectInequality(BinaryExpressionSyntax binaryExpression, BinaryExpressionSyntax right, BinaryExpressionSyntax left, SyntaxNodeAnalysisContext c)
         {
             return binaryExpression.IsKind(SyntaxKind.LogicalOrExpression) &&
@@ -122,7 +133,6 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         private static bool HasFloatingType(ExpressionSyntax right, ExpressionSyntax left, SemanticModel semanticModel)
         {
             var rightType = semanticModel.GetTypeInfo(right);
-
             if (rightType.Type != null && FloatingPointTypes.Contains(rightType.Type.SpecialType))
             {
                 return true;
