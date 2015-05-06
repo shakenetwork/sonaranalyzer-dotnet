@@ -15,23 +15,16 @@ namespace Tests.TestCases
             {
                 if (cond2 || cond3) // Noncompliant
                 {
-                    ;
-                    ;
-                    ;
                 }
             }
             if (cond1)
                 if (cond2 || cond3) // Noncompliant
                 {
-                    ;
-                    ;
-                    ;
                 }
             if (cond1)
             {
                 if (cond2 || cond3)
                 {
-                    ;
                 }
                 else
                 {
@@ -40,23 +33,24 @@ namespace Tests.TestCases
             }
             if (cond1)
             {
-                ;
-                ;
-                ;
+                var x = 5;
                 if (cond2 || cond3) 
                 {
-                    ;
-                    ;
-                    ;
                 }
             }
 
             if (cond1 && (cond2 || cond3))
             {
-                
-                    ;
-                    ;
-                    ;
+            }
+
+            if (cond1)
+            {
+                if (cond2 || cond3) // Compliant, parent has else
+                {
+                }
+            }
+            else
+            {
             }
         }
     }
