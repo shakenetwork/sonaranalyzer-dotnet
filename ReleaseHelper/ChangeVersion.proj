@@ -51,10 +51,4 @@
     <RegexTransform Items="@(NugetRunner)" />
     <RegexTransform Items="@(NugetDescriptor)" />
   </Target>
-  
-  <!--
-    <Target Name="Build">
-        <MSBuild Projects="$(SolutionRoot)\SonarQube.CSharp.CodeAnalysis.sln" Targets="Build" />
-    </Target>
-	-->
 </Project>
