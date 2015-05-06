@@ -109,18 +109,12 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             return false;
         }
 
-        private static IEnumerable<SyntaxKind> AllowedParentExpressionKinds
+        private static readonly IEnumerable<SyntaxKind> AllowedParentExpressionKinds = new[]
         {
-            get
-            {
-                return new[]
-                {
-                    SyntaxKind.ParenthesizedLambdaExpression,
-                    SyntaxKind.SimpleLambdaExpression,
-                    SyntaxKind.AnonymousMethodExpression,
-                    SyntaxKind.ObjectInitializerExpression
-                };
-            }
-        }
+            SyntaxKind.ParenthesizedLambdaExpression,
+            SyntaxKind.SimpleLambdaExpression,
+            SyntaxKind.AnonymousMethodExpression,
+            SyntaxKind.ObjectInitializerExpression
+        };
     }
 }

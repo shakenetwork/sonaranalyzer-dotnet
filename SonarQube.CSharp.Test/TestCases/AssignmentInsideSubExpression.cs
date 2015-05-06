@@ -63,6 +63,9 @@ namespace Tests.Diagnostics
             }
 
             if (i == 0) i = 2;
+            if ((i = 1) == 1) // Noncompliant
+            {
+            }
 
             string result = "";
             if (!string.IsNullOrEmpty(result)) result = result + " ";
