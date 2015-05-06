@@ -20,6 +20,7 @@
 
 using System.Collections.Immutable;
 using System.Linq;
+using System.Net;
 using System.Text.RegularExpressions;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
@@ -58,10 +59,10 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 c =>
                 {
                     var stringLiteral = (LiteralExpressionSyntax)c.Node;
-                    var text = stringLiteral.Token.Text;
+                    var text = stringLiteral.Token.Text.Substring(1, stringLiteral.Token.Text.Length - 2);
 
-                    var match = Regex.Match(text, @"^""(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})""$");
-                    if (!match.Success)
+                    IPAddress address;
+                    if (!IPAddress.TryParse(text, out address))
                     {
                         return;
                     }
@@ -71,21 +72,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     {
                         return;
                     }
-
-                    var subparts = match.Groups
-                        .Cast<Group>()
-                        .Select(@group => @group.Value)
-                        .Skip(1);
-
-                    if (subparts.Any(s =>
-                    {
-                        int i;
-                        return !int.TryParse(s, out i) || i < 0 || i >= 256;
-                    }))
-                    {
-                        return;
-                    }
-
+                    
                     c.ReportDiagnostic(Diagnostic.Create(Rule, stringLiteral.GetLocation(), text));
                 },
                 SyntaxKind.StringLiteralExpression);
