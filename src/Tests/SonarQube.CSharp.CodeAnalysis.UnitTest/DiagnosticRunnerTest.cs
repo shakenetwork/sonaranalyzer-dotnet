@@ -25,7 +25,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarQube.CSharp.CodeAnalysis.Runner;
 
-namespace SonarQube.CSharp.IntegrationTest
+namespace SonarQube.CSharp.CodeAnalysis.UnitTest
 {
     [TestClass]
     public class DiagnosticRunnerTest

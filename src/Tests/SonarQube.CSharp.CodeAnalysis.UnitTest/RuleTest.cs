@@ -29,7 +29,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarQube.CSharp.CodeAnalysis.Descriptor;
 using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings;
 
-namespace SonarQube.CSharp.IntegrationTest
+namespace SonarQube.CSharp.CodeAnalysis.UnitTest
 {
     [TestClass]
     public class RuleTest

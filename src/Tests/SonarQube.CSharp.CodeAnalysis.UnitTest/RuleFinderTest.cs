@@ -22,7 +22,7 @@ using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarQube.CSharp.CodeAnalysis.Descriptor;
 
-namespace SonarQube.CSharp.IntegrationTest
+namespace SonarQube.CSharp.CodeAnalysis.UnitTest
 {
     [TestClass]
     public class RuleFinderTest
