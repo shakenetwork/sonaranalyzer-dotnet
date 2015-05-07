@@ -18,6 +18,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System.Linq;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarQube.CSharp.CodeAnalysis.Descriptor;
@@ -37,6 +38,14 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest
         public void GetParameterlessAnalyzerTypes()
         {
             new RuleFinder().GetParameterlessAnalyzerTypes().Should().HaveCount(46);
+        }
+
+        [TestMethod]
+        public void GetAllAnalyzerTypes()
+        {
+            var finder = new RuleFinder();
+            var countParameterless = finder.GetParameterlessAnalyzerTypes().Count();
+            finder.GetAllAnalyzerTypes().Should().HaveCount(countParameterless + 10);
         }
     }
 }

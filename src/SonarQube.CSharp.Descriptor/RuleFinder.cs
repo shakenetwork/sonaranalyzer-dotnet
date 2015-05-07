@@ -68,6 +68,11 @@ namespace SonarQube.CSharp.CodeAnalysis.Descriptor
                         .Any(p => p.GetCustomAttributes<RuleParameterAttribute>().Any()));
         }
 
+        public IEnumerable<Type> GetAllAnalyzerTypes()
+        {
+            return diagnosticAnalyzers;
+        }
+
         internal IEnumerable<FullRuleDescriptor> GetRuleDescriptors()
         {
             return diagnosticAnalyzers.Select(GetRuleDescriptor);
