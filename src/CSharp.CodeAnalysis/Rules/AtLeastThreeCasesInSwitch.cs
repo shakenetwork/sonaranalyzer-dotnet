@@ -59,7 +59,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     var switchNode = (SwitchStatementSyntax)c.Node;
                     if (!HasAtLeastThreeLabels(switchNode))
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, c.Node.GetLocation()));
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, switchNode.SwitchKeyword.GetLocation()));
                     }
                 },
                 SyntaxKind.SwitchStatement);
