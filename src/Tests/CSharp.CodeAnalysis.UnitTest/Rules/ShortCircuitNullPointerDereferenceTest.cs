@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class ShortCircuitNullPointerDereferenceTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void ShortCircuitNullPointerDereference()
         {
             Verifier.Verify(@"TestCases\ShortCircuitNullPointerDereference.cs", new ShortCircuitNullPointerDereference());

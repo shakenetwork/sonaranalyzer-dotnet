@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class BooleanCheckInvertedTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void BooleanCheckInverted()
         {
             Verifier.Verify(@"TestCases\BooleanCheckInverted.cs", new BooleanCheckInverted());

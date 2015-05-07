@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class FileLinesTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void FileLines()
         {
             var diagnostic = new FileLines {Maximum = 12};

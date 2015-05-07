@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class TabCharacterTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void TabCharacter()
         {
             Verifier.Verify(@"TestCases\TabCharacter.cs", new TabCharacter());

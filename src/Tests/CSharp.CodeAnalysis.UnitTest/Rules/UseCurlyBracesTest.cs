@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class UseCurlyBracesTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void UseCurlyBraces()
         {
             Verifier.Verify(@"TestCases\UseCurlyBraces.cs", new UseCurlyBraces());

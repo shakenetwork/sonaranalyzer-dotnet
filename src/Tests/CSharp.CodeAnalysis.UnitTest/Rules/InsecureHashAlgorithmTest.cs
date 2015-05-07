@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class InsecureHashAlgorithmTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void InsecureHashAlgorithm()
         {
             Verifier.Verify(@"TestCases\InsecureHashAlgorithm.cs", new InsecureHashAlgorithm());

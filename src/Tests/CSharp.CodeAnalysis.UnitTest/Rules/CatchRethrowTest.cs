@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class CatchRethrowTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void CatchRethrow()
         {
             Verifier.Verify(@"TestCases\CatchRethrow.cs", new CatchRethrow());

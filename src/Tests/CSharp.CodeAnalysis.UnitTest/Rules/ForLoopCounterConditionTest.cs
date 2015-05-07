@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class ForLoopCounterConditionTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void ForLoopCounterCondition()
         {
             Verifier.Verify(@"TestCases\ForLoopCounterCondition.cs", new ForLoopCounterCondition());

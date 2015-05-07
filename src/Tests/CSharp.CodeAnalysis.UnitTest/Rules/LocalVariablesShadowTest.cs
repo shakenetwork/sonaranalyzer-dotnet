@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class LocalVariablesShadowTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void LocalVariablesShadow()
         {
             Verifier.Verify(@"TestCases\LocalVariablesShadow.cs", new LocalVariablesShadow());

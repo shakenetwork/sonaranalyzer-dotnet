@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class ReversedOperatorsTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void ReversedOperators()
         {
             Verifier.Verify(@"TestCases\ReversedOperators.cs", new ReversedOperators());

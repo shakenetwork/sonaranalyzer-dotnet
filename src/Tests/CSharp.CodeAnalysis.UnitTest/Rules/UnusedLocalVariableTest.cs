@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class UnusedLocalVariableTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void UnusedLocalVariable()
         {
             Verifier.Verify(@"TestCases\UnusedLocalVariable.cs", new UnusedLocalVariable());

@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class EmptyNestedBlockTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void EmptyNestedBlock()
         {
             Verifier.Verify(@"TestCases\EmptyNestedBlock.cs", new EmptyNestedBlock());

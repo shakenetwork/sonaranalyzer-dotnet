@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class TooManyParametersTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void TooManyParameters()
         {
             var diagnostic = new TooManyParameters {Maximum = 3};

@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class AssignmentInsideSubExpressionTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void AssignmentInsideSubExpression()
         {
             Verifier.Verify(@"TestCases\AssignmentInsideSubExpression.cs", new AssignmentInsideSubExpression());

@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class DeadStoresTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void DeadStores()
         {
             Verifier.Verify(@"TestCases\DeadStores.cs", new DeadStores());

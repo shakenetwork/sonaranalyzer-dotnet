@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class IfConditionalAlwaysTrueOrFalseTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void IfConditionalAlwaysTrueOrFalse()
         {
             Verifier.Verify(@"TestCases\IfConditionalAlwaysTrueOrFalse.cs", new IfConditionalAlwaysTrueOrFalse());

@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class ValuesUselesslyIncrementedTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void ValuesUselesslyIncremented()
         {
             Verifier.Verify(@"TestCases\ValuesUselesslyIncremented.cs", new ValuesUselesslyIncremented());

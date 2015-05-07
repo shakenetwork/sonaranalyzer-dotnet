@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class TooManyLabelsInSwitchTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void TooManyLabelsInSwitch()
         {
             var diagnostic = new TooManyLabelsInSwitch {Maximum = 2};

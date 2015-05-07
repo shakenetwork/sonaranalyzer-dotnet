@@ -28,6 +28,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class MagicNumberTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void MagicNumber()
         {
             var diagnostic = new MagicNumber

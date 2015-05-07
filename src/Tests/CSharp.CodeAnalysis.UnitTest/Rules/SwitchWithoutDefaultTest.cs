@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class SwitchWithoutDefaultTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void SwitchWithoutDefault()
         {
             Verifier.Verify(@"TestCases\SwitchWithoutDefault.cs", new SwitchWithoutDefault());

@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class ElseIfWithoutElseTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void ElseIfWithoutElse()
         {
             Verifier.Verify(@"TestCases\ElseIfWithoutElse.cs", new ElseIfWithoutElse());

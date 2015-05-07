@@ -27,12 +27,14 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class ConditionalStructureSameImplementationTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void ConditionalStructureSameImplementation_If()
         {
             Verifier.Verify(@"TestCases\ConditionalStructureSameImplementation_If.cs", new ConditionalStructureSameImplementation());
         }
 
         [TestMethod]
+        [TestCategory("Rule")]
         public void ConditionalStructureSameImplementation_Switch()
         {
             Verifier.Verify(@"TestCases\ConditionalStructureSameImplementation_Switch.cs", new ConditionalStructureSameImplementation());

@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class UnusedTypeParameterTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void UnusedTypeParameter()
         {
             Verifier.Verify(@"TestCases\UnusedTypeParameter.cs", new UnusedTypeParameter());

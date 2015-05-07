@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class SelfAssignedVariablesTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void SelfAssignedVariables()
         {
             Verifier.Verify(@"TestCases\SelfAssignedVariables.cs", new SelfAssignedVariables());

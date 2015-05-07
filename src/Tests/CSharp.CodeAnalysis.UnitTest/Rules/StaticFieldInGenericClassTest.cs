@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class StaticFieldInGenericClassTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void StaticFieldInGenericClass()
         {
             Verifier.Verify(@"TestCases\StaticFieldInGenericClass.cs", new StaticFieldInGenericClass());

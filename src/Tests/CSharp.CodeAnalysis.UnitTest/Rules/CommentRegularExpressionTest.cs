@@ -28,6 +28,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class CommentRegularExpressionTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void CommentRegularExpression()
         {
             var rules = ImmutableArray.Create(

@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class ObjectCreatedDroppedTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void ObjectCreatedDropped()
         {
             Verifier.Verify(@"TestCases\ObjectCreatedDropped.cs", new ObjectCreatedDropped());            

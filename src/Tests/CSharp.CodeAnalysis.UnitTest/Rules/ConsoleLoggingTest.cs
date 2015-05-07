@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class ConsoleLoggingTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void ConsoleLogging()
         {
             Verifier.Verify(@"TestCases\ConsoleLogging.cs", new ConsoleLogging());

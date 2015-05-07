@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class FloatingPointEqualityTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void FloatingPointEquality()
         {
             Verifier.Verify(@"TestCases\FloatingPointEquality.cs", new FloatingPointEquality());

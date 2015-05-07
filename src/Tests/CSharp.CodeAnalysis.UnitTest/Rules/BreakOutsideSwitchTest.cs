@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class BreakOutsideSwitchTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void BreakOutsideSwitch()
         {
             Verifier.Verify(@"TestCases\BreakOutsideSwitch.cs", new BreakOutsideSwitch());

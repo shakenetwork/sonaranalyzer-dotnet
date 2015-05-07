@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class MethodNameTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void MethodName()
         {
             var diagnostic = new MethodName {Convention = "^[A-Z][a-zA-Z0-9]+$"};

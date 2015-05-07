@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class GetHashCodeMutableTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void GetHashCodeMutable()
         {
             Verifier.Verify(@"TestCases\GetHashCodeMutable.cs", new GetHashCodeMutable());

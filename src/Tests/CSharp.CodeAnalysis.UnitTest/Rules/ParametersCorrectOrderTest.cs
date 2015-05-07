@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class ParametersCorrectOrderTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void ParametersCorrectOrder()
         {
             Verifier.Verify(@"TestCases\ParametersCorrectOrder.cs", new ParametersCorrectOrder());

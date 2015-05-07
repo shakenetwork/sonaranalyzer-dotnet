@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class EmptyStatementTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void EmptyStatement()
         {
             Verifier.Verify(@"TestCases\EmptyStatement.cs", new EmptyStatement());

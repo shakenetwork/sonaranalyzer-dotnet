@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class IdenticalExpressionsInBinaryOpTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void IdenticalExpressionsInBinaryOp()
         {
             Verifier.Verify(@"TestCases\IdenticalExpressionsInBinaryOp.cs", new IdenticalExpressionsInBinaryOp());

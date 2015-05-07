@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class AsyncAwaitIdentifierTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void AsyncAwaitIdentifier()
         {
             Verifier.Verify(@"TestCases\AsyncAwaitIdentifier.cs", new AsyncAwaitIdentifier());

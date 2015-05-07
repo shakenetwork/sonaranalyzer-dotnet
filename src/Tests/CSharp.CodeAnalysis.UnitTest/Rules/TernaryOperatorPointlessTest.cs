@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class TernaryOperatorPointlessTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void TernaryOperatorPointless()
         {
             Verifier.Verify(@"TestCases\TernaryOperatorPointless.cs", new TernaryOperatorPointless());

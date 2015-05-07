@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class RightCurlyBraceStartsLineTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void RightCurlyBraceStartsLine()
         {
             Verifier.Verify(@"TestCases\RightCurlyBraceStartsLine.cs", new RightCurlyBraceStartsLine());

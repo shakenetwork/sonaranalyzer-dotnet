@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class AtLeastThreeCasesInSwitchTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void AtLeastThreeCasesInSwitch()
         {
             Verifier.Verify(@"TestCases\AtLeastThreeCasesInSwitch.cs", new AtLeastThreeCasesInSwitch());

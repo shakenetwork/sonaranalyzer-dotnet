@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class ToStringNoNullTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void ToStringNoNull()
         {
             Verifier.Verify(@"TestCases\ToStringNoNull.cs", new ToStringNoNull());

@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class HardcodedIpAddressTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void HardcodedIpAddress()
         {
             Verifier.Verify(@"TestCases\HardcodedIpAddress.cs", new HardcodedIpAddress());

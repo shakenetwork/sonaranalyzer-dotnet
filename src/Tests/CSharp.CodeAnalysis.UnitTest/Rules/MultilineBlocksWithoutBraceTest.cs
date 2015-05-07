@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class MultilineBlocksWithoutBraceTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void MultilineBlocksWithoutBrace()
         {
             Verifier.Verify(@"TestCases\MultilineBlocksWithoutBrace.cs", new MultilineBlocksWithoutBrace());

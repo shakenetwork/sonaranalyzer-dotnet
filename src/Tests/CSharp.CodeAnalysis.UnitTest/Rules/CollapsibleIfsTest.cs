@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class CollapsibleIfsTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void CollapsibleIfs()
         {
             Verifier.Verify(@"TestCases\CollapsibleIfs.cs", new CollapsibleIfs());

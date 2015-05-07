@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class ForLoopCounterChangedTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void ForLoopCounterChanged()
         {
             Verifier.Verify(@"TestCases\ForLoopCounterChanged.cs", new ForLoopCounterChanged());

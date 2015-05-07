@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class ConditionalStructureSameConditionTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void ConditionalStructureSameCondition()
         {
             Verifier.Verify(@"TestCases\ConditionalStructureSameCondition.cs", new ConditionalStructureSameCondition());

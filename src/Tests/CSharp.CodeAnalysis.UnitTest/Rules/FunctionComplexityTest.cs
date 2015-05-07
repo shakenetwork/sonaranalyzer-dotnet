@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class FunctionComplexityTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void FunctionComplexity()
         {
             var diagnostic = new FunctionComplexity {Maximum = 3};

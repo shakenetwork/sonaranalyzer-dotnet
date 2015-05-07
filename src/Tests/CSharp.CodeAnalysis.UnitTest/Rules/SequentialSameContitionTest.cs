@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class SequentialSameContitionTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void SequentialSameContition()
         {
             Verifier.Verify(@"TestCases\SequentialSameContition.cs", new SequentialSameContition());

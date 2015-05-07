@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class MethodsWithoutInstanceDataTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void MethodsWithoutInstanceData()
         {
             Verifier.Verify(@"TestCases\MethodsWithoutInstanceData.cs", new MethodsWithoutInstanceData());

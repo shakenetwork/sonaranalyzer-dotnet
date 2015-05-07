@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class ExpressionComplexityTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void ExpressionComplexity()
         {
             var diagnostic = new ExpressionComplexity {Maximum = 3};

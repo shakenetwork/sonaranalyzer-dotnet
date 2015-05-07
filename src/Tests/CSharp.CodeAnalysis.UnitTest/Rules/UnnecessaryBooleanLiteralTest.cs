@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class UnnecessaryBooleanLiteralTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void UnnecessaryBooleanLiteral()
         {
             Verifier.Verify(@"TestCases\UnnecessaryBooleanLiteral.cs", new UnnecessaryBooleanLiteral());

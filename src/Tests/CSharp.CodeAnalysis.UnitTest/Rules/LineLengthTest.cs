@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class LineLengthTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void LineLength()
         {
             var diagnostic = new LineLength {Maximum = 47};

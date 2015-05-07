@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class CommentedOutCodeTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void CommentedOutCode()
         {
             Verifier.Verify(@"TestCases\CommentedOutCode.cs", new CommentedOutCode());

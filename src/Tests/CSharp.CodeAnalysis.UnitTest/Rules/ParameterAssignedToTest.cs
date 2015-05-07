@@ -27,6 +27,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
     public class ParameterAssignedToTest
     {
         [TestMethod]
+        [TestCategory("Rule")]
         public void ParameterAssignedTo()
         {
             Verifier.Verify(@"TestCases\ParameterAssignedTo.cs", new ParameterAssignedTo());
