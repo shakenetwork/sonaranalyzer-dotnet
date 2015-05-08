@@ -59,7 +59,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 c =>
                 {
                     var stringLiteral = (LiteralExpressionSyntax)c.Node;
-                    var text = stringLiteral.Token.Text.Substring(1, stringLiteral.Token.Text.Length - 2);
+                    var text = stringLiteral.Token.ValueText;
 
                     IPAddress address;
                     if (!IPAddress.TryParse(text, out address))
