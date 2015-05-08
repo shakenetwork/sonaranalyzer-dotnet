@@ -60,12 +60,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     {
                         var methodDeclaration = c.Node as MethodDeclarationSyntax;
                         var classDeclaration = c.Node as ClassDeclarationSyntax;
-
-                        if (methodDeclaration == null && classDeclaration == null)
-                        {
-                            return;
-                        }
-
+                        
                         if (methodDeclaration != null &&
                             (methodDeclaration.Modifiers.Any(modifier => ModifiersToSkip.Contains(modifier.Kind())) ||
                              methodDeclaration.Body == null))
@@ -102,17 +97,17 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                             .Select(typeParameter => typeParameter.Identifier.Text)
                             .ToList();
 
-                        var declarations =
-                            declarationSymbol.DeclaringSyntaxReferences.Select(reference => reference.GetSyntax());
+                        var declarations = declarationSymbol.DeclaringSyntaxReferences
+                            .Select(reference => reference.GetSyntax());
 
-                        var usedTypeParameters = declarations.SelectMany(declaration => declaration.DescendantNodes())
+                        var usedTypeParameters = declarations
+                            .SelectMany(declaration => declaration.DescendantNodes())
                             .OfType<IdentifierNameSyntax>()
                             .Select(identifier =>
                             {
                                 var semanticModelOfThisTree = identifier.SyntaxTree == c.Node.SyntaxTree
                                     ? c.SemanticModel
-                                    : analysisContext.Compilation
-                                        .GetSemanticModel(identifier.SyntaxTree);
+                                    : analysisContext.Compilation.GetSemanticModel(identifier.SyntaxTree);
 
                                 if (semanticModelOfThisTree == null)
                                 {
@@ -124,8 +119,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                             .Select(symbol => symbol.Name)
                             .ToList();
 
-                        foreach (
-                            var typeParameter in
+                        foreach (var typeParameter in
                                 typeParameters.Where(typeParameter => !usedTypeParameters.Contains(typeParameter)))
                         {
                             c.ReportDiagnostic(Diagnostic.Create(Rule,

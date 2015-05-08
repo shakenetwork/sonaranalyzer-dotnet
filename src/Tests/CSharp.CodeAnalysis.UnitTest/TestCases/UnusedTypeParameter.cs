@@ -5,6 +5,11 @@ using System.Collections.Generic;
 
 namespace Tests.Diagnostics
 {
+    public class NonGeneric
+    {
+
+    }
+
     public interface Interface
     {
         int Add<T>(int a, int b); //Compliant
