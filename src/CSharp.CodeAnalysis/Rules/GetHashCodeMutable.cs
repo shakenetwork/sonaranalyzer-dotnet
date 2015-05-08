@@ -66,8 +66,12 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     {
                         return;
                     }
-
-                    var parentAndSelfTypes = GetParentAndSelfTypes(methodSymbol.ContainingType);
+                    
+                    var fieldsOfClass = c.SemanticModel.LookupBaseMembers(methodSyntax.SpanStart)
+                        .Concat(methodSymbol.ContainingType.GetMembers())
+                        .Select(symbol => symbol as IFieldSymbol)
+                        .Where(symbol => symbol != null)
+                        .ToList();
 
                     var identifiers = methodSyntax.DescendantNodes()
                         .OfType<IdentifierNameSyntax>();
@@ -79,28 +83,15 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                         if (identifierSymbol == null ||
                             identifierSymbol.IsConst ||
                             identifierSymbol.IsReadOnly ||
-                            !parentAndSelfTypes.Contains(identifierSymbol.ContainingType))
+                            !fieldsOfClass.Contains(identifierSymbol))
                         {
                             continue;
                         }
-
+                        
                         c.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(), identifier.Identifier.Text));
                     }
                 },
                 SyntaxKind.MethodDeclaration);
-        }
-
-        private static List<INamedTypeSymbol> GetParentAndSelfTypes(INamedTypeSymbol containingType)
-        {
-            var parentChain = new List<INamedTypeSymbol>();
-            var currentType = containingType;
-            while (currentType != null)
-            {
-                parentChain.Add(currentType);
-                currentType = currentType.BaseType;
-            }
-
-            return parentChain;
         }
     }
 }
