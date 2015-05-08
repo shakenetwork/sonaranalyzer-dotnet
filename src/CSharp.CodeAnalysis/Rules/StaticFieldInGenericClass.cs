@@ -69,21 +69,15 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
                     var fields = classDeclaration.Members
                         .OfType<FieldDeclarationSyntax>()
-                        .Where(f => f.Modifiers.Any(m => m.IsKind(SyntaxKind.StaticKeyword)))
-                        .ToList();
+                        .Where(f => f.Modifiers.Any(m => m.IsKind(SyntaxKind.StaticKeyword)));
 
-                    fields.ForEach(field =>
+                    foreach (var field in fields.Where(field => !HasGenericType(field.Declaration.Type, typeParameterNames, c)))
                     {
-                        if (HasGenericType(field.Declaration.Type, typeParameterNames, c))
-                        {
-                            return;
-                        }
-
                         field.Declaration.Variables.ToList().ForEach(variable =>
                         {
                             CheckMember(variable, variable.Identifier.GetLocation(), typeParameterNames, c);
                         });
-                    });
+                    }
                     
                     var properties = classDeclaration.Members
                         .OfType<PropertyDeclarationSyntax>()
