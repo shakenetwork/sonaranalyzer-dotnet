@@ -88,8 +88,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             context.RegisterSyntaxNodeAction(
                 c =>
                 {
-                    var variableDeclarator = (VariableDeclaratorSyntax)c.Node;
-                    var variableDeclaration = variableDeclarator.Parent;
+                    var variableDeclaration = (VariableDeclarationSyntax)c.Node;
                     var localDeclarationStatementSyntax = variableDeclaration.Parent;
 
                     var declaringBlock = localDeclarationStatementSyntax.Parent as BlockSyntax;
@@ -98,66 +97,69 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                         return;
                     }
 
-                    var variableSymbol = c.SemanticModel.GetDeclaredSymbol(variableDeclarator);
-
-                    var references = declaringBlock.DescendantNodes()
-                        .OfType<IdentifierNameSyntax>()
-                        .Where(syntax => syntax.SpanStart > variableDeclarator.FullSpan.End)
-                        .Where(syntax =>
-                            variableSymbol.Equals(c.SemanticModel.GetSymbolInfo(syntax).Symbol))
-                        .ToList();
-
-                    if (references.Count == 0)
+                    foreach (var variableDeclarator in variableDeclaration.Variables)
                     {
-                        if (variableDeclarator.Initializer != null)
+                        var variableSymbol = c.SemanticModel.GetDeclaredSymbol(variableDeclarator);
+
+                        var references = declaringBlock.DescendantNodes()
+                            .OfType<IdentifierNameSyntax>()
+                            .Where(syntax => syntax.SpanStart > variableDeclarator.FullSpan.End)
+                            .Where(syntax =>
+                                variableSymbol.Equals(c.SemanticModel.GetSymbolInfo(syntax).Symbol))
+                            .ToList();
+
+                        if (references.Count == 0)
                         {
-                            c.ReportDiagnostic(Diagnostic.Create(Rule, variableDeclarator.Initializer.GetLocation(),
-                                variableDeclarator.Identifier.Text));
+                            if (variableDeclarator.Initializer != null)
+                            {
+                                c.ReportDiagnostic(Diagnostic.Create(Rule, variableDeclarator.Initializer.GetLocation(),
+                                    variableDeclarator.Identifier.Text));
+                            }
+                            continue;
                         }
-                        return;
-                    }
 
-                    var assignments = declaringBlock.DescendantNodes()
-                        .OfType<AssignmentExpressionSyntax>()
-                        .Where(assignment =>
-                            variableSymbol.Equals(c.SemanticModel.GetSymbolInfo(assignment.Left).Symbol))
-                        .ToList();
+                        var assignments = declaringBlock.DescendantNodes()
+                            .OfType<AssignmentExpressionSyntax>()
+                            .Where(assignment =>
+                                variableSymbol.Equals(c.SemanticModel.GetSymbolInfo(assignment.Left).Symbol))
+                            .ToList();
 
-                    if (assignments.Count == 0)
-                    {
-                        return;
-                    }
-
-                    if (variableDeclarator.Initializer != null &&
-                        !MightHaveReferenceBetween(variableDeclarator.Initializer, assignments.First(), references))
-                    {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, variableDeclarator.Initializer.GetLocation(),
-                            variableDeclarator.Identifier.Text));
-                    }
-
-                    for (var i = 1; i < assignments.Count; i++)
-                    {
-                        var first = assignments[i - 1];
-                        var second = assignments[i];
-                        
-                        if (MightHaveReferenceBetween(first, second, references))
+                        if (assignments.Count == 0)
                         {
                             continue;
                         }
 
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, first.GetLocation(),
-                            variableDeclarator.Identifier.Text));
-                    }
-                    
-                    var lastAssignment = assignments.Last();
-                    if (!references.Any(reference => reference.SpanStart > lastAssignment.Span.End) &&
-                        !InLoop(lastAssignment, declaringBlock))
-                    {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, lastAssignment.GetLocation(),
-                            variableDeclarator.Identifier.Text));
+                        if (variableDeclarator.Initializer != null &&
+                            !MightHaveReferenceBetween(variableDeclarator.Initializer, assignments.First(), references))
+                        {
+                            c.ReportDiagnostic(Diagnostic.Create(Rule, variableDeclarator.Initializer.GetLocation(),
+                                variableDeclarator.Identifier.Text));
+                        }
+
+                        for (var i = 1; i < assignments.Count; i++)
+                        {
+                            var first = assignments[i - 1];
+                            var second = assignments[i];
+
+                            if (MightHaveReferenceBetween(first, second, references))
+                            {
+                                continue;
+                            }
+
+                            c.ReportDiagnostic(Diagnostic.Create(Rule, first.GetLocation(),
+                                variableDeclarator.Identifier.Text));
+                        }
+
+                        var lastAssignment = assignments.Last();
+                        if (!references.Any(reference => reference.SpanStart > lastAssignment.Span.End) &&
+                            !InLoop(lastAssignment, declaringBlock))
+                        {
+                            c.ReportDiagnostic(Diagnostic.Create(Rule, lastAssignment.GetLocation(),
+                                variableDeclarator.Identifier.Text));
+                        }
                     }
                 },
-                SyntaxKind.VariableDeclarator);
+                SyntaxKind.VariableDeclaration);
         }
         
         private static bool MightHaveReferenceBetween(SyntaxNode first, AssignmentExpressionSyntax second, List<IdentifierNameSyntax> references)
