@@ -11,6 +11,13 @@ namespace Tests.TestCases
     {
         public void Test(bool cond1, bool cond2, bool cond3)
         {
+            while (cond1)
+            {
+                if (cond2 || cond3)
+                {
+                }
+            }
+
             if (cond1)
             {
                 if (cond2 || cond3) // Noncompliant
