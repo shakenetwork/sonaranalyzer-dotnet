@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Go" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildProjectDirectory)\Version.props" />
   <Import Project="$(MSBuildProjectDirectory)\RegexTransform.tasks" />
   <PropertyGroup>
@@ -38,9 +38,6 @@
       <ReplaceWith>$(NugetVersion)</ReplaceWith>
     </NugetDescriptor>
   </ItemGroup>
-
-  <Target Name="Go" DependsOnTargets="UpdateAssemblyVersion">
-  </Target>
 
   <Target Name="UpdateAssemblyVersion">
     <RegexTransform Items="@(AssemblyVersion)" />
