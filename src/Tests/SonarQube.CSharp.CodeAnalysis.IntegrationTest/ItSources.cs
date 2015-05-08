@@ -21,12 +21,13 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Xml;
+using System.Xml.Linq;
+using System.Xml.Serialization;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarQube.CSharp.CodeAnalysis.Descriptor;
 using SonarQube.CSharp.CodeAnalysis.Rules;
@@ -41,6 +42,9 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
         private FileInfo[] codeFiles;
         private IList<Type> analyzerTypes;
         private string xmlInputPattern;
+        private string pathToRoot;
+        private DirectoryInfo output;
+
         private static readonly XmlWriterSettings Settings = new XmlWriterSettings
         {
             Encoding = new UTF8Encoding(false),
@@ -56,21 +60,28 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
             CloseOutput = false,
             OmitXmlDeclaration = true
         };
-
+        
         [TestInitialize]
         public void Setup()
         {
-            var pathToRoot = Environment.GetEnvironmentVariable(
-                ConfigurationManager.AppSettings["env.var.it-sources"]);
+            pathToRoot = new DirectoryInfo(
+                Environment.GetEnvironmentVariable(
+                    ConfigurationManager.AppSettings["env.var.it-sources"])).FullName;
 
-            var rootDirectory = new DirectoryInfo(
+            var rootItSources = new DirectoryInfo(
                 Path.Combine(pathToRoot, ConfigurationManager.AppSettings["path.it-sources.input"]));
 
-            codeFiles = rootDirectory.GetFiles("*.cs", SearchOption.AllDirectories);
+            codeFiles = rootItSources.GetFiles("*.cs", SearchOption.AllDirectories);
 
             analyzerTypes = new RuleFinder().GetAllAnalyzerTypes().ToList();
 
             xmlInputPattern = GenerateAnalysisInputFilePattern();
+
+            output = new DirectoryInfo("GeneratedOutput");
+            if (!output.Exists)
+            {
+                output.Create();
+            }
         }
 
         private string GenerateAnalysisInputFilePattern()
@@ -120,8 +131,7 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
                 var rule = analyzerType.GetCustomAttribute<RuleAttribute>();
                 writer.WriteString(rule.Key);
                 writer.WriteEndElement();
-
-
+                
                 switch (rule.Key)
                 {
                     case CommentRegularExpression.DiagnosticId:
@@ -199,6 +209,23 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
 
             var rules = xdoc.CreateElement("Rules");
             rules.InnerXml = GenerateAnalysisInputFileSegment(analyzerType);
+            xdoc.DocumentElement.AppendChild(rules);
+
+            return xdoc.OuterXml;
+        }
+        private string GenerateAnalysisInputFile()
+        {
+            var xdoc = new XmlDocument();
+            xdoc.LoadXml(xmlInputPattern);
+
+            var rules = xdoc.CreateElement("Rules");
+            
+            var sb = new StringBuilder();
+            foreach (var analyzerType in analyzerTypes)
+            {
+                sb.Append(GenerateAnalysisInputFileSegment(analyzerType));
+            }
+            rules.InnerXml = sb.ToString();
 
             xdoc.DocumentElement.AppendChild(rules);
 
@@ -207,46 +234,148 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
 
         [TestMethod]
         [TestCategory("Integration")]
-        public void ItSources_Match_Expected()
+        [Ignore]
+        public void ItSources_Match_Expected_Single()
         {
-            var sw = Stopwatch.StartNew();
-
-            var output = new DirectoryInfo("GeneratedOutput");
-            if (!output.Exists)
-            {
-                output.Create();
-            }
-
             foreach (var analyzerType in analyzerTypes)
             {
-                var ruleId = analyzerType.GetCustomAttribute<RuleAttribute>().Key;
-
-                var input = GenerateAnalysisInputFile(analyzerType);
                 var tempInputFilePath = Path.GetTempFileName();
                 try
                 {
-                    File.AppendAllText(tempInputFilePath, input);
+                    System.IO.File.AppendAllText(tempInputFilePath, GenerateAnalysisInputFile(analyzerType));
+                    var outputFileName = string.Format("{0}.xml", analyzerType.GetCustomAttribute<RuleAttribute>().Key);
+                    var outputPath = Path.Combine(output.FullName, outputFileName);
 
-                    var retValue = Program.Main(new[]
-                    {
-                        tempInputFilePath,
-                        Path.Combine(output.FullName, string.Format("{0}.xml", ruleId))
-                    });
-
-                    if (retValue != 0)
-                    {
-                        throw new Exception("Analysis failed with error");
-                    }
+                    CallMainAndCheckResult(tempInputFilePath, outputPath, outputFileName);
                 }
                 finally
                 {
-                    File.Delete(tempInputFilePath);
+                    System.IO.File.Delete(tempInputFilePath);
                 }
-                Console.WriteLine(sw.Elapsed);
+            }
+        }
+
+        [TestMethod]
+        [TestCategory("Integration")]
+        public void ItSources_Match_Expected_All()
+        {
+            var tempInputFilePath = Path.GetTempFileName();
+            try
+            {
+                System.IO.File.AppendAllText(tempInputFilePath, GenerateAnalysisInputFile());
+                var outputPath = Path.Combine(output.FullName, "all.xml");
+                const string outputFileName = "all.xml";
+
+                CallMainAndCheckResult(tempInputFilePath, outputPath, outputFileName);
+            }
+            finally
+            {
+                System.IO.File.Delete(tempInputFilePath);
+            }
+        }
+
+        private void CallMainAndCheckResult(string tempInputFilePath, string outputPath, string outputFileName)
+        {
+            var retValue = Program.Main(new[]
+            {
+                tempInputFilePath,
+                outputPath
+            });
+
+            var fileContents = System.IO.File.ReadAllText(outputPath);
+            fileContents = fileContents.Replace(pathToRoot, ConfigurationManager.AppSettings["env.var.it-sources"]);
+            System.IO.File.WriteAllText(outputPath, fileContents);
+
+            if (retValue != 0)
+            {
+                Assert.Fail("Analysis failed with error");
             }
 
-            sw.Stop();
-            Console.WriteLine(sw.Elapsed);
+            if (!XmlsAreEqual(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Expected", outputFileName), outputPath))
+            {
+                Assert.Fail("Expected and actual files are different");
+            }
         }
+        
+        private static bool XmlsAreEqual(string pathExpected, string pathActual)
+        {
+            var first = XDocument.Load(new FileInfo(pathExpected).FullName);
+            var second = XDocument.Load(new FileInfo(pathActual).FullName);
+
+            var s = new XmlSerializer(typeof(AnalysisOutput));
+            var output1 = (AnalysisOutput)s.Deserialize(first.CreateReader());
+            var output2 = (AnalysisOutput)s.Deserialize(second.CreateReader());
+
+            if (output1.Files.Count != output2.Files.Count)
+            {
+                Console.WriteLine("The expected number of 'File' entries doesn't match in file: '{0}'", pathActual);
+                return false;
+            }
+
+            var files1 = output1.Files.OrderBy(file => file.Path).ToList();
+            var files2 = output2.Files.OrderBy(file => file.Path).ToList();
+
+            for (int i = 0; i < files1.Count; i++)
+            {
+                var file1 = files1[i];
+                var file2 = files2[i];
+
+                if (file1.Path != file2.Path ||
+                    file1.Issues.Count != file2.Issues.Count)
+                {
+                    Console.WriteLine("The expected file paths or the issue count doesn't match in file: '{0}'", file2.Path);
+                    return false;
+                }
+
+                var issues1 = file1.Issues.OrderBy(issue => issue.Id).ThenBy(issue => issue.Line).ToList();
+                var issues2 = file2.Issues.OrderBy(issue => issue.Id).ThenBy(issue => issue.Line).ToList();
+
+                for (int j = 0; j < issues1.Count; j++)
+                {
+                    var issue1 = issues1[j];
+                    var issue2 = issues2[j];
+
+                    if (issue1.Id != issue2.Id || issue1.Line != issue2.Line || issue1.Message != issue2.Message)
+                    {
+                        Console.WriteLine("The expected issues don't match in file: '{0}'", file1);
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
+
+        #region XML model
+
+        public class AnalysisOutput
+        {
+            public AnalysisOutput()
+            {
+                Files = new List<File>();
+            }
+
+            public List<File> Files { get; set; }
+        }
+
+        public class File
+        {
+            public File()
+            {
+                Issues = new List<Issue>();
+            }
+
+            public string Path { get; set; }
+            public List<Issue> Issues { get; set; }
+        }
+
+        public class Issue
+        {
+            public string Id { get; set; }
+            public int Line { get; set; }
+            public string Message { get; set; }
+        }
+
+        #endregion
     }
 }
