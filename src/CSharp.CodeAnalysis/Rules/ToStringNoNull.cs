@@ -59,9 +59,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     var methodDeclaration = cbc.CodeBlock as MethodDeclarationSyntax;
 
                     if (methodDeclaration == null || 
-                        methodDeclaration.Identifier.Text != "ToString" ||
-                        methodDeclaration.ParameterList.Parameters.Any() ||
-                        !methodDeclaration.Modifiers.Select(modifier => modifier.Kind()).Contains(SyntaxKind.OverrideKeyword))
+                        methodDeclaration.Identifier.Text != "ToString")
                     {
                         return;
                     }

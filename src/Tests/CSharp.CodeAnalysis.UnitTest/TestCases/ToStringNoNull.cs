@@ -10,7 +10,7 @@ namespace Tests.Diagnostics
             return null;
         }
 
-        public override string ToString()
+        public string ToString()
         {
             if (this.collection.Count == 0)
             {
