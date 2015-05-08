@@ -64,7 +64,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                         return;
                     }
 
-                    var methodSymbol = cbc.SemanticModel.GetDeclaredSymbol(methodDeclaration);
+                    var methodSymbol = cbc.OwningSymbol as IMethodSymbol;
 
                     if (methodSymbol == null ||
                         HasAllowedModifier(methodSymbol) ||
@@ -74,27 +74,29 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     }
 
                     var reportShouldBeStatic = true;
-                    cbc.RegisterSyntaxNodeAction(c =>
-                    {
-                        var identifierSymbol = c.SemanticModel.GetSymbolInfo(c.Node);
-
-                        if (identifierSymbol.Symbol == null)
+                    cbc.RegisterSyntaxNodeAction(
+                        c =>
                         {
-                            return;
-                        }
+                            var identifierSymbol = c.SemanticModel.GetSymbolInfo(c.Node);
 
-                        if (PossibleMemberSymbolKinds.Contains(identifierSymbol.Symbol.Kind) &&
-                            !identifierSymbol.Symbol.IsStatic)
-                        {
-                            reportShouldBeStatic = false;
-                        }
-                    },
+                            if (identifierSymbol.Symbol == null)
+                            {
+                                return;
+                            }
+
+                            if (PossibleMemberSymbolKinds.Contains(identifierSymbol.Symbol.Kind) &&
+                                !identifierSymbol.Symbol.IsStatic)
+                            {
+                                reportShouldBeStatic = false;
+                            }
+                        },
                         SyntaxKind.IdentifierName, SyntaxKind.GenericName);
 
-                    cbc.RegisterSyntaxNodeAction(c =>
-                    {
-                        reportShouldBeStatic = false;
-                    },
+                    cbc.RegisterSyntaxNodeAction(
+                        c =>
+                        {
+                            reportShouldBeStatic = false;
+                        },
                         SyntaxKind.ThisExpression);
 
 
