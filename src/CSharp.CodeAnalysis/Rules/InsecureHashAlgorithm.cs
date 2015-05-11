@@ -102,49 +102,45 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     }
 
                     var methodName = string.Format("{0}.{1}", methodSymbol.ContainingType.ToString(), methodSymbol.Name);
+                    string algorithmName;
                     if (MethodNamesToReachHashAlgorithm.Contains(methodName) &&
-                        IsArgumentMatchingAlgorithmName(invocation))
+                        TryGetAlgorithmName(invocation.ArgumentList, out algorithmName))
                     {
-                        var algorithm = InsecureHashAlgorithmTypeNames.Values.First(algorithmName =>
-                            ((LiteralExpressionSyntax) invocation.ArgumentList.Arguments.First().Expression).Token
-                                .ValueText.StartsWith(algorithmName));
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(), algorithm));
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(), algorithmName));
                     }
                 },
                 SyntaxKind.InvocationExpression);
         }
 
-        private static bool IsArgumentMatchingAlgorithmName(InvocationExpressionSyntax invocation)
+        private static bool TryGetAlgorithmName(ArgumentListSyntax argumentList, out string algorithmName)
         {
-            return
-                invocation.ArgumentList != null &&
-                invocation.ArgumentList.Arguments.Count > 0 &&
-                invocation.ArgumentList.Arguments.First().Expression.IsKind(SyntaxKind.StringLiteralExpression) &&
-                InsecureHashAlgorithmTypeNames.Values.Any(algorithmName =>
-                    ((LiteralExpressionSyntax) invocation.ArgumentList.Arguments.First().Expression).Token.ValueText
-                        .StartsWith(algorithmName));
+            if (argumentList == null ||
+                argumentList.Arguments.Count == 0 ||
+                !argumentList.Arguments.First().Expression.IsKind(SyntaxKind.StringLiteralExpression))
+            {
+                algorithmName = null;
+                return false;
+            }
+
+            algorithmName = InsecureHashAlgorithmTypeNames.Values
+                .FirstOrDefault(alg =>
+                    ((LiteralExpressionSyntax) argumentList.Arguments.First().Expression).Token.ValueText.StartsWith(alg));
+
+            return algorithmName != null;
         }
 
         private static ITypeSymbol GetInsecureAlgorithmBase(ITypeSymbol type)
         {
-            var typeChain = new List<ITypeSymbol>();
+            ITypeSymbol insecureAlgorithmBase = null;
+            ITypeSymbol currentType = type;
 
-            var currentType = type;
-            while (currentType != null)
+            while (currentType != null && currentType.ToString() != HashAlgorithmTypeName)
             {
-                typeChain.Add(currentType);
+                insecureAlgorithmBase = currentType;
                 currentType = currentType.BaseType;
             }
             
-            var hashAlgorithmType = typeChain.FirstOrDefault(t => t.ToString() == HashAlgorithmTypeName);
-            if (hashAlgorithmType == null)
-            {
-                return null;
-            }
-
-            var index = typeChain.IndexOf(hashAlgorithmType);
-
-            return index == 0 ? null : typeChain[index - 1];
+            return currentType == null ? null : insecureAlgorithmBase;
         }
     }
 }
