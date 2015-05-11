@@ -73,6 +73,8 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                         return;
                     }
 
+                    var inheritanceChain = GetInheritanceChain(methodSymbol);
+
                     var reportShouldBeStatic = true;
                     cbc.RegisterSyntaxNodeAction(
                         c =>
@@ -85,7 +87,8 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                             }
 
                             if (PossibleMemberSymbolKinds.Contains(identifierSymbol.Symbol.Kind) &&
-                                !identifierSymbol.Symbol.IsStatic)
+                                !identifierSymbol.Symbol.IsStatic &&
+                                inheritanceChain.Contains(identifierSymbol.Symbol.ContainingType))
                             {
                                 reportShouldBeStatic = false;
                             }
@@ -109,6 +112,18 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                         }
                     });
                 });
+        }
+
+        private static List<ITypeSymbol> GetInheritanceChain(IMethodSymbol methodSymbol)
+        {
+            var inheritanceChain = new List<ITypeSymbol>();
+            var currentType = methodSymbol.ContainingType;
+            while (currentType != null)
+            {
+                inheritanceChain.Add(currentType);
+                currentType = currentType.BaseType;
+            }
+            return inheritanceChain;
         }
 
         private static bool HasAllowedModifier(IMethodSymbol methodSymbol)

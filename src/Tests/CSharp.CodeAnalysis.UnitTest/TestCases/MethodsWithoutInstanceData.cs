@@ -28,6 +28,7 @@ namespace Tests.Diagnostics
 
         public abstract void DoStuffAbstract();
     }
+    
 
     public class MethodsWithoutInstanceData : MethodsWithoutInstanceDataBase
     {
@@ -62,13 +63,31 @@ namespace Tests.Diagnostics
         {
             MyStaticProperty = y;
         }
-
+        
         public void Test5()
         {
             var o = this;
         }
+
+        public void Test6() //Noncompliant
+        {
+            var x = new OtherClass().IntProp;
+        }
     }
-    
+
+    public class OtherClassDerived : OtherClass
+    {
+        public void Test6()
+        {
+            var x = IntProp;
+        }
+    }
+
+    public class OtherClass
+    {
+        public int IntProp { get; set; }
+    }
+
     public class GenericMethods
     {
         public int I { get; set; }
