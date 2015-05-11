@@ -48,7 +48,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        [RuleParameter("Max", PropertyType.Integer, "Maximum authorized lines in a file.", "1000")]
+        [RuleParameter("maximumFileLocThreshold", PropertyType.Integer, "Maximum authorized lines in a file.", "1000")]
         public int Maximum { get; set; }
 
         public override void Initialize(AnalysisContext context)

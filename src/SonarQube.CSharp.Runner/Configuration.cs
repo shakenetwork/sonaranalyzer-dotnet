@@ -243,7 +243,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Runner
                 return;
             }
             analyzer.Maximum = int.Parse(
-                Parameters[analyzer.SupportedDiagnostics.Single().Id].Single()["Max"],
+                Parameters[analyzer.SupportedDiagnostics.Single().Id].Single()["maximumFileLocThreshold"],
                 NumberStyles.None, CultureInfo.InvariantCulture);
             builder.Add(analyzer);
         }
