@@ -10,32 +10,39 @@
     <AssemblyVersion Include="$(SolutionRoot)\src\AssemblyInfo.Shared.cs">
       <Find>(?&lt;=\[assembly\: AssemblyVersion\(")([^"]*)</Find>
       <ReplaceWith>$(AssemblyVersion)</ReplaceWith>
+      <ExpectedMatchCount>1</ExpectedMatchCount>
     </AssemblyVersion>
     <AssemblyFileVersion Include="$(SolutionRoot)\src\AssemblyInfo.Shared.cs">
       <Find>(?&lt;=\[assembly\: AssemblyFileVersion\(")([^"]*)</Find>
       <ReplaceWith>$(AssemblyFileVersion)</ReplaceWith>
+      <ExpectedMatchCount>1</ExpectedMatchCount>
     </AssemblyFileVersion>
     <AssemblyInformationalVersion Include="$(SolutionRoot)\src\AssemblyInfo.Shared.cs">
       <Find>(?&lt;=\[assembly\: AssemblyInformationalVersion\(")([^"]*)</Find>
       <ReplaceWith>$(AssemblyInformationalVersion)</ReplaceWith>
+      <ExpectedMatchCount>1</ExpectedMatchCount>
     </AssemblyInformationalVersion>
 
     <VsixVersion Include="$(SolutionRoot)\src\CSharp.CodeAnalysis.Vsix\source.extension.vsixmanifest">
       <Find>(?&lt;=Identity.*Version=")([^"]*)</Find>
       <ReplaceWith>$(VsixVersion)</ReplaceWith>
+      <ExpectedMatchCount>1</ExpectedMatchCount>
     </VsixVersion>
 
     <NugetAnalyzer Include="$(SolutionRoot)\src\CSharp.CodeAnalysis.Vsix\Diagnostic.nuspec">
       <Find>(?&lt;=&lt;version&gt;)([^&lt;]*)</Find>
       <ReplaceWith>$(NugetVersion)</ReplaceWith>
+      <ExpectedMatchCount>1</ExpectedMatchCount>
     </NugetAnalyzer>
     <NugetRunner Include="$(SolutionRoot)\src\SonarQube.CSharp.Runner\Runner.nuspec">
       <Find>(?&lt;=&lt;version&gt;)([^&lt;]*)</Find>
       <ReplaceWith>$(NugetVersion)</ReplaceWith>
+      <ExpectedMatchCount>1</ExpectedMatchCount>
     </NugetRunner>
     <NugetDescriptor Include="$(SolutionRoot)\src\SonarQube.CSharp.Descriptor\Descriptor.nuspec">
       <Find>(?&lt;=&lt;version&gt;)([^&lt;]*)</Find>
       <ReplaceWith>$(NugetVersion)</ReplaceWith>
+      <ExpectedMatchCount>1</ExpectedMatchCount>
     </NugetDescriptor>
   </ItemGroup>
 
