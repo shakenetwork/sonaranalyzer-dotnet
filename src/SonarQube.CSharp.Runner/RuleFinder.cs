@@ -31,23 +31,22 @@ namespace SonarQube.CSharp.CodeAnalysis.Runner
     public class RuleFinder
     {
         private readonly List<Type> diagnosticAnalyzers;
-        public const string RuleDescriptionPathPattern = "SonarQube.CSharp.CodeAnalysis.Rules.Description.{0}.html";
-        public const string RuleAssemblyName = "SonarQube.CSharp.CodeAnalysis";
-        public const string RuleAssemblyFileName = RuleAssemblyName + ".dll";
-        public const string RuleExtraAssemblyFileName = RuleAssemblyName + ".Extra.dll";
+        private const string RuleAssemblyName = "SonarQube.CSharp.CodeAnalysis";
+        private const string RuleAssemblyFileName = RuleAssemblyName + ".dll";
+        private const string RuleExtraAssemblyFileName = RuleAssemblyName + ".Extra.dll";
 
-        public static IList<Assembly> GetRuleAssemblies()
+        public static Assembly GetPackagedRuleAssembly()
         {
-            return new[]
-            {
-                Assembly.LoadFrom(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, RuleAssemblyFileName)),
-                Assembly.LoadFrom(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, RuleExtraAssemblyFileName))
-            };
+            return Assembly.LoadFrom(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, RuleAssemblyFileName));
         }
-
+        public static Assembly GetExtraRuleAssembly()
+        {
+            return Assembly.LoadFrom(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, RuleExtraAssemblyFileName));
+        }
+        
         public RuleFinder()
         {
-            diagnosticAnalyzers = GetRuleAssemblies()
+            diagnosticAnalyzers = new[] {GetPackagedRuleAssembly(), GetExtraRuleAssembly()}
                 .SelectMany(a => a.GetTypes())
                 .Where(t => t.IsSubclassOf(typeof (DiagnosticAnalyzer)))
                 .Where(t => t.GetCustomAttributes<RuleAttribute>().Any())

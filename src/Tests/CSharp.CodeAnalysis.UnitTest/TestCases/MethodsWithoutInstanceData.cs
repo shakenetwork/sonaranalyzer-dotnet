@@ -73,6 +73,12 @@ namespace Tests.Diagnostics
         {
             var x = new OtherClass().IntProp;
         }
+
+        private OtherClass member;
+        public void Test7() // Compliant
+        {
+            var x = member.IntProp;
+        }
     }
 
     public class OtherClassDerived : OtherClass

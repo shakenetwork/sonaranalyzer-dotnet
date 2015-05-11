@@ -29,9 +29,15 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest
     public class RuleFinderTest
     {
         [TestMethod]
-        public void GetRuleAssemblies()
+        public void GetPackagedRuleAssembly()
         {
-            RuleFinder.GetRuleAssemblies().Should().HaveCount(2);
+            Assert.IsNotNull(RuleFinder.GetPackagedRuleAssembly());
+        }
+
+        [TestMethod]
+        public void GetExtraRuleAssembly()
+        {
+            Assert.IsNotNull(RuleFinder.GetExtraRuleAssembly());
         }
 
         [TestMethod]

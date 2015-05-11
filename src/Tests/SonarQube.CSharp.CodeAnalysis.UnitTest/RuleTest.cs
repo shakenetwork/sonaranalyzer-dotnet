@@ -26,6 +26,8 @@ using System.Linq;
 using System.Reflection;
 using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SonarQube.CSharp.CodeAnalysis.Descriptor;
+using SonarQube.CSharp.CodeAnalysis.Descriptor.RuleDescriptors;
 using SonarQube.CSharp.CodeAnalysis.Runner;
 using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings;
 
@@ -45,47 +47,20 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest
         [TestMethod]
         public void RuleHasResourceHtml()
         {
-            var assemblies = RuleFinder.GetRuleAssemblies();
-            var analyzers = GetDiagnosticAnalyzerTypes(assemblies);
-
-            var resources = new Dictionary<Assembly, string[]>();
-            foreach (var assembly in assemblies)
-            {
-                resources[assembly] = assembly.GetManifestResourceNames();
-            }
-
-            var missingDescriptors = new List<string>();
+            var analyzers = new RuleFinder().GetAllAnalyzerTypes();
+            
             foreach (var analyzer in analyzers)
             {
                 var ruleDescriptor = analyzer.GetCustomAttributes<RuleAttribute>().First();
-                var resource = resources[analyzer.Assembly].SingleOrDefault(r => r.EndsWith(
-                    string.Format(CultureInfo.InvariantCulture, RuleFinder.RuleDescriptionPathPattern,
-                        ruleDescriptor.Key), StringComparison.OrdinalIgnoreCase));
 
-                if (resource != null)
-                {
-                    using (var stream = analyzer.Assembly.GetManifestResourceStream(resource))
-                    using (var reader = new StreamReader(stream))
-                    {
-                        reader.ReadToEnd();
-                    }
-                }
-                else
-                {
-                    missingDescriptors.Add(string.Format("'{0}' ({1})", analyzer.Name, ruleDescriptor.Key));
-                }
-            }
-
-            if (missingDescriptors.Any())
-            {
-                throw new Exception(string.Format("Missing HTML description for rule {0}", string.Join(",", missingDescriptors)));
+                RuleDescriptorBuilder.GetResourceHtml(analyzer, ruleDescriptor);
             }
         }
 
         [TestMethod]
         public void DiagnosticAnalyzerHasRuleAttribute()
         {
-            var analyzers = GetDiagnosticAnalyzerTypes(RuleFinder.GetRuleAssemblies());
+            var analyzers = new RuleFinder().GetAllAnalyzerTypes();
 
             foreach (var analyzer in analyzers)
             {
@@ -100,7 +75,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest
         [TestMethod]
         public void VisualStudio_NoRuleTemplates()
         {
-            var analyzers = GetDiagnosticAnalyzerTypes(new[] { Assembly.LoadFrom(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, RuleFinder.RuleAssemblyFileName)) });
+            var analyzers = GetDiagnosticAnalyzerTypes(new[] { RuleFinder.GetPackagedRuleAssembly() });
 
             foreach (var analyzer in analyzers)
             {
@@ -116,7 +91,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest
         [TestMethod]
         public void VisualStudio_OnlyParameterlessRules()
         {
-            var analyzers = GetDiagnosticAnalyzerTypes(new[] { Assembly.LoadFrom(RuleFinder.RuleAssemblyFileName) });
+            var analyzers = GetDiagnosticAnalyzerTypes(new[] { RuleFinder.GetPackagedRuleAssembly() });
 
             foreach (var analyzer in analyzers)
             {
@@ -131,7 +106,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest
         [TestMethod]
         public void VisualStudio_AllParameterlessRulesNotRuleTemplate()
         {
-            var analyzers = GetDiagnosticAnalyzerTypes(new[] { Assembly.LoadFrom(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, RuleFinder.RuleExtraAssemblyFileName)) });
+            var analyzers = GetDiagnosticAnalyzerTypes(new[] { RuleFinder.GetExtraRuleAssembly() });
 
             foreach (var analyzer in analyzers)
             {

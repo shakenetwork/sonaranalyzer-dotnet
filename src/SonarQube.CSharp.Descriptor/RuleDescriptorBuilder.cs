@@ -32,8 +32,10 @@ using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings.Sqale;
 
 namespace SonarQube.CSharp.CodeAnalysis.Descriptor
 {
-    internal class RuleDescriptorBuilder
+    public class RuleDescriptorBuilder
     {
+        private const string RuleDescriptionPathPattern = "SonarQube.CSharp.CodeAnalysis.Rules.Description.{0}.html";
+
         internal static IEnumerable<FullRuleDescriptor> GetRuleDescriptors()
         {
             return new RuleFinder().GetAllAnalyzerTypes().Select(GetRuleDescriptor);
@@ -55,20 +57,9 @@ namespace SonarQube.CSharp.CodeAnalysis.Descriptor
                 Severity = rule.Severity.ToString().ToUpper(CultureInfo.InvariantCulture),
                 IsActivatedByDefault = rule.IsActivatedByDefault,
                 Cardinality = rule.Template ? "MULTIPLE" : "SINGLE",
+                Description = GetResourceHtml(analyzerType, rule)
             };
 
-            var resources = analyzerType.Assembly.GetManifestResourceNames();
-            var resource = resources.SingleOrDefault(r => r.EndsWith(
-                string.Format(CultureInfo.InvariantCulture, RuleFinder.RuleDescriptionPathPattern, rule.Key),
-                StringComparison.OrdinalIgnoreCase));
-            if (resource != null)
-            {
-                using (var stream = analyzerType.Assembly.GetManifestResourceStream(resource))
-                using (var reader = new StreamReader(stream))
-                {
-                    ruleDescriptor.Description = reader.ReadToEnd();
-                }
-            }
             var parameters = analyzerType.GetProperties()
                 .Where(p => p.GetCustomAttributes<RuleParameterAttribute>().Any());
 
@@ -135,6 +126,25 @@ namespace SonarQube.CSharp.CodeAnalysis.Descriptor
                 RuleDescriptor = ruleDescriptor,
                 SqaleDescriptor = sqale
             };
+        }
+
+        public static string GetResourceHtml(Type analyzerType, RuleAttribute rule)
+        {
+            var resources = analyzerType.Assembly.GetManifestResourceNames();
+            var resource = resources.SingleOrDefault(r => r.EndsWith(
+                string.Format(CultureInfo.InvariantCulture, RuleDescriptionPathPattern, rule.Key),
+                StringComparison.OrdinalIgnoreCase));
+
+            if (resource == null)
+            {
+                throw new Exception(string.Format("Could not locate resource for rule {0}", rule.Key));
+            }
+
+            using (var stream = analyzerType.Assembly.GetManifestResourceStream(resource))
+            using (var reader = new StreamReader(stream))
+            {
+                return reader.ReadToEnd();
+            }
         }
     }
 }
