@@ -26,15 +26,21 @@
               }
               string content = File.ReadAllText(fileName);    
               int matchCount = 0;
-              File.WriteAllText(fileName, Regex.Replace(content, find, (match) =>
-                {
-                    matchCount++;
-                    return match.Result(replaceWith);
-                }), Encoding.UTF8);
-              Log.LogMessage(MessageImportance.High, string.Format("{0} matches (on pattern '{2}') have been replaced (with '{3}') in file '{1}'", matchCount, fileName, find, replaceWith));
+              
+              string replacedContent = Regex.Replace(content, find, (match) =>
+              {
+                  matchCount++;
+                  return match.Result(replaceWith);
+              });
+              
               if (matchCount != expectedMatchCount)
               {
                 Log.LogError("Actual ({0}) and expected ({1}) match count doesn't match", matchCount, expectedMatchCount);
+              }
+              else
+              {              
+                File.WriteAllText(fileName, replacedContent, Encoding.UTF8);
+                Log.LogMessage(MessageImportance.High, string.Format("{0} matches (on pattern '{2}') have been replaced (with '{3}') in file '{1}'", matchCount, fileName, find, replaceWith));
               }
             }
           ]]>
