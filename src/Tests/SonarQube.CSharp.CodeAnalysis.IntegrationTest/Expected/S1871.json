@@ -1,0 +1,401 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarQube.CSharp.CodeAnalysis.IntegrationTest",
+    "ProductVersion": "0.8.0.0",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this branch with the identical one on line \"14\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\additional-sources-for-not-covered-tests\\ConditionalStructureSameCondition.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this branch with the identical one on line \"14\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\additional-sources-for-not-covered-tests\\ConditionalStructureSameCondition.cs",
+            "Region": {
+              "StartLine": 22,
+              "EndLine": 22,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this branch with the identical one on line \"27\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\additional-sources-for-not-covered-tests\\ConditionalStructureSameCondition.cs",
+            "Region": {
+              "StartLine": 31,
+              "EndLine": 31,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this branch with the identical one on line \"27\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\additional-sources-for-not-covered-tests\\ConditionalStructureSameCondition.cs",
+            "Region": {
+              "StartLine": 35,
+              "EndLine": 35,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this branch with the identical one on line \"27\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\additional-sources-for-not-covered-tests\\ConditionalStructureSameCondition.cs",
+            "Region": {
+              "StartLine": 39,
+              "EndLine": 39,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this branch with the identical one on line \"99\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\ControllerTypeCache.cs",
+            "Region": {
+              "StartLine": 103,
+              "EndLine": 103,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this case with the identical one on line \"231\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\HtmlHelper.cs",
+            "Region": {
+              "StartLine": 233,
+              "EndLine": 233,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this case with the identical one on line \"248\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\HtmlHelper.cs",
+            "Region": {
+              "StartLine": 250,
+              "EndLine": 250,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this branch with the identical one on line \"514\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.Razor\\Parser\\CSharpCodeParser.cs",
+            "Region": {
+              "StartLine": 518,
+              "EndLine": 518,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this branch with the identical one on line \"88\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.WebPages\\PageDataDictionary.cs",
+            "Region": {
+              "StartLine": 91,
+              "EndLine": 91,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this branch with the identical one on line \"88\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.WebPages\\PageDataDictionary.cs",
+            "Region": {
+              "StartLine": 94,
+              "EndLine": 94,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this branch with the identical one on line \"390\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Core\\Utility\\VersionUtility.cs",
+            "Region": {
+              "StartLine": 394,
+              "EndLine": 394,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this branch with the identical one on line \"19\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\DialogServices\\PackageManagerUI\\Converters\\FixUrlConverter.cs",
+            "Region": {
+              "StartLine": 27,
+              "EndLine": 27,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this case with the identical one on line \"37\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Core.Test\\WiresharkDatagramComparerUdp.cs",
+            "Region": {
+              "StartLine": 64,
+              "EndLine": 64,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this case with the identical one on line \"149\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IcmpTests.cs",
+            "Region": {
+              "StartLine": 166,
+              "EndLine": 166,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this case with the identical one on line \"191\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Packets\\Igmp\\IgmpDatagram.cs",
+            "Region": {
+              "StartLine": 197,
+              "EndLine": 197,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this case with the identical one on line \"51\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6ExtensionHeaderRouting.cs",
+            "Region": {
+              "StartLine": 61,
+              "EndLine": 61,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this branch with the identical one on line \"57\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Rar\\RarVolume.cs",
+            "Region": {
+              "StartLine": 62,
+              "EndLine": 62,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this branch with the identical one on line \"50\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\Folder.cs",
+            "Region": {
+              "StartLine": 54,
+              "EndLine": 54,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this branch with the identical one on line \"91\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\Folder.cs",
+            "Region": {
+              "StartLine": 96,
+              "EndLine": 96,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this case with the identical one on line \"189\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 191,
+              "EndLine": 191,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this case with the identical one on line \"189\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 199,
+              "EndLine": 199,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this case with the identical one on line \"189\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 207,
+              "EndLine": 207,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

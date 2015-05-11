@@ -1,0 +1,61 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarQube.CSharp.CodeAnalysis.IntegrationTest",
+    "ProductVersion": "0.8.0.0",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S1862",
+      "FullMessage": "This branch duplicates the one on line 13.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\additional-sources-for-not-covered-tests\\ConditionalStructureSameCondition.cs",
+            "Region": {
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1862",
+      "FullMessage": "This branch duplicates the one on line 30.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\additional-sources-for-not-covered-tests\\ConditionalStructureSameCondition.cs",
+            "Region": {
+              "StartLine": 34,
+              "EndLine": 34,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1862",
+      "FullMessage": "This branch duplicates the one on line 54.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Packets.TestUtils\\RandomHttpExtensions.cs",
+            "Region": {
+              "StartLine": 56,
+              "EndLine": 56,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

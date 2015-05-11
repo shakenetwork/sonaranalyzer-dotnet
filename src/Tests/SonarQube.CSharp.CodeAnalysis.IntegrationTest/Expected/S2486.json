@@ -1,0 +1,1285 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarQube.CSharp.CodeAnalysis.IntegrationTest",
+    "ProductVersion": "0.8.0.0",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\AsyncManagerExtensions.cs",
+            "Region": {
+              "StartLine": 29,
+              "EndLine": 29,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\SecurityUtil.cs",
+            "Region": {
+              "StartLine": 45,
+              "EndLine": 45,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\TypeCacheUtil.cs",
+            "Region": {
+              "StartLine": 62,
+              "EndLine": 62,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\TypeCacheUtil.cs",
+            "Region": {
+              "StartLine": 78,
+              "EndLine": 78,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Async\\Test\\AsyncControllerActionInvokerTest.cs",
+            "Region": {
+              "StartLine": 800,
+              "EndLine": 800,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Async\\Test\\AsyncControllerActionInvokerTest.cs",
+            "Region": {
+              "StartLine": 808,
+              "EndLine": 808,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Async\\Test\\SynchronizationContextUtilTest.cs",
+            "Region": {
+              "StartLine": 47,
+              "EndLine": 47,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\ViewPageTest.cs",
+            "Region": {
+              "StartLine": 156,
+              "EndLine": 156,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\Common\\DynamicHelper.cs",
+            "Region": {
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\Common\\DynamicHelper.cs",
+            "Region": {
+              "StartLine": 27,
+              "EndLine": 27,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.Helpers\\ConversionUtil.cs",
+            "Region": {
+              "StartLine": 54,
+              "EndLine": 54,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.Helpers\\ObjectVisitor.cs",
+            "Region": {
+              "StartLine": 373,
+              "EndLine": 373,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.Helpers\\ServerInfo.cs",
+            "Region": {
+              "StartLine": 135,
+              "EndLine": 135,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.Helpers\\WebImage.cs",
+            "Region": {
+              "StartLine": 683,
+              "EndLine": 683,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.Helpers\\WebMail.cs",
+            "Region": {
+              "StartLine": 159,
+              "EndLine": 159,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.Razor\\RazorEditorParser.cs",
+            "Region": {
+              "StartLine": 344,
+              "EndLine": 344,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.Razor\\RazorEditorParser.cs",
+            "Region": {
+              "StartLine": 354,
+              "EndLine": 354,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.WebPages.Deployment\\PreApplicationStartCode.cs",
+            "Region": {
+              "StartLine": 93,
+              "EndLine": 93,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.WebPages\\Helpers\\AntiForgeryWorker.cs",
+            "Region": {
+              "StartLine": 43,
+              "EndLine": 43,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.WebPages\\SecurityUtil.cs",
+            "Region": {
+              "StartLine": 47,
+              "EndLine": 47,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.WebPages\\StringExtensions.cs",
+            "Region": {
+              "StartLine": 74,
+              "EndLine": 74,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.WebPages\\Utils\\CultureUtil.cs",
+            "Region": {
+              "StartLine": 50,
+              "EndLine": 50,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.WebPages\\WebPageBase.cs",
+            "Region": {
+              "StartLine": 179,
+              "EndLine": 179,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\WebMatrix.WebData\\WebSecurity.cs",
+            "Region": {
+              "StartLine": 187,
+              "EndLine": 187,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\CommandLine\\Commands\\ProjectFactory.cs",
+            "Region": {
+              "StartLine": 764,
+              "EndLine": 764,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\CommandLine\\Commands\\UpdateCommand.cs",
+            "Region": {
+              "StartLine": 136,
+              "EndLine": 136,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\CommandLine\\Common\\SelfUpdater.cs",
+            "Region": {
+              "StartLine": 92,
+              "EndLine": 92,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\CommandLine\\Common\\SelfUpdater.cs",
+            "Region": {
+              "StartLine": 116,
+              "EndLine": 116,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\CommandLine\\Program.cs",
+            "Region": {
+              "StartLine": 145,
+              "EndLine": 145,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Core\\NETPortable\\NetPortableProfileTable.cs",
+            "Region": {
+              "StartLine": 74,
+              "EndLine": 74,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Core\\NETPortable\\NetPortableProfileTable.cs",
+            "Region": {
+              "StartLine": 77,
+              "EndLine": 77,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Core\\NETPortable\\NetPortableProfileTable.cs",
+            "Region": {
+              "StartLine": 174,
+              "EndLine": 174,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Core\\NETPortable\\NetPortableProfileTable.cs",
+            "Region": {
+              "StartLine": 177,
+              "EndLine": 177,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Core\\NETPortable\\NetPortableProfileTable.cs",
+            "Region": {
+              "StartLine": 180,
+              "EndLine": 180,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Core\\Packages\\OptimizedZipPackage.cs",
+            "Region": {
+              "StartLine": 277,
+              "EndLine": 277,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Core\\ProjectSystem\\PhysicalFileSystem.cs",
+            "Region": {
+              "StartLine": 121,
+              "EndLine": 121,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Core\\ProjectSystem\\PhysicalFileSystem.cs",
+            "Region": {
+              "StartLine": 153,
+              "EndLine": 153,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Core\\ProjectSystem\\PhysicalFileSystem.cs",
+            "Region": {
+              "StartLine": 179,
+              "EndLine": 179,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Core\\ProjectSystem\\PhysicalFileSystem.cs",
+            "Region": {
+              "StartLine": 183,
+              "EndLine": 183,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Core\\ProjectSystem\\PhysicalFileSystem.cs",
+            "Region": {
+              "StartLine": 203,
+              "EndLine": 203,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Core\\ProjectSystem\\PhysicalFileSystem.cs",
+            "Region": {
+              "StartLine": 207,
+              "EndLine": 207,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Core\\Repositories\\MachineCache.cs",
+            "Region": {
+              "StartLine": 166,
+              "EndLine": 166,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Core\\Repositories\\MachineCache.cs",
+            "Region": {
+              "StartLine": 169,
+              "EndLine": 169,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Core\\Repositories\\SharedPackageRepository.cs",
+            "Region": {
+              "StartLine": 398,
+              "EndLine": 398,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Dialog10\\Nodes\\PackagesTreeNodeBase.cs",
+            "Region": {
+              "StartLine": 465,
+              "EndLine": 465,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\TeamFoundationServer\\TfsWorkspaceWrapper.cs",
+            "Region": {
+              "StartLine": 171,
+              "EndLine": 171,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\TeamFoundationServer\\TfsWorkspaceWrapper.cs",
+            "Region": {
+              "StartLine": 174,
+              "EndLine": 174,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VisualStudio\\Extensions\\ProjectSystemExtensions.cs",
+            "Region": {
+              "StartLine": 64,
+              "EndLine": 64,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VisualStudio\\ProductUpdate\\ProductUpdateService.cs",
+            "Region": {
+              "StartLine": 84,
+              "EndLine": 84,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VisualStudio\\ProjectExtensions.cs",
+            "Region": {
+              "StartLine": 314,
+              "EndLine": 314,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VisualStudio\\ProjectExtensions.cs",
+            "Region": {
+              "StartLine": 413,
+              "EndLine": 413,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VisualStudio\\ProjectSystems\\FSharpProjectSystem.cs",
+            "Region": {
+              "StartLine": 24,
+              "EndLine": 24,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VisualStudio\\ProjectSystems\\VsProjectSystem.cs",
+            "Region": {
+              "StartLine": 208,
+              "EndLine": 208,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VisualStudio\\ProjectSystems\\VsProjectSystem.cs",
+            "Region": {
+              "StartLine": 358,
+              "EndLine": 358,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VisualStudio\\ProjectSystems\\VsProjectSystem.cs",
+            "Region": {
+              "StartLine": 374,
+              "EndLine": 374,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VisualStudio\\ProjectSystems\\VsProjectSystem.cs",
+            "Region": {
+              "StartLine": 475,
+              "EndLine": 475,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VisualStudio\\ProjectSystems\\VsProjectSystem.cs",
+            "Region": {
+              "StartLine": 479,
+              "EndLine": 479,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VisualStudio\\SolutionExtensions.cs",
+            "Region": {
+              "StartLine": 99,
+              "EndLine": 99,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VisualStudio\\SolutionManager.cs",
+            "Region": {
+              "StartLine": 219,
+              "EndLine": 219,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VisualStudio\\Utility\\NuGetEventTrigger.cs",
+            "Region": {
+              "StartLine": 52,
+              "EndLine": 52,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VisualStudio\\VsFileSystemProvider.cs",
+            "Region": {
+              "StartLine": 73,
+              "EndLine": 73,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VisualStudio11\\QuickSearch\\NugetSearchProvider.cs",
+            "Region": {
+              "StartLine": 62,
+              "EndLine": 62,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VsConsole\\Console\\ConsoleInitializer.cs",
+            "Region": {
+              "StartLine": 36,
+              "EndLine": 36,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VsConsole\\PowerShellHost\\HostUtilities.cs",
+            "Region": {
+              "StartLine": 137,
+              "EndLine": 137,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VsConsole\\PowerShellHost\\Utils\\ComplexCommand.cs",
+            "Region": {
+              "StartLine": 99,
+              "EndLine": 99,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\test\\EndToEnd\\ProjectTemplates\\SilverlightProject.zip\\App.xaml.cs",
+            "Region": {
+              "StartLine": 62,
+              "EndLine": 62,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\test\\Test.Integration\\Core\\LocalPackageRepositoryTest.cs",
+            "Region": {
+              "StartLine": 308,
+              "EndLine": 308,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\test\\Test.Integration\\Core\\PathResolverTest.cs",
+            "Region": {
+              "StartLine": 1138,
+              "EndLine": 1138,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\test\\Test.Integration\\NuGetCommandLine\\NuGetCommandLineTest.cs",
+            "Region": {
+              "StartLine": 52,
+              "EndLine": 52,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\test\\VisualStudio.Test\\PackageRestoreManagerTest.cs",
+            "Region": {
+              "StartLine": 913,
+              "EndLine": 913,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\Tools\\NuGet\\GenerateTestPackages\\Program.cs",
+            "Region": {
+              "StartLine": 101,
+              "EndLine": 101,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Archive\\Tar\\TarArchive.cs",
+            "Region": {
+              "StartLine": 107,
+              "EndLine": 107,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 350,
+              "EndLine": 350,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\VirtualRouter-71075\\VirtualRouterClient\\App.xaml.cs",
+            "Region": {
+              "StartLine": 75,
+              "EndLine": 75,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2486",
+      "FullMessage": "Handle the exception, rather than swallow it with an empty statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\VirtualRouter-71075\\VirtualRouterClient\\VirtualRouterClientInstaller.cs",
+            "Region": {
+              "StartLine": 35,
+              "EndLine": 35,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,486 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarQube.CSharp.CodeAnalysis.IntegrationTest",
+    "ProductVersion": "0.8.0.0",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\ModelBinding\\MutableObjectModelBinder.cs",
+            "Region": {
+              "StartLine": 140,
+              "EndLine": 140,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\DictionaryHelpers.cs",
+            "Region": {
+              "StartLine": 26,
+              "EndLine": 26,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\ValueProviderUtil.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\ValueProviderUtil.cs",
+            "Region": {
+              "StartLine": 37,
+              "EndLine": 37,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\test\\UnitTestUtil\\UnitTestUtil\\SimpleValueProvider.cs",
+            "Region": {
+              "StartLine": 36,
+              "EndLine": 36,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.Razor\\Generator\\RazorCodeGenerator.cs",
+            "Region": {
+              "StartLine": 184,
+              "EndLine": 184,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.Razor\\Parser\\VBCodeParser.cs",
+            "Region": {
+              "StartLine": 101,
+              "EndLine": 101,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\CommandLine\\Common\\ProjectHelper.cs",
+            "Region": {
+              "StartLine": 29,
+              "EndLine": 29,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VsConsole\\Console\\Console\\WpfConsole.cs",
+            "Region": {
+              "StartLine": 379,
+              "EndLine": 379,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VsConsole\\Console\\Console\\WpfConsoleKeyProcessor.cs",
+            "Region": {
+              "StartLine": 140,
+              "EndLine": 140,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Core.Test\\WiresharkCompareTests.cs",
+            "Region": {
+              "StartLine": 518,
+              "EndLine": 518,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Core.Test\\WiresharkDatagramComparerDns.cs",
+            "Region": {
+              "StartLine": 246,
+              "EndLine": 246,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Core.Test\\WiresharkDatagramComparerDns.cs",
+            "Region": {
+              "StartLine": 500,
+              "EndLine": 500,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Core.Test\\WiresharkDatagramComparerDns.cs",
+            "Region": {
+              "StartLine": 1226,
+              "EndLine": 1226,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Core.Test\\WiresharkDatagramComparerDns.cs",
+            "Region": {
+              "StartLine": 1252,
+              "EndLine": 1252,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Core.Test\\WiresharkDatagramComparerDns.cs",
+            "Region": {
+              "StartLine": 1436,
+              "EndLine": 1436,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Core.Test\\WiresharkDatagramComparerIcmp.cs",
+            "Region": {
+              "StartLine": 58,
+              "EndLine": 58,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Core.Test\\WiresharkDatagramComparerIpV4.cs",
+            "Region": {
+              "StartLine": 63,
+              "EndLine": 63,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Core.Test\\WiresharkDatagramComparerUdp.cs",
+            "Region": {
+              "StartLine": 47,
+              "EndLine": 47,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\GreTests.cs",
+            "Region": {
+              "StartLine": 161,
+              "EndLine": 161,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IcmpTests.cs",
+            "Region": {
+              "StartLine": 75,
+              "EndLine": 75,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Archive\\Zip\\ZipArchive.cs",
+            "Region": {
+              "StartLine": 185,
+              "EndLine": 185,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Rar\\Headers\\FileHeader.cs",
+            "Region": {
+              "StartLine": 55,
+              "EndLine": 55,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 1859,
+              "EndLine": 1859,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 1891,
+              "EndLine": 1891,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
+            "Region": {
+              "StartLine": 892,
+              "EndLine": 892,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Reader\\Zip\\ZipReader.cs",
+            "Region": {
+              "StartLine": 50,
+              "EndLine": 50,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1301",
+      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\VirtualRouter-71075\\VirtualRouterClient\\WindowMain.xaml.cs",
+            "Region": {
+              "StartLine": 279,
+              "EndLine": 279,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

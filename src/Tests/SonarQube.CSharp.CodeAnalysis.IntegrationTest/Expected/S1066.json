@@ -1,0 +1,1421 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarQube.CSharp.CodeAnalysis.IntegrationTest",
+    "ProductVersion": "0.8.0.0",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcAjaxScript\\MvcHelpers.cs",
+            "Region": {
+              "StartLine": 101,
+              "EndLine": 101,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\RequiredValidator.cs",
+            "Region": {
+              "StartLine": 89,
+              "EndLine": 89,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\CachedDataAnnotationsModelMetadata.cs",
+            "Region": {
+              "StartLine": 131,
+              "EndLine": 131,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Controls\\DropDownList.cs",
+            "Region": {
+              "StartLine": 120,
+              "EndLine": 120,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\ModelBinding\\CollectionModelBinder`1.cs",
+            "Region": {
+              "StartLine": 97,
+              "EndLine": 97,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\ModelBinding\\GenericModelBinderProvider.cs",
+            "Region": {
+              "StartLine": 87,
+              "EndLine": 87,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\ModelBinding\\GenericModelBinderProvider.cs",
+            "Region": {
+              "StartLine": 104,
+              "EndLine": 104,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\ModelBinding\\KeyValuePairModelBinderUtil.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\ModelBinding\\ModelValidationNode.cs",
+            "Region": {
+              "StartLine": 85,
+              "EndLine": 85,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\ModelBinding\\SimpleModelBinderProvider.cs",
+            "Region": {
+              "StartLine": 50,
+              "EndLine": 50,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Resources\\DefaultFormatHelper.cs",
+            "Region": {
+              "StartLine": 256,
+              "EndLine": 256,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Resources\\DefaultFormatHelper.cs",
+            "Region": {
+              "StartLine": 293,
+              "EndLine": 293,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Resources\\ResourceControllerFactory.cs",
+            "Region": {
+              "StartLine": 77,
+              "EndLine": 77,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Resources\\ResourceModelBinder.cs",
+            "Region": {
+              "StartLine": 41,
+              "EndLine": 41,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\Async\\AsyncActionMethodSelector.cs",
+            "Region": {
+              "StartLine": 154,
+              "EndLine": 154,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\Async\\AsyncResultWrapper.cs",
+            "Region": {
+              "StartLine": 171,
+              "EndLine": 171,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\Async\\AsyncResultWrapper.cs",
+            "Region": {
+              "StartLine": 178,
+              "EndLine": 178,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\Async\\TriggerListener.cs",
+            "Region": {
+              "StartLine": 42,
+              "EndLine": 42,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\DataAnnotationsModelMetadata.cs",
+            "Region": {
+              "StartLine": 20,
+              "EndLine": 20,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\FormContext.cs",
+            "Region": {
+              "StartLine": 60,
+              "EndLine": 60,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\Html\\InputExtensions.cs",
+            "Region": {
+              "StartLine": 366,
+              "EndLine": 366,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\Html\\SelectExtensions.cs",
+            "Region": {
+              "StartLine": 192,
+              "EndLine": 192,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\Html\\SelectExtensions.cs",
+            "Region": {
+              "StartLine": 235,
+              "EndLine": 235,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\HtmlHelper.cs",
+            "Region": {
+              "StartLine": 258,
+              "EndLine": 258,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\HttpRequestExtensions.cs",
+            "Region": {
+              "StartLine": 36,
+              "EndLine": 36,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\ValueProviderDictionary.cs",
+            "Region": {
+              "StartLine": 84,
+              "EndLine": 84,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.Helpers\\WebGrid\\WebGrid.cs",
+            "Region": {
+              "StartLine": 324,
+              "EndLine": 324,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.Helpers\\WebGrid\\WebGrid.cs",
+            "Region": {
+              "StartLine": 442,
+              "EndLine": 442,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.Helpers\\WebGrid\\WebGrid.cs",
+            "Region": {
+              "StartLine": 547,
+              "EndLine": 547,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.Helpers\\WebGrid\\WebGrid.cs",
+            "Region": {
+              "StartLine": 919,
+              "EndLine": 919,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.Razor\\Parser\\CodeParser.cs",
+            "Region": {
+              "StartLine": 158,
+              "EndLine": 158,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.Razor\\Parser\\CodeParser.cs",
+            "Region": {
+              "StartLine": 164,
+              "EndLine": 164,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.Razor\\Parser\\CSharpCodeParser.cs",
+            "Region": {
+              "StartLine": 784,
+              "EndLine": 784,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.Razor\\Parser\\HtmlMarkupParser.cs",
+            "Region": {
+              "StartLine": 591,
+              "EndLine": 591,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.Razor\\Parser\\VBCodeParser.cs",
+            "Region": {
+              "StartLine": 702,
+              "EndLine": 702,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.Razor\\RazorEditorParser.cs",
+            "Region": {
+              "StartLine": 240,
+              "EndLine": 240,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.WebPages\\StringExtensions.cs",
+            "Region": {
+              "StartLine": 107,
+              "EndLine": 107,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\WebMatrix.Data\\Database.cs",
+            "Region": {
+              "StartLine": 64,
+              "EndLine": 64,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\CommandLine\\Commands\\PackCommand.cs",
+            "Region": {
+              "StartLine": 127,
+              "EndLine": 127,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\CommandLine\\Commands\\ProjectFactory.cs",
+            "Region": {
+              "StartLine": 312,
+              "EndLine": 312,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Core\\Analysis\\Rules\\MisplacedAssemblyRule.cs",
+            "Region": {
+              "StartLine": 31,
+              "EndLine": 31,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Core\\Authoring\\Manifest.cs",
+            "Region": {
+              "StartLine": 368,
+              "EndLine": 368,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Core\\PackageWalker\\PackageMarker.cs",
+            "Region": {
+              "StartLine": 132,
+              "EndLine": 132,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Core\\Runtime\\BindingRedirectResolver.cs",
+            "Region": {
+              "StartLine": 86,
+              "EndLine": 86,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Core\\Utility\\VersionUtility.cs",
+            "Region": {
+              "StartLine": 186,
+              "EndLine": 186,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Dialog10\\Providers\\InstalledProvider.cs",
+            "Region": {
+              "StartLine": 328,
+              "EndLine": 328,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Dialog10\\Providers\\UpdatesProvider.cs",
+            "Region": {
+              "StartLine": 212,
+              "EndLine": 212,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\DialogServices\\PackageManagerUI\\ProgressDialog.xaml.cs",
+            "Region": {
+              "StartLine": 61,
+              "EndLine": 61,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\DialogServices\\SolutionExplorer\\SolutionWalker.cs",
+            "Region": {
+              "StartLine": 81,
+              "EndLine": 81,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VisualStudio\\Extensions\\DTEExtensions.cs",
+            "Region": {
+              "StartLine": 70,
+              "EndLine": 70,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VisualStudio\\PackageRestore\\PackageRestoreManager.cs",
+            "Region": {
+              "StartLine": 401,
+              "EndLine": 401,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VisualStudio\\VSPackageManager.cs",
+            "Region": {
+              "StartLine": 788,
+              "EndLine": 788,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VisualStudio10\\GalleryEntry.cs",
+            "Region": {
+              "StartLine": 45,
+              "EndLine": 45,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VsConsole\\PowerShellHost\\PowerShellHost.cs",
+            "Region": {
+              "StartLine": 101,
+              "EndLine": 101,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Packets\\Ethernet\\EthernetLayer.cs",
+            "Region": {
+              "StartLine": 54,
+              "EndLine": 54,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Packets\\Http\\HttpDatagram.cs",
+            "Region": {
+              "StartLine": 276,
+              "EndLine": 276,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\RazorEngine-850082854d\\Core\\RazorEngine.Core\\Templating\\IsolatedTemplateService.cs",
+            "Region": {
+              "StartLine": 168,
+              "EndLine": 168,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\RazorEngine-850082854d\\Core\\RazorEngine.Core\\Templating\\IsolatedTemplateService.cs",
+            "Region": {
+              "StartLine": 205,
+              "EndLine": 205,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\RazorEngine-850082854d\\Core\\RazorEngine.Core\\Templating\\IsolatedTemplateService.cs",
+            "Region": {
+              "StartLine": 324,
+              "EndLine": 324,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\RazorEngine-850082854d\\Core\\RazorEngine.Core\\Templating\\IsolatedTemplateService.cs",
+            "Region": {
+              "StartLine": 368,
+              "EndLine": 368,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\RazorEngine-850082854d\\Core\\RazorEngine.Core\\Templating\\IsolatedTemplateService.cs",
+            "Region": {
+              "StartLine": 390,
+              "EndLine": 390,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\DeflateManager.cs",
+            "Region": {
+              "StartLine": 1208,
+              "EndLine": 1208,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ZlibBaseStream.cs",
+            "Region": {
+              "StartLine": 234,
+              "EndLine": 234,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ZlibBaseStream.cs",
+            "Region": {
+              "StartLine": 513,
+              "EndLine": 513,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Filters\\BCJFilter.cs",
+            "Region": {
+              "StartLine": 43,
+              "EndLine": 43,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LZ\\LzBinTree.cs",
+            "Region": {
+              "StartLine": 156,
+              "EndLine": 156,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LZ\\LzBinTree.cs",
+            "Region": {
+              "StartLine": 162,
+              "EndLine": 162,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LZ\\LzBinTree.cs",
+            "Region": {
+              "StartLine": 187,
+              "EndLine": 187,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LZ\\LzBinTree.cs",
+            "Region": {
+              "StartLine": 189,
+              "EndLine": 189,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LZ\\LzInWindow.cs",
+            "Region": {
+              "StartLine": 119,
+              "EndLine": 119,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaStream.cs",
+            "Region": {
+              "StartLine": 137,
+              "EndLine": 137,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\PpmdStream.cs",
+            "Region": {
+              "StartLine": 74,
+              "EndLine": 74,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack.cs",
+            "Region": {
+              "StartLine": 268,
+              "EndLine": 268,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack.cs",
+            "Region": {
+              "StartLine": 808,
+              "EndLine": 808,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack.cs",
+            "Region": {
+              "StartLine": 867,
+              "EndLine": 867,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack20.cs",
+            "Region": {
+              "StartLine": 97,
+              "EndLine": 97,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack20.cs",
+            "Region": {
+              "StartLine": 110,
+              "EndLine": 110,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack20.cs",
+            "Region": {
+              "StartLine": 256,
+              "EndLine": 256,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack20.cs",
+            "Region": {
+              "StartLine": 296,
+              "EndLine": 296,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\VirtualRouter-71075\\VirtualRouterClient\\WindowMain.xaml.cs",
+            "Region": {
+              "StartLine": 200,
+              "EndLine": 200,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\VirtualRouter-71075\\VirtualRouterHost\\VirtualRouterHost.cs",
+            "Region": {
+              "StartLine": 56,
+              "EndLine": 56,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\VirtualRouter-71075\\VirtualRouterService\\VirtualRouterWindowsService.cs",
+            "Region": {
+              "StartLine": 106,
+              "EndLine": 106,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1066",
+      "FullMessage": "Merge this if statement with the enclosing one.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\VirtualRouter-71075\\VirtualRouterService\\VirtualRouterWindowsService.cs",
+            "Region": {
+              "StartLine": 154,
+              "EndLine": 154,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

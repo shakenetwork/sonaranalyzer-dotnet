@@ -1,0 +1,61 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarQube.CSharp.CodeAnalysis.IntegrationTest",
+    "ProductVersion": "0.8.0.0",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S1479",
+      "FullMessage": "Reduce the number of switch cases from 73 to at most 30.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Core.Test\\WiresharkDatagramComparerDns.cs",
+            "Region": {
+              "StartLine": 243,
+              "EndLine": 243,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1479",
+      "FullMessage": "Reduce the number of switch cases from 64 to at most 30.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Packets.TestUtils\\RandomDnsExtensions.cs",
+            "Region": {
+              "StartLine": 119,
+              "EndLine": 119,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1479",
+      "FullMessage": "Reduce the number of switch cases from 55 to at most 30.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
+            "Region": {
+              "StartLine": 246,
+              "EndLine": 246,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

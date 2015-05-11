@@ -1,0 +1,129 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarQube.CSharp.CodeAnalysis.IntegrationTest",
+    "ProductVersion": "0.8.0.0",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S2760",
+      "FullMessage": "This condition was just checked on line 443.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\src\\System.Web.Razor\\Generator\\RazorCodeGenerator.cs",
+            "Region": {
+              "StartLine": 448,
+              "EndLine": 448,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2760",
+      "FullMessage": "This condition was just checked on line 141.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Core\\Repositories\\MachineCache.cs",
+            "Region": {
+              "StartLine": 148,
+              "EndLine": 148,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2760",
+      "FullMessage": "This condition was just checked on line 30.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Core\\Utility\\PackageHelper.cs",
+            "Region": {
+              "StartLine": 45,
+              "EndLine": 45,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2760",
+      "FullMessage": "This condition was just checked on line 683.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\Core\\Utility\\VersionUtility.cs",
+            "Region": {
+              "StartLine": 691,
+              "EndLine": 691,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2760",
+      "FullMessage": "This condition was just checked on line 755.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VisualStudio\\VSPackageManager.cs",
+            "Region": {
+              "StartLine": 777,
+              "EndLine": 777,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2760",
+      "FullMessage": "This condition was just checked on line 186.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\src\\VsConsole\\Console\\PowerConsoleToolWindow.cs",
+            "Region": {
+              "StartLine": 195,
+              "EndLine": 195,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2760",
+      "FullMessage": "This condition was just checked on line 197.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Core.Test\\WiresharkDatagramComparerTcp.cs",
+            "Region": {
+              "StartLine": 212,
+              "EndLine": 212,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,605 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarQube.CSharp.CodeAnalysis.IntegrationTest",
+    "ProductVersion": "0.8.0.0",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"IEnumerableExtensions\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Resources\\IEnumerableExtensions.cs",
+            "Region": {
+              "StartLine": 7,
+              "EndLine": 7,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"IEnumerableWrapper\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Resources\\IEnumerableExtensions.cs",
+            "Region": {
+              "StartLine": 20,
+              "EndLine": 20,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"ModelWithBindAttribute_Buddy\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\test\\MvcFuturesTest\\Mvc\\ModelBinding\\Test\\ModelBinderProviderCollectionTest.cs",
+            "Region": {
+              "StartLine": 438,
+              "EndLine": 438,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"ModelWithProviderAttribute_BadAttribute\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\test\\MvcFuturesTest\\Mvc\\ModelBinding\\Test\\ModelBinderProviderCollectionTest.cs",
+            "Region": {
+              "StartLine": 450,
+              "EndLine": 450,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"ModelWithProviderAttribute_Binder\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\test\\MvcFuturesTest\\Mvc\\ModelBinding\\Test\\ModelBinderProviderCollectionTest.cs",
+            "Region": {
+              "StartLine": 453,
+              "EndLine": 453,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"ModelWithProviderAttribute_Binder_Generic\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\test\\MvcFuturesTest\\Mvc\\ModelBinding\\Test\\ModelBinderProviderCollectionTest.cs",
+            "Region": {
+              "StartLine": 456,
+              "EndLine": 456,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"ModelWithProviderAttribute_Binder_SuppressPrefix\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\test\\MvcFuturesTest\\Mvc\\ModelBinding\\Test\\ModelBinderProviderCollectionTest.cs",
+            "Region": {
+              "StartLine": 459,
+              "EndLine": 459,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"ModelWithProviderAttribute_Provider\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\test\\MvcFuturesTest\\Mvc\\ModelBinding\\Test\\ModelBinderProviderCollectionTest.cs",
+            "Region": {
+              "StartLine": 462,
+              "EndLine": 462,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"AreaRegistrationTest_AbstractAreaRegistration\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\AreaRegistrationTest.cs",
+            "Region": {
+              "StartLine": 62,
+              "EndLine": 62,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"AreaRegistrationTest_AreaRegistration\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\AreaRegistrationTest.cs",
+            "Region": {
+              "StartLine": 71,
+              "EndLine": 71,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"AreaRegistrationTest_NoConstructorAreaRegistration\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\AreaRegistrationTest.cs",
+            "Region": {
+              "StartLine": 77,
+              "EndLine": 77,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"CreateComplexElementalModelBindingContext_ReadsBindAttributeFromBuddyClass_Model\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\DefaultModelBinderTest.cs",
+            "Region": {
+              "StartLine": 1034,
+              "EndLine": 1034,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"CreateComplexElementalModelBindingContext_ReadsBindAttributeFromBuddyClass_Model_BuddyClass\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\DefaultModelBinderTest.cs",
+            "Region": {
+              "StartLine": 1037,
+              "EndLine": 1037,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"SampleModel_Buddy\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\ModelBindersTest.cs",
+            "Region": {
+              "StartLine": 48,
+              "EndLine": 48,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"WebViewPage_1Test\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\WebViewPage`1Test.cs",
+            "Region": {
+              "StartLine": 7,
+              "EndLine": 7,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"_Page_Foo_Test_cshtml\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\webpages\\test\\System.Web.WebPages.Razor.Test\\RazorBuildProviderTest.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\test\\EndToEnd\\ProjectTemplates\\EmptyMvcWebApplicationProjectTemplatev2.0.cs.zip\\Global.asax.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\test\\EndToEnd\\ProjectTemplates\\EmptyMvcWebApplicationProjectTemplatev4.0.csaspx.zip\\EmptyGlobal.asax.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"_Default\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\test\\EndToEnd\\ProjectTemplates\\WebApplicationProject20.zip\\Default.aspx.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"_Default\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\test\\EndToEnd\\ProjectTemplates\\WebApplicationProject20.zip\\Default.aspx.designer.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"_Default\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\test\\EndToEnd\\ProjectTemplates\\WebApplicationProject40.zip\\Default.aspx.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"_Default\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\test\\EndToEnd\\ProjectTemplates\\WebApplicationProject40.zip\\Default.aspx.designer.cs",
+            "Region": {
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\nuget-189b1aeab812\\test\\EndToEnd\\ProjectTemplates\\WPFApplication.zip\\MainWindow.xaml.cs",
+            "Region": {
+              "StartLine": 20,
+              "EndLine": 20,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"IDictionaryExtensionsTests\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Base.Test\\IDictionaryExtensionsTests.cs",
+            "Region": {
+              "StartLine": 12,
+              "EndLine": 12,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"IEnumerableExtensionsTests\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Base.Test\\IEnumerableExtensionsTests.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"IDictionaryExtensions\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Base\\IDictionaryExtensions.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"IEnumerableExtensions\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Base\\IEnumerableExtensions.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"IListExtensions\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\PcapDotNet-71480\\PcapDotNet.Base\\IListExtensions.cs",
+            "Region": {
+              "StartLine": 11,
+              "EndLine": 11,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"Release_3_0_TestFixture\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\RazorEngine-850082854d\\Core\\Tests\\RazorEngine.Core.Tests\\Issues\\Release_3_0_TestFixture.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"IArchiveExtensions\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Archive\\IArchive.Extensions.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"IArchiveEntryExtensions\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Archive\\IArchiveEntry.Extensions.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"IReaderExtensions\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Reader\\IReader.Extensions.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"IWriterExtensions\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Writer\\IWriter.Extensions.cs",
+            "Region": {
+              "StartLine": 5,
+              "EndLine": 5,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"wlanapi\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\wlanapi.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S101",
+      "FullMessage": "Rename this class \"IPInfo\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\VirtualRouter-71075\\VirtualRouterClient\\IPInfo.cs",
+            "Region": {
+              "StartLine": 23,
+              "EndLine": 23,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

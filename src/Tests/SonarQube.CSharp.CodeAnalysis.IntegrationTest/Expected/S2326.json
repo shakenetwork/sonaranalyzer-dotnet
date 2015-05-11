@@ -1,0 +1,95 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarQube.CSharp.CodeAnalysis.IntegrationTest",
+    "ProductVersion": "0.8.0.0",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S2326",
+      "FullMessage": "\"T\" is not used in the class.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\test\\MvcFuturesTest\\Mvc\\ModelBinding\\Test\\ModelBinderProviderCollectionTest.cs",
+            "Region": {
+              "StartLine": 456,
+              "EndLine": 456,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2326",
+      "FullMessage": "\"T\" is not used in the class.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\test\\MvcFuturesTest\\Mvc\\ModelBinding\\Test\\ModelBinderProviderCollectionTest.cs",
+            "Region": {
+              "StartLine": 476,
+              "EndLine": 476,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2326",
+      "FullMessage": "\"T\" is not used in the class.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\test\\MvcFuturesTest\\Mvc\\ModelBinding\\Test\\ModelBinderUtilTest.cs",
+            "Region": {
+              "StartLine": 296,
+              "EndLine": 296,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2326",
+      "FullMessage": "\"T\" is not used in the method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\ReflectedActionDescriptorTest.cs",
+            "Region": {
+              "StartLine": 467,
+              "EndLine": 467,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2326",
+      "FullMessage": "\"T\" is not used in the method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\ReflectedControllerDescriptorTest.cs",
+            "Region": {
+              "StartLine": 186,
+              "EndLine": 186,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
