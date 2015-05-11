@@ -73,7 +73,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                         return;
                     }
 
-                    var inheritanceChain = GetInheritanceChain(methodSymbol);
+                    var inheritanceChain = GetInheritanceChain(methodSymbol).ToImmutableHashSet();
 
                     var reportShouldBeStatic = true;
                     cbc.RegisterSyntaxNodeAction(
