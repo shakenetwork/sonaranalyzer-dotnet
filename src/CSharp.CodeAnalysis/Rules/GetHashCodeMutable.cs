@@ -71,7 +71,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                         .Concat(methodSymbol.ContainingType.GetMembers())
                         .Select(symbol => symbol as IFieldSymbol)
                         .Where(symbol => symbol != null)
-                        .ToImmutableArray();
+                        .ToImmutableHashSet();
 
                     var identifiers = methodSyntax.DescendantNodes()
                         .OfType<IdentifierNameSyntax>();
