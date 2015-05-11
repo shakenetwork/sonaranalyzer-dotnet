@@ -24,58 +24,19 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using Microsoft.CodeAnalysis.Diagnostics;
 using SonarQube.CSharp.CodeAnalysis.Descriptor.RuleDescriptors;
 using SonarQube.CSharp.CodeAnalysis.Helpers;
+using SonarQube.CSharp.CodeAnalysis.Runner;
 using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings;
 using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings.Sqale;
 
 namespace SonarQube.CSharp.CodeAnalysis.Descriptor
 {
-    public class RuleFinder
+    internal class RuleDescriptorBuilder
     {
-        private readonly List<Type> diagnosticAnalyzers;
-        public const string RuleDescriptionPathPattern = "SonarQube.CSharp.CodeAnalysis.Rules.Description.{0}.html";
-        public const string RuleAssemblyName = "SonarQube.CSharp.CodeAnalysis";
-        public const string RuleAssemblyFileName = RuleAssemblyName + ".dll";
-        public const string RuleExtraAssemblyFileName = RuleAssemblyName + ".Extra.dll";
-
-        public static IList<Assembly> GetRuleAssemblies()
+        internal static IEnumerable<FullRuleDescriptor> GetRuleDescriptors()
         {
-            return new[]
-            {
-                Assembly.LoadFrom(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, RuleAssemblyFileName)),
-                Assembly.LoadFrom(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, RuleExtraAssemblyFileName))
-            };
-        }
-
-        public RuleFinder()
-        {
-            diagnosticAnalyzers = GetRuleAssemblies()
-                .SelectMany(a => a.GetTypes())
-                .Where(t => t.IsSubclassOf(typeof (DiagnosticAnalyzer)))
-                .Where(t => t.GetCustomAttributes<RuleAttribute>().Any())
-                .ToList();
-        }
-
-        public IEnumerable<Type> GetParameterlessAnalyzerTypes()
-        {
-            return diagnosticAnalyzers
-                .Where(analyzerType =>
-                    !analyzerType.GetCustomAttributes<RuleAttribute>().First().Template)
-                .Where(analyzerType =>
-                    !analyzerType.GetProperties()
-                        .Any(p => p.GetCustomAttributes<RuleParameterAttribute>().Any()));
-        }
-
-        public IEnumerable<Type> GetAllAnalyzerTypes()
-        {
-            return diagnosticAnalyzers;
-        }
-
-        internal IEnumerable<FullRuleDescriptor> GetRuleDescriptors()
-        {
-            return diagnosticAnalyzers.Select(GetRuleDescriptor);
+            return new RuleFinder().GetAllAnalyzerTypes().Select(GetRuleDescriptor);
         }
 
         private static FullRuleDescriptor GetRuleDescriptor(Type analyzerType)
@@ -98,7 +59,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Descriptor
 
             var resources = analyzerType.Assembly.GetManifestResourceNames();
             var resource = resources.SingleOrDefault(r => r.EndsWith(
-                string.Format(CultureInfo.InvariantCulture, RuleDescriptionPathPattern, rule.Key),
+                string.Format(CultureInfo.InvariantCulture, RuleFinder.RuleDescriptionPathPattern, rule.Key),
                 StringComparison.OrdinalIgnoreCase));
             if (resource != null)
             {
@@ -132,7 +93,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Descriptor
             }
 
             var sqaleRemediation = analyzerType.GetCustomAttributes<SqaleRemediationAttribute>().FirstOrDefault();
-            
+
             if (sqaleRemediation == null || sqaleRemediation is NoSqaleRemediationAttribute)
             {
                 return new FullRuleDescriptor

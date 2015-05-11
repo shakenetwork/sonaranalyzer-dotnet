@@ -26,7 +26,7 @@ using System.Linq;
 using System.Reflection;
 using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarQube.CSharp.CodeAnalysis.Descriptor;
+using SonarQube.CSharp.CodeAnalysis.Runner;
 using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings;
 
 namespace SonarQube.CSharp.CodeAnalysis.UnitTest

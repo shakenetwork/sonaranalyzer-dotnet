@@ -49,10 +49,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Descriptor
 
         private static void WriteXmlDescriptorFiles(string rulePath, string profilePath, string sqalePath)
         {
-            var fullRuleDescriptors =
-                new RuleFinder()
-                    .GetRuleDescriptors()
-                    .ToList();
+            var fullRuleDescriptors = RuleDescriptorBuilder.GetRuleDescriptors().ToList();
 
             WriteRuleDescriptorFile(rulePath, fullRuleDescriptors);
             WriteQualityProfileFile(profilePath, fullRuleDescriptors);

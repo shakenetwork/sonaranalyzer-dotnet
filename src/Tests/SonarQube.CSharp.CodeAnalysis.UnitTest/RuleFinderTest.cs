@@ -21,7 +21,7 @@
 using System.Linq;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarQube.CSharp.CodeAnalysis.Descriptor;
+using SonarQube.CSharp.CodeAnalysis.Runner;
 
 namespace SonarQube.CSharp.CodeAnalysis.UnitTest
 {
