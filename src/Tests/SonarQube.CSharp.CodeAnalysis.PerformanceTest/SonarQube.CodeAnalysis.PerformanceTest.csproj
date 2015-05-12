@@ -123,11 +123,17 @@
     <Compile Include="..\..\AssemblyInfo.Shared.cs">
       <Link>Properties\AssemblyInfo.Shared.cs</Link>
     </Compile>
-    <Compile Include="ItSources.cs" />
+    <Compile Include="Expected\Performance.cs" />
+    <Compile Include="Expected\RulePerformance.cs" />
+    <Compile Include="Expected\Threshold.cs" />
+    <Compile Include="PerformanceAnalyzer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Expected\performance.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -146,6 +152,10 @@
     <ProjectReference Include="..\..\SonarQube.CSharp.Runner\Runner.csproj">
       <Project>{79f0b359-8275-4f3b-b919-82c493b74665}</Project>
       <Name>Runner</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SonarQube.CSharp.CodeAnalysis.IntegrationTest\SonarQube.CodeAnalysis.IntegrationTest.csproj">
+      <Project>{F99B7664-D557-438B-B051-6292DA97450C}</Project>
+      <Name>SonarQube.CodeAnalysis.IntegrationTest</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

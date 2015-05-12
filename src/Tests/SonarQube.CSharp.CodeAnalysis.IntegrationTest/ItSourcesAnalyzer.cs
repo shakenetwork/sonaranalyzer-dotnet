@@ -21,7 +21,6 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
-using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -41,193 +40,21 @@ using Formatting = Newtonsoft.Json.Formatting;
 namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
 {
     [TestClass]
-    public class ItSourcesAnalyzer
+    public class ItSourcesAnalyzer : IntegrationTestBase
     {
-        private FileInfo[] codeFiles;
-        private IList<Type> analyzerTypes;
-        private string xmlInputPattern;
-        private string pathToRoot;
-        private DirectoryInfo outputDirectory;
-
-        private static readonly XmlWriterSettings Settings = new XmlWriterSettings
-        {
-            Encoding = new UTF8Encoding(false),
-            Indent = true,
-            IndentChars = "  "
-        };
-        private static readonly XmlWriterSettings FragmentSettings = new XmlWriterSettings
-        {
-            Encoding = new UTF8Encoding(false),
-            Indent = true,
-            IndentChars = "  ",
-            ConformanceLevel = ConformanceLevel.Fragment,
-            CloseOutput = false,
-            OmitXmlDeclaration = true
-        };
-
-        private string environmentVarName;
+        private DirectoryInfo analysisOutputDirectory;
 
         [TestInitialize]
-        public void Setup()
+        public override void Setup()
         {
-            environmentVarName = ConfigurationManager.AppSettings["env.var.it-sources"];
+            base.Setup();
 
-            pathToRoot = new DirectoryInfo(Environment.GetEnvironmentVariable(environmentVarName)).FullName;
-
-            var rootItSources = new DirectoryInfo(
-                Path.Combine(pathToRoot, ConfigurationManager.AppSettings["path.it-sources.input"]));
-
-            codeFiles = rootItSources.GetFiles("*.cs", SearchOption.AllDirectories);
-
-            analyzerTypes = new RuleFinder().GetAllAnalyzerTypes().ToList();
-
-            xmlInputPattern = GenerateAnalysisInputFilePattern();
-
-            outputDirectory = new DirectoryInfo("GeneratedOutput");
-            if (!outputDirectory.Exists)
+            analysisOutputDirectory = new DirectoryInfo(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "GeneratedOutput"));
+            if (!analysisOutputDirectory.Exists)
             {
-                outputDirectory.Create();
+                analysisOutputDirectory.Create();
             }
         }
-
-        #region Analysis input file generation
-
-        private string GenerateAnalysisInputFilePattern()
-        {
-            var memoryStream = new MemoryStream();
-            using (var writer = XmlWriter.Create(memoryStream, Settings))
-            {
-                writer.WriteStartDocument();
-                writer.WriteStartElement("AnalysisInput");
-
-                //some mandatory settings
-                writer.WriteStartElement("Settings");
-                writer.WriteStartElement("Setting");
-                writer.WriteStartElement("Key");
-                writer.WriteString("sonar.cs.ignoreHeaderComments");
-                writer.WriteEndElement();
-                writer.WriteStartElement("Value");
-                writer.WriteString("true");
-                writer.WriteEndElement();
-                writer.WriteEndElement();
-                writer.WriteEndElement();
-                
-                writer.WriteStartElement("Files");
-
-                foreach (var codeFile in codeFiles)
-                {
-                    writer.WriteStartElement("File");
-                    writer.WriteString(codeFile.FullName);
-                    writer.WriteEndElement();
-                }
-
-                writer.WriteEndElement();
-                writer.WriteEndElement();
-                writer.WriteEndDocument();
-            }
-
-            return Encoding.UTF8.GetString(memoryStream.ToArray());
-        }
-        private static string GenerateAnalysisInputFileSegment(Type analyzerType)
-        {
-            var builder = new StringBuilder();
-            using (var writer = XmlWriter.Create(builder, FragmentSettings))
-            {
-                writer.WriteStartElement("Rule");
-                writer.WriteStartElement("Key");
-                var rule = analyzerType.GetCustomAttribute<RuleAttribute>();
-                writer.WriteString(rule.Key);
-                writer.WriteEndElement();
-                
-                switch (rule.Key)
-                {
-                    case CommentRegularExpression.DiagnosticId:
-                        writer.WriteStartElement("Parameters");
-                        {
-                            writer.WriteStartElement("Parameter");
-                            writer.WriteStartElement("Key");
-                            writer.WriteString("RuleKey");
-                            writer.WriteEndElement();
-                            writer.WriteStartElement("Value");
-                            writer.WriteString("S124-1");
-                            writer.WriteEndElement();
-                            writer.WriteEndElement();
-                        }
-                        {
-                            writer.WriteStartElement("Parameter");
-                            writer.WriteStartElement("Key");
-                            writer.WriteString("message");
-                            writer.WriteEndElement();
-                            writer.WriteStartElement("Value");
-                            writer.WriteString("Some message");
-                            writer.WriteEndElement();
-                            writer.WriteEndElement();
-                        }
-                        {
-                            writer.WriteStartElement("Parameter");
-                            writer.WriteStartElement("Key");
-                            writer.WriteString("regularExpression");
-                            writer.WriteEndElement();
-                            writer.WriteStartElement("Value");
-                            writer.WriteString("(?i)TODO");
-                            writer.WriteEndElement();
-                            writer.WriteEndElement();
-                        }
-                        writer.WriteEndElement();
-                        break;
-                    default:
-                        var parameters = analyzerType.GetProperties()
-                    .Where(p => p.GetCustomAttributes<RuleParameterAttribute>().Any())
-                    .ToList();
-
-                        if (parameters.Any())
-                        {
-                            writer.WriteStartElement("Parameters");
-
-                            foreach (var propertyInfo in parameters)
-                            {
-                                var ruleParameter = propertyInfo.GetCustomAttribute<RuleParameterAttribute>();
-
-                                writer.WriteStartElement("Parameter");
-                                writer.WriteStartElement("Key");
-                                writer.WriteString(ruleParameter.Key);
-                                writer.WriteEndElement();
-                                writer.WriteStartElement("Value");
-                                writer.WriteString(ruleParameter.DefaultValue);
-                                writer.WriteEndElement();
-                                writer.WriteEndElement();
-                            }
-
-                            writer.WriteEndElement();
-                        }
-                        break;
-                }
-
-                writer.WriteEndElement();
-            }
-
-            return builder.ToString();
-        }
-        private string GenerateAnalysisInputFile()
-        {
-            var xdoc = new XmlDocument();
-            xdoc.LoadXml(xmlInputPattern);
-
-            var rules = xdoc.CreateElement("Rules");
-            
-            var sb = new StringBuilder();
-            foreach (var analyzerType in analyzerTypes)
-            {
-                sb.Append(GenerateAnalysisInputFileSegment(analyzerType));
-            }
-            rules.InnerXml = sb.ToString();
-
-            xdoc.DocumentElement.AppendChild(rules);
-
-            return xdoc.OuterXml;
-        }
-
-        #endregion
         
         [TestMethod]
         [TestCategory("Integration")]
@@ -237,7 +64,7 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
             try
             {
                 File.AppendAllText(tempInputFilePath, GenerateAnalysisInputFile());
-                var outputPath = Path.Combine(outputDirectory.FullName, "all.xml");
+                var outputPath = Path.Combine(analysisOutputDirectory.FullName, "all.xml");
 
                 CallMainAndCheckResult(tempInputFilePath, outputPath);
             }
@@ -276,10 +103,9 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
         private bool FilesAreEquivalent(out List<string> problematicRules)
         {
             problematicRules = new List<string>();
-
-            var expectedDirectory = new DirectoryInfo(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Expected"));
-            var expectedFiles = expectedDirectory.GetFiles("*.json");
-            var actualFiles = outputDirectory.GetFiles("*.json");
+            
+            var expectedFiles = ExpectedDirectory.GetFiles("*.json");
+            var actualFiles = analysisOutputDirectory.GetFiles("*.json");
 
             var problematicFileNames =
                     expectedFiles.Select(file => file.Name)
@@ -325,7 +151,7 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
                     });
 
                 File.WriteAllText(Path.Combine(
-                    outputDirectory.FullName, string.Format("{0}.json", issueGroup.Key)), content);
+                    analysisOutputDirectory.FullName, string.Format("{0}.json", issueGroup.Key)), content);
             }
         }
 
@@ -381,7 +207,7 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
         private void RemoveExactFilePathNames(string outputPath)
         {
             var fileContents = File.ReadAllText(outputPath);
-            fileContents = fileContents.Replace(pathToRoot, environmentVarName);
+            fileContents = fileContents.Replace(ItSourcesRootDirectory.FullName, ItSourcesEnvVarName);
             File.WriteAllText(outputPath, fileContents);
         }
 

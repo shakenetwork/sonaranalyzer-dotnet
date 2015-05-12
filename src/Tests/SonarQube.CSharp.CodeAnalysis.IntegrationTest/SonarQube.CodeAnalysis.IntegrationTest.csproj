@@ -133,6 +133,7 @@
     <Compile Include="ErrorModels\Xml\AnalysisOutput.cs" />
     <Compile Include="ErrorModels\Xml\File.cs" />
     <Compile Include="ErrorModels\Xml\Issue.cs" />
+    <Compile Include="IntegrationTestBase.cs" />
     <Compile Include="ItSourcesAnalyzer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
