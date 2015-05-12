@@ -32,6 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runner", "src\SonarQube.CSh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarQube.CodeAnalysis.IntegrationTest", "src\Tests\SonarQube.CSharp.CodeAnalysis.IntegrationTest\SonarQube.CodeAnalysis.IntegrationTest.csproj", "{F99B7664-D557-438B-B051-6292DA97450C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarQube.CodeAnalysis.PerformanceTest", "src\Tests\SonarQube.CSharp.CodeAnalysis.PerformanceTest\SonarQube.CodeAnalysis.PerformanceTest.csproj", "{0D4C17D2-A91B-446A-A165-BBBF861D0BB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -70,6 +72,10 @@ Global
 		{F99B7664-D557-438B-B051-6292DA97450C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F99B7664-D557-438B-B051-6292DA97450C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F99B7664-D557-438B-B051-6292DA97450C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D4C17D2-A91B-446A-A165-BBBF861D0BB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D4C17D2-A91B-446A-A165-BBBF861D0BB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D4C17D2-A91B-446A-A165-BBBF861D0BB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D4C17D2-A91B-446A-A165-BBBF861D0BB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,5 +86,6 @@ Global
 		{E4D5FF22-C1A4-4CAD-B068-E47817F25848} = {F51A8C2A-A0F5-4282-956F-549D05860396}
 		{79F0B359-8275-4F3B-B919-82C493B74665} = {F51A8C2A-A0F5-4282-956F-549D05860396}
 		{F99B7664-D557-438B-B051-6292DA97450C} = {B7233F78-E142-4882-B084-7C83BE472109}
+		{0D4C17D2-A91B-446A-A165-BBBF861D0BB6} = {B7233F78-E142-4882-B084-7C83BE472109}
 	EndGlobalSection
 EndGlobal
