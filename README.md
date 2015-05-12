@@ -2,4 +2,4 @@
 
 ## Documentation
 
-http://docs.sonarqube.org/x/fAU4
+http://redirect.sonarsource.com/6
