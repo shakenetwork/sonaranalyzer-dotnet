@@ -37,7 +37,7 @@ namespace SonarQube.CSharp.CodeAnalysis.PerformanceTest
     public class PerformanceAnalyzer : IntegrationTestBase
     {
         private Performance expectedPerformance;
-        private const int NumberOfRoundsToAverage = 3;
+        private const int NumberOfRoundsToAverage = 5;
         private double actualBaseline;
 
         [TestInitialize]
@@ -63,6 +63,7 @@ namespace SonarQube.CSharp.CodeAnalysis.PerformanceTest
         [TestCategory("Integration")]
         public void Performance_Meets_Expected()
         {
+            var errors = new List<string>();
             foreach (var analyzerType in AnalyzerTypes)
             {
                 var ruleId = analyzerType.GetCustomAttribute<RuleAttribute>().Key;
@@ -74,13 +75,18 @@ namespace SonarQube.CSharp.CodeAnalysis.PerformanceTest
 
                 if (expectedPerformance.BaseLine * rulePerformance > diff * expectedPerformance.Threshold.Upper)
                 {
-                    Assert.Fail("Rule {0} is slower ({1}) than expected {2}", ruleId, diff, rulePerformance);
+                    errors.Add(string.Format("Rule {0} is slower ({1}) than expected {2}", ruleId, diff, rulePerformance));
                 }
 
                 if (expectedPerformance.BaseLine * rulePerformance < diff * expectedPerformance.Threshold.Lower)
                 {
-                    Assert.Fail("Rule {0} is faster ({1}) than expected {2}", ruleId, diff, rulePerformance);
+                    errors.Add(string.Format("Rule {0} is faster ({1}) than expected {2}", ruleId, diff, rulePerformance));
                 }
+            }
+
+            if (errors.Any())
+            {
+                Assert.Fail("{0} errors:{1}{2}", errors.Count, Environment.NewLine, string.Join(Environment.NewLine, errors));
             }
         }
 
@@ -134,7 +140,7 @@ namespace SonarQube.CSharp.CodeAnalysis.PerformanceTest
 
         [TestMethod]
         [TestCategory("Integration")]
-        public void Generate_Expected()
+        public void Performance_Generate_Expected()
         {
             var performanceActual = new Performance
             {
@@ -149,7 +155,7 @@ namespace SonarQube.CSharp.CodeAnalysis.PerformanceTest
             {
                 var ruleId = analyzerType.GetCustomAttribute<RuleAttribute>().Key;
                 var average = CalculateAverage(GenerateAnalysisInputFile(analyzerType));
-                performanceActual.Rules.Add(new RulePerformance {Performance = average/baseLineForCalculation, RuleId = ruleId});
+                performanceActual.Rules.Add(new RulePerformance {Performance = Math.Round(average/baseLineForCalculation,2), RuleId = ruleId});
             }
 
             var outputDirectory = new DirectoryInfo(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "GeneratedOutput"));
