@@ -41,7 +41,7 @@ using Formatting = Newtonsoft.Json.Formatting;
 namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
 {
     [TestClass]
-    public class ItSources
+    public class ItSourcesAnalyzer
     {
         private FileInfo[] codeFiles;
         private IList<Type> analyzerTypes;
