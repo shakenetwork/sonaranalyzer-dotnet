@@ -85,6 +85,9 @@
     </Content>
     <Content Include="logos\waves-sonarqube-256.png" />
     <Content Include="logos\waves-sonarqube-26.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="logos\waves-sonarqube-32.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
