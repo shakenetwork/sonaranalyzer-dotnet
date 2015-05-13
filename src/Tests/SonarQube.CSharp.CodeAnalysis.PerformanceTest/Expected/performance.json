@@ -1,5 +1,5 @@
 ﻿{
-  "BaseLine": 0.94,
+  "BaseLine": 1.0,
   "Threshold": {
     "Upper": 1.1,
     "Lower": 0.9
@@ -7,227 +7,227 @@
   "Rules": [
     {
       "RuleId": "S1066",
-      "Performance": 0.98
-    },
-    {
-      "RuleId": "S1117",
-      "Performance": 1.0
-    },
-    {
-      "RuleId": "S1313",
-      "Performance": 1.02
-    },
-    {
-      "RuleId": "S2225",
-      "Performance": 0.98
-    },
-    {
-      "RuleId": "S1244",
-      "Performance": 1.01
-    },
-    {
-      "RuleId": "S1854",
-      "Performance": 1.47
-    },
-    {
-      "RuleId": "S2328",
-      "Performance": 1.0
-    },
-    {
-      "RuleId": "S2228",
-      "Performance": 1.03
-    },
-    {
-      "RuleId": "S2070",
-      "Performance": 1.02
-    },
-    {
-      "RuleId": "S2123",
       "Performance": 1.04
     },
     {
-      "RuleId": "S2326",
-      "Performance": 0.94
-    },
-    {
-      "RuleId": "S2325",
-      "Performance": 0.98
-    },
-    {
-      "RuleId": "S2234",
-      "Performance": 0.92
-    },
-    {
-      "RuleId": "S1940",
-      "Performance": 0.92
-    },
-    {
-      "RuleId": "S2758",
-      "Performance": 0.91
-    },
-    {
-      "RuleId": "S2757",
-      "Performance": 0.93
-    },
-    {
-      "RuleId": "S1121",
-      "Performance": 0.92
-    },
-    {
-      "RuleId": "S2306",
-      "Performance": 0.88
-    },
-    {
-      "RuleId": "S1301",
-      "Performance": 0.93
-    },
-    {
-      "RuleId": "S1227",
-      "Performance": 0.93
-    },
-    {
-      "RuleId": "S2737",
-      "Performance": 0.93
-    },
-    {
-      "RuleId": "S125",
-      "Performance": 0.9
-    },
-    {
-      "RuleId": "S2760",
-      "Performance": 0.93
-    },
-    {
-      "RuleId": "S1862",
-      "Performance": 0.93
-    },
-    {
-      "RuleId": "S1871",
-      "Performance": 0.93
-    },
-    {
-      "RuleId": "S126",
-      "Performance": 0.93
-    },
-    {
-      "RuleId": "S2486",
-      "Performance": 0.94
-    },
-    {
-      "RuleId": "S1186",
-      "Performance": 0.93
-    },
-    {
-      "RuleId": "S108",
-      "Performance": 0.93
-    },
-    {
-      "RuleId": "S1116",
-      "Performance": 0.94
-    },
-    {
-      "RuleId": "S127",
-      "Performance": 0.93
-    },
-    {
-      "RuleId": "S1994",
-      "Performance": 0.94
-    },
-    {
-      "RuleId": "S1764",
-      "Performance": 0.94
-    },
-    {
-      "RuleId": "S1145",
-      "Performance": 0.93
-    },
-    {
-      "RuleId": "S2681",
-      "Performance": 0.94
-    },
-    {
-      "RuleId": "S1848",
-      "Performance": 0.94
-    },
-    {
-      "RuleId": "S1226",
-      "Performance": 0.94
-    },
-    {
-      "RuleId": "S1109",
-      "Performance": 0.89
-    },
-    {
-      "RuleId": "S1656",
-      "Performance": 0.94
-    },
-    {
-      "RuleId": "S1697",
-      "Performance": 0.94
-    },
-    {
-      "RuleId": "S2743",
-      "Performance": 0.95
-    },
-    {
-      "RuleId": "S131",
-      "Performance": 0.93
-    },
-    {
-      "RuleId": "S105",
-      "Performance": 0.87
-    },
-    {
-      "RuleId": "S1125",
-      "Performance": 0.94
-    },
-    {
-      "RuleId": "S1481",
+      "RuleId": "S1117",
       "Performance": 1.06
     },
     {
-      "RuleId": "S121",
-      "Performance": 0.95
+      "RuleId": "S1313",
+      "Performance": 1.09
     },
     {
-      "RuleId": "S101",
-      "Performance": 0.94
+      "RuleId": "S2225",
+      "Performance": 1.04
     },
     {
-      "RuleId": "S124",
-      "Performance": 0.91
+      "RuleId": "S1244",
+      "Performance": 1.07
     },
     {
-      "RuleId": "S1067",
-      "Performance": 1.01
+      "RuleId": "S1854",
+      "Performance": 1.56
     },
     {
-      "RuleId": "S104",
-      "Performance": 0.88
+      "RuleId": "S2328",
+      "Performance": 1.06
     },
     {
-      "RuleId": "S1541",
+      "RuleId": "S2228",
+      "Performance": 1.1
+    },
+    {
+      "RuleId": "S2070",
+      "Performance": 1.09
+    },
+    {
+      "RuleId": "S2123",
+      "Performance": 1.11
+    },
+    {
+      "RuleId": "S2326",
+      "Performance": 1
+    },
+    {
+      "RuleId": "S2325",
+      "Performance": 1.04
+    },
+    {
+      "RuleId": "S2234",
       "Performance": 0.98
     },
     {
-      "RuleId": "S103",
-      "Performance": 0.9
+      "RuleId": "S1940",
+      "Performance": 0.98
     },
     {
-      "RuleId": "S109",
-      "Performance": 0.95
+      "RuleId": "S2758",
+      "Performance": 0.97
     },
     {
-      "RuleId": "S100",
-      "Performance": 0.95
+      "RuleId": "S2757",
+      "Performance": 0.99
     },
     {
-      "RuleId": "S1479",
+      "RuleId": "S1121",
+      "Performance": 0.98
+    },
+    {
+      "RuleId": "S2306",
+      "Performance": 0.94
+    },
+    {
+      "RuleId": "S1301",
+      "Performance": 0.99
+    },
+    {
+      "RuleId": "S1227",
+      "Performance": 0.99
+    },
+    {
+      "RuleId": "S2737",
+      "Performance": 0.99
+    },
+    {
+      "RuleId": "S125",
       "Performance": 0.96
     },
     {
-      "RuleId": "S107",
+      "RuleId": "S2760",
+      "Performance": 0.99
+    },
+    {
+      "RuleId": "S1862",
+      "Performance": 0.99
+    },
+    {
+      "RuleId": "S1871",
+      "Performance": 0.99
+    },
+    {
+      "RuleId": "S126",
+      "Performance": 0.99
+    },
+    {
+      "RuleId": "S2486",
+      "Performance": 1
+    },
+    {
+      "RuleId": "S1186",
+      "Performance": 0.99
+    },
+    {
+      "RuleId": "S108",
+      "Performance": 0.99
+    },
+    {
+      "RuleId": "S1116",
+      "Performance": 1
+    },
+    {
+      "RuleId": "S127",
+      "Performance": 0.99
+    },
+    {
+      "RuleId": "S1994",
+      "Performance": 1
+    },
+    {
+      "RuleId": "S1764",
+      "Performance": 1
+    },
+    {
+      "RuleId": "S1145",
+      "Performance": 0.99
+    },
+    {
+      "RuleId": "S2681",
+      "Performance": 1
+    },
+    {
+      "RuleId": "S1848",
+      "Performance": 1
+    },
+    {
+      "RuleId": "S1226",
+      "Performance": 1
+    },
+    {
+      "RuleId": "S1109",
       "Performance": 0.95
+    },
+    {
+      "RuleId": "S1656",
+      "Performance": 1
+    },
+    {
+      "RuleId": "S1697",
+      "Performance": 1
+    },
+    {
+      "RuleId": "S2743",
+      "Performance": 1.01
+    },
+    {
+      "RuleId": "S131",
+      "Performance": 0.99
+    },
+    {
+      "RuleId": "S105",
+      "Performance": 0.93
+    },
+    {
+      "RuleId": "S1125",
+      "Performance": 1
+    },
+    {
+      "RuleId": "S1481",
+      "Performance": 1.13
+    },
+    {
+      "RuleId": "S121",
+      "Performance": 1.01
+    },
+    {
+      "RuleId": "S101",
+      "Performance": 1
+    },
+    {
+      "RuleId": "S124",
+      "Performance": 0.97
+    },
+    {
+      "RuleId": "S1067",
+      "Performance": 1.07
+    },
+    {
+      "RuleId": "S104",
+      "Performance": 0.94
+    },
+    {
+      "RuleId": "S1541",
+      "Performance": 1.04
+    },
+    {
+      "RuleId": "S103",
+      "Performance": 0.96
+    },
+    {
+      "RuleId": "S109",
+      "Performance": 1.01
+    },
+    {
+      "RuleId": "S100",
+      "Performance": 1.01
+    },
+    {
+      "RuleId": "S1479",
+      "Performance": 1.02
+    },
+    {
+      "RuleId": "S107",
+      "Performance": 1.01
     }
   ]
 }
