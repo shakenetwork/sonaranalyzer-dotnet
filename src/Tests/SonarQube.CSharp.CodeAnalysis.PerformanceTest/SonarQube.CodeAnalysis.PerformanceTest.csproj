@@ -127,6 +127,8 @@
     <Compile Include="Expected\RulePerformance.cs" />
     <Compile Include="Expected\Threshold.cs" />
     <Compile Include="PerformanceAnalyzer.cs" />
+    <Compile Include="PerformanceAnalyzerCount.cs" />
+    <Compile Include="PerformanceTestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -26,62 +26,68 @@ using System.Linq;
 using System.Reflection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
-using SonarQube.CSharp.CodeAnalysis.IntegrationTest;
 using SonarQube.CSharp.CodeAnalysis.PerformanceTest.Expected;
+using SonarQube.CSharp.CodeAnalysis.Rules;
 using SonarQube.CSharp.CodeAnalysis.Runner;
 using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings;
 
 namespace SonarQube.CSharp.CodeAnalysis.PerformanceTest
 {
     [TestClass]
-    public class PerformanceAnalyzer : IntegrationTestBase
+    public class PerformanceAnalyzer : PerformanceTestBase
     {
-        private Performance expectedPerformance;
-        private const int NumberOfRoundsToAverage = 5;
+        private const int NumberOfRoundsToAverage = 1;
         private double actualBaseline;
 
         [TestInitialize]
         public override void Setup()
         {
             base.Setup();
-            ParseExpected();
             CalculateActualBaseline();
-        }
-
-        private void ParseExpected()
-        {
-            var expectedFile = ExpectedDirectory.GetFiles("performance.json").Single();
-            expectedPerformance = JsonConvert.DeserializeObject<Performance>(File.ReadAllText(expectedFile.FullName));
         }
 
         private void CalculateActualBaseline()
         {
-            actualBaseline = CalculateAverage(GenerateEmptyAnalysisInputFile());
+            //actualBaseline = CalculateAverage(GenerateEmptyAnalysisInputFile());            
+            actualBaseline = CalculateAverage(GenerateAnalysisInputFile(typeof(EmptyStatement)));
         }
 
         [TestMethod]
         [TestCategory("Integration")]
         public void Performance_Meets_Expected()
         {
+            var performanceActual = new Performance
+            {
+                BaseLine = 1.0,
+                Threshold = new Threshold { Lower = 0.95, Upper = 1.05 },
+                Rules = new List<RulePerformance>()
+            };
+
             var errors = new List<string>();
             foreach (var analyzerType in AnalyzerTypes)
             {
                 var ruleId = analyzerType.GetCustomAttribute<RuleAttribute>().Key;
 
                 var average = CalculateAverage(GenerateAnalysisInputFile(analyzerType));
+                
+                var rulePerformance = ExpectedPerformance.Rules.Single(rulePerf => rulePerf.RuleId == ruleId).Performance;
+                var actualToBaseline = average / actualBaseline;
+                var expectedToBaseline = ExpectedPerformance.BaseLine * rulePerformance;
+                performanceActual.Rules.Add(new RulePerformance { Performance = Math.Round(actualToBaseline, 4), RuleId = ruleId });
 
-                var rulePerformance = expectedPerformance.Rules.Single(rulePerf => rulePerf.RuleId == ruleId).Performance;
-                var diff = average / actualBaseline;
-
-                if (expectedPerformance.BaseLine * rulePerformance > diff * expectedPerformance.Threshold.Upper)
+                if (expectedToBaseline * ExpectedPerformance.Threshold.Upper < actualToBaseline)
                 {
-                    errors.Add(string.Format("Rule {0} is slower ({1}) than expected {2}", ruleId, diff, rulePerformance));
+                    errors.Add(string.Format("Rule {0} is slower ({1}) than expected {2}", ruleId, actualToBaseline, rulePerformance));
                 }
 
-                if (expectedPerformance.BaseLine * rulePerformance < diff * expectedPerformance.Threshold.Lower)
+                if (expectedToBaseline * ExpectedPerformance.Threshold.Lower > actualToBaseline)
                 {
-                    errors.Add(string.Format("Rule {0} is faster ({1}) than expected {2}", ruleId, diff, rulePerformance));
+                    errors.Add(string.Format("Rule {0} is faster ({1}) than expected {2}", ruleId, actualToBaseline, rulePerformance));
                 }
+
+                // write it in each iteration because the whole test can take quite some time
+                var content = JsonConvert.SerializeObject(performanceActual, Formatting.Indented);
+                File.WriteAllText(Path.Combine(AnalysisOutputDirectory.FullName, string.Format("performance_{0}.json", DateTime.Now.Ticks)), content);
             }
 
             if (errors.Any())
@@ -130,16 +136,10 @@ namespace SonarQube.CSharp.CodeAnalysis.PerformanceTest
         {
             return Enumerable.Range(0, NumberOfRoundsToAverage).Select(i => Time(action)).Average();
         }
-        
-        [TestMethod]
-        [TestCategory("Integration")]
-        public void All_Rules_Have_Performance_Test()
-        {
-            Assert.AreEqual(AnalyzerTypes.Count, expectedPerformance.Rules.Count);
-        }
 
         [TestMethod]
         [TestCategory("Integration")]
+        [Ignore]
         public void Performance_Generate_Expected()
         {
             var performanceActual = new Performance
@@ -155,17 +155,12 @@ namespace SonarQube.CSharp.CodeAnalysis.PerformanceTest
             {
                 var ruleId = analyzerType.GetCustomAttribute<RuleAttribute>().Key;
                 var average = CalculateAverage(GenerateAnalysisInputFile(analyzerType));
-                performanceActual.Rules.Add(new RulePerformance {Performance = Math.Round(average/baseLineForCalculation,2), RuleId = ruleId});
-            }
+                performanceActual.Rules.Add(new RulePerformance {Performance = Math.Round(average/baseLineForCalculation,4), RuleId = ruleId});
 
-            var outputDirectory = new DirectoryInfo(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "GeneratedOutput"));
-            if (!outputDirectory.Exists)
-            {
-                outputDirectory.Create();
+                // write it in each iteration because the whole test can take quite some time
+                var content = JsonConvert.SerializeObject(performanceActual, Formatting.Indented);
+                File.WriteAllText(Path.Combine(AnalysisOutputDirectory.FullName, "performance.json"), content);
             }
-
-            var content = JsonConvert.SerializeObject(performanceActual, Formatting.Indented);
-            File.WriteAllText(Path.Combine(outputDirectory.FullName, "performance.json"), content);
         }
     }
 }
