@@ -24,14 +24,11 @@ using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using SonarQube.CSharp.CodeAnalysis.IntegrationTest.ErrorModels.Omstar;
-using SonarQube.CSharp.CodeAnalysis.Rules;
 using SonarQube.CSharp.CodeAnalysis.Runner;
 using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings;
 using AnalysisOutput = SonarQube.CSharp.CodeAnalysis.IntegrationTest.ErrorModels.Xml.AnalysisOutput;
@@ -42,20 +39,19 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
     [TestClass]
     public class ItSourcesAnalyzer : IntegrationTestBase
     {
-        private DirectoryInfo analysisOutputDirectory;
-
         [TestInitialize]
         public override void Setup()
         {
             base.Setup();
-
-            analysisOutputDirectory = new DirectoryInfo(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "GeneratedOutput"));
-            if (!analysisOutputDirectory.Exists)
-            {
-                analysisOutputDirectory.Create();
-            }
         }
-        
+
+        [TestMethod]
+        [TestCategory("Integration")]
+        public void All_Rules_Have_Integration_Test()
+        {
+            Assert.AreEqual(AnalyzerTypes.Count, ExpectedDirectory.GetFiles("S*.json").Count());
+        }
+
         [TestMethod]
         [TestCategory("Integration")]
         public void ItSources_Match_Expected_All()
@@ -64,7 +60,7 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
             try
             {
                 File.AppendAllText(tempInputFilePath, GenerateAnalysisInputFile());
-                var outputPath = Path.Combine(analysisOutputDirectory.FullName, "all.xml");
+                var outputPath = Path.Combine(AnalysisOutputDirectory.FullName, "all.xml");
 
                 CallMainAndCheckResult(tempInputFilePath, outputPath);
             }
@@ -91,6 +87,7 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
 
             var output = ParseAnalysisXmlOutput(outputPath);
             var omstar = GenerateOmstarOutput(output);
+            AddMissingEntries(omstar);
             SplitAndStoreOmstarByIssueType(omstar);
             List<string> problematicRules;
             if (!FilesAreEquivalent(out problematicRules))
@@ -100,12 +97,30 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
             }
         }
 
+        private void AddMissingEntries(ErrorModels.Omstar.AnalysisOutput output)
+        {
+            var foundKeys = output.Issues.Select(i => i.RuleId).ToList();
+
+            var notFoundKeys = AnalyzerTypes
+                .Select(t => t.GetCustomAttribute<RuleAttribute>())
+                .Select(attribute => attribute.Template ? string.Format(TemplateRuleIdPattern, attribute.Key) : attribute.Key)
+                .Where(s => !foundKeys.Contains(s));
+
+            foreach (var notFoundKey in notFoundKeys)
+            {
+                output.Issues.Add(new Issue
+                {
+                    RuleId = notFoundKey
+                });
+            }
+        }
+
         private bool FilesAreEquivalent(out List<string> problematicRules)
         {
             problematicRules = new List<string>();
             
-            var expectedFiles = ExpectedDirectory.GetFiles("*.json");
-            var actualFiles = analysisOutputDirectory.GetFiles("*.json");
+            var expectedFiles = ExpectedDirectory.GetFiles("S*.json");
+            var actualFiles = AnalysisOutputDirectory.GetFiles("S*.json");
 
             var problematicFileNames =
                     expectedFiles.Select(file => file.Name)
@@ -138,8 +153,16 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
                     ToolInfo = omstar.ToolInfo,
                     Version = omstar.Version,
                     Issues = issueGroup
-                        .OrderBy(issue => issue.Locations.First().AnalysisTarget.Uri)
-                        .ThenBy(issue => issue.Locations.First().AnalysisTarget.Region.StartLine)
+                        .OrderBy(issue =>
+                        {
+                            var location = issue.Locations.FirstOrDefault();
+                            return location == null ? string.Empty : location.AnalysisTarget.Uri;
+                        })
+                        .ThenBy(issue =>
+                        {
+                            var location = issue.Locations.FirstOrDefault();
+                            return location == null ? 0 : location.AnalysisTarget.Region.StartLine;
+                        })
                         .ToList()
                 };
 
@@ -151,7 +174,7 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
                     });
 
                 File.WriteAllText(Path.Combine(
-                    analysisOutputDirectory.FullName, string.Format("{0}.json", issueGroup.Key)), content);
+                    AnalysisOutputDirectory.FullName, string.Format("{0}.json", issueGroup.Key)), content);
             }
         }
 

@@ -20,6 +20,9 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
         protected string ItSourcesEnvVarName;
         protected string XmlInputPattern;
         protected DirectoryInfo ExpectedDirectory;
+        protected DirectoryInfo AnalysisOutputDirectory;
+
+        public const string TemplateRuleIdPattern = "{0}-1";
 
         private static readonly XmlWriterSettings XmlWriterSettings = new XmlWriterSettings
         {
@@ -37,8 +40,7 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
             CloseOutput = false,
             OmitXmlDeclaration = true
         };
-
-
+        
         public virtual void Setup()
         {
             ItSourcesEnvVarName = ConfigurationManager.AppSettings["env.var.it-sources"];
@@ -49,6 +51,13 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
             AnalyzerTypes = new RuleFinder().GetAllAnalyzerTypes().ToList();
             XmlInputPattern = GenerateAnalysisInputFilePattern();
             ExpectedDirectory = new DirectoryInfo(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Expected"));
+
+            AnalysisOutputDirectory = new DirectoryInfo(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "GeneratedOutput"));
+            if (AnalysisOutputDirectory.Exists)
+            {
+                AnalysisOutputDirectory.Delete(true);
+            }
+            AnalysisOutputDirectory.Create();
         }
 
         private string GenerateAnalysisInputFilePattern()
@@ -109,7 +118,7 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
                             writer.WriteString("RuleKey");
                             writer.WriteEndElement();
                             writer.WriteStartElement("Value");
-                            writer.WriteString("S124-1");
+                            writer.WriteString(string.Format(TemplateRuleIdPattern, CommentRegularExpression.DiagnosticId));
                             writer.WriteEndElement();
                             writer.WriteEndElement();
                         }
