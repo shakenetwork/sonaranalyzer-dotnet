@@ -23,7 +23,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace SonarQube.CSharp.CodeAnalysis.PerformanceTest
 {
     [TestClass]
-    public class PerformanceAnalyzerCount : PerformanceTestBase
+    public class PerformanceAnalyzerCountTest : PerformanceTestBase
     {
         [TestInitialize]
         public override void Setup()

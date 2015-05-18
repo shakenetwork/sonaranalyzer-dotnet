@@ -34,7 +34,7 @@ using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings;
 namespace SonarQube.CSharp.CodeAnalysis.PerformanceTest
 {
     [TestClass]
-    public class PerformanceAnalyzer : PerformanceTestBase
+    public class PerformanceTest : PerformanceTestBase
     {
         private const int NumberOfRoundsToAverage = 1;
         private double actualBaseline;
@@ -48,7 +48,6 @@ namespace SonarQube.CSharp.CodeAnalysis.PerformanceTest
 
         private void CalculateActualBaseline()
         {
-            //actualBaseline = CalculateAverage(GenerateEmptyAnalysisInputFile());            
             actualBaseline = CalculateAverage(GenerateAnalysisInputFile(typeof(EmptyStatement)));
         }
 
@@ -135,32 +134,6 @@ namespace SonarQube.CSharp.CodeAnalysis.PerformanceTest
         private static double TimeAverage(Action action)
         {
             return Enumerable.Range(0, NumberOfRoundsToAverage).Select(i => Time(action)).Average();
-        }
-
-        [TestMethod]
-        [TestCategory("Integration")]
-        [Ignore]
-        public void Performance_Generate_Expected()
-        {
-            var performanceActual = new Performance
-            {
-                BaseLine = 1.0,
-                Threshold = new Threshold {Lower = 0.95, Upper = 1.05},
-                Rules = new List<RulePerformance>()
-            };
-
-            var baseLineForCalculation = actualBaseline*performanceActual.BaseLine;
-
-            foreach (var analyzerType in AnalyzerTypes)
-            {
-                var ruleId = analyzerType.GetCustomAttribute<RuleAttribute>().Key;
-                var average = CalculateAverage(GenerateAnalysisInputFile(analyzerType));
-                performanceActual.Rules.Add(new RulePerformance {Performance = Math.Round(average/baseLineForCalculation,4), RuleId = ruleId});
-
-                // write it in each iteration because the whole test can take quite some time
-                var content = JsonConvert.SerializeObject(performanceActual, Formatting.Indented);
-                File.WriteAllText(Path.Combine(AnalysisOutputDirectory.FullName, "performance.json"), content);
-            }
         }
     }
 }
