@@ -30,7 +30,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Descriptor", "src\SonarQube
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runner", "src\SonarQube.CSharp.Runner\Runner.csproj", "{79F0B359-8275-4F3B-B919-82C493B74665}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarQube.CodeAnalysis.IntegrationTest", "src\Tests\SonarQube.CSharp.CodeAnalysis.IntegrationTest\SonarQube.CodeAnalysis.IntegrationTest.csproj", "{F99B7664-D557-438B-B051-6292DA97450C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarQube.CodeAnalysis.RulingTest", "src\Tests\SonarQube.CSharp.CodeAnalysis.RulingTest\SonarQube.CodeAnalysis.RulingTest.csproj", "{F99B7664-D557-438B-B051-6292DA97450C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarQube.CodeAnalysis.PerformanceTest", "src\Tests\SonarQube.CSharp.CodeAnalysis.PerformanceTest\SonarQube.CodeAnalysis.PerformanceTest.csproj", "{0D4C17D2-A91B-446A-A165-BBBF861D0BB6}"
 EndProject

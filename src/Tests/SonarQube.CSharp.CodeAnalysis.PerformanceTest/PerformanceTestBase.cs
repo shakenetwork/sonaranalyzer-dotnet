@@ -21,8 +21,8 @@
 using System.IO;
 using System.Linq;
 using Newtonsoft.Json;
-using SonarQube.CSharp.CodeAnalysis.IntegrationTest;
 using SonarQube.CSharp.CodeAnalysis.PerformanceTest.Expected;
+using SonarQube.CSharp.CodeAnalysis.RulingTest;
 
 namespace SonarQube.CSharp.CodeAnalysis.PerformanceTest
 {

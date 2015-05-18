@@ -134,7 +134,7 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Expected\performance.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -155,9 +155,9 @@
       <Project>{79f0b359-8275-4f3b-b919-82c493b74665}</Project>
       <Name>Runner</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SonarQube.CSharp.CodeAnalysis.IntegrationTest\SonarQube.CodeAnalysis.IntegrationTest.csproj">
+    <ProjectReference Include="..\SonarQube.CSharp.CodeAnalysis.RulingTest\SonarQube.CodeAnalysis.RulingTest.csproj">
       <Project>{F99B7664-D557-438B-B051-6292DA97450C}</Project>
-      <Name>SonarQube.CodeAnalysis.IntegrationTest</Name>
+      <Name>SonarQube.CodeAnalysis.RulingTest</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
