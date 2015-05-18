@@ -18,9 +18,11 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
 using System.Collections.Immutable;
 using System.Linq;
 using System.Net;
+using System.Net.Sockets;
 using System.Text.RegularExpressions;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
@@ -53,6 +55,9 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
+        private static readonly string[] SkippedWords = {"version", "assembly"};
+        private static readonly Type[] NodeTypesToCheck = {typeof(StatementSyntax), typeof(VariableDeclaratorSyntax), typeof(ParameterSyntax) };
+
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeAction(
@@ -65,6 +70,21 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     if (!IPAddress.TryParse(text, out address))
                     {
                         return;
+                    }
+
+                    if (address.AddressFamily == AddressFamily.InterNetwork &&
+                        text.Split('.').Count() != 4)
+                    {
+                        return;
+                    }
+
+                    foreach (var type in NodeTypesToCheck)
+                    {
+                        var ancestorOrSelf = stringLiteral.FirstAncestorOrSelf<SyntaxNode>(node => type.IsInstanceOfType(node));
+                        if (ancestorOrSelf != null && SkippedWords.Any(s => ancestorOrSelf.ToString().ToLowerInvariant().Contains(s)))
+                        {
+                            return;
+                        }
                     }
 
                     var attribute = stringLiteral.FirstAncestorOrSelf<AttributeSyntax>();
