@@ -37,7 +37,7 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
         protected FileInfo[] CodeFiles;
         protected IList<Type> AnalyzerTypes;
         protected DirectoryInfo ItSourcesRootDirectory;
-        protected string ItSourcesEnvVarName;
+        protected const string ItSourcesEnvVarName = "SONAR_IT_SOURCES";
         protected string XmlInputPattern;
         protected DirectoryInfo ExpectedDirectory;
         protected DirectoryInfo AnalysisOutputDirectory;
@@ -63,16 +63,15 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
         
         public virtual void Setup()
         {
-            ItSourcesEnvVarName = ConfigurationManager.AppSettings["env.var.it-sources"];
             ItSourcesRootDirectory = new DirectoryInfo(Environment.GetEnvironmentVariable(ItSourcesEnvVarName));
-            CodeFiles = new DirectoryInfo(Path.Combine(ItSourcesRootDirectory.FullName,
+            CodeFiles = new DirectoryInfo(Path.Combine(ItSourcesRootDirectory.FullName, 
                 ConfigurationManager.AppSettings["path.it-sources.input"]))
                 .GetFiles("*.cs", SearchOption.AllDirectories);
             AnalyzerTypes = new RuleFinder().GetAllAnalyzerTypes().ToList();
             XmlInputPattern = GenerateAnalysisInputFilePattern();
             ExpectedDirectory = new DirectoryInfo(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Expected"));
 
-            AnalysisOutputDirectory = new DirectoryInfo(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "GeneratedOutput"));
+            AnalysisOutputDirectory = new DirectoryInfo(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Actual"));
             if (AnalysisOutputDirectory.Exists)
             {
                 AnalysisOutputDirectory.Delete(true);
@@ -82,7 +81,7 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
 
         private string GenerateAnalysisInputFilePattern()
         {
-            var memoryStream = new MemoryStream();
+            using (var memoryStream = new MemoryStream())
             using (var writer = XmlWriter.Create(memoryStream, XmlWriterSettings))
             {
                 writer.WriteStartDocument();
@@ -112,9 +111,11 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
                 writer.WriteEndElement();
                 writer.WriteEndElement();
                 writer.WriteEndDocument();
-            }
 
-            return Encoding.UTF8.GetString(memoryStream.ToArray());
+                writer.Flush();
+
+                return Encoding.UTF8.GetString(memoryStream.ToArray());
+            }
         }
 
         protected static string GenerateAnalysisInputFileSegment(Type analyzerType)

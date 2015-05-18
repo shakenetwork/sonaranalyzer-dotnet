@@ -19,6 +19,7 @@
  */
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.IO;
@@ -37,7 +38,7 @@ using Formatting = Newtonsoft.Json.Formatting;
 namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
 {
     [TestClass]
-    public class ItSourcesAnalyzer : IntegrationTestBase
+    public class RulingTest : IntegrationTestBase
     {
         [TestInitialize]
         public override void Setup()
@@ -135,7 +136,10 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
 
             foreach (var expectedFile in expectedFiles)
             {
-                if (!FilesAreEqual(expectedFile, actualFiles.Single(file => file.Name == expectedFile.Name)))
+                var bytesExpected = File.ReadAllBytes(expectedFile.FullName);
+                var bytesActual = File.ReadAllBytes(actualFiles.Single(file => file.Name == expectedFile.Name).FullName);
+
+                if (!StructuralComparisons.StructuralEqualityComparer.Equals(bytesExpected, bytesActual))
                 {
                     problematicRules.Add(Path.GetFileNameWithoutExtension(expectedFile.Name));
                 }
@@ -188,7 +192,6 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
                 ToolInfo = new ToolInfo
                 {
                     FileVersion = "1.0.0",
-                    ProductVersion = assemblyName.Version.ToString(),
                     ToolName = assemblyName.Name
                 }
             };
@@ -200,7 +203,7 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
                 Properties = null,
                 Locations = new List<IssueLocation>
                 {
-                    new IssueLocation()
+                    new IssueLocation
                     {
                         AnalysisTarget = new AnalysisTarget
                         {
@@ -209,7 +212,7 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
                                 StartLine = i.Line,
                                 EndLine = i.Line,
                                 StartColumn = 0,
-                                EndColumn = int.MaxValue,
+                                EndColumn = int.MaxValue
                             },
                             Uri = f.Path
                         }
@@ -233,41 +236,5 @@ namespace SonarQube.CSharp.CodeAnalysis.IntegrationTest
             fileContents = fileContents.Replace(ItSourcesRootDirectory.FullName, ItSourcesEnvVarName);
             File.WriteAllText(outputPath, fileContents);
         }
-
-        #region file compare
-
-        const int BYTES_TO_READ = sizeof(Int64);
-
-        static bool FilesAreEqual(FileInfo first, FileInfo second)
-        {
-            if (first.Length != second.Length)
-            {
-                return false;
-            }
-
-            int iterations = (int)Math.Ceiling((double)first.Length / BYTES_TO_READ);
-
-            using (FileStream fs1 = first.OpenRead())
-            using (FileStream fs2 = second.OpenRead())
-            {
-                byte[] one = new byte[BYTES_TO_READ];
-                byte[] two = new byte[BYTES_TO_READ];
-
-                for (int i = 0; i < iterations; i++)
-                {
-                    fs1.Read(one, 0, BYTES_TO_READ);
-                    fs2.Read(two, 0, BYTES_TO_READ);
-
-                    if (BitConverter.ToInt64(one, 0) != BitConverter.ToInt64(two, 0))
-                    {
-                        return false;
-                    }
-                }
-            }
-
-            return true;
-        }
-
-        #endregion
     }
 }
