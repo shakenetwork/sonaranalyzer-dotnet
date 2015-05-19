@@ -1,4 +1,4 @@
-/*
+﻿/*
  * SonarQube C# Code Analysis
  * Copyright (C) 2015 SonarSource
  * dev@sonar.codehaus.org
@@ -18,40 +18,19 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Linq;
-using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarQube.CSharp.CodeAnalysis.Runner;
+using SonarQube.CSharp.CodeAnalysis.Rules;
 
-namespace SonarQube.CSharp.CodeAnalysis.UnitTest
+namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
 {
     [TestClass]
-    public class RuleFinderTest
+    public class ParameterNamesInPartialMethodTest
     {
         [TestMethod]
-        public void GetPackagedRuleAssembly()
+        [TestCategory("Rule")]
+        public void ParameterNamesInPartialMethod()
         {
-            Assert.IsNotNull(RuleFinder.GetPackagedRuleAssembly());
-        }
-
-        [TestMethod]
-        public void GetExtraRuleAssembly()
-        {
-            Assert.IsNotNull(RuleFinder.GetExtraRuleAssembly());
-        }
-
-        [TestMethod]
-        public void GetParameterlessAnalyzerTypes()
-        {
-            new RuleFinder().GetParameterlessAnalyzerTypes().Should().HaveCount(47);
-        }
-
-        [TestMethod]
-        public void GetAllAnalyzerTypes()
-        {
-            var finder = new RuleFinder();
-            var countParameterless = finder.GetParameterlessAnalyzerTypes().Count();
-            finder.GetAllAnalyzerTypes().Should().HaveCount(countParameterless + 10);
+            Verifier.Verify(@"TestCases\ParameterNamesInPartialMethod.cs", new ParameterNamesInPartialMethod());
         }
     }
 }

@@ -1,0 +1,46 @@
+<p>
+    When the parameters to the implementation of a <code>partial</code> method don't match those
+    in the signature declaration, then confusion is almost guaranteed. Either the implementer was
+    confused when he renamed, swapped or mangled the parameter names in the implementation, or 
+    callers will be confused.
+</p>
+
+<h2>Noncompliant Code Example</h2>
+<pre>
+partial class Point
+{
+  partial void OnChange(int x, int y);
+}
+
+partial class Point
+{
+  int x = 0;
+  int y = 0;
+
+  partial void OnChange(int yk, int x)  // Noncompliant
+  {
+    this.x = x;
+    this.y = y;
+  }
+}
+</pre>
+
+<h2>Compliant Solution</h2>
+<pre>
+partial class Point
+{
+  partial void OnChange(int x, int y);
+}
+
+partial class Point
+{
+  int x = 0;
+  int y = 0;
+
+  partial void OnChange(int x, int y)
+  {
+    this.x = x;
+    this.y = y;
+  }
+}
+</pre>
