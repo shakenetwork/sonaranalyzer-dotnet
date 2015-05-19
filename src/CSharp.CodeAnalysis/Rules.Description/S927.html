@@ -17,10 +17,10 @@ partial class Point
   int x = 0;
   int y = 0;
 
-  partial void OnChange(int yk, int x)  // Noncompliant
+  partial void OnChange(int x, int yk)  // Noncompliant
   {
     this.x = x;
-    this.y = y;
+    this.y = yk;
   }
 }
 </pre>

@@ -70,10 +70,10 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     for (var i = 0; i < implementationParameters.Count; i++)
                     {
                         var implementationParameter = implementationParameters[i];
-                        if (definitionParameters.Length > i)
+                        if (i < definitionParameters.Length)
                         {
                             var definitionParameter = definitionParameters[i];
-                            if ((string) implementationParameter.Identifier.Value != definitionParameter.Name)
+                            if (implementationParameter.Identifier.ValueText != definitionParameter.Name)
                             {
                                 c.ReportDiagnostic(Diagnostic.Create(Rule, implementationParameter.Identifier.GetLocation(),
                                     implementationParameter.Identifier.Value, definitionParameter.Name));

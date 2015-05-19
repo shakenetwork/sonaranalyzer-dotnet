@@ -43,7 +43,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest
         [TestMethod]
         public void GetParameterlessAnalyzerTypes()
         {
-            new RuleFinder().GetParameterlessAnalyzerTypes().Should().HaveCount(47);
+            new RuleFinder().GetParameterlessAnalyzerTypes().Count().Should().BeGreaterThan(0);
         }
 
         [TestMethod]
@@ -51,7 +51,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest
         {
             var finder = new RuleFinder();
             var countParameterless = finder.GetParameterlessAnalyzerTypes().Count();
-            finder.GetAllAnalyzerTypes().Should().HaveCount(countParameterless + 10);
+            finder.GetAllAnalyzerTypes().Count().Should().BeGreaterThan(countParameterless);
         }
     }
 }
