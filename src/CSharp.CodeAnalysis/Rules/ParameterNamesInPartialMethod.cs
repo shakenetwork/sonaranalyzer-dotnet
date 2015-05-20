@@ -73,10 +73,11 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                         if (i < definitionParameters.Length)
                         {
                             var definitionParameter = definitionParameters[i];
-                            if (implementationParameter.Identifier.ValueText != definitionParameter.Name)
+                            var implementationParameterName = implementationParameter.Identifier.ValueText;
+                            if (implementationParameterName != definitionParameter.Name)
                             {
                                 c.ReportDiagnostic(Diagnostic.Create(Rule, implementationParameter.Identifier.GetLocation(),
-                                    implementationParameter.Identifier.Value, definitionParameter.Name));
+                                    implementationParameterName, definitionParameter.Name));
                             }
                         }
                     }
