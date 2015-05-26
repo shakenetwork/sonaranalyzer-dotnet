@@ -66,6 +66,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 {
                     var binary = (BinaryExpressionSyntax) c.Node;
                     CheckCountZero(binary.Right, binary.Left, c);
+                    CheckCountOne(binary.Left, binary.Right, c);
                 },
                 SyntaxKind.GreaterThanExpression);
             context.RegisterSyntaxNodeAction(
@@ -73,6 +74,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 {
                     var binary = (BinaryExpressionSyntax)c.Node;
                     CheckCountZero(binary.Left, binary.Right, c);
+                    CheckCountOne(binary.Right, binary.Left, c);
                 },
                 SyntaxKind.LessThanExpression);
             context.RegisterSyntaxNodeAction(
@@ -80,7 +82,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 {
                     var binary = (BinaryExpressionSyntax)c.Node;
                     CheckCountOne(binary.Right, binary.Left, c);
-                    CheckCountZero(binary.Right, binary.Left, c);
+                    CheckCountZero(binary.Left, binary.Right, c);
                 },
                 SyntaxKind.GreaterThanOrEqualExpression);
             context.RegisterSyntaxNodeAction(
