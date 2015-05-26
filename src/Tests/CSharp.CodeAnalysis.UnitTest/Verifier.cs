@@ -80,6 +80,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest
             {
                 var document = workspace.CurrentSolution.AddProject("foo", "foo.dll", LanguageNames.CSharp)
                     .AddMetadataReference(MetadataReference.CreateFromAssembly(typeof(object).Assembly))
+                    .AddMetadataReference(MetadataReference.CreateFromAssembly(typeof(Enumerable).Assembly))
                     .AddDocument(file.Name, File.ReadAllText(file.FullName, Encoding.UTF8));
 
                 Verify(document.Project, diagnosticAnalyzer);

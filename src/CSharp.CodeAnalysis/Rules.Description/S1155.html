@@ -1,0 +1,40 @@
+<p>
+    Using <code>.Count() > 0</code> to test for emptiness works, but using <code>.Any()</code> makes the intent clearer, 
+    and the code more readable.
+</p>
+
+<h2>Noncompliant Code Example</h2>
+<pre>
+private static bool HasContent(BlockSyntax block)
+{
+  return block.Statements.Count() > 0;
+}
+</pre>
+<pre>
+private static bool HasContent(BlockSyntax block)
+{
+  return block.Statements.Count() >= 1;
+}
+</pre>
+or
+<pre>
+private static bool IsEmpty(BlockSyntax block)
+{
+  return block.Statements.Count() == 0;
+}
+</pre>
+
+<h2>Compliant Solution</h2>
+<pre>
+private static bool HasContent(BlockSyntax block)
+{
+  return block.Statements.Any();
+}
+</pre>
+or
+<pre>
+private static bool IsEmpty(BlockSyntax block)
+{
+  return !block.Statements.Any();
+}
+</pre>
