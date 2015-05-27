@@ -64,7 +64,8 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     {
                         var property = (PropertyDeclarationSyntax) c.Node;
 
-                        if (property.AccessorList.Accessors.Any(accessor => accessor.Body != null))
+                        if (property.AccessorList != null &&
+                            property.AccessorList.Accessors.Any(accessor => accessor.Body != null))
                         {
                             propertyAccessorsByProperty = propertyAccessorsByProperty.SetItem(property,
                                 property.AccessorList.Accessors.ToImmutableHashSet());
@@ -84,7 +85,6 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                         }
 
                         var methodOrPropertySymbol = cbc.OwningSymbol;
-
                         if (methodOrPropertySymbol == null ||
                             HasAllowedModifier(methodOrPropertySymbol) ||
                             IsInterfaceImplementation(methodOrPropertySymbol))
