@@ -24,13 +24,13 @@ using SonarQube.CSharp.CodeAnalysis.Rules;
 namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
 {
     [TestClass]
-    public class MethodsWithoutInstanceDataTest
+    public class MethodOrPropertyWithoutInstanceDataTest
     {
         [TestMethod]
         [TestCategory("Rule")]
-        public void MethodsWithoutInstanceData()
+        public void MethodOrPropertyWithoutInstanceData()
         {
-            Verifier.Verify(@"TestCases\MethodsWithoutInstanceData.cs", new MethodsWithoutInstanceData());
+            Verifier.Verify(@"TestCases\MethodOrPropertyWithoutInstanceData.cs", new MethodOrPropertyWithoutInstanceData());
         }
     }
 }

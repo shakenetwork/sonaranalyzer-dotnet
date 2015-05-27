@@ -100,7 +100,7 @@
     <Compile Include="Rules\InsecureHashAlgorithm.cs" />
     <Compile Include="Rules\ValuesUselesslyIncremented.cs" />
     <Compile Include="Rules\UnusedTypeParameter.cs" />
-    <Compile Include="Rules\MethodsWithoutInstanceData.cs" />
+    <Compile Include="Rules\MethodOrPropertyWithoutInstanceData.cs" />
     <Compile Include="Rules\ParametersCorrectOrder.cs" />
     <Compile Include="Rules\BooleanCheckInverted.cs" />
     <Compile Include="Rules\TernaryOperatorPointless.cs" />

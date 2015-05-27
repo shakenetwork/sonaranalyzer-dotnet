@@ -41,7 +41,19 @@ namespace Tests.Diagnostics
             throw new NotImplementedException();
         }
 
-        public int MyProperty { get; set; }
+        public int MyProperty { get; set; } //Compliant
+        public int myField;
+        public int MyProperty2 
+        {
+            get { return myField; }
+            set { myField3 = value; }
+        }
+        public static int myField3;
+        public int MyProperty3 //Noncompliant
+        {
+            get { return myField3; }
+            set { myField3 = value; }
+        }
         public void Test1()
         {
             MyProperty = 6;
