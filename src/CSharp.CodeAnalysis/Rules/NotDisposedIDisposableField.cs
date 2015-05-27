@@ -30,7 +30,6 @@ using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings.Sqale;
 
 namespace SonarQube.CSharp.CodeAnalysis.Rules
 {
-    //TODO merge this class with the other IDisposable rule
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [SqaleConstantRemediation("10min")]
@@ -49,9 +48,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2930");
-
-        private static readonly Accessibility[] accessibilities = { Accessibility.Protected, Accessibility.Private };
-
+        
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         public override void Initialize(AnalysisContext context)
@@ -70,7 +67,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     {
                         var fieldSymbol = c.SemanticModel.GetDeclaredSymbol(variableDeclaratorSyntax) as IFieldSymbol;
 
-                        if (!FieldIsRelevant(fieldSymbol))
+                        if (!ClassWithIDisposableMembers.FieldIsRelevant(fieldSymbol))
                         {
                             continue;
                         }
@@ -98,7 +95,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     }
 
                     var fieldSymbol = c.SemanticModel.GetSymbolInfo(assignment.Left).Symbol as IFieldSymbol;
-                    if (!FieldIsRelevant(fieldSymbol))
+                    if (!ClassWithIDisposableMembers.FieldIsRelevant(fieldSymbol))
                     {
                         return;
                     }
@@ -111,15 +108,13 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 {
                     var invocation = (InvocationExpressionSyntax) c.Node;
                     var memberAccess = invocation.Expression as MemberAccessExpressionSyntax;
-
                     if (memberAccess == null)
                     {
                         return;
                     }
 
                     var fieldSymbol = c.SemanticModel.GetSymbolInfo(memberAccess.Expression).Symbol as IFieldSymbol;
-
-                    if (!FieldIsRelevant(fieldSymbol))
+                    if (!ClassWithIDisposableMembers.FieldIsRelevant(fieldSymbol))
                     {
                         return;
                     }
@@ -162,25 +157,6 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     }
                 });
             });
-        }
-
-        private static bool FieldIsRelevant(IFieldSymbol fieldSymbol)
-        {
-            return fieldSymbol != null &&
-                   !fieldSymbol.IsStatic &&
-                   accessibilities.Contains(fieldSymbol.DeclaredAccessibility) &&
-                   FieldImplementsIDisposable(fieldSymbol);
-        }
-
-        private static bool FieldImplementsIDisposable(IFieldSymbol symbol)
-        {
-            var namedType = symbol.Type as INamedTypeSymbol;
-            return namedType != null && ImplementsIDisposable(namedType);
-        }
-
-        private static bool ImplementsIDisposable(INamedTypeSymbol namedTypeSymbol)
-        {
-            return namedTypeSymbol.AllInterfaces.Any(symbol => symbol.SpecialType == SpecialType.System_IDisposable);
         }
     }
 }

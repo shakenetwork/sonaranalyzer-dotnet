@@ -146,7 +146,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             return fieldsAssigned.Add(fieldSymbol);
         }
 
-        private static bool FieldIsRelevant(IFieldSymbol fieldSymbol)
+        internal static bool FieldIsRelevant(IFieldSymbol fieldSymbol)
         {
             return fieldSymbol != null &&
                    !fieldSymbol.IsStatic &&
@@ -154,7 +154,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                    FieldImplementsIDisposable(fieldSymbol);
         }
 
-        private static bool FieldImplementsIDisposable(IFieldSymbol symbol)
+        internal static bool FieldImplementsIDisposable(IFieldSymbol symbol)
         {
             var namedType = symbol.Type as INamedTypeSymbol;
             return namedType != null && ImplementsIDisposable(namedType);
