@@ -118,6 +118,7 @@
     <Compile Include="MetricsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\ParameterNamesInPartialMethodTest.cs" />
+    <Compile Include="Rules\ClassWithIDisposableMembersTest.cs" />
     <Compile Include="Rules\CollapsibleIfsTest.cs" />
     <Compile Include="Rules\ConsoleLoggingTest.cs" />
     <Compile Include="Rules\HardcodedIpAddressTest.cs" />
@@ -227,6 +228,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\ParameterNamesInPartialMethod.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\ClassWithIDisposableMembers.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
