@@ -1,0 +1,54 @@
+<p>
+    You can't rely on garbage collection to clean up everything. Specifically, you can't count on
+    it to release non-memory resources such as <code>File</code>s. For that, there's the <code>IDisposable</code>
+    interface, and the contract that <code>Dispose</code> will always be called on such objects.
+</p>
+<p>
+    When an <code>IDisposable</code> is a class member, then it's up to that class to call <code>Dispose</code>
+    on it, ideally in its own <code>Dispose</code> method.
+</p>
+<p>
+    This rule raises issues on members that are never <code>Dispose</code>d.
+</p>
+
+<h2>Noncompliant Code Example</h2>
+<pre>
+public class ResourceHolder 
+{
+  private FileStream fs;  // Noncompliant; Dispose is never called
+  public void OpenResource(string path)
+  {
+    this.fs = new FileStream(path, FileMode.Open);
+  }
+  public void CloseResource()
+  {
+    this.fs.Close();
+  }
+}
+</pre>
+
+<h2>Compliant Solution</h2>
+<pre>
+public class ResourceHolder  : IDisposable
+{
+  private FileStream fs;
+  public void OpenResource(string path)
+  {
+    this.fs = new FileStream(path, FileMode.Open);
+  }
+  public void CloseResource()
+  {
+    this.fs.Close();
+  }
+
+  public void Dispose() 
+  {
+    this.fs.Dispose();
+  }
+}
+</pre>
+
+<h2>See</h2>
+<ul>
+    <li> <a href="http://cwe.mitre.org/data/definitions/459.html">MITRE, CWE-459</a> - Incomplete Cleanup</li>
+</ul>

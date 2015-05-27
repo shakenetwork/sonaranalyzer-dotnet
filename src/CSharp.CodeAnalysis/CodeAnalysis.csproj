@@ -85,6 +85,7 @@
     <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="Helpers\EquivalenceChecker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules\NotDisposedIDisposableField.cs" />
     <Compile Include="Rules\ParameterNamesInPartialMethod.cs" />
     <Compile Include="Rules\ClassWithIDisposableMembers.cs" />
     <Compile Include="Rules\CollapsibleIfs.cs" />
@@ -294,6 +295,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S2931.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S2930.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
