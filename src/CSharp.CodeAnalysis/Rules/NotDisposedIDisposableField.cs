@@ -74,8 +74,8 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
                         disposableFields = disposableFields.Add(fieldSymbol);
 
-                        var objectCreation = variableDeclaratorSyntax.Initializer.Value as ObjectCreationExpressionSyntax;
-                        if (objectCreation == null)
+                        if (variableDeclaratorSyntax.Initializer == null ||
+                            !(variableDeclaratorSyntax.Initializer.Value is ObjectCreationExpressionSyntax))
                         {
                             return;
                         }

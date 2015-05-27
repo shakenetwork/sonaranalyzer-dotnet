@@ -98,12 +98,13 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 {
                     var field = (FieldDeclarationSyntax)c.Node;
 
-                    foreach (var variableDeclaratorSyntax in field.Declaration.Variables)
+                    foreach (var variableDeclaratorSyntax in field.Declaration.Variables
+                        .Where(declaratorSyntax => declaratorSyntax.Initializer != null))
                     {
-                        var expression = variableDeclaratorSyntax.Initializer.Value;
                         var fieldSymbol = c.SemanticModel.GetDeclaredSymbol(variableDeclaratorSyntax) as IFieldSymbol;
 
-                        fieldsAssigned = AddFieldIfNeeded(fieldSymbol, expression, fieldsAssigned);
+                        fieldsAssigned = AddFieldIfNeeded(fieldSymbol, variableDeclaratorSyntax.Initializer.Value,
+                            fieldsAssigned);
                     }
 
                 }, SyntaxKind.FieldDeclaration);
