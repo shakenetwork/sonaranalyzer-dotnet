@@ -55,6 +55,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             public SyntaxKind Kind;
             public string Value;
             public Func<SyntaxNode, bool> Validator;
+            public Func<SyntaxNode, Location> IssueReportLocation;
         }
 
         private readonly ImmutableList<CheckedKind> checkedKinds = ImmutableList.Create(
@@ -62,7 +63,8 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             {
                 Kind = SyntaxKind.IfStatement,
                 Value = "if",
-                Validator = node => ((IfStatementSyntax)node).Statement.IsKind(SyntaxKind.Block)
+                Validator = node => ((IfStatementSyntax)node).Statement.IsKind(SyntaxKind.Block),
+                IssueReportLocation = node => ((IfStatementSyntax)node).IfKeyword.GetLocation()
             },
             new CheckedKind
             {
@@ -73,31 +75,36 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     {
                         var statement = ((ElseClauseSyntax)node).Statement;
                         return statement.IsKind(SyntaxKind.IfStatement) || statement.IsKind(SyntaxKind.Block);
-                    }
+                    },
+                IssueReportLocation = node => ((ElseClauseSyntax)node).ElseKeyword.GetLocation()
             },
             new CheckedKind
             {
                 Kind = SyntaxKind.ForStatement,
                 Value = "for",
-                Validator = node => ((ForStatementSyntax)node).Statement.IsKind(SyntaxKind.Block)
+                Validator = node => ((ForStatementSyntax)node).Statement.IsKind(SyntaxKind.Block),
+                IssueReportLocation = node => ((ForStatementSyntax)node).ForKeyword.GetLocation()
             },
             new CheckedKind
             {
                 Kind = SyntaxKind.ForEachStatement,
                 Value = "foreach",
-                Validator = node => ((ForEachStatementSyntax)node).Statement.IsKind(SyntaxKind.Block)
+                Validator = node => ((ForEachStatementSyntax)node).Statement.IsKind(SyntaxKind.Block),
+                IssueReportLocation = node => ((ForEachStatementSyntax)node).ForEachKeyword.GetLocation()
             },
             new CheckedKind
             {
                 Kind = SyntaxKind.DoStatement,
                 Value = "do",
-                Validator = node => ((DoStatementSyntax)node).Statement.IsKind(SyntaxKind.Block)
+                Validator = node => ((DoStatementSyntax)node).Statement.IsKind(SyntaxKind.Block),
+                IssueReportLocation = node => ((DoStatementSyntax)node).DoKeyword.GetLocation()
             },
             new CheckedKind
             {
                 Kind = SyntaxKind.WhileStatement,
                 Value = "while",
-                Validator = node => ((WhileStatementSyntax)node).Statement.IsKind(SyntaxKind.Block)
+                Validator = node => ((WhileStatementSyntax)node).Statement.IsKind(SyntaxKind.Block),
+                IssueReportLocation = node => ((WhileStatementSyntax)node).WhileKeyword.GetLocation()
             });
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
@@ -111,7 +118,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
                     if (!checkedKind.Validator(c.Node))
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, c.Node.GetLocation(), checkedKind.Value));
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, checkedKind.IssueReportLocation(c.Node), checkedKind.Value));
                     }
                 },
                 checkedKinds.Select(e => e.Kind).ToArray());

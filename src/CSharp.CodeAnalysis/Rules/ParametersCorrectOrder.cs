@@ -121,7 +121,12 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
                     if (methodCallHasIssue)
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, methodCall.GetLocation(),
+                        var memberAccess = methodCall.Expression as MemberAccessExpressionSyntax;
+                        var reportLocation = memberAccess == null
+                            ? methodCall.Expression.GetLocation()
+                            : memberAccess.Name.GetLocation();
+
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, reportLocation,
                             methodDeclarationSyntax.Identifier.Text));
                     }
                 },

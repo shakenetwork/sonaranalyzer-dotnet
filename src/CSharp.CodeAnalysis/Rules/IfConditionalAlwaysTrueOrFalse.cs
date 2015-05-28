@@ -59,7 +59,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
                     if (HasBooleanLiteralExpressionAsCondition(ifNode))
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, ifNode.GetLocation()));
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, ifNode.IfKeyword.GetLocation()));
                     }
                 },
                 SyntaxKind.IfStatement);

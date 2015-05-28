@@ -112,7 +112,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                         {
                             if (variableDeclarator.Initializer != null)
                             {
-                                c.ReportDiagnostic(Diagnostic.Create(Rule, variableDeclarator.Initializer.GetLocation(),
+                                c.ReportDiagnostic(Diagnostic.Create(Rule, variableDeclarator.Initializer.EqualsToken.GetLocation(),
                                     variableDeclarator.Identifier.Text));
                             }
                             continue;
@@ -132,7 +132,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                         if (variableDeclarator.Initializer != null &&
                             !MightHaveReferenceBetween(variableDeclarator.Initializer, assignments.First(), references))
                         {
-                            c.ReportDiagnostic(Diagnostic.Create(Rule, variableDeclarator.Initializer.GetLocation(),
+                            c.ReportDiagnostic(Diagnostic.Create(Rule, variableDeclarator.Initializer.EqualsToken.GetLocation(),
                                 variableDeclarator.Identifier.Text));
                         }
 
@@ -146,7 +146,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                                 continue;
                             }
 
-                            c.ReportDiagnostic(Diagnostic.Create(Rule, first.GetLocation(),
+                            c.ReportDiagnostic(Diagnostic.Create(Rule, first.OperatorToken.GetLocation(),
                                 variableDeclarator.Identifier.Text));
                         }
 
@@ -154,7 +154,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                         if (!references.Any(reference => reference.SpanStart > lastAssignment.Span.End) &&
                             !InLoop(lastAssignment, declaringBlock))
                         {
-                            c.ReportDiagnostic(Diagnostic.Create(Rule, lastAssignment.GetLocation(),
+                            c.ReportDiagnostic(Diagnostic.Create(Rule, lastAssignment.OperatorToken.GetLocation(),
                                 variableDeclarator.Identifier.Text));
                         }
                     }

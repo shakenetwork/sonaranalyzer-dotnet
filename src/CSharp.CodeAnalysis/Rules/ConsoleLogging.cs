@@ -59,14 +59,13 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 c =>
                 {
                     var methodCall = (InvocationExpressionSyntax) c.Node;
-                    
                     var methodSymbol = c.SemanticModel.GetSymbolInfo(methodCall.Expression).Symbol;
 
                     if (methodSymbol != null &&
                         methodSymbol.ContainingType.ToString() == "System.Console" &&
                         BannedConsoleMembers.Contains(methodSymbol.Name))
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, c.Node.GetLocation()));
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, methodCall.Expression.GetLocation()));
                     }
                 },
                 SyntaxKind.InvocationExpression);

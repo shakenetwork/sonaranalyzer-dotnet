@@ -57,16 +57,13 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             context.RegisterSyntaxNodeAction(
                 c =>
                 {
-                    if (IsInSubExpression(c.Node))
-                    {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, c.Node.GetLocation(), c.Node.ChildNodes().First().ToString()));
-                        return;
-                    }
+                    var assignment = (AssignmentExpressionSyntax) c.Node;
 
-                    if (IsInCondition(c.Node))
+                    if (IsInSubExpression(assignment) ||
+                        IsInCondition(assignment))
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, c.Node.GetLocation(), c.Node.ChildNodes().First().ToString()));
-                        return;
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, assignment.OperatorToken.GetLocation(),
+                            assignment.Left.ToString()));
                     }
                 },
                 SyntaxKind.SimpleAssignmentExpression,
@@ -93,14 +90,12 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         private static bool IsInCondition(SyntaxNode node)
         {
             var ifStatement = node.Parent.FirstAncestorOrSelf<IfStatementSyntax>(ancestor => ancestor != null);
-
             if (ifStatement != null)
             {
                 return ifStatement.Condition == node;
             }
 
             var forStatement = node.Parent.FirstAncestorOrSelf<ForStatementSyntax>(ancestor => ancestor != null);
-
             if (forStatement != null)
             {
                 return forStatement.Condition == node;
