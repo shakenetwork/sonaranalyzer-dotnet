@@ -24,13 +24,13 @@ using SonarQube.CSharp.CodeAnalysis.Rules;
 namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
 {
     [TestClass]
-    public class SequentialSameContitionTest
+    public class SequentialSameConditionTest
     {
         [TestMethod]
         [TestCategory("Rule")]
-        public void SequentialSameContition()
+        public void SequentialSameCondition()
         {
-            Verifier.Verify(@"TestCases\SequentialSameContition.cs", new SequentialSameContition());
+            Verifier.Verify(@"TestCases\SequentialSameCondition.cs", new SequentialSameCondition());
         }
     }
 }

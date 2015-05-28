@@ -19,7 +19,9 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -35,7 +37,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [SqaleConstantRemediation("5min")]
     [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
     [Tags("bug")]
-    public class SequentialSameContition : DiagnosticAnalyzer
+    public class SequentialSameCondition : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2760";
         internal const string Description = @"Sequential tests should not check the same condition";
@@ -68,27 +70,75 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 SyntaxKind.SwitchStatement);
         }
 
-        private static void CheckMatchingExpressionsInSucceedingStatements<T>(T statement, Func<T, ExpressionSyntax> expression, 
-            SyntaxNodeAnalysisContext c) where T : StatementSyntax
+        private static void CheckMatchingExpressionsInSucceedingStatements<T>(T statement,
+            Func<T, ExpressionSyntax> expressionSelector, SyntaxNodeAnalysisContext c) where T : StatementSyntax
         {
             var previousStatement = statement.GetPrecedingStatement() as T;
-
             if (previousStatement == null)
             {
                 return;
             }
 
-            CheckMatchingTests(expression(statement), expression(previousStatement), c);
+            var currentExpression = expressionSelector(statement);
+            var previousExpression = expressionSelector(previousStatement);
+
+            if (EquivalenceChecker.AreEquivalent(currentExpression, previousExpression) &&
+                !ContainsPossibleUpdate(previousStatement, currentExpression, c.SemanticModel))
+            {
+                c.ReportDiagnostic(Diagnostic.Create(Rule, currentExpression.GetLocation(),
+                    previousExpression.GetLineNumberToReport()));
+            }
         }
 
-        private static void CheckMatchingTests(ExpressionSyntax current, ExpressionSyntax preceding,
-            SyntaxNodeAnalysisContext c)
+        private static bool ContainsPossibleUpdate(StatementSyntax statement, ExpressionSyntax expression,
+            SemanticModel semanticModel)
         {
-            if (EquivalenceChecker.AreEquivalent(current, preceding))
+            var checkedSymbols = expression.DescendantNodesAndSelf()
+                .Select(node => semanticModel.GetSymbolInfo(node).Symbol)
+                .Where(symbol => symbol != null)
+                .ToImmutableHashSet();
+
+            var statementDescendents = statement.DescendantNodesAndSelf().ToList();
+            var assignmentExpressions = statementDescendents
+                .OfType<AssignmentExpressionSyntax>()
+                .Any(expressionSyntax =>
+                {
+                    var symbol = semanticModel.GetSymbolInfo(expressionSyntax.Left).Symbol;
+                    return symbol != null && checkedSymbols.Contains(symbol);
+                });
+
+            if (assignmentExpressions)
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, current.GetLocation(),
-                    preceding.GetLineNumberToReport()));
+                return true;
             }
+
+            var postfixUnaryExpression = statementDescendents
+                .OfType<PostfixUnaryExpressionSyntax>()
+                .Any(expressionSyntax =>
+                {
+                    var symbol = semanticModel.GetSymbolInfo(expressionSyntax.Operand).Symbol;
+                    return symbol != null && checkedSymbols.Contains(symbol);
+                });
+
+            if (postfixUnaryExpression)
+            {
+                return true;
+            }
+
+            var prefixUnaryExpression = statementDescendents
+                .OfType<PrefixUnaryExpressionSyntax>()
+                .Any(expressionSyntax =>
+                {
+                    var symbol = semanticModel.GetSymbolInfo(expressionSyntax.Operand).Symbol;
+                    return symbol != null && checkedSymbols.Contains(symbol);
+                });
+
+            if (prefixUnaryExpression)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

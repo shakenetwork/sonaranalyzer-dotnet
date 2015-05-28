@@ -112,7 +112,7 @@
     <Compile Include="Rules\BreakOutsideSwitch.cs" />
     <Compile Include="Rules\CatchRethrow.cs" />
     <Compile Include="Rules\CommentedOutCode.cs" />
-    <Compile Include="Rules\SequentialSameContition.cs" />
+    <Compile Include="Rules\SequentialSameCondition.cs" />
     <Compile Include="Rules\ConditionalStructureSameCondition.cs" />
     <Compile Include="Rules\ConditionalStructureSameImplementation.cs" />
     <Compile Include="Rules\ElseIfWithoutElse.cs" />

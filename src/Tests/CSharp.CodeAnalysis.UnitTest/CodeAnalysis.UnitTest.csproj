@@ -138,7 +138,7 @@
     <Compile Include="Rules\CommentedOutCodeTest.cs" />
     <Compile Include="Rules\CommentRegularExpressionTest.cs" />
     <Compile Include="Rules\ParametersCorrectOrderTest.cs" />
-    <Compile Include="Rules\SequentialSameContitionTest.cs" />
+    <Compile Include="Rules\SequentialSameConditionTest.cs" />
     <Compile Include="Rules\ConditionalStructureSameConditionTest.cs" />
     <Compile Include="Rules\ConditionalStructureSameImplementationTest.cs" />
     <Compile Include="Rules\ElseIfWithoutElseTest.cs" />
@@ -179,7 +179,7 @@
     <Compile Include="Rules\ValuesUselesslyIncrementedTest.cs" />
     <Compile Include="Rules\UseCurlyBracesTest.cs" />
     <None Include="app.config" />
-    <None Include="TestCases\SequentialSameContition.cs">
+    <None Include="TestCases\SequentialSameCondition.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\ReversedOperators.cs">

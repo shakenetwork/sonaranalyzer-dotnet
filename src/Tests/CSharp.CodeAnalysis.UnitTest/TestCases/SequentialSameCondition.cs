@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tests.TestCases
 {
-    class SequentialSameContition
+    class SequentialSameCondition
     {
         public void doTheThing(object o)
         {
@@ -32,7 +32,17 @@ namespace Tests.TestCases
             if (a == c) 
             {
                 doTheThing(c);
+                c = 5;
             }
+            if (a == c) // Compliant, c might be updated in the previous if
+            {
+                c++;
+            }
+            if (a == c) // Compliant, c might be updated in the previous if
+            {
+
+            }
+
         }
         public void TestSw()
         {
