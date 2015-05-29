@@ -7,20 +7,17 @@
 <pre>
 private static bool HasContent(BlockSyntax block)
 {
-  return block.Statements.Count() > 0;
+  return block.Statements.Count() > 0; // Noncompliant
 }
-</pre>
-<pre>
-private static bool HasContent(BlockSyntax block)
+
+private static bool HasContent2(BlockSyntax block)
 {
-  return block.Statements.Count() >= 1;
+  return block.Statements.Count() >= 1; // Noncompliant
 }
-</pre>
-or
-<pre>
+
 private static bool IsEmpty(BlockSyntax block)
 {
-  return block.Statements.Count() == 0;
+  return block.Statements.Count() == 0; // Noncompliant
 }
 </pre>
 
@@ -30,9 +27,7 @@ private static bool HasContent(BlockSyntax block)
 {
   return block.Statements.Any();
 }
-</pre>
-or
-<pre>
+
 private static bool IsEmpty(BlockSyntax block)
 {
   return !block.Statements.Any();
