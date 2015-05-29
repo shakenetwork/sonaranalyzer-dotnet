@@ -1,0 +1,4939 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarQube.CSharp.CodeAnalysis.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Confirm\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcAjaxScript\\AjaxOptions.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"HttpMethod\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcAjaxScript\\AjaxOptions.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"InsertionMode\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcAjaxScript\\AjaxOptions.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"LoadingElementId\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcAjaxScript\\AjaxOptions.cs",
+            "Region": {
+              "StartLine": 11,
+              "EndLine": 11,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"OnBegin\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcAjaxScript\\AjaxOptions.cs",
+            "Region": {
+              "StartLine": 12,
+              "EndLine": 12,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"OnComplete\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcAjaxScript\\AjaxOptions.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"OnFailure\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcAjaxScript\\AjaxOptions.cs",
+            "Region": {
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"OnSuccess\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcAjaxScript\\AjaxOptions.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"UpdateTargetId\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcAjaxScript\\AjaxOptions.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Url\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcAjaxScript\\AjaxOptions.cs",
+            "Region": {
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"DefaultErrorMessage\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\FieldContext.cs",
+            "Region": {
+              "StartLine": 23,
+              "EndLine": 23,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Elements\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\FieldContext.cs",
+            "Region": {
+              "StartLine": 24,
+              "EndLine": 24,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"FormContext\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\FieldContext.cs",
+            "Region": {
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ReplaceValidationMessageContents\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\FieldContext.cs",
+            "Region": {
+              "StartLine": 26,
+              "EndLine": 26,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ValidationMessageElement\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\FieldContext.cs",
+            "Region": {
+              "StartLine": 27,
+              "EndLine": 27,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Validations\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\FieldContext.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Fields\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\FormContext.cs",
+            "Region": {
+              "StartLine": 21,
+              "EndLine": 21,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ReplaceValidationSummary\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\FormContext.cs",
+            "Region": {
+              "StartLine": 24,
+              "EndLine": 24,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"FieldName\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\JsonValidationField.cs",
+            "Region": {
+              "StartLine": 7,
+              "EndLine": 7,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ReplaceValidationMessageContents\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\JsonValidationField.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ValidationMessageId\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\JsonValidationField.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ValidationRules\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\JsonValidationField.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Fields\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\JsonValidationOptions.cs",
+            "Region": {
+              "StartLine": 7,
+              "EndLine": 7,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"FormId\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\JsonValidationOptions.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ReplaceValidationSummary\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\JsonValidationOptions.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ValidationSummaryId\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\JsonValidationOptions.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ErrorMessage\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\JsonValidationRule.cs",
+            "Region": {
+              "StartLine": 7,
+              "EndLine": 7,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ValidationType\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\JsonValidationRule.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ValidationParameters\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\JsonValidationRule.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"FieldErrorMessage\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\Validation.cs",
+            "Region": {
+              "StartLine": 7,
+              "EndLine": 7,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Validator\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\Validation.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"EventName\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\ValidationContext.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"FieldContext\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\ValidationContext.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Validation\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\ValidationContext.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Elements\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\ExpressionUtil\\ExpressionFingerprintChain.cs",
+            "Region": {
+              "StartLine": 45,
+              "EndLine": 45,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Elements\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\ExpressionUtil\\ExpressionFingerprintChain.cs",
+            "Region": {
+              "StartLine": 45,
+              "EndLine": 45,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"HttpHandler\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\MvcHttpHandler.cs",
+            "Region": {
+              "StartLine": 76,
+              "EndLine": 76,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Left\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\ViewDataDictionary.cs",
+            "Region": {
+              "StartLine": 323,
+              "EndLine": 323,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Right\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\ViewDataDictionary.cs",
+            "Region": {
+              "StartLine": 324,
+              "EndLine": 324,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"SendWasCalled\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\MvcFuturesTest\\Mvc\\Test\\AsyncManagerExtensionsTest.cs",
+            "Region": {
+              "StartLine": 148,
+              "EndLine": 148,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Cache\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\MvcFuturesTest\\Mvc\\Test\\CachedAssociatedMetadataProviderTest.cs",
+            "Region": {
+              "StartLine": 218,
+              "EndLine": 218,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"PrototypeMetadata\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\MvcFuturesTest\\Mvc\\Test\\CachedAssociatedMetadataProviderTest.cs",
+            "Region": {
+              "StartLine": 219,
+              "EndLine": 219,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"RealMetadata\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\MvcFuturesTest\\Mvc\\Test\\CachedAssociatedMetadataProviderTest.cs",
+            "Region": {
+              "StartLine": 220,
+              "EndLine": 220,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Log\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Async\\Test\\AsyncControllerActionInvokerTest.cs",
+            "Region": {
+              "StartLine": 715,
+              "EndLine": 715,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"product\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Html\\Test\\LabelExtensionsTest.cs",
+            "Region": {
+              "StartLine": 276,
+              "EndLine": 276,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"RenderPartialInternal_PartialViewName\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Html\\Test\\RenderPartialExtensionsTest.cs",
+            "Region": {
+              "StartLine": 79,
+              "EndLine": 79,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"RenderPartialInternal_ViewData\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Html\\Test\\RenderPartialExtensionsTest.cs",
+            "Region": {
+              "StartLine": 80,
+              "EndLine": 80,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"RenderPartialInternal_Model\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Html\\Test\\RenderPartialExtensionsTest.cs",
+            "Region": {
+              "StartLine": 81,
+              "EndLine": 81,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"RenderPartialInternal_Writer\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Html\\Test\\RenderPartialExtensionsTest.cs",
+            "Region": {
+              "StartLine": 82,
+              "EndLine": 82,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"RenderPartialInternal_ViewEngineCollection\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Html\\Test\\RenderPartialExtensionsTest.cs",
+            "Region": {
+              "StartLine": 83,
+              "EndLine": 83,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"MyField\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Html\\Test\\TemplateHelpersTest.cs",
+            "Region": {
+              "StartLine": 521,
+              "EndLine": 521,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"_i\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\ActionMethodDispatcherTest.cs",
+            "Region": {
+              "StartLine": 98,
+              "EndLine": 98,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"_s\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\ActionMethodDispatcherTest.cs",
+            "Region": {
+              "StartLine": 99,
+              "EndLine": 99,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"_dt\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\ActionMethodDispatcherTest.cs",
+            "Region": {
+              "StartLine": 100,
+              "EndLine": 100,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Namespaces\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\AreaRegistrationTest.cs",
+            "Region": {
+              "StartLine": 44,
+              "EndLine": 44,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"State\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\AreaRegistrationTest.cs",
+            "Region": {
+              "StartLine": 45,
+              "EndLine": 45,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"_areasLoaded\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\AreaRegistrationTest.cs",
+            "Region": {
+              "StartLine": 59,
+              "EndLine": 59,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"CreateMetadataLog\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\AssociatedMetadataProviderTest.cs",
+            "Region": {
+              "StartLine": 293,
+              "EndLine": 293,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"CreateMetadataReturnValue\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\AssociatedMetadataProviderTest.cs",
+            "Region": {
+              "StartLine": 294,
+              "EndLine": 294,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"TempDataSaved\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\AsyncControllerTest.cs",
+            "Region": {
+              "StartLine": 188,
+              "EndLine": 188,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"HandleUnknownActionCalled\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\AsyncControllerTest.cs",
+            "Region": {
+              "StartLine": 189,
+              "EndLine": 189,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ShortCircuitResult\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\ControllerActionInvokerTest.cs",
+            "Region": {
+              "StartLine": 2166,
+              "EndLine": 2166,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ShouldHandleException\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\ControllerActionInvokerTest.cs",
+            "Region": {
+              "StartLine": 2183,
+              "EndLine": 2183,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ContextPassed\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\ControllerActionInvokerTest.cs",
+            "Region": {
+              "StartLine": 2184,
+              "EndLine": 2184,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"NumTimesExecuteCoreCalled\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\ControllerBaseTest.cs",
+            "Region": {
+              "StartLine": 208,
+              "EndLine": 208,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"WasCalled\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\ControllerTest.cs",
+            "Region": {
+              "StartLine": 1732,
+              "EndLine": 1732,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ControllerContext\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\ControllerTest.cs",
+            "Region": {
+              "StartLine": 1778,
+              "EndLine": 1778,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"BindingContext\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\ControllerTest.cs",
+            "Region": {
+              "StartLine": 1779,
+              "EndLine": 1779,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"WasWriteFileCalled\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\FileResultTest.cs",
+            "Region": {
+              "StartLine": 137,
+              "EndLine": 137,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"OriginalCulture\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\HtmlHelperTest.cs",
+            "Region": {
+              "StartLine": 941,
+              "EndLine": 941,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"OriginalUICulture\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\HtmlHelperTest.cs",
+            "Region": {
+              "StartLine": 942,
+              "EndLine": 942,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"CachedFileStore\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\MockBuildManager.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"IntField\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 835,
+              "EndLine": 835,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Text\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\MultiSelectListTest.cs",
+            "Region": {
+              "StartLine": 274,
+              "EndLine": 274,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Value\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\MultiSelectListTest.cs",
+            "Region": {
+              "StartLine": 275,
+              "EndLine": 275,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ActionParameters\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\OutputCacheAttributeTest.cs",
+            "Region": {
+              "StartLine": 253,
+              "EndLine": 253,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"InitHelpersCalled\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\RazorViewTest.cs",
+            "Region": {
+              "StartLine": 190,
+              "EndLine": 190,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ResultLayoutPage\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\RazorViewTest.cs",
+            "Region": {
+              "StartLine": 191,
+              "EndLine": 191,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ResultOverridenLayoutPath\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\RazorViewTest.cs",
+            "Region": {
+              "StartLine": 192,
+              "EndLine": 192,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ResultViewContext\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\RazorViewTest.cs",
+            "Region": {
+              "StartLine": 193,
+              "EndLine": 193,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ResultVirtualPath\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\RazorViewTest.cs",
+            "Region": {
+              "StartLine": 194,
+              "EndLine": 194,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"RouteTable\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\RemoteAttributeTest.cs",
+            "Region": {
+              "StartLine": 145,
+              "EndLine": 145,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"OriginalCulture\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\ValueProviderDictionaryTest.cs",
+            "Region": {
+              "StartLine": 181,
+              "EndLine": 181,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"CreatePartialViewResult\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\VirtualPathProviderViewEngineTest.cs",
+            "Region": {
+              "StartLine": 983,
+              "EndLine": 983,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"CreatePartialViewPartialPath\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\VirtualPathProviderViewEngineTest.cs",
+            "Region": {
+              "StartLine": 984,
+              "EndLine": 984,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"CreatePartialViewControllerContext\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\VirtualPathProviderViewEngineTest.cs",
+            "Region": {
+              "StartLine": 985,
+              "EndLine": 985,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"CreateViewResult\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\VirtualPathProviderViewEngineTest.cs",
+            "Region": {
+              "StartLine": 988,
+              "EndLine": 988,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"CreateViewMasterPath\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\VirtualPathProviderViewEngineTest.cs",
+            "Region": {
+              "StartLine": 989,
+              "EndLine": 989,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"CreateViewControllerContext\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\VirtualPathProviderViewEngineTest.cs",
+            "Region": {
+              "StartLine": 990,
+              "EndLine": 990,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"CreateViewViewPath\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\VirtualPathProviderViewEngineTest.cs",
+            "Region": {
+              "StartLine": 991,
+              "EndLine": 991,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"MockCache\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\VirtualPathProviderViewEngineTest.cs",
+            "Region": {
+              "StartLine": 993,
+              "EndLine": 993,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"MockPathProvider\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\VirtualPathProviderViewEngineTest.cs",
+            "Region": {
+              "StartLine": 994,
+              "EndLine": 994,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ResultViewContext\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\WebFormViewTest.cs",
+            "Region": {
+              "StartLine": 140,
+              "EndLine": 140,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ResultViewContext\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\WebFormViewTest.cs",
+            "Region": {
+              "StartLine": 148,
+              "EndLine": 148,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Comparer\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\UnitTestUtil\\UnitTestUtil\\DictionaryHelper.cs",
+            "Region": {
+              "StartLine": 115,
+              "EndLine": 115,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Creator\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\UnitTestUtil\\UnitTestUtil\\DictionaryHelper.cs",
+            "Region": {
+              "StartLine": 116,
+              "EndLine": 116,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ExcludedKey\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\UnitTestUtil\\UnitTestUtil\\DictionaryHelper.cs",
+            "Region": {
+              "StartLine": 117,
+              "EndLine": 117,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ConflictingKeys\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\UnitTestUtil\\UnitTestUtil\\DictionaryHelper.cs",
+            "Region": {
+              "StartLine": 118,
+              "EndLine": 118,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"NonConflictingKeys\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\UnitTestUtil\\UnitTestUtil\\DictionaryHelper.cs",
+            "Region": {
+              "StartLine": 119,
+              "EndLine": 119,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ThrowOnKeyNotFound\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\UnitTestUtil\\UnitTestUtil\\DictionaryHelper.cs",
+            "Region": {
+              "StartLine": 120,
+              "EndLine": 120,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Values\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\UnitTestUtil\\UnitTestUtil\\DictionaryHelper.cs",
+            "Region": {
+              "StartLine": 121,
+              "EndLine": 121,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Foo\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\System.Web.Helpers.Test\\ObjectInfoTest.cs",
+            "Region": {
+              "StartLine": 557,
+              "EndLine": 557,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Bar\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\System.Web.Helpers.Test\\ObjectInfoTest.cs",
+            "Region": {
+              "StartLine": 558,
+              "EndLine": 558,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"_values\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\System.Web.Helpers.Test\\WebGridDataSourceTest.cs",
+            "Region": {
+              "StartLine": 256,
+              "EndLine": 256,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Parser\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\System.Web.Razor.Test\\Parser\\PartialParsing\\PartialParsingTestBase.cs",
+            "Region": {
+              "StartLine": 67,
+              "EndLine": 67,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ParserComplete\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\System.Web.Razor.Test\\Parser\\PartialParsing\\PartialParsingTestBase.cs",
+            "Region": {
+              "StartLine": 68,
+              "EndLine": 68,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ParseCount\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\System.Web.Razor.Test\\Parser\\PartialParsing\\PartialParsingTestBase.cs",
+            "Region": {
+              "StartLine": 69,
+              "EndLine": 69,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ApplicationState\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\System.Web.WebPages.Test\\WebPage\\ApplicationStartPageTest.cs",
+            "Region": {
+              "StartLine": 114,
+              "EndLine": 114,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"PageInstances\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\System.Web.WebPages.Test\\WebPage\\Utils.cs",
+            "Region": {
+              "StartLine": 133,
+              "EndLine": 133,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"PageInstances\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\System.Web.WebPages.Test\\WebPage\\Utils.cs",
+            "Region": {
+              "StartLine": 158,
+              "EndLine": 158,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"CalledInitialize\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\System.Web.WebPages.Test\\WebPage\\WebPageHttpModuleTest.cs",
+            "Region": {
+              "StartLine": 53,
+              "EndLine": 53,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"CalledExecuteStartPage\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\System.Web.WebPages.Test\\WebPage\\WebPageHttpModuleTest.cs",
+            "Region": {
+              "StartLine": 58,
+              "EndLine": 58,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"CalledApplicationStart\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\System.Web.WebPages.Test\\WebPage\\WebPageHttpModuleTest.cs",
+            "Region": {
+              "StartLine": 63,
+              "EndLine": 63,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"hIcon\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\DialogServices\\SolutionExplorer\\ProjectUtilities.cs",
+            "Region": {
+              "StartLine": 374,
+              "EndLine": 374,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"iIcon\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\DialogServices\\SolutionExplorer\\ProjectUtilities.cs",
+            "Region": {
+              "StartLine": 375,
+              "EndLine": 375,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"dwAttributes\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\DialogServices\\SolutionExplorer\\ProjectUtilities.cs",
+            "Region": {
+              "StartLine": 376,
+              "EndLine": 376,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"szDisplayName\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\DialogServices\\SolutionExplorer\\ProjectUtilities.cs",
+            "Region": {
+              "StartLine": 378,
+              "EndLine": 378,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"szTypeName\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\DialogServices\\SolutionExplorer\\ProjectUtilities.cs",
+            "Region": {
+              "StartLine": 380,
+              "EndLine": 380,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"cbSize\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\VsConsole\\PowerShellHost\\NativeMethods.cs",
+            "Region": {
+              "StartLine": 49,
+              "EndLine": 49,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"hwndParent\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\VsConsole\\PowerShellHost\\NativeMethods.cs",
+            "Region": {
+              "StartLine": 50,
+              "EndLine": 50,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"pszMessageText\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\VsConsole\\PowerShellHost\\NativeMethods.cs",
+            "Region": {
+              "StartLine": 52,
+              "EndLine": 52,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"pszCaptionText\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\VsConsole\\PowerShellHost\\NativeMethods.cs",
+            "Region": {
+              "StartLine": 54,
+              "EndLine": 54,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"hbmBanner\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\VsConsole\\PowerShellHost\\NativeMethods.cs",
+            "Region": {
+              "StartLine": 55,
+              "EndLine": 55,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"MovedFiles\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\CommandLine.Test\\SelfUpdaterTests.cs",
+            "Region": {
+              "StartLine": 166,
+              "EndLine": 166,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"UpdatedFiles\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\CommandLine.Test\\SelfUpdaterTests.cs",
+            "Region": {
+              "StartLine": 167,
+              "EndLine": 167,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"IsAnti\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\FileEntry.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"HasStream\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\FileEntry.cs",
+            "Region": {
+              "StartLine": 7,
+              "EndLine": 7,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"IsDirectory\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\FileEntry.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Size\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\FileEntry.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"FileCRC\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\FileEntry.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Name\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\FileEntry.cs",
+            "Region": {
+              "StartLine": 11,
+              "EndLine": 11,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Folder\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\FileEntry.cs",
+            "Region": {
+              "StartLine": 12,
+              "EndLine": 12,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"UnpackedStream\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\FileEntry.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"FolderOffset\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\FileEntry.cs",
+            "Region": {
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Coders\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\Folder.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"BindPairs\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\Folder.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"PackedStreamIndices\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\Folder.cs",
+            "Region": {
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"UnpackedStreamSizes\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\Folder.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"UnpackCRC\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\Folder.cs",
+            "Region": {
+              "StartLine": 19,
+              "EndLine": 19,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"PackedStreams\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\Folder.cs",
+            "Region": {
+              "StartLine": 20,
+              "EndLine": 20,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"UnpackedStreams\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\Folder.cs",
+            "Region": {
+              "StartLine": 21,
+              "EndLine": 21,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Method\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\Folder.cs",
+            "Region": {
+              "StartLine": 145,
+              "EndLine": 145,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"NumberOfInStreams\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\Folder.cs",
+            "Region": {
+              "StartLine": 146,
+              "EndLine": 146,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"NumberOfOutStreams\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\Folder.cs",
+            "Region": {
+              "StartLine": 147,
+              "EndLine": 147,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Properties\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\Folder.cs",
+            "Region": {
+              "StartLine": 148,
+              "EndLine": 148,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"InIndex\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\Folder.cs",
+            "Region": {
+              "StartLine": 153,
+              "EndLine": 153,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"OutIndex\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\Folder.cs",
+            "Region": {
+              "StartLine": 154,
+              "EndLine": 154,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Folders\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\StreamsInfo.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"PackPosition\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\StreamsInfo.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"EmptyStreamFlags\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\StreamsInfo.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"EmptyFileFlags\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\StreamsInfo.cs",
+            "Region": {
+              "StartLine": 11,
+              "EndLine": 11,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"PackedStreams\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\StreamsInfo.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"UnpackedStreams\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\StreamsInfo.cs",
+            "Region": {
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"PackedSize\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\StreamsInfo.cs",
+            "Region": {
+              "StartLine": 19,
+              "EndLine": 19,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Crc\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\StreamsInfo.cs",
+            "Region": {
+              "StartLine": 20,
+              "EndLine": 20,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"StartPosition\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\StreamsInfo.cs",
+            "Region": {
+              "StartLine": 21,
+              "EndLine": 21,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"UnpackedSize\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\StreamsInfo.cs",
+            "Region": {
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Digest\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\StreamsInfo.cs",
+            "Region": {
+              "StartLine": 26,
+              "EndLine": 26,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"buffer\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ParallelDeflateOutputStream.cs",
+            "Region": {
+              "StartLine": 30,
+              "EndLine": 30,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"compressed\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ParallelDeflateOutputStream.cs",
+            "Region": {
+              "StartLine": 31,
+              "EndLine": 31,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"compressedBytesAvailable\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ParallelDeflateOutputStream.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"compressor\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ParallelDeflateOutputStream.cs",
+            "Region": {
+              "StartLine": 33,
+              "EndLine": 33,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"crc\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ParallelDeflateOutputStream.cs",
+            "Region": {
+              "StartLine": 34,
+              "EndLine": 34,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"index\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ParallelDeflateOutputStream.cs",
+            "Region": {
+              "StartLine": 35,
+              "EndLine": 35,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"inputBytesAvailable\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ParallelDeflateOutputStream.cs",
+            "Region": {
+              "StartLine": 36,
+              "EndLine": 36,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"status\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ParallelDeflateOutputStream.cs",
+            "Region": {
+              "StartLine": 37,
+              "EndLine": 37,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"InputBuffer\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ZlibCodec.cs",
+            "Region": {
+              "StartLine": 86,
+              "EndLine": 86,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"NextIn\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ZlibCodec.cs",
+            "Region": {
+              "StartLine": 91,
+              "EndLine": 91,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"AvailableBytesIn\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ZlibCodec.cs",
+            "Region": {
+              "StartLine": 100,
+              "EndLine": 100,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"TotalBytesIn\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ZlibCodec.cs",
+            "Region": {
+              "StartLine": 105,
+              "EndLine": 105,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"OutputBuffer\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ZlibCodec.cs",
+            "Region": {
+              "StartLine": 110,
+              "EndLine": 110,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"NextOut\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ZlibCodec.cs",
+            "Region": {
+              "StartLine": 115,
+              "EndLine": 115,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"AvailableBytesOut\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ZlibCodec.cs",
+            "Region": {
+              "StartLine": 124,
+              "EndLine": 124,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"TotalBytesOut\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ZlibCodec.cs",
+            "Region": {
+              "StartLine": 129,
+              "EndLine": 129,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Message\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ZlibCodec.cs",
+            "Region": {
+              "StartLine": 134,
+              "EndLine": 134,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"CompressLevel\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ZlibCodec.cs",
+            "Region": {
+              "StartLine": 144,
+              "EndLine": 144,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"WindowBits\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ZlibCodec.cs",
+            "Region": {
+              "StartLine": 155,
+              "EndLine": 155,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Strategy\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ZlibCodec.cs",
+            "Region": {
+              "StartLine": 170,
+              "EndLine": 170,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"_bufferBase\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LZ\\LzInWindow.cs",
+            "Region": {
+              "StartLine": 7,
+              "EndLine": 7,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"_bufferOffset\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LZ\\LzInWindow.cs",
+            "Region": {
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"_blockSize\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LZ\\LzInWindow.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"_pos\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LZ\\LzInWindow.cs",
+            "Region": {
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"_streamPos\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LZ\\LzInWindow.cs",
+            "Region": {
+              "StartLine": 20,
+              "EndLine": 20,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Total\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LZ\\LzOutWindow.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Limit\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LZ\\LzOutWindow.cs",
+            "Region": {
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Index\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaBase.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"State\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
+            "Region": {
+              "StartLine": 280,
+              "EndLine": 280,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Prev1IsChar\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
+            "Region": {
+              "StartLine": 282,
+              "EndLine": 282,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Prev2\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
+            "Region": {
+              "StartLine": 283,
+              "EndLine": 283,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"PosPrev2\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
+            "Region": {
+              "StartLine": 285,
+              "EndLine": 285,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"BackPrev2\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
+            "Region": {
+              "StartLine": 286,
+              "EndLine": 286,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Price\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
+            "Region": {
+              "StartLine": 288,
+              "EndLine": 288,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"PosPrev\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
+            "Region": {
+              "StartLine": 289,
+              "EndLine": 289,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"BackPrev\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
+            "Region": {
+              "StartLine": 290,
+              "EndLine": 290,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Backs0\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
+            "Region": {
+              "StartLine": 292,
+              "EndLine": 292,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Backs1\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
+            "Region": {
+              "StartLine": 293,
+              "EndLine": 293,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Backs2\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
+            "Region": {
+              "StartLine": 294,
+              "EndLine": 294,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Backs3\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
+            "Region": {
+              "StartLine": 295,
+              "EndLine": 295,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Low\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\RangeCoder\\RangeCoder.cs",
+            "Region": {
+              "StartLine": 11,
+              "EndLine": 11,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Range\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\RangeCoder\\RangeCoder.cs",
+            "Region": {
+              "StartLine": 12,
+              "EndLine": 12,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Range\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\RangeCoder\\RangeCoder.cs",
+            "Region": {
+              "StartLine": 125,
+              "EndLine": 125,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Code\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\RangeCoder\\RangeCoder.cs",
+            "Region": {
+              "StartLine": 126,
+              "EndLine": 126,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Stream\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\RangeCoder\\RangeCoder.cs",
+            "Region": {
+              "StartLine": 128,
+              "EndLine": 128,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Total\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\RangeCoder\\RangeCoder.cs",
+            "Region": {
+              "StartLine": 129,
+              "EndLine": 129,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"AllocatorSize\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Allocator.cs",
+            "Region": {
+              "StartLine": 29,
+              "EndLine": 29,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"GlueCount\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Allocator.cs",
+            "Region": {
+              "StartLine": 30,
+              "EndLine": 30,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"BaseUnit\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Allocator.cs",
+            "Region": {
+              "StartLine": 31,
+              "EndLine": 31,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"LowUnit\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Allocator.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"HighUnit\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Allocator.cs",
+            "Region": {
+              "StartLine": 33,
+              "EndLine": 33,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Text\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Allocator.cs",
+            "Region": {
+              "StartLine": 34,
+              "EndLine": 34,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Heap\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Allocator.cs",
+            "Region": {
+              "StartLine": 35,
+              "EndLine": 35,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"MemoryNodes\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Allocator.cs",
+            "Region": {
+              "StartLine": 36,
+              "EndLine": 36,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Memory\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Allocator.cs",
+            "Region": {
+              "StartLine": 38,
+              "EndLine": 38,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"LowCount\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Coder.cs",
+            "Region": {
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"HighCount\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Coder.cs",
+            "Region": {
+              "StartLine": 26,
+              "EndLine": 26,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Scale\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Coder.cs",
+            "Region": {
+              "StartLine": 27,
+              "EndLine": 27,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Address\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\MemoryNode.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Memory\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\MemoryNode.cs",
+            "Region": {
+              "StartLine": 33,
+              "EndLine": 33,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Address\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Pointer.cs",
+            "Region": {
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Memory\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Pointer.cs",
+            "Region": {
+              "StartLine": 26,
+              "EndLine": 26,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Address\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\PpmContext.cs",
+            "Region": {
+              "StartLine": 26,
+              "EndLine": 26,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Memory\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\PpmContext.cs",
+            "Region": {
+              "StartLine": 27,
+              "EndLine": 27,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Address\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\PpmState.cs",
+            "Region": {
+              "StartLine": 24,
+              "EndLine": 24,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Memory\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\PpmState.cs",
+            "Region": {
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Summary\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\See2Context.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Shift\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\See2Context.cs",
+            "Region": {
+              "StartLine": 29,
+              "EndLine": 29,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Count\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\See2Context.cs",
+            "Region": {
+              "StartLine": 30,
+              "EndLine": 30,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Version\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\PpmdProperties.cs",
+            "Region": {
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ModelOrder\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\PpmdProperties.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"one\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\DOT11_MAC_ADDRESS.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"two\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\DOT11_MAC_ADDRESS.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"three\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\DOT11_MAC_ADDRESS.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"four\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\DOT11_MAC_ADDRESS.cs",
+            "Region": {
+              "StartLine": 11,
+              "EndLine": 11,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"five\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\DOT11_MAC_ADDRESS.cs",
+            "Region": {
+              "StartLine": 12,
+              "EndLine": 12,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"six\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\DOT11_MAC_ADDRESS.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"uSSIDLength\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\DOT11_SSID.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ucSSID\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\DOT11_SSID.cs",
+            "Region": {
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"strProfileName\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_AVAILABLE_NETWORK.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"dot11Ssid\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_AVAILABLE_NETWORK.cs",
+            "Region": {
+              "StartLine": 11,
+              "EndLine": 11,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"dot11BssType\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_AVAILABLE_NETWORK.cs",
+            "Region": {
+              "StartLine": 12,
+              "EndLine": 12,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"uNumberOfBssids\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_AVAILABLE_NETWORK.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"bNetworkConnectable\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_AVAILABLE_NETWORK.cs",
+            "Region": {
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"wlanNotConnectableReason\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_AVAILABLE_NETWORK.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"uNumberOfPhyTypes\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_AVAILABLE_NETWORK.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"dot11PhyTypes\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_AVAILABLE_NETWORK.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"bMorePhyTypes\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_AVAILABLE_NETWORK.cs",
+            "Region": {
+              "StartLine": 19,
+              "EndLine": 19,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"wlanSignalQuality\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_AVAILABLE_NETWORK.cs",
+            "Region": {
+              "StartLine": 20,
+              "EndLine": 20,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"bSecurityEnabled\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_AVAILABLE_NETWORK.cs",
+            "Region": {
+              "StartLine": 21,
+              "EndLine": 21,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"dot11DefaultAuthAlgorithm\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_AVAILABLE_NETWORK.cs",
+            "Region": {
+              "StartLine": 22,
+              "EndLine": 22,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"dot11DefaultCipherAlgorithm\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_AVAILABLE_NETWORK.cs",
+            "Region": {
+              "StartLine": 23,
+              "EndLine": 23,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"dwFlags\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_AVAILABLE_NETWORK.cs",
+            "Region": {
+              "StartLine": 24,
+              "EndLine": 24,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"dwReserved\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_AVAILABLE_NETWORK.cs",
+            "Region": {
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"hostedNetworkSSID\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_HOSTED_NETWORK_CONNECTION_SETTINGS.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"dwMaxNumberOfPeers\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_HOSTED_NETWORK_CONNECTION_SETTINGS.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"OldState\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_HOSTED_NETWORK_DATA_PEER_STATE_CHANGE.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"NewState\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_HOSTED_NETWORK_DATA_PEER_STATE_CHANGE.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Reason\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_HOSTED_NETWORK_DATA_PEER_STATE_CHANGE.cs",
+            "Region": {
+              "StartLine": 11,
+              "EndLine": 11,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"PeerMacAddress\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_HOSTED_NETWORK_PEER_STATE.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"PeerAuthState\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_HOSTED_NETWORK_PEER_STATE.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"OldState\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_HOSTED_NETWORK_STATE_CHANGE.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"NewState\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_HOSTED_NETWORK_STATE_CHANGE.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Reason\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_HOSTED_NETWORK_STATE_CHANGE.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"HostedNetworkState\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_HOSTED_NETWORK_STATUS.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"IPDeviceID\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_HOSTED_NETWORK_STATUS.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"wlanHostedNetworkBSSID\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_HOSTED_NETWORK_STATUS.cs",
+            "Region": {
+              "StartLine": 11,
+              "EndLine": 11,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"dot11PhyType\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_HOSTED_NETWORK_STATUS.cs",
+            "Region": {
+              "StartLine": 12,
+              "EndLine": 12,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ulChannelFrequency\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_HOSTED_NETWORK_STATUS.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"dwNumberOfPeers\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_HOSTED_NETWORK_STATUS.cs",
+            "Region": {
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"PeerList\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_HOSTED_NETWORK_STATUS.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"InterfaceGuid\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_INTERFACE_INFO.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"strInterfaceDescription\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_INTERFACE_INFO.cs",
+            "Region": {
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"isState\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_INTERFACE_INFO.cs",
+            "Region": {
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"dwNumberOfItems\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_INTERFACE_INFO_LIST.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"dwIndex\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_INTERFACE_INFO_LIST.cs",
+            "Region": {
+              "StartLine": 19,
+              "EndLine": 19,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"InterfaceInfo\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_INTERFACE_INFO_LIST.cs",
+            "Region": {
+              "StartLine": 23,
+              "EndLine": 23,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"notificationSource\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_NOTIFICATION_DATA.cs",
+            "Region": {
+              "StartLine": 21,
+              "EndLine": 21,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"notificationCode\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_NOTIFICATION_DATA.cs",
+            "Region": {
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"interfaceGuid\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_NOTIFICATION_DATA.cs",
+            "Region": {
+              "StartLine": 29,
+              "EndLine": 29,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"dataSize\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_NOTIFICATION_DATA.cs",
+            "Region": {
+              "StartLine": 33,
+              "EndLine": 33,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"dataPtr\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_NOTIFICATION_DATA.cs",
+            "Region": {
+              "StartLine": 37,
+              "EndLine": 37,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"strProfileName\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_PROFILE_INFO.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"dwFlags\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_PROFILE_INFO.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"dwNumberOfItems\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_PROFILE_INFO_LIST.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"dwIndex\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_PROFILE_INFO_LIST.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"ProfileInfo\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\WLAN_PROFILE_INFO_LIST.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Left\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouterClient\\AeroGlass\\AeroGlassHelper.cs",
+            "Region": {
+              "StartLine": 142,
+              "EndLine": 142,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Right\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouterClient\\AeroGlass\\AeroGlassHelper.cs",
+            "Region": {
+              "StartLine": 143,
+              "EndLine": 143,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Top\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouterClient\\AeroGlass\\AeroGlassHelper.cs",
+            "Region": {
+              "StartLine": 144,
+              "EndLine": 144,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"Bottom\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouterClient\\AeroGlass\\AeroGlassHelper.cs",
+            "Region": {
+              "StartLine": 145,
+              "EndLine": 145,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2357",
+      "FullMessage": "Make \"DoubleClick\" private.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouterClient\\WpfNotifyIcon.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

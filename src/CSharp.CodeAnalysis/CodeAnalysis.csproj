@@ -87,6 +87,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\GenericTypeParameterNull.cs" />
     <Compile Include="Rules\PropertiesOfReadonlyGenericsField.cs" />
+    <Compile Include="Rules\VisibleInstanceField.cs" />
     <Compile Include="Rules\VisibleStaticField.cs" />
     <Compile Include="Rules\NotDisposedIDisposableField.cs" />
     <Compile Include="Rules\FieldShouldBeReadonly.cs" />
@@ -318,6 +319,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S2223.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S2357.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
