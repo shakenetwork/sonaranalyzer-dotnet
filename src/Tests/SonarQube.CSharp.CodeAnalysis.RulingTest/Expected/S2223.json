@@ -1,0 +1,502 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarQube.CSharp.CodeAnalysis.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"Validators\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MicrosoftMvcValidationScript\\ValidatorRegistry.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"DefaultAttributeFactory\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\DataAnnotationsModelValidatorProvider.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"AttributeFactories\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\DataAnnotationsModelValidatorProvider.cs",
+            "Region": {
+              "StartLine": 35,
+              "EndLine": 35,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"DefaultValidatableFactory\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\DataAnnotationsModelValidatorProvider.cs",
+            "Region": {
+              "StartLine": 56,
+              "EndLine": 56,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"ValidatableFactories\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\DataAnnotationsModelValidatorProvider.cs",
+            "Region": {
+              "StartLine": 59,
+              "EndLine": 59,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"cacheItemId\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\Html\\TemplateHelpers.cs",
+            "Region": {
+              "StartLine": 47,
+              "EndLine": 47,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"DefaultKeywords\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.Razor\\Parser\\CSharpCodeParser.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"DefaultKeywords\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.Razor\\Parser\\VBCodeParser.cs",
+            "Region": {
+              "StartLine": 11,
+              "EndLine": 11,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"TypeFactory\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.WebPages.Razor\\WebRazorHostFactory.cs",
+            "Region": {
+              "StartLine": 19,
+              "EndLine": 19,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"Initialize\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.WebPages\\WebPageHttpModule.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"ApplicationStart\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.WebPages\\WebPageHttpModule.cs",
+            "Region": {
+              "StartLine": 7,
+              "EndLine": 7,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"BeginRequest\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.WebPages\\WebPageHttpModule.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"EndRequest\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.WebPages\\WebPageHttpModule.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"DataDirectory\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\WebMatrix.Data\\Database.cs",
+            "Region": {
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"NuGetDocs\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\CommandLine\\Common\\CommandLineConstants.cs",
+            "Region": {
+              "StartLine": 7,
+              "EndLine": 7,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"NuGetDocsCommandLineReference\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\CommandLine\\Common\\CommandLineConstants.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"PackagesDirectoryName\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\CommandLine\\Common\\CommandLineConstants.cs",
+            "Region": {
+              "StartLine": 11,
+              "EndLine": 11,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"CurrentInstance\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\Dialog10\\PackageManagerWindow.xaml.cs",
+            "Region": {
+              "StartLine": 22,
+              "EndLine": 22,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"FileContents\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Test.Integration\\NuGetCommandLine\\NuSpecFileContext.cs",
+            "Region": {
+              "StartLine": 7,
+              "EndLine": 7,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"Default\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\ArchiveEncoding.cs",
+            "Region": {
+              "StartLine": 11,
+              "EndLine": 11,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"Password\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\ArchiveEncoding.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"rNums\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\BZip2Constants.cs",
+            "Region": {
+              "StartLine": 45,
+              "EndLine": 45,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"crc32Table\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CRC.cs",
+            "Region": {
+              "StartLine": 34,
+              "EndLine": 34,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"DBitLengthCounts\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack.cs",
+            "Region": {
+              "StartLine": 132,
+              "EndLine": 132,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"ShortLen1\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 117,
+              "EndLine": 117,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"ShortXor1\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 119,
+              "EndLine": 119,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"ShortLen2\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 121,
+              "EndLine": 121,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"ShortXor2\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 123,
+              "EndLine": 123,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2223",
+      "FullMessage": "Change the visibility of \"VM_CmdFlags\" or make it \"static\" or \"readonly\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\VMCmdFlags.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
