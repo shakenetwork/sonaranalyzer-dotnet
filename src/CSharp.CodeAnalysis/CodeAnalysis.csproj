@@ -85,6 +85,7 @@
     <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="Helpers\EquivalenceChecker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules\GenericTypeParameterNull.cs" />
     <Compile Include="Rules\NotDisposedIDisposableField.cs" />
     <Compile Include="Rules\FieldShouldBeReadonly.cs" />
     <Compile Include="Rules\EmptinessChecking.cs" />
@@ -306,6 +307,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S1155.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S2955.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
