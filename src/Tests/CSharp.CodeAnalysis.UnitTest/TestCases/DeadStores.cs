@@ -26,7 +26,7 @@ namespace Tests.Diagnostics
             int ll = doSomething(); // Noncompliant; variable not used later
 
             int i, j;
-            i = a + b;  
+            i = a + b;
             i += i + 2; // Noncompliant; variable is overwritten in the following statement
             i = 5;
             j = i;
@@ -84,11 +84,59 @@ namespace Tests.Diagnostics
                 case 6:
                     b = 5; //compliant, we ignore consecutive statements that are not in the same context (have different parents)
                 case 7:
-                    b = 56; 
+                    b = 56;
             }
 
             b = 7;
             b += 7; //Noncompliant
+        }
+        public List<int> Method(int i)
+        {
+            var l = new List<int>();
+
+            Func<List<int>> func = () =>
+            {
+                return (l = new List<int>(new [] {i}));
+            };
+
+            var x = l; //Noncompliant
+
+            return func();
+        }
+
+        public List<int> Method2(int i)
+        {
+            var l = new List<int>();
+
+            return (() =>
+            {
+                return (l = new List<int>(new[] { i }));
+            })();
+        }
+
+        public List<int> Method3(int i)
+        {
+            bool f = false;
+            if (true || (f = false))
+            {
+                if (f)
+                {
+
+                }
+            }
+        }
+
+        public List<int> Method4(int i)
+        {
+            bool f;
+            f = true;
+            if (true || (f = false))
+            {
+                if (f)
+                {
+
+                }
+            }
         }
     }
 }

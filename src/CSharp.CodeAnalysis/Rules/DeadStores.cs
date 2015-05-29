@@ -129,8 +129,16 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                             continue;
                         }
 
+                        var firstAssignment = assignments.First();
                         if (variableDeclarator.Initializer != null &&
-                            !MightHaveReferenceBetween(variableDeclarator.Initializer, assignments.First(), references))
+                            InAnonymous(firstAssignment, declaringBlock))
+                        {
+                            return;
+                        }
+
+                        if (variableDeclarator.Initializer != null &&
+                            !MightHaveReferenceBetween(variableDeclarator.Initializer, firstAssignment, references) &&
+                            !InConditional(firstAssignment, declaringBlock))
                         {
                             c.ReportDiagnostic(Diagnostic.Create(Rule, variableDeclarator.Initializer.EqualsToken.GetLocation(),
                                 variableDeclarator.Identifier.Text));
@@ -140,6 +148,16 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                         {
                             var first = assignments[i - 1];
                             var second = assignments[i];
+
+                            if (InConditional(second, declaringBlock))
+                            {
+                                continue;
+                            }
+
+                            if (InAnonymous(second, declaringBlock))
+                            {
+                                return;
+                            }
 
                             if (MightHaveReferenceBetween(first, second, references))
                             {
@@ -151,6 +169,12 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                         }
 
                         var lastAssignment = assignments.Last();
+
+                        if (InAnonymous(lastAssignment, declaringBlock))
+                        {
+                            return;
+                        }
+
                         if (!references.Any(reference => reference.SpanStart > lastAssignment.Span.End) &&
                             !InLoop(lastAssignment, declaringBlock))
                         {
@@ -171,7 +195,23 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                    ReadWriteAssignment.Contains(second.Kind());
         }
 
-        private bool InLoop(AssignmentExpressionSyntax currentAssignment, BlockSyntax declaringBlock)
+        private static bool InAnonymous(AssignmentExpressionSyntax currentAssignment, BlockSyntax declaringBlock)
+        {
+            return currentAssignment.Ancestors()
+                .TakeWhile(ancestor => ancestor != declaringBlock)
+                .Any(ancestor => ancestor is AnonymousFunctionExpressionSyntax);
+        }
+
+        private static bool InConditional(AssignmentExpressionSyntax currentAssignment, BlockSyntax declaringBlock)
+        {
+            return currentAssignment.Ancestors()
+                .TakeWhile(ancestor => ancestor != declaringBlock)
+                .OfType<BinaryExpressionSyntax>()
+                .Any(binary => binary.IsKind(SyntaxKind.LogicalAndExpression) ||
+                                 binary.IsKind(SyntaxKind.LogicalOrExpression));
+        }
+
+        private static bool InLoop(AssignmentExpressionSyntax currentAssignment, BlockSyntax declaringBlock)
         {
             return currentAssignment.Ancestors()
                 .TakeWhile(ancestor => ancestor != declaringBlock)

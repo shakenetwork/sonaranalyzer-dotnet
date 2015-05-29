@@ -1214,142 +1214,6 @@
     },
     {
       "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"returnValue\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Html\\Test\\ChildActionExtensionsTest.cs",
-            "Region": {
-              "StartLine": 35,
-              "EndLine": 35,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"mvcHandler\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Html\\Test\\ChildActionExtensionsTest.cs",
-            "Region": {
-              "StartLine": 104,
-              "EndLine": 104,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"mvcHandler\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Html\\Test\\ChildActionExtensionsTest.cs",
-            "Region": {
-              "StartLine": 118,
-              "EndLine": 118,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"mvcHandler\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Html\\Test\\ChildActionExtensionsTest.cs",
-            "Region": {
-              "StartLine": 134,
-              "EndLine": 134,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"mvcHandler\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Html\\Test\\ChildActionExtensionsTest.cs",
-            "Region": {
-              "StartLine": 150,
-              "EndLine": 150,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"mvcHandler\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Html\\Test\\ChildActionExtensionsTest.cs",
-            "Region": {
-              "StartLine": 167,
-              "EndLine": 167,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"mvcHandler\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Html\\Test\\ChildActionExtensionsTest.cs",
-            "Region": {
-              "StartLine": 185,
-              "EndLine": 185,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"mvcHandler\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Html\\Test\\ChildActionExtensionsTest.cs",
-            "Region": {
-              "StartLine": 202,
-              "EndLine": 202,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
       "FullMessage": "Remove this useless assignment to local variable \"route\".",
       "Locations": [
         {
@@ -1358,23 +1222,6 @@
             "Region": {
               "StartLine": 218,
               "EndLine": 218,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"mvcHandler\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Html\\Test\\ChildActionExtensionsTest.cs",
-            "Region": {
-              "StartLine": 219,
-              "EndLine": 219,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -1528,57 +1375,6 @@
             "Region": {
               "StartLine": 97,
               "EndLine": 97,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"callbackAttributes\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\AssociatedValidatorProviderTest.cs",
-            "Region": {
-              "StartLine": 31,
-              "EndLine": 31,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"callbackAttributes\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\AssociatedValidatorProviderTest.cs",
-            "Region": {
-              "StartLine": 51,
-              "EndLine": 51,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"callbackAttributes\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\AssociatedValidatorProviderTest.cs",
-            "Region": {
-              "StartLine": 71,
-              "EndLine": 71,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -2421,23 +2217,6 @@
     },
     {
       "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"validationContext\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\ValidatableObjectAdapterTest.cs",
-            "Region": {
-              "StartLine": 36,
-              "EndLine": 36,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
       "FullMessage": "Remove this useless assignment to local variable \"unused\".",
       "Locations": [
         {
@@ -2676,57 +2455,6 @@
     },
     {
       "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"keyMaster\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\VirtualPathProviderViewEngineTest.cs",
-            "Region": {
-              "StartLine": 832,
-              "EndLine": 832,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"keyPartial\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\VirtualPathProviderViewEngineTest.cs",
-            "Region": {
-              "StartLine": 833,
-              "EndLine": 833,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"keyView\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\VirtualPathProviderViewEngineTest.cs",
-            "Region": {
-              "StartLine": 834,
-              "EndLine": 834,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
       "FullMessage": "Remove this useless assignment to local variable \"o\".",
       "Locations": [
         {
@@ -2888,23 +2616,6 @@
             "Region": {
               "StartLine": 617,
               "EndLine": 617,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"ch\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.Razor\\Parser\\TextReaderExtensions.cs",
-            "Region": {
-              "StartLine": 40,
-              "EndLine": 40,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -3254,57 +2965,6 @@
     },
     {
       "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"actual\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\System.Web.Razor.Test\\Parser\\CallbackParserListenerTest.cs",
-            "Region": {
-              "StartLine": 123,
-              "EndLine": 123,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"expectedLocation\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\System.Web.Razor.Test\\Text\\LookaheadTextReaderTestBase.cs",
-            "Region": {
-              "StartLine": 36,
-              "EndLine": 36,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"actualLocation\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\System.Web.Razor.Test\\Text\\LookaheadTextReaderTestBase.cs",
-            "Region": {
-              "StartLine": 37,
-              "EndLine": 37,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
       "FullMessage": "Remove this useless assignment to local variable \"ccu\".",
       "Locations": [
         {
@@ -3492,23 +3152,6 @@
     },
     {
       "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"headerSet\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\System.Web.WebPages.Test\\WebPage\\WebPageHttpHandlerTest.cs",
-            "Region": {
-              "StartLine": 108,
-              "EndLine": 108,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
       "FullMessage": "Remove this useless assignment to local variable \"env\".",
       "Locations": [
         {
@@ -3594,23 +3237,6 @@
     },
     {
       "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"expandedNodes\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\VisualStudio\\VsCommonOperations.cs",
-            "Region": {
-              "StartLine": 46,
-              "EndLine": 46,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
       "FullMessage": "Remove this useless assignment to local variable \"packages\".",
       "Locations": [
         {
@@ -3628,23 +3254,6 @@
     },
     {
       "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"iNewLine\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\VsConsole\\Console\\Console\\WpfConsoleKeyProcessor.cs",
-            "Region": {
-              "StartLine": 398,
-              "EndLine": 398,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
       "FullMessage": "Remove this useless assignment to local variable \"innerException\".",
       "Locations": [
         {
@@ -3653,23 +3262,6 @@
             "Region": {
               "StartLine": 724,
               "EndLine": 724,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"langPackInstalled\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\CommandLine.Test\\InstallCommandTest.cs",
-            "Region": {
-              "StartLine": 761,
-              "EndLine": 761,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -3704,91 +3296,6 @@
             "Region": {
               "StartLine": 167,
               "EndLine": 167,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"path\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Core.Test\\PackageReferenceRepositoryTest.cs",
-            "Region": {
-              "StartLine": 21,
-              "EndLine": 21,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"path\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Core.Test\\PackageReferenceRepositoryTest.cs",
-            "Region": {
-              "StartLine": 39,
-              "EndLine": 39,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"path\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Core.Test\\PackageReferenceRepositoryTest.cs",
-            "Region": {
-              "StartLine": 60,
-              "EndLine": 60,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"path\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Core.Test\\PackageReferenceRepositoryTest.cs",
-            "Region": {
-              "StartLine": 84,
-              "EndLine": 84,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"path\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Core.Test\\PackageReferenceRepositoryTest.cs",
-            "Region": {
-              "StartLine": 183,
-              "EndLine": 183,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -3883,23 +3390,6 @@
     },
     {
       "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"value\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Core.Test\\SettingsTests.cs",
-            "Region": {
-              "StartLine": 927,
-              "EndLine": 927,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
       "FullMessage": "Remove this useless assignment to local variable \"repository\".",
       "Locations": [
         {
@@ -3942,23 +3432,6 @@
             "Region": {
               "StartLine": 352,
               "EndLine": 352,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"assignedValue\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Dialog.Test\\OnlineSearchProviderTest.cs",
-            "Region": {
-              "StartLine": 40,
-              "EndLine": 40,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -4078,23 +3551,6 @@
             "Region": {
               "StartLine": 478,
               "EndLine": 478,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"actual\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Dialog.Test\\UpdatesTreeNodeTest.cs",
-            "Region": {
-              "StartLine": 480,
-              "EndLine": 480,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -4631,40 +4087,6 @@
     },
     {
       "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"savedSources\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\VisualStudio.Test\\VsPackageSourceProviderTest.cs",
-            "Region": {
-              "StartLine": 428,
-              "EndLine": 428,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"savedSources\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\VisualStudio.Test\\VsPackageSourceProviderTest.cs",
-            "Region": {
-              "StartLine": 458,
-              "EndLine": 458,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
       "FullMessage": "Remove this useless assignment to local variable \"scTracker\".",
       "Locations": [
         {
@@ -4750,23 +4172,6 @@
     },
     {
       "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"eventRaised\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\VisualStudio.Test\\VsSourceControlTrackerTest.cs",
-            "Region": {
-              "StartLine": 159,
-              "EndLine": 159,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
       "FullMessage": "Remove this useless assignment to local variable \"registryResult\".",
       "Locations": [
         {
@@ -4809,40 +4214,6 @@
             "Region": {
               "StartLine": 68,
               "EndLine": 68,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"totalBytes\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Core.Test\\LivePacketDeviceTests.cs",
-            "Region": {
-              "StartLine": 689,
-              "EndLine": 689,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"lastTimestamp\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Core.Test\\PacketSendBufferTests.cs",
-            "Region": {
-              "StartLine": 134,
-              "EndLine": 134,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -5336,23 +4707,6 @@
             "Region": {
               "StartLine": 224,
               "EndLine": 224,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1854",
-      "FullMessage": "Remove this useless assignment to local variable \"c2\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\RangeCoder.cs",
-            "Region": {
-              "StartLine": 94,
-              "EndLine": 94,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
