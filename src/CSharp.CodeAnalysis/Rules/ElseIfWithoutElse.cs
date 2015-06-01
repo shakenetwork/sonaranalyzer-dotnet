@@ -58,7 +58,12 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     var ifNode = (IfStatementSyntax)c.Node;
                     if (IsElseIfWithoutElse(ifNode))
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, ifNode.IfKeyword.GetLocation()));
+                        var parentElse = (ElseClauseSyntax)ifNode.Parent;
+                        var diff = ifNode.IfKeyword.Span.End - parentElse.ElseKeyword.SpanStart;
+                        var location = Location.Create(c.Node.SyntaxTree,
+                            new Microsoft.CodeAnalysis.Text.TextSpan(parentElse.ElseKeyword.SpanStart, diff));                        
+
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, location));
                     }
                 },
                 SyntaxKind.IfStatement);
