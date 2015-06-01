@@ -5,31 +5,29 @@
 
 <h2>Noncompliant Code Example</h2>
 <pre>
-private static bool HasContent(BlockSyntax block)
+private static bool HasContent(IEnumerable&lt;string&gt; strings)
 {
-  return block.Statements.Count() > 0; // Noncompliant
+  return strings.Count() > 0; // Noncompliant
 }
-
-private static bool HasContent2(BlockSyntax block)
+private static bool HasContent2(&lt;string&gt; strings)
 {
-  return block.Statements.Count() >= 1; // Noncompliant
+  return strings.Count() >= 1; // Noncompliant
 }
-
-private static bool IsEmpty(BlockSyntax block)
+private static bool IsEmpty(&lt;string&gt; strings)
 {
-  return block.Statements.Count() == 0; // Noncompliant
+  return strings.Count() == 0; // Noncompliant
 }
 </pre>
 
 <h2>Compliant Solution</h2>
 <pre>
-private static bool HasContent(BlockSyntax block)
+private static bool HasContent(&lt;string&gt; strings)
 {
-  return block.Statements.Any();
+  return strings.Any();
 }
 
-private static bool IsEmpty(BlockSyntax block)
+private static bool IsEmpty(&lt;string&gt; strings)
 {
-  return !block.Statements.Any();
+  return !strings.Any();
 }
 </pre>
