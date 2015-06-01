@@ -50,6 +50,9 @@ namespace Tests.Diagnostics
             if (null == t) // Noncompliant
             {
             }
+            if (null != t) // Noncompliant
+            {
+            }
         }
         public void M4<T>(T t) where T : A
         {

@@ -83,7 +83,8 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                             typeInfo.Name));
                     }
                 },
-                SyntaxKind.EqualsExpression);
+                SyntaxKind.EqualsExpression,
+                SyntaxKind.NotEqualsExpression);
         }
     }
 }
