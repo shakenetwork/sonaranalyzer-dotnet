@@ -40,7 +40,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     {
         internal const string DiagnosticId = "S2223";
         internal const string Description = "Non-constant static fields should not be visible";
-        internal const string MessageFormat = "Change the visibility of \"{0}\" or make it \"static\" or \"readonly\".";
+        internal const string MessageFormat = "Change the visibility of \"{0}\" or make it \"const\" or \"readonly\".";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
