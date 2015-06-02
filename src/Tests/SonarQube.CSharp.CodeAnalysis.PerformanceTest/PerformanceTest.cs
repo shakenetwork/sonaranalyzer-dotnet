@@ -68,20 +68,33 @@ namespace SonarQube.CSharp.CodeAnalysis.PerformanceTest
                 var ruleId = analyzerType.GetCustomAttribute<RuleAttribute>().Key;
 
                 var average = CalculateAverage(GenerateAnalysisInputFile(analyzerType));
-                
-                var rulePerformance = ExpectedPerformance.Rules.Single(rulePerf => rulePerf.RuleId == ruleId).Performance;
                 var actualToBaseline = average / actualBaseline;
-                var expectedToBaseline = ExpectedPerformance.BaseLine * rulePerformance;
-                performanceActual.Rules.Add(new RulePerformance { Performance = Math.Round(actualToBaseline, 4), RuleId = ruleId });
-
-                if (expectedToBaseline * ExpectedPerformance.Threshold.Upper < actualToBaseline)
+                performanceActual.Rules.Add(new RulePerformance
                 {
-                    errors.Add(string.Format("Rule {0} is slower ({1}) than expected {2}", ruleId, actualToBaseline, rulePerformance));
+                    Performance = Math.Round(actualToBaseline, 4),
+                    RuleId = ruleId
+                });
+
+                var expected = ExpectedPerformance.Rules.SingleOrDefault(rulePerf => rulePerf.RuleId == ruleId);
+                if (expected != null)
+                {
+                    var rulePerformance = expected.Performance;
+                    var expectedToBaseline = ExpectedPerformance.BaseLine*rulePerformance;
+                    if (expectedToBaseline*ExpectedPerformance.Threshold.Upper < actualToBaseline)
+                    {
+                        errors.Add(string.Format("Rule {0} is slower ({1}) than expected {2}", ruleId, actualToBaseline,
+                            rulePerformance));
+                    }
+
+                    if (expectedToBaseline*ExpectedPerformance.Threshold.Lower > actualToBaseline)
+                    {
+                        errors.Add(string.Format("Rule {0} is faster ({1}) than expected {2}", ruleId, actualToBaseline,
+                            rulePerformance));
+                    }
                 }
-
-                if (expectedToBaseline * ExpectedPerformance.Threshold.Lower > actualToBaseline)
+                else
                 {
-                    errors.Add(string.Format("Rule {0} is faster ({1}) than expected {2}", ruleId, actualToBaseline, rulePerformance));
+                    errors.Add(string.Format("Rule {0} doesn't have an expected entry", ruleId));
                 }
 
                 // write it in each iteration because the whole test can take quite some time
