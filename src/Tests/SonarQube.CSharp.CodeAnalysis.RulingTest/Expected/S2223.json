@@ -7,7 +7,7 @@
   "Issues": [
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"Validators\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"Validators\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -24,7 +24,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"DefaultAttributeFactory\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"DefaultAttributeFactory\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -41,7 +41,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"AttributeFactories\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"AttributeFactories\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -58,7 +58,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"DefaultValidatableFactory\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"DefaultValidatableFactory\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -75,7 +75,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"ValidatableFactories\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"ValidatableFactories\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -92,7 +92,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"cacheItemId\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"cacheItemId\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -109,7 +109,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"DefaultKeywords\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"DefaultKeywords\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -126,7 +126,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"DefaultKeywords\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"DefaultKeywords\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -143,7 +143,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"TypeFactory\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"TypeFactory\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -160,7 +160,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"Initialize\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"Initialize\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -177,7 +177,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"ApplicationStart\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"ApplicationStart\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -194,7 +194,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"BeginRequest\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"BeginRequest\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -211,7 +211,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"EndRequest\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"EndRequest\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -228,7 +228,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"DataDirectory\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"DataDirectory\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -245,7 +245,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"NuGetDocs\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"NuGetDocs\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -262,7 +262,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"NuGetDocsCommandLineReference\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"NuGetDocsCommandLineReference\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -279,7 +279,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"PackagesDirectoryName\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"PackagesDirectoryName\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -296,7 +296,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"CurrentInstance\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"CurrentInstance\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -313,7 +313,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"FileContents\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"FileContents\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -330,7 +330,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"Default\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"Default\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -347,7 +347,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"Password\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"Password\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -364,7 +364,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"rNums\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"rNums\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -381,7 +381,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"crc32Table\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"crc32Table\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -398,7 +398,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"DBitLengthCounts\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"DBitLengthCounts\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -415,7 +415,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"ShortLen1\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"ShortLen1\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -432,7 +432,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"ShortXor1\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"ShortXor1\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -449,7 +449,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"ShortLen2\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"ShortLen2\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -466,7 +466,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"ShortXor2\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"ShortXor2\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -483,7 +483,7 @@
     },
     {
       "RuleId": "S2223",
-      "FullMessage": "Change the visibility of \"VM_CmdFlags\" or make it \"static\" or \"readonly\".",
+      "FullMessage": "Change the visibility of \"VM_CmdFlags\" or make it \"const\" or \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
