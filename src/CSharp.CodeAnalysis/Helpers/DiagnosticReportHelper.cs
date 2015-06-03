@@ -18,6 +18,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System.Diagnostics;
 using Microsoft.CodeAnalysis;
 
 namespace SonarQube.CSharp.CodeAnalysis.Helpers
@@ -39,6 +40,17 @@ namespace SonarQube.CSharp.CodeAnalysis.Helpers
         private static int GetLineNumberToReport(this Location self)
         {
             return self.GetLineSpan().StartLinePosition.Line + 1;
+        }
+
+        #endregion
+
+        #region Help link
+
+        private const string HelpLinkPattern = "http://dist.sonarsource.com/csharp/rulesdoc/{0}/{1}.html";
+        internal static string GetHelpLink(this string ruleId)
+        {
+            var productVersion = FileVersionInfo.GetVersionInfo(typeof(DiagnosticReportHelper).Assembly.Location).ProductVersion;
+            return string.Format(HelpLinkPattern, productVersion, ruleId);
         }
 
         #endregion

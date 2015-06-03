@@ -54,7 +54,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         internal static readonly DiagnosticDescriptor Rule = 
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2306",
+                helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
 
         private static readonly IImmutableSet<string> AsyncOrAwait = ImmutableHashSet.Create("async", "await");

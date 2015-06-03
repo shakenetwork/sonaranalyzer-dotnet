@@ -48,8 +48,8 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
         internal static readonly DiagnosticDescriptor Rule = 
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2225",
+                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
+                helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
