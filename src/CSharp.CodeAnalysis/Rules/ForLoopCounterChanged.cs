@@ -35,21 +35,28 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [SqaleConstantRemediation("10min")]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("misra", "pitfall")]
     public class ForLoopCounterChanged : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S127";
-        internal const string Description = "\"for\" loop stop conditions should be invariant";
+        internal const string Title = "\"for\" loop stop conditions should be invariant";
+        internal const string Description =
+            "\"for\" loop stop conditions must be invariant (i.e. true at both the beginning " +
+            "and ending of every loop iteration). Ideally, this means that the stop condition " +
+            "is set to a local variable just before the loop begins. Stop conditions that are " +
+            "not invariant are difficult to understand and maintain, and will likely lead to " +
+            "the introduction of errors in the future.";
         internal const string MessageFormat = "Do not update the loop counter \"{0}\" within the loop body.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major; 
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS127");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS127",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

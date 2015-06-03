@@ -33,21 +33,28 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("10min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("bug")]
     public class GetHashCodeMutable : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2328";
-        internal const string Description = "\"GetHashCode\" should not reference mutable fields";
+        internal const string Title = "\"GetHashCode\" should not reference mutable fields";
+        internal const string Description =
+            "\"GetHashCode\" is used to file an object in a \"Dictionary\" or \"Hashtable\". " +
+            "If \"GetHashCode\" uses non-\"readonly\" fields and those fields change after " +
+            "the object is stored, the object immediately becomes mis-filed in the " +
+            "\"Hashtable\". Any subsequent test to see if the object is in the \"Hashtable\" " +
+            "will return a false negative.";
         internal const string MessageFormat = "Remove this use of \"{0}\".";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category, 
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2328");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2328",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

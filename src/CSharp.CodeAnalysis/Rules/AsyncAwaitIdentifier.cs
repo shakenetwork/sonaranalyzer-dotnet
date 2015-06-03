@@ -34,21 +34,28 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("5min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("pitfall")]
     public class AsyncAwaitIdentifier : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2306";
-        internal const string Description = "\"async\" and \"await\" should not be used as identifiers";
+        internal const string Title = "\"async\" and \"await\" should not be used as identifiers";
+        internal const string Description =
+            "Since C# 5.0, \"async\" and \"await\" are contextual keywords. Contextual keywords " +
+            "do have a particular meaning in some contexts, but can still be used as variable " +
+            "names for example. Keywords, on the other hand, are always reserved, and therefore " +
+            "are not valid variable names. To avoid any confusion though, it is best to not use " +
+            "\"async\" and \"await\" as identifiers.";
         internal const string MessageFormat = "Rename \"{0}\".";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category, 
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2306");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2306",
+                description: Description);
 
         private static readonly IImmutableSet<string> AsyncOrAwait = ImmutableHashSet.Create("async", "await");
 

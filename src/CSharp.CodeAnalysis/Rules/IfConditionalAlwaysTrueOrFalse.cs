@@ -32,21 +32,28 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [SqaleConstantRemediation("2min")]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("bug", "cwe", "misra", "security")]
     public class IfConditionalAlwaysTrueOrFalse : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1145";
-        internal const string Description = "Useless \"if(true) {...}\" and \"if(false){...}\" blocks should be removed";
+        internal const string Title = "Useless \"if(true) {...}\" and \"if(false){...}\" blocks should be removed";
+        internal const string Description =
+            "\"if\" statements with conditions that are always false have the effect of making " +
+            "blocks of code non-functional. This can be useful during debugging, but should not " +
+            "be checked in. \"if\" statements with conditions that are always true are completely " +
+            "redundant, and make the code less readable. In either case, unconditional \"if\" " +
+            "statements should be removed.";
         internal const string MessageFormat = "Remove this \"if\" statement.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major; 
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1145");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1145",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

@@ -32,21 +32,25 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.ExceptionHandling)]
     [SqaleConstantRemediation("1h")]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("cwe", "error-handling", "security")]
     public class EmptyCatch : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2486";
-        internal const string Description = @"Exceptions should not be ignored";
-        internal const string MessageFormat = @"Handle the exception, rather than swallow it with an empty statement.";
+        internal const string Title = "Exceptions should not be ignored";
+        internal const string Description =
+            "When exceptions occur, it is usually a bad idea to simply ignore them. Instead, it " +
+            "is better to handle them properly, or at least to log them.";
+        internal const string MessageFormat = "Handle the exception, rather than swallow it with an empty statement.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major; 
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2486");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2486",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

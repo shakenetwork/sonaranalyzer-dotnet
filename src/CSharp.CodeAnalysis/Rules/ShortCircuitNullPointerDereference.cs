@@ -34,13 +34,20 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [SqaleConstantRemediation("2min")]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("bug")]
     public class ShortCircuitNullPointerDereference : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1697";
-        internal const string Description = @"Short-circuit logic should be used to prevent null pointer dereferences in conditionals";
-        internal const string MessageFormat = @"Either reverse the equality operator in the ""{0}"" null test, or reverse the logical operator that follows it.";
+        internal const string Title = 
+            "Short-circuit logic should be used to prevent null pointer dereferences in conditionals";
+        internal const string Description =
+            "When either the equality operator in a null test or the logical operator that follows it is reversed, " +
+            "the code has the appearance of safely null-testing the object before dereferencing it. Unfortunately " +
+            "the effect is just the opposite - the object is null-tested and then dereferenced only if it is null, " +
+            "leading to a guaranteed null pointer dereference.";
+        internal const string MessageFormat = 
+            "Either reverse the equality operator in the \"{0}\" null test, or reverse the logical operator that follows it.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Blocker; 
         internal const bool IsActivatedByDefault = true;
@@ -48,9 +55,10 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         private static readonly ExpressionSyntax NullExpression = SyntaxFactory.LiteralExpression(SyntaxKind.NullLiteralExpression);
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1697");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1697",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

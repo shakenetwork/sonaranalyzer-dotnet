@@ -33,21 +33,28 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("20min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.SynchronizationReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("pitfall")]
     public class VisibleStaticField : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2223";
-        internal const string Description = "Non-constant static fields should not be visible";
+        internal const string Title = "Non-constant static fields should not be visible";
+        internal const string Description =
+            "A \"static\" field that is neither constant nor read-only is not thread-safe. Correctly accessing " +
+            "these fields from different threads needs synchronization with \"lock\"s. Improper synchronization " +
+            "may lead to unexpected results, thus publicly visible static fields are best suited for storing " +
+            "non-changing data shared by many consumers. To enforce this intent, these fields should be marked " +
+            "\"readonly\" or converted to a constant.";
         internal const string MessageFormat = "Change the visibility of \"{0}\" or make it \"const\" or \"readonly\".";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2223");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2223",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics
         {

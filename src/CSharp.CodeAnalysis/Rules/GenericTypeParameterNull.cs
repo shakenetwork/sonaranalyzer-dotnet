@@ -33,13 +33,21 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("10min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("bug")]
     public class GenericTypeParameterNull : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2955";
-        internal const string Description = "Generic parameters not constrained to reference types should not be compared to \"null\"";
-        internal const string MessageFormat = "Use a comparison to \"default({0})\" instead or add a constraint to \"{0}\" so that it can't be a value type.";
+        internal const string Title = "Generic parameters not constrained to reference types should not be compared to \"null\"";
+        internal const string Description =
+            "When constraints have not been applied to restrict a generic type parameter to be " +
+            "a reference type, then a value type, such as a \"struct\", could also be passed. " +
+            "In such cases, comparing the type parameter to \"null\" would always be false, " +
+            "because a \"struct\" can be empty, but never \"null\". If a value type is truly " +
+            "what's expected, then the comparison should use \"default()\". If it's not, then " +
+            "constraints should be added so that no value type can be passed.";
+        internal const string MessageFormat = 
+            "Use a comparison to \"default({0})\" instead or add a constraint to \"{0}\" so that it can't be a value type.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
@@ -47,9 +55,10 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         private static readonly ExpressionSyntax NullExpression = SyntaxFactory.LiteralExpression(SyntaxKind.NullLiteralExpression);
 
         internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category, 
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2955");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2955",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

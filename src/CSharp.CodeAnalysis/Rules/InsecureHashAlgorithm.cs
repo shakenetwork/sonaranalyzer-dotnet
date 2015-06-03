@@ -34,21 +34,29 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("30min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.SecurityFeatures)]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("cwe", "owasp-a6", "sans-top25-porous", "security")]
     public class InsecureHashAlgorithm : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2070";
-        internal const string Description = "SHA-1 and Message-Digest hash algorithms should not be used";
+        internal const string Title = "SHA-1 and Message-Digest hash algorithms should not be used";
+        internal const string Description =
+            "The MD5 algorithm and its successor, SHA-1, are no longer considered secure, because " +
+            "it is too easy to create hash collisions with them.That is, it takes too little " +
+            "computational effort to come up with a different input that produces the same MD5 or " +
+            "SHA-1 hash, and using the new, same-hash value gives an attacker the same access as " +
+            "if he had the originally-hashed value.This applies as well to the other Message-Digest" +
+            " algorithms: MD2, MD4, MD6.";
         internal const string MessageFormat = "Use a stronger encryption algorithm than {0}.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category, 
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2070");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2070",
+                description: Description);
 
         private const string HashAlgorithmTypeName = "System.Security.Cryptography.HashAlgorithm";
 

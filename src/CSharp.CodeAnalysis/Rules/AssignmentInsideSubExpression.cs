@@ -34,21 +34,26 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("5min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("bug", "cwe", "misra")]
     public class AssignmentInsideSubExpression : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1121";
-        internal const string Description = "Assignments should not be made from within sub-expressions";
+        internal const string Title = "Assignments should not be made from within sub-expressions";
+        internal const string Description =
+            "Assignments within sub-expressions are hard to spot and therefore make the code less readable. " +
+            "It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, every expression should " +
+            "have no more than one side-effect. Assignments inside lambda and delegate expressions are allowed.";
         internal const string MessageFormat = "Extract the assignment of \"{0}\" from this expression.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category, 
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1121");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1121",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

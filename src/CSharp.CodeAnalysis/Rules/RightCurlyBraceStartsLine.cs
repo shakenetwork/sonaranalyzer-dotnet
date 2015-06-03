@@ -33,21 +33,25 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [SqaleConstantRemediation("1min")]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("convention")]
     public class RightCurlyBraceStartsLine : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1109";
-        internal const string Description = "A close curly brace should be located at the beginning of a line";
+        internal const string Title = "A close curly brace should be located at the beginning of a line";
+        internal const string Description = 
+            "Shared coding conventions make it possible for a team to efficiently collaborate. This rule makes " +
+            "it mandatory to place a close curly brace at the beginning of a line.";
         internal const string MessageFormat = "Move this closing curly brace to the next line.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Minor; 
         internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1109");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1109",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

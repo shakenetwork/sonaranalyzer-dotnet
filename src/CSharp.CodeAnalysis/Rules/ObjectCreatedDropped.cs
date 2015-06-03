@@ -32,21 +32,25 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
     [SqaleConstantRemediation("5min")]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("bug")]
     public class ObjectCreatedDropped : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1848";
-        internal const string Description = "Objects should not be created to be dropped immediately without being used";
-        internal const string MessageFormat = @"Either remove this useless object instantiation of class ""{0}"" or use it";
+        internal const string Title = "Objects should not be created to be dropped immediately without being used";
+        internal const string Description = 
+            "There is no good reason to create a new object to not do anything with it. Most of the time, " +
+            "this is due to a missing piece of code and so could lead to an unexpected behavior in production.";
+        internal const string MessageFormat = "Either remove this useless object instantiation of class \"{0}\" or use it";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Critical; 
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1848");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1848",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

@@ -35,22 +35,30 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [SqaleConstantRemediation("20min")]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("bug")]
     public class ForLoopCounterCondition : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1994";
-        internal const string Description = @"""for"" loop incrementers should modify the variable being tested in the loop's stop condition";
-        internal const string MessageFormatNotEmpty = @"This loop's stop condition tests ""{0}"" but the incrementer updates ""{1}"".";
-        internal const string MessageFormatEmpty = @"This loop's stop incrementer updates ""{0}"" but the stop condition doesn't test any variables.";
+        internal const string Title = 
+            "\"for\" loop incrementers should modify the variable being tested in the loop's stop condition";
+        internal const string Description =
+            "It is almost always an error when a \"for\" loop's stop condition and incrementer " +
+            "don't act on the same variable. Even when it is not, it could confuse future " +
+            "maintainers of the code, and should be avoided.";
+        internal const string MessageFormatNotEmpty = 
+            "This loop's stop condition tests \"{0}\" but the incrementer updates \"{1}\".";
+        internal const string MessageFormatEmpty = 
+            "This loop's stop incrementer updates \"{0}\" but the stop condition doesn't test any variables.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Critical; 
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, "{0}", Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, "{0}", Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1994");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1994",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

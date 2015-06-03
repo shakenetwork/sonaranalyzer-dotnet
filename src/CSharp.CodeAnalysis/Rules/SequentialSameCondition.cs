@@ -34,21 +34,26 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [SqaleConstantRemediation("5min")]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("bug")]
     public class SequentialSameCondition : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2760";
-        internal const string Description = @"Sequential tests should not check the same condition";
-        internal const string MessageFormat = @"This condition was just checked on line {0}.";
+        internal const string Title = "Sequential tests should not check the same condition";
+        internal const string Description = 
+            "When the same condition is checked twice in a row, it is either inefficient - why not combine " +
+            "the checks? - or an error - some other condition should have been checked in the second test. " +
+            "This rule raises an issue when sequential \"if\"s or \"switch\"es test the same condition.";
+        internal const string MessageFormat = "This condition was just checked on line {0}.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2760");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2760",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

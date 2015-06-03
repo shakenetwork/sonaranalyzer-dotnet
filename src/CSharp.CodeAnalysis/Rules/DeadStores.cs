@@ -34,21 +34,28 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("15min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("bug", "cert", "cwe", "unused")]
     public class DeadStores : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1854";
-        internal const string Description = "Dead stores should be removed";
+        internal const string Title = "Dead stores should be removed";
+        internal const string Description =
+            "A dead store happens when a local variable is assigned a value that is not read by " +
+            "any subsequent instruction. Calculating or retrieving a value only to then overwrite " +
+            "it or throw it away, could indicate a serious error in the code.Even if it's not an " +
+            "error, it is at best a waste of resources. Therefore all calculated values should be " +
+            "used.";
         internal const string MessageFormat = "Remove this useless assignment to local variable \"{0}\".";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1854");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1854",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics
         {

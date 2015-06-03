@@ -33,21 +33,29 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.ArchitectureReliability)]
     [SqaleConstantRemediation("5min")]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("bug")]
     public class EmptyMethod : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1186";
-        internal const string Description = "Methods should not be empty";
-        internal const string MessageFormat = "Add a nested comment explaining why this method is empty, throw a NotSupportedException or complete the implementation.";
+        internal const string Title = "Methods should not be empty";
+        internal const string Description =
+            "There are several reasons for a method not to have a method body: It is an " +
+            "unintentional omission, and should be fixed. It is not yet, or never will be, " +
+            "supported. In this case an \"NotSupportedException\" should be thrown. The " +
+            "method is an intentionally-blank override. In this case a nested comment should " +
+            "explain the reason for the blank override.";
+        internal const string MessageFormat = "Add a nested comment explaining why this method is empty, throw a " +
+                                              "NotSupportedException or complete the implementation.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major; 
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1186");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1186",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

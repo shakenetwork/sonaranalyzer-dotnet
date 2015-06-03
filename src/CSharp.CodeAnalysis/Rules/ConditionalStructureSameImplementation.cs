@@ -34,21 +34,29 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [SqaleConstantRemediation("10min")]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("bug")]
     public class ConditionalStructureSameImplementation : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1871";
-        internal const string Description = @"Two branches in the same conditional structure should not have exactly the same implementation";
-        internal const string MessageFormat = @"Either merge this {1} with the identical one on line ""{0}"" or change one of the implementations.";
+        internal const string Title = "Two branches in the same conditional structure should not have exactly the same " +
+                                      "implementation";
+        internal const string Description =
+            "Having two \"cases\" in the same \"switch\" statement or branches in the same " +
+            "\"if\" structure with the same implementation is at best duplicate code, and at " +
+            "worst a coding error.If the same logic is truly needed for both instances, then " +
+            "in an \"if\" structure they should be combined, or for a \"switch\", one should " +
+            "fall through to the other.";
+        internal const string MessageFormat = "Either merge this {1} with the identical one on line \"{0}\" or change one of the implementations.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major; 
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1871");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1871",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

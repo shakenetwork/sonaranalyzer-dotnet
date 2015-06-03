@@ -53,7 +53,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Descriptor
             var ruleDescriptor = new RuleDescriptor
             {
                 Key = rule.Key,
-                Title = rule.Description,
+                Title = rule.Title,
                 Severity = rule.Severity.ToString().ToUpper(CultureInfo.InvariantCulture),
                 IsActivatedByDefault = rule.IsActivatedByDefault,
                 Cardinality = rule.Template ? "MULTIPLE" : "SINGLE",

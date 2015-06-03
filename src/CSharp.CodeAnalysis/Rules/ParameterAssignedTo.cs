@@ -33,21 +33,31 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("5min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.ArchitectureReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("misra", "pitfall")]
     public class ParameterAssignedTo : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1226";
-        internal const string Description = "Method parameters and caught exceptions should not be reassigned";
+        internal const string Title = "Method parameters and caught exceptions should not be reassigned";
+        internal const string Description = 
+            "While it is technically correct to assign to parameters from within method bodies, it is better to " +
+            "use temporary variables to store intermediate results. This rule will typically detect cases where a " +
+            "constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\" was " +
+            "forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will " +
+            "not be able to know whether the original parameter or some temporary variable is being accessed without " +
+            "going through the whole method. Moreover, some developers might also expect assignments of method " +
+            "parameters to be visible from callers, which is not the case and can confuse them. All parameters " +
+            "should be treated as \"final\".";
         internal const string MessageFormat = "Introduce a new variable instead of reusing the parameter \"{0}\".";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major; 
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1226");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1226",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

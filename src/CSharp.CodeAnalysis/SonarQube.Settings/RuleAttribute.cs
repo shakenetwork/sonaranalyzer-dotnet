@@ -26,25 +26,25 @@ namespace SonarQube.CSharp.CodeAnalysis.SonarQube.Settings
     public class RuleAttribute : Attribute
     {
         public string Key { get; set; }
-        public string Description { get; set; }
+        public string Title { get; set; }
         public Severity Severity { get; set; }
         public bool IsActivatedByDefault { get; set; }
         public bool Template { get; set; }
 
-        public RuleAttribute(string key, Severity severity, string description, bool isActivatedByDefault, bool template)
+        public RuleAttribute(string key, Severity severity, string title, bool isActivatedByDefault, bool template)
         {
             Key = key;
-            Description = description;
+            Title = title;
             Severity = severity;
             IsActivatedByDefault = isActivatedByDefault;
             Template = template;
         }
-        public RuleAttribute(string key, Severity severity, string description, bool isActivatedByDefault)
-            :this(key, severity, description, isActivatedByDefault, false)
+        public RuleAttribute(string key, Severity severity, string title, bool isActivatedByDefault)
+            :this(key, severity, title, isActivatedByDefault, false)
         {
         }
-        public RuleAttribute(string key, Severity severity, string description)
-            : this(key, severity, description, true, false)
+        public RuleAttribute(string key, Severity severity, string title)
+            : this(key, severity, title, true, false)
         {
         }
     }

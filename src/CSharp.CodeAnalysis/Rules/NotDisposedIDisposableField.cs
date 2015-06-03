@@ -33,21 +33,28 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [SqaleConstantRemediation("10min")]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("bug", "cwe", "denial-of-service", "security")]
     public class NotDisposedIDisposableField : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2930";
-        internal const string Description = "\"IDisposable\" members should be disposed";
+        internal const string Title = "\"IDisposable\" members should be disposed";
+        internal const string Description =
+            "You can't rely on garbage collection to clean up everything. Specifically, you can't " +
+            "count on it to release non-memory resources such as \"File\"s. For that, there's the " +
+            "\"IDisposable\" interface, and the contract that \"Dispose\" will always be called on " +
+            "such objects. When an \"IDisposable\" is a class member, then it's up to that class " +
+            "to call \"Dispose\" on it, ideally in its own \"Dispose\" method.";
         internal const string MessageFormat = "\"Dispose\" of \"{0}\".";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Critical; 
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2930");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2930",
+                description: Description);
         
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

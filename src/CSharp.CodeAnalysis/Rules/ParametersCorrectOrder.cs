@@ -34,21 +34,27 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("5min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("bug")]
     public class ParametersCorrectOrder : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2234";
-        internal const string Description = "Parameters should be passed in the correct order";
+        internal const string Title = "Parameters should be passed in the correct order";
+        internal const string Description = 
+            "When the names of parameters in a method call match the names of the method arguments, " +
+            "it contributes to clearer, more readable code. However, when the names match, but are " +
+            "passed in a different order than the method arguments, it indicates a mistake in the " +
+            "parameter order which will likely lead to unexpected results.";
         internal const string MessageFormat = "Parameters to \"{0}\" have the same names but not the same order as the method arguments.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Blocker;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category, 
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2234");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2234",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

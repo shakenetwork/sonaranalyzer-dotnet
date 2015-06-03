@@ -32,22 +32,28 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("5min")]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [Tags("cert", "cwe", "misra")]
     public class SwitchWithoutDefault : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S131";
-        internal const string Description = "\"switch\" statements should end with a \"default\" clause";
+        internal const string Title = "\"switch\" statements should end with a \"default\" clause";
+        internal const string Description =
+            "The requirement for a final \"default\" clause is defensive programming. The clause should either " +
+            "take appropriate action, or contain a suitable comment as to why no action is taken. Even when the " +
+            "\"switch\" covers all current values of an \"enum\", a \"default\" case should still be used because " +
+            "there is no guarantee that the \"enum\" won't be extended.";
         internal const string MessageFormat = "Add a \"default\" clause to this switch statement.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major; 
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS131");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS131",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

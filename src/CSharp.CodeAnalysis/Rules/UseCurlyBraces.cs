@@ -34,21 +34,25 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [SqaleConstantRemediation("2min")]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("cert", "cwe", "misra", "pitfall")]
     public class UseCurlyBraces : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S121";
-        internal const string Description = "Control structures should always use curly braces";
+        internal const string Title = "Control structures should always use curly braces";
+        internal const string Description = 
+            "While not technically incorrect, the omission of curly braces can be misleading, and may " +
+            "lead to the introduction of errors during maintenance.";
         internal const string MessageFormat = "Add curly braces around the nested statement(s) in this \"{0}\" block.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major; 
         internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS121");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS121",
+                description: Description);
 
         private sealed class CheckedKind
         {

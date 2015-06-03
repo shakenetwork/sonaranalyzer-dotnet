@@ -33,21 +33,28 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("2min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("confusing")]
     public class FieldShouldBeReadonly : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2933";
-        internal const string Description = "Fields that are only assigned in the constructor should be \"readonly\"";
+        internal const string Title = "Fields that are only assigned in the constructor should be \"readonly\"";
+        internal const string Description =
+            "\"readonly\" fields can only be assigned in a class constructor. If a class has " +
+            "a field that's not marked \"readonly\" but is only set in the constructor, it " +
+            "could cause confusion about the field's intended use. To avoid confusion, such " +
+            "fields should be marked \"readonly\" to make their intended use explicit, and to " +
+            "prevent future maintainers from inadvertently changing their use.";
         internal const string MessageFormat = "Make \"{0}\" \"readonly\".";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category, 
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2933");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2933",
+                description: Description);
         
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

@@ -33,21 +33,30 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("20min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("bug")]
     public class PropertiesOfReadonlyGenericsField : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2934";
-        internal const string Description = "Property assignments should not be made for \"readonly\" fields not constrained to reference types";
-        internal const string MessageFormat = "Restrict \"{0}\" to be a reference type or remove this assignment of \"{1}\"; it is useless if \"{0}\" is a value type.";
+        internal const string Title = 
+            "Property assignments should not be made for \"readonly\" fields not constrained to reference types";
+        internal const string Description =
+            "While the properties of a \"readonly\" reference type field can still be changed after " +
+            "initialization, those of a \"readonly\" value field, such as a \"struct\", cannot. If the " +
+            "member could be either a \"class\" or a \"struct\" then assignment to its properties could " +
+            "be unreliable, working sometimes but not others.";
+        internal const string MessageFormat = 
+            "Restrict \"{0}\" to be a reference type or remove this assignment of \"{1}\"; it is useless if \"{0}\" " +
+            "is a value type.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category, 
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2934");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2934",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

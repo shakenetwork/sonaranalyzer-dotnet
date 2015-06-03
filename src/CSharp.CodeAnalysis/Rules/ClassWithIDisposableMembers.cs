@@ -34,21 +34,28 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("10min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.ArchitectureReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("bug", "cwe", "denial-of-service", "security")]
     public class ClassWithIDisposableMembers : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2931";
-        internal const string Description = "Classes with \"IDisposable\" members should implement \"IDisposable\"";
+        internal const string Title = "Classes with \"IDisposable\" members should implement \"IDisposable\"";
+        internal const string Description =
+            "Classes with \"IDisposable\" members are responsible for cleaning up those members " +
+            "by calling their \"Dispose\" methods.The best practice here is for the owning class " +
+            "to itself implement \"IDisposable\" and call its members' \"Dispose\" methods from " +
+            "its own \"Dispose\" method.";
         internal const string MessageFormat = "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on {0}.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category, 
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2931");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2931",
+                description: Description);
+
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         private static readonly Accessibility[] Accessibilities = { Accessibility.Protected, Accessibility.Private };

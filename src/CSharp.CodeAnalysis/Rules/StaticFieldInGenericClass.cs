@@ -34,20 +34,27 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
     [SqaleConstantRemediation("10min")]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     public class StaticFieldInGenericClass : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2743";
-        internal const string Description = @"Static fields should not be used in generic types";
-        internal const string MessageFormat = @"A static field in a generic type is not shared among instances of different close constructed types.";
+        internal const string Title = "Static fields should not be used in generic types";
+        internal const string Description = 
+            "A static field in a generic type is not shared among instances of different closed constructed types, " +
+            "If you need to have a static field shared among instances with different generic arguments, define a " +
+            "non-generic base class to store your static members, then set your generic type to inherit from the " +
+            "base class.";
+        internal const string MessageFormat = 
+            "A static field in a generic type is not shared among instances of different close constructed types.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Critical; 
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2743");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2743",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

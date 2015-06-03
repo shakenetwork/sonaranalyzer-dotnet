@@ -33,21 +33,28 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("30min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.ArchitectureChangeability)]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("pitfall")]
     public class VisibleInstanceField : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2357";
-        internal const string Description = "Fields should be private";
+        internal const string Title = "Fields should be private";
+        internal const string Description = 
+            "Fields should not be part of an API, and therefore should always be private. Indeed, they " +
+            "cannot be added to an interface for instance, and validation cannot be added later on without " +
+            "breaking backward compatiblity. Instead, developers should encapsulate their fields into " +
+            "properties. Explicit property getters and setters can be introduced for validation purposes " +
+            "or to smooth the transition to a newer system.";
         internal const string MessageFormat = "Make \"{0}\" private.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2357");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2357",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics
         {

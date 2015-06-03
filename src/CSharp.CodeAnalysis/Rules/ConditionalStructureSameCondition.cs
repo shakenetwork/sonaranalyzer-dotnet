@@ -33,21 +33,29 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [SqaleConstantRemediation("10min")]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("bug", "cert", "pitfall", "unused")]
     public class ConditionalStructureSameCondition : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1862";
-        internal const string Description = @"Related ""if/else if"" statements should not have the same condition";
-        internal const string MessageFormat = @"This branch duplicates the one on line {0}.";
+        internal const string Title = "Related \"if/else if\" statements should not have the same condition";
+        internal const string Description =
+            "A chain of \"if\"/\"else if\" statements is evaluated from top to bottom. At most, " +
+            "only one branch will be executed: the first one with a condition that evaluates to " +
+            "\"true\". Therefore, duplicating a condition automatically leads to dead code. " +
+            "Usually, this is due to a copy/paste error. At best, it's simply dead code and at " +
+            "worst, it's a bug that is likely to induce further bugs as the code is maintained, " +
+            "and obviously it could lead to unexpected behavior.";
+        internal const string MessageFormat = "This branch duplicates the one on line {0}.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1862");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1862",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

@@ -30,22 +30,26 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("2min")]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [Tags("convention")]
     public class TabCharacter : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S105";
-        internal const string Description = "Tabulation characters should not be used";
+        internal const string Title = "Tabulation characters should not be used";
+        internal const string Description =
+            "Developers should not need to configure the tab width of their text editors in order to be " +
+            "able to read source code. So the use of tabulation character must be banned.";
         internal const string MessageFormat = "Replace all tab characters in this file by sequences of white-spaces.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Minor; 
         internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS105");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS105",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

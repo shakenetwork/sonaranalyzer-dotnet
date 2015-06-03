@@ -36,21 +36,29 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("30min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.ArchitectureChangeability)]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("cert", "security")]
     public class HardcodedIpAddress : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1313";
-        internal const string Description = "IP addresses should not be hardcoded";
+        internal const string Title = "IP addresses should not be hardcoded";
+        internal const string Description =
+            "Hardcoding an IP address into source code is a bad idea for several reasons: " +
+            "a recompile is required if the address changes; it forces the same address to be " +
+            "used in every environment (dev, sys, qa, prod); it places the responsibility of " +
+            "setting the value to use in production on the shoulders of the developer; it " +
+            "allows attackers to decompile the code and thereby discover a potentially " +
+            "sensitive address";
         internal const string MessageFormat = "Make this IP {0} address configurable.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1313");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1313",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

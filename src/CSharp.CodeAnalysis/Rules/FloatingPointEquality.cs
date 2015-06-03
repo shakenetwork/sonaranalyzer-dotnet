@@ -33,21 +33,28 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("5min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("bug", "misra")]
     public class FloatingPointEquality : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1244";
-        internal const string Description = "Floating point numbers should not be tested for equality";
+        internal const string Title = "Floating point numbers should not be tested for equality";
+        internal const string Description =
+            "Floating point math is imprecise because of the challenges of storing such values " +
+            "in a binary representation.Even worse, floating point math is not associative; " +
+            "push a \"float\" or a \"double\" through a series of simple mathematical " +
+            "operations and the answer will be different based on the order of those operation " +
+            "because of the rounding that takes place at each step.";
         internal const string MessageFormat = "Use \"<=\" or \">=\" instead of \"==\" and \"!=\".";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category, 
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1244");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1244",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

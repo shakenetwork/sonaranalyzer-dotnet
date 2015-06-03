@@ -32,21 +32,26 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
     [SqaleConstantRemediation("3min")]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("bug", "cert")]
     public class SelfAssignedVariables : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1656";
-        internal const string Description = @"Variables should not be self-assigned";
-        internal const string MessageFormat = @"Remove or correct this useless self-assignment";
+        internal const string Title = "Variables should not be self-assigned";
+        internal const string Description = 
+            "There is no reason to re-assign a variable to itself. Either this statement is redundant and should " +
+            "be removed, or the re-assignment is a mistake and some other value or variable was intended for the " +
+            "assignment instead.";
+        internal const string MessageFormat = "Remove or correct this useless self-assignment";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major; 
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1656");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1656",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics
         {

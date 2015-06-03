@@ -32,21 +32,27 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("2min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("bug")]
     public class ReversedOperators : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2757";
-        internal const string Description = "Reversed operators should not be used";
+        internal const string Title = "Reversed operators should not be used";
+        internal const string Description = 
+            "The use of operators pairs (\"=+\" or \"=-\") where the reversed, single operator " +
+            "was meant (\"+=\" or \"-=\") will compile and run, but not produce the expected results. " +
+            "This rule raises an issue when \"=+\", and \"=-\" are used, but ignores the operators " +
+            "when they're spaced out: \"= +\", \"= -\".";
         internal const string MessageFormat = "Was \"{0}\" meant instead?";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category, 
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2757");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2757",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

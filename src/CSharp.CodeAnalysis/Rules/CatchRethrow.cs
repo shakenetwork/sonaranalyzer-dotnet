@@ -32,12 +32,18 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [SqaleConstantRemediation("5min")]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("clumsy", "unused")]
     public class CatchRethrow : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2737";
-        internal const string Description = "\"catch\" clauses should do more than rethrow";
+        internal const string Title = "\"catch\" clauses should do more than rethrow";
+        internal const string Description =
+            "A \"catch\" clause that only rethrows the caught exception has the same effect " +
+            "as omitting the \"catch\" altogether and letting it bubble up automatically, but " +
+            "with more code and the additional detrement of leaving maintainers scratching " +
+            "their heads. Such clauses should either be eliminated or populated with the " +
+            "appropriate logic.";
         internal const string MessageFormat = @"Add logic to this catch clause or eliminate it and rethrow the exception automatically.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major;
@@ -46,9 +52,10 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         private static readonly BlockSyntax ThrowBlock = SyntaxFactory.Block(SyntaxFactory.ThrowStatement());
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2737");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2737",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

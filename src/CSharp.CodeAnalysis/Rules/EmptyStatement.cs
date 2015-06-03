@@ -31,21 +31,26 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
     [SqaleConstantRemediation("2min")]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("cert", "misra", "unused")]
     public class EmptyStatement : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1116";
-        internal const string Description = "Empty statements should be removed";
+        internal const string Title = "Empty statements should be removed";
+        internal const string Description =
+            "Empty statements, i.e. \";\", are usually introduced by mistake, for example " +
+            "because: It was meant to be replaced by an actual statement, but this was forgotten. " +
+            "There was a typo which lead the semicolon to be doubled, i.e. \";;\".";
         internal const string MessageFormat = "Remove this empty statement.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Minor; 
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1116");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1116",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

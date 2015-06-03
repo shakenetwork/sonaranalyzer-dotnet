@@ -35,20 +35,25 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [SqaleConstantRemediation("2min")]
     [Tags("clumsy")]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     public class UnnecessaryBooleanLiteral : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1125";
-        internal const string Description = "Literal boolean values should not be used in condition expressions";
+        internal const string Title = "Literal boolean values should not be used in condition expressions";
+        internal const string Description = 
+            "Remove literal boolean values from conditional expressions to improve readability. Anything that " +
+            "can be tested for equality with a boolean value must itself be a boolean value, and boolean values " +
+            "can be tested atomically.";
         internal const string MessageFormat = "Remove the literal \"{0}\" boolean value.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Minor; 
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1125");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1125",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

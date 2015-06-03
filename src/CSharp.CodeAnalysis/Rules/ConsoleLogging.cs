@@ -33,21 +33,26 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("5min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.SecurityFeatures)]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("security", "owasp-a6")]
     public class ConsoleLogging : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2228";
-        internal const string Description = "Console logging should not be used";
+        internal const string Title = "Console logging should not be used";
+        internal const string Description =
+            "Debug statements are always useful during development. But include them in production " +
+            "code - particularly in code that runs client-side - and you run the risk of " +
+            "inadvertently exposing sensitive information.";
         internal const string MessageFormat = "Remove this logging statement.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category, 
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2228");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2228",
+                description: Description);
 
         private static readonly string[] BannedConsoleMembers = { "WriteLine", "Write" };
 

@@ -32,21 +32,29 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [SqaleConstantRemediation("5min")]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("bug")]
     public class MultilineBlocksWithoutBrace : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2681";
-        internal const string Description = @"Multiline blocks should be enclosed in curly braces";
-        internal const string MessageFormat = @"Only the first line of this n-line block will be executed {0}. The rest will execute {1}.";
+        internal const string Title = "Multiline blocks should be enclosed in curly braces";
+        internal const string Description =
+            "Curly braces can be omitted from a one-line block, such as with an \"if\" statement " +
+            "or \"for\" loop, but doing so can be misleading and induce bugs. This rule raises an " +
+            "issue when the indention of the lines after a one-line block indicates an intent to " +
+            "include those lines in the block, but the omission of curly braces means the lines " +
+            "will be unconditionally executed once.";
+        internal const string MessageFormat = 
+            "Only the first line of this n-line block will be executed {0}. The rest will execute {1}.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Critical; 
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2681");
+                helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2681",
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
