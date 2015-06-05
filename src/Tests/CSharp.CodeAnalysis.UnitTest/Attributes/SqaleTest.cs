@@ -134,7 +134,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Attributes
                 "EFFICIENCY_COMPLIANCE",
                 "CHANGEABILITY_COMPLIANCE",
                 "RELIABILITY_COMPLIANCE",
-                "TESTABILITY_COMPLIANCE",
+                "TESTABILITY_COMPLIANCE"
             };
 
             var enumValues = Enum.GetValues(typeof(SqaleSubCharacteristic)).Cast<SqaleSubCharacteristic>();

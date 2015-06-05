@@ -171,7 +171,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     IdentifierParameter parameter;
                     if (argument.NameColon == null)
                     {
-                        parameter = new PositionalIdentifierParameter()
+                        parameter = new PositionalIdentifierParameter
                         {
                             IdentifierName = identifierName,
                             Position = index
@@ -179,7 +179,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     }
                     else
                     {
-                        parameter = new NamedIdentifierParameter()
+                        parameter = new NamedIdentifierParameter
                         {
                             IdentifierName = identifierName,
                             DeclaredName = argument.NameColon.Name.Identifier.Text

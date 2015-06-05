@@ -69,7 +69,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         private static readonly string[] MethodNamesToReachHashAlgorithm =
         {
             "System.Security.Cryptography.CryptoConfig.CreateFromName",
-            "System.Security.Cryptography.HashAlgorithm.Create",
+            "System.Security.Cryptography.HashAlgorithm.Create"
         };
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }

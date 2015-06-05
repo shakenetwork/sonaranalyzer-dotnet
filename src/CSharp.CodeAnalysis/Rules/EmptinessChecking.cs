@@ -104,7 +104,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 SyntaxKind.EqualsExpression);
         }
 
-        private void CheckCountZero(ExpressionSyntax zero, ExpressionSyntax count, SyntaxNodeAnalysisContext c)
+        private static void CheckCountZero(ExpressionSyntax zero, ExpressionSyntax count, SyntaxNodeAnalysisContext c)
         {
             Location reportLocation;
             string typeArgument;
@@ -115,7 +115,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 c.ReportDiagnostic(Diagnostic.Create(Rule, reportLocation, typeArgument));
             }
         }
-        private void CheckCountOne(ExpressionSyntax one, ExpressionSyntax count, SyntaxNodeAnalysisContext c)
+        private static void CheckCountOne(ExpressionSyntax one, ExpressionSyntax count, SyntaxNodeAnalysisContext c)
         {
             Location reportLocation;
             string typeArgument;

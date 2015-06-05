@@ -73,18 +73,17 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     var implementationParameters = methodSyntax.ParameterList.Parameters;
                     var definitionParameters = methodSymbol.PartialDefinitionPart.Parameters;
 
-                    for (var i = 0; i < implementationParameters.Count; i++)
+                    for (var i = 0; i < implementationParameters.Count && i < definitionParameters.Length; i++)
                     {
                         var implementationParameter = implementationParameters[i];
-                        if (i < definitionParameters.Length)
+
+                        var definitionParameter = definitionParameters[i];
+                        var implementationParameterName = implementationParameter.Identifier.ValueText;
+                        if (implementationParameterName != definitionParameter.Name)
                         {
-                            var definitionParameter = definitionParameters[i];
-                            var implementationParameterName = implementationParameter.Identifier.ValueText;
-                            if (implementationParameterName != definitionParameter.Name)
-                            {
-                                c.ReportDiagnostic(Diagnostic.Create(Rule, implementationParameter.Identifier.GetLocation(),
-                                    implementationParameterName, definitionParameter.Name));
-                            }
+                            c.ReportDiagnostic(Diagnostic.Create(Rule,
+                                implementationParameter.Identifier.GetLocation(),
+                                implementationParameterName, definitionParameter.Name));
                         }
                     }
                 },

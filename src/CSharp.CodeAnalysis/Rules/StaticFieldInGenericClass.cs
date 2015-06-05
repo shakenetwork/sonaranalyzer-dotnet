@@ -120,12 +120,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                             .Select(symbol => symbol.Name)
                             .ToList();
 
-            if (typeParameters.Intersect(typeParameterNames).Any())
-            {
-                return true;
-            }
-
-            return false;
+            return typeParameters.Intersect(typeParameterNames).Any();
         }
     }
 }

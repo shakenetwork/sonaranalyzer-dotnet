@@ -96,7 +96,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest
             CommentsWithoutHeaders("using System; /* foo*/ /* NOSONAR */").NonBlank.Should().BeEquivalentTo();
         }
 
-        private FileComments CommentsWithoutHeaders(string text)
+        private static FileComments CommentsWithoutHeaders(string text)
         {
             return MetricsFor(text).Comments(true);
         }
@@ -137,7 +137,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest
             CommentsWithHeaders("using System; /* foo*/ /* NOSONAR */").NonBlank.Should().BeEquivalentTo();
         }
 
-        private FileComments CommentsWithHeaders(string text)
+        private static FileComments CommentsWithHeaders(string text)
         {
             return MetricsFor(text).Comments(false);
         }

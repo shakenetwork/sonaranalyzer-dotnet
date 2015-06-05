@@ -33,12 +33,11 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest
     [TestClass]
     public class RuleTest
     {
-        private static IList<Type> GetDiagnosticAnalyzerTypes(IList<Assembly> assemblies)
+        private static IEnumerable<Type> GetDiagnosticAnalyzerTypes(IEnumerable<Assembly> assemblies)
         {
             return assemblies
                 .SelectMany(assembly => assembly.GetTypes())
-                .Where(t => t.IsSubclassOf(typeof(DiagnosticAnalyzer)))
-                .ToList();
+                .Where(t => t.IsSubclassOf(typeof(DiagnosticAnalyzer)));
         }
 
         [TestMethod]

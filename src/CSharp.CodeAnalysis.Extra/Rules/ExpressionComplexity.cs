@@ -118,7 +118,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 });
         }
 
-        private bool IsCompoundExpression(SyntaxNode node)
+        private static bool IsCompoundExpression(SyntaxNode node)
         {
             return CompoundExpressionKinds.Any(node.IsKind);
         }

@@ -81,7 +81,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 SyntaxKind.LogicalOrExpression, SyntaxKind.LogicalAndExpression);
         }
 
-        private void ReportDereference(BinaryExpressionSyntax binaryExpression, SyntaxKind comparisonOperator, 
+        private static void ReportDereference(BinaryExpressionSyntax binaryExpression, SyntaxKind comparisonOperator, 
             SyntaxNodeAnalysisContext c)
         {
             if (IsMidLevelExpression(binaryExpression))

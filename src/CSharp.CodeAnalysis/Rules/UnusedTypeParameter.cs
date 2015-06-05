@@ -113,11 +113,9 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                                     ? c.SemanticModel
                                     : analysisContext.Compilation.GetSemanticModel(identifier.SyntaxTree);
 
-                                if (semanticModelOfThisTree == null)
-                                {
-                                    return null;
-                                }
-                                return semanticModelOfThisTree.GetSymbolInfo(identifier).Symbol;
+                                return semanticModelOfThisTree == null
+                                    ? null
+                                    : semanticModelOfThisTree.GetSymbolInfo(identifier).Symbol;
                             })
                             .Where(symbol => symbol != null && symbol.Kind == SymbolKind.TypeParameter)
                             .Select(symbol => symbol.Name)

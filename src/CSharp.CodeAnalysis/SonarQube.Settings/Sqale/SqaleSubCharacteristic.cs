@@ -62,6 +62,6 @@ namespace SonarQube.CSharp.CodeAnalysis.SonarQube.Settings.Sqale
         EfficiencyCompliance,
         ChangeabilityCompliance,
         ReliabilityCompliance,
-        TestabilityCompliance,
+        TestabilityCompliance
     }
 }

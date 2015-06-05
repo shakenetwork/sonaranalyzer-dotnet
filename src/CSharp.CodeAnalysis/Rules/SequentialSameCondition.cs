@@ -137,12 +137,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     return symbol != null && checkedSymbols.Contains(symbol);
                 });
 
-            if (prefixUnaryExpression)
-            {
-                return true;
-            }
-
-            return false;
+            return prefixUnaryExpression;
         }
     }
 }
