@@ -43,12 +43,12 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         internal const Severity RuleSeverity = Severity.Critical; 
         internal const bool IsActivatedByDefault = true;
 
-        internal static DiagnosticDescriptor Rule =
+        internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1764");
 
-        internal static SyntaxKind[] SyntaxElementsToCheck = 
+        internal static readonly SyntaxKind[] SyntaxElementsToCheck = 
         {
             SyntaxKind.SubtractExpression,
             SyntaxKind.DivideExpression, SyntaxKind.ModuloExpression,
@@ -60,7 +60,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             SyntaxKind.LeftShiftExpression, SyntaxKind.RightShiftExpression
         };
 
-        private readonly LiteralExpressionSyntax literalOneSyntax =
+        private static readonly LiteralExpressionSyntax LiteralOneSyntax =
             SyntaxFactory.LiteralExpression(
                 SyntaxKind.NumericLiteralExpression,
                 SyntaxFactory.Literal(1));
@@ -75,7 +75,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     var expression = (BinaryExpressionSyntax) c.Node;
 
                     if (expression.IsKind(SyntaxKind.LeftShiftExpression) &&
-                        SyntaxFactory.AreEquivalent(expression.Right, literalOneSyntax))
+                        SyntaxFactory.AreEquivalent(expression.Right, LiteralOneSyntax))
                     {
                         return;
                     }

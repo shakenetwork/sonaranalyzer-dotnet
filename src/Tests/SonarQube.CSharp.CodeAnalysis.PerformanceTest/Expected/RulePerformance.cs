@@ -1,7 +1,4 @@
-﻿using System;
-using Newtonsoft.Json;
-
-namespace SonarQube.CSharp.CodeAnalysis.PerformanceTest.Expected
+﻿namespace SonarQube.CSharp.CodeAnalysis.PerformanceTest.Expected
 {
     public class RulePerformance
     {

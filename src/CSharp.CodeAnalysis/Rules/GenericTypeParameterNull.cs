@@ -44,9 +44,9 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
-        private readonly ExpressionSyntax nullExpression = SyntaxFactory.LiteralExpression(SyntaxKind.NullLiteralExpression);
+        private static readonly ExpressionSyntax NullExpression = SyntaxFactory.LiteralExpression(SyntaxKind.NullLiteralExpression);
 
-        internal static DiagnosticDescriptor Rule = 
+        internal static readonly DiagnosticDescriptor Rule = 
             new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category, 
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
                 helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2955");
@@ -60,8 +60,8 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 {
                     var equalsExpression = (BinaryExpressionSyntax) c.Node;
 
-                    var leftIsNull = EquivalenceChecker.AreEquivalent(equalsExpression.Left, nullExpression);
-                    var rightIsNull = EquivalenceChecker.AreEquivalent(equalsExpression.Right, nullExpression);
+                    var leftIsNull = EquivalenceChecker.AreEquivalent(equalsExpression.Left, NullExpression);
+                    var rightIsNull = EquivalenceChecker.AreEquivalent(equalsExpression.Right, NullExpression);
 
                     if (!(leftIsNull ^ rightIsNull))
                     {

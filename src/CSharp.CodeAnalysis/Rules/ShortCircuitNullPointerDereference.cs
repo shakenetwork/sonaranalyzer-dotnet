@@ -45,9 +45,9 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         internal const Severity RuleSeverity = Severity.Blocker; 
         internal const bool IsActivatedByDefault = true;
 
-        private readonly ExpressionSyntax nullExpression = SyntaxFactory.LiteralExpression(SyntaxKind.NullLiteralExpression);
+        private static readonly ExpressionSyntax NullExpression = SyntaxFactory.LiteralExpression(SyntaxKind.NullLiteralExpression);
 
-        internal static DiagnosticDescriptor Rule =
+        internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1697");
@@ -94,8 +94,8 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     continue;
                 }
 
-                var leftNull = SyntaxFactory.AreEquivalent(comparisonToNull.Left, nullExpression);
-                var rightNull = SyntaxFactory.AreEquivalent(comparisonToNull.Right, nullExpression);
+                var leftNull = SyntaxFactory.AreEquivalent(comparisonToNull.Left, NullExpression);
+                var rightNull = SyntaxFactory.AreEquivalent(comparisonToNull.Right, NullExpression);
 
                 if (leftNull && rightNull)
                 {

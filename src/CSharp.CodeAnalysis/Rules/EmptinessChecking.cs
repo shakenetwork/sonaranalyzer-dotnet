@@ -18,10 +18,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System;
-using System.Collections.Generic;
 using System.Collections.Immutable;
-using System.Diagnostics;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
@@ -47,16 +44,16 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
-        internal static DiagnosticDescriptor Rule = 
+        internal static readonly DiagnosticDescriptor Rule = 
             new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category, 
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
                 helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1155");
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        private readonly LiteralExpressionSyntax literalOneSyntax =
+        private static readonly LiteralExpressionSyntax LiteralOneSyntax =
             SyntaxFactory.LiteralExpression(SyntaxKind.NumericLiteralExpression, SyntaxFactory.Literal(1));
-        private readonly LiteralExpressionSyntax literalZeroSyntax =
+        private static readonly LiteralExpressionSyntax LiteralZeroSyntax =
             SyntaxFactory.LiteralExpression(SyntaxKind.NumericLiteralExpression, SyntaxFactory.Literal(0));
 
         public override void Initialize(AnalysisContext context)
@@ -108,7 +105,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             Location reportLocation;
             string typeArgument;
 
-            if (EquivalenceChecker.AreEquivalent(zero, literalZeroSyntax) &&
+            if (EquivalenceChecker.AreEquivalent(zero, LiteralZeroSyntax) &&
                 TryGetCountCall(count, c.SemanticModel, out reportLocation, out typeArgument))
             {
                 c.ReportDiagnostic(Diagnostic.Create(Rule, reportLocation, typeArgument));
@@ -119,7 +116,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             Location reportLocation;
             string typeArgument;
 
-            if (EquivalenceChecker.AreEquivalent(one, literalOneSyntax) &&
+            if (EquivalenceChecker.AreEquivalent(one, LiteralOneSyntax) &&
                 TryGetCountCall(count, c.SemanticModel, out reportLocation, out typeArgument))
             {
                 c.ReportDiagnostic(Diagnostic.Create(Rule, reportLocation, typeArgument));

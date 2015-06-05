@@ -45,7 +45,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
-        internal static DiagnosticDescriptor Rule = 
+        internal static readonly DiagnosticDescriptor Rule = 
             new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category, 
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
                 helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2325");
@@ -179,16 +179,6 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         private static bool IsInterfaceImplementation(ISymbol symbol)
         {
             var containingType = symbol.ContainingType;
-
-            var interfaces = new Queue<INamedTypeSymbol>(containingType.Interfaces);
-            var allInterfaces = new List<INamedTypeSymbol>();
-
-            while (interfaces.Count > 0)
-            {
-                var @interface = interfaces.Dequeue();
-                @interface.Interfaces.ToList().ForEach(interfaces.Enqueue);
-                allInterfaces.Add(@interface);
-            }
 
             return containingType.AllInterfaces
                 .SelectMany(interf => interf.GetMembers().OfType<IMethodSymbol>())

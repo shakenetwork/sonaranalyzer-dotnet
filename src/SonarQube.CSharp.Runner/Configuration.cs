@@ -31,7 +31,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Runner
 {
     public class Configuration
     {
-        private readonly ImmutableArray<DiagnosticAnalyzer> parameterLessAnalyzers = 
+        private static readonly ImmutableArray<DiagnosticAnalyzer> ParameterLessAnalyzers = 
             ImmutableArray.Create(GetParameterlessAnalyzers().ToArray());
 
         public bool IgnoreHeaderComments { private set; get; }
@@ -89,7 +89,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Runner
         {
             var builder = ImmutableArray.CreateBuilder<DiagnosticAnalyzer>();
 
-            foreach (var parameterLessAnalyzer in parameterLessAnalyzers
+            foreach (var parameterLessAnalyzer in ParameterLessAnalyzers
                 .Where(parameterLessAnalyzer => 
                     AnalyzerIds.Contains(parameterLessAnalyzer.SupportedDiagnostics.Single().Id)))
             {

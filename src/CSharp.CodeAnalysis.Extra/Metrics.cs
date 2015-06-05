@@ -43,7 +43,7 @@ namespace SonarQube.CSharp.CodeAnalysis
 
     public class Metrics
     {
-        private readonly string[] lineTerminators = { "\r\n", "\n", "\r" };
+        private static readonly string[] LineTerminators = { "\r\n", "\n", "\r" };
         private readonly SyntaxTree tree;
 
         public Metrics(SyntaxTree tree)
@@ -86,7 +86,7 @@ namespace SonarQube.CSharp.CodeAnalysis
 
                 var lineNumber = tree.GetLineSpan(trivia.FullSpan).StartLinePosition.Line + 1;
 
-                foreach (var line in trivia.ToFullString().Split(lineTerminators, StringSplitOptions.None))
+                foreach (var line in trivia.ToFullString().Split(LineTerminators, StringSplitOptions.None))
                 {
                     if (line.Contains("NOSONAR"))
                     {

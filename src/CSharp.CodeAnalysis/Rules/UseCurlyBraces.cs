@@ -45,7 +45,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         internal const Severity RuleSeverity = Severity.Major; 
         internal const bool IsActivatedByDefault = false;
 
-        internal static DiagnosticDescriptor Rule =
+        internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS121");
@@ -58,7 +58,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             public Func<SyntaxNode, Location> IssueReportLocation;
         }
 
-        private readonly ImmutableList<CheckedKind> checkedKinds = ImmutableList.Create(
+        private static readonly ImmutableList<CheckedKind> CheckedKinds = ImmutableList.Create(
             new CheckedKind
             {
                 Kind = SyntaxKind.IfStatement,
@@ -114,14 +114,14 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             context.RegisterSyntaxNodeAction(
                 c =>
                 {
-                    var checkedKind = checkedKinds.Single(e => c.Node.IsKind(e.Kind));
+                    var checkedKind = CheckedKinds.Single(e => c.Node.IsKind(e.Kind));
 
                     if (!checkedKind.Validator(c.Node))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, checkedKind.IssueReportLocation(c.Node), checkedKind.Value));
                     }
                 },
-                checkedKinds.Select(e => e.Kind).ToArray());
+                CheckedKinds.Select(e => e.Kind).ToArray());
         }
     }
 }

@@ -31,8 +31,6 @@ using Newtonsoft.Json;
 using SonarQube.CSharp.CodeAnalysis.RulingTest.ErrorModels.Omstar;
 using SonarQube.CSharp.CodeAnalysis.Runner;
 using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings;
-using AnalysisOutput = SonarQube.CSharp.CodeAnalysis.RulingTest.ErrorModels.Xml.AnalysisOutput;
-using Formatting = Newtonsoft.Json.Formatting;
 
 namespace SonarQube.CSharp.CodeAnalysis.RulingTest
 {
@@ -97,7 +95,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
             }
         }
 
-        private void AddMissingEntries(ErrorModels.Omstar.AnalysisOutput output)
+        private void AddMissingEntries(AnalysisOutput output)
         {
             var foundKeys = output.Issues.Select(i => i.RuleId).ToList();
 
@@ -147,11 +145,11 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
             return !problematicRules.Any();
         }
 
-        private void SplitAndStoreOmstarByIssueType(ErrorModels.Omstar.AnalysisOutput omstar)
+        private void SplitAndStoreOmstarByIssueType(AnalysisOutput omstar)
         {
             foreach (var issueGroup in omstar.Issues.GroupBy(issue => issue.RuleId))
             {
-                var omstarForRule = new ErrorModels.Omstar.AnalysisOutput
+                var omstarForRule = new AnalysisOutput
                 {
                     ToolInfo = omstar.ToolInfo,
                     Version = omstar.Version,
@@ -181,52 +179,52 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
             }
         }
 
-        private static ErrorModels.Omstar.AnalysisOutput GenerateOmstarOutput(AnalysisOutput xml)
+        private static AnalysisOutput GenerateOmstarOutput(ErrorModels.Xml.AnalysisOutput xml)
         {
             var assemblyName = xml.GetType().Assembly.GetName();
 
-            var omstar = new ErrorModels.Omstar.AnalysisOutput
+            var omstar = new AnalysisOutput
             {
                 Version = "0.1",
                 ToolInfo = new ToolInfo
                 {
                     FileVersion = "1.0.0",
                     ToolName = assemblyName.Name
-                }
-            };
-
-            omstar.Issues = xml.Files.SelectMany(f => f.Issues.Select(i => new Issue
-            {
-                FullMessage = i.Message,
-                RuleId = i.Id,
-                Properties = null,
-                Locations = new List<IssueLocation>
+                },
+                Issues = xml.Files.SelectMany(f => f.Issues.Select(i => new Issue
                 {
-                    new IssueLocation
+                    FullMessage = i.Message,
+                    RuleId = i.Id,
+                    Properties = null,
+                    Locations = new List<IssueLocation>
                     {
-                        AnalysisTarget = new AnalysisTarget
+                        new IssueLocation
                         {
-                            Region = new Region
+                            AnalysisTarget = new AnalysisTarget
                             {
-                                StartLine = i.Line,
-                                EndLine = i.Line,
-                                StartColumn = 0,
-                                EndColumn = int.MaxValue
-                            },
-                            Uri = f.Path
+                                Region = new Region
+                                {
+                                    StartLine = i.Line,
+                                    EndLine = i.Line,
+                                    StartColumn = 0,
+                                    EndColumn = int.MaxValue
+                                },
+                                Uri = f.Path
+                            }
                         }
                     }
-                }
-            })).ToList();
+                })).ToList()
+            };
+
 
             return omstar;
         }
 
-        private static AnalysisOutput ParseAnalysisXmlOutput(string path)
+        private static ErrorModels.Xml.AnalysisOutput ParseAnalysisXmlOutput(string path)
         {
             var xml = XDocument.Load(new FileInfo(path).FullName);
-            var s = new XmlSerializer(typeof(AnalysisOutput));
-            return (AnalysisOutput)s.Deserialize(xml.CreateReader());
+            var s = new XmlSerializer(typeof(ErrorModels.Xml.AnalysisOutput));
+            return (ErrorModels.Xml.AnalysisOutput)s.Deserialize(xml.CreateReader());
         }
 
         private void RemoveExactFilePathNames(string outputPath)

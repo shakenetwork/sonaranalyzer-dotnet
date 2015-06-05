@@ -44,7 +44,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         internal const Severity RuleSeverity = Severity.Major; 
         internal const bool IsActivatedByDefault = true;
 
-        internal static DiagnosticDescriptor Rule =
+        internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS1067");
@@ -54,7 +54,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         [RuleParameter("max", PropertyType.Integer, "Maximum number of allowed conditional operators in an expression", "3")]
         public int Maximum { get; set; }
 
-        private readonly IImmutableSet<SyntaxKind> compoundExpressionKinds = ImmutableHashSet.Create(
+        private static readonly IImmutableSet<SyntaxKind> CompoundExpressionKinds = ImmutableHashSet.Create(
             SyntaxKind.SimpleLambdaExpression,
             SyntaxKind.ArrayInitializerExpression,
             SyntaxKind.AnonymousMethodExpression,
@@ -121,7 +121,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
         private bool IsCompoundExpression(SyntaxNode node)
         {
-            return compoundExpressionKinds.Any(node.IsKind);
+            return CompoundExpressionKinds.Any(node.IsKind);
         }
     }
 }

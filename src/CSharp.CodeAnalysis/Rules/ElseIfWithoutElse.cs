@@ -23,6 +23,7 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
+using Microsoft.CodeAnalysis.Text;
 using SonarQube.CSharp.CodeAnalysis.Helpers;
 using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings;
 using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings.Sqale;
@@ -43,7 +44,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         internal const Severity RuleSeverity = Severity.Major; 
         internal const bool IsActivatedByDefault = false;
 
-        internal static DiagnosticDescriptor Rule =
+        internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS126");
@@ -61,7 +62,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                         var parentElse = (ElseClauseSyntax)ifNode.Parent;
                         var diff = ifNode.IfKeyword.Span.End - parentElse.ElseKeyword.SpanStart;
                         var location = Location.Create(c.Node.SyntaxTree,
-                            new Microsoft.CodeAnalysis.Text.TextSpan(parentElse.ElseKeyword.SpanStart, diff));                        
+                            new TextSpan(parentElse.ElseKeyword.SpanStart, diff));                        
 
                         c.ReportDiagnostic(Diagnostic.Create(Rule, location));
                     }

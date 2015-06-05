@@ -43,9 +43,9 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
-        private readonly BlockSyntax throwBlock = SyntaxFactory.Block(SyntaxFactory.ThrowStatement());
+        private static readonly BlockSyntax ThrowBlock = SyntaxFactory.Block(SyntaxFactory.ThrowStatement());
 
-        internal static DiagnosticDescriptor Rule =
+        internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: "http://nemo.sonarqube.org/coding_rules#rule_key=csharpsquid%3AS2737");
@@ -62,7 +62,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     var lastCatchClause = tryStatement.Catches.LastOrDefault();
                     
                     if (lastCatchClause!=null && 
-                        SyntaxFactory.AreEquivalent(lastCatchClause.Block, throwBlock))
+                        SyntaxFactory.AreEquivalent(lastCatchClause.Block, ThrowBlock))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(
                                 Rule,
