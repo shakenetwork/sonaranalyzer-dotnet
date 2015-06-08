@@ -35,16 +35,21 @@ namespace SonarQube.CSharp.CodeAnalysis.Descriptor
         {
             if (args.Length != 3)
             {
-                Console.WriteLine("The application requires three parameters to run: ");
-                Console.WriteLine("[Path to RuleDescriptors.xml]");
-                Console.WriteLine("[Path to QualityProfile.xml]");
-                Console.WriteLine("[Path to SqaleDescriptors.xml]");
-                Console.WriteLine("All files will be created by the application");
+                Write("The application requires three parameters to run: ");
+                Write("[Path to RuleDescriptors.xml]");
+                Write("[Path to QualityProfile.xml]");
+                Write("[Path to SqaleDescriptors.xml]");
+                Write("All files will be created by the application");
 
                 return;
             }
 
             WriteXmlDescriptorFiles(args[0], args[1], args[2]);
+        }
+
+        private static void Write(string text)
+        {
+            Console.WriteLine(text);
         }
 
         private static void WriteXmlDescriptorFiles(string rulePath, string profilePath, string sqalePath)

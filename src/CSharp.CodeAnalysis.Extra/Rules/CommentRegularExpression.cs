@@ -32,8 +32,8 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 {
     public class CommentRegularExpressionRule
     {
-        public DiagnosticDescriptor Descriptor;
-        public string RegularExpression;
+        public DiagnosticDescriptor Descriptor { get; set; }
+        public string RegularExpression { get; set; }
     }
 
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
@@ -54,7 +54,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault);
         }
 
-        public ImmutableArray<CommentRegularExpressionRule> Rules;
+        public ImmutableArray<CommentRegularExpressionRule> Rules { get; set; }
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return Rules.Select(r => r.Descriptor).ToImmutableArray(); } }
 

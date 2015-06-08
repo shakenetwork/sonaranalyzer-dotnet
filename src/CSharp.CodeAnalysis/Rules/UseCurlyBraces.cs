@@ -56,10 +56,10 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
         private sealed class CheckedKind
         {
-            public SyntaxKind Kind;
-            public string Value;
-            public Func<SyntaxNode, bool> Validator;
-            public Func<SyntaxNode, Location> IssueReportLocation;
+            public SyntaxKind Kind { get; set; }
+            public string Value { get; set; }
+            public Func<SyntaxNode, bool> Validator { get; set; }
+            public Func<SyntaxNode, Location> IssueReportLocation { get; set; }
         }
 
         private static readonly ImmutableList<CheckedKind> CheckedKinds = ImmutableList.Create(

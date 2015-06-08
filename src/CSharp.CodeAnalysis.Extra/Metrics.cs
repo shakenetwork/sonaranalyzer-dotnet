@@ -31,14 +31,16 @@ namespace SonarQube.CSharp.CodeAnalysis
 {
     public class FileComments
     {
-        public readonly IImmutableSet<int> NoSonar;
-        public readonly IImmutableSet<int> NonBlank;
+        private readonly IImmutableSet<int> noSonar;
+        private readonly IImmutableSet<int> nonBlank;
 
         public FileComments(IImmutableSet<int> noSonar, IImmutableSet<int> nonBlank)
         {
-            NoSonar = noSonar;
-            NonBlank = nonBlank;
+            this.noSonar = noSonar;
+            this.nonBlank = nonBlank;
         }
+        public IImmutableSet<int> NoSonar { get { return noSonar;} }
+        public IImmutableSet<int> NonBlank { get { return nonBlank; } }
     }
 
     public class Metrics

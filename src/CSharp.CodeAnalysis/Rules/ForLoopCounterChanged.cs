@@ -62,8 +62,8 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
         private sealed class SideEffectExpression
         {
-            public IImmutableList<SyntaxKind> Kinds;
-            public Func<SyntaxNode, SyntaxNode> AffectedExpression;
+            public IImmutableList<SyntaxKind> Kinds { get; set; }
+            public Func<SyntaxNode, SyntaxNode> AffectedExpression { get; set; }
         }
 
         private static readonly IImmutableList<SideEffectExpression> SideEffectExpressions = ImmutableArray.Create(
