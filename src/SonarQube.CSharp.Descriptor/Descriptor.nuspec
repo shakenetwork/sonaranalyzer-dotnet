@@ -16,8 +16,8 @@
     </frameworkAssemblies>
   </metadata>
   <files>
-    <file src="rules.xml"  target="xml\" />
-    <file src="profile.xml"  target="xml\" />
-    <file src="sqale.xml"  target="xml\" />
+    <file src="bin\Release\rules.xml"  target="xml\" />
+    <file src="bin\Release\profile.xml"  target="xml\" />
+    <file src="bin\Release\sqale.xml"  target="xml\" />
   </files>
 </package>

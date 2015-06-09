@@ -16,8 +16,8 @@
     </frameworkAssemblies>
   </metadata>
   <files>
-    <file src="*.dll" target="assembly\" />
-    <file src="*.exe" target="assembly\" />
-    <file src="*.exe.config" target="assembly\" />
+    <file src="bin\Release\*.dll" target="assembly\" />
+    <file src="bin\Release\*.exe" target="assembly\" />
+    <file src="bin\Release\*.exe.config" target="assembly\" />
   </files>
 </package>
