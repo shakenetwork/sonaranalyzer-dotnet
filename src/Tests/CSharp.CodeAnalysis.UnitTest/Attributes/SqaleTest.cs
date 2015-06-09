@@ -24,9 +24,8 @@ using System.Reflection;
 using FluentAssertions;
 using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarQube.CSharp.CodeAnalysis.Helpers;
-using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings;
-using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings.Sqale;
+using SonarQube.CSharp.CodeAnalysis.Common;
+using SonarQube.CSharp.CodeAnalysis.Common.Sqale;
 
 namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Attributes
 {

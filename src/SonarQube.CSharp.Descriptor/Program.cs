@@ -25,7 +25,7 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
-using SonarQube.CSharp.CodeAnalysis.Descriptor.RuleDescriptors;
+using SonarQube.CSharp.CodeAnalysis.Common;
 
 namespace SonarQube.CSharp.CodeAnalysis.Descriptor
 {
@@ -54,47 +54,40 @@ namespace SonarQube.CSharp.CodeAnalysis.Descriptor
 
         private static void WriteXmlDescriptorFiles(string rulePath, string profilePath, string sqalePath)
         {
-            var fullRuleDescriptors = RuleDescriptorBuilder.GetRuleDescriptors().ToList();
-
-            WriteRuleDescriptorFile(rulePath, fullRuleDescriptors);
-            WriteQualityProfileFile(profilePath, fullRuleDescriptors);
-            WriteSqaleDescriptorFile(sqalePath, fullRuleDescriptors);
+            var genericRuleDetails = RuleDetailBuilder.GetAllRuleDetails().ToList();
+            var ruleDetails = genericRuleDetails.Select(RuleDetail.Convert).ToList();
+            var sqaleDetails = genericRuleDetails.Select(SqaleDescriptor.Convert).ToList();
+            
+            WriteRuleDescriptorFile(rulePath, ruleDetails);
+            WriteQualityProfileFile(profilePath, ruleDetails);
+            WriteSqaleDescriptorFile(sqalePath, sqaleDetails);
         }
 
-        private static void WriteSqaleDescriptorFile(string filePath, IEnumerable<FullRuleDescriptor> fullRuleDescriptors)
+        private static void WriteSqaleDescriptorFile(string filePath, IEnumerable<SqaleDescriptor> sqaleDescriptions)
         {
             var root = new SqaleRoot();
-            foreach (var fullRuleDescriptor in fullRuleDescriptors
-                .Where(fullRuleDescriptor => fullRuleDescriptor.SqaleDescriptor != null))
-            {
-                root.Sqale.Add(fullRuleDescriptor.SqaleDescriptor);
-            }
-
+            root.Sqale.AddRange(sqaleDescriptions
+                .Where(descriptor => descriptor != null));
             SerializeObjectToFile(filePath, root);
         }
 
-        private static void WriteQualityProfileFile(string filePath, IEnumerable<FullRuleDescriptor> fullRuleDescriptors)
+        private static void WriteQualityProfileFile(string filePath, IEnumerable<RuleDetail> ruleDetails)
         {
             var root = new QualityProfileRoot();
-            foreach (var fullRuleDescriptor in fullRuleDescriptors.Where(full => full.RuleDescriptor.IsActivatedByDefault))
-            {
-                root.Rules.Add(new QualityProfileRuleDescriptor
+            root.Rules.AddRange(ruleDetails
+                .Where(descriptor => descriptor.IsActivatedByDefault)
+                .Select(descriptor => new QualityProfileRuleDescriptor
                 {
-                    Key = fullRuleDescriptor.RuleDescriptor.Key
-                });
-            }
+                    Key = descriptor.Key
+                }));
 
             SerializeObjectToFile(filePath, root);
         }
 
-        private static void WriteRuleDescriptorFile(string filePath, IEnumerable<FullRuleDescriptor> fullRuleDescriptors)
+        private static void WriteRuleDescriptorFile(string filePath, IEnumerable<RuleDetail> ruleDetails)
         {
             var root = new RuleDescriptorRoot();
-            foreach (var fullRuleDescriptor in fullRuleDescriptors)
-            {
-                root.Rules.Add(fullRuleDescriptor.RuleDescriptor);
-            }
-
+            root.Rules.AddRange(ruleDetails);
             SerializeObjectToFile(filePath, root);
         }
 

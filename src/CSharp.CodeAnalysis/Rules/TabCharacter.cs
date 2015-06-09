@@ -22,9 +22,9 @@ using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.CodeAnalysis.Text;
+using SonarQube.CSharp.CodeAnalysis.Common;
+using SonarQube.CSharp.CodeAnalysis.Common.Sqale;
 using SonarQube.CSharp.CodeAnalysis.Helpers;
-using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings;
-using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings.Sqale;
 
 namespace SonarQube.CSharp.CodeAnalysis.Rules
 {

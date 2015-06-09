@@ -26,9 +26,8 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Xml;
+using SonarQube.CSharp.CodeAnalysis.Common;
 using SonarQube.CSharp.CodeAnalysis.Rules;
-using SonarQube.CSharp.CodeAnalysis.Runner;
-using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings;
 
 namespace SonarQube.CSharp.CodeAnalysis.RulingTest
 {

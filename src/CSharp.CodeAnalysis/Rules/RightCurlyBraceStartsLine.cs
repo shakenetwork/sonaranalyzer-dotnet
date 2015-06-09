@@ -24,9 +24,9 @@ using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Diagnostics;
+using SonarQube.CSharp.CodeAnalysis.Common;
+using SonarQube.CSharp.CodeAnalysis.Common.Sqale;
 using SonarQube.CSharp.CodeAnalysis.Helpers;
-using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings;
-using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings.Sqale;
 
 namespace SonarQube.CSharp.CodeAnalysis.Rules
 {

@@ -28,9 +28,9 @@ using System.Xml.Linq;
 using System.Xml.Serialization;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
+using SonarQube.CSharp.CodeAnalysis.Common;
 using SonarQube.CSharp.CodeAnalysis.RulingTest.ErrorModels.Omstar;
 using SonarQube.CSharp.CodeAnalysis.Runner;
-using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings;
 
 namespace SonarQube.CSharp.CodeAnalysis.RulingTest
 {

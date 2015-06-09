@@ -1,0 +1,126 @@
+﻿body {
+    font-family: Roboto,'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    line-height: 1.23076923;
+    color: #444;
+    background-color: rgb(243, 243, 243);
+}
+
+h1 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 1em 0;
+    line-height: 22px;
+}
+
+pre {
+    padding: 10px;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    line-height: 18px;
+    overflow: auto;
+    font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace;
+    font-size: 12px;
+    margin: 1em 0;
+}
+
+code {
+    font-weight: 600;
+    font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.rule-details {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: white;
+}
+
+.rule-description {
+    margin-top: 18px;
+}
+
+.rule-meta .id {
+    color: #777;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    padding-left: 40px;
+    list-style: disc;
+    margin: 1em 0;
+}
+
+a {
+    border-bottom: 1px solid #cae3f2;
+    color: #236a97;
+    cursor: pointer;
+    outline: 0;
+    text-decoration: none;
+    transition: all .2s ease;
+}
+
+footer {
+    min-height: 60px;
+    padding: 10px;
+    line-height: 1.5;
+    border-top: 1px solid #e6e6e6;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #f3f3f3;
+    color: #595959;
+    font-size: 12px;
+    text-align: center;
+}
+
+    footer a {
+        border-color: #d0d0d0;
+        color: #444;
+    }
+
+header {
+    top: 0;
+    z-index: 499;
+    background-color: #262626;
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 30px;
+    box-sizing: border-box;
+    min-width: 980px;
+}
+
+.navbar-header {
+    float: left;
+}
+
+img {
+    vertical-align: top;
+    border: 0;
+}
+
+header a {
+    border-bottom: none;
+    transition: none .2s ease;
+}
+
+.rules-detail-properties {
+    margin: 10px 0;
+    font-size: 12px;
+    line-height: 22px;
+}
+
+.tags {
+    font-size: 11px;
+}

@@ -83,21 +83,24 @@
     <Compile Include="..\AssemblyInfo.Shared.cs">
       <Link>Properties\AssemblyInfo.Shared.cs</Link>
     </Compile>
-    <Compile Include="RuleDescriptorBuilder.cs" />
+    <Compile Include="Descriptors\FullRuleDescriptor.cs" />
+    <Compile Include="Descriptors\QualityProfileRoot.cs" />
+    <Compile Include="Descriptors\QualityProfileRuleDescriptor.cs" />
+    <Compile Include="Descriptors\RuleDetail.cs" />
+    <Compile Include="Descriptors\RuleDescriptorRoot.cs" />
+    <Compile Include="Descriptors\RuleParameter.cs" />
+    <Compile Include="Descriptors\SqaleDescriptor.cs" />
+    <Compile Include="Descriptors\SqaleRemediation.cs" />
+    <Compile Include="Descriptors\SqaleRemediationProperty.cs" />
+    <Compile Include="Descriptors\SqaleRoot.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RuleDescriptors\FullRuleDescriptor.cs" />
-    <Compile Include="RuleDescriptors\QualityProfileRoot.cs" />
-    <Compile Include="RuleDescriptors\QualityProfileRuleDescriptor.cs" />
-    <Compile Include="RuleDescriptors\RuleDescriptor.cs" />
-    <Compile Include="RuleDescriptors\RuleDescriptorRoot.cs" />
-    <Compile Include="RuleDescriptors\SqaleDescriptor.cs" />
-    <Compile Include="RuleDescriptors\SqaleRemediationProperty.cs" />
-    <Compile Include="RuleDescriptors\SqaleRemediation.cs" />
-    <Compile Include="RuleDescriptors\SqaleRoot.cs" />
-    <Compile Include="RuleDescriptors\RuleParameter.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CSharp.CodeAnalysis.Common\CodeAnalysis.Common.csproj">
+      <Project>{741C2442-0401-4B83-8527-8C4D3BBC0E1C}</Project>
+      <Name>CodeAnalysis.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CSharp.CodeAnalysis.Extra\CodeAnalysis.Extra.csproj">
       <Project>{4c1bb6ce-645f-400b-b491-af7bb40e5c01}</Project>
       <Name>CodeAnalysis.Extra</Name>

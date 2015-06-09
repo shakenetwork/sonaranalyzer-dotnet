@@ -82,7 +82,6 @@
     </Compile>
     <Compile Include="Helpers\DiagnosticReportHelper.cs" />
     <Compile Include="Helpers\NavigationHelper.cs" />
-    <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="Helpers\EquivalenceChecker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\GenericTypeParameterNull.cs" />
@@ -140,16 +139,6 @@
     <Compile Include="Rules\UnnecessaryBooleanLiteral.cs" />
     <Compile Include="Rules\UnusedLocalVariable.cs" />
     <Compile Include="Rules\UseCurlyBraces.cs" />
-    <Compile Include="SonarQube.Settings\PropertyType.cs" />
-    <Compile Include="SonarQube.Settings\RuleAttribute.cs" />
-    <Compile Include="SonarQube.Settings\RuleParameterAttribute.cs" />
-    <Compile Include="SonarQube.Settings\Severity.cs" />
-    <Compile Include="SonarQube.Settings\Sqale\NoSqaleRemediationAttribute.cs" />
-    <Compile Include="SonarQube.Settings\Sqale\SqaleConstantRemediationAttribute.cs" />
-    <Compile Include="SonarQube.Settings\Sqale\SqaleRemediationAttribute.cs" />
-    <Compile Include="SonarQube.Settings\Sqale\SqaleSubCharacteristic.cs" />
-    <Compile Include="SonarQube.Settings\Sqale\SqaleSubCharacteristicAttribute.cs" />
-    <Compile Include="SonarQube.Settings\TagsAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -322,6 +311,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S2357.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSharp.CodeAnalysis.Common\CodeAnalysis.Common.csproj">
+      <Project>{741C2442-0401-4B83-8527-8C4D3BBC0E1C}</Project>
+      <Name>CodeAnalysis.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

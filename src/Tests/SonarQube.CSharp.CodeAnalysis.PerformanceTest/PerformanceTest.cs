@@ -26,10 +26,10 @@ using System.Linq;
 using System.Reflection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
+using SonarQube.CSharp.CodeAnalysis.Common;
 using SonarQube.CSharp.CodeAnalysis.PerformanceTest.Expected;
 using SonarQube.CSharp.CodeAnalysis.Rules;
 using SonarQube.CSharp.CodeAnalysis.Runner;
-using SonarQube.CSharp.CodeAnalysis.SonarQube.Settings;
 
 namespace SonarQube.CSharp.CodeAnalysis.PerformanceTest
 {

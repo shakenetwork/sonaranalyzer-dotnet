@@ -25,6 +25,7 @@ using System.Globalization;
 using System.Linq;
 using System.Xml.Linq;
 using Microsoft.CodeAnalysis.Diagnostics;
+using SonarQube.CSharp.CodeAnalysis.Common;
 using SonarQube.CSharp.CodeAnalysis.Rules;
 
 namespace SonarQube.CSharp.CodeAnalysis.Runner

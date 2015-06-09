@@ -129,8 +129,6 @@
     <Compile Include="ConfigurationTest.cs" />
     <Compile Include="DiagnosticRunnerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RuleFinderTest.cs" />
-    <Compile Include="RuleTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -140,6 +138,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\CSharp.CodeAnalysis.Common\CodeAnalysis.Common.csproj">
+      <Project>{741C2442-0401-4B83-8527-8C4D3BBC0E1C}</Project>
+      <Name>CodeAnalysis.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\CSharp.CodeAnalysis.Extra\CodeAnalysis.Extra.csproj">
       <Project>{4C1BB6CE-645F-400B-B491-AF7BB40E5C01}</Project>
       <Name>CodeAnalysis.Extra</Name>

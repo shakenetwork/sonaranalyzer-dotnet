@@ -387,6 +387,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\CSharp.CodeAnalysis.Common\CodeAnalysis.Common.csproj">
+      <Project>{741C2442-0401-4B83-8527-8C4D3BBC0E1C}</Project>
+      <Name>CodeAnalysis.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\CSharp.CodeAnalysis.Extra\CodeAnalysis.Extra.csproj">
       <Project>{4c1bb6ce-645f-400b-b491-af7bb40e5c01}</Project>
       <Name>CodeAnalysis.Extra</Name>
