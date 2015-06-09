@@ -146,12 +146,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             }
 
             var leftType = semanticModel.GetTypeInfo(left);
-            if (leftType.Type != null && FloatingPointTypes.Contains(leftType.Type.SpecialType))
-            {
-                return true;
-            }
-
-            return false;
+            return leftType.Type != null && FloatingPointTypes.Contains(leftType.Type.SpecialType);
         }
 
         private static bool HasAppropriateOperatorsForEquality(BinaryExpressionSyntax right, BinaryExpressionSyntax left)

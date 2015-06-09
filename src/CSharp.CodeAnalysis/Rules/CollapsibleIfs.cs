@@ -92,11 +92,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             }
 
             var parentIfStatement = parent as IfStatementSyntax;
-            if (parentIfStatement != null)
-            {
-                return parentIfStatement;
-            }
-            return null;
+            return parentIfStatement;
         }
     }
 }
