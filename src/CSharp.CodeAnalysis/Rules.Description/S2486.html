@@ -5,18 +5,24 @@ When exceptions occur, it is usually a bad idea to simply ignore them. Instead, 
 <h2>Noncompliant Code Example</h2>
 <pre>
 string text = "";
-try {
+try 
+{
   text = File.ReadAllText(fileName);
-} catch (Exception exc) {  // Noncompliant
+} 
+catch (Exception exc) // Noncompliant
+{  
 }
 </pre>
 
 <h2>Compliant Solution</h2>
 <pre>
 string text = "";
-try {
+try 
+{
   text = File.ReadAllText(fileName);
-} catch (Exception exc) {
+} 
+catch (Exception exc) 
+{
   logger.Log(exc);
 }
 </pre>

@@ -6,14 +6,16 @@
 
 <h2>Noncompliant Code Example</h2>
 <pre>
-public boolean canVote(Person person) {
+public boolean canVote(Person person) 
+{
   return person.getAge > 18 ? true : true; // Noncompliant; is this what was intended?
 }
 </pre>
 
 <h2>Compliant Solution</h2>
 <pre>
-public boolean canVote(Person person) {
+public boolean canVote(Person person) 
+{
   return person.getAge > 18 ? true : false;
 }
 </pre>

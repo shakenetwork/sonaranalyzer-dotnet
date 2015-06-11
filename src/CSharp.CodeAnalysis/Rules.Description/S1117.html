@@ -6,15 +6,18 @@
 
 <h2>Noncompliant Code Example</h2>
 <pre>
-class Foo {
+class Foo 
+{
   public int myField;
 
-  public void doSomething() {
+  public void doSomething() 
+  {
     int myField = 0;
     ...
   }
 
-  public void doSomethingElse(int myField) {
+  public void doSomethingElse(int myField) 
+  {
     ...
   }
 }
@@ -30,11 +33,13 @@ class Foo {
 class Foo {
   public int myField;
 
-  public Foo(int myField) {
+  public Foo(int myField) 
+  {
     this.myField = myField;
   }
 
-  public static Foo build(int myField) {
+  public static Foo build(int myField) 
+  {
     ...
   }
 }

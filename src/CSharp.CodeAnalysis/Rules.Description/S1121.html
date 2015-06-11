@@ -1,18 +1,16 @@
 <p>
-Assignments within sub-expressions are hard to spot and therefore make the code less readable.
-It is also a common mistake to write <code>=</code> when <code>==</code> was meant.
-Ideally, every expression should have no more than one side-effect.
-Assignments inside lambda and delegate expressions are allowed.
+    Assignments within sub-expressions are hard to spot and therefore make the code less readable.
+    It is also a common mistake to write <code>=</code> when <code>==</code> was meant.
+    Ideally, every expression should have no more than one side-effect.
+    Assignments inside lambda and delegate expressions are allowed.
 </p>
 
 <h2>Noncompliant Code Example</h2>
-
 <pre>
-    doSomething(i = 42);
+doSomething(i = 42);
 </pre>
 
 <h2>Compliant Solution</h2>
-
 <pre>
 i = 42;
 doSomething(i);   
@@ -21,5 +19,4 @@ doSomething(i == 42);  // Perhaps in fact the comparison operator was expected
 </pre>
 
 <h2>Exceptions</h2>
-
 <p>Assignments in <code>while</code> statement conditions, and assignments enclosed in relational expressions are allowed.</p>

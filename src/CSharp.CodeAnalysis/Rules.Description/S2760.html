@@ -5,17 +5,20 @@
 </p>
 <h2>Noncompliant Code Example</h2>
 <pre>
-if (a == b) { 
+if (a == b) 
+{ 
   doTheThing(b);
 }
-if (a == b) {  // Noncompliant; is this really what was intended?
+if (a == b) // Noncompliant; is this really what was intended?
+{  
   doTheThing(c);
 }
 </pre>
 
 <h2>Compliant Solution</h2>
 <pre>
-if (a == b) { 
+if (a == b) 
+{ 
   doTheThing(b);
   doTheThing(c);
 }
@@ -24,10 +27,12 @@ if (a == b) {
 or
 
 <pre>
-if (a == b) { 
+if (a == b) 
+{ 
   doTheThing(b);
 }
-if (b == c) {
+if (b == c) 
+{
   doTheThing(c);
 }
 </pre>

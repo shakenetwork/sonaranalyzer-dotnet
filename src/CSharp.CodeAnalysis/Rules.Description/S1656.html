@@ -4,14 +4,16 @@ There is no reason to re-assign a variable to itself. Either this statement is r
 
 <h2>Noncompliant Code Example</h2>
 <pre>
-public void setName(String name) {
+public void setName(string name) 
+{
     name = name;
 }
 </pre>
 
 <h2>Compliant Solution</h2>
 <pre>
-public void setName(String name) {
+public void setName(string name) 
+{
     this.name = name;
 }
 </pre>

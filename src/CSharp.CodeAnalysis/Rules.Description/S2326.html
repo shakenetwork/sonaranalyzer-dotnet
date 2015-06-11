@@ -4,8 +4,10 @@
 </p>
 <h2>Noncompliant Code Example</h2>
 <pre>
-public class MoreMath&lt;T&gt; {  // Noncompliant; &lt;T&gt;is ignored
-  public int Add&lt;T&gt;(int a, int b){ // Noncompliant; &lt;T&gt; is ignored
+public class MoreMath&lt;T&gt; // Noncompliant; &lt;T&gt;is ignored
+{  
+  public int Add&lt;T&gt;(int a, int b) // Noncompliant; &lt;T&gt; is ignored
+  { 
     return a + b; 
   }
 }
@@ -13,8 +15,10 @@ public class MoreMath&lt;T&gt; {  // Noncompliant; &lt;T&gt;is ignored
 
 <h2>Compliant Solution</h2>
 <pre>
-public class MoreMath {
-  public int Add (int a, int b) {
+public class MoreMath 
+{
+  public int Add (int a, int b) 
+  {
     return a + b; 
   }
 }

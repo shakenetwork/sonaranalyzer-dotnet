@@ -5,22 +5,26 @@ Unfortunately the effect is just the opposite - the object is null-tested and th
 
 <h2>Noncompliant Code Sample</h2>
 <pre>
-if (str == null && str.Length == 0) {
+if (str == null && str.Length == 0) 
+{
   Console.WriteLine("String is empty");
 }
 
-if (str != null || str.Length > 0) {
+if (str != null || str.Length > 0) 
+{
   Console.WriteLine("String is not empty");
 }
 </pre>
 
 <h2>Compliant Solution</h2>
 <pre>
-if (str == null || str.Length == 0) {
+if (str == null || str.Length == 0) 
+{
   Console.WriteLine("String is empty");
 }
 
-if (str != null && str.Length > 0) {
+if (str != null && str.Length > 0) 
+{
   Console.WriteLine("String is not empty");
 }
 </pre>

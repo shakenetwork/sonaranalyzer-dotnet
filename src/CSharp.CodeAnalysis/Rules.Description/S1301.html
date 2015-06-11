@@ -7,7 +7,8 @@
 
 <h2>Noncompliant Code Example</h2>
 <pre>
-switch (variable) {
+switch (variable) 
+{
   case 0:
     doSomething();
     break;
@@ -19,9 +20,11 @@ switch (variable) {
 
 <h2>Compliant Solution</h2>
 <pre>
-if (variable == 0) {
+if (variable == 0) 
+{
   doSomething();
-} else {
+} else 
+{
   doSomethingElse();
 }
 </pre>

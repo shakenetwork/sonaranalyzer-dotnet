@@ -9,13 +9,17 @@
 
 <h2>Noncompliant Code Example</h2>
 <pre>
-public class LengthLimitedSingletonCollection&lt;T&gt; where T : new() {
+public class LengthLimitedSingletonCollection&lt;T&gt; where T : new() 
+{
   protected const int MaxAllowedLength = 5;
   protected static Dictionary&lt;Type, object&gt; instances = new Dictionary&lt;Type, object&gt;(); // Noncompliant
-  public static T GetInstance() {
+  public static T GetInstance() 
+  {
     object instance;
-    if (!instances.TryGetValue(typeof(T), out instance)) {
-      if (instances.Count >= MaxAllowedLength) {
+    if (!instances.TryGetValue(typeof(T), out instance)) 
+    {
+      if (instances.Count >= MaxAllowedLength) 
+      {
         throw new Exception();
       }
       instance = new T();
@@ -28,16 +32,20 @@ public class LengthLimitedSingletonCollection&lt;T&gt; where T : new() {
 
 <h2>Compliant Solution</h2>
 <pre>
-public class SingletonCollectionBase {
+public class SingletonCollectionBase 
+{
   protected static Dictionary&lt;Type, object&gt; instances = new Dictionary&lt;Type, object&gt;(); 
 }
 public class LengthLimitedSingletonCollection&lt;T&gt; : SingletonCollectionBase where T : new()
 {
   protected const int MaxAllowedLength = 5;
-  public static T GetInstance() {
+  public static T GetInstance() 
+  {
     object instance;
-    if (!instances.TryGetValue(typeof(T), out instance)) {
-      if (instances.Count >= MaxAllowedLength) {
+    if (!instances.TryGetValue(typeof(T), out instance)) 
+    {
+      if (instances.Count >= MaxAllowedLength) 
+      {
         throw new Exception();
       }
       instance = new T();
@@ -53,7 +61,8 @@ public class LengthLimitedSingletonCollection&lt;T&gt; : SingletonCollectionBase
     If the static field or property uses a type parameter, then the developer is assumed to understand that the static member is not shared among the closed constructed types.
 </p>
 <pre>
-public class Cache&lt;T&gt; {
+public class Cache&lt;T&gt; 
+{
   private static Dictionary&lt;string, T&gt; CacheDictionary { get; set; } // Compliant
 }
 </pre>

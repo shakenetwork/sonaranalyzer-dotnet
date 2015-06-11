@@ -7,16 +7,18 @@
 </p>
 
 <h2>Noncompliant Code Example</h2>
-
 <pre>
-class MyClass {
+class MyClass 
+{
   public String name;
 
-  public MyClass(String name) {
+  public MyClass(String name) 
+  {
     name = name;                    // Noncompliant - useless identity assignment
   }
 
-  public int add(int a, int b) {
+  public int add(int a, int b) 
+  {
     a = a + b;                      // Noncompliant
 
     /* additional logic */
@@ -24,7 +26,8 @@ class MyClass {
     return a;                       // Seems like the parameter is returned as is, what is the point?
   }
 
-  public static void main(String[] args) {
+  public static void main(String[] args) 
+  {
     MyClass foo = new MyClass();
     int a = 40;
     int b = 2;
@@ -34,20 +37,23 @@ class MyClass {
 </pre>
 
 <h2>Compliant Solution</h2>
-
 <pre>
-class MyClass {
+class MyClass 
+{
   public String name;
 
-  public MyClass(String name) {
+  public MyClass(String name) 
+  {
     this.name = name;               // Compliant
   }
 
-  public int add(int a, int b) {
+  public int add(int a, int b) 
+  {
     return a + b;                   // Compliant
   }
 
-  public static void main(String[] args) {
+  public static void main(String[] args) 
+  {
     MyClass foo = new MyClass();
     int a = 40;
     int b = 2;
@@ -57,7 +63,6 @@ class MyClass {
 </pre>
 
 <h2>See</h2>
-
 <ul>
     <li>MISRA C:2012, 17.8 - A function parameter should not be modified</li>
 </ul>

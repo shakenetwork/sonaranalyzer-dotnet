@@ -7,7 +7,8 @@
 
 <h2>Noncompliant Code Example</h2>
 <pre>
-switch (i) {
+switch (i) 
+{
   case 1: 
     doSomething();
     break;
@@ -21,19 +22,25 @@ switch (i) {
     doTheRest();
 }
 
-if (a >= 0 && a < 10) {
+if (a >= 0 && a < 10) 
+{
   doTheThing();
-else if (a >= 10 && a < 20) {
+}
+else if (a >= 10 && a < 20) 
+{
   doTheOtherThing();
 }
-else if (a >= 20 && a < 50) {
+else if (a >= 20 && a < 50) 
+{
   doTheThing();  // Noncompliant; duplicates first condition
 }
-else {
+else 
+{
   doTheRest(); 
 }
 
-if (b == 0) {
+if (b == 0) 
+{
   doOneMoreThing();
 }
 </pre>
@@ -52,12 +59,16 @@ switch (i) {
     doTheRest();
 }
 
-if ((a >= 0 && a < 10) || (a >= 20 && a < 50)) {
+if ((a >= 0 && a < 10) || (a >= 20 && a < 50)) 
+{
   doTheThing();
-else if (a >= 10 && a < 20) {
+}
+else if (a >= 10 && a < 20) 
+{
   doTheOtherThing();
 }
-else {
+else 
+{
   doTheRest(); 
 }
 
@@ -65,7 +76,8 @@ doOneMoreThing();
 </pre>
 or
 <pre>
-switch (i) {
+switch (i) 
+{
   case 1: 
     doSomething();
     break;
@@ -79,15 +91,20 @@ switch (i) {
     doTheRest();
 }
 
-if (a >= 0 && a < 10) {
+if (a >= 0 && a < 10) 
+{
   doTheThing();
-else if (a >= 10 && a < 20) {
+}
+else if (a >= 10 && a < 20) 
+{
   doTheOtherThing();
 }
-else if (a >= 20 && a < 50) {
+else if (a >= 20 && a < 50) 
+{
   doTheThirdThing();
 }
-else {
+else 
+{
   doTheRest(); 
 }
 </pre>

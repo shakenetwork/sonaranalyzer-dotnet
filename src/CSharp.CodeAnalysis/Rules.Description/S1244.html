@@ -27,21 +27,23 @@ double d = 0.1; // 0.1000000000000000055511151231257827021181583404541015625
 <h2>Noncompliant Code Example</h2>
 <pre>
 float myNumber = 3.146f;
-if ( myNumber == 3.146f ) {  //Noncompliant. Because of floating point imprecision, this will be false
+if ( myNumber == 3.146f ) //Noncompliant. Because of floating point imprecision, this will be false
+{  
   // ...
 }
 
-if (myNumber &lt;= 3.146f &amp;&amp; mNumber &gt;= 3.146f) { // Noncompliant indirect equality test
+if (myNumber &lt;= 3.146f &amp;&amp; mNumber &gt;= 3.146f) // Noncompliant indirect equality test
+{ 
   // ...
 }
 
-if (myNumber &lt; 4 || myNumber &gt; 4) { // Noncompliant indirect inequality test
+if (myNumber &lt; 4 || myNumber &gt; 4) // Noncompliant indirect inequality test 
+{ 
   // ...
 }
 </pre>
 
 <h2>See</h2>
-
 <ul>
     <li>MISRA C:2004, 13.3 - Floating-point expressions shall not be tested for equality or inequality.</li>
     <li>MISRA C++:2008, 6-2-2 - Floating-point expressions shall not be directly or indirectly tested for equality or inequality</li>
