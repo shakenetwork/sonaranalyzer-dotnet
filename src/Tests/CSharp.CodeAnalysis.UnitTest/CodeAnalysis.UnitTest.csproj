@@ -118,6 +118,7 @@
     <Compile Include="MetricsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\GotoStatementTest.cs" />
+    <Compile Include="Rules\LockOnThisOrTypeTest.cs" />
     <Compile Include="Rules\GenericTypeParameterNullTest.cs" />
     <Compile Include="Rules\PropertiesOfReadonlyGenericsFieldTest.cs" />
     <Compile Include="Rules\VisibleInstanceFieldTest.cs" />
@@ -263,6 +264,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\GotoStatement.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\LockOnThisOrType.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />

@@ -1,0 +1,26 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarQube.CSharp.CodeAnalysis.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S2551",
+      "FullMessage": "Lock on a new \"object\" instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.WebPages\\Common\\DisposableAction.cs",
+            "Region": {
+              "StartLine": 24,
+              "EndLine": 24,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
