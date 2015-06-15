@@ -39,8 +39,9 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         internal const string DiagnosticId = "S2551";
         internal const string Title = "Types and \"this\" should not be used for locking";
         internal const string Description =
-            "Locking on the current object instance (i.e. \"this\"), or on a \"Type\" object is a bad idea because any other " +
-            "thread could acquire (or attempt to acquire) the same lock for another unrelated purpose, thus creating deadlocks.";
+            "Locking on the current object instance (i.e. \"this\"), or on a \"Type\" object increases the chance of " +
+            "deadlocks because any other thread could acquire (or attempt to acquire) the same lock for another unrelated " +
+            "purpose.";
         internal const string MessageFormat = "Lock on a new \"object\" instead.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Critical;
