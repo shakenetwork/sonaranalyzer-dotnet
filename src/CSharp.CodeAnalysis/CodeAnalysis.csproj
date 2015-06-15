@@ -90,6 +90,7 @@
     <Compile Include="Helpers\NavigationHelper.cs" />
     <Compile Include="Helpers\EquivalenceChecker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules\ReferenceEqualsOnValueType.cs" />
     <Compile Include="Rules\GotoStatement.cs" />
     <Compile Include="Rules\LockOnThisOrType.cs" />
     <Compile Include="Rules\GenericTypeParameterNull.cs" />
@@ -325,6 +326,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S2551.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S2995.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
