@@ -118,6 +118,7 @@
     <Compile Include="MetricsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\ReferenceEqualsOnValueTypeTest.cs" />
+    <Compile Include="Rules\ThreadStaticWithInitializerTest.cs" />
     <Compile Include="Rules\GotoStatementTest.cs" />
     <Compile Include="Rules\LockOnThisOrTypeTest.cs" />
     <Compile Include="Rules\GenericTypeParameterNullTest.cs" />
@@ -271,6 +272,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\ReferenceEqualsOnValueType.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\ThreadStaticWithInitializer.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
