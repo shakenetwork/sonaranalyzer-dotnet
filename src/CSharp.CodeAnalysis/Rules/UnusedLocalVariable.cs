@@ -70,18 +70,6 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                             .Variables.Select(variable => c.SemanticModel.GetDeclaredSymbol(variable)));
                 },
                 SyntaxKind.LocalDeclarationStatement);
-
-                cbc.RegisterSyntaxNodeAction(c =>
-                {
-                    var variableDeclarationSyntax = ((UsingStatementSyntax)c.Node).Declaration;
-                    if (variableDeclarationSyntax != null)
-                    {
-                        unusedLocals.AddRange(
-                            variableDeclarationSyntax
-                                .Variables.Select(variable => c.SemanticModel.GetDeclaredSymbol(variable)));
-                    }
-                },
-                SyntaxKind.UsingStatement);
  
                 cbc.RegisterSyntaxNodeAction(c =>
                 {

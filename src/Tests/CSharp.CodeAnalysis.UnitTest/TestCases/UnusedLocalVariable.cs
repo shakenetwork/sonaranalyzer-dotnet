@@ -14,7 +14,7 @@ namespace Tests.Diagnostics
 
             var localRepository = new Cl { packageA, packageB }; // Noncompliant
 
-            using (var x = new StreamReader("")) // Noncompliant
+            using (var x = new StreamReader("")) // Compliant
             {
                 var v = 5; // Noncompliant
             }

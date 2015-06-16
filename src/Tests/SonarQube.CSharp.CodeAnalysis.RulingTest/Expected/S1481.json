@@ -1180,40 +1180,6 @@
     },
     {
       "RuleId": "S1481",
-      "FullMessage": "Remove this unused \"engine\" local variable.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Html\\Test\\TemplateHelpersTest.cs",
-            "Region": {
-              "StartLine": 209,
-              "EndLine": 209,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1481",
-      "FullMessage": "Remove this unused \"engine\" local variable.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Html\\Test\\TemplateHelpersTest.cs",
-            "Region": {
-              "StartLine": 235,
-              "EndLine": 235,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1481",
       "FullMessage": "Remove this unused \"result\" local variable.",
       "Locations": [
         {
@@ -3857,40 +3823,6 @@
             "Region": {
               "StartLine": 51,
               "EndLine": 51,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1481",
-      "FullMessage": "Remove this unused \"service\" local variable.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\RazorEngine-850082854d\\Core\\Tests\\RazorEngine.Core.Tests\\IsolatedTemplateServiceTestFixture.cs",
-            "Region": {
-              "StartLine": 162,
-              "EndLine": 162,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1481",
-      "FullMessage": "Remove this unused \"service\" local variable.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\RazorEngine-850082854d\\Core\\Tests\\RazorEngine.Core.Tests\\IsolatedTemplateServiceTestFixture.cs",
-            "Region": {
-              "StartLine": 181,
-              "EndLine": 181,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
