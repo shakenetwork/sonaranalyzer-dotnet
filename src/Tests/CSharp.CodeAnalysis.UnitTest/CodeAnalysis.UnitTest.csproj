@@ -121,6 +121,7 @@
     <Compile Include="Rules\ThreadStaticWithInitializerTest.cs" />
     <Compile Include="Rules\ThreadStaticNonStaticFieldTest.cs" />
     <Compile Include="Rules\VirtualEventFieldTest.cs" />
+    <Compile Include="Rules\DisposableReturnedFromUsingTest.cs" />
     <Compile Include="Rules\GotoStatementTest.cs" />
     <Compile Include="Rules\LockOnThisOrTypeTest.cs" />
     <Compile Include="Rules\GenericTypeParameterNullTest.cs" />
@@ -283,6 +284,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\VirtualEventField.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\DisposableReturnedFromUsing.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
