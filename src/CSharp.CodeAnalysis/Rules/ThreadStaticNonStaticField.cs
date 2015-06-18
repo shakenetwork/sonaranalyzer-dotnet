@@ -1,0 +1,105 @@
+﻿/*
+ * SonarQube C# Code Analysis
+ * Copyright (C) 2015 SonarSource
+ * sonarqube@googlegroups.com
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
+ */
+
+using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Linq;
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.CodeAnalysis.Diagnostics;
+using SonarQube.CSharp.CodeAnalysis.Common;
+using SonarQube.CSharp.CodeAnalysis.Common.Sqale;
+using SonarQube.CSharp.CodeAnalysis.Helpers;
+
+namespace SonarQube.CSharp.CodeAnalysis.Rules
+{
+    [DiagnosticAnalyzer(LanguageNames.CSharp)]
+    [SqaleConstantRemediation("5min")]
+    [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
+    [Tags("bug", "unused")]
+    public class ThreadStaticNonStaticField : DiagnosticAnalyzer
+    {
+        internal const string DiagnosticId = "S3005";
+        internal const string Title = "\"ThreadStatic\" should not be used on non-static fields";
+        internal const string Description =
+            "When a non-static class field is annotated with \"ThreadStatic\", the code seems to show that the " +
+            "field can have different values for different calling threads, but that's not the case, since the " +
+            "\"ThreadStatic\" attribute is simply ignored on non-static fields.";
+        internal const string MessageFormat = "Remove the \"ThreadStatic\" attribute from this definition.";
+        internal const string Category = "SonarQube";
+        internal const Severity RuleSeverity = Severity.Critical;
+        internal const bool IsActivatedByDefault = true;
+
+        internal static readonly DiagnosticDescriptor Rule = 
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
+                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
+                helpLinkUri: DiagnosticId.GetHelpLink(),
+                description: Description);
+
+        private const string ThreadStaticAttributeName = "System.ThreadStaticAttribute";
+
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+
+        public override void Initialize(AnalysisContext context)
+        {
+            context.RegisterSyntaxNodeAction(
+                c =>
+                {
+                    var fieldDeclaration = (FieldDeclarationSyntax) c.Node;
+                    AttributeSyntax threadStaticAttribute;
+                    if (!fieldDeclaration.Modifiers.Any(modifier => modifier.IsKind(SyntaxKind.StaticKeyword)) &&
+                        TryGetThreadStaticAttribute(fieldDeclaration.AttributeLists, c.SemanticModel, out threadStaticAttribute))
+                    {
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, threadStaticAttribute.Name.GetLocation()));
+                    }
+                },
+                SyntaxKind.FieldDeclaration);
+        }
+
+        private static bool TryGetThreadStaticAttribute(SyntaxList<AttributeListSyntax> attributeLists, SemanticModel semanticModel, out AttributeSyntax threadStaticAttribute)
+        {
+            threadStaticAttribute = null;
+
+            if (!attributeLists.Any())
+            {
+                return false;
+            }
+
+            foreach (var attributeList in attributeLists)
+            {
+                foreach (var attribute in attributeList.Attributes)
+                {
+                    var attributeType = semanticModel.GetTypeInfo(attribute).Type;
+
+                    if (attributeType != null &&
+                        attributeType.ToDisplayString() == ThreadStaticAttributeName)
+                    {
+                        threadStaticAttribute = attribute;
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+    }
+}

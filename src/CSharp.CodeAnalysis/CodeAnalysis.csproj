@@ -92,6 +92,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\ReferenceEqualsOnValueType.cs" />
     <Compile Include="Rules\ThreadStaticWithInitializer.cs" />
+    <Compile Include="Rules\ThreadStaticNonStaticField.cs" />
     <Compile Include="Rules\GotoStatement.cs" />
     <Compile Include="Rules\LockOnThisOrType.cs" />
     <Compile Include="Rules\GenericTypeParameterNull.cs" />
@@ -333,6 +334,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S2996.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S3005.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
