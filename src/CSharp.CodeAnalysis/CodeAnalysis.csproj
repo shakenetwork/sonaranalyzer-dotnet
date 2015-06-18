@@ -91,6 +91,7 @@
     <Compile Include="Helpers\EquivalenceChecker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\RedundantCast.cs" />
+    <Compile Include="Rules\ArrayCovariance.cs" />
     <Compile Include="Rules\ReferenceEqualsOnValueType.cs" />
     <Compile Include="Rules\ThreadStaticWithInitializer.cs" />
     <Compile Include="Rules\ThreadStaticNonStaticField.cs" />
@@ -349,6 +350,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S1905.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S2330.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

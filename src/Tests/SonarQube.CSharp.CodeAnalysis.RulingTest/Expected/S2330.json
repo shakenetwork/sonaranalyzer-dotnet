@@ -1,0 +1,77 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarQube.CSharp.CodeAnalysis.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S2330",
+      "FullMessage": "Refactor the code to not rely on potentially unsafe array conversions.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\WebMatrix.Data.Test\\DatabaseUtil.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2330",
+      "FullMessage": "Refactor the code to not rely on potentially unsafe array conversions.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\WebMatrix.Data.Test\\DatabaseUtil.cs",
+            "Region": {
+              "StartLine": 36,
+              "EndLine": 36,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2330",
+      "FullMessage": "Refactor the code to not rely on potentially unsafe array conversions.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\WebMatrix.Data.Test\\DatabaseUtil.cs",
+            "Region": {
+              "StartLine": 45,
+              "EndLine": 45,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2330",
+      "FullMessage": "Refactor the code to not rely on potentially unsafe array conversions.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\RazorEngine-850082854d\\Core\\Tests\\RazorEngine.Core.Tests\\TemplateServiceTestFixture.cs",
+            "Region": {
+              "StartLine": 333,
+              "EndLine": 333,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

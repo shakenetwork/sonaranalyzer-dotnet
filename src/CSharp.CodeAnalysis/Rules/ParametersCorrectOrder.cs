@@ -64,60 +64,61 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 c =>
                 {
                     var methodCall = (InvocationExpressionSyntax) c.Node;
-                    var methodSymbol = c.SemanticModel.GetSymbolInfo(methodCall).Symbol as IMethodSymbol;
+                    var methodParameterLookup = new ArrayCovariance.MethodParameterLookup(methodCall, c.SemanticModel);
+                    var argumentParameterMappings = methodCall.ArgumentList.Arguments.Select(argument =>
+                        new KeyValuePair<ArgumentSyntax, IParameterSymbol>(argument,
+                            methodParameterLookup.GetParameterSymbol(argument)))
+                        .ToDictionary(pair => pair.Key, pair => pair.Value);
+                    
+                    var methodSymbol = methodParameterLookup.MethodSymbol;
 
                     if (methodSymbol == null)
                     {
                         return;
                     }
-
-                    var methodDeclaration = methodSymbol.DeclaringSyntaxReferences.FirstOrDefault();
-                    if (methodDeclaration == null)
-                    {
-                        return;
-                    }
-
-                    var methodDeclarationSyntax = methodDeclaration.GetSyntax() as MethodDeclarationSyntax;
-                    if (methodDeclarationSyntax == null)
-                    {
-                        return;
-                    }
-
-                    var parameterNamesInDeclaration = ParameterNamesInDeclaration(
-                        methodDeclarationSyntax, methodCall, methodSymbol, c.SemanticModel);
-
-                    var parametersInCall = GetParametersForCall(methodCall);
-                    var namesInCall = parametersInCall
+                    
+                    var parameterNames = argumentParameterMappings.Values
+                        .Select(symbol => symbol.Name)
+                        .Distinct()
+                        .ToList();
+                    
+                    var identifierArguments = GetIdentifierArguments(methodCall);
+                    var identifierNames = identifierArguments
                         .Select(p => p.IdentifierName)
                         .ToList();
 
-                    if (!parameterNamesInDeclaration.Intersect(namesInCall).Any())
+                    if (!parameterNames.Intersect(identifierNames).Any())
                     {
                         return;
                     }
 
                     var methodCallHasIssue = false;
 
-                    for (var i = 0; !methodCallHasIssue && i < parametersInCall.Count; i++)
+                    for (var i = 0; !methodCallHasIssue && i < identifierArguments.Count; i++)
                     {
-                        if (string.IsNullOrEmpty(parametersInCall[i].IdentifierName) ||
-                            !parameterNamesInDeclaration.Contains(namesInCall[i]))
+                        var identifierArgument = identifierArguments[i];
+                        var identifierName = identifierArgument.IdentifierName;
+                        var parameter = argumentParameterMappings[identifierArgument.ArgumentSyntax];
+                        var parameterName = parameter.Name;
+
+                        if (string.IsNullOrEmpty(identifierName) ||
+                            !parameterNames.Contains(identifierName))
                         {
                             continue;
                         }
 
-                        var positional = parametersInCall[i] as PositionalIdentifierParameter;
+                        var positional = identifierArgument as PositionalIdentifierArgument;
                         if (positional != null &&
-                            (i >= parameterNamesInDeclaration.Count ||
-                             !namesInCall.Contains(parameterNamesInDeclaration[i]) ||
-                             namesInCall[i] == parameterNamesInDeclaration[i]))
+                            (parameter.IsParams ||
+                             !identifierNames.Contains(parameterName) ||
+                             identifierName == parameterName))
                         {
                             continue;
                         }
 
-                        var named = parametersInCall[i] as NamedIdentifierParameter;
+                        var named = identifierArgument as NamedIdentifierArgument;
                         if (named != null &&
-                            (!namesInCall.Contains(named.DeclaredName) || named.DeclaredName == named.IdentifierName))
+                            (!identifierNames.Contains(named.DeclaredName) || named.DeclaredName == named.IdentifierName))
                         {
                             continue;
                         }
@@ -133,34 +134,13 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                             : memberAccess.Name.GetLocation();
 
                         c.ReportDiagnostic(Diagnostic.Create(Rule, reportLocation,
-                            methodDeclarationSyntax.Identifier.Text));
+                            methodSymbol.Name));
                     }
                 },
                 SyntaxKind.InvocationExpression);
         }
-
-        private static List<string> ParameterNamesInDeclaration(MethodDeclarationSyntax methodDeclarationSyntax,
-            InvocationExpressionSyntax methodCall, IMethodSymbol methodSymbol, SemanticModel semanticModel)
-        {
-            var namesInDeclaration = methodDeclarationSyntax.ParameterList.Parameters
-                .Select(parameter => parameter.Identifier.Text)
-                .ToList();
-
-            var memberAccess = methodCall.Expression as MemberAccessExpressionSyntax;
-
-            if (methodSymbol.IsExtensionMethod &&
-                memberAccess != null)
-            {
-                var symbol = semanticModel.GetSymbolInfo(memberAccess.Expression).Symbol as ITypeSymbol;
-                if (symbol == null || !symbol.IsType)
-                {
-                    namesInDeclaration = namesInDeclaration.Skip(1).ToList();
-                }
-            }
-            return namesInDeclaration;
-        }
-
-        private static List<IdentifierParameter> GetParametersForCall(InvocationExpressionSyntax methodCall)
+        
+        private static List<IdentifierArgument> GetIdentifierArguments(InvocationExpressionSyntax methodCall)
         {
             return methodCall.ArgumentList.Arguments.ToList()
                 .Select((argument, index) =>
@@ -168,37 +148,40 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     var identifier = argument.Expression as IdentifierNameSyntax;
                     var identifierName = identifier == null ? null : identifier.Identifier.Text;
 
-                    IdentifierParameter parameter;
+                    IdentifierArgument identifierArgument;
                     if (argument.NameColon == null)
                     {
-                        parameter = new PositionalIdentifierParameter
+                        identifierArgument = new PositionalIdentifierArgument
                         {
                             IdentifierName = identifierName,
-                            Position = index
+                            Position = index,
+                            ArgumentSyntax = argument
                         };
                     }
                     else
                     {
-                        parameter = new NamedIdentifierParameter
+                        identifierArgument = new NamedIdentifierArgument
                         {
                             IdentifierName = identifierName,
-                            DeclaredName = argument.NameColon.Name.Identifier.Text
+                            DeclaredName = argument.NameColon.Name.Identifier.Text,
+                            ArgumentSyntax = argument
                         };
                     }
-                    return parameter;
+                    return identifierArgument;
                 })
                 .ToList();
         }
 
-        internal class IdentifierParameter
+        internal class IdentifierArgument
         {
             public string IdentifierName { get; set; }
+            public ArgumentSyntax ArgumentSyntax { get; set; }
         }
-        internal class PositionalIdentifierParameter : IdentifierParameter
+        internal class PositionalIdentifierArgument : IdentifierArgument
         {
             public int Position { get; set; }
         }
-        internal class NamedIdentifierParameter : IdentifierParameter
+        internal class NamedIdentifierArgument : IdentifierArgument
         {
             public string DeclaredName { get; set; }
         }

@@ -118,6 +118,7 @@
     <Compile Include="MetricsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\RedundantCastTest.cs" />
+    <Compile Include="Rules\ArrayCovarianceTest.cs" />
     <Compile Include="Rules\ReferenceEqualsOnValueTypeTest.cs" />
     <Compile Include="Rules\ThreadStaticWithInitializerTest.cs" />
     <Compile Include="Rules\ThreadStaticNonStaticFieldTest.cs" />
@@ -291,6 +292,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\RedundantCast.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\ArrayCovariance.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
