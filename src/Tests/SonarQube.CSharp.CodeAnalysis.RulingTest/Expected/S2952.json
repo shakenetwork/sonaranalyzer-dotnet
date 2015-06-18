@@ -1,0 +1,60 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarQube.CSharp.CodeAnalysis.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S2952",
+      "FullMessage": "Move this \"Dispose\" call into this class' own \"Dispose\" method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.Razor\\RazorEditorParser.cs",
+            "Region": {
+              "StartLine": 186,
+              "EndLine": 186,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2952",
+      "FullMessage": "Move this \"Dispose\" call into this class' own \"Dispose\" method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 346,
+              "EndLine": 346,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2952",
+      "FullMessage": "Move this \"Dispose\" call into this class' own \"Dispose\" method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\MultiVolumeReadOnlyStream.cs",
+            "Region": {
+              "StartLine": 56,
+              "EndLine": 56,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

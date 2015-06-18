@@ -168,8 +168,13 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             return namedType != null && ImplementsIDisposable(namedType);
         }
 
-        private static bool ImplementsIDisposable(INamedTypeSymbol namedTypeSymbol)
+        internal static bool ImplementsIDisposable(INamedTypeSymbol namedTypeSymbol)
         {
+            if (namedTypeSymbol == null)
+            {
+                return false;
+            }
+
             return namedTypeSymbol.AllInterfaces.Any(symbol => symbol.SpecialType == SpecialType.System_IDisposable);
         }
     }
