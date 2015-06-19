@@ -70,7 +70,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
                     if (AreCovariantArrayTypes(typeDerived, typeBase))
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, assignment.OperatorToken.GetLocation()));
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, assignment.Right.GetLocation()));
                     }
                 },
                 SyntaxKind.SimpleAssignmentExpression);
@@ -88,7 +88,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
                         if (AreCovariantArrayTypes(typeDerived, typeBase))
                         {
-                            c.ReportDiagnostic(Diagnostic.Create(Rule, variable.Initializer.EqualsToken.GetLocation()));
+                            c.ReportDiagnostic(Diagnostic.Create(Rule, variable.Initializer.Value.GetLocation()));
                         }
                     }
                 },
