@@ -47,9 +47,9 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             "don't act on the same variable. Even when it is not, it could confuse future " +
             "maintainers of the code, and should be avoided.";
         internal const string MessageFormatNotEmpty = 
-            "This loop's stop condition tests \"{0}\" but the incrementer updates \"{1}\".";
+            "This loop's stop condition tests {0} but the incrementer updates {1}.";
         internal const string MessageFormatEmpty = 
-            "This loop's stop incrementer updates \"{0}\" but the stop condition doesn't test any variables.";
+            "This loop's stop incrementer updates {0} but the stop condition doesn't test any variables.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Critical; 
         internal const bool IsActivatedByDefault = true;
@@ -83,10 +83,14 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                         return;
                     }
 
-                    var incrementedVariables = string.Join(",", incrementedSymbols.Select(s => s.Name));
+                    var incrementedVariables = string.Join(",", incrementedSymbols
+                        .Select(s => string.Format("\"{0}\"", s.Name))
+                        .OrderBy(s => s));
                     if (conditionSymbols.Any())
                     {
-                        var conditionVariables = string.Join(",", conditionSymbols.Select(s=>s.Name));
+                        var conditionVariables = string.Join(",", conditionSymbols
+                            .Select(s => string.Format("\"{0}\"", s.Name))
+                            .OrderBy(s => s));
                         c.ReportDiagnostic(Diagnostic.Create(Rule, forNode.Condition.GetLocation(),
                             string.Format(CultureInfo.InvariantCulture, MessageFormatNotEmpty, incrementedVariables, conditionVariables)));
                     }

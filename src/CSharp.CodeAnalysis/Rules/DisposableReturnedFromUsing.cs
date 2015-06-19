@@ -46,7 +46,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             "returns that \"IDisposable\". In that case \"using\" disposes of the object before the caller can make use " +
             "of it, likely causing exceptions at runtime. So you should either remove \"using\" or avoid returning the " +
             "\"IDisposable\".";
-        internal const string MessageFormat = "Remove the \"using\" statement; it will cause automatic disposal of \"{0}\".";
+        internal const string MessageFormat = "Remove the \"using\" statement; it will cause automatic disposal of {0}.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Blocker;
         internal const bool IsActivatedByDefault = true;
@@ -105,7 +105,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, usingStatement.UsingKeyword.GetLocation(),
                             string.Join(", ",
-                                returnedSymbols.Select(s => string.Format("\"{0}\"", s.Name)))));
+                                returnedSymbols.Select(s => string.Format("\"{0}\"", s.Name)).OrderBy(s => s))));
                     }
                 },
                 SyntaxKind.UsingStatement);

@@ -70,7 +70,9 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     if (eventField.Modifiers.Any(modifier => modifier.IsKind(SyntaxKind.VirtualKeyword)))
                     {
                         var virt = eventField.Modifiers.First(modifier => modifier.IsKind(SyntaxKind.VirtualKeyword));
-                        var names = string.Join(", ", eventField.Declaration.Variables.Select(syntax => string.Format("\"{0}\"", syntax.Identifier.ValueText)));
+                        var names = string.Join(", ", eventField.Declaration.Variables
+                            .Select(syntax => string.Format("\"{0}\"", syntax.Identifier.ValueText))
+                            .OrderBy(s => s));
                         c.ReportDiagnostic(Diagnostic.Create(Rule, virt.GetLocation(), names));
                     }
                 },
