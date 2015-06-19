@@ -18,6 +18,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
@@ -31,11 +32,11 @@ namespace SonarQube.CSharp.CodeAnalysis.DocGenerator
     public class Program
     {
         private const string TemplateInternalName = "main-html";
-        private const string ResourcesFolderName = "DocResources";
-        private const string ToZipFolderName = "ToZip";
-        private const string OutputZipFileName = "rule-documentation.zip";
-        private const string DestinationFolderPattern = ToZipFolderName + "/{0}";
-        private const string DestinationFilePattern = DestinationFolderPattern + "/{1}.html";
+        private static readonly string ResourcesFolderName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DocResources");
+        private static readonly string ToZipFolderName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ToZip");
+        private static readonly string OutputZipFileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "rule-documentation.zip");
+        private static readonly string DestinationFolderPattern = ToZipFolderName + "/{0}";
+        private static readonly string DestinationFilePattern = DestinationFolderPattern + "/{1}.html";
         private const string TemplateHtmlResourceName = "SonarQube.CSharp.CodeAnalysis.DocGenerator.DocResources.main.template.html";
 
         static void Main(string[] args)
@@ -72,7 +73,25 @@ namespace SonarQube.CSharp.CodeAnalysis.DocGenerator
         private static void CopyStaticResources(string productVersion)
         {
             var resourcesFolder = new DirectoryInfo(ResourcesFolderName);
-            resourcesFolder.MoveTo(string.Format(DestinationFolderPattern, productVersion));
+            CopyDirectory(resourcesFolder, new DirectoryInfo(string.Format(DestinationFolderPattern, productVersion)));
+        }
+
+        private static void CopyDirectory(DirectoryInfo source, DirectoryInfo destination)
+        {
+            if (!destination.Exists)
+            {
+                destination.Create();
+            }
+
+            foreach (var dir in source.GetDirectories("*", SearchOption.AllDirectories))
+            {
+                Directory.CreateDirectory(dir.FullName.Replace(source.FullName, destination.FullName));
+            }
+
+            foreach (var file in source.GetFiles("*.*", SearchOption.AllDirectories))
+            {
+                file.CopyTo(file.FullName.Replace(source.FullName, destination.FullName), true);
+            }
         }
 
         private static void CreateZipFolder()
