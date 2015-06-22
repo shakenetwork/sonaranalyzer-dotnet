@@ -1,0 +1,26 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarQube.CSharp.CodeAnalysis.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S2953",
+      "FullMessage": "Either implement \"IDisposable.Dispose\", or totally rename this method to prevent confusion.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.WebPages\\RequestResourceTracker.cs",
+            "Region": {
+              "StartLine": 45,
+              "EndLine": 45,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

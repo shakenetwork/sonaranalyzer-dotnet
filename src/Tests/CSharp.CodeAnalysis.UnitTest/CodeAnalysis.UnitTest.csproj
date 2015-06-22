@@ -118,6 +118,7 @@
     <Compile Include="MetricsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\DisposeFromDisposeTest.cs" />
+    <Compile Include="Rules\DisposeNotImplementingDisposeTest.cs" />
     <Compile Include="Rules\RedundantCastTest.cs" />
     <Compile Include="Rules\ArrayCovarianceTest.cs" />
     <Compile Include="Rules\SimplifyLinqTest.cs" />
@@ -303,6 +304,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\SimplifyLinq.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\DisposeNotImplementingDispose.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
