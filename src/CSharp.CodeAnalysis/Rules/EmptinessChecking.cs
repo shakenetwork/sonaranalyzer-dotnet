@@ -151,17 +151,8 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             {
                 return false;
             }
-            
-            var enumerableType = semanticModel.Compilation.GetSpecialType(SpecialType.System_Collections_Generic_IEnumerable_T);
-            var receiverType = methodSymbol.ReceiverType as INamedTypeSymbol;
 
-            if (methodSymbol.MethodKind == MethodKind.Ordinary)
-            {
-                receiverType = methodSymbol.Parameters.First().Type as INamedTypeSymbol;
-            }
-
-            if (receiverType == null ||
-                receiverType.ConstructedFrom != enumerableType)
+            if (!MethodIsOnIEnumerable(methodSymbol, semanticModel))
             {
                 return false;
             }
@@ -173,6 +164,24 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
             countLocation = memberAccess.Name.GetLocation();
             return true;
+        }
+
+        internal static bool MethodIsOnIEnumerable(IMethodSymbol methodSymbol, SemanticModel semanticModel)
+        {
+            if (methodSymbol == null)
+            {
+                return false;
+            }
+
+            var enumerableType = semanticModel.Compilation.GetSpecialType(SpecialType.System_Collections_Generic_IEnumerable_T);
+            var receiverType = methodSymbol.ReceiverType as INamedTypeSymbol;
+
+            if (methodSymbol.MethodKind == MethodKind.Ordinary)
+            {
+                receiverType = methodSymbol.Parameters.First().Type as INamedTypeSymbol;
+            }
+
+            return receiverType != null && receiverType.ConstructedFrom == enumerableType;
         }
     }
 }

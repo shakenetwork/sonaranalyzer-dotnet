@@ -93,6 +93,7 @@
     <Compile Include="Rules\DisposeFromDispose.cs" />
     <Compile Include="Rules\RedundantCast.cs" />
     <Compile Include="Rules\ArrayCovariance.cs" />
+    <Compile Include="Rules\SimplifyLinq.cs" />
     <Compile Include="Rules\ReferenceEqualsOnValueType.cs" />
     <Compile Include="Rules\ThreadStaticWithInitializer.cs" />
     <Compile Include="Rules\ThreadStaticNonStaticField.cs" />
@@ -357,6 +358,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S2952.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S2971.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

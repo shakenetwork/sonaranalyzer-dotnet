@@ -120,6 +120,7 @@
     <Compile Include="Rules\DisposeFromDisposeTest.cs" />
     <Compile Include="Rules\RedundantCastTest.cs" />
     <Compile Include="Rules\ArrayCovarianceTest.cs" />
+    <Compile Include="Rules\SimplifyLinqTest.cs" />
     <Compile Include="Rules\ReferenceEqualsOnValueTypeTest.cs" />
     <Compile Include="Rules\ThreadStaticWithInitializerTest.cs" />
     <Compile Include="Rules\ThreadStaticNonStaticFieldTest.cs" />
@@ -299,6 +300,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\DisposeFromDispose.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\SimplifyLinq.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />

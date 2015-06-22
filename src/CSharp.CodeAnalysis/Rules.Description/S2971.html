@@ -1,0 +1,29 @@
+<p>
+    In the interests of readability, code that can be simplified should be simplified. To that end, there are several
+    ways <code>IEnumerable LINQ</code>s can be simplified
+</p>
+<ul>
+    <li>Use <code>OfType</code> instead of using <code>Select</code> with <code>as</code> to type cast elements and then 
+    null-checking in a query expression to choose elements based on type.</li>
+    <li>Use <code>OfType</code> instead of using <code>Where</code> and the <code>is</code> operator, followed by a cast 
+    in a <code>Select</code></li>
+    <li>Use an expression in <code>Any</code> instead of <code>Where(element => [expression]).Any()</code>.</li>
+</ul>
+
+<h2>Noncompliant Code Example</h2>
+<pre>
+seq1.Select(element => element as T).Any(element => element != null);  // Noncompliant; use OfType
+seq2.Select(element => element as T).Any(element => element != null &amp;&amp; CheckCondition(element));  // Noncompliant; use OfType
+seq3.Where(element => element is T).Select(element => element as T); // Noncompliant; use OfType
+seq4.Where(element => element is T).Select(element => (T)element); // Noncompliant; use OfType
+seq.Where(element => [expression]).Any();  // Noncompliant; use Any([expression])
+</pre>
+
+<h2>Compliant Solution</h2>
+<pre>
+seq1.OfType&lt;T&gt;().Any();
+seq2.OfType&lt;T&gt;().Any(element => CheckCondition(element));
+seq3.OfType&lt;T&gt;();
+seq4.OfType&lt;T&gt;();
+seq.Any(element => [expression])
+</pre>
