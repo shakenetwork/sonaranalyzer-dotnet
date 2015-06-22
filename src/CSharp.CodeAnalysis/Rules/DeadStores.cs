@@ -62,12 +62,6 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             get { return ImmutableArray.Create(Rule); }
         }
 
-        public class AssignmentWithParentStatement
-        {
-            public AssignmentExpressionSyntax Assignment { get; set; }
-            public StatementSyntax ParentStatement { get; set; }
-        }
-
         private static readonly SyntaxKind[] ReadWriteAssignment =
         {
             SyntaxKind.AddAssignmentExpression,
