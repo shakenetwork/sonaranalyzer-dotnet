@@ -18,6 +18,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
@@ -176,12 +177,13 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             var enumerableType = semanticModel.Compilation.GetSpecialType(SpecialType.System_Collections_Generic_IEnumerable_T);
             var receiverType = methodSymbol.ReceiverType as INamedTypeSymbol;
 
-            if (methodSymbol.MethodKind == MethodKind.Ordinary)
+            if (methodSymbol.MethodKind == MethodKind.Ordinary && 
+                methodSymbol.IsExtensionMethod)
             {
                 receiverType = methodSymbol.Parameters.First().Type as INamedTypeSymbol;
             }
 
-            return receiverType != null && receiverType.ConstructedFrom == enumerableType;
+            return receiverType != null && receiverType.ConstructedFrom.Equals(enumerableType);
         }
     }
 }
