@@ -21,6 +21,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -144,7 +145,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
 
             return !problematicRules.Any();
         }
-
+        
         private void SplitAndStoreOmstarByIssueType(AnalysisOutput omstar)
         {
             foreach (var issueGroup in omstar.Issues.GroupBy(issue => issue.RuleId))
@@ -158,7 +159,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
                         {
                             var location = issue.Locations.FirstOrDefault();
                             return location == null ? string.Empty : location.AnalysisTarget.Uri;
-                        })
+                        }, new InvariantCultureStringSortComparer())
                         .ThenBy(issue =>
                         {
                             var location = issue.Locations.FirstOrDefault();
@@ -172,7 +173,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
                         .ThenBy(issue =>
                         {
                             return issue.FullMessage;
-                        })
+                        }, new InvariantCultureStringSortComparer())
                         .ToList()
                 };
 
@@ -241,6 +242,15 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
             var fileContents = File.ReadAllText(outputPath);
             fileContents = fileContents.Replace(ItSourcesRootDirectory.FullName, string.Empty);
             File.WriteAllText(outputPath, fileContents);
+        }
+
+        private class InvariantCultureStringSortComparer : IComparer<string>
+        {
+            private readonly CompareInfo _compareInfo = CultureInfo.InvariantCulture.CompareInfo;
+            public int Compare(string x, string y)
+            {
+                return _compareInfo.Compare(x, y, CompareOptions.StringSort);
+            }
         }
     }
 }

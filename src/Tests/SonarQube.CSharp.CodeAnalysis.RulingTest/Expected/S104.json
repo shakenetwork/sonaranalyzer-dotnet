@@ -789,11 +789,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1006 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 1720 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\ILogger.cs",
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\ILogger-V1.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -806,11 +806,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1720 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 1006 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\ILogger-V1.cs",
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\ILogger.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -840,11 +840,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1606 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 3323 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Logger1.cs",
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Logger-V1Compat.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -857,11 +857,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 3323 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 1606 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Logger-V1Compat.cs",
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Logger1.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
