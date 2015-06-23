@@ -67,12 +67,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             SyntaxKind.GreaterThanOrEqualExpression,
             SyntaxKind.LeftShiftExpression, SyntaxKind.RightShiftExpression
         };
-
-        private static readonly LiteralExpressionSyntax LiteralOneSyntax =
-            SyntaxFactory.LiteralExpression(
-                SyntaxKind.NumericLiteralExpression,
-                SyntaxFactory.Literal(1));
-
+        
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         public override void Initialize(AnalysisContext context)
@@ -81,21 +76,20 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 c =>
                 {
                     var expression = (BinaryExpressionSyntax) c.Node;
-
+                    int value;
                     if (expression.IsKind(SyntaxKind.LeftShiftExpression) &&
-                        SyntaxFactory.AreEquivalent(expression.Right, LiteralOneSyntax))
+                        SillyBitwiseOperation.TryGetConstantIntValue(expression.Right, out value) &&
+                        value == 1)
                     {
                         return;
                     }
-                    
+
                     if (EquivalenceChecker.AreEquivalent(expression.Left, expression.Right))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, c.Node.GetLocation(), expression.OperatorToken));
                     }
-
                 },
-                SyntaxElementsToCheck
-                );
+                SyntaxElementsToCheck);
         }
     }
 }

@@ -137,7 +137,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             }
         }
 
-        private static bool TryGetConstantIntValue(ExpressionSyntax expression, out int value)
+        internal static bool TryGetConstantIntValue(ExpressionSyntax expression, out int value)
         {
             var multiplier = 1;
             var expr = expression;

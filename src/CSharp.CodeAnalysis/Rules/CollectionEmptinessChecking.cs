@@ -55,11 +55,6 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        private static readonly LiteralExpressionSyntax LiteralOneSyntax =
-            SyntaxFactory.LiteralExpression(SyntaxKind.NumericLiteralExpression, SyntaxFactory.Literal(1));
-        private static readonly LiteralExpressionSyntax LiteralZeroSyntax =
-            SyntaxFactory.LiteralExpression(SyntaxKind.NumericLiteralExpression, SyntaxFactory.Literal(0));
-
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeAction(
@@ -108,8 +103,9 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         {
             Location reportLocation;
             string typeArgument;
-
-            if (EquivalenceChecker.AreEquivalent(zero, LiteralZeroSyntax) &&
+            int value;
+            if (SillyBitwiseOperation.TryGetConstantIntValue(zero, out value) &&
+                value == 0 &&
                 TryGetCountCall(count, c.SemanticModel, out reportLocation, out typeArgument))
             {
                 c.ReportDiagnostic(Diagnostic.Create(Rule, reportLocation, typeArgument));
@@ -119,8 +115,9 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         {
             Location reportLocation;
             string typeArgument;
-
-            if (EquivalenceChecker.AreEquivalent(one, LiteralOneSyntax) &&
+            int value;
+            if (SillyBitwiseOperation.TryGetConstantIntValue(one, out value) &&
+                value == 1 &&
                 TryGetCountCall(count, c.SemanticModel, out reportLocation, out typeArgument))
             {
                 c.ReportDiagnostic(Diagnostic.Create(Rule, reportLocation, typeArgument));

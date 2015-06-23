@@ -27,6 +27,7 @@ namespace Tests.TestCases
             int l = 5 * 5;
 
             int i = 1 << 1;
+            i = 1 << 0x1;
             i = 2 << 2; //Noncompliant
         }
     }

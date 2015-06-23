@@ -16,11 +16,11 @@ namespace Tests.Diagnostics
         }
         private static bool HasContent2(List<string> l)
         {
-            return Enumerable.Count(l) >= 1; // Noncompliant
+            return Enumerable.Count(l) >= 0x1; // Noncompliant
         }
         private static bool HasContent2b(List<string> l)
         {
-            return 1 <= Enumerable.Count(l); // Noncompliant
+            return 1UL <= Enumerable.Count(l); // Noncompliant
         }
         private static bool HasContent3(List<string> l)
         {
