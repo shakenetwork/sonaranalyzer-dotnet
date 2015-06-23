@@ -7,14 +7,14 @@
   "Issues": [
     {
       "RuleId": "S1871",
-      "FullMessage": "Either merge this branch with the identical one on line \"14\" or change one of the implementations.",
+      "FullMessage": "Either merge this branch with the identical one on line \"207\" or change one of the implementations.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\additional-sources-for-not-covered-tests\\ConditionalStructureSameCondition.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\benchmark\\PingPong\\Program.cs",
             "Region": {
-              "StartLine": 18,
-              "EndLine": 18,
+              "StartLine": 209,
+              "EndLine": 209,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -24,14 +24,14 @@
     },
     {
       "RuleId": "S1871",
-      "FullMessage": "Either merge this branch with the identical one on line \"14\" or change one of the implementations.",
+      "FullMessage": "Either merge this branch with the identical one on line \"69\" or change one of the implementations.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\additional-sources-for-not-covered-tests\\ConditionalStructureSameCondition.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence.Tests\\PersistentViewSpec.Actors.cs",
             "Region": {
-              "StartLine": 22,
-              "EndLine": 22,
+              "StartLine": 70,
+              "EndLine": 70,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -41,14 +41,14 @@
     },
     {
       "RuleId": "S1871",
-      "FullMessage": "Either merge this branch with the identical one on line \"27\" or change one of the implementations.",
+      "FullMessage": "Either merge this branch with the identical one on line \"438\" or change one of the implementations.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\additional-sources-for-not-covered-tests\\ConditionalStructureSameCondition.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\BarrierCoordinator.cs",
             "Region": {
-              "StartLine": 31,
-              "EndLine": 31,
+              "StartLine": 444,
+              "EndLine": 444,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -58,14 +58,14 @@
     },
     {
       "RuleId": "S1871",
-      "FullMessage": "Either merge this branch with the identical one on line \"27\" or change one of the implementations.",
+      "FullMessage": "Either merge this case with the identical one on line \"35\" or change one of the implementations.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\additional-sources-for-not-covered-tests\\ConditionalStructureSameCondition.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.TestKit.Tests\\TestActorRefTests\\SenderActor.cs",
             "Region": {
-              "StartLine": 35,
-              "EndLine": 35,
+              "StartLine": 38,
+              "EndLine": 38,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -75,14 +75,14 @@
     },
     {
       "RuleId": "S1871",
-      "FullMessage": "Either merge this branch with the identical one on line \"27\" or change one of the implementations.",
+      "FullMessage": "Either merge this case with the identical one on line \"408\" or change one of the implementations.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\additional-sources-for-not-covered-tests\\ConditionalStructureSameCondition.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests\\Actor\\ActorRefSpec.cs",
             "Region": {
-              "StartLine": 39,
-              "EndLine": 39,
+              "StartLine": 409,
+              "EndLine": 409,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -92,14 +92,14 @@
     },
     {
       "RuleId": "S1871",
-      "FullMessage": "Either merge this branch with the identical one on line \"99\" or change one of the implementations.",
+      "FullMessage": "Either merge this case with the identical one on line \"154\" or change one of the implementations.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\ControllerTypeCache.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Configuration\\Hocon\\HoconValue.cs",
             "Region": {
-              "StartLine": 103,
-              "EndLine": 103,
+              "StartLine": 158,
+              "EndLine": 158,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -109,14 +109,14 @@
     },
     {
       "RuleId": "S1871",
-      "FullMessage": "Either merge this case with the identical one on line \"231\" or change one of the implementations.",
+      "FullMessage": "Either merge this case with the identical one on line \"156\" or change one of the implementations.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\HtmlHelper.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Configuration\\Hocon\\HoconValue.cs",
             "Region": {
-              "StartLine": 233,
-              "EndLine": 233,
+              "StartLine": 160,
+              "EndLine": 160,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -126,14 +126,14 @@
     },
     {
       "RuleId": "S1871",
-      "FullMessage": "Either merge this case with the identical one on line \"248\" or change one of the implementations.",
+      "FullMessage": "Either merge this branch with the identical one on line \"142\" or change one of the implementations.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\HtmlHelper.cs",
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Abstractions\\ModelBinding\\ModelExplorer.cs",
             "Region": {
-              "StartLine": 250,
-              "EndLine": 250,
+              "StartLine": 147,
+              "EndLine": 147,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -143,48 +143,14 @@
     },
     {
       "RuleId": "S1871",
-      "FullMessage": "Either merge this branch with the identical one on line \"514\" or change one of the implementations.",
+      "FullMessage": "Either merge this branch with the identical one on line \"265\" or change one of the implementations.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.Razor\\Parser\\CSharpCodeParser.cs",
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ApplicationModels\\AttributeRouteModel.cs",
             "Region": {
-              "StartLine": 518,
-              "EndLine": 518,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1871",
-      "FullMessage": "Either merge this branch with the identical one on line \"88\" or change one of the implementations.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.WebPages\\PageDataDictionary.cs",
-            "Region": {
-              "StartLine": 91,
-              "EndLine": 91,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1871",
-      "FullMessage": "Either merge this branch with the identical one on line \"88\" or change one of the implementations.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.WebPages\\PageDataDictionary.cs",
-            "Region": {
-              "StartLine": 94,
-              "EndLine": 94,
+              "StartLine": 273,
+              "EndLine": 273,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -198,7 +164,313 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\Core\\Utility\\VersionUtility.cs",
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ApplicationModels\\DefaultApplicationModelProvider.cs",
+            "Region": {
+              "StartLine": 396,
+              "EndLine": 396,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this branch with the identical one on line \"386\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ApplicationModels\\DefaultApplicationModelProvider.cs",
+            "Region": {
+              "StartLine": 401,
+              "EndLine": 401,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this branch with the identical one on line \"632\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\FilterActionInvoker.cs",
+            "Region": {
+              "StartLine": 647,
+              "EndLine": 647,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this branch with the identical one on line \"135\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\ModelBinding\\Metadata\\DataAnnotationsMetadataProvider.cs",
+            "Region": {
+              "StartLine": 140,
+              "EndLine": 140,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this branch with the identical one on line \"135\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\ModelBinding\\Metadata\\DataAnnotationsMetadataProvider.cs",
+            "Region": {
+              "StartLine": 145,
+              "EndLine": 145,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this branch with the identical one on line \"176\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Rendering\\Html\\DefaultHtmlGenerator.cs",
+            "Region": {
+              "StartLine": 180,
+              "EndLine": 180,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this case with the identical one on line \"1176\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Rendering\\Html\\DefaultHtmlGenerator.cs",
+            "Region": {
+              "StartLine": 1178,
+              "EndLine": 1178,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this case with the identical one on line \"584\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Rendering\\Html\\HtmlHelper.cs",
+            "Region": {
+              "StartLine": 586,
+              "EndLine": 586,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this branch with the identical one on line \"203\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\MvcCoreServiceCollectionExtensionsTest.cs",
+            "Region": {
+              "StartLine": 209,
+              "EndLine": 209,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this branch with the identical one on line \"274\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Test\\MvcServiceCollectionExtensionsTest.cs",
+            "Region": {
+              "StartLine": 280,
+              "EndLine": 280,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this case with the identical one on line \"642\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Json\\JsonDeserializer.cs",
+            "Region": {
+              "StartLine": 647,
+              "EndLine": 647,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this branch with the identical one on line \"74\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Targets\\TraceTarget.cs",
+            "Region": {
+              "StartLine": 94,
+              "EndLine": 94,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this case with the identical one on line \"87\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\LayoutRenderers\\Log4JXmlTests.cs",
+            "Region": {
+              "StartLine": 118,
+              "EndLine": 118,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this case with the identical one on line \"167\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\LayoutRenderers\\Log4JXmlTests.cs",
+            "Region": {
+              "StartLine": 174,
+              "EndLine": 174,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this case with the identical one on line \"291\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tools\\MakeNLogXSD\\XsdFileGenerator.cs",
+            "Region": {
+              "StartLine": 306,
+              "EndLine": 306,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this case with the identical one on line \"291\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tools\\MakeNLogXSD\\XsdFileGenerator.cs",
+            "Region": {
+              "StartLine": 309,
+              "EndLine": 309,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this case with the identical one on line \"291\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tools\\MakeNLogXSD\\XsdFileGenerator.cs",
+            "Region": {
+              "StartLine": 312,
+              "EndLine": 312,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this case with the identical one on line \"291\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tools\\MakeNLogXSD\\XsdFileGenerator.cs",
+            "Region": {
+              "StartLine": 315,
+              "EndLine": 315,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1871",
+      "FullMessage": "Either merge this branch with the identical one on line \"390\" or change one of the implementations.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Core\\Utility\\VersionUtility.cs",
             "Region": {
               "StartLine": 394,
               "EndLine": 394,
@@ -215,7 +487,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\DialogServices\\PackageManagerUI\\Converters\\FixUrlConverter.cs",
+            "Uri": "\\nuget\\src\\DialogServices\\PackageManagerUI\\Converters\\FixUrlConverter.cs",
             "Region": {
               "StartLine": 27,
               "EndLine": 27,
@@ -232,7 +504,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Core.Test\\WiresharkDatagramComparerUdp.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Core.Test\\WiresharkDatagramComparerUdp.cs",
             "Region": {
               "StartLine": 64,
               "EndLine": 64,
@@ -249,7 +521,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IcmpTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IcmpTests.cs",
             "Region": {
               "StartLine": 166,
               "EndLine": 166,
@@ -266,7 +538,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\Igmp\\IgmpDatagram.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Igmp\\IgmpDatagram.cs",
             "Region": {
               "StartLine": 197,
               "EndLine": 197,
@@ -283,7 +555,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6ExtensionHeaderRouting.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6ExtensionHeaderRouting.cs",
             "Region": {
               "StartLine": 61,
               "EndLine": 61,
@@ -300,7 +572,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Rar\\RarVolume.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Rar\\RarVolume.cs",
             "Region": {
               "StartLine": 62,
               "EndLine": 62,
@@ -317,7 +589,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\Folder.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\Folder.cs",
             "Region": {
               "StartLine": 54,
               "EndLine": 54,
@@ -334,7 +606,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\Folder.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\Folder.cs",
             "Region": {
               "StartLine": 96,
               "EndLine": 96,
@@ -351,7 +623,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
             "Region": {
               "StartLine": 191,
               "EndLine": 191,
@@ -368,7 +640,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
             "Region": {
               "StartLine": 199,
               "EndLine": 199,
@@ -385,7 +657,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
             "Region": {
               "StartLine": 207,
               "EndLine": 207,

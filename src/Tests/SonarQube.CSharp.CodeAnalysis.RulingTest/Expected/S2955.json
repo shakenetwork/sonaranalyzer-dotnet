@@ -7,31 +7,14 @@
   "Issues": [
     {
       "RuleId": "S2955",
-      "FullMessage": "Use a comparison to \"default(TKey)\" instead or add a constraint to \"TKey\" so that it can't be a value type.",
+      "FullMessage": "Use a comparison to \"default(T)\" instead or add a constraint to \"T\" so that it can't be a value type.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\ModelBinding\\CollectionModelBinderUtil.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Util\\AtomicReference.cs",
             "Region": {
-              "StartLine": 33,
-              "EndLine": 33,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S2955",
-      "FullMessage": "Use a comparison to \"default(TParam)\" instead or add a constraint to \"TParam\" so that it can't be a value type.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\ParameterInfoUtilTest.cs",
-            "Region": {
-              "StartLine": 120,
-              "EndLine": 120,
+              "StartLine": 66,
+              "EndLine": 66,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -45,7 +28,75 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\System.Web.Razor.Test\\Utils\\MiscAssert.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Util\\AtomicReference.cs",
+            "Region": {
+              "StartLine": 68,
+              "EndLine": 68,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2955",
+      "FullMessage": "Use a comparison to \"default(T)\" instead or add a constraint to \"T\" so that it can't be a value type.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Util\\Internal\\StringBuilderExtensions.cs",
+            "Region": {
+              "StartLine": 38,
+              "EndLine": 38,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2955",
+      "FullMessage": "Use a comparison to \"default(T)\" instead or add a constraint to \"T\" so that it can't be a value type.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Util\\Internal\\StringBuilderExtensions.cs",
+            "Region": {
+              "StartLine": 49,
+              "EndLine": 49,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2955",
+      "FullMessage": "Use a comparison to \"default(T)\" instead or add a constraint to \"T\" so that it can't be a value type.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.WebApiCompatShimTest\\TestUtils\\TestDataHolder.cs",
+            "Region": {
+              "StartLine": 36,
+              "EndLine": 36,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2955",
+      "FullMessage": "Use a comparison to \"default(TModel)\" instead or add a constraint to \"TModel\" so that it can't be a value type.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Responses\\JsonResponse.cs",
             "Region": {
               "StartLine": 16,
               "EndLine": 16,
@@ -62,7 +113,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\Core\\Repositories\\AggregateQuery.cs",
+            "Uri": "\\nuget\\src\\Core\\Repositories\\AggregateQuery.cs",
             "Region": {
               "StartLine": 177,
               "EndLine": 177,
@@ -79,7 +130,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\Core\\Repositories\\LazyQueue.cs",
+            "Uri": "\\nuget\\src\\Core\\Repositories\\LazyQueue.cs",
             "Region": {
               "StartLine": 20,
               "EndLine": 20,
@@ -96,7 +147,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\VisualStudio\\ProjectSystems\\VsProjectSystem.cs",
+            "Uri": "\\nuget\\src\\VisualStudio\\ProjectSystems\\VsProjectSystem.cs",
             "Region": {
               "StartLine": 435,
               "EndLine": 435,
@@ -113,7 +164,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\VisualStudio\\ProjectSystems\\VsProjectSystem.cs",
+            "Uri": "\\nuget\\src\\VisualStudio\\ProjectSystems\\VsProjectSystem.cs",
             "Region": {
               "StartLine": 435,
               "EndLine": 435,
@@ -130,7 +181,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\VsConsole\\Console\\Utils\\UtilityMethods.cs",
+            "Uri": "\\nuget\\src\\VsConsole\\Console\\Utils\\UtilityMethods.cs",
             "Region": {
               "StartLine": 9,
               "EndLine": 9,
@@ -147,7 +198,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\RazorEngine-850082854d\\Core\\RazorEngine.Core\\Templating\\TemplateService.cs",
+            "Uri": "\\RazorEngine-850082854d\\Core\\RazorEngine.Core\\Templating\\TemplateService.cs",
             "Region": {
               "StartLine": 619,
               "EndLine": 619,

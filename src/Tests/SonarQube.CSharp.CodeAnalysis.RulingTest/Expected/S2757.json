@@ -7,7 +7,20 @@
   "Issues": [
     {
       "RuleId": "S2757",
-      "Locations": []
+      "FullMessage": "Was \"-=\" meant instead?",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Util\\AtomicCounter.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
     }
   ]
 }

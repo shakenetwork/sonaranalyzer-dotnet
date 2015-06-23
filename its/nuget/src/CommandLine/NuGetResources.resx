@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DeleteCommandDeletedPackage" xml:space="preserve">
+    <value>{0} {1} was deleted successfully.</value>
+  </data>
+  <data name="InvalidOptionValueError" xml:space="preserve">
+    <value>Invalid option value: '{0} {1}'</value>
+  </data>
+  <data name="ListCommandNoPackages" xml:space="preserve">
+    <value>No packages found.</value>
+  </data>
+  <data name="MissingOptionValueError" xml:space="preserve">
+    <value>Missing option value for: '{0}'</value>
+  </data>
+  <data name="OptionInvalidWithoutSetter" xml:space="preserve">
+    <value>[option] on '{0}' is invalid without a setter.</value>
+  </data>
+  <data name="PackageCommandSpecifyInputFileError" xml:space="preserve">
+    <value>Please specify a nuspec or project file to use.</value>
+  </data>
+  <data name="PackageCommandSuccess" xml:space="preserve">
+    <value>Successfully created package '{0}'.</value>
+  </data>
+  <data name="PushCommandPushingPackage" xml:space="preserve">
+    <value>Pushing {0} to {1}...</value>
+  </data>
+  <data name="PushCommandNoSourceError" xml:space="preserve">
+    <value>There is no default source, please specify a source.</value>
+  </data>
+  <data name="ResourcePropertyIncorrectType" xml:space="preserve">
+    <value>The property '{0}' on resource type '{1}' is not a type of ResourceManager.</value>
+  </data>
+  <data name="ResourceTypeDoesNotHaveProperty" xml:space="preserve">
+    <value>The resource type '{0}' does not have an accessible static property named '{1}'.</value>
+  </data>
+  <data name="UnableToConvertTypeError" xml:space="preserve">
+    <value>Unable to change from type '{0}' to '{1}'.</value>
+  </data>
+  <data name="UnknowCommandError" xml:space="preserve">
+    <value>Unknown command: '{0}'</value>
+  </data>
+  <data name="UnknownOptionError" xml:space="preserve">
+    <value>Unknown option: '{0}'</value>
+  </data>
+  <data name="UpdateCommandCheckingForUpdates" xml:space="preserve">
+    <value>Checking for updates from {0}.</value>
+  </data>
+  <data name="UpdateCommandCurrentlyRunningNuGetExe" xml:space="preserve">
+    <value>Currently running NuGet.exe {0}.</value>
+  </data>
+  <data name="UpdateCommandNuGetUpToDate" xml:space="preserve">
+    <value>NuGet.exe is up to date.</value>
+  </data>
+  <data name="UpdateCommandUnableToFindPackage" xml:space="preserve">
+    <value>Unable to find '{0}' package.</value>
+  </data>
+  <data name="UpdateCommandUnableToLocateNuGetExe" xml:space="preserve">
+    <value>Invalid NuGet.CommandLine package. Unable to locate NuGet.exe within the package.</value>
+  </data>
+  <data name="UpdateCommandUpdateSuccessful" xml:space="preserve">
+    <value>Update successful.</value>
+  </data>
+  <data name="UpdateCommandUpdatingNuGet" xml:space="preserve">
+    <value>Updating NuGet.exe to {0}.</value>
+  </data>
+  <data name="InvalidArguments" xml:space="preserve">
+    <value>{0}: invalid arguments.</value>
+  </data>
+  <data name="PackageCommandAddedFile" xml:space="preserve">
+    <value>Added file '{0}'.</value>
+  </data>
+  <data name="PackageCommandAttemptingToBuildPackage" xml:space="preserve">
+    <value>Attempting to build package from '{0}'.</value>
+  </data>
+  <data name="DefaultCommandDescription" xml:space="preserve">
+    <value>No description was provided for this command.</value>
+  </data>
+  <data name="ConsoleConfirmMessage" xml:space="preserve">
+    <value>{0} (y/N) </value>
+  </data>
+  <data name="ConsoleConfirmMessageAccept" xml:space="preserve">
+    <value>y</value>
+  </data>
+  <data name="DeleteCommandCanceled" xml:space="preserve">
+    <value>Delete canceled</value>
+  </data>
+  <data name="DeleteCommandConfirm" xml:space="preserve">
+    <value>{0} {1} will be deleted from the {2}. Would you like to continue?</value>
+  </data>
+  <data name="AmbiguousCommand" xml:space="preserve">
+    <value>Ambiguous command '{0}'. Possible values: {1}.</value>
+  </data>
+  <data name="AmbiguousOption" xml:space="preserve">
+    <value>Ambiguous option '{0}'. Possible values: {1}.</value>
+  </data>
+  <data name="InstallCommandNothingToInstall" xml:space="preserve">
+    <value>All packages listed in {0} are already installed.</value>
+  </data>
+  <data name="NoApiKeyFound" xml:space="preserve">
+    <value>No API Key was provided and no API Key could be found for {0}. To save an API Key for a source use the 'setApiKey' command.</value>
+  </data>
+  <data name="SetApiKeyCommandApiKeySaved" xml:space="preserve">
+    <value>The API Key '{0}' was saved for {1}.</value>
+  </data>
+  <data name="BuildingProjectTargetingFramework" xml:space="preserve">
+    <value>Building project '{0}' for target framework '{1}'.</value>
+  </data>
+  <data name="FailedToBuildProject" xml:space="preserve">
+    <value>Failed to build '{0}'.</value>
+  </data>
+  <data name="PackagingFilesFromOutputPath" xml:space="preserve">
+    <value>Packing files from '{0}'.</value>
+  </data>
+  <data name="UnableToExtractAssemblyMetadata" xml:space="preserve">
+    <value>Unable to extract metadata from '{0}'.</value>
+  </data>
+  <data name="UsingPackagesConfigForDependencies" xml:space="preserve">
+    <value>Found packages.config. Using packages listed as dependencies</value>
+  </data>
+  <data name="Warning_FileDoesNotExist" xml:space="preserve">
+    <value>'{0}' was included in the project but doesn't exist. Skipping...</value>
+  </data>
+  <data name="Warning_UnspecifiedField" xml:space="preserve">
+    <value>{0} was not specified. Using '{1}'.</value>
+  </data>
+  <data name="DefaultSymbolServer" xml:space="preserve">
+    <value>the symbol server</value>
+  </data>
+  <data name="LiveFeed" xml:space="preserve">
+    <value>the NuGet gallery</value>
+  </data>
+  <data name="PackageCommandAttemptingToBuildSymbolsPackage" xml:space="preserve">
+    <value>Attempting to build symbols package for '{0}'.</value>
+  </data>
+  <data name="Warning_SymbolServerNotConfigured" xml:space="preserve">
+    <value>Found symbols package '{0}', but no API key was specified for the symbol server. To save an API Key, run 'NuGet.exe setApiKey [your API key from http://www.NuGet.org]'.</value>
+  </data>
+  <data name="UsingNuspecForMetadata" xml:space="preserve">
+    <value>Using '{0}' for metadata.</value>
+  </data>
+  <data name="InvalidSource" xml:space="preserve">
+    <value>The specified source '{0}' is invalid. Please provide a valid source.</value>
+  </data>
+  <data name="SetApiKeyCommandDefaultApiKeysSaved" xml:space="preserve">
+    <value>The API Key '{0}' was saved for {1} and {2}.</value>
+  </data>
+  <data name="UnableToFindBuildOutput" xml:space="preserve">
+    <value>Unable to find '{0}'. Make sure the project has been built.</value>
+  </data>
+  <data name="InvalidFile" xml:space="preserve">
+    <value>No packages.config or solution file specified. Use the -self switch to update NuGet.exe.</value>
+  </data>
+  <data name="PackageDoesNotExist" xml:space="preserve">
+    <value>Unable to locate '{0} {1}'. Make sure all packages exist in the packages folder before running update.</value>
+  </data>
+  <data name="UnableToFindPackages" xml:space="preserve">
+    <value>Unable to find '{0}'. Make sure they are specified in packages.config.</value>
+  </data>
+  <data name="UnableToLocatePackagesFolder" xml:space="preserve">
+    <value>Unable to locate the packages folder. Try specifying it using the repositoryPath switch.</value>
+  </data>
+  <data name="UnableToLocateProjectFile" xml:space="preserve">
+    <value>Unable to locate project file for '{0}'.</value>
+  </data>
+  <data name="FoundProjects" xml:space="preserve">
+    <value>Found {0} projects with a packages.config file. ({1})</value>
+  </data>
+  <data name="LookingForInstalledPackages" xml:space="preserve">
+    <value>Looking for installed packages in '{0}'.</value>
+  </data>
+  <data name="ScanningForProjects" xml:space="preserve">
+    <value>Scanning for projects...</value>
+  </data>
+  <data name="UpdatingProject" xml:space="preserve">
+    <value>Updating '{0}'...</value>
+  </data>
+  <data name="FoundProject" xml:space="preserve">
+    <value>Found 1 project with a packages.config file. ({0})</value>
+  </data>
+  <data name="NoProjectsFound" xml:space="preserve">
+    <value>No projects found with packages.config.</value>
+  </data>
+  <data name="UnableToFindSolution" xml:space="preserve">
+    <value>Unable to find solution '{0}'.</value>
+  </data>
+  <data name="CommandLine_Warning" xml:space="preserve">
+    <value>WARNING: {0}</value>
+  </data>
+  <data name="Credentials_Password" xml:space="preserve">
+    <value>Password: </value>
+  </data>
+  <data name="Credentials_UserName" xml:space="preserve">
+    <value>UserName: </value>
+  </data>
+  <data name="Credentials_RequestCredentials" xml:space="preserve">
+    <value>Please provide credentials for: {0}</value>
+  </data>
+  <data name="InstallCommandPackageAlreadyExists" xml:space="preserve">
+    <value>Package "{0}" is already installed.</value>
+  </data>
+  <data name="SourcesCommandNoSources" xml:space="preserve">
+    <value>No sources found.</value>
+  </data>
+  <data name="SourcesCommandRegisteredSources" xml:space="preserve">
+    <value>Registered Sources:</value>
+  </data>
+  <data name="SourcesCommandInvalidSource" xml:space="preserve">
+    <value>The source specified is invalid. Please provide a valid source.</value>
+  </data>
+  <data name="SourcesCommandNameRequired" xml:space="preserve">
+    <value>The name specified cannot be empty. Please provide a valid name.</value>
+  </data>
+  <data name="SourcesCommandSourceAddedSuccessfully" xml:space="preserve">
+    <value>Package Source with Name: {0} added successfully.</value>
+  </data>
+  <data name="SourcesCommandSourceRequired" xml:space="preserve">
+    <value>The source specified cannot be empty. Please provide a valid source.</value>
+  </data>
+  <data name="SourcesCommandUniqueName" xml:space="preserve">
+    <value>The name specified has already been added to the list of available package sources. Please provide a unique name.</value>
+  </data>
+  <data name="SourcesCommandUniqueSource" xml:space="preserve">
+    <value>The source specified has already been added to the list of available package sources. Please provide a unique source.</value>
+  </data>
+  <data name="SourcesCommandNoMatchingSourcesFound" xml:space="preserve">
+    <value>Unable to find any package source(s) matching name: {0}.</value>
+  </data>
+  <data name="SourcesCommandSourceRemovedSuccessfully" xml:space="preserve">
+    <value>Package source with Name: {0} removed successfully.</value>
+  </data>
+  <data name="SourcesCommandAllNameIsReserved" xml:space="preserve">
+    <value>Package source name 'All' is a reserved name.</value>
+  </data>
+  <data name="ReservedPackageNameAll" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="PackageCommandNoFilesForLibPackage" xml:space="preserve">
+    <value>Failed to build package. Ensure '{0}' includes assembly files. For help on building symbols package, visit {1}.</value>
+  </data>
+  <data name="PackageCommandNoFilesForSymbolsPackage" xml:space="preserve">
+    <value>Failed to build package. Ensure '{0}' includes source and symbol files. For help on building symbols package, visit {1}.</value>
+  </data>
+  <data name="InstallCommandInvalidPackageReference" xml:space="preserve">
+    <value>'{0}' contains invalid package references. </value>
+  </data>
+  <data name="InstallCommandPackageReferenceInvalidVersion" xml:space="preserve">
+    <value>Version string specified for package reference '{0}' is invalid.</value>
+  </data>
+  <data name="PackageCommandPackageIssueSummary" xml:space="preserve">
+    <value>{0} issue(s) found with package '{1}'.</value>
+  </data>
+  <data name="PackageCommandIssueDescription" xml:space="preserve">
+    <value>Description: {0}</value>
+  </data>
+  <data name="PackageCommandIssueSolution" xml:space="preserve">
+    <value>Solution: {0}</value>
+  </data>
+  <data name="PackageCommandIssueTitle" xml:space="preserve">
+    <value>Issue: {0}</value>
+  </data>
+  <data name="Warning_DefaultSpecValue" xml:space="preserve">
+    <value>The value "{0}" for {1} is a sample value and should be removed.</value>
+  </data>
+  <data name="Warning_DefaultSpecValueSolution" xml:space="preserve">
+    <value>Replace with an appropriate value or remove and it and rebuild your package.</value>
+  </data>
+  <data name="Warning_DefaultSpecValueTitle" xml:space="preserve">
+    <value>Remove sample nuspec values.</value>
+  </data>
+  <data name="Credentials_ProxyCredentials" xml:space="preserve">
+    <value>Please provide proxy credentials:</value>
+  </data>
+  <data name="SourcesCommandDisabled" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="SourcesCommandEnabled" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="SourcesCommandSourceDisabledSuccessfully" xml:space="preserve">
+    <value>Package source with Name: {0} disabled successfully.</value>
+  </data>
+  <data name="SourcesCommandSourceEnabledSuccessfully" xml:space="preserve">
+    <value>Package source with Name: {0} enabled successfully.</value>
+  </data>
+  <data name="Warning_SemanticVersion" xml:space="preserve">
+    <value>Version "{0}" does not follow semantic versioning guidelines.</value>
+  </data>
+  <data name="Warning_SemanticVersionSolution" xml:space="preserve">
+    <value>Update your nuspec file or use the AssemblyInformationalVersion assembly attribute to specify a semantic version as described at http://semver.org. </value>
+  </data>
+  <data name="Warning_SemanticVersionTitle" xml:space="preserve">
+    <value>Use semantic versioning</value>
+  </data>
+  <data name="OfficialPackageSourceName" xml:space="preserve">
+    <value>NuGet official package source</value>
+  </data>
+  <data name="PackageCommandFileFromDependencyIsChanged" xml:space="preserve">
+    <value>File from dependency is changed. Adding file '{0}'.</value>
+  </data>
+  <data name="PushCommandPackagePushed" xml:space="preserve">
+    <value>Your package was pushed.</value>
+  </data>
+  <data name="PackageCommandFileFromDependencyIsNotChanged" xml:space="preserve">
+    <value>File from dependency is not changed. File '{0}' is not added.</value>
+  </data>
+  <data name="UnableToFindFile" xml:space="preserve">
+    <value>File does not exist ({0}).</value>
+  </data>
+  <data name="SourcesCommandUpdateSuccessful" xml:space="preserve">
+    <value>Package source "{0}" was successfully updated.</value>
+  </data>
+  <data name="SourcesCommandCredentialsRequired" xml:space="preserve">
+    <value>Both UserName and Password must be specified.</value>
+  </data>
+  <data name="InstallCommandPackageRestoreConsentNotFound" xml:space="preserve">
+    <value>Package restore is disabled by default. To give consent, open the Visual Studio Options dialog, click on Package Manager node and check 'Allow NuGet to download missing packages during build.' You can also give consent by setting the environment variable 'EnableNuGetPackageRestore' to 'true'.</value>
+  </data>
+  <data name="ConfigCommandKeyNotFound" xml:space="preserve">
+    <value>Key '{0}' not found.</value>
+  </data>
+  <data name="Error_CannotPromptForInput" xml:space="preserve">
+    <value>Cannot prompt for input in non-interactive mode.</value>
+  </data>
+  <data name="DeleteCommandDeletingPackage" xml:space="preserve">
+    <value>Deleting {0} {1} from the {2}.</value>
+  </data>
+  <data name="Option_VerboseDeprecated" xml:space="preserve">
+    <value>Option 'Verbose' has been deprecated. Use 'Verbosity' instead.</value>
+  </data>
+  <data name="SpecCommandCreatedNuSpec" xml:space="preserve">
+    <value>Created '{0}' successfully.</value>
+  </data>
+  <data name="SpecCommandFileExists" xml:space="preserve">
+    <value>'{0}' already exists, use -f to overwrite it.</value>
+  </data>
+  <data name="Warning_NoPromptDeprecated" xml:space="preserve">
+    <value>Option 'NoPrompt' has been deprecated. Use 'NonInteractive' instead.</value>
+  </data>
+  <data name="InstallCommandPackageRestoreConsentNotFound_chs" xml:space="preserve">
+    <value>默认情况下已禁用程序包还原。若要允许还原程序包，请打开 Visual Studio 的“选项”对话框，单击“程序包管理器”节点，然后选中“允许 NuGet 在生成期间下载缺少的程序包”。还可以通过将环境变量“EnableNuGetPackageRestore”设置为“true”来允许还原程序包。</value>
+  </data>
+  <data name="InstallCommandPackageRestoreConsentNotFound_cht" xml:space="preserve">
+    <value>還原封裝預設為停用。 若同意，請開啟 Visual Studio 選項對話框，按一下 [封裝管理員] 節點並勾選 [建置時允許 NuGet 下載缺少的封裝]。 您也可以透過設定環境變數「EnableNuGetPackageRestore」設定為「true」來表示同意。</value>
+  </data>
+  <data name="InstallCommandPackageRestoreConsentNotFound_csy" xml:space="preserve">
+    <value>Obnovení balíèku je ve výchozím nastavení zakázáno. Chcete-li udìlit souhlas, otevøete dialogové okno Možnosti produktu Visual Studio, kliknìte na uzel Správce balíèkù a zaškrtnìte možnost 'Povolit rozhraní NuGet stáhnout chybìjící balíèky bìhem sestavení'. Souhlas mùžete udìlit také nastavením promìnné prostøedí EnableNuGetPackageRestore na hodnotu true.</value>
+  </data>
+  <data name="InstallCommandPackageRestoreConsentNotFound_deu" xml:space="preserve">
+    <value>Die Paketwiederherstellung ist standardmäßig deaktiviert. Wenn Sie Ihre Zustimmung erteilen möchten, öffnen Sie das Dialogfeld "Optionen" von Visual Studio, klicken Sie auf den Knoten "Paket-Manager", und aktivieren Sie dann "NuGet das Herunterladen fehlender Pakete während des Builds erlauben". Sie können Ihre Zustimmung erteilen, indem Sie die Umgebungsvariable "EnableNuGetPackageRestore" auf "true" festlegen.</value>
+  </data>
+  <data name="InstallCommandPackageRestoreConsentNotFound_esn" xml:space="preserve">
+    <value>De manera predeterminada, restauración de paquetes está deshabilitada. Para dar su consentimiento, abra el cuadro de diálogo Opciones de Visual Studio, haga clic en el nodo Administrador de paquetes y active la opción para permitir que NuGet descargue los paquetes faltantes durante la compilación. También puede dar su consentimiento al establecer la variable de entorno 'EnableNuGetPackageRestore' en 'true'.</value>
+  </data>
+  <data name="InstallCommandPackageRestoreConsentNotFound_fra" xml:space="preserve">
+    <value>La fonctionnalité de restauration des packages est désactivée par défaut. Pour donner votre accord, ouvrez la boîte de dialogue Options de Visual Studio, cliquez sur le nœud Gestionnaire de package et activez l’option « Autoriser NuGet à télécharger les packages manquants lors de la génération ». Vous pouvez également donner votre accord en définissant la variable d’environnement « EnableNuGetPackageRestore » sur « true ».</value>
+  </data>
+  <data name="InstallCommandPackageRestoreConsentNotFound_ita" xml:space="preserve">
+    <value>Il ripristino dei pacchetti è disabilitato per impostazione predefinita. Per abilitarlo, aprire la finestra di dialogo Opzioni di Visual Studio, fare clic sul nodo Gestione pacchetti e selezionare l'opzione che consente a NuGet di scaricare pacchetti mancanti durante la compilazione. È anche possibile abilitare il ripristino dei pacchetti impostando la variabile di ambiente 'EnableNuGetPackageRestore' su 'true'.</value>
+  </data>
+  <data name="InstallCommandPackageRestoreConsentNotFound_jpn" xml:space="preserve">
+    <value>パッケージの復元は既定で無効になっています。確認のため、Visual Studio の [オプション] ダイアログ ボックスを開き、Package Manager ノードをクリックして、[NuGet がビルド中に存在しないパッケージをダウンロードするのを許可する] チェック ボックスをオンにします。また、環境変数 'EnableNuGetPackageRestore' を true に設定して確認することもできます。</value>
+  </data>
+  <data name="InstallCommandPackageRestoreConsentNotFound_kor" xml:space="preserve">
+    <value>패키지 복원은 기본적으로 사용하지 않도록 설정됩니다. 동의하려면 Visual Studio 옵션 대화 상자를 열어 패키지 관리자 노드를 클릭하고 '빌드하는 동안 누락된 패키지를 다운로드하도록 NuGet 허용'을 선택합니다. 환경 변수 'EnableNuGetPackageRestore'를 'true'로 설정해 동의할 수도 있습니다.</value>
+  </data>
+  <data name="InstallCommandPackageRestoreConsentNotFound_plk" xml:space="preserve">
+    <value>Przywracanie pakietów jest domyślnie wyłączone. Aby wyrazić zgodę, otwórz okno dialogowe Opcje programu Visual Studio, kliknij węzeł Menedżer pakietów i zaznacz pozycję „Zezwalaj programowi NuGet na pobieranie brakujących pakietów podczas kompilowania”. Zgodę możesz także wyrazić, ustawiając zmienną środowiskową „EnableNuGetPackageRestore” na wartość „true”.</value>
+  </data>
+  <data name="InstallCommandPackageRestoreConsentNotFound_ptb" xml:space="preserve">
+    <value>A restauração de pacotes está desabilitada por padrão. Para dar permissão, abra o diálogo Opções do Visual Studio, clique no nó do Gerenciador de Pacotes e marque 'Permitir que o NuGet baixe os pacotes ausentes durante a compilação'. Também é possível dar permissão configurando a variável de ambiente 'EnableNuGetPackageRestore' para 'true'.</value>
+  </data>
+  <data name="InstallCommandPackageRestoreConsentNotFound_rus" xml:space="preserve">
+    <value>По умолчанию восстановление пакетов выключено. Чтобы разрешить его, откройте диалоговое окно "Параметры" в Visual Studio, щелкните узел диспетчера пакетов и установите флажок "Разрешить NuGet загружать недостающие пакеты при построении". Это также можно сделать, задав для переменной среды "EnableNuGetPackageRestore" значение "true".</value>
+  </data>
+  <data name="InstallCommandPackageRestoreConsentNotFound_trk" xml:space="preserve">
+    <value>Paketi geri yükleme varsayýlan olarak devre dýþý. Ýzin vermek için Visual Studio Seçenekleri iletiþim kutusunu açýn, Package Manager  (Paket Yöneticisi) düðümünü týklatýn ve 'Allow NuGet to download missing packages during build' (NuGet'in derleme sýrasýnda eksik paketleri indirmesine izin ver) öðesini iþaretleyin. Ayrýca 'EnableNuGetPackageRestore' ortam deðiþkenini 'true' olarak ayarlayarak da izin verebilirsiniz.</value>
+  </data>
+  <data name="Error_SettingsIsNull" xml:space="preserve">
+    <value>Property Settings is null.</value>
+  </data>
+  <data name="Error_SourceProviderIsNull" xml:space="preserve">
+    <value>Property SourceProvider is null.</value>
+  </data>
+  <data name="PackageCommandInvalidMinClientVersion" xml:space="preserve">
+    <value>The value of MinClientVersion argument is not a valid version.</value>
+  </data>
+  <data name="AddFileToPackage" xml:space="preserve">
+    <value>Add file '{0}' to package as '{1}'</value>
+  </data>
+  <data name="FileNotAddedToPackage" xml:space="preserve">
+    <value>File '{0}' is not added because the package already contains file '{1}'</value>
+  </data>
+  <data name="Error_ProcessingNuspecFile" xml:space="preserve">
+    <value>Error occurred when processing file '{0}': {1}</value>
+  </data>
+  <data name="FileConflictChoiceText" xml:space="preserve">
+    <value>[Y] Yes  [A] Yes to All  [N] No  [L] No to All ?</value>
+    <comment>Please do not localize the letters inside the [] brackets.</comment>
+  </data>
+  <data name="Error_IncludeReferencedProjectsAndSymbolsNotSupported" xml:space="preserve">
+    <value>Specifying both -IncludeReferencedProjects and -Symbols is not supported.</value>
+  </data>
+</root>

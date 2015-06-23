@@ -7,11 +7,11 @@
   "Issues": [
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1023 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 2090 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\Resources\\MvcResources.Designer.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -24,11 +24,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1790 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 8028 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Ajax\\Test\\AjaxExtensionsTest.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -41,11 +41,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 2145 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 1654 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Html\\Test\\InputExtensionsTest.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -58,11 +58,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1613 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 2632 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Html\\Test\\SelectExtensionsTest.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Proto\\TestConductorProtocol.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -75,11 +75,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 2268 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 1727 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\ControllerActionInvokerTest.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Endpoint.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -92,11 +92,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1804 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 1144 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\ControllerTest.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Containerformats.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -109,11 +109,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 2456 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 6673 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\DefaultModelBinderTest.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -126,11 +126,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1048 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 1018 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\VirtualPathProviderViewEngineTest.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -143,11 +143,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1104 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 1078 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.Helpers\\WebGrid\\WebGrid.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -160,11 +160,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1010 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 2632 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.Helpers\\WebImage.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\protobuf\\TestConductorProtocol.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -177,11 +177,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1202 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 2931 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.Razor\\Parser\\CSharpCodeParser.cs",
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests.integration\\scenarios\\InstallScenarios.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -194,11 +194,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 2219 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 2284 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\System.Web.Helpers.Test\\WebGridTest.cs",
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests.integration\\scenarios\\UpgradeScenarios.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -211,11 +211,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1060 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 1059 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\CommandLine\\Commands\\ProjectFactory.cs",
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure.app\\services\\NugetService.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -228,11 +228,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1261 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 1131 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\CommandLine\\NuGetResources.Designer.cs",
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\commandline\\Options.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -245,11 +245,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1040 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 2095 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\Core\\Utility\\VersionUtility.cs",
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\Properties\\Resources.Designer.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -262,11 +262,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1456 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 1370 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\VisualStudio\\VSPackageManager.cs",
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Controller.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -279,11 +279,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1757 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 2095 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Core.Test\\PackageBuilderTest.cs",
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Properties\\Resources.Designer.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -296,11 +296,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1158 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 1304 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Core.Test\\PackageWalkerTest.cs",
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Rendering\\Html\\DefaultHtmlGenerator.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -313,11 +313,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 3464 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 1089 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Core.Test\\ProjectManagerTest.cs",
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Rendering\\Html\\HtmlHelper.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -330,11 +330,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1317 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 1118 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Core.Test\\SettingsTests.cs",
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Rendering\\HtmlHelperInputExtensions.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -347,11 +347,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1449 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 2028 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Core.Test\\VersionUtilityTest.cs",
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.JsonPatch.Test\\NestedObjectTests.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -364,11 +364,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1240 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 1731 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Test.Integration\\Core\\PathResolverTest.cs",
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.JsonPatch.Test\\ObjectAdapterTests.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -381,45 +381,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1910 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 1406 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Test.Integration\\NuGetCommandLine\\NuGetCommandLineTest.cs",
-            "Region": {
-              "StartLine": 0,
-              "EndLine": 0,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S104",
-      "FullMessage": "This file has 1343 lines, which is greater than 1000 authorized. Split it into smaller files.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\VisualStudio.Test\\VsPackageManagerTest.cs",
-            "Region": {
-              "StartLine": 0,
-              "EndLine": 0,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S104",
-      "FullMessage": "This file has 1353 lines, which is greater than 1000 authorized. Split it into smaller files.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\VisualStudio.Test\\VsPackageManagerTest.Reinstall.cs",
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.ApiExplorer.Test\\DefaultApiDescriptionProviderTest.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -436,7 +402,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\VisualStudio.Test\\VsTemplateWizardTest.cs",
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\ApplicationModel\\DefaultApplicationModelProviderTest.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -449,11 +415,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1620 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 2066 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Core.Test\\WiresharkDatagramComparerDns.cs",
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\ControllerActionDescriptorProviderTests.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -466,11 +432,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1080 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 2294 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\DnsTests.cs",
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\ControllerActionInvokerTest.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -483,11 +449,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1110 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 2039 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\ByteArrayExtensions.cs",
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\ModelBinding\\MutableObjectModelBinderTest.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -500,11 +466,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1288 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 1806 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\Igmp\\IgmpReplyVersion0Code.cs",
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\Routing\\InnerAttributeRouteTest.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -517,11 +483,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1279 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 1795 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6ExtensionHeaderFragmentData.cs",
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Extensions.Test\\ControllerTests.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -534,11 +500,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1121 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 1043 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Extensions.Test\\ModelBinding\\Metadata\\ModelMetadataProviderTest.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -551,11 +517,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1985 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 1167 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Extensions.Test\\Rendering\\DefaultEditorTemplatesTest.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -568,11 +534,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1898 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 1686 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\DeflateManager.cs",
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Extensions.Test\\Rendering\\HtmlHelperSelectTest.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -585,11 +551,79 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 1918 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "FullMessage": "This file has 2172 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.FunctionalTests\\ModelBindingTest.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1463 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.FunctionalTests\\RoutingTests.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 2055 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.IntegrationTests\\MutableObjectModelBinderIntegrationTest.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1093 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.IntegrationTests\\ValidationIntegrationTests.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1412 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Razor.Test\\RazorPageTest.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -606,7 +640,755 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ParallelDeflateOutputStream.cs",
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Razor.Test\\RazorViewEngineTest.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1377 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Razor.Test\\RazorViewTest.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1885 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Testing\\ConfigurableBootstrapper.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1163 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Unit\\DynamicDictionaryFixture.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1141 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Unit\\DynamicDictionaryValueFixture.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1594 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 2082 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Unit\\RequestHeadersFixture.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1429 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 3909 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1006 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\ILogger.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1720 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\ILogger-V1.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1030 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\LogFactory.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1606 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Logger1.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 3323 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Logger-V1Compat.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 2011 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Targets\\FileTarget.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1230 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\LoggerTests.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1211 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Targets\\DatabaseTargetTests.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1602 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Targets\\FileTargetTests.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1966 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\lib\\commandline\\CommandLine.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1277 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\lib\\commandline\\CommandLineText.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1038 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\LocalDateTime.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1060 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\CommandLine\\Commands\\ProjectFactory.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1261 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\CommandLine\\NuGetResources.Designer.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1040 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Core\\Utility\\VersionUtility.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1456 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\VSPackageManager.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1757 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\Core.Test\\PackageBuilderTest.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1158 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\Core.Test\\PackageWalkerTest.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 3464 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\Core.Test\\ProjectManagerTest.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1317 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\Core.Test\\SettingsTests.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1449 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\Core.Test\\VersionUtilityTest.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1240 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\Test.Integration\\Core\\PathResolverTest.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1910 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\Test.Integration\\NuGetCommandLine\\NuGetCommandLineTest.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1343 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\VisualStudio.Test\\VsPackageManagerTest.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1353 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\VisualStudio.Test\\VsPackageManagerTest.Reinstall.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1260 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\VisualStudio.Test\\VsTemplateWizardTest.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1620 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Core.Test\\WiresharkDatagramComparerDns.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1080 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\DnsTests.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1110 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\ByteArrayExtensions.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1288 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Igmp\\IgmpReplyVersion0Code.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1279 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6ExtensionHeaderFragmentData.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1121 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1985 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1898 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\DeflateManager.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1918 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
+            "Region": {
+              "StartLine": 0,
+              "EndLine": 0,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S104",
+      "FullMessage": "This file has 1139 lines, which is greater than 1000 authorized. Split it into smaller files.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ParallelDeflateOutputStream.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -623,7 +1405,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -640,7 +1422,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -657,7 +1439,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,

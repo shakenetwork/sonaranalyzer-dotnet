@@ -7,14 +7,14 @@
   "Issues": [
     {
       "RuleId": "S2931",
-      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_timer\".",
+      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_cancellationTokenSource\".",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\Async\\AsyncResultWrapper.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.TestKit.Tests\\TestActorRefTests\\ReceiveTimeoutActor.cs",
             "Region": {
-              "StartLine": 116,
-              "EndLine": 116,
+              "StartLine": 15,
+              "EndLine": 15,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -24,11 +24,28 @@
     },
     {
       "RuleId": "S2931",
-      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_timer\".",
+      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_latch\".",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Async\\Test\\AsyncActionDescriptorTest.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.TestKit\\TestLatch.cs",
+            "Region": {
+              "StartLine": 27,
+              "EndLine": 27,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2931",
+      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_fileStream\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests.integration\\infrastructure.app\\services\\FilesServiceSpecs.cs",
             "Region": {
               "StartLine": 31,
               "EndLine": 31,
@@ -41,14 +58,14 @@
     },
     {
       "RuleId": "S2931",
-      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_asyncWaitHandle\".",
+      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"fileStream\".",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Async\\Test\\MockAsyncResult.cs",
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests.integration\\scenarios\\InstallScenarios.cs",
             "Region": {
-              "StartLine": 5,
-              "EndLine": 5,
+              "StartLine": 689,
+              "EndLine": 689,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -58,14 +75,14 @@
     },
     {
       "RuleId": "S2931",
-      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_waitHandle\".",
+      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"fileStream\".",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Async\\Test\\SignalContainer.cs",
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests.integration\\scenarios\\InstallScenarios.cs",
             "Region": {
-              "StartLine": 5,
-              "EndLine": 5,
+              "StartLine": 789,
+              "EndLine": 789,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -75,14 +92,14 @@
     },
     {
       "RuleId": "S2931",
-      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_tempWriter\".",
+      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"fileStream\".",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.WebPages\\WebPageBase.cs",
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests.integration\\scenarios\\UninstallScenarios.cs",
             "Region": {
-              "StartLine": 11,
-              "EndLine": 11,
+              "StartLine": 332,
+              "EndLine": 332,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -92,14 +109,235 @@
     },
     {
       "RuleId": "S2931",
-      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_outputStream\".",
+      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"fileStream\".",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\System.Web.WebPages.Test\\Extensions\\HttpResponseExtensionsTest.cs",
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests.integration\\scenarios\\UninstallScenarios.cs",
             "Region": {
-              "StartLine": 13,
-              "EndLine": 13,
+              "StartLine": 405,
+              "EndLine": 405,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2931",
+      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"fileStream\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests.integration\\scenarios\\UpgradeScenarios.cs",
+            "Region": {
+              "StartLine": 619,
+              "EndLine": 619,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2931",
+      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"fileStream\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests.integration\\scenarios\\UpgradeScenarios.cs",
+            "Region": {
+              "StartLine": 726,
+              "EndLine": 726,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2931",
+      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"writer\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure.app\\configuration\\ConfigurationOptionsSpec.cs",
+            "Region": {
+              "StartLine": 31,
+              "EndLine": 31,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2931",
+      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_featuredMoviesTokenSource\", \"_quotesTokenSource\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\samples\\TagHelperSample.Web\\Services\\MoviesService.cs",
+            "Region": {
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2931",
+      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_tokenSource\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\WebSites\\HtmlGenerationWebSite\\ProductsService.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2931",
+      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_clientResetEvent\", \"_serverResetEvent\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\WebSites\\RazorWebSite\\Services\\WaitService.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2931",
+      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"provider\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Cryptography\\PassphraseKeyGenerator.cs",
+            "Region": {
+              "StartLine": 12,
+              "EndLine": 12,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2931",
+      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"provider\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Cryptography\\RandomKeyGenerator.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2931",
+      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"autoClosingTimer\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Targets\\FileTarget.cs",
+            "Region": {
+              "StartLine": 59,
+              "EndLine": 59,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2931",
+      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"lazyWriterTimer\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Targets\\Wrappers\\AsyncTargetWrapper.cs",
+            "Region": {
+              "StartLine": 79,
+              "EndLine": 79,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2931",
+      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"flushTimer\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Targets\\Wrappers\\BufferingTargetWrapper.cs",
+            "Region": {
+              "StartLine": 46,
+              "EndLine": 46,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2931",
+      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"readStream\", \"writeStream\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.Test\\TimeZones\\IO\\IoStream.cs",
+            "Region": {
+              "StartLine": 19,
+              "EndLine": 19,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2931",
+      "FullMessage": "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"stream\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.TzdbCompiler\\Tzdb\\TzdbStreamWriter.cs",
+            "Region": {
+              "StartLine": 220,
+              "EndLine": 220,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -113,7 +351,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\Dialog10\\Nodes\\PackagesTreeNodeBase.cs",
+            "Uri": "\\nuget\\src\\Dialog10\\Nodes\\PackagesTreeNodeBase.cs",
             "Region": {
               "StartLine": 17,
               "EndLine": 17,
@@ -130,7 +368,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\Server\\Infrastructure\\ServerPackageRepository.cs",
+            "Uri": "\\nuget\\src\\Server\\Infrastructure\\ServerPackageRepository.cs",
             "Region": {
               "StartLine": 12,
               "EndLine": 12,
@@ -147,7 +385,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\GZip\\GZipFilePart.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\GZip\\GZipFilePart.cs",
             "Region": {
               "StartLine": 9,
               "EndLine": 9,

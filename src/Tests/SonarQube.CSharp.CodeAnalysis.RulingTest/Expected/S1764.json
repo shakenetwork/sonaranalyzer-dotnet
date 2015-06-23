@@ -7,11 +7,147 @@
   "Issues": [
     {
       "RuleId": "S1764",
+      "FullMessage": "Identical sub-expressions on both sides of operator \"==\"",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests\\Actor\\ActorRefSpec.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1764",
+      "FullMessage": "Identical sub-expressions on both sides of operator \"!=\"",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests\\Actor\\ActorRefSpec.cs",
+            "Region": {
+              "StartLine": 29,
+              "EndLine": 29,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1764",
       "FullMessage": "Identical sub-expressions on both sides of operator \"<\"",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Base.Test\\SerialNumber32Test.cs",
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.Benchmarks\\BclTests\\DateTimeOffsetBenchmarks.cs",
+            "Region": {
+              "StartLine": 42,
+              "EndLine": 42,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1764",
+      "FullMessage": "Identical sub-expressions on both sides of operator \"-\"",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.Test\\DurationTest.Operators.cs",
+            "Region": {
+              "StartLine": 46,
+              "EndLine": 46,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1764",
+      "FullMessage": "Identical sub-expressions on both sides of operator \"-\"",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.Test\\InstantTest.Operators.cs",
+            "Region": {
+              "StartLine": 114,
+              "EndLine": 114,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1764",
+      "FullMessage": "Identical sub-expressions on both sides of operator \"-\"",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.Test\\OffsetTest.Operators.cs",
+            "Region": {
+              "StartLine": 104,
+              "EndLine": 104,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1764",
+      "FullMessage": "Identical sub-expressions on both sides of operator \"-\"",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.Test\\OffsetTest.Operators.cs",
+            "Region": {
+              "StartLine": 112,
+              "EndLine": 112,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1764",
+      "FullMessage": "Identical sub-expressions on both sides of operator \"-\"",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.Test\\PeriodTest.cs",
+            "Region": {
+              "StartLine": 667,
+              "EndLine": 667,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1764",
+      "FullMessage": "Identical sub-expressions on both sides of operator \"<\"",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Base.Test\\SerialNumber32Test.cs",
             "Region": {
               "StartLine": 63,
               "EndLine": 63,
@@ -28,7 +164,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Base.Test\\SerialNumber32Test.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Base.Test\\SerialNumber32Test.cs",
             "Region": {
               "StartLine": 64,
               "EndLine": 64,
@@ -45,7 +181,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Base.Test\\UInt128Tests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Base.Test\\UInt128Tests.cs",
             "Region": {
               "StartLine": 57,
               "EndLine": 57,
@@ -62,7 +198,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Base.Test\\UInt128Tests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Base.Test\\UInt128Tests.cs",
             "Region": {
               "StartLine": 58,
               "EndLine": 58,
@@ -79,7 +215,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Base.Test\\UInt128Tests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Base.Test\\UInt128Tests.cs",
             "Region": {
               "StartLine": 59,
               "EndLine": 59,
@@ -96,7 +232,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Base.Test\\UInt128Tests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Base.Test\\UInt128Tests.cs",
             "Region": {
               "StartLine": 60,
               "EndLine": 60,
@@ -113,7 +249,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Base.Test\\UInt24Tests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Base.Test\\UInt24Tests.cs",
             "Region": {
               "StartLine": 51,
               "EndLine": 51,
@@ -130,7 +266,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Base.Test\\UInt24Tests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Base.Test\\UInt24Tests.cs",
             "Region": {
               "StartLine": 52,
               "EndLine": 52,
@@ -147,7 +283,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Base.Test\\UInt48Tests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Base.Test\\UInt48Tests.cs",
             "Region": {
               "StartLine": 91,
               "EndLine": 91,
@@ -164,7 +300,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Base.Test\\UInt48Tests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Base.Test\\UInt48Tests.cs",
             "Region": {
               "StartLine": 92,
               "EndLine": 92,
@@ -181,7 +317,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\DataLinkTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\DataLinkTests.cs",
             "Region": {
               "StartLine": 50,
               "EndLine": 50,
@@ -198,7 +334,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\DataLinkTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\DataLinkTests.cs",
             "Region": {
               "StartLine": 51,
               "EndLine": 51,
@@ -215,7 +351,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4Tests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4Tests.cs",
             "Region": {
               "StartLine": 349,
               "EndLine": 349,
@@ -232,7 +368,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4Tests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4Tests.cs",
             "Region": {
               "StartLine": 350,
               "EndLine": 350,
@@ -249,7 +385,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\DeflateManager.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\DeflateManager.cs",
             "Region": {
               "StartLine": 1494,
               "EndLine": 1494,

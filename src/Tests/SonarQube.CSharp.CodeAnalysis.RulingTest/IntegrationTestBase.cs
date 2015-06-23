@@ -26,6 +26,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Xml;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarQube.CSharp.CodeAnalysis.Common;
 using SonarQube.CSharp.CodeAnalysis.Rules;
 
@@ -36,7 +37,6 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
         protected FileInfo[] CodeFiles;
         protected IList<Type> AnalyzerTypes;
         protected DirectoryInfo ItSourcesRootDirectory;
-        protected const string ItSourcesEnvVarName = "SONAR_IT_SOURCES";
         protected string XmlInputPattern;
         protected DirectoryInfo ExpectedDirectory;
         protected DirectoryInfo AnalysisOutputDirectory;
@@ -62,9 +62,8 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
         
         public virtual void Setup()
         {
-            ItSourcesRootDirectory = new DirectoryInfo(Environment.GetEnvironmentVariable(ItSourcesEnvVarName));
-            CodeFiles = new DirectoryInfo(Path.Combine(ItSourcesRootDirectory.FullName, 
-                ConfigurationManager.AppSettings["path.it-sources.input"]))
+            ItSourcesRootDirectory = GetItSourcesFolder();
+            CodeFiles = ItSourcesRootDirectory
                 .GetFiles("*.cs", SearchOption.AllDirectories);
             AnalyzerTypes = new RuleFinder().GetAllAnalyzerTypes().ToList();
             XmlInputPattern = GenerateAnalysisInputFilePattern();
@@ -76,6 +75,21 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
                 AnalysisOutputDirectory.Delete(true);
             }
             AnalysisOutputDirectory.Create();
+        }
+
+        private static DirectoryInfo GetItSourcesFolder()
+        {
+            const string navigationToRoot = "../../../../../";
+            const string repoName = "sonar-dotnet-codeanalysis";
+            const string navigationToItSources = "its";
+
+            var testAssembly = new FileInfo(typeof(IntegrationTestBase).Assembly.Location);
+            var solutionDirectory = new DirectoryInfo(Path.Combine(testAssembly.DirectoryName, navigationToRoot));
+            if (solutionDirectory.Name != repoName)
+            {
+                Assert.Fail();
+            }
+            return solutionDirectory.GetDirectories(navigationToItSources).Single();
         }
 
         private string GenerateAnalysisInputFilePattern()

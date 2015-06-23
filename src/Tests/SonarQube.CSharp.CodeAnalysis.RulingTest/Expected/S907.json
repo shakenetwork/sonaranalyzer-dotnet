@@ -11,10 +11,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\Html\\InputExtensions.cs",
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\commandline\\Options.cs",
             "Region": {
-              "StartLine": 331,
-              "EndLine": 331,
+              "StartLine": 1060,
+              "EndLine": 1060,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -28,7 +28,41 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\CommandLine\\Commands\\PackCommand.cs",
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Rendering\\Html\\DefaultHtmlGenerator.cs",
+            "Region": {
+              "StartLine": 991,
+              "EndLine": 991,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S907",
+      "FullMessage": "Remove this use of \"goto\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Json\\JsonSerializer.cs",
+            "Region": {
+              "StartLine": 185,
+              "EndLine": 185,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S907",
+      "FullMessage": "Remove this use of \"goto\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\CommandLine\\Commands\\PackCommand.cs",
             "Region": {
               "StartLine": 472,
               "EndLine": 472,
@@ -45,7 +79,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
             "Region": {
               "StartLine": 384,
               "EndLine": 384,
@@ -62,7 +96,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
             "Region": {
               "StartLine": 444,
               "EndLine": 444,
@@ -79,7 +113,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
             "Region": {
               "StartLine": 584,
               "EndLine": 584,
@@ -96,7 +130,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
             "Region": {
               "StartLine": 614,
               "EndLine": 614,
@@ -113,7 +147,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
             "Region": {
               "StartLine": 632,
               "EndLine": 632,
@@ -130,7 +164,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
             "Region": {
               "StartLine": 887,
               "EndLine": 887,
@@ -147,7 +181,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
             "Region": {
               "StartLine": 990,
               "EndLine": 990,
@@ -164,7 +198,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
             "Region": {
               "StartLine": 1076,
               "EndLine": 1076,
@@ -181,7 +215,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
             "Region": {
               "StartLine": 1195,
               "EndLine": 1195,
@@ -198,7 +232,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
             "Region": {
               "StartLine": 180,
               "EndLine": 180,
@@ -215,7 +249,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
             "Region": {
               "StartLine": 259,
               "EndLine": 259,
@@ -232,7 +266,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
             "Region": {
               "StartLine": 410,
               "EndLine": 410,
@@ -249,7 +283,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
             "Region": {
               "StartLine": 420,
               "EndLine": 420,
@@ -266,7 +300,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
             "Region": {
               "StartLine": 433,
               "EndLine": 433,
@@ -283,7 +317,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
             "Region": {
               "StartLine": 459,
               "EndLine": 459,
@@ -300,7 +334,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
             "Region": {
               "StartLine": 468,
               "EndLine": 468,
@@ -317,7 +351,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
             "Region": {
               "StartLine": 517,
               "EndLine": 517,
@@ -334,7 +368,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
             "Region": {
               "StartLine": 532,
               "EndLine": 532,
@@ -351,7 +385,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
             "Region": {
               "StartLine": 644,
               "EndLine": 644,
@@ -368,7 +402,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\PpmContext.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\PpmContext.cs",
             "Region": {
               "StartLine": 365,
               "EndLine": 365,

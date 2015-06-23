@@ -12,14 +12,10 @@ call %SolutionRoot%build/cibuild.bat
 if %errorlevel% neq 0 exit /b %errorlevel%
 
 rem create rule documentation ZIP
-pushd %SolutionRoot%src\CSharp.CodeAnalysis.DocGenerator\bin\Release\
-SonarQube.CSharp.CodeAnalysis.DocGenerator.exe
-if %errorlevel% neq 0 exit /b %errorlevel%
-popd
+call %SolutionRoot%build/generate_documentation.bat
+
+rem create descriptors
+call %SolutionRoot%build/generate_rule_descriptor.bat
 
 rem create Nuget packages
-pushd %SolutionRoot%src\SonarQube.CSharp.Descriptor\bin\Release\
-SonarQube.CSharp.CodeAnalysis.Descriptor.exe rules.xml profile.xml sqale.xml
-if %errorlevel% neq 0 exit /b %errorlevel%
-popd
 forfiles /p %SolutionRoot%src 		/s /m *.nuspec /c "cmd /c %NUGET_PATH% pack @PATH -NoPackageAnalysis -OutputDirectory .\bin\Release%

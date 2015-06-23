@@ -7,14 +7,14 @@
   "Issues": [
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the literal \"false\" boolean value.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\MvcHandler.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\contrib\\persistence\\Akka.Persistence.Cassandra\\Journal\\CassandraJournal.cs",
             "Region": {
-              "StartLine": 153,
-              "EndLine": 153,
+              "StartLine": 207,
+              "EndLine": 207,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -28,7 +28,500 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.WebPages.Razor\\RazorBuildProvider.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\contrib\\persistence\\Akka.Persistence.Cassandra\\Journal\\CassandraJournal.cs",
+            "Region": {
+              "StartLine": 266,
+              "EndLine": 266,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\contrib\\persistence\\Akka.Persistence.Cassandra\\SessionManagement\\DefaultSessionManager.cs",
+            "Region": {
+              "StartLine": 47,
+              "EndLine": 47,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\ConsoleMessageSinkActor.cs",
+            "Region": {
+              "StartLine": 54,
+              "EndLine": 54,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\ConsoleMessageSinkActor.cs",
+            "Region": {
+              "StartLine": 59,
+              "EndLine": 59,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Player.cs",
+            "Region": {
+              "StartLine": 464,
+              "EndLine": 464,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Player.cs",
+            "Region": {
+              "StartLine": 469,
+              "EndLine": 469,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests\\MatchHandler\\MatchHandlerBuilderTests.cs",
+            "Region": {
+              "StartLine": 105,
+              "EndLine": 105,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests\\MatchHandler\\MatchHandlerBuilderTests.cs",
+            "Region": {
+              "StartLine": 126,
+              "EndLine": 126,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\DefaultControllerActionArgumentBinder.cs",
+            "Region": {
+              "StartLine": 128,
+              "EndLine": 128,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\FilterActionInvoker.cs",
+            "Region": {
+              "StartLine": 611,
+              "EndLine": 611,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\FilterActionInvoker.cs",
+            "Region": {
+              "StartLine": 646,
+              "EndLine": 646,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\FilterActionInvoker.cs",
+            "Region": {
+              "StartLine": 666,
+              "EndLine": 666,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ModelBinding\\Metadata\\DefaultModelMetadataProvider.cs",
+            "Region": {
+              "StartLine": 123,
+              "EndLine": 123,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ModelBinding\\Metadata\\DefaultModelMetadataProvider.cs",
+            "Region": {
+              "StartLine": 129,
+              "EndLine": 129,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ObjectResult.cs",
+            "Region": {
+              "StartLine": 256,
+              "EndLine": 256,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\ModelBinding\\Metadata\\DataAnnotationsMetadataProvider.cs",
+            "Region": {
+              "StartLine": 131,
+              "EndLine": 131,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Rendering\\Html\\DefaultDisplayTemplates.cs",
+            "Region": {
+              "StartLine": 83,
+              "EndLine": 83,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Rendering\\Html\\DefaultDisplayTemplates.cs",
+            "Region": {
+              "StartLine": 89,
+              "EndLine": 89,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.TagHelpers\\LinkTagHelper.cs",
+            "Region": {
+              "StartLine": 277,
+              "EndLine": 277,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.TagHelpers\\LinkTagHelper.cs",
+            "Region": {
+              "StartLine": 341,
+              "EndLine": 341,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.TagHelpers\\ScriptTagHelper.cs",
+            "Region": {
+              "StartLine": 291,
+              "EndLine": 291,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.TagHelpers\\ScriptTagHelper.cs",
+            "Region": {
+              "StartLine": 343,
+              "EndLine": 343,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.WebApiCompatShim\\Formatters\\HttpResponseMessageOutputFormatter.cs",
+            "Region": {
+              "StartLine": 48,
+              "EndLine": 48,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+            "Region": {
+              "StartLine": 3093,
+              "EndLine": 3093,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
+            "Region": {
+              "StartLine": 274,
+              "EndLine": 274,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
+            "Region": {
+              "StartLine": 296,
+              "EndLine": 296,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
+            "Region": {
+              "StartLine": 477,
+              "EndLine": 477,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
+            "Region": {
+              "StartLine": 651,
+              "EndLine": 651,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog.Extended\\LayoutRenderers\\AppSettingLayoutRenderer.cs",
+            "Region": {
+              "StartLine": 89,
+              "EndLine": 89,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog.Extended\\LayoutRenderers\\AppSettingLayoutRenderer.cs",
             "Region": {
               "StartLine": 100,
               "EndLine": 100,
@@ -45,10 +538,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.WebPages\\Html\\HtmlHelper.Checkbox.cs",
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\LayoutRenderers\\CallSiteLayoutRenderer.cs",
             "Region": {
-              "StartLine": 51,
-              "EndLine": 51,
+              "StartLine": 177,
+              "EndLine": 177,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -62,7 +555,194 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\Core\\Extensions\\SettingsExtensions.cs",
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\LayoutRenderers\\CallSiteLayoutRenderer.cs",
+            "Region": {
+              "StartLine": 177,
+              "EndLine": 177,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\LayoutRenderers\\CallSiteLayoutRenderer.cs",
+            "Region": {
+              "StartLine": 177,
+              "EndLine": 177,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\LayoutRenderers\\CallSiteTests.cs",
+            "Region": {
+              "StartLine": 358,
+              "EndLine": 358,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\LayoutRenderers\\CallSiteTests.cs",
+            "Region": {
+              "StartLine": 363,
+              "EndLine": 363,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\LayoutRenderers\\CallSiteTests.cs",
+            "Region": {
+              "StartLine": 391,
+              "EndLine": 391,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\LayoutRenderers\\CallSiteTests.cs",
+            "Region": {
+              "StartLine": 396,
+              "EndLine": 396,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\LayoutRenderers\\CallSiteTests.cs",
+            "Region": {
+              "StartLine": 425,
+              "EndLine": 425,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\LayoutRenderers\\CallSiteTests.cs",
+            "Region": {
+              "StartLine": 430,
+              "EndLine": 430,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\LayoutRenderers\\CallSiteTests.cs",
+            "Region": {
+              "StartLine": 458,
+              "EndLine": 458,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\LayoutRenderers\\CallSiteTests.cs",
+            "Region": {
+              "StartLine": 463,
+              "EndLine": 463,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.CodeDiagnostics\\NotNullDiagnosticAnalyzer.cs",
+            "Region": {
+              "StartLine": 100,
+              "EndLine": 100,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Core\\Extensions\\SettingsExtensions.cs",
             "Region": {
               "StartLine": 88,
               "EndLine": 88,
@@ -79,7 +759,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\DialogServices\\SolutionExplorer\\FolderNode.cs",
+            "Uri": "\\nuget\\src\\DialogServices\\SolutionExplorer\\FolderNode.cs",
             "Region": {
               "StartLine": 149,
               "EndLine": 149,
@@ -96,7 +776,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\DialogServices\\SolutionExplorer\\FolderNode.cs",
+            "Uri": "\\nuget\\src\\DialogServices\\SolutionExplorer\\FolderNode.cs",
             "Region": {
               "StartLine": 153,
               "EndLine": 153,
@@ -113,7 +793,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\DialogServices\\SolutionExplorer\\ProjectNode.cs",
+            "Uri": "\\nuget\\src\\DialogServices\\SolutionExplorer\\ProjectNode.cs",
             "Region": {
               "StartLine": 27,
               "EndLine": 27,
@@ -130,7 +810,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\Server\\Infrastructure\\PackageAuthenticationService.cs",
+            "Uri": "\\nuget\\src\\Server\\Infrastructure\\PackageAuthenticationService.cs",
             "Region": {
               "StartLine": 25,
               "EndLine": 25,
@@ -147,7 +827,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\VisualStudio\\PackageRestore\\PackageRestoreManager.cs",
+            "Uri": "\\nuget\\src\\VisualStudio\\PackageRestore\\PackageRestoreManager.cs",
             "Region": {
               "StartLine": 124,
               "EndLine": 124,
@@ -164,7 +844,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\VisualStudio\\Utility\\VsHierarchyItem.cs",
+            "Uri": "\\nuget\\src\\VisualStudio\\Utility\\VsHierarchyItem.cs",
             "Region": {
               "StartLine": 111,
               "EndLine": 111,
@@ -181,7 +861,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\VsConsole\\PowerShellCmdlets\\NuGetBaseCommand.cs",
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellCmdlets\\NuGetBaseCommand.cs",
             "Region": {
               "StartLine": 311,
               "EndLine": 311,
@@ -198,7 +878,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
+            "Uri": "\\nuget\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
             "Region": {
               "StartLine": 30,
               "EndLine": 30,
@@ -215,7 +895,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
+            "Uri": "\\nuget\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
             "Region": {
               "StartLine": 68,
               "EndLine": 68,
@@ -232,7 +912,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
+            "Uri": "\\nuget\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
             "Region": {
               "StartLine": 95,
               "EndLine": 95,
@@ -249,7 +929,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
+            "Uri": "\\nuget\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
             "Region": {
               "StartLine": 96,
               "EndLine": 96,
@@ -266,7 +946,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
+            "Uri": "\\nuget\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
             "Region": {
               "StartLine": 97,
               "EndLine": 97,
@@ -283,7 +963,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
+            "Uri": "\\nuget\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
             "Region": {
               "StartLine": 108,
               "EndLine": 108,
@@ -300,7 +980,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
+            "Uri": "\\nuget\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
             "Region": {
               "StartLine": 117,
               "EndLine": 117,
@@ -317,7 +997,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
+            "Uri": "\\nuget\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
             "Region": {
               "StartLine": 141,
               "EndLine": 141,
@@ -334,7 +1014,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
+            "Uri": "\\nuget\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
             "Region": {
               "StartLine": 142,
               "EndLine": 142,
@@ -351,7 +1031,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
+            "Uri": "\\nuget\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
             "Region": {
               "StartLine": 143,
               "EndLine": 143,
@@ -368,7 +1048,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
+            "Uri": "\\nuget\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
             "Region": {
               "StartLine": 149,
               "EndLine": 149,
@@ -385,7 +1065,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
+            "Uri": "\\nuget\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
             "Region": {
               "StartLine": 150,
               "EndLine": 150,
@@ -402,7 +1082,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
+            "Uri": "\\nuget\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
             "Region": {
               "StartLine": 151,
               "EndLine": 151,
@@ -419,7 +1099,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
+            "Uri": "\\nuget\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
             "Region": {
               "StartLine": 167,
               "EndLine": 167,
@@ -436,7 +1116,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
+            "Uri": "\\nuget\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
             "Region": {
               "StartLine": 184,
               "EndLine": 184,
@@ -453,7 +1133,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
+            "Uri": "\\nuget\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
             "Region": {
               "StartLine": 242,
               "EndLine": 242,
@@ -470,7 +1150,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
+            "Uri": "\\nuget\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
             "Region": {
               "StartLine": 243,
               "EndLine": 243,
@@ -487,7 +1167,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
+            "Uri": "\\nuget\\test\\Dialog.Test\\SolutionExplorer\\FolderNodeTest.cs",
             "Region": {
               "StartLine": 244,
               "EndLine": 244,
@@ -504,7 +1184,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Dialog.Test\\SolutionExplorer\\ProjectNodeTest.cs",
+            "Uri": "\\nuget\\test\\Dialog.Test\\SolutionExplorer\\ProjectNodeTest.cs",
             "Region": {
               "StartLine": 29,
               "EndLine": 29,
@@ -521,7 +1201,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\RazorEngine-850082854d\\Core\\RazorEngine.Core\\Templating\\DynamicViewBag.cs",
+            "Uri": "\\RazorEngine-850082854d\\Core\\RazorEngine.Core\\Templating\\DynamicViewBag.cs",
             "Region": {
               "StartLine": 78,
               "EndLine": 78,
@@ -538,7 +1218,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\RazorEngine-850082854d\\Core\\RazorEngine.Core\\Templating\\DynamicViewBag.cs",
+            "Uri": "\\RazorEngine-850082854d\\Core\\RazorEngine.Core\\Templating\\DynamicViewBag.cs",
             "Region": {
               "StartLine": 109,
               "EndLine": 109,
@@ -555,7 +1235,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\RazorEngine-850082854d\\Core\\RazorEngine.Core\\Templating\\DynamicViewBag.cs",
+            "Uri": "\\RazorEngine-850082854d\\Core\\RazorEngine.Core\\Templating\\DynamicViewBag.cs",
             "Region": {
               "StartLine": 132,
               "EndLine": 132,
@@ -572,7 +1252,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\RazorEngine-850082854d\\Core\\RazorEngine.Core\\Templating\\DynamicViewBag.cs",
+            "Uri": "\\RazorEngine-850082854d\\Core\\RazorEngine.Core\\Templating\\DynamicViewBag.cs",
             "Region": {
               "StartLine": 160,
               "EndLine": 160,
@@ -589,7 +1269,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Coder.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Coder.cs",
             "Region": {
               "StartLine": 37,
               "EndLine": 37,
@@ -606,129 +1286,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Coder.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Coder.cs",
             "Region": {
               "StartLine": 77,
               "EndLine": 77,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouterClient\\PeerDeviceProperties.xaml.cs",
-            "Region": {
-              "StartLine": 55,
-              "EndLine": 55,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouterClient\\Service References\\VirtualRouterService\\Reference.cs",
-            "Region": {
-              "StartLine": 50,
-              "EndLine": 50,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouterClient\\Service References\\VirtualRouterService\\Reference.cs",
-            "Region": {
-              "StartLine": 63,
-              "EndLine": 63,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouterClient\\Service References\\VirtualRouterService\\Reference.cs",
-            "Region": {
-              "StartLine": 76,
-              "EndLine": 76,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouterClient\\Service References\\VirtualRouterService\\Reference.cs",
-            "Region": {
-              "StartLine": 124,
-              "EndLine": 124,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouterClient\\Service References\\VirtualRouterService\\Reference.cs",
-            "Region": {
-              "StartLine": 137,
-              "EndLine": 137,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouterClient\\Service References\\VirtualRouterService\\Reference.cs",
-            "Region": {
-              "StartLine": 182,
-              "EndLine": 182,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }

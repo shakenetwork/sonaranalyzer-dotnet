@@ -7,31 +7,14 @@
   "Issues": [
     {
       "RuleId": "S1862",
-      "FullMessage": "This branch duplicates the one on line 13.",
+      "FullMessage": "This branch duplicates the one on line 440.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\additional-sources-for-not-covered-tests\\ConditionalStructureSameCondition.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Player.cs",
             "Region": {
-              "StartLine": 17,
-              "EndLine": 17,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1862",
-      "FullMessage": "This branch duplicates the one on line 30.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\additional-sources-for-not-covered-tests\\ConditionalStructureSameCondition.cs",
-            "Region": {
-              "StartLine": 34,
-              "EndLine": 34,
+              "StartLine": 441,
+              "EndLine": 441,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -45,7 +28,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.TestUtils\\RandomHttpExtensions.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.TestUtils\\RandomHttpExtensions.cs",
             "Region": {
               "StartLine": 56,
               "EndLine": 56,

@@ -1,0 +1,24 @@
+using System;
+using System.Linq;
+
+namespace NuGet
+{
+    public abstract class PackageRepositoryBase : IPackageRepository
+    {
+        public abstract string Source { get; }
+
+        public abstract IQueryable<IPackage> GetPackages();
+
+        public abstract bool SupportsPrereleasePackages { get; }
+
+        public virtual void AddPackage(IPackage package)
+        {
+            throw new NotSupportedException();
+        }
+
+        public virtual void RemovePackage(IPackage package)
+        {
+            throw new NotSupportedException();
+        }
+    }
+}

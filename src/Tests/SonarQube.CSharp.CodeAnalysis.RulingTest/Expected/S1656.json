@@ -11,7 +11,24 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Core.Test\\LivePacketDeviceTests.cs",
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Conditions\\ConditionTokenizer.cs",
+            "Region": {
+              "StartLine": 195,
+              "EndLine": 195,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1656",
+      "FullMessage": "Remove or correct this useless self-assignment",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Core.Test\\LivePacketDeviceTests.cs",
             "Region": {
               "StartLine": 894,
               "EndLine": 894,

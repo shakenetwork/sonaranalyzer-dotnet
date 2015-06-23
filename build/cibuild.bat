@@ -8,13 +8,13 @@ if not defined VSTEST_PATH ( set VSTEST_PATH=vstest.console.exe )
 rem build minimal solution
 %NUGET_PATH% restore %SolutionRoot%SonarQube.CSharp.CodeAnalysis.sln
 if %errorlevel% neq 0 exit /b %errorlevel%
-%MSBUILD_PATH% %SolutionRoot%SonarQube.CSharp.CodeAnalysis.sln -t:Rebuild -p:Configuration=Release
+%MSBUILD_PATH% %SolutionRoot%SonarQube.CSharp.CodeAnalysis.sln /t:Rebuild /p:Configuration=Release /p:DeployExtension=false
 if %errorlevel% neq 0 exit /b %errorlevel%
 
 rem build full solution with integration pieces
-%NUGET_PATH% restore %SolutionRoot%SonarQube.CSharp.CodeAnalysis.Integration.sln
+%NUGET_PATH% restore %SolutionRoot%SonarQube.CSharp.CodeAnalysis.Integration.sln 
 if %errorlevel% neq 0 exit /b %errorlevel%
-%MSBUILD_PATH% %SolutionRoot%SonarQube.CSharp.CodeAnalysis.Integration.sln -t:Rebuild -p:Configuration=Release
+%MSBUILD_PATH% %SolutionRoot%SonarQube.CSharp.CodeAnalysis.Integration.sln /t:Rebuild /p:Configuration=Release /p:DeployExtension=false
 if %errorlevel% neq 0 exit /b %errorlevel%
 
 rem run tests

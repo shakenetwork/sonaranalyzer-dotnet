@@ -7,14 +7,14 @@
   "Issues": [
     {
       "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 15 parameters, which is greater than the 7 authorized.",
+      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Endpoint.cs",
             "Region": {
-              "StartLine": 108,
-              "EndLine": 108,
+              "StartLine": 275,
+              "EndLine": 275,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -24,14 +24,14 @@
     },
     {
       "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 14 parameters, which is greater than the 7 authorized.",
+      "FullMessage": "Method \"Lambda\" has 9 parameters, which is greater than the 7 authorized.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Endpoint.cs",
             "Region": {
-              "StartLine": 121,
-              "EndLine": 121,
+              "StartLine": 562,
+              "EndLine": 562,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -41,14 +41,14 @@
     },
     {
       "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 14 parameters, which is greater than the 7 authorized.",
+      "FullMessage": "Method \"Lambda\" has 9 parameters, which is greater than the 7 authorized.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Endpoint.cs",
             "Region": {
-              "StartLine": 138,
-              "EndLine": 138,
+              "StartLine": 770,
+              "EndLine": 770,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -58,14 +58,14 @@
     },
     {
       "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 13 parameters, which is greater than the 7 authorized.",
+      "FullMessage": "Method \"Lambda\" has 9 parameters, which is greater than the 7 authorized.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Endpoint.cs",
             "Region": {
-              "StartLine": 148,
-              "EndLine": 148,
+              "StartLine": 1371,
+              "EndLine": 1371,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -75,14 +75,14 @@
     },
     {
       "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 14 parameters, which is greater than the 7 authorized.",
+      "FullMessage": "Method \"Lambda\" has 10 parameters, which is greater than the 7 authorized.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Endpoint.cs",
             "Region": {
-              "StartLine": 168,
-              "EndLine": 168,
+              "StartLine": 1500,
+              "EndLine": 1500,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -92,14 +92,14 @@
     },
     {
       "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 13 parameters, which is greater than the 7 authorized.",
+      "FullMessage": "Method \"Lambda\" has 10 parameters, which is greater than the 7 authorized.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Endpoint.cs",
             "Region": {
-              "StartLine": 179,
-              "EndLine": 179,
+              "StartLine": 1703,
+              "EndLine": 1703,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -109,14 +109,14 @@
     },
     {
       "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 15 parameters, which is greater than the 7 authorized.",
+      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\RemoteActorRefProvider.cs",
             "Region": {
-              "StartLine": 188,
-              "EndLine": 188,
+              "StartLine": 129,
+              "EndLine": 129,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -126,11 +126,79 @@
     },
     {
       "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 14 parameters, which is greater than the 7 authorized.",
+      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\RemoteActorRefProvider.cs",
+            "Region": {
+              "StartLine": 257,
+              "EndLine": 257,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
+            "Region": {
+              "StartLine": 472,
+              "EndLine": 472,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
+            "Region": {
+              "StartLine": 998,
+              "EndLine": 998,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests\\MatchHandler\\PartialActionBuilderTests.cs",
+            "Region": {
+              "StartLine": 172,
+              "EndLine": 172,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 9 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests\\MatchHandler\\PartialActionBuilderTests.cs",
             "Region": {
               "StartLine": 198,
               "EndLine": 198,
@@ -143,252 +211,14 @@
     },
     {
       "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 14 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
-            "Region": {
-              "StartLine": 208,
-              "EndLine": 208,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 13 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
-            "Region": {
-              "StartLine": 219,
-              "EndLine": 219,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 23 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
-            "Region": {
-              "StartLine": 248,
-              "EndLine": 248,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 22 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
-            "Region": {
-              "StartLine": 266,
-              "EndLine": 266,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 13 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
-            "Region": {
-              "StartLine": 306,
-              "EndLine": 306,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 13 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
-            "Region": {
-              "StartLine": 318,
-              "EndLine": 318,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 12 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
-            "Region": {
-              "StartLine": 329,
-              "EndLine": 329,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 12 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
-            "Region": {
-              "StartLine": 340,
-              "EndLine": 340,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 15 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
-            "Region": {
-              "StartLine": 352,
-              "EndLine": 352,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 14 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
-            "Region": {
-              "StartLine": 363,
-              "EndLine": 363,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 9 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
-            "Region": {
-              "StartLine": 384,
-              "EndLine": 384,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 9 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
-            "Region": {
-              "StartLine": 395,
-              "EndLine": 395,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 9 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
-            "Region": {
-              "StartLine": 405,
-              "EndLine": 405,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 15 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
-            "Region": {
-              "StartLine": 438,
-              "EndLine": 438,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
       "FullMessage": "Method \"Lambda\" has 10 parameters, which is greater than the 7 authorized.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests\\MatchHandler\\PartialActionBuilderTests.cs",
             "Region": {
-              "StartLine": 457,
-              "EndLine": 457,
+              "StartLine": 225,
+              "EndLine": 225,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -402,27 +232,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests\\MatchHandler\\PartialActionBuilderTests.cs",
             "Region": {
-              "StartLine": 471,
-              "EndLine": 471,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 9 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
-            "Region": {
-              "StartLine": 486,
-              "EndLine": 486,
+              "StartLine": 254,
+              "EndLine": 254,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -436,10 +249,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\Html\\HtmlHelperExtensions.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests\\MatchHandler\\PartialActionBuilderTests.cs",
             "Region": {
-              "StartLine": 509,
-              "EndLine": 509,
+              "StartLine": 283,
+              "EndLine": 283,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -449,371 +262,14 @@
     },
     {
       "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
+      "FullMessage": "Method \"Lambda\" has 13 parameters, which is greater than the 7 authorized.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\MailToExtensions.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests\\MatchHandler\\PartialActionBuilderTests.cs",
             "Region": {
-              "StartLine": 33,
-              "EndLine": 33,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\MailToExtensions.cs",
-            "Region": {
-              "StartLine": 37,
-              "EndLine": 37,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 10 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\Ajax\\AjaxExtensions.cs",
-            "Region": {
-              "StartLine": 67,
-              "EndLine": 67,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 10 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\Ajax\\AjaxExtensions.cs",
-            "Region": {
-              "StartLine": 73,
-              "EndLine": 73,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 9 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\Ajax\\AjaxExtensions.cs",
-            "Region": {
-              "StartLine": 263,
-              "EndLine": 263,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 10 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\Html\\InputExtensions.cs",
-            "Region": {
-              "StartLine": 310,
-              "EndLine": 310,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 9 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\Html\\LinkExtensions.cs",
-            "Region": {
-              "StartLine": 43,
-              "EndLine": 43,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 9 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\Html\\LinkExtensions.cs",
-            "Region": {
-              "StartLine": 47,
-              "EndLine": 47,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\Html\\LinkExtensions.cs",
-            "Region": {
-              "StartLine": 93,
-              "EndLine": 93,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\Html\\LinkExtensions.cs",
-            "Region": {
-              "StartLine": 97,
-              "EndLine": 97,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\HtmlHelper.cs",
-            "Region": {
-              "StartLine": 201,
-              "EndLine": 201,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 11 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\HtmlHelper.cs",
-            "Region": {
-              "StartLine": 205,
-              "EndLine": 205,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 12 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\HtmlHelper.cs",
-            "Region": {
-              "StartLine": 209,
-              "EndLine": 209,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 9 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\HtmlHelper.cs",
-            "Region": {
-              "StartLine": 223,
-              "EndLine": 223,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 10 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\UrlHelper.cs",
-            "Region": {
-              "StartLine": 100,
-              "EndLine": 100,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 9 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\VirtualPathProviderViewEngine.cs",
-            "Region": {
-              "StartLine": 144,
-              "EndLine": 144,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 12 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\ParameterInfoUtilTest.cs",
-            "Region": {
-              "StartLine": 131,
-              "EndLine": 131,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 11 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Test\\ParameterInfoUtilTest.cs",
-            "Region": {
-              "StartLine": 146,
-              "EndLine": 146,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 18 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\Microsoft.Web.Helpers\\Twitter.cs",
-            "Region": {
-              "StartLine": 11,
-              "EndLine": 11,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 17 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\Microsoft.Web.Helpers\\Twitter.cs",
-            "Region": {
-              "StartLine": 48,
-              "EndLine": 48,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 15 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\Microsoft.Web.Helpers\\Twitter.cs",
-            "Region": {
-              "StartLine": 82,
-              "EndLine": 82,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 15 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\Microsoft.Web.Helpers\\Video.cs",
-            "Region": {
-              "StartLine": 52,
-              "EndLine": 52,
+              "StartLine": 313,
+              "EndLine": 313,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -827,10 +283,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\Microsoft.Web.Helpers\\Video.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests\\MatchHandler\\PartialActionBuilderTests.cs",
             "Region": {
-              "StartLine": 67,
-              "EndLine": 67,
+              "StartLine": 344,
+              "EndLine": 344,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -840,31 +296,14 @@
     },
     {
       "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 9 parameters, which is greater than the 7 authorized.",
+      "FullMessage": "Method \"Lambda\" has 15 parameters, which is greater than the 7 authorized.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\Microsoft.Web.Helpers\\Video.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests\\MatchHandler\\PartialActionBuilderTests.cs",
             "Region": {
-              "StartLine": 81,
-              "EndLine": 81,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 17 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\Microsoft.Web.Helpers\\Video.cs",
-            "Region": {
-              "StartLine": 89,
-              "EndLine": 89,
+              "StartLine": 376,
+              "EndLine": 376,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -878,10 +317,78 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\Microsoft.Web.Helpers\\Video.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests\\MatchHandler\\PartialActionBuilderTests.cs",
             "Region": {
-              "StartLine": 128,
-              "EndLine": 128,
+              "StartLine": 410,
+              "EndLine": 410,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\ActorRefProvider.cs",
+            "Region": {
+              "StartLine": 90,
+              "EndLine": 90,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\ActorRefProvider.cs",
+            "Region": {
+              "StartLine": 351,
+              "EndLine": 351,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\LocalActorRefProvider.cs",
+            "Region": {
+              "StartLine": 260,
+              "EndLine": 260,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\RootGuardianActorRef.cs",
+            "Region": {
+              "StartLine": 21,
+              "EndLine": 21,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -895,95 +402,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\Microsoft.Web.Helpers\\Video.cs",
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure.app\\services\\ChocolateyPackageService.cs",
             "Region": {
-              "StartLine": 163,
-              "EndLine": 163,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 15 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\Microsoft.Web.Helpers\\Video.cs",
-            "Region": {
-              "StartLine": 213,
-              "EndLine": 213,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 10 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.Helpers\\Chart\\Chart.cs",
-            "Region": {
-              "StartLine": 178,
-              "EndLine": 178,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 13 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.Helpers\\WebGrid\\WebGrid.cs",
-            "Region": {
-              "StartLine": 67,
-              "EndLine": 67,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 12 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.Helpers\\WebGrid\\WebGrid.cs",
-            "Region": {
-              "StartLine": 91,
-              "EndLine": 91,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 19 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.Helpers\\WebGrid\\WebGrid.cs",
-            "Region": {
-              "StartLine": 488,
-              "EndLine": 488,
+              "StartLine": 47,
+              "EndLine": 47,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -997,10 +419,248 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.Helpers\\WebGrid\\WebGrid.cs",
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ControllerActionInvoker.cs",
             "Region": {
-              "StartLine": 677,
-              "EndLine": 677,
+              "StartLine": 23,
+              "EndLine": 23,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 10 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\FilterActionInvoker.cs",
+            "Region": {
+              "StartLine": 56,
+              "EndLine": 56,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 10 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ModelBindingHelper.cs",
+            "Region": {
+              "StartLine": 46,
+              "EndLine": 46,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 11 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ModelBindingHelper.cs",
+            "Region": {
+              "StartLine": 100,
+              "EndLine": 100,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 11 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ModelBindingHelper.cs",
+            "Region": {
+              "StartLine": 156,
+              "EndLine": 156,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 11 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ModelBindingHelper.cs",
+            "Region": {
+              "StartLine": 208,
+              "EndLine": 208,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 12 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ModelBindingHelper.cs",
+            "Region": {
+              "StartLine": 262,
+              "EndLine": 262,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Rendering\\Html\\DefaultHtmlGenerator.cs",
+            "Region": {
+              "StartLine": 83,
+              "EndLine": 83,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Rendering\\Html\\DefaultHtmlGenerator.cs",
+            "Region": {
+              "StartLine": 402,
+              "EndLine": 402,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 11 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Rendering\\Html\\DefaultHtmlGenerator.cs",
+            "Region": {
+              "StartLine": 952,
+              "EndLine": 952,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Rendering\\Html\\HtmlHelper.cs",
+            "Region": {
+              "StartLine": 194,
+              "EndLine": 194,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Rendering\\Html\\IHtmlGenerator.cs",
+            "Region": {
+              "StartLine": 24,
+              "EndLine": 24,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Rendering\\Html\\IHtmlGenerator.cs",
+            "Region": {
+              "StartLine": 245,
+              "EndLine": 245,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Rendering\\IHtmlHelper.cs",
+            "Region": {
+              "StartLine": 91,
+              "EndLine": 91,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Rendering\\Internal\\TemplateBuilder.cs",
+            "Region": {
+              "StartLine": 23,
+              "EndLine": 23,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -1014,10 +674,27 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.Helpers\\WebImage.cs",
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.TagHelpers\\Properties\\Resources.Designer.cs",
             "Region": {
-              "StartLine": 304,
-              "EndLine": 304,
+              "StartLine": 40,
+              "EndLine": 40,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 14 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\ControllerActionInvokerTest.cs",
+            "Region": {
+              "StartLine": 2232,
+              "EndLine": 2232,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -1031,10 +708,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.Helpers\\WebImage.cs",
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Extensions.Test\\Rendering\\DefaultEditorTemplatesTest.cs",
             "Region": {
-              "StartLine": 441,
-              "EndLine": 441,
+              "StartLine": 936,
+              "EndLine": 936,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -1048,27 +725,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.Helpers\\WebImage.cs",
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Razor.Test\\RazorPageTest.cs",
             "Region": {
-              "StartLine": 864,
-              "EndLine": 864,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.Helpers\\WebMail.cs",
-            "Region": {
-              "StartLine": 25,
-              "EndLine": 25,
+              "StartLine": 1324,
+              "EndLine": 1324,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -1082,10 +742,78 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.Helpers\\WebMail.cs",
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.WebApiCompatShimTest\\TestUtils\\TestDataSetAttribute.cs",
             "Region": {
-              "StartLine": 181,
-              "EndLine": 181,
+              "StartLine": 48,
+              "EndLine": 48,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 11 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.WebApiCompatShimTest\\TestUtils\\TestDataSetAttribute.cs",
+            "Region": {
+              "StartLine": 58,
+              "EndLine": 58,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 11 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Unit\\Diagnostics\\CustomInteractiveDiagnosticsFixture.cs",
+            "Region": {
+              "StartLine": 49,
+              "EndLine": 49,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 12 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Diagnostics\\DefaultDiagnostics.cs",
+            "Region": {
+              "StartLine": 46,
+              "EndLine": 46,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 13 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Diagnostics\\DiagnosticsHook.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -1099,10 +827,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\WebMatrix.WebData\\SimpleMembershipProvider.cs",
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.Test\\Text\\ZonedDateTimePatternTest.cs",
             "Region": {
-              "StartLine": 335,
-              "EndLine": 335,
+              "StartLine": 242,
+              "EndLine": 242,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -1116,7 +844,75 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\Core\\PackageWalker\\UpdateWalker.cs",
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\LocalDateTime.cs",
+            "Region": {
+              "StartLine": 168,
+              "EndLine": 168,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\LocalDateTime.cs",
+            "Region": {
+              "StartLine": 188,
+              "EndLine": 188,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 9 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\LocalDateTime.cs",
+            "Region": {
+              "StartLine": 209,
+              "EndLine": 209,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 10 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Period.cs",
+            "Region": {
+              "StartLine": 197,
+              "EndLine": 197,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S107",
+      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Core\\PackageWalker\\UpdateWalker.cs",
             "Region": {
               "StartLine": 21,
               "EndLine": 21,
@@ -1133,7 +929,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\Dialog10\\PackageManagerWindow.xaml.cs",
+            "Uri": "\\nuget\\src\\Dialog10\\PackageManagerWindow.xaml.cs",
             "Region": {
               "StartLine": 60,
               "EndLine": 60,
@@ -1150,7 +946,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\Dialog10\\PackageManagerWindow.xaml.cs",
+            "Uri": "\\nuget\\src\\Dialog10\\PackageManagerWindow.xaml.cs",
             "Region": {
               "StartLine": 223,
               "EndLine": 223,
@@ -1167,7 +963,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\Dialog10\\Providers\\InstalledProvider.cs",
+            "Uri": "\\nuget\\src\\Dialog10\\Providers\\InstalledProvider.cs",
             "Region": {
               "StartLine": 29,
               "EndLine": 29,
@@ -1184,7 +980,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\Dialog10\\Providers\\OnlineProvider.cs",
+            "Uri": "\\nuget\\src\\Dialog10\\Providers\\OnlineProvider.cs",
             "Region": {
               "StartLine": 23,
               "EndLine": 23,
@@ -1201,7 +997,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\Dialog10\\Providers\\SolutionOnlineProvider.cs",
+            "Uri": "\\nuget\\src\\Dialog10\\Providers\\SolutionOnlineProvider.cs",
             "Region": {
               "StartLine": 18,
               "EndLine": 18,
@@ -1218,7 +1014,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\Dialog10\\Providers\\SolutionUpdatesProvider.cs",
+            "Uri": "\\nuget\\src\\Dialog10\\Providers\\SolutionUpdatesProvider.cs",
             "Region": {
               "StartLine": 18,
               "EndLine": 18,
@@ -1235,7 +1031,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\Dialog10\\Providers\\UpdatesProvider.cs",
+            "Uri": "\\nuget\\src\\Dialog10\\Providers\\UpdatesProvider.cs",
             "Region": {
               "StartLine": 18,
               "EndLine": 18,
@@ -1252,7 +1048,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\VisualStudio\\PackageRestore\\PackageRestoreManager.cs",
+            "Uri": "\\nuget\\src\\VisualStudio\\PackageRestore\\PackageRestoreManager.cs",
             "Region": {
               "StartLine": 61,
               "EndLine": 61,
@@ -1269,7 +1065,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\VisualStudio\\SolutionManager.cs",
+            "Uri": "\\nuget\\src\\VisualStudio\\SolutionManager.cs",
             "Region": {
               "StartLine": 514,
               "EndLine": 514,
@@ -1286,7 +1082,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\VsConsole\\Console.Types\\VsKeyInfo.cs",
+            "Uri": "\\nuget\\src\\VsConsole\\Console.Types\\VsKeyInfo.cs",
             "Region": {
               "StartLine": 16,
               "EndLine": 16,
@@ -1303,7 +1099,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\VsConsole\\PowerShellCmdlets\\InstallPackageCommand.cs",
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellCmdlets\\InstallPackageCommand.cs",
             "Region": {
               "StartLine": 30,
               "EndLine": 30,
@@ -1320,7 +1116,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\VsConsole\\PowerShellCmdlets\\UpdatePackageCommand.cs",
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellCmdlets\\UpdatePackageCommand.cs",
             "Region": {
               "StartLine": 31,
               "EndLine": 31,
@@ -1337,7 +1133,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\VsConsole\\PowerShellHost\\NativeMethods.cs",
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHost\\NativeMethods.cs",
             "Region": {
               "StartLine": 59,
               "EndLine": 59,
@@ -1354,7 +1150,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Core.Test\\ManifestTest.cs",
+            "Uri": "\\nuget\\test\\Core.Test\\ManifestTest.cs",
             "Region": {
               "StartLine": 654,
               "EndLine": 654,
@@ -1371,7 +1167,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Dialog.Test\\OnlineProviderTest.cs",
+            "Uri": "\\nuget\\test\\Dialog.Test\\OnlineProviderTest.cs",
             "Region": {
               "StartLine": 524,
               "EndLine": 524,
@@ -1388,7 +1184,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Dialog.Test\\SolutionInstalledProviderTest.cs",
+            "Uri": "\\nuget\\test\\Dialog.Test\\SolutionInstalledProviderTest.cs",
             "Region": {
               "StartLine": 468,
               "EndLine": 468,
@@ -1405,7 +1201,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Dialog.Test\\UpdatesProviderTest.cs",
+            "Uri": "\\nuget\\test\\Dialog.Test\\UpdatesProviderTest.cs",
             "Region": {
               "StartLine": 421,
               "EndLine": 421,
@@ -1422,7 +1218,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Test.Utility\\PackageUtility.cs",
+            "Uri": "\\nuget\\test\\Test.Utility\\PackageUtility.cs",
             "Region": {
               "StartLine": 19,
               "EndLine": 19,
@@ -1439,7 +1235,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Test.Utility\\PackageUtility.cs",
+            "Uri": "\\nuget\\test\\Test.Utility\\PackageUtility.cs",
             "Region": {
               "StartLine": 53,
               "EndLine": 53,
@@ -1456,7 +1252,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Test.Utility\\PackageUtility.cs",
+            "Uri": "\\nuget\\test\\Test.Utility\\PackageUtility.cs",
             "Region": {
               "StartLine": 82,
               "EndLine": 82,
@@ -1473,7 +1269,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Test.Utility\\PackageUtility.cs",
+            "Uri": "\\nuget\\test\\Test.Utility\\PackageUtility.cs",
             "Region": {
               "StartLine": 116,
               "EndLine": 116,
@@ -1490,7 +1286,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Test.Utility\\PackageUtility.cs",
+            "Uri": "\\nuget\\test\\Test.Utility\\PackageUtility.cs",
             "Region": {
               "StartLine": 152,
               "EndLine": 152,
@@ -1507,7 +1303,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\VisualStudio.Test\\PackageRestoreManagerTest.cs",
+            "Uri": "\\nuget\\test\\VisualStudio.Test\\PackageRestoreManagerTest.cs",
             "Region": {
               "StartLine": 809,
               "EndLine": 809,
@@ -1524,7 +1320,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Base\\BitSequence.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Base\\BitSequence.cs",
             "Region": {
               "StartLine": 126,
               "EndLine": 126,
@@ -1541,7 +1337,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Base\\BitSequence.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Base\\BitSequence.cs",
             "Region": {
               "StartLine": 202,
               "EndLine": 202,
@@ -1558,7 +1354,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Base\\BitSequence.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Base\\BitSequence.cs",
             "Region": {
               "StartLine": 229,
               "EndLine": 229,
@@ -1575,7 +1371,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Core.Test\\LivePacketDeviceTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Core.Test\\LivePacketDeviceTests.cs",
             "Region": {
               "StartLine": 662,
               "EndLine": 662,
@@ -1592,7 +1388,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Core.Test\\LivePacketDeviceTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Core.Test\\LivePacketDeviceTests.cs",
             "Region": {
               "StartLine": 711,
               "EndLine": 711,
@@ -1609,7 +1405,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Core.Test\\LivePacketDeviceTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Core.Test\\LivePacketDeviceTests.cs",
             "Region": {
               "StartLine": 749,
               "EndLine": 749,
@@ -1626,7 +1422,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Core.Test\\LivePacketDeviceTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Core.Test\\LivePacketDeviceTests.cs",
             "Region": {
               "StartLine": 794,
               "EndLine": 794,
@@ -1643,7 +1439,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\Arp\\ArpDatagram.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Arp\\ArpDatagram.cs",
             "Region": {
               "StartLine": 189,
               "EndLine": 189,
@@ -1660,7 +1456,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\DnsDatagram.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\DnsDatagram.cs",
             "Region": {
               "StartLine": 402,
               "EndLine": 402,
@@ -1677,7 +1473,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataKey.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataKey.cs",
             "Region": {
               "StartLine": 111,
               "EndLine": 111,
@@ -1694,7 +1490,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataSignature.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataSignature.cs",
             "Region": {
               "StartLine": 112,
               "EndLine": 112,
@@ -1711,7 +1507,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\Gre\\GreDatagram.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Gre\\GreDatagram.cs",
             "Region": {
               "StartLine": 363,
               "EndLine": 363,
@@ -1728,7 +1524,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\Igmp\\IgmpDatagram.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Igmp\\IgmpDatagram.cs",
             "Region": {
               "StartLine": 589,
               "EndLine": 589,
@@ -1745,7 +1541,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV4\\IpV4Datagram.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV4\\IpV4Datagram.cs",
             "Region": {
               "StartLine": 399,
               "EndLine": 399,
@@ -1762,7 +1558,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV4\\IpV4Datagram.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV4\\IpV4Datagram.cs",
             "Region": {
               "StartLine": 427,
               "EndLine": 427,
@@ -1779,7 +1575,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6Datagram.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6Datagram.cs",
             "Region": {
               "StartLine": 231,
               "EndLine": 231,
@@ -1796,7 +1592,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6ExtensionHeaderFragmentData.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6ExtensionHeaderFragmentData.cs",
             "Region": {
               "StartLine": 707,
               "EndLine": 707,
@@ -1813,7 +1609,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\Transport\\TcpDatagram.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Transport\\TcpDatagram.cs",
             "Region": {
               "StartLine": 353,
               "EndLine": 353,
@@ -1830,7 +1626,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
             "Region": {
               "StartLine": 1239,
               "EndLine": 1239,
@@ -1847,7 +1643,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\InfTree.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\InfTree.cs",
             "Region": {
               "StartLine": 228,
               "EndLine": 228,
@@ -1864,27 +1660,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\InfTree.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\InfTree.cs",
             "Region": {
               "StartLine": 465,
               "EndLine": 465,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S107",
-      "FullMessage": "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.Wlan\\WinAPI\\wlanapi.cs",
-            "Region": {
-              "StartLine": 144,
-              "EndLine": 144,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }

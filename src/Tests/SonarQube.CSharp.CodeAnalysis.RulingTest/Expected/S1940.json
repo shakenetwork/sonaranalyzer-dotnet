@@ -7,14 +7,31 @@
   "Issues": [
     {
       "RuleId": "S1940",
-      "FullMessage": "Use the opposite operator (\"!=\") instead.",
+      "FullMessage": "Use the opposite operator (\"<=\") instead.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\Core\\SemanticVersion.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
             "Region": {
-              "StartLine": 214,
-              "EndLine": 214,
+              "StartLine": 645,
+              "EndLine": 645,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1940",
+      "FullMessage": "Use the opposite operator (\"<=\") instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
+            "Region": {
+              "StartLine": 646,
+              "EndLine": 646,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -28,10 +45,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Base\\SerialNumber32.cs",
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.JsonPatch\\Adapters\\ObjectAdapter.cs",
             "Region": {
-              "StartLine": 154,
-              "EndLine": 154,
+              "StartLine": 579,
+              "EndLine": 579,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -45,10 +62,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Base\\UInt128.cs",
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Abstractions\\ModelBinding\\BindingSource.cs",
             "Region": {
-              "StartLine": 404,
-              "EndLine": 404,
+              "StartLine": 206,
+              "EndLine": 206,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -62,10 +79,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Base\\UInt24.cs",
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\DynamicDictionaryValue.cs",
             "Region": {
-              "StartLine": 95,
-              "EndLine": 95,
+              "StartLine": 144,
+              "EndLine": 144,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -79,10 +96,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Base\\UInt48.cs",
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\IO\\RequestStream.cs",
             "Region": {
-              "StartLine": 530,
-              "EndLine": 530,
+              "StartLine": 162,
+              "EndLine": 162,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -96,10 +113,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\DataLink.cs",
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\RequestHeaders.cs",
             "Region": {
-              "StartLine": 73,
-              "EndLine": 73,
+              "StartLine": 390,
+              "EndLine": 390,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -113,10 +130,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\Ethernet\\MacAddress.cs",
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.TzdbCompiler\\Tzdb\\ZoneRule.cs",
             "Region": {
-              "StartLine": 90,
-              "EndLine": 90,
+              "StartLine": 65,
+              "EndLine": 65,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -126,45 +143,11 @@
     },
     {
       "RuleId": "S1940",
-      "FullMessage": "Use the opposite operator (\"!=\") instead.",
+      "FullMessage": "Use the opposite operator (\">=\") instead.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV4\\IpV4Address.cs",
-            "Region": {
-              "StartLine": 100,
-              "EndLine": 100,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1940",
-      "FullMessage": "Use the opposite operator (\"!=\") instead.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV4\\IpV4Fragmentation.cs",
-            "Region": {
-              "StartLine": 79,
-              "EndLine": 79,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1940",
-      "FullMessage": "Use the opposite operator (\"!=\") instead.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV4\\IpV4OptionTimedAddress.cs",
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\DateInterval.cs",
             "Region": {
               "StartLine": 69,
               "EndLine": 69,
@@ -181,7 +164,347 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV4\\IpV4TimeOfDay.cs",
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Duration.cs",
+            "Region": {
+              "StartLine": 592,
+              "EndLine": 592,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1940",
+      "FullMessage": "Use the opposite operator (\"!=\") instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Instant.cs",
+            "Region": {
+              "StartLine": 357,
+              "EndLine": 357,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1940",
+      "FullMessage": "Use the opposite operator (\"!=\") instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Interval.cs",
+            "Region": {
+              "StartLine": 220,
+              "EndLine": 220,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1940",
+      "FullMessage": "Use the opposite operator (\"!=\") instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\LocalDate.cs",
+            "Region": {
+              "StartLine": 446,
+              "EndLine": 446,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1940",
+      "FullMessage": "Use the opposite operator (\"!=\") instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\LocalDateTime.cs",
+            "Region": {
+              "StartLine": 447,
+              "EndLine": 447,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1940",
+      "FullMessage": "Use the opposite operator (\"!=\") instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\LocalInstant.cs",
+            "Region": {
+              "StartLine": 145,
+              "EndLine": 145,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1940",
+      "FullMessage": "Use the opposite operator (\"!=\") instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Offset.cs",
+            "Region": {
+              "StartLine": 236,
+              "EndLine": 236,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1940",
+      "FullMessage": "Use the opposite operator (\"!=\") instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\OffsetDateTime.cs",
+            "Region": {
+              "StartLine": 668,
+              "EndLine": 668,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1940",
+      "FullMessage": "Use the opposite operator (\"!=\") instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\TimeZones\\Transition.cs",
+            "Region": {
+              "StartLine": 47,
+              "EndLine": 47,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1940",
+      "FullMessage": "Use the opposite operator (\"!=\") instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\ZonedDateTime.cs",
+            "Region": {
+              "StartLine": 358,
+              "EndLine": 358,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1940",
+      "FullMessage": "Use the opposite operator (\"!=\") instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Core\\SemanticVersion.cs",
+            "Region": {
+              "StartLine": 214,
+              "EndLine": 214,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1940",
+      "FullMessage": "Use the opposite operator (\"!=\") instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Base\\SerialNumber32.cs",
+            "Region": {
+              "StartLine": 154,
+              "EndLine": 154,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1940",
+      "FullMessage": "Use the opposite operator (\"!=\") instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Base\\UInt128.cs",
+            "Region": {
+              "StartLine": 404,
+              "EndLine": 404,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1940",
+      "FullMessage": "Use the opposite operator (\"!=\") instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Base\\UInt24.cs",
+            "Region": {
+              "StartLine": 95,
+              "EndLine": 95,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1940",
+      "FullMessage": "Use the opposite operator (\"!=\") instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Base\\UInt48.cs",
+            "Region": {
+              "StartLine": 530,
+              "EndLine": 530,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1940",
+      "FullMessage": "Use the opposite operator (\"!=\") instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\DataLink.cs",
+            "Region": {
+              "StartLine": 73,
+              "EndLine": 73,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1940",
+      "FullMessage": "Use the opposite operator (\"!=\") instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Ethernet\\MacAddress.cs",
+            "Region": {
+              "StartLine": 90,
+              "EndLine": 90,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1940",
+      "FullMessage": "Use the opposite operator (\"!=\") instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV4\\IpV4Address.cs",
+            "Region": {
+              "StartLine": 100,
+              "EndLine": 100,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1940",
+      "FullMessage": "Use the opposite operator (\"!=\") instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV4\\IpV4Fragmentation.cs",
+            "Region": {
+              "StartLine": 79,
+              "EndLine": 79,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1940",
+      "FullMessage": "Use the opposite operator (\"!=\") instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV4\\IpV4OptionTimedAddress.cs",
+            "Region": {
+              "StartLine": 69,
+              "EndLine": 69,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1940",
+      "FullMessage": "Use the opposite operator (\"!=\") instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV4\\IpV4TimeOfDay.cs",
             "Region": {
               "StartLine": 72,
               "EndLine": 72,
@@ -198,7 +521,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6Address.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6Address.cs",
             "Region": {
               "StartLine": 130,
               "EndLine": 130,
@@ -215,7 +538,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\Transport\\TcpOptionSelectiveAcknowledgmentBlock.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Transport\\TcpOptionSelectiveAcknowledgmentBlock.cs",
             "Region": {
               "StartLine": 85,
               "EndLine": 85,
@@ -232,7 +555,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Rar\\Headers\\MarkHeader.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Rar\\Headers\\MarkHeader.cs",
             "Region": {
               "StartLine": 14,
               "EndLine": 14,
@@ -249,7 +572,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Rar\\Headers\\MarkHeader.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Rar\\Headers\\MarkHeader.cs",
             "Region": {
               "StartLine": 18,
               "EndLine": 18,
@@ -266,7 +589,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Rar\\Headers\\MarkHeader.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Rar\\Headers\\MarkHeader.cs",
             "Region": {
               "StartLine": 22,
               "EndLine": 22,
@@ -283,7 +606,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Rar\\Headers\\MarkHeader.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Rar\\Headers\\MarkHeader.cs",
             "Region": {
               "StartLine": 26,
               "EndLine": 26,
@@ -300,7 +623,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
             "Region": {
               "StartLine": 122,
               "EndLine": 122,
@@ -317,7 +640,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
             "Region": {
               "StartLine": 210,
               "EndLine": 210,
@@ -334,7 +657,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
             "Region": {
               "StartLine": 869,
               "EndLine": 869,
@@ -351,7 +674,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
             "Region": {
               "StartLine": 1041,
               "EndLine": 1041,
@@ -368,7 +691,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
             "Region": {
               "StartLine": 1473,
               "EndLine": 1473,
@@ -385,7 +708,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
             "Region": {
               "StartLine": 1522,
               "EndLine": 1522,
@@ -402,7 +725,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
             "Region": {
               "StartLine": 450,
               "EndLine": 450,

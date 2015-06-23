@@ -11,10 +11,95 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.WebPages\\RequestResourceTracker.cs",
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\ApplicationModel\\DefaultApplicationModelProviderTest.cs",
             "Region": {
-              "StartLine": 45,
-              "EndLine": 45,
+              "StartLine": 923,
+              "EndLine": 923,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2953",
+      "FullMessage": "Either implement \"IDisposable.Dispose\", or totally rename this method to prevent confusion.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\ApplicationModel\\DefaultApplicationModelProviderTest.cs",
+            "Region": {
+              "StartLine": 928,
+              "EndLine": 928,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2953",
+      "FullMessage": "Either implement \"IDisposable.Dispose\", or totally rename this method to prevent confusion.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\ApplicationModel\\DefaultApplicationModelProviderTest.cs",
+            "Region": {
+              "StartLine": 949,
+              "EndLine": 949,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2953",
+      "FullMessage": "Either implement \"IDisposable.Dispose\", or totally rename this method to prevent confusion.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\ApplicationModel\\DefaultApplicationModelProviderTest.cs",
+            "Region": {
+              "StartLine": 976,
+              "EndLine": 976,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2953",
+      "FullMessage": "Either implement \"IDisposable.Dispose\", or totally rename this method to prevent confusion.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\ApplicationModel\\DefaultApplicationModelProviderTest.cs",
+            "Region": {
+              "StartLine": 989,
+              "EndLine": 989,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2953",
+      "FullMessage": "Either implement \"IDisposable.Dispose\", or totally rename this method to prevent confusion.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\ApplicationModel\\DefaultApplicationModelProviderTest.cs",
+            "Region": {
+              "StartLine": 993,
+              "EndLine": 993,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }

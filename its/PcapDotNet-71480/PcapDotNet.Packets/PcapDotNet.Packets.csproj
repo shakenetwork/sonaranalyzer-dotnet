@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8A184AF5-E46C-482C-81A3-76D8CE290104}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PcapDotNet.Packets</RootNamespace>
+    <AssemblyName>PcapDotNet.Packets</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\PcapDotNet.snk</AssemblyOriginatorKeyFile>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <DocumentationFile>..\..\bin\Debug\PcapDotNet.Packets.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>..\PcapDotNet.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <DocumentationFile>..\..\bin\Release\PcapDotNet.Packets.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>..\PcapDotNet.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arp\ArpLayer.cs" />
+    <Compile Include="Arp\ArpDatagram.cs" />
+    <Compile Include="Arp\ArpHardwareType.cs" />
+    <Compile Include="Arp\ArpOperation.cs" />
+    <Compile Include="Datagram.cs" />
+    <Compile Include="DataLink.cs" />
+    <Compile Include="DataLinkKind.cs" />
+    <Compile Include="DataSegment.cs" />
+    <Compile Include="Dns\DnsClass.cs" />
+    <Compile Include="Dns\DnsDataResourceRecord.cs" />
+    <Compile Include="Dns\DnsDomainName.cs" />
+    <Compile Include="Dns\DnsDatagram.cs" />
+    <Compile Include="Dns\DnsDomainNameCompressionData.cs" />
+    <Compile Include="Dns\DnsDomainNameCompressionMode.cs" />
+    <Compile Include="Dns\DnsLayer.cs" />
+    <Compile Include="Dns\DnsOpcode.cs" />
+    <Compile Include="Dns\DnsOptFlags.cs" />
+    <Compile Include="Dns\DnsOptionAnything.cs" />
+    <Compile Include="Dns\DnsOptResourceRecord.cs" />
+    <Compile Include="Dns\DnsOptVersion.cs" />
+    <Compile Include="Dns\DnsQueryResourceRecord.cs" />
+    <Compile Include="AddressFamily.cs" />
+    <Compile Include="Dns\ResourceData\DnsAddressPrefix.cs" />
+    <Compile Include="Dns\ResourceData\DnsAfsDatabaseSubtype.cs" />
+    <Compile Include="Dns\ResourceData\DnsAlgorithm.cs" />
+    <Compile Include="Dns\ResourceData\DnsAtmAddressFormat.cs" />
+    <Compile Include="Dns\ResourceData\DnsCertificateType.cs" />
+    <Compile Include="Dns\ResourceData\DnsCertificationAuthorityAuthorizationFlags.cs" />
+    <Compile Include="Dns\ResourceData\DnsDigestType.cs" />
+    <Compile Include="Dns\ResourceData\DnsFingerprintPublicKeyAlgorithm.cs" />
+    <Compile Include="Dns\ResourceData\DnsFingerprintType.cs" />
+    <Compile Include="Dns\ResourceData\DnsGateway.cs" />
+    <Compile Include="Dns\ResourceData\DnsGatewayDomainName.cs" />
+    <Compile Include="Dns\ResourceData\DnsGatewayIpV4.cs" />
+    <Compile Include="Dns\ResourceData\DnsGatewayIpV6.cs" />
+    <Compile Include="Dns\ResourceData\DnsGatewayNone.cs" />
+    <Compile Include="Dns\ResourceData\DnsGatewayType.cs" />
+    <Compile Include="Dns\ResourceData\DnsKeyNameType.cs" />
+    <Compile Include="Dns\ResourceData\DnsKeyProtocol.cs" />
+    <Compile Include="Dns\ResourceData\DnsKeySignatoryAttributes.cs" />
+    <Compile Include="Dns\ResourceData\DnsLongLivedQueryErrorCode.cs" />
+    <Compile Include="Dns\ResourceData\DnsLongLivedQueryOpcode.cs" />
+    <Compile Include="Dns\ResourceData\DnsOption.cs" />
+    <Compile Include="Dns\ResourceData\DnsOptionCode.cs" />
+    <Compile Include="Dns\ResourceData\DnsOptionLongLivedQuery.cs" />
+    <Compile Include="Dns\ResourceData\DnsOptions.cs" />
+    <Compile Include="Dns\ResourceData\DnsOptionUpdateLease.cs" />
+    <Compile Include="Dns\ResourceData\DnsPublicKeyAlgorithm.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceData.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceData2DomainNames.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataA6.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataAddressPrefixList.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataAfsDatabase.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataAnything.cs" />
+    <Compile Include="Dns\DnsResourceRecord.cs" />
+    <Compile Include="Dns\DnsResponseCode.cs" />
+    <Compile Include="Dns\DnsType.cs" />
+    <Compile Include="Dns\ListSegment.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataAtmAddress.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataCertificate.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataCertificationAuthorityAuthorization.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataDelegationSigner.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataDnsKey.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataDomainName.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataDomainNames.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataGeographicalPosition.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataHostIdentityProtocol.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataHostInformation.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataIpSecKey.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataIpV4.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataIpV6.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataIsdn.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataKey.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataKeyExchanger.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataLocationInformation.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataMailExchange.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataMailingListInfo.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataNamingAuthorityPointer.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataNetworkServiceAccessPoint.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataNextDomain.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataNextDomainSecure.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataNextDomainSecure3.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataNextDomainSecure3Base.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataNextDomainSecure3Parameters.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataNInfo.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataNoCompression.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataOptions.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataResponsiblePerson.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataRKey.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataRouteThrough.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataServerSelection.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataSignature.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataSimple.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataSink.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataSshFingerprint.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataStartOfAuthority.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataString.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataStrings.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataText.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataTransactionKey.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataTransactionSignature.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataTrustAnchorLink.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataUri.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataUShortDomainName.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataWellKnownService.cs" />
+    <Compile Include="Dns\ResourceData\DnsResourceDataX400Pointer.cs" />
+    <Compile Include="Dns\ResourceData\DnsSecNSec3Flags.cs" />
+    <Compile Include="Dns\ResourceData\DnsSecNSec3HashAlgorithm.cs" />
+    <Compile Include="Dns\ResourceData\DnsSinkCoding.cs" />
+    <Compile Include="Dns\ResourceData\DnsSinkCodingSubcoding.cs" />
+    <Compile Include="Dns\ResourceData\DnsTransactionKeyMode.cs" />
+    <Compile Include="Dns\ResourceData\DnsTypeBitmaps.cs" />
+    <Compile Include="Dns\ResourceData\DnsTypeRegistrationAttribute.cs" />
+    <Compile Include="Endianity.cs" />
+    <Compile Include="Ethernet\EthernetBaseDatagram.cs" />
+    <Compile Include="Ethernet\EthernetBaseLayer.cs" />
+    <Compile Include="Ethernet\EthernetLayer.cs" />
+    <Compile Include="Ethernet\EthernetDatagram.cs" />
+    <Compile Include="Ethernet\EthernetPayloadDatagrams.cs" />
+    <Compile Include="Ethernet\EthernetType.cs" />
+    <Compile Include="Ethernet\MacAddress.cs" />
+    <Compile Include="Arp\IArpPreviousLayer.cs" />
+    <Compile Include="Gre\GreDatagram.cs" />
+    <Compile Include="Gre\GreLayer.cs" />
+    <Compile Include="Gre\GreSourceRouteEntry.cs" />
+    <Compile Include="Gre\GreSourceRouteEntryAddressFamily.cs" />
+    <Compile Include="Gre\GreSourceRouteEntryAs.cs" />
+    <Compile Include="Gre\GreSourceRouteEntryIp.cs" />
+    <Compile Include="Gre\GreSourceRouteEntryUnknown.cs" />
+    <Compile Include="Gre\GreVersion.cs" />
+    <Compile Include="Http\AsciiBytes.cs" />
+    <Compile Include="Http\ByteExtensions.cs" />
+    <Compile Include="Http\HttpCommaSeparatedField.cs" />
+    <Compile Include="Http\HttpCommaSeparatedInnerField.cs" />
+    <Compile Include="Http\HttpContentLengthField.cs" />
+    <Compile Include="Http\HttpContentTypeField.cs" />
+    <Compile Include="Http\HttpDatagram.cs" />
+    <Compile Include="Http\HttpField.cs" />
+    <Compile Include="Http\HttpFieldParameters.cs" />
+    <Compile Include="Http\HttpHeader.cs" />
+    <Compile Include="Http\HttpLayer.cs" />
+    <Compile Include="Http\HttpParser.cs" />
+    <Compile Include="Http\HttpRegex.cs" />
+    <Compile Include="Http\HttpRequestDatagram.cs" />
+    <Compile Include="Http\HttpRequestKnownMethod.cs" />
+    <Compile Include="Http\HttpRequestLayer.cs" />
+    <Compile Include="Http\HttpRequestMethod.cs" />
+    <Compile Include="Http\HttpResponseDatagram.cs" />
+    <Compile Include="Http\HttpResponseLayer.cs" />
+    <Compile Include="Http\HttpTrailerField.cs" />
+    <Compile Include="Http\HttpTransferEncodingField.cs" />
+    <Compile Include="Http\HttpVersion.cs" />
+    <Compile Include="Icmp\IcmpAddressMaskReplyDatagram.cs" />
+    <Compile Include="Icmp\IcmpAddressMaskReplyLayer.cs" />
+    <Compile Include="Icmp\IcmpAddressMaskRequestLayer.cs" />
+    <Compile Include="Icmp\IcmpCodeConversionFailed.cs" />
+    <Compile Include="Icmp\IcmpCodeRedirect.cs" />
+    <Compile Include="Icmp\IcmpCodeSecurityFailure.cs" />
+    <Compile Include="Icmp\IcmpCodeTimeExceeded.cs" />
+    <Compile Include="Icmp\IcmpCodeTraceRoute.cs" />
+    <Compile Include="Icmp\IcmpConversionFailedLayer.cs" />
+    <Compile Include="Icmp\IcmpDatagramFactory.cs" />
+    <Compile Include="Icmp\IcmpDatagramRegistrationAttribute.cs" />
+    <Compile Include="Icmp\IcmpDestinationUnreachableDatagram.cs" />
+    <Compile Include="Icmp\IcmpDestinationUnreachableLayer.cs" />
+    <Compile Include="Icmp\IcmpDomainNameRequestDatagram.cs" />
+    <Compile Include="Icmp\IcmpDomainNameRequestLayer.cs" />
+    <Compile Include="Icmp\IcmpEchoLayer.cs" />
+    <Compile Include="Icmp\IcmpEchoReplyDatagram.cs" />
+    <Compile Include="Icmp\IcmpEchoReplyLayer.cs" />
+    <Compile Include="Icmp\IcmpIdentifiedLayer.cs" />
+    <Compile Include="Icmp\IcmpInformationReplyDatagram.cs" />
+    <Compile Include="Icmp\IcmpInformationReplyLayer.cs" />
+    <Compile Include="Icmp\IcmpInformationRequestDatagram.cs" />
+    <Compile Include="Icmp\IcmpInformationRequestLayer.cs" />
+    <Compile Include="Icmp\IcmpLayer.cs" />
+    <Compile Include="Icmp\IcmpParameterProblemLayer.cs" />
+    <Compile Include="Icmp\IcmpRedirectLayer.cs" />
+    <Compile Include="Icmp\IcmpRouterAdvertisementEntry.cs" />
+    <Compile Include="Icmp\IcmpRouterAdvertisementLayer.cs" />
+    <Compile Include="Icmp\IcmpRouterSolicitationDatagram.cs" />
+    <Compile Include="Icmp\IcmpRouterSolicitationLayer.cs" />
+    <Compile Include="Icmp\IcmpSecurityFailuresLayer.cs" />
+    <Compile Include="Icmp\IcmpSourceQuenchDatagram.cs" />
+    <Compile Include="Icmp\IcmpSourceQuenchLayer.cs" />
+    <Compile Include="Icmp\IcmpTimeExceededDatagram.cs" />
+    <Compile Include="Icmp\IcmpTimeExceededLayer.cs" />
+    <Compile Include="Icmp\IcmpTimestampLayer.cs" />
+    <Compile Include="Icmp\IcmpTimestampReplyDatagram.cs" />
+    <Compile Include="Icmp\IcmpTimestampReplyLayer.cs" />
+    <Compile Include="Icmp\IcmpTraceRouteLayer.cs" />
+    <Compile Include="Icmp\IcmpAddressMaskRequestDatagram.cs" />
+    <Compile Include="Icmp\IcmpCodeDestinationUnreachable.cs" />
+    <Compile Include="Icmp\IcmpConversionFailedDatagram.cs" />
+    <Compile Include="Icmp\IcmpDatagram.cs" />
+    <Compile Include="Icmp\IcmpEchoDatagram.cs" />
+    <Compile Include="Icmp\IcmpIdentifiedDatagram.cs" />
+    <Compile Include="Icmp\IcmpIpV4HeaderPlus64BitsPayloadDatagram.cs" />
+    <Compile Include="Icmp\IcmpIpV4PayloadDatagram.cs" />
+    <Compile Include="Icmp\IcmpParameterProblemDatagram.cs" />
+    <Compile Include="Icmp\IcmpRedirectDatagram.cs" />
+    <Compile Include="Icmp\IcmpRouterAdvertisementDatagram.cs" />
+    <Compile Include="Icmp\IcmpSecurityFailuresDatagram.cs" />
+    <Compile Include="Icmp\IcmpTimestampDatagram.cs" />
+    <Compile Include="Icmp\IcmpTraceRouteDatagram.cs" />
+    <Compile Include="Icmp\IcmpMessageType.cs" />
+    <Compile Include="Icmp\IcmpMessageTypeAndCode.cs" />
+    <Compile Include="Icmp\IcmpUnknownDatagram.cs" />
+    <Compile Include="Icmp\IcmpUnknownLayer.cs" />
+    <Compile Include="IDataLink.cs" />
+    <Compile Include="Ethernet\IEthernetNextLayer.cs" />
+    <Compile Include="Igmp\IgmpCreateGroupRequestVersion0Code.cs" />
+    <Compile Include="Igmp\IgmpLayer.cs" />
+    <Compile Include="Igmp\IgmpLeaveGroupVersion2Layer.cs" />
+    <Compile Include="Igmp\IgmpQueryVersion1Layer.cs" />
+    <Compile Include="Igmp\IgmpQueryVersion2Layer.cs" />
+    <Compile Include="Igmp\IgmpQueryVersion3Layer.cs" />
+    <Compile Include="Igmp\IgmpReplyVersion0Code.cs" />
+    <Compile Include="Igmp\IgmpReportVersion1Layer.cs" />
+    <Compile Include="Igmp\IgmpReportVersion2Layer.cs" />
+    <Compile Include="Igmp\IgmpReportVersion3Layer.cs" />
+    <Compile Include="Igmp\IgmpSimpleLayer.cs" />
+    <Compile Include="Igmp\IgmpVersion1Layer.cs" />
+    <Compile Include="Igmp\IgmpVersion2Layer.cs" />
+    <Compile Include="Igmp\IgmpDatagram.cs" />
+    <Compile Include="Igmp\IgmpGroupRecord.cs" />
+    <Compile Include="Igmp\IgmpGroupRecordDatagram.cs" />
+    <Compile Include="Igmp\IgmpQueryVersion.cs" />
+    <Compile Include="Igmp\IgmpRecordType.cs" />
+    <Compile Include="Igmp\IgmpMessageType.cs" />
+    <Compile Include="Igmp\IIgmpLayerWithGroupAddress.cs" />
+    <Compile Include="IpV6\IpV6CalipsoDomainOfInterpretation.cs" />
+    <Compile Include="IpV6\IpV6ExtensionHeader.cs" />
+    <Compile Include="IpV6\IpV6ExtensionHeaderAuthentication.cs" />
+    <Compile Include="IpV6\IpV6ExtensionHeaderDestinationOptions.cs" />
+    <Compile Include="IpV6\IpV6ExtensionHeaderEncapsulatingSecurityPayload.cs" />
+    <Compile Include="IpV6\IpV6ExtensionHeaderFragmentData.cs" />
+    <Compile Include="IpV6\IpV6ExtensionHeaderHopByHopOptions.cs" />
+    <Compile Include="IpV6\IpV6ExtensionHeaderOptions.cs" />
+    <Compile Include="IpV6\IpV6ExtensionHeaderRouting.cs" />
+    <Compile Include="IpV6\IpV6ExtensionHeaderRoutingHomeAddress.cs" />
+    <Compile Include="IpV6\IpV6ExtensionHeaderRoutingRpl.cs" />
+    <Compile Include="IpV6\IpV6ExtensionHeaderRoutingSourceRoute.cs" />
+    <Compile Include="IpV6\IpV6Option.cs" />
+    <Compile Include="IpV6\IpV6OptionCalipso.cs" />
+    <Compile Include="IpV6\IpV6OptionComplex.cs" />
+    <Compile Include="IpV6\IpV6OptionEndpointIdentification.cs" />
+    <Compile Include="IpV6\IpV6OptionHomeAddress.cs" />
+    <Compile Include="IpV6\IpV6OptionIlnpNonce.cs" />
+    <Compile Include="IpV6\IpV6OptionJumboPayload.cs" />
+    <Compile Include="IpV6\IpV6OptionLineIdentificationDestination.cs" />
+    <Compile Include="IpV6\IpV6OptionPad1.cs" />
+    <Compile Include="IpV6\IpV6OptionPadN.cs" />
+    <Compile Include="IpV6\IpV6OptionQuickStart.cs" />
+    <Compile Include="IpV6\IpV6OptionRouterAlert.cs" />
+    <Compile Include="IpV6\IpV6OptionRoutingProtocolLowPowerAndLossyNetworks.cs" />
+    <Compile Include="IpV6\IpV6Options.cs" />
+    <Compile Include="IpV6\IpV6OptionSimple.cs" />
+    <Compile Include="IpV6\IpV6OptionSmfDpd.cs" />
+    <Compile Include="IpV6\IpV6OptionSmfDpdDefault.cs" />
+    <Compile Include="IpV6\IpV6OptionSmfDpdIpV4.cs" />
+    <Compile Include="IpV6\IpV6OptionSmfDpdIpV6.cs" />
+    <Compile Include="IpV6\IpV6OptionSmfDpdNull.cs" />
+    <Compile Include="IpV6\IpV6OptionSmfDpdSequenceBased.cs" />
+    <Compile Include="IpV6\IpV6OptionSmfDpdSequenceHashAssistValue.cs" />
+    <Compile Include="IpV6\IpV6OptionTunnelEncapsulationLimit.cs" />
+    <Compile Include="IpV6\IpV6OptionType.cs" />
+    <Compile Include="IpV6\IpV6OptionTypeRegistrationAttribute.cs" />
+    <Compile Include="IpV6\IpV6OptionUnknown.cs" />
+    <Compile Include="IpV6\IpV6RouterAlertType.cs" />
+    <Compile Include="IpV6\IpV6RoutingType.cs" />
+    <Compile Include="IpV6\IpV6TaggerIdType.cs" />
+    <Compile Include="IpV6\PppFrameCheckSequenceCalculator.cs" />
+    <Compile Include="Ip\V4Option.cs" />
+    <Compile Include="Ip\IIpOptionQuickStart.cs" />
+    <Compile Include="IpV4\IpV4OptionTypeRegistrationAttribute.cs" />
+    <Compile Include="IpV4\IIpV4NextLayer.cs" />
+    <Compile Include="IpV4\IIpV4NextTransportLayer.cs" />
+    <Compile Include="ILayer.cs" />
+    <Compile Include="Ip\IOptionUnknownFactory.cs" />
+    <Compile Include="IpV4\IpV4Layer.cs" />
+    <Compile Include="IpV4\IpV4OptionUnknown.cs" />
+    <Compile Include="Ip\IpOptionQuickStartCommon.cs" />
+    <Compile Include="Transport\TcpOptionTypeRegistrationAttribute.cs" />
+    <Compile Include="IpV6\IpV6Address.cs" />
+    <Compile Include="IpV6\IpV6Datagram.cs" />
+    <Compile Include="Layer.cs" />
+    <Compile Include="Ip\Option.cs" />
+    <Compile Include="Ip\IOptionComplexFactory.cs" />
+    <Compile Include="IpV4\IpV4Address.cs" />
+    <Compile Include="IpV4\IpV4Datagram.cs" />
+    <Compile Include="IpV4\IpV4Fragmentation.cs" />
+    <Compile Include="IpV4\IpV4FragmentationOptions.cs" />
+    <Compile Include="IpV4\IpV4Option.cs" />
+    <Compile Include="IpV4\IpV4OptionComplex.cs" />
+    <Compile Include="IpV4\IpV4OptionLooseSourceRouting.cs" />
+    <Compile Include="IpV4\IpV4OptionQuickStart.cs" />
+    <Compile Include="IpV4\IpV4OptionQuickStartFunction.cs" />
+    <Compile Include="IpV4\IpV4OptionRouterAlert.cs" />
+    <Compile Include="IpV4\IpV4OptionSecurityProtectionAuthorities.cs" />
+    <Compile Include="IpV4\IpV4OptionSimple.cs" />
+    <Compile Include="IpV4\IpV4OptionRecordRoute.cs" />
+    <Compile Include="IpV4\IpV4OptionRoute.cs" />
+    <Compile Include="IpV4\IpV4Options.cs" />
+    <Compile Include="IpV4\IpV4OptionBasicSecurity.cs" />
+    <Compile Include="IpV4\IpV4OptionSecurityClassificationLevel.cs" />
+    <Compile Include="IpV4\IpV4OptionStreamIdentifier.cs" />
+    <Compile Include="IpV4\IpV4OptionStrictSourceRouting.cs" />
+    <Compile Include="IpV4\IpV4OptionTimedAddress.cs" />
+    <Compile Include="IpV4\IpV4TimeOfDay.cs" />
+    <Compile Include="IpV4\IpV4OptionTimestamp.cs" />
+    <Compile Include="IpV4\IpV4OptionTimestampAndAddress.cs" />
+    <Compile Include="IpV4\IpV4OptionTimestampOnly.cs" />
+    <Compile Include="IpV4\IpV4OptionTimestampType.cs" />
+    <Compile Include="IpV4\IpV4OptionTraceRoute.cs" />
+    <Compile Include="IpV4\IpV4OptionType.cs" />
+    <Compile Include="IpV4\IpV4Protocol.cs" />
+    <Compile Include="ByteArrayExtensions.cs" />
+    <Compile Include="Ip\OptionComplexFactory.cs" />
+    <Compile Include="Ip\Options.cs" />
+    <Compile Include="Ip\OptionTypeRegistrationAttribute.cs" />
+    <Compile Include="Packet.cs" />
+    <Compile Include="PacketBuilder.cs" />
+    <Compile Include="PayloadLayer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleLayer.cs" />
+    <Compile Include="Transport\TcpLayer.cs" />
+    <Compile Include="Transport\TcpOptionMood.cs" />
+    <Compile Include="Transport\TcpOptionMoodEmotion.cs" />
+    <Compile Include="Transport\TransportLayer.cs" />
+    <Compile Include="Transport\TcpDatagram.cs" />
+    <Compile Include="Transport\TcpControlBits.cs" />
+    <Compile Include="Transport\TcpOption.cs" />
+    <Compile Include="Transport\TcpOptionAlternateChecksumData.cs" />
+    <Compile Include="Transport\TcpOptionAlternateChecksumRequest.cs" />
+    <Compile Include="Transport\TcpOptionAlternateChecksumType.cs" />
+    <Compile Include="Transport\TcpOptionComplex.cs" />
+    <Compile Include="Transport\TcpOptionConnectionCount.cs" />
+    <Compile Include="Transport\TcpOptionConnectionCountBase.cs" />
+    <Compile Include="Transport\TcpOptionConnectionCountEcho.cs" />
+    <Compile Include="Transport\TcpOptionConnectionCountNew.cs" />
+    <Compile Include="Transport\TcpOptionEcho.cs" />
+    <Compile Include="Transport\TcpOptionEchoReply.cs" />
+    <Compile Include="Transport\TcpOptionMaximumSegmentSize.cs" />
+    <Compile Include="Transport\TcpOptionMd5Signature.cs" />
+    <Compile Include="Transport\TcpOptionPartialOrderConnectionPermitted.cs" />
+    <Compile Include="Transport\TcpOptionPartialOrderServiceProfile.cs" />
+    <Compile Include="Transport\TcpOptions.cs" />
+    <Compile Include="Transport\TcpOptionSelectiveAcknowledgment.cs" />
+    <Compile Include="Transport\TcpOptionSelectiveAcknowledgmentBlock.cs" />
+    <Compile Include="Transport\TcpOptionSelectiveAcknowledgmentPermitted.cs" />
+    <Compile Include="Transport\TcpOptionSimple.cs" />
+    <Compile Include="Transport\TcpOptionTimestamp.cs" />
+    <Compile Include="Transport\TcpOptionType.cs" />
+    <Compile Include="Transport\TcpOptionUnknown.cs" />
+    <Compile Include="Transport\TcpOptionWindowScale.cs" />
+    <Compile Include="Transport\TransportDatagram.cs" />
+    <Compile Include="Transport\UdpDatagram.cs" />
+    <Compile Include="Transport\UdpLayer.cs" />
+    <Compile Include="Ethernet\ClassOfService.cs" />
+    <Compile Include="Ethernet\VLanTaggedFrameDatagram.cs" />
+    <Compile Include="Ethernet\VLanTaggedFrameLayer.cs" />
+    <Compile Include="Ip\V4Options.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\PcapDotNet.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PcapDotNet.Base\PcapDotNet.Base.csproj">
+      <Project>{83E805C9-4D29-4E34-A27E-5A78690FBD2B}</Project>
+      <Name>PcapDotNet.Base</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="..\PcapDotNet.CodeAnalysisDictionary.xml">
+      <Link>PcapDotNet.CodeAnalysisDictionary.xml</Link>
+    </CodeAnalysisDictionary>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>if not exist "$(SolutionDir)$(SolutionName).snk" ("%25PROGRAMFILES%25\Microsoft SDKs\Windows\v7.0A\bin\sn.exe" -k "$(SolutionDir)$(SolutionName).snk")</PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

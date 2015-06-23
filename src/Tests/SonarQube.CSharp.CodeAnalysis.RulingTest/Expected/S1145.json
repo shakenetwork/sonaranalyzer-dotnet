@@ -7,37 +7,7 @@
   "Issues": [
     {
       "RuleId": "S1145",
-      "FullMessage": "Remove this \"if\" statement.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\additional-sources-for-not-covered-tests\\MisformattedMultilineBlocks.cs",
-            "Region": {
-              "StartLine": 13,
-              "EndLine": 13,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1145",
-      "FullMessage": "Remove this \"if\" statement.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\additional-sources-for-not-covered-tests\\MisformattedMultilineBlocks.cs",
-            "Region": {
-              "StartLine": 17,
-              "EndLine": 17,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
+      "Locations": []
     }
   ]
 }

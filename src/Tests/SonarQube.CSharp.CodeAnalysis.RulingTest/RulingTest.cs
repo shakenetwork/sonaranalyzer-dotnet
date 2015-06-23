@@ -164,6 +164,15 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
                             var location = issue.Locations.FirstOrDefault();
                             return location == null ? 0 : location.AnalysisTarget.Region.StartLine;
                         })
+                        .ThenBy(issue =>
+                        {
+                            var location = issue.Locations.FirstOrDefault();
+                            return location == null ? 0 : location.AnalysisTarget.Region.EndLine;
+                        })
+                        .ThenBy(issue =>
+                        {
+                            return issue.FullMessage;
+                        })
                         .ToList()
                 };
 
@@ -230,7 +239,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
         private void RemoveExactFilePathNames(string outputPath)
         {
             var fileContents = File.ReadAllText(outputPath);
-            fileContents = fileContents.Replace(ItSourcesRootDirectory.FullName, ItSourcesEnvVarName);
+            fileContents = fileContents.Replace(ItSourcesRootDirectory.FullName, string.Empty);
             File.WriteAllText(outputPath, fileContents);
         }
     }

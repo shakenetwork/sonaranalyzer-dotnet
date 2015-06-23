@@ -11,41 +11,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\MvcFutures\\Mvc\\ModelBinding\\CollectionModelBinderUtil.cs",
-            "Region": {
-              "StartLine": 66,
-              "EndLine": 66,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1994",
-      "FullMessage": "This loop's stop incrementer updates \"i\" but the stop condition doesn't test any variables.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\src\\SystemWebMvc\\Mvc\\DefaultModelBinder.cs",
-            "Region": {
-              "StartLine": 426,
-              "EndLine": 426,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1994",
-      "FullMessage": "This loop's stop incrementer updates \"i\" but the stop condition doesn't test any variables.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\Options\\PackageSourcesOptionsControl.cs",
+            "Uri": "\\nuget\\src\\Options\\PackageSourcesOptionsControl.cs",
             "Region": {
               "StartLine": 188,
               "EndLine": 188,
@@ -62,7 +28,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
             "Region": {
               "StartLine": 673,
               "EndLine": 673,
@@ -79,7 +45,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
             "Region": {
               "StartLine": 967,
               "EndLine": 967,
@@ -92,11 +58,11 @@
     },
     {
       "RuleId": "S1994",
-      "FullMessage": "This loop's stop condition tests \"memoryNode\" but the incrementer updates \"counts,index\".",
+      "FullMessage": "This loop's stop condition tests \"memoryNode\" but the incrementer updates \"counts\",\"index\".",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Allocator.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Allocator.cs",
             "Region": {
               "StartLine": 315,
               "EndLine": 315,
@@ -113,7 +79,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
             "Region": {
               "StartLine": 294,
               "EndLine": 294,
@@ -130,7 +96,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
             "Region": {
               "StartLine": 305,
               "EndLine": 305,

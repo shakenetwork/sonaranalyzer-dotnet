@@ -7,14 +7,14 @@
   "Issues": [
     {
       "RuleId": "S1117",
-      "FullMessage": "Rename \"route\" which hides the field with the same name.",
+      "FullMessage": "Rename \"dependencyResolver\" which hides the field with the same name.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Html\\Test\\ChildActionExtensionsTest.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\contrib\\dependencyInjection\\Akka.DI.Core\\DIExt.cs",
             "Region": {
-              "StartLine": 200,
-              "EndLine": 200,
+              "StartLine": 24,
+              "EndLine": 24,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -24,14 +24,14 @@
     },
     {
       "RuleId": "S1117",
-      "FullMessage": "Rename \"route\" which hides the field with the same name.",
+      "FullMessage": "Rename \"dispatcher\" which hides the field with the same name.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Html\\Test\\ChildActionExtensionsTest.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Dispatch\\Mailbox.cs",
             "Region": {
-              "StartLine": 218,
-              "EndLine": 218,
+              "StartLine": 78,
+              "EndLine": 78,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -41,14 +41,14 @@
     },
     {
       "RuleId": "S1117",
-      "FullMessage": "Rename \"html\" which hides the field with the same name.",
+      "FullMessage": "Rename \"type\" which hides the field with the same name.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Html\\Test\\LabelExtensionsTest.cs",
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\commandline\\Options.cs",
             "Region": {
-              "StartLine": 84,
-              "EndLine": 84,
+              "StartLine": 373,
+              "EndLine": 373,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -58,14 +58,14 @@
     },
     {
       "RuleId": "S1117",
-      "FullMessage": "Rename \"html\" which hides the field with the same name.",
+      "FullMessage": "Rename \"config\" which hides the field with the same name.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Html\\Test\\LabelExtensionsTest.cs",
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Authentication.Basic.Tests\\BasicAuthenticationFixture.cs",
             "Region": {
-              "StartLine": 246,
-              "EndLine": 246,
+              "StartLine": 142,
+              "EndLine": 142,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -75,14 +75,881 @@
     },
     {
       "RuleId": "S1117",
-      "FullMessage": "Rename \"html\" which hides the field with the same name.",
+      "FullMessage": "Rename \"hooks\" which hides the field with the same name.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Html\\Test\\LabelExtensionsTest.cs",
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Authentication.Basic.Tests\\BasicAuthenticationFixture.cs",
             "Region": {
-              "StartLine": 258,
-              "EndLine": 258,
+              "StartLine": 143,
+              "EndLine": 143,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"config\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Authentication.Basic.Tests\\BasicAuthenticationFixture.cs",
+            "Region": {
+              "StartLine": 164,
+              "EndLine": 164,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"hooks\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Authentication.Basic.Tests\\BasicAuthenticationFixture.cs",
+            "Region": {
+              "StartLine": 165,
+              "EndLine": 165,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"config\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Authentication.Basic.Tests\\BasicAuthenticationFixture.cs",
+            "Region": {
+              "StartLine": 188,
+              "EndLine": 188,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"hooks\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Authentication.Basic.Tests\\BasicAuthenticationFixture.cs",
+            "Region": {
+              "StartLine": 189,
+              "EndLine": 189,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"keys\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Authentication.Token\\Storage\\InMemoryTokenKeyStore.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"browser\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests.Functional\\Tests\\BasicRouteInvocationsFixture.cs",
+            "Region": {
+              "StartLine": 186,
+              "EndLine": 186,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"etag\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Helpers\\CacheHelpersFixture.cs",
+            "Region": {
+              "StartLine": 73,
+              "EndLine": 73,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"lastModified\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Helpers\\CacheHelpersFixture.cs",
+            "Region": {
+              "StartLine": 73,
+              "EndLine": 73,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"response\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Unit\\JsonFormatterExtensionsFixtures.cs",
+            "Region": {
+              "StartLine": 62,
+              "EndLine": 62,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"response\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Unit\\JsonFormatterExtensionsFixtures.cs",
+            "Region": {
+              "StartLine": 73,
+              "EndLine": 73,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"response\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Unit\\TextFormatterFixture.cs",
+            "Region": {
+              "StartLine": 45,
+              "EndLine": 45,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"url\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Unit\\UrlFixture.cs",
+            "Region": {
+              "StartLine": 274,
+              "EndLine": 274,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"conventions\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Unit\\ViewEngines\\DefaultViewFactoryFixture.cs",
+            "Region": {
+              "StartLine": 447,
+              "EndLine": 447,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"viewLocator\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Unit\\ViewEngines\\DefaultViewLocatorFixture.cs",
+            "Region": {
+              "StartLine": 329,
+              "EndLine": 329,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"era\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Calendars\\SingleEraCalculator.cs",
+            "Region": {
+              "StartLine": 27,
+              "EndLine": 27,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"era\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Calendars\\SingleEraCalculator.cs",
+            "Region": {
+              "StartLine": 37,
+              "EndLine": 37,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"era\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Calendars\\SingleEraCalculator.cs",
+            "Region": {
+              "StartLine": 46,
+              "EndLine": 46,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"era\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Calendars\\SingleEraCalculator.cs",
+            "Region": {
+              "StartLine": 52,
+              "EndLine": 52,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"days\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Duration.cs",
+            "Region": {
+              "StartLine": 487,
+              "EndLine": 487,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"days\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Duration.cs",
+            "Region": {
+              "StartLine": 526,
+              "EndLine": 526,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"days\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Duration.cs",
+            "Region": {
+              "StartLine": 798,
+              "EndLine": 798,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"days\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Duration.cs",
+            "Region": {
+              "StartLine": 810,
+              "EndLine": 810,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"nanoOfDay\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Duration.cs",
+            "Region": {
+              "StartLine": 814,
+              "EndLine": 814,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"days\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Duration.cs",
+            "Region": {
+              "StartLine": 835,
+              "EndLine": 835,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"nanoOfDay\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Duration.cs",
+            "Region": {
+              "StartLine": 839,
+              "EndLine": 839,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"duration\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Instant.cs",
+            "Region": {
+              "StartLine": 292,
+              "EndLine": 292,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"duration\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Instant.cs",
+            "Region": {
+              "StartLine": 341,
+              "EndLine": 341,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"nanoseconds\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\LocalTime.cs",
+            "Region": {
+              "StartLine": 650,
+              "EndLine": 650,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"pattern\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Text\\DurationPattern.cs",
+            "Region": {
+              "StartLine": 99,
+              "EndLine": 99,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"pattern\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Text\\InstantPattern.cs",
+            "Region": {
+              "StartLine": 114,
+              "EndLine": 114,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"pattern\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Text\\LocalDatePattern.cs",
+            "Region": {
+              "StartLine": 119,
+              "EndLine": 119,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"pattern\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Text\\LocalDateTimePattern.cs",
+            "Region": {
+              "StartLine": 152,
+              "EndLine": 152,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"pattern\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Text\\LocalTimePattern.cs",
+            "Region": {
+              "StartLine": 117,
+              "EndLine": 117,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"pattern\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Text\\OffsetDateTimePattern.cs",
+            "Region": {
+              "StartLine": 161,
+              "EndLine": 161,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"pattern\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Text\\ZonedDateTimePattern.cs",
+            "Region": {
+              "StartLine": 157,
+              "EndLine": 157,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"standardOffset\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\TimeZones\\DaylightSavingsDateTimeZone.cs",
+            "Region": {
+              "StartLine": 180,
+              "EndLine": 180,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"standardRecurrence\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\TimeZones\\DaylightSavingsDateTimeZone.cs",
+            "Region": {
+              "StartLine": 186,
+              "EndLine": 186,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"dstRecurrence\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\TimeZones\\DaylightSavingsDateTimeZone.cs",
+            "Region": {
+              "StartLine": 187,
+              "EndLine": 187,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"data\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\TimeZones\\IO\\TzdbStreamField.cs",
+            "Region": {
+              "StartLine": 51,
+              "EndLine": 51,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"periods\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\TimeZones\\PrecalculatedDateTimeZone.cs",
+            "Region": {
+              "StartLine": 168,
+              "EndLine": 168,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"tailZone\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\TimeZones\\PrecalculatedDateTimeZone.cs",
+            "Region": {
+              "StartLine": 181,
+              "EndLine": 181,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"latitudeSeconds\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\TimeZones\\TzdbZone1970Location.cs",
+            "Region": {
+              "StartLine": 123,
+              "EndLine": 123,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"longitudeSeconds\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\TimeZones\\TzdbZone1970Location.cs",
+            "Region": {
+              "StartLine": 124,
+              "EndLine": 124,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"latitudeSeconds\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\TimeZones\\TzdbZoneLocation.cs",
+            "Region": {
+              "StartLine": 108,
+              "EndLine": 108,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"longitudeSeconds\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\TimeZones\\TzdbZoneLocation.cs",
+            "Region": {
+              "StartLine": 109,
+              "EndLine": 109,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"options\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\TimeZones\\ZoneEqualityComparer.cs",
+            "Region": {
+              "StartLine": 172,
+              "EndLine": 172,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"dayOfWeek\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\TimeZones\\ZoneYearOffset.cs",
+            "Region": {
+              "StartLine": 269,
+              "EndLine": 269,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"addDay\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\TimeZones\\ZoneYearOffset.cs",
+            "Region": {
+              "StartLine": 271,
+              "EndLine": 271,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"monthOfYear\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\TimeZones\\ZoneYearOffset.cs",
+            "Region": {
+              "StartLine": 272,
+              "EndLine": 272,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"dayOfMonth\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\TimeZones\\ZoneYearOffset.cs",
+            "Region": {
+              "StartLine": 273,
+              "EndLine": 273,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"offsetDateTime\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\ZonedDateTime.cs",
+            "Region": {
+              "StartLine": 742,
+              "EndLine": 742,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -96,7 +963,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Archive\\AbstractWritableArchive.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Archive\\AbstractWritableArchive.cs",
             "Region": {
               "StartLine": 119,
               "EndLine": 119,
@@ -113,7 +980,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Archive\\Zip\\ZipArchive.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Archive\\Zip\\ZipArchive.cs",
             "Region": {
               "StartLine": 115,
               "EndLine": 115,
@@ -130,7 +997,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\GZip\\GZipFilePart.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\GZip\\GZipFilePart.cs",
             "Region": {
               "StartLine": 33,
               "EndLine": 33,
@@ -147,7 +1014,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\GZip\\GZipFilePart.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\GZip\\GZipFilePart.cs",
             "Region": {
               "StartLine": 75,
               "EndLine": 75,
@@ -164,7 +1031,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Rar\\Headers\\NewSubHeader.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Rar\\Headers\\NewSubHeader.cs",
             "Region": {
               "StartLine": 34,
               "EndLine": 34,
@@ -181,7 +1048,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Zip\\WinzipAesCryptoStream.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Zip\\WinzipAesCryptoStream.cs",
             "Region": {
               "StartLine": 45,
               "EndLine": 45,
@@ -198,7 +1065,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
             "Region": {
               "StartLine": 60,
               "EndLine": 60,
@@ -215,27 +1082,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
             "Region": {
               "StartLine": 356,
               "EndLine": 356,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1117",
-      "FullMessage": "Rename \"limit\" which hides the field with the same name.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
-            "Region": {
-              "StartLine": 418,
-              "EndLine": 418,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -249,7 +1099,24 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 418,
+              "EndLine": 418,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1117",
+      "FullMessage": "Rename \"limit\" which hides the field with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
             "Region": {
               "StartLine": 418,
               "EndLine": 418,
@@ -266,7 +1133,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
             "Region": {
               "StartLine": 419,
               "EndLine": 419,
@@ -283,7 +1150,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
             "Region": {
               "StartLine": 422,
               "EndLine": 422,
@@ -300,7 +1167,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
             "Region": {
               "StartLine": 472,
               "EndLine": 472,
@@ -317,7 +1184,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
             "Region": {
               "StartLine": 593,
               "EndLine": 593,
@@ -334,7 +1201,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
             "Region": {
               "StartLine": 1050,
               "EndLine": 1050,
@@ -351,7 +1218,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
             "Region": {
               "StartLine": 1073,
               "EndLine": 1073,
@@ -368,7 +1235,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
             "Region": {
               "StartLine": 592,
               "EndLine": 592,
@@ -385,7 +1252,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\DeflateManager.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\DeflateManager.cs",
             "Region": {
               "StartLine": 1543,
               "EndLine": 1543,
@@ -402,7 +1269,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\InfTree.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\InfTree.cs",
             "Region": {
               "StartLine": 228,
               "EndLine": 228,
@@ -419,7 +1286,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\InfTree.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\InfTree.cs",
             "Region": {
               "StartLine": 229,
               "EndLine": 229,
@@ -436,7 +1303,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\InfTree.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\InfTree.cs",
             "Region": {
               "StartLine": 446,
               "EndLine": 446,
@@ -453,7 +1320,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\InfTree.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\InfTree.cs",
             "Region": {
               "StartLine": 465,
               "EndLine": 465,
@@ -470,7 +1337,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Tree.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Tree.cs",
             "Region": {
               "StartLine": 328,
               "EndLine": 328,
@@ -487,7 +1354,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
             "Region": {
               "StartLine": 1434,
               "EndLine": 1434,
@@ -504,7 +1371,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\ModelPPM.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\ModelPPM.cs",
             "Region": {
               "StartLine": 822,
               "EndLine": 822,
@@ -521,7 +1388,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\ModelPPM.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\ModelPPM.cs",
             "Region": {
               "StartLine": 945,
               "EndLine": 945,
@@ -538,7 +1405,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\ModelPPM.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\ModelPPM.cs",
             "Region": {
               "StartLine": 975,
               "EndLine": 975,
@@ -555,7 +1422,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\PPMContext.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\PPMContext.cs",
             "Region": {
               "StartLine": 100,
               "EndLine": 100,
@@ -572,7 +1439,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\PPMContext.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\PPMContext.cs",
             "Region": {
               "StartLine": 114,
               "EndLine": 114,
@@ -589,7 +1456,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\PPMContext.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\PPMContext.cs",
             "Region": {
               "StartLine": 119,
               "EndLine": 119,
@@ -606,7 +1473,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\PPMContext.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\PPMContext.cs",
             "Region": {
               "StartLine": 426,
               "EndLine": 426,
@@ -623,7 +1490,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\PPMContext.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\PPMContext.cs",
             "Region": {
               "StartLine": 451,
               "EndLine": 451,
@@ -640,7 +1507,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\PPMContext.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\PPMContext.cs",
             "Region": {
               "StartLine": 511,
               "EndLine": 511,
@@ -657,7 +1524,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\RarMemBlock.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\RarMemBlock.cs",
             "Region": {
               "StartLine": 70,
               "EndLine": 70,
@@ -674,7 +1541,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\RarMemBlock.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\RarMemBlock.cs",
             "Region": {
               "StartLine": 75,
               "EndLine": 75,
@@ -691,7 +1558,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\RarMemBlock.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\RarMemBlock.cs",
             "Region": {
               "StartLine": 111,
               "EndLine": 111,
@@ -708,7 +1575,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\RarMemBlock.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\RarMemBlock.cs",
             "Region": {
               "StartLine": 116,
               "EndLine": 116,
@@ -725,7 +1592,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\RarNode.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\RarNode.cs",
             "Region": {
               "StartLine": 25,
               "EndLine": 25,
@@ -742,7 +1609,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\RarNode.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\RarNode.cs",
             "Region": {
               "StartLine": 30,
               "EndLine": 30,
@@ -759,7 +1626,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\StateRef.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\StateRef.cs",
             "Region": {
               "StartLine": 66,
               "EndLine": 66,
@@ -776,7 +1643,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\StateRef.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\StateRef.cs",
             "Region": {
               "StartLine": 71,
               "EndLine": 71,
@@ -793,7 +1660,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
             "Region": {
               "StartLine": 297,
               "EndLine": 297,
@@ -810,7 +1677,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
             "Region": {
               "StartLine": 359,
               "EndLine": 359,
@@ -827,7 +1694,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
             "Region": {
               "StartLine": 364,
               "EndLine": 364,
@@ -844,7 +1711,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\Model.cs",
             "Region": {
               "StartLine": 719,
               "EndLine": 719,
@@ -861,7 +1728,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack.cs",
             "Region": {
               "StartLine": 160,
               "EndLine": 160,
@@ -878,7 +1745,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
             "Region": {
               "StartLine": 676,
               "EndLine": 676,
@@ -895,7 +1762,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
             "Region": {
               "StartLine": 911,
               "EndLine": 911,
@@ -912,7 +1779,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
             "Region": {
               "StartLine": 992,
               "EndLine": 992,
@@ -929,7 +1796,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Writer\\AbstractWriter.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Writer\\AbstractWriter.cs",
             "Region": {
               "StartLine": 17,
               "EndLine": 17,
@@ -946,78 +1813,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Writer\\Zip\\ZipWriter.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Writer\\Zip\\ZipWriter.cs",
             "Region": {
               "StartLine": 219,
               "EndLine": 219,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1117",
-      "FullMessage": "Rename \"props\" which hides the property with the same name.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.ICS\\IcsConnection.cs",
-            "Region": {
-              "StartLine": 55,
-              "EndLine": 55,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1117",
-      "FullMessage": "Rename \"config\" which hides the property with the same name.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.ICS\\IcsConnection.cs",
-            "Region": {
-              "StartLine": 129,
-              "EndLine": 129,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1117",
-      "FullMessage": "Rename \"config\" which hides the property with the same name.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.ICS\\IcsConnection.cs",
-            "Region": {
-              "StartLine": 138,
-              "EndLine": 138,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1117",
-      "FullMessage": "Rename \"config\" which hides the property with the same name.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\VirtualRouter-71075\\VirtualRouter.ICS\\IcsConnection.cs",
-            "Region": {
-              "StartLine": 147,
-              "EndLine": 147,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }

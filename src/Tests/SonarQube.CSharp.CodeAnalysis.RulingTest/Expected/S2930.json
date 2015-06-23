@@ -7,14 +7,14 @@
   "Issues": [
     {
       "RuleId": "S2930",
-      "FullMessage": "\"Dispose\" of \"_timer\".",
+      "FullMessage": "\"Dispose\" of \"_cancellationTokenSource\".",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Async\\Test\\AsyncActionDescriptorTest.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.TestKit.Tests\\TestActorRefTests\\ReceiveTimeoutActor.cs",
             "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
+              "StartLine": 18,
+              "EndLine": 18,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -24,14 +24,14 @@
     },
     {
       "RuleId": "S2930",
-      "FullMessage": "\"Dispose\" of \"_asyncWaitHandle\".",
+      "FullMessage": "\"Dispose\" of \"_latch\".",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Async\\Test\\MockAsyncResult.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.TestKit\\TestLatch.cs",
             "Region": {
-              "StartLine": 8,
-              "EndLine": 8,
+              "StartLine": 29,
+              "EndLine": 29,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -41,14 +41,14 @@
     },
     {
       "RuleId": "S2930",
-      "FullMessage": "\"Dispose\" of \"_waitHandle\".",
+      "FullMessage": "\"Dispose\" of \"_fileStream\".",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\mvc3\\test\\SystemWebMvcTest\\Mvc\\Async\\Test\\SignalContainer.cs",
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests.integration\\infrastructure.app\\services\\FilesServiceSpecs.cs",
             "Region": {
-              "StartLine": 8,
-              "EndLine": 8,
+              "StartLine": 38,
+              "EndLine": 38,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -58,14 +58,14 @@
     },
     {
       "RuleId": "S2930",
-      "FullMessage": "\"Dispose\" of \"_tempWriter\".",
+      "FullMessage": "\"Dispose\" of \"fileStream\".",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.WebPages\\WebPageBase.cs",
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests.integration\\scenarios\\InstallScenarios.cs",
             "Region": {
-              "StartLine": 20,
-              "EndLine": 20,
+              "StartLine": 692,
+              "EndLine": 692,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -75,14 +75,269 @@
     },
     {
       "RuleId": "S2930",
-      "FullMessage": "\"Dispose\" of \"_outputStream\".",
+      "FullMessage": "\"Dispose\" of \"fileStream\".",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\System.Web.WebPages.Test\\Extensions\\HttpResponseExtensionsTest.cs",
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests.integration\\scenarios\\InstallScenarios.cs",
             "Region": {
-              "StartLine": 17,
-              "EndLine": 17,
+              "StartLine": 792,
+              "EndLine": 792,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2930",
+      "FullMessage": "\"Dispose\" of \"fileStream\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests.integration\\scenarios\\UninstallScenarios.cs",
+            "Region": {
+              "StartLine": 336,
+              "EndLine": 336,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2930",
+      "FullMessage": "\"Dispose\" of \"fileStream\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests.integration\\scenarios\\UninstallScenarios.cs",
+            "Region": {
+              "StartLine": 409,
+              "EndLine": 409,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2930",
+      "FullMessage": "\"Dispose\" of \"fileStream\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests.integration\\scenarios\\UpgradeScenarios.cs",
+            "Region": {
+              "StartLine": 623,
+              "EndLine": 623,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2930",
+      "FullMessage": "\"Dispose\" of \"fileStream\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests.integration\\scenarios\\UpgradeScenarios.cs",
+            "Region": {
+              "StartLine": 730,
+              "EndLine": 730,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2930",
+      "FullMessage": "\"Dispose\" of \"writer\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure.app\\configuration\\ConfigurationOptionsSpec.cs",
+            "Region": {
+              "StartLine": 42,
+              "EndLine": 42,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2930",
+      "FullMessage": "\"Dispose\" of \"_tokenSource\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\WebSites\\HtmlGenerationWebSite\\ProductsService.cs",
+            "Region": {
+              "StartLine": 11,
+              "EndLine": 11,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2930",
+      "FullMessage": "\"Dispose\" of \"_serverResetEvent\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\WebSites\\RazorWebSite\\Services\\WaitService.cs",
+            "Region": {
+              "StartLine": 12,
+              "EndLine": 12,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2930",
+      "FullMessage": "\"Dispose\" of \"_clientResetEvent\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\WebSites\\RazorWebSite\\Services\\WaitService.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2930",
+      "FullMessage": "\"Dispose\" of \"provider\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Cryptography\\PassphraseKeyGenerator.cs",
+            "Region": {
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2930",
+      "FullMessage": "\"Dispose\" of \"provider\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Cryptography\\RandomKeyGenerator.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2930",
+      "FullMessage": "\"Dispose\" of \"stream\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\IO\\RequestStream.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2930",
+      "FullMessage": "\"Dispose\" of \"lazyWriterTimer\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Targets\\Wrappers\\AsyncTargetWrapper.cs",
+            "Region": {
+              "StartLine": 82,
+              "EndLine": 82,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2930",
+      "FullMessage": "\"Dispose\" of \"readStream\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.Test\\TimeZones\\IO\\IoStream.cs",
+            "Region": {
+              "StartLine": 23,
+              "EndLine": 23,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2930",
+      "FullMessage": "\"Dispose\" of \"writeStream\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.Test\\TimeZones\\IO\\IoStream.cs",
+            "Region": {
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2930",
+      "FullMessage": "\"Dispose\" of \"stream\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.TzdbCompiler\\Tzdb\\TzdbStreamWriter.cs",
+            "Region": {
+              "StartLine": 222,
+              "EndLine": 222,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -96,7 +351,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\Dialog10\\Nodes\\PackagesTreeNodeBase.cs",
+            "Uri": "\\nuget\\src\\Dialog10\\Nodes\\PackagesTreeNodeBase.cs",
             "Region": {
               "StartLine": 41,
               "EndLine": 41,
@@ -113,7 +368,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\src\\Server\\Infrastructure\\ServerPackageRepository.cs",
+            "Uri": "\\nuget\\src\\Server\\Infrastructure\\ServerPackageRepository.cs",
             "Region": {
               "StartLine": 15,
               "EndLine": 15,
@@ -130,7 +385,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Test.Integration\\NuGetCommandLine\\NuGetCommandLineTest.cs",
+            "Uri": "\\nuget\\test\\Test.Integration\\NuGetCommandLine\\NuGetCommandLineTest.cs",
             "Region": {
               "StartLine": 21,
               "EndLine": 21,
@@ -147,7 +402,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\GZip\\GZipFilePart.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\GZip\\GZipFilePart.cs",
             "Region": {
               "StartLine": 12,
               "EndLine": 12,
@@ -164,7 +419,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Zip\\WinzipAesCryptoStream.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Zip\\WinzipAesCryptoStream.cs",
             "Region": {
               "StartLine": 12,
               "EndLine": 12,
@@ -181,7 +436,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ParallelDeflateOutputStream.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ParallelDeflateOutputStream.cs",
             "Region": {
               "StartLine": 116,
               "EndLine": 116,
@@ -198,7 +453,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ParallelDeflateOutputStream.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ParallelDeflateOutputStream.cs",
             "Region": {
               "StartLine": 117,
               "EndLine": 117,
@@ -215,7 +470,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\IO\\RewindableStream.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\IO\\RewindableStream.cs",
             "Region": {
               "StartLine": 8,
               "EndLine": 8,

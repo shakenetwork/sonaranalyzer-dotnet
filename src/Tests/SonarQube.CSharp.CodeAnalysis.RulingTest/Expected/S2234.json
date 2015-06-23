@@ -7,11 +7,28 @@
   "Issues": [
     {
       "RuleId": "S2234",
+      "FullMessage": "Parameters to \"Subtract\" have the same names but not the same order as the method arguments.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Fields\\TimePeriodField.cs",
+            "Region": {
+              "StartLine": 138,
+              "EndLine": 138,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2234",
       "FullMessage": "Parameters to \"Merge\" have the same names but not the same order as the method arguments.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Base\\BitSequence.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Base\\BitSequence.cs",
             "Region": {
               "StartLine": 153,
               "EndLine": 153,
@@ -28,7 +45,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Base\\BitSequence.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Base\\BitSequence.cs",
             "Region": {
               "StartLine": 185,
               "EndLine": 185,
@@ -45,7 +62,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Base\\BitSequence.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Base\\BitSequence.cs",
             "Region": {
               "StartLine": 257,
               "EndLine": 257,

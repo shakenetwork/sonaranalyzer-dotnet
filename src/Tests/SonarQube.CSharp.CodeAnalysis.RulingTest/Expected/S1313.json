@@ -7,14 +7,14 @@
   "Issues": [
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 127.0.0.1 address configurable.",
+      "FullMessage": "Make this IP 192.168.107.1 address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\Microsoft.Web.Helpers.Test\\ReCaptchaTest.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests\\Actor\\ActorPathSpec.cs",
             "Region": {
-              "StartLine": 115,
-              "EndLine": 115,
+              "StartLine": 131,
+              "EndLine": 131,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -28,10 +28,27 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\Microsoft.Web.Helpers.Test\\ReCaptchaTest.cs",
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests\\Configuration\\HoconTests.cs",
             "Region": {
-              "StartLine": 123,
-              "EndLine": 123,
+              "StartLine": 259,
+              "EndLine": 259,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1313",
+      "FullMessage": "Make this IP 0.0.0.0 address configurable.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure\\information\\VersionInformationSpecs.cs",
+            "Region": {
+              "StartLine": 61,
+              "EndLine": 61,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -45,10 +62,248 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\test\\Microsoft.Web.Helpers.Test\\ReCaptchaTest.cs",
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Testing.Tests\\BrowserFixture.cs",
             "Region": {
-              "StartLine": 134,
-              "EndLine": 134,
+              "StartLine": 56,
+              "EndLine": 56,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1313",
+      "FullMessage": "Make this IP 127.0.0.1 address configurable.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Testing.Tests\\BrowserFixture.cs",
+            "Region": {
+              "StartLine": 73,
+              "EndLine": 73,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1313",
+      "FullMessage": "Make this IP ::1 address configurable.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Testing.Tests\\BrowserFixture.cs",
+            "Region": {
+              "StartLine": 91,
+              "EndLine": 91,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1313",
+      "FullMessage": "Make this IP 84.12.65.72 address configurable.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Testing.Tests\\BrowserFixture.cs",
+            "Region": {
+              "StartLine": 109,
+              "EndLine": 109,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1313",
+      "FullMessage": "Make this IP ::1 address configurable.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Unit\\Extensions\\RequestExtensionsFixture.cs",
+            "Region": {
+              "StartLine": 41,
+              "EndLine": 41,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1313",
+      "FullMessage": "Make this IP 127.0.0.1 address configurable.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Unit\\Extensions\\RequestExtensionsFixture.cs",
+            "Region": {
+              "StartLine": 72,
+              "EndLine": 72,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1313",
+      "FullMessage": "Make this IP 86.13.73.12 address configurable.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Unit\\Extensions\\RequestExtensionsFixture.cs",
+            "Region": {
+              "StartLine": 83,
+              "EndLine": 83,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1313",
+      "FullMessage": "Make this IP ::1 address configurable.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Unit\\UrlFixture.cs",
+            "Region": {
+              "StartLine": 50,
+              "EndLine": 50,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1313",
+      "FullMessage": "Make this IP 127.0.0.1 address configurable.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Unit\\UrlFixture.cs",
+            "Region": {
+              "StartLine": 65,
+              "EndLine": 65,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1313",
+      "FullMessage": "Make this IP 192.168.0.15 address configurable.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\Mail\\Buffered\\Example.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1313",
+      "FullMessage": "Make this IP 192.168.0.15 address configurable.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\Mail\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1313",
+      "FullMessage": "Make this IP :: address configurable.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Layouts\\SimpleLayoutParserTests.cs",
+            "Region": {
+              "StartLine": 308,
+              "EndLine": 308,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1313",
+      "FullMessage": "Make this IP :: address configurable.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Layouts\\SimpleLayoutParserTests.cs",
+            "Region": {
+              "StartLine": 347,
+              "EndLine": 347,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1313",
+      "FullMessage": "Make this IP 14.15.16.7 address configurable.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.Test\\Text\\LocalTimePatternTest.cs",
+            "Region": {
+              "StartLine": 229,
+              "EndLine": 229,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1313",
+      "FullMessage": "Make this IP 14.15.16.78 address configurable.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.Test\\Text\\LocalTimePatternTest.cs",
+            "Region": {
+              "StartLine": 230,
+              "EndLine": 230,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -62,7 +317,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Core.Test\\PackageRepositoryTest.cs",
+            "Uri": "\\nuget\\test\\Core.Test\\PackageRepositoryTest.cs",
             "Region": {
               "StartLine": 293,
               "EndLine": 293,
@@ -79,7 +334,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Core.Test\\PackageRepositoryTest.cs",
+            "Uri": "\\nuget\\test\\Core.Test\\PackageRepositoryTest.cs",
             "Region": {
               "StartLine": 323,
               "EndLine": 323,
@@ -96,7 +351,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\PowerShellCmdlets.Test\\GetPackageCommandTest.cs",
+            "Uri": "\\nuget\\test\\PowerShellCmdlets.Test\\GetPackageCommandTest.cs",
             "Region": {
               "StartLine": 539,
               "EndLine": 539,
@@ -113,7 +368,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\Test.Integration\\Core\\LocalPackageRepositoryTest.cs",
+            "Uri": "\\nuget\\test\\Test.Integration\\Core\\LocalPackageRepositoryTest.cs",
             "Region": {
               "StartLine": 241,
               "EndLine": 241,
@@ -130,7 +385,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\VisualStudio.Test\\UriHelperTest.cs",
+            "Uri": "\\nuget\\test\\VisualStudio.Test\\UriHelperTest.cs",
             "Region": {
               "StartLine": 13,
               "EndLine": 13,
@@ -147,7 +402,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\VisualStudio.Test\\VsTemplateWizardTest.cs",
+            "Uri": "\\nuget\\test\\VisualStudio.Test\\VsTemplateWizardTest.cs",
             "Region": {
               "StartLine": 923,
               "EndLine": 923,
@@ -164,7 +419,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\VisualStudio.Test\\VsTemplateWizardTest.cs",
+            "Uri": "\\nuget\\test\\VisualStudio.Test\\VsTemplateWizardTest.cs",
             "Region": {
               "StartLine": 937,
               "EndLine": 937,
@@ -181,7 +436,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\VisualStudio.Test\\VsTemplateWizardTest.cs",
+            "Uri": "\\nuget\\test\\VisualStudio.Test\\VsTemplateWizardTest.cs",
             "Region": {
               "StartLine": 955,
               "EndLine": 955,
@@ -198,7 +453,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\VisualStudio.Test\\VsTemplateWizardTest.cs",
+            "Uri": "\\nuget\\test\\VisualStudio.Test\\VsTemplateWizardTest.cs",
             "Region": {
               "StartLine": 975,
               "EndLine": 975,
@@ -215,7 +470,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\VisualStudio.Test\\VsTemplateWizardTest.cs",
+            "Uri": "\\nuget\\test\\VisualStudio.Test\\VsTemplateWizardTest.cs",
             "Region": {
               "StartLine": 999,
               "EndLine": 999,
@@ -232,7 +487,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\nuget-189b1aeab812\\test\\VisualStudio.Test\\VsTemplateWizardTest.cs",
+            "Uri": "\\nuget\\test\\VisualStudio.Test\\VsTemplateWizardTest.cs",
             "Region": {
               "StartLine": 1020,
               "EndLine": 1020,
@@ -249,7 +504,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\ArpTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\ArpTests.cs",
             "Region": {
               "StartLine": 100,
               "EndLine": 100,
@@ -266,7 +521,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\ArpTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\ArpTests.cs",
             "Region": {
               "StartLine": 101,
               "EndLine": 101,
@@ -283,7 +538,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\DnsTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\DnsTests.cs",
             "Region": {
               "StartLine": 738,
               "EndLine": 738,
@@ -300,7 +555,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IgmpTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IgmpTests.cs",
             "Region": {
               "StartLine": 402,
               "EndLine": 402,
@@ -317,7 +572,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IgmpTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IgmpTests.cs",
             "Region": {
               "StartLine": 403,
               "EndLine": 403,
@@ -334,7 +589,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4AddressTests.cs",
             "Region": {
               "StartLine": 45,
               "EndLine": 45,
@@ -351,7 +606,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4AddressTests.cs",
             "Region": {
               "StartLine": 72,
               "EndLine": 72,
@@ -368,7 +623,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4AddressTests.cs",
             "Region": {
               "StartLine": 73,
               "EndLine": 73,
@@ -385,7 +640,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4AddressTests.cs",
             "Region": {
               "StartLine": 74,
               "EndLine": 74,
@@ -402,7 +657,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4AddressTests.cs",
             "Region": {
               "StartLine": 75,
               "EndLine": 75,
@@ -419,7 +674,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4AddressTests.cs",
             "Region": {
               "StartLine": 76,
               "EndLine": 76,
@@ -436,7 +691,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4AddressTests.cs",
             "Region": {
               "StartLine": 77,
               "EndLine": 77,
@@ -453,7 +708,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4AddressTests.cs",
             "Region": {
               "StartLine": 78,
               "EndLine": 78,
@@ -470,7 +725,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4AddressTests.cs",
             "Region": {
               "StartLine": 79,
               "EndLine": 79,
@@ -487,7 +742,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4AddressTests.cs",
             "Region": {
               "StartLine": 80,
               "EndLine": 80,
@@ -504,7 +759,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4AddressTests.cs",
             "Region": {
               "StartLine": 81,
               "EndLine": 81,
@@ -521,7 +776,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4AddressTests.cs",
             "Region": {
               "StartLine": 82,
               "EndLine": 82,
@@ -538,7 +793,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4Tests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4Tests.cs",
             "Region": {
               "StartLine": 75,
               "EndLine": 75,
@@ -555,7 +810,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4Tests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4Tests.cs",
             "Region": {
               "StartLine": 76,
               "EndLine": 76,
@@ -572,7 +827,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4Tests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4Tests.cs",
             "Region": {
               "StartLine": 169,
               "EndLine": 169,
@@ -589,7 +844,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4Tests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4Tests.cs",
             "Region": {
               "StartLine": 170,
               "EndLine": 170,
@@ -606,7 +861,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4Tests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4Tests.cs",
             "Region": {
               "StartLine": 176,
               "EndLine": 176,
@@ -623,7 +878,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4Tests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4Tests.cs",
             "Region": {
               "StartLine": 185,
               "EndLine": 185,
@@ -640,7 +895,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4Tests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4Tests.cs",
             "Region": {
               "StartLine": 357,
               "EndLine": 357,
@@ -657,7 +912,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4Tests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV4Tests.cs",
             "Region": {
               "StartLine": 358,
               "EndLine": 358,
@@ -674,7 +929,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 111,
               "EndLine": 111,
@@ -691,7 +946,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 112,
               "EndLine": 112,
@@ -708,7 +963,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 113,
               "EndLine": 113,
@@ -725,7 +980,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 114,
               "EndLine": 114,
@@ -742,7 +997,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 115,
               "EndLine": 115,
@@ -759,7 +1014,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 116,
               "EndLine": 116,
@@ -776,7 +1031,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 117,
               "EndLine": 117,
@@ -793,7 +1048,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 118,
               "EndLine": 118,
@@ -810,7 +1065,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 119,
               "EndLine": 119,
@@ -827,27 +1082,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 120,
               "EndLine": 120,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1313",
-      "FullMessage": "Make this IP 1:2:3:4:5:6:7:8 address configurable.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
-            "Region": {
-              "StartLine": 122,
-              "EndLine": 122,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -861,7 +1099,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 122,
               "EndLine": 122,
@@ -878,10 +1116,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
-              "StartLine": 123,
-              "EndLine": 123,
+              "StartLine": 122,
+              "EndLine": 122,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -895,7 +1133,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 123,
               "EndLine": 123,
@@ -908,14 +1146,14 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 1:0:3:4:5:6:7:8 address configurable.",
+      "FullMessage": "Make this IP 1:2:3:4:5:6:7:8 address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
-              "StartLine": 124,
-              "EndLine": 124,
+              "StartLine": 123,
+              "EndLine": 123,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -929,7 +1167,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 124,
               "EndLine": 124,
@@ -946,10 +1184,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
-              "StartLine": 125,
-              "EndLine": 125,
+              "StartLine": 124,
+              "EndLine": 124,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -963,7 +1201,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 125,
               "EndLine": 125,
@@ -976,14 +1214,14 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0:0:3:4:5:6:7:8 address configurable.",
+      "FullMessage": "Make this IP 1:0:3:4:5:6:7:8 address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
-              "StartLine": 126,
-              "EndLine": 126,
+              "StartLine": 125,
+              "EndLine": 125,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -997,7 +1235,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 126,
               "EndLine": 126,
@@ -1014,10 +1252,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
-              "StartLine": 127,
-              "EndLine": 127,
+              "StartLine": 126,
+              "EndLine": 126,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -1031,10 +1269,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
-              "StartLine": 128,
-              "EndLine": 128,
+              "StartLine": 127,
+              "EndLine": 127,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -1048,7 +1286,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 128,
               "EndLine": 128,
@@ -1061,14 +1299,14 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0:0:3:0:0:6:7:8 address configurable.",
+      "FullMessage": "Make this IP 0:0:3:4:5:6:7:8 address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
-              "StartLine": 129,
-              "EndLine": 129,
+              "StartLine": 128,
+              "EndLine": 128,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -1082,7 +1320,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 129,
               "EndLine": 129,
@@ -1099,10 +1337,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
-              "StartLine": 130,
-              "EndLine": 130,
+              "StartLine": 129,
+              "EndLine": 129,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -1116,7 +1354,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 130,
               "EndLine": 130,
@@ -1133,10 +1371,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
-              "StartLine": 131,
-              "EndLine": 131,
+              "StartLine": 130,
+              "EndLine": 130,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -1150,7 +1388,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 131,
               "EndLine": 131,
@@ -1167,10 +1405,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
-              "StartLine": 132,
-              "EndLine": 132,
+              "StartLine": 131,
+              "EndLine": 131,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -1184,7 +1422,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 132,
               "EndLine": 132,
@@ -1201,10 +1439,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
-              "StartLine": 133,
-              "EndLine": 133,
+              "StartLine": 132,
+              "EndLine": 132,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -1218,7 +1456,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 133,
               "EndLine": 133,
@@ -1235,10 +1473,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
-              "StartLine": 134,
-              "EndLine": 134,
+              "StartLine": 133,
+              "EndLine": 133,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -1252,7 +1490,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 134,
               "EndLine": 134,
@@ -1269,7 +1507,24 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Region": {
+              "StartLine": 134,
+              "EndLine": 134,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1313",
+      "FullMessage": "Make this IP 0:0:3:0:0:6:7:8 address configurable.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 135,
               "EndLine": 135,
@@ -1286,7 +1541,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 136,
               "EndLine": 136,
@@ -1303,7 +1558,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 137,
               "EndLine": 137,
@@ -1320,7 +1575,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 138,
               "EndLine": 138,
@@ -1337,7 +1592,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 139,
               "EndLine": 139,
@@ -1354,7 +1609,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 140,
               "EndLine": 140,
@@ -1371,7 +1626,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
             "Region": {
               "StartLine": 146,
               "EndLine": 146,
@@ -1388,7 +1643,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV4\\IpV4Address.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV4\\IpV4Address.cs",
             "Region": {
               "StartLine": 131,
               "EndLine": 131,
@@ -1405,7 +1660,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6Address.cs",
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6Address.cs",
             "Region": {
               "StartLine": 72,
               "EndLine": 72,

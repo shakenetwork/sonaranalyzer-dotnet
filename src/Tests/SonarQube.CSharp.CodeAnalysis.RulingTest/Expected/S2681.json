@@ -11,10 +11,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\additional-sources-for-not-covered-tests\\MisformattedMultilineBlocks.cs",
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Internal\\PropertyHelper.cs",
             "Region": {
-              "StartLine": 15,
-              "EndLine": 15,
+              "StartLine": 86,
+              "EndLine": 86,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -28,10 +28,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\additional-sources-for-not-covered-tests\\MisformattedMultilineBlocks.cs",
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Internal\\PropertyHelper.cs",
             "Region": {
-              "StartLine": 21,
-              "EndLine": 21,
+              "StartLine": 86,
+              "EndLine": 86,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -41,14 +41,48 @@
     },
     {
       "RuleId": "S2681",
-      "FullMessage": "Only the first line of this n-line block will be executed in a loop. The rest will execute only once.",
+      "FullMessage": "Only the first line of this n-line block will be executed conditionally. The rest will execute unconditionally.",
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\additional-sources-for-not-covered-tests\\MisformattedMultilineBlocks.cs",
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Internal\\PropertyHelper.cs",
             "Region": {
-              "StartLine": 25,
-              "EndLine": 25,
+              "StartLine": 86,
+              "EndLine": 86,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2681",
+      "FullMessage": "Only the first line of this n-line block will be executed conditionally. The rest will execute unconditionally.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Internal\\PropertyHelper.cs",
+            "Region": {
+              "StartLine": 86,
+              "EndLine": 86,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2681",
+      "FullMessage": "Only the first line of this n-line block will be executed conditionally. The rest will execute unconditionally.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\LogManager.cs",
+            "Region": {
+              "StartLine": 186,
+              "EndLine": 186,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }

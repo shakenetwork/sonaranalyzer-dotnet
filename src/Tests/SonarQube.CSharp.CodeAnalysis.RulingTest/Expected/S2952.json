@@ -11,10 +11,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\mvc3-rtm-sources\\webpages\\src\\System.Web.Razor\\RazorEditorParser.cs",
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Internal\\TimeoutContinuation.cs",
             "Region": {
-              "StartLine": 186,
-              "EndLine": 186,
+              "StartLine": 106,
+              "EndLine": 106,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -28,7 +28,24 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\LogFactory.cs",
+            "Region": {
+              "StartLine": 589,
+              "EndLine": 589,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2952",
+      "FullMessage": "Move this \"Dispose\" call into this class' own \"Dispose\" method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
             "Region": {
               "StartLine": 346,
               "EndLine": 346,
@@ -45,7 +62,7 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "SONAR_IT_SOURCES\\csharp\\ruling\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\MultiVolumeReadOnlyStream.cs",
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\MultiVolumeReadOnlyStream.cs",
             "Region": {
               "StartLine": 56,
               "EndLine": 56,
