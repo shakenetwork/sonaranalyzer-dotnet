@@ -106,7 +106,7 @@
     <Compile Include="Rules\PropertiesOfReadonlyGenericsField.cs" />
     <Compile Include="Rules\VisibleInstanceField.cs" />
     <Compile Include="Rules\VisibleStaticField.cs" />
-    <Compile Include="Rules\NotDisposedIDisposableField.cs" />
+    <Compile Include="Rules\NotDisposedIDisposable.cs" />
     <Compile Include="Rules\FieldShouldBeReadonly.cs" />
     <Compile Include="Rules\EmptinessChecking.cs" />
     <Compile Include="Rules\ParameterNamesInPartialMethod.cs" />

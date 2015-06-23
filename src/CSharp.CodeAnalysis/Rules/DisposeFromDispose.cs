@@ -72,7 +72,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
                     var fieldSymbol = c.SemanticModel.GetSymbolInfo(memberAccess.Expression).Symbol as IFieldSymbol;
                     if (fieldSymbol == null ||
-                        !ClassWithIDisposableMembers.FieldIsRelevant(fieldSymbol) ||
+                        !ClassWithIDisposableMembers.IsNonStaticNonPublicDisposableField(fieldSymbol) ||
                         !ClassWithIDisposableMembers.ImplementsIDisposable(fieldSymbol.ContainingType))
                     {
                         return;

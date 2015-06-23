@@ -78,7 +78,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
                     var disposableFields = namedTypeSymbol.GetMembers()
                         .OfType<IFieldSymbol>()
-                        .Where(FieldIsRelevant)
+                        .Where(IsNonStaticNonPublicDisposableField)
                         .ToImmutableHashSet();
 
                     if (!fieldsByNamedType.ContainsKey(namedTypeSymbol))
@@ -146,7 +146,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
         {
             var objectCreation = expression as ObjectCreationExpressionSyntax;
             if (objectCreation == null ||
-                !FieldIsRelevant(fieldSymbol))
+                !IsNonStaticNonPublicDisposableField(fieldSymbol))
             {
                 return fieldsAssigned;
             }
@@ -154,28 +154,19 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             return fieldsAssigned.Add(fieldSymbol);
         }
 
-        internal static bool FieldIsRelevant(IFieldSymbol fieldSymbol)
+        internal static bool IsNonStaticNonPublicDisposableField(IFieldSymbol fieldSymbol)
         {
             return fieldSymbol != null &&
                    !fieldSymbol.IsStatic &&
                    Accessibilities.Contains(fieldSymbol.DeclaredAccessibility) &&
-                   FieldImplementsIDisposable(fieldSymbol);
-        }
-
-        internal static bool FieldImplementsIDisposable(IFieldSymbol symbol)
-        {
-            var namedType = symbol.Type as INamedTypeSymbol;
-            return namedType != null && ImplementsIDisposable(namedType);
+                   ImplementsIDisposable(fieldSymbol.Type as INamedTypeSymbol);
         }
 
         internal static bool ImplementsIDisposable(INamedTypeSymbol namedTypeSymbol)
         {
-            if (namedTypeSymbol == null)
-            {
-                return false;
-            }
-
-            return namedTypeSymbol.AllInterfaces.Any(symbol => symbol.SpecialType == SpecialType.System_IDisposable);
+            return namedTypeSymbol != null &&
+                   namedTypeSymbol.AllInterfaces.Any(symbol =>
+                       symbol.SpecialType == SpecialType.System_IDisposable);
         }
     }
 }

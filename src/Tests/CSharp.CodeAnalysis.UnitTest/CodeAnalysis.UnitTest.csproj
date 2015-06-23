@@ -133,7 +133,7 @@
     <Compile Include="Rules\PropertiesOfReadonlyGenericsFieldTest.cs" />
     <Compile Include="Rules\VisibleInstanceFieldTest.cs" />
     <Compile Include="Rules\VisibleStaticFieldTest.cs" />
-    <Compile Include="Rules\NotDisposedIDisposableFieldTest.cs" />
+    <Compile Include="Rules\NotDisposedIDisposableTest.cs" />
     <Compile Include="Rules\FieldShouldBeReadonlyTest.cs" />
     <Compile Include="Rules\EmptinessCheckingTest.cs" />
     <Compile Include="Rules\ParameterNamesInPartialMethodTest.cs" />
@@ -252,7 +252,7 @@
     <None Include="TestCases\ClassWithIDisposableMembers.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="TestCases\NotDisposedIDisposableField.cs">
+    <None Include="TestCases\NotDisposedIDisposable.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\FieldShouldBeReadonly.cs">

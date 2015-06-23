@@ -5,7 +5,8 @@
 </p>
 <p>
     When an <code>IDisposable</code> is a class member, then it's up to that class to call <code>Dispose</code>
-    on it, ideally in its own <code>Dispose</code> method.
+    on it, ideally in its own <code>Dispose</code> method. If it's a local variable, then it should be instantiated
+    with a <code>using</code> clause to prompt automatic cleanup when it goes out of scope.
 </p>
 <p>
     This rule raises issues on members that are never <code>Dispose</code>d.
@@ -24,12 +25,18 @@ public class ResourceHolder
   {
     this.fs.Close();
   }
+  public void WriteToFile(string path, string text)
+  {
+    var fs = new FileStream(path, FileMode.Open);  // Noncompliant
+    var bytes = Encoding.UTF8.GetBytes(text);
+    fs.Write(bytes, 0, bytes.Length);
+  }
 }
 </pre>
 
 <h2>Compliant Solution</h2>
 <pre>
-public class ResourceHolder  : IDisposable
+public class ResourceHolder : IDisposable
 {
   private FileStream fs;
   public void OpenResource(string path)
@@ -45,7 +52,35 @@ public class ResourceHolder  : IDisposable
   {
     this.fs.Dispose();
   }
+
+  public void WriteToFile(string path, string text)
+  {
+    using (var fs = new FileStream(path, FileMode.Open))
+    {
+      var bytes = Encoding.UTF8.GetBytes(text);
+      fs.Write(bytes, 0, bytes.Length);
+    }
+  }
 }
+</pre>
+
+<h2>Exceptions</h2>
+Local <code>IDisposable</code>s returned from methods are ignored, as are local <code>IDisposable</code>s that are 
+initialized with non-local <code>IDisposable</code>s.
+<pre>
+  public Stream WriteToFile(string path, string text)
+  {
+    var fs = new FileStream(path, FileMode.Open); // Compliant, because it is returned
+    var bytes = Encoding.UTF8.GetBytes(text);
+    fs.Write(bytes, 0, bytes.Length);
+    return fs;
+  }
+
+  public void ReadFromStream(Stream s)
+  {
+    var sr = new StreamReader(s); // Compliant as it would close the underlying stream.
+    // ...
+  }
 </pre>
 
 <h2>See</h2>

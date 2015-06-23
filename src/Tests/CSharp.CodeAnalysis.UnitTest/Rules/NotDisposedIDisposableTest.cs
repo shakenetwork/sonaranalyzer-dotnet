@@ -24,13 +24,13 @@ using SonarQube.CSharp.CodeAnalysis.Rules;
 namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
 {
     [TestClass]
-    public class NotDisposedIDisposableFieldTest
+    public class NotDisposedIDisposableTest
     {
         [TestMethod]
         [TestCategory("Rule")]
         public void NotDisposedIDisposableField()
         {
-            Verifier.Verify(@"TestCases\NotDisposedIDisposableField.cs", new NotDisposedIDisposableField());
+            Verifier.Verify(@"TestCases\NotDisposedIDisposable.cs", new NotDisposedIDisposable());
         }
     }
 }
