@@ -31,6 +31,6 @@ namespace SonarQube.CSharp.CodeAnalysis.Descriptor
             Rules= new List<RuleDetail>();
         }
         [XmlElement("rule")]
-        public List<RuleDetail> Rules { get; set; }
+        public List<RuleDetail> Rules { get; private set; }
     }
 }

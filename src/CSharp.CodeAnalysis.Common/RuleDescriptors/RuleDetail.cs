@@ -34,8 +34,8 @@ namespace SonarQube.CSharp.CodeAnalysis.Common
         public string Title { get; set; }
         public string Severity { get; set; }
         public string Description { get; set; }
-        public List<string> Tags { get; set; }
-        public List<RuleParameter> Parameters { get; set; }
+        public List<string> Tags { get; private set; }
+        public List<RuleParameter> Parameters { get; private set; }
         public bool IsActivatedByDefault { get; set; }
         public bool IsTemplate { get; set; }
         public SqaleDescriptor SqaleDescriptor { get; set; }

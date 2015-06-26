@@ -39,7 +39,7 @@ namespace SonarQube.CSharp.CodeAnalysis.DocGenerator
         private static readonly string DestinationFilePattern = DestinationFolderPattern + "/{1}.html";
         private const string TemplateHtmlResourceName = "SonarQube.CSharp.CodeAnalysis.DocGenerator.DocResources.main.template.html";
 
-        static void Main(string[] args)
+        static void Main()
         {
             var ruleDetails = RuleDetailBuilder.GetParameterlessRuleDetails().ToList();
             var productVersion = FileVersionInfo.GetVersionInfo(typeof(Program).Assembly.Location).ProductVersion;

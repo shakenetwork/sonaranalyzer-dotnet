@@ -121,7 +121,7 @@
     <Compile Include="Rules\DisposeNotImplementingDisposeTest.cs" />
     <Compile Include="Rules\RedundantCastTest.cs" />
     <Compile Include="Rules\ArrayCovarianceTest.cs" />
-    <Compile Include="Rules\SimplifyLinqTest.cs" />
+    <Compile Include="Rules\CollectionQuerySimplificationTest.cs" />
     <Compile Include="Rules\ReferenceEqualsOnValueTypeTest.cs" />
     <Compile Include="Rules\ThreadStaticWithInitializerTest.cs" />
     <Compile Include="Rules\ThreadStaticNonStaticFieldTest.cs" />
@@ -129,36 +129,36 @@
     <Compile Include="Rules\DisposableReturnedFromUsingTest.cs" />
     <Compile Include="Rules\GotoStatementTest.cs" />
     <Compile Include="Rules\LockOnThisOrTypeTest.cs" />
-    <Compile Include="Rules\GenericTypeParameterNullTest.cs" />
-    <Compile Include="Rules\PropertiesOfReadonlyGenericsFieldTest.cs" />
-    <Compile Include="Rules\VisibleInstanceFieldTest.cs" />
-    <Compile Include="Rules\VisibleStaticFieldTest.cs" />
-    <Compile Include="Rules\NotDisposedIDisposableTest.cs" />
+    <Compile Include="Rules\GenericTypeParameterEmptinessCheckingTest.cs" />
+    <Compile Include="Rules\GenericReadonlyFieldPropertyAssignmentTest.cs" />
+    <Compile Include="Rules\FieldShouldNotBePublicTest.cs" />
+    <Compile Include="Rules\StaticFieldVisibleTest.cs" />
+    <Compile Include="Rules\DisposableNotDisposedTest.cs" />
     <Compile Include="Rules\FieldShouldBeReadonlyTest.cs" />
-    <Compile Include="Rules\EmptinessCheckingTest.cs" />
+    <Compile Include="Rules\CollectionEmptinessCheckingTest.cs" />
     <Compile Include="Rules\ParameterNamesInPartialMethodTest.cs" />
-    <Compile Include="Rules\ClassWithIDisposableMembersTest.cs" />
-    <Compile Include="Rules\CollapsibleIfsTest.cs" />
+    <Compile Include="Rules\DisposableMemberInNonDisposableClassTest.cs" />
+    <Compile Include="Rules\IfCollapsibleTest.cs" />
     <Compile Include="Rules\ConsoleLoggingTest.cs" />
     <Compile Include="Rules\HardcodedIpAddressTest.cs" />
     <Compile Include="Rules\ToStringNoNullTest.cs" />
     <Compile Include="Rules\DeadStoresTest.cs" />
     <Compile Include="Rules\GetHashCodeMutableTest.cs" />
-    <Compile Include="Rules\LocalVariablesShadowTest.cs" />
+    <Compile Include="Rules\VariableShadowsFieldTest.cs" />
     <Compile Include="Rules\AssignmentInsideSubExpressionTest.cs" />
     <Compile Include="Rules\AsyncAwaitIdentifierTest.cs" />
-    <Compile Include="Rules\AtLeastThreeCasesInSwitchTest.cs" />
+    <Compile Include="Rules\SwitchCasesMinimumThreeTest.cs" />
     <Compile Include="Rules\BreakOutsideSwitchTest.cs" />
     <Compile Include="Rules\CatchRethrowTest.cs" />
     <Compile Include="Rules\ClassNameTest.cs" />
     <Compile Include="Rules\CommentedOutCodeTest.cs" />
     <Compile Include="Rules\CommentRegularExpressionTest.cs" />
     <Compile Include="Rules\ParametersCorrectOrderTest.cs" />
-    <Compile Include="Rules\SequentialSameConditionTest.cs" />
+    <Compile Include="Rules\ConditionalsWithSameConditionTest.cs" />
     <Compile Include="Rules\ConditionalStructureSameConditionTest.cs" />
     <Compile Include="Rules\ConditionalStructureSameImplementationTest.cs" />
-    <Compile Include="Rules\ElseIfWithoutElseTest.cs" />
-    <Compile Include="Rules\EmptyCatchTest.cs" />
+    <Compile Include="Rules\IfChainWithoutElseTest.cs" />
+    <Compile Include="Rules\CatchEmptyTest.cs" />
     <Compile Include="Rules\EmptyMethodTest.cs" />
     <Compile Include="Rules\EmptyNestedBlockTest.cs" />
     <Compile Include="Rules\EmptyStatementTest.cs" />
@@ -167,7 +167,7 @@
     <Compile Include="Rules\ForLoopCounterChangedTest.cs" />
     <Compile Include="Rules\ForLoopCounterConditionTest.cs" />
     <Compile Include="Rules\FunctionComplexityTest.cs" />
-    <Compile Include="Rules\IdenticalExpressionsInBinaryOpTest.cs" />
+    <Compile Include="Rules\BinaryOperationWithIdenticalExpressionsTest.cs" />
     <Compile Include="Rules\IfConditionalAlwaysTrueOrFalseTest.cs" />
     <Compile Include="Rules\LineLengthTest.cs" />
     <Compile Include="Rules\MagicNumberTest.cs" />
@@ -176,17 +176,17 @@
     <Compile Include="Rules\ObjectCreatedDroppedTest.cs" />
     <Compile Include="Rules\ParameterAssignedToTest.cs" />
     <Compile Include="Rules\RightCurlyBraceStartsLineTest.cs" />
-    <Compile Include="Rules\SelfAssignedVariablesTest.cs" />
+    <Compile Include="Rules\SelfAssignmentTest.cs" />
     <Compile Include="Rules\ShortCircuitNullPointerDereferenceTest.cs" />
-    <Compile Include="Rules\FloatingPointEqualityTest.cs" />
+    <Compile Include="Rules\EqualityOnFloatingPointTest.cs" />
     <Compile Include="Rules\StaticFieldInGenericClassTest.cs" />
     <Compile Include="Rules\SwitchWithoutDefaultTest.cs" />
     <Compile Include="Rules\TabCharacterTest.cs" />
     <Compile Include="Rules\TooManyLabelsInSwitchTest.cs" />
     <Compile Include="Rules\TooManyParametersTest.cs" />
-    <Compile Include="Rules\UnnecessaryBooleanLiteralTest.cs" />
-    <Compile Include="Rules\UnusedTypeParameterTest.cs" />
-    <Compile Include="Rules\UnusedLocalVariableTest.cs" />
+    <Compile Include="Rules\BooleanLiteralUnnecessaryTest.cs" />
+    <Compile Include="Rules\GenericTypeParameterUnusedTest.cs" />
+    <Compile Include="Rules\VariableUnusedTest.cs" />
     <Compile Include="Rules\ReversedOperatorsTest.cs" />
     <Compile Include="Rules\TernaryOperatorPointlessTest.cs" />
     <Compile Include="Rules\BooleanCheckInvertedTest.cs" />
@@ -195,7 +195,7 @@
     <Compile Include="Rules\ValuesUselesslyIncrementedTest.cs" />
     <Compile Include="Rules\UseCurlyBracesTest.cs" />
     <None Include="app.config" />
-    <None Include="TestCases\SequentialSameCondition.cs">
+    <None Include="TestCases\ConditionalsWithSameCondition.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\ReversedOperators.cs">
@@ -213,7 +213,7 @@
     <None Include="TestCases\MethodOrPropertyWithoutInstanceData.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="TestCases\UnusedTypeParameter.cs">
+    <None Include="TestCases\GenericTypeParameterUnused.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\ValuesUselesslyIncremented.cs">
@@ -231,7 +231,7 @@
     <None Include="TestCases\DeadStores.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="TestCases\FloatingPointEquality.cs">
+    <None Include="TestCases\EqualityOnFloatingPoint.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\ToStringNoNull.cs">
@@ -240,37 +240,37 @@
     <None Include="TestCases\HardcodedIpAddress.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="TestCases\LocalVariablesShadow.cs">
+    <None Include="TestCases\VariableShadowsField.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="TestCases\CollapsibleIfs.cs">
+    <None Include="TestCases\IfCollapsible.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\ParameterNamesInPartialMethod.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="TestCases\ClassWithIDisposableMembers.cs">
+    <None Include="TestCases\DisposableMemberInNonDisposableClass.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="TestCases\NotDisposedIDisposable.cs">
+    <None Include="TestCases\DisposableNotDisposed.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\FieldShouldBeReadonly.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="TestCases\EmptinessChecking.cs">
+    <None Include="TestCases\CollectionEmptinessChecking.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="TestCases\GenericTypeParameterNull.cs">
+    <None Include="TestCases\GenericTypeParameterEmptinessChecking.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="TestCases\PropertiesOfReadonlyGenericsField.cs">
+    <None Include="TestCases\GenericReadonlyFieldPropertyAssignment.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="TestCases\VisibleStaticField.cs">
+    <None Include="TestCases\StaticFieldVisible.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="TestCases\VisibleInstanceField.cs">
+    <None Include="TestCases\FieldShouldNotBePublic.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\GotoStatement.cs">
@@ -303,7 +303,7 @@
     <None Include="TestCases\DisposeFromDispose.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="TestCases\SimplifyLinq.cs">
+    <None Include="TestCases\CollectionQuerySimplification.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\DisposeNotImplementingDispose.cs">
@@ -313,10 +313,10 @@
     <None Include="TestCases\UseCurlyBraces.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="TestCases\UnusedLocalVariable.cs">
+    <None Include="TestCases\VariableUnused.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="TestCases\UnnecessaryBooleanLiteral.cs">
+    <None Include="TestCases\BooleanLiteralUnnecessary.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\TooManyParameters.cs">
@@ -337,7 +337,7 @@
     <None Include="TestCases\ShortCircuitNullPointerDereference.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="TestCases\SelfAssignedVariables.cs">
+    <None Include="TestCases\SelfAssignment.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\RightCurlyBraceStartsLine.cs">
@@ -364,7 +364,7 @@
     <None Include="TestCases\IfConditionalAlwaysTrueOrFalse.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="TestCases\IdenticalExpressionsInBinaryOp.cs">
+    <None Include="TestCases\BinaryOperationWithIdenticalExpressions.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\FunctionComplexity.cs">
@@ -394,10 +394,10 @@
     <None Include="TestCases\EmptyMethod.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="TestCases\EmptyCatch.cs">
+    <None Include="TestCases\CatchEmpty.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="TestCases\ElseIfWithoutElse.cs">
+    <None Include="TestCases\IfChainWithoutElse.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\ConditionalStructureSameImplementation_Switch.cs">
@@ -424,7 +424,7 @@
     <None Include="TestCases\BreakOutsideSwitch.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="TestCases\AtLeastThreeCasesInSwitch.cs">
+    <None Include="TestCases\SwitchCasesMinimumThree.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\AsyncAwaitIdentifier.cs">

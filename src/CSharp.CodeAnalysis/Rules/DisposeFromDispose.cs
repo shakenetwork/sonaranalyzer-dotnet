@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
- 
+
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
@@ -72,8 +72,8 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
                     var fieldSymbol = c.SemanticModel.GetSymbolInfo(memberAccess.Expression).Symbol as IFieldSymbol;
                     if (fieldSymbol == null ||
-                        !ClassWithIDisposableMembers.IsNonStaticNonPublicDisposableField(fieldSymbol) ||
-                        !ClassWithIDisposableMembers.ImplementsIDisposable(fieldSymbol.ContainingType))
+                        !DisposableMemberInNonDisposableClass.IsNonStaticNonPublicDisposableField(fieldSymbol) ||
+                        !DisposableMemberInNonDisposableClass.ImplementsIDisposable(fieldSymbol.ContainingType))
                     {
                         return;
                     }

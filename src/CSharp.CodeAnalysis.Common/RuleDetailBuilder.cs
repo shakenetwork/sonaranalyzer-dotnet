@@ -28,7 +28,7 @@ using SonarQube.CSharp.CodeAnalysis.Common.Sqale;
 
 namespace SonarQube.CSharp.CodeAnalysis.Common
 {
-    public class RuleDetailBuilder
+    public static class RuleDetailBuilder
     {
         private const string RuleDescriptionPathPattern = "SonarQube.CSharp.CodeAnalysis.Rules.Description.{0}.html";
 

@@ -78,10 +78,10 @@ namespace SonarQube.CSharp.CodeAnalysis.Descriptor
         }
 
         [XmlElement("tag")]
-        public List<string> Tags { get; set; }
+        public List<string> Tags { get; private set; }
 
         [XmlElement("param")]
-        public List<RuleParameter> Parameters { get; set; }
+        public List<RuleParameter> Parameters { get; private set; }
 
         [XmlIgnore]
         public bool IsActivatedByDefault { get; set; }

@@ -39,6 +39,6 @@ namespace SonarQube.CSharp.CodeAnalysis.Descriptor
         public string Name { get; set; }
 
         [XmlArray("rules")]
-        public List<QualityProfileRuleDescriptor> Rules { get; set; }
+        public List<QualityProfileRuleDescriptor> Rules { get; private set; }
     }
 }

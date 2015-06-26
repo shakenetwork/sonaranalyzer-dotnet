@@ -9,6 +9,6 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest.ErrorModels.Xml
             Files = new List<File>();
         }
 
-        public List<File> Files { get; set; }
+        public List<File> Files { get; private set; }
     }
 }

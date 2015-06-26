@@ -17,11 +17,15 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
+
+using System;
+
 namespace SonarQube.CSharp.CodeAnalysis.Common.Sqale
 {
-    public class SqaleConstantRemediationAttribute : SqaleRemediationAttribute
+    [AttributeUsage(AttributeTargets.Class)]
+    public sealed class SqaleConstantRemediationAttribute : SqaleRemediationAttribute
     {
-        public string Value { get; set; }
+        public string Value { get; private set; }
 
         public SqaleConstantRemediationAttribute(string value)
         {

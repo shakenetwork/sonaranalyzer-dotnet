@@ -18,9 +18,12 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
+
 namespace SonarQube.CSharp.CodeAnalysis.Common.Sqale
 {
-    public class NoSqaleRemediationAttribute : SqaleRemediationAttribute
+    [AttributeUsage(AttributeTargets.Class)]
+    public sealed class NoSqaleRemediationAttribute : SqaleRemediationAttribute
     {
     }
 }

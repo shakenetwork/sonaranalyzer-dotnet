@@ -23,9 +23,9 @@ using System;
 namespace SonarQube.CSharp.CodeAnalysis.Common.Sqale
 {
     [AttributeUsage(AttributeTargets.Class)]
-    public class SqaleSubCharacteristicAttribute : Attribute
+    public sealed class SqaleSubCharacteristicAttribute : Attribute
     {
-        public SqaleSubCharacteristic SubCharacteristic { get; set; }
+        public SqaleSubCharacteristic SubCharacteristic { get; private set; }
 
         public SqaleSubCharacteristicAttribute(SqaleSubCharacteristic subCharacteristic)
         {

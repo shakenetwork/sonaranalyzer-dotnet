@@ -23,13 +23,13 @@ using System;
 namespace SonarQube.CSharp.CodeAnalysis.Common
 {
     [AttributeUsage(AttributeTargets.Class)]
-    public class RuleAttribute : Attribute
+    public sealed class RuleAttribute : Attribute
     {
-        public string Key { get; set; }
-        public string Title { get; set; }
-        public Severity Severity { get; set; }
-        public bool IsActivatedByDefault { get; set; }
-        public bool Template { get; set; }
+        public string Key { get; private set; }
+        public string Title { get; private set; }
+        public Severity Severity { get; private set; }
+        public bool IsActivatedByDefault { get; private set; }
+        public bool Template { get; private set; }
 
         public RuleAttribute(string key, Severity severity, string title, bool isActivatedByDefault, bool template)
         {

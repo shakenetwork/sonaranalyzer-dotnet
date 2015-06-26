@@ -142,68 +142,67 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
                 writer.WriteString(rule.Key);
                 writer.WriteEndElement();
 
-                switch (rule.Key)
+                if (rule.Key == CommentRegularExpression.DiagnosticId)
                 {
-                    case CommentRegularExpression.DiagnosticId:
-                        writer.WriteStartElement("Parameters");
-                        {
-                            writer.WriteStartElement("Parameter");
-                            writer.WriteStartElement("Key");
-                            writer.WriteString("RuleKey");
-                            writer.WriteEndElement();
-                            writer.WriteStartElement("Value");
-                            writer.WriteString(string.Format(TemplateRuleIdPattern, CommentRegularExpression.DiagnosticId));
-                            writer.WriteEndElement();
-                            writer.WriteEndElement();
-                        }
-                        {
-                            writer.WriteStartElement("Parameter");
-                            writer.WriteStartElement("Key");
-                            writer.WriteString("message");
-                            writer.WriteEndElement();
-                            writer.WriteStartElement("Value");
-                            writer.WriteString("Some message");
-                            writer.WriteEndElement();
-                            writer.WriteEndElement();
-                        }
-                        {
-                            writer.WriteStartElement("Parameter");
-                            writer.WriteStartElement("Key");
-                            writer.WriteString("regularExpression");
-                            writer.WriteEndElement();
-                            writer.WriteStartElement("Value");
-                            writer.WriteString("(?i)TODO");
-                            writer.WriteEndElement();
-                            writer.WriteEndElement();
-                        }
+                    writer.WriteStartElement("Parameters");
+                    {
+                        writer.WriteStartElement("Parameter");
+                        writer.WriteStartElement("Key");
+                        writer.WriteString("RuleKey");
                         writer.WriteEndElement();
-                        break;
-                    default:
-                        var parameters = analyzerType.GetProperties()
-                    .Where(p => p.GetCustomAttributes<RuleParameterAttribute>().Any())
-                    .ToList();
+                        writer.WriteStartElement("Value");
+                        writer.WriteString(string.Format(TemplateRuleIdPattern, CommentRegularExpression.DiagnosticId));
+                        writer.WriteEndElement();
+                        writer.WriteEndElement();
+                    }
+                    {
+                        writer.WriteStartElement("Parameter");
+                        writer.WriteStartElement("Key");
+                        writer.WriteString("message");
+                        writer.WriteEndElement();
+                        writer.WriteStartElement("Value");
+                        writer.WriteString("Some message");
+                        writer.WriteEndElement();
+                        writer.WriteEndElement();
+                    }
+                    {
+                        writer.WriteStartElement("Parameter");
+                        writer.WriteStartElement("Key");
+                        writer.WriteString("regularExpression");
+                        writer.WriteEndElement();
+                        writer.WriteStartElement("Value");
+                        writer.WriteString("(?i)TODO");
+                        writer.WriteEndElement();
+                        writer.WriteEndElement();
+                    }
+                    writer.WriteEndElement();
+                }
+                else
+                {
+                    var parameters = analyzerType.GetProperties()
+                        .Where(p => p.GetCustomAttributes<RuleParameterAttribute>().Any())
+                        .ToList();
 
-                        if (parameters.Any())
+                    if (parameters.Any())
+                    {
+                        writer.WriteStartElement("Parameters");
+
+                        foreach (var propertyInfo in parameters)
                         {
-                            writer.WriteStartElement("Parameters");
+                            var ruleParameter = propertyInfo.GetCustomAttribute<RuleParameterAttribute>();
 
-                            foreach (var propertyInfo in parameters)
-                            {
-                                var ruleParameter = propertyInfo.GetCustomAttribute<RuleParameterAttribute>();
-
-                                writer.WriteStartElement("Parameter");
-                                writer.WriteStartElement("Key");
-                                writer.WriteString(ruleParameter.Key);
-                                writer.WriteEndElement();
-                                writer.WriteStartElement("Value");
-                                writer.WriteString(ruleParameter.DefaultValue);
-                                writer.WriteEndElement();
-                                writer.WriteEndElement();
-                            }
-
+                            writer.WriteStartElement("Parameter");
+                            writer.WriteStartElement("Key");
+                            writer.WriteString(ruleParameter.Key);
+                            writer.WriteEndElement();
+                            writer.WriteStartElement("Value");
+                            writer.WriteString(ruleParameter.DefaultValue);
+                            writer.WriteEndElement();
                             writer.WriteEndElement();
                         }
-                        break;
+
+                        writer.WriteEndElement();
+                    }
                 }
 
                 writer.WriteEndElement();

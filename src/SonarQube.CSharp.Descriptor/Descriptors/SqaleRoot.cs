@@ -31,6 +31,6 @@ namespace SonarQube.CSharp.CodeAnalysis.Descriptor
             Sqale = new List<SqaleDescriptor>();
         }
         [XmlArray("chc")]
-        public List<SqaleDescriptor> Sqale { get; set; }
+        public List<SqaleDescriptor> Sqale { get; private set; }
     }
 }

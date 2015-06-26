@@ -29,6 +29,6 @@ namespace SonarQube.CSharp.CodeAnalysis.Common
             Properties = new List<SqaleRemediationProperty>();
         }
 
-        public List<SqaleRemediationProperty> Properties { get; set; }
+        public List<SqaleRemediationProperty> Properties { get; private set; }
     }
 }

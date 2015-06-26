@@ -19,13 +19,14 @@
  */
 
 using System;
+using System.Collections.Generic;
 
 namespace SonarQube.CSharp.CodeAnalysis.Common
 {
     [AttributeUsage(AttributeTargets.Class)]
-    public class TagsAttribute : Attribute
+    public sealed class TagsAttribute : Attribute
     {
-        public string[] Tags { get; set; }
+        public IEnumerable<string> Tags { get; private set; }
 
         public TagsAttribute(params string[] tags)
         {

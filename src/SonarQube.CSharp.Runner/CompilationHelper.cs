@@ -24,7 +24,7 @@ using Microsoft.CodeAnalysis;
 
 namespace SonarQube.CSharp.CodeAnalysis.Runner
 {
-    public class CompilationHelper
+    public static class CompilationHelper
     {
         public static Solution GetSolutionFromFiles(params string[] filePaths)
         {

@@ -23,12 +23,12 @@ using System;
 namespace SonarQube.CSharp.CodeAnalysis.Common
 {
     [AttributeUsage(AttributeTargets.Property)]
-    public class RuleParameterAttribute : Attribute
+    public sealed class RuleParameterAttribute : Attribute
     {
-        public string Key { get; set; }
-        public string Description { get; set; }
-        public PropertyType Type { get; set; }
-        public string DefaultValue { get; set; }
+        public string Key { get; private set; }
+        public string Description { get; private set; }
+        public PropertyType Type { get; private set; }
+        public string DefaultValue { get; private set; }
 
         public RuleParameterAttribute(string key, PropertyType type, string description, string defaultValue)
         {
