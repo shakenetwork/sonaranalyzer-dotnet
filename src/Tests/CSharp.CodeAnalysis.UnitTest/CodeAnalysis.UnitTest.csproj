@@ -119,6 +119,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\SillyBitwiseOperationTest.cs" />
     <Compile Include="Rules\ConstructorOverridableCallTest.cs" />
+    <Compile Include="Rules\FieldShadowsParentFieldTest.cs" />
     <Compile Include="Rules\DisposeFromDisposeTest.cs" />
     <Compile Include="Rules\DisposeNotImplementingDisposeTest.cs" />
     <Compile Include="Rules\RedundantCastTest.cs" />
@@ -315,6 +316,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\ConstructorOverridableCall.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\FieldShadowsParentField.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
