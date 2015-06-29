@@ -58,14 +58,9 @@ namespace SonarQube.CSharp.CodeAnalysis.Common.UnitTest
         {
             var analyzers = GetDiagnosticAnalyzerTypes(new[] { RuleFinder.GetPackagedRuleAssembly() });
 
-            foreach (var analyzer in analyzers)
+            foreach (var analyzer in analyzers.Where(RuleFinder.IsRuleTemplate))
             {
-                var ruleDescriptor = analyzer.GetCustomAttributes<RuleAttribute>().Single();
-
-                if (ruleDescriptor.Template)
-                {
-                    throw new Exception(string.Format("Visual Studio rules cannot be templates, remove DiagnosticAnalyzer '{0}'.", analyzer.Name));
-                }
+                throw new Exception(string.Format("Visual Studio rules cannot be templates, remove DiagnosticAnalyzer '{0}'.", analyzer.Name));
             }
         }
 
@@ -89,13 +84,27 @@ namespace SonarQube.CSharp.CodeAnalysis.Common.UnitTest
         {
             var analyzers = GetDiagnosticAnalyzerTypes(new[] { RuleFinder.GetExtraRuleAssembly() });
 
-            foreach (var analyzer in analyzers)
+            foreach (var analyzer in analyzers.Where(type => !RuleFinder.IsRuleTemplate(type)))
             {
-                var ruleDescriptor = analyzer.GetCustomAttributes<RuleAttribute>().Single();
                 var hasParameter = analyzer.GetProperties().Any(p => p.GetCustomAttributes<RuleParameterAttribute>().Any());
-                if (!hasParameter && !ruleDescriptor.Template)
+                if (!hasParameter)
                 {
                     throw new Exception(string.Format("DiagnosticAnalyzer '{0}' should be moved to the assembly that implements Visual Studio rules.", analyzer.Name));
+                }
+            }
+        }
+
+        [TestMethod]
+        public void TemplateRule_With_Direct_Parameters()
+        {
+            var analyzers = new RuleFinder().GetAllAnalyzerTypes();
+
+            foreach (var analyzer in analyzers.Where(RuleFinder.IsRuleTemplate))
+            {
+                var hasParameter = analyzer.GetProperties().Any(p => p.GetCustomAttributes<RuleParameterAttribute>().Any());
+                if (hasParameter)
+                {
+                    throw new Exception(string.Format("DiagnosticAnalyzer '{0}' has parameters that are defined outside of IRuleTemplateInstance.", analyzer.Name));
                 }
             }
         }

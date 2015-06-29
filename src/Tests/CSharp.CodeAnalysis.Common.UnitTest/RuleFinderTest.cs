@@ -21,6 +21,7 @@
 using System.Linq;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SonarQube.CSharp.CodeAnalysis.Rules;
 
 namespace SonarQube.CSharp.CodeAnalysis.Common.UnitTest
 {
@@ -51,6 +52,13 @@ namespace SonarQube.CSharp.CodeAnalysis.Common.UnitTest
             var finder = new RuleFinder();
             var countParameterless = finder.GetParameterlessAnalyzerTypes().Count();
             finder.GetAllAnalyzerTypes().Count().Should().BeGreaterThan(countParameterless);
+        }
+
+        [TestMethod]
+        public void IsRuleTemplate()
+        {
+            Assert.IsTrue(RuleFinder.IsRuleTemplate(typeof(CommentRegularExpression)));
+            Assert.IsFalse(RuleFinder.IsRuleTemplate(typeof(AsyncAwaitIdentifier)));
         }
     }
 }

@@ -18,6 +18,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -29,34 +30,40 @@ using SonarQube.CSharp.CodeAnalysis.Common.Sqale;
 
 namespace SonarQube.CSharp.CodeAnalysis.Rules
 {
-    public class CommentRegularExpressionRule
+    public class CommentRegularExpressionRule : IRuleTemplateInstance
     {
         public DiagnosticDescriptor Descriptor { get; set; }
+
+        [RuleParameter("regularExpression", PropertyType.String, "The regular expression")]
         public string RegularExpression { get; set; }
+
+        [RuleParameter("message", PropertyType.String, "The issue message", MessageFormat)]
+        public string Message { get; set; }
+
+        private const string MessageFormat = "The regular expression matches this comment.";
     }
 
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [NoSqaleRemediation]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault, true)]
-    public class CommentRegularExpression : DiagnosticAnalyzer
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
+    public class CommentRegularExpression : DiagnosticAnalyzer, IRuleTemplate<CommentRegularExpressionRule>
     {
         public const string DiagnosticId = "S124";
-        internal const string Description = "Regular expression on comment";
-        internal const string MessageFormat = "The regular expression matches this comment";
+        internal const string Title = "Comments matching a regular expression should be handled";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = false;
 
         public static DiagnosticDescriptor CreateDiagnosticDescriptor(string diagnosticId, string messageFormat)
         {
-            return new DiagnosticDescriptor(diagnosticId, Description, messageFormat, Category,
+            return new DiagnosticDescriptor(diagnosticId, Title, messageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault);
         }
 
-        public ImmutableArray<CommentRegularExpressionRule> Rules { get; set; }
+        public IImmutableList<CommentRegularExpressionRule> RuleInstances { get; set; }
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return Rules.Select(r => r.Descriptor).ToImmutableArray(); } }
-
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return RuleInstances.Select(r => r.Descriptor).ToImmutableArray(); } }
+        
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxTreeAction(
@@ -69,7 +76,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     foreach (var comment in comments)
                     {
                         var text = comment.ToString();
-                        foreach (var rule in Rules.Where(rule => Regex.IsMatch(text, rule.RegularExpression)))
+                        foreach (var rule in RuleInstances.Where(rule => Regex.IsMatch(text, rule.RegularExpression)))
                         {
                             c.ReportDiagnostic(Diagnostic.Create(rule.Descriptor, comment.GetLocation()));
                         }

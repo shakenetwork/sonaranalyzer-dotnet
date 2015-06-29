@@ -55,11 +55,17 @@ namespace SonarQube.CSharp.CodeAnalysis.Common
         public IEnumerable<Type> GetParameterlessAnalyzerTypes()
         {
             return diagnosticAnalyzers
-                .Where(analyzerType =>
-                    !analyzerType.GetCustomAttributes<RuleAttribute>().First().Template)
+                .Where(analyzerType => !IsRuleTemplate(analyzerType))
                 .Where(analyzerType =>
                     !analyzerType.GetProperties()
                         .Any(p => p.GetCustomAttributes<RuleParameterAttribute>().Any()));
+        }
+
+        public static bool IsRuleTemplate(Type analyzerType)
+        {
+            return analyzerType.GetInterfaces()
+                .Any(type => type.IsGenericType &&
+                             type.GetGenericTypeDefinition() == typeof(IRuleTemplate<>));
         }
 
         public IEnumerable<Type> GetAllAnalyzerTypes()

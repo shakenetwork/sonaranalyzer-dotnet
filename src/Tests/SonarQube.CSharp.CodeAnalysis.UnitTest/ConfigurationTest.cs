@@ -66,13 +66,14 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest
             analyzers.OfType<MagicNumber>().Single().Exceptions.ShouldBeEquivalentTo(ImmutableHashSet.Create("0", "1", "0x0", "0x00", ".0", ".1", "0.0", "1.0"));
 
             var commentAnalyzer = analyzers.OfType<CommentRegularExpression>().Single();
-            commentAnalyzer.Rules.Should().HaveCount(2);
-            commentAnalyzer.Rules[0].Descriptor.Id.ShouldBeEquivalentTo("TODO");
-            commentAnalyzer.Rules[0].Descriptor.MessageFormat.ToString().ShouldBeEquivalentTo("Fix this TODO");
-            commentAnalyzer.Rules[0].RegularExpression.ShouldBeEquivalentTo(".*TODO.*");
-            commentAnalyzer.Rules[1].Descriptor.Id.ShouldBeEquivalentTo("FIXME");
-            commentAnalyzer.Rules[1].Descriptor.MessageFormat.ToString().ShouldBeEquivalentTo("Fix this FIXME");
-            commentAnalyzer.Rules[1].RegularExpression.ShouldBeEquivalentTo(".*FIXME.*");
+            var ruleInstances = commentAnalyzer.RuleInstances.ToList();
+            ruleInstances.Should().HaveCount(2);
+            ruleInstances[0].Descriptor.Id.ShouldBeEquivalentTo("TODO");
+            ruleInstances[0].Descriptor.MessageFormat.ToString().ShouldBeEquivalentTo("Fix this TODO");
+            ruleInstances[0].RegularExpression.ShouldBeEquivalentTo(".*TODO.*");
+            ruleInstances[1].Descriptor.Id.ShouldBeEquivalentTo("FIXME");
+            ruleInstances[1].Descriptor.MessageFormat.ToString().ShouldBeEquivalentTo("Fix this FIXME");
+            ruleInstances[1].RegularExpression.ShouldBeEquivalentTo(".*FIXME.*");
         }
     }
 }

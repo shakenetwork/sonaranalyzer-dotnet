@@ -38,7 +38,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Rules
                     RegularExpression = "(?i)TODO"
                 });
 
-            var diagnostic = new CommentRegularExpression {Rules = rules};
+            var diagnostic = new CommentRegularExpression {RuleInstances = rules};
             Verifier.Verify(@"TestCases\CommentRegularExpression.cs", diagnostic);
         }
     }

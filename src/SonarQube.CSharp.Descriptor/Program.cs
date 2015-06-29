@@ -93,7 +93,8 @@ namespace SonarQube.CSharp.CodeAnalysis.Descriptor
 
         private static void SerializeObjectToFile(string filePath, object objectToSerialize)
         {
-            var settings = new XmlWriterSettings {
+            var settings = new XmlWriterSettings
+            {
                 Indent = true, 
                 Encoding = Encoding.UTF8,
                 IndentChars = "  "

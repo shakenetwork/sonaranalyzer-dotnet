@@ -40,14 +40,18 @@ namespace SonarQube.CSharp.CodeAnalysis.Descriptor
                 Description = ruleDetail.Description,
                 IsActivatedByDefault = ruleDetail.IsActivatedByDefault,
                 Tags = ruleDetail.Tags,
-                Parameters = ruleDetail.Parameters.Select(parameter => new RuleParameter
-                {
-                    Type = parameter.Type,
-                    Key = parameter.Key,
-                    Description = parameter.Description,
-                    DefaultValue = parameter.DefaultValue
-                }).ToList(),
-                Cardinality = ruleDetail.IsTemplate ? CardinalityMultiple : CardinalitySingle
+                Parameters = ruleDetail.Parameters.Select(
+                    parameter =>
+                        new RuleParameter
+                        {
+                            Type = parameter.Type,
+                            Key = parameter.Key,
+                            Description = parameter.Description,
+                            DefaultValue = parameter.DefaultValue
+                        }).ToList(),
+                Cardinality = ruleDetail.IsTemplate
+                    ? CardinalityMultiple
+                    : CardinalitySingle
             };
         }
 
@@ -74,6 +78,10 @@ namespace SonarQube.CSharp.CodeAnalysis.Descriptor
             get
             {
                 return new XmlDocument().CreateCDataSection(Description);
+            }
+            set
+            {
+                Description = value == null ? "" : value.Value;
             }
         }
 

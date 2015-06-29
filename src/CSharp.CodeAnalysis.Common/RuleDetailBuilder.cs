@@ -43,12 +43,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Common
 
         private static RuleDetail GetRuleDetail(Type analyzerType)
         {
-            var rule = analyzerType.GetCustomAttributes<RuleAttribute>().FirstOrDefault();
-
-            if (rule == null)
-            {
-                return null;
-            }
+            var rule = analyzerType.GetCustomAttributes<RuleAttribute>().Single();
 
             var ruleDetail = new RuleDetail
             {
@@ -57,47 +52,36 @@ namespace SonarQube.CSharp.CodeAnalysis.Common
                 Severity = rule.Severity.ToString().ToUpper(CultureInfo.InvariantCulture),
                 IsActivatedByDefault = rule.IsActivatedByDefault,
                 Description = GetResourceHtml(analyzerType, rule),
-                IsTemplate = rule.Template
+                IsTemplate = RuleFinder.IsRuleTemplate(analyzerType)
             };
 
-            var parameters = analyzerType.GetProperties()
-                .Where(p => p.GetCustomAttributes<RuleParameterAttribute>().Any());
+            GetParameters(analyzerType, ruleDetail);
+            GetTags(analyzerType, ruleDetail);
+            GetSqale(analyzerType, ruleDetail);
+            
+            return ruleDetail;
+        }
 
-            foreach (var ruleParameter in parameters
-                .Select(propertyInfo => propertyInfo.GetCustomAttributes<RuleParameterAttribute>().First()))
-            {
-                ruleDetail.Parameters.Add(
-                    new RuleParameter
-                    {
-                        DefaultValue = ruleParameter.DefaultValue,
-                        Description = ruleParameter.Description,
-                        Key = ruleParameter.Key,
-                        Type = ruleParameter.Type.ToSonarQubeString()
-                    });
-            }
-
-            var tags = analyzerType.GetCustomAttributes<TagsAttribute>().FirstOrDefault();
-
-            if (tags != null)
-            {
-                ruleDetail.Tags.AddRange(tags.Tags);
-            }
-
+        private static void GetSqale(Type analyzerType, RuleDetail ruleDetail)
+        {
             var sqaleRemediation = analyzerType.GetCustomAttributes<SqaleRemediationAttribute>().FirstOrDefault();
 
             if (sqaleRemediation == null || sqaleRemediation is NoSqaleRemediationAttribute)
             {
                 ruleDetail.SqaleDescriptor = null;
-                return ruleDetail;
+                return;
             }
 
             var sqaleSubCharacteristic = analyzerType.GetCustomAttributes<SqaleSubCharacteristicAttribute>().First();
-            var sqaleDescriptor = new SqaleDescriptor { SubCharacteristic = sqaleSubCharacteristic.SubCharacteristic.ToSonarQubeString() };
+            var sqaleDescriptor = new SqaleDescriptor
+            {
+                SubCharacteristic = sqaleSubCharacteristic.SubCharacteristic.ToSonarQubeString()
+            };
             var constantRemediation = sqaleRemediation as SqaleConstantRemediationAttribute;
             if (constantRemediation == null)
             {
                 ruleDetail.SqaleDescriptor = sqaleDescriptor;
-                return ruleDetail;
+                return;
             }
 
             sqaleDescriptor.Remediation.Properties.AddRange(new[]
@@ -116,7 +100,44 @@ namespace SonarQube.CSharp.CodeAnalysis.Common
             });
 
             ruleDetail.SqaleDescriptor = sqaleDescriptor;
-            return ruleDetail;
+        }
+
+        private static void GetTags(Type analyzerType, RuleDetail ruleDetail)
+        {
+            var tags = analyzerType.GetCustomAttributes<TagsAttribute>().FirstOrDefault();
+            if (tags != null)
+            {
+                ruleDetail.Tags.AddRange(tags.Tags);
+            }
+        }
+        
+        private static void GetParameters(Type analyzerType, RuleDetail ruleDetail)
+        {
+            var typeToGetParametersFrom = analyzerType;
+            var templateInterface = analyzerType.GetInterfaces()
+                .FirstOrDefault(type => type.IsGenericType &&
+                                        type.GetGenericTypeDefinition() == typeof (IRuleTemplate<>));
+
+            if (templateInterface != null)
+            {
+                typeToGetParametersFrom = templateInterface.GetGenericArguments().First();
+            }
+
+            var parameters = typeToGetParametersFrom.GetProperties()
+                .Select(p => p.GetCustomAttributes<RuleParameterAttribute>().SingleOrDefault());
+
+            foreach (var ruleParameter in parameters
+                .Where(attribute => attribute != null))
+            {
+                ruleDetail.Parameters.Add(
+                    new RuleParameter
+                    {
+                        DefaultValue = ruleParameter.DefaultValue,
+                        Description = ruleParameter.Description,
+                        Key = ruleParameter.Key,
+                        Type = ruleParameter.Type.ToSonarQubeString()
+                    });
+            }
         }
 
         private static string GetResourceHtml(Type analyzerType, RuleAttribute rule)

@@ -1,4 +1,4 @@
-﻿/*
+/*
  * SonarQube C# Code Analysis
  * Copyright (C) 2015 SonarSource
  * sonarqube@googlegroups.com
@@ -18,24 +18,12 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System;
+using Microsoft.CodeAnalysis;
 
 namespace SonarQube.CSharp.CodeAnalysis.Common
 {
-    [AttributeUsage(AttributeTargets.Class)]
-    public sealed class RuleAttribute : Attribute
+    public interface IRuleTemplateInstance
     {
-        public string Key { get; private set; }
-        public string Title { get; private set; }
-        public Severity Severity { get; private set; }
-        public bool IsActivatedByDefault { get; private set; }
-
-        public RuleAttribute(string key, Severity severity, string title, bool isActivatedByDefault)
-        {
-            Key = key;
-            Title = title;
-            Severity = severity;
-            IsActivatedByDefault = isActivatedByDefault;
-        }
+        DiagnosticDescriptor Descriptor { get; set; }
     }
 }

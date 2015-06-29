@@ -37,6 +37,10 @@ namespace SonarQube.CSharp.CodeAnalysis.Descriptor
             {
                 return new XmlDocument().CreateCDataSection(Description);
             }
+            set
+            {
+                Description = value == null ? "" : value.Value;
+            }
         }
 
         [XmlElement("type")]

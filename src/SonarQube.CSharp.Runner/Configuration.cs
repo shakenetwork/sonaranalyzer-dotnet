@@ -130,7 +130,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Runner
                         RegularExpression = parameters["regularExpression"]
                     });
             }
-            var analyzer = new CommentRegularExpression {Rules = rules.ToImmutable()};
+            var analyzer = new CommentRegularExpression {RuleInstances = rules.ToImmutable()};
             builder.Add(analyzer);
         }
 
