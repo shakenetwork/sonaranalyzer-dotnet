@@ -1,0 +1,3681 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarQube.CSharp.CodeAnalysis.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\contrib\\persistence\\Akka.Persistence.Cassandra\\CassandraSettings.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster.Tests\\ClusterSpecBase.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\ClusterEvent.cs",
+            "Region": {
+              "StartLine": 173,
+              "EndLine": 173,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\ClusterEvent.cs",
+            "Region": {
+              "StartLine": 375,
+              "EndLine": 375,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
+            "Region": {
+              "StartLine": 504,
+              "EndLine": 504,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Routing\\ClusterRoutingConfig.cs",
+            "Region": {
+              "StartLine": 77,
+              "EndLine": 77,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Reporting\\MultiNodeMessage.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.MultiNodeTests\\ClusterDeathWatchSpec.cs",
+            "Region": {
+              "StartLine": 68,
+              "EndLine": 68,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.MultiNodeTests\\ConvergenceSpec.cs",
+            "Region": {
+              "StartLine": 106,
+              "EndLine": 106,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.MultiNodeTests\\InitialHeartbeatSpec.cs",
+            "Region": {
+              "StartLine": 72,
+              "EndLine": 72,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.MultiNodeTests\\JoinInProgressSpec.cs",
+            "Region": {
+              "StartLine": 51,
+              "EndLine": 51,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.MultiNodeTests\\JoinSeedNodeSpec.cs",
+            "Region": {
+              "StartLine": 53,
+              "EndLine": 53,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.MultiNodeTests\\LeaderLeavingSpec.cs",
+            "Region": {
+              "StartLine": 65,
+              "EndLine": 65,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.MultiNodeTests\\MultiNodeClusterSpec.cs",
+            "Region": {
+              "StartLine": 29,
+              "EndLine": 29,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.MultiNodeTests\\Routing\\ClusterConsistentHashingGroupSpec.cs",
+            "Region": {
+              "StartLine": 78,
+              "EndLine": 78,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.MultiNodeTests\\Routing\\ClusterConsistentHashingRouterSpec.cs",
+            "Region": {
+              "StartLine": 71,
+              "EndLine": 71,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence.TestKit\\Journal\\JournalSpec.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence.TestKit\\PluginSpec.cs",
+            "Region": {
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence.TestKit\\Snapshot\\SnapshotStoreSpec.cs",
+            "Region": {
+              "StartLine": 22,
+              "EndLine": 22,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence.Tests\\PersistenceSpec.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence.Tests\\PersistenceSpec.cs",
+            "Region": {
+              "StartLine": 118,
+              "EndLine": 118,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
+            "Region": {
+              "StartLine": 84,
+              "EndLine": 84,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\AtLeastOnceDelivery.cs",
+            "Region": {
+              "StartLine": 144,
+              "EndLine": 144,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Eventsourced.Recovery.cs",
+            "Region": {
+              "StartLine": 37,
+              "EndLine": 37,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Journal\\AsyncWriteProxy.cs",
+            "Region": {
+              "StartLine": 161,
+              "EndLine": 161,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Journal\\WriteJournal.cs",
+            "Region": {
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\PersistentActor.cs",
+            "Region": {
+              "StartLine": 121,
+              "EndLine": 121,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\PersistentActor.cs",
+            "Region": {
+              "StartLine": 189,
+              "EndLine": 189,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\MultiNodeSpec.cs",
+            "Region": {
+              "StartLine": 29,
+              "EndLine": 29,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Endpoint.cs",
+            "Region": {
+              "StartLine": 656,
+              "EndLine": 656,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Endpoint.cs",
+            "Region": {
+              "StartLine": 711,
+              "EndLine": 711,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\EndpointManager.cs",
+            "Region": {
+              "StartLine": 29,
+              "EndLine": 29,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\EndpointManager.cs",
+            "Region": {
+              "StartLine": 98,
+              "EndLine": 98,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to an interface",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\FailureDetector.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\RemoteWatcher.cs",
+            "Region": {
+              "StartLine": 50,
+              "EndLine": 50,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to an interface",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\RemotingLifecycleEvent.cs",
+            "Region": {
+              "StartLine": 21,
+              "EndLine": 21,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
+            "Region": {
+              "StartLine": 350,
+              "EndLine": 350,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
+            "Region": {
+              "StartLine": 351,
+              "EndLine": 351,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Transport\\Helios\\HeliosTcpTransport.cs",
+            "Region": {
+              "StartLine": 52,
+              "EndLine": 52,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Transport\\Helios\\HeliosTransport.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Transport\\TestTransport.cs",
+            "Region": {
+              "StartLine": 228,
+              "EndLine": 228,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Transport\\TransportAdapters.cs",
+            "Region": {
+              "StartLine": 188,
+              "EndLine": 188,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Transport\\TransportAdapters.cs",
+            "Region": {
+              "StartLine": 239,
+              "EndLine": 239,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to an interface",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.TestKit\\MessageEnvelope.cs",
+            "Region": {
+              "StartLine": 12,
+              "EndLine": 12,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.TestKit\\TestActorRefBase.cs",
+            "Region": {
+              "StartLine": 21,
+              "EndLine": 21,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.TestKit\\TestKitBase.cs",
+            "Region": {
+              "StartLine": 22,
+              "EndLine": 22,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.TestKit\\TestKitBase_AwaitAssert.cs",
+            "Region": {
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.TestKit\\TestKitBase_AwaitConditions.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.TestKit\\TestKitBase_Expect.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.TestKit\\TestKitBase_ExpectMsgFrom.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.TestKit\\TestKitBase_Receive.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.TestKit\\TestKitBase_Within.cs",
+            "Region": {
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests.Shared.Internals\\AkkaSpec.cs",
+            "Region": {
+              "StartLine": 20,
+              "EndLine": 20,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests\\Actor\\FSMTimingSpec.cs",
+            "Region": {
+              "StartLine": 244,
+              "EndLine": 244,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\ActorBase.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\ActorBase.Lifecycle.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\ActorBase.SupervisorStrategy.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\ActorProducerPipeline.cs",
+            "Region": {
+              "StartLine": 41,
+              "EndLine": 41,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\ActorProducerPipeline.cs",
+            "Region": {
+              "StartLine": 65,
+              "EndLine": 65,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\ActorRef.cs",
+            "Region": {
+              "StartLine": 285,
+              "EndLine": 285,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\ActorSelection.cs",
+            "Region": {
+              "StartLine": 271,
+              "EndLine": 271,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\ChildrenContainer\\Internal\\SuspendReason.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\Exceptions.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\FSM.cs",
+            "Region": {
+              "StartLine": 21,
+              "EndLine": 21,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\FSM.cs",
+            "Region": {
+              "StartLine": 101,
+              "EndLine": 101,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\FSM.cs",
+            "Region": {
+              "StartLine": 385,
+              "EndLine": 385,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\ReceiveActor.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\Stash\\Internal\\AbstractStash.cs",
+            "Region": {
+              "StartLine": 21,
+              "EndLine": 21,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\Stash\\UntypedActorWithBoundedStash.cs",
+            "Region": {
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\Stash\\UntypedActorWithUnboundedStash.cs",
+            "Region": {
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\TypedActor.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Configuration\\Hocon\\CDataConfigurationElement.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Event\\ActorEventBus.cs",
+            "Region": {
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Routing\\Listeners.cs",
+            "Region": {
+              "StartLine": 27,
+              "EndLine": 27,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to an interface",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Routing\\Resizer.cs",
+            "Region": {
+              "StartLine": 21,
+              "EndLine": 21,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to an interface",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Routing\\Router.cs",
+            "Region": {
+              "StartLine": 162,
+              "EndLine": 162,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Routing\\RouterMsg.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Util\\Internal\\Collections\\ImmutableAvlTreeBase.cs",
+            "Region": {
+              "StartLine": 22,
+              "EndLine": 22,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests.integration\\infrastructure.app\\services\\FilesServiceSpecs.cs",
+            "Region": {
+              "StartLine": 20,
+              "EndLine": 20,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests.integration\\infrastructure\\commands\\CommandExecutorSpecs.cs",
+            "Region": {
+              "StartLine": 26,
+              "EndLine": 26,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests.integration\\infrastructure\\cryptography\\CrytpoHashProviderSpecs.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests.integration\\infrastructure\\filesystem\\DotNetFileSystemSpecs.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests.integration\\scenarios\\InstallScenarios.cs",
+            "Region": {
+              "StartLine": 37,
+              "EndLine": 37,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests.integration\\scenarios\\UninstallScenarios.cs",
+            "Region": {
+              "StartLine": 35,
+              "EndLine": 35,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests.integration\\scenarios\\UpgradeScenarios.cs",
+            "Region": {
+              "StartLine": 34,
+              "EndLine": 34,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\GetChocolateySpecs.cs",
+            "Region": {
+              "StartLine": 23,
+              "EndLine": 23,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure.app\\attributes\\CommandForAttributeSpecs.cs",
+            "Region": {
+              "StartLine": 24,
+              "EndLine": 24,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure.app\\commands\\ChocolateyApiKeyCommandSpecs.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure.app\\commands\\ChocolateyFeatureCommandSpecs.cs",
+            "Region": {
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure.app\\commands\\ChocolateyInstallCommandSpecs.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure.app\\commands\\ChocolateyListCommandSpecs.cs",
+            "Region": {
+              "StartLine": 33,
+              "EndLine": 33,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure.app\\commands\\ChocolateyNewCommandSpecs.cs",
+            "Region": {
+              "StartLine": 33,
+              "EndLine": 33,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure.app\\commands\\ChocolateyOutdatedCommandSpecs.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure.app\\commands\\ChocolateyPackCommandSpecs.cs",
+            "Region": {
+              "StartLine": 31,
+              "EndLine": 31,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure.app\\commands\\ChocolateyPinCommandSpecs.cs",
+            "Region": {
+              "StartLine": 37,
+              "EndLine": 37,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure.app\\commands\\ChocolateyPushCommandSpecs.cs",
+            "Region": {
+              "StartLine": 33,
+              "EndLine": 33,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure.app\\commands\\ChocolateySourceCommandSpecs.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure.app\\commands\\ChocolateyUninstallCommandSpecs.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure.app\\commands\\ChocolateyUnpackSelfCommandSpecs.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure.app\\commands\\ChocolateyUpgradeCommandSpecs.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure.app\\configuration\\ConfigurationOptionsSpec.cs",
+            "Region": {
+              "StartLine": 31,
+              "EndLine": 31,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure.app\\services\\AutomaticUninstallerServiceSpecs.cs",
+            "Region": {
+              "StartLine": 36,
+              "EndLine": 36,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure.app\\services\\FilesServiceSpecs.cs",
+            "Region": {
+              "StartLine": 19,
+              "EndLine": 19,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure.app\\services\\NugetServiceSpecs.cs",
+            "Region": {
+              "StartLine": 31,
+              "EndLine": 31,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure.app\\services\\RegistryServiceSpecs.cs",
+            "Region": {
+              "StartLine": 29,
+              "EndLine": 29,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure\\commandline\\InteractivePromptSpecs.cs",
+            "Region": {
+              "StartLine": 27,
+              "EndLine": 27,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure\\commands\\CommandExecutorSpecs.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure\\commands\\PowershellExecutorSpecs.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure\\configuration\\ConfigSpecs.cs",
+            "Region": {
+              "StartLine": 24,
+              "EndLine": 24,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure\\cryptography\\CrytpoHashProvider.cs",
+            "Region": {
+              "StartLine": 30,
+              "EndLine": 30,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure\\events\\EventSubscriptionManagerSpecs.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure\\filesystem\\DotNetFileSystemSpecs.cs",
+            "Region": {
+              "StartLine": 29,
+              "EndLine": 29,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure\\guards\\EnsureSpecs.cs",
+            "Region": {
+              "StartLine": 26,
+              "EndLine": 26,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure\\information\\VersionInformationSpecs.cs",
+            "Region": {
+              "StartLine": 24,
+              "EndLine": 24,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure\\platforms\\PlatformSpecs.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure\\tokens\\TokenReplacerSpecs.cs",
+            "Region": {
+              "StartLine": 24,
+              "EndLine": 24,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure\\tolerance\\FaultToleranceSpecs.cs",
+            "Region": {
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Abstractions\\FilterContext.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ActionResult.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\HttpMethodAttribute.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\RouteConstraintAttribute.cs",
+            "Region": {
+              "StartLine": 21,
+              "EndLine": 21,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\ActionFilterAttribute.cs",
+            "Region": {
+              "StartLine": 11,
+              "EndLine": 11,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\AuthorizationFilterAttribute.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Controller.cs",
+            "Region": {
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\ExceptionFilterAttribute.cs",
+            "Region": {
+              "StartLine": 11,
+              "EndLine": 11,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Filters\\ResultFilterAttribute.cs",
+            "Region": {
+              "StartLine": 11,
+              "EndLine": 11,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\ViewComponents\\ViewComponent.cs",
+            "Region": {
+              "StartLine": 21,
+              "EndLine": 21,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Razor.Host\\MvcCSharpCodeVistor.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Razor\\Precompilation\\RazorFileInfoCollection.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Razor\\RazorPageOfT.cs",
+            "Region": {
+              "StartLine": 19,
+              "EndLine": 19,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.WebApiCompatShim\\ApiController.cs",
+            "Region": {
+              "StartLine": 22,
+              "EndLine": 22,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc\\RazorPreCompileModule.cs",
+            "Region": {
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\DefaultControllerFactoryTest.cs",
+            "Region": {
+              "StartLine": 332,
+              "EndLine": 332,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\DefaultControllerTypeProviderTest.cs",
+            "Region": {
+              "StartLine": 237,
+              "EndLine": 237,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\DefaultControllerTypeProviderTest.cs",
+            "Region": {
+              "StartLine": 249,
+              "EndLine": 249,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\DefaultControllerTypeProviderTest.cs",
+            "Region": {
+              "StartLine": 283,
+              "EndLine": 283,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Extensions.Test\\ViewComponents\\ViewComponentConventionsTest.cs",
+            "Region": {
+              "StartLine": 68,
+              "EndLine": 68,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to an interface",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Razor.Test\\Compilation\\CompilerCacheTest.cs",
+            "Region": {
+              "StartLine": 146,
+              "EndLine": 146,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Razor.Test\\Compilation\\CompilerCacheTest.cs",
+            "Region": {
+              "StartLine": 627,
+              "EndLine": 627,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Razor.Test\\RazorPageActivatorTest.cs",
+            "Region": {
+              "StartLine": 208,
+              "EndLine": 208,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Razor.Test\\RazorPageActivatorTest.cs",
+            "Region": {
+              "StartLine": 227,
+              "EndLine": 227,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Razor.Test\\RazorPageTest.cs",
+            "Region": {
+              "StartLine": 1395,
+              "EndLine": 1395,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.WebApiCompatShimTest\\TestUtils\\TestData.cs",
+            "Region": {
+              "StartLine": 19,
+              "EndLine": 19,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\WebSites\\BasicWebSite\\Controllers\\ApplicationBaseController.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\WebSites\\ControllerDiscoveryConventionsWebSite\\AbstractController.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\WebSites\\RazorWebSite\\MyBasePage.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Demo.CustomModule\\UglifiedNancyModule.cs",
+            "Region": {
+              "StartLine": 24,
+              "EndLine": 24,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Hosting.Aspnet\\DefaultNancyAspNetBootstrapper.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Metadata.Modules\\MetadataModule.cs",
+            "Region": {
+              "StartLine": 11,
+              "EndLine": 11,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Unit\\Bootstrapper\\BootstrapperLocatorFixture.cs",
+            "Region": {
+              "StartLine": 23,
+              "EndLine": 23,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.ViewEngines.Razor.Tests\\GreetingViewBase.cs",
+            "Region": {
+              "StartLine": 3,
+              "EndLine": 3,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.ViewEngines.Razor\\NancyRazorViewBase.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.ViewEngines.Spark\\NancySparkView.cs",
+            "Region": {
+              "StartLine": 7,
+              "EndLine": 7,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.ViewEngines.Spark\\NancySparkView.cs",
+            "Region": {
+              "StartLine": 80,
+              "EndLine": 80,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Bootstrapper\\ContainerRegistration.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Bootstrapper\\Registrations.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Diagnostics\\DiagnosticModule.cs",
+            "Region": {
+              "StartLine": 3,
+              "EndLine": 3,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to an interface",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Json\\JavaScriptPrimitiveConverter.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\NamedPipelineBase.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\NancyModule.cs",
+            "Region": {
+              "StartLine": 19,
+              "EndLine": 19,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Config\\NameBaseAttribute.cs",
+            "Region": {
+              "StartLine": 45,
+              "EndLine": 45,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Filters\\LayoutBasedFilter.cs",
+            "Region": {
+              "StartLine": 42,
+              "EndLine": 42,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Targets\\Target.cs",
+            "Region": {
+              "StartLine": 49,
+              "EndLine": 49,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Targets\\TargetWithLayout.cs",
+            "Region": {
+              "StartLine": 43,
+              "EndLine": 43,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Targets\\TargetWithLayoutHeaderAndFooter.cs",
+            "Region": {
+              "StartLine": 42,
+              "EndLine": 42,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Targets\\Wrappers\\CompoundTargetBase.cs",
+            "Region": {
+              "StartLine": 46,
+              "EndLine": 46,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Targets\\Wrappers\\WrapperTargetBase.cs",
+            "Region": {
+              "StartLine": 44,
+              "EndLine": 44,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\NLogTestBase.cs",
+            "Region": {
+              "StartLine": 52,
+              "EndLine": 52,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\build\\DocumentAnnotations\\ProcessorBase.cs",
+            "Region": {
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\lib\\commandline\\CommandLine.cs",
+            "Region": {
+              "StartLine": 46,
+              "EndLine": 46,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\lib\\commandline\\CommandLine.cs",
+            "Region": {
+              "StartLine": 1492,
+              "EndLine": 1492,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\lib\\commandline\\CommandLineText.cs",
+            "Region": {
+              "StartLine": 435,
+              "EndLine": 435,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.Test\\Text\\PatternTestBase.cs",
+            "Region": {
+              "StartLine": 20,
+              "EndLine": 20,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Calendars\\FixedMonthYearMonthDayCalculator.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Calendars\\GJYearMonthDayCalculator.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Calendars\\PersianYearMonthDayCalculator.cs",
+            "Region": {
+              "StartLine": 19,
+              "EndLine": 19,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Calendars\\RegularYearMonthDayCalculator.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Text\\TextCursor.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Options\\OptionsPageBase.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\SettingsManagerBase.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellCmdlets\\ProcessPackageBaseCommand.cs",
+            "Region": {
+              "StartLine": 20,
+              "EndLine": 20,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceData2DomainNames.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataDomainNames.cs",
+            "Region": {
+              "StartLine": 12,
+              "EndLine": 12,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataNextDomainSecure3Base.cs",
+            "Region": {
+              "StartLine": 23,
+              "EndLine": 23,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataStrings.cs",
+            "Region": {
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataUShortDomainName.cs",
+            "Region": {
+              "StartLine": 19,
+              "EndLine": 19,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Ethernet\\EthernetBaseLayer.cs",
+            "Region": {
+              "StartLine": 11,
+              "EndLine": 11,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Icmp\\IcmpIdentifiedDatagram.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Icmp\\IcmpIdentifiedLayer.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Icmp\\IcmpIpV4HeaderPlus64BitsPayloadDatagram.cs",
+            "Region": {
+              "StartLine": 19,
+              "EndLine": 19,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Icmp\\IcmpIpV4PayloadDatagram.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Igmp\\IgmpSimpleLayer.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Igmp\\IgmpVersion1Layer.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Igmp\\IgmpVersion2Layer.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to an interface",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Ip\\Option.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Ip\\Options.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Ip\\V4Options.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV4\\IpV4Option.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV4\\IpV4OptionComplex.cs",
+            "Region": {
+              "StartLine": 7,
+              "EndLine": 7,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV4\\IpV4OptionRoute.cs",
+            "Region": {
+              "StartLine": 12,
+              "EndLine": 12,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6ExtensionHeader.cs",
+            "Region": {
+              "StartLine": 20,
+              "EndLine": 20,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6ExtensionHeaderOptions.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6OptionSimple.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Transport\\TcpOption.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Transport\\TcpOptionComplex.cs",
+            "Region": {
+              "StartLine": 7,
+              "EndLine": 7,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Transport\\TcpOptionConnectionCountBase.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\RazorEngine-850082854d\\Core\\RazorEngine.Core\\Compilation\\DirectCompilerServiceBase.cs",
+            "Region": {
+              "StartLine": 20,
+              "EndLine": 20,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\RazorEngine-850082854d\\Core\\RazorEngine.Core\\Templating\\TemplateBase.cs",
+            "Region": {
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\RazorEngine-850082854d\\Web\\RazorEngine.Mvc\\MvcTemplateBase.cs",
+            "Region": {
+              "StartLine": 12,
+              "EndLine": 12,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to an interface",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\FilePart.cs",
+            "Region": {
+              "StartLine": 5,
+              "EndLine": 5,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Rar\\RarFilePart.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Zip\\Headers\\ZipFileEntry..cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaBase.cs",
+            "Region": {
+              "StartLine": 3,
+              "EndLine": 3,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\Pointer.cs",
+            "Region": {
+              "StartLine": 4,
+              "EndLine": 4,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1694",
+      "FullMessage": "Convert this \"abstract\" class to a concrete class with a private constructor",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack20.cs",
+            "Region": {
+              "StartLine": 31,
+              "EndLine": 31,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -122,6 +122,7 @@
     <Compile Include="Rules\FieldShadowsParentFieldTest.cs" />
     <Compile Include="Rules\ClassWithOnlyStaticMemberTest.cs" />
     <Compile Include="Rules\StaticFieldWrittenFromInstanceMemberTest.cs" />
+    <Compile Include="Rules\ClassShouldNotBeAbstractTest.cs" />
     <Compile Include="Rules\DisposeFromDisposeTest.cs" />
     <Compile Include="Rules\DisposeNotImplementingDisposeTest.cs" />
     <Compile Include="Rules\RedundantCastTest.cs" />
@@ -327,6 +328,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\StaticFieldWrittenFromInstanceMember.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\ClassShouldNotBeAbstract.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
