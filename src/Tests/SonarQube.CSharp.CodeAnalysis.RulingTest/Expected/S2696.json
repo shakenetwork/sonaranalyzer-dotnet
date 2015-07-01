@@ -1,0 +1,400 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarQube.CSharp.CodeAnalysis.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S2696",
+      "FullMessage": "Make the enclosing method \"static\" or remove this set.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.TestKit.Tests\\TestActorRefTests\\TestActorRefSpec.cs",
+            "Region": {
+              "StartLine": 85,
+              "EndLine": 85,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2696",
+      "FullMessage": "Make the enclosing method \"static\" or remove this set.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.TestKit.Tests\\TestActorRefTests\\TestActorRefSpec.cs",
+            "Region": {
+              "StartLine": 92,
+              "EndLine": 92,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2696",
+      "FullMessage": "Make the enclosing method \"static\" or remove this set.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.TestKit.Tests\\TestActorRefTests\\TestActorRefSpec.cs",
+            "Region": {
+              "StartLine": 119,
+              "EndLine": 119,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2696",
+      "FullMessage": "Make the enclosing method \"static\" or remove this set.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Helios.Concurrency.DedicatedThreadPool.cs",
+            "Region": {
+              "StartLine": 182,
+              "EndLine": 182,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2696",
+      "FullMessage": "Make the enclosing method \"static\" or remove this set.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Helios.Concurrency.DedicatedThreadPool.cs",
+            "Region": {
+              "StartLine": 208,
+              "EndLine": 208,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2696",
+      "FullMessage": "Make the enclosing method \"static\" or remove this set.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Helios.Concurrency.DedicatedThreadPool.cs",
+            "Region": {
+              "StartLine": 437,
+              "EndLine": 437,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2696",
+      "FullMessage": "Make the enclosing method \"static\" or remove this set.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\filesystem\\DotNetFileSystem.cs",
+            "Region": {
+              "StartLine": 55,
+              "EndLine": 55,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2696",
+      "FullMessage": "Make the enclosing method \"static\" or remove this set.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\samples\\MvcSample.Web\\Filters\\UserNameService.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2696",
+      "FullMessage": "Make the enclosing method \"static\" or remove this set.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\samples\\TagHelperSample.Web\\Controllers\\HomeController.cs",
+            "Region": {
+              "StartLine": 46,
+              "EndLine": 46,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2696",
+      "FullMessage": "Make the enclosing method \"static\" or remove this set.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Razor.Host.Test\\TestFiles\\Output\\DesignTime\\Basic.cs",
+            "Region": {
+              "StartLine": 33,
+              "EndLine": 33,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2696",
+      "FullMessage": "Make the enclosing method \"static\" or remove this set.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Razor.Host.Test\\TestFiles\\Output\\DesignTime\\Basic.cs",
+            "Region": {
+              "StartLine": 38,
+              "EndLine": 38,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2696",
+      "FullMessage": "Make the enclosing method \"static\" or remove this set.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\WebSites\\BasicWebSite\\Controllers\\JsonResultController.cs",
+            "Region": {
+              "StartLine": 42,
+              "EndLine": 42,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2696",
+      "FullMessage": "Make the enclosing method \"static\" or remove this set.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\WebSites\\ModelBindingWebSite\\Controllers\\VehicleController.cs",
+            "Region": {
+              "StartLine": 129,
+              "EndLine": 129,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2696",
+      "FullMessage": "Make the enclosing method \"static\" or remove this set.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\WebSites\\ValidationWebSite\\Controllers\\RemoteAttribute_HomeController.cs",
+            "Region": {
+              "StartLine": 30,
+              "EndLine": 30,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2696",
+      "FullMessage": "Make the enclosing method \"static\" or remove this set.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\WebSites\\ValidationWebSite\\MyArea\\Controllers\\RemoteAttribute_HomeController.cs",
+            "Region": {
+              "StartLine": 30,
+              "EndLine": 30,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2696",
+      "FullMessage": "Make the enclosing method \"static\" or remove this set.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Dialog10\\PackageManagerWindow.xaml.cs",
+            "Region": {
+              "StartLine": 505,
+              "EndLine": 505,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2696",
+      "FullMessage": "Make the enclosing method \"static\" or remove this set.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Dialog10\\PackageManagerWindow.xaml.cs",
+            "Region": {
+              "StartLine": 719,
+              "EndLine": 719,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2696",
+      "FullMessage": "Make the enclosing property \"static\" or remove this set.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\DialogServices\\SolutionExplorer\\FolderNode.cs",
+            "Region": {
+              "StartLine": 76,
+              "EndLine": 76,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2696",
+      "FullMessage": "Make the enclosing property \"static\" or remove this set.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\DialogServices\\SolutionExplorer\\FolderNode.cs",
+            "Region": {
+              "StartLine": 84,
+              "EndLine": 84,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2696",
+      "FullMessage": "Make the enclosing method \"static\" or remove this set.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHost\\RunspaceDispatcher.cs",
+            "Region": {
+              "StartLine": 228,
+              "EndLine": 228,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2696",
+      "FullMessage": "Make the enclosing method \"static\" or remove this set.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHost\\RunspaceDispatcher.cs",
+            "Region": {
+              "StartLine": 233,
+              "EndLine": 233,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2696",
+      "FullMessage": "Make the enclosing method \"static\" or remove this set.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHost\\RunspaceDispatcher.cs",
+            "Region": {
+              "StartLine": 293,
+              "EndLine": 293,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2696",
+      "FullMessage": "Make the enclosing method \"static\" or remove this set.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHost\\RunspaceDispatcher.cs",
+            "Region": {
+              "StartLine": 299,
+              "EndLine": 299,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

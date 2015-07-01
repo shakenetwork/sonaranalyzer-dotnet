@@ -93,6 +93,7 @@
     <Compile Include="Rules\SillyBitwiseOperation.cs" />
     <Compile Include="Rules\ConstructorOverridableCall.cs" />
     <Compile Include="Rules\FieldShadowsParentField.cs" />
+    <Compile Include="Rules\StaticFieldWrittenFromInstanceMember.cs" />
     <Compile Include="Rules\DisposeFromDispose.cs" />
     <Compile Include="Rules\DisposeNotImplementingDispose.cs" />
     <Compile Include="Rules\ClassWithOnlyStaticMember.cs" />
@@ -381,6 +382,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S1118.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S2696.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

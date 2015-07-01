@@ -121,6 +121,7 @@
     <Compile Include="Rules\ConstructorOverridableCallTest.cs" />
     <Compile Include="Rules\FieldShadowsParentFieldTest.cs" />
     <Compile Include="Rules\ClassWithOnlyStaticMemberTest.cs" />
+    <Compile Include="Rules\StaticFieldWrittenFromInstanceMemberTest.cs" />
     <Compile Include="Rules\DisposeFromDisposeTest.cs" />
     <Compile Include="Rules\DisposeNotImplementingDisposeTest.cs" />
     <Compile Include="Rules\RedundantCastTest.cs" />
@@ -323,6 +324,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\ClassWithOnlyStaticMember.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\StaticFieldWrittenFromInstanceMember.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
