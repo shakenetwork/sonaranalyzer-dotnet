@@ -1,0 +1,3120 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarQube.CSharp.CodeAnalysis.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\contrib\\dependencyInjection\\Examples\\BasicAutoFacUses\\Program.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\contrib\\dependencyInjection\\Examples\\BasicCastleWindsorUse\\Program.cs",
+            "Region": {
+              "StartLine": 19,
+              "EndLine": 19,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\contrib\\dependencyInjection\\Examples\\BasicNinjectUses\\Program.cs",
+            "Region": {
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\contrib\\dependencyInjection\\Examples\\BasicStructureMapUses\\Program.cs",
+            "Region": {
+              "StartLine": 19,
+              "EndLine": 19,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\contrib\\dependencyInjection\\Examples\\BasicUnityUses\\Program.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
+            "Region": {
+              "StartLine": 504,
+              "EndLine": 504,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\VectorClock.cs",
+            "Region": {
+              "StartLine": 100,
+              "EndLine": 100,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.MultiNodeTestRunner\\Program.cs",
+            "Region": {
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.NodeTestRunner\\Program.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"private\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence.Tests\\AtLeastOnceDeliverySpec.cs",
+            "Region": {
+              "StartLine": 286,
+              "EndLine": 286,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"private\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence.Tests\\AtLeastOnceDeliverySpec.cs",
+            "Region": {
+              "StartLine": 289,
+              "EndLine": 289,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\CommandLine.cs",
+            "Region": {
+              "StartLine": 27,
+              "EndLine": 27,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Transport\\TransportAdapters.cs",
+            "Region": {
+              "StartLine": 239,
+              "EndLine": 239,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Configuration\\ConfigurationFactory.cs",
+            "Region": {
+              "StartLine": 22,
+              "EndLine": 22,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Util\\Internal\\Collections\\EmptyReadOnlyCollections.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\examples\\Chat\\ChatClient\\Program.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\examples\\Chat\\ChatServer\\Program.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\examples\\Cluster\\Roles\\Samples.Cluster.Transformation\\Program.cs",
+            "Region": {
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\examples\\Cluster\\Routing\\Samples.Cluster.ConsistentHashRouting\\Program.cs",
+            "Region": {
+              "StartLine": 20,
+              "EndLine": 20,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\examples\\Cluster\\Samples.Cluster.Simple\\Program.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\examples\\FaultTolerance\\Program.cs",
+            "Region": {
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\examples\\FaultTolerance\\Program.cs",
+            "Region": {
+              "StartLine": 486,
+              "EndLine": 486,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\examples\\HelloWorld\\HelloAkka\\Program.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\examples\\PersistenceExample\\Program.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\examples\\RemoteDeploy\\System1\\Program.cs",
+            "Region": {
+              "StartLine": 24,
+              "EndLine": 24,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\examples\\RemoteDeploy\\System2\\Program.cs",
+            "Region": {
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\examples\\Routing\\Program.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\examples\\Stocks\\SymbolLookup\\Properties\\Resources.Designer.cs",
+            "Region": {
+              "StartLine": 40,
+              "EndLine": 40,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"private\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.console\\Program.cs",
+            "Region": {
+              "StartLine": 40,
+              "EndLine": 40,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests.integration\\Scenario.cs",
+            "Region": {
+              "StartLine": 29,
+              "EndLine": 29,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"private\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure.app\\nuget\\NugetCommon.cs",
+            "Region": {
+              "StartLine": 26,
+              "EndLine": 26,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"private\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure.app\\nuget\\NugetList.cs",
+            "Region": {
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"private\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure.app\\nuget\\NugetPack.cs",
+            "Region": {
+              "StartLine": 27,
+              "EndLine": 27,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure.app\\nuget\\NugetPush.cs",
+            "Region": {
+              "StartLine": 24,
+              "EndLine": 24,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure.app\\templates\\ChocolateyInstallTemplate.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure.app\\templates\\ChocolateyReadMeTemplate.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure.app\\templates\\ChocolateyUninstallTemplate.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure.app\\templates\\NuspecTemplate.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\commandline\\InteractivePrompt.cs",
+            "Region": {
+              "StartLine": 27,
+              "EndLine": 27,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"private\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\commands\\PowershellExecutor.cs",
+            "Region": {
+              "StartLine": 26,
+              "EndLine": 26,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"private\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\configuration\\Config.cs",
+            "Region": {
+              "StartLine": 24,
+              "EndLine": 24,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"private\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\information\\VersionInformation.cs",
+            "Region": {
+              "StartLine": 21,
+              "EndLine": 21,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"private\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\licensing\\LicenseValidation.cs",
+            "Region": {
+              "StartLine": 22,
+              "EndLine": 22,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"private\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\logging\\Log4NetAppenderConfiguration.cs",
+            "Region": {
+              "StartLine": 30,
+              "EndLine": 30,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"private\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\registration\\Bootstrap.cs",
+            "Region": {
+              "StartLine": 27,
+              "EndLine": 27,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"private\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\tokens\\TokenReplacer.cs",
+            "Region": {
+              "StartLine": 22,
+              "EndLine": 22,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\tolerance\\FaultTolerance.cs",
+            "Region": {
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Razor\\Internal\\SymbolsUtility.cs",
+            "Region": {
+              "StartLine": 12,
+              "EndLine": 12,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Extensions.Test\\ModelBinding\\Metadata\\DataAnnotationsMetadataProviderTest.cs",
+            "Region": {
+              "StartLine": 677,
+              "EndLine": 677,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Extensions.Test\\Rendering\\HtmlHelperSelectTest.cs",
+            "Region": {
+              "StartLine": 1606,
+              "EndLine": 1606,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Extensions.Test\\Rendering\\TestResources.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Demo.Async\\Program.cs",
+            "Region": {
+              "StartLine": 11,
+              "EndLine": 11,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Demo.Authentication.Stateless\\UserDatabase.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Demo.Authentication.Token\\Program.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Demo.Authentication.Token\\UserDatabase.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Demo.Hosting.Aspnet\\Resources\\Menu.Designer.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Demo.Hosting.Self\\Program.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Demo.Hosting.Wcf\\Program.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Demo.Razor.Localization\\Resources\\Text.Designer.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Embedded\\Conventions\\EmbeddedStaticContentConventionBuilder.cs",
+            "Region": {
+              "StartLine": 12,
+              "EndLine": 12,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Testing\\Properties\\Resources.Designer.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Helpers\\HttpEncoder.cs",
+            "Region": {
+              "StartLine": 113,
+              "EndLine": 113,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"private\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\MimeTypes.cs",
+            "Region": {
+              "StartLine": 36,
+              "EndLine": 36,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\ExtendingLoggers\\InheritFromLogger\\Program.cs",
+            "Region": {
+              "StartLine": 70,
+              "EndLine": 70,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\ExtendingLoggers\\LoggerWrapper\\Program.cs",
+            "Region": {
+              "StartLine": 76,
+              "EndLine": 76,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\NLogReceiverForwarderService\\Program.cs",
+            "Region": {
+              "StartLine": 7,
+              "EndLine": 7,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\AsyncWrapper\\Wrapping File\\Example.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\AutoFlushWrapper\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\BufferingWrapper\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\Chainsaw\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 4,
+              "EndLine": 4,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\ColoredConsole\\Row Highlighting\\Example.cs",
+            "Region": {
+              "StartLine": 4,
+              "EndLine": 4,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\ColoredConsole\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 4,
+              "EndLine": 4,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\ColoredConsole\\Word Highlighting\\Example.cs",
+            "Region": {
+              "StartLine": 4,
+              "EndLine": 4,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\Console\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 4,
+              "EndLine": 4,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\Database\\MSSQL\\Example.cs",
+            "Region": {
+              "StartLine": 4,
+              "EndLine": 4,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\Database\\Oracle.Native\\Example.cs",
+            "Region": {
+              "StartLine": 4,
+              "EndLine": 4,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\Database\\Oracle.OleDb\\Example.cs",
+            "Region": {
+              "StartLine": 4,
+              "EndLine": 4,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\Debugger\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\EventLog\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 5,
+              "EndLine": 5,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\FallbackGroup\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\File\\Archive1\\Example.cs",
+            "Region": {
+              "StartLine": 5,
+              "EndLine": 5,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\File\\Archive2\\Example.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\File\\Archive3\\Example.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\File\\Archive4\\Example.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\File\\Asynchronous\\Example.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\File\\CSV\\Example.cs",
+            "Region": {
+              "StartLine": 7,
+              "EndLine": 7,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\File\\Multiple\\Example.cs",
+            "Region": {
+              "StartLine": 5,
+              "EndLine": 5,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\File\\Multiple2\\Example.cs",
+            "Region": {
+              "StartLine": 5,
+              "EndLine": 5,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\File\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 5,
+              "EndLine": 5,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\FilteringWrapper\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\FormControl\\Properties\\Resources.Designer.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\Mail\\Buffered\\Example.cs",
+            "Region": {
+              "StartLine": 7,
+              "EndLine": 7,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\Mail\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\Memory\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\MessageBox\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\MethodCall\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 7,
+              "EndLine": 7,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\MSMQ\\Multiple Queues\\Example.cs",
+            "Region": {
+              "StartLine": 5,
+              "EndLine": 5,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\MSMQ\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 5,
+              "EndLine": 5,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\Network\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 4,
+              "EndLine": 4,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\NLogViewer\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 4,
+              "EndLine": 4,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\Null\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\OutputDebugString\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 7,
+              "EndLine": 7,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\PerfCounter\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\PostFilteringWrapper\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\RandomizeGroup\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\RepeatingWrapper\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\RetryingWrapper\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\RichTextBox\\RowColoring\\Properties\\Resources.Designer.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\RichTextBox\\Simple\\Properties\\Resources.Designer.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\RichTextBox\\WordColoring\\Properties\\Resources.Designer.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\RoundRobinGroup\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\SplitGroup\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\Trace\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 7,
+              "EndLine": 7,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\WebService\\Simple\\Example.cs",
+            "Region": {
+              "StartLine": 4,
+              "EndLine": 4,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\web\\article1.cs",
+            "Region": {
+              "StartLine": 5,
+              "EndLine": 5,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\web\\article2.cs",
+            "Region": {
+              "StartLine": 5,
+              "EndLine": 5,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\web\\GetCurrentClassLogger.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\web\\GetLogger.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\web\\Performance.cs",
+            "Region": {
+              "StartLine": 3,
+              "EndLine": 3,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\web\\tutorial.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\InstallNLogConfig\\Program.cs",
+            "Region": {
+              "StartLine": 41,
+              "EndLine": 41,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Internal\\ObjectGraphScanner.cs",
+            "Region": {
+              "StartLine": 48,
+              "EndLine": 48,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Internal\\StackTraceUsageUtils.cs",
+            "Region": {
+              "StartLine": 42,
+              "EndLine": 42,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Internal\\UrlHelper.cs",
+            "Region": {
+              "StartLine": 41,
+              "EndLine": 41,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"private\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Layouts\\LayoutParser.cs",
+            "Region": {
+              "StartLine": 51,
+              "EndLine": 51,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.Test\\Test.cs",
+            "Region": {
+              "StartLine": 46,
+              "EndLine": 46,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Conditions\\ConditionEvaluatorTests.cs",
+            "Region": {
+              "StartLine": 366,
+              "EndLine": 366,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Conditions\\ConditionParserTests.cs",
+            "Region": {
+              "StartLine": 321,
+              "EndLine": 321,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\LayoutRenderers\\ExceptionTests.cs",
+            "Region": {
+              "StartLine": 500,
+              "EndLine": 500,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLogReceiverService\\Program.cs",
+            "Region": {
+              "StartLine": 7,
+              "EndLine": 7,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tools\\BuildDocPages\\Program.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tools\\DumpApiXml\\Program.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tools\\MakeNLogXSD\\Program.cs",
+            "Region": {
+              "StartLine": 39,
+              "EndLine": 39,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tools\\MergeApiXml\\Program.cs",
+            "Region": {
+              "StartLine": 7,
+              "EndLine": 7,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tools\\RunXap\\Program.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\build\\BuildProjectVariants\\Program.cs",
+            "Region": {
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\build\\CombineBenchmarks\\Program.cs",
+            "Region": {
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\build\\TweakSandcastleStyle\\Program.cs",
+            "Region": {
+              "StartLine": 12,
+              "EndLine": 12,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.Benchmarks\\Program.cs",
+            "Region": {
+              "StartLine": 12,
+              "EndLine": 12,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"private\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.TzdbCompiler\\Program.cs",
+            "Region": {
+              "StartLine": 22,
+              "EndLine": 22,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.TzdbCompiler\\Tzdb\\CldrWindowsZonesParser.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.Web\\App_Start\\BundleConfig.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.Web\\App_Start\\FilterConfig.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.Web\\App_Start\\RouteConfig.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Properties\\Messages.Designer.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Properties\\PatternResources.Designer.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\Common\\CommonResources.Designer.cs",
+            "Region": {
+              "StartLine": 33,
+              "EndLine": 33,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\CommandLine.ServerExtensions\\NuGetResources.Designer.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\CommandLine\\NuGetCommand.cs",
+            "Region": {
+              "StartLine": 5,
+              "EndLine": 5,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\CommandLine\\NuGetResources.Designer.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Core\\Resources\\AnalysisResources.Designer.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Core\\Resources\\NuGetResources.Designer.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\DialogServices\\Resources.Designer.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Options\\Resources.Designer.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Server\\Infrastructure\\PackageUtility.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\NativeMethods.cs",
+            "Region": {
+              "StartLine": 4,
+              "EndLine": 4,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\Resources\\VsResources.Designer.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio11\\Resources.Designer.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\Console\\Resources.Designer.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellCmdlets\\Resources.Designer.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHost\\Resources.Designer.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHostProvider\\Resources.Designer.cs",
+            "Region": {
+              "StartLine": 33,
+              "EndLine": 33,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsExtension\\Resources.Designer.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\CommandLine.Test\\MockResourceType.Designer.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\CommandLine.Test\\ResourceHelperTests.cs",
+            "Region": {
+              "StartLine": 79,
+              "EndLine": 79,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\Core.Test\\DataServicePackageRepositoryTest.cs",
+            "Region": {
+              "StartLine": 232,
+              "EndLine": 232,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\Test.Integration\\CommandRunner.cs",
+            "Region": {
+              "StartLine": 7,
+              "EndLine": 7,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\Test.Integration\\NuGetCommandLine\\NuSpecFileContext.cs",
+            "Region": {
+              "StartLine": 4,
+              "EndLine": 4,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\Test.Utility\\PackageUtility.cs",
+            "Region": {
+              "StartLine": 12,
+              "EndLine": 12,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\Test.Utility\\PathFixUtility.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\Tools\\NuGet\\GenerateTestPackages\\Program.cs",
+            "Region": {
+              "StartLine": 12,
+              "EndLine": 12,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\RazorEngine-850082854d\\Hosts\\RazorEngine.Hosts.Console\\Program.cs",
+            "Region": {
+              "StartLine": 11,
+              "EndLine": 11,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\RazorEngine-850082854d\\Web\\Test\\RazorEngine.Web.Test\\App_Start\\BundleConfig.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\RazorEngine-850082854d\\Web\\Test\\RazorEngine.Web.Test\\App_Start\\FilterConfig.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\RazorEngine-850082854d\\Web\\Test\\RazorEngine.Web.Test\\App_Start\\RouteConfig.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Hide this public constructor.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress.Test\\Properties\\Resources.Designer.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Archive\\ArchiveFactory.cs",
+            "Region": {
+              "StartLine": 12,
+              "EndLine": 12,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\ArchiveEncoding.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\BZip2Constants.cs",
+            "Region": {
+              "StartLine": 31,
+              "EndLine": 31,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Zlib.cs",
+            "Region": {
+              "StartLine": 202,
+              "EndLine": 202,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"private\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Zlib.cs",
+            "Region": {
+              "StartLine": 384,
+              "EndLine": 384,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Decode\\Compress.cs",
+            "Region": {
+              "StartLine": 4,
+              "EndLine": 4,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1118",
+      "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\VMCmdFlags.cs",
+            "Region": {
+              "StartLine": 3,
+              "EndLine": 3,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
