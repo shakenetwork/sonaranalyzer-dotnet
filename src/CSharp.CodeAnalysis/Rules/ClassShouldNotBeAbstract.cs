@@ -65,7 +65,9 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 c =>
                 {
                     var symbol = c.Symbol as INamedTypeSymbol;
-                    if (symbol == null || !symbol.IsAbstract)
+                    if (symbol == null ||
+                        !symbol.IsAbstract ||
+                        symbol.TypeKind != TypeKind.Class)
                     {
                         return;
                     }

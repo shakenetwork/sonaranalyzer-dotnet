@@ -3,6 +3,20 @@ using System.Collections.Generic;
 
 namespace Tests.Diagnostics
 {
+    public interface IMyInterface
+    {
+        
+    }
+
+    public struct MyStruct // Compliant, we don't care about structs
+    {
+        public static string Concatenate(string s1, string s2)
+        {
+            return s1 + s2;
+        }
+        public static string Prop { get; set; }
+    }
+
     public class StringUtils // Noncompliant
     {
         public static string Concatenate(string s1, string s2)

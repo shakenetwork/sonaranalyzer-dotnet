@@ -73,7 +73,8 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 {
                     var namedType = c.Symbol as INamedTypeSymbol;
                     if (namedType == null ||
-                        !namedType.IsType)
+                        !namedType.IsType ||
+                        namedType.TypeKind != TypeKind.Class)
                     {
                         return;
                     }
