@@ -18,7 +18,6 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
@@ -150,7 +149,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 currentType = currentType.BaseType;
             }
 
-            return currentType == null ? null : currentType;
+            return currentType;
         }
     }
 }
