@@ -29,7 +29,7 @@ using SonarQube.CSharp.CodeAnalysis.Helpers;
 
 namespace SonarQube.CSharp.CodeAnalysis.Runner
 {
-    public class Program
+    public static class Program
     {
         public static int Main(string[] args)
         {

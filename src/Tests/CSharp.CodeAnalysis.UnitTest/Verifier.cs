@@ -32,7 +32,7 @@ using SonarQube.CSharp.CodeAnalysis.Helpers;
 
 namespace SonarQube.CSharp.CodeAnalysis.UnitTest
 {
-    public class Verifier
+    public static class Verifier
     {
         public static void Verify(Project project, DiagnosticAnalyzer diagnosticAnalyzer)
         {

@@ -29,7 +29,7 @@ using SonarQube.CSharp.CodeAnalysis.Common;
 
 namespace SonarQube.CSharp.CodeAnalysis.DocGenerator
 {
-    public class Program
+    public static class Program
     {
         private const string TemplateInternalName = "main-html";
         private static readonly string ResourcesFolderName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DocResources");
@@ -39,7 +39,7 @@ namespace SonarQube.CSharp.CodeAnalysis.DocGenerator
         private static readonly string DestinationFilePattern = DestinationFolderPattern + "/{1}.html";
         private const string TemplateHtmlResourceName = "SonarQube.CSharp.CodeAnalysis.DocGenerator.DocResources.main.template.html";
 
-        static void Main()
+        public static void Main()
         {
             var ruleDetails = RuleDetailBuilder.GetParameterlessRuleDetails().ToList();
             var productVersion = FileVersionInfo.GetVersionInfo(typeof(Program).Assembly.Location).ProductVersion;

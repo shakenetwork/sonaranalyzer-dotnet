@@ -20,6 +20,7 @@
 
 using System;
 using System.Globalization;
+using System.Linq;
 using System.Text.RegularExpressions;
 using Microsoft.CodeAnalysis;
 using SonarQube.CSharp.CodeAnalysis.Common.Sqale;

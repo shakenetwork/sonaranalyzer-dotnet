@@ -125,7 +125,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
             return
                 (CodeEndings.Any(ending => checkedLine.EndsWith(ending, StringComparison.Ordinal)) ||
-                 CodeParts.Any(part => checkedLine.Contains(part)) ||
+                 CodeParts.Any(checkedLine.Contains) ||
                  (checkedLine.Length - checkedLine.Replace("&&", "").Replace("||", "").Length)/2 >= 3) &&
                 !checkedLine.Contains("License");
         }

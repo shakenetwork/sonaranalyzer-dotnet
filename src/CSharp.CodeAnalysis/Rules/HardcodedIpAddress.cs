@@ -87,7 +87,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
 
                     foreach (var type in NodeTypesToCheck)
                     {
-                        var ancestorOrSelf = stringLiteral.FirstAncestorOrSelf<SyntaxNode>(node => type.IsInstanceOfType(node));
+                        var ancestorOrSelf = stringLiteral.FirstAncestorOrSelf<SyntaxNode>(type.IsInstanceOfType);
                         if (ancestorOrSelf != null && SkippedWords.Any(s => ancestorOrSelf.ToString().ToLowerInvariant().Contains(s)))
                         {
                             return;

@@ -34,7 +34,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest
         [TestMethod]
         public void Configuration()
         {
-            Configuration conf = new Configuration(XDocument.Load("ConfigurationTest.xml"));
+            var conf = new Configuration(XDocument.Load("ConfigurationTest.xml"));
             conf.IgnoreHeaderComments.Should().BeTrue();
             conf.Files.Should().BeEquivalentTo(@"C:\MyClass1.cs", @"C:\MyClass2.cs");
 
