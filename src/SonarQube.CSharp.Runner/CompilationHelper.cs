@@ -31,7 +31,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Runner
             using (var workspace = new AdhocWorkspace())
             {
                 var project = workspace.CurrentSolution.AddProject("foo", "foo.dll", LanguageNames.CSharp)
-                    .AddMetadataReference(MetadataReference.CreateFromAssembly(typeof (object).Assembly));
+                    .AddMetadataReference(MetadataReference.CreateFromFile(typeof (object).Assembly.Location));
 
                 foreach (var filePath in filePaths)
                 {
@@ -49,7 +49,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Runner
             using (var workspace = new AdhocWorkspace())
             {
                 return workspace.CurrentSolution.AddProject("foo", "foo.dll", LanguageNames.CSharp)
-                    .AddMetadataReference(MetadataReference.CreateFromAssembly(typeof (object).Assembly))
+                    .AddMetadataReference(MetadataReference.CreateFromFile(typeof (object).Assembly.Location))
                     .AddDocument("foo.cs", text)
                     .Project
                     .Solution;

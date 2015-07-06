@@ -79,8 +79,8 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest
             using (var workspace = new AdhocWorkspace())
             {
                 var document = workspace.CurrentSolution.AddProject("foo", "foo.dll", LanguageNames.CSharp)
-                    .AddMetadataReference(MetadataReference.CreateFromAssembly(typeof(object).Assembly))
-                    .AddMetadataReference(MetadataReference.CreateFromAssembly(typeof(Enumerable).Assembly))
+                    .AddMetadataReference(MetadataReference.CreateFromFile(typeof(object).Assembly.Location))
+                    .AddMetadataReference(MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location))
                     .AddDocument(file.Name, File.ReadAllText(file.FullName, Encoding.UTF8));
 
                 Verify(document.Project, diagnosticAnalyzer);
