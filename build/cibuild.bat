@@ -24,5 +24,5 @@ if %errorlevel% neq 0 exit /b %errorlevel%
 if %errorlevel% neq 0 exit /b %errorlevel%
 %VSTEST_PATH% %SolutionRoot%src\Tests\SonarQube.CSharp.CodeAnalysis.UnitTest\bin\Release\SonarQube.CSharp.CodeAnalysis.Integration.UnitTest.dll
 if %errorlevel% neq 0 exit /b %errorlevel%
-%VSTEST_PATH% %SolutionRoot%src\Tests\SonarQube.CSharp.CodeAnalysis.RulingTest\bin\Release\SonarQube.CSharp.CodeAnalysis.RulingTest.dll
+%VSTEST_PATH% %SolutionRoot%src\Tests\CSharp.CodeAnalysis.RulingTest\bin\Release\SonarQube.CSharp.CodeAnalysis.RulingTest.dll
 if %errorlevel% neq 0 exit /b %errorlevel%
