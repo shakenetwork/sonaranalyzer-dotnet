@@ -33,6 +33,8 @@ namespace SonarQube.CSharp.CodeAnalysis.Runner
     {
         public static int Main(string[] args)
         {
+            Write(string.Format("SonarQube C# Code Analysis version {0}", typeof (Program).Assembly.GetName().Version));
+
             var configuration = new Configuration(XDocument.Load(args[0]));
             var diagnosticsRunner = new DiagnosticsRunner(configuration.Analyzers());
 
@@ -53,7 +55,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Runner
                 foreach (var file in configuration.Files)
                 {
                     xmlOut.Flush();
-                    Console.WriteLine(n + "/" + configuration.Files.Count() + " files analyzed, starting to analyze: " + file);
+                    Write(n + "/" + configuration.Files.Count() + " files analyzed, starting to analyze: " + file);
                     n++;
 
                     try
@@ -147,6 +149,11 @@ namespace SonarQube.CSharp.CodeAnalysis.Runner
                 xmlOut.Flush();
                 return 0;
             }
+        }
+
+        private static void Write(string text)
+        {
+            Console.WriteLine(text);
         }
     }
 }
