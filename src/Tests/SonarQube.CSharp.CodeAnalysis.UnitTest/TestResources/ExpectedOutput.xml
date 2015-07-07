@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--This XML format is not an API-->
+<AnalysisOutput>
+  <Files>
+    <File>
+      <Path>TestResources\TestInput.cs</Path>
+      <Metrics>
+        <Lines>15</Lines>
+        <Classes>1</Classes>
+        <Accessors>0</Accessors>
+        <Statements>3</Statements>
+        <Functions>1</Functions>
+        <PublicApi>2</PublicApi>
+        <PublicUndocumentedApi>1</PublicUndocumentedApi>
+        <Complexity>3</Complexity>
+        <FileComplexityDistribution>0=1;5=0;10=0;20=0;30=0;60=0;90=0</FileComplexityDistribution>
+        <FunctionComplexityDistribution>1=0;2=1;4=0;6=0;8=0;10=0;12=0</FunctionComplexityDistribution>
+        <Comments>
+          <NoSonar />
+          <NonBlank>
+            <Line>3</Line>
+            <Line>5</Line>
+          </NonBlank>
+        </Comments>
+        <LinesOfCode>
+          <Line>1</Line>
+          <Line>2</Line>
+          <Line>6</Line>
+          <Line>7</Line>
+          <Line>8</Line>
+          <Line>9</Line>
+          <Line>10</Line>
+          <Line>11</Line>
+          <Line>13</Line>
+          <Line>14</Line>
+          <Line>15</Line>
+        </LinesOfCode>
+      </Metrics>
+      <Issues>
+        <Issue>
+          <Id>S109</Id>
+          <Line>10</Line>
+          <Message>Assign this magic number 5 to a well-named constant, and use the constant instead.</Message>
+        </Issue>
+        <Issue>
+          <Id>S109</Id>
+          <Line>13</Line>
+          <Message>Assign this magic number 6 to a well-named constant, and use the constant instead.</Message>
+        </Issue>
+        <Issue>
+          <Id>FIXME</Id>
+          <Line>3</Line>
+          <Message>Fix this FIXME</Message>
+        </Issue>
+        <Issue>
+          <Id>TODO</Id>
+          <Line>5</Line>
+          <Message>Fix this TODO</Message>
+        </Issue>
+      </Issues>
+    </File>
+  </Files>
+</AnalysisOutput>

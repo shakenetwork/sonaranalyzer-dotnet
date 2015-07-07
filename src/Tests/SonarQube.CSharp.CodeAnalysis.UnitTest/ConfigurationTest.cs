@@ -34,9 +34,9 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest
         [TestMethod]
         public void Configuration()
         {
-            var conf = new Configuration(XDocument.Load("ConfigurationTest.xml"));
+            var conf = new Configuration(XDocument.Load("TestResources\\ConfigurationTest.xml"));
             conf.IgnoreHeaderComments.Should().BeTrue();
-            conf.Files.Should().BeEquivalentTo(@"C:\MyClass1.cs", @"C:\MyClass2.cs");
+            conf.Files.Should().BeEquivalentTo("TestResources\\TestInput.cs");
 
             conf.AnalyzerIds.Should().BeEquivalentTo(
                 "S1121",
