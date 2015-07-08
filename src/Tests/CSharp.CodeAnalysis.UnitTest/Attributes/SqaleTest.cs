@@ -35,19 +35,15 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Attributes
         [TestMethod]
         public void SingleSqaleRemediationAttribute()
         {
-            var analyzers = typeof(RuleParameterAttribute).Assembly
-                .GetTypes()
-                .Where(t => t.IsSubclassOf(typeof(DiagnosticAnalyzer)))
-                .ToList();
+            var analyzers = new RuleFinder().GetAllAnalyzerTypes();
 
             foreach (var analyzer in analyzers)
             {
                 var count = analyzer.GetCustomAttributes<SqaleRemediationAttribute>().Count();
                 if (count != 1)
                 {
-                    throw new Exception(
-                        string.Format("Only one SqaleRemediationAttribute can be assigned to DiagnosticAnalyzers, '{0}' has {1}",
-                        analyzer.Name, count));
+                    Assert.Fail("Only one SqaleRemediationAttribute can be assigned to DiagnosticAnalyzers, '{0}' has {1}", 
+                        analyzer.Name, count);
                 }
             }
         }
@@ -55,10 +51,7 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Attributes
         [TestMethod]
         public void SqaleSubCharacteristicAttribute()
         {
-            var analyzers = typeof(RuleParameterAttribute).Assembly
-                .GetTypes()
-                .Where(t => t.IsSubclassOf(typeof(DiagnosticAnalyzer)))
-                .ToList();
+            var analyzers = new RuleFinder().GetAllAnalyzerTypes();
 
             foreach (var analyzer in analyzers)
             {
@@ -70,18 +63,19 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest.Attributes
                 {
                     if (subCharacteristicCount > 0)
                     {
-                        throw new Exception(
-                            string.Format("SqaleSubCharacteristicAttribute can only be assigned to DiagnosticAnalyzers that have a SQALE remediation function, '{0}' has NoSqaleRemediationAttribute",
-                            analyzer.Name));
+                        Assert.Fail(
+                            "SqaleSubCharacteristicAttribute can only be assigned to DiagnosticAnalyzers that have a SQALE " +
+                            "remediation function, '{0}' has NoSqaleRemediationAttribute", 
+                            analyzer.Name);
                     }
                 }
                 else
                 {
                     if (subCharacteristicCount != 1)
                     {
-                        throw new Exception(
-                            string.Format("Only one SqaleSubCharacteristicAttribute can be assigned to DiagnosticAnalyzers, '{0}' has {1}",
-                            analyzer.Name, subCharacteristicCount));
+                        Assert.Fail(
+                            "Only one SqaleSubCharacteristicAttribute can be assigned to DiagnosticAnalyzers, '{0}' has {1}",
+                            analyzer.Name, subCharacteristicCount);
                     }
                 }
             }

@@ -48,7 +48,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Common.UnitTest
                 var ruleDescriptor = analyzer.GetCustomAttributes<RuleAttribute>().SingleOrDefault();
                 if (ruleDescriptor == null)
                 {
-                    throw new Exception(string.Format("RuleAttribute is missing from DiagnosticAnalyzer '{0}'", analyzer.Name));
+                    Assert.Fail("RuleAttribute is missing from DiagnosticAnalyzer '{0}'", analyzer.Name);
                 }
             }
         }
@@ -60,7 +60,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Common.UnitTest
 
             foreach (var analyzer in analyzers.Where(RuleFinder.IsRuleTemplate))
             {
-                throw new Exception(string.Format("Visual Studio rules cannot be templates, remove DiagnosticAnalyzer '{0}'.", analyzer.Name));
+                Assert.Fail("Visual Studio rules cannot be templates, remove DiagnosticAnalyzer '{0}'.", analyzer.Name);
             }
         }
 
@@ -74,7 +74,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Common.UnitTest
                 var hasParameter = analyzer.GetProperties().Any(p => p.GetCustomAttributes<RuleParameterAttribute>().Any());
                 if (hasParameter)
                 {
-                    throw new Exception(string.Format("Visual Studio rules cannot have parameters, remove DiagnosticAnalyzer '{0}'.", analyzer.Name));
+                    Assert.Fail("Visual Studio rules cannot have parameters, remove DiagnosticAnalyzer '{0}'.", analyzer.Name);
                 }
             }
         }
@@ -89,7 +89,9 @@ namespace SonarQube.CSharp.CodeAnalysis.Common.UnitTest
                 var hasParameter = analyzer.GetProperties().Any(p => p.GetCustomAttributes<RuleParameterAttribute>().Any());
                 if (!hasParameter)
                 {
-                    throw new Exception(string.Format("DiagnosticAnalyzer '{0}' should be moved to the assembly that implements Visual Studio rules.", analyzer.Name));
+                    Assert.Fail(
+                        "DiagnosticAnalyzer '{0}' should be moved to the assembly that implements Visual Studio rules.", 
+                        analyzer.Name);
                 }
             }
         }
@@ -104,7 +106,9 @@ namespace SonarQube.CSharp.CodeAnalysis.Common.UnitTest
                 var hasParameter = analyzer.GetProperties().Any(p => p.GetCustomAttributes<RuleParameterAttribute>().Any());
                 if (hasParameter)
                 {
-                    throw new Exception(string.Format("DiagnosticAnalyzer '{0}' has parameters that are defined outside of IRuleTemplateInstance.", analyzer.Name));
+                    Assert.Fail(
+                        "DiagnosticAnalyzer '{0}' has parameters that are defined outside of IRuleTemplateInstance.", 
+                        analyzer.Name);
                 }
             }
         }
