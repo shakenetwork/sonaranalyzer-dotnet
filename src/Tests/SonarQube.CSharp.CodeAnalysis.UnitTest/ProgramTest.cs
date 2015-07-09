@@ -22,6 +22,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarQube.CSharp.CodeAnalysis.Runner;
 using System.Collections;
 using System.IO;
+using System.Linq;
 
 namespace SonarQube.CSharp.CodeAnalysis.UnitTest
 {
@@ -32,13 +33,49 @@ namespace SonarQube.CSharp.CodeAnalysis.UnitTest
         public void End_To_End()
         {
             Program.Main(new [] { "TestResources\\ConfigurationTest.xml", "Output.xml"});
+            
+            var textActual = new string(File.ReadAllText("Output.xml")
+                .ToCharArray()
+                .Where(c => !char.IsWhiteSpace(c))
+                .ToArray());
 
-            var bytesExpected = File.ReadAllBytes("TestResources\\ExpectedOutput.xml");
-            var bytesActual = File.ReadAllBytes("Output.xml");
+            CheckExpected(textActual);
+            CheckNotExpected(textActual);
+        }
 
-            if (!StructuralComparisons.StructuralEqualityComparer.Equals(bytesExpected, bytesActual))
+        private static void CheckExpected(string textActual)
+        {
+            var expectedContent = new[]
             {
-                Assert.Fail("Actual and expected files are not the same");
+                @"<AnalysisOutput><Files><File><Path>TestResources\TestInput.cs</Path>",
+                @"<Metrics><Lines>16</Lines>",
+                @"<Issue><Id>S109</Id><Line>10</Line>",
+                @"<Issue><Id>S109</Id><Line>13</Line>",
+                @"<Issue><Id>FIXME</Id><Line>3</Line>",
+                @"<Issue><Id>TODO</Id><Line>5</Line>"
+            };
+
+            foreach (var expected in expectedContent)
+            {
+                if (!textActual.Contains(expected))
+                {
+                    Assert.Fail("Generated output file doesn't contain expected string '{0}'", expected);
+                }
+            }
+        }
+        private static void CheckNotExpected(string textActual)
+        {
+            var notExpectedContent = new[]
+            {
+                @"<Id>S1116</Id><Line>14</Line>"
+            };
+
+            foreach (var notExpected in notExpectedContent)
+            {
+                if (textActual.Contains(notExpected))
+                {
+                    Assert.Fail("Generated output file contains not expected string '{0}'", notExpected);
+                }
             }
         }
     }
