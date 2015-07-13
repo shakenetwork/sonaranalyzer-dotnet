@@ -101,6 +101,10 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                     foreach (var variableDeclarator in variableDeclaration.Variables)
                     {
                         var variableSymbol = c.SemanticModel.GetDeclaredSymbol(variableDeclarator);
+                        if (variableSymbol == null)
+                        {
+                            continue;
+                        }
 
                         var references = declaringBlock.DescendantNodes()
                             .OfType<IdentifierNameSyntax>()

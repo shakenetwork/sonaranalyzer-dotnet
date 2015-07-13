@@ -119,7 +119,8 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
             var declaredVariables = node.Declaration == null
                 ? Enumerable.Empty<ISymbol>()
                 : node.Declaration.Variables
-                    .Select(v => semanticModel.GetDeclaredSymbol(v));
+                    .Select(v => semanticModel.GetDeclaredSymbol(v))
+                    .Where(symbol => symbol != null);
 
             var initializedVariables = node.Initializers
                 .Where(i => i.IsKind(SyntaxKind.SimpleAssignmentExpression))

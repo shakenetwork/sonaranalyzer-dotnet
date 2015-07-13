@@ -66,8 +66,9 @@ namespace SonarQube.CSharp.CodeAnalysis.Rules
                 cbc.RegisterSyntaxNodeAction(c =>
                 {
                     unusedLocals.AddRange(
-                        ((LocalDeclarationStatementSyntax) c.Node).Declaration
-                            .Variables.Select(variable => c.SemanticModel.GetDeclaredSymbol(variable)));
+                        ((LocalDeclarationStatementSyntax) c.Node).Declaration.Variables
+                            .Select(variable => c.SemanticModel.GetDeclaredSymbol(variable))
+                            .Where(symbol => symbol != null));
                 },
                 SyntaxKind.LocalDeclarationStatement);
  
