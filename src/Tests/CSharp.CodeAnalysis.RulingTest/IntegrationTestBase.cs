@@ -79,15 +79,10 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
         private static DirectoryInfo GetItSourcesFolder()
         {
             const string navigationToRoot = "../../../../../";
-            const string repoName = "sonar-dotnet-codeanalysis";
             const string navigationToItSources = "its";
 
             var testAssembly = new FileInfo(typeof(IntegrationTestBase).Assembly.Location);
             var solutionDirectory = new DirectoryInfo(Path.Combine(testAssembly.DirectoryName, navigationToRoot));
-            if (solutionDirectory.Name != repoName)
-            {
-                Assert.Fail();
-            }
             return solutionDirectory.GetDirectories(navigationToItSources).Single();
         }
 
