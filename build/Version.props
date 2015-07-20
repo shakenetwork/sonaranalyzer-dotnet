@@ -1,9 +1,9 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <MainVersion>0.10.0</MainVersion>
+    <MainVersion>1.0.0</MainVersion>
     <AssemblyVersion>$(MainVersion).0</AssemblyVersion>
     <AssemblyFileVersion>$(MainVersion).0</AssemblyFileVersion>
-    <AssemblyInformationalVersion>$(MainVersion)-RC</AssemblyInformationalVersion>
+    <AssemblyInformationalVersion>$(MainVersion)</AssemblyInformationalVersion>
     <NugetVersion>$(AssemblyInformationalVersion)</NugetVersion>
     <VsixVersion>$(MainVersion)</VsixVersion>
   </PropertyGroup>
