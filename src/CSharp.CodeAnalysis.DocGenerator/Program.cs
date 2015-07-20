@@ -17,113 +17,32 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-
-using System;
+ 
 using System.Diagnostics;
 using System.IO;
-using System.IO.Compression;
 using System.Linq;
-using RazorEngine.Configuration;
-using RazorEngine.Templating;
 using SonarQube.CSharp.CodeAnalysis.Common;
+using Newtonsoft.Json;
 
 namespace SonarQube.CSharp.CodeAnalysis.DocGenerator
 {
     public static class Program
     {
-        private const string TemplateInternalName = "main-html";
-        private static readonly string ResourcesFolderName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DocResources");
-        private static readonly string ToZipFolderName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ToZip");
-        private static readonly string OutputZipFileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "rule-documentation.zip");
-        private static readonly string DestinationFolderPattern = ToZipFolderName + "/{0}";
-        private static readonly string DestinationFilePattern = DestinationFolderPattern + "/{1}.html";
-        private const string TemplateHtmlResourceName = "SonarQube.CSharp.CodeAnalysis.DocGenerator.DocResources.main.template.html";
-
         public static void Main()
         {
-            var ruleDetails = RuleDetailBuilder.GetParameterlessRuleDetails().ToList();
+            var ruleDetails = RuleDetailBuilder.GetParameterlessRuleDetails().Select(ruleDetail => RuleDescription.Convert(ruleDetail)).ToList();
             var productVersion = FileVersionInfo.GetVersionInfo(typeof(Program).Assembly.Location).ProductVersion;
-            var ruleDescriptionType = typeof(RuleDescription);
 
-            CreateZipFolder();
-            CopyStaticResources(productVersion);
+            Directory.CreateDirectory(productVersion);
 
-            using (var engine = 
-                RazorEngineService.Create(new TemplateServiceConfiguration
-            {
-                DisableTempFileLocking = true,
-                CachingProvider = new DefaultCachingProvider(t => { })
-            }))
-            {
-                engine.AddTemplate(TemplateInternalName, GetTemplateText());
-                engine.Compile(TemplateInternalName, ruleDescriptionType);
+            var content = JsonConvert.SerializeObject(ruleDetails,
+                    new JsonSerializerSettings
+                    {
+                        NullValueHandling = NullValueHandling.Ignore,
+                        Formatting = Formatting.Indented
+                    });
 
-                foreach (var detail in ruleDetails)
-                {
-                    var ruleDescription = RuleDescription.Convert(detail);
-                    ruleDescription.Version = productVersion;
-                    File.WriteAllText(string.Format(DestinationFilePattern, productVersion, detail.Key),
-                        engine.Run(TemplateInternalName, ruleDescriptionType, ruleDescription));
-                }
-            }
-
-            ZipFolder();
-        }
-
-        private static void CopyStaticResources(string productVersion)
-        {
-            var resourcesFolder = new DirectoryInfo(ResourcesFolderName);
-            CopyDirectory(resourcesFolder, new DirectoryInfo(string.Format(DestinationFolderPattern, productVersion)));
-        }
-
-        private static void CopyDirectory(DirectoryInfo source, DirectoryInfo destination)
-        {
-            if (!destination.Exists)
-            {
-                destination.Create();
-            }
-
-            foreach (var dir in source.GetDirectories("*", SearchOption.AllDirectories))
-            {
-                Directory.CreateDirectory(dir.FullName.Replace(source.FullName, destination.FullName));
-            }
-
-            foreach (var file in source.GetFiles("*.*", SearchOption.AllDirectories))
-            {
-                file.CopyTo(file.FullName.Replace(source.FullName, destination.FullName), true);
-            }
-        }
-
-        private static void CreateZipFolder()
-        {
-            if (Directory.Exists(ToZipFolderName))
-            {
-                Directory.Delete(ToZipFolderName, true);
-            }
-            Directory.CreateDirectory(ToZipFolderName);
-        }
-
-        private static void ZipFolder()
-        {
-            if (File.Exists(OutputZipFileName))
-            {
-                File.Delete(OutputZipFileName);
-            }
-            
-            ZipFile.CreateFromDirectory(ToZipFolderName, OutputZipFileName);
-        }
-
-        private static string GetTemplateText()
-        {
-            var assembly = typeof (Program).Assembly;
-            var templateResource = assembly.GetManifestResourceNames()
-                .Single(s => s == TemplateHtmlResourceName);
-
-            using (var stream = assembly.GetManifestResourceStream(templateResource))
-            using (var reader = new StreamReader(stream))
-            {
-                return reader.ReadToEnd();
-            }
+            File.WriteAllText(Path.Combine(productVersion, "rules.json"), content);
         }
     }
 }
