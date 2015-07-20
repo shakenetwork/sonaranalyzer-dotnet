@@ -7,7 +7,7 @@ if ($project.DTE.Version -ne '14.0')
 
 $analyzersPath = join-path $toolsPath "analyzers"
 $analyzersPath = join-path $analyzersPath "C#"
-$analyzerFilePath = join-path $analyzersPath "SonarQube.CSharp.CodeAnalysis.dll"
+$analyzerFilePath = join-path $analyzersPath "SonarLint.dll"
 
 if ($project.Object.AnalyzerReferences -eq $null)
 {

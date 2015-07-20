@@ -1,5 +1,5 @@
 ﻿/*
- * SonarQube C# Code Analysis
+ * SonarLint for Visual Studio
  * Copyright (C) 2015 SonarSource
  * sonarqube@googlegroups.com
  *
@@ -30,7 +30,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Common
     public class RuleFinder
     {
         private readonly List<Type> diagnosticAnalyzers;
-        private const string RuleAssemblyName = "SonarQube.CSharp.CodeAnalysis";
+        private const string RuleAssemblyName = "SonarLint";
         private const string RuleAssemblyFileName = RuleAssemblyName + ".dll";
         private const string RuleExtraAssemblyFileName = RuleAssemblyName + ".Extra.dll";
 

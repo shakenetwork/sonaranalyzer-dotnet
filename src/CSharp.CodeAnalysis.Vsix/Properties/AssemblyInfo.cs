@@ -1,5 +1,5 @@
 ﻿/*
- * SonarQube C# Code Analysis
+ * SonarLint for Visual Studio
  * Copyright (C) 2015 SonarSource
  * sonarqube@googlegroups.com
  *
@@ -20,6 +20,6 @@
 
 using System.Reflection;
 
-[assembly: AssemblyTitle("SonarQube.CSharp.CodeAnalysis.Vsix")]
-[assembly: AssemblyProduct("SonarQube.CSharp.CodeAnalysis.Vsix")]
+[assembly: AssemblyTitle("SonarLint.Vsix")]
+[assembly: AssemblyProduct("SonarLint.Vsix")]
 [assembly: AssemblyDescription("")]

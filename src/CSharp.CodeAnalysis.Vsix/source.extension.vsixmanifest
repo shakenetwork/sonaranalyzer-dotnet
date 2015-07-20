@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="SonarQube.CSharp.CodeAnalysis.73fe60bc-4da5-4f3b-856f-53806f10c149" Version="1.0.0" Language="en-US" Publisher="SonarSource" />
-    <DisplayName>SonarQube C# Code Analysis</DisplayName>
-    <Description xml:space="preserve">This extension provides a subset of SonarQube rules to identify code quality issues in C# source code.</Description>
-    <MoreInfo>http://redirect.sonarsource.com/6</MoreInfo>
+    <Identity Id="SonarLint.8c442ec8-0208-4840-b83f-acd24f41acf7" Version="1.0.0" Language="en-US" Publisher="SonarSource" />
+    <DisplayName>SonarLint for Visual Studio</DisplayName>
+    <Description xml:space="preserve">This extension provides on-the-fly feedback to developers on new bugs and quality issues injected into C# code.</Description>
+    <MoreInfo>http://vs.sonarlint.org</MoreInfo>
     <License>License.txt</License>
     <Icon>logos\waves-sonarqube-32.png</Icon>
     <PreviewImage>logos\waves-sonarqube-200.png</PreviewImage>
-    <Tags>SonarQube, Analysis, Roslyn, CodeAnalysis, Analyzer, Code analysis, Sonar, Debt, Technical, Tech, Quality</Tags>
+    <Tags>SonarLint, SonarQube, Analysis, Roslyn, CodeAnalysis, Analyzer, Code analysis, Sonar, Debt, Technical, Tech, Quality</Tags>
   </Metadata>
   <Installation>
     <InstallationTarget Version="[14.0,15.0)" Id="Microsoft.VisualStudio.Pro" />

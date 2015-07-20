@@ -1,5 +1,5 @@
 /*
- * SonarQube C# Code Analysis
+ * SonarLint for Visual Studio
  * Copyright (C) 2015 SonarSource
  * sonarqube@googlegroups.com
  *
