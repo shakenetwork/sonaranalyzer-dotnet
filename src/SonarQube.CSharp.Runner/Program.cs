@@ -33,7 +33,7 @@ namespace SonarQube.CSharp.CodeAnalysis.Runner
     {
         public static int Main(string[] args)
         {
-            Write(string.Format("SonarQube C# Code Analysis version {0}", typeof (Program).Assembly.GetName().Version));
+            Write(string.Format("SonarLint version {0}", typeof (Program).Assembly.GetName().Version));
 
             var configuration = new Configuration(XDocument.Load(args[0]));
             var diagnosticsRunner = new DiagnosticsRunner(configuration.Analyzers());
