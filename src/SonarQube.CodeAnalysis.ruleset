@@ -139,15 +139,17 @@
     <Rule Id="C6320" Action="Warning" />
     <Rule Id="C6322" Action="Warning" />
   </Rules>
-  <Rules AnalyzerId="SonarQube.CSharp.CodeAnalysis" RuleNamespace="SonarQube.CSharp.CodeAnalysis">
+  <Rules AnalyzerId="SonarLint" RuleNamespace="SonarLint">
     <Rule Id="S105" Action="Warning" />
     <Rule Id="S1109" Action="Warning" />
     <Rule Id="S121" Action="Warning" />
     <Rule Id="S1227" Action="Warning" />
     <Rule Id="S126" Action="Warning" />
     <Rule Id="S1301" Action="Warning" />
+    <Rule Id="S1694" Action="Warning" />
     <Rule Id="S1940" Action="Warning" />
     <Rule Id="S2070" Action="Warning" />
+    <Rule Id="S2197" Action="Warning" />
     <Rule Id="S2278" Action="Warning" />
     <Rule Id="S2330" Action="Warning" />
     <Rule Id="S2357" Action="Warning" />
