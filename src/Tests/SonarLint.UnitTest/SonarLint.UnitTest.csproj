@@ -135,6 +135,7 @@
     <Compile Include="Rules\RedundantParenthesesTest.cs" />
     <Compile Include="Rules\UseValueParameterTest.cs" />
     <Compile Include="Rules\AnonymousDelegateEventUnsubscribeTest.cs" />
+    <Compile Include="Rules\DelegateSubtractionTest.cs" />
     <Compile Include="Rules\InsecureEncryptionAlgorithmTest.cs" />
     <Compile Include="Rules\SillyBitwiseOperationTest.cs" />
     <Compile Include="Rules\ConstructorOverridableCallTest.cs" />
@@ -375,6 +376,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\AnonymousDelegateEventUnsubscribe.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\DelegateSubtraction.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
