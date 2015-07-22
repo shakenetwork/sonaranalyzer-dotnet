@@ -69,31 +69,31 @@ namespace SonarLint.Rules
                 var localsAssignedInUsing = ImmutableHashSet<ILocalSymbol>.Empty;
                 var localsDisposed = ImmutableHashSet<ILocalSymbol>.Empty;
                 var localsReturned = ImmutableHashSet<ILocalSymbol>.Empty;
-                var disposeMethod = (IMethodSymbol) analysisContext.SemanticModel.Compilation.GetSpecialType(
+                var disposeMethod = (IMethodSymbol)analysisContext.SemanticModel.Compilation.GetSpecialType(
                     SpecialType.System_IDisposable).GetMembers("Dispose").Single();
 
                 analysisContext.RegisterSyntaxNodeAction(
-                    c => CollectAssignedLocalDisposables((AssignmentExpressionSyntax) c.Node, c.SemanticModel,
+                    c => CollectAssignedLocalDisposables((AssignmentExpressionSyntax)c.Node, c.SemanticModel,
                         ref localsAssigned),
                     SyntaxKind.SimpleAssignmentExpression);
 
                 analysisContext.RegisterSyntaxNodeAction(
-                    c => CollectInitializedLocalDisposables((VariableDeclaratorSyntax) c.Node, c.SemanticModel,
+                    c => CollectInitializedLocalDisposables((VariableDeclaratorSyntax)c.Node, c.SemanticModel,
                         ref localsAssigned),
                     SyntaxKind.VariableDeclarator);
 
                 analysisContext.RegisterSyntaxNodeAction(
-                    c => CollectDisposableLocalFromUsing((UsingStatementSyntax) c.Node, c.SemanticModel,
+                    c => CollectDisposableLocalFromUsing((UsingStatementSyntax)c.Node, c.SemanticModel,
                         ref localsAssignedInUsing),
                     SyntaxKind.UsingStatement);
 
                 analysisContext.RegisterSyntaxNodeAction(
-                    c => CollectDisposedSymbol((InvocationExpressionSyntax) c.Node, c.SemanticModel, disposeMethod,
+                    c => CollectDisposedSymbol((InvocationExpressionSyntax)c.Node, c.SemanticModel, disposeMethod,
                         IsDisposableLocalSymbol, ref localsDisposed),
                     SyntaxKind.InvocationExpression);
 
                 analysisContext.RegisterSyntaxNodeAction(
-                    c => CollectReturnedLocals((ReturnStatementSyntax) c.Node, c.SemanticModel,
+                    c => CollectReturnedLocals((ReturnStatementSyntax)c.Node, c.SemanticModel,
                         ref localsReturned),
                     SyntaxKind.ReturnStatement);
 
@@ -116,18 +116,18 @@ namespace SonarLint.Rules
                 var disposeMethod = (IMethodSymbol)analysisContext.Compilation.GetSpecialType(SpecialType.System_IDisposable).GetMembers("Dispose").Single();
 
                 analysisContext.RegisterSyntaxNodeAction(
-                    c => CollectDisposableFields((FieldDeclarationSyntax) c.Node, c.SemanticModel,
+                    c => CollectDisposableFields((FieldDeclarationSyntax)c.Node, c.SemanticModel,
                         ref disposableFields, ref fieldsAssigned),
                     SyntaxKind.FieldDeclaration);
 
                 analysisContext.RegisterSyntaxNodeAction(
-                    c => CollectAssignedDisposableFields((AssignmentExpressionSyntax) c.Node, c.SemanticModel,
+                    c => CollectAssignedDisposableFields((AssignmentExpressionSyntax)c.Node, c.SemanticModel,
                         ref fieldsAssigned),
                     SyntaxKind.SimpleAssignmentExpression);
 
                 analysisContext.RegisterSyntaxNodeAction(
-                    c => CollectDisposedSymbol((InvocationExpressionSyntax) c.Node, c.SemanticModel, disposeMethod,
-                    DisposableMemberInNonDisposableClass.IsNonStaticNonPublicDisposableField, ref fieldsDisposed), 
+                    c => CollectDisposedSymbol((InvocationExpressionSyntax)c.Node, c.SemanticModel, disposeMethod,
+                    DisposableMemberInNonDisposableClass.IsNonStaticNonPublicDisposableField, ref fieldsDisposed),
                     SyntaxKind.InvocationExpression);
 
                 analysisContext.RegisterCompilationEndAction(c =>
@@ -145,7 +145,7 @@ namespace SonarLint.Rules
              where T : class, ISymbol
         {
             T fieldSymbol;
-            if (TryGetDisposedSymbol(invocation, semanticModel, disposeMethod, 
+            if (TryGetDisposedSymbol(invocation, semanticModel, disposeMethod,
                 isSymbolRelevant, out fieldSymbol))
             {
                 fieldsDisposed = fieldsDisposed.Add(fieldSymbol);
@@ -201,7 +201,7 @@ namespace SonarLint.Rules
                 localsReturned = localsReturned.Add(localSymbol);
             }
         }
-        
+
         private static void CollectDisposableLocalFromUsing(UsingStatementSyntax usingStatement, SemanticModel semanticModel,
             ref ImmutableHashSet<ILocalSymbol> localsAssignedInUsing)
         {
@@ -276,8 +276,8 @@ namespace SonarLint.Rules
 
             var methodSymbol = semanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
             return methodSymbol != null &&
-                   methodSymbol.Equals(
-                       methodSymbol.ContainingType.FindImplementationForInterfaceMember(disposeMethod));
+                   (methodSymbol.Equals(disposeMethod) ||
+                   methodSymbol.Equals(methodSymbol.ContainingType.FindImplementationForInterfaceMember(disposeMethod)));
         }
 
         private static bool TryGetLocallyConstructedSymbol<T>(AssignmentExpressionSyntax assignment, SemanticModel semanticModel,
@@ -285,7 +285,7 @@ namespace SonarLint.Rules
         {
             localSymbol = null;
             var objectCreation = assignment.Right as ObjectCreationExpressionSyntax;
-            if (objectCreation == null || 
+            if (objectCreation == null ||
                 (doCheckNonLocalDisposables && MightUseNonLocalDisposable(objectCreation, semanticModel)))
             {
                 return false;
@@ -294,7 +294,7 @@ namespace SonarLint.Rules
             localSymbol = semanticModel.GetSymbolInfo(assignment.Left).Symbol as T;
             return isSymbolRelevant(localSymbol);
         }
-        
+
         private static bool TryGetLocallyConstructedInitializedLocalSymbol(VariableDeclaratorSyntax declarator, SemanticModel semanticModel,
             out ILocalSymbol localSymbol)
         {
@@ -314,7 +314,7 @@ namespace SonarLint.Rules
             return IsDisposableLocalSymbol(localSymbol);
         }
 
-        private static bool MightUseNonLocalDisposable(ObjectCreationExpressionSyntax objectCreation, 
+        private static bool MightUseNonLocalDisposable(ObjectCreationExpressionSyntax objectCreation,
             SemanticModel semanticModel)
         {
             return MightUseNonLocalDisposableInArguments(objectCreation, semanticModel) ||
@@ -338,8 +338,8 @@ namespace SonarLint.Rules
                     })
                 .Any(expression => HasDisposableNotLocalIdentifier(expression, semanticModel));
         }
-        
-        private static bool MightUseNonLocalDisposableInArguments(ObjectCreationExpressionSyntax objectCreation, 
+
+        private static bool MightUseNonLocalDisposableInArguments(ObjectCreationExpressionSyntax objectCreation,
             SemanticModel semanticModel)
         {
             if (objectCreation.ArgumentList == null)

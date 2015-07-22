@@ -80,6 +80,36 @@ namespace Tests.Diagnostics
                 BaseStream = sr
             };
             return sr;
+        }        
+    }
+
+    public interface IContainer : IDisposable
+    { }
+    public class Container : IContainer
+    {
+        public void Dispose()
+        { }
+    }
+
+    class Form1
+    {
+        private IContainer components = null; // Compliant
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
         }
+
+        #region Windows Form Designer generated code
+        
+        private void InitializeComponent()
+        {
+            this.components = new Container();
+        }
+
+        #endregion
     }
 }
