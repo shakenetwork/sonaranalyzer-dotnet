@@ -4,7 +4,7 @@ SonarLint is a Visual Studio 2015 extension that provides on-the-fly feedback to
 
 SonarLint found real bugs in popular open-source C# projects such as [Roslyn](https://github.com/dotnet/roslyn/pull/2237/files) and [NuGet](https://github.com/NuGet/NuGet3/pull/41/files).
 
-You can start to use it today by downloading the latest version from the [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/47d1049d-bb27-454e-aab8-24566c85e548).
+Start to use SonarLint today and download it from the [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/47d1049d-bb27-454e-aab8-24566c85e548).
 
 Visit http://vs.sonarlint.org for more information.
 
