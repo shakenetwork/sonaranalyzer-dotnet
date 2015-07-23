@@ -141,6 +141,7 @@
     <Compile Include="Rules\AnonymousDelegateEventUnsubscribeTest.cs" />
     <Compile Include="Rules\DelegateSubtractionTest.cs" />
     <Compile Include="Rules\ForeachLoopExplicitConversionTest.cs" />
+    <Compile Include="Rules\CastConcreteTypeToInterfaceTest.cs" />
     <Compile Include="Rules\InsecureEncryptionAlgorithmTest.cs" />
     <Compile Include="Rules\SillyBitwiseOperationTest.cs" />
     <Compile Include="Rules\ConstructorOverridableCallTest.cs" />
@@ -390,6 +391,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\OrderByRepeated.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\CastConcreteTypeToInterface.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />

@@ -1,0 +1,145 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarLint.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S3215",
+      "FullMessage": "Remove this cast and edit the interface to add the missing functionality.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
+            "Region": {
+              "StartLine": 228,
+              "EndLine": 228,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3215",
+      "FullMessage": "Remove this cast and edit the interface to add the missing functionality.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
+            "Region": {
+              "StartLine": 246,
+              "EndLine": 246,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3215",
+      "FullMessage": "Remove this cast and edit the interface to add the missing functionality.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\WebSites\\FiltersWebSite\\Controllers\\ActionFilterController.cs",
+            "Region": {
+              "StartLine": 19,
+              "EndLine": 19,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3215",
+      "FullMessage": "Remove this cast and edit the interface to add the missing functionality.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Demo.Hosting.Owin\\SimpleOwinAspNetHost.cs",
+            "Region": {
+              "StartLine": 339,
+              "EndLine": 339,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3215",
+      "FullMessage": "Remove this cast and edit the interface to add the missing functionality.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Hosting.Aspnet\\NancyHttpRequestHandler.cs",
+            "Region": {
+              "StartLine": 102,
+              "EndLine": 102,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3215",
+      "FullMessage": "Remove this cast and edit the interface to add the missing functionality.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
+            "Region": {
+              "StartLine": 308,
+              "EndLine": 308,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3215",
+      "FullMessage": "Remove this cast and edit the interface to add the missing functionality.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+            "Region": {
+              "StartLine": 657,
+              "EndLine": 657,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3215",
+      "FullMessage": "Remove this cast and edit the interface to add the missing functionality.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Globalization\\NodaFormatInfo.cs",
+            "Region": {
+              "StartLine": 401,
+              "EndLine": 401,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

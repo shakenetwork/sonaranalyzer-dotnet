@@ -97,6 +97,7 @@
     <Compile Include="Rules\AnonymousDelegateEventUnsubscribe.cs" />
     <Compile Include="Rules\DelegateSubtraction.cs" />
     <Compile Include="Rules\ForeachLoopExplicitConversion.cs" />
+    <Compile Include="Rules\CastConcreteTypeToInterface.cs" />
     <Compile Include="Rules\InsecureEncryptionAlgorithm.cs" />
     <Compile Include="Rules\SillyBitwiseOperation.cs" />
     <Compile Include="Rules\ConstructorOverridableCall.cs" />
@@ -436,6 +437,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S3169.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S3215.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
