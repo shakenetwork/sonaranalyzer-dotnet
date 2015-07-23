@@ -25,13 +25,12 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Xml;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarLint.Common;
 using SonarLint.Rules;
 
 namespace SonarQube.CSharp.CodeAnalysis.RulingTest
 {
-    public abstract class IntegrationTestBase
+    public class IntegrationTestBase
     {
         protected FileInfo[] CodeFiles;
         protected IList<Type> AnalyzerTypes;
@@ -41,6 +40,8 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
         protected DirectoryInfo AnalysisOutputDirectory;
 
         public const string TemplateRuleIdPattern = "{0}-1";
+
+        protected IntegrationTestBase() { }
 
         private static readonly XmlWriterSettings XmlWriterSettings = new XmlWriterSettings
         {

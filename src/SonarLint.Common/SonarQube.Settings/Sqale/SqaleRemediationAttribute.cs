@@ -23,7 +23,8 @@ using System;
 namespace SonarLint.Common.Sqale
 {
     [AttributeUsage(AttributeTargets.Class)]
-    public abstract class SqaleRemediationAttribute : Attribute
+    public class SqaleRemediationAttribute : Attribute
     {
+        protected SqaleRemediationAttribute() { }
     }
 }

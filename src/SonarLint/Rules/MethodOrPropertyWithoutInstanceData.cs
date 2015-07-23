@@ -56,14 +56,14 @@ namespace SonarLint.Rules
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext analysisContext)
+        public override void Initialize(AnalysisContext context)
         {
-            analysisContext.RegisterCompilationStartAction(context =>
+            context.RegisterCompilationStartAction(compilationContext =>
             {
                 var accessorsCouldBeStatic = ImmutableHashSet<AccessorDeclarationSyntax>.Empty;
                 var propertyAccessorsByProperty = ImmutableDictionary<PropertyDeclarationSyntax, ImmutableHashSet<AccessorDeclarationSyntax>>.Empty;
 
-                context.RegisterSyntaxNodeAction(
+                compilationContext.RegisterSyntaxNodeAction(
                     c =>
                     {
                         var property = (PropertyDeclarationSyntax) c.Node;
@@ -76,7 +76,7 @@ namespace SonarLint.Rules
                         }
                     }, SyntaxKind.PropertyDeclaration);
 
-                context.RegisterCodeBlockStartAction<SyntaxKind>(
+                compilationContext.RegisterCodeBlockStartAction<SyntaxKind>(
                     cbc =>
                     {
                         var methodDeclaration = cbc.CodeBlock as MethodDeclarationSyntax;
@@ -144,7 +144,7 @@ namespace SonarLint.Rules
                             });
                     });
 
-                context.RegisterCompilationEndAction(
+                compilationContext.RegisterCompilationEndAction(
                     c =>
                     {
                         foreach (var property in propertyAccessorsByProperty)

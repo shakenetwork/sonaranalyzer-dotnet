@@ -22,7 +22,6 @@ using System;
 using System.Linq;
 using System.Reflection;
 using FluentAssertions;
-using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;

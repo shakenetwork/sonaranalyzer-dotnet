@@ -132,9 +132,10 @@ namespace SonarLint.Rules
                 return false;
             }
 
+            var algorithmNameCandidate = ((LiteralExpressionSyntax)argumentList.Arguments.First().Expression).Token.ValueText;
             var algorithmName = AlgorithmNames
                 .FirstOrDefault(alg =>
-                    ((LiteralExpressionSyntax) argumentList.Arguments.First().Expression).Token.ValueText.StartsWith(alg));
+                    algorithmNameCandidate.StartsWith(alg, System.StringComparison.InvariantCulture));
 
             return algorithmName != null;
         }
