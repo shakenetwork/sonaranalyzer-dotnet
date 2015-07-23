@@ -5,24 +5,15 @@ if not defined NUGET_PATH ( set NUGET_PATH=nuget )
 if not defined MSBUILD_PATH ( set MSBUILD_PATH=msbuild )
 if not defined VSTEST_PATH ( set VSTEST_PATH=vstest.console.exe )
 
-rem build minimal solution
-%NUGET_PATH% restore %SolutionRoot%SonarQube.CSharp.CodeAnalysis.sln
-if %errorlevel% neq 0 exit /b %errorlevel%
-%MSBUILD_PATH% %SolutionRoot%SonarQube.CSharp.CodeAnalysis.sln /t:Rebuild /p:Configuration=Release /p:DeployExtension=false
-if %errorlevel% neq 0 exit /b %errorlevel%
-
-rem build full solution with integration pieces
-%NUGET_PATH% restore %SolutionRoot%SonarQube.CSharp.CodeAnalysis.Integration.sln 
-if %errorlevel% neq 0 exit /b %errorlevel%
-%MSBUILD_PATH% %SolutionRoot%SonarQube.CSharp.CodeAnalysis.Integration.sln /t:Rebuild /p:Configuration=Release /p:DeployExtension=false
-if %errorlevel% neq 0 exit /b %errorlevel%
+rem build solution
+call %SolutionRoot%build\build.bat
 
 rem run tests
-%VSTEST_PATH% %SolutionRoot%src\Tests\CSharp.CodeAnalysis.Common.UnitTest\bin\Release\SonarLint.Common.UnitTest.dll
+%VSTEST_PATH% %SolutionRoot%src\Tests\SonarLint.Common.UnitTest\bin\Release\SonarLint.Common.UnitTest.dll
 if %errorlevel% neq 0 exit /b %errorlevel%
-%VSTEST_PATH% %SolutionRoot%src\Tests\CSharp.CodeAnalysis.UnitTest\bin\Release\SonarLint.UnitTest.dll
+%VSTEST_PATH% %SolutionRoot%src\Tests\SonarLint.UnitTest\bin\Release\SonarLint.UnitTest.dll
 if %errorlevel% neq 0 exit /b %errorlevel%
-%VSTEST_PATH% %SolutionRoot%src\Tests\SonarQube.CSharp.CodeAnalysis.UnitTest\bin\Release\SonarLint.SonarQube.Integration.UnitTest.dll
+%VSTEST_PATH% %SolutionRoot%src\Tests\SonarLint.SonarQube.Integration.UnitTest\bin\Release\SonarLint.SonarQube.Integration.UnitTest.dll
 if %errorlevel% neq 0 exit /b %errorlevel%
-%VSTEST_PATH% %SolutionRoot%src\Tests\CSharp.CodeAnalysis.RulingTest\bin\Release\SonarLint.RulingTest.dll
+%VSTEST_PATH% %SolutionRoot%src\Tests\SonarLint.RulingTest\bin\Release\SonarLint.RulingTest.dll
 if %errorlevel% neq 0 exit /b %errorlevel%

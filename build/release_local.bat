@@ -12,4 +12,4 @@ call %SolutionRoot%build\build.bat
 if %errorlevel% neq 0 exit /b %errorlevel%
 
 rem create Nuget packages
-forfiles /p %SolutionRoot%src\CSharp.CodeAnalysis.Vsix 	/s /m *.nuspec /c "cmd /c %NUGET_PATH% pack @PATH -NoPackageAnalysis -OutputDirectory .\bin\Release"
+forfiles /p %SolutionRoot%src\SonarLint.Vsix 	/s /m *.nuspec /c "cmd /c %NUGET_PATH% pack @PATH -NoPackageAnalysis -OutputDirectory .\bin\Release"
