@@ -1,5 +1,7 @@
 # SonarLint for Visual Studio
 
+[![Build status](https://ci.appveyor.com/api/projects/status/7k0q64nckn92t87g/branch/master?svg=true)](https://ci.appveyor.com/project/dbolkensteyn/sonarlint-vs/branch/master)
+
 SonarLint is a Visual Studio 2015 extension that provides on-the-fly feedback to developers on new bugs and quality issues injected into C# code.
 
 SonarLint has found real bugs in popular open-source C# projects such as [Roslyn](https://github.com/dotnet/roslyn/pull/2237/files) and [NuGet](https://github.com/NuGet/NuGet3/pull/41/files).
