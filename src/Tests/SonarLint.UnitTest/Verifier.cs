@@ -42,7 +42,7 @@ namespace SonarLint.UnitTest
 
             var expected = new List<int>(ExpectedIssues(compilation.SyntaxTrees.First()));
             foreach (var diagnostic in compilationWithAnalyzer
-                
+
                 .Where(diag => diag.Id == diagnosticAnalyzer.SupportedDiagnostics.Single().Id))
             {
                 var line = diagnostic.GetLineNumberToReport();
@@ -74,11 +74,20 @@ namespace SonarLint.UnitTest
 
         public static void Verify(string path, DiagnosticAnalyzer diagnosticAnalyzer)
         {
+            Verify(path, "foo", diagnosticAnalyzer);
+        }
+        public static void VerifyInTest(string path, DiagnosticAnalyzer diagnosticAnalyzer)
+        {
+            Verify(path, ProjectTypeHelper.TestAssemblyNamePattern, diagnosticAnalyzer);
+        }
+        private static void Verify(string path, string assemblyName, DiagnosticAnalyzer diagnosticAnalyzer)
+        {
             var file = new FileInfo(path);
 
             using (var workspace = new AdhocWorkspace())
             {
-                var document = workspace.CurrentSolution.AddProject("foo", "foo.dll", LanguageNames.CSharp)
+                var document = workspace.CurrentSolution.AddProject(assemblyName,
+                    string.Format("{0}.dll", assemblyName), LanguageNames.CSharp)
                     .AddMetadataReference(MetadataReference.CreateFromFile(typeof(object).Assembly.Location))
                     .AddMetadataReference(MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location))
                     .AddDocument(file.Name, File.ReadAllText(file.FullName, Encoding.UTF8));

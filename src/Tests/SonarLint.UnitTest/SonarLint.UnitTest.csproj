@@ -133,6 +133,7 @@
     <Compile Include="Rules\UnaryPrefixOperatorRepeatedTest.cs" />
     <Compile Include="Rules\GetHashCodeEqualsOverrideTest.cs" />
     <Compile Include="Rules\RedundantParenthesesTest.cs" />
+    <Compile Include="Rules\UseValueParameterTest.cs" />
     <Compile Include="Rules\InsecureEncryptionAlgorithmTest.cs" />
     <Compile Include="Rules\SillyBitwiseOperationTest.cs" />
     <Compile Include="Rules\ConstructorOverridableCallTest.cs" />
@@ -364,6 +365,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\RedundantParentheses.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\UseValueParameter.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\UseValueParameterInTest.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />

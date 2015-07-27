@@ -1,0 +1,281 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarLint.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S3237",
+      "FullMessage": "Use the \"value\" parameter in this indexer set accessor declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
+            "Region": {
+              "StartLine": 219,
+              "EndLine": 219,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3237",
+      "FullMessage": "Use the \"value\" parameter in this indexer set accessor declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
+            "Region": {
+              "StartLine": 225,
+              "EndLine": 225,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3237",
+      "FullMessage": "Use the \"value\" parameter in this property set accessor declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
+            "Region": {
+              "StartLine": 237,
+              "EndLine": 237,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3237",
+      "FullMessage": "Use the \"value\" parameter in this property set accessor declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
+            "Region": {
+              "StartLine": 247,
+              "EndLine": 247,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3237",
+      "FullMessage": "Use the \"value\" parameter in this indexer set accessor declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
+            "Region": {
+              "StartLine": 1553,
+              "EndLine": 1553,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3237",
+      "FullMessage": "Use the \"value\" parameter in this property set accessor declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Targets\\NLogViewerTarget.cs",
+            "Region": {
+              "StartLine": 184,
+              "EndLine": 184,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3237",
+      "FullMessage": "Use the \"value\" parameter in this property set accessor declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Dialog10\\Providers\\InstalledProvider.cs",
+            "Region": {
+              "StartLine": 94,
+              "EndLine": 94,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3237",
+      "FullMessage": "Use the \"value\" parameter in this event accessor declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\OutputConsole\\OutputConsole.cs",
+            "Region": {
+              "StartLine": 36,
+              "EndLine": 36,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3237",
+      "FullMessage": "Use the \"value\" parameter in this event accessor declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\OutputConsole\\OutputConsole.cs",
+            "Region": {
+              "StartLine": 37,
+              "EndLine": 37,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3237",
+      "FullMessage": "Use the \"value\" parameter in this property set accessor declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHost\\NuGetHostRawUserInterface.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3237",
+      "FullMessage": "Use the \"value\" parameter in this property set accessor declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHost\\NuGetHostRawUserInterface.cs",
+            "Region": {
+              "StartLine": 85,
+              "EndLine": 85,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3237",
+      "FullMessage": "Use the \"value\" parameter in this property set accessor declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHostProvider\\UnsupportedHost.cs",
+            "Region": {
+              "StartLine": 47,
+              "EndLine": 47,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3237",
+      "FullMessage": "Use the \"value\" parameter in this property set accessor declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\CommandLine.Test\\ResourceHelperTests.cs",
+            "Region": {
+              "StartLine": 81,
+              "EndLine": 81,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3237",
+      "FullMessage": "Use the \"value\" parameter in this indexer set accessor declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Packet.cs",
+            "Region": {
+              "StartLine": 179,
+              "EndLine": 179,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3237",
+      "FullMessage": "Use the \"value\" parameter in this property set accessor declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 1115,
+              "EndLine": 1115,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3237",
+      "FullMessage": "Use the \"value\" parameter in this property set accessor declaration.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 1979,
+              "EndLine": 1979,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
