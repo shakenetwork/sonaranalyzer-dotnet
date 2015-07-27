@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
- 
+
 using System.Collections.Immutable;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -26,6 +26,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules
 {

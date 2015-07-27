@@ -27,7 +27,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Text;
 
-namespace SonarLint
+namespace SonarLint.Common
 {
     public class FileComments
     {

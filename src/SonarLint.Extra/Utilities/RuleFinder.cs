@@ -20,27 +20,25 @@
 
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Reflection;
 using Microsoft.CodeAnalysis.Diagnostics;
+using SonarLint.Rules;
+using SonarLint.Common;
 
-namespace SonarLint.Common
+namespace SonarLint.Utilities
 {
     public class RuleFinder
     {
         private readonly List<Type> diagnosticAnalyzers;
-        private const string RuleAssemblyName = "SonarLint";
-        private const string RuleAssemblyFileName = RuleAssemblyName + ".dll";
-        private const string RuleExtraAssemblyFileName = RuleAssemblyName + ".Extra.dll";
 
         public static Assembly GetPackagedRuleAssembly()
         {
-            return Assembly.LoadFrom(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, RuleAssemblyFileName));
+            return Assembly.LoadFrom(typeof(EmptyStatement).Assembly.Location);
         }
         public static Assembly GetExtraRuleAssembly()
         {
-            return Assembly.LoadFrom(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, RuleExtraAssemblyFileName));
+            return Assembly.LoadFrom(typeof(MagicNumber).Assembly.Location);
         }
         
         public RuleFinder()

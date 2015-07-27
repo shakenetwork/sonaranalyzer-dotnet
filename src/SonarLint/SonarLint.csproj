@@ -81,7 +81,9 @@
     <Compile Include="..\AssemblyInfo.Shared.cs">
       <Link>Properties\AssemblyInfo.Shared.cs</Link>
     </Compile>
+    <Compile Include="Common\IdeVisibility.cs" />
     <Compile Include="Helpers\DiagnosticReportHelper.cs" />
+    <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="Helpers\NavigationHelper.cs" />
     <Compile Include="Helpers\EquivalenceChecker.cs" />
     <Compile Include="Helpers\ProjectTypeHelper.cs" />
@@ -167,6 +169,14 @@
     <Compile Include="Rules\BooleanLiteralUnnecessary.cs" />
     <Compile Include="Rules\VariableUnused.cs" />
     <Compile Include="Rules\UseCurlyBraces.cs" />
+    <Compile Include="Common\RuleAttribute.cs" />
+    <Compile Include="Common\Severity.cs" />
+    <Compile Include="Common\Sqale\NoSqaleRemediationAttribute.cs" />
+    <Compile Include="Common\Sqale\SqaleConstantRemediationAttribute.cs" />
+    <Compile Include="Common\Sqale\SqaleRemediationAttribute.cs" />
+    <Compile Include="Common\Sqale\SqaleSubCharacteristic.cs" />
+    <Compile Include="Common\Sqale\SqaleSubCharacteristicAttribute.cs" />
+    <Compile Include="Common\TagsAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -413,17 +423,11 @@
     <EmbeddedResource Include="Rules.Description\S3172.html" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S3244.html" />
+  </ItemGroup>
+  <ItemGroup>
     <Analyzer Include="..\..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
     <Analyzer Include="..\..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SonarLint.Common\SonarLint.Common.csproj">
-      <Project>{741c2442-0401-4b83-8527-8c4d3bbc0e1c}</Project>
-      <Name>SonarLint.Common</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Rules.Description\S3244.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

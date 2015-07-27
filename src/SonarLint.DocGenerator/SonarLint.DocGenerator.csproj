@@ -85,10 +85,6 @@
     <Analyzer Include="..\..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SonarLint.Common\SonarLint.Common.csproj">
-      <Project>{741c2442-0401-4b83-8527-8c4d3bbc0e1c}</Project>
-      <Name>SonarLint.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SonarLint.Extra\SonarLint.Extra.csproj">
       <Project>{4c1bb6ce-645f-400b-b491-af7bb40e5c01}</Project>
       <Name>SonarLint.Extra</Name>

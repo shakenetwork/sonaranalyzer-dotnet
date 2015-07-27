@@ -21,7 +21,7 @@
 using System.Globalization;
 using System.Linq;
 
-namespace SonarLint
+namespace SonarLint.Common
 {
     public class Distribution
     {

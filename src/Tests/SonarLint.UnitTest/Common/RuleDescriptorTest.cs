@@ -20,8 +20,9 @@
 
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SonarLint.Utilities;
 
-namespace SonarLint.Common.UnitTest
+namespace SonarLint.UnitTest.Common
 {
     [TestClass]
     public class RuleDescriptorTest

@@ -26,6 +26,7 @@ using System.Xml;
 using System.Xml.Linq;
 using Microsoft.CodeAnalysis;
 using SonarLint.Helpers;
+using SonarLint.Common;
 
 namespace SonarLint.Runner
 {

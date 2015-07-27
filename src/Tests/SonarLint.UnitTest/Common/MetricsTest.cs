@@ -22,8 +22,9 @@ using System.Collections.Immutable;
 using FluentAssertions;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SonarLint.Common;
 
-namespace SonarLint.UnitTest
+namespace SonarLint.UnitTest.Common
 {
     [TestClass]
     public class MetricsTest

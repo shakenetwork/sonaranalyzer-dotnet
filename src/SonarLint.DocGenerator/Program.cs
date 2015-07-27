@@ -23,6 +23,7 @@ using System.IO;
 using System.Linq;
 using SonarLint.Common;
 using Newtonsoft.Json;
+using SonarLint.Utilities;
 
 namespace SonarLint.DocGenerator
 {

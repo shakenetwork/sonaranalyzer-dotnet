@@ -27,6 +27,7 @@ using System.Text;
 using System.Xml;
 using SonarLint.Common;
 using SonarLint.Rules;
+using SonarLint.Utilities;
 
 namespace SonarQube.CSharp.CodeAnalysis.RulingTest
 {

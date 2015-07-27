@@ -24,8 +24,10 @@ using System.Linq;
 using System.Reflection;
 using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SonarLint.Utilities;
+using SonarLint.Common;
 
-namespace SonarLint.Common.UnitTest
+namespace SonarLint.UnitTest.Common
 {
     [TestClass]
     public class RuleTest

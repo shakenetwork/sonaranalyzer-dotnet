@@ -23,8 +23,9 @@ using System.Linq;
 using System.Reflection;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarLint.Common;
 using SonarLint.Common.Sqale;
+using SonarLint.Helpers;
+using SonarLint.Utilities;
 
 namespace SonarLint.UnitTest.Attributes
 {

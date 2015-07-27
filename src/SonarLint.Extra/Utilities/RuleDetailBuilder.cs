@@ -25,8 +25,10 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using SonarLint.Common.Sqale;
+using SonarLint.Helpers;
+using SonarLint.Common;
 
-namespace SonarLint.Common
+namespace SonarLint.Utilities
 {
     public static class RuleDetailBuilder
     {

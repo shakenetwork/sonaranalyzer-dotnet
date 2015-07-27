@@ -22,8 +22,9 @@ using System.Linq;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarLint.Rules;
+using SonarLint.Utilities;
 
-namespace SonarLint.Common.UnitTest
+namespace SonarLint.UnitTest.Common
 {
     [TestClass]
     public class RuleFinderTest

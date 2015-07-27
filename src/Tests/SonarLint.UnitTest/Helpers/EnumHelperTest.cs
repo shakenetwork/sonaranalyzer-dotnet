@@ -22,6 +22,7 @@ using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
+using SonarLint.Helpers;
 
 namespace SonarLint.UnitTest.Helpers
 {

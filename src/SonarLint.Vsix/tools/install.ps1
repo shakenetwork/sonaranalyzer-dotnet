@@ -13,8 +13,5 @@ if ($project.Object.AnalyzerReferences -eq $null)
 $analyzersPath = join-path $toolsPath "analyzers"
 $analyzersPath = join-path $analyzersPath "C#"
 
-$analyzerCommonFilePath = join-path $analyzersPath "SonarLint.Common.dll"
-$project.Object.AnalyzerReferences.Add($analyzerCommonFilePath)
-
 $analyzerFilePath = join-path $analyzersPath "SonarLint.dll"
 $project.Object.AnalyzerReferences.Add($analyzerFilePath)

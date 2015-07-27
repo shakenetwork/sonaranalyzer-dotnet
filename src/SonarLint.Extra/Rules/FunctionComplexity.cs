@@ -24,6 +24,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules
 {

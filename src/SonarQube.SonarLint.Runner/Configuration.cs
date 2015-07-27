@@ -25,8 +25,8 @@ using System.Globalization;
 using System.Linq;
 using System.Xml.Linq;
 using Microsoft.CodeAnalysis.Diagnostics;
-using SonarLint.Common;
 using SonarLint.Rules;
+using SonarLint.Utilities;
 
 namespace SonarLint.Runner
 {

@@ -25,7 +25,7 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
-using SonarLint.Common;
+using SonarLint.Utilities;
 
 namespace SonarLint.Descriptor
 {

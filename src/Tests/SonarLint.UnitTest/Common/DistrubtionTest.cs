@@ -20,8 +20,9 @@
 
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SonarLint.Common;
 
-namespace SonarLint.UnitTest
+namespace SonarLint.UnitTest.Common
 {
     [TestClass]
     public class DistributionTest

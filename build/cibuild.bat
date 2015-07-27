@@ -9,8 +9,6 @@ rem build solution
 call %SolutionRoot%build\build.bat
 
 rem run tests
-%VSTEST_PATH% %SolutionRoot%src\Tests\SonarLint.Common.UnitTest\bin\Release\SonarLint.Common.UnitTest.dll
-if %errorlevel% neq 0 exit /b %errorlevel%
 %VSTEST_PATH% %SolutionRoot%src\Tests\SonarLint.UnitTest\bin\Release\SonarLint.UnitTest.dll
 if %errorlevel% neq 0 exit /b %errorlevel%
 %VSTEST_PATH% %SolutionRoot%src\Tests\SonarLint.SonarQube.Integration.UnitTest\bin\Release\SonarLint.SonarQube.Integration.UnitTest.dll

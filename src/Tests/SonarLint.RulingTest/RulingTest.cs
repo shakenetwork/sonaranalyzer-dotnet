@@ -32,6 +32,7 @@ using Newtonsoft.Json;
 using SonarLint.Common;
 using SonarQube.CSharp.CodeAnalysis.RulingTest.ErrorModels.Omstar;
 using SonarLint.Runner;
+using SonarLint.Utilities;
 
 namespace SonarQube.CSharp.CodeAnalysis.RulingTest
 {

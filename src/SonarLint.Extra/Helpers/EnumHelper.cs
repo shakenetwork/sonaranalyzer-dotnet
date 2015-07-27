@@ -18,8 +18,17 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Reflection;
+using System.Globalization;
+using SonarLint.Common;
 
-[assembly: AssemblyTitle("SonarLint.Common.UnitTest")]
-[assembly: AssemblyProduct("SonarLint.Common.UnitTest")]
-[assembly: AssemblyDescription("")]
+namespace SonarLint.Helpers
+{
+    public static class EnumHelper
+    {
+        public static string ToSonarQubeString(this PropertyType propertyType)
+        {
+            var parts = propertyType.ToString().SplitCamelCase();
+            return string.Join("_", parts).ToUpper(CultureInfo.InvariantCulture);
+        }
+    }
+}
