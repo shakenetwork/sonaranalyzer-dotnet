@@ -91,6 +91,7 @@
     <Compile Include="Rules\AssignmentInsideSubExpression.cs" />
     <Compile Include="Rules\RedundantParentheses.cs" />
     <Compile Include="Rules\UseValueParameter.cs" />
+    <Compile Include="Rules\AnonymousDelegateEventUnsubscribe.cs" />
     <Compile Include="Rules\InsecureEncryptionAlgorithm.cs" />
     <Compile Include="Rules\SillyBitwiseOperation.cs" />
     <Compile Include="Rules\ConstructorOverridableCall.cs" />
@@ -416,6 +417,9 @@
       <Project>{741c2442-0401-4b83-8527-8c4d3bbc0e1c}</Project>
       <Name>SonarLint.Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S3244.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
