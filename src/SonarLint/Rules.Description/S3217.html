@@ -1,0 +1,56 @@
+<p>
+    The <code>foreach</code> statement was introduced in the C# language prior to generics. To make it easier to work with
+    non-generic collections available at that time such as <code>ArrayList</code>, the <code>foreach</code> statements allows
+    to downcast the collection's element of type <code>Object</code> into any other type. The problem is that, to achieve that,
+    the <code>foreach</code> statements silently performs <code>explicit</code> type conversion, which at runtime can result in
+    an <code>InvalidCastException</code> to be thrown.
+</p>
+<p>
+    New C# code should use generics and not rely on <code>foreach</code> statement's silent <code>explicit</code> conversions.
+</p>
+
+<h2>Noncompliant Code Example</h2>
+<pre>
+ArrayList list = new ArrayList();
+list.Add(0);
+list.Add(1);
+// list.Add("surprise!"); // uncommenting this line will make both foreach below throw an InvalidCastException
+
+foreach (object elementObject in list)
+{
+  int element = (int)elementObject; // This "explicit" conversion is hidden within the foreach loop
+  Console.WriteLine(element);
+}
+
+// can be written in an equivalent but shorter way:
+
+foreach (int element in list) // Noncompliant
+{
+  Console.WriteLine(element);
+}
+</pre>
+
+<h2>Compliant Solution</h2>
+<pre>
+List&lt;int&gt; list = new List&lt;int&gt;();
+list.Add(0);
+list.Add(1);
+// list.Add("surprise!"); // uncommenting this line won't compile
+
+foreach (int element in list)
+{
+  Console.WriteLine(element);
+}
+</pre>
+or
+<pre>
+ArrayList list = new ArrayList();
+list.Add(0);
+list.Add(1);
+list.Add("surprise!");
+
+foreach (int element in list.OfType&lt;int&gt;())
+{
+  Console.WriteLine(element);
+}
+</pre>

@@ -95,6 +95,7 @@
     <Compile Include="Rules\UseValueParameter.cs" />
     <Compile Include="Rules\AnonymousDelegateEventUnsubscribe.cs" />
     <Compile Include="Rules\DelegateSubtraction.cs" />
+    <Compile Include="Rules\ForeachLoopExplicitConversion.cs" />
     <Compile Include="Rules\InsecureEncryptionAlgorithm.cs" />
     <Compile Include="Rules\SillyBitwiseOperation.cs" />
     <Compile Include="Rules\ConstructorOverridableCall.cs" />
@@ -428,6 +429,9 @@
   <ItemGroup>
     <Analyzer Include="..\..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
     <Analyzer Include="..\..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S3217.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
