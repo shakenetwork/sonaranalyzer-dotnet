@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E944109B-0B7A-4ADE-8602-004CEFA5897D}"
 EndProject
@@ -134,6 +134,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.Metadata.Modules", "Nancy.Metadata.Modules\Nancy.Metadata.Modules.csproj", "{DC8AAA8B-7FD0-47C4-9413-3CC94088BCC4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.Metadata.Modules.Tests", "Nancy.Metadata.Modules.Tests\Nancy.Metadata.Modules.Tests.csproj", "{508A3A68-2012-4E62-925F-2F3083A013FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_ruleset", "_ruleset", "{CCA29FB8-804C-46C7-8F7F-E33C6A1FD16F}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\ValidationRuleset.ruleset = ..\..\ValidationRuleset.ruleset
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
