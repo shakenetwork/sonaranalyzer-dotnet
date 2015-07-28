@@ -214,7 +214,6 @@
     <Compile Include="Rules\ReversedOperatorsTest.cs" />
     <Compile Include="Rules\TernaryOperatorPointlessTest.cs" />
     <Compile Include="Rules\BooleanCheckInvertedTest.cs" />
-    <Compile Include="Rules\MethodOrPropertyWithoutInstanceDataTest.cs" />
     <Compile Include="Rules\InsecureHashAlgorithmTest.cs" />
     <Compile Include="Rules\ValuesUselesslyIncrementedTest.cs" />
     <Compile Include="Rules\UseCurlyBracesTest.cs" />
@@ -232,9 +231,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\ParametersCorrectOrder.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="TestCases\MethodOrPropertyWithoutInstanceData.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\GenericTypeParameterUnused.cs">
