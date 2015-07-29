@@ -78,6 +78,7 @@
     <Compile Include="SonarQube.Settings\PropertyType.cs" />
     <Compile Include="SonarQube.Settings\RuleAttribute.cs" />
     <Compile Include="SonarQube.Settings\RuleParameterAttribute.cs" />
+    <Compile Include="SonarQube.Settings\IdeVisibility.cs" />
     <Compile Include="SonarQube.Settings\Severity.cs" />
     <Compile Include="SonarQube.Settings\Sqale\NoSqaleRemediationAttribute.cs" />
     <Compile Include="SonarQube.Settings\Sqale\SqaleConstantRemediationAttribute.cs" />

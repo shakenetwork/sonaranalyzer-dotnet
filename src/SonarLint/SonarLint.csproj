@@ -87,6 +87,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\UnaryPrefixOperatorRepeated.cs" />
     <Compile Include="Rules\GetHashCodeEqualsOverride.cs" />
+    <Compile Include="Rules\AssignmentInsideSubExpression.cs" />
+    <Compile Include="Rules\RedundantParentheses.cs" />
     <Compile Include="Rules\InsecureEncryptionAlgorithm.cs" />
     <Compile Include="Rules\SillyBitwiseOperation.cs" />
     <Compile Include="Rules\ConstructorOverridableCall.cs" />
@@ -132,7 +134,6 @@
     <Compile Include="Rules\BooleanCheckInverted.cs" />
     <Compile Include="Rules\TernaryOperatorPointless.cs" />
     <Compile Include="Rules\ReversedOperators.cs" />
-    <Compile Include="Rules\AssignmentInsideSubExpression.cs" />
     <Compile Include="Rules\AsyncAwaitIdentifier.cs" />
     <Compile Include="Rules\SwitchCasesMinimumThree.cs" />
     <Compile Include="Rules\BreakOutsideSwitch.cs" />
@@ -396,6 +397,9 @@
     <EmbeddedResource Include="Rules.Description\S2761.html" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S3235.html" />
+  </ItemGroup>
+  <ItemGroup>
     <Analyzer Include="..\..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
     <Analyzer Include="..\..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
@@ -409,7 +413,7 @@
     <EmbeddedResource Include="Rules.Description\S3249.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

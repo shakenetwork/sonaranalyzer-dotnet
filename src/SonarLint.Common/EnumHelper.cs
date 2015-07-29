@@ -43,13 +43,15 @@ namespace SonarLint.Common
             return string.Join("_", parts).ToUpper(CultureInfo.InvariantCulture);
         }
 
-        public static DiagnosticSeverity ToDiagnosticSeverity(this Severity severity)
+        public static DiagnosticSeverity ToDiagnosticSeverity(this Severity severity,
+            IdeVisibility ideVisibility = IdeVisibility.Visible)
         {
             switch (severity)
             {
                 case Severity.Info:
-                    return DiagnosticSeverity.Info;
+                    return ideVisibility == IdeVisibility.Hidden ? DiagnosticSeverity.Hidden : DiagnosticSeverity.Info;
                 case Severity.Minor:
+                    return ideVisibility == IdeVisibility.Hidden ? DiagnosticSeverity.Hidden : DiagnosticSeverity.Warning;
                 case Severity.Major:
                 case Severity.Critical:
                 case Severity.Blocker:
@@ -57,6 +59,16 @@ namespace SonarLint.Common
                 default:
                     throw new NotSupportedException();
             }
+        }
+
+        public static string[] ToCustomTags(this IdeVisibility ideVisibility)
+        {
+            if (ideVisibility == IdeVisibility.Hidden)
+            {
+                return new[] { WellKnownDiagnosticTags.Unnecessary };
+            }
+
+            return new string[0];
         }
     }
 }
