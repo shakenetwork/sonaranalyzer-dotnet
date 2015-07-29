@@ -1,6 +1,8 @@
 # SonarLint for Visual Studio
 
-[![Build status](https://ci.appveyor.com/api/projects/status/7k0q64nckn92t87g/branch/master?svg=true)](https://ci.appveyor.com/project/dbolkensteyn/sonarlint-vs/branch/master) | [@SonarLintVS](http://www.twitter.com/SonarLintVS)
+[![Build status](https://ci.appveyor.com/api/projects/status/7k0q64nckn92t87g/branch/master?svg=true)](https://ci.appveyor.com/project/dbolkensteyn/sonarlint-vs/branch/master) 
+
+Follow [@SonarLintVS on Twitter](http://www.twitter.com/SonarLintVS).
 
 SonarLint is a Visual Studio 2015 extension that provides on-the-fly feedback to developers on new bugs and quality issues injected into C# code.
 
