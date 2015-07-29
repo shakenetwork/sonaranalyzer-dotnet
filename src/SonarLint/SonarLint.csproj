@@ -93,7 +93,7 @@
     <Compile Include="Rules\FieldShadowsParentField.cs" />
     <Compile Include="Rules\StaticFieldWrittenFromInstanceMember.cs" />
     <Compile Include="Rules\ClassShouldNotBeAbstract.cs" />
-    <Compile Include="Rules\EqualityCheckOnModulus.cs" />
+    <Compile Include="Rules\EqualityOnModulus.cs" />
     <Compile Include="Rules\IndexOfCheckAgainstZero.cs" />
     <Compile Include="Rules\DisposeFromDispose.cs" />
     <Compile Include="Rules\DisposeNotImplementingDispose.cs" />

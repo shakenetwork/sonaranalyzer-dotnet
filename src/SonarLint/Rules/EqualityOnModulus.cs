@@ -19,6 +19,7 @@
  */
 
 using System.Collections.Immutable;
+using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -33,18 +34,17 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("5min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("bug")]
-    public class EqualityCheckOnModulus : DiagnosticAnalyzer
+    [Tags("suspicious")]
+    public class EqualityOnModulus : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2197";
         internal const string Title = "Modulus results should not be checked for direct equality";
         internal const string Description =
-            "When the modulus of a negative number is calculated, the result will either be negative or zero. Thus, " +
-            "comparing the modulus of a variable for equality with a positive number (or a negative one) could result " +
-            "in false negatives.";
+            "When the modulus of a negative number is calculated, the result will either be negative or zero. Thus, comparing " +
+            "the modulus of a variable for equality with a positive number (or a negative one) could result in unexpected results.";
         internal const string MessageFormat = "The result of this modulus operation may not be {0}.";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Critical;
+        internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule = 
@@ -63,8 +63,8 @@ namespace SonarLint.Rules
                     var equalsExpression = (BinaryExpressionSyntax)c.Node;
 
                     int constantValue;
-                    if (CheckExpression(equalsExpression.Left, equalsExpression.Right, out constantValue) ||
-                        CheckExpression(equalsExpression.Right, equalsExpression.Left, out constantValue))
+                    if (CheckExpression(equalsExpression.Left, equalsExpression.Right, c.SemanticModel, out constantValue) ||
+                        CheckExpression(equalsExpression.Right, equalsExpression.Left, c.SemanticModel, out constantValue))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, equalsExpression.GetLocation(),
                             constantValue < 0 ? "negative" : "positive"));
@@ -74,12 +74,13 @@ namespace SonarLint.Rules
                 SyntaxKind.NotEqualsExpression);
         }
 
-        private static bool CheckExpression(ExpressionSyntax constant, ExpressionSyntax modulus,
+        private static bool CheckExpression(ExpressionSyntax constant, ExpressionSyntax modulus, SemanticModel semanticModel,
             out int constantValue)
         {
             return SillyBitwiseOperation.TryGetConstantIntValue(constant, out constantValue) &&
                    constantValue != 0 &&
-                   ExpressionIsModulus(modulus);
+                   ExpressionIsModulus(modulus) &&
+                   !ExpressionIsNonNegative(modulus, semanticModel);
         }
 
         private static bool ExpressionIsModulus(ExpressionSyntax expression)
@@ -95,5 +96,22 @@ namespace SonarLint.Rules
             var binary = currentExpression as BinaryExpressionSyntax;
             return binary != null && binary.IsKind(SyntaxKind.ModuloExpression);
         }
+        private static bool ExpressionIsNonNegative(ExpressionSyntax expression, SemanticModel semantic)
+        {
+            var type = semantic.GetTypeInfo(expression).Type;
+            if (type == null)
+            {
+                return false;
+            }
+
+            return UnsingedSpecialTypes.Contains(type.SpecialType);
+        }
+
+        private static readonly SpecialType[] UnsingedSpecialTypes =
+        {
+            SpecialType.System_UInt16,
+            SpecialType.System_UInt32,
+            SpecialType.System_UInt64
+        };
     }
 }

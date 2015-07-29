@@ -139,7 +139,7 @@
     <Compile Include="Rules\ClassWithOnlyStaticMemberTest.cs" />
     <Compile Include="Rules\StaticFieldWrittenFromInstanceMemberTest.cs" />
     <Compile Include="Rules\ClassShouldNotBeAbstractTest.cs" />
-    <Compile Include="Rules\EqualityCheckOnModulusTest.cs" />
+    <Compile Include="Rules\EqualityOnModulusTest.cs" />
     <Compile Include="Rules\IndexOfCheckAgainstZeroTest.cs" />
     <Compile Include="Rules\DisposeFromDisposeTest.cs" />
     <Compile Include="Rules\DisposeNotImplementingDisposeTest.cs" />
@@ -347,7 +347,7 @@
     <None Include="TestCases\ClassShouldNotBeAbstract.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="TestCases\EqualityCheckOnModulus.cs">
+    <None Include="TestCases\EqualityOnModulus.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\IndexOfCheckAgainstZero.cs">

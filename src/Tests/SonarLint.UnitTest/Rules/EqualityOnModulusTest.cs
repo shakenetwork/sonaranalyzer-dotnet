@@ -24,13 +24,13 @@ using SonarLint.Rules;
 namespace SonarLint.UnitTest.Rules
 {
     [TestClass]
-    public class EqualityCheckOnModulusTest
+    public class EqualityOnModulusTest
     {
         [TestMethod]
         [TestCategory("Rule")]
-        public void EqualityCheckOnModulus()
+        public void EqualityOnModulus()
         {
-            Verifier.Verify(@"TestCases\EqualityCheckOnModulus.cs", new EqualityCheckOnModulus());
+            Verifier.Verify(@"TestCases\EqualityOnModulus.cs", new EqualityOnModulus());
         }
     }
 }

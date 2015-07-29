@@ -12,6 +12,10 @@ namespace Tests.Diagnostics
             y = 1 == x%2; // Noncompliant
             y = x%2 != 0;
             y = Math.Abs(x%2) == 1;
+
+            var unsignedY = 54U;
+
+            var xx = unsignedY % 4 == 1; //Compliant
         }
     }
 }
