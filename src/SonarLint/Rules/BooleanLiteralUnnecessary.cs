@@ -28,6 +28,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using Microsoft.CodeAnalysis.Text;
 
 namespace SonarLint.Rules
 {
@@ -40,36 +41,120 @@ namespace SonarLint.Rules
     {
         internal const string DiagnosticId = "S1125";
         internal const string Title = "Literal boolean values should not be used in condition expressions";
-        internal const string Description = 
+        internal const string Description =
             "Remove literal boolean values from conditional expressions to improve readability. Anything that " +
             "can be tested for equality with a boolean value must itself be a boolean value, and boolean values " +
             "can be tested atomically.";
         internal const string MessageFormat = "Remove the literal \"{0}\" boolean value.";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Minor; 
+        internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
+        private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
+                RuleSeverity.ToDiagnosticSeverity(ideVisibility), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+                description: Description,
+                customTags: ideVisibility.ToCustomTags());
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+
+        private static readonly ExpressionSyntax TrueExpression = SyntaxFactory.LiteralExpression(SyntaxKind.TrueLiteralExpression);
+        private static readonly ExpressionSyntax FalseExpression = SyntaxFactory.LiteralExpression(SyntaxKind.FalseLiteralExpression);
 
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeAction(
                 c =>
                 {
-                    var literalNode = (LiteralExpressionSyntax)c.Node;
-                    if (IsUnnecessary(literalNode))
+                    var binaryExpression = (BinaryExpressionSyntax)c.Node;
+
+                    CheckForBooleanConstantOnLeftReportOnExtendedLocation(binaryExpression, TrueExpression, c);
+                    CheckForBooleanConstantOnLeftReportOnNormalLocation(binaryExpression, FalseExpression, c);
+
+                    CheckForBooleanConstantOnRightReportOnExtendedLocation(binaryExpression, TrueExpression, c);
+                    CheckForBooleanConstantOnRightReportOnNormalLocation(binaryExpression, FalseExpression, c);
+                },
+                SyntaxKind.EqualsExpression,
+                SyntaxKind.LogicalAndExpression);
+
+            context.RegisterSyntaxNodeAction(
+                c =>
+                {
+                    var binaryExpression = (BinaryExpressionSyntax)c.Node;
+
+                    CheckForBooleanConstantOnLeftReportOnExtendedLocation(binaryExpression, FalseExpression, c);
+                    CheckForBooleanConstantOnLeftReportOnNormalLocation(binaryExpression, TrueExpression, c);
+
+                    CheckForBooleanConstantOnRightReportOnExtendedLocation(binaryExpression, FalseExpression, c);
+                    CheckForBooleanConstantOnRightReportOnNormalLocation(binaryExpression, TrueExpression, c);
+                },
+                SyntaxKind.NotEqualsExpression,
+                SyntaxKind.LogicalOrExpression);
+
+            context.RegisterSyntaxNodeAction(
+                c =>
+                {
+                    var logicalNot = (PrefixUnaryExpressionSyntax)c.Node;
+
+                    if (EquivalenceChecker.AreEquivalent(logicalNot.Operand, TrueExpression) ||
+                        EquivalenceChecker.AreEquivalent(logicalNot.Operand, FalseExpression))
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, literalNode.GetLocation(), literalNode.Token.ToString()));
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, logicalNot.Operand.GetLocation(), logicalNot.Operand.ToString()));
                     }
                 },
-                SyntaxKind.TrueLiteralExpression,
-                SyntaxKind.FalseLiteralExpression);
+                SyntaxKind.LogicalNotExpression);
+        }
+
+        private static void CheckForBooleanConstantOnLeftReportOnExtendedLocation(BinaryExpressionSyntax binaryExpression,
+            ExpressionSyntax booleanContantExpression, SyntaxNodeAnalysisContext c)
+        {
+            CheckForBooleanConstant(binaryExpression, true, booleanContantExpression, true, c);
+        }
+        private static void CheckForBooleanConstantOnRightReportOnExtendedLocation(BinaryExpressionSyntax binaryExpression,
+            ExpressionSyntax booleanContantExpression, SyntaxNodeAnalysisContext c)
+        {
+            CheckForBooleanConstant(binaryExpression, false, booleanContantExpression, true, c);
+        }
+        private static void CheckForBooleanConstantOnLeftReportOnNormalLocation(BinaryExpressionSyntax binaryExpression,
+            ExpressionSyntax booleanContantExpression, SyntaxNodeAnalysisContext c)
+        {
+            CheckForBooleanConstant(binaryExpression, true, booleanContantExpression, false, c);
+        }
+        private static void CheckForBooleanConstantOnRightReportOnNormalLocation(BinaryExpressionSyntax binaryExpression,
+            ExpressionSyntax booleanContantExpression, SyntaxNodeAnalysisContext c)
+        {
+            CheckForBooleanConstant(binaryExpression, false, booleanContantExpression, false, c);
+        }
+
+        private static void CheckForBooleanConstant(BinaryExpressionSyntax binaryExpression, bool leftSide,
+            ExpressionSyntax booleanContantExpression, bool needsLocationCalculation, SyntaxNodeAnalysisContext c)
+        {
+            var expression = leftSide
+                ? binaryExpression.Left
+                : binaryExpression.Right;
+
+            if (EquivalenceChecker.AreEquivalent(expression, booleanContantExpression))
+            {
+                var location = needsLocationCalculation
+                    ? CalculateLocation(binaryExpression, leftSide)
+                    : expression.GetLocation();
+
+                c.ReportDiagnostic(Diagnostic.Create(Rule, location,
+                    booleanContantExpression.ToString()));
+            }
+        }
+
+        private static Location CalculateLocation(BinaryExpressionSyntax binaryExpression, bool leftSide)
+        {
+            return leftSide
+                ? Location.Create(binaryExpression.SyntaxTree,
+                        new TextSpan(binaryExpression.SpanStart,
+                            binaryExpression.OperatorToken.Span.End - binaryExpression.SpanStart))
+                : Location.Create(binaryExpression.SyntaxTree,
+                        new TextSpan(binaryExpression.OperatorToken.SpanStart,
+                            binaryExpression.Span.End - binaryExpression.OperatorToken.SpanStart));
         }
 
         private static bool IsUnnecessary(LiteralExpressionSyntax node)
@@ -77,19 +162,13 @@ namespace SonarLint.Rules
             return AllowedContainerKinds.Contains(node.Parent.Kind());
         }
 
-        private static IEnumerable<SyntaxKind> AllowedContainerKinds
-        {
-            get
+        private static readonly SyntaxKind[] AllowedContainerKinds =
             {
-                return new[]
-                {
-                    SyntaxKind.EqualsExpression,
-                    SyntaxKind.NotEqualsExpression, 
-                    SyntaxKind.LogicalAndExpression,
-                    SyntaxKind.LogicalOrExpression,
-                    SyntaxKind.LogicalNotExpression
-                };
-            }
-        }
+                SyntaxKind.EqualsExpression,
+                SyntaxKind.NotEqualsExpression,
+                SyntaxKind.LogicalAndExpression,
+                SyntaxKind.LogicalOrExpression,
+                SyntaxKind.LogicalNotExpression
+            };
     }
 }
