@@ -40,19 +40,21 @@ namespace SonarLint.Rules
     {
         internal const string DiagnosticId = "S2326";
         internal const string Title = "Unused type parameters should be removed";
-        internal const string Description = 
+        internal const string Description =
             "Type parameters that aren't used are dead code, which can only distract and possibly confuse " +
             "developers during maintenance. Therefore, unused type parameters should be removed.";
         internal const string MessageFormat = "\"{0}\" is not used in the {1}.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
+        private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
+                RuleSeverity.ToDiagnosticSeverity(ideVisibility), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+                description: Description,
+                customTags: ideVisibility.ToCustomTags());
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
@@ -120,8 +122,8 @@ namespace SonarLint.Rules
             });
         }
 
-        private static List<string> GetUsedTypeParameters(IEnumerable<SyntaxNode> declarations, 
-            SyntaxNodeAnalysisContext localContext, 
+        private static List<string> GetUsedTypeParameters(IEnumerable<SyntaxNode> declarations,
+            SyntaxNodeAnalysisContext localContext,
             Compilation compilation)
         {
             return declarations
