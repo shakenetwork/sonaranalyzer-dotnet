@@ -48,9 +48,9 @@ namespace SonarLint.Rules
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
+                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
 
@@ -64,14 +64,14 @@ namespace SonarLint.Rules
                 c =>
                 {
                     var fieldDeclaration = (FieldDeclarationSyntax)c.Node;
-                    
+
                     if (fieldDeclaration.Modifiers.Any(modifier => modifier.IsKind(SyntaxKind.StaticKeyword)) &&
                         HasThreadStaticAttribute(fieldDeclaration.AttributeLists, c.SemanticModel))
                     {
                         foreach (var variableDeclaratorSyntax in fieldDeclaration.Declaration.Variables
                             .Where(variableDeclaratorSyntax => variableDeclaratorSyntax.Initializer != null))
                         {
-                            c.ReportDiagnostic(Diagnostic.Create(Rule, variableDeclaratorSyntax.Identifier.GetLocation(),
+                            c.ReportDiagnostic(Diagnostic.Create(Rule, variableDeclaratorSyntax.Initializer.GetLocation(),
                                 variableDeclaratorSyntax.Identifier.ValueText));
                         }
                     }
