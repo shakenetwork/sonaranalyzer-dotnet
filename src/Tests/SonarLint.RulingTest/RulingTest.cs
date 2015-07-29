@@ -53,6 +53,13 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
 
         [TestMethod]
         [TestCategory("Integration")]
+        public void ITSources_Expected_Number_Of_Files()
+        {
+            Assert.AreEqual(6567, CodeFiles.Length);
+        }
+
+        [TestMethod]
+        [TestCategory("Integration")]
         public void ItSources_Match_Expected_All()
         {
             var tempInputFilePath = Path.GetTempFileName();
