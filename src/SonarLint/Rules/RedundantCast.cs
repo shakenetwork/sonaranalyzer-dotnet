@@ -27,6 +27,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using Microsoft.CodeAnalysis.Text;
 
 namespace SonarLint.Rules
 {
@@ -45,12 +46,14 @@ namespace SonarLint.Rules
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
+        private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
+                RuleSeverity.ToDiagnosticSeverity(ideVisibility), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+                description: Description,
+                customTags: ideVisibility.ToCustomTags());
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
@@ -80,7 +83,7 @@ namespace SonarLint.Rules
 
                     if (expressionType.Equals(castType))
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, castExpression.Type.GetLocation(), 
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, castExpression.Type.GetLocation(),
                             castType.ToDisplayString()));
                     }
                 },
@@ -114,19 +117,26 @@ namespace SonarLint.Rules
 
                     if (elementType.Equals(castType))
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, GetReportLocation(invocation),
+                        var methodCalledAsStatic = methodSymbol.MethodKind == MethodKind.Ordinary;
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, GetReportLocation(invocation, methodCalledAsStatic),
                             returnType.ToDisplayString()));
                     }
                 },
                 SyntaxKind.InvocationExpression);
         }
 
-        private static Location GetReportLocation(InvocationExpressionSyntax invocation)
+        private static Location GetReportLocation(InvocationExpressionSyntax invocation, bool methodCalledAsStatic)
         {
             var memberAccess = invocation.Expression as MemberAccessExpressionSyntax;
-            return memberAccess == null 
-                ? invocation.Expression.GetLocation() 
-                : memberAccess.Name.GetLocation();
+            if (memberAccess == null)
+            {
+                return invocation.Expression.GetLocation();
+            }
+
+            return methodCalledAsStatic
+                ? memberAccess.GetLocation()
+                : Location.Create(invocation.SyntaxTree,
+                    new TextSpan(memberAccess.OperatorToken.SpanStart, invocation.Span.End - memberAccess.OperatorToken.SpanStart));
         }
 
         private static ITypeSymbol GetElementType(InvocationExpressionSyntax invocation, IMethodSymbol methodSymbol,
@@ -159,8 +169,8 @@ namespace SonarLint.Rules
             }
 
             var arrayType = semanticModel.GetTypeInfo(collection).Type as IArrayTypeSymbol;
-            return arrayType != null 
-                ? arrayType.ElementType 
+            return arrayType != null
+                ? arrayType.ElementType
                 : null;
         }
 
