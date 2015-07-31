@@ -1,0 +1,26 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarLint.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S3234",
+      "FullMessage": "Remove this useless call to \"GC.SuppressFinalize\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+            "Region": {
+              "StartLine": 3843,
+              "EndLine": 3843,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
