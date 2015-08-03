@@ -129,6 +129,7 @@
     <Compile Include="Rules\SuppressFinalizeUseless.cs" />
     <Compile Include="Rules\FieldInitializedToDefault.cs" />
     <Compile Include="Rules\RedundantParenthesesCodeFixProvider.cs" />
+    <Compile Include="Rules\GenericTypeParameterInOut.cs" />
     <Compile Include="Rules\UnaryPrefixOperatorRepeated.cs" />
     <Compile Include="Rules\GetHashCodeEqualsOverride.cs" />
     <Compile Include="Rules\AssignmentInsideSubExpression.cs" />
@@ -510,6 +511,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S3263.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S3246.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
