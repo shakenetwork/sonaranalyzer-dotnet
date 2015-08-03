@@ -147,16 +147,55 @@ namespace SonarLint.Rules
 
         private static bool IsCode(string line)
         {
-            var checkedLine = line.Replace(" ", "").Replace("\t", "");
+            var checkedLine = line
+                .Replace(" ", string.Empty)
+                .Replace("\t", string.Empty);
 
             return
-                (CodeEndings.Any(ending => checkedLine.EndsWith(ending, StringComparison.Ordinal)) ||
-                 CodeParts.Any(checkedLine.Contains) ||
-                 (checkedLine.Length - checkedLine.Replace("&&", "").Replace("||", "").Length)/2 >= 3) &&
+                (
+                    EndsWithCode(checkedLine) ||
+                    ContainsCodeParts(checkedLine) ||
+                    ContainsMultipleLogicalOperators(checkedLine) ||
+                    ContainsCodePartsWithRelationalOperator(checkedLine)
+                ) &&
                 !checkedLine.Contains("License");
         }
 
+        private static bool ContainsMultipleLogicalOperators(string checkedLine)
+        {
+            var lineLength = checkedLine.Length;
+            var lineLengthWithoutLogicalOperators = checkedLine
+                .Replace("&&", string.Empty)
+                .Replace("||", string.Empty)
+                .Length;
+
+            const int lengthOfOperator = 2;
+
+            return lineLength - lineLengthWithoutLogicalOperators >= 3 * lengthOfOperator;
+        }
+
+        private static bool ContainsCodeParts(string checkedLine)
+        {
+            return CodeParts.Any(checkedLine.Contains);
+        }
+
+        private static bool ContainsCodePartsWithRelationalOperator(string checkedLine)
+        {
+            return CodePartsWithRelationalOperator.Any(codePart =>
+            {
+                var index = checkedLine.IndexOf(codePart);
+                return index >= 0 && RelationalOperators.Any(op => checkedLine.IndexOf(op, index) >= 0);
+            });
+        }
+
+        private static bool EndsWithCode(string checkedLine)
+        {
+            return CodeEndings.Any(ending => checkedLine.EndsWith(ending, StringComparison.Ordinal));
+        }
+
         private static readonly string[] CodeEndings = { ";", "{", "}" };
-        private static readonly string[] CodeParts = { "++", "for(", "if(", "while(", "catch(", "switch(", "try{", "else{" };
+        private static readonly string[] CodeParts = { "++", "catch(", "switch(", "try{", "else{" };
+        private static readonly string[] CodePartsWithRelationalOperator = { "for(", "if(", "while(" };
+        private static readonly string[] RelationalOperators = { "<", ">", "<=", ">=", "==", "!=" };
     }
 }

@@ -1,26 +1,26 @@
 ﻿// Copyright © 2011 - Present RealDimensions Software, LLC
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // Noncompliant: ;
 using System;
 
-// Noncompliant: ; 
+// Noncompliant: ;
 
 // Noncompliant: {
 
 // Noncompliant: }
 
-// foo ; {} bar 
+// foo ; {} bar
 
 // ; {} foo
 
 // Noncompliant: ++
 
-// Noncompliant: for    (
+// Noncompliant: for    ( .. i != 5
 
-// Noncompliant: if (
+// Noncompliant: if ( 1==2
 
-// Noncompliant: while(
+// Noncompliant: while( i > 5
 
 // Noncompliant: catch(
 
@@ -65,7 +65,7 @@ using System;
 
 namespace Tests.Diagnostics
 {
-    
+
 
     /// <summary>
     /// ...
@@ -83,5 +83,8 @@ namespace Tests.Diagnostics
 
         int a; // Noncompliant: Console.WriteLine();
         int b; // Noncompliant: Console.WriteLine();
+
+        // this should be compliant:
+        // does *not* overwrite file if (still) exists
     }
 }
