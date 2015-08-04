@@ -45,7 +45,6 @@ namespace SonarLint.Common
 
     public class Metrics
     {
-        private static readonly string[] LineTerminators = { "\r\n", "\n", "\r" };
         private readonly SyntaxTree tree;
 
         public Metrics(SyntaxTree tree)
@@ -88,7 +87,7 @@ namespace SonarLint.Common
 
                 var lineNumber = tree.GetLineSpan(trivia.FullSpan).StartLinePosition.Line + 1;
 
-                foreach (var line in trivia.ToFullString().Split(LineTerminators, StringSplitOptions.None))
+                foreach (var line in trivia.ToFullString().Split(Rules.CommentedOutCode.LineTerminators, StringSplitOptions.None))
                 {
                     if (line.Contains("NOSONAR"))
                     {
@@ -148,7 +147,7 @@ namespace SonarLint.Common
         {
             return FunctionKinds.Contains(node.Kind());
         }
-        
+
         public int PublicApi()
         {
             return PublicApiNodes().Count();

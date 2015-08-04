@@ -54,7 +54,9 @@ namespace SonarLint.Rules
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
-        
+
+        public static readonly string[] LineTerminators = { "\r\n", "\n", "\r" };
+
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         public override void Initialize(AnalysisContext context)
@@ -77,15 +79,9 @@ namespace SonarLint.Rules
                                         continue;
                                     }
 
-                                    var triviaContent = trivia.ToString().Substring(2);
-                                    if (trivia.IsKind(SyntaxKind.MultiLineCommentTrivia))
-                                    {
-                                        triviaContent = triviaContent.Substring(0, triviaContent.Length - 2);
-                                    }
-
+                                    var triviaContent = GetTriviaContent(trivia);
                                     var triviaStartingLineNumber = trivia.GetLocation().GetLineSpan().StartLinePosition.Line;
-                                    // TODO Do not duplicate line terminators here
-                                    var triviaLines = triviaContent.Split(new [] { "\r\n", "\n" }, StringSplitOptions.None);
+                                    var triviaLines = triviaContent.Split(LineTerminators, StringSplitOptions.None);
 
                                     for (var triviaLineNumber = 0; triviaLineNumber < triviaLines.Length; triviaLineNumber++)
                                     {
@@ -117,6 +113,36 @@ namespace SonarLint.Rules
                         check(token.TrailingTrivia);
                     }
                 });
+        }
+
+        private static string GetTriviaContent(SyntaxTrivia trivia)
+        {
+            var triviaContent = trivia.ToString();
+            if (trivia.IsKind(SyntaxKind.MultiLineCommentTrivia))
+            {
+                if (triviaContent.StartsWith("/*"))
+                {
+                    triviaContent = triviaContent.Substring(2);
+                }
+
+                if (triviaContent.EndsWith("*/"))
+                {
+                    triviaContent = triviaContent.Substring(0, triviaContent.Length-2);
+                }
+                return triviaContent;
+            }
+
+            if (trivia.IsKind(SyntaxKind.SingleLineCommentTrivia))
+            {
+                if (triviaContent.StartsWith("//"))
+                {
+                    triviaContent = triviaContent.Substring(2);
+                }
+
+                return triviaContent;
+            }
+
+            return string.Empty;
         }
 
         private static bool IsCode(string line)
