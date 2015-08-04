@@ -48,9 +48,9 @@ namespace SonarLint.Rules
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
+                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
 
@@ -84,10 +84,11 @@ namespace SonarLint.Rules
                         return;
                     }
 
-                    var disposeMethod =
-                        (IMethodSymbol) c.SemanticModel.Compilation.GetSpecialType(SpecialType.System_IDisposable)
-                            .GetMembers(DisposeMethodName)
-                            .Single();
+                    var disposeMethod = DisposableNotDisposed.GetDisposeMethod(c.SemanticModel.Compilation);
+                    if (disposeMethod == null)
+                    {
+                        return;
+                    }
 
                     if (!methodSymbol.Equals(
                             methodSymbol.ContainingType.FindImplementationForInterfaceMember(disposeMethod)))

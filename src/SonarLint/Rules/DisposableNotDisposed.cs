@@ -69,8 +69,12 @@ namespace SonarLint.Rules
                 var localsAssignedInUsing = ImmutableHashSet<ILocalSymbol>.Empty;
                 var localsDisposed = ImmutableHashSet<ILocalSymbol>.Empty;
                 var localsReturned = ImmutableHashSet<ILocalSymbol>.Empty;
-                var disposeMethod = (IMethodSymbol)analysisContext.SemanticModel.Compilation.GetSpecialType(
-                    SpecialType.System_IDisposable).GetMembers("Dispose").Single();
+                var disposeMethod = GetDisposeMethod(analysisContext.SemanticModel.Compilation);
+
+                if (disposeMethod == null)
+                {
+                    return;
+                }
 
                 analysisContext.RegisterSyntaxNodeAction(
                     c => CollectAssignedLocalDisposables((AssignmentExpressionSyntax)c.Node, c.SemanticModel,
@@ -113,7 +117,12 @@ namespace SonarLint.Rules
                 var disposableFields = ImmutableHashSet<IFieldSymbol>.Empty;
                 var fieldsAssigned = ImmutableHashSet<IFieldSymbol>.Empty;
                 var fieldsDisposed = ImmutableHashSet<IFieldSymbol>.Empty;
-                var disposeMethod = (IMethodSymbol)analysisContext.Compilation.GetSpecialType(SpecialType.System_IDisposable).GetMembers("Dispose").Single();
+
+                var disposeMethod = GetDisposeMethod(analysisContext.Compilation);
+                if (disposeMethod == null)
+                {
+                    return;
+                }
 
                 analysisContext.RegisterSyntaxNodeAction(
                     c => CollectDisposableFields((FieldDeclarationSyntax)c.Node, c.SemanticModel,
@@ -138,6 +147,13 @@ namespace SonarLint.Rules
                     ReportIssues(nonDisposedFields, c.ReportDiagnostic);
                 });
             });
+        }
+
+        internal static IMethodSymbol GetDisposeMethod(Compilation compilation)
+        {
+            return (IMethodSymbol)compilation.GetSpecialType(SpecialType.System_IDisposable)
+                .GetMembers("Dispose")
+                .SingleOrDefault();
         }
 
         private static void CollectDisposedSymbol<T>(InvocationExpressionSyntax invocation, SemanticModel semanticModel,

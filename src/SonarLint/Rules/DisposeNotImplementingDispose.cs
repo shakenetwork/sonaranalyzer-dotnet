@@ -63,11 +63,12 @@ namespace SonarLint.Rules
             context.RegisterCompilationStartAction(
                 analysisContext =>
                 {
-                    var disposeMethod =
-                        (IMethodSymbol) analysisContext.Compilation.GetSpecialType(SpecialType.System_IDisposable)
-                            .GetMembers(DisposeMethodName)
-                            .Single();
-                    
+                    var disposeMethod = DisposableNotDisposed.GetDisposeMethod(analysisContext.Compilation);
+                    if (disposeMethod == null)
+                    {
+                        return;
+                    }
+
                     var disposeMethodsCalledFromDispose = ImmutableDictionary<INamedTypeSymbol, ImmutableHashSet<IMethodSymbol>>.Empty;
                     var implementingDisposeMethods = ImmutableHashSet<IMethodSymbol>.Empty;
                     var allDisposeMethods = ImmutableHashSet<IMethodSymbol>.Empty;
