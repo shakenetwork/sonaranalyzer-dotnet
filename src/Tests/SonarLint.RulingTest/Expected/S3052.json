@@ -1,0 +1,4259 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarLint.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_leader\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\AutoDown.cs",
+            "Region": {
+              "StartLine": 91,
+              "EndLine": 91,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_seedNodeProcessCounter\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
+            "Region": {
+              "StartLine": 654,
+              "EndLine": 654,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_leaderActionCounter\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
+            "Region": {
+              "StartLine": 658,
+              "EndLine": 658,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_protocolCache\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\ClusterMessageSerializer.cs",
+            "Region": {
+              "StartLine": 137,
+              "EndLine": 137,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_systemCache\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\ClusterMessageSerializer.cs",
+            "Region": {
+              "StartLine": 138,
+              "EndLine": 138,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_memberStatusFromProtoCache\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\ClusterMessageSerializer.cs",
+            "Region": {
+              "StartLine": 228,
+              "EndLine": 228,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_reachabilityStatusFromProtoCache\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\ClusterMessageSerializer.cs",
+            "Region": {
+              "StartLine": 249,
+              "EndLine": 249,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Zero\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\VectorClock.cs",
+            "Region": {
+              "StartLine": 102,
+              "EndLine": 102,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"ExitCode\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.MultiNodeTestRunner.Shared\\ExitCodeContainer.cs",
+            "Region": {
+              "StartLine": 19,
+              "EndLine": 19,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"TotalReceiveClosedConfirmations\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\SinkCoordinator.cs",
+            "Region": {
+              "StartLine": 85,
+              "EndLine": 85,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"ReceivedSinkCloseConfirmations\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\SinkCoordinator.cs",
+            "Region": {
+              "StartLine": 86,
+              "EndLine": 86,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_router1\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.MultiNodeTests\\Routing\\ClusterConsistentHashingRouterSpec.cs",
+            "Region": {
+              "StartLine": 82,
+              "EndLine": 82,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_count\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence.Tests\\AtLeastOnceDeliverySpec.cs",
+            "Region": {
+              "StartLine": 158,
+              "EndLine": 158,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_stashed\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
+            "Region": {
+              "StartLine": 392,
+              "EndLine": 392,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_counter\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
+            "Region": {
+              "StartLine": 477,
+              "EndLine": 477,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_counter\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
+            "Region": {
+              "StartLine": 506,
+              "EndLine": 506,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_counter\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
+            "Region": {
+              "StartLine": 572,
+              "EndLine": 572,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_counter\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
+            "Region": {
+              "StartLine": 601,
+              "EndLine": 601,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_counter\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
+            "Region": {
+              "StartLine": 630,
+              "EndLine": 630,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_deliverySequenceNr\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\AtLeastOnceDelivery.cs",
+            "Region": {
+              "StartLine": 147,
+              "EndLine": 147,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_isWriteInProgress\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Eventsourced.cs",
+            "Region": {
+              "StartLine": 64,
+              "EndLine": 64,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_sequenceNr\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Eventsourced.cs",
+            "Region": {
+              "StartLine": 65,
+              "EndLine": 65,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_pendingStashingPersistInvocations\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Eventsourced.cs",
+            "Region": {
+              "StartLine": 70,
+              "EndLine": 70,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_delivered\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Journal\\AsyncWriteJournal.cs",
+            "Region": {
+              "StartLine": 166,
+              "EndLine": 166,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_failed\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\BarrierCoordinator.cs",
+            "Region": {
+              "StartLine": 385,
+              "EndLine": 385,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_commonConf\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\MultiNodeSpec.cs",
+            "Region": {
+              "StartLine": 31,
+              "EndLine": 31,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_testTransport\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\MultiNodeSpec.cs",
+            "Region": {
+              "StartLine": 36,
+              "EndLine": 36,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_loggedDisconnect\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Player.cs",
+            "Region": {
+              "StartLine": 524,
+              "EndLine": 524,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"called\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.Tests\\Transport\\AkkaProtocolSpec.cs",
+            "Region": {
+              "StartLine": 92,
+              "EndLine": 92,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"NextSeq\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.Tests\\Transport\\AkkaProtocolStressTest.cs",
+            "Region": {
+              "StartLine": 70,
+              "EndLine": 70,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Losses\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.Tests\\Transport\\AkkaProtocolStressTest.cs",
+            "Region": {
+              "StartLine": 72,
+              "EndLine": 72,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_received\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.Tests\\Transport\\ThrottlerTransportAdapterSpec.cs",
+            "Region": {
+              "StartLine": 55,
+              "EndLine": 55,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_startTime\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.Tests\\Transport\\ThrottlerTransportAdapterSpec.cs",
+            "Region": {
+              "StartLine": 57,
+              "EndLine": 57,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_heartbeatTimestamp\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\DeadlineFailureDetector.cs",
+            "Region": {
+              "StartLine": 53,
+              "EndLine": 53,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_active\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\DeadlineFailureDetector.cs",
+            "Region": {
+              "StartLine": 55,
+              "EndLine": 55,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_lastAck\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Endpoint.cs",
+            "Region": {
+              "StartLine": 818,
+              "EndLine": 818,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_writeCount\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Endpoint.cs",
+            "Region": {
+              "StartLine": 1109,
+              "EndLine": 1109,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_fullBackoff\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Endpoint.cs",
+            "Region": {
+              "StartLine": 1112,
+              "EndLine": 1112,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_smallBackoffCount\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Endpoint.cs",
+            "Region": {
+              "StartLine": 1116,
+              "EndLine": 1116,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_noBackoffCount\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Endpoint.cs",
+            "Region": {
+              "StartLine": 1117,
+              "EndLine": 1117,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_upstreamListener\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
+            "Region": {
+              "StartLine": 125,
+              "EndLine": 125,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"MaximumOverhead\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
+            "Region": {
+              "StartLine": 129,
+              "EndLine": 129,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_upstreamListener\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
+            "Region": {
+              "StartLine": 290,
+              "EndLine": 290,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"uniqueId\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Transport\\TransportAdapters.cs",
+            "Region": {
+              "StartLine": 342,
+              "EndLine": 342,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"NoSupervisor\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.TestKit\\TestKitBase_ActorOf.cs",
+            "Region": {
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_systemNumber\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests.Shared.Internals\\AkkaSpec.cs",
+            "Region": {
+              "StartLine": 40,
+              "EndLine": 40,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"UndefinedUid\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\ActorCell.cs",
+            "Region": {
+              "StartLine": 23,
+              "EndLine": 23,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_pendingReceiveTimeout\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\ActorCell.ReceiveTimeout.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"INITIATED\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\ActorRef.cs",
+            "Region": {
+              "StartLine": 82,
+              "EndLine": 82,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"NoSender\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\ActorRef.cs",
+            "Region": {
+              "StartLine": 161,
+              "EndLine": 161,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_generation\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\FSM.cs",
+            "Region": {
+              "StartLine": 656,
+              "EndLine": 656,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"inboxNr\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\Inbox.cs",
+            "Region": {
+              "StartLine": 241,
+              "EndLine": 241,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"None\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\Props.cs",
+            "Region": {
+              "StartLine": 140,
+              "EndLine": 140,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Idle\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Dispatch\\Mailbox.cs",
+            "Region": {
+              "StartLine": 126,
+              "EndLine": 126,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_parallelWorkers\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Helios.Concurrency.DedicatedThreadPool.cs",
+            "Region": {
+              "StartLine": 82,
+              "EndLine": 82,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_ring\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Routing\\ConsistentHash.cs",
+            "Region": {
+              "StartLine": 44,
+              "EndLine": 44,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_falseValue\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Util\\AtomicBoolean.cs",
+            "Region": {
+              "StartLine": 21,
+              "EndLine": 21,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Jobs\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\examples\\Cluster\\Roles\\Samples.Cluster.Transformation\\TransformationFrontend.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"jobCount\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\examples\\Cluster\\Routing\\Samples.Cluster.ConsistentHashRouting\\FrontendActor.cs",
+            "Region": {
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_numReplicated\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\examples\\PersistenceExample\\ExampleView.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"components\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\examples\\Stocks\\SymbolLookup\\MainForm.Designer.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"IsShutdown\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\examples\\TimeServer\\TimeClient\\Program.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"result\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey.tests\\infrastructure\\information\\VersionInformationSpecs.cs",
+            "Region": {
+              "StartLine": 33,
+              "EndLine": 33,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_currentLineLength\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure.app\\configuration\\ChocolateyConfiguration.cs",
+            "Region": {
+              "StartLine": 112,
+              "EndLine": 112,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_logOutput\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure.app\\services\\RegistryService.cs",
+            "Region": {
+              "StartLine": 37,
+              "EndLine": 37,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"DefaultAttributeRouteOrder\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ControllerActionDescriptorBuilder.cs",
+            "Region": {
+              "StartLine": 24,
+              "EndLine": 24,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"First\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\FilterScope.cs",
+            "Region": {
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Zero\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Extensions.Test\\ModelBinding\\Metadata\\DataAnnotationsMetadataProviderTest.cs",
+            "Region": {
+              "StartLine": 679,
+              "EndLine": 679,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Zero\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Extensions.Test\\ModelBinding\\Metadata\\DataAnnotationsMetadataProviderTest.cs",
+            "Region": {
+              "StartLine": 758,
+              "EndLine": 758,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Zero\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Extensions.Test\\Rendering\\HtmlHelperSelectTest.cs",
+            "Region": {
+              "StartLine": 1608,
+              "EndLine": 1608,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Zero\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Extensions.Test\\Rendering\\HtmlHelperSelectTest.cs",
+            "Region": {
+              "StartLine": 1676,
+              "EndLine": 1676,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"__Microsoft_AspNet_Mvc_Razor_InputTestTagHelper\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Razor.Host.Test\\TestFiles\\Output\\DesignTime\\ModelExpressionTagHelper.cs",
+            "Region": {
+              "StartLine": 34,
+              "EndLine": 34,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"__tagHelperStringValueBuffer\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Razor.Host.Test\\TestFiles\\Output\\Runtime\\ModelExpressionTagHelper.cs",
+            "Region": {
+              "StartLine": 22,
+              "EndLine": 22,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"__tagHelperExecutionContext\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Razor.Host.Test\\TestFiles\\Output\\Runtime\\ModelExpressionTagHelper.cs",
+            "Region": {
+              "StartLine": 24,
+              "EndLine": 24,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"__tagHelperRunner\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Razor.Host.Test\\TestFiles\\Output\\Runtime\\ModelExpressionTagHelper.cs",
+            "Region": {
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"__Microsoft_AspNet_Mvc_Razor_InputTestTagHelper\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Razor.Host.Test\\TestFiles\\Output\\Runtime\\ModelExpressionTagHelper.cs",
+            "Region": {
+              "StartLine": 27,
+              "EndLine": 27,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"createSerializerCalledCount\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Xml.Test\\XmlDataContractSerializerInputFormatterTest.cs",
+            "Region": {
+              "StartLine": 531,
+              "EndLine": 531,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"createSerializerCalledCount\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Xml.Test\\XmlDataContractSerializerOutputFormatterTest.cs",
+            "Region": {
+              "StartLine": 592,
+              "EndLine": 592,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"createSerializerCalledCount\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Xml.Test\\XmlSerializerOutputFormatterTest.cs",
+            "Region": {
+              "StartLine": 394,
+              "EndLine": 394,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"C_SPACE\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Json\\JsonDeserializer.cs",
+            "Region": {
+              "StartLine": 79,
+              "EndLine": 79,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"GO\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Json\\JsonDeserializer.cs",
+            "Region": {
+              "StartLine": 117,
+              "EndLine": 117,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"disposed\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+            "Region": {
+              "StartLine": 3834,
+              "EndLine": 3834,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"phoneApplicationInitialized\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\NLogWindowsPhoneApplication\\App.xaml.cs",
+            "Region": {
+              "StartLine": 102,
+              "EndLine": 102,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"components\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\FormControl\\Form1.Designer.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"components\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\RichTextBox\\RowColoring\\Form1.Designer.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"components\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\RichTextBox\\Simple\\Form1.Designer.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"components\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\RichTextBox\\WordColoring\\Form1.Designer.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_fromHour\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\web\\MyFirstFilter.cs",
+            "Region": {
+              "StartLine": 11,
+              "EndLine": 11,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_showMinutes\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\web\\MyFirstLayoutRenderer.cs",
+            "Region": {
+              "StartLine": 11,
+              "EndLine": 11,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_cachedAppSettingValue\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog.Extended\\LayoutRenderers\\AppSettingLayoutRenderer.cs",
+            "Region": {
+              "StartLine": 93,
+              "EndLine": 93,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_appSettingValue\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog.Extended\\LayoutRenderers\\AppSettingLayoutRenderer.cs",
+            "Region": {
+              "StartLine": 94,
+              "EndLine": 94,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"StackTraceSkipMethods\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\LoggerImpl.cs",
+            "Region": {
+              "StartLine": 56,
+              "EndLine": 56,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"activeConnection\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Targets\\DatabaseTarget.cs",
+            "Region": {
+              "StartLine": 79,
+              "EndLine": 79,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"EnableArchiveFileCompression\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Targets\\FileTarget.cs",
+            "Region": {
+              "StartLine": 420,
+              "EndLine": 420,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"currentTarget\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Targets\\Wrappers\\RoundRobinGroupTarget.cs",
+            "Region": {
+              "StartLine": 63,
+              "EndLine": 63,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"faulted\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Internal\\NetworkSenders\\TcpNetworkSenderTests.cs",
+            "Region": {
+              "StartLine": 297,
+              "EndLine": 297,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_reloadCounter\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\LogManagerTests.cs",
+            "Region": {
+              "StartLine": 265,
+              "EndLine": 265,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_addDashesToOption\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\lib\\commandline\\CommandLineText.cs",
+            "Region": {
+              "StartLine": 642,
+              "EndLine": 642,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"built\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.Testing\\TimeZones\\MultiTransitionDateTimeZone.cs",
+            "Region": {
+              "StartLine": 89,
+              "EndLine": 89,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Version\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.TzdbCompiler\\Tzdb\\TzdbStreamWriter.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"formatOnly\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Text\\Patterns\\SteppedPatternBuilder.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Nul\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Text\\TextCursor.cs",
+            "Region": {
+              "StartLine": 34,
+              "EndLine": 34,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"MarkerMinValue\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\TimeZones\\IO\\DateTimeZoneWriter.cs",
+            "Region": {
+              "StartLine": 34,
+              "EndLine": 34,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"AcceptedVersion\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\TimeZones\\IO\\TzdbStreamData.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"zoneLocations\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\TimeZones\\IO\\TzdbStreamData.cs",
+            "Region": {
+              "StartLine": 159,
+              "EndLine": 159,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"zone1970Locations\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\TimeZones\\IO\\TzdbStreamData.cs",
+            "Region": {
+              "StartLine": 160,
+              "EndLine": 160,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"components\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Options\\GeneralOptionControl.Designer.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"components\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Options\\PackageSourcesOptionsControl.Designer.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_triggerEventMethod\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\Utility\\NuGetEventTrigger.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"S_OK\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\VSConstants.cs",
+            "Region": {
+              "StartLine": 34,
+              "EndLine": 34,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_vsOutputConsole\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\Console\\PowerConsoleToolWindow.cs",
+            "Region": {
+              "StartLine": 638,
+              "EndLine": 638,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"IHaveTheLock\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHost\\RunspaceDispatcher.cs",
+            "Region": {
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"components\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\TestUI\\TestForm.Designer.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_routingEntryIndex\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Core.Test\\WiresharkDatagramComparerGre.cs",
+            "Region": {
+              "StartLine": 172,
+              "EndLine": 172,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"HardwareType\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Arp\\ArpDatagram.cs",
+            "Region": {
+              "StartLine": 41,
+              "EndLine": 41,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Id\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\DnsDatagram.cs",
+            "Region": {
+              "StartLine": 51,
+              "EndLine": 51,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Ttl\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\DnsDataResourceRecord.cs",
+            "Region": {
+              "StartLine": 37,
+              "EndLine": 37,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Type\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\DnsResourceRecord.cs",
+            "Region": {
+              "StartLine": 36,
+              "EndLine": 36,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"AddressFamily\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsAddressPrefix.cs",
+            "Region": {
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Version\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsOptionLongLivedQuery.cs",
+            "Region": {
+              "StartLine": 31,
+              "EndLine": 31,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"PrefixLength\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataA6.cs",
+            "Region": {
+              "StartLine": 27,
+              "EndLine": 27,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Format\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataAtmAddress.cs",
+            "Region": {
+              "StartLine": 23,
+              "EndLine": 23,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Type\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataCertificate.cs",
+            "Region": {
+              "StartLine": 26,
+              "EndLine": 26,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Flags\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataCertificationAuthorityAuthorization.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"KeyTag\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataDelegationSigner.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"ZoneKey\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataDnsKey.cs",
+            "Region": {
+              "StartLine": 31,
+              "EndLine": 31,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"HostIdentityTagLength\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataHostIdentityProtocol.cs",
+            "Region": {
+              "StartLine": 35,
+              "EndLine": 35,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Precedence\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataIpSecKey.cs",
+            "Region": {
+              "StartLine": 31,
+              "EndLine": 31,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"AuthenticationProhibited\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataKey.cs",
+            "Region": {
+              "StartLine": 30,
+              "EndLine": 30,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"ConfidentialityProhibited\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataKey.cs",
+            "Region": {
+              "StartLine": 31,
+              "EndLine": 31,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Experimental\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataKey.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"IsFlagsExtension\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataKey.cs",
+            "Region": {
+              "StartLine": 33,
+              "EndLine": 33,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"UserAssociated\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataKey.cs",
+            "Region": {
+              "StartLine": 34,
+              "EndLine": 34,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"NameType\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataKey.cs",
+            "Region": {
+              "StartLine": 35,
+              "EndLine": 35,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Version\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataLocationInformation.cs",
+            "Region": {
+              "StartLine": 33,
+              "EndLine": 33,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Order\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataNamingAuthorityPointer.cs",
+            "Region": {
+              "StartLine": 36,
+              "EndLine": 36,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"AreaAddress\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataNetworkServiceAccessPoint.cs",
+            "Region": {
+              "StartLine": 31,
+              "EndLine": 31,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"SystemIdentifier\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataNetworkServiceAccessPoint.cs",
+            "Region": {
+              "StartLine": 36,
+              "EndLine": 36,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"HashAlgorithm\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataNextDomainSecure3Base.cs",
+            "Region": {
+              "StartLine": 27,
+              "EndLine": 27,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Flags\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataRKey.cs",
+            "Region": {
+              "StartLine": 24,
+              "EndLine": 24,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Priority\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataServerSelection.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"TypeCovered\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataSignature.cs",
+            "Region": {
+              "StartLine": 35,
+              "EndLine": 35,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Coding\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataSink.cs",
+            "Region": {
+              "StartLine": 24,
+              "EndLine": 24,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Algorithm\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataSshFingerprint.cs",
+            "Region": {
+              "StartLine": 24,
+              "EndLine": 24,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Serial\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataStartOfAuthority.cs",
+            "Region": {
+              "StartLine": 35,
+              "EndLine": 35,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Inception\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataTransactionKey.cs",
+            "Region": {
+              "StartLine": 37,
+              "EndLine": 37,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"TimeSigned\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataTransactionSignature.cs",
+            "Region": {
+              "StartLine": 34,
+              "EndLine": 34,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"OriginalId\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataTransactionSignature.cs",
+            "Region": {
+              "StartLine": 42,
+              "EndLine": 42,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Priority\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataUri.cs",
+            "Region": {
+              "StartLine": 27,
+              "EndLine": 27,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Value\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataUShortDomainName.cs",
+            "Region": {
+              "StartLine": 23,
+              "EndLine": 23,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Address\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataWellKnownService.cs",
+            "Region": {
+              "StartLine": 24,
+              "EndLine": 24,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Preference\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\ResourceData\\DnsResourceDataX400Pointer.cs",
+            "Region": {
+              "StartLine": 27,
+              "EndLine": 27,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Destination\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Ethernet\\EthernetDatagram.cs",
+            "Region": {
+              "StartLine": 22,
+              "EndLine": 22,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"PriorityCodePoint\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Ethernet\\VLanTaggedFrameDatagram.cs",
+            "Region": {
+              "StartLine": 19,
+              "EndLine": 19,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"NullVLanIdentifier\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Ethernet\\VLanTaggedFrameDatagram.cs",
+            "Region": {
+              "StartLine": 48,
+              "EndLine": 48,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"ChecksumPresent\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Gre\\GreDatagram.cs",
+            "Region": {
+              "StartLine": 35,
+              "EndLine": 35,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"RoutingPresent\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Gre\\GreDatagram.cs",
+            "Region": {
+              "StartLine": 36,
+              "EndLine": 36,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"KeyPresent\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Gre\\GreDatagram.cs",
+            "Region": {
+              "StartLine": 37,
+              "EndLine": 37,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"SequenceNumberPresent\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Gre\\GreDatagram.cs",
+            "Region": {
+              "StartLine": 38,
+              "EndLine": 38,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"StrictSourceRoute\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Gre\\GreDatagram.cs",
+            "Region": {
+              "StartLine": 39,
+              "EndLine": 39,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"RecursionControl\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Gre\\GreDatagram.cs",
+            "Region": {
+              "StartLine": 40,
+              "EndLine": 40,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"AddressFamily\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Gre\\GreSourceRouteEntry.cs",
+            "Region": {
+              "StartLine": 34,
+              "EndLine": 34,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Type\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Icmp\\IcmpDatagram.cs",
+            "Region": {
+              "StartLine": 29,
+              "EndLine": 29,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"MessageType\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Igmp\\IgmpDatagram.cs",
+            "Region": {
+              "StartLine": 109,
+              "EndLine": 109,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"RecordType\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Igmp\\IgmpGroupRecordDatagram.cs",
+            "Region": {
+              "StartLine": 42,
+              "EndLine": 42,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Function\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Ip\\IpOptionQuickStartCommon.cs",
+            "Region": {
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"VersionAndHeaderLength\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV4\\IpV4Datagram.cs",
+            "Region": {
+              "StartLine": 50,
+              "EndLine": 50,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Version\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6Datagram.cs",
+            "Region": {
+              "StartLine": 44,
+              "EndLine": 44,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"TrafficClass\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6Datagram.cs",
+            "Region": {
+              "StartLine": 45,
+              "EndLine": 45,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"NextHeader\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6ExtensionHeader.cs",
+            "Region": {
+              "StartLine": 24,
+              "EndLine": 24,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"NextHeader\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6ExtensionHeaderAuthentication.cs",
+            "Region": {
+              "StartLine": 26,
+              "EndLine": 26,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"SecurityParametersIndex\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6ExtensionHeaderEncapsulatingSecurityPayload.cs",
+            "Region": {
+              "StartLine": 50,
+              "EndLine": 50,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"FragmentOffset\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6ExtensionHeaderFragmentData.cs",
+            "Region": {
+              "StartLine": 22,
+              "EndLine": 22,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"MobilityHeaderType\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6ExtensionHeaderFragmentData.cs",
+            "Region": {
+              "StartLine": 203,
+              "EndLine": 203,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"HomeNonceIndex\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6ExtensionHeaderFragmentData.cs",
+            "Region": {
+              "StartLine": 520,
+              "EndLine": 520,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"CareOfNonceIndex\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6ExtensionHeaderFragmentData.cs",
+            "Region": {
+              "StartLine": 607,
+              "EndLine": 607,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"SequenceNumber\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6ExtensionHeaderFragmentData.cs",
+            "Region": {
+              "StartLine": 688,
+              "EndLine": 688,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Status\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6ExtensionHeaderFragmentData.cs",
+            "Region": {
+              "StartLine": 1101,
+              "EndLine": 1101,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Status\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6ExtensionHeaderFragmentData.cs",
+            "Region": {
+              "StartLine": 1233,
+              "EndLine": 1233,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"RoutingType\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6ExtensionHeaderRouting.cs",
+            "Region": {
+              "StartLine": 22,
+              "EndLine": 22,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Reserved\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6ExtensionHeaderRoutingHomeAddress.cs",
+            "Region": {
+              "StartLine": 26,
+              "EndLine": 26,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"CommonPrefixLengthForNonLastAddresses\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6ExtensionHeaderRoutingRpl.cs",
+            "Region": {
+              "StartLine": 40,
+              "EndLine": 40,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Reserved\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6ExtensionHeaderRoutingSourceRoute.cs",
+            "Region": {
+              "StartLine": 42,
+              "EndLine": 42,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"DomainOfInterpretation\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6OptionCalipso.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"SourceEndpointIdentifierLength\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6OptionEndpointIdentification.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"LineIdentificationLength\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6OptionLineIdentificationDestination.cs",
+            "Region": {
+              "StartLine": 29,
+              "EndLine": 29,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Down\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6OptionRoutingProtocolLowPowerAndLossyNetworks.cs",
+            "Region": {
+              "StartLine": 26,
+              "EndLine": 26,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"HashIndicator\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6OptionSmfDpd.cs",
+            "Region": {
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"TaggerIdType\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6OptionSmfDpdSequenceBased.cs",
+            "Region": {
+              "StartLine": 31,
+              "EndLine": 31,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"HashAssistValue\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6OptionSmfDpdSequenceHashAssistValue.cs",
+            "Region": {
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"NoFlags\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Transport\\TcpOptionPartialOrderServiceProfile.cs",
+            "Region": {
+              "StartLine": 30,
+              "EndLine": 30,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"SourcePort\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Transport\\TransportDatagram.cs",
+            "Region": {
+              "StartLine": 23,
+              "EndLine": 23,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"RUNA\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\BZip2Constants.cs",
+            "Region": {
+              "StartLine": 37,
+              "EndLine": 37,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"streamEnd\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 122,
+              "EndLine": 122,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"rNToGo\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 142,
+              "EndLine": 142,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"rTPos\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 143,
+              "EndLine": 143,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"LESSER_ICOST\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 41,
+              "EndLine": 41,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"runLength\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 301,
+              "EndLine": 301,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"disposed\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 426,
+              "EndLine": 426,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"STORED_BLOCK\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\DeflateManager.cs",
+            "Region": {
+              "StartLine": 193,
+              "EndLine": 193,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Z_BINARY\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\DeflateManager.cs",
+            "Region": {
+              "StartLine": 198,
+              "EndLine": 198,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Rfc1950BytesEmitted\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\DeflateManager.cs",
+            "Region": {
+              "StartLine": 1524,
+              "EndLine": 1524,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"START\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
+            "Region": {
+              "StartLine": 789,
+              "EndLine": 789,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Z_OK\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\InfTree.cs",
+            "Region": {
+              "StartLine": 71,
+              "EndLine": 71,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_z\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ZlibBaseStream.cs",
+            "Region": {
+              "StartLine": 38,
+              "EndLine": 38,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"nomoreinput\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ZlibBaseStream.cs",
+            "Region": {
+              "StartLine": 351,
+              "EndLine": 351,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Z_OK\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ZlibConstants.cs",
+            "Region": {
+              "StartLine": 85,
+              "EndLine": 85,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"inputOffset\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Filters\\BCJ2Filter.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"inputCount\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Filters\\BCJ2Filter.cs",
+            "Region": {
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"endReached\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Filters\\BCJ2Filter.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"position\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Filters\\BCJ2Filter.cs",
+            "Region": {
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"outputOffset\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Filters\\BCJ2Filter.cs",
+            "Region": {
+              "StartLine": 19,
+              "EndLine": 19,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"outputCount\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Filters\\BCJ2Filter.cs",
+            "Region": {
+              "StartLine": 20,
+              "EndLine": 20,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"controlPos\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Filters\\BCJ2Filter.cs",
+            "Region": {
+              "StartLine": 26,
+              "EndLine": 26,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"data1Pos\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Filters\\BCJ2Filter.cs",
+            "Region": {
+              "StartLine": 27,
+              "EndLine": 27,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"data2Pos\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Filters\\BCJ2Filter.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"prevByte\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Filters\\BCJ2Filter.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"prevMask\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Filters\\BCJFilter.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"transformed\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Filters\\Filter.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"read\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Filters\\Filter.cs",
+            "Region": {
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"endReached\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Filters\\Filter.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_cyclicBufferSize\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LZ\\LzBinTree.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_hashSizeSum\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LZ\\LzBinTree.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"kEmptyHashValue\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LZ\\LzBinTree.cs",
+            "Region": {
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"kNumHashDirectBytes\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LZ\\LzBinTree.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_bufferBase\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LZ\\LzInWindow.cs",
+            "Region": {
+              "StartLine": 7,
+              "EndLine": 7,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_buffer\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LZ\\LzOutWindow.cs",
+            "Region": {
+              "StartLine": 5,
+              "EndLine": 5,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_windowSize\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LZ\\LzOutWindow.cs",
+            "Region": {
+              "StartLine": 6,
+              "EndLine": 6,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"kDicLogSizeMin\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaBase.cs",
+            "Region": {
+              "StartLine": 30,
+              "EndLine": 30,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"m_NumPosStates\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaDecoder.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_matchFinder\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
+            "Region": {
+              "StartLine": 302,
+              "EndLine": 302,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_numLiteralPosStateBits\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
+            "Region": {
+              "StartLine": 344,
+              "EndLine": 344,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_writeEndMark\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
+            "Region": {
+              "StartLine": 356,
+              "EndLine": 356,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"_trainSize\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
+            "Region": {
+              "StartLine": 1539,
+              "EndLine": 1539,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"position\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaStream.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"endReached\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaStream.cs",
+            "Region": {
+              "StartLine": 19,
+              "EndLine": 19,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"inputPosition\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaStream.cs",
+            "Region": {
+              "StartLine": 22,
+              "EndLine": 22,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"uncompressedChunk\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaStream.cs",
+            "Region": {
+              "StartLine": 26,
+              "EndLine": 26,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"Code\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\RangeCoder\\RangeCoder.cs",
+            "Region": {
+              "StartLine": 126,
+              "EndLine": 126,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"tempPPMContext\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\PPMContext.cs",
+            "Region": {
+              "StartLine": 77,
+              "EndLine": 77,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"tempRarNode\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\SubAllocator.cs",
+            "Region": {
+              "StartLine": 100,
+              "EndLine": 100,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"tempRarMemBlock1\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\SubAllocator.cs",
+            "Region": {
+              "StartLine": 101,
+              "EndLine": 101,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"tempRarMemBlock2\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\SubAllocator.cs",
+            "Region": {
+              "StartLine": 102,
+              "EndLine": 102,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"tempRarMemBlock3\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\SubAllocator.cs",
+            "Region": {
+              "StartLine": 103,
+              "EndLine": 103,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"position\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\PpmdStream.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"fetch\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\RarStream.cs",
+            "Region": {
+              "StartLine": 13,
+              "EndLine": 13,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"tmpOffset\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\RarStream.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"tmpCount\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\RarStream.cs",
+            "Region": {
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"outCount\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\RarStream.cs",
+            "Region": {
+              "StartLine": 21,
+              "EndLine": 21,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3052",
+      "FullMessage": "Remove this initialization to \"VMCF_OP0\", the compiler will do that for you.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\VMCmdFlags.cs",
+            "Region": {
+              "StartLine": 5,
+              "EndLine": 5,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

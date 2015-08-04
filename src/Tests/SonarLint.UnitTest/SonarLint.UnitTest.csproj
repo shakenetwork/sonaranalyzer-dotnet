@@ -135,6 +135,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\OrderByRepeatedTest.cs" />
     <Compile Include="Rules\SuppressFinalizeUselessTest.cs" />
+    <Compile Include="Rules\FieldInitializedToDefaultTest.cs" />
     <Compile Include="Rules\UnaryPrefixOperatorRepeatedTest.cs" />
     <Compile Include="Rules\GetHashCodeEqualsOverrideTest.cs" />
     <Compile Include="Rules\RedundantParenthesesTest.cs" />
@@ -398,6 +399,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\SuppressFinalizeUseless.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\FieldInitializedToDefault.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
