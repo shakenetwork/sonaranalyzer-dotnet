@@ -60,7 +60,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
             CloseOutput = false,
             OmitXmlDeclaration = true
         };
-        
+
         public virtual void Setup()
         {
             ItSourcesRootDirectory = GetItSourcesFolder();
@@ -73,7 +73,14 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
             AnalysisOutputDirectory = new DirectoryInfo(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Actual"));
             if (AnalysisOutputDirectory.Exists)
             {
-                AnalysisOutputDirectory.Delete(true);
+                foreach (FileInfo file in AnalysisOutputDirectory.GetFiles())
+                {
+                    file.Delete();
+                }
+                foreach (DirectoryInfo dir in AnalysisOutputDirectory.GetDirectories())
+                {
+                    dir.Delete(true);
+                }
             }
             AnalysisOutputDirectory.Create();
         }
@@ -226,7 +233,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
             {
                 sb.Append(GenerateAnalysisInputFileSegment(analyzerType));
             }
-            
+
             return GenerateAnalysisInputFile(sb.ToString());
         }
         protected string GenerateEmptyAnalysisInputFile()
