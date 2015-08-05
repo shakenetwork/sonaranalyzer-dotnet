@@ -1,0 +1,1522 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarLint.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this field to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 4020,
+              "EndLine": 4020,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this property to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 4023,
+              "EndLine": 4023,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this property to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 4035,
+              "EndLine": 4035,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this field to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 4053,
+              "EndLine": 4053,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 4102,
+              "EndLine": 4102,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 4105,
+              "EndLine": 4105,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 4108,
+              "EndLine": 4108,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 4111,
+              "EndLine": 4111,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 4114,
+              "EndLine": 4114,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 4117,
+              "EndLine": 4117,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 4120,
+              "EndLine": 4120,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 4123,
+              "EndLine": 4123,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 4126,
+              "EndLine": 4126,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 4129,
+              "EndLine": 4129,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 4136,
+              "EndLine": 4136,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 4139,
+              "EndLine": 4139,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this class to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 4144,
+              "EndLine": 4144,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this field to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 5539,
+              "EndLine": 5539,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this property to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 5542,
+              "EndLine": 5542,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this property to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 5554,
+              "EndLine": 5554,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 5654,
+              "EndLine": 5654,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 5657,
+              "EndLine": 5657,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 5660,
+              "EndLine": 5660,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 5663,
+              "EndLine": 5663,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 5666,
+              "EndLine": 5666,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 5669,
+              "EndLine": 5669,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 5672,
+              "EndLine": 5672,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 5675,
+              "EndLine": 5675,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 5678,
+              "EndLine": 5678,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 5681,
+              "EndLine": 5681,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 5688,
+              "EndLine": 5688,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 5691,
+              "EndLine": 5691,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this class to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 5696,
+              "EndLine": 5696,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this field to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 5954,
+              "EndLine": 5954,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this property to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 5957,
+              "EndLine": 5957,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this property to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 5969,
+              "EndLine": 5969,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6036,
+              "EndLine": 6036,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6039,
+              "EndLine": 6039,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6042,
+              "EndLine": 6042,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6045,
+              "EndLine": 6045,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6048,
+              "EndLine": 6048,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6051,
+              "EndLine": 6051,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6054,
+              "EndLine": 6054,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6057,
+              "EndLine": 6057,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6060,
+              "EndLine": 6060,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6063,
+              "EndLine": 6063,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6070,
+              "EndLine": 6070,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6073,
+              "EndLine": 6073,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this class to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6078,
+              "EndLine": 6078,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this field to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6269,
+              "EndLine": 6269,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this property to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6272,
+              "EndLine": 6272,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this property to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6284,
+              "EndLine": 6284,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6371,
+              "EndLine": 6371,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6374,
+              "EndLine": 6374,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6377,
+              "EndLine": 6377,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6380,
+              "EndLine": 6380,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6383,
+              "EndLine": 6383,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6386,
+              "EndLine": 6386,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6389,
+              "EndLine": 6389,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6392,
+              "EndLine": 6392,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6395,
+              "EndLine": 6395,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6398,
+              "EndLine": 6398,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6405,
+              "EndLine": 6405,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6408,
+              "EndLine": 6408,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this class to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6413,
+              "EndLine": 6413,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\VectorClock.cs",
+            "Region": {
+              "StartLine": 47,
+              "EndLine": 47,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this field to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
+            "Region": {
+              "StartLine": 945,
+              "EndLine": 945,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this property to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
+            "Region": {
+              "StartLine": 948,
+              "EndLine": 948,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this property to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
+            "Region": {
+              "StartLine": 960,
+              "EndLine": 960,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
+            "Region": {
+              "StartLine": 1045,
+              "EndLine": 1045,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
+            "Region": {
+              "StartLine": 1048,
+              "EndLine": 1048,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
+            "Region": {
+              "StartLine": 1051,
+              "EndLine": 1051,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
+            "Region": {
+              "StartLine": 1054,
+              "EndLine": 1054,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
+            "Region": {
+              "StartLine": 1057,
+              "EndLine": 1057,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
+            "Region": {
+              "StartLine": 1060,
+              "EndLine": 1060,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
+            "Region": {
+              "StartLine": 1063,
+              "EndLine": 1063,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
+            "Region": {
+              "StartLine": 1066,
+              "EndLine": 1066,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
+            "Region": {
+              "StartLine": 1069,
+              "EndLine": 1069,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
+            "Region": {
+              "StartLine": 1072,
+              "EndLine": 1072,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
+            "Region": {
+              "StartLine": 1079,
+              "EndLine": 1079,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
+            "Region": {
+              "StartLine": 1082,
+              "EndLine": 1082,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this class to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
+            "Region": {
+              "StartLine": 1087,
+              "EndLine": 1087,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this field to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+            "Region": {
+              "StartLine": 2831,
+              "EndLine": 2831,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this field to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\CalendarSystem.cs",
+            "Region": {
+              "StartLine": 890,
+              "EndLine": 890,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this field to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\CalendarSystem.cs",
+            "Region": {
+              "StartLine": 892,
+              "EndLine": 892,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this field to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\CalendarSystem.cs",
+            "Region": {
+              "StartLine": 923,
+              "EndLine": 923,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Text\\ZonedDateTimePatternParser.cs",
+            "Region": {
+              "StartLine": 164,
+              "EndLine": 164,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Core\\Authoring\\AssemblyMetadataExtractor.cs",
+            "Region": {
+              "StartLine": 50,
+              "EndLine": 50,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3218",
+      "FullMessage": "Rename this method to not shadow the outer class' member with the same name.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\DialogServices\\SolutionExplorer\\ProjectUtilities.cs",
+            "Region": {
+              "StartLine": 428,
+              "EndLine": 428,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
