@@ -89,6 +89,7 @@
     <Compile Include="Helpers\ProjectTypeHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\OrderByRepeated.cs" />
+    <Compile Include="Rules\MethodParameterUnused.cs" />
     <Compile Include="Rules\SuppressFinalizeUseless.cs" />
     <Compile Include="Rules\FieldInitializedToDefault.cs" />
     <Compile Include="Rules\UnaryPrefixOperatorRepeated.cs" />
@@ -448,6 +449,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S3052.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S1172.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
