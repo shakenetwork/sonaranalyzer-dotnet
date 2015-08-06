@@ -35,8 +35,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarLint.DocGenerator", "s
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{CCEE2C5C-96D9-4427-B980-71DC0A49E23F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarLint.Tests", "src\SonarLint.Tests\SonarLint.Tests.csproj", "{26AD3432-0495-4DE3-BB14-4F776BE9DEE2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,10 +77,6 @@ Global
 		{98EF48F7-28D7-44CA-8C7F-6042EA4898E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98EF48F7-28D7-44CA-8C7F-6042EA4898E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98EF48F7-28D7-44CA-8C7F-6042EA4898E1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{26AD3432-0495-4DE3-BB14-4F776BE9DEE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{26AD3432-0495-4DE3-BB14-4F776BE9DEE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{26AD3432-0495-4DE3-BB14-4F776BE9DEE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{26AD3432-0495-4DE3-BB14-4F776BE9DEE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
