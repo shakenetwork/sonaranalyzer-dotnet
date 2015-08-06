@@ -34,7 +34,7 @@ namespace SonarLint.Rules
     [SqaleSubCharacteristic(SqaleSubCharacteristic.ArchitectureReliability)]
     [SqaleConstantRemediation("5min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("bug")]
+    [Tags("suspicious")]
     public class EmptyMethod : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1186";
@@ -48,7 +48,7 @@ namespace SonarLint.Rules
         internal const string MessageFormat = "Add a nested comment explaining why this method is empty, throw a " +
                                               "NotSupportedException or complete the implementation.";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Major; 
+        internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =

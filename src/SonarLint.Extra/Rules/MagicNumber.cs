@@ -32,7 +32,7 @@ namespace SonarLint.Rules
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("5min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
+    [SqaleSubCharacteristic(SqaleSubCharacteristic.DataChangeability)]
     [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
     [Tags("brain-overload")]
     public class MagicNumber : DiagnosticAnalyzer
@@ -41,7 +41,7 @@ namespace SonarLint.Rules
         internal const string Description = "Magic numbers should not be used";
         internal const string MessageFormat = "Assign this magic number {0} to a well-named constant, and use the constant instead.";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Minor; 
+        internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =

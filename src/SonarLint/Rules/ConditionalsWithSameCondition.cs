@@ -40,13 +40,12 @@ namespace SonarLint.Rules
     {
         internal const string DiagnosticId = "S2760";
         internal const string Title = "Sequential tests should not check the same condition";
-        internal const string Description = 
+        internal const string Description =
             "When the same condition is checked twice in a row, it is either inefficient - why not combine " +
-            "the checks? - or an error - some other condition should have been checked in the second test. " +
-            "This rule raises an issue when sequential \"if\"s or \"switch\"es test the same condition.";
+            "the checks? - or an error - some other condition should have been checked in the second test.";
         internal const string MessageFormat = "This condition was just checked on line {0}.";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Major;
+        internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =

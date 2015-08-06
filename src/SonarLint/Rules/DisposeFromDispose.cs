@@ -45,7 +45,7 @@ namespace SonarLint.Rules
             "and you risk resource leaks.";
         internal const string MessageFormat = "Move this \"Dispose\" call into this class' own \"Dispose\" method.";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Major;
+        internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =

@@ -39,13 +39,13 @@ namespace SonarLint.Rules
     public class UseCurlyBraces : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S121";
-        internal const string Title = "Control structures should always use curly braces";
-        internal const string Description = 
+        internal const string Title = "Control structures should use curly braces";
+        internal const string Description =
             "While not technically incorrect, the omission of curly braces can be misleading, and may " +
             "lead to the introduction of errors during maintenance.";
         internal const string MessageFormat = "Add curly braces around the nested statement(s) in this \"{0}\" block.";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Major; 
+        internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =

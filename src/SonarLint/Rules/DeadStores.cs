@@ -35,7 +35,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("15min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("bug", "cert", "cwe", "unused")]
+    [Tags("suspicious", "cert", "cwe", "unused")]
     public class DeadStores : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1854";
@@ -190,7 +190,7 @@ namespace SonarLint.Rules
                 },
                 SyntaxKind.VariableDeclaration);
         }
-        
+
         private static bool MightHaveReferenceBetween(SyntaxNode first, AssignmentExpressionSyntax second, List<IdentifierNameSyntax> references)
         {
             return !DifferentStatementsWithSameParent(first, second) ||

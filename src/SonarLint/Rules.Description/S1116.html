@@ -10,14 +10,16 @@
 <pre>
 void doSomething()
 {
-  ;                                                   // Non-Compliant - was used as a kind of TODO marker
+  ; // Noncompliant - was used as a kind of TODO marker
 }
 
 void doSomethingElse()
 {
-  Console.WriteLine("Hello, world!");;                // Non-Compliant - double ;
+  Console.WriteLine("Hello, world!");;  // Noncompliant - double ;
   ...
-  for (int i = 0; i < 3; Console.WriteLine(i), i++);  // Non-Compliant - Rarely, they are used on purpose as the body of a loop. It is a bad practice to have side-effects outside of the loop body
+  // Rarely, they are used on purpose as the body of a loop. It is a bad practice to
+  // have side-effects outside of the loop body
+  for (int i = 0; i < 3; Console.WriteLine(i), i++); // Noncompliant
   ...
 }
 </pre>

@@ -38,13 +38,13 @@ namespace SonarLint.Rules
     {
         internal const string DiagnosticId = "S1656";
         internal const string Title = "Variables should not be self-assigned";
-        internal const string Description = 
+        internal const string Description =
             "There is no reason to re-assign a variable to itself. Either this statement is redundant and should " +
             "be removed, or the re-assignment is a mistake and some other value or variable was intended for the " +
             "assignment instead.";
         internal const string MessageFormat = "Remove or correct this useless self-assignment";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Major; 
+        internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
@@ -69,7 +69,7 @@ namespace SonarLint.Rules
                     {
                         return;
                     }
-                    
+
                     if (EquivalenceChecker.AreEquivalent(expression.Left, expression.Right))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, c.Node.GetLocation()));

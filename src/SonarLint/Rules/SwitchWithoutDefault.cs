@@ -33,7 +33,7 @@ namespace SonarLint.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("5min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
+    [SqaleSubCharacteristic(SqaleSubCharacteristic.ArchitectureChangeability)]
     [Tags("cert", "cwe", "misra")]
     public class SwitchWithoutDefault : DiagnosticAnalyzer
     {
@@ -46,7 +46,7 @@ namespace SonarLint.Rules
             "there is no guarantee that the \"enum\" won't be extended.";
         internal const string MessageFormat = "Add a \"default\" clause to this switch statement.";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Major; 
+        internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =

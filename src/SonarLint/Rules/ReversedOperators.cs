@@ -38,18 +38,18 @@ namespace SonarLint.Rules
     {
         internal const string DiagnosticId = "S2757";
         internal const string Title = "Reversed operators should not be used";
-        internal const string Description = 
+        internal const string Description =
             "The use of operators pairs (\"=+\" or \"=-\") where the reversed, single operator " +
             "was meant (\"+=\" or \"-=\") will compile and run, but not produce the expected results. " +
             "This rule raises an issue when \"=+\", and \"=-\" are used, but ignores the operators " +
             "when they're spaced out: \"= +\", \"= -\".";
         internal const string MessageFormat = "Was \"{0}\" meant instead?";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Major;
+        internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);

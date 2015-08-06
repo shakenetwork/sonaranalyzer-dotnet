@@ -31,7 +31,7 @@ using SonarLint.Helpers;
 namespace SonarLint.Rules
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("5min")]
+    [SqaleConstantRemediation("2min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("pitfall")]
@@ -39,7 +39,7 @@ namespace SonarLint.Rules
     {
         internal const string DiagnosticId = "S1940";
         internal const string Title = "Boolean checks should not be inverted";
-        internal const string Description = 
+        internal const string Description =
             "It is needlessly complex to invert the result of a boolean comparison. The opposite comparison should " +
             "be made instead.";
         internal const string MessageFormat = "Use the opposite operator (\"{0}\") instead.";
@@ -47,8 +47,8 @@ namespace SonarLint.Rules
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = false;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
@@ -72,7 +72,7 @@ namespace SonarLint.Rules
                     var logicalNot = parenthesizedParent as PrefixUnaryExpressionSyntax;
                     if (logicalNot != null && logicalNot.OperatorToken.IsKind(SyntaxKind.ExclamationToken))
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, logicalNot.GetLocation(), 
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, logicalNot.GetLocation(),
                             OppositeTokens[expression.OperatorToken.Kind()]));
                     }
                 },

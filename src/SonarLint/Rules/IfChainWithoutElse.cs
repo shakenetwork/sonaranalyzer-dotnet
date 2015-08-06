@@ -38,14 +38,14 @@ namespace SonarLint.Rules
     public class IfChainWithoutElse : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S126";
-        internal const string Title = "\"if ... else if\" constructs shall be terminated with an \"else\" clause";
+        internal const string Title = "\"if ... else if\" constructs should end with \"else\" clause";
         internal const string Description =
             "The requirement for a final \"else\"statement is defensive programming. The \"else\" statement should " +
             "either take appropriate action or contain a suitable comment as to why no action is taken. This is " +
             "consistent with the requirement to have a final \"default\" clause in a \"switch\" statement.";
         internal const string MessageFormat = "Add the missing \"else\" clause.";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Major; 
+        internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
@@ -67,7 +67,7 @@ namespace SonarLint.Rules
                         var parentElse = (ElseClauseSyntax)ifNode.Parent;
                         var diff = ifNode.IfKeyword.Span.End - parentElse.ElseKeyword.SpanStart;
                         var location = Location.Create(c.Node.SyntaxTree,
-                            new TextSpan(parentElse.ElseKeyword.SpanStart, diff));                        
+                            new TextSpan(parentElse.ElseKeyword.SpanStart, diff));
 
                         c.ReportDiagnostic(Diagnostic.Create(Rule, location));
                     }

@@ -1,8 +1,7 @@
 <p>
     Assignments within sub-expressions are hard to spot and therefore make the code less readable.
     It is also a common mistake to write <code>=</code> when <code>==</code> was meant.
-    Ideally, every expression should have no more than one side-effect.
-    Assignments inside lambda and delegate expressions are allowed.
+    Ideally, expressions should should not have side-effects.
 </p>
 
 <h2>Noncompliant Code Example</h2>
@@ -13,10 +12,18 @@ doSomething(i = 42);
 <h2>Compliant Solution</h2>
 <pre>
 i = 42;
-doSomething(i);   
+doSomething(i);
 // or
 doSomething(i == 42);  // Perhaps in fact the comparison operator was expected
 </pre>
 
 <h2>Exceptions</h2>
-<p>Assignments in <code>while</code> statement conditions, and assignments enclosed in relational expressions are allowed.</p>
+Assignments inside lambda and delegate expressions are allowed.
+
+<h2>See</h2>
+<ul>
+    <li>MISRA C:2004, 13.1 - Assignment operators shall not be used in expressions that yield a Boolean value</li>
+    <li>MISRA C++:2008, 6-2-1 - Assignment operators shall not be used in sub-expressions</li>
+    <li>MISRA C:2012, 13.4 - The result of an assignment operator should not be used</li>
+    <li><a href="http://cwe.mitre.org/data/definitions/481.html">MITRE, CWE-481</a> - Assigning instead of Comparing</li>
+</ul>

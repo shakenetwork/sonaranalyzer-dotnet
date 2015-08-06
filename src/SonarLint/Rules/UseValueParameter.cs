@@ -40,8 +40,8 @@ namespace SonarLint.Rules
         internal const string DiagnosticId = "S3237";
         internal const string Title = "\"value\" parameters should be used";
         internal const string Description =
-            "In property and indexer \"set\" methods, and in event \"add\" and \"remove\" methods, the implicit value parameter " +
-            "holds the value the accessor was called with.Not using the \"value\" means that the accessor ignores the caller's " +
+            "In property and indexer \"set\" methods, and in event \"add\" and \"remove\" methods, the implicit \"value\" parameter " +
+            "holds the value the accessor was called with. Not using the \"value\" means that the accessor ignores the caller's " +
             "intent which could cause unexpected results at runtime.";
         internal const string MessageFormat = "Use the \"value\" parameter in this {0} accessor declaration.";
         internal const string Category = "SonarQube";

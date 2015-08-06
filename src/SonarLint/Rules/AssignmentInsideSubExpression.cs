@@ -35,23 +35,23 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("5min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("bug", "cwe", "misra")]
+    [Tags("suspicious", "cwe", "misra")]
     public class AssignmentInsideSubExpression : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1121";
         internal const string Title = "Assignments should not be made from within sub-expressions";
         internal const string Description =
             "Assignments within sub-expressions are hard to spot and therefore make the code less readable. " +
-            "It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, every expression should " +
-            "have no more than one side-effect. Assignments inside lambda and delegate expressions are allowed.";
+            "It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should not" +
+            "have side-effects. Assignments inside lambda and delegate expressions are allowed.";
         internal const string MessageFormat = "Extract the assignment of \"{0}\" from this expression.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
+                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
 

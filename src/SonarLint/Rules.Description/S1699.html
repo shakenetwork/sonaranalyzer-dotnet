@@ -15,20 +15,20 @@
 
 <h2>Noncompliant Code Example</h2>
 <pre>
-public class Parent 
+public class Parent
 {
-  public Parent () 
+  public Parent()
   {
     DoSomething();  // Noncompliant
   }
 
   public virtual void DoSomething() // can be overridden
-  {  
+  {
     ...
   }
 }
 
-public class Child : Parent 
+public class Child : Parent
 {
   private string foo;
 
@@ -37,7 +37,7 @@ public class Child : Parent
     this.foo = foo;
   }
 
-  public override void DoSomething() 
+  public override void DoSomething()
   {
     Console.WriteLine(this.foo.Length);
   }

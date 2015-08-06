@@ -47,11 +47,11 @@ namespace SonarLint.Rules
             "its own \"Dispose\" method.";
         internal const string MessageFormat = "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on {0}.";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Major;
+        internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
@@ -90,7 +90,7 @@ namespace SonarLint.Rules
                         fieldsByNamedType[namedTypeSymbol] = fieldsByNamedType[namedTypeSymbol].Union(disposableFields);
                     }
                 }, SymbolKind.NamedType);
-                
+
 
                 analysisContext.RegisterSyntaxNodeAction(c =>
                 {
@@ -141,7 +141,7 @@ namespace SonarLint.Rules
             });
         }
 
-        private static ImmutableHashSet<IFieldSymbol> AddFieldIfNeeded(IFieldSymbol fieldSymbol, ExpressionSyntax expression, 
+        private static ImmutableHashSet<IFieldSymbol> AddFieldIfNeeded(IFieldSymbol fieldSymbol, ExpressionSyntax expression,
             ImmutableHashSet<IFieldSymbol> fieldsAssigned)
         {
             var objectCreation = expression as ObjectCreationExpressionSyntax;

@@ -35,7 +35,7 @@ namespace SonarLint.Rules
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [SqaleConstantRemediation("10min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("bug")]
+    [Tags("design", "suspicious")]
     public class ConditionalStructureSameImplementation : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1871";
@@ -49,7 +49,7 @@ namespace SonarLint.Rules
             "fall through to the other.";
         internal const string MessageFormat = "Either merge this {1} with the identical one on line \"{0}\" or change one of the implementations.";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Major; 
+        internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
@@ -73,13 +73,13 @@ namespace SonarLint.Rules
 
                     CheckStatement(c, ifStatement.Statement, precedingStatements);
 
-                    if (ifStatement.Else == null) 
+                    if (ifStatement.Else == null)
                     {
                         return;
                     }
 
                     precedingStatements.Add(ifStatement.Statement);
-                    CheckStatement(c, ifStatement.Else.Statement, precedingStatements);                                       
+                    CheckStatement(c, ifStatement.Else.Statement, precedingStatements);
                 },
                 SyntaxKind.IfStatement);
 
@@ -100,7 +100,7 @@ namespace SonarLint.Rules
                 SyntaxKind.SwitchSection);
         }
 
-        private static void CheckStatement(SyntaxNodeAnalysisContext c, StatementSyntax statementToCheck, 
+        private static void CheckStatement(SyntaxNodeAnalysisContext c, StatementSyntax statementToCheck,
             IEnumerable<StatementSyntax> precedingStatements)
         {
             var precedingStatement = precedingStatements
@@ -127,8 +127,8 @@ namespace SonarLint.Rules
             c.ReportDiagnostic(Diagnostic.Create(
                            Rule,
                            node.GetLocation(),
-                           precedingNode.GetLineNumberToReport(), 
+                           precedingNode.GetLineNumberToReport(),
                            errorMessageDiscriminator));
-        } 
+        }
     }
 }

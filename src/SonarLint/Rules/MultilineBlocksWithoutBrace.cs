@@ -41,13 +41,13 @@ namespace SonarLint.Rules
         internal const string Description =
             "Curly braces can be omitted from a one-line block, such as with an \"if\" statement " +
             "or \"for\" loop, but doing so can be misleading and induce bugs. This rule raises an " +
-            "issue when the indention of the lines after a one-line block indicates an intent to " +
+            "issue when the indentation of the lines after a one-line block indicates an intent to " +
             "include those lines in the block, but the omission of curly braces means the lines " +
             "will be unconditionally executed once.";
-        internal const string MessageFormat = 
+        internal const string MessageFormat =
             "Only the first line of this n-line block will be executed {0}. The rest will execute {1}.";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Critical; 
+        internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
@@ -85,7 +85,7 @@ namespace SonarLint.Rules
                 "conditionally", "unconditionally");
         }
 
-        private static void CheckStatement(SyntaxNodeAnalysisContext c, StatementSyntax statement, 
+        private static void CheckStatement(SyntaxNodeAnalysisContext c, StatementSyntax statement,
             string executed, string execute)
         {
             if (statement is BlockSyntax)

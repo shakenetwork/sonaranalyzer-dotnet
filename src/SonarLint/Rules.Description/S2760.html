@@ -1,24 +1,26 @@
 <p>
-    When the same condition is checked twice in a row, it is either inefficient - why not combine the checks? - or an error - 
+    When the same condition is checked twice in a row, it is either inefficient - why not combine the checks? - or an error -
     some other condition should have been checked in the second test.
+</p>
+<p>
     This rule raises an issue when sequential <code>if</code>s or <code>switch</code>es test the same condition.
 </p>
 <h2>Noncompliant Code Example</h2>
 <pre>
-if (a == b) 
-{ 
+if (a == b)
+{
   doTheThing(b);
 }
 if (a == b) // Noncompliant; is this really what was intended?
-{  
+{
   doTheThing(c);
 }
 </pre>
 
 <h2>Compliant Solution</h2>
 <pre>
-if (a == b) 
-{ 
+if (a == b)
+{
   doTheThing(b);
   doTheThing(c);
 }
@@ -27,11 +29,11 @@ if (a == b)
 or
 
 <pre>
-if (a == b) 
-{ 
+if (a == b)
+{
   doTheThing(b);
 }
-if (b == c) 
+if (b == c)
 {
   doTheThing(c);
 }
@@ -39,6 +41,6 @@ if (b == c)
 
 <h2>Exceptions</h2>
 <p>
-    This rule ignores sequential <code>if</code> statements when any symbols checked in the condition is modified within 
+    This rule ignores sequential <code>if</code> statements when any symbols checked in the condition is modified within
     the first <code>if</code>.
 </p>

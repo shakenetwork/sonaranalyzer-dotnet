@@ -30,7 +30,7 @@ namespace SonarLint.Rules
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("1h")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.IntegrationTestability)]
+    [SqaleSubCharacteristic(SqaleSubCharacteristic.UnitTestability)]
     [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
     [Tags("brain-overload")]
     public class FunctionComplexity : DiagnosticAnalyzer
@@ -39,7 +39,7 @@ namespace SonarLint.Rules
         internal const string Description = "Methods should not be too complex";
         internal const string MessageFormat = "The Cyclomatic Complexity of this method is {1} which is greater than {0} authorized).";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Major; 
+        internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =

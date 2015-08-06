@@ -36,7 +36,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("5min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("bug")]
+    [Tags("suspicious")]
     public class SillyBitwiseOperation : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2437";
@@ -50,12 +50,12 @@ namespace SonarLint.Rules
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
+                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
-        
+
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         public override void Initialize(AnalysisContext context)
@@ -83,7 +83,7 @@ namespace SonarLint.Rules
         {
             var assignment = (AssignmentExpressionSyntax)c.Node;
             int constValue;
-            if (TryGetConstantIntValue(assignment.Right, out constValue) && 
+            if (TryGetConstantIntValue(assignment.Right, out constValue) &&
                 constValue == constValueToLookFor)
             {
                 var location = GetReportLocation(assignment.OperatorToken.Span, assignment.Right.Span, assignment.SyntaxTree);
@@ -102,7 +102,7 @@ namespace SonarLint.Rules
                 c.ReportDiagnostic(Diagnostic.Create(Rule, location));
                 return;
             }
-            
+
             if (TryGetConstantIntValue(binary.Right, out constValue) &&
                 constValue == constValueToLookFor)
             {
