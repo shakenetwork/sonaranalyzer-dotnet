@@ -17,11 +17,10 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
- 
+
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using SonarLint.Common;
 using Newtonsoft.Json;
 using SonarLint.Utilities;
 
@@ -31,19 +30,26 @@ namespace SonarLint.DocGenerator
     {
         public static void Main()
         {
-            var ruleDetails = RuleDetailBuilder.GetParameterlessRuleDetails().Select(ruleDetail => RuleDescription.Convert(ruleDetail)).ToList();
             var productVersion = FileVersionInfo.GetVersionInfo(typeof(Program).Assembly.Location).ProductVersion;
+            var content = GenerateRuleJson(productVersion);
 
             Directory.CreateDirectory(productVersion);
+            File.WriteAllText(Path.Combine(productVersion, "rules.json"), content);
+        }
 
-            var content = JsonConvert.SerializeObject(ruleDetails,
+        public static string GenerateRuleJson(string productVersion)
+        {
+            var ruleDetails = RuleDetailBuilder.GetParameterlessRuleDetails()
+                .Select(ruleDetail =>
+                    RuleDescription.Convert(ruleDetail, productVersion))
+                .ToList();
+
+            return JsonConvert.SerializeObject(ruleDetails,
                     new JsonSerializerSettings
                     {
                         NullValueHandling = NullValueHandling.Ignore,
                         Formatting = Formatting.Indented
                     });
-
-            File.WriteAllText(Path.Combine(productVersion, "rules.json"), content);
         }
     }
 }

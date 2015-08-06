@@ -127,6 +127,7 @@
     <Compile Include="Common\RuleDescriptorTest.cs" />
     <Compile Include="Common\RuleFinderTest.cs" />
     <Compile Include="Common\RuleTest.cs" />
+    <Compile Include="DocGenerator\DocGeneratorTest.cs" />
     <Compile Include="Helpers\DiagnosticReportHelperTest.cs" />
     <Compile Include="Helpers\NavigationHelperTest.cs" />
     <Compile Include="Helpers\EnumHelperTest.cs" />
@@ -541,6 +542,10 @@
     <Analyzer Include="..\..\..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\SonarLint.DocGenerator\SonarLint.DocGenerator.csproj">
+      <Project>{98ef48f7-28d7-44ca-8c7f-6042ea4898e1}</Project>
+      <Name>SonarLint.DocGenerator</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\SonarLint.Extra\SonarLint.Extra.csproj">
       <Project>{4c1bb6ce-645f-400b-b491-af7bb40e5c01}</Project>
       <Name>SonarLint.Extra</Name>

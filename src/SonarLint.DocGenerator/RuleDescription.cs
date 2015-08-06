@@ -19,18 +19,20 @@
  */
 
 using SonarLint.Common;
+using SonarLint.Helpers;
+using System.Text.RegularExpressions;
 
 namespace SonarLint.DocGenerator
 {
     public class RuleDescription
     {
-        public static RuleDescription Convert(RuleDetail detail)
+        public static RuleDescription Convert(RuleDetail detail, string productVersion)
         {
             return new RuleDescription
             {
                 Key = detail.Key,
                 Title = detail.Title,
-                Description = detail.Description,
+                Description = AddLinksBetweenRulesToDescription(detail.Description, productVersion),
                 Tags = string.Join(", ", detail.Tags)
             };
         }
@@ -40,5 +42,14 @@ namespace SonarLint.DocGenerator
         public string Description { get; set; }
         public string Version { get; set; }
         public string Tags { get; set; }
+
+        public const string CrosslinkPattern = "(Rule )(S[0-9]+)";
+
+        private static string AddLinksBetweenRulesToDescription(string description, string productVersion)
+        {
+            var urlRegexPattern = string.Format(DiagnosticReportHelper.HelpLinkPattern, productVersion, "$2");
+            var linkPattern = string.Format("<a href=\"{0}\">{1}</a>", urlRegexPattern, "$1$2");
+            return Regex.Replace(description, CrosslinkPattern, linkPattern);
+        }
     }
 }
