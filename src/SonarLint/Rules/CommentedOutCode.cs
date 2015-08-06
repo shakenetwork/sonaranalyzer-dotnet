@@ -120,12 +120,12 @@ namespace SonarLint.Rules
             var triviaContent = trivia.ToString();
             if (trivia.IsKind(SyntaxKind.MultiLineCommentTrivia))
             {
-                if (triviaContent.StartsWith("/*"))
+                if (triviaContent.StartsWith("/*", StringComparison.InvariantCulture))
                 {
                     triviaContent = triviaContent.Substring(2);
                 }
 
-                if (triviaContent.EndsWith("*/"))
+                if (triviaContent.EndsWith("*/", StringComparison.InvariantCulture))
                 {
                     triviaContent = triviaContent.Substring(0, triviaContent.Length-2);
                 }
@@ -134,7 +134,7 @@ namespace SonarLint.Rules
 
             if (trivia.IsKind(SyntaxKind.SingleLineCommentTrivia))
             {
-                if (triviaContent.StartsWith("//"))
+                if (triviaContent.StartsWith("//", StringComparison.InvariantCulture))
                 {
                     triviaContent = triviaContent.Substring(2);
                 }
@@ -183,8 +183,8 @@ namespace SonarLint.Rules
         {
             return CodePartsWithRelationalOperator.Any(codePart =>
             {
-                var index = checkedLine.IndexOf(codePart);
-                return index >= 0 && RelationalOperators.Any(op => checkedLine.IndexOf(op, index) >= 0);
+                var index = checkedLine.IndexOf(codePart, StringComparison.InvariantCulture);
+                return index >= 0 && RelationalOperators.Any(op => checkedLine.IndexOf(op, index, StringComparison.InvariantCulture) >= 0);
             });
         }
 
