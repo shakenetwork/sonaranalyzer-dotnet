@@ -58,14 +58,14 @@ namespace SonarLint.Rules
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     CheckMatchingExpressionsInSucceedingStatements((IfStatementSyntax)c.Node, syntax => syntax.Condition, c);
                 },
                 SyntaxKind.IfStatement);
 
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     CheckMatchingExpressionsInSucceedingStatements((SwitchStatementSyntax)c.Node, syntax => syntax.Expression, c);

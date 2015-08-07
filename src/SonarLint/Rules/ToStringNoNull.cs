@@ -56,7 +56,7 @@ namespace SonarLint.Rules
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterCodeBlockStartAction<SyntaxKind>(
+            context.RegisterCodeBlockStartActionInNonGenerated<SyntaxKind>(
                 cbc =>
                 {
                     var methodDeclaration = cbc.CodeBlock as MethodDeclarationSyntax;

@@ -60,16 +60,16 @@ namespace SonarLint.Rules
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckLoop(c, ((WhileStatementSyntax) c.Node).Statement),
                 SyntaxKind.WhileStatement);
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckLoop(c, ((ForStatementSyntax) c.Node).Statement),
                 SyntaxKind.ForStatement);
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckLoop(c, ((ForEachStatementSyntax) c.Node).Statement),
                 SyntaxKind.ForEachStatement);
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckIf(c, (IfStatementSyntax) c.Node),
                 SyntaxKind.IfStatement);
         }

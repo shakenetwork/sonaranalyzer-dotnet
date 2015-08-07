@@ -60,7 +60,7 @@ namespace SonarLint.Rules
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     var assignment = (AssignmentExpressionSyntax) c.Node;
@@ -74,7 +74,7 @@ namespace SonarLint.Rules
                 },
                 SyntaxKind.SimpleAssignmentExpression);
 
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     var variableDeclaration = (VariableDeclarationSyntax)c.Node;
@@ -93,7 +93,7 @@ namespace SonarLint.Rules
                 },
                 SyntaxKind.VariableDeclaration);
 
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     var invocation = (InvocationExpressionSyntax)c.Node;
@@ -121,7 +121,7 @@ namespace SonarLint.Rules
                 },
                 SyntaxKind.InvocationExpression);
 
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     var castExpression = (CastExpressionSyntax) c.Node;

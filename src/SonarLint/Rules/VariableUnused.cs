@@ -59,7 +59,7 @@ namespace SonarLint.Rules
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterCodeBlockStartAction<SyntaxKind>(cbc =>
+            context.RegisterCodeBlockStartActionInNonGenerated<SyntaxKind>(cbc =>
             {
                 var unusedLocals = new List<ISymbol>();
 

@@ -76,7 +76,7 @@ namespace SonarLint.Rules
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     var objectCreation = (ObjectCreationExpressionSyntax) c.Node;
@@ -97,7 +97,8 @@ namespace SonarLint.Rules
                     }
                 },
                 SyntaxKind.ObjectCreationExpression);
-            context.RegisterSyntaxNodeAction(
+
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     var invocation = (InvocationExpressionSyntax) c.Node;

@@ -61,7 +61,7 @@ namespace SonarLint.Rules
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterSyntaxTreeAction(
+            context.RegisterSyntaxTreeActionInNonGenerated(
                 c =>
                 {
                     foreach (var token in c.Tree.GetRoot().DescendantTokens())

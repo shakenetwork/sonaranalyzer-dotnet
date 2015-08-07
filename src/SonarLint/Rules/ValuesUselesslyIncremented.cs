@@ -55,7 +55,7 @@ namespace SonarLint.Rules
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     var increment = (PostfixUnaryExpressionSyntax)c.Node;
@@ -79,7 +79,8 @@ namespace SonarLint.Rules
                         c.ReportDiagnostic(Diagnostic.Create(Rule, increment.GetLocation(), operatorText));
                     }
                 },
-                SyntaxKind.PostIncrementExpression, SyntaxKind.PostDecrementExpression);
+                SyntaxKind.PostIncrementExpression,
+                SyntaxKind.PostDecrementExpression);
         }
     }
 }

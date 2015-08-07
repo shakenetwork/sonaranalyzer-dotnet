@@ -63,7 +63,7 @@ namespace SonarLint.Rules
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterCodeBlockStartAction<SyntaxKind>(analysisContext =>
+            context.RegisterCodeBlockStartActionInNonGenerated<SyntaxKind>(analysisContext =>
             {
                 var localsAssigned = ImmutableHashSet<ILocalSymbol>.Empty;
                 var localsAssignedInUsing = ImmutableHashSet<ILocalSymbol>.Empty;
@@ -144,7 +144,7 @@ namespace SonarLint.Rules
                     var internallyInitializedFields = disposableFields.Intersect(fieldsAssigned);
                     var nonDisposedFields = internallyInitializedFields.Except(fieldsDisposed);
 
-                    ReportIssues(nonDisposedFields, c.ReportDiagnostic);
+                    ReportIssues(nonDisposedFields, diagnostic => { c.ReportDiagnosticIfNonGenerated(diagnostic); });
                 });
             });
         }

@@ -59,7 +59,7 @@ namespace SonarLint.Rules
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     var lessThan = (BinaryExpressionSyntax) c.Node;
@@ -74,7 +74,7 @@ namespace SonarLint.Rules
                 },
                 SyntaxKind.LessThanExpression);
 
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     var greaterThan = (BinaryExpressionSyntax)c.Node;

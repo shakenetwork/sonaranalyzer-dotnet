@@ -62,7 +62,7 @@ namespace SonarLint.Rules
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     var assignment = (AssignmentExpressionSyntax)c.Node;
@@ -82,7 +82,7 @@ namespace SonarLint.Rules
                 SyntaxKind.LeftShiftAssignmentExpression,
                 SyntaxKind.RightShiftAssignmentExpression);
 
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                     c =>
                     {
                         var unary = (PrefixUnaryExpressionSyntax)c.Node;
@@ -93,7 +93,7 @@ namespace SonarLint.Rules
                     SyntaxKind.PreDecrementExpression,
                     SyntaxKind.PreIncrementExpression);
 
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     var unary = (PostfixUnaryExpressionSyntax)c.Node;

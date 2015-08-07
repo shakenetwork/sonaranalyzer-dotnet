@@ -55,7 +55,7 @@ namespace SonarLint.Rules
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterSyntaxTreeAction(
+            context.RegisterSyntaxTreeActionInNonGenerated(
                 c =>
                 {
                     var offset = c.Tree.GetText().ToString().IndexOf('\t');

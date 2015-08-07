@@ -53,7 +53,7 @@ namespace SonarLint.Rules
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterSyntaxTreeAction(
+            context.RegisterSyntaxTreeActionInNonGenerated(
                 c =>
                 {
                     foreach (var line in c.Tree

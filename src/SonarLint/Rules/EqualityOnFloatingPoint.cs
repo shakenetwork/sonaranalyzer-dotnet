@@ -66,7 +66,7 @@ namespace SonarLint.Rules
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     var equals = (BinaryExpressionSyntax) c.Node;
@@ -82,7 +82,7 @@ namespace SonarLint.Rules
                 },
                 SyntaxKind.EqualsExpression
                 );
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     var binaryExpression = (BinaryExpressionSyntax) c.Node;

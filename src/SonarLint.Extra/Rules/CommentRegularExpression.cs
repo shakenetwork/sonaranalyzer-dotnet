@@ -66,7 +66,7 @@ namespace SonarLint.Rules
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterSyntaxTreeAction(
+            context.RegisterSyntaxTreeActionInNonGenerated(
                 c =>
                 {
                     var comments = from t in c.Tree.GetCompilationUnitRoot().DescendantTrivia()

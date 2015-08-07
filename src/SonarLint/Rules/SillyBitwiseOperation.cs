@@ -60,20 +60,20 @@ namespace SonarLint.Rules
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckBinary(c, -1),
                 SyntaxKind.BitwiseAndExpression);
 
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckBinary(c, 0),
                 SyntaxKind.BitwiseOrExpression,
                 SyntaxKind.ExclusiveOrExpression);
 
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckAssignment(c, -1),
                 SyntaxKind.AndAssignmentExpression);
 
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckAssignment(c, 0),
                 SyntaxKind.OrAssignmentExpression,
                 SyntaxKind.ExclusiveOrAssignmentExpression);

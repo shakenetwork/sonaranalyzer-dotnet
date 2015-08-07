@@ -62,7 +62,7 @@ namespace SonarLint.Rules
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     var ifStatement = (IfStatementSyntax)c.Node;
@@ -83,7 +83,7 @@ namespace SonarLint.Rules
                 },
                 SyntaxKind.IfStatement);
 
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     var switchSection = (SwitchSectionSyntax) c.Node;

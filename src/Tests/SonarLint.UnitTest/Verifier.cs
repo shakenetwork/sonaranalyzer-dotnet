@@ -53,7 +53,7 @@ namespace SonarLint.UnitTest
             expected.Should().BeEquivalentTo(Enumerable.Empty<int>());
         }
 
-        private static IEnumerable<Diagnostic> GetDiagnostics(Compilation compilation,
+        internal static IEnumerable<Diagnostic> GetDiagnostics(Compilation compilation,
             DiagnosticAnalyzer diagnosticAnalyzer)
         {
             using (var tokenSource = new CancellationTokenSource())

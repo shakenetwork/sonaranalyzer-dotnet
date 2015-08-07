@@ -5009,44 +5009,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\NLogDemo\\Default.aspx.designer.cs",
-            "Region": {
-              "StartLine": 13,
-              "EndLine": 13,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S101",
-      "FullMessage": "Rename this class \"_Default\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
-      "Locations": [
-        {
-          "AnalysisTarget": {
             "Uri": "\\NLog-master_25d6863e72\\examples\\NLogSilverlightApp.Web\\Default.aspx.cs",
             "Region": {
               "StartLine": 10,
               "EndLine": 10,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S101",
-      "FullMessage": "Rename this class \"_Default\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\NLogSilverlightApp.Web\\Default.aspx.designer.cs",
-            "Region": {
-              "StartLine": 15,
-              "EndLine": 15,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }

@@ -133,7 +133,7 @@ namespace SonarLint.Rules
                             var variableNames = string.Join(", ",
                                 assignedFields.Select(symbol => string.Format("\"{0}\"", symbol.Name)).OrderBy(s => s));
 
-                            c.ReportDiagnostic(Diagnostic.Create(Rule, classSyntax.Identifier.GetLocation(),
+                            c.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, classSyntax.Identifier.GetLocation(),
                                 variableNames));
                         }
                     }

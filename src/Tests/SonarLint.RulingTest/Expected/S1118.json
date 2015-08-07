@@ -466,23 +466,6 @@
     },
     {
       "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\examples\\Stocks\\SymbolLookup\\Properties\\Resources.Designer.cs",
-            "Region": {
-              "StartLine": 40,
-              "EndLine": 40,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
       "FullMessage": "Add a \"private\" constructor or the \"static\" keyword to the class declaration.",
       "Locations": [
         {
@@ -942,23 +925,6 @@
     },
     {
       "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Demo.Hosting.Aspnet\\Resources\\Menu.Designer.cs",
-            "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
       "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
       "Locations": [
         {
@@ -993,23 +959,6 @@
     },
     {
       "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Demo.Razor.Localization\\Resources\\Text.Designer.cs",
-            "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
       "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
       "Locations": [
         {
@@ -1018,23 +967,6 @@
             "Region": {
               "StartLine": 12,
               "EndLine": 12,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Testing\\Properties\\Resources.Designer.cs",
-            "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -1537,23 +1469,6 @@
     },
     {
       "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\FormControl\\Properties\\Resources.Designer.cs",
-            "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
       "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
       "Locations": [
         {
@@ -1817,57 +1732,6 @@
             "Region": {
               "StartLine": 8,
               "EndLine": 8,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\RichTextBox\\RowColoring\\Properties\\Resources.Designer.cs",
-            "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\RichTextBox\\Simple\\Properties\\Resources.Designer.cs",
-            "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\RichTextBox\\WordColoring\\Properties\\Resources.Designer.cs",
-            "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -2455,74 +2319,6 @@
     },
     {
       "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Properties\\Messages.Designer.cs",
-            "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Properties\\PatternResources.Designer.cs",
-            "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\Common\\CommonResources.Designer.cs",
-            "Region": {
-              "StartLine": 33,
-              "EndLine": 33,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\CommandLine.ServerExtensions\\NuGetResources.Designer.cs",
-            "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
       "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
       "Locations": [
         {
@@ -2531,91 +2327,6 @@
             "Region": {
               "StartLine": 5,
               "EndLine": 5,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\CommandLine\\NuGetResources.Designer.cs",
-            "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\Core\\Resources\\AnalysisResources.Designer.cs",
-            "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\Core\\Resources\\NuGetResources.Designer.cs",
-            "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\DialogServices\\Resources.Designer.cs",
-            "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\Options\\Resources.Designer.cs",
-            "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -2650,142 +2361,6 @@
             "Region": {
               "StartLine": 4,
               "EndLine": 4,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VisualStudio\\Resources\\VsResources.Designer.cs",
-            "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VisualStudio11\\Resources.Designer.cs",
-            "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsConsole\\Console\\Resources.Designer.cs",
-            "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsConsole\\PowerShellCmdlets\\Resources.Designer.cs",
-            "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHost\\Resources.Designer.cs",
-            "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHostProvider\\Resources.Designer.cs",
-            "Region": {
-              "StartLine": 33,
-              "EndLine": 33,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsExtension\\Resources.Designer.cs",
-            "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\test\\CommandLine.Test\\MockResourceType.Designer.cs",
-            "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -2973,23 +2548,6 @@
             "Region": {
               "StartLine": 10,
               "EndLine": 10,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress.Test\\Properties\\Resources.Designer.cs",
-            "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }

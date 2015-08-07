@@ -94,7 +94,7 @@ namespace SonarLint.Rules
                 var classDeclaration = declaringSyntaxReference.GetSyntax() as ClassDeclarationSyntax;
                 if (classDeclaration != null)
                 {
-                    c.ReportDiagnostic(Diagnostic.Create(Rule, classDeclaration.Identifier.GetLocation(),
+                    c.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, classDeclaration.Identifier.GetLocation(),
                         message));
                 }
             }

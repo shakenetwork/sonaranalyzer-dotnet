@@ -57,7 +57,7 @@ namespace SonarLint.Rules
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     var binary = (BinaryExpressionSyntax) c.Node;
@@ -65,7 +65,7 @@ namespace SonarLint.Rules
                     CheckCountOne(binary.Left, binary.Right, c);
                 },
                 SyntaxKind.GreaterThanExpression);
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     var binary = (BinaryExpressionSyntax)c.Node;
@@ -73,7 +73,7 @@ namespace SonarLint.Rules
                     CheckCountOne(binary.Right, binary.Left, c);
                 },
                 SyntaxKind.LessThanExpression);
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     var binary = (BinaryExpressionSyntax)c.Node;
@@ -81,7 +81,7 @@ namespace SonarLint.Rules
                     CheckCountZero(binary.Left, binary.Right, c);
                 },
                 SyntaxKind.GreaterThanOrEqualExpression);
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     var binary = (BinaryExpressionSyntax)c.Node;
@@ -89,7 +89,7 @@ namespace SonarLint.Rules
                     CheckCountZero(binary.Right, binary.Left, c);
                 },
                 SyntaxKind.LessThanOrEqualExpression);
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     var binary = (BinaryExpressionSyntax)c.Node;

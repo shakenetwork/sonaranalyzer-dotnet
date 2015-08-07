@@ -57,7 +57,7 @@ namespace SonarLint.Rules
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     var argumentList = (AttributeArgumentListSyntax)c.Node;
@@ -68,7 +68,7 @@ namespace SonarLint.Rules
                 },
                 SyntaxKind.AttributeArgumentList);
 
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     var objectCreation = (ObjectCreationExpressionSyntax)c.Node;

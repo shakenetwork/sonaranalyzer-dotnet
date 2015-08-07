@@ -148,7 +148,7 @@ namespace SonarLint.Rules
                         declaringSyntaxReference.GetSyntax() as MethodDeclarationSyntax;
                     if (methodDeclaration != null)
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, methodDeclaration.Identifier.GetLocation()));
+                        c.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, methodDeclaration.Identifier.GetLocation()));
                     }
                 }
             }

@@ -245,45 +245,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 2095 lines, which is greater than 1000 authorized. Split it into smaller files.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\Properties\\Resources.Designer.cs",
-            "Region": {
-              "StartLine": 0,
-              "EndLine": 0,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S104",
       "FullMessage": "This file has 1370 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
             "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Controller.cs",
-            "Region": {
-              "StartLine": 0,
-              "EndLine": 0,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S104",
-      "FullMessage": "This file has 2095 lines, which is greater than 1000 authorized. Split it into smaller files.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Properties\\Resources.Designer.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -998,23 +964,6 @@
         {
           "AnalysisTarget": {
             "Uri": "\\nuget\\src\\CommandLine\\Commands\\ProjectFactory.cs",
-            "Region": {
-              "StartLine": 0,
-              "EndLine": 0,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S104",
-      "FullMessage": "This file has 1261 lines, which is greater than 1000 authorized. Split it into smaller files.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\CommandLine\\NuGetResources.Designer.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,

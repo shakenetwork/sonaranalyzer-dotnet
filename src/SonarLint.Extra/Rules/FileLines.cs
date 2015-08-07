@@ -52,7 +52,7 @@ namespace SonarLint.Rules
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterSyntaxTreeAction(
+            context.RegisterSyntaxTreeActionInNonGenerated(
                 c =>
                 {
                     var root = c.Tree.GetRoot();
