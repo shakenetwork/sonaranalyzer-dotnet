@@ -22,15 +22,15 @@ switch (i)
     doTheRest();
 }
 
-if (a >= 0 && a < 10)
+if (a >= 0 &amp;&amp; a < 10)
 {
   doTheThing();
 }
-else if (a >= 10 && a < 20)
+else if (a >= 10 &amp;&amp; a < 20)
 {
   doTheOtherThing();
 }
-else if (a >= 20 && a < 50)
+else if (a >= 20 &amp;&amp; a < 50)
 {
   doTheThing();  // Noncompliant; duplicates first condition
 }
@@ -59,11 +59,11 @@ switch (i) {
     doTheRest();
 }
 
-if ((a >= 0 && a < 10) || (a >= 20 && a < 50))
+if ((a >= 0 &amp;&amp; a < 10) || (a >= 20 &amp;&amp; a < 50))
 {
   doTheThing();
 }
-else if (a >= 10 && a < 20)
+else if (a >= 10 &amp;&amp; a < 20)
 {
   doTheOtherThing();
 }
@@ -91,15 +91,15 @@ switch (i)
     doTheRest();
 }
 
-if (a >= 0 && a < 10)
+if (a >= 0 &amp;&amp; a < 10)
 {
   doTheThing();
 }
-else if (a >= 10 && a < 20)
+else if (a >= 10 &amp;&amp; a < 20)
 {
   doTheOtherThing();
 }
-else if (a >= 20 && a < 50)
+else if (a >= 20 &amp;&amp; a < 50)
 {
   doTheThirdThing();
 }
