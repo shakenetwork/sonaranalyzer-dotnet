@@ -23,7 +23,7 @@ using Microsoft.CodeAnalysis.CSharp;
 
 namespace SonarLint.Helpers
 {
-    public static class EquivalenceChecker 
+    public static class EquivalenceChecker
     {
         public static bool AreEquivalent(SyntaxNode node1, SyntaxNode node2)
         {

@@ -41,8 +41,8 @@ namespace SonarLint.Runner
 
             var xmlOutSettings = new XmlWriterSettings
             {
-                Encoding = Encoding.UTF8, 
-                Indent = true, 
+                Encoding = Encoding.UTF8,
+                Indent = true,
                 IndentChars = "  "
             };
 
@@ -117,7 +117,7 @@ namespace SonarLint.Runner
                         xmlOut.WriteEndElement();
 
                         xmlOut.WriteStartElement("Issues");
-                        
+
                         foreach (var diagnostic in diagnosticsRunner.GetDiagnostics(compilation))
                         {
                             xmlOut.WriteStartElement("Issue");
@@ -129,7 +129,7 @@ namespace SonarLint.Runner
                             xmlOut.WriteElementString("Message", diagnostic.GetMessage());
                             xmlOut.WriteEndElement();
                         }
-                        
+
                         xmlOut.WriteEndElement();
 
                         xmlOut.WriteEndElement();

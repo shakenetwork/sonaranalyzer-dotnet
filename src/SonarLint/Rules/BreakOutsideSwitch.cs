@@ -39,7 +39,7 @@ namespace SonarLint.Rules
     {
         internal const string DiagnosticId = "S1227";
         internal const string Title = "break statements should not be used except for switch cases";
-        internal const string Description = 
+        internal const string Description =
             "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop " +
             "should have a single termination condition.";
         internal const string MessageFormat = "Refactor the code in order to remove this break statement.";
@@ -83,7 +83,7 @@ namespace SonarLint.Rules
                 return new[]
                 {
                     SyntaxKind.SwitchStatement,
-                    SyntaxKind.WhileStatement, 
+                    SyntaxKind.WhileStatement,
                     SyntaxKind.DoStatement,
                     SyntaxKind.ForStatement,
                     SyntaxKind.ForEachStatement

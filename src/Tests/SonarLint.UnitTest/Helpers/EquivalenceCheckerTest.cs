@@ -53,7 +53,7 @@ namespace Test
         public void Method3()
         {
             var x = Property+2;
-            Console.Write(x);            
+            Console.Write(x);
         }
     }
 }";
@@ -68,7 +68,7 @@ namespace Test
 
             methods = syntaxTree.GetRoot().DescendantNodes().OfType<MethodDeclarationSyntax>().ToList();
         }
-        
+
         [TestMethod]
         public void AreEquivalent_Node()
         {

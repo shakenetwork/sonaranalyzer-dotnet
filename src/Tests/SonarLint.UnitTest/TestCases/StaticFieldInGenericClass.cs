@@ -14,7 +14,7 @@ namespace Tests.TestCases
     class StaticFieldInGenericClass<T/*comment*/, /*comment*/U>
     {
         private static readonly ConditionalWeakTable<T, Task<T>>.CreateValueCallback s_taskCreationCallback = Task.FromResult<T>;
-        
+
         private static Dictionary<string, List<T>> Dict, Dict4 = new Dictionary<string,List<T>>();
         private static Dictionary<string, T[]> Dict2;
 

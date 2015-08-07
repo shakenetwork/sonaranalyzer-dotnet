@@ -42,7 +42,7 @@ namespace Tests.Diagnostics
             t1.Start();
 
             _birthYear = birthYear;
-            
+
             Mod.DoSomething(ref this._birthDay3);
             Mod.DoSomething2(out _birthDay4);
         }

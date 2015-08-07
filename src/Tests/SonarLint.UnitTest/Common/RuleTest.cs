@@ -38,7 +38,7 @@ namespace SonarLint.UnitTest.Common
                 .SelectMany(assembly => assembly.GetTypes())
                 .Where(t => t.IsSubclassOf(typeof(DiagnosticAnalyzer)));
         }
-        
+
 
         [TestMethod]
         public void DiagnosticAnalyzerHasRuleAttribute()
@@ -92,7 +92,7 @@ namespace SonarLint.UnitTest.Common
                 if (!hasParameter)
                 {
                     Assert.Fail(
-                        "DiagnosticAnalyzer '{0}' should be moved to the assembly that implements Visual Studio rules.", 
+                        "DiagnosticAnalyzer '{0}' should be moved to the assembly that implements Visual Studio rules.",
                         analyzer.Name);
                 }
             }
@@ -109,7 +109,7 @@ namespace SonarLint.UnitTest.Common
                 if (hasParameter)
                 {
                     Assert.Fail(
-                        "DiagnosticAnalyzer '{0}' has parameters that are defined outside of IRuleTemplateInstance.", 
+                        "DiagnosticAnalyzer '{0}' has parameters that are defined outside of IRuleTemplateInstance.",
                         analyzer.Name);
                 }
             }

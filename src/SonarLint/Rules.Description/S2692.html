@@ -4,7 +4,7 @@
     value in a <code>string</code>, <code>List</code>, or an array, consider using the <code>Contains</code> method instead.
 </p>
 <p>
-    This rule raises an issue when an <code>IndexOf</code> value retrieved from a <code>string</code>, <code>List</code>, 
+    This rule raises an issue when an <code>IndexOf</code> value retrieved from a <code>string</code>, <code>List</code>,
     or array is tested against <code>&gt;0</code>.
 </p>
 
@@ -19,19 +19,19 @@ strings.add(name);
 string[] stringArray = strings.ToArray();
 
 if (strings.IndexOf(color) &gt; 0) // Noncompliant
-{  
+{
   // ...
 }
 if (name.IndexOf("ish") &gt; 0) // Noncompliant
-{ 
+{
   // ...
 }
 if (name.IndexOf("ae") &gt; 0) // Noncompliant
-{ 
+{
   // ...
 }
 if (Array.IndexOf(stringArray, color) &gt; 0) // Noncompliant
-{  
+{
   // ...
 }
 </pre>
@@ -44,20 +44,20 @@ List&lt;string&gt; strings = new List&lt;string&gt; ();
 strings.add(color);
 strings.add(name);
 string[] stringArray = strings.ToArray();
-if (strings.IndexOf(color) &gt; -1) 
+if (strings.IndexOf(color) &gt; -1)
 {
   // ...
 }
-if (name.IndexOf("ish") &gt;= 0) 
+if (name.IndexOf("ish") &gt;= 0)
 {
   // ...
 }
-if (name.Contains("ae") 
+if (name.Contains("ae")
 {
   // ...
 }
 if (Array.IndexOf(stringArray, color) &gt;= 0)
-{  
+{
   // ...
 }
 </pre>

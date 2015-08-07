@@ -50,9 +50,9 @@ namespace SonarLint.Rules
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = false;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
+                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
 
@@ -168,7 +168,7 @@ namespace SonarLint.Rules
                     return methodSymbol.Parameters
                         .FirstOrDefault(symbol => symbol.Name == argument.NameColon.Name.Identifier.ValueText);
                 }
-                
+
                 var argumentIndex = invocation.ArgumentList.Arguments.IndexOf(argument);
                 var parameterIndex = argumentIndex;
 

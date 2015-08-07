@@ -29,7 +29,7 @@ namespace Tests.TestCases
             {
                 doSomething();
             }
-            catch (ArgumentException) 
+            catch (ArgumentException)
             {
                 throw;
             }

@@ -43,7 +43,7 @@ namespace SonarLint.Runner
             {
                 return new Diagnostic[0];
             }
-            
+
             var compilationOptions = new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary);
             compilationOptions = compilationOptions.WithSpecificDiagnosticOptions(
                 diagnosticAnalyzers.SelectMany(analyzer => analyzer.SupportedDiagnostics)

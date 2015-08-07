@@ -31,7 +31,7 @@ namespace Tests.TestCases
                 DoSomething1();
             }
             else if (someCondition2)
-            { // Noncompliant     
+            { // Noncompliant
                 DoSomething1();
             }
             else if (someCondition3)
@@ -48,11 +48,11 @@ namespace Tests.TestCases
                 DoSomething1();
             }
             else if (someCondition2)
-            { // Noncompliant     
+            { // Noncompliant
                 DoSomething1();
             }
             else
-            {// Noncompliant 
+            {// Noncompliant
                 DoSomething1();
             }
         }

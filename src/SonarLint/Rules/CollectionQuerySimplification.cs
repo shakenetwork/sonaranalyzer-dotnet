@@ -52,9 +52,9 @@ namespace SonarLint.Rules
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, "{0}", Category, 
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, "{0}", Category,
+                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
 
@@ -64,13 +64,13 @@ namespace SonarLint.Rules
 
         private static readonly string[] MethodNamesWithPredicate =
         {
-            "Any", "LongCount", "Count", 
+            "Any", "LongCount", "Count",
             "First", "FirstOrDefault", "Last", "LastOrDefault",
             "Single", "SingleOrDefault"
         };
         private static readonly string[] MethodNamesForTypeCheckingWithSelect =
         {
-            "Any", "LongCount", "Count", 
+            "Any", "LongCount", "Count",
             "First", "FirstOrDefault", "Last", "LastOrDefault",
             "Single", "SingleOrDefault", "SkipWhile", "TakeWhile"
         };
@@ -116,7 +116,7 @@ namespace SonarLint.Rules
                     {
                         return;
                     }
-                    
+
                     var innerMethodSymbol = c.SemanticModel.GetSymbolInfo(innerInvocation).Symbol as IMethodSymbol;
                     if (innerMethodSymbol == null ||
                         !CollectionEmptinessChecking.MethodIsOnIEnumerable(innerMethodSymbol, c.SemanticModel))
@@ -125,7 +125,7 @@ namespace SonarLint.Rules
                     }
 
                     var outerArguments = GetReducedArguments(outerMethodSymbol, outerInvocation);
-                    
+
                     if (CheckForSimplifiable(outerArguments, outerMethodSymbol, innerMethodSymbol, c,
                         innerInvocation))
                     {
@@ -143,12 +143,12 @@ namespace SonarLint.Rules
 
         private static List<ArgumentSyntax> GetReducedArguments(IMethodSymbol methodSymbol, InvocationExpressionSyntax invocation)
         {
-            return methodSymbol.MethodKind == MethodKind.ReducedExtension 
-                ? invocation.ArgumentList.Arguments.ToList() 
+            return methodSymbol.MethodKind == MethodKind.ReducedExtension
+                ? invocation.ArgumentList.Arguments.ToList()
                 : invocation.ArgumentList.Arguments.Skip(1).ToList();
         }
 
-        private static bool CheckForCastSimplification(IMethodSymbol outerMethodSymbol, IMethodSymbol innerMethodSymbol, 
+        private static bool CheckForCastSimplification(IMethodSymbol outerMethodSymbol, IMethodSymbol innerMethodSymbol,
             InvocationExpressionSyntax innerInvocation, InvocationExpressionSyntax outerInvocation, SyntaxNodeAnalysisContext c)
         {
             string typeNameInInner;
@@ -180,8 +180,8 @@ namespace SonarLint.Rules
         private static Location GetReportLocation(InvocationExpressionSyntax invocation)
         {
             var memberAccess = invocation.Expression as MemberAccessExpressionSyntax;
-            return memberAccess == null 
-                ? invocation.Expression.GetLocation() 
+            return memberAccess == null
+                ? invocation.Expression.GetLocation()
                 : memberAccess.Name.GetLocation();
         }
 
@@ -202,7 +202,7 @@ namespace SonarLint.Rules
 
             var binaryExpression = GetExpressionFromParens(GetExpressionFromLambda(expression)) as BinaryExpressionSyntax;
             var lambdaParameter = GetLambdaParameter(expression);
-            
+
             while (binaryExpression != null)
             {
                 if (!binaryExpression.IsKind(SyntaxKind.LogicalAndExpression))
@@ -287,7 +287,7 @@ namespace SonarLint.Rules
             {
                 return false;
             }
-            
+
             var arguments = GetReducedArguments(methodSymbol, invocation);
             if (arguments.Count() != 1)
             {
@@ -340,7 +340,7 @@ namespace SonarLint.Rules
             type = castExpression.Type.ToString();
             return true;
         }
-        
+
         private static bool CheckForSimplifiable(List<ArgumentSyntax> outerArguments, IMethodSymbol outerMethodSymbol,
             IMethodSymbol innerMethodSymbol, SyntaxNodeAnalysisContext c, InvocationExpressionSyntax innerInvocation)
         {

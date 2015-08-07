@@ -9,14 +9,14 @@ namespace Tests.TestCases
     public class StaticFieldVisible
     {
         public static double Pi = 3.14;  // Noncompliant
-        public const double Pi2 = 3.14;  
-        public double Pi3 = 3.14;  
+        public const double Pi2 = 3.14;
+        public double Pi3 = 3.14;
     }
 
     public class Shape
     {
         public static Shape Empty = new EmptyShape(); // Noncompliant
-        public static readonly Shape Empty2 = new EmptyShape(); 
+        public static readonly Shape Empty2 = new EmptyShape();
 
         private class EmptyShape : Shape
         {

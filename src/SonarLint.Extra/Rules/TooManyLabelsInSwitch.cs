@@ -41,7 +41,7 @@ namespace SonarLint.Rules
         internal const string Description = "\"switch\" statements should not have too many \"case\" clauses";
         internal const string MessageFormat = "Reduce the number of switch cases from {1} to at most {0}.";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Major; 
+        internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =

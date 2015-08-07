@@ -5,7 +5,7 @@ namespace Tests.Diagnostics
 {
     public interface IMyInterface
     {
-        
+
     }
 
     public struct MyStruct // Compliant, we don't care about structs
@@ -35,7 +35,7 @@ namespace Tests.Diagnostics
         public static string Prop { get; set; }
     }
 
-    public class StringUtilsAsBase 
+    public class StringUtilsAsBase
     {
         public StringUtilsAsBase() //Noncompliant, should be protected
         { }

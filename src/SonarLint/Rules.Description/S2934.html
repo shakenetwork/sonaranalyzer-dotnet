@@ -3,7 +3,7 @@
     those of a <code>readonly</code> value field, such as a <code>struct</code>, cannot.
 </p>
 <p>
-    If the member could be either a <code>class</code> or a <code>struct</code> then assignment to its properties 
+    If the member could be either a <code>class</code> or a <code>struct</code> then assignment to its properties
     could be unreliable, working sometimes but not others.
 </p>
 
@@ -15,7 +15,7 @@ interface IPoint
   int Y { get; set; }
 }
 
-class PointManager&lt;T&gt; where T: IPoint 
+class PointManager&lt;T&gt; where T: IPoint
 {
   readonly T point;  // this could be a struct
   public PointManager(T point)
@@ -39,7 +39,7 @@ interface IPoint
   int Y { get; set; }
 }
 
-class PointManager&lt;T&gt; where T : IPoint 
+class PointManager&lt;T&gt; where T : IPoint
 {
   readonly T point;  // this could be a struct
   public PointManager(T point)
@@ -61,7 +61,7 @@ interface IPoint
   int Y { get; set; }
 }
 
-class PointManager&lt;T&gt; where T : class, IPoint 
+class PointManager&lt;T&gt; where T : class, IPoint
 {
   readonly T point;  // this can only be a class
   public PointManager(T point)

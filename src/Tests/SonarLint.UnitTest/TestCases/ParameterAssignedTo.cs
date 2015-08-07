@@ -69,7 +69,7 @@ namespace Tests.Diagnostics
             };
 
             param = i => 42; // Noncompliant
-            
+
             e += delegate(out int foo1, int foo2, ref int foo3)
             {
                 foo1 = 0;

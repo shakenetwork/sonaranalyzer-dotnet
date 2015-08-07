@@ -32,7 +32,7 @@ namespace SonarLint.UnitTest
         public void End_To_End()
         {
             Program.Main(new [] { "TestResources\\ConfigurationTest.xml", "Output.xml"});
-            
+
             var textActual = new string(File.ReadAllText("Output.xml")
                 .ToCharArray()
                 .Where(c => !char.IsWhiteSpace(c))

@@ -51,14 +51,14 @@ namespace SonarLint.Rules
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = false;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
+                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
-        
+
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSymbolAction(

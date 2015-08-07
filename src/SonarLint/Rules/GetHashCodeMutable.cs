@@ -50,8 +50,8 @@ namespace SonarLint.Rules
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
@@ -72,7 +72,7 @@ namespace SonarLint.Rules
                     {
                         return;
                     }
-                    
+
                     var fieldsOfClass = c.SemanticModel.LookupBaseMembers(methodSyntax.SpanStart)
                         .Concat(methodSymbol.ContainingType.GetMembers())
                         .Select(symbol => symbol as IFieldSymbol)
@@ -93,7 +93,7 @@ namespace SonarLint.Rules
                         {
                             continue;
                         }
-                        
+
                         c.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(), identifier.Identifier.Text));
                     }
                 },

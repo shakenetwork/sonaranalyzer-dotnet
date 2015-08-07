@@ -42,7 +42,7 @@ namespace SonarLint.UnitTest.Attributes
                 var count = analyzer.GetCustomAttributes<SqaleRemediationAttribute>().Count();
                 if (count != 1)
                 {
-                    Assert.Fail("Only one SqaleRemediationAttribute can be assigned to DiagnosticAnalyzers, '{0}' has {1}", 
+                    Assert.Fail("Only one SqaleRemediationAttribute can be assigned to DiagnosticAnalyzers, '{0}' has {1}",
                         analyzer.Name, count);
                 }
             }
@@ -65,7 +65,7 @@ namespace SonarLint.UnitTest.Attributes
                     {
                         Assert.Fail(
                             "SqaleSubCharacteristicAttribute can only be assigned to DiagnosticAnalyzers that have a SQALE " +
-                            "remediation function, '{0}' has NoSqaleRemediationAttribute", 
+                            "remediation function, '{0}' has NoSqaleRemediationAttribute",
                             analyzer.Name);
                     }
                 }

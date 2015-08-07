@@ -11,7 +11,7 @@
 public class Math
 {
   public static double Pi = 3.14;  // Noncompliant
-} 
+}
 </pre>
 or
 <pre>
@@ -21,8 +21,8 @@ public class Shape
 
   private class EmptyShape : Shape
   {
-  } 
-} 
+  }
+}
 </pre>
 
 <h2>Compliant Solution</h2>
@@ -30,16 +30,16 @@ public class Shape
 public class Math
 {
   public const double Pi = 3.14;
-} 
+}
 </pre>
 or
 <pre>
 public class Shape
 {
-  public static readonly Shape Empty = new EmptyShape(); 
+  public static readonly Shape Empty = new EmptyShape();
 
   private class EmptyShape : Shape
   {
-  } 
-} 
+  }
+}
 </pre>

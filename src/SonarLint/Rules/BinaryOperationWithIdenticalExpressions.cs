@@ -47,7 +47,7 @@ namespace SonarLint.Rules
             "and should be simplified.";
         internal const string MessageFormat = "Identical sub-expressions on both sides of operator \"{0}\"";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Critical; 
+        internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
@@ -56,7 +56,7 @@ namespace SonarLint.Rules
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
 
-        internal static readonly SyntaxKind[] SyntaxElementsToCheck = 
+        internal static readonly SyntaxKind[] SyntaxElementsToCheck =
         {
             SyntaxKind.SubtractExpression,
             SyntaxKind.DivideExpression, SyntaxKind.ModuloExpression,
@@ -67,7 +67,7 @@ namespace SonarLint.Rules
             SyntaxKind.GreaterThanOrEqualExpression,
             SyntaxKind.LeftShiftExpression, SyntaxKind.RightShiftExpression
         };
-        
+
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         public override void Initialize(AnalysisContext context)

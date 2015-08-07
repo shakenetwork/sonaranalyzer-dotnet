@@ -60,7 +60,7 @@ namespace SonarLint.Utilities
             GetParameters(analyzerType, ruleDetail);
             GetTags(analyzerType, ruleDetail);
             GetSqale(analyzerType, ruleDetail);
-            
+
             return ruleDetail;
         }
 
@@ -112,7 +112,7 @@ namespace SonarLint.Utilities
                 ruleDetail.Tags.AddRange(tags.Tags);
             }
         }
-        
+
         private static void GetParameters(Type analyzerType, RuleDetail ruleDetail)
         {
             var typeToGetParametersFrom = analyzerType;

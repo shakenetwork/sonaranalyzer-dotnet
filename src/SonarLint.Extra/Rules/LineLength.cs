@@ -39,7 +39,7 @@ namespace SonarLint.Rules
         internal const string Description = "Lines should not be too long";
         internal const string MessageFormat = "Split this {1} characters long line (which is greater than {0} authorized).";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Minor; 
+        internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =

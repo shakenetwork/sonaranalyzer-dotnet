@@ -4,13 +4,13 @@
     attribute is simply ignored on non-<code>static</code> fields.
 </p>
 <p>
-    So <code>ThreadStatic</code> should either be removed or replaced with a use of the <code>ThreadLocal&lt;T&gt;</code> class, 
+    So <code>ThreadStatic</code> should either be removed or replaced with a use of the <code>ThreadLocal&lt;T&gt;</code> class,
     which gives a similar behavior for non-<code>static</code> fields.
 </p>
 
 <h2>Noncompliant Code Example</h2>
 <pre>
-public class MyClass 
+public class MyClass
 {
   [ThreadStatic]  // Noncompliant
   private int count = 0;
@@ -21,7 +21,7 @@ public class MyClass
 
 <h2>Compliant Solution</h2>
 <pre>
-public class MyClass 
+public class MyClass
 {
   private int count = 0;
 
@@ -30,7 +30,7 @@ public class MyClass
 </pre>
 or
 <pre>
-public class MyClass 
+public class MyClass
 {
   private readonly ThreadLocal&lt;int&gt; count = new ThreadLocal&lt;int&gt;();
   public int Count

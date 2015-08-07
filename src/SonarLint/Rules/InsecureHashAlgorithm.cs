@@ -52,8 +52,8 @@ namespace SonarLint.Rules
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = false;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
@@ -80,7 +80,7 @@ namespace SonarLint.Rules
                 c =>
                 {
                     var objectCreation = (ObjectCreationExpressionSyntax) c.Node;
-                    
+
                     var typeInfo = c.SemanticModel.GetTypeInfo(objectCreation);
 
                     if (typeInfo.ConvertedType == null || typeInfo.ConvertedType is IErrorTypeSymbol)
@@ -148,7 +148,7 @@ namespace SonarLint.Rules
                 insecureAlgorithmBase = currentType;
                 currentType = currentType.BaseType;
             }
-            
+
             return currentType == null ? null : insecureAlgorithmBase;
         }
     }

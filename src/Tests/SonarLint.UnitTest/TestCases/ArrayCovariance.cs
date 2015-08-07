@@ -17,11 +17,11 @@ namespace Tests.Diagnostics
             Fruit[] fruits = new Apple[1]; // Noncompliant - array covariance is used
             fruits = new Apple[1]; // Noncompliant
             FillWithOranges(fruits);
-            var fruits2 = new Apple[1]; 
+            var fruits2 = new Apple[1];
             FillWithOranges(fruits2); // Noncompliant
             var fruits3 = (Fruit[])new Apple[1]; // Noncompliant
         }
-        
+
         static void FillWithOranges(Fruit[] fruits)
         {
         }

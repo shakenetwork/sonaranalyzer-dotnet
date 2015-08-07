@@ -39,12 +39,12 @@ namespace SonarLint.Rules
     {
         internal const string DiagnosticId = "S1109";
         internal const string Title = "A close curly brace should be located at the beginning of a line";
-        internal const string Description = 
+        internal const string Description =
             "Shared coding conventions make it possible for a team to efficiently collaborate. This rule makes " +
             "it mandatory to place a close curly brace at the beginning of a line.";
         internal const string MessageFormat = "Move this closing curly brace to the next line.";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Minor; 
+        internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =

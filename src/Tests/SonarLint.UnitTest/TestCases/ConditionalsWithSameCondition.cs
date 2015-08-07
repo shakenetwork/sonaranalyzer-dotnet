@@ -22,14 +22,14 @@ namespace Tests.TestCases
                 doTheThing(b);
             }
             if (a == b) // Noncompliant
-            {  
+            {
                 doTheThing(b);
             }
             if (a == b) // Noncompliant
             {
                 doTheThing(b);
             }
-            if (a == c) 
+            if (a == c)
             {
                 doTheThing(c);
                 c = 5;

@@ -50,9 +50,9 @@ namespace SonarLint.Rules
         internal const Severity RuleSeverity = Severity.Blocker;
         internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
+                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
 
@@ -110,7 +110,7 @@ namespace SonarLint.Rules
                 SyntaxKind.UsingStatement);
         }
 
-        private static ImmutableHashSet<ISymbol> GetReturnedSymbols(StatementSyntax usingStatement, 
+        private static ImmutableHashSet<ISymbol> GetReturnedSymbols(StatementSyntax usingStatement,
             SemanticModel semanticModel)
         {
             var enclosingSymbol = semanticModel.GetEnclosingSymbol(usingStatement.SpanStart);

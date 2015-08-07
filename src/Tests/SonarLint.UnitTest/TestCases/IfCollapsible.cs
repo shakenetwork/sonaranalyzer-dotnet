@@ -35,13 +35,13 @@ namespace Tests.TestCases
                 }
                 else
                 {
-                    
+
                 }
             }
             if (cond1)
             {
                 var x = 5;
-                if (cond2 || cond3) 
+                if (cond2 || cond3)
                 {
                 }
             }

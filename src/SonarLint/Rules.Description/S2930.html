@@ -14,7 +14,7 @@
 
 <h2>Noncompliant Code Example</h2>
 <pre>
-public class ResourceHolder 
+public class ResourceHolder
 {
   private FileStream fs;  // Noncompliant; Dispose is never called
   public void OpenResource(string path)
@@ -48,7 +48,7 @@ public class ResourceHolder : IDisposable
     this.fs.Close();
   }
 
-  public void Dispose() 
+  public void Dispose()
   {
     this.fs.Dispose();
   }
@@ -65,7 +65,7 @@ public class ResourceHolder : IDisposable
 </pre>
 
 <h2>Exceptions</h2>
-Local <code>IDisposable</code>s returned from methods are ignored, as are local <code>IDisposable</code>s that are 
+Local <code>IDisposable</code>s returned from methods are ignored, as are local <code>IDisposable</code>s that are
 initialized with non-local <code>IDisposable</code>s.
 <pre>
   public Stream WriteToFile(string path, string text)

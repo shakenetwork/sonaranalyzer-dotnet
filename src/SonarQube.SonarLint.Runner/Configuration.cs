@@ -32,7 +32,7 @@ namespace SonarLint.Runner
 {
     public class Configuration
     {
-        private static readonly ImmutableArray<DiagnosticAnalyzer> ParameterLessAnalyzers = 
+        private static readonly ImmutableArray<DiagnosticAnalyzer> ParameterLessAnalyzers =
             ImmutableArray.Create(GetParameterlessAnalyzers().ToArray());
 
         public bool IgnoreHeaderComments { private set; get; }
@@ -91,7 +91,7 @@ namespace SonarLint.Runner
             var builder = ImmutableArray.CreateBuilder<DiagnosticAnalyzer>();
 
             foreach (var parameterLessAnalyzer in ParameterLessAnalyzers
-                .Where(parameterLessAnalyzer => 
+                .Where(parameterLessAnalyzer =>
                     AnalyzerIds.Contains(parameterLessAnalyzer.SupportedDiagnostics.Single().Id)))
             {
                 builder.Add(parameterLessAnalyzer);
@@ -112,7 +112,7 @@ namespace SonarLint.Runner
         }
 
         #region Add analyzers with parameters
-        
+
         private void AddAnalyzerCommentRegularExpression(ImmutableArray<DiagnosticAnalyzer>.Builder builder)
         {
             if (!AnalyzerIds.Contains(CommentRegularExpression.DiagnosticId))

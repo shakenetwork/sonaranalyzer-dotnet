@@ -38,7 +38,7 @@ namespace SonarLint.Rules
         internal const string Description = "Files should not have too many lines";
         internal const string MessageFormat = "This file has {1} lines, which is greater than {0} authorized. Split it into smaller files.";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Major; 
+        internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =

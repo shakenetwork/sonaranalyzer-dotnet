@@ -116,7 +116,7 @@ namespace SonarLint.Rules
 
             if (matchingMember != null)
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(), 
+                c.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(),
                     identifier.Text,
                     (matchingMember is IFieldSymbol) ? "field" : "property"));
             }

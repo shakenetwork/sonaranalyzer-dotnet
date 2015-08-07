@@ -40,7 +40,7 @@ namespace Tests.Diagnostics
         }
         private static bool IsEmpty3(List<string> l)
         {
-            return !l.Any(); 
+            return !l.Any();
         }
         private static bool IsEmpty4(List<string> l)
         {

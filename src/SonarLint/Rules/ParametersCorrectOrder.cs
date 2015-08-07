@@ -40,7 +40,7 @@ namespace SonarLint.Rules
     {
         internal const string DiagnosticId = "S2234";
         internal const string Title = "Parameters should be passed in the correct order";
-        internal const string Description = 
+        internal const string Description =
             "When the names of parameters in a method call match the names of the method arguments, " +
             "it contributes to clearer, more readable code. However, when the names match, but are " +
             "passed in a different order than the method arguments, it indicates a mistake in the " +
@@ -50,8 +50,8 @@ namespace SonarLint.Rules
         internal const Severity RuleSeverity = Severity.Blocker;
         internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
@@ -69,19 +69,19 @@ namespace SonarLint.Rules
                         new KeyValuePair<ArgumentSyntax, IParameterSymbol>(argument,
                             methodParameterLookup.GetParameterSymbol(argument)))
                         .ToDictionary(pair => pair.Key, pair => pair.Value);
-                    
+
                     var methodSymbol = methodParameterLookup.MethodSymbol;
 
                     if (methodSymbol == null)
                     {
                         return;
                     }
-                    
+
                     var parameterNames = argumentParameterMappings.Values
                         .Select(symbol => symbol.Name)
                         .Distinct()
                         .ToList();
-                    
+
                     var identifierArguments = GetIdentifierArguments(methodCall);
                     var identifierNames = identifierArguments
                         .Select(p => p.IdentifierName)
@@ -139,7 +139,7 @@ namespace SonarLint.Rules
                 },
                 SyntaxKind.InvocationExpression);
         }
-        
+
         private static List<IdentifierArgument> GetIdentifierArguments(InvocationExpressionSyntax methodCall)
         {
             return methodCall.ArgumentList.Arguments.ToList()

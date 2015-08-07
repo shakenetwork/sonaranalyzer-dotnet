@@ -11,7 +11,7 @@ namespace Tests.TestCases
         public static void Tests() { throw new Exception();}
         public static int SomeMethod(int a)
         {
-            if (a == 1) 
+            if (a == 1)
                 a++;
                 return a; // Noncompliant
 
@@ -21,7 +21,7 @@ namespace Tests.TestCases
             {
 
             }
-            else if (a == 1) 
+            else if (a == 1)
                 a *= 3;
 
                 return a; // Noncompliant
@@ -38,11 +38,11 @@ namespace Tests.TestCases
 
         public void Test()
         {
-            while (true) 
+            while (true)
                 Tests();
                 Tests(); // Noncompliant
 
-            while (true) 
+            while (true)
 Tests();
 Tests(); // Noncompliant
 
@@ -56,22 +56,22 @@ Tests(); // Noncompliant
             }
             Tests();
 
-            if (true) 
+            if (true)
                 Tests();
 
                 Tests(); // Noncompliant
 
-            if (true) 
+            if (true)
                 Tests();
-            else 
+            else
                 Tests();
                 Tests(); // Noncompliant
 
-            while (true) 
+            while (true)
                 Tests();
    /*comment*/  Tests(); // Noncompliant
 
-            while (true) 
+            while (true)
                 Tests();
             /*comment*/
                 Tests(); // Noncompliant

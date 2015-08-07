@@ -35,7 +35,7 @@ namespace SonarLint.UnitTest.Helpers
 namespace Test
 {
     class TestClass
-    {        
+    {
         public void DoSomething(){}
         public void IfMethod()
         {
@@ -44,7 +44,7 @@ namespace Test
             else if (true)
                 DoSomething();
             else
-                DoSomething();  
+                DoSomething();
         }
 
         public void SwitchMethod()
@@ -61,7 +61,7 @@ namespace Test
                 default:
                     DoSomething();
                     break;
-            }  
+            }
         }
     }
 }";

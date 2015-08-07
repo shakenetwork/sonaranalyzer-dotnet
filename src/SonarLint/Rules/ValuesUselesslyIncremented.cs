@@ -38,15 +38,15 @@ namespace SonarLint.Rules
     {
         internal const string DiagnosticId = "S2123";
         internal const string Title = "Values should not be uselessly incremented";
-        internal const string Description = 
+        internal const string Description =
             "A value that is incremented or decremented and then not stored is at best wasted code and at worst a bug.";
         internal const string MessageFormat = "Remove this {0} or correct the code not to waste it.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);

@@ -10,11 +10,11 @@ namespace Tests.TestCases
     {
         public SelfAssignment()
         {
-            
+
         }
         public SelfAssignment(int Prop1)
         {
-            
+
         }
         public int Prop1 { get; set; }
         public void Test()

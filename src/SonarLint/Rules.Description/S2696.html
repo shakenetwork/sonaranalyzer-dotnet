@@ -1,5 +1,5 @@
 <p>
-    Correctly updating a <code>static</code> field from a non-static method is tricky to get right and could easily lead to 
+    Correctly updating a <code>static</code> field from a non-static method is tricky to get right and could easily lead to
     bugs if there are multiple class instances and/or multiple threads in play.
 </p>
 <p>
@@ -8,11 +8,11 @@
 
 <h2>Noncompliant Code Example</h2>
 <pre>
-public class MyClass 
+public class MyClass
 {
   private static int count = 0;
 
-  public void DoSomething() 
+  public void DoSomething()
   {
     //...
     count++;  // Noncompliant

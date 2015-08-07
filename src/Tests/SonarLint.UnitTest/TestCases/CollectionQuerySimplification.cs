@@ -18,7 +18,7 @@ namespace Tests.Diagnostics
             z = Enumerable.Count(coll.Where(element => element == null));  // Noncompliant
             z = Enumerable.Count(Enumerable.Where(coll, element => element == null));  // Noncompliant
             y = coll.Select(element => element as object);
-            
+
             x = Enumerable.Select(coll, element => element as object).Any(element => element != null); //Noncompliant
             x = Enumerable.Any(Enumerable.Select(coll, element => element as object), element => element != null); //Noncompliant
         }

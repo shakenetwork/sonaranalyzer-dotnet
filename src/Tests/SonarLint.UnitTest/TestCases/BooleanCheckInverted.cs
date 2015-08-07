@@ -10,7 +10,7 @@ namespace Tests.Diagnostics
             var a = 2;
             if (!((a == 2))) // Noncompliant
             {
-                
+
             }
             bool b = !(a < 10);  // Noncompliant
             b = !(a <= 10);  // Noncompliant
@@ -25,6 +25,6 @@ namespace Tests.Diagnostics
             }
             b = (a >= 10);
         }
-    
+
     }
 }

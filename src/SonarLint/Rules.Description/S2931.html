@@ -1,7 +1,7 @@
 <p>
     Classes with <code>IDisposable</code> members are responsible for cleaning up those members by calling
     their <code>Dispose</code> methods. The best practice here is for the owning class to itself implement
-    <code>IDisposable</code> and call its members' <code>Dispose</code> methods from its own 
+    <code>IDisposable</code> and call its members' <code>Dispose</code> methods from its own
     <code>Dispose</code> method.
 </p>
 
@@ -34,7 +34,7 @@ public class ResourceHolder : IDisposable
   {
     this.fs.Close();
   }
-  public void Dispose() 
+  public void Dispose()
   {
     this.fs.Dispose();
   }

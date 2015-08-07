@@ -48,12 +48,12 @@ namespace Tests.Diagnostics
 
         public void WriteToFileEx2(Streams ss)
         {
-            var fs = new BinaryReader(s.Stream); // Compliant as it is getting a non-local IDisposable as an argument 
+            var fs = new BinaryReader(s.Stream); // Compliant as it is getting a non-local IDisposable as an argument
         }
 
         public void WriteToFileEx5(Streams ss)
         {
-            var fs = new BinaryReader() // Compliant as it is getting a non-local IDisposable as an argument 
+            var fs = new BinaryReader() // Compliant as it is getting a non-local IDisposable as an argument
             {
                 BaseStream = ss.Stream
             };
@@ -61,7 +61,7 @@ namespace Tests.Diagnostics
 
         public void WriteToFileEx3()
         {
-            Stream sl = null; 
+            Stream sl = null;
             var fs = new BinaryReader(sl); // Noncompliant
         }
 
@@ -80,7 +80,7 @@ namespace Tests.Diagnostics
                 BaseStream = sr
             };
             return sr;
-        }        
+        }
     }
 
     public interface IContainer : IDisposable
@@ -104,7 +104,7 @@ namespace Tests.Diagnostics
         }
 
         #region Windows Form Designer generated code
-        
+
         private void InitializeComponent()
         {
             this.components = new Container();

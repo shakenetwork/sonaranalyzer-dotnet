@@ -28,7 +28,7 @@ namespace Tests.Diagnostics
             {
                 var hash = md5.ComputeHash(temp);
             }
-            
+
             using (var md5 = (HashAlgorithm)CryptoConfig.CreateFromName("MD5")) //Noncompliant
             {
                 var hash = md5.ComputeHash(temp);

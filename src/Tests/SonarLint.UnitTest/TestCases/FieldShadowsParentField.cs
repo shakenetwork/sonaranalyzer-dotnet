@@ -15,6 +15,6 @@ namespace Tests.TestCases
     {
         private bool ripe;  // Noncompliant
         private static int FLESH; // Noncompliant
-        private static int FLESH_COLOR; 
+        private static int FLESH_COLOR;
     }
 }

@@ -51,9 +51,9 @@ namespace SonarLint.Rules
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
+                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
 
@@ -65,7 +65,7 @@ namespace SonarLint.Rules
                 c =>
                 {
                     var eventField = (EventFieldDeclarationSyntax) c.Node;
-                    
+
                     if (eventField.Modifiers.Any(modifier => modifier.IsKind(SyntaxKind.VirtualKeyword)))
                     {
                         var virt = eventField.Modifiers.First(modifier => modifier.IsKind(SyntaxKind.VirtualKeyword));
@@ -77,6 +77,6 @@ namespace SonarLint.Rules
                 },
                 SyntaxKind.EventFieldDeclaration);
         }
-        
+
     }
 }

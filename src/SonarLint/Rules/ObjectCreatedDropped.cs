@@ -38,12 +38,12 @@ namespace SonarLint.Rules
     {
         internal const string DiagnosticId = "S1848";
         internal const string Title = "Objects should not be created to be dropped immediately without being used";
-        internal const string Description = 
+        internal const string Description =
             "There is no good reason to create a new object to not do anything with it. Most of the time, " +
             "this is due to a missing piece of code and so could lead to an unexpected behavior in production.";
         internal const string MessageFormat = "Either remove this useless object instantiation of class \"{0}\" or use it";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Critical; 
+        internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =

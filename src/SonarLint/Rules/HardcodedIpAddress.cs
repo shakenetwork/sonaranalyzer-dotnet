@@ -99,7 +99,7 @@ namespace SonarLint.Rules
                     {
                         return;
                     }
-                    
+
                     c.ReportDiagnostic(Diagnostic.Create(Rule, stringLiteral.GetLocation(), text));
                 },
                 SyntaxKind.StringLiteralExpression);

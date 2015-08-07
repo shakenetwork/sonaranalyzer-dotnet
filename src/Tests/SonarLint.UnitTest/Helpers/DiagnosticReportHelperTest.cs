@@ -30,11 +30,11 @@ namespace SonarLint.UnitTest.Helpers
     [TestClass]
     public class DiagnosticReportHelperTest
     {
-        private const string Source = 
+        private const string Source =
 @"namespace Test
 {
     class TestClass
-    {   
+    {
     }
 }";
         [TestMethod]

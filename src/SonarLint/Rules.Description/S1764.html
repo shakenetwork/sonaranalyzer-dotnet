@@ -8,19 +8,19 @@ This rule ignores <code>*</code>, <code>+</code>, and <code>=</code>.
 <h2>Noncompliant Code Example</h2>
 <pre>
 if ( a == a ) // always true
-{ 
+{
   doZ();
 }
 if ( a != a ) // always false
-{ 
+{
   doY();
 }
 if ( a == b && a == b ) // if the first one is true, the second one is too
-{ 
+{
   doX();
 }
 if ( a == b || a == b ) // if the first one is true, the second one is too
-{ 
+{
   doW();
 }
 
@@ -32,11 +32,11 @@ int k = 5 - 5; //always 0
 <pre>
 doZ();
 
-if ( a == b ) 
+if ( a == b )
 {
   doX();
 }
-if ( a == b ) 
+if ( a == b )
 {
   doW();
 }

@@ -6,12 +6,12 @@ Such clauses should either be eliminated or populated with the appropriate logic
 <h2>Noncompliant Code Example</h2>
 <pre>
 string s = "";
-try 
+try
 {
   s = File.ReadAllText(fileName);
 }
 catch (Exception e) // Noncompliant
-{  
+{
   throw;
 }
 </pre>
@@ -19,11 +19,11 @@ catch (Exception e) // Noncompliant
 <h2>Compliant Solution</h2>
 <pre>
 string s = "";
-try 
+try
 {
   s = File.ReadAllText(fileName);
 }
-catch (Exception e) 
+catch (Exception e)
 {
   logger.LogError(e);
   throw;

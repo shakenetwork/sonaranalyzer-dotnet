@@ -17,9 +17,9 @@ namespace Tests.Diagnostics
         {
             if (O == null && new ShortCircuitNullPointerDereference().O == null)
             {
-                
+
             }
-            
+
             List<int> l = new List<int>();
             bool someOtherCondition = a== b;
 

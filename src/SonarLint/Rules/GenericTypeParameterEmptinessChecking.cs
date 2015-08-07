@@ -46,7 +46,7 @@ namespace SonarLint.Rules
             "because a \"struct\" can be empty, but never \"null\". If a value type is truly " +
             "what's expected, then the comparison should use \"default()\". If it's not, then " +
             "constraints should be added so that no value type can be passed.";
-        internal const string MessageFormat = 
+        internal const string MessageFormat =
             "Use a comparison to \"default({0})\" instead or add a constraint to \"{0}\" so that it can't be a value type.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Critical;
@@ -54,8 +54,8 @@ namespace SonarLint.Rules
 
         private static readonly ExpressionSyntax NullExpression = SyntaxFactory.LiteralExpression(SyntaxKind.NullLiteralExpression);
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);

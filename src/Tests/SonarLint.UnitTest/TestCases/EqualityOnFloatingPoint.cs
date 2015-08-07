@@ -19,12 +19,12 @@ namespace Tests.Diagnostics
 
             var b = d == 3.14; //Noncompliant
 
-            if (true && f >= 3.146) 
+            if (true && f >= 3.146)
             {
             }
 
             if (f <= 3.146 && ((f >= 3.146))) // Noncompliant indirect equality test
-            { 
+            {
             }
             var i = 3;
             if (i <= 3 && i >= 3)
@@ -32,7 +32,7 @@ namespace Tests.Diagnostics
             }
 
             if (i < 4 || i > 4)
-            { 
+            {
             }
 
             if (f < 3.146 || f > 3.146) // Noncompliant indirect inequality test

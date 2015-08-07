@@ -39,7 +39,7 @@ namespace SonarLint.Rules
     {
         internal const string DiagnosticId = "S1226";
         internal const string Title = "Method parameters and caught exceptions should not be reassigned";
-        internal const string Description = 
+        internal const string Description =
             "While it is technically correct to assign to parameters from within method bodies, it is better to " +
             "use temporary variables to store intermediate results. This rule will typically detect cases where a " +
             "constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\" was " +
@@ -50,7 +50,7 @@ namespace SonarLint.Rules
             "should be treated as \"final\".";
         internal const string MessageFormat = "Introduce a new variable instead of reusing the parameter \"{0}\".";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Major; 
+        internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
@@ -90,12 +90,12 @@ namespace SonarLint.Rules
         private static bool AssignsToParameter(ISymbol symbol)
         {
             var parameterSymbol = symbol as IParameterSymbol;
-            
+
             if (parameterSymbol == null)
             {
                 return false;
             }
-            
+
             return parameterSymbol.RefKind == RefKind.None;
         }
         private static bool AssignsToCatchVariable(ISymbol symbol)

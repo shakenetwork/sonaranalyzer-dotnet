@@ -57,7 +57,7 @@ namespace SonarLint.Descriptor
             var genericRuleDetails = RuleDetailBuilder.GetAllRuleDetails().ToList();
             var ruleDetails = genericRuleDetails.Select(RuleDetail.Convert).ToList();
             var sqaleDetails = genericRuleDetails.Select(SqaleDescriptor.Convert).ToList();
-            
+
             WriteRuleDescriptorFile(rulePath, ruleDetails);
             WriteQualityProfileFile(profilePath, ruleDetails);
             WriteSqaleDescriptorFile(sqalePath, sqaleDetails);
@@ -95,11 +95,11 @@ namespace SonarLint.Descriptor
         {
             var settings = new XmlWriterSettings
             {
-                Indent = true, 
+                Indent = true,
                 Encoding = Encoding.UTF8,
                 IndentChars = "  "
             };
-            
+
             using (var stream = new MemoryStream())
             using (var writer = XmlWriter.Create(stream, settings))
             {

@@ -28,11 +28,11 @@ namespace Tests.Diagnostics
             {
                 // ...
             }
-            if (-1 < name.IndexOf("ish")) 
+            if (-1 < name.IndexOf("ish"))
             {
                 // ...
             }
-            if (2 < name.IndexOf("ish")) 
+            if (2 < name.IndexOf("ish"))
             {
                 // ...
             }
@@ -41,7 +41,7 @@ namespace Tests.Diagnostics
                 // ...
             }
             if (Array.IndexOf(stringArray, color) > 0) // Noncompliant
-            { 
+            {
                 // ...
             }
             if (Array.IndexOf(stringArray, color) >= 0)

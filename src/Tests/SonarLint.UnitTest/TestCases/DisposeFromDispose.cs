@@ -26,7 +26,7 @@ namespace Tests.Diagnostics
             // method added to satisfy demands of interface
         }
     }
-    public class NonDisposable 
+    public class NonDisposable
     {
         private FileStream fs;
         public void OpenResource(string path)

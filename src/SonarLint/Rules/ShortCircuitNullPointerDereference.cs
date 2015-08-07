@@ -39,17 +39,17 @@ namespace SonarLint.Rules
     public class ShortCircuitNullPointerDereference : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1697";
-        internal const string Title = 
+        internal const string Title =
             "Short-circuit logic should be used to prevent null pointer dereferences in conditionals";
         internal const string Description =
             "When either the equality operator in a null test or the logical operator that follows it is reversed, " +
             "the code has the appearance of safely null-testing the object before dereferencing it. Unfortunately " +
             "the effect is just the opposite - the object is null-tested and then dereferenced only if it is null, " +
             "leading to a guaranteed null pointer dereference.";
-        internal const string MessageFormat = 
+        internal const string MessageFormat =
             "Either reverse the equality operator in the \"{0}\" null test, or reverse the logical operator that follows it.";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Blocker; 
+        internal const Severity RuleSeverity = Severity.Blocker;
         internal const bool IsActivatedByDefault = true;
 
         private static readonly ExpressionSyntax NullExpression = SyntaxFactory.LiteralExpression(SyntaxKind.NullLiteralExpression);
@@ -81,7 +81,7 @@ namespace SonarLint.Rules
                 SyntaxKind.LogicalOrExpression, SyntaxKind.LogicalAndExpression);
         }
 
-        private static void ReportDereference(BinaryExpressionSyntax binaryExpression, SyntaxKind comparisonOperator, 
+        private static void ReportDereference(BinaryExpressionSyntax binaryExpression, SyntaxKind comparisonOperator,
             SyntaxNodeAnalysisContext c)
         {
             if (IsMidLevelExpression(binaryExpression))
@@ -123,7 +123,7 @@ namespace SonarLint.Rules
         private static bool IsMidLevelExpression(BinaryExpressionSyntax binaryExpression)
         {
             var binaryParent = binaryExpression.Parent as BinaryExpressionSyntax;
-            return binaryParent != null && 
+            return binaryParent != null &&
                    SyntaxFactory.AreEquivalent(binaryExpression.OperatorToken, binaryParent.OperatorToken);
         }
 
@@ -164,7 +164,7 @@ namespace SonarLint.Rules
                 expressionList.Add(currentBinary.Right);
 
                 var leftBinary = currentBinary.Left as BinaryExpressionSyntax;
-                if (leftBinary == null || 
+                if (leftBinary == null ||
                     !SyntaxFactory.AreEquivalent(leftBinary.OperatorToken, binaryExpression.OperatorToken))
                 {
                     expressionList.Add(currentBinary.Left);

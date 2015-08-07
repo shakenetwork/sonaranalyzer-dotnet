@@ -47,12 +47,12 @@ namespace SonarLint.Rules
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = false;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
-        
+
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         private const string BaseEncryptionAlgorithmCreate = "System.Security.Cryptography.SymmetricAlgorithm.Create";
@@ -144,7 +144,7 @@ namespace SonarLint.Rules
         {
             var currentType = type;
 
-            while (currentType != null && 
+            while (currentType != null &&
                 !BaseClassNamesForEncryptionAlgorithm.Contains(currentType.ToString()))
             {
                 currentType = currentType.BaseType;

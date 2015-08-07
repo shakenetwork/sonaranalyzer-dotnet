@@ -40,7 +40,7 @@ namespace SonarLint.Utilities
         {
             return Assembly.LoadFrom(typeof(MagicNumber).Assembly.Location);
         }
-        
+
         public RuleFinder()
         {
             diagnosticAnalyzers = new[] {GetPackagedRuleAssembly(), GetExtraRuleAssembly()}

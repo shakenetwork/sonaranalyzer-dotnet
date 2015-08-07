@@ -11,5 +11,5 @@ if ($project.DTE.Version -eq '14.0')
         {
             $project.Object.AnalyzerReferences.Remove($analyzerFilePath)
         }
-	}	
+	}
 }

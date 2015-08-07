@@ -38,7 +38,7 @@ namespace SonarLint.Rules
     {
         internal const string DiagnosticId = "S927";
         internal const string Title = "\"partial\" method parameter names should match";
-        internal const string Description = 
+        internal const string Description =
             "When the parameters to the implementation of a \"partial\" method don't match those " +
             "in the signature declaration, then confusion is almost guaranteed. Either the implementer was " +
             "confused when he renamed, swapped or mangled the parameter names in the implementation, or " +
@@ -48,8 +48,8 @@ namespace SonarLint.Rules
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);

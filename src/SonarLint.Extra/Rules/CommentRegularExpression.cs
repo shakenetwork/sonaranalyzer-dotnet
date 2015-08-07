@@ -63,7 +63,7 @@ namespace SonarLint.Rules
         public IImmutableList<CommentRegularExpressionRule> RuleInstances { get; set; }
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return RuleInstances.Select(r => r.Descriptor).ToImmutableArray(); } }
-        
+
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxTreeAction(

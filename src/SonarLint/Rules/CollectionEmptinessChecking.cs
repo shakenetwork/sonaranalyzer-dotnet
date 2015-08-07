@@ -47,8 +47,8 @@ namespace SonarLint.Rules
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
@@ -141,7 +141,7 @@ namespace SonarLint.Rules
             }
 
             var methodSymbol = semanticModel.GetSymbolInfo(memberAccess).Symbol as IMethodSymbol;
-            if (methodSymbol == null || 
+            if (methodSymbol == null ||
                 methodSymbol.Name != "Count" ||
                 !methodSymbol.IsExtensionMethod ||
                 methodSymbol.ReceiverType == null)
@@ -173,7 +173,7 @@ namespace SonarLint.Rules
             var enumerableType = semanticModel.Compilation.GetSpecialType(SpecialType.System_Collections_Generic_IEnumerable_T);
             var receiverType = methodSymbol.ReceiverType as INamedTypeSymbol;
 
-            if (methodSymbol.MethodKind == MethodKind.Ordinary && 
+            if (methodSymbol.MethodKind == MethodKind.Ordinary &&
                 methodSymbol.IsExtensionMethod)
             {
                 receiverType = methodSymbol.Parameters.First().Type as INamedTypeSymbol;

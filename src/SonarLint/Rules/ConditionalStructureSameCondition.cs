@@ -66,7 +66,7 @@ namespace SonarLint.Rules
                 {
                     var ifStatement = (IfStatementSyntax)c.Node;
                     var currentCondition = ifStatement.Condition;
-                    
+
                     var precedingCondition = ifStatement
                         .GetPrecedingConditionsInConditionChain()
                         .FirstOrDefault(
@@ -81,6 +81,6 @@ namespace SonarLint.Rules
                     }
                 },
                 SyntaxKind.IfStatement);
-        }        
+        }
     }
 }

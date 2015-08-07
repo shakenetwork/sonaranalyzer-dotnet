@@ -40,15 +40,15 @@ namespace SonarLint.Rules
     {
         internal const string DiagnosticId = "S1481";
         internal const string Title = "Unused local variables should be removed";
-        internal const string Description = 
+        internal const string Description =
             "If a local variable is declared but not used, it is dead code and should be removed. " +
             "Doing so will improve maintainability because developers will not wonder what the variable " +
             "is used for.";
         internal const string MessageFormat = "Remove this unused \"{0}\" local variable.";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Major; 
+        internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
-        
+
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
@@ -56,13 +56,13 @@ namespace SonarLint.Rules
                 description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
-        
+
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterCodeBlockStartAction<SyntaxKind>(cbc =>
             {
                 var unusedLocals = new List<ISymbol>();
- 
+
                 cbc.RegisterSyntaxNodeAction(c =>
                 {
                     unusedLocals.AddRange(
@@ -71,7 +71,7 @@ namespace SonarLint.Rules
                             .Where(symbol => symbol != null));
                 },
                 SyntaxKind.LocalDeclarationStatement);
- 
+
                 cbc.RegisterSyntaxNodeAction(c =>
                 {
                     var symbolInfo = c.SemanticModel.GetSymbolInfo(c.Node);
@@ -83,7 +83,7 @@ namespace SonarLint.Rules
                     }
                 },
                 SyntaxKind.IdentifierName);
- 
+
                 cbc.RegisterCodeBlockEndAction(c =>
                 {
                     foreach (var unused in unusedLocals)

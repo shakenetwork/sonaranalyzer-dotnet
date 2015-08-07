@@ -42,7 +42,7 @@ namespace SonarLint.Rules
             "able to read source code. So the use of tabulation character must be banned.";
         internal const string MessageFormat = "Replace all tab characters in this file by sequences of white-spaces.";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Minor; 
+        internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =

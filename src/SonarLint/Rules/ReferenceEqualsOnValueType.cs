@@ -47,9 +47,9 @@ namespace SonarLint.Rules
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
+                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
 
@@ -67,7 +67,7 @@ namespace SonarLint.Rules
                     var methodSymbol = c.SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
                     if (methodSymbol != null &&
                         methodSymbol.ContainingType.SpecialType == SpecialType.System_Object &&
-                        methodSymbol.Name == ReferenceEqualsName && 
+                        methodSymbol.Name == ReferenceEqualsName &&
                         AnyArgumentIsValueType(invocation.ArgumentList, c.SemanticModel))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.Expression.GetLocation()));

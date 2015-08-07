@@ -46,7 +46,7 @@ namespace SonarLint.Rules
             "statements should be removed.";
         internal const string MessageFormat = "Remove this \"if\" statement.";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Major; 
+        internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =

@@ -39,7 +39,7 @@ namespace SonarLint.Rules
     {
         internal const string DiagnosticId = "S2357";
         internal const string Title = "Fields should be private";
-        internal const string Description = 
+        internal const string Description =
             "Fields should not be part of an API, and therefore should always be private. Indeed, they " +
             "cannot be added to an interface for instance, and validation cannot be added later on without " +
             "breaking backward compatiblity. Instead, developers should encapsulate their fields into " +

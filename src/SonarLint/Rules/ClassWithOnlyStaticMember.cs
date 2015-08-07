@@ -81,7 +81,7 @@ namespace SonarLint.Rules
 
                     CheckClasses(namedType, c);
                     CheckConstructors(namedType, c);
-                }, 
+                },
                 SymbolKind.NamedType);
         }
 

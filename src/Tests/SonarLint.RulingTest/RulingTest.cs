@@ -133,7 +133,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
         private bool FilesAreEquivalent(out List<string> problematicRules)
         {
             problematicRules = new List<string>();
-            
+
             var expectedFiles = ExpectedDirectory.GetFiles("S*.json");
             var actualFiles = AnalysisOutputDirectory.GetFiles("S*.json");
 
@@ -161,7 +161,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
 
             return !problematicRules.Any();
         }
-        
+
         private void SplitAndStoreOmstarByIssueType(AnalysisOutput omstar)
         {
             foreach (var issueGroup in omstar.Issues.GroupBy(issue => issue.RuleId))

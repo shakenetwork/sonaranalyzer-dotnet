@@ -45,7 +45,7 @@ namespace SonarLint.Rules
             "So such empty block must be either filled or removed.";
         internal const string MessageFormat = "Either remove or fill this block of code.";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Major; 
+        internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
@@ -101,7 +101,7 @@ namespace SonarLint.Rules
                 return new[]
                 {
                     SyntaxKind.ConstructorDeclaration,
-                    SyntaxKind.DestructorDeclaration, 
+                    SyntaxKind.DestructorDeclaration,
                     SyntaxKind.MethodDeclaration,
                     SyntaxKind.SimpleLambdaExpression,
                     SyntaxKind.ParenthesizedLambdaExpression,

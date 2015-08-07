@@ -40,7 +40,7 @@ namespace SonarLint.Rules
         internal const string Description = "Methods should not have too many parameters";
         internal const string MessageFormat = "Method \"{2}\" has {1} parameters, which is greater than the {0} authorized.";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Major; 
+        internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =

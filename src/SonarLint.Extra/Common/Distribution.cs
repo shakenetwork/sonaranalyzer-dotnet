@@ -51,7 +51,7 @@ namespace SonarLint.Common
 
         public override string ToString()
         {
-            return string.Join(";", 
+            return string.Join(";",
                 Ranges.Zip(Values, (r, v) => string.Format(CultureInfo.InvariantCulture, "{0}={1}", r, v)));
         }
     }

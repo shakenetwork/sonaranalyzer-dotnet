@@ -38,22 +38,22 @@ namespace SonarLint.Rules
     public class GenericReadonlyFieldPropertyAssignment : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2934";
-        internal const string Title = 
+        internal const string Title =
             "Property assignments should not be made for \"readonly\" fields not constrained to reference types";
         internal const string Description =
             "While the properties of a \"readonly\" reference type field can still be changed after " +
             "initialization, those of a \"readonly\" value field, such as a \"struct\", cannot. If the " +
             "member could be either a \"class\" or a \"struct\" then assignment to its properties could " +
             "be unreliable, working sometimes but not others.";
-        internal const string MessageFormat = 
+        internal const string MessageFormat =
             "Restrict \"{0}\" to be a reference type or remove this assignment of \"{1}\"; it is useless if \"{0}\" " +
             "is a value type.";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
@@ -105,7 +105,7 @@ namespace SonarLint.Rules
                 SyntaxKind.PostIncrementExpression);
         }
 
-        private static void ProcessPropertyChange(ExpressionSyntax expression, SemanticModel semanticModel, 
+        private static void ProcessPropertyChange(ExpressionSyntax expression, SemanticModel semanticModel,
             SyntaxNodeAnalysisContext context)
         {
             var memberAccess = expression as MemberAccessExpressionSyntax;

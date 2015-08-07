@@ -65,10 +65,10 @@ namespace SonarLint.Rules
                 c =>
                 {
                     var tryStatement = (TryStatementSyntax)c.Node;
-                    
+
                     var lastCatchClause = tryStatement.Catches.LastOrDefault();
-                    
-                    if (lastCatchClause!=null && 
+
+                    if (lastCatchClause!=null &&
                         SyntaxFactory.AreEquivalent(lastCatchClause.Block, ThrowBlock))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(

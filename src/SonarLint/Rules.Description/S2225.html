@@ -4,30 +4,30 @@
 
 <h2>Noncompliant Code Example</h2>
 <pre>
-public override string ToString () 
+public override string ToString ()
 {
-  if (this.collection.Count == 0) 
+  if (this.collection.Count == 0)
   {
     return null; // Noncompliant
-  } 
-  else 
+  }
+  else
   {
     // ...
- 
+
 </pre>
 
 <h2>Compliant Solution</h2>
 <pre>
-public override string ToString () 
+public override string ToString ()
 {
-  if (this.collection.Count == 0) 
+  if (this.collection.Count == 0)
   {
     return "";
-  } 
-  else 
+  }
+  else
   {
     // ...
- 
+
 </pre>
 
 <h2>See</h2>

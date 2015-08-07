@@ -21,7 +21,7 @@
     }
 
     partial class
-    Foo 
+    Foo
     {
     }
 

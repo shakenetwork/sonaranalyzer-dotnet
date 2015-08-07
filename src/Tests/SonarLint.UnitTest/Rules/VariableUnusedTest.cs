@@ -32,7 +32,5 @@ namespace SonarLint.UnitTest.Rules
         {
             Verifier.Verify(@"TestCases\VariableUnused.cs", new VariableUnused());
         }
-
-        
     }
 }

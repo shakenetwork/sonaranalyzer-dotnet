@@ -55,9 +55,9 @@ namespace Tests.Diagnostics
             if (b = false) { } // Noncompliant
             for (int j = 0; b = false; j++) // Noncompliant
             {
-                
+
             }
-            for (int j = 0; b == false; j++) 
+            for (int j = 0; b == false; j++)
             {
 
             }

@@ -1,6 +1,6 @@
 <p>
     When an object has a field annotated with <code>ThreadStatic</code>, that field is shared within a given thread,
-    but unique across threads. Since a class' static initializer is only invoked for the 
+    but unique across threads. Since a class' static initializer is only invoked for the
     first thread created, it also means that only the first thread will have the expected initial values.
 </p>
 <p>
@@ -22,11 +22,11 @@ public class Foo
 {
   [ThreadStatic]
   public static object _perThreadObject;
-  public static object PerThreadObject 
+  public static object PerThreadObject
   {
-    get 
+    get
     {
-      if (_perThreadObject == null) 
+      if (_perThreadObject == null)
       {
         _perThreadObject = new object();
       }

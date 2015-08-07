@@ -31,7 +31,7 @@ namespace Tests.Diagnostics
             resultLong = bitMaskLong & - - - +1L; // Noncompliant
             resultLong = bitMaskLong & 0L; // Compliant
             resultLong = bitMaskLong | 0U; // Noncompliant
-            resultLong = bitMaskLong | 0x0L; // Noncompliant            
+            resultLong = bitMaskLong | 0x0L; // Noncompliant
             resultLong = bitMaskLong & returnLong(); // Compliant
             resultLong = bitMaskLong & 0x0F; // Compliant
 

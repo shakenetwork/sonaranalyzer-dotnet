@@ -10,7 +10,7 @@ namespace Tests.Diagnostics
 
         [System.ThreadStatic]
         private static int count2 = 0;
-        
+
         private int count3 = 0;
     }
 }

@@ -50,9 +50,9 @@ namespace SonarLint.Rules
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
+                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
 
@@ -68,7 +68,7 @@ namespace SonarLint.Rules
                     {
                         CheckField(c, variableDeclarator);
                     }
-                }, 
+                },
                 SyntaxKind.FieldDeclaration);
         }
 

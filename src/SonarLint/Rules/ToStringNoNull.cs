@@ -46,8 +46,8 @@ namespace SonarLint.Rules
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
@@ -61,7 +61,7 @@ namespace SonarLint.Rules
                 {
                     var methodDeclaration = cbc.CodeBlock as MethodDeclarationSyntax;
 
-                    if (methodDeclaration == null || 
+                    if (methodDeclaration == null ||
                         methodDeclaration.Identifier.Text != "ToString")
                     {
                         return;
@@ -79,6 +79,6 @@ namespace SonarLint.Rules
 
                     }, SyntaxKind.ReturnStatement);
                 });
-        }        
+        }
     }
 }

@@ -50,12 +50,12 @@ namespace SonarLint.Rules
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule = 
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, 
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
-        
+
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         public override void Initialize(AnalysisContext context)
@@ -116,7 +116,7 @@ namespace SonarLint.Rules
 
                         ProcessExpressionChange(expression, c.SemanticModel, ref nonCandidateFields, ref assignedAsReadonly);
                     },
-                    SyntaxKind.PreDecrementExpression, 
+                    SyntaxKind.PreDecrementExpression,
                     SyntaxKind.PreIncrementExpression);
 
                 analysisContext.RegisterSyntaxNodeAction(
@@ -184,7 +184,7 @@ namespace SonarLint.Rules
                 return;
             }
 
-            if (constructorSymbol.MethodKind == MethodKind.Constructor && 
+            if (constructorSymbol.MethodKind == MethodKind.Constructor &&
                 constructorSymbol.ContainingType.Equals(fieldSymbol.ContainingType))
             {
                 assignedAsReadonly = assignedAsReadonly.Add(fieldSymbol);

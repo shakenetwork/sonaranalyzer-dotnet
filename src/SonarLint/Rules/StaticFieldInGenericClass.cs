@@ -39,15 +39,15 @@ namespace SonarLint.Rules
     {
         internal const string DiagnosticId = "S2743";
         internal const string Title = "Static fields should not be used in generic types";
-        internal const string Description = 
+        internal const string Description =
             "A static field in a generic type is not shared among instances of different closed constructed types, " +
             "If you need to have a static field shared among instances with different generic arguments, define a " +
             "non-generic base class to store your static members, then set your generic type to inherit from the " +
             "base class.";
-        internal const string MessageFormat = 
+        internal const string MessageFormat =
             "A static field in a generic type is not shared among instances of different close constructed types.";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Critical; 
+        internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
@@ -70,7 +70,7 @@ namespace SonarLint.Rules
                     {
                         return;
                     }
-                    
+
                     var typeParameterNames =
                         classDeclaration.TypeParameterList.Parameters.Select(p => p.Identifier.ToString()).ToList();
 
@@ -85,12 +85,12 @@ namespace SonarLint.Rules
                             CheckMember(variable, variable.Identifier.GetLocation(), typeParameterNames, c);
                         });
                     }
-                    
+
                     var properties = classDeclaration.Members
                         .OfType<PropertyDeclarationSyntax>()
                         .Where(p => p.Modifiers.Any(m => m.IsKind(SyntaxKind.StaticKeyword)))
                         .ToList();
-                    
+
                     properties.ForEach(property =>
                     {
                         CheckMember(property, property.Identifier.GetLocation(), typeParameterNames, c);
@@ -100,7 +100,7 @@ namespace SonarLint.Rules
                 SyntaxKind.ClassDeclaration);
         }
 
-        private static void CheckMember(SyntaxNode root, Location location, IEnumerable<string> typeParameterNames, 
+        private static void CheckMember(SyntaxNode root, Location location, IEnumerable<string> typeParameterNames,
             SyntaxNodeAnalysisContext c)
         {
             if (HasGenericType(root, typeParameterNames, c))

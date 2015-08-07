@@ -1,6 +1,6 @@
 <p>
     It is possible in an <code>IDisposable</code> to call <code>Dispose</code> on class members from any method, but the
-    contract of <code>Dispose</code> is that it will clean up all unmanaged resources. Move disposing of members to some 
+    contract of <code>Dispose</code> is that it will clean up all unmanaged resources. Move disposing of members to some
     other method, and you risk resource leaks.
 </p>
 
@@ -8,7 +8,7 @@
 <pre>
 public class ResourceHolder : IDisposable
 {
-  private FileStream fs;  
+  private FileStream fs;
   public void OpenResource(string path)
   {
     this.fs = new FileStream(path, FileMode.Open);
@@ -18,12 +18,12 @@ public class ResourceHolder : IDisposable
     this.fs.Close();
   }
 
-  public void CleanUp() 
+  public void CleanUp()
   {
     this.fs.Dispose(); // Noncompliant; Dispose not called in class' Dispose method
   }
 
-  public void Dispose() 
+  public void Dispose()
   {
     // method added to satisfy demands of interface
   }
@@ -44,7 +44,7 @@ public class ResourceHolder : IDisposable
     this.fs.Close();
   }
 
-  public void Dispose() 
+  public void Dispose()
   {
     this.fs.Dispose();
   }

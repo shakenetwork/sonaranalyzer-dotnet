@@ -31,7 +31,7 @@ namespace Tests.Diagnostics
         {
             if (this.collection.Count == 0)
             {
-                return ""; 
+                return "";
             }
             else
             {

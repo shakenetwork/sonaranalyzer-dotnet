@@ -41,7 +41,7 @@ namespace SonarLint.Rules
         internal const string Description = "Method name should comply with a naming convention";
         internal const string MessageFormat = "Rename this method \"{1}\" to match the regular expression {0}";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Minor; 
+        internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =

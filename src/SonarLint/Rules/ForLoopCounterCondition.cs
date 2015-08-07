@@ -40,18 +40,18 @@ namespace SonarLint.Rules
     public class ForLoopCounterCondition : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1994";
-        internal const string Title = 
+        internal const string Title =
             "\"for\" loop incrementers should modify the variable being tested in the loop's stop condition";
         internal const string Description =
             "It is almost always an error when a \"for\" loop's stop condition and incrementer " +
             "don't act on the same variable. Even when it is not, it could confuse future " +
             "maintainers of the code, and should be avoided.";
-        internal const string MessageFormatNotEmpty = 
+        internal const string MessageFormatNotEmpty =
             "This loop's stop condition tests {0} but the incrementer updates {1}.";
-        internal const string MessageFormatEmpty = 
+        internal const string MessageFormatEmpty =
             "This loop's stop incrementer updates {0} but the stop condition doesn't test any variables.";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Critical; 
+        internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
@@ -68,9 +68,9 @@ namespace SonarLint.Rules
                 c =>
                 {
                     var forNode = (ForStatementSyntax)c.Node;
-                    
+
                     var incrementedSymbols = GetIncrementorSymbols(forNode, c.SemanticModel).ToList();
-                    
+
                     if (!incrementedSymbols.Any())
                     {
                         return;
@@ -129,8 +129,8 @@ namespace SonarLint.Rules
 
             var dataFlowAnalysis = semanticModel.AnalyzeDataFlow(forNode.Condition);
 
-            return dataFlowAnalysis.Succeeded 
-                ? dataFlowAnalysis.ReadInside.Distinct() 
+            return dataFlowAnalysis.Succeeded
+                ? dataFlowAnalysis.ReadInside.Distinct()
                 : new ISymbol[0];
         }
     }
