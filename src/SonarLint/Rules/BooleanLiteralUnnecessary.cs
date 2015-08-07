@@ -156,19 +156,5 @@ namespace SonarLint.Rules
                         new TextSpan(binaryExpression.OperatorToken.SpanStart,
                             binaryExpression.Span.End - binaryExpression.OperatorToken.SpanStart));
         }
-
-        private static bool IsUnnecessary(LiteralExpressionSyntax node)
-        {
-            return AllowedContainerKinds.Contains(node.Parent.Kind());
-        }
-
-        private static readonly SyntaxKind[] AllowedContainerKinds =
-            {
-                SyntaxKind.EqualsExpression,
-                SyntaxKind.NotEqualsExpression,
-                SyntaxKind.LogicalAndExpression,
-                SyntaxKind.LogicalOrExpression,
-                SyntaxKind.LogicalNotExpression
-            };
     }
 }
