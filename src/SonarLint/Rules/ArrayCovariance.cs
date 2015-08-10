@@ -136,7 +136,8 @@ namespace SonarLint.Rules
                 SyntaxKind.CastExpression);
         }
 
-        public class MethodParameterLookup
+        // todo: this should come from the Roslyn API (https://github.com/dotnet/roslyn/issues/9)
+        internal class MethodParameterLookup
         {
             private readonly InvocationExpressionSyntax invocation;
             private readonly IMethodSymbol methodSymbol;
