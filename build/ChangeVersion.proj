@@ -28,12 +28,23 @@
       <ReplaceWith>$(VsixVersion)</ReplaceWith>
       <ExpectedMatchCount>1</ExpectedMatchCount>
     </VsixVersion>
+    <VsixReleaseNotes Include="$(SolutionRoot)\src\SonarLint.Vsix\source.extension.vsixmanifest">
+      <Find>(?&lt;=&lt;ReleaseNotes&gt;https:\/\/github\.com\/SonarSource\/sonarlint\-vs\/issues\?q=milestone:)([^&lt;]*)</Find>
+      <ReplaceWith>$(VsixVersion)</ReplaceWith>
+      <ExpectedMatchCount>1</ExpectedMatchCount>
+    </VsixReleaseNotes>
 
     <NugetAnalyzer Include="$(SolutionRoot)\src\SonarLint.Vsix\Diagnostic.nuspec">
       <Find>(?&lt;=&lt;version&gt;)([^&lt;]*)</Find>
       <ReplaceWith>$(NugetVersion)</ReplaceWith>
       <ExpectedMatchCount>1</ExpectedMatchCount>
     </NugetAnalyzer>
+    <NugetReleaseNotes Include="$(SolutionRoot)\src\SonarLint.Vsix\Diagnostic.nuspec">
+      <Find>(?&lt;=&lt;releaseNotes&gt;https:\/\/github\.com\/SonarSource\/sonarlint\-vs\/issues\?q=milestone:)([^&lt;]*)</Find>
+      <ReplaceWith>$(VsixVersion)</ReplaceWith>
+      <ExpectedMatchCount>1</ExpectedMatchCount>
+    </NugetReleaseNotes>
+
     <NugetRunner Include="$(SolutionRoot)\src\SonarQube.SonarLint.Runner\Runner.nuspec">
       <Find>(?&lt;=&lt;version&gt;)([^&lt;]*)</Find>
       <ReplaceWith>$(NugetVersion)</ReplaceWith>
@@ -51,7 +62,9 @@
     <RegexTransform Items="@(AssemblyFileVersion)" />
     <RegexTransform Items="@(AssemblyInformationalVersion)" />
     <RegexTransform Items="@(VsixVersion)" />
+    <RegexTransform Items="@(VsixReleaseNotes)" />
     <RegexTransform Items="@(NugetAnalyzer)" />
+    <RegexTransform Items="@(NugetReleaseNotes)" />
     <RegexTransform Items="@(NugetRunner)" />
     <RegexTransform Items="@(NugetDescriptor)" />
   </Target>
