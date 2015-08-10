@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void SwitchWithoutDefault()
         {
-            Verifier.Verify(@"TestCases\SwitchWithoutDefault.cs", new SwitchWithoutDefault());
+            Verifier.VerifyAnalyzer(@"TestCases\SwitchWithoutDefault.cs", new SwitchWithoutDefault());
         }
     }
 }

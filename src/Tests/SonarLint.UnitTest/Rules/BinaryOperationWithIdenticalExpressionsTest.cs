@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void BinaryOperationWithIdenticalExpressions()
         {
-            Verifier.Verify(@"TestCases\BinaryOperationWithIdenticalExpressions.cs", new BinaryOperationWithIdenticalExpressions());
+            Verifier.VerifyAnalyzer(@"TestCases\BinaryOperationWithIdenticalExpressions.cs", new BinaryOperationWithIdenticalExpressions());
         }
     }
 }

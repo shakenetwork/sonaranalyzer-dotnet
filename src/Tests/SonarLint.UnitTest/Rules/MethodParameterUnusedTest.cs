@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void MethodParameterUnused()
         {
-            Verifier.Verify(@"TestCases\MethodParameterUnused.cs", new MethodParameterUnused());
+            Verifier.VerifyAnalyzer(@"TestCases\MethodParameterUnused.cs", new MethodParameterUnused());
         }
     }
 }

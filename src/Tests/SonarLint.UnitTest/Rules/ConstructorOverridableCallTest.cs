@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void ConstructorOverridableCall()
         {
-            Verifier.Verify(@"TestCases\ConstructorOverridableCall.cs", new ConstructorOverridableCall());
+            Verifier.VerifyAnalyzer(@"TestCases\ConstructorOverridableCall.cs", new ConstructorOverridableCall());
         }
     }
 }

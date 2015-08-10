@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void ForeachLoopExplicitConversion()
         {
-            Verifier.Verify(@"TestCases\ForeachLoopExplicitConversion.cs", new ForeachLoopExplicitConversion());
+            Verifier.VerifyAnalyzer(@"TestCases\ForeachLoopExplicitConversion.cs", new ForeachLoopExplicitConversion());
         }
     }
 }

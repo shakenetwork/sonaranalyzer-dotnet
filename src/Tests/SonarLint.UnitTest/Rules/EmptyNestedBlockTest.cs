@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void EmptyNestedBlock()
         {
-            Verifier.Verify(@"TestCases\EmptyNestedBlock.cs", new EmptyNestedBlock());
+            Verifier.VerifyAnalyzer(@"TestCases\EmptyNestedBlock.cs", new EmptyNestedBlock());
         }
     }
 }

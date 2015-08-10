@@ -31,8 +31,8 @@ namespace SonarLint.UnitTest.Rules
         public void FileLines()
         {
             var diagnostic = new FileLines {Maximum = 12};
-            Verifier.Verify(@"TestCases\FileLines12.cs", diagnostic);
-            Verifier.Verify(@"TestCases\FileLines13.cs", diagnostic);
+            Verifier.VerifyAnalyzer(@"TestCases\FileLines12.cs", diagnostic);
+            Verifier.VerifyAnalyzer(@"TestCases\FileLines13.cs", diagnostic);
         }
     }
 }

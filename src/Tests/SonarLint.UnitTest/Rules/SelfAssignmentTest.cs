@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void SelfAssignment()
         {
-            Verifier.Verify(@"TestCases\SelfAssignment.cs", new SelfAssignment());
+            Verifier.VerifyAnalyzer(@"TestCases\SelfAssignment.cs", new SelfAssignment());
         }
     }
 }

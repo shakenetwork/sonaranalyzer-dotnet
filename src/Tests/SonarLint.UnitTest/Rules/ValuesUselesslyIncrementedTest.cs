@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void ValuesUselesslyIncremented()
         {
-            Verifier.Verify(@"TestCases\ValuesUselesslyIncremented.cs", new ValuesUselesslyIncremented());
+            Verifier.VerifyAnalyzer(@"TestCases\ValuesUselesslyIncremented.cs", new ValuesUselesslyIncremented());
         }
     }
 }

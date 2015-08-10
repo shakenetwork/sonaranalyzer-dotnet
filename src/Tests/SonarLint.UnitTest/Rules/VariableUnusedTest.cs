@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void VariableUnused()
         {
-            Verifier.Verify(@"TestCases\VariableUnused.cs", new VariableUnused());
+            Verifier.VerifyAnalyzer(@"TestCases\VariableUnused.cs", new VariableUnused());
         }
     }
 }

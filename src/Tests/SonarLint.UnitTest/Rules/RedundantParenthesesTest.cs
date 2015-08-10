@@ -30,7 +30,18 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void RedundantParentheses()
         {
-            Verifier.Verify(@"TestCases\RedundantParentheses.cs", new RedundantParentheses());
+            Verifier.VerifyAnalyzer(@"TestCases\RedundantParentheses.cs", new RedundantParentheses());
+        }
+
+        [TestMethod]
+        [TestCategory("CodeFix")]
+        public void RedundantParentheses_CodeFix()
+        {
+            Verifier.VerifyCodeFix(
+                @"TestCases\RedundantParentheses.cs",
+                @"TestCases\RedundantParentheses.Fixed.cs",
+                new RedundantParentheses(), 
+                new RedundantParenthesesCodeFixProvider());
         }
     }
 }

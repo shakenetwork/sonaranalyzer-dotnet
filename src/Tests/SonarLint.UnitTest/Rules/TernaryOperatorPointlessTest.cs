@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void TernaryOperatorPointless()
         {
-            Verifier.Verify(@"TestCases\TernaryOperatorPointless.cs", new TernaryOperatorPointless());
+            Verifier.VerifyAnalyzer(@"TestCases\TernaryOperatorPointless.cs", new TernaryOperatorPointless());
         }
     }
 }

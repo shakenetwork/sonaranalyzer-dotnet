@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void ReferenceEqualsOnValueType()
         {
-            Verifier.Verify(@"TestCases\ReferenceEqualsOnValueType.cs", new ReferenceEqualsOnValueType());
+            Verifier.VerifyAnalyzer(@"TestCases\ReferenceEqualsOnValueType.cs", new ReferenceEqualsOnValueType());
         }
     }
 }

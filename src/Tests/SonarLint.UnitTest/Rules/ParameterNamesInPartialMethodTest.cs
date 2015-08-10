@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void ParameterNamesInPartialMethod()
         {
-            Verifier.Verify(@"TestCases\ParameterNamesInPartialMethod.cs", new ParameterNamesInPartialMethod());
+            Verifier.VerifyAnalyzer(@"TestCases\ParameterNamesInPartialMethod.cs", new ParameterNamesInPartialMethod());
         }
     }
 }

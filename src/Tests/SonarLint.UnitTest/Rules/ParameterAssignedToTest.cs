@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void ParameterAssignedTo()
         {
-            Verifier.Verify(@"TestCases\ParameterAssignedTo.cs", new ParameterAssignedTo());
+            Verifier.VerifyAnalyzer(@"TestCases\ParameterAssignedTo.cs", new ParameterAssignedTo());
         }
     }
 }

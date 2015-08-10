@@ -39,7 +39,7 @@ namespace SonarLint.UnitTest.Rules
                 });
 
             var diagnostic = new CommentRegularExpression {RuleInstances = rules};
-            Verifier.Verify(@"TestCases\CommentRegularExpression.cs", diagnostic);
+            Verifier.VerifyAnalyzer(@"TestCases\CommentRegularExpression.cs", diagnostic);
         }
     }
 }

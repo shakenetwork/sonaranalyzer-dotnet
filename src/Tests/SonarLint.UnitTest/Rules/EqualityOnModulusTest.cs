@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void EqualityOnModulus()
         {
-            Verifier.Verify(@"TestCases\EqualityOnModulus.cs", new EqualityOnModulus());
+            Verifier.VerifyAnalyzer(@"TestCases\EqualityOnModulus.cs", new EqualityOnModulus());
         }
     }
 }

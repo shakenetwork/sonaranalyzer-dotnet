@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void ConditionalsWithSameCondition()
         {
-            Verifier.Verify(@"TestCases\ConditionalsWithSameCondition.cs", new ConditionalsWithSameCondition());
+            Verifier.VerifyAnalyzer(@"TestCases\ConditionalsWithSameCondition.cs", new ConditionalsWithSameCondition());
         }
     }
 }

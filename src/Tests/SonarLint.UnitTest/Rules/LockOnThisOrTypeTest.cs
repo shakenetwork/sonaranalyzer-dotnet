@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void LockOnThisOrType()
         {
-            Verifier.Verify(@"TestCases\LockOnThisOrType.cs", new LockOnThisOrType());
+            Verifier.VerifyAnalyzer(@"TestCases\LockOnThisOrType.cs", new LockOnThisOrType());
         }
     }
 }

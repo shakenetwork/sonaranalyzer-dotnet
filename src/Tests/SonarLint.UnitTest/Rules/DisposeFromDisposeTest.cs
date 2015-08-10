@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void DisposeFromDispose()
         {
-            Verifier.Verify(@"TestCases\DisposeFromDispose.cs", new DisposeFromDispose());
+            Verifier.VerifyAnalyzer(@"TestCases\DisposeFromDispose.cs", new DisposeFromDispose());
         }
     }
 }

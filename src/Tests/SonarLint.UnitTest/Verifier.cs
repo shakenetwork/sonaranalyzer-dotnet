@@ -29,29 +29,73 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Helpers;
+using Microsoft.CodeAnalysis.CodeFixes;
+using Microsoft.CodeAnalysis.CodeActions;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace SonarLint.UnitTest
 {
     public static class Verifier
     {
-        public static void Verify(Project project, DiagnosticAnalyzer diagnosticAnalyzer)
+        #region Verify*
+
+        public static void VerifyAnalyzer(string path, DiagnosticAnalyzer diagnosticAnalyzer)
         {
-            var compilation = project.GetCompilationAsync().Result;
-
-            var compilationWithAnalyzer = GetDiagnostics(compilation, diagnosticAnalyzer);
-
-            var expected = new List<int>(ExpectedIssues(compilation.SyntaxTrees.First()));
-            foreach (var diagnostic in compilationWithAnalyzer
-
-                .Where(diag => diag.Id == diagnosticAnalyzer.SupportedDiagnostics.Single().Id))
-            {
-                var line = diagnostic.GetLineNumberToReport();
-                expected.Should().Contain(line);
-                expected.Remove(line);
-            }
-
-            expected.Should().BeEquivalentTo(Enumerable.Empty<int>());
+            Verify(path, "foo", diagnosticAnalyzer);
         }
+
+        public static void VerifyAnalyzerInTest(string path, DiagnosticAnalyzer diagnosticAnalyzer)
+        {
+            Verify(path, ProjectTypeHelper.TestAssemblyNamePattern, diagnosticAnalyzer);
+        }
+
+        public static void VerifyCodeFix(string path, string pathToExpected, DiagnosticAnalyzer diagnosticAnalyzer,
+            CodeFixProvider codeFixProvider)
+        {
+            var fileInput = new FileInfo(path);
+
+            using (var workspace = new AdhocWorkspace())
+            {
+                var document = GetDocument(fileInput, "foo", workspace);
+                var diagnostics = GetDiagnostics(document.Project.GetCompilationAsync().Result, diagnosticAnalyzer).ToList();
+                var attempts = diagnostics.Count;
+
+                for (int i = 0; i < attempts; ++i)
+                {
+                    var actions = new List<CodeAction>();
+                    var context = new CodeFixContext(document, diagnostics[0], (a, d) => actions.Add(a), CancellationToken.None);
+                    codeFixProvider.RegisterCodeFixesAsync(context).Wait();
+
+                    Assert.AreEqual(1, actions.Count);
+
+                    document = ApplyFix(document, actions.ElementAt(0));
+                    diagnostics = GetDiagnostics(document.Project.GetCompilationAsync().Result, diagnosticAnalyzer).ToList();
+
+                    Assert.AreEqual(attempts - i - 1, diagnostics.Count);
+                }
+
+                var actual = document.GetSyntaxRootAsync().Result.GetText().ToString();
+
+                Assert.AreEqual(File.ReadAllText(pathToExpected), actual);
+            }
+        }
+
+        #endregion
+
+        #region Generic helper
+
+        private static Document GetDocument(FileInfo file, string assemblyName, AdhocWorkspace workspace)
+        {
+            return workspace.CurrentSolution.AddProject(assemblyName,
+                    string.Format("{0}.dll", assemblyName), LanguageNames.CSharp)
+                .AddMetadataReference(MetadataReference.CreateFromFile(typeof(object).Assembly.Location))
+                .AddMetadataReference(MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location))
+                .AddDocument(file.Name, File.ReadAllText(file.FullName, Encoding.UTF8));
+        }
+
+        #endregion
+
+        #region Analyzer helpers
 
         internal static IEnumerable<Diagnostic> GetDiagnostics(Compilation compilation,
             DiagnosticAnalyzer diagnosticAnalyzer)
@@ -68,31 +112,28 @@ namespace SonarLint.UnitTest
                 var compilationWithAnalyzer = compilationWithOptions
                     .WithAnalyzers(ImmutableArray.Create(diagnosticAnalyzer), null, tokenSource.Token);
 
-                return compilationWithAnalyzer.GetAnalyzerDiagnosticsAsync().Result;
+                return compilationWithAnalyzer.GetAnalyzerDiagnosticsAsync().Result
+                    .Where(diag => diag.Id == diagnosticAnalyzer.SupportedDiagnostics.Single().Id);
             }
         }
 
-        public static void Verify(string path, DiagnosticAnalyzer diagnosticAnalyzer)
-        {
-            Verify(path, "foo", diagnosticAnalyzer);
-        }
-        public static void VerifyInTest(string path, DiagnosticAnalyzer diagnosticAnalyzer)
-        {
-            Verify(path, ProjectTypeHelper.TestAssemblyNamePattern, diagnosticAnalyzer);
-        }
         private static void Verify(string path, string assemblyName, DiagnosticAnalyzer diagnosticAnalyzer)
         {
-            var file = new FileInfo(path);
-
             using (var workspace = new AdhocWorkspace())
             {
-                var document = workspace.CurrentSolution.AddProject(assemblyName,
-                    string.Format("{0}.dll", assemblyName), LanguageNames.CSharp)
-                    .AddMetadataReference(MetadataReference.CreateFromFile(typeof(object).Assembly.Location))
-                    .AddMetadataReference(MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location))
-                    .AddDocument(file.Name, File.ReadAllText(file.FullName, Encoding.UTF8));
+                var document = GetDocument(new FileInfo(path), assemblyName, workspace);
+                var compilation = document.Project.GetCompilationAsync().Result;
+                var diagnostics = GetDiagnostics(compilation, diagnosticAnalyzer);
+                var expected = ExpectedIssues(compilation.SyntaxTrees.First()).ToList();
 
-                Verify(document.Project, diagnosticAnalyzer);
+                foreach (var diagnostic in diagnostics)
+                {
+                    var line = diagnostic.GetLineNumberToReport();
+                    expected.Should().Contain(line);
+                    expected.Remove(line);
+                }
+
+                expected.Should().BeEquivalentTo(Enumerable.Empty<int>());
             }
         }
 
@@ -102,5 +143,18 @@ namespace SonarLint.UnitTest
                    where l.ToString().Contains("Noncompliant")
                    select l.LineNumber + 1;
         }
+
+        #endregion
+
+        #region Codefix helper
+
+        private static Document ApplyFix(Document document, CodeAction codeAction)
+        {
+            var operations = codeAction.GetOperationsAsync(CancellationToken.None).Result;
+            var solution = operations.OfType<ApplyChangesOperation>().Single().ChangedSolution;
+            return solution.GetDocument(document.Id);
+        }
+
+        #endregion
     }
 }

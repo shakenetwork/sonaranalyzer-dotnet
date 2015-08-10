@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void GotoStatement()
         {
-            Verifier.Verify(@"TestCases\GotoStatement.cs", new GotoStatement());
+            Verifier.VerifyAnalyzer(@"TestCases\GotoStatement.cs", new GotoStatement());
         }
     }
 }

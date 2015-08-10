@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void CollectionQuerySimplification()
         {
-            Verifier.Verify(@"TestCases\CollectionQuerySimplification.cs", new CollectionQuerySimplification());
+            Verifier.VerifyAnalyzer(@"TestCases\CollectionQuerySimplification.cs", new CollectionQuerySimplification());
         }
     }
 }

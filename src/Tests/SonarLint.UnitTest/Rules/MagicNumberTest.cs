@@ -35,7 +35,7 @@ namespace SonarLint.UnitTest.Rules
             {
                 Exceptions = ImmutableHashSet.Create("0", "1", "0x0", "0x00", ".0", ".1", "0.0", "1.0")
             };
-            Verifier.Verify(@"TestCases\MagicNumber.cs", diagnostic);
+            Verifier.VerifyAnalyzer(@"TestCases\MagicNumber.cs", diagnostic);
         }
     }
 }

@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void IfChainWithoutElse()
         {
-            Verifier.Verify(@"TestCases\IfChainWithoutElse.cs", new IfChainWithoutElse());
+            Verifier.VerifyAnalyzer(@"TestCases\IfChainWithoutElse.cs", new IfChainWithoutElse());
         }
     }
 }

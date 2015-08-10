@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void SwitchCasesMinimumThree()
         {
-            Verifier.Verify(@"TestCases\SwitchCasesMinimumThree.cs", new SwitchCasesMinimumThree());
+            Verifier.VerifyAnalyzer(@"TestCases\SwitchCasesMinimumThree.cs", new SwitchCasesMinimumThree());
         }
     }
 }

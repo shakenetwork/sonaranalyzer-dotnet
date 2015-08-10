@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void DeadStores()
         {
-            Verifier.Verify(@"TestCases\DeadStores.cs", new DeadStores());
+            Verifier.VerifyAnalyzer(@"TestCases\DeadStores.cs", new DeadStores());
         }
     }
 }

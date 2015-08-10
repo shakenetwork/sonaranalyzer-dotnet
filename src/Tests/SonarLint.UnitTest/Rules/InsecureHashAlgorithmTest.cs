@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void InsecureHashAlgorithm()
         {
-            Verifier.Verify(@"TestCases\InsecureHashAlgorithm.cs", new InsecureHashAlgorithm());
+            Verifier.VerifyAnalyzer(@"TestCases\InsecureHashAlgorithm.cs", new InsecureHashAlgorithm());
         }
     }
 }

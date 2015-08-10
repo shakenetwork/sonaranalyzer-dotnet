@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void IndexOfCheckAgainstZero()
         {
-            Verifier.Verify(@"TestCases\IndexOfCheckAgainstZero.cs", new IndexOfCheckAgainstZero());
+            Verifier.VerifyAnalyzer(@"TestCases\IndexOfCheckAgainstZero.cs", new IndexOfCheckAgainstZero());
         }
     }
 }

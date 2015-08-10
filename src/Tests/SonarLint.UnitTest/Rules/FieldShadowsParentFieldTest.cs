@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void FieldShadowsParentField()
         {
-            Verifier.Verify(@"TestCases\FieldShadowsParentField.cs", new FieldShadowsParentField());
+            Verifier.VerifyAnalyzer(@"TestCases\FieldShadowsParentField.cs", new FieldShadowsParentField());
         }
     }
 }

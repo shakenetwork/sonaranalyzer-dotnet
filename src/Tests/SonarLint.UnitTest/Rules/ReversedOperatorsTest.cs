@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void ReversedOperators()
         {
-            Verifier.Verify(@"TestCases\ReversedOperators.cs", new ReversedOperators());
+            Verifier.VerifyAnalyzer(@"TestCases\ReversedOperators.cs", new ReversedOperators());
         }
     }
 }

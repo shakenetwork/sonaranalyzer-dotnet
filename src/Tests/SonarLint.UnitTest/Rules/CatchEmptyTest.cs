@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void CatchEmpty()
         {
-            Verifier.Verify(@"TestCases\CatchEmpty.cs", new CatchEmpty());
+            Verifier.VerifyAnalyzer(@"TestCases\CatchEmpty.cs", new CatchEmpty());
         }
     }
 }

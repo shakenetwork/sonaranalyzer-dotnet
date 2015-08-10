@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void RedundantCast()
         {
-            Verifier.Verify(@"TestCases\RedundantCast.cs", new RedundantCast());
+            Verifier.VerifyAnalyzer(@"TestCases\RedundantCast.cs", new RedundantCast());
         }
     }
 }

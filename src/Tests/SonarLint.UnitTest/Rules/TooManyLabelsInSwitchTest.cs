@@ -31,7 +31,7 @@ namespace SonarLint.UnitTest.Rules
         public void TooManyLabelsInSwitch()
         {
             var diagnostic = new TooManyLabelsInSwitch {Maximum = 2};
-            Verifier.Verify(@"TestCases\TooManyLabelsInSwitch.cs", diagnostic);
+            Verifier.VerifyAnalyzer(@"TestCases\TooManyLabelsInSwitch.cs", diagnostic);
         }
     }
 }

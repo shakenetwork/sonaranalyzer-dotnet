@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void ToStringNoNull()
         {
-            Verifier.Verify(@"TestCases\ToStringNoNull.cs", new ToStringNoNull());
+            Verifier.VerifyAnalyzer(@"TestCases\ToStringNoNull.cs", new ToStringNoNull());
         }
     }
 }

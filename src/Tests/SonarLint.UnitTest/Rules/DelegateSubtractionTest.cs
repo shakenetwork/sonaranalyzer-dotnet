@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void DelegateSubtraction()
         {
-            Verifier.Verify(@"TestCases\DelegateSubtraction.cs", new DelegateSubtraction());
+            Verifier.VerifyAnalyzer(@"TestCases\DelegateSubtraction.cs", new DelegateSubtraction());
         }
     }
 }

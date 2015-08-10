@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void BreakOutsideSwitch()
         {
-            Verifier.Verify(@"TestCases\BreakOutsideSwitch.cs", new BreakOutsideSwitch());
+            Verifier.VerifyAnalyzer(@"TestCases\BreakOutsideSwitch.cs", new BreakOutsideSwitch());
         }
     }
 }

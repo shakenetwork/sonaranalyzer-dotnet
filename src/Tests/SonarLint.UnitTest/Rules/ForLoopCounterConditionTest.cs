@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void ForLoopCounterCondition()
         {
-            Verifier.Verify(@"TestCases\ForLoopCounterCondition.cs", new ForLoopCounterCondition());
+            Verifier.VerifyAnalyzer(@"TestCases\ForLoopCounterCondition.cs", new ForLoopCounterCondition());
         }
     }
 }

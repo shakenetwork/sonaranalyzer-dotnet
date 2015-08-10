@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void FieldShouldNotBePublic()
         {
-            Verifier.Verify(@"TestCases\FieldShouldNotBePublic.cs", new FieldShouldNotBePublic());
+            Verifier.VerifyAnalyzer(@"TestCases\FieldShouldNotBePublic.cs", new FieldShouldNotBePublic());
         }
     }
 }

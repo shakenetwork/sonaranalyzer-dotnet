@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void StaticFieldVisible()
         {
-            Verifier.Verify(@"TestCases\StaticFieldVisible.cs", new StaticFieldVisible());
+            Verifier.VerifyAnalyzer(@"TestCases\StaticFieldVisible.cs", new StaticFieldVisible());
         }
     }
 }

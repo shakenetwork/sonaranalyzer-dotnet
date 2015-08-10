@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void ArrayCovariance()
         {
-            Verifier.Verify(@"TestCases\ArrayCovariance.cs", new ArrayCovariance());
+            Verifier.VerifyAnalyzer(@"TestCases\ArrayCovariance.cs", new ArrayCovariance());
         }
     }
 }

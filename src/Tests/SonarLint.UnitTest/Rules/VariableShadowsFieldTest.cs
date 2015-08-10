@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void VariableShadowsField()
         {
-            Verifier.Verify(@"TestCases\VariableShadowsField.cs", new VariableShadowsField());
+            Verifier.VerifyAnalyzer(@"TestCases\VariableShadowsField.cs", new VariableShadowsField());
         }
     }
 }

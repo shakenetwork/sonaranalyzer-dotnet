@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void CommentedOutCode()
         {
-            Verifier.Verify(@"TestCases\CommentedOutCode.cs", new CommentedOutCode());
+            Verifier.VerifyAnalyzer(@"TestCases\CommentedOutCode.cs", new CommentedOutCode());
         }
     }
 }

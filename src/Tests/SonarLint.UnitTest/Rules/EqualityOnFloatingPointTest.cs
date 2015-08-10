@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void EqualityOnFloatingPoint()
         {
-            Verifier.Verify(@"TestCases\EqualityOnFloatingPoint.cs", new EqualityOnFloatingPoint());
+            Verifier.VerifyAnalyzer(@"TestCases\EqualityOnFloatingPoint.cs", new EqualityOnFloatingPoint());
         }
     }
 }

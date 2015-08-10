@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void CastConcreteTypeToInterface()
         {
-            Verifier.Verify(@"TestCases\CastConcreteTypeToInterface.cs", new CastConcreteTypeToInterface());
+            Verifier.VerifyAnalyzer(@"TestCases\CastConcreteTypeToInterface.cs", new CastConcreteTypeToInterface());
         }
     }
 }

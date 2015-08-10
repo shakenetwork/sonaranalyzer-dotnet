@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void HardcodedIpAddress()
         {
-            Verifier.Verify(@"TestCases\HardcodedIpAddress.cs", new HardcodedIpAddress());
+            Verifier.VerifyAnalyzer(@"TestCases\HardcodedIpAddress.cs", new HardcodedIpAddress());
         }
     }
 }

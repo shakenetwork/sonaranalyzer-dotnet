@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void ConditionalStructureSameCondition()
         {
-            Verifier.Verify(@"TestCases\ConditionalStructureSameCondition.cs", new ConditionalStructureSameCondition());
+            Verifier.VerifyAnalyzer(@"TestCases\ConditionalStructureSameCondition.cs", new ConditionalStructureSameCondition());
         }
     }
 }

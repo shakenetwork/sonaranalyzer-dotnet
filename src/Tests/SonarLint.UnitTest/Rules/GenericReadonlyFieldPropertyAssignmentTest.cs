@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void GenericReadonlyFieldPropertyAssignment()
         {
-            Verifier.Verify(@"TestCases\GenericReadonlyFieldPropertyAssignment.cs", new GenericReadonlyFieldPropertyAssignment());
+            Verifier.VerifyAnalyzer(@"TestCases\GenericReadonlyFieldPropertyAssignment.cs", new GenericReadonlyFieldPropertyAssignment());
         }
     }
 }

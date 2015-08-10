@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void BooleanCheckInverted()
         {
-            Verifier.Verify(@"TestCases\BooleanCheckInverted.cs", new BooleanCheckInverted());
+            Verifier.VerifyAnalyzer(@"TestCases\BooleanCheckInverted.cs", new BooleanCheckInverted());
         }
     }
 }

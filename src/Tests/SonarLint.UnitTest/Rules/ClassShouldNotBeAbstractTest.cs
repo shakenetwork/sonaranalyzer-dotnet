@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void ClassShouldNotBeAbstract()
         {
-            Verifier.Verify(@"TestCases\ClassShouldNotBeAbstract.cs", new ClassShouldNotBeAbstract());
+            Verifier.VerifyAnalyzer(@"TestCases\ClassShouldNotBeAbstract.cs", new ClassShouldNotBeAbstract());
         }
     }
 }

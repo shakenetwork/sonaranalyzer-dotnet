@@ -31,7 +31,7 @@ namespace SonarLint.UnitTest.Rules
         public void FunctionComplexity()
         {
             var diagnostic = new FunctionComplexity {Maximum = 3};
-            Verifier.Verify(@"TestCases\FunctionComplexity.cs", diagnostic);
+            Verifier.VerifyAnalyzer(@"TestCases\FunctionComplexity.cs", diagnostic);
         }
     }
 }

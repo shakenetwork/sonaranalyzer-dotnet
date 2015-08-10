@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void ParametersCorrectOrder()
         {
-            Verifier.Verify(@"TestCases\ParametersCorrectOrder.cs", new ParametersCorrectOrder());
+            Verifier.VerifyAnalyzer(@"TestCases\ParametersCorrectOrder.cs", new ParametersCorrectOrder());
         }
     }
 }

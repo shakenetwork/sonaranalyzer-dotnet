@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void ThreadStaticWithInitializer()
         {
-            Verifier.Verify(@"TestCases\ThreadStaticWithInitializer.cs", new ThreadStaticWithInitializer());
+            Verifier.VerifyAnalyzer(@"TestCases\ThreadStaticWithInitializer.cs", new ThreadStaticWithInitializer());
         }
     }
 }

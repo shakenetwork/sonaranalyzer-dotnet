@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void IfCollapsible()
         {
-            Verifier.Verify(@"TestCases\IfCollapsible.cs", new IfCollapsible());
+            Verifier.VerifyAnalyzer(@"TestCases\IfCollapsible.cs", new IfCollapsible());
         }
     }
 }

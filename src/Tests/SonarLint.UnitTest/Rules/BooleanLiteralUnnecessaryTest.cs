@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void BooleanLiteralUnnecessary()
         {
-            Verifier.Verify(@"TestCases\BooleanLiteralUnnecessary.cs", new BooleanLiteralUnnecessary());
+            Verifier.VerifyAnalyzer(@"TestCases\BooleanLiteralUnnecessary.cs", new BooleanLiteralUnnecessary());
         }
     }
 }

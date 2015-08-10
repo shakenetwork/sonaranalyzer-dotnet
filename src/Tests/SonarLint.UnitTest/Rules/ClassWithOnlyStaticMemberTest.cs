@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void ClassWithOnlyStaticMember()
         {
-            Verifier.Verify(@"TestCases\ClassWithOnlyStaticMember.cs", new ClassWithOnlyStaticMember());
+            Verifier.VerifyAnalyzer(@"TestCases\ClassWithOnlyStaticMember.cs", new ClassWithOnlyStaticMember());
         }
     }
 }

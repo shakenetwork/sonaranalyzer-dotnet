@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void RightCurlyBraceStartsLine()
         {
-            Verifier.Verify(@"TestCases\RightCurlyBraceStartsLine.cs", new RightCurlyBraceStartsLine());
+            Verifier.VerifyAnalyzer(@"TestCases\RightCurlyBraceStartsLine.cs", new RightCurlyBraceStartsLine());
         }
     }
 }

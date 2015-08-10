@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void CollectionEmptinessChecking()
         {
-            Verifier.Verify(@"TestCases\CollectionEmptinessChecking.cs", new CollectionEmptinessChecking());
+            Verifier.VerifyAnalyzer(@"TestCases\CollectionEmptinessChecking.cs", new CollectionEmptinessChecking());
         }
     }
 }

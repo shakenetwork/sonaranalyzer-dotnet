@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void MemberShadowsOuterStaticMember()
         {
-            Verifier.Verify(@"TestCases\MemberShadowsOuterStaticMember.cs", new MemberShadowsOuterStaticMember());
+            Verifier.VerifyAnalyzer(@"TestCases\MemberShadowsOuterStaticMember.cs", new MemberShadowsOuterStaticMember());
         }
     }
 }

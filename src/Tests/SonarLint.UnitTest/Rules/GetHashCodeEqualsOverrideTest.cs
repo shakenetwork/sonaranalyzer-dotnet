@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void GetHashCodeEqualsOverride()
         {
-            Verifier.Verify(@"TestCases\GetHashCodeEqualsOverride.cs", new GetHashCodeEqualsOverride());
+            Verifier.VerifyAnalyzer(@"TestCases\GetHashCodeEqualsOverride.cs", new GetHashCodeEqualsOverride());
         }
     }
 }

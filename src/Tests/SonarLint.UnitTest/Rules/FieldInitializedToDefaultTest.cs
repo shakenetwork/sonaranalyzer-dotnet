@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void FieldInitializedToDefault()
         {
-            Verifier.Verify(@"TestCases\FieldInitializedToDefault.cs", new FieldInitializedToDefault());
+            Verifier.VerifyAnalyzer(@"TestCases\FieldInitializedToDefault.cs", new FieldInitializedToDefault());
         }
     }
 }

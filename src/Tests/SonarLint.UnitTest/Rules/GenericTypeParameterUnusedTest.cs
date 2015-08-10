@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void GenericTypeParameterUnused()
         {
-            Verifier.Verify(@"TestCases\GenericTypeParameterUnused.cs", new GenericTypeParameterUnused());
+            Verifier.VerifyAnalyzer(@"TestCases\GenericTypeParameterUnused.cs", new GenericTypeParameterUnused());
         }
     }
 }

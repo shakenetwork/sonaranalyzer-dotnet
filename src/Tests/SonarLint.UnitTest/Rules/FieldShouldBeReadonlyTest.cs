@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void FieldShouldBeReadonly()
         {
-            Verifier.Verify(@"TestCases\FieldShouldBeReadonly.cs", new FieldShouldBeReadonly());
+            Verifier.VerifyAnalyzer(@"TestCases\FieldShouldBeReadonly.cs", new FieldShouldBeReadonly());
         }
     }
 }

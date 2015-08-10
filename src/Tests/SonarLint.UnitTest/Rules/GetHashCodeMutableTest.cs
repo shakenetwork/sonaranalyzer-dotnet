@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void GetHashCodeMutable()
         {
-            Verifier.Verify(@"TestCases\GetHashCodeMutable.cs", new GetHashCodeMutable());
+            Verifier.VerifyAnalyzer(@"TestCases\GetHashCodeMutable.cs", new GetHashCodeMutable());
         }
     }
 }

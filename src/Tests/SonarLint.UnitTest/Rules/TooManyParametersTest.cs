@@ -31,7 +31,7 @@ namespace SonarLint.UnitTest.Rules
         public void TooManyParameters()
         {
             var diagnostic = new TooManyParameters {Maximum = 3};
-            Verifier.Verify(@"TestCases\TooManyParameters.cs", diagnostic);
+            Verifier.VerifyAnalyzer(@"TestCases\TooManyParameters.cs", diagnostic);
         }
     }
 }

@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void ConsoleLogging()
         {
-            Verifier.Verify(@"TestCases\ConsoleLogging.cs", new ConsoleLogging());
+            Verifier.VerifyAnalyzer(@"TestCases\ConsoleLogging.cs", new ConsoleLogging());
         }
     }
 }

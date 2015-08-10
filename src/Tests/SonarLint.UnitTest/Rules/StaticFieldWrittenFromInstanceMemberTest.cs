@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void StaticFieldWrittenFromInstanceMember()
         {
-            Verifier.Verify(@"TestCases\StaticFieldWrittenFromInstanceMember.cs", new StaticFieldWrittenFromInstanceMember());
+            Verifier.VerifyAnalyzer(@"TestCases\StaticFieldWrittenFromInstanceMember.cs", new StaticFieldWrittenFromInstanceMember());
         }
     }
 }

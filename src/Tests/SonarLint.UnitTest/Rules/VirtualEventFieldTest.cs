@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void VirtualEventField()
         {
-            Verifier.Verify(@"TestCases\VirtualEventField.cs", new VirtualEventField());
+            Verifier.VerifyAnalyzer(@"TestCases\VirtualEventField.cs", new VirtualEventField());
         }
     }
 }

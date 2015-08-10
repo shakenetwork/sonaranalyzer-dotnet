@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void SillyBitwiseOperation()
         {
-            Verifier.Verify(@"TestCases\SillyBitwiseOperation.cs", new SillyBitwiseOperation());
+            Verifier.VerifyAnalyzer(@"TestCases\SillyBitwiseOperation.cs", new SillyBitwiseOperation());
         }
     }
 }

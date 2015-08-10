@@ -31,7 +31,7 @@ namespace SonarLint.UnitTest.Rules
         public void ExpressionComplexity()
         {
             var diagnostic = new ExpressionComplexity {Maximum = 3};
-            Verifier.Verify(@"TestCases\ExpressionComplexity.cs", diagnostic);
+            Verifier.VerifyAnalyzer(@"TestCases\ExpressionComplexity.cs", diagnostic);
         }
     }
 }

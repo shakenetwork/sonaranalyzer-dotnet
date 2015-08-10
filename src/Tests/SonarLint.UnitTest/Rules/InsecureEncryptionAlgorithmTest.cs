@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void InsecureEncryptionAlgorithm()
         {
-            Verifier.Verify(@"TestCases\InsecureEncryptionAlgorithm.cs", new InsecureEncryptionAlgorithm());
+            Verifier.VerifyAnalyzer(@"TestCases\InsecureEncryptionAlgorithm.cs", new InsecureEncryptionAlgorithm());
         }
     }
 }

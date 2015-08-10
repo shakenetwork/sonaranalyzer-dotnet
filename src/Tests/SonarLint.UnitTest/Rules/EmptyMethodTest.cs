@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void EmptyMethod()
         {
-            Verifier.Verify(@"TestCases\EmptyMethod.cs", new EmptyMethod());
+            Verifier.VerifyAnalyzer(@"TestCases\EmptyMethod.cs", new EmptyMethod());
         }
     }
 }
