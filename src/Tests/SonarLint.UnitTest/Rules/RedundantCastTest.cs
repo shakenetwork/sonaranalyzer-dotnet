@@ -32,5 +32,16 @@ namespace SonarLint.UnitTest.Rules
         {
             Verifier.VerifyAnalyzer(@"TestCases\RedundantCast.cs", new RedundantCast());
         }
+
+        [TestMethod]
+        [TestCategory("CodeFix")]
+        public void RedundantCast_CodeFix()
+        {
+            Verifier.VerifyCodeFix(
+                @"TestCases\RedundantCast.cs",
+                @"TestCases\RedundantCast.Fixed.cs",
+                new RedundantCast(),
+                new RedundantCastCodeFixProvider());
+        }
     }
 }

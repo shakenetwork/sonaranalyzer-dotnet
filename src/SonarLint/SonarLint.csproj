@@ -112,6 +112,7 @@
     <Compile Include="Rules\RedundantArgumentCodeFixProvider.cs" />
     <Compile Include="Rules\CatchRethrowCodeFixProvider.cs" />
     <Compile Include="Rules\ThreadStaticNonStaticFieldCodeFixProvider.cs" />
+    <Compile Include="Rules\RedundantCastCodeFixProvider.cs" />
     <Compile Include="Rules\SuppressFinalizeUseless.cs" />
     <Compile Include="Rules\FieldInitializedToDefault.cs" />
     <Compile Include="Rules\RedundantParenthesesCodeFixProvider.cs" />
