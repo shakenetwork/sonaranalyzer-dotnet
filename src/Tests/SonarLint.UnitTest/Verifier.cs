@@ -31,6 +31,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Helpers;
 using Microsoft.CodeAnalysis.CodeFixes;
 using Microsoft.CodeAnalysis.CodeActions;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace SonarLint.UnitTest
@@ -50,34 +51,54 @@ namespace SonarLint.UnitTest
         }
 
         public static void VerifyCodeFix(string path, string pathToExpected, DiagnosticAnalyzer diagnosticAnalyzer,
-            CodeFixProvider codeFixProvider)
+            CodeFixProvider codeFixProvider, string codeFixTitle = null)
         {
             var fileInput = new FileInfo(path);
 
             using (var workspace = new AdhocWorkspace())
             {
                 var document = GetDocument(fileInput, "foo", workspace);
-                var diagnostics = GetDiagnostics(document.Project.GetCompilationAsync().Result, diagnosticAnalyzer).ToList();
-                var attempts = diagnostics.Count;
 
-                for (int i = 0; i < attempts; ++i)
+                List<Diagnostic> diagnostics;
+                string actualCode;
+                CalculateDiagnosticsAndCode(diagnosticAnalyzer, document, out diagnostics, out actualCode);
+
+                Assert.AreNotEqual(0, diagnostics.Count);
+
+                string codeBeforeFix;
+                var codeFixExecutedAtLeastOnce = false;
+
+                do
                 {
-                    var actions = new List<CodeAction>();
-                    var context = new CodeFixContext(document, diagnostics[0], (a, d) => actions.Add(a), CancellationToken.None);
-                    codeFixProvider.RegisterCodeFixesAsync(context).Wait();
+                    codeBeforeFix = actualCode;
 
-                    Assert.AreEqual(1, actions.Count);
+                    for (int diagnosticIndexToFix = 0; diagnosticIndexToFix < diagnostics.Count; diagnosticIndexToFix++)
+                    {
+                        var codeActionsForDiagnostic = GetCodeActionsForDiagnostic(codeFixProvider, document, diagnostics[diagnosticIndexToFix]);
 
-                    document = ApplyFix(document, actions.ElementAt(0));
-                    diagnostics = GetDiagnostics(document.Project.GetCompilationAsync().Result, diagnosticAnalyzer).ToList();
+                        CodeAction codeActionToExecute;
+                        if (TryGetCodeActionToApply(codeFixTitle, codeActionsForDiagnostic, out codeActionToExecute))
+                        {
+                            document = ApplyCodeFix(document, codeActionToExecute);
+                            CalculateDiagnosticsAndCode(diagnosticAnalyzer, document, out diagnostics, out actualCode);
 
-                    Assert.AreEqual(attempts - i - 1, diagnostics.Count);
-                }
+                            codeFixExecutedAtLeastOnce = true;
+                            break;
+                        }
+                    }
+                } while (codeBeforeFix != actualCode);
 
-                var actual = document.GetSyntaxRootAsync().Result.GetText().ToString();
-
-                Assert.AreEqual(File.ReadAllText(pathToExpected), actual);
+                Assert.IsTrue(codeFixExecutedAtLeastOnce);
+                Assert.AreEqual(File.ReadAllText(pathToExpected), actualCode);
             }
+        }
+
+        private static void CalculateDiagnosticsAndCode(DiagnosticAnalyzer diagnosticAnalyzer, Document document,
+            out List<Diagnostic> diagnostics,
+            out string actualCode)
+        {
+            diagnostics = GetDiagnostics(document.Project.GetCompilationAsync().Result, diagnosticAnalyzer).ToList();
+            actualCode = document.GetSyntaxRootAsync().Result.GetText().ToString();
         }
 
         #endregion
@@ -148,11 +169,31 @@ namespace SonarLint.UnitTest
 
         #region Codefix helper
 
-        private static Document ApplyFix(Document document, CodeAction codeAction)
+        private static Document ApplyCodeFix(Document document, CodeAction codeAction)
         {
             var operations = codeAction.GetOperationsAsync(CancellationToken.None).Result;
             var solution = operations.OfType<ApplyChangesOperation>().Single().ChangedSolution;
             return solution.GetDocument(document.Id);
+        }
+
+        private static bool TryGetCodeActionToApply(string codeFixTitle, IEnumerable<CodeAction> codeActions,
+            out CodeAction codeAction)
+        {
+            codeAction = codeFixTitle != null
+                ? codeActions.SingleOrDefault(action => action.Title == codeFixTitle)
+                : codeActions.FirstOrDefault();
+
+            return codeAction != null;
+        }
+
+        private static IEnumerable<CodeAction> GetCodeActionsForDiagnostic(CodeFixProvider codeFixProvider, Document document,
+            Diagnostic diagnostic)
+        {
+            var actions = new List<CodeAction>();
+            var context = new CodeFixContext(document, diagnostic, (a, d) => actions.Add(a), CancellationToken.None);
+
+            codeFixProvider.RegisterCodeFixesAsync(context).Wait();
+            return actions;
         }
 
         #endregion
