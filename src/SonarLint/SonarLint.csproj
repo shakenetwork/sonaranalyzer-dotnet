@@ -104,6 +104,7 @@
     <Compile Include="Rules\MemberShadowsOuterStaticMember.cs" />
     <Compile Include="Rules\OrderByRepeated.cs" />
     <Compile Include="Rules\MethodParameterUnused.cs" />
+    <Compile Include="Rules\OrderByRepeatedCodeFixProvider.cs" />
     <Compile Include="Rules\SuppressFinalizeUseless.cs" />
     <Compile Include="Rules\FieldInitializedToDefault.cs" />
     <Compile Include="Rules\RedundantParenthesesCodeFixProvider.cs" />

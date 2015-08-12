@@ -32,5 +32,16 @@ namespace SonarLint.UnitTest.Rules
         {
             Verifier.VerifyAnalyzer(@"TestCases\OrderByRepeated.cs", new OrderByRepeated());
         }
+
+        [TestMethod]
+        [TestCategory("CodeFix")]
+        public void OrderByRepeated_CodeFix()
+        {
+            Verifier.VerifyCodeFix(
+                @"TestCases\OrderByRepeated.cs",
+                @"TestCases\OrderByRepeated.Fixed.cs",
+                new OrderByRepeated(),
+                new OrderByRepeatedCodeFixProvider());
+        }
     }
 }
