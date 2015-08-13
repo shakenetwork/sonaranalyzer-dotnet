@@ -14,6 +14,10 @@ namespace Tests.Diagnostics
             new string[] { "" }
                 .OrderBy(i => i, StringComparer.CurrentCultureIgnoreCase)
                 .OrderBy(i => i); //Noncompliant
+            new string[] { "" }
+                .OrderBy(i => i, StringComparer.CurrentCultureIgnoreCase)
+                .ThenBy(i => i, StringComparer.CurrentCultureIgnoreCase)
+                .OrderBy(i => i); //Noncompliant
         }
     }
 }
