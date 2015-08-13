@@ -32,5 +32,16 @@ namespace SonarLint.UnitTest.Rules
         {
             Verifier.VerifyAnalyzer(@"TestCases\TernaryOperatorPointless.cs", new TernaryOperatorPointless());
         }
+
+        [TestMethod]
+        [TestCategory("CodeFix")]
+        public void TernaryOperatorPointless_CodeFix()
+        {
+            Verifier.VerifyCodeFix(
+                @"TestCases\TernaryOperatorPointless.cs",
+                @"TestCases\TernaryOperatorPointless.Fixed.cs",
+                new TernaryOperatorPointless(),
+                new TernaryOperatorPointlessCodeFixProvider());
+        }
     }
 }
