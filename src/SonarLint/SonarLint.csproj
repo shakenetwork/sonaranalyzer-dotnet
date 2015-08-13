@@ -105,6 +105,7 @@
     <Compile Include="Rules\OrderByRepeated.cs" />
     <Compile Include="Rules\MethodParameterUnused.cs" />
     <Compile Include="Rules\OrderByRepeatedCodeFixProvider.cs" />
+    <Compile Include="Rules\UnaryPrefixOperatorRepeatedCodeFixProvider.cs" />
     <Compile Include="Rules\VirtualEventFieldFixProvider.cs" />
     <Compile Include="Rules\SuppressFinalizeUseless.cs" />
     <Compile Include="Rules\FieldInitializedToDefault.cs" />
