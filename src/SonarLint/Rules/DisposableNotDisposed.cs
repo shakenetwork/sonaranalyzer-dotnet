@@ -97,6 +97,11 @@ namespace SonarLint.Rules
                     SyntaxKind.InvocationExpression);
 
                 analysisContext.RegisterSyntaxNodeAction(
+                    c => CollectDisposedSymbol((ConditionalAccessExpressionSyntax)c.Node, c.SemanticModel, disposeMethod,
+                    IsDisposableLocalSymbol, ref localsDisposed),
+                    SyntaxKind.ConditionalAccessExpression);
+
+                analysisContext.RegisterSyntaxNodeAction(
                     c => CollectReturnedLocals((ReturnStatementSyntax)c.Node, c.SemanticModel,
                         ref localsReturned),
                     SyntaxKind.ReturnStatement);
@@ -139,6 +144,11 @@ namespace SonarLint.Rules
                     DisposableMemberInNonDisposableClass.IsNonStaticNonPublicDisposableField, ref fieldsDisposed),
                     SyntaxKind.InvocationExpression);
 
+                analysisContext.RegisterSyntaxNodeAction(
+                    c => CollectDisposedSymbol((ConditionalAccessExpressionSyntax)c.Node, c.SemanticModel, disposeMethod,
+                    DisposableMemberInNonDisposableClass.IsNonStaticNonPublicDisposableField, ref fieldsDisposed),
+                    SyntaxKind.ConditionalAccessExpression);
+
                 analysisContext.RegisterCompilationEndAction(c =>
                 {
                     var internallyInitializedFields = disposableFields.Intersect(fieldsAssigned);
@@ -162,6 +172,17 @@ namespace SonarLint.Rules
         {
             T fieldSymbol;
             if (TryGetDisposedSymbol(invocation, semanticModel, disposeMethod,
+                isSymbolRelevant, out fieldSymbol))
+            {
+                fieldsDisposed = fieldsDisposed.Add(fieldSymbol);
+            }
+        }
+        private static void CollectDisposedSymbol<T>(ConditionalAccessExpressionSyntax conditionalAccess, SemanticModel semanticModel,
+            IMethodSymbol disposeMethod, Predicate<T> isSymbolRelevant, ref ImmutableHashSet<T> fieldsDisposed)
+             where T : class, ISymbol
+        {
+            T fieldSymbol;
+            if (TryGetDisposedSymbol(conditionalAccess, semanticModel, disposeMethod,
                 isSymbolRelevant, out fieldSymbol))
             {
                 fieldsDisposed = fieldsDisposed.Add(fieldSymbol);
@@ -291,6 +312,23 @@ namespace SonarLint.Rules
             }
 
             var methodSymbol = semanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
+            return methodSymbol != null &&
+                   (methodSymbol.Equals(disposeMethod) ||
+                   methodSymbol.Equals(methodSymbol.ContainingType.FindImplementationForInterfaceMember(disposeMethod)));
+        }
+
+        private static bool TryGetDisposedSymbol<T>(ConditionalAccessExpressionSyntax conditionalAccess, SemanticModel semanticModel,
+            IMethodSymbol disposeMethod, Predicate<T> isSymbolRelevant, out T localSymbol) where T : class, ISymbol
+        {
+            localSymbol = null;
+
+            localSymbol = semanticModel.GetSymbolInfo(conditionalAccess.Expression).Symbol as T;
+            if (!isSymbolRelevant(localSymbol))
+            {
+                return false;
+            }
+
+            var methodSymbol = semanticModel.GetSymbolInfo(conditionalAccess.WhenNotNull).Symbol as IMethodSymbol;
             return methodSymbol != null &&
                    (methodSymbol.Equals(disposeMethod) ||
                    methodSymbol.Equals(methodSymbol.ContainingType.FindImplementationForInterfaceMember(disposeMethod)));

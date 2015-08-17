@@ -12,16 +12,19 @@ namespace Tests.Diagnostics
         private Stream field3; //Noncompliant
         private Stream field6 = new MemoryStream(); //Noncompliant
         private Stream field4; //Compliant, disposed
+        private Stream field7; //Compliant, disposed
 
         public void Init()
         {
             field3 = new MemoryStream();
             field4 = new MemoryStream();
+            field7 = new MemoryStream();
         }
 
         public void DoSomething()
         {
             field4.Dispose();
+            field7?.Dispose();
         }
         public void WriteToFile(string path, string text)
         {
@@ -65,14 +68,14 @@ namespace Tests.Diagnostics
             var fs = new BinaryReader(sl); // Noncompliant
         }
 
-        public void WriteToFileEx4()
+        public Stream WriteToFileEx4()
         {
             Stream sr = null;
             var fs = new BinaryReader(sr); // Noncompliant, this is a false positive
             return sr;
         }
 
-        public void WriteToFileEx6()
+        public Stream WriteToFileEx6()
         {
             Stream sr = null;
             var fs = new BinaryReader() // Noncompliant, this is a false positive
@@ -80,6 +83,12 @@ namespace Tests.Diagnostics
                 BaseStream = sr
             };
             return sr;
+        }
+
+        public void WriteElvis()
+        {
+            var fs = new BinaryReader();
+            fs?.Dispose();
         }
     }
 
