@@ -1,6 +1,6 @@
 # SonarLint for Visual Studio
 
-[![Build status](https://ci.appveyor.com/api/projects/status/7k0q64nckn92t87g/branch/master?svg=true)](https://ci.appveyor.com/project/dbolkensteyn/sonarlint-vs/branch/master) 
+[![Build status](https://ci.appveyor.com/api/projects/status/7k0q64nckn92t87g/branch/master?svg=true)](https://ci.appveyor.com/project/SonarSource/sonarlint-vs/branch/master) 
 
 Follow [@SonarLintVS on Twitter](http://www.twitter.com/SonarLintVS).
 
