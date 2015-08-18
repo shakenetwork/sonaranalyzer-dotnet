@@ -136,6 +136,7 @@
     <Compile Include="Common\MetricsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\RedundantArgumentTest.cs" />
+    <Compile Include="Rules\ConditionalSimplificationTest.cs" />
     <Compile Include="Rules\MethodParameterUnusedTest.cs" />
     <Compile Include="Rules\MemberShadowsOuterStaticMemberTest.cs" />
     <Compile Include="Rules\OrderByRepeatedTest.cs" />
@@ -464,6 +465,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\BooleanLiteralUnnecessary.Fixed.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\ConditionalSimplification.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\ConditionalSimplification.Fixed.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />

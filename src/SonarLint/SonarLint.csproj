@@ -105,10 +105,12 @@
     <Compile Include="Rules\BooleanCheckInvertedCodeFixProvider.cs" />
     <Compile Include="Rules\GenericTypeParameterEmptinessCheckingCodeFixProvider.cs" />
     <Compile Include="Rules\RedundantArgument.cs" />
+    <Compile Include="Rules\ConditionalSimplification.cs" />
     <Compile Include="Rules\MemberShadowsOuterStaticMember.cs" />
     <Compile Include="Rules\OrderByRepeated.cs" />
     <Compile Include="Rules\MethodParameterUnused.cs" />
     <Compile Include="Rules\OrderByRepeatedCodeFixProvider.cs" />
+    <Compile Include="Rules\ConditionalSimplificationCodeFixProvider.cs" />
     <Compile Include="Rules\UnaryPrefixOperatorRepeatedCodeFixProvider.cs" />
     <Compile Include="Rules\TernaryOperatorPointlessCodeFixProvider.cs" />
     <Compile Include="Rules\BooleanLiteralUnnecessaryCodeFixProvider.cs" />
@@ -488,6 +490,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S3254.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S3240.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

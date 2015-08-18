@@ -1,0 +1,7047 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarLint.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\contrib\\persistence\\Akka.Persistence.PostgreSql\\Journal\\QueryBuilder.cs",
+            "Region": {
+              "StartLine": 114,
+              "EndLine": 114,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\contrib\\persistence\\Akka.Persistence.SqlServer\\Journal\\QueryBuilder.cs",
+            "Region": {
+              "StartLine": 112,
+              "EndLine": 112,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
+            "Region": {
+              "StartLine": 963,
+              "EndLine": 963,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
+            "Region": {
+              "StartLine": 1387,
+              "EndLine": 1387,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 406,
+              "EndLine": 406,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 537,
+              "EndLine": 537,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 760,
+              "EndLine": 760,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 896,
+              "EndLine": 896,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 936,
+              "EndLine": 936,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 1144,
+              "EndLine": 1144,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 1287,
+              "EndLine": 1287,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 1327,
+              "EndLine": 1327,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 1563,
+              "EndLine": 1563,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 1706,
+              "EndLine": 1706,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 1778,
+              "EndLine": 1778,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 2061,
+              "EndLine": 2061,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 2377,
+              "EndLine": 2377,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 2417,
+              "EndLine": 2417,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 2618,
+              "EndLine": 2618,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 2990,
+              "EndLine": 2990,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 3373,
+              "EndLine": 3373,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 3768,
+              "EndLine": 3768,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 4185,
+              "EndLine": 4185,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 4481,
+              "EndLine": 4481,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 4839,
+              "EndLine": 4839,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 4982,
+              "EndLine": 4982,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 5022,
+              "EndLine": 5022,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 5265,
+              "EndLine": 5265,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 5737,
+              "EndLine": 5737,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6119,
+              "EndLine": 6119,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6454,
+              "EndLine": 6454,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6617,
+              "EndLine": 6617,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6657,
+              "EndLine": 6657,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 6845,
+              "EndLine": 6845,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 7177,
+              "EndLine": 7177,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 7472,
+              "EndLine": 7472,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 7848,
+              "EndLine": 7848,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
+            "Region": {
+              "StartLine": 7979,
+              "EndLine": 7979,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Reachability.cs",
+            "Region": {
+              "StartLine": 134,
+              "EndLine": 134,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence.Tests\\Journal\\ChaosJournal.cs",
+            "Region": {
+              "StartLine": 81,
+              "EndLine": 81,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
+            "Region": {
+              "StartLine": 298,
+              "EndLine": 298,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
+            "Region": {
+              "StartLine": 450,
+              "EndLine": 450,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
+            "Region": {
+              "StartLine": 737,
+              "EndLine": 737,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
+            "Region": {
+              "StartLine": 1128,
+              "EndLine": 1128,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
+            "Region": {
+              "StartLine": 1307,
+              "EndLine": 1307,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
+            "Region": {
+              "StartLine": 1478,
+              "EndLine": 1478,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\BarrierCoordinator.cs",
+            "Region": {
+              "StartLine": 496,
+              "EndLine": 496,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Proto\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 352,
+              "EndLine": 352,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Proto\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 519,
+              "EndLine": 519,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Proto\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 559,
+              "EndLine": 559,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Proto\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 599,
+              "EndLine": 599,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Proto\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 660,
+              "EndLine": 660,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Proto\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 850,
+              "EndLine": 850,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Proto\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 1002,
+              "EndLine": 1002,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Proto\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 1207,
+              "EndLine": 1207,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Proto\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 1560,
+              "EndLine": 1560,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Proto\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 1712,
+              "EndLine": 1712,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Proto\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 1935,
+              "EndLine": 1935,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Proto\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 2357,
+              "EndLine": 2357,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Proto\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 2565,
+              "EndLine": 2565,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\AckedDelivery.cs",
+            "Region": {
+              "StartLine": 147,
+              "EndLine": 147,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Deadline.cs",
+            "Region": {
+              "StartLine": 86,
+              "EndLine": 86,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\EndpointManager.cs",
+            "Region": {
+              "StartLine": 304,
+              "EndLine": 304,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\EndpointManager.cs",
+            "Region": {
+              "StartLine": 410,
+              "EndLine": 410,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\EndpointManager.cs",
+            "Region": {
+              "StartLine": 810,
+              "EndLine": 810,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\PhiAccrualFailureDetector.cs",
+            "Region": {
+              "StartLine": 160,
+              "EndLine": 160,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\PhiAccrualFailureDetector.cs",
+            "Region": {
+              "StartLine": 211,
+              "EndLine": 211,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\PhiAccrualFailureDetector.cs",
+            "Region": {
+              "StartLine": 281,
+              "EndLine": 281,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Containerformats.cs",
+            "Region": {
+              "StartLine": 452,
+              "EndLine": 452,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Containerformats.cs",
+            "Region": {
+              "StartLine": 971,
+              "EndLine": 971,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
+            "Region": {
+              "StartLine": 510,
+              "EndLine": 510,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
+            "Region": {
+              "StartLine": 666,
+              "EndLine": 666,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
+            "Region": {
+              "StartLine": 709,
+              "EndLine": 709,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
+            "Region": {
+              "StartLine": 1082,
+              "EndLine": 1082,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
+            "Region": {
+              "StartLine": 1262,
+              "EndLine": 1262,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
+            "Region": {
+              "StartLine": 1306,
+              "EndLine": 1306,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
+            "Region": {
+              "StartLine": 1350,
+              "EndLine": 1350,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
+            "Region": {
+              "StartLine": 1678,
+              "EndLine": 1678,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
+            "Region": {
+              "StartLine": 2101,
+              "EndLine": 2101,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
+            "Region": {
+              "StartLine": 2546,
+              "EndLine": 2546,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
+            "Region": {
+              "StartLine": 3079,
+              "EndLine": 3079,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
+            "Region": {
+              "StartLine": 3259,
+              "EndLine": 3259,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
+            "Region": {
+              "StartLine": 3302,
+              "EndLine": 3302,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
+            "Region": {
+              "StartLine": 3362,
+              "EndLine": 3362,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
+            "Region": {
+              "StartLine": 3745,
+              "EndLine": 3745,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
+            "Region": {
+              "StartLine": 3913,
+              "EndLine": 3913,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
+            "Region": {
+              "StartLine": 4397,
+              "EndLine": 4397,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
+            "Region": {
+              "StartLine": 4913,
+              "EndLine": 4913,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
+            "Region": {
+              "StartLine": 5080,
+              "EndLine": 5080,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
+            "Region": {
+              "StartLine": 5385,
+              "EndLine": 5385,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
+            "Region": {
+              "StartLine": 5563,
+              "EndLine": 5563,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
+            "Region": {
+              "StartLine": 5900,
+              "EndLine": 5900,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
+            "Region": {
+              "StartLine": 6059,
+              "EndLine": 6059,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
+            "Region": {
+              "StartLine": 6459,
+              "EndLine": 6459,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\RemoteSettings.cs",
+            "Region": {
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Serialization\\DaemonMsgCreateSerializer.cs",
+            "Region": {
+              "StartLine": 129,
+              "EndLine": 129,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Serialization\\DaemonMsgCreateSerializer.cs",
+            "Region": {
+              "StartLine": 135,
+              "EndLine": 135,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Serialization\\DaemonMsgCreateSerializer.cs",
+            "Region": {
+              "StartLine": 141,
+              "EndLine": 141,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Serialization\\DaemonMsgCreateSerializer.cs",
+            "Region": {
+              "StartLine": 147,
+              "EndLine": 147,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
+            "Region": {
+              "StartLine": 777,
+              "EndLine": 777,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
+            "Region": {
+              "StartLine": 792,
+              "EndLine": 792,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
+            "Region": {
+              "StartLine": 404,
+              "EndLine": 404,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
+            "Region": {
+              "StartLine": 413,
+              "EndLine": 413,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests.Shared.Internals\\Helpers\\XAssert.cs",
+            "Region": {
+              "StartLine": 62,
+              "EndLine": 62,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\Extensions.cs",
+            "Region": {
+              "StartLine": 84,
+              "EndLine": 84,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\Extensions.cs",
+            "Region": {
+              "StartLine": 98,
+              "EndLine": 98,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\FSM.cs",
+            "Region": {
+              "StartLine": 184,
+              "EndLine": 184,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\Futures.cs",
+            "Region": {
+              "StartLine": 256,
+              "EndLine": 256,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\RepointableActorRef.cs",
+            "Region": {
+              "StartLine": 203,
+              "EndLine": 203,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\SupervisorStrategy.cs",
+            "Region": {
+              "StartLine": 144,
+              "EndLine": 144,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Dispatch\\CachingConfig.cs",
+            "Region": {
+              "StartLine": 138,
+              "EndLine": 138,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Dispatch\\CachingConfig.cs",
+            "Region": {
+              "StartLine": 165,
+              "EndLine": 165,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Dispatch\\CachingConfig.cs",
+            "Region": {
+              "StartLine": 204,
+              "EndLine": 204,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Dispatch\\SingleThreadDispatcher.cs",
+            "Region": {
+              "StartLine": 31,
+              "EndLine": 31,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Event\\Logging.cs",
+            "Region": {
+              "StartLine": 130,
+              "EndLine": 130,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Helios.Concurrency.DedicatedThreadPool.cs",
+            "Region": {
+              "StartLine": 110,
+              "EndLine": 110,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Routing\\ConsistentHash.cs",
+            "Region": {
+              "StartLine": 100,
+              "EndLine": 100,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Routing\\RouterConfig.cs",
+            "Region": {
+              "StartLine": 373,
+              "EndLine": 373,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Util\\Internal\\Collections\\ImmutableAvlTreeBase.cs",
+            "Region": {
+              "StartLine": 88,
+              "EndLine": 88,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\protobuf\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 352,
+              "EndLine": 352,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\protobuf\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 519,
+              "EndLine": 519,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\protobuf\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 559,
+              "EndLine": 559,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\protobuf\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 599,
+              "EndLine": 599,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\protobuf\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 660,
+              "EndLine": 660,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\protobuf\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 850,
+              "EndLine": 850,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\protobuf\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 1002,
+              "EndLine": 1002,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\protobuf\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 1207,
+              "EndLine": 1207,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\protobuf\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 1560,
+              "EndLine": 1560,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\protobuf\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 1712,
+              "EndLine": 1712,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\protobuf\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 1935,
+              "EndLine": 1935,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\protobuf\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 2357,
+              "EndLine": 2357,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\protobuf\\TestConductorProtocol.cs",
+            "Region": {
+              "StartLine": 2565,
+              "EndLine": 2565,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure.app\\domain\\Registry.cs",
+            "Region": {
+              "StartLine": 46,
+              "EndLine": 46,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure.app\\nuget\\NugetList.cs",
+            "Region": {
+              "StartLine": 37,
+              "EndLine": 37,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure.app\\services\\WindowsFeatureService.cs",
+            "Region": {
+              "StartLine": 222,
+              "EndLine": 222,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\commandline\\Options.cs",
+            "Region": {
+              "StartLine": 1011,
+              "EndLine": 1011,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\commands\\CommandExecutor.cs",
+            "Region": {
+              "StartLine": 134,
+              "EndLine": 134,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\commands\\CommandExecutor.cs",
+            "Region": {
+              "StartLine": 142,
+              "EndLine": 142,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\filesystem\\DotNetFileSystem.cs",
+            "Region": {
+              "StartLine": 71,
+              "EndLine": 71,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\platforms\\Platform.cs",
+            "Region": {
+              "StartLine": 63,
+              "EndLine": 63,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.JsonPatch\\Helpers\\ExpressionHelpers.cs",
+            "Region": {
+              "StartLine": 70,
+              "EndLine": 70,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Abstractions\\ActionExecutedContext.cs",
+            "Region": {
+              "StartLine": 33,
+              "EndLine": 33,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Abstractions\\ExceptionContext.cs",
+            "Region": {
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Abstractions\\ModelBinding\\Metadata\\ModelMetadataIdentity.cs",
+            "Region": {
+              "StartLine": 71,
+              "EndLine": 71,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Abstractions\\ModelBinding\\ModelExplorer.cs",
+            "Region": {
+              "StartLine": 203,
+              "EndLine": 203,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Abstractions\\ModelBinding\\ModelStateDictionary.cs",
+            "Region": {
+              "StartLine": 217,
+              "EndLine": 217,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Abstractions\\ResourceExecutedContext.cs",
+            "Region": {
+              "StartLine": 48,
+              "EndLine": 48,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Abstractions\\ResultExecutedContext.cs",
+            "Region": {
+              "StartLine": 35,
+              "EndLine": 35,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Abstractions\\RouteDataActionConstraint.cs",
+            "Region": {
+              "StartLine": 38,
+              "EndLine": 38,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.ApiExplorer\\ApiDescriptionExtensions.cs",
+            "Region": {
+              "StartLine": 23,
+              "EndLine": 23,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.ApiExplorer\\DefaultApiDescriptionProvider.cs",
+            "Region": {
+              "StartLine": 246,
+              "EndLine": 246,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.ApiExplorer\\DefaultApiDescriptionProvider.cs",
+            "Region": {
+              "StartLine": 365,
+              "EndLine": 365,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.ApiExplorer\\DefaultApiDescriptionProvider.cs",
+            "Region": {
+              "StartLine": 608,
+              "EndLine": 608,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ActionDescriptorExtensions.cs",
+            "Region": {
+              "StartLine": 23,
+              "EndLine": 23,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ApplicationModels\\AttributeRouteModel.cs",
+            "Region": {
+              "StartLine": 97,
+              "EndLine": 97,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ApplicationModels\\DefaultApplicationModelProvider.cs",
+            "Region": {
+              "StartLine": 509,
+              "EndLine": 509,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ControllerActionDescriptorBuilder.cs",
+            "Region": {
+              "StartLine": 396,
+              "EndLine": 396,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ControllerActionExecutor.cs",
+            "Region": {
+              "StartLine": 132,
+              "EndLine": 132,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\DefaultActionSelector.cs",
+            "Region": {
+              "StartLine": 190,
+              "EndLine": 190,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\FilterDescriptorOrderComparer.cs",
+            "Region": {
+              "StartLine": 20,
+              "EndLine": 20,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\Internal\\DecisionTree\\DecisionCriterionValueEqualityComparer.cs",
+            "Region": {
+              "StartLine": 24,
+              "EndLine": 24,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ModelBinding\\BindingSourceValueProvider.cs",
+            "Region": {
+              "StartLine": 71,
+              "EndLine": 71,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"??\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ModelBinding\\ComplexModelDtoModelBinder.cs",
+            "Region": {
+              "StartLine": 33,
+              "EndLine": 33,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ModelBinding\\Metadata\\DefaultModelMetadata.cs",
+            "Region": {
+              "StartLine": 323,
+              "EndLine": 323,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ModelBinding\\Metadata\\DefaultModelMetadata.cs",
+            "Region": {
+              "StartLine": 339,
+              "EndLine": 339,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ModelBinding\\Metadata\\DefaultModelMetadata.cs",
+            "Region": {
+              "StartLine": 400,
+              "EndLine": 400,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ModelBinding\\PrefixContainer.cs",
+            "Region": {
+              "StartLine": 97,
+              "EndLine": 97,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ModelBinding\\Validation\\SimpleTypesExcludeFilter.cs",
+            "Region": {
+              "StartLine": 22,
+              "EndLine": 22,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\OutputFormatter.cs",
+            "Region": {
+              "StartLine": 137,
+              "EndLine": 137,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\Routing\\RouteValueEqualityComparer.cs",
+            "Region": {
+              "StartLine": 29,
+              "EndLine": 29,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\Routing\\RouteValueEqualityComparer.cs",
+            "Region": {
+              "StartLine": 43,
+              "EndLine": 43,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\UrlHelper.cs",
+            "Region": {
+              "StartLine": 112,
+              "EndLine": 112,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Controller.cs",
+            "Region": {
+              "StartLine": 842,
+              "EndLine": 842,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Rendering\\Expressions\\ExpressionMetadataProvider.cs",
+            "Region": {
+              "StartLine": 72,
+              "EndLine": 72,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Rendering\\Expressions\\ViewDataEvaluator.cs",
+            "Region": {
+              "StartLine": 46,
+              "EndLine": 46,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Rendering\\Html\\DefaultEditorTemplates.cs",
+            "Region": {
+              "StartLine": 148,
+              "EndLine": 148,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Rendering\\Html\\TagBuilder.cs",
+            "Region": {
+              "StartLine": 51,
+              "EndLine": 51,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"??\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Rendering\\ViewEngine\\CompositeViewEngine.cs",
+            "Region": {
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\ViewComponents\\DefaultViewComponentSelector.cs",
+            "Region": {
+              "StartLine": 41,
+              "EndLine": 41,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\ViewComponents\\ViewComponentConventions.cs",
+            "Region": {
+              "StartLine": 20,
+              "EndLine": 20,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\ViewComponents\\ViewComponentConventions.cs",
+            "Region": {
+              "StartLine": 44,
+              "EndLine": 44,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\ViewComponents\\ViewComponentConventions.cs",
+            "Region": {
+              "StartLine": 56,
+              "EndLine": 56,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\ViewComponents\\ViewViewComponentResult.cs",
+            "Region": {
+              "StartLine": 68,
+              "EndLine": 68,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\ViewDataDictionary.cs",
+            "Region": {
+              "StartLine": 347,
+              "EndLine": 347,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\ViewDataDictionary.cs",
+            "Region": {
+              "StartLine": 411,
+              "EndLine": 411,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Razor\\Compilation\\RoslynCompilationService.cs",
+            "Region": {
+              "StartLine": 89,
+              "EndLine": 89,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Razor\\RazorPageActivator.cs",
+            "Region": {
+              "StartLine": 98,
+              "EndLine": 98,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.WebApiCompatShim\\ApiController.cs",
+            "Region": {
+              "StartLine": 190,
+              "EndLine": 190,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.WebApiCompatShim\\ApiController.cs",
+            "Region": {
+              "StartLine": 340,
+              "EndLine": 340,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.WebApiCompatShim\\HttpError.cs",
+            "Region": {
+              "StartLine": 93,
+              "EndLine": 93,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.WebApiCompatShim\\HttpRequestMessage\\HttpRequestMessageExtensions.cs",
+            "Region": {
+              "StartLine": 253,
+              "EndLine": 253,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.WebApiCompatShim\\HttpRequestMessage\\HttpRequestMessageExtensions.cs",
+            "Region": {
+              "StartLine": 415,
+              "EndLine": 415,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.WebApiCompatShim\\Routing\\RouteBuilderExtensions.cs",
+            "Region": {
+              "StartLine": 60,
+              "EndLine": 60,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\ControllerActionInvokerTest.cs",
+            "Region": {
+              "StartLine": 1999,
+              "EndLine": 1999,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\Routing\\InnerAttributeRouteTest.cs",
+            "Region": {
+              "StartLine": 449,
+              "EndLine": 449,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\Routing\\InnerAttributeRouteTest.cs",
+            "Region": {
+              "StartLine": 1779,
+              "EndLine": 1779,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\Routing\\InnerAttributeRouteTest.cs",
+            "Region": {
+              "StartLine": 1793,
+              "EndLine": 1793,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.FunctionalTests\\InlineConstraintTests.cs",
+            "Region": {
+              "StartLine": 654,
+              "EndLine": 654,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.IntegrationTests\\ValidationIntegrationTests.cs",
+            "Region": {
+              "StartLine": 690,
+              "EndLine": 690,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.IntegrationTests\\ValidationIntegrationTests.cs",
+            "Region": {
+              "StartLine": 798,
+              "EndLine": 798,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Razor.Host.Test\\SpanFactory\\RawTextSymbol.cs",
+            "Region": {
+              "StartLine": 63,
+              "EndLine": 63,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Razor.Host.Test\\SpanFactory\\SpanFactory.cs",
+            "Region": {
+              "StartLine": 93,
+              "EndLine": 93,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Razor.Test\\SpanFactory.cs",
+            "Region": {
+              "StartLine": 100,
+              "EndLine": 100,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Razor.Test\\SpanFactory.cs",
+            "Region": {
+              "StartLine": 237,
+              "EndLine": 237,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.TestCommon\\ResourceFile.cs",
+            "Region": {
+              "StartLine": 216,
+              "EndLine": 216,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.TestCommon\\TestFileProvider.cs",
+            "Region": {
+              "StartLine": 51,
+              "EndLine": 51,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.WebApiCompatShimTest\\DefaultContentNegotiatorTest.cs",
+            "Region": {
+              "StartLine": 821,
+              "EndLine": 821,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.WebApiCompatShimTest\\TestUtils\\TestDataHolder.cs",
+            "Region": {
+              "StartLine": 36,
+              "EndLine": 36,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"??\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.WebApiCompatShimTest\\TestUtils\\TestDataSetAttribute.cs",
+            "Region": {
+              "StartLine": 149,
+              "EndLine": 149,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\WebSites\\FormatterWebSite\\Controllers\\ValidationController.cs",
+            "Region": {
+              "StartLine": 49,
+              "EndLine": 49,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\WebSites\\HtmlGenerationWebSite\\ProductsService.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\WebSites\\InlineConstraintsWebSite\\Constraints\\IsbnDigitScheme10Constraint.cs",
+            "Region": {
+              "StartLine": 56,
+              "EndLine": 56,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\WebSites\\ModelBindingWebSite\\Controllers\\TryUpdateModelController.cs",
+            "Region": {
+              "StartLine": 182,
+              "EndLine": 182,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\WebSites\\ValidationWebSite\\ProductValidatorAttibute.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\WebSites\\ValidationWebSite\\ProductValidatorAttibute.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\WebSites\\VersioningWebSite\\VersionRangeValidator.cs",
+            "Region": {
+              "StartLine": 30,
+              "EndLine": 30,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\WebSites\\VersioningWebSite\\VersionRoute.cs",
+            "Region": {
+              "StartLine": 62,
+              "EndLine": 62,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\WebSites\\VersioningWebSite\\VersionRoute.cs",
+            "Region": {
+              "StartLine": 111,
+              "EndLine": 111,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\WebSites\\WebApiCompatShimWebSite\\Controllers\\HttpRequestMessage\\HttpRequestMessageController.cs",
+            "Region": {
+              "StartLine": 71,
+              "EndLine": 71,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Tests\\Unit\\Json\\TestPrimitiveConverter.cs",
+            "Region": {
+              "StartLine": 30,
+              "EndLine": 30,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Diagnostics\\InteractiveDiagnostics.cs",
+            "Region": {
+              "StartLine": 26,
+              "EndLine": 26,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Extensions\\RequestExtensions.cs",
+            "Region": {
+              "StartLine": 36,
+              "EndLine": 36,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Helpers\\HttpEncoder.cs",
+            "Region": {
+              "StartLine": 123,
+              "EndLine": 123,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Helpers\\HttpEncoder.cs",
+            "Region": {
+              "StartLine": 128,
+              "EndLine": 128,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Helpers\\HttpEncoder.cs",
+            "Region": {
+              "StartLine": 461,
+              "EndLine": 461,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Helpers\\HttpUtility.cs",
+            "Region": {
+              "StartLine": 180,
+              "EndLine": 180,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Helpers\\HttpUtility.cs",
+            "Region": {
+              "StartLine": 303,
+              "EndLine": 303,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Helpers\\ReflectionUtils.cs",
+            "Region": {
+              "StartLine": 174,
+              "EndLine": 174,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
+            "Region": {
+              "StartLine": 178,
+              "EndLine": 178,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
+            "Region": {
+              "StartLine": 365,
+              "EndLine": 365,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
+            "Region": {
+              "StartLine": 396,
+              "EndLine": 396,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Json\\JsonDeserializer.cs",
+            "Region": {
+              "StartLine": 919,
+              "EndLine": 919,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"??\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Json\\JsonSerializer.cs",
+            "Region": {
+              "StartLine": 368,
+              "EndLine": 368,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\ModelBinding\\BindingMemberInfo.cs",
+            "Region": {
+              "StartLine": 39,
+              "EndLine": 39,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\ModelBinding\\BindingMemberInfo.cs",
+            "Region": {
+              "StartLine": 85,
+              "EndLine": 85,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Request.cs",
+            "Region": {
+              "StartLine": 186,
+              "EndLine": 186,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Responses\\GenericFileResponse.cs",
+            "Region": {
+              "StartLine": 113,
+              "EndLine": 113,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+            "Region": {
+              "StartLine": 3262,
+              "EndLine": 3262,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\examples\\web\\MyFirstFilter.cs",
+            "Region": {
+              "StartLine": 29,
+              "EndLine": 29,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Conditions\\ConditionMethodExpression.cs",
+            "Region": {
+              "StartLine": 91,
+              "EndLine": 91,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Internal\\DictionaryAdapter.cs",
+            "Region": {
+              "StartLine": 150,
+              "EndLine": 150,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Internal\\FileInfoHelper.cs",
+            "Region": {
+              "StartLine": 52,
+              "EndLine": 52,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Internal\\ThreadIDHelper.cs",
+            "Region": {
+              "StartLine": 50,
+              "EndLine": 50,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\LayoutRenderers\\CallSiteLayoutRenderer.cs",
+            "Region": {
+              "StartLine": 201,
+              "EndLine": 201,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\LayoutRenderers\\IdentityLayoutRenderer.cs",
+            "Region": {
+              "StartLine": 109,
+              "EndLine": 109,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\LayoutRenderers\\PerformanceCounterLayoutRenderer.cs",
+            "Region": {
+              "StartLine": 84,
+              "EndLine": 84,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\LayoutRenderers\\QueryPerformanceCounterLayoutRenderer.cs",
+            "Region": {
+              "StartLine": 171,
+              "EndLine": 171,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\LayoutRenderers\\StackTraceLayoutRenderer.cs",
+            "Region": {
+              "StartLine": 134,
+              "EndLine": 134,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\LayoutRenderers\\WindowsIdentityLayoutRenderer.cs",
+            "Region": {
+              "StartLine": 94,
+              "EndLine": 94,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\LayoutRenderers\\WindowsIdentityLayoutRenderer.cs",
+            "Region": {
+              "StartLine": 114,
+              "EndLine": 114,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\LayoutRenderers\\Wrappers\\PaddingLayoutRendererWrapper.cs",
+            "Region": {
+              "StartLine": 105,
+              "EndLine": 105,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\LayoutRenderers\\Wrappers\\PaddingLayoutRendererWrapper.cs",
+            "Region": {
+              "StartLine": 122,
+              "EndLine": 122,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Layouts\\CsvLayout.cs",
+            "Region": {
+              "StartLine": 198,
+              "EndLine": 198,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Layouts\\CsvLayout.cs",
+            "Region": {
+              "StartLine": 215,
+              "EndLine": 215,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Layouts\\CsvLayout.cs",
+            "Region": {
+              "StartLine": 263,
+              "EndLine": 263,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Layouts\\CsvLayout.cs",
+            "Region": {
+              "StartLine": 280,
+              "EndLine": 280,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Layouts\\SimpleLayout.cs",
+            "Region": {
+              "StartLine": 209,
+              "EndLine": 209,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\NestedDiagnosticsContext.cs",
+            "Region": {
+              "StartLine": 59,
+              "EndLine": 59,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\NestedDiagnosticsContext.cs",
+            "Region": {
+              "StartLine": 95,
+              "EndLine": 95,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\NLogTraceListener.cs",
+            "Region": {
+              "StartLine": 437,
+              "EndLine": 437,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Targets\\DatabaseTarget.cs",
+            "Region": {
+              "StartLine": 277,
+              "EndLine": 277,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Targets\\LogReceiverWebServiceTarget.cs",
+            "Region": {
+              "StartLine": 426,
+              "EndLine": 426,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Targets\\NetworkTarget.cs",
+            "Region": {
+              "StartLine": 297,
+              "EndLine": 297,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Targets\\WebServiceTarget.cs",
+            "Region": {
+              "StartLine": 254,
+              "EndLine": 254,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\LoggerTests.cs",
+            "Region": {
+              "StartLine": 55,
+              "EndLine": 55,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\LoggerTests.cs",
+            "Region": {
+              "StartLine": 201,
+              "EndLine": 201,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\LoggerTests.cs",
+            "Region": {
+              "StartLine": 344,
+              "EndLine": 344,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\LoggerTests.cs",
+            "Region": {
+              "StartLine": 490,
+              "EndLine": 490,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\LoggerTests.cs",
+            "Region": {
+              "StartLine": 636,
+              "EndLine": 636,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\LoggerTests.cs",
+            "Region": {
+              "StartLine": 782,
+              "EndLine": 782,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\LoggerTests.cs",
+            "Region": {
+              "StartLine": 932,
+              "EndLine": 932,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tools\\DumpApiXml\\DocFileBuilder.cs",
+            "Region": {
+              "StartLine": 597,
+              "EndLine": 597,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tools\\MakeNLogXSD\\Program.cs",
+            "Region": {
+              "StartLine": 52,
+              "EndLine": 52,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\build\\SetVersions\\ProjectVersion.cs",
+            "Region": {
+              "StartLine": 53,
+              "EndLine": 53,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\lib\\commandline\\CommandLine.cs",
+            "Region": {
+              "StartLine": 239,
+              "EndLine": 239,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\lib\\commandline\\CommandLine.cs",
+            "Region": {
+              "StartLine": 1088,
+              "EndLine": 1088,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\lib\\commandline\\CommandLineText.cs",
+            "Region": {
+              "StartLine": 241,
+              "EndLine": 241,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\lib\\commandline\\CommandLineText.cs",
+            "Region": {
+              "StartLine": 287,
+              "EndLine": 287,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\lib\\commandline\\CommandLineText.cs",
+            "Region": {
+              "StartLine": 1040,
+              "EndLine": 1040,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\lib\\commandline\\CommandLineText.cs",
+            "Region": {
+              "StartLine": 1087,
+              "EndLine": 1087,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Calendars\\GJYearMonthDayCalculator.cs",
+            "Region": {
+              "StartLine": 50,
+              "EndLine": 50,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Calendars\\GregorianYearMonthDayCalculator.cs",
+            "Region": {
+              "StartLine": 81,
+              "EndLine": 81,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Calendars\\RegularYearMonthDayCalculator.cs",
+            "Region": {
+              "StartLine": 105,
+              "EndLine": 105,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Calendars\\TickArithmetic.cs",
+            "Region": {
+              "StartLine": 27,
+              "EndLine": 27,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Calendars\\WeekYearCalculator.cs",
+            "Region": {
+              "StartLine": 120,
+              "EndLine": 120,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\DateTimeZone.cs",
+            "Region": {
+              "StartLine": 481,
+              "EndLine": 481,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\DateTimeZone.cs",
+            "Region": {
+              "StartLine": 497,
+              "EndLine": 497,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Fields\\YearsPeriodField.cs",
+            "Region": {
+              "StartLine": 41,
+              "EndLine": 41,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\TimeZones\\ZoneEqualityComparer.cs",
+            "Region": {
+              "StartLine": 280,
+              "EndLine": 280,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\CommandLine\\CommandLineParser.cs",
+            "Region": {
+              "StartLine": 57,
+              "EndLine": 57,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\CommandLine\\Commands\\HelpCommandMarkdownTemplate.cs",
+            "Region": {
+              "StartLine": 252,
+              "EndLine": 252,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\CommandLine\\Commands\\ListCommand.cs",
+            "Region": {
+              "StartLine": 46,
+              "EndLine": 46,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\CommandLine\\Commands\\PackCommand.cs",
+            "Region": {
+              "StartLine": 265,
+              "EndLine": 265,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\CommandLine\\Commands\\PackCommand.cs",
+            "Region": {
+              "StartLine": 282,
+              "EndLine": 282,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\CommandLine\\Commands\\ProjectFactory.cs",
+            "Region": {
+              "StartLine": 543,
+              "EndLine": 543,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\CommandLine\\Commands\\PushCommand.cs",
+            "Region": {
+              "StartLine": 62,
+              "EndLine": 62,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\CommandLine\\Program.cs",
+            "Region": {
+              "StartLine": 90,
+              "EndLine": 90,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Core\\Authoring\\ManifestMetadata.cs",
+            "Region": {
+              "StartLine": 124,
+              "EndLine": 124,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Core\\Authoring\\ManifestMetadata.cs",
+            "Region": {
+              "StartLine": 170,
+              "EndLine": 170,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Core\\Authoring\\PathResolver.cs",
+            "Region": {
+              "StartLine": 46,
+              "EndLine": 46,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Core\\Extensions\\VersionExtensions.cs",
+            "Region": {
+              "StartLine": 35,
+              "EndLine": 35,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Core\\Extensions\\VersionExtensions.cs",
+            "Region": {
+              "StartLine": 47,
+              "EndLine": 47,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Core\\Extensions\\XElementExtensions.cs",
+            "Region": {
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Core\\Extensions\\XElementExtensions.cs",
+            "Region": {
+              "StartLine": 31,
+              "EndLine": 31,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Core\\Packages\\OptimizedZipPackage.cs",
+            "Region": {
+              "StartLine": 211,
+              "EndLine": 211,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Core\\Repositories\\MachineCache.cs",
+            "Region": {
+              "StartLine": 42,
+              "EndLine": 42,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Core\\Repositories\\PackageRepositoryExtensions.cs",
+            "Region": {
+              "StartLine": 157,
+              "EndLine": 157,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Core\\Repositories\\PackageRepositoryExtensions.cs",
+            "Region": {
+              "StartLine": 171,
+              "EndLine": 171,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Core\\Repositories\\PackageRepositoryExtensions.cs",
+            "Region": {
+              "StartLine": 413,
+              "EndLine": 413,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Core\\Server\\PackageServer.cs",
+            "Region": {
+              "StartLine": 199,
+              "EndLine": 199,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Core\\Utility\\VersionUtility.cs",
+            "Region": {
+              "StartLine": 469,
+              "EndLine": 469,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Core\\Utility\\VersionUtility.cs",
+            "Region": {
+              "StartLine": 532,
+              "EndLine": 532,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Core\\Utility\\VersionUtility.cs",
+            "Region": {
+              "StartLine": 853,
+              "EndLine": 853,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Dialog10\\Nodes\\PackagesTreeNodeBase.cs",
+            "Region": {
+              "StartLine": 394,
+              "EndLine": 394,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Dialog10\\Nodes\\PackagesTreeNodeBase.cs",
+            "Region": {
+              "StartLine": 408,
+              "EndLine": 408,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\DialogServices\\PackageManagerUI\\Converters\\CountToVisibilityConverter.cs",
+            "Region": {
+              "StartLine": 27,
+              "EndLine": 27,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\DialogServices\\PackageManagerUI\\UserNotifierServices.cs",
+            "Region": {
+              "StartLine": 95,
+              "EndLine": 95,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\DialogServices\\SolutionExplorer\\SolutionExplorer.xaml.cs",
+            "Region": {
+              "StartLine": 37,
+              "EndLine": 37,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\DialogServices\\SolutionExplorer\\SolutionExplorerViewModel.cs",
+            "Region": {
+              "StartLine": 45,
+              "EndLine": 45,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Server\\DataServices\\Package.cs",
+            "Region": {
+              "StartLine": 239,
+              "EndLine": 239,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\MessageHelper.cs",
+            "Region": {
+              "StartLine": 59,
+              "EndLine": 59,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\PackageSource\\VSPackageSourceProvider.cs",
+            "Region": {
+              "StartLine": 259,
+              "EndLine": 259,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\ProductUpdate\\ProductUpdateService.cs",
+            "Region": {
+              "StartLine": 51,
+              "EndLine": 51,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\ProjectExtensions.cs",
+            "Region": {
+              "StartLine": 239,
+              "EndLine": 239,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\SettingsManagerBase.cs",
+            "Region": {
+              "StartLine": 26,
+              "EndLine": 26,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\SettingsManagerBase.cs",
+            "Region": {
+              "StartLine": 45,
+              "EndLine": 45,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\SettingsManagerBase.cs",
+            "Region": {
+              "StartLine": 64,
+              "EndLine": 64,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\Utility\\PathHelper.cs",
+            "Region": {
+              "StartLine": 38,
+              "EndLine": 38,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\Utility\\PathHelper.cs",
+            "Region": {
+              "StartLine": 68,
+              "EndLine": 68,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\Utility\\UriHelper.cs",
+            "Region": {
+              "StartLine": 38,
+              "EndLine": 38,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\Utility\\UriHelper.cs",
+            "Region": {
+              "StartLine": 56,
+              "EndLine": 56,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\VsTemplateWizard.cs",
+            "Region": {
+              "StartLine": 389,
+              "EndLine": 389,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\VsTemplateWizard.cs",
+            "Region": {
+              "StartLine": 405,
+              "EndLine": 405,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\Console\\Console\\ConsoleDispatcher.cs",
+            "Region": {
+              "StartLine": 160,
+              "EndLine": 160,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\Console\\PowerConsoleToolWindow.cs",
+            "Region": {
+              "StartLine": 195,
+              "EndLine": 195,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellCmdlets\\FindPackageCommand.cs",
+            "Region": {
+              "StartLine": 56,
+              "EndLine": 56,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellCmdlets\\GetPackageCommand.cs",
+            "Region": {
+              "StartLine": 186,
+              "EndLine": 186,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellCmdlets\\JsonApiCommandBase.cs",
+            "Region": {
+              "StartLine": 90,
+              "EndLine": 90,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellCmdlets\\NuGetBaseCommand.cs",
+            "Region": {
+              "StartLine": 311,
+              "EndLine": 311,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHost\\CommandParser.cs",
+            "Region": {
+              "StartLine": 90,
+              "EndLine": 90,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHost\\NuGetHostUserInterface.cs",
+            "Region": {
+              "StartLine": 116,
+              "EndLine": 116,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHost\\PowerShellHost.cs",
+            "Region": {
+              "StartLine": 202,
+              "EndLine": 202,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHost\\PowerShellHost.cs",
+            "Region": {
+              "StartLine": 435,
+              "EndLine": 435,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHost\\PowerShellHostService.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHost\\RunspaceDispatcher.cs",
+            "Region": {
+              "StartLine": 166,
+              "EndLine": 166,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHostProvider\\PowerShellHostProvider.cs",
+            "Region": {
+              "StartLine": 29,
+              "EndLine": 29,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\Core.Test\\ProjectManagerTest.cs",
+            "Region": {
+              "StartLine": 539,
+              "EndLine": 539,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\Test.Utility\\Mocks\\MockFileSystem.cs",
+            "Region": {
+              "StartLine": 221,
+              "EndLine": 221,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\Test.Utility\\Mocks\\MockFileSystem.cs",
+            "Region": {
+              "StartLine": 234,
+              "EndLine": 234,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\Test.Utility\\Mocks\\MockFileSystem.cs",
+            "Region": {
+              "StartLine": 247,
+              "EndLine": 247,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\Test.Utility\\Mocks\\MockProjectSystem.cs",
+            "Region": {
+              "StartLine": 122,
+              "EndLine": 122,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\Tools\\NuGet\\GenerateTestPackages\\AssemblySourceFileGenerator.cs",
+            "Region": {
+              "StartLine": 325,
+              "EndLine": 325,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"??\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\Tools\\NuGet\\GenerateTestPackages\\Program.cs",
+            "Region": {
+              "StartLine": 271,
+              "EndLine": 271,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Core.Test\\PacketSendBufferTests.cs",
+            "Region": {
+              "StartLine": 118,
+              "EndLine": 118,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.TestUtils\\RandomGreExtensions.cs",
+            "Region": {
+              "StartLine": 31,
+              "EndLine": 31,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.TestUtils\\RandomHttpExtensions.cs",
+            "Region": {
+              "StartLine": 250,
+              "EndLine": 250,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.TestUtils\\RandomIpV4Extensions.cs",
+            "Region": {
+              "StartLine": 121,
+              "EndLine": 121,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.TestUtils\\RandomIpV4Extensions.cs",
+            "Region": {
+              "StartLine": 148,
+              "EndLine": 148,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\ByteArrayExtensions.cs",
+            "Region": {
+              "StartLine": 384,
+              "EndLine": 384,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Http\\HttpTransferEncodingField.cs",
+            "Region": {
+              "StartLine": 122,
+              "EndLine": 122,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\RazorEngine-850082854d\\Core\\RazorEngine.Core\\Templating\\DynamicViewBag.cs",
+            "Region": {
+              "StartLine": 36,
+              "EndLine": 36,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"??\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\RazorEngine-850082854d\\Core\\RazorEngine.Core\\Templating\\ExecuteContext.cs",
+            "Region": {
+              "StartLine": 29,
+              "EndLine": 29,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\RazorEngine-850082854d\\Core\\RazorEngine.Core\\Templating\\TemplateBaseOfT.cs",
+            "Region": {
+              "StartLine": 46,
+              "EndLine": 46,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\RazorEngine-850082854d\\Core\\RazorEngine.Core\\Templating\\TemplateService.cs",
+            "Region": {
+              "StartLine": 203,
+              "EndLine": 203,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\RazorEngine-850082854d\\Core\\RazorEngine.Core\\Templating\\TemplateService.cs",
+            "Region": {
+              "StartLine": 219,
+              "EndLine": 219,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"??\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\RazorEngine-850082854d\\Core\\RazorEngine.Core\\Templating\\TemplateService.cs",
+            "Region": {
+              "StartLine": 242,
+              "EndLine": 242,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\RazorEngine-850082854d\\Core\\RazorEngine.Core\\Templating\\TemplateService.cs",
+            "Region": {
+              "StartLine": 434,
+              "EndLine": 434,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\RazorEngine-850082854d\\Core\\RazorEngine.Core\\Templating\\TemplateService.cs",
+            "Region": {
+              "StartLine": 456,
+              "EndLine": 456,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\RazorEngine-850082854d\\Web\\Test\\RazorEngine.Web.Test\\Controllers\\AccountController.cs",
+            "Region": {
+              "StartLine": 334,
+              "EndLine": 334,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Archive\\Rar\\RarArchiveVolumeFactory.cs",
+            "Region": {
+              "StartLine": 59,
+              "EndLine": 59,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\FlagUtility.cs",
+            "Region": {
+              "StartLine": 124,
+              "EndLine": 124,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\HeaderBuffer.cs",
+            "Region": {
+              "StartLine": 69,
+              "EndLine": 69,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\SevenZipHeaderFactory.cs",
+            "Region": {
+              "StartLine": 232,
+              "EndLine": 232,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\SevenZipHeaderFactory.cs",
+            "Region": {
+              "StartLine": 249,
+              "EndLine": 249,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Zip\\StreamingZipHeaderFactory.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Zip\\ZipFilePart.cs",
+            "Region": {
+              "StartLine": 135,
+              "EndLine": 135,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\BZip2Stream.cs",
+            "Region": {
+              "StartLine": 19,
+              "EndLine": 19,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 274,
+              "EndLine": 274,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 479,
+              "EndLine": 479,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 730,
+              "EndLine": 730,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 951,
+              "EndLine": 951,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 967,
+              "EndLine": 967,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\DeflateManager.cs",
+            "Region": {
+              "StartLine": 1273,
+              "EndLine": 1273,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\DeflateManager.cs",
+            "Region": {
+              "StartLine": 1426,
+              "EndLine": 1426,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
+            "Region": {
+              "StartLine": 698,
+              "EndLine": 698,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Filters\\BCJ2Filter.cs",
+            "Region": {
+              "StartLine": 176,
+              "EndLine": 176,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Filters\\BCJFilter.cs",
+            "Region": {
+              "StartLine": 61,
+              "EndLine": 61,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Filters\\Filter.cs",
+            "Region": {
+              "StartLine": 121,
+              "EndLine": 121,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaDecoder.cs",
+            "Region": {
+              "StartLine": 267,
+              "EndLine": 267,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
+            "Region": {
+              "StartLine": 492,
+              "EndLine": 492,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\PpmContext.cs",
+            "Region": {
+              "StartLine": 694,
+              "EndLine": 694,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\PpmContext.cs",
+            "Region": {
+              "StartLine": 761,
+              "EndLine": 761,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\I1\\PpmContext.cs",
+            "Region": {
+              "StartLine": 778,
+              "EndLine": 778,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"??\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack.cs",
+            "Region": {
+              "StartLine": 147,
+              "EndLine": 147,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack.cs",
+            "Region": {
+              "StartLine": 1080,
+              "EndLine": 1080,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 433,
+              "EndLine": 433,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 489,
+              "EndLine": 489,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 531,
+              "EndLine": 531,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\UnpackUtility.cs",
+            "Region": {
+              "StartLine": 78,
+              "EndLine": 78,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\UnpackUtility.cs",
+            "Region": {
+              "StartLine": 89,
+              "EndLine": 89,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\UnpackUtility.cs",
+            "Region": {
+              "StartLine": 103,
+              "EndLine": 103,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\UnpackUtility.cs",
+            "Region": {
+              "StartLine": 110,
+              "EndLine": 110,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\UnpackUtility.cs",
+            "Region": {
+              "StartLine": 126,
+              "EndLine": 126,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\UnpackUtility.cs",
+            "Region": {
+              "StartLine": 139,
+              "EndLine": 139,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
+            "Region": {
+              "StartLine": 71,
+              "EndLine": 71,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
+            "Region": {
+              "StartLine": 82,
+              "EndLine": 82,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
+            "Region": {
+              "StartLine": 97,
+              "EndLine": 97,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
+            "Region": {
+              "StartLine": 267,
+              "EndLine": 267,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
+            "Region": {
+              "StartLine": 283,
+              "EndLine": 283,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
+            "Region": {
+              "StartLine": 298,
+              "EndLine": 298,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
+            "Region": {
+              "StartLine": 1169,
+              "EndLine": 1169,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\IO\\RewindableStream.cs",
+            "Region": {
+              "StartLine": 19,
+              "EndLine": 19,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Utility.cs",
+            "Region": {
+              "StartLine": 26,
+              "EndLine": 26,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3240",
+      "FullMessage": "Use the \"?:\" operator here.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Utility.cs",
+            "Region": {
+              "StartLine": 51,
+              "EndLine": 51,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
