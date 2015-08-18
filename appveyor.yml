@@ -1,13 +1,11 @@
 version: 1.0.{build}
 
-cache:
-  - packages -> **\packages.config
-
 install: 
   - ps: (new-object Net.WebClient).DownloadString("https://raw.github.com/madskristensen/ExtensionScripts/master/AppVeyor/vsix.ps1") | iex
 
 before_build:
-  - nuget restore 
+  - appveyor DownloadFile https://raw.githubusercontent.com/appveyor/ci/master/scripts/nuget-restore.cmd
+  - nuget-restore
   - ps: Vsix-IncrementVsixVersion | Vsix-UpdateBuildVersion
 
 build_script:
