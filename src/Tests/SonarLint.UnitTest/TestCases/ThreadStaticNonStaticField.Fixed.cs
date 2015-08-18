@@ -6,10 +6,9 @@ namespace Tests.Diagnostics
     class XAttribute : Attribute { }
     public class ThreadStaticNonStaticField
     {
-        [ThreadStatic]  // Noncompliant
         private int count1 = 0, count11 = 0;
 
-        [ThreadStatic, X]  // Noncompliant
+        [X]  // Noncompliant
         private int count2 = 0;
 
         [System.ThreadStatic]
