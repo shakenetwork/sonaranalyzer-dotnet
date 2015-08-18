@@ -32,5 +32,16 @@ namespace SonarLint.UnitTest.Rules
         {
             Verifier.VerifyAnalyzer(@"TestCases\CatchRethrow.cs", new CatchRethrow());
         }
+
+        [TestMethod]
+        [TestCategory("CodeFix")]
+        public void CatchRethrow_CodeFix()
+        {
+            Verifier.VerifyCodeFix(
+                @"TestCases\CatchRethrow.cs",
+                @"TestCases\CatchRethrow.Fixed.cs",
+                new CatchRethrow(),
+                new CatchRethrowCodeFixProvider());
+        }
     }
 }

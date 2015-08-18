@@ -29,7 +29,8 @@ namespace Tests.TestCases
             {
                 doSomething();
             }
-            catch (ArgumentException)
+            catch (ArgumentException) // Compliant now, but if the following catch is removed it is not.
+            // So, this will also be removed by the codefix, as it is doing an iterative run
             {
                 throw;
             }
@@ -51,6 +52,19 @@ namespace Tests.TestCases
             {
                 Console.WriteLine("");
                 throw;
+            }
+
+            try
+            {
+                doSomething();
+            }
+            catch (NotSupportedException) //Noncompliant
+            {
+                throw;
+            }
+            finally
+            {
+
             }
         }
     }

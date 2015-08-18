@@ -48,14 +48,16 @@ namespace SonarLint.Rules
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
+        private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         private static readonly BlockSyntax ThrowBlock = SyntaxFactory.Block(SyntaxFactory.ThrowStatement());
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
+                RuleSeverity.ToDiagnosticSeverity(ideVisibility), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+                description: Description,
+                customTags: ideVisibility.ToCustomTags());
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
@@ -69,7 +71,7 @@ namespace SonarLint.Rules
                     var lastCatchClause = tryStatement.Catches.LastOrDefault();
 
                     if (lastCatchClause!=null &&
-                        SyntaxFactory.AreEquivalent(lastCatchClause.Block, ThrowBlock))
+                        EquivalenceChecker.AreEquivalent(lastCatchClause.Block, ThrowBlock))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(
                                 Rule,

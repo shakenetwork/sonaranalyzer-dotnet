@@ -110,6 +110,7 @@
     <Compile Include="Rules\TernaryOperatorPointlessCodeFixProvider.cs" />
     <Compile Include="Rules\VirtualEventFieldFixProvider.cs" />
     <Compile Include="Rules\RedundantArgumentCodeFixProvider.cs" />
+    <Compile Include="Rules\CatchRethrowCodeFixProvider.cs" />
     <Compile Include="Rules\SuppressFinalizeUseless.cs" />
     <Compile Include="Rules\FieldInitializedToDefault.cs" />
     <Compile Include="Rules\RedundantParenthesesCodeFixProvider.cs" />
