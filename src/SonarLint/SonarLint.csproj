@@ -114,6 +114,7 @@
     <Compile Include="Rules\ThreadStaticNonStaticFieldCodeFixProvider.cs" />
     <Compile Include="Rules\RedundantCastCodeFixProvider.cs" />
     <Compile Include="Rules\FieldShouldBeReadonlyCodeFixProvider.cs" />
+    <Compile Include="Rules\SuppressFinalizeUselessCodeFixProvider.cs" />
     <Compile Include="Rules\SuppressFinalizeUseless.cs" />
     <Compile Include="Rules\FieldInitializedToDefault.cs" />
     <Compile Include="Rules\RedundantParenthesesCodeFixProvider.cs" />
