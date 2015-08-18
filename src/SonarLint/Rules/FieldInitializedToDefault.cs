@@ -27,7 +27,6 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
-using Microsoft.CodeAnalysis.Text;
 
 namespace SonarLint.Rules
 {
@@ -78,9 +77,9 @@ namespace SonarLint.Rules
                             continue;
                         }
 
-                        if (CheckDefaultExpressionInitializer(variable, variableSymbol, c.SemanticModel) ||
+                        if (CheckDefaultExpressionInitializer(variable) ||
                             CheckReferenceTypeNullInitializer(variable, variableSymbol) ||
-                            CheckValueTypeDefaultValueInitializer(variable, variableSymbol, c.SemanticModel))
+                            CheckValueTypeDefaultValueInitializer(variable, variableSymbol))
                         {
                             c.ReportDiagnostic(Diagnostic.Create(Rule, variable.Initializer.GetLocation(), variableSymbol.Name));
                             return;
@@ -90,8 +89,7 @@ namespace SonarLint.Rules
                 SyntaxKind.FieldDeclaration);
         }
 
-        private static bool CheckDefaultExpressionInitializer(VariableDeclaratorSyntax variable, IFieldSymbol variableSymbol,
-            SemanticModel semanticModel)
+        private static bool CheckDefaultExpressionInitializer(VariableDeclaratorSyntax variable)
         {
             var defaultValue = variable.Initializer.Value as DefaultExpressionSyntax;
             return defaultValue != null;
@@ -103,8 +101,7 @@ namespace SonarLint.Rules
                 EquivalenceChecker.AreEquivalent(NullExpression, variable.Initializer.Value);
         }
 
-        private static bool CheckValueTypeDefaultValueInitializer(VariableDeclaratorSyntax variable, IFieldSymbol variableSymbol,
-            SemanticModel semanticModel)
+        private static bool CheckValueTypeDefaultValueInitializer(VariableDeclaratorSyntax variable, IFieldSymbol variableSymbol)
         {
             if (!variableSymbol.Type.IsValueType)
             {

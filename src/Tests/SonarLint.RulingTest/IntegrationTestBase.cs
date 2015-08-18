@@ -134,7 +134,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
             }
         }
 
-        protected static string GenerateAnalysisInputFileSegment(Type analyzerType)
+        private static string GenerateAnalysisInputFileSegment(Type analyzerType)
         {
             var builder = new StringBuilder();
             using (var writer = XmlWriter.Create(builder, FragmentSettings))

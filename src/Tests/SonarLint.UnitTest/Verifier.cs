@@ -51,7 +51,12 @@ namespace SonarLint.UnitTest
         }
 
         public static void VerifyCodeFix(string path, string pathToExpected, DiagnosticAnalyzer diagnosticAnalyzer,
-            CodeFixProvider codeFixProvider, string codeFixTitle = null)
+            CodeFixProvider codeFixProvider)
+        {
+            VerifyCodeFix(path, pathToExpected, diagnosticAnalyzer, codeFixProvider, null);
+        }
+        public static void VerifyCodeFix(string path, string pathToExpected, DiagnosticAnalyzer diagnosticAnalyzer,
+            CodeFixProvider codeFixProvider, string codeFixTitle)
         {
             var fileInput = new FileInfo(path);
 

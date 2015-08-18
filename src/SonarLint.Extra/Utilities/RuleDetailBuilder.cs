@@ -151,7 +151,7 @@ namespace SonarLint.Utilities
 
             if (resource == null)
             {
-                throw new Exception(string.Format("Could not locate resource for rule {0}", rule.Key));
+                throw new InvalidDataException(string.Format("Could not locate resource for rule {0}", rule.Key));
             }
 
             using (var stream = analyzerType.Assembly.GetManifestResourceStream(resource))

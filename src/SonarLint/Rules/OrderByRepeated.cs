@@ -19,7 +19,6 @@
  */
 
 using System.Collections.Immutable;
-using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -27,7 +26,6 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
-using Microsoft.CodeAnalysis.Text;
 
 namespace SonarLint.Rules
 {
@@ -111,12 +109,11 @@ namespace SonarLint.Rules
             return methodSymbol != null &&
                    methodSymbol.Name == "ThenBy" &&
                    methodSymbol.MethodKind == MethodKind.ReducedExtension &&
-                   MethodIsOnIOrderedEnumerable(methodSymbol, semanticModel);
+                   MethodIsOnIOrderedEnumerable(methodSymbol);
         }
 
-        private static bool MethodIsOnIOrderedEnumerable(IMethodSymbol methodSymbol, SemanticModel semanticModel)
+        private static bool MethodIsOnIOrderedEnumerable(IMethodSymbol methodSymbol)
         {
-            var enumerableType = semanticModel.Compilation.GetSpecialType(SpecialType.System_Collections_Generic_IEnumerable_T);
             var receiverType = methodSymbol.ReceiverType as INamedTypeSymbol;
 
             return receiverType != null &&

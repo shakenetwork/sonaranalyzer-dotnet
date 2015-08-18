@@ -40,8 +40,13 @@ namespace SonarLint.Helpers
             return string.Join("_", parts).ToUpper(CultureInfo.InvariantCulture);
         }
 
+        public static DiagnosticSeverity ToDiagnosticSeverity(this Severity severity)
+        {
+            return severity.ToDiagnosticSeverity(IdeVisibility.Visible);
+        }
+
         public static DiagnosticSeverity ToDiagnosticSeverity(this Severity severity,
-            IdeVisibility ideVisibility = IdeVisibility.Visible)
+            IdeVisibility ideVisibility)
         {
             switch (severity)
             {
