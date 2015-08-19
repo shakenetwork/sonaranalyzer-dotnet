@@ -32,5 +32,16 @@ namespace SonarLint.UnitTest.Rules
         {
             Verifier.VerifyAnalyzer(@"TestCases\GenericTypeParameterEmptinessChecking.cs", new GenericTypeParameterEmptinessChecking());
         }
+
+        [TestMethod]
+        [TestCategory("CodeFix")]
+        public void GenericTypeParameterEmptinessChecking_CodeFix()
+        {
+            Verifier.VerifyCodeFix(
+                @"TestCases\GenericTypeParameterEmptinessChecking.cs",
+                @"TestCases\GenericTypeParameterEmptinessChecking.Fixed.cs",
+                new GenericTypeParameterEmptinessChecking(),
+                new GenericTypeParameterEmptinessCheckingCodeFixProvider());
+        }
     }
 }
