@@ -128,6 +128,14 @@ namespace SonarLint.Rules
                 return;
             }
 
+            var constructorSymbol = semanticModel.GetEnclosingSymbol(expression.SpanStart) as IMethodSymbol;
+            if (constructorSymbol != null &&
+                constructorSymbol.MethodKind == MethodKind.Constructor &&
+                constructorSymbol.ContainingType.Equals(fieldSymbol.ContainingType))
+            {
+                return;
+            }
+
             context.ReportDiagnostic(Diagnostic.Create(Rule, expression.GetLocation(), fieldSymbol.Name, propertySymbol.Name));
         }
 
@@ -136,6 +144,7 @@ namespace SonarLint.Rules
             var typeParameterSymbol = type as ITypeParameterSymbol;
             return typeParameterSymbol != null &&
                    !typeParameterSymbol.HasReferenceTypeConstraint &&
+                   !typeParameterSymbol.HasValueTypeConstraint &&
                    !typeParameterSymbol.ConstraintTypes.OfType<IErrorTypeSymbol>().Any() &&
                    !typeParameterSymbol.ConstraintTypes.Any(typeSymbol =>
                        typeSymbol.IsReferenceType &&

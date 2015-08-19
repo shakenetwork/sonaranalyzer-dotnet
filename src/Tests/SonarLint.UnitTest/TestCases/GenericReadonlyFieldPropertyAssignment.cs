@@ -18,6 +18,7 @@ namespace Tests.TestCases
         public PointManager(T point)
         {
             this.point = point;
+            this.point.X = 1; // Compliant, we are in the constructor
         }
 
         public void MovePointVertically(int newX)
@@ -39,6 +40,23 @@ namespace Tests.TestCases
         public void MovePointVertically(int newX)
         {
             point.X = newX;  // this assignment is guaranteed to work
+            Console.WriteLine(point.X);
+        }
+    }
+
+    class PointManager3<T> where T : struct, IPoint
+    {
+        readonly T point;  // this could be a struct
+        public PointManager3(T point)
+        {
+            this.point = point;
+            this.point.X = 1; // Compliant, we are in the constructor
+        }
+
+        public void MovePointVertically(int newX)
+        {
+            point.X = newX; // Compliant, compiler error CS1648
+            point.X++;      // Compliant, compiler error CS1648
             Console.WriteLine(point.X);
         }
     }
