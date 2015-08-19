@@ -130,6 +130,7 @@
     <Compile Include="Rules\ConditionalSimplificationCodeFixProvider.cs" />
     <Compile Include="Rules\IfConditionalAlwaysTrueOrFalseCodeFixProvider.cs" />
     <Compile Include="Rules\StaticFieldInitializerOrder.cs" />
+    <Compile Include="Rules\GenericReadonlyFieldPropertyAssignmentCodeFixProvider.cs" />
     <Compile Include="Rules\UnaryPrefixOperatorRepeatedCodeFixProvider.cs" />
     <Compile Include="Rules\TernaryOperatorPointlessCodeFixProvider.cs" />
     <Compile Include="Rules\BooleanLiteralUnnecessaryCodeFixProvider.cs" />

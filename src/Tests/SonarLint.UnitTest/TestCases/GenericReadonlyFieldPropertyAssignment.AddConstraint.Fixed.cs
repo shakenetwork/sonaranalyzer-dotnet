@@ -12,7 +12,7 @@ namespace Tests.TestCases
         int Y { get; set; }
     }
 
-    partial class PointManager<T> where T : IPoint
+    partial class PointManager<T> where T : class, IPoint
     {
         readonly T point;  // this could be a struct
         public PointManager(T point)
@@ -31,7 +31,7 @@ namespace Tests.TestCases
         }
     }
 
-    partial class PointManager<T> where T : IPoint
+    partial class PointManager<T> where T : class, IPoint
     {
 
     }

@@ -32,5 +32,29 @@ namespace SonarLint.UnitTest.Rules
         {
             Verifier.VerifyAnalyzer(@"TestCases\GenericReadonlyFieldPropertyAssignment.cs", new GenericReadonlyFieldPropertyAssignment());
         }
+
+        [TestMethod]
+        [TestCategory("CodeFix")]
+        public void GenericReadonlyFieldPropertyAssignment_CodeFix_Remove_Statement()
+        {
+            Verifier.VerifyCodeFix(
+                @"TestCases\GenericReadonlyFieldPropertyAssignment.cs",
+                @"TestCases\GenericReadonlyFieldPropertyAssignment.Remove.Fixed.cs",
+                new GenericReadonlyFieldPropertyAssignment(),
+                new GenericReadonlyFieldPropertyAssignmentCodeFixProvider(),
+                GenericReadonlyFieldPropertyAssignmentCodeFixProvider.TitleRemove);
+        }
+
+        [TestMethod]
+        [TestCategory("CodeFix")]
+        public void GenericReadonlyFieldPropertyAssignment_CodeFix_Add_Generic_Type_Constraint()
+        {
+            Verifier.VerifyCodeFix(
+                @"TestCases\GenericReadonlyFieldPropertyAssignment.cs",
+                @"TestCases\GenericReadonlyFieldPropertyAssignment.AddConstraint.Fixed.cs",
+                new GenericReadonlyFieldPropertyAssignment(),
+                new GenericReadonlyFieldPropertyAssignmentCodeFixProvider(),
+                GenericReadonlyFieldPropertyAssignmentCodeFixProvider.TitleAddClassConstraint);
+        }
     }
 }
