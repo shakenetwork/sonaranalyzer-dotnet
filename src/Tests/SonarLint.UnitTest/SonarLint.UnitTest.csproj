@@ -473,6 +473,9 @@
     <None Include="TestCases\ConditionalSimplification.Fixed.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="TestCases\IfConditionalAlwaysTrueOrFalse.Fixed.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Compile Include="Verifier.cs" />
     <None Include="TestCases\UseCurlyBraces.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

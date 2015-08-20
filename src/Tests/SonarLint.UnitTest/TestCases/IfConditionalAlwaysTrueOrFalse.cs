@@ -31,6 +31,24 @@ namespace Tests.Diagnostics
             {
                 DoSomething();
             }
+
+            if (true) // Noncompliant
+            {
+                DoSomething();
+            }
+            else // Noncompliant
+            {
+
+            }
+
+            if (false) // Noncompliant
+            {
+                DoSomething();
+            }
+            else
+            {
+                ; ;
+            }
         }
     }
 }

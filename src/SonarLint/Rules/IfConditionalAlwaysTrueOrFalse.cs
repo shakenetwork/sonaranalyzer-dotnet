@@ -26,6 +26,8 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using Microsoft.CodeAnalysis.Text;
+using System;
 
 namespace SonarLint.Rules
 {
@@ -44,16 +46,20 @@ namespace SonarLint.Rules
             "be checked in. \"if\" statements with conditions that are always true are completely " +
             "redundant, and make the code less readable. In either case, unconditional \"if\" " +
             "statements should be removed.";
-        internal const string MessageFormat = "Remove this \"if\" statement.";
+        internal const string MessageFormat = "Remove this useless {0}.";
+        private const string ifStatementLiteral = "\"if\" statement";
+        private const string elseClauseLiteral = "\"else\" clause";
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
+        private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
+                RuleSeverity.ToDiagnosticSeverity(ideVisibility), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+                description: Description,
+                customTags: ideVisibility.ToCustomTags());
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
@@ -64,18 +70,47 @@ namespace SonarLint.Rules
                 {
                     var ifNode = (IfStatementSyntax)c.Node;
 
-                    if (HasBooleanLiteralExpressionAsCondition(ifNode))
+                    var isTrue = ifNode.Condition.IsKind(SyntaxKind.TrueLiteralExpression);
+                    var isFalse = ifNode.Condition.IsKind(SyntaxKind.FalseLiteralExpression);
+
+                    if (isTrue || isFalse)
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, ifNode.IfKeyword.GetLocation()));
+                        if (isTrue)
+                        {
+                            ReportIfTrue(ifNode, c);
+                        }
+                        else
+                        {
+                            ReportIfFalse(ifNode, c);
+                        }
                     }
                 },
                 SyntaxKind.IfStatement);
         }
 
-        private static bool HasBooleanLiteralExpressionAsCondition(IfStatementSyntax node)
+        private static void ReportIfFalse(IfStatementSyntax ifStatement, SyntaxNodeAnalysisContext c)
         {
-            return node.Condition.IsKind(SyntaxKind.TrueLiteralExpression) ||
-                node.Condition.IsKind(SyntaxKind.FalseLiteralExpression);
+            var location = ifStatement.Else == null
+                ? ifStatement.GetLocation()
+                : Location.Create(
+                    ifStatement.SyntaxTree,
+                    new TextSpan(ifStatement.IfKeyword.SpanStart, ifStatement.Else.ElseKeyword.Span.End - ifStatement.IfKeyword.SpanStart));
+
+            c.ReportDiagnostic(Diagnostic.Create(Rule, location, ifStatementLiteral));
+        }
+
+        private static void ReportIfTrue(IfStatementSyntax ifStatement, SyntaxNodeAnalysisContext c)
+        {
+            var location = Location.Create(
+                ifStatement.SyntaxTree,
+                new TextSpan(ifStatement.IfKeyword.SpanStart, ifStatement.CloseParenToken.Span.End - ifStatement.IfKeyword.SpanStart));
+
+            c.ReportDiagnostic(Diagnostic.Create(Rule, location, ifStatementLiteral));
+
+            if (ifStatement.Else != null)
+            {
+                c.ReportDiagnostic(Diagnostic.Create(Rule, ifStatement.Else.GetLocation(), elseClauseLiteral));
+            }
         }
     }
 }

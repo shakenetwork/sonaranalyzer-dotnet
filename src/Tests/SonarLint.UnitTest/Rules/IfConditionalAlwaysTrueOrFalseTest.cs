@@ -32,5 +32,16 @@ namespace SonarLint.UnitTest.Rules
         {
             Verifier.VerifyAnalyzer(@"TestCases\IfConditionalAlwaysTrueOrFalse.cs", new IfConditionalAlwaysTrueOrFalse());
         }
+
+        [TestMethod]
+        [TestCategory("CodeFix")]
+        public void IfConditionalAlwaysTrueOrFalse_CodeFix()
+        {
+            Verifier.VerifyCodeFix(
+                @"TestCases\IfConditionalAlwaysTrueOrFalse.cs",
+                @"TestCases\IfConditionalAlwaysTrueOrFalse.Fixed.cs",
+                new IfConditionalAlwaysTrueOrFalse(),
+                new IfConditionalAlwaysTrueOrFalseCodeFixProvider());
+        }
     }
 }
