@@ -44,8 +44,8 @@ namespace SonarLint.Rules
             "be made instead.";
         internal const string MessageFormat = "Use the opposite operator (\"{0}\") instead.";
         internal const string Category = "SonarQube";
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = false;
+        internal const Severity RuleSeverity = Severity.Minor;
+        internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,

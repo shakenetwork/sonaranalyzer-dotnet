@@ -32,5 +32,16 @@ namespace SonarLint.UnitTest.Rules
         {
             Verifier.VerifyAnalyzer(@"TestCases\BooleanCheckInverted.cs", new BooleanCheckInverted());
         }
+
+        [TestMethod]
+        [TestCategory("CodeFix")]
+        public void BooleanCheckInverted_CodeFix()
+        {
+            Verifier.VerifyCodeFix(
+                @"TestCases\BooleanCheckInverted.cs",
+                @"TestCases\BooleanCheckInverted.Fixed.cs",
+                new BooleanCheckInverted(),
+                new BooleanCheckInvertedCodeFixProvider());
+        }
     }
 }
