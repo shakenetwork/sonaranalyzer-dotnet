@@ -49,12 +49,16 @@ namespace SonarLint.Rules
         internal const string Category = "SonarQube";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
+        private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
+                RuleSeverity.ToDiagnosticSeverity(ideVisibility), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+                description: Description,
+                customTags: ideVisibility.ToCustomTags());
+
+        internal const string IsReportingOnLeftKey = "IsReportingOnLeft";
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
@@ -86,7 +90,9 @@ namespace SonarLint.Rules
             if (TryGetConstantIntValue(assignment.Right, out constValue) &&
                 constValue == constValueToLookFor)
             {
-                var location = GetReportLocation(assignment.OperatorToken.Span, assignment.Right.Span, assignment.SyntaxTree);
+                var location = assignment.Parent is StatementSyntax
+                    ? assignment.Parent.GetLocation()
+                    : GetReportLocation(assignment.OperatorToken.Span, assignment.Right.Span, assignment.SyntaxTree);
                 c.ReportDiagnostic(Diagnostic.Create(Rule, location));
             }
         }
@@ -99,7 +105,7 @@ namespace SonarLint.Rules
                 constValue == constValueToLookFor)
             {
                 var location = GetReportLocation(binary.Left.Span, binary.OperatorToken.Span, binary.SyntaxTree);
-                c.ReportDiagnostic(Diagnostic.Create(Rule, location));
+                c.ReportDiagnostic(Diagnostic.Create(Rule, location, ImmutableDictionary<string, string>.Empty.Add(IsReportingOnLeftKey, true.ToString())));
                 return;
             }
 
@@ -107,7 +113,7 @@ namespace SonarLint.Rules
                 constValue == constValueToLookFor)
             {
                 var location = GetReportLocation(binary.OperatorToken.Span, binary.Right.Span, binary.SyntaxTree);
-                c.ReportDiagnostic(Diagnostic.Create(Rule, location));
+                c.ReportDiagnostic(Diagnostic.Create(Rule, location, ImmutableDictionary<string, string>.Empty.Add(IsReportingOnLeftKey, false.ToString())));
             }
         }
 

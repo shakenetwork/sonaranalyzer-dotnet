@@ -32,5 +32,16 @@ namespace SonarLint.UnitTest.Rules
         {
             Verifier.VerifyAnalyzer(@"TestCases\SillyBitwiseOperation.cs", new SillyBitwiseOperation());
         }
+
+        [TestMethod]
+        [TestCategory("CodeFix")]
+        public void SillyBitwiseOperation_CodeFix()
+        {
+            Verifier.VerifyCodeFix(
+                @"TestCases\SillyBitwiseOperation.cs",
+                @"TestCases\SillyBitwiseOperation.Fixed.cs",
+                new SillyBitwiseOperation(),
+                new SillyBitwiseOperationCodeFixProvider());
+        }
     }
 }
