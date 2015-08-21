@@ -4,10 +4,28 @@
     {
         public BooleanLiteralUnnecessary(bool a, bool b)
         {
-            var x = !true;                      // Noncompliant
+            var z = true || true;   // Noncompliant
+            z = false || false;     // Noncompliant
+            z = true || false;      // Noncompliant
+            z = false || true;      // Noncompliant
+            z = false && false;     // Noncompliant
+            z = false && true;      // Noncompliant
+            z = true && true;       // Noncompliant
+            z = true && false;      // Noncompliant
+            z = true == true;       // Noncompliant
+            z = false == true;      // Noncompliant
+            z = false == false;     // Noncompliant
+            z = true == false;      // Noncompliant
+            z = true != true;       // Noncompliant
+            z = false != true;      // Noncompliant
+            z = false != false;     // Noncompliant
+            z = true != false;      // Noncompliant
+
+            var x = !true;                  // Noncompliant
+            x = true || false;              // Noncompliant
             x = !false;                     // Noncompliant
             x = (a == false)                // Noncompliant
-                && true;                // Noncompliant
+                && true;                    // Noncompliant
             x = a == true;                  // Noncompliant
             x = a != false;                 // Noncompliant
             x = a != true;                  // Noncompliant
@@ -22,6 +40,19 @@
             x = a == Foo(true);             // Compliant
             x = !a;                         // Compliant
             x = Foo() && Bar();             // Compliant
+
+            var condition = false;
+            var exp = true;
+            var exp2 = true;
+
+            var booleanVariable = condition ? true : exp; // Noncompliant
+            booleanVariable = condition ? false : exp; // Noncompliant
+            booleanVariable = condition ? exp : true; // Noncompliant
+            booleanVariable = condition ? exp : false; // Noncompliant
+            booleanVariable = condition ? true : false; // Noncompliant
+            booleanVariable = condition ? true : true; // Compliant, this triggers another issue S2758
+
+            booleanVariable = condition ? exp : exp2;
         }
 
         private bool Foo()

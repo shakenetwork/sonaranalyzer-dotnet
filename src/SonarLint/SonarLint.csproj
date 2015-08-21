@@ -111,6 +111,7 @@
     <Compile Include="Rules\OrderByRepeatedCodeFixProvider.cs" />
     <Compile Include="Rules\UnaryPrefixOperatorRepeatedCodeFixProvider.cs" />
     <Compile Include="Rules\TernaryOperatorPointlessCodeFixProvider.cs" />
+    <Compile Include="Rules\BooleanLiteralUnnecessaryCodeFixProvider.cs" />
     <Compile Include="Rules\VirtualEventFieldFixProvider.cs" />
     <Compile Include="Rules\RedundantArgumentCodeFixProvider.cs" />
     <Compile Include="Rules\CatchRethrowCodeFixProvider.cs" />

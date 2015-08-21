@@ -7,7 +7,7 @@
   "Issues": [
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -24,7 +24,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -41,7 +41,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -58,7 +58,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -75,7 +75,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -92,7 +92,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -109,7 +109,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -126,7 +126,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -143,7 +143,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -160,7 +160,41 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\commandline\\Options.cs",
+            "Region": {
+              "StartLine": 1019,
+              "EndLine": 1019,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Abstractions\\ModelBinding\\BindingSource.cs",
+            "Region": {
+              "StartLine": 177,
+              "EndLine": 177,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -177,7 +211,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -194,7 +228,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -211,7 +245,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -228,7 +262,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -245,7 +279,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -262,7 +296,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -279,7 +313,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -296,7 +330,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -313,7 +347,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -330,7 +364,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -347,7 +381,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -364,7 +398,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -381,7 +415,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -398,7 +432,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -415,7 +449,58 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.WebApiCompatShimTest\\Mocks\\MockMediaTypeFormatter.cs",
+            "Region": {
+              "StartLine": 29,
+              "EndLine": 29,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.WebApiCompatShimTest\\Mocks\\MockMediaTypeFormatter.cs",
+            "Region": {
+              "StartLine": 39,
+              "EndLine": 39,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Cryptography\\HmacComparer.cs",
+            "Region": {
+              "StartLine": 41,
+              "EndLine": 41,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -432,7 +517,92 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+            "Region": {
+              "StartLine": 3263,
+              "EndLine": 3263,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+            "Region": {
+              "StartLine": 3271,
+              "EndLine": 3271,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+            "Region": {
+              "StartLine": 3281,
+              "EndLine": 3281,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+            "Region": {
+              "StartLine": 3296,
+              "EndLine": 3296,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+            "Region": {
+              "StartLine": 3296,
+              "EndLine": 3296,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -449,7 +619,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -466,7 +636,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -483,7 +653,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -500,7 +670,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -517,7 +687,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -534,7 +704,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -551,7 +721,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -568,7 +738,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -585,7 +755,24 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\LogLevel.cs",
+            "Region": {
+              "StartLine": 360,
+              "EndLine": 360,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -602,7 +789,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -619,7 +806,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -636,7 +823,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -653,7 +840,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -670,7 +857,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -687,7 +874,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -704,7 +891,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -721,7 +908,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -738,7 +925,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -755,7 +942,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -772,7 +959,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -789,7 +976,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -806,7 +993,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -823,7 +1010,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -840,7 +1027,24 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\PackageSource\\VSPackageSourceRepository.cs",
+            "Region": {
+              "StartLine": 82,
+              "EndLine": 82,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -857,7 +1061,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -874,7 +1078,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -891,7 +1095,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -908,7 +1112,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -925,7 +1129,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -942,7 +1146,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -959,7 +1163,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -976,7 +1180,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -993,7 +1197,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1010,7 +1214,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1027,7 +1231,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1044,7 +1248,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1061,7 +1265,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1078,7 +1282,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1095,7 +1299,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1112,7 +1316,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1129,7 +1333,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1146,7 +1350,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1163,7 +1367,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1180,7 +1384,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"false\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1197,7 +1401,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1214,7 +1418,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1231,7 +1435,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1248,7 +1452,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1265,7 +1469,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1282,7 +1486,7 @@
     },
     {
       "RuleId": "S1125",
-      "FullMessage": "Remove the literal \"true\" boolean value.",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1290,6 +1494,40 @@
             "Region": {
               "StartLine": 77,
               "EndLine": 77,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack.cs",
+            "Region": {
+              "StartLine": 794,
+              "EndLine": 794,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1125",
+      "FullMessage": "Remove the unnecessary Boolean literal(s).",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
+            "Region": {
+              "StartLine": 750,
+              "EndLine": 750,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }

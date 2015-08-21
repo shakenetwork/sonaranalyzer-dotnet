@@ -32,5 +32,16 @@ namespace SonarLint.UnitTest.Rules
         {
             Verifier.VerifyAnalyzer(@"TestCases\BooleanLiteralUnnecessary.cs", new BooleanLiteralUnnecessary());
         }
+
+        [TestMethod]
+        [TestCategory("CodeFix")]
+        public void BooleanLiteralUnnecessary_CodeFix()
+        {
+            Verifier.VerifyCodeFix(
+                @"TestCases\BooleanLiteralUnnecessary.cs",
+                @"TestCases\BooleanLiteralUnnecessary.Fixed.cs",
+                new BooleanLiteralUnnecessary(),
+                new BooleanLiteralUnnecessaryCodeFixProvider());
+        }
     }
 }
