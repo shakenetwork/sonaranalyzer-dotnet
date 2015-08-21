@@ -7,7 +7,7 @@
   "Issues": [
     {
       "RuleId": "S3217",
-      "FullMessage": "Make \"item\" a \"object\".",
+      "FullMessage": "Either change the type of \"item\" to \"object\" or iterate on a generic collection of type \"AssemblyConfigurationItem\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -24,7 +24,7 @@
     },
     {
       "RuleId": "S3217",
-      "FullMessage": "Make \"item\" a \"object\".",
+      "FullMessage": "Either change the type of \"item\" to \"object\" or iterate on a generic collection of type \"NamespaceConfigurationItem\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -41,7 +41,7 @@
     },
     {
       "RuleId": "S3217",
-      "FullMessage": "Make \"entry\" a \"object\".",
+      "FullMessage": "Either change the type of \"entry\" to \"object\" or iterate on a generic collection of type \"DictionaryEntry\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -58,7 +58,7 @@
     },
     {
       "RuleId": "S3217",
-      "FullMessage": "Make \"kind\" a \"object\".",
+      "FullMessage": "Either change the type of \"kind\" to \"object\" or iterate on a generic collection of type \"DateTimeKind\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -75,7 +75,7 @@
     },
     {
       "RuleId": "S3217",
-      "FullMessage": "Make \"kind\" a \"object\".",
+      "FullMessage": "Either change the type of \"kind\" to \"object\" or iterate on a generic collection of type \"DateTimeKind\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -92,7 +92,7 @@
     },
     {
       "RuleId": "S3217",
-      "FullMessage": "Make \"kind\" a \"object\".",
+      "FullMessage": "Either change the type of \"kind\" to \"object\" or iterate on a generic collection of type \"DateTimeKind\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -109,7 +109,7 @@
     },
     {
       "RuleId": "S3217",
-      "FullMessage": "Make \"kind\" a \"object\".",
+      "FullMessage": "Either change the type of \"kind\" to \"object\" or iterate on a generic collection of type \"DateTimeKind\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -126,7 +126,7 @@
     },
     {
       "RuleId": "S3217",
-      "FullMessage": "Make \"item\" a \"object\".",
+      "FullMessage": "Either change the type of \"item\" to \"object\" or iterate on a generic collection of type \"T\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -143,24 +143,7 @@
     },
     {
       "RuleId": "S3217",
-      "FullMessage": "Make \"hostInfo\" a \"HostInfo\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsConsole\\Console\\PowerConsole\\PowerConsoleWindow.cs",
-            "Region": {
-              "StartLine": 152,
-              "EndLine": 152,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S3217",
-      "FullMessage": "Make \"b\" a \"object\".",
+      "FullMessage": "Either change the type of \"b\" to \"object\" or iterate on a generic collection of type \"byte\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -177,7 +160,7 @@
     },
     {
       "RuleId": "S3217",
-      "FullMessage": "Make \"b\" a \"object\".",
+      "FullMessage": "Either change the type of \"b\" to \"object\" or iterate on a generic collection of type \"byte\".",
       "Locations": [
         {
           "AnalysisTarget": {

@@ -104,6 +104,7 @@
     <Compile Include="Rules\SillyBitwiseOperationCodeFixProvider.cs" />
     <Compile Include="Rules\BooleanCheckInvertedCodeFixProvider.cs" />
     <Compile Include="Rules\GenericTypeParameterEmptinessCheckingCodeFixProvider.cs" />
+    <Compile Include="Rules\ForeachLoopExplicitConversionCodeFixProvider.cs" />
     <Compile Include="Rules\RedundantArgument.cs" />
     <Compile Include="Rules\ConditionalSimplification.cs" />
     <Compile Include="Common\DocumentBasedFixAllProvider.cs" />

@@ -26,6 +26,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Linq;
 
 namespace SonarLint.Rules
 {
@@ -44,7 +45,7 @@ namespace SonarLint.Rules
             "element of type \"Object\" into any other type. The problem is that, to achieve that, the \"foreach\" statements silently " +
             "performs \"explicit\" type conversion, which at runtime can result in an \"InvalidCastException\" to be thrown. New C# " +
             "code should use generics and not rely on \"foreach\" statement's silent \"explicit\" conversions.";
-        internal const string MessageFormat = "Make \"{0}\" a \"{1}\".";
+        internal const string MessageFormat = "Either change the type of \"{0}\" to \"{1}\" or iterate on a generic collection of type \"{2}\".";
         internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
@@ -65,17 +66,17 @@ namespace SonarLint.Rules
                     var foreachStatement = (ForEachStatementSyntax)c.Node;
                     var foreachInfo = c.SemanticModel.GetForEachStatementInfo(foreachStatement);
 
-                    if (foreachInfo.Equals(default(ForEachStatementInfo)))
+                    if (foreachInfo.Equals(default(ForEachStatementInfo)) ||
+                        foreachInfo.ElementConversion.IsImplicit ||
+                        !foreachInfo.ElementConversion.Exists)
                     {
                         return;
                     }
 
-                    if (!foreachInfo.ElementConversion.IsImplicit)
-                    {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, foreachStatement.Type.GetLocation(),
-                            foreachStatement.Identifier.ValueText,
-                            foreachInfo.ElementType.ToDisplayString()));
-                    }
+                    c.ReportDiagnostic(Diagnostic.Create(Rule, foreachStatement.Type.GetLocation(),
+                        foreachStatement.Identifier.ValueText,
+                        foreachInfo.ElementType.ToDisplayString(),
+                        foreachStatement.Type.ToString()));
                 },
                 SyntaxKind.ForEachStatement);
         }

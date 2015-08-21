@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Tests.Diagnostics
 {
@@ -33,7 +34,7 @@ namespace Tests.Diagnostics
             { }
             foreach (var i in enumerable)
             { }
-            foreach (B i in enumerable) // Noncompliant
+            foreach (B i in enumerable.OfType<B>()) // Noncompliant
             { }
         }
         public void M3(A[] array)
@@ -42,7 +43,7 @@ namespace Tests.Diagnostics
             { }
             foreach (I i in array)
             { }
-            foreach (B i in array) // Noncompliant
+            foreach (B i in array.OfType<B>()) // Noncompliant
             { }
         }
         public void M4(A[][] array)
@@ -53,18 +54,18 @@ namespace Tests.Diagnostics
             { }
             foreach (var i in array)
             { }
-            foreach (B[] i in array) // Noncompliant
+            foreach (B[] i in array.OfType<B[]>()) // Noncompliant
             { }
         }
         public void M5(ArrayList list)
         {
-            foreach (A i in list) // Noncompliant
+            foreach (A i in list.OfType<A>()) // Noncompliant
             { }
             foreach (var i in list)
             { }
             foreach (object i in list)
             { }
-            foreach (B i in list) // Noncompliant
+            foreach (B i in list.OfType<B>()) // Noncompliant
             { }
         }
     }
