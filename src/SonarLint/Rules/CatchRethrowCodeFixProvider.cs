@@ -59,32 +59,35 @@ namespace SonarLint.Rules
                 return;
             }
 
-            if (tryStatement.Catches.Count > 1 ||
-                tryStatement.Finally != null)
-            {
-                context.RegisterCodeFix(
-                    CodeAction.Create(
-                        Title,
-                        c =>
-                        {
-                            var newRoot = root.RemoveNode(syntaxNode, SyntaxRemoveOptions.KeepNoTrivia);
-                            return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
-                        }),
-                    context.Diagnostics);
-            }
-            else
-            {
-                context.RegisterCodeFix(
-                    CodeAction.Create(
-                        Title,
-                        c =>
-                        {
-                            var newRoot = root.ReplaceNode(tryStatement, tryStatement.Block.Statements)
-                                .WithAdditionalAnnotations(Formatter.Annotation);
-                            return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
-                        }),
-                    context.Diagnostics);
-            }
+            var isTryRemovable = tryStatement.Catches.Count == 1 && tryStatement.Finally == null;
+            context.RegisterCodeFix(
+                isTryRemovable
+                    ? CreateActionWithRemovedTryStatement(context, root, tryStatement)
+                    : CreateActionWithRemovedCatchClause(context, root, syntaxNode),
+                context.Diagnostics);
+        }
+
+        private static CodeAction CreateActionWithRemovedTryStatement(CodeFixContext context, SyntaxNode root, TryStatementSyntax tryStatement)
+        {
+            return CodeAction.Create(
+                Title,
+                c =>
+                {
+                    var newRoot = root.ReplaceNode(tryStatement, tryStatement.Block.Statements)
+                        .WithAdditionalAnnotations(Formatter.Annotation);
+                    return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
+                });
+        }
+
+        private static CodeAction CreateActionWithRemovedCatchClause(CodeFixContext context, SyntaxNode root, SyntaxNode syntaxNode)
+        {
+            return CodeAction.Create(
+                Title,
+                c =>
+                {
+                    var newRoot = root.RemoveNode(syntaxNode, SyntaxRemoveOptions.KeepNoTrivia);
+                    return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
+                });
         }
     }
 }

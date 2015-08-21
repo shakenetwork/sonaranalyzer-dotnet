@@ -197,16 +197,10 @@ namespace SonarLint.Rules
 
             if (leftIsBoolean && rightIsBoolean)
             {
-                Location errorLocation;
-                if ((leftIsTrue && rightIsTrue) || (leftIsFalse && rightIsFalse))
-                {
-                    errorLocation = CalculateExtendedLocation(binaryExpression, false);
-                }
-                else
-                {
-                    errorLocation = CalculateExtendedLocation(binaryExpression, reportOnTrue == leftIsTrue);
-                }
-                
+                var errorLocation = (leftIsTrue && rightIsTrue) || (leftIsFalse && rightIsFalse)
+                    ? CalculateExtendedLocation(binaryExpression, false)
+                    : CalculateExtendedLocation(binaryExpression, reportOnTrue == leftIsTrue);
+
                 c.ReportDiagnostic(Diagnostic.Create(Rule, errorLocation));
                 return true;
             }

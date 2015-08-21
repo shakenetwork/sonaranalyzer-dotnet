@@ -72,14 +72,9 @@ namespace SonarLint.Rules
             if (isTrue)
             {
                 var block = ifStatement.Statement as BlockSyntax;
-                if (block == null)
-                {
-                    newRoot = root.ReplaceNode(ifStatement, ifStatement.Statement);
-                }
-                else
-                {
-                    newRoot = root.ReplaceNode(ifStatement, block.Statements);
-                }
+                newRoot = block == null
+                    ? root.ReplaceNode(ifStatement, ifStatement.Statement)
+                    : root.ReplaceNode(ifStatement, block.Statements);
             }
             else
             {
@@ -90,14 +85,9 @@ namespace SonarLint.Rules
                 else
                 {
                     var block = ifStatement.Else.Statement as BlockSyntax;
-                    if (block == null)
-                    {
-                        newRoot = root.ReplaceNode(ifStatement, ifStatement.Else.Statement);
-                    }
-                    else
-                    {
-                        newRoot = root.ReplaceNode(ifStatement, block.Statements);
-                    }
+                    newRoot = block == null
+                        ? root.ReplaceNode(ifStatement, ifStatement.Else.Statement)
+                        : root.ReplaceNode(ifStatement, block.Statements);
                 }
             }
 
