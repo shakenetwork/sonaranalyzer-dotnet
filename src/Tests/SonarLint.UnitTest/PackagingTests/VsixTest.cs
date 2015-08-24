@@ -39,10 +39,10 @@ namespace SonarLint.UnitTest.PackagingTests
             const string vsixFileName = "SonarLint.vsix";
 #if DEBUG
             const string pathEnding = @"bin\Debug";
-            const int fileSizeLimit = 510 * 1024;
+            const int approxFileSize = 1215 * 1024;
 #else
             const string pathEnding = @"bin\Release";
-            const int fileSizeLimit = 160 * 1024;
+            const int approxFileSize = 290 * 1024;
 #endif
 
             var currentDirectory = Directory.GetCurrentDirectory();
@@ -54,9 +54,16 @@ namespace SonarLint.UnitTest.PackagingTests
                 Assert.Fail("VSIX file doesn't exist");
             }
 
-            if (vsixFile.Length > fileSizeLimit)
+            var upperBound = approxFileSize * 1.1;
+            if (vsixFile.Length > upperBound)
             {
-                Assert.Fail(string.Format("VSIX file is larger then {0}KB", fileSizeLimit));
+                Assert.Fail(string.Format("VSIX file is larger then {0}KB", upperBound));
+            }
+
+            var lowerBound = approxFileSize * 0.9;
+            if (vsixFile.Length < lowerBound)
+            {
+                Assert.Fail(string.Format("VSIX file is smaller then {0}KB", lowerBound));
             }
         }
     }
