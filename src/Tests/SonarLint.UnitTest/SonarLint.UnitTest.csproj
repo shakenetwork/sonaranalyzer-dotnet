@@ -127,7 +127,8 @@
     <Compile Include="Common\RuleDescriptorTest.cs" />
     <Compile Include="Common\RuleFinderTest.cs" />
     <Compile Include="Common\RuleTest.cs" />
-    <Compile Include="DocGenerator\DocGeneratorTest.cs" />
+    <Compile Include="PackagingTests\VsixTest.cs" />
+    <Compile Include="PackagingTests\DocGeneratorTest.cs" />
     <Compile Include="Helpers\DiagnosticAnalyzerContextHelperTest.cs" />
     <Compile Include="Helpers\DiagnosticReportHelperTest.cs" />
     <Compile Include="Helpers\NavigationHelperTest.cs" />
@@ -616,6 +617,10 @@
     <ProjectReference Include="..\..\SonarLint.Extra\SonarLint.Extra.csproj">
       <Project>{4c1bb6ce-645f-400b-b491-af7bb40e5c01}</Project>
       <Name>SonarLint.Extra</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SonarLint.Vsix\SonarLint.Vsix.csproj">
+      <Project>{9d2df65b-8bb4-4f85-8b71-c4b636513ef3}</Project>
+      <Name>SonarLint.Vsix</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\SonarLint\SonarLint.csproj">
       <Project>{d1ae804f-ae78-4883-b3d6-9e3c4026def6}</Project>

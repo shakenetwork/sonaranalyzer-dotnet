@@ -26,7 +26,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace SonarLint.UnitTest.DocGenerator
+namespace SonarLint.UnitTest.PackagingTests
 {
     [TestClass]
     public class DocGeneratorTest
