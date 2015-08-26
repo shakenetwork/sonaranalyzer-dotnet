@@ -47,7 +47,7 @@ namespace SonarLint.UnitTest.PackagingTests
             var productVersion = FileVersionInfo.GetVersionInfo(typeof(Program).Assembly.Location).ProductVersion;
             var json = Program.GenerateRuleJson(productVersion);
 
-            var commonSubUrl = DiagnosticReportHelper.HelpLinkPattern.Replace("{1}", string.Empty);
+            var commonSubUrl = RuleDescription.HelpLinkPattern.Replace("{1}", string.Empty);
             var crossLinkCount = NumberOfOccurrences(json, string.Format(commonSubUrl, productVersion));
 
             Assert.AreEqual(crossReferenceCount, crossLinkCount);

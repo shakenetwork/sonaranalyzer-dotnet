@@ -44,11 +44,11 @@ namespace SonarLint.DocGenerator
         public string Tags { get; set; }
 
         public const string CrosslinkPattern = "(Rule )(S[0-9]+)";
-
+        public const string HelpLinkPattern = "#version={0}&ruleId={1}";
         private static string AddLinksBetweenRulesToDescription(string description, string productVersion)
         {
-            var urlRegexPattern = string.Format(DiagnosticReportHelper.HelpLinkPattern, productVersion, "$2");
-            var linkPattern = string.Format("<a href=\"{0}\">{1}</a>", urlRegexPattern, "$1$2");
+            var urlRegexPattern = string.Format(HelpLinkPattern, productVersion, "$2");
+            var linkPattern = string.Format("<a class=\"rule-link\" href=\"{0}\">{1}</a>", urlRegexPattern, "$1$2");
             return Regex.Replace(description, CrosslinkPattern, linkPattern);
         }
     }
