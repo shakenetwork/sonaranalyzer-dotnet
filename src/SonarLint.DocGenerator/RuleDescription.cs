@@ -20,6 +20,7 @@
 
 using SonarLint.Common;
 using SonarLint.Helpers;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 namespace SonarLint.DocGenerator
@@ -33,7 +34,7 @@ namespace SonarLint.DocGenerator
                 Key = detail.Key,
                 Title = detail.Title,
                 Description = AddLinksBetweenRulesToDescription(detail.Description, productVersion),
-                Tags = string.Join(", ", detail.Tags)
+                Tags = detail.Tags
             };
         }
 
@@ -41,7 +42,7 @@ namespace SonarLint.DocGenerator
         public string Title { get; set; }
         public string Description { get; set; }
         public string Version { get; set; }
-        public string Tags { get; set; }
+        public IEnumerable<string> Tags { get; set; }
 
         public const string CrosslinkPattern = "(Rule )(S[0-9]+)";
         public const string HelpLinkPattern = "#version={0}&ruleId={1}";
