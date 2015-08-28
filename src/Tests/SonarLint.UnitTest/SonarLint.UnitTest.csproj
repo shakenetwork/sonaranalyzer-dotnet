@@ -144,6 +144,7 @@
     <Compile Include="Rules\MethodParameterUnusedTest.cs" />
     <Compile Include="Rules\MemberShadowsOuterStaticMemberTest.cs" />
     <Compile Include="Rules\OrderByRepeatedTest.cs" />
+    <Compile Include="Rules\StaticFieldInitializerOrderTest.cs" />
     <Compile Include="Rules\SuppressFinalizeUselessTest.cs" />
     <Compile Include="Rules\FieldInitializedToDefaultTest.cs" />
     <Compile Include="Rules\UnaryPrefixOperatorRepeatedTest.cs" />
@@ -487,6 +488,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\PropertyToAutoProperty.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\StaticFieldInitializerOrder.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />

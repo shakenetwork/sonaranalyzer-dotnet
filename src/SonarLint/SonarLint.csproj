@@ -112,6 +112,7 @@
     <Compile Include="Rules\OrderByRepeatedCodeFixProvider.cs" />
     <Compile Include="Rules\ConditionalSimplificationCodeFixProvider.cs" />
     <Compile Include="Rules\IfConditionalAlwaysTrueOrFalseCodeFixProvider.cs" />
+    <Compile Include="Rules\StaticFieldInitializerOrder.cs" />
     <Compile Include="Rules\UnaryPrefixOperatorRepeatedCodeFixProvider.cs" />
     <Compile Include="Rules\TernaryOperatorPointlessCodeFixProvider.cs" />
     <Compile Include="Rules\BooleanLiteralUnnecessaryCodeFixProvider.cs" />
@@ -503,6 +504,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S2292.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S3263.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
