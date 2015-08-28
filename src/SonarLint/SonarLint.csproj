@@ -102,6 +102,8 @@
     <Compile Include="Rules\GetTypeWithIsAssignableFrom.cs" />
     <Compile Include="Rules\ArgumentSpecifiedForCallerInfoParameter.cs" />
     <Compile Include="Rules\PropertyToAutoProperty.cs" />
+    <Compile Include="Rules\DefaultBaseConstructorCall.cs" />
+    <Compile Include="Rules\DefaultBaseConstructorCallCodeFixProvider.cs" />
     <Compile Include="Rules\SillyBitwiseOperationCodeFixProvider.cs" />
     <Compile Include="Rules\BooleanCheckInvertedCodeFixProvider.cs" />
     <Compile Include="Rules\GenericTypeParameterEmptinessCheckingCodeFixProvider.cs" />
@@ -515,6 +517,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S3246.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S3253.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

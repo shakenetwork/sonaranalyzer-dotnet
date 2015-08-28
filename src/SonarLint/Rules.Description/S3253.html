@@ -1,0 +1,41 @@
+<p>
+    Since the compiler will automatically invoke the base type's no-argument constructor, there's no need to specify its invocation explicitly. Doing so just clutters the code.
+</p>
+
+<h2>Noncompliant Code Example</h2>
+<pre>
+class X
+{
+  public X()
+  {
+    /* ... */
+  }
+}
+
+class Y : X
+{
+  public Y(int parameter) : base() // Noncompliant
+  {
+    /* does something with the parameter */
+  }
+}
+</pre>
+
+<h2>Compliant Solution</h2>
+<pre>
+class X
+{
+  public X()
+  {
+    /* ... */
+  }
+}
+
+class Y : X
+{
+  public Y(int parameter)
+  {
+    /* does something with the parameter */
+  }
+}
+</pre>
