@@ -107,9 +107,7 @@ namespace SonarLint.Rules
                     Title,
                     c =>
                     {
-                        var newExpression = SyntaxFactory.PrefixUnaryExpression(
-                                SyntaxKind.LogicalNotExpression,
-                                otherNode);
+                        var newExpression = GetNegatedExpression(otherNode);
                         var newRoot = root.ReplaceNode(binaryParent, newExpression)
                             .WithAdditionalAnnotations(Formatter.Annotation);
 
@@ -260,9 +258,7 @@ namespace SonarLint.Rules
             else
             {
                 var newRoot = root.ReplaceNode(conditional,
-                    SyntaxFactory.PrefixUnaryExpression(
-                        SyntaxKind.LogicalNotExpression,
-                        conditional.Condition))
+                        GetNegatedExpression(conditional.Condition))
                     .WithAdditionalAnnotations(Formatter.Annotation);
                 return Task.FromResult(document.WithSyntaxRoot(newRoot));
             }
@@ -290,9 +286,7 @@ namespace SonarLint.Rules
                 var newRoot = root.ReplaceNode(conditional,
                     SyntaxFactory.BinaryExpression(
                         SyntaxKind.LogicalAndExpression,
-                        SyntaxFactory.PrefixUnaryExpression(
-                            SyntaxKind.LogicalNotExpression,
-                            conditional.Condition),
+                        GetNegatedExpression(conditional.Condition),
                         conditional.WhenFalse))
                     .WithAdditionalAnnotations(Formatter.Annotation);
 
@@ -305,9 +299,7 @@ namespace SonarLint.Rules
                 var newRoot = root.ReplaceNode(conditional,
                     SyntaxFactory.BinaryExpression(
                         SyntaxKind.LogicalOrExpression,
-                        SyntaxFactory.PrefixUnaryExpression(
-                            SyntaxKind.LogicalNotExpression,
-                            conditional.Condition),
+                        GetNegatedExpression(conditional.Condition),
                         conditional.WhenTrue))
                     .WithAdditionalAnnotations(Formatter.Annotation);
 
@@ -328,6 +320,20 @@ namespace SonarLint.Rules
             }
 
             return Task.FromResult(document);
+        }
+
+        private static ExpressionSyntax GetNegatedExpression(ExpressionSyntax expression)
+        {
+            var exp = expression;
+            if (expression is BinaryExpressionSyntax ||
+                expression is ConditionalExpressionSyntax)
+            {
+                exp = SyntaxFactory.ParenthesizedExpression(expression);
+            }
+
+            return SyntaxFactory.PrefixUnaryExpression(
+                SyntaxKind.LogicalNotExpression,
+                exp);
         }
     }
 }

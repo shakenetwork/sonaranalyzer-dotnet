@@ -53,6 +53,8 @@
             booleanVariable = condition ? true : true; // Compliant, this triggers another issue S2758
 
             booleanVariable = condition ? exp : exp2;
+
+            var b = !(x || booleanVariable); // Noncompliant
         }
 
         private bool Foo()
