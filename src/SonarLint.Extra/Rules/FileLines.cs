@@ -31,7 +31,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("1h")]
     [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
-    [Tags("brain-overload")]
+    [Tags(Tag.BrainOverload)]
     public class FileLines : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S104";

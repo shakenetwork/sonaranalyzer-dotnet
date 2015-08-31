@@ -34,7 +34,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("20min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.SecurityFeatures)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("cwe", "owasp-a6", "security")]
+    [Tags(Tag.Cwe, Tag.OwaspA6, Tag.Security)]
     public class InsecureEncryptionAlgorithm : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2278";

@@ -34,7 +34,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("20min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.SynchronizationReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("bug", "multi-threading")]
+    [Tags(Tag.Bug, Tag.MultiThreading)]
     public class ThreadStaticWithInitializer : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2996";

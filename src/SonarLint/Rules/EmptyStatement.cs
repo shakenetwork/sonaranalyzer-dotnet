@@ -32,7 +32,7 @@ namespace SonarLint.Rules
     [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
     [SqaleConstantRemediation("2min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("cert", "misra", "unused")]
+    [Tags(Tag.Cert, Tag.Misra, Tag.Unused)]
     public class EmptyStatement : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1116";

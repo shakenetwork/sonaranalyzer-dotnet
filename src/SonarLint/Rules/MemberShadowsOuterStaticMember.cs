@@ -35,7 +35,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("10min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("design", "pitfall")]
+    [Tags(Tag.Design, Tag.Pitfall)]
     public class MemberShadowsOuterStaticMember : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3218";

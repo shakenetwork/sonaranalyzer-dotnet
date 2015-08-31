@@ -35,7 +35,7 @@ namespace SonarLint.Rules
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [SqaleConstantRemediation("2min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("cert", "cwe", "misra", "pitfall")]
+    [Tags(Tag.Cert, Tag.Cwe, Tag.Misra, Tag.Pitfall)]
     public class UseCurlyBraces : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S121";

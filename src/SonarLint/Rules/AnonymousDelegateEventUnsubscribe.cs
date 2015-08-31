@@ -34,7 +34,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("15min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("bug")]
+    [Tags(Tag.Bug)]
     public class AnonymousDelegateEventUnsubscribe : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3244";

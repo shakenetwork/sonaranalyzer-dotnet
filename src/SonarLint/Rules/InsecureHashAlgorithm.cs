@@ -35,7 +35,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("30min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.SecurityFeatures)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("cwe", "owasp-a6", "sans-top25-porous", "security")]
+    [Tags(Tag.Cwe, Tag.OwaspA6, Tag.SansTop25Porous, Tag.Security)]
     public class InsecureHashAlgorithm : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2070";

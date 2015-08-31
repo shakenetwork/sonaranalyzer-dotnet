@@ -35,7 +35,7 @@ namespace SonarLint.Rules
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [SqaleConstantRemediation("2min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("clumsy")]
+    [Tags(Tag.Clumsy)]
     public class ConditionalSimplification : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3240";

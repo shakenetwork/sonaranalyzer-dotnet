@@ -34,7 +34,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("20min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.SynchronizationReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("pitfall")]
+    [Tags(Tag.Pitfall)]
     public class StaticFieldVisible : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2223";

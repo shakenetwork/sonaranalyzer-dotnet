@@ -36,7 +36,7 @@ namespace SonarLint.Rules
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [SqaleConstantRemediation("10min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("misra", "pitfall")]
+    [Tags(Tag.Misra, Tag.Pitfall)]
     public class ForLoopCounterChanged : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S127";

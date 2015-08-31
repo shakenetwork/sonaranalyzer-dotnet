@@ -34,7 +34,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("15min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("bug")]
+    [Tags(Tag.Bug)]
     public class GetHashCodeEqualsOverride : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3249";

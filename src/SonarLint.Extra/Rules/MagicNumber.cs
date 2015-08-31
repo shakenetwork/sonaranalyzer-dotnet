@@ -34,7 +34,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("5min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.DataChangeability)]
     [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
-    [Tags("brain-overload")]
+    [Tags(Tag.BrainOverload)]
     public class MagicNumber : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S109";

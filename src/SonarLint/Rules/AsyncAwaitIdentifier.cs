@@ -35,7 +35,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("5min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("pitfall")]
+    [Tags(Tag.Pitfall)]
     public class AsyncAwaitIdentifier : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2306";

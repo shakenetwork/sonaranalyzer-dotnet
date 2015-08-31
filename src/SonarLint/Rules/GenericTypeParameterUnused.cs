@@ -35,7 +35,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("5min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("unused")]
+    [Tags(Tag.Unused)]
     public class GenericTypeParameterUnused : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2326";

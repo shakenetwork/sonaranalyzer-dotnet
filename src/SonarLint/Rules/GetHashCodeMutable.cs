@@ -34,7 +34,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("10min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("bug")]
+    [Tags(Tag.Bug)]
     public class GetHashCodeMutable : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2328";

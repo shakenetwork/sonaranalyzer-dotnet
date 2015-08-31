@@ -33,7 +33,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("10min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.ArchitectureReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("pitfall")]
+    [Tags(Tag.Pitfall)]
     public class ConstructorOverridableCall : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1699";

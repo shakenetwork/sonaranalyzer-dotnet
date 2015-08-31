@@ -35,7 +35,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("5min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("pitfall")]
+    [Tags(Tag.Pitfall)]
     public class VariableShadowsField : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1117";

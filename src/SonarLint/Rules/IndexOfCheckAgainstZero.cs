@@ -35,7 +35,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("2min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("pitfall")]
+    [Tags(Tag.Pitfall)]
     public class IndexOfCheckAgainstZero : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2692";

@@ -33,7 +33,7 @@ namespace SonarLint.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [SqaleConstantRemediation("2min")]
-    [Tags("clumsy")]
+    [Tags(Tag.Clumsy)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     public class BooleanLiteralUnnecessary : DiagnosticAnalyzer
     {

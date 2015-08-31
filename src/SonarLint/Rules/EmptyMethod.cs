@@ -34,7 +34,7 @@ namespace SonarLint.Rules
     [SqaleSubCharacteristic(SqaleSubCharacteristic.ArchitectureReliability)]
     [SqaleConstantRemediation("5min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("suspicious")]
+    [Tags(Tag.Suspicious)]
     public class EmptyMethod : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1186";

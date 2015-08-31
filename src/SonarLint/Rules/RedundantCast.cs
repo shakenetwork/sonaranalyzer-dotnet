@@ -35,7 +35,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("5min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("clumsy")]
+    [Tags(Tag.Clumsy)]
     public class RedundantCast : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1905";

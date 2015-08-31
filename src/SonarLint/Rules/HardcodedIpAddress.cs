@@ -37,7 +37,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("30min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.ArchitectureChangeability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("cert", "security")]
+    [Tags(Tag.Cert, Tag.Security)]
     public class HardcodedIpAddress : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1313";

@@ -33,7 +33,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("30min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("bug")]
+    [Tags(Tag.Bug)]
     public class DelegateSubtraction : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3172";

@@ -34,7 +34,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("20min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("bug")]
+    [Tags(Tag.Bug)]
     public class VirtualEventField : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2290";

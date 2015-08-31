@@ -35,7 +35,7 @@ namespace SonarLint.Rules
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [SqaleConstantRemediation("2min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("bug", "cwe", "misra", "security")]
+    [Tags(Tag.Bug, Tag.Cwe, Tag.Misra, Tag.Security)]
     public class IfConditionalAlwaysTrueOrFalse : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1145";

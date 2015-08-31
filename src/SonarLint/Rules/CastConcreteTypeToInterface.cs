@@ -33,7 +33,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("1h")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("design")]
+    [Tags(Tag.Design)]
     public class CastConcreteTypeToInterface : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3215";

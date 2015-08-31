@@ -33,7 +33,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("15min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("suspicious")]
+    [Tags(Tag.Suspicious)]
     public class ForeachLoopExplicitConversion : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3217";

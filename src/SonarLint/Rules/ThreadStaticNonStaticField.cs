@@ -34,7 +34,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("5min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("bug", "unused")]
+    [Tags(Tag.Bug, Tag.Unused)]
     public class ThreadStaticNonStaticField : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3005";

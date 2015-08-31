@@ -35,7 +35,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("15min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("suspicious", "cert", "cwe", "unused")]
+    [Tags(Tag.Suspicious, Tag.Cert, Tag.Cwe, Tag.Unused)]
     public class DeadStores : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1854";

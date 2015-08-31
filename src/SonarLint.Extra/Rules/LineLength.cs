@@ -32,7 +32,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("1min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
-    [Tags("convention")]
+    [Tags(Tag.Convention)]
     public class LineLength : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S103";

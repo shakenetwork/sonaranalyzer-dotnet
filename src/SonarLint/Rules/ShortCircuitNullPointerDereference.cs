@@ -35,7 +35,7 @@ namespace SonarLint.Rules
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [SqaleConstantRemediation("2min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("bug")]
+    [Tags(Tag.Bug)]
     public class ShortCircuitNullPointerDereference : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1697";

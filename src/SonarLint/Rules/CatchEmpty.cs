@@ -33,7 +33,7 @@ namespace SonarLint.Rules
     [SqaleSubCharacteristic(SqaleSubCharacteristic.ExceptionHandling)]
     [SqaleConstantRemediation("1h")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("cwe", "error-handling", "security")]
+    [Tags(Tag.Cwe, Tag.ErrorHandling, Tag.Security)]
     public class CatchEmpty : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2486";

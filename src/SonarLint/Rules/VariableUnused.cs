@@ -35,7 +35,7 @@ namespace SonarLint.Rules
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [SqaleConstantRemediation("5min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("unused")]
+    [Tags(Tag.Unused)]
     public class VariableUnused : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1481";

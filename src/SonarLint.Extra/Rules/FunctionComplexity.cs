@@ -32,7 +32,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("1h")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.UnitTestability)]
     [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
-    [Tags("brain-overload")]
+    [Tags(Tag.BrainOverload)]
     public class FunctionComplexity : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1541";

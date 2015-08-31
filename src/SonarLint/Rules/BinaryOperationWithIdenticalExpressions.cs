@@ -33,7 +33,7 @@ namespace SonarLint.Rules
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [SqaleConstantRemediation("2min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("bug", "cert")]
+    [Tags(Tag.Bug, Tag.Cert)]
     public class BinaryOperationWithIdenticalExpressions : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1764";

@@ -34,7 +34,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("5min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.SecurityFeatures)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("security", "owasp-a6")]
+    [Tags(Tag.Security, Tag.OwaspA6)]
     public class ConsoleLogging : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2228";

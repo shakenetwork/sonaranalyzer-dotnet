@@ -34,7 +34,7 @@ namespace SonarLint.Rules
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [SqaleConstantRemediation("5min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("misra")]
+    [Tags(Tag.Misra)]
     public class SwitchCasesMinimumThree : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1301";

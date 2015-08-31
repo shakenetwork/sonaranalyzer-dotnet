@@ -33,7 +33,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("20min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("bug", "cwe", "denial-of-service", "security")]
+    [Tags(Tag.Bug, Tag.Cwe, Tag.DenialOfService, Tag.Security)]
     public class DisposeFromDispose : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2952";

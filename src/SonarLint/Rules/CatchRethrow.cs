@@ -33,7 +33,7 @@ namespace SonarLint.Rules
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [SqaleConstantRemediation("5min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("clumsy", "unused")]
+    [Tags(Tag.Clumsy, Tag.Unused)]
     public class CatchRethrow : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2737";

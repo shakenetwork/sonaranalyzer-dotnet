@@ -34,7 +34,7 @@ namespace SonarLint.Rules
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [SqaleConstantRemediation("5min")]
     [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
-    [Tags("convention")]
+    [Tags(Tag.Convention)]
     public class ClassName : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S101";

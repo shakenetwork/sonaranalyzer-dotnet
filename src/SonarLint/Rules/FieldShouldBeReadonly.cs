@@ -34,7 +34,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("2min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("confusing")]
+    [Tags(Tag.Confusing)]
     public class FieldShouldBeReadonly : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2933";

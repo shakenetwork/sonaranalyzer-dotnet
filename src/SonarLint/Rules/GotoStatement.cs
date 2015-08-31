@@ -32,7 +32,7 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("10min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("brain-overload", "misra")]
+    [Tags(Tag.BrainOverload, Tag.Misra)]
     public class GotoStatement : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S907";

@@ -34,7 +34,7 @@ namespace SonarLint.Rules
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [SqaleConstantRemediation("1min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags("convention")]
+    [Tags(Tag.Convention)]
     public class RightCurlyBraceStartsLine : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1109";
