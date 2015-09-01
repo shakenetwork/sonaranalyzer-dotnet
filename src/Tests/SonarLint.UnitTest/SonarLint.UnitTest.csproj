@@ -137,6 +137,7 @@
     <Compile Include="Common\MetricsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\GetTypeWithIsAssignableFromTest.cs" />
+    <Compile Include="Rules\ArgumentSpecifiedForCallerInfoParameterTest.cs" />
     <Compile Include="Rules\RedundantArgumentTest.cs" />
     <Compile Include="Rules\ConditionalSimplificationTest.cs" />
     <Compile Include="Rules\MethodParameterUnusedTest.cs" />
@@ -479,6 +480,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\GetTypeWithIsAssignableFrom.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\ArgumentSpecifiedForCallerInfoParameter.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
