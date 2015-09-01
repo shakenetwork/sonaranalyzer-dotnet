@@ -45,7 +45,7 @@ namespace SonarLint.Rules
             "implementing the dispose pattern where object finalization is already handled in \"IDisposable.Dispose\". However, it " +
             "has no effect if there is no finalizer defined in the object's type, so using it in such cases is just confusing.";
         internal const string MessageFormat = "Remove this useless call to \"GC.SuppressFinalize\".";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;

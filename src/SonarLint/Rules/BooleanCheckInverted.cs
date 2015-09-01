@@ -43,7 +43,7 @@ namespace SonarLint.Rules
             "It is needlessly complex to invert the result of a boolean comparison. The opposite comparison should " +
             "be made instead.";
         internal const string MessageFormat = "Use the opposite operator (\"{0}\") instead.";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
 

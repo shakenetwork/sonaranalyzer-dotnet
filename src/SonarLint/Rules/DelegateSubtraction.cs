@@ -42,7 +42,7 @@ namespace SonarLint.Rules
             "In C#, delegates can be added together to chain their execution, and subtracted to remove their execution from the chain. " +
             "Subtracting a chain of delegates from another one might yield unexpected results as shown hereunder - and is likely to be a bug.";
         internal const string MessageFormat = "Review this subtraction of a chain of delegates: it may not work as you expect.";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

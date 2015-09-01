@@ -46,7 +46,7 @@ namespace SonarLint.Rules
             "of it, likely causing exceptions at runtime. So you should either remove \"using\" or avoid returning the " +
             "\"IDisposable\".";
         internal const string MessageFormat = "Remove the \"using\" statement; it will cause automatic disposal of {0}.";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Blocker;
         internal const bool IsActivatedByDefault = true;
 

@@ -47,7 +47,7 @@ namespace SonarLint.Rules
             "error, it is at best a waste of resources. Therefore all calculated values should be " +
             "used.";
         internal const string MessageFormat = "Remove this useless assignment to local variable \"{0}\".";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

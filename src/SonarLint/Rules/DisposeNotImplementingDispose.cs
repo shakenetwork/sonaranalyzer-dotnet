@@ -43,7 +43,7 @@ namespace SonarLint.Rules
             "confusion. It may be tempting to create a \"Dispose\" method for other purposes, but doing so will result in " +
             "confusion and likely lead to problems in production.";
         internal const string MessageFormat = "Either implement \"IDisposable.Dispose\", or totally rename this method to prevent confusion.";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

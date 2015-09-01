@@ -46,7 +46,7 @@ namespace SonarLint.Rules
             "Specifically, using \"& -1\" with any value will always result in the original value, as will \"anyValue ^ 0\" " +
             "and \"anyValue | 0\".";
         internal const string MessageFormat = "Remove this silly bit operation.";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;

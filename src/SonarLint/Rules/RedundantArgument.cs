@@ -43,7 +43,7 @@ namespace SonarLint.Rules
         internal const string Description =
             "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.";
         internal const string MessageFormat = "Remove this default value assigned to parameter \"{0}\".";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;

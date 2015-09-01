@@ -43,7 +43,7 @@ namespace SonarLint.Rules
             "According to the US National Institute of Standards and Technology (NIST), the Data Encryption Standard (DES) is " +
             "no longer considered secure";
         internal const string MessageFormat = "Use the recommended AES (Advanced Encryption Standard) instead.";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = false;
 

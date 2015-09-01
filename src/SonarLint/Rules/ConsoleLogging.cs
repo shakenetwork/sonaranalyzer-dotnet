@@ -44,7 +44,7 @@ namespace SonarLint.Rules
             "code - particularly in code that runs client-side - and you run the risk of " +
             "inadvertently exposing sensitive information.";
         internal const string MessageFormat = "Remove this logging statement.";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

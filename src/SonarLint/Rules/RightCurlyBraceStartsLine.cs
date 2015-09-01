@@ -43,7 +43,7 @@ namespace SonarLint.Rules
             "Shared coding conventions make it possible for a team to efficiently collaborate. This rule makes " +
             "it mandatory to place a close curly brace at the beginning of a line.";
         internal const string MessageFormat = "Move this closing curly brace to the next line.";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = false;
 

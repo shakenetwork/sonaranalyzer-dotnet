@@ -46,7 +46,7 @@ namespace SonarLint.Rules
             "to itself implement \"IDisposable\" and call its members' \"Dispose\" methods from " +
             "its own \"Dispose\" method.";
         internal const string MessageFormat = "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on {0}.";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

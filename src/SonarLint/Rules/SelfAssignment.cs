@@ -43,7 +43,7 @@ namespace SonarLint.Rules
             "be removed, or the re-assignment is a mistake and some other value or variable was intended for the " +
             "assignment instead.";
         internal const string MessageFormat = "Remove or correct this useless self-assignment";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

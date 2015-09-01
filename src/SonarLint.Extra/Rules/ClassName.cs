@@ -40,7 +40,7 @@ namespace SonarLint.Rules
         internal const string DiagnosticId = "S101";
         internal const string Description = "Class names should comply with a naming convention";
         internal const string MessageFormat = "Rename this class \"{1}\" to match the regular expression: {0}";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
 

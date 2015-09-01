@@ -47,7 +47,7 @@ namespace SonarLint.Rules
             "worst, it's a bug that is likely to induce further bugs as the code is maintained, " +
             "and obviously it could lead to unexpected behavior.";
         internal const string MessageFormat = "This branch duplicates the one on line {0}.";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

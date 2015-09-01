@@ -38,7 +38,7 @@ namespace SonarLint.Rules
         internal const string DiagnosticId = "S1541";
         internal const string Description = "Methods should not be too complex";
         internal const string MessageFormat = "The Cyclomatic Complexity of this method is {1} which is greater than {0} authorized).";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

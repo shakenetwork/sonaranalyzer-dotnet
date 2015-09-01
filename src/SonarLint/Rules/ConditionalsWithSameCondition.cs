@@ -44,7 +44,7 @@ namespace SonarLint.Rules
             "When the same condition is checked twice in a row, it is either inefficient - why not combine " +
             "the checks? - or an error - some other condition should have been checked in the second test.";
         internal const string MessageFormat = "This condition was just checked on line {0}.";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

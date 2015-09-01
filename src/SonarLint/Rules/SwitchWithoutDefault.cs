@@ -45,7 +45,7 @@ namespace SonarLint.Rules
             "\"switch\" covers all current values of an \"enum\", a \"default\" case should still be used because " +
             "there is no guarantee that the \"enum\" won't be extended.";
         internal const string MessageFormat = "Add a \"default\" clause to this switch statement.";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

@@ -40,7 +40,7 @@ namespace SonarLint.Rules
         internal const string DiagnosticId = "S1067";
         internal const string Description = "Expressions should not be too complex";
         internal const string MessageFormat = "Reduce the number of conditional operators ({1}) used in the expression (maximum allowed {0}).";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

@@ -43,7 +43,7 @@ namespace SonarLint.Rules
             "Using \"Object.ReferenceEquals\" to compare the references of two value types simply won't return the " +
             "expected results most of the time because such types are passed by value, not by reference.";
         internal const string MessageFormat = "Use a different kind of comparison for these value types.";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

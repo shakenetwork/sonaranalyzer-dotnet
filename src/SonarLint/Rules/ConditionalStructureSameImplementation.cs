@@ -48,7 +48,7 @@ namespace SonarLint.Rules
             "in an \"if\" structure they should be combined, or for a \"switch\", one should " +
             "fall through to the other.";
         internal const string MessageFormat = "Either merge this {1} with the identical one on line \"{0}\" or change one of the implementations.";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

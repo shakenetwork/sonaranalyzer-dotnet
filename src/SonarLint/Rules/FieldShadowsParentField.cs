@@ -46,7 +46,7 @@ namespace SonarLint.Rules
         internal const string MessageFormat = "{0}";
         internal const string MessageMatch = "\"{0}\" is the name of a field in \"{1}\"";
         internal const string MessageSimilar = "\"{0}\" differs only by case from \"{2}\" in \"{1}\".";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

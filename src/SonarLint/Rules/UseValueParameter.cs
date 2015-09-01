@@ -44,7 +44,7 @@ namespace SonarLint.Rules
             "holds the value the accessor was called with. Not using the \"value\" means that the accessor ignores the caller's " +
             "intent which could cause unexpected results at runtime.";
         internal const string MessageFormat = "Use the \"value\" parameter in this {0} accessor declaration.";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

@@ -40,7 +40,7 @@ namespace SonarLint.Rules
         internal const string DiagnosticId = "S109";
         internal const string Description = "Magic numbers should not be used";
         internal const string MessageFormat = "Assign this magic number {0} to a well-named constant, and use the constant instead.";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = false;
 

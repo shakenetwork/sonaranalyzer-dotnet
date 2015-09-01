@@ -44,7 +44,7 @@ namespace SonarLint.Rules
             "Type parameters that aren't used are dead code, which can only distract and possibly confuse " +
             "developers during maintenance. Therefore, unused type parameters should be removed.";
         internal const string MessageFormat = "\"{0}\" is not used in the {1}.";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;

@@ -46,7 +46,7 @@ namespace SonarLint.Rules
             "used with care, since assigning an instance of \"B\" into an array of \"A\" will cause an " +
             "\"ArrayTypeMismatchException\" to be thrown at runtime.";
         internal const string MessageFormat = "Refactor the code to not rely on potentially unsafe array conversions.";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = false;
 

@@ -51,7 +51,7 @@ namespace SonarLint.Rules
         internal const string MessageFormatStaticClass =
             "Add a \"{0}\" constructor or the \"static\" keyword to the class declaration.";
 
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

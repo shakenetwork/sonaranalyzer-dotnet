@@ -49,7 +49,7 @@ namespace SonarLint.Rules
             "parameters to be visible from callers, which is not the case and can confuse them. All parameters " +
             "should be treated as \"final\".";
         internal const string MessageFormat = "Introduce a new variable instead of reusing the parameter \"{0}\".";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

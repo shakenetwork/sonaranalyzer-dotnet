@@ -43,7 +43,7 @@ namespace SonarLint.Rules
             "\"Dispose\" is that it will clean up all unmanaged resources. Move disposing of members to some other method, " +
             "and you risk resource leaks.";
         internal const string MessageFormat = "Move this \"Dispose\" call into this class' own \"Dispose\" method.";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

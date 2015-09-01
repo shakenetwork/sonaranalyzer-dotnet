@@ -42,7 +42,7 @@ namespace SonarLint.Rules
             "Structured control flow statements such as \"if\", \"for\", \"while\", \"continue\" or \"break\" " +
             "should be used instead.";
         internal const string MessageFormat = "Remove this use of \"goto\".";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

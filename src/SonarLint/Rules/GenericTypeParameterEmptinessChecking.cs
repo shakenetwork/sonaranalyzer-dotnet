@@ -48,7 +48,7 @@ namespace SonarLint.Rules
             "constraints should be added so that no value type can be passed.";
         internal const string MessageFormat =
             "Use a comparison to \"default({0})\" instead or add a constraint to \"{0}\" so that it can't be a value type.";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

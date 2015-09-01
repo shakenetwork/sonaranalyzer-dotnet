@@ -46,7 +46,7 @@ namespace SonarLint.Rules
             "fields should be marked \"readonly\" to make their intended use explicit, and to " +
             "prevent future maintainers from inadvertently changing their use.";
         internal const string MessageFormat = "Make \"{0}\" \"readonly\".";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

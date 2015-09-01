@@ -46,7 +46,7 @@ namespace SonarLint.Rules
             "properties. Explicit property getters and setters can be introduced for validation purposes " +
             "or to smooth the transition to a newer system.";
         internal const string MessageFormat = "Make \"{0}\" private.";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = false;
 

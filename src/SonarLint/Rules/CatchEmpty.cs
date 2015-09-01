@@ -42,7 +42,7 @@ namespace SonarLint.Rules
             "When exceptions occur, it is usually a bad idea to simply ignore them. Instead, it " +
             "is better to handle them properly, or at least to log them.";
         internal const string MessageFormat = "Handle the exception, rather than swallow it with an empty statement.";
-        internal const string Category = "SonarQube";
+        internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
