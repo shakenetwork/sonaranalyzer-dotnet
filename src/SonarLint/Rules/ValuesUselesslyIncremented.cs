@@ -59,6 +59,15 @@ namespace SonarLint.Rules
                 c =>
                 {
                     var increment = (PostfixUnaryExpressionSyntax)c.Node;
+                    var symbol = c.SemanticModel.GetSymbolInfo(increment.Operand).Symbol;
+                    var localSymbol = symbol as ILocalSymbol;
+                    var parameterSymbol = symbol as IParameterSymbol;
+
+                    if (localSymbol == null &&
+                        (parameterSymbol == null || parameterSymbol.RefKind != RefKind.None))
+                    {
+                        return;
+                    }
 
                     var operatorText = increment.OperatorToken.IsKind(SyntaxKind.PlusPlusToken)
                         ? "increment"

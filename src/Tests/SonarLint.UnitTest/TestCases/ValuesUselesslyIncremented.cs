@@ -24,5 +24,21 @@ namespace Tests.Diagnostics
             i++;
             return ++j;
         }
+
+        int x = 0;
+        int y = 0;
+        public int pickNumber3()
+        {
+            y = y++;
+            return x++; // Compliant; 0 returned
+        }
+        public int pickNumber3(int i)
+        {
+            return i++; // Noncompliant
+        }
+        public int pickNumber4(ref int i)
+        {
+            return i++; // Compliant
+        }
     }
 }
