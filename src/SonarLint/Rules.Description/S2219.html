@@ -1,0 +1,29 @@
+<p>
+    To check the type of an object there are at least three options:
+    <ul>
+        <li>The simplest and shortest one uses the <code>expr is SomeType</code> operator</li>
+        <li>The slightly longer <code>typeInstance.IsInstanceOfType(expr)</code></li>
+        <li>The cumbersome and error-prone one uses <code>expr1.GetType().IsAssignableFrom(expr2.GetType())</code></li>
+    </ul>
+</p>
+
+<h2>Noncompliant Code Example</h2>
+<pre>
+A expr1;
+B expr2;
+if (expr2.GetType().IsAssignableFrom(expr1.GetType())) { /* ... */ } // Noncompliant
+</pre>
+
+<h2>Compliant Solution</h2>
+<pre>
+A expr;
+if (expr is MyType) { /* ... */ }
+</pre>
+
+or, when the type is not known at compile time:
+
+<pre>
+A expr;
+Type myType;
+if (myType.IsInstanceOfType(expr)) { /* ... */ }
+</pre>

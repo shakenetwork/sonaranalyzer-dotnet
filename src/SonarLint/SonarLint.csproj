@@ -98,6 +98,7 @@
     <Compile Include="Helpers\EquivalenceChecker.cs" />
     <Compile Include="Helpers\ProjectTypeHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules\GetTypeWithIsAssignableFrom.cs" />
     <Compile Include="Rules\SillyBitwiseOperationCodeFixProvider.cs" />
     <Compile Include="Rules\BooleanCheckInvertedCodeFixProvider.cs" />
     <Compile Include="Rules\GenericTypeParameterEmptinessCheckingCodeFixProvider.cs" />
@@ -491,6 +492,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S3240.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S2219.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
