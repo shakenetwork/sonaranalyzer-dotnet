@@ -54,13 +54,13 @@ namespace SonarLint.UnitTest.PackagingTests
                 Assert.Fail("VSIX file doesn't exist");
             }
 
-            var upperBound = approxFileSize * 1.1;
+            const double upperBound = approxFileSize * 1.1;
             if (vsixFile.Length > upperBound)
             {
                 Assert.Fail(string.Format("VSIX file is larger then {0}KB", upperBound));
             }
 
-            var lowerBound = approxFileSize * 0.9;
+            const double lowerBound = approxFileSize * 0.9;
             if (vsixFile.Length < lowerBound)
             {
                 Assert.Fail(string.Format("VSIX file is smaller then {0}KB", lowerBound));

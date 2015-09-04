@@ -185,7 +185,7 @@ namespace SonarLint.Rules
                 SyntaxKind.ConditionalExpression);
         }
 
-        private bool CheckForBooleanConstantsReport(BinaryExpressionSyntax binaryExpression, bool reportOnTrue, SyntaxNodeAnalysisContext c)
+        private static bool CheckForBooleanConstantsReport(BinaryExpressionSyntax binaryExpression, bool reportOnTrue, SyntaxNodeAnalysisContext c)
         {
             var leftIsTrue = EquivalenceChecker.AreEquivalent(binaryExpression.Left, TrueExpression);
             var leftIsFalse = EquivalenceChecker.AreEquivalent(binaryExpression.Left, FalseExpression);
@@ -207,13 +207,13 @@ namespace SonarLint.Rules
             return false;
         }
 
-        private void CheckForBooleanConstantOnLeftReportOnInvertedLocation(BinaryExpressionSyntax binaryExpression,
+        private static void CheckForBooleanConstantOnLeftReportOnInvertedLocation(BinaryExpressionSyntax binaryExpression,
             ExpressionSyntax booleanContantExpression, SyntaxNodeAnalysisContext c)
         {
             CheckForBooleanConstant(binaryExpression, true, booleanContantExpression, ErrorLocation.Inverted, c);
         }
 
-        private void CheckForBooleanConstantOnRightReportOnInvertedLocation(BinaryExpressionSyntax binaryExpression,
+        private static void CheckForBooleanConstantOnRightReportOnInvertedLocation(BinaryExpressionSyntax binaryExpression,
             ExpressionSyntax booleanContantExpression, SyntaxNodeAnalysisContext c)
         {
             CheckForBooleanConstant(binaryExpression, false, booleanContantExpression, ErrorLocation.Inverted, c);

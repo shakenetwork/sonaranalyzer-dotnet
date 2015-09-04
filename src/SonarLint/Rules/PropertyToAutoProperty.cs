@@ -91,7 +91,7 @@ namespace SonarLint.Rules
                 SyntaxKind.PropertyDeclaration);
         }
 
-        private bool TryGetFieldFromSetter(AccessorDeclarationSyntax setter, SemanticModel semanticModel, out IFieldSymbol setterField)
+        private static bool TryGetFieldFromSetter(AccessorDeclarationSyntax setter, SemanticModel semanticModel, out IFieldSymbol setterField)
         {
             setterField = null;
             if (setter.Body == null ||
@@ -124,7 +124,7 @@ namespace SonarLint.Rules
                 semanticModel, out setterField);
         }
 
-        private bool TryGetField(ExpressionSyntax expression, INamedTypeSymbol declaringType,
+        private static bool TryGetField(ExpressionSyntax expression, INamedTypeSymbol declaringType,
             SemanticModel semanticModel, out IFieldSymbol field)
         {
             if (expression is IdentifierNameSyntax)
@@ -166,7 +166,7 @@ namespace SonarLint.Rules
             return field != null;
         }
 
-        private bool TryGetFieldFromGetter(AccessorDeclarationSyntax getter, SemanticModel semanticModel, out IFieldSymbol getterField)
+        private static bool TryGetFieldFromGetter(AccessorDeclarationSyntax getter, SemanticModel semanticModel, out IFieldSymbol getterField)
         {
             getterField = null;
             if (getter.Body == null ||

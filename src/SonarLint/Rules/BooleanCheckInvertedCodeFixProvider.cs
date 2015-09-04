@@ -77,7 +77,7 @@ namespace SonarLint.Rules
                 context.Diagnostics);
         }
 
-        private BinaryExpressionSyntax ChangeOperator(BinaryExpressionSyntax binary)
+        private static BinaryExpressionSyntax ChangeOperator(BinaryExpressionSyntax binary)
         {
             return
                 SyntaxFactory.BinaryExpression(

@@ -40,7 +40,7 @@ namespace SonarLint.UnitTest.Rules
             Verifier.VerifyCodeFix(
                 @"TestCases\RedundantParentheses.cs",
                 @"TestCases\RedundantParentheses.Fixed.cs",
-                new RedundantParentheses(), 
+                new RedundantParentheses(),
                 new RedundantParenthesesCodeFixProvider());
         }
     }

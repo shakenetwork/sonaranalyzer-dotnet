@@ -132,7 +132,7 @@ namespace SonarLint.Rules
                 SyntaxKind.IfStatement);
         }
 
-        private bool CanBeSimplified(StatementSyntax statement1, StatementSyntax statement2,
+        private static bool CanBeSimplified(StatementSyntax statement1, StatementSyntax statement2,
             ExpressionSyntax compared, bool comparedIsNullInTrue, SemanticModel semanticModel, out bool isNullCoalescing)
         {
             isNullCoalescing = false;

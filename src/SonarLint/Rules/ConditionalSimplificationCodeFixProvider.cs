@@ -106,7 +106,7 @@ namespace SonarLint.Rules
             }
         }
 
-        private StatementSyntax GetSimplified(StatementSyntax statement1, StatementSyntax statement2,
+        private static StatementSyntax GetSimplified(StatementSyntax statement1, StatementSyntax statement2,
             ExpressionSyntax condition, ExpressionSyntax compared, bool isNullCoalescing)
         {
             var return1 = statement1 as ReturnStatementSyntax;
