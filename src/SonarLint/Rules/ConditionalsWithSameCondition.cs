@@ -32,21 +32,21 @@ using SonarLint.Helpers;
 namespace SonarLint.Rules
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
+    [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [SqaleConstantRemediation("5min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Bug)]
+    [Tags(Tag.Clumsy, Tag.Suspicious)]
     public class ConditionalsWithSameCondition : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2760";
         internal const string Title = "Sequential tests should not check the same condition";
         internal const string Description =
-            "When the same condition is checked twice in a row, it is either inefficient - why not combine " +
-            "the checks? - or an error - some other condition should have been checked in the second test.";
+            "When the same condition is checked twice in a row, it is either confusing - why have separate checks? - or an error - some other " +
+            "condition should have been checked in the second test.";
         internal const string MessageFormat = "This condition was just checked on line {0}.";
         internal const string Category = "SonarLint";
-        internal const Severity RuleSeverity = Severity.Critical;
-        internal const bool IsActivatedByDefault = true;
+        internal const Severity RuleSeverity = Severity.Major;
+        internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
