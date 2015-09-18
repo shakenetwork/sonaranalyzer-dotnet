@@ -77,7 +77,7 @@ namespace SonarLint.Rules
         private static bool CheckExpression(ExpressionSyntax constant, ExpressionSyntax modulus, SemanticModel semanticModel,
             out int constantValue)
         {
-            return SillyBitwiseOperation.TryGetConstantIntValue(constant, out constantValue) &&
+            return ExpressionNumericConverter.TryGetConstantIntValue(constant, out constantValue) &&
                    constantValue != 0 &&
                    ExpressionIsModulus(modulus) &&
                    !ExpressionIsNonNegative(modulus, semanticModel);

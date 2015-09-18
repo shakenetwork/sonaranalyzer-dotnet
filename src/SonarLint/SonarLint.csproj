@@ -91,6 +91,7 @@
     </Compile>
     <Compile Include="Common\Tag.cs" />
     <Compile Include="Common\IdeVisibility.cs" />
+    <Compile Include="Helpers\ExpressionNumericConverter.cs" />
     <Compile Include="Helpers\DiagnosticReportHelper.cs" />
     <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="Helpers\DiagnosticAnalyzerContextHelper.cs" />

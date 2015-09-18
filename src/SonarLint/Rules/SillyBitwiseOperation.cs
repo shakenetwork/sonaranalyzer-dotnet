@@ -87,7 +87,7 @@ namespace SonarLint.Rules
         {
             var assignment = (AssignmentExpressionSyntax)c.Node;
             int constValue;
-            if (TryGetConstantIntValue(assignment.Right, out constValue) &&
+            if (ExpressionNumericConverter.TryGetConstantIntValue(assignment.Right, out constValue) &&
                 constValue == constValueToLookFor)
             {
                 var location = assignment.Parent is StatementSyntax
@@ -101,7 +101,7 @@ namespace SonarLint.Rules
         {
             var binary = (BinaryExpressionSyntax) c.Node;
             int constValue;
-            if (TryGetConstantIntValue(binary.Left, out constValue) &&
+            if (ExpressionNumericConverter.TryGetConstantIntValue(binary.Left, out constValue) &&
                 constValue == constValueToLookFor)
             {
                 var location = GetReportLocation(binary.Left.Span, binary.OperatorToken.Span, binary.SyntaxTree);
@@ -109,7 +109,7 @@ namespace SonarLint.Rules
                 return;
             }
 
-            if (TryGetConstantIntValue(binary.Right, out constValue) &&
+            if (ExpressionNumericConverter.TryGetConstantIntValue(binary.Right, out constValue) &&
                 constValue == constValueToLookFor)
             {
                 var location = GetReportLocation(binary.OperatorToken.Span, binary.Right.Span, binary.SyntaxTree);
@@ -121,67 +121,5 @@ namespace SonarLint.Rules
         {
             return Location.Create(tree, new TextSpan(start.Start, end.End - start.Start));
         }
-
-        private static bool TryConvert(object o, out int value)
-        {
-            try
-            {
-                value = Convert.ToInt32(o);
-                return true;
-            }
-            catch (Exception exception)
-            {
-                if (exception is FormatException ||
-                    exception is OverflowException ||
-                    exception is InvalidCastException)
-                {
-                    value = 0;
-                    return false;
-                }
-
-                throw;
-            }
-        }
-
-        internal static bool TryGetConstantIntValue(ExpressionSyntax expression, out int value)
-        {
-            var multiplier = 1;
-            var expr = expression;
-            var unary = expr as PrefixUnaryExpressionSyntax;
-            while (unary != null)
-            {
-                var op = unary.OperatorToken;
-
-                if (!SupportedOperatorTokens.Contains(op.Kind()))
-                {
-                    value = 0;
-                    return false;
-                }
-
-                if (op.IsKind(SyntaxKind.MinusToken))
-                {
-                    multiplier *= -1;
-                }
-                expr = unary.Operand;
-                unary = expr as PrefixUnaryExpressionSyntax;
-            }
-
-            var literalExpression = expr as LiteralExpressionSyntax;
-            if (literalExpression != null &&
-                TryConvert(literalExpression.Token.Value, out value))
-            {
-                value = multiplier*value;
-                return true;
-            }
-
-            value = 0;
-            return false;
-        }
-
-        private static readonly SyntaxKind[] SupportedOperatorTokens =
-        {
-            SyntaxKind.MinusToken,
-            SyntaxKind.PlusToken
-        };
     }
 }

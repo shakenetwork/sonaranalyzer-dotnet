@@ -78,7 +78,7 @@ namespace SonarLint.Rules
                     var expression = (BinaryExpressionSyntax) c.Node;
                     int value;
                     if (expression.IsKind(SyntaxKind.LeftShiftExpression) &&
-                        SillyBitwiseOperation.TryGetConstantIntValue(expression.Right, out value) &&
+                        ExpressionNumericConverter.TryGetConstantIntValue(expression.Right, out value) &&
                         value == 1)
                     {
                         return;

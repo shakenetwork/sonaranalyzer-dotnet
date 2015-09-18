@@ -27,6 +27,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System;
 
 namespace SonarLint.Rules
 {
@@ -113,21 +114,28 @@ namespace SonarLint.Rules
             {
                 case SpecialType.System_Boolean:
                     return EquivalenceChecker.AreEquivalent(variable.Initializer.Value, FalseExpression);
-                case SpecialType.System_Char:
-                case SpecialType.System_Byte:
                 case SpecialType.System_Decimal:
                 case SpecialType.System_Double:
+                case SpecialType.System_Single:
+                    {
+                        double constantValue;
+                        return ExpressionNumericConverter.TryGetConstantDoubleValue(variable.Initializer.Value, out constantValue) &&
+                            Math.Abs(constantValue - default(double)) < double.Epsilon;
+                    }
+                case SpecialType.System_Char:
+                case SpecialType.System_Byte:
                 case SpecialType.System_Int16:
                 case SpecialType.System_Int32:
                 case SpecialType.System_Int64:
                 case SpecialType.System_SByte:
-                case SpecialType.System_Single:
                 case SpecialType.System_UInt16:
                 case SpecialType.System_UInt32:
                 case SpecialType.System_UInt64:
-                    int constantValue;
-                    return SillyBitwiseOperation.TryGetConstantIntValue(variable.Initializer.Value, out constantValue) &&
-                        constantValue == 0;
+                    {
+                        int constantValue;
+                        return ExpressionNumericConverter.TryGetConstantIntValue(variable.Initializer.Value, out constantValue) &&
+                            constantValue == default(int);
+                    }
                 default:
                     return false;
             }

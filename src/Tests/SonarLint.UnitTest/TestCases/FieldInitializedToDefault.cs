@@ -8,19 +8,19 @@ namespace Tests.Diagnostics
 
     class FieldInitializedToDefault<T>
     {
-        public int field = 0; // Noncompliant
-        public float fieldF = 0.0; // Noncompliant
-        public char fieldC = '\0'; // Noncompliant
-        public long fieldL = 0L; // Noncompliant
-        public long fieldL2 = default(long); // Noncompliant
-        public object o = null; // Noncompliant
-
-        public int field2;
-        public object o2;
-
-        public T gen = default(T); // Noncompliant
-        public Dummy stru = default(Dummy); // Noncompliant
-
         public const int myConst = 0; //Compliant
+        public double fieldD1 = 0; // Noncompliant
+        public double fieldD2 = +0.0; // Noncompliant
+        public double fieldD2b = -+-+-0.0; // Noncompliant
+        public double fieldD3 = .0; // Noncompliant
+        public decimal fieldD4 = .0m; // Noncompliant
+        public decimal fieldD5 = .2m;
+        public byte b = 0; // Noncompliant
+        public char c = 0; // Noncompliant
+        public bool bo = false; // Noncompliant
+        public sbyte sb = +0; // Noncompliant
+        public ushort us = -0; // Noncompliant
+        public uint ui = +-+-+0U; // Noncompliant
+        public ulong ul = 0UL; // Noncompliant
     }
 }

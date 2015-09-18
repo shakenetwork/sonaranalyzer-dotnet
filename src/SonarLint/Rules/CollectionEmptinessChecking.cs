@@ -104,7 +104,7 @@ namespace SonarLint.Rules
             Location reportLocation;
             string typeArgument;
             int value;
-            if (SillyBitwiseOperation.TryGetConstantIntValue(zero, out value) &&
+            if (ExpressionNumericConverter.TryGetConstantIntValue(zero, out value) &&
                 value == 0 &&
                 TryGetCountCall(count, c.SemanticModel, out reportLocation, out typeArgument))
             {
@@ -116,7 +116,7 @@ namespace SonarLint.Rules
             Location reportLocation;
             string typeArgument;
             int value;
-            if (SillyBitwiseOperation.TryGetConstantIntValue(one, out value) &&
+            if (ExpressionNumericConverter.TryGetConstantIntValue(one, out value) &&
                 value == 1 &&
                 TryGetCountCall(count, c.SemanticModel, out reportLocation, out typeArgument))
             {
