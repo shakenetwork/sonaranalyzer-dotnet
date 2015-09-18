@@ -138,6 +138,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\MethodOverrideNoParamsTest.cs" />
     <Compile Include="Rules\RedundantInheritanceListTest.cs" />
+    <Compile Include="Rules\LiteralSuffixUpperCaseTest.cs" />
     <Compile Include="Rules\GetTypeWithIsAssignableFromTest.cs" />
     <Compile Include="Rules\ArgumentSpecifiedForCallerInfoParameterTest.cs" />
     <Compile Include="Rules\PropertyToAutoPropertyTest.cs" />
@@ -529,6 +530,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\RedundantModifier.Fixed.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\LiteralSuffixUpperCase.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\LiteralSuffixUpperCase.Fixed.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
