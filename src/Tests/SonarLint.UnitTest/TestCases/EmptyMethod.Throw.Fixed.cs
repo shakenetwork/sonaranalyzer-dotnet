@@ -22,6 +22,7 @@ namespace Tests.Diagnostics
         [Conditional("DEBUG")]
         void F4()    // Noncompliant
         {
+            throw new NotSupportedException();
         }
 
         protected virtual void F5()
@@ -33,7 +34,10 @@ namespace Tests.Diagnostics
 
     public abstract class MyClass
     {
-        public void F1() { } // Noncompliant
+        public void F1()
+        {
+            throw new NotSupportedException();
+        } // Noncompliant
 
         public abstract void F2();
     }
