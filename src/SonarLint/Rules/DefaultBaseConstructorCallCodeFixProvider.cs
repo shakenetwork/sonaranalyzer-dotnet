@@ -82,8 +82,7 @@ namespace SonarLint.Rules
             ctor = (ConstructorDeclarationSyntax)newRoot.GetAnnotatedNodes(annotation).First();
             var initializer = ctor.Initializer;
 
-            if (constructor.ParameterList.HasTrailingTrivia &&
-                constructor.ParameterList.GetTrailingTrivia().Last().IsKind(SyntaxKind.EndOfLineTrivia))
+            if (RedundantInheritanceListCodeFixProvider.HasLineEnding(constructor.ParameterList))
             {
                 newRoot = newRoot.RemoveNode(initializer, SyntaxRemoveOptions.KeepNoTrivia);
                 ctor = (ConstructorDeclarationSyntax)newRoot.GetAnnotatedNodes(annotation).First();

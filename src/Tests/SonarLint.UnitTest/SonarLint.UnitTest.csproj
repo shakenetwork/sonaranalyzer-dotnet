@@ -137,6 +137,7 @@
     <Compile Include="Common\MetricsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\MethodOverrideNoParamsTest.cs" />
+    <Compile Include="Rules\RedundantInheritanceListTest.cs" />
     <Compile Include="Rules\GetTypeWithIsAssignableFromTest.cs" />
     <Compile Include="Rules\ArgumentSpecifiedForCallerInfoParameterTest.cs" />
     <Compile Include="Rules\PropertyToAutoPropertyTest.cs" />
@@ -515,6 +516,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\MethodOverrideNoParams.Fixed.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\RedundantInheritanceList.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\RedundantInheritanceList.Fixed.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
