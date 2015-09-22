@@ -1,0 +1,30 @@
+<p>
+    Unnecessary keywords simply clutter the code and should be removed. Specifically:
+    <ul>
+        <li><code>virtual</code> on members of classes that are never overridden</li>
+        <li><code>partial</code> on type declarations that are completely defined in one place</li>
+        <li><code>sealed</code> on members of <code>sealed</code> classes</li>
+    </ul>
+</p>
+
+<h2>Noncompliant Code Example</h2>
+<pre>
+internal partial class MyClass // Noncompliant;
+{
+  public virtual void DoSomething()  // Noncompliant; virtual is gratuitous
+  {
+    // ...
+  }
+}
+</pre>
+
+<h2>Compliant Solution</h2>
+<pre>
+internal class MyClass
+{
+  public void DoSomething()
+  {
+    // ...
+  }
+}
+</pre>

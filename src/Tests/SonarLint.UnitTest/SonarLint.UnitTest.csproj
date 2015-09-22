@@ -147,6 +147,7 @@
     <Compile Include="Rules\MethodParameterUnusedTest.cs" />
     <Compile Include="Rules\MemberShadowsOuterStaticMemberTest.cs" />
     <Compile Include="Rules\OrderByRepeatedTest.cs" />
+    <Compile Include="Rules\RedundantModifierTest.cs" />
     <Compile Include="Rules\StaticFieldInitializerOrderTest.cs" />
     <Compile Include="Rules\SuppressFinalizeUselessTest.cs" />
     <Compile Include="Rules\FieldInitializedToDefaultTest.cs" />
@@ -522,6 +523,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\RedundantInheritanceList.Fixed.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\RedundantModifier.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\RedundantModifier.Fixed.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
