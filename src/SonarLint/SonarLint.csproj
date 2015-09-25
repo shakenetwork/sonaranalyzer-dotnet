@@ -114,6 +114,7 @@
     <Compile Include="Rules\LiteralSuffixUpperCase.cs" />
     <Compile Include="Rules\LiteralSuffixUpperCaseCodeFixProvider.cs" />
     <Compile Include="Rules\StringFormatArgumentNumberMismatch.cs" />
+    <Compile Include="Rules\GetHashCodeMutableCodeFixProvider.cs" />
     <Compile Include="Rules\SillyBitwiseOperationCodeFixProvider.cs" />
     <Compile Include="Rules\BooleanCheckInvertedCodeFixProvider.cs" />
     <Compile Include="Rules\GenericTypeParameterEmptinessCheckingCodeFixProvider.cs" />

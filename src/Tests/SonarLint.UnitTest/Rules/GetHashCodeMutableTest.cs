@@ -32,5 +32,16 @@ namespace SonarLint.UnitTest.Rules
         {
             Verifier.VerifyAnalyzer(@"TestCases\GetHashCodeMutable.cs", new GetHashCodeMutable());
         }
+
+        [TestMethod]
+        [TestCategory("CodeFix")]
+        public void GetHashCodeMutable_CodeFix()
+        {
+            Verifier.VerifyCodeFix(
+                @"TestCases\GetHashCodeMutable.cs",
+                @"TestCases\GetHashCodeMutable.Fixed.cs",
+                new GetHashCodeMutable(),
+                new GetHashCodeMutableCodeFixProvider());
+        }
     }
 }

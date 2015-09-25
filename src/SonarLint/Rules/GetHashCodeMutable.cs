@@ -45,7 +45,7 @@ namespace SonarLint.Rules
             "the object is stored, the object immediately becomes mis-filed in the " +
             "\"Hashtable\". Any subsequent test to see if the object is in the \"Hashtable\" " +
             "will return a false negative.";
-        internal const string MessageFormat = "Remove this use of \"{0}\".";
+        internal const string MessageFormat = "Remove this use of \"{0}\" or make it \"readonly\".";
         internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;

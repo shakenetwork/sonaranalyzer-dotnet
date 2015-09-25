@@ -6,15 +6,15 @@ namespace Tests.Diagnostics
 {
     public class AnyOther
     {
-        public int Field;
+        public readonly int Field;
     }
 
     public class GetHashCodeMutable : AnyOther
     {
         public readonly DateTime birthday;
         public const int Zero = 0;
-        public int age;
-        public string name;
+        public readonly int age;
+        public readonly string name;
         int foo, bar;
 
         public GetHashCodeMutable()

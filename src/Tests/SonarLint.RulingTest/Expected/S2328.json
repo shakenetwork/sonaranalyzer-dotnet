@@ -7,7 +7,7 @@
   "Issues": [
     {
       "RuleId": "S2328",
-      "FullMessage": "Remove this use of \"inputType\".",
+      "FullMessage": "Remove this use of \"inputType\" or make it \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -24,7 +24,7 @@
     },
     {
       "RuleId": "S2328",
-      "FullMessage": "Remove this use of \"inputType\".",
+      "FullMessage": "Remove this use of \"inputType\" or make it \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -41,7 +41,7 @@
     },
     {
       "RuleId": "S2328",
-      "FullMessage": "Remove this use of \"Data\".",
+      "FullMessage": "Remove this use of \"Data\" or make it \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -58,7 +58,7 @@
     },
     {
       "RuleId": "S2328",
-      "FullMessage": "Remove this use of \"ConverterData\".",
+      "FullMessage": "Remove this use of \"ConverterData\" or make it \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -75,7 +75,7 @@
     },
     {
       "RuleId": "S2328",
-      "FullMessage": "Remove this use of \"PrimitiveConverterData\".",
+      "FullMessage": "Remove this use of \"PrimitiveConverterData\" or make it \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -92,7 +92,7 @@
     },
     {
       "RuleId": "S2328",
-      "FullMessage": "Remove this use of \"Data\".",
+      "FullMessage": "Remove this use of \"Data\" or make it \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -109,7 +109,7 @@
     },
     {
       "RuleId": "S2328",
-      "FullMessage": "Remove this use of \"_hashCode\".",
+      "FullMessage": "Remove this use of \"_hashCode\" or make it \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -126,7 +126,7 @@
     },
     {
       "RuleId": "S2328",
-      "FullMessage": "Remove this use of \"duration\".",
+      "FullMessage": "Remove this use of \"duration\" or make it \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -143,7 +143,7 @@
     },
     {
       "RuleId": "S2328",
-      "FullMessage": "Remove this use of \"yearMonthDayCalendar\".",
+      "FullMessage": "Remove this use of \"yearMonthDayCalendar\" or make it \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -160,7 +160,7 @@
     },
     {
       "RuleId": "S2328",
-      "FullMessage": "Remove this use of \"date\".",
+      "FullMessage": "Remove this use of \"date\" or make it \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -177,7 +177,7 @@
     },
     {
       "RuleId": "S2328",
-      "FullMessage": "Remove this use of \"time\".",
+      "FullMessage": "Remove this use of \"time\" or make it \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -194,7 +194,7 @@
     },
     {
       "RuleId": "S2328",
-      "FullMessage": "Remove this use of \"duration\".",
+      "FullMessage": "Remove this use of \"duration\" or make it \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -211,7 +211,7 @@
     },
     {
       "RuleId": "S2328",
-      "FullMessage": "Remove this use of \"offsetDateTime\".",
+      "FullMessage": "Remove this use of \"offsetDateTime\" or make it \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -228,7 +228,7 @@
     },
     {
       "RuleId": "S2328",
-      "FullMessage": "Remove this use of \"Address\".",
+      "FullMessage": "Remove this use of \"Address\" or make it \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -245,7 +245,7 @@
     },
     {
       "RuleId": "S2328",
-      "FullMessage": "Remove this use of \"Address\".",
+      "FullMessage": "Remove this use of \"Address\" or make it \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -262,7 +262,7 @@
     },
     {
       "RuleId": "S2328",
-      "FullMessage": "Remove this use of \"Address\".",
+      "FullMessage": "Remove this use of \"Address\" or make it \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -279,7 +279,7 @@
     },
     {
       "RuleId": "S2328",
-      "FullMessage": "Remove this use of \"Address\".",
+      "FullMessage": "Remove this use of \"Address\" or make it \"readonly\".",
       "Locations": [
         {
           "AnalysisTarget": {
