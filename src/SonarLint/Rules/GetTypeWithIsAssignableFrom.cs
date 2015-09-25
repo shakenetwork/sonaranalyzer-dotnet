@@ -57,6 +57,8 @@ namespace SonarLint.Rules
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
+        internal const string UseIsOperatorKey = "UseIsOperator";
+
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
@@ -81,13 +83,17 @@ namespace SonarLint.Rules
                     var argument = invocation.ArgumentList.Arguments.First().Expression;
                     if (IsGetTypeCall(argument, c.SemanticModel))
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(), IsInstanceOfType));
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(),
+                            ImmutableDictionary<string, string>.Empty.Add(UseIsOperatorKey, false.ToString()),
+                            IsInstanceOfType));
                         return;
                     }
 
                     if (IsInvocationOnGetTypeAndTypeOfArgument(memberAccess.Expression, argument, c.SemanticModel))
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(), IsOperator));
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(),
+                            ImmutableDictionary<string, string>.Empty.Add(UseIsOperatorKey, true.ToString()),
+                            IsOperator));
                         return;
                     }
                 },

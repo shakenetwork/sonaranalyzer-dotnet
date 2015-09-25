@@ -32,5 +32,16 @@ namespace SonarLint.UnitTest.Rules
         {
             Verifier.VerifyAnalyzer(@"TestCases\GetTypeWithIsAssignableFrom.cs", new GetTypeWithIsAssignableFrom());
         }
+
+        [TestMethod]
+        [TestCategory("CodeFix")]
+        public void GetTypeWithIsAssignableFrom_CodeFix()
+        {
+            Verifier.VerifyCodeFix(
+                @"TestCases\GetTypeWithIsAssignableFrom.cs",
+                @"TestCases\GetTypeWithIsAssignableFrom.Fixed.cs",
+                new GetTypeWithIsAssignableFrom(),
+                new GetTypeWithIsAssignableFromCodeFixProvider());
+        }
     }
 }
