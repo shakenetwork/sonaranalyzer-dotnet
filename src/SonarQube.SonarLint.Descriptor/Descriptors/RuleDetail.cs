@@ -19,6 +19,7 @@
  */
 
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Xml;
 using System.Xml.Serialization;
@@ -36,7 +37,7 @@ namespace SonarLint.Descriptor
             {
                 Key = ruleDetail.Key,
                 Title = ruleDetail.Title,
-                Severity = ruleDetail.Severity,
+                Severity = ruleDetail.Severity.ToUpper(CultureInfo.InvariantCulture),
                 Description = ruleDetail.Description,
                 IsActivatedByDefault = ruleDetail.IsActivatedByDefault,
                 Tags = ruleDetail.Tags,

@@ -28,16 +28,19 @@ namespace SonarLint.Common
         {
             Tags = new List<string>();
             Parameters = new List<RuleParameter>();
+            CodeFixTitles = new List<string>();
         }
 
         public string Key { get; set; }
         public string Title { get; set; }
         public string Severity { get; set; }
+        public int IdeSeverity { get; set; }
         public string Description { get; set; }
         public List<string> Tags { get; private set; }
         public List<RuleParameter> Parameters { get; private set; }
         public bool IsActivatedByDefault { get; set; }
         public bool IsTemplate { get; set; }
         public SqaleDescriptor SqaleDescriptor { get; set; }
+        public List<string> CodeFixTitles { get; private set; }
     }
 }

@@ -33,6 +33,7 @@ namespace SonarLint.Utilities
     public static class RuleDetailBuilder
     {
         private const string RuleDescriptionPathPattern = "SonarLint.Rules.Description.{0}.html";
+        public const string CodeFixProviderSuffix = "CodeFixProvider";
 
         public static IEnumerable<RuleDetail> GetAllRuleDetails()
         {
@@ -51,7 +52,8 @@ namespace SonarLint.Utilities
             {
                 Key = rule.Key,
                 Title = rule.Title,
-                Severity = rule.Severity.ToString().ToUpper(CultureInfo.InvariantCulture),
+                Severity = rule.Severity.ToString(),
+                IdeSeverity = (int)rule.Severity.ToDiagnosticSeverity(),
                 IsActivatedByDefault = rule.IsActivatedByDefault,
                 Description = GetResourceHtml(analyzerType, rule),
                 IsTemplate = RuleFinder.IsRuleTemplate(analyzerType)
@@ -60,8 +62,16 @@ namespace SonarLint.Utilities
             GetParameters(analyzerType, ruleDetail);
             GetTags(analyzerType, ruleDetail);
             GetSqale(analyzerType, ruleDetail);
+            GetCodeFixNames(analyzerType, ruleDetail);
 
             return ruleDetail;
+        }
+
+        private static Type GetCodeFixProviderType(Type analyzerType)
+        {
+            var typeName = analyzerType.FullName + CodeFixProviderSuffix;
+            return analyzerType.Assembly.GetType(typeName);
+
         }
 
         private static void GetSqale(Type analyzerType, RuleDetail ruleDetail)
@@ -111,6 +121,30 @@ namespace SonarLint.Utilities
             {
                 ruleDetail.Tags.AddRange(tags.Tags);
             }
+        }
+
+
+
+        private static void GetCodeFixNames(Type analyzerType, RuleDetail ruleDetail)
+        {
+            var codeFixProvider = GetCodeFixProviderType(analyzerType);
+            if (codeFixProvider == null)
+            {
+                return;
+            }
+
+            var titles = GetCodeFixTitles(codeFixProvider);
+
+            ruleDetail.CodeFixTitles.AddRange(titles);
+        }
+
+        public static IEnumerable<string> GetCodeFixTitles(Type codeFixProvider)
+        {
+            return codeFixProvider.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static)
+                .Where(field =>
+                    field.Name.StartsWith("Title", StringComparison.InvariantCulture) &&
+                    field.FieldType == typeof(string))
+                .Select(field => (string)field.GetRawConstantValue());
         }
 
         private static void GetParameters(Type analyzerType, RuleDetail ruleDetail)

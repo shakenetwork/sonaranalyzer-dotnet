@@ -26,6 +26,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarLint.Utilities;
 using SonarLint.Common;
+using Microsoft.CodeAnalysis.CodeFixes;
 
 namespace SonarLint.UnitTest.Common
 {
@@ -37,6 +38,13 @@ namespace SonarLint.UnitTest.Common
             return assemblies
                 .SelectMany(assembly => assembly.GetTypes())
                 .Where(t => t.IsSubclassOf(typeof(DiagnosticAnalyzer)));
+        }
+
+        private static IEnumerable<Type> GetCodeFixProviderTypes(IEnumerable<Assembly> assemblies)
+        {
+            return assemblies
+                .SelectMany(assembly => assembly.GetTypes())
+                .Where(t => t.IsSubclassOf(typeof(CodeFixProvider)));
         }
 
 
@@ -111,6 +119,40 @@ namespace SonarLint.UnitTest.Common
                     Assert.Fail(
                         "DiagnosticAnalyzer '{0}' has parameters that are defined outside of IRuleTemplateInstance.",
                         analyzer.Name);
+                }
+            }
+        }
+
+        [TestMethod]
+        public void CodeFixProviders_Named_Properly()
+        {
+            var codeFixProviders = GetCodeFixProviderTypes(new[] { RuleFinder.GetPackagedRuleAssembly() });
+
+            foreach (var codeFixProvider in codeFixProviders)
+            {
+                var analyzerName = codeFixProvider.FullName.Replace(RuleDetailBuilder.CodeFixProviderSuffix, "");
+                if (codeFixProvider.Assembly.GetType(analyzerName) == null)
+                {
+                    Assert.Fail(
+                        "CodeFixProvider '{0}' has no matching DiagnosticAnalyzer.",
+                        codeFixProvider.Name);
+                }
+            }
+        }
+
+        [TestMethod]
+        public void CodeFixProviders_Have_Title()
+        {
+            var codeFixProviders = GetCodeFixProviderTypes(new[] { RuleFinder.GetPackagedRuleAssembly() });
+
+            foreach (var codeFixProvider in codeFixProviders)
+            {
+                var titles = RuleDetailBuilder.GetCodeFixTitles(codeFixProvider);
+                if (!titles.Any())
+                {
+                    Assert.Fail(
+                        "CodeFixProvider '{0}' has no title field.",
+                        codeFixProvider.Name);
                 }
             }
         }

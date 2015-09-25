@@ -21,6 +21,7 @@
 using SonarLint.Common;
 using SonarLint.Helpers;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace SonarLint.DocGenerator
@@ -33,8 +34,11 @@ namespace SonarLint.DocGenerator
             {
                 Key = detail.Key,
                 Title = detail.Title,
-                Description = AddLinksBetweenRulesToDescription(detail.Description, productVersion),
-                Tags = detail.Tags
+                Description = AddLinksBetweenRulesToDescription(detail.Description, productVersion) +
+                    GetCodeFixDescription(detail),
+                Tags = detail.Tags,
+                Severity = detail.Severity,
+                IdeSeverity = detail.IdeSeverity
             };
         }
 
@@ -42,6 +46,8 @@ namespace SonarLint.DocGenerator
         public string Title { get; set; }
         public string Description { get; set; }
         public string Version { get; set; }
+        public string Severity { get; set; }
+        public int IdeSeverity { get; set; }
         public IEnumerable<string> Tags { get; set; }
 
         public const string CrosslinkPattern = "(Rule )(S[0-9]+)";
@@ -51,6 +57,21 @@ namespace SonarLint.DocGenerator
             var urlRegexPattern = string.Format(HelpLinkPattern, productVersion, "$2");
             var linkPattern = string.Format("<a class=\"rule-link\" href=\"{0}\">{1}</a>", urlRegexPattern, "$1$2");
             return Regex.Replace(description, CrosslinkPattern, linkPattern);
+        }
+
+        private static string GetCodeFixDescription(RuleDetail detail)
+        {
+            if (!detail.CodeFixTitles.Any())
+            {
+                return string.Empty;
+            }
+
+            const string listItemPattern = "<li>{0}</li>";
+            const string codeFixPattern = "<h2>Code Fixes</h2><ul>{0}</ul>";
+
+            return
+                string.Format(codeFixPattern,
+                    string.Join("", detail.CodeFixTitles.Select(title => string.Format(listItemPattern, title))));
         }
     }
 }
