@@ -26,6 +26,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules
 {
@@ -38,19 +39,15 @@ namespace SonarLint.Rules
     {
         internal const string DiagnosticId = "S1118";
         internal const string Title = "Utility classes should not have public constructors";
-
         internal const string Description =
             "Utility classes, which are collections of \"static\" members, are not meant to be instantiated. Even \"abstract\" " +
             "utility classes, which can be extended, should not have \"public\" constructors. C# adds an implicit public " +
             "constructor to every class which does not explicitly define at least one constructor. Hence, at least one " +
             "\"protected\" constructor should be defined if you wish to subclass this utility class. Or the \"static\" keyword " +
             "should be added to the class declaration to prevent subclassing.";
-
-        internal const string MessageFormatConstructor = "Hide this public constructor.";
-
+        internal const string MessageFormatConstructor = "Hide this public constructor by making it \"{0}\".";
         internal const string MessageFormatStaticClass =
             "Add a \"{0}\" constructor or the \"static\" keyword to the class declaration.";
-
         internal const string Category = "SonarLint";
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
@@ -116,10 +113,13 @@ namespace SonarLint.Rules
         private static void CheckConstructors(INamedTypeSymbol utilityClass, SymbolAnalysisContext c)
         {
             if (!ClassQualifiesForIssue(utilityClass) ||
-                !HasMembersAndAllAreStaticExceptConstructors(utilityClass.GetMembers()))
+                !HasMembersAndAllAreStaticExceptConstructors(utilityClass))
             {
                 return;
             }
+
+            var reportMessage = string.Format(MessageFormatConstructor,
+                utilityClass.IsSealed ? "private" : "protected");
 
             foreach (var constructor in utilityClass.GetMembers()
                 .Where(IsConstructor)
@@ -132,7 +132,7 @@ namespace SonarLint.Rules
                     if (constructorDeclaration != null)
                     {
                         c.ReportDiagnosticIfNonGenerated(
-                            Diagnostic.Create(Rule, constructorDeclaration.Identifier.GetLocation(), MessageFormatConstructor),
+                            Diagnostic.Create(Rule, constructorDeclaration.Identifier.GetLocation(), reportMessage),
                             c.Compilation);
                     }
                 }
@@ -142,8 +142,9 @@ namespace SonarLint.Rules
         private static bool ClassIsRelevant(INamedTypeSymbol @class)
         {
             return ClassQualifiesForIssue(@class) &&
-                   HasMembersAndAllAreStatic(@class.GetMembers()
-                       .Where(member => !member.IsImplicitlyDeclared).ToImmutableList());
+                   HasOnlyQualifyingMembers(@class, @class.GetMembers()
+                .Where(member => !member.IsImplicitlyDeclared)
+                .ToList());
         }
 
         private static bool ClassQualifiesForIssue(INamedTypeSymbol @class)
@@ -153,19 +154,29 @@ namespace SonarLint.Rules
                    @class.BaseType.SpecialType == SpecialType.System_Object;
         }
 
-        private static bool HasMembersAndAllAreStatic(IImmutableList<ISymbol> members)
+        private static bool HasOnlyQualifyingMembers(INamedTypeSymbol @class, IList<ISymbol> members)
         {
             return members.Any() &&
-                   members.All(member => member.IsStatic);
+                   members.All(member => member.IsStatic) &&
+                   !ClassUsedAsInstanceInMembers(@class, members);
         }
 
-        private static bool HasMembersAndAllAreStaticExceptConstructors(IImmutableList<ISymbol> members)
+        private static bool ClassUsedAsInstanceInMembers(INamedTypeSymbol @class, IList<ISymbol> members)
         {
-            var membersExceptConstructors = members
-                .Where(member => !IsConstructor(member))
-                .ToImmutableList();
+            return members.OfType<IMethodSymbol>().Any(member =>
+                        @class.Equals(member.ReturnType) ||
+                        member.Parameters.Any(parameter => @class.Equals(parameter.Type))) ||
+                   members.OfType<IPropertySymbol>().Any(member => @class.Equals(member.Type)) ||
+                   members.OfType<IFieldSymbol>().Any(member => @class.Equals(member.Type));
+        }
 
-            return HasMembersAndAllAreStatic(membersExceptConstructors);
+        private static bool HasMembersAndAllAreStaticExceptConstructors(INamedTypeSymbol @class)
+        {
+            var membersExceptConstructors = @class.GetMembers()
+                .Where(member => !IsConstructor(member))
+                .ToList();
+
+            return HasOnlyQualifyingMembers(@class, membersExceptConstructors);
         }
 
         private static bool IsConstructor(ISymbol member)

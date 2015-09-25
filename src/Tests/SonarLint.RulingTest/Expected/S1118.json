@@ -160,40 +160,6 @@
     },
     {
       "RuleId": "S1118",
-      "FullMessage": "Add a \"private\" constructor or the \"static\" keyword to the class declaration.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence.Tests\\AtLeastOnceDeliverySpec.cs",
-            "Region": {
-              "StartLine": 286,
-              "EndLine": 286,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
-      "FullMessage": "Add a \"private\" constructor or the \"static\" keyword to the class declaration.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence.Tests\\AtLeastOnceDeliverySpec.cs",
-            "Region": {
-              "StartLine": 289,
-              "EndLine": 289,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
       "FullMessage": "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
       "Locations": [
         {
@@ -967,23 +933,6 @@
             "Region": {
               "StartLine": 12,
               "EndLine": 12,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1118",
-      "FullMessage": "Hide this public constructor.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Helpers\\HttpEncoder.cs",
-            "Region": {
-              "StartLine": 113,
-              "EndLine": 113,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }

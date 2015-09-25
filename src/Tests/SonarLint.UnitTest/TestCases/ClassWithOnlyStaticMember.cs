@@ -88,4 +88,27 @@ namespace Tests.Diagnostics
             return s1 + s2;
         }
     }
+
+    public class StringUtils4
+    {
+        public static StringUtils4 Concatenate()
+        {
+            return null;
+        }
+    }
+    public class StringUtils5
+    {
+        public static void Concatenate(StringUtils5 p)
+        {
+        }
+    }
+    public class StringUtils6
+    {
+        public static StringUtils6 Prop { get; set; }
+    }
+
+    public class StringUtils7
+    {
+        public static StringUtils7 Field;
+    }
 }
