@@ -78,6 +78,11 @@ namespace SonarLint.Rules
                         c.ReportDiagnostic(Diagnostic.Create(Rule, increment.GetLocation(), operatorText));
                         return;
                     }
+                    if (increment.Parent is ArrowExpressionClauseSyntax)
+                    {
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, increment.GetLocation(), operatorText));
+                        return;
+                    }
 
                     var assignment = increment.Parent as AssignmentExpressionSyntax;
                     if (assignment != null &&

@@ -40,5 +40,7 @@ namespace Tests.Diagnostics
         {
             return i++; // Compliant
         }
+
+        public int pickNumber4(int i) => i++; // Noncompliant
     }
 }
