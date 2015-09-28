@@ -8,11 +8,7 @@ namespace Tests.Diagnostics
 
         public EmptyStatement()
         {
-            ; // Noncompliant
-            ; // Noncompliant
-            ; // Noncompliant
-            ; // Noncompliant
-            ; // Noncompliant
+
             Console.WriteLine();
             while (true)
                 ; // Noncompliant

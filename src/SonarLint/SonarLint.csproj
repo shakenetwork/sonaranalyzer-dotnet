@@ -106,6 +106,7 @@
     <Compile Include="Rules\GenericTypeParameterEmptinessCheckingCodeFixProvider.cs" />
     <Compile Include="Rules\RedundantArgument.cs" />
     <Compile Include="Rules\ConditionalSimplification.cs" />
+    <Compile Include="Common\DocumentBasedFixAllProvider.cs" />
     <Compile Include="Rules\MemberShadowsOuterStaticMember.cs" />
     <Compile Include="Rules\OrderByRepeated.cs" />
     <Compile Include="Rules\MethodParameterUnused.cs" />
@@ -123,6 +124,7 @@
     <Compile Include="Rules\RedundantCastCodeFixProvider.cs" />
     <Compile Include="Rules\FieldShouldBeReadonlyCodeFixProvider.cs" />
     <Compile Include="Rules\SuppressFinalizeUselessCodeFixProvider.cs" />
+    <Compile Include="Rules\EmptyStatementCodeFixProvider.cs" />
     <Compile Include="Rules\SuppressFinalizeUseless.cs" />
     <Compile Include="Rules\FieldInitializedToDefault.cs" />
     <Compile Include="Rules\RedundantParenthesesCodeFixProvider.cs" />

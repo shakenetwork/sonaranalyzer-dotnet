@@ -32,5 +32,16 @@ namespace SonarLint.UnitTest.Rules
         {
             Verifier.VerifyAnalyzer(@"TestCases\EmptyStatement.cs", new EmptyStatement());
         }
+
+        [TestMethod]
+        [TestCategory("CodeFix")]
+        public void EmptyStatement_CodeFix()
+        {
+            Verifier.VerifyCodeFix(
+                @"TestCases\EmptyStatement.cs",
+                @"TestCases\EmptyStatement.Fixed.cs",
+                new EmptyStatement(),
+                new EmptyStatementCodeFixProvider());
+        }
     }
 }
