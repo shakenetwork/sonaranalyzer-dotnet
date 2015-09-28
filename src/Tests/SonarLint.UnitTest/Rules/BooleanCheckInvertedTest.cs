@@ -40,6 +40,7 @@ namespace SonarLint.UnitTest.Rules
             Verifier.VerifyCodeFix(
                 @"TestCases\BooleanCheckInverted.cs",
                 @"TestCases\BooleanCheckInverted.Fixed.cs",
+                @"TestCases\BooleanCheckInverted.Fixed.Batch.cs",
                 new BooleanCheckInverted(),
                 new BooleanCheckInvertedCodeFixProvider());
         }

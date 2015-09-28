@@ -42,13 +42,9 @@ namespace SonarLint.Rules
             }
         }
 
-        private static readonly FixAllProvider FixAllProviderInstance = new DocumentBasedFixAllProvider<StringConcatenationWithPlus>(
-            Title,
-            (root, node, diagnostic) => CalculateNewRoot(root, node as BinaryExpressionSyntax));
-
         public sealed override FixAllProvider GetFixAllProvider()
         {
-            return FixAllProviderInstance;
+            return DocumentBasedFixAllProvider.Instance;
         }
 
         public override sealed async Task RegisterCodeFixesAsync(CodeFixContext context)
@@ -75,11 +71,6 @@ namespace SonarLint.Rules
 
         private static SyntaxNode CalculateNewRoot(SyntaxNode root, BinaryExpressionSyntax currentAsBinary)
         {
-            if (currentAsBinary == null)
-            {
-                return root;
-            }
-
             return root.ReplaceNode(currentAsBinary,
                 SyntaxFactory.ConcatenateExpression(
                     currentAsBinary.Left,

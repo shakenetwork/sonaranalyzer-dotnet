@@ -42,13 +42,9 @@ namespace SonarLint.Rules
             }
         }
 
-        private static readonly FixAllProvider FixAllProviderInstance = new DocumentBasedFixAllProvider<SillyBitwiseOperation>(
-            Title,
-            (root, node, diagnostic) => CalculateNewRoot(root, node, diagnostic));
-
         public sealed override FixAllProvider GetFixAllProvider()
         {
-            return FixAllProviderInstance;
+            return DocumentBasedFixAllProvider.Instance;
         }
 
         public override sealed async Task RegisterCodeFixesAsync(CodeFixContext context)
@@ -76,21 +72,6 @@ namespace SonarLint.Rules
                         }),
                     context.Diagnostics);
             }
-        }
-
-        private static SyntaxNode CalculateNewRoot(SyntaxNode root, SyntaxNode current, Diagnostic diagnostic)
-        {
-            var statement = current as StatementSyntax;
-            var assignment = current as AssignmentExpressionSyntax;
-            var binary = current as BinaryExpressionSyntax;
-            if (statement == null &&
-                assignment == null &&
-                binary == null)
-            {
-                return root;
-            }
-
-            return CalculateNewRoot(root, diagnostic, statement, assignment, binary);
         }
 
         private static SyntaxNode CalculateNewRoot(SyntaxNode root, Diagnostic diagnostic,

@@ -703,6 +703,13 @@
     <None Include="TestCases\MultipleVariableDeclaration.Fixed.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Compile Include="FixAllDiagnosticProvider.cs" />
+    <None Include="TestCases\CatchRethrow.Fixed.Batch.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\BooleanCheckInverted.Fixed.Batch.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Compile Include="Verifier.cs" />
     <None Include="TestCases\UseCurlyBraces.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

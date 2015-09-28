@@ -42,13 +42,9 @@ namespace SonarLint.Rules
             }
         }
 
-        private static readonly FixAllProvider FixAllProviderInstance = new DocumentBasedFixAllProvider<CatchRethrow>(
-            Title,
-            (root, node, diagnostic) => CalculateNewRoot(root, node));
-
         public sealed override FixAllProvider GetFixAllProvider()
         {
-            return FixAllProviderInstance;
+            return DocumentBasedFixAllProvider.Instance;
         }
 
         public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
@@ -74,15 +70,6 @@ namespace SonarLint.Rules
                     return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                 }),
                 context.Diagnostics);
-        }
-
-        private static SyntaxNode CalculateNewRoot(SyntaxNode root, SyntaxNode currentNode)
-        {
-            var tryStatement = currentNode.Parent as TryStatementSyntax;
-
-            return tryStatement == null
-                ? root
-                : CalculateNewRoot(root, currentNode, tryStatement);
         }
 
         private static SyntaxNode CalculateNewRoot(SyntaxNode root, SyntaxNode currentNode, TryStatementSyntax tryStatement)

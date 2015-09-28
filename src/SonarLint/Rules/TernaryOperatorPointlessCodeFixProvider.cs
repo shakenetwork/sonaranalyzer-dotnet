@@ -40,6 +40,7 @@ namespace SonarLint.Rules
                 return ImmutableArray.Create(TernaryOperatorPointless.DiagnosticId);
             }
         }
+
         public sealed override FixAllProvider GetFixAllProvider()
         {
             return WellKnownFixAllProviders.BatchFixer;

@@ -41,13 +41,9 @@ namespace SonarLint.Rules
             }
         }
 
-        private static readonly FixAllProvider FixAllProviderInstance = new DocumentBasedFixAllProvider<SuppressFinalizeUseless>(
-            Title,
-            (root, node, diagnostic) => RemoveUnusedCode(root, node));
-
         public sealed override FixAllProvider GetFixAllProvider()
         {
-            return FixAllProviderInstance;
+            return DocumentBasedFixAllProvider.Instance;
         }
 
         public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
@@ -64,16 +60,11 @@ namespace SonarLint.Rules
                         Title,
                         c =>
                         {
-                            var newRoot = RemoveUnusedCode(root, syntaxNode);
+                            var newRoot = root.RemoveNode(syntaxNode.Parent, SyntaxRemoveOptions.KeepNoTrivia);
                             return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                         }),
                     context.Diagnostics);
             }
-        }
-
-        internal static SyntaxNode RemoveUnusedCode(SyntaxNode root, SyntaxNode syntaxNode)
-        {
-            return root.RemoveNode(syntaxNode.Parent, SyntaxRemoveOptions.KeepNoTrivia);
         }
     }
 }

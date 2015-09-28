@@ -18,31 +18,36 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarLint.Rules;
+using System;
+using System.Collections.Generic;
 
-namespace SonarLint.UnitTest.Rules
+namespace SonarLint.Common
 {
-    [TestClass]
-    public class CatchRethrowTest
+    internal class BidirectionalDictionary<TA, TB>
     {
-        [TestMethod]
-        [TestCategory("Rule")]
-        public void CatchRethrow()
+        private readonly IDictionary<TA, TB> aToB = new Dictionary<TA, TB>();
+        private readonly IDictionary<TB, TA> bToA = new Dictionary<TB, TA>();
+
+        public void Add(TA a, TB b)
         {
-            Verifier.VerifyAnalyzer(@"TestCases\CatchRethrow.cs", new CatchRethrow());
+            if (aToB.ContainsKey(a) || bToA.ContainsKey(b))
+            {
+                throw new ArgumentException("An element with the same key already exists in the BidirectionalDictionary");
+            }
+
+            aToB.Add(a, b);
+            bToA.Add(b, a);
         }
 
-        [TestMethod]
-        [TestCategory("CodeFix")]
-        public void CatchRethrow_CodeFix()
+        public TB GetByA(TA a)
         {
-            Verifier.VerifyCodeFix(
-                @"TestCases\CatchRethrow.cs",
-                @"TestCases\CatchRethrow.Fixed.cs",
-                @"TestCases\CatchRethrow.Fixed.Batch.cs",
-                new CatchRethrow(),
-                new CatchRethrowCodeFixProvider());
+            return aToB[a];
+        }
+
+        public TA GetByB(TB b)
+        {
+            return bToA[b];
         }
     }
 }
+

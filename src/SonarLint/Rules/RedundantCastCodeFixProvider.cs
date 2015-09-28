@@ -41,13 +41,9 @@ namespace SonarLint.Rules
             }
         }
 
-        private static readonly FixAllProvider FixAllProviderInstance = new DocumentBasedFixAllProvider<RedundantCast>(
-            Title,
-            (root, node, diagnostic) => RemoveCall(root, node as InvocationExpressionSyntax, node as MemberAccessExpressionSyntax));
-
         public sealed override FixAllProvider GetFixAllProvider()
         {
-            return FixAllProviderInstance;
+            return DocumentBasedFixAllProvider.Instance;
         }
 
         public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
@@ -86,12 +82,6 @@ namespace SonarLint.Rules
         private static SyntaxNode RemoveCall(SyntaxNode root,
             InvocationExpressionSyntax castInvocation, MemberAccessExpressionSyntax memberAccess)
         {
-            if (castInvocation == null &&
-                memberAccess == null)
-            {
-                return root;
-            }
-
             return castInvocation != null
                 ? RemoveExtensionMethodCall(root, castInvocation)
                 : RemoveStaticMemberCall(root, memberAccess);

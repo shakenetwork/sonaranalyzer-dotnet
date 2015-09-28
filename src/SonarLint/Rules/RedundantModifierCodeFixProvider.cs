@@ -25,6 +25,7 @@ using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CSharp;
+using SonarLint.Common;
 
 namespace SonarLint.Rules
 {
@@ -39,9 +40,10 @@ namespace SonarLint.Rules
                 return ImmutableArray.Create(RedundantModifier.DiagnosticId);
             }
         }
+
         public sealed override FixAllProvider GetFixAllProvider()
         {
-            return WellKnownFixAllProviders.BatchFixer;
+            return DocumentBasedFixAllProvider.Instance;
         }
 
         private static readonly SyntaxKind[] ExpectedTokenKinds =
@@ -69,17 +71,23 @@ namespace SonarLint.Rules
                     Title,
                     c =>
                     {
-                        var oldParent = token.Parent;
-                        var newParent = oldParent.ReplaceToken(
-                            token,
-                            SyntaxFactory.Token(SyntaxKind.None));
-
-                        var newRoot = root.ReplaceNode(
-                            oldParent,
-                            newParent.WithLeadingTrivia(oldParent.GetLeadingTrivia()));
+                        var newRoot = RemoveRedundantToken(root, token);
                         return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                     }),
                 context.Diagnostics);
+        }
+
+        private static SyntaxNode RemoveRedundantToken(SyntaxNode root, SyntaxToken token)
+        {
+            var oldParent = token.Parent;
+            var newParent = oldParent.ReplaceToken(
+                token,
+                SyntaxFactory.Token(SyntaxKind.None));
+
+            var newRoot = root.ReplaceNode(
+                oldParent,
+                newParent.WithLeadingTrivia(oldParent.GetLeadingTrivia()));
+            return newRoot;
         }
     }
 }

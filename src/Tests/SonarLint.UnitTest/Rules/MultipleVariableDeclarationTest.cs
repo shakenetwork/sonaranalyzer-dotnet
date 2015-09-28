@@ -43,13 +43,15 @@ namespace SonarLint.UnitTest.Rules
                 @"TestCases\MultipleVariableDeclaration.cs",
                 @"TestCases\MultipleVariableDeclaration.Fixed.cs",
                 new CS.MultipleVariableDeclaration(),
-                new CS.MultipleVariableDeclarationCodeFixProvider());
+                new CS.MultipleVariableDeclarationCodeFixProvider(),
+                SonarLint.Rules.Common.MultipleVariableDeclarationCodeFixProviderBase.Title);
 
             Verifier.VerifyCodeFix(
                 @"TestCases\MultipleVariableDeclaration.vb",
                 @"TestCases\MultipleVariableDeclaration.Fixed.vb",
                 new VB.MultipleVariableDeclaration(),
-                new VB.MultipleVariableDeclarationCodeFixProvider());
+                new VB.MultipleVariableDeclarationCodeFixProvider(),
+                SonarLint.Rules.Common.MultipleVariableDeclarationCodeFixProviderBase.Title);
         }
     }
 }

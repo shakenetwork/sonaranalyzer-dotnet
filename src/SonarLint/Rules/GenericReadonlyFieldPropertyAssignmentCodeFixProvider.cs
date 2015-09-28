@@ -43,10 +43,6 @@ namespace SonarLint.Rules
                 return ImmutableArray.Create(GenericReadonlyFieldPropertyAssignment.DiagnosticId);
             }
         }
-        public sealed override FixAllProvider GetFixAllProvider()
-        {
-            return WellKnownFixAllProviders.BatchFixer;
-        }
 
         private static readonly SyntaxAnnotation annotation = new SyntaxAnnotation(nameof(GenericReadonlyFieldPropertyAssignmentCodeFixProvider));
 

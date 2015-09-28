@@ -41,13 +41,9 @@ namespace SonarLint.Rules
             }
         }
 
-        private static readonly FixAllProvider FixAllProviderInstance = new DocumentBasedFixAllProvider<EmptyStatement>(
-            Title,
-            (root, node, diagnostic) => RemoveUnusedCode(root, node));
-
         public sealed override FixAllProvider GetFixAllProvider()
         {
-            return FixAllProviderInstance;
+            return DocumentBasedFixAllProvider.Instance;
         }
 
         public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)

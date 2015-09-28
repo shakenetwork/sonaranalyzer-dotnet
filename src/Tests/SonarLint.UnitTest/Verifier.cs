@@ -31,18 +31,23 @@ using SonarLint.Helpers;
 using Microsoft.CodeAnalysis.CodeFixes;
 using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.Threading.Tasks;
 using CS = Microsoft.CodeAnalysis.CSharp;
 using VB = Microsoft.CodeAnalysis.VisualBasic;
+
 
 namespace SonarLint.UnitTest
 {
     public static class Verifier
     {
+        private const string GeneratedAssemblyName = "foo";
+
         #region Verify*
 
         public static void VerifyAnalyzer(string path, DiagnosticAnalyzer diagnosticAnalyzer)
         {
-            Verify(path, "foo", diagnosticAnalyzer);
+            Verify(path, GeneratedAssemblyName, diagnosticAnalyzer);
         }
 
         public static void VerifyAnalyzerInTest(string path, DiagnosticAnalyzer diagnosticAnalyzer)
@@ -53,16 +58,24 @@ namespace SonarLint.UnitTest
         public static void VerifyCodeFix(string path, string pathToExpected, DiagnosticAnalyzer diagnosticAnalyzer,
             CodeFixProvider codeFixProvider)
         {
-            VerifyCodeFix(path, pathToExpected, diagnosticAnalyzer, codeFixProvider, null);
+            VerifyCodeFix(path, pathToExpected, pathToExpected, diagnosticAnalyzer, codeFixProvider, null);
+        }
+        public static void VerifyCodeFix(string path, string pathToExpected, string pathToBatchExpected, DiagnosticAnalyzer diagnosticAnalyzer,
+            CodeFixProvider codeFixProvider)
+        {
+            VerifyCodeFix(path, pathToExpected, pathToBatchExpected, diagnosticAnalyzer, codeFixProvider, null);
         }
         public static void VerifyCodeFix(string path, string pathToExpected, DiagnosticAnalyzer diagnosticAnalyzer,
             CodeFixProvider codeFixProvider, string codeFixTitle)
         {
-            var fileInput = new FileInfo(path);
-
+            VerifyCodeFix(path, pathToExpected, pathToExpected, diagnosticAnalyzer, codeFixProvider, codeFixTitle);
+        }
+        public static void VerifyCodeFix(string path, string pathToExpected, string pathToBatchExpected, DiagnosticAnalyzer diagnosticAnalyzer,
+            CodeFixProvider codeFixProvider, string codeFixTitle)
+        {
             using (var workspace = new AdhocWorkspace())
             {
-                var document = GetDocument(fileInput, "foo", workspace);
+                var document = GetDocument(path, GeneratedAssemblyName, workspace);
 
                 List<Diagnostic> diagnostics;
                 string actualCode;
@@ -97,22 +110,57 @@ namespace SonarLint.UnitTest
                 Assert.IsTrue(codeFixExecutedAtLeastOnce);
                 Assert.AreEqual(File.ReadAllText(pathToExpected), actualCode);
             }
+
+            VerifyFixAllCodeFix(path, pathToBatchExpected, diagnosticAnalyzer, codeFixProvider, codeFixTitle);
         }
 
-        private static void CalculateDiagnosticsAndCode(DiagnosticAnalyzer diagnosticAnalyzer, Document document,
-            out List<Diagnostic> diagnostics,
-            out string actualCode)
+        private static void VerifyFixAllCodeFix(string path, string pathToExpected, DiagnosticAnalyzer diagnosticAnalyzer,
+            CodeFixProvider codeFixProvider, string codeFixTitle)
         {
-            diagnostics = GetDiagnostics(document.Project.GetCompilationAsync().Result, diagnosticAnalyzer).ToList();
-            actualCode = document.GetSyntaxRootAsync().Result.GetText().ToString();
+            var fixAllProvider = codeFixProvider.GetFixAllProvider();
+            if (fixAllProvider == null)
+            {
+                return;
+            }
+
+            using (var workspace = new AdhocWorkspace())
+            {
+                var document = GetDocument(path, GeneratedAssemblyName, workspace);
+
+                List<Diagnostic> diagnostics;
+                string actualCode;
+                CalculateDiagnosticsAndCode(diagnosticAnalyzer, document, out diagnostics, out actualCode);
+
+                Assert.AreNotEqual(0, diagnostics.Count);
+
+                var fixAllDiagnosticProvider = new FixAllDiagnosticProvider(
+                    codeFixProvider.FixableDiagnosticIds.ToImmutableHashSet(),
+                    (doc, ids, ct) => Task.FromResult(
+                        GetDiagnostics(document.Project.GetCompilationAsync().Result, diagnosticAnalyzer)),
+                    null);
+                var fixAllContext = new FixAllContext(document, codeFixProvider, FixAllScope.Document,
+                    codeFixTitle,
+                    codeFixProvider.FixableDiagnosticIds,
+                    fixAllDiagnosticProvider,
+                    CancellationToken.None);
+                var codeActionToExecute = fixAllProvider.GetFixAsync(fixAllContext).Result;
+
+                Assert.IsNotNull(codeActionToExecute);
+
+                document = ApplyCodeFix(document, codeActionToExecute);
+
+                CalculateDiagnosticsAndCode(diagnosticAnalyzer, document, out diagnostics, out actualCode);
+                Assert.AreEqual(File.ReadAllText(pathToExpected), actualCode);
+            }
         }
 
         #endregion
 
         #region Generic helper
 
-        private static Document GetDocument(FileInfo file, string assemblyName, AdhocWorkspace workspace)
+        private static Document GetDocument(string filePath, string assemblyName, AdhocWorkspace workspace)
         {
+            var file = new FileInfo(filePath);
             var language = file.Extension == ".cs"
                 ? LanguageNames.CSharp
                 : LanguageNames.VisualBasic;
@@ -154,7 +202,7 @@ namespace SonarLint.UnitTest
         {
             using (var workspace = new AdhocWorkspace())
             {
-                var document = GetDocument(new FileInfo(path), assemblyName, workspace);
+                var document = GetDocument(path, assemblyName, workspace);
                 var compilation = document.Project.GetCompilationAsync().Result;
                 var diagnostics = GetDiagnostics(compilation, diagnosticAnalyzer);
                 var expected = ExpectedIssues(compilation.SyntaxTrees.First()).ToList();
@@ -180,6 +228,14 @@ namespace SonarLint.UnitTest
         #endregion
 
         #region Codefix helper
+
+        private static void CalculateDiagnosticsAndCode(DiagnosticAnalyzer diagnosticAnalyzer, Document document,
+            out List<Diagnostic> diagnostics,
+            out string actualCode)
+        {
+            diagnostics = GetDiagnostics(document.Project.GetCompilationAsync().Result, diagnosticAnalyzer).ToList();
+            actualCode = document.GetSyntaxRootAsync().Result.GetText().ToString();
+        }
 
         private static Document ApplyCodeFix(Document document, CodeAction codeAction)
         {

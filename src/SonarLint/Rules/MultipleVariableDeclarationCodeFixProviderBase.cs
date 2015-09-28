@@ -39,17 +39,9 @@ namespace SonarLint.Rules.Common
             }
         }
 
-        private readonly FixAllProvider FixAllProviderInstance;
-        protected MultipleVariableDeclarationCodeFixProviderBase()
-        {
-            FixAllProviderInstance = new DocumentBasedFixAllProvider<MultipleVariableDeclarationBase>(
-                Title,
-                (root, node, diagnostic) => CalculateNewRoot(root, node));
-        }
-
         public sealed override FixAllProvider GetFixAllProvider()
         {
-            return FixAllProviderInstance;
+            return DocumentBasedFixAllProvider.Instance;
         }
 
         public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
