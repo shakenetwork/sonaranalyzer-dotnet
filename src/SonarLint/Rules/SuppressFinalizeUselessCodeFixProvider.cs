@@ -25,6 +25,7 @@ using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using SonarLint.Common;
 
 namespace SonarLint.Rules
 {
@@ -39,9 +40,14 @@ namespace SonarLint.Rules
                 return ImmutableArray.Create(SuppressFinalizeUseless.DiagnosticId);
             }
         }
+
+        private static readonly FixAllProvider FixAllProviderInstance = new DocumentBasedFixAllProvider<SuppressFinalizeUseless>(
+            Title,
+            (root, node, diagnostic) => RemoveUnusedCode(root, node));
+
         public sealed override FixAllProvider GetFixAllProvider()
         {
-            return WellKnownFixAllProviders.BatchFixer;
+            return FixAllProviderInstance;
         }
 
         public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
@@ -58,11 +64,16 @@ namespace SonarLint.Rules
                         Title,
                         c =>
                         {
-                            var newRoot = root.RemoveNode(syntaxNode.Parent, SyntaxRemoveOptions.KeepNoTrivia);
+                            var newRoot = RemoveUnusedCode(root, syntaxNode);
                             return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                         }),
                     context.Diagnostics);
             }
+        }
+
+        internal static SyntaxNode RemoveUnusedCode(SyntaxNode root, SyntaxNode syntaxNode)
+        {
+            return root.RemoveNode(syntaxNode.Parent, SyntaxRemoveOptions.KeepNoTrivia);
         }
     }
 }
