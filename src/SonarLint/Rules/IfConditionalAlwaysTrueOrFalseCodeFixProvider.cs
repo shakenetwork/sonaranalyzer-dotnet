@@ -27,6 +27,7 @@ using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Formatting;
 using Microsoft.CodeAnalysis.CSharp;
+using SonarLint.Common;
 
 namespace SonarLint.Rules
 {
@@ -41,9 +42,14 @@ namespace SonarLint.Rules
                 return ImmutableArray.Create(IfConditionalAlwaysTrueOrFalse.DiagnosticId);
             }
         }
+
+        private static FixAllProvider FixAllProviderInstance = new DocumentBasedFixAllProvider<IfConditionalAlwaysTrueOrFalse>(
+           Title,
+           (root, node) => CalculateNewRoot(root, node.FirstAncestorOrSelf<IfStatementSyntax>()));
+
         public sealed override FixAllProvider GetFixAllProvider()
         {
-            return WellKnownFixAllProviders.BatchFixer;
+            return FixAllProviderInstance;
         }
 
         public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
