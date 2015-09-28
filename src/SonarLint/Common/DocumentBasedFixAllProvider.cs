@@ -24,16 +24,18 @@ using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.CodeAnalysis.CodeActions;
 using System;
+using System.Collections.Generic;
+using System.Collections;
 
 namespace SonarLint.Common
 {
     internal sealed class DocumentBasedFixAllProvider<T> : FixAllProvider
     {
         private readonly string title;
-        private readonly Func<SyntaxNode, SyntaxNode, SyntaxNode> calculateNewRoot;
-        internal static readonly SyntaxAnnotation annotation = new SyntaxAnnotation(typeof(T).Name);
+        private readonly Func<SyntaxNode, SyntaxNode, Diagnostic, SyntaxNode> calculateNewRoot;
+        private static readonly string AnnotationKind = typeof(T).Name;
 
-        public DocumentBasedFixAllProvider(string title, Func<SyntaxNode, SyntaxNode, SyntaxNode> calculateNewRoot)
+        public DocumentBasedFixAllProvider(string title, Func<SyntaxNode, SyntaxNode, Diagnostic, SyntaxNode> calculateNewRoot)
         {
             this.title = title;
             this.calculateNewRoot = calculateNewRoot;
@@ -85,19 +87,87 @@ namespace SonarLint.Common
         {
             var diagnostics = await fixAllContext.GetDocumentDiagnosticsAsync(document).ConfigureAwait(false);
             var root = await document.GetSyntaxRootAsync(fixAllContext.CancellationToken).ConfigureAwait(false);
-            var nodes = diagnostics
-                .Select(d => root.FindNode(d.Location.SourceSpan))
-                .Where(n => !n.IsMissing);
-            root = root.ReplaceNodes(nodes, (original, rewritten) => original.WithAdditionalAnnotations(annotation));
-            var annotatedNodes = root.GetAnnotatedNodes(annotation);
+            var nodeDiagnosticPairs = diagnostics
+                .Select(d => new KeyValuePair<SyntaxNode, Diagnostic>(root.FindNode(d.Location.SourceSpan), d))
+                .Where(n => !n.Key.IsMissing)
+                .ToDictionary(kv => kv.Key, kv => kv.Value);
 
+            var diagnosticIdPairs = new BidirectionalDictionary<Diagnostic, string>();
+            GenerateGuidForEachDiagnostic(diagnostics, diagnosticIdPairs);
+            root = GetRootWithGuidAnnotatedNodes(root, nodeDiagnosticPairs, diagnosticIdPairs);
+
+            var annotatedNodes = root.GetAnnotatedNodes(AnnotationKind);
             while (annotatedNodes.Any())
             {
                 var node = annotatedNodes.First();
-                root = calculateNewRoot(root, node);
-                annotatedNodes = root.GetAnnotatedNodes(annotation);
+                var annotation = node.GetAnnotations(AnnotationKind).First();
+                var diagnostic = diagnosticIdPairs.GetByB(annotation.Data);
+                root = calculateNewRoot(root, node, diagnostic);
+
+                root = RemovePossiblyLeftAnnotation(root, annotation);
+                annotatedNodes = root.GetAnnotatedNodes(AnnotationKind);
             }
             return root;
+        }
+
+        private static SyntaxNode RemovePossiblyLeftAnnotation(SyntaxNode root, SyntaxAnnotation annotation)
+        {
+            var newNode = root.GetAnnotatedNodes(annotation).FirstOrDefault();
+            return newNode == null
+                ? root
+                : root.ReplaceNode(
+                    newNode,
+                    newNode.WithoutAnnotations(annotation));
+        }
+
+        private static SyntaxNode GetRootWithGuidAnnotatedNodes(SyntaxNode root,
+            Dictionary<SyntaxNode, Diagnostic> nodeDiagnosticPairs,
+            BidirectionalDictionary<Diagnostic, string> diagnosticIdPairs)
+        {
+            return root.ReplaceNodes(
+                nodeDiagnosticPairs.Keys,
+                (original, rewritten) =>
+                {
+                    var annotation = new SyntaxAnnotation(
+                        AnnotationKind,
+                        diagnosticIdPairs.GetByA(nodeDiagnosticPairs[original]));
+                    return rewritten.WithAdditionalAnnotations(annotation);
+                });
+        }
+
+        private static void GenerateGuidForEachDiagnostic(System.Collections.Immutable.ImmutableArray<Diagnostic> diagnostics, BidirectionalDictionary<Diagnostic, string> diagnosticIdPairs)
+        {
+            foreach (var diagnostic in diagnostics)
+            {
+                diagnosticIdPairs.Add(diagnostic, Guid.NewGuid().ToString());
+            }
+        }
+
+        private class BidirectionalDictionary<TA, TB>
+        {
+            private readonly IDictionary<TA, TB> aToB = new Dictionary<TA, TB>();
+            private readonly IDictionary<TB, TA> bToA = new Dictionary<TB, TA>();
+
+            public void Add(TA a, TB b)
+            {
+                if (aToB.ContainsKey(a) || bToA.ContainsKey(b))
+                {
+                    throw new ArgumentException("An element with the same key already exists in the BidirectionalDictionary");
+                }
+
+                aToB.Add(a, b);
+                bToA.Add(b, a);
+            }
+
+            public TB GetByA(TA a)
+            {
+                return aToB[a];
+            }
+
+            public TA GetByB(TB b)
+            {
+                return bToA[b];
+            }
         }
     }
 }

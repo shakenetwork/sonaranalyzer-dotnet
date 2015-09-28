@@ -27,6 +27,7 @@ using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Formatting;
+using SonarLint.Common;
 
 namespace SonarLint.Rules
 {
@@ -41,9 +42,14 @@ namespace SonarLint.Rules
                 return ImmutableArray.Create(SillyBitwiseOperation.DiagnosticId);
             }
         }
+
+        private static FixAllProvider FixAllProviderInstance = new DocumentBasedFixAllProvider<SillyBitwiseOperation>(
+            Title,
+            (root, node, diagnostic) => CalculateNewRoot(root, node, diagnostic));
+
         public sealed override FixAllProvider GetFixAllProvider()
         {
-            return WellKnownFixAllProviders.BatchFixer;
+            return FixAllProviderInstance;
         }
 
         public override sealed async Task RegisterCodeFixesAsync(CodeFixContext context)
@@ -55,52 +61,59 @@ namespace SonarLint.Rules
             var syntaxNode = root.FindNode(diagnosticSpan);
 
             var statement = syntaxNode as StatementSyntax;
-            if (statement != null)
-            {
-                context.RegisterCodeFix(
-                    CodeAction.Create(
-                        Title,
-                        c =>
-                        {
-                            var newRoot = root.RemoveNode(statement, SyntaxRemoveOptions.KeepNoTrivia);
-                            return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
-                        }),
-                    context.Diagnostics);
-                return;
-            }
-
             var assignment = syntaxNode as AssignmentExpressionSyntax;
-            if (assignment != null)
+            var binary = syntaxNode as BinaryExpressionSyntax;
+            if (statement != null ||
+                assignment != null ||
+                binary != null)
             {
                 context.RegisterCodeFix(
                     CodeAction.Create(
                         Title,
                         c =>
                         {
-                            var newRoot = root.ReplaceNode(assignment, assignment.Left
-                                .WithAdditionalAnnotations(Formatter.Annotation));
+                            var newRoot = CalculateNewRoot(root, diagnostic, statement, assignment, binary);
                             return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                         }),
                     context.Diagnostics);
-                return;
+            }
+        }
+
+        private static SyntaxNode CalculateNewRoot(SyntaxNode root, SyntaxNode current, Diagnostic diagnostic)
+        {
+            var statement = current as StatementSyntax;
+            var assignment = current as AssignmentExpressionSyntax;
+            var binary = current as BinaryExpressionSyntax;
+            if (statement == null &&
+                assignment == null &&
+                binary == null)
+            {
+                return root;
             }
 
-            var binary = syntaxNode as BinaryExpressionSyntax;
-            if (binary != null)
+            return CalculateNewRoot(root, diagnostic, statement, assignment, binary);
+        }
+
+        private static SyntaxNode CalculateNewRoot(SyntaxNode root, Diagnostic diagnostic,
+            StatementSyntax currentAsStatement, AssignmentExpressionSyntax currentAsAssignment,
+            BinaryExpressionSyntax currentAsBinary)
+        {
+            if (currentAsStatement != null)
             {
-                context.RegisterCodeFix(
-                    CodeAction.Create(
-                        Title,
-                        c =>
-                        {
-                            var isReportingOnLeft = bool.Parse(diagnostic.Properties[SillyBitwiseOperation.IsReportingOnLeftKey]);
-                            var newRoot = root.ReplaceNode(binary,
-                                (isReportingOnLeft ? binary.Right : binary.Left).WithAdditionalAnnotations(Formatter.Annotation));
-                            return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
-                        }),
-                    context.Diagnostics);
-                return;
+                return root.RemoveNode(currentAsStatement, SyntaxRemoveOptions.KeepNoTrivia);
             }
+
+            if (currentAsAssignment != null)
+            {
+                return root.ReplaceNode(
+                    currentAsAssignment,
+                    currentAsAssignment.Left.WithAdditionalAnnotations(Formatter.Annotation));
+            }
+
+            var isReportingOnLeft = bool.Parse(diagnostic.Properties[SillyBitwiseOperation.IsReportingOnLeftKey]);
+            return root.ReplaceNode(
+                currentAsBinary,
+                (isReportingOnLeft ? currentAsBinary.Right : currentAsBinary.Left).WithAdditionalAnnotations(Formatter.Annotation));
         }
     }
 }

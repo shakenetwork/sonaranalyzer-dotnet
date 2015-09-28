@@ -43,7 +43,7 @@ namespace SonarLint.Rules
 
         private static readonly FixAllProvider FixAllProviderInstance = new DocumentBasedFixAllProvider<EmptyStatement>(
             Title,
-            (root, node) => RemoveUnusedCode(root, node));
+            (root, node, diagnostic) => RemoveUnusedCode(root, node));
 
         public sealed override FixAllProvider GetFixAllProvider()
         {
