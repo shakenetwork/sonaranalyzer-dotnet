@@ -33,7 +33,7 @@ namespace SonarLint.Common
     {
         private readonly string title;
         private readonly Func<SyntaxNode, SyntaxNode, Diagnostic, SyntaxNode> calculateNewRoot;
-        private static readonly string AnnotationKind = typeof(T).Name;
+        internal static readonly string AnnotationKind = typeof(T).Name;
 
         public DocumentBasedFixAllProvider(string title, Func<SyntaxNode, SyntaxNode, Diagnostic, SyntaxNode> calculateNewRoot)
         {
@@ -87,8 +87,9 @@ namespace SonarLint.Common
         {
             var diagnostics = await fixAllContext.GetDocumentDiagnosticsAsync(document).ConfigureAwait(false);
             var root = await document.GetSyntaxRootAsync(fixAllContext.CancellationToken).ConfigureAwait(false);
+
             var nodeDiagnosticPairs = diagnostics
-                .Select(d => new KeyValuePair<SyntaxNode, Diagnostic>(root.FindNode(d.Location.SourceSpan), d))
+                .Select(d => new KeyValuePair<SyntaxNode, Diagnostic>(root.FindNode(d.Location.SourceSpan, getInnermostNodeForTie: true), d))
                 .Where(n => !n.Key.IsMissing)
                 .ToDictionary(kv => kv.Key, kv => kv.Value);
 
@@ -100,6 +101,7 @@ namespace SonarLint.Common
             while (annotatedNodes.Any())
             {
                 var node = annotatedNodes.First();
+
                 var annotation = node.GetAnnotations(AnnotationKind).First();
                 var diagnostic = diagnosticIdPairs.GetByB(annotation.Data);
                 root = calculateNewRoot(root, node, diagnostic);

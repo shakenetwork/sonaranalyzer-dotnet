@@ -25,6 +25,7 @@ using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using SonarLint.Common;
 
 namespace SonarLint.Rules
 {
@@ -39,9 +40,14 @@ namespace SonarLint.Rules
                 return ImmutableArray.Create(RedundantCast.DiagnosticId);
             }
         }
+
+        private static readonly FixAllProvider FixAllProviderInstance = new DocumentBasedFixAllProvider<RedundantCast>(
+            Title,
+            (root, node, diagnostic) => RemoveCall(root, node as InvocationExpressionSyntax, node as MemberAccessExpressionSyntax));
+
         public sealed override FixAllProvider GetFixAllProvider()
         {
-            return WellKnownFixAllProviders.BatchFixer;
+            return FixAllProviderInstance;
         }
 
         public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
@@ -50,10 +56,9 @@ namespace SonarLint.Rules
 
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
-            var syntaxNode = root.FindNode(diagnosticSpan);
+            var syntaxNode = root.FindNode(diagnosticSpan, getInnermostNodeForTie: true);
 
             var castExpression = syntaxNode.Parent as CastExpressionSyntax;
-
             if (castExpression != null)
             {
                 //this is handled by IDE0004 code fix.
@@ -61,41 +66,48 @@ namespace SonarLint.Rules
             }
 
             var castInvocation = syntaxNode as InvocationExpressionSyntax;
-            if (castInvocation != null)
-            {
-                context.RegisterCodeFix(
-                    CodeAction.Create(
-                        Title,
-                        c => RemoveExtensionMethodCall(context.Document, root, castInvocation)),
-                    context.Diagnostics);
-                return;
-            }
-
             var memberAccess = syntaxNode as MemberAccessExpressionSyntax;
-            if (memberAccess != null)
+            if (castInvocation != null ||
+                memberAccess != null)
             {
                 context.RegisterCodeFix(
                     CodeAction.Create(
                         Title,
-                        c => RemoveStaticMemberCall(context.Document, root, memberAccess)),
+                        c =>
+                        {
+                            var newRoot = RemoveCall(root, castInvocation, memberAccess);
+                            return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
+                        }),
                     context.Diagnostics);
                 return;
             }
         }
 
-        private static Task<Document> RemoveStaticMemberCall(Document document, SyntaxNode root,
+        private static SyntaxNode RemoveCall(SyntaxNode root,
+            InvocationExpressionSyntax castInvocation, MemberAccessExpressionSyntax memberAccess)
+        {
+            if (castInvocation == null &&
+                memberAccess == null)
+            {
+                return root;
+            }
+
+            return castInvocation != null
+                ? RemoveExtensionMethodCall(root, castInvocation)
+                : RemoveStaticMemberCall(root, memberAccess);
+        }
+
+        private static SyntaxNode RemoveStaticMemberCall(SyntaxNode root,
             MemberAccessExpressionSyntax memberAccess)
         {
             var invocation = (InvocationExpressionSyntax)memberAccess.Parent;
-            var newRoot = root.ReplaceNode(invocation, invocation.ArgumentList.Arguments.First().Expression);
-            return Task.FromResult(document.WithSyntaxRoot(newRoot));
+            return root.ReplaceNode(invocation, invocation.ArgumentList.Arguments.First().Expression);
         }
 
-        private static Task<Document> RemoveExtensionMethodCall(Document document, SyntaxNode root, InvocationExpressionSyntax invocation)
+        private static SyntaxNode RemoveExtensionMethodCall(SyntaxNode root, InvocationExpressionSyntax invocation)
         {
             var memberAccess = (MemberAccessExpressionSyntax)invocation.Expression;
-            var newRoot = root.ReplaceNode(invocation, memberAccess.Expression);
-            return Task.FromResult(document.WithSyntaxRoot(newRoot));
+            return root.ReplaceNode(invocation, memberAccess.Expression);
         }
     }
 }

@@ -22,6 +22,10 @@ namespace Tests.Diagnostics
             z = (Int32) i; // Noncompliant
 
             var w = (object) i;
+
+            method(new int[] { 1, 2, 3 }); // Noncompliant
         }
+        void method(IEnumerable<int> enumerable)
+        { }
     }
 }
