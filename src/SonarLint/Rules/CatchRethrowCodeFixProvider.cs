@@ -26,6 +26,7 @@ using System.Linq;
 using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Formatting;
+using SonarLint.Common;
 
 namespace SonarLint.Rules
 {
@@ -40,9 +41,14 @@ namespace SonarLint.Rules
                 return ImmutableArray.Create(CatchRethrow.DiagnosticId);
             }
         }
+
+        private static FixAllProvider FixAllProviderInstance = new DocumentBasedFixAllProvider<CatchRethrow>(
+            Title,
+            (root, node, diagnostic) => CalculateNewRoot(root, node));
+
         public sealed override FixAllProvider GetFixAllProvider()
         {
-            return WellKnownFixAllProviders.BatchFixer;
+            return FixAllProviderInstance;
         }
 
         public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
@@ -59,12 +65,35 @@ namespace SonarLint.Rules
                 return;
             }
 
-            var isTryRemovable = tryStatement.Catches.Count == 1 && tryStatement.Finally == null;
             context.RegisterCodeFix(
-                isTryRemovable
-                    ? CreateActionWithRemovedTryStatement(context, root, tryStatement)
-                    : CreateActionWithRemovedCatchClause(context, root, syntaxNode),
+                CodeAction.Create(
+                Title,
+                c =>
+                {
+                    var newRoot = CalculateNewRoot(root, syntaxNode, tryStatement);
+                    return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
+                }),
                 context.Diagnostics);
+        }
+
+        private static SyntaxNode CalculateNewRoot(SyntaxNode root, SyntaxNode currentNode)
+        {
+            var tryStatement = currentNode.Parent as TryStatementSyntax;
+
+            return tryStatement == null
+                ? root
+                : CalculateNewRoot(root, currentNode, tryStatement);
+        }
+
+        private static SyntaxNode CalculateNewRoot(SyntaxNode root, SyntaxNode currentNode, TryStatementSyntax tryStatement)
+        {
+            var isTryRemovable = tryStatement.Catches.Count == 1 && tryStatement.Finally == null;
+
+            return isTryRemovable
+                ? root.ReplaceNode(
+                    tryStatement,
+                    tryStatement.Block.Statements.Select(st => st.WithAdditionalAnnotations(Formatter.Annotation)))
+                : root.RemoveNode(currentNode, SyntaxRemoveOptions.KeepNoTrivia);
         }
 
         private static CodeAction CreateActionWithRemovedTryStatement(CodeFixContext context, SyntaxNode root, TryStatementSyntax tryStatement)
