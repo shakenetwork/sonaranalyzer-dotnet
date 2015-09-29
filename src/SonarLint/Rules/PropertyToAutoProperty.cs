@@ -62,7 +62,8 @@ namespace SonarLint.Rules
                 {
                     var propertyDeclaration = (PropertyDeclarationSyntax)c.Node;
                     var propertySymbol = c.SemanticModel.GetDeclaredSymbol(propertyDeclaration);
-                    if (propertyDeclaration.AccessorList.Accessors.Count != 2 ||
+                    if (propertyDeclaration.AccessorList == null ||
+                        propertyDeclaration.AccessorList.Accessors.Count != 2 ||
                         propertySymbol == null)
                     {
                         return;

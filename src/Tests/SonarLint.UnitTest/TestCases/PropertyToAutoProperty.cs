@@ -76,5 +76,7 @@ namespace Tests.Diagnostics
                 _make = value;
             }
         }
+
+        public int Readonly => 1;
     }
 }
