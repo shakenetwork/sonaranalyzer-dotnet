@@ -112,6 +112,7 @@
     <Compile Include="Rules\RedundantModifierCodeFixProvider.cs" />
     <Compile Include="Rules\LiteralSuffixUpperCase.cs" />
     <Compile Include="Rules\LiteralSuffixUpperCaseCodeFixProvider.cs" />
+    <Compile Include="Rules\StringFormatArgumentNumberMismatch.cs" />
     <Compile Include="Rules\SillyBitwiseOperationCodeFixProvider.cs" />
     <Compile Include="Rules\BooleanCheckInvertedCodeFixProvider.cs" />
     <Compile Include="Rules\GenericTypeParameterEmptinessCheckingCodeFixProvider.cs" />
@@ -540,6 +541,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S818.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S2275.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -143,6 +143,7 @@
     <Compile Include="Rules\ArgumentSpecifiedForCallerInfoParameterTest.cs" />
     <Compile Include="Rules\PropertyToAutoPropertyTest.cs" />
     <Compile Include="Rules\DefaultBaseConstructorCallTest.cs" />
+    <Compile Include="Rules\StringFormatArgumentNumberMismatchTest.cs" />
     <Compile Include="Rules\RedundantArgumentTest.cs" />
     <Compile Include="Rules\ConditionalSimplificationTest.cs" />
     <Compile Include="Rules\MethodParameterUnusedTest.cs" />
@@ -536,6 +537,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\LiteralSuffixUpperCase.Fixed.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\StringFormatArgumentNumberMismatch.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
