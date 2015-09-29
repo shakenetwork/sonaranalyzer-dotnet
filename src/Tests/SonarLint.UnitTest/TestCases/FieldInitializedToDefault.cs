@@ -20,5 +20,7 @@ namespace Tests.Diagnostics
 
         public T gen = default(T); // Noncompliant
         public Dummy stru = default(Dummy); // Noncompliant
+
+        public const int myConst = 0; //Compliant
     }
 }

@@ -72,7 +72,8 @@ namespace SonarLint.Rules
                         .Where(v => v.Initializer != null))
                     {
                         var variableSymbol = c.SemanticModel.GetDeclaredSymbol(variable) as IFieldSymbol;
-                        if (variableSymbol == null)
+                        if (variableSymbol == null ||
+                            variableSymbol.IsConst)
                         {
                             continue;
                         }
