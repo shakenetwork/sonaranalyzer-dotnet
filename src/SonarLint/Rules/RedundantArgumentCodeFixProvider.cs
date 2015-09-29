@@ -116,7 +116,7 @@ namespace SonarLint.Rules
                     CodeAction.Create(
                         TitleRemoveWithNameAdditions,
                         c => RemoveArgumentsAndAddNecessaryNames(context.Document, invocation.ArgumentList,
-                        argumentMappings, argumentsWithDefaultValues, semanticModel, c),
+                                argumentMappings, argumentsWithDefaultValues, semanticModel, c),
                         TitleRemoveWithNameAdditions),
                     context.Diagnostics);
             }

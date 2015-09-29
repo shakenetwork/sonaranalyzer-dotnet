@@ -12,7 +12,7 @@ namespace Tests.TestCases
         {
             return o;
         }
-        object IdentityAnyOtherMethod(object o)
+        object IdentityAnyOtherMethod(object o  )
         {
             return o;
         }

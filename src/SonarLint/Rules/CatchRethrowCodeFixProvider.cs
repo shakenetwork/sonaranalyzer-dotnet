@@ -73,8 +73,11 @@ namespace SonarLint.Rules
                 Title,
                 c =>
                 {
-                    var newRoot = root.ReplaceNode(tryStatement, tryStatement.Block.Statements)
-                        .WithAdditionalAnnotations(Formatter.Annotation);
+                    var newParent = tryStatement.Parent.ReplaceNode(
+                        tryStatement,
+                        tryStatement.Block.Statements.Select(st => st.WithAdditionalAnnotations(Formatter.Annotation)));
+
+                    var newRoot = root.ReplaceNode(tryStatement.Parent, newParent);
                     return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                 });
         }

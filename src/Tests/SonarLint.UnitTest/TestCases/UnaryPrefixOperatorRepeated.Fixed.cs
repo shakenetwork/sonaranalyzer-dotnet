@@ -6,7 +6,7 @@ namespace Tests.Diagnostics
 
     class UnaryPrefixOperatorRepeated
     {
-        static void NonComp()
+        static void NonComp(  )
         {
             int i = 1;
 

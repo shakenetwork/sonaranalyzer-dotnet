@@ -62,8 +62,7 @@ namespace SonarLint.Rules
                         Title,
                         c =>
                         {
-                            var newRoot = root.RemoveNode(statement, SyntaxRemoveOptions.KeepNoTrivia)
-                                .WithAdditionalAnnotations(Formatter.Annotation);
+                            var newRoot = root.RemoveNode(statement, SyntaxRemoveOptions.KeepNoTrivia);
                             return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                         }),
                     context.Diagnostics);
@@ -78,8 +77,8 @@ namespace SonarLint.Rules
                         Title,
                         c =>
                         {
-                            var newRoot = root.ReplaceNode(assignment, assignment.Left)
-                                .WithAdditionalAnnotations(Formatter.Annotation);
+                            var newRoot = root.ReplaceNode(assignment, assignment.Left
+                                .WithAdditionalAnnotations(Formatter.Annotation));
                             return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                         }),
                     context.Diagnostics);
@@ -95,8 +94,8 @@ namespace SonarLint.Rules
                         c =>
                         {
                             var isReportingOnLeft = bool.Parse(diagnostic.Properties[SillyBitwiseOperation.IsReportingOnLeftKey]);
-                            var newRoot = root.ReplaceNode(binary, isReportingOnLeft?binary.Right :binary.Left)
-                                .WithAdditionalAnnotations(Formatter.Annotation);
+                            var newRoot = root.ReplaceNode(binary,
+                                (isReportingOnLeft ? binary.Right : binary.Left).WithAdditionalAnnotations(Formatter.Annotation));
                             return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                         }),
                     context.Diagnostics);

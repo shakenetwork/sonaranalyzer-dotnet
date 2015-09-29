@@ -26,7 +26,7 @@ namespace Tests.Diagnostics
             b = (a >= 10);
         }
 
-        public static bool operator ==(BooleanCheckInverted a, BooleanCheckInverted b)
+        public static bool operator ==     (BooleanCheckInverted a, BooleanCheckInverted b)
         {
             return false;
         }

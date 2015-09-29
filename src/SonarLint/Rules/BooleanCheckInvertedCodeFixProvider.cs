@@ -70,8 +70,9 @@ namespace SonarLint.Rules
                         }
 
                         var newBinary = ChangeOperator((BinaryExpressionSyntax)expression);
-                        var newRoot = root.ReplaceNode(syntaxNode, newBinary)
-                            .WithAdditionalAnnotations(Formatter.Annotation);
+                        var newRoot = root.ReplaceNode(
+                            syntaxNode,
+                            newBinary.WithAdditionalAnnotations(Formatter.Annotation));
                         return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                     }),
                 context.Diagnostics);

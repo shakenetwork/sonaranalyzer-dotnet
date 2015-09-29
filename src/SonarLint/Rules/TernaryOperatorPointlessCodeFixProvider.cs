@@ -58,8 +58,10 @@ namespace SonarLint.Rules
                     Title,
                     c =>
                     {
-                        var newRoot = root.ReplaceNode(conditional, TernaryOperatorPointless.RemoveParentheses(conditional.WhenTrue))
-                            .WithAdditionalAnnotations(Formatter.Annotation);
+                        var newRoot = root.ReplaceNode(
+                            conditional,
+                            TernaryOperatorPointless.RemoveParentheses(conditional.WhenTrue)
+                                .WithAdditionalAnnotations(Formatter.Annotation));
                         return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                     }),
                 context.Diagnostics);

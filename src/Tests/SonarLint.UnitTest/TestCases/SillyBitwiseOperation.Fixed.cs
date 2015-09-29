@@ -6,7 +6,7 @@ namespace Tests.Diagnostics
 
     class SillyBitwiseOperation
     {
-        static void Main(string[] args)
+        static void Main(string[] args  )
         {
             int result;
             int bitMask = 0x010F;

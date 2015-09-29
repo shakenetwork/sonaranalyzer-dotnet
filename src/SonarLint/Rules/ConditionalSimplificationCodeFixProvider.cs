@@ -71,9 +71,11 @@ namespace SonarLint.Rules
                             bool comparedIsNullInTrue;
                             ConditionalSimplification.TryGetComparedVariable(condition, out compared, out comparedIsNullInTrue);
 
-                            var newRoot = root.ReplaceNode(conditional, GetNullCoalescing(whenTrue, whenFalse, compared)
-                                    .WithTriviaFrom(conditional))
-                                .WithAdditionalAnnotations(Formatter.Annotation);
+                            var newRoot = root.ReplaceNode(
+                                conditional,
+                                GetNullCoalescing(whenTrue, whenFalse, compared)
+                                    .WithTriviaFrom(conditional)
+                                    .WithAdditionalAnnotations(Formatter.Annotation));
                             return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                         }),
                     context.Diagnostics);
@@ -98,8 +100,8 @@ namespace SonarLint.Rules
 
                             var newRoot = root.ReplaceNode(ifStatement,
                                 GetSimplified(whenTrue, whenFalse, ifStatement.Condition, compared, isNullCoalescing)
-                                    .WithTriviaFrom(ifStatement))
-                                .WithAdditionalAnnotations(Formatter.Annotation);
+                                    .WithTriviaFrom(ifStatement)
+                                    .WithAdditionalAnnotations(Formatter.Annotation));
                             return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                         }),
                     context.Diagnostics);

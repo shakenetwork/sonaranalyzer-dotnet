@@ -70,8 +70,8 @@ namespace SonarLint.Rules
                                 expression);
                         }
 
-                        var newRoot = root.ReplaceNode(prefix, expression)
-                            .WithAdditionalAnnotations(Formatter.Annotation);
+                        var newRoot = root.ReplaceNode(prefix, expression
+                            .WithAdditionalAnnotations(Formatter.Annotation));
                         return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                     }),
                 context.Diagnostics);

@@ -73,8 +73,8 @@ namespace SonarLint.Rules
             {
                 var block = ifStatement.Statement as BlockSyntax;
                 newRoot = block == null
-                    ? root.ReplaceNode(ifStatement, ifStatement.Statement)
-                    : root.ReplaceNode(ifStatement, block.Statements);
+                    ? root.ReplaceNode(ifStatement, ifStatement.Statement.WithAdditionalAnnotations(Formatter.Annotation))
+                    : root.ReplaceNode(ifStatement, block.Statements.Select(st => st.WithAdditionalAnnotations(Formatter.Annotation)));
             }
             else
             {
@@ -86,12 +86,12 @@ namespace SonarLint.Rules
                 {
                     var block = ifStatement.Else.Statement as BlockSyntax;
                     newRoot = block == null
-                        ? root.ReplaceNode(ifStatement, ifStatement.Else.Statement)
-                        : root.ReplaceNode(ifStatement, block.Statements);
+                        ? root.ReplaceNode(ifStatement, ifStatement.Else.Statement.WithAdditionalAnnotations(Formatter.Annotation))
+                        : root.ReplaceNode(ifStatement, block.Statements.Select(st => st.WithAdditionalAnnotations(Formatter.Annotation)));
                 }
             }
 
-            return newRoot.WithAdditionalAnnotations(Formatter.Annotation);
+            return newRoot;
         }
     }
 }

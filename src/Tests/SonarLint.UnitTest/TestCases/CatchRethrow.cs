@@ -4,9 +4,11 @@ namespace Tests.TestCases
 {
     class CatchRethrow
     {
-        private void doSomething() { throw new NotSupportedException(); }
+        private void doSomething(  ) { throw new NotSupportedException()  ; }
         public void Test()
         {
+            var someWronglyFormatted =      45     ;
+
             try
             {
                 doSomething();

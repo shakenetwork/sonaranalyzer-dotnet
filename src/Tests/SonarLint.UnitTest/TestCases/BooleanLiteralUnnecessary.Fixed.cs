@@ -62,7 +62,7 @@
             return false;
         }
 
-        private bool Foo(bool a)
+        private bool Foo(bool a      )
         {
             return a;
         }
