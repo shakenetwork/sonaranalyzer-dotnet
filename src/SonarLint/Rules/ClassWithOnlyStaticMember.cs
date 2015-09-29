@@ -100,8 +100,9 @@ namespace SonarLint.Rules
                 var classDeclarationSyntax = syntaxReference.GetSyntax() as ClassDeclarationSyntax;
                 if (classDeclarationSyntax != null)
                 {
-                    c.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, classDeclarationSyntax.Identifier.GetLocation(),
-                        reportMessage));
+                    c.ReportDiagnosticIfNonGenerated(
+                        Diagnostic.Create(Rule, classDeclarationSyntax.Identifier.GetLocation(), reportMessage),
+                        c.Compilation);
                 }
             }
         }
@@ -130,8 +131,9 @@ namespace SonarLint.Rules
                     var constructorDeclaration = syntaxReference.GetSyntax() as ConstructorDeclarationSyntax;
                     if (constructorDeclaration != null)
                     {
-                        c.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, constructorDeclaration.Identifier.GetLocation(),
-                            MessageFormatConstructor));
+                        c.ReportDiagnosticIfNonGenerated(
+                            Diagnostic.Create(Rule, constructorDeclaration.Identifier.GetLocation(), MessageFormatConstructor),
+                            c.Compilation);
                     }
                 }
             }

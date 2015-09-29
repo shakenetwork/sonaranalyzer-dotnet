@@ -8592,23 +8592,6 @@
     },
     {
       "RuleId": "S1226",
-      "FullMessage": "Introduce a new variable instead of reusing the parameter \"textToAppend\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\Tools\\NuGet\\GenerateTestPackages\\AssemblySourceFileGenerator.cs",
-            "Region": {
-              "StartLine": 196,
-              "EndLine": 196,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1226",
       "FullMessage": "Introduce a new variable instead of reusing the parameter \"result\".",
       "Locations": [
         {

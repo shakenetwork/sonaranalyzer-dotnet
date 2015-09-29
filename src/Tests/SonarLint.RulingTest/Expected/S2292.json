@@ -555,40 +555,6 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "\\nuget\\Common\\CommonResources.cs",
-            "Region": {
-              "StartLine": 51,
-              "EndLine": 51,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S2292",
-      "FullMessage": "Make this an auto-implemented property and remove its backing field.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\CommandLine\\Commands\\HelpCommandMarkdownTemplate.cs",
-            "Region": {
-              "StartLine": 218,
-              "EndLine": 218,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S2292",
-      "FullMessage": "Make this an auto-implemented property and remove its backing field.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
             "Uri": "\\nuget\\src\\Core\\Http\\HttpClient.cs",
             "Region": {
               "StartLine": 31,
@@ -610,23 +576,6 @@
             "Region": {
               "StartLine": 43,
               "EndLine": 43,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S2292",
-      "FullMessage": "Make this an auto-implemented property and remove its backing field.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\Tools\\NuGet\\GenerateTestPackages\\AssemblySourceFileGenerator.cs",
-            "Region": {
-              "StartLine": 153,
-              "EndLine": 153,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }

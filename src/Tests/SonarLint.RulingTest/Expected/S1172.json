@@ -177,23 +177,6 @@
     },
     {
       "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"registry\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
-            "Region": {
-              "StartLine": 22,
-              "EndLine": 22,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
       "FullMessage": "Remove this unused method parameter \"context\".",
       "Locations": [
         {
@@ -253,23 +236,6 @@
             "Region": {
               "StartLine": 23,
               "EndLine": 23,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"registry\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
-            "Region": {
-              "StartLine": 20,
-              "EndLine": 20,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -355,57 +321,6 @@
             "Region": {
               "StartLine": 566,
               "EndLine": 566,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"registry\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Proto\\TestConductorProtocol.cs",
-            "Region": {
-              "StartLine": 22,
-              "EndLine": 22,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"registry\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Containerformats.cs",
-            "Region": {
-              "StartLine": 24,
-              "EndLine": 24,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"registry\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
-            "Region": {
-              "StartLine": 24,
-              "EndLine": 24,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -2174,23 +2089,6 @@
             "Region": {
               "StartLine": 55,
               "EndLine": 55,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"registry\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\protobuf\\TestConductorProtocol.cs",
-            "Region": {
-              "StartLine": 22,
-              "EndLine": 22,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }

@@ -64,7 +64,8 @@ namespace SonarLint.Rules
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxTreeActionInNonGenerated(
-                c => {
+                c =>
+                {
                     foreach (var asyncOrAwaitToken in GetAsyncOrAwaitTokens(c.Tree.GetRoot())
                         .Where(token => !token.Parent.AncestorsAndSelf().OfType<IdentifierNameSyntax>().Any()))
                     {

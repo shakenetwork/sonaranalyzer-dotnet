@@ -162,7 +162,9 @@ namespace SonarLint.Rules
                             continue;
                         }
 
-                        c.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, fieldSyntax.Identifier.GetLocation(), fieldSyntax.Identifier.ValueText));
+                        c.ReportDiagnosticIfNonGenerated(
+                            Diagnostic.Create(Rule, fieldSyntax.Identifier.GetLocation(), fieldSyntax.Identifier.ValueText),
+                            c.Compilation);
                     }
                 });
             });

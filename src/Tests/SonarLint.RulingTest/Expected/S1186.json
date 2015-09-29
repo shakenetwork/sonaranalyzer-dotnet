@@ -28,23 +28,6 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
-            "Region": {
-              "StartLine": 22,
-              "EndLine": 22,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1186",
-      "FullMessage": "Add a nested comment explaining why this method is empty, throw a NotSupportedException or complete the implementation.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
             "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.MultiNodeTests\\MultiNodeClusterSpec.cs",
             "Region": {
               "StartLine": 163,
@@ -79,44 +62,10 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
-            "Region": {
-              "StartLine": 20,
-              "EndLine": 20,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1186",
-      "FullMessage": "Add a nested comment explaining why this method is empty, throw a NotSupportedException or complete the implementation.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
             "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\BarrierCoordinator.cs",
             "Region": {
               "StartLine": 388,
               "EndLine": 388,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1186",
-      "FullMessage": "Add a nested comment explaining why this method is empty, throw a NotSupportedException or complete the implementation.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Proto\\TestConductorProtocol.cs",
-            "Region": {
-              "StartLine": 22,
-              "EndLine": 22,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -202,40 +151,6 @@
             "Region": {
               "StartLine": 25,
               "EndLine": 25,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1186",
-      "FullMessage": "Add a nested comment explaining why this method is empty, throw a NotSupportedException or complete the implementation.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Containerformats.cs",
-            "Region": {
-              "StartLine": 24,
-              "EndLine": 24,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1186",
-      "FullMessage": "Add a nested comment explaining why this method is empty, throw a NotSupportedException or complete the implementation.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
-            "Region": {
-              "StartLine": 24,
-              "EndLine": 24,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -522,23 +437,6 @@
         {
           "AnalysisTarget": {
             "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Event\\DeadLetterListener.cs",
-            "Region": {
-              "StartLine": 22,
-              "EndLine": 22,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1186",
-      "FullMessage": "Add a nested comment explaining why this method is empty, throw a NotSupportedException or complete the implementation.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\protobuf\\TestConductorProtocol.cs",
             "Region": {
               "StartLine": 22,
               "EndLine": 22,

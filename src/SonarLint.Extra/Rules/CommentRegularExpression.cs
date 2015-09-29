@@ -70,8 +70,8 @@ namespace SonarLint.Rules
                 c =>
                 {
                     var comments = from t in c.Tree.GetCompilationUnitRoot().DescendantTrivia()
-                                   where IsComment(t)
-                                   select t;
+                                    where IsComment(t)
+                                    select t;
 
                     foreach (var comment in comments)
                     {

@@ -11,23 +11,6 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
-            "Region": {
-              "StartLine": 7238,
-              "EndLine": 7238,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1301",
-      "FullMessage": "Replace this \"switch\" statement with \"if\" statements to increase readability.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
             "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests\\Actor\\ActorBecomeTests.cs",
             "Region": {
               "StartLine": 107,

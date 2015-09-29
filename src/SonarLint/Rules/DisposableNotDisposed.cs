@@ -154,7 +154,7 @@ namespace SonarLint.Rules
                     var internallyInitializedFields = disposableFields.Intersect(fieldsAssigned);
                     var nonDisposedFields = internallyInitializedFields.Except(fieldsDisposed);
 
-                    ReportIssues(nonDisposedFields, diagnostic => c.ReportDiagnosticIfNonGenerated(diagnostic));
+                    ReportIssues(nonDisposedFields, diagnostic => c.ReportDiagnosticIfNonGenerated(diagnostic, c.Compilation));
                 });
             });
         }

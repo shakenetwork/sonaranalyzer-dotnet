@@ -24,96 +24,11 @@
     },
     {
       "RuleId": "S104",
-      "FullMessage": "This file has 8028 lines, which is greater than 1000 authorized. Split it into smaller files.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Proto\\Msg\\ClusterMessages.cs",
-            "Region": {
-              "StartLine": 0,
-              "EndLine": 0,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S104",
-      "FullMessage": "This file has 1654 lines, which is greater than 1000 authorized. Split it into smaller files.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Serialization\\Proto\\PersistenceMessages.cs",
-            "Region": {
-              "StartLine": 0,
-              "EndLine": 0,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S104",
-      "FullMessage": "This file has 2632 lines, which is greater than 1000 authorized. Split it into smaller files.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Proto\\TestConductorProtocol.cs",
-            "Region": {
-              "StartLine": 0,
-              "EndLine": 0,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S104",
       "FullMessage": "This file has 1727 lines, which is greater than 1000 authorized. Split it into smaller files.",
       "Locations": [
         {
           "AnalysisTarget": {
             "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Endpoint.cs",
-            "Region": {
-              "StartLine": 0,
-              "EndLine": 0,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S104",
-      "FullMessage": "This file has 1144 lines, which is greater than 1000 authorized. Split it into smaller files.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Containerformats.cs",
-            "Region": {
-              "StartLine": 0,
-              "EndLine": 0,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S104",
-      "FullMessage": "This file has 6673 lines, which is greater than 1000 authorized. Split it into smaller files.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Proto\\Wireformats.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
@@ -148,23 +63,6 @@
         {
           "AnalysisTarget": {
             "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
-            "Region": {
-              "StartLine": 0,
-              "EndLine": 0,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S104",
-      "FullMessage": "This file has 2632 lines, which is greater than 1000 authorized. Split it into smaller files.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\protobuf\\TestConductorProtocol.cs",
             "Region": {
               "StartLine": 0,
               "EndLine": 0,
