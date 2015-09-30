@@ -24,6 +24,11 @@ namespace Tests.Diagnostics
             {
             }
             b = (a >= 10);
+
+            var c = true && (new int[0].Length != 0); // Noncompliant
+
+            int[] args = { };
+            var a = args.Length == 0; // Noncompliant
         }
 
         public static bool operator ==     (BooleanCheckInverted a, BooleanCheckInverted b)

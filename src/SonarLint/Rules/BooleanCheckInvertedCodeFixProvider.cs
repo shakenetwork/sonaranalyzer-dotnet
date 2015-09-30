@@ -70,15 +70,28 @@ namespace SonarLint.Rules
                         }
 
                         var newBinary = ChangeOperator((BinaryExpressionSyntax)expression);
+
+                        if (syntaxNode.Parent is ExpressionSyntax &&
+                            !ExpressionTypesWithNoParens.Any(type => type.IsInstanceOfType(syntaxNode.Parent)))
+                        {
+                            newBinary = SyntaxFactory.ParenthesizedExpression(newBinary);
+                        }
+
                         var newRoot = root.ReplaceNode(
                             syntaxNode,
                             newBinary.WithAdditionalAnnotations(Formatter.Annotation));
+
                         return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                     }),
                 context.Diagnostics);
         }
 
-        private static BinaryExpressionSyntax ChangeOperator(BinaryExpressionSyntax binary)
+        private static readonly Type[] ExpressionTypesWithNoParens = new[]
+        {
+            typeof(AssignmentExpressionSyntax)
+        };
+
+        private static ExpressionSyntax ChangeOperator(BinaryExpressionSyntax binary)
         {
             return
                 SyntaxFactory.BinaryExpression(
