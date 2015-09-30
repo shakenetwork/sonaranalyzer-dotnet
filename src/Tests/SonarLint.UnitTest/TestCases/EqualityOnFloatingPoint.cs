@@ -17,6 +17,9 @@ namespace Tests.Diagnostics
             {
             }
 
+            if (f != 3.14F) //Noncompliant
+            { }
+
             var b = d == 3.14; //Noncompliant
 
             if (true && f >= 3.146)

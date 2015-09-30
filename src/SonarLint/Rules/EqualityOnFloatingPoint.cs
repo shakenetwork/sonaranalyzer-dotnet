@@ -64,6 +64,12 @@ namespace SonarLint.Rules
             SpecialType.System_Double
         };
 
+        private static readonly string[] EqualityOperators =
+        {
+            "op_Equality",
+            "op_Inequality"
+        };
+
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
@@ -73,15 +79,16 @@ namespace SonarLint.Rules
                     var equalitySymbol = c.SemanticModel.GetSymbolInfo(equals).Symbol as IMethodSymbol;
 
                     if (equalitySymbol != null &&
-                        equalitySymbol.Name == "op_Equality" &&
                         equalitySymbol.ContainingType != null &&
-                        FloatingPointTypes.Contains(equalitySymbol.ContainingType.SpecialType))
+                        FloatingPointTypes.Contains(equalitySymbol.ContainingType.SpecialType) &&
+                        EqualityOperators.Contains(equalitySymbol.Name))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, equals.OperatorToken.GetLocation()));
                     }
                 },
-                SyntaxKind.EqualsExpression
-                );
+                SyntaxKind.EqualsExpression,
+                SyntaxKind.NotEqualsExpression);
+
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
@@ -108,8 +115,7 @@ namespace SonarLint.Rules
                     }
                 },
                 SyntaxKind.LogicalAndExpression,
-                SyntaxKind.LogicalOrExpression
-                );
+                SyntaxKind.LogicalOrExpression);
         }
 
         private static BinaryExpressionSyntax TryGetBinaryExpression(ExpressionSyntax expression)
