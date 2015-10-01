@@ -67,6 +67,7 @@ namespace SonarLint.Rules
                     var methodSymbol = c.SemanticModel.GetSymbolInfo(methodCall.Expression).Symbol;
 
                     if (methodSymbol != null &&
+                        methodSymbol.ContainingType != null &&
                         methodSymbol.ContainingType.ToString() == "System.Console" &&
                         BannedConsoleMembers.Contains(methodSymbol.Name))
                     {

@@ -105,7 +105,8 @@ namespace SonarLint.Rules
                     var invocation = (InvocationExpressionSyntax)c.Node;
 
                     var methodSymbol = c.SemanticModel.GetSymbolInfo(invocation.Expression).Symbol;
-                    if (methodSymbol == null)
+                    if (methodSymbol == null ||
+                        methodSymbol.ContainingType == null)
                     {
                         return;
                     }
