@@ -20,7 +20,7 @@ namespace Tests.TestCases
         {
             object x;
 
-            x = a ?? b;
+            x = a ?? b/*some other comment*/;
 
             x = a ?? b;  // Noncompliant; better but could still be simplified
             x = a != null ? a : a;  // Compliant, triggers S2758
@@ -49,6 +49,47 @@ namespace Tests.TestCases
                 return 2;
             else
                 return 3;
+
+            X o = null;
+            if (o == null) //Noncompliant, but there is no fix for it
+            {
+                x = new Y();
+            }
+            else
+            {
+                x = o;
+            }
+
+            var yyy = new Y();
+            x = Identity(condition ? new Y() : yyy);
+
+            if (condition) //Noncompliant
+            {
+                x = Identity(new Y());
+            }
+            else
+            {
+                x = Identity(new X());
+            }
+
+            Base elem;
+            if (condition) //Noncompliant
+            {
+                elem = new A();
+            }
+            else
+            {
+                elem = new B();
+            }
+
+            x = Identity(condition ? new Y() : yyy);
         }
     }
+
+    class X { }
+    class Y { }
+
+    class Base { }
+    class A : Base { }
+    class B : Base { }
 }

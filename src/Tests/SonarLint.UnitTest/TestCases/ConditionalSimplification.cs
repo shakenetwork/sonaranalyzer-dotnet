@@ -22,11 +22,12 @@ namespace Tests.TestCases
 
             if (a != null) // Noncompliant; needlessly verbose
             {
+                /*some comment*/
                 x = a;
             }
             else
             {
-                x = b;
+                x = b/*some other comment*/;
             }
 
             x = a != null ? (a) : b;  // Noncompliant; better but could still be simplified
@@ -84,6 +85,57 @@ namespace Tests.TestCases
                 return 2;
             else
                 return 3;
+
+            X o = null;
+            if (o == null) //Noncompliant, but there is no fix for it
+            {
+                x = new Y();
+            }
+            else
+            {
+                x = o;
+            }
+
+            var yyy = new Y();
+            if (condition) //Noncompliant
+            {
+                x = Identity(new Y());
+            }
+            else
+            {
+                x = Identity(yyy);
+            }
+
+            if (condition) //Noncompliant
+            {
+                x = Identity(new Y());
+            }
+            else
+            {
+                x = Identity(new X());
+            }
+
+            Base elem;
+            if (condition) //Noncompliant
+            {
+                elem = new A();
+            }
+            else
+            {
+                elem = new B();
+            }
+
+            if (condition) //Noncompliant
+                x = Identity(new Y());
+            else
+                x = Identity(yyy);
         }
     }
+
+    class X { }
+    class Y { }
+
+    class Base { }
+    class A : Base { }
+    class B : Base { }
 }

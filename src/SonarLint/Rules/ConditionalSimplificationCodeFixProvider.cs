@@ -29,6 +29,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Formatting;
 using Microsoft.CodeAnalysis.CSharp;
 using SonarLint.Helpers;
+using System;
 
 namespace SonarLint.Rules
 {
@@ -54,62 +55,103 @@ namespace SonarLint.Rules
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var syntax = root.FindNode(diagnosticSpan);
+            var semanticModel = await context.Document.GetSemanticModelAsync(context.CancellationToken).ConfigureAwait(false);
 
             var conditional = syntax as ConditionalExpressionSyntax;
             if (conditional != null)
             {
-                context.RegisterCodeFix(
-                    CodeAction.Create(
-                        Title,
-                        c =>
-                        {
-                            var condition = TernaryOperatorPointless.RemoveParentheses(conditional.Condition);
-                            var whenTrue = TernaryOperatorPointless.RemoveParentheses(conditional.WhenTrue);
-                            var whenFalse = TernaryOperatorPointless.RemoveParentheses(conditional.WhenFalse);
+                var condition = TernaryOperatorPointless.RemoveParentheses(conditional.Condition);
+                var whenTrue = TernaryOperatorPointless.RemoveParentheses(conditional.WhenTrue);
+                var whenFalse = TernaryOperatorPointless.RemoveParentheses(conditional.WhenFalse);
 
-                            ExpressionSyntax compared;
-                            bool comparedIsNullInTrue;
-                            ConditionalSimplification.TryGetComparedVariable(condition, out compared, out comparedIsNullInTrue);
+                ExpressionSyntax compared;
+                bool comparedIsNullInTrue;
+                ConditionalSimplification.TryGetComparedVariable(condition, out compared, out comparedIsNullInTrue);
 
-                            var newRoot = root.ReplaceNode(
-                                conditional,
-                                GetNullCoalescing(whenTrue, whenFalse, compared)
-                                    .WithTriviaFrom(conditional)
-                                    .WithAdditionalAnnotations(Formatter.Annotation));
-                            return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
-                        }),
-                    context.Diagnostics);
+                var annotation = new SyntaxAnnotation();
+                var coalescing = GetNullCoalescing(whenTrue, whenFalse, compared, semanticModel, annotation);
+
+                var fixIsOkay = IsFixOkay(root, conditional, coalescing, annotation, semanticModel);
+                if (fixIsOkay)
+                {
+                    context.RegisterCodeFix(
+                        GetActionToExecute(context, root, conditional, coalescing, annotation),
+                        context.Diagnostics);
+                }
             }
 
             var ifStatement = syntax as IfStatementSyntax;
             if (ifStatement != null)
             {
-                context.RegisterCodeFix(
-                    CodeAction.Create(
-                        Title,
-                        c =>
-                        {
-                            var whenTrue = ConditionalSimplification.ExtractSingleStatement(ifStatement.Statement);
-                            var whenFalse = ConditionalSimplification.ExtractSingleStatement(ifStatement.Else.Statement);
+                var whenTrue = ConditionalSimplification.ExtractSingleStatement(ifStatement.Statement);
+                var whenFalse = ConditionalSimplification.ExtractSingleStatement(ifStatement.Else.Statement);
 
-                            ExpressionSyntax compared;
-                            bool comparedIsNullInTrue;
-                            ConditionalSimplification.TryGetComparedVariable(ifStatement.Condition, out compared, out comparedIsNullInTrue);
+                ExpressionSyntax compared;
+                bool comparedIsNullInTrue;
+                ConditionalSimplification.TryGetComparedVariable(ifStatement.Condition, out compared, out comparedIsNullInTrue);
+                var isNullCoalescing = bool.Parse(diagnostic.Properties[ConditionalSimplification.IsNullCoalescingKey]);
 
-                            var isNullCoalescing = bool.Parse(diagnostic.Properties[ConditionalSimplification.IsNullCoalescingKey]);
+                var annotation = new SyntaxAnnotation();
+                var simplified = GetSimplified(whenTrue, whenFalse, ifStatement.Condition, compared, isNullCoalescing, semanticModel, annotation);
 
-                            var newRoot = root.ReplaceNode(ifStatement,
-                                GetSimplified(whenTrue, whenFalse, ifStatement.Condition, compared, isNullCoalescing)
-                                    .WithTriviaFrom(ifStatement)
-                                    .WithAdditionalAnnotations(Formatter.Annotation));
-                            return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
-                        }),
-                    context.Diagnostics);
+                var fixIsOkay = IsFixOkay(root, ifStatement, simplified, annotation, semanticModel);
+                if (fixIsOkay)
+                {
+                    context.RegisterCodeFix(
+                        GetActionToExecute(context, root, ifStatement, simplified, annotation),
+                        context.Diagnostics);
+                }
             }
         }
 
-        private static StatementSyntax GetSimplified(StatementSyntax statement1, StatementSyntax statement2,
-            ExpressionSyntax condition, ExpressionSyntax compared, bool isNullCoalescing)
+        private static CodeAction GetActionToExecute(CodeFixContext context, SyntaxNode root,
+            SyntaxNode nodeToChange, SyntaxNode nodeToAdd, SyntaxAnnotation annotation)
+        {
+            return CodeAction.Create(
+                Title,
+                c =>
+                {
+                    var nodeToAddWithoutAnnotation = RemoveAnnotation(nodeToAdd, annotation);
+
+                    var newRoot = root.ReplaceNode(
+                        nodeToChange,
+                        nodeToAddWithoutAnnotation.WithTriviaFrom(nodeToChange).WithAdditionalAnnotations(Formatter.Annotation));
+                    return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
+                });
+        }
+
+        private static T RemoveAnnotation<T>(T node, SyntaxAnnotation annotation) where T: SyntaxNode
+        {
+            var annotated = node.GetAnnotatedNodes(annotation).FirstOrDefault();
+            if (annotated == null)
+            {
+                return node;
+            }
+
+            if (annotated == node)
+            {
+                return node.WithoutAnnotations(annotation);
+            }
+
+            return node.ReplaceNode(annotated, annotated.WithoutAnnotations(annotation));
+        }
+
+        private static bool IsFixOkay(SyntaxNode originalRoot, SyntaxNode originalNode, SyntaxNode newNode, SyntaxAnnotation annotation,
+            SemanticModel semanticModel)
+        {
+            var newRoot = originalRoot.ReplaceNode(originalNode, newNode);
+
+            var newSemantic = semanticModel.Compilation.ReplaceSyntaxTree(originalRoot.SyntaxTree, newRoot.SyntaxTree)
+                .GetSemanticModel(newRoot.SyntaxTree);
+
+            var node = newRoot.GetAnnotatedNodes(annotation).First();
+            var type = newSemantic.GetTypeInfo(node).Type;
+            return !(type is IErrorTypeSymbol);
+        }
+
+        private StatementSyntax GetSimplified(StatementSyntax statement1, StatementSyntax statement2,
+            ExpressionSyntax condition, ExpressionSyntax compared, bool isNullCoalescing, SemanticModel semanticModel,
+            SyntaxAnnotation annotation)
         {
             var return1 = statement1 as ReturnStatementSyntax;
             var return2 = statement2 as ReturnStatementSyntax;
@@ -119,18 +161,15 @@ namespace SonarLint.Rules
                 var retExpr1 = TernaryOperatorPointless.RemoveParentheses(return1.Expression);
                 var retExpr2 = TernaryOperatorPointless.RemoveParentheses(return2.Expression);
 
-                if (isNullCoalescing)
-                {
-                    var nullCoalescing = GetNullCoalescing(retExpr1, retExpr2, compared);
-                    return SyntaxFactory.ReturnStatement(nullCoalescing);
-                }
-
-                return
-                    SyntaxFactory.ReturnStatement(
-                        SyntaxFactory.ConditionalExpression(
+                var createdExpression = isNullCoalescing
+                    ? GetNullCoalescing(retExpr1, retExpr2, compared, semanticModel, annotation)
+                    : SyntaxFactory.ConditionalExpression(
                             condition,
                             return1.Expression,
-                            return2.Expression));
+                            return2.Expression)
+                            .WithAdditionalAnnotations(annotation);
+
+                return SyntaxFactory.ReturnStatement(createdExpression);
             }
 
             var expressionStatement1 = statement1 as ExpressionStatementSyntax;
@@ -139,18 +178,23 @@ namespace SonarLint.Rules
             var expression1 = TernaryOperatorPointless.RemoveParentheses(expressionStatement1.Expression);
             var expression2 = TernaryOperatorPointless.RemoveParentheses(expressionStatement2.Expression);
 
-            var assignment = GetSimplifiedAssignment(expression1, expression2, condition, compared, isNullCoalescing);
+            var assignment = GetSimplifiedAssignment(expression1, expression2, condition, compared, isNullCoalescing, semanticModel, annotation);
             if (assignment != null)
             {
                 return SyntaxFactory.ExpressionStatement(assignment);
             }
 
-            return SyntaxFactory.ExpressionStatement(
-                GetSimplificationFromInvocations(expression1, expression2, condition, compared, isNullCoalescing));
+            var expression = GetSimplificationFromInvocations(expression1, expression2, condition, compared, isNullCoalescing, semanticModel, annotation);
+            if (expression != null)
+            {
+                return SyntaxFactory.ExpressionStatement(expression);
+            }
+            return null;
         }
 
         private static ExpressionSyntax GetSimplifiedAssignment(ExpressionSyntax expression1, ExpressionSyntax expression2,
-            ExpressionSyntax condition, ExpressionSyntax compared, bool isNullCoalescing)
+            ExpressionSyntax condition, ExpressionSyntax compared, bool isNullCoalescing, SemanticModel semanticModel,
+            SyntaxAnnotation annotation)
         {
             var assignment1 = expression1 as AssignmentExpressionSyntax;
             var assignment2 = expression2 as AssignmentExpressionSyntax;
@@ -165,46 +209,77 @@ namespace SonarLint.Rules
                 return null;
             }
 
-            var expression = isNullCoalescing
-                ? GetNullCoalescing(assignment1.Right, assignment2.Right, compared)
+            var callSimplification = GetSimplificationFromInvocations(assignment1.Right, assignment2.Right,
+                condition, compared, isNullCoalescing, semanticModel, annotation);
+
+            if (callSimplification != null)
+            {
+                return SyntaxFactory.AssignmentExpression(
+                    assignment1.Kind(),
+                    assignment1.Left,
+                    callSimplification);
+            }
+
+            var createdExpression = isNullCoalescing
+                ? GetNullCoalescing(assignment1.Right, assignment2.Right, compared, semanticModel, annotation)
                 : SyntaxFactory.ConditionalExpression(
                     condition,
                     assignment1.Right,
-                    assignment2.Right);
+                    assignment2.Right)
+                    .WithAdditionalAnnotations(annotation);
 
             return SyntaxFactory.AssignmentExpression(
                 assignment1.Kind(),
                 assignment1.Left,
-                expression);
+                createdExpression);
         }
 
         private static ExpressionSyntax GetNullCoalescing(ExpressionSyntax whenTrue, ExpressionSyntax whenFalse,
-            ExpressionSyntax compared)
+            ExpressionSyntax compared, SemanticModel semanticModel, SyntaxAnnotation annotation)
         {
             if (EquivalenceChecker.AreEquivalent(whenTrue, compared))
             {
-                return SyntaxFactory.BinaryExpression(
+                var createdExpression = SyntaxFactory.BinaryExpression(
                     SyntaxKind.CoalesceExpression,
                     compared,
-                    whenFalse);
+                    whenFalse)
+                    .WithAdditionalAnnotations(annotation);
+                return createdExpression;
             }
 
             if (EquivalenceChecker.AreEquivalent(whenFalse, compared))
             {
-                return SyntaxFactory.BinaryExpression(
+                var createdExpression = SyntaxFactory.BinaryExpression(
                     SyntaxKind.CoalesceExpression,
                     compared,
-                    whenTrue);
+                    whenTrue)
+                    .WithAdditionalAnnotations(annotation);
+                return createdExpression;
             }
 
-            return GetSimplificationFromInvocations(whenTrue, whenFalse, null, compared, true);
+            return GetSimplificationFromInvocations(whenTrue, whenFalse, null, compared, true, semanticModel, annotation);
         }
 
         private static ExpressionSyntax GetSimplificationFromInvocations(ExpressionSyntax expression1, ExpressionSyntax expression2,
-            ExpressionSyntax condition, ExpressionSyntax compared, bool isNullCoalescing)
+            ExpressionSyntax condition, ExpressionSyntax compared, bool isNullCoalescing, SemanticModel semanticModel,
+            SyntaxAnnotation annotation)
         {
             var methodCall1 = expression1 as InvocationExpressionSyntax;
             var methodCall2 = expression2 as InvocationExpressionSyntax;
+            if (methodCall1 == null ||
+                methodCall2 == null)
+            {
+                return null;
+            }
+
+            var methodSymbol1 = semanticModel.GetSymbolInfo(methodCall1).Symbol;
+            var methodSymbol2 = semanticModel.GetSymbolInfo(methodCall2).Symbol;
+            if (methodSymbol1 == null ||
+                methodSymbol2 == null ||
+                !methodSymbol1.Equals(methodSymbol2))
+            {
+                return null;
+            }
 
             var newArgumentList = SyntaxFactory.ArgumentList();
 
@@ -215,31 +290,30 @@ namespace SonarLint.Rules
 
                 if (!EquivalenceChecker.AreEquivalent(arg1.Expression, arg2.Expression))
                 {
+                    ExpressionSyntax createdExpression;
                     if (isNullCoalescing)
                     {
                         var arg1IsCompared = EquivalenceChecker.AreEquivalent(arg1.Expression, compared);
                         var expression = arg1IsCompared ? arg2.Expression : arg1.Expression;
 
-                        newArgumentList = newArgumentList.AddArguments(
-                            SyntaxFactory.Argument(
-                                arg1.NameColon,
-                                arg1.RefOrOutKeyword,
-                                SyntaxFactory.BinaryExpression(
+                        createdExpression = SyntaxFactory.BinaryExpression(
                                     SyntaxKind.CoalesceExpression,
                                     compared,
-                                    expression)));
+                                    expression);
                     }
                     else
                     {
-                        newArgumentList = newArgumentList.AddArguments(
+                        createdExpression = SyntaxFactory.ConditionalExpression(
+                                    condition,
+                                    arg1.Expression,
+                                    arg2.Expression);
+                    }
+
+                    newArgumentList = newArgumentList.AddArguments(
                             SyntaxFactory.Argument(
                                 arg1.NameColon,
                                 arg1.RefOrOutKeyword,
-                                SyntaxFactory.ConditionalExpression(
-                                    condition,
-                                    arg1.Expression,
-                                    arg2.Expression)));
-                    }
+                                createdExpression.WithAdditionalAnnotations(annotation)));
                 }
                 else
                 {
