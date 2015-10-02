@@ -16,8 +16,8 @@ namespace Tests.Diagnostics
 
     class AA : Object //Noncompliant
     { }
-    class AAA:
-        Object //Noncompliant
+    class AAA://Noncompliant
+        Object
     { }
 
     class A
