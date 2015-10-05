@@ -77,7 +77,8 @@ namespace SonarLint.UnitTest
                 {
                     codeBeforeFix = actualCode;
 
-                    for (int diagnosticIndexToFix = 0; diagnosticIndexToFix < diagnostics.Count; diagnosticIndexToFix++)
+                    var codeFixExecuted = false;
+                    for (int diagnosticIndexToFix = 0; !codeFixExecuted && diagnosticIndexToFix < diagnostics.Count; diagnosticIndexToFix++)
                     {
                         var codeActionsForDiagnostic = GetCodeActionsForDiagnostic(codeFixProvider, document, diagnostics[diagnosticIndexToFix]);
 
@@ -88,7 +89,7 @@ namespace SonarLint.UnitTest
                             CalculateDiagnosticsAndCode(diagnosticAnalyzer, document, out diagnostics, out actualCode);
 
                             codeFixExecutedAtLeastOnce = true;
-                            break;
+                            codeFixExecuted = true;
                         }
                     }
                 } while (codeBeforeFix != actualCode);

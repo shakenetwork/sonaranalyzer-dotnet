@@ -86,41 +86,39 @@ namespace SonarLint.Rules
                     .ReplaceNode(collection, invocationToAdd)
                     .WithAdditionalAnnotations(Formatter.Annotation);
             }
-            else
+
+            var usingDirectiveToAdd = SyntaxFactory.UsingDirective(
+                SyntaxFactory.QualifiedName(
+                    SyntaxFactory.IdentifierName("System"),
+                    SyntaxFactory.IdentifierName("Linq")));
+
+            var annotation = new SyntaxAnnotation("CollectionToChange");
+            var newRoot = root.ReplaceNode(
+                collection,
+                collection.WithAdditionalAnnotations(annotation));
+
+            var node = newRoot.GetAnnotatedNodes(annotation).First();
+            var closestNamespaceWithUsing = node.AncestorsAndSelf()
+                .OfType<NamespaceDeclarationSyntax>()
+                .FirstOrDefault(n => n.Usings.Count > 0);
+
+            if (closestNamespaceWithUsing != null)
             {
-                var usingDirectiveToAdd = SyntaxFactory.UsingDirective(
-                    SyntaxFactory.QualifiedName(
-                        SyntaxFactory.IdentifierName("System"),
-                        SyntaxFactory.IdentifierName("Linq")));
-
-                var annotation = new SyntaxAnnotation("CollectionToChange");
-                var newRoot = root.ReplaceNode(
-                    collection,
-                    collection.WithAdditionalAnnotations(annotation));
-
-                var node = newRoot.GetAnnotatedNodes(annotation).First();
-                var closestNamespaceWithUsing = node.AncestorsAndSelf()
-                    .OfType<NamespaceDeclarationSyntax>()
-                    .FirstOrDefault(n => n.Usings.Count > 0);
-
-                if (closestNamespaceWithUsing != null)
-                {
-                    newRoot = newRoot.ReplaceNode(
-                        closestNamespaceWithUsing,
-                        closestNamespaceWithUsing.AddUsings(usingDirectiveToAdd))
-                        .WithAdditionalAnnotations(Formatter.Annotation);
-                }
-                else
-                {
-                    var compilationUnit = node.FirstAncestorOrSelf<CompilationUnitSyntax>();
-                    newRoot = compilationUnit.AddUsings(usingDirectiveToAdd);
-                }
-
-                node = newRoot.GetAnnotatedNodes(annotation).First();
-                return newRoot
-                    .ReplaceNode(node, invocationToAdd)
+                newRoot = newRoot.ReplaceNode(
+                    closestNamespaceWithUsing,
+                    closestNamespaceWithUsing.AddUsings(usingDirectiveToAdd))
                     .WithAdditionalAnnotations(Formatter.Annotation);
             }
+            else
+            {
+                var compilationUnit = node.FirstAncestorOrSelf<CompilationUnitSyntax>();
+                newRoot = compilationUnit.AddUsings(usingDirectiveToAdd);
+            }
+
+            node = newRoot.GetAnnotatedNodes(annotation).First();
+            return newRoot
+                .ReplaceNode(node, invocationToAdd)
+                .WithAdditionalAnnotations(Formatter.Annotation);
         }
 
         private static InvocationExpressionSyntax GetOfTypeInvocation(string typeName, ExpressionSyntax collection)

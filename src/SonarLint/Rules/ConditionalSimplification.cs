@@ -199,7 +199,8 @@ namespace SonarLint.Rules
                 return false;
             }
 
-            if (compared != null && CanBeNullCoalescing(assignment1.Right, assignment2.Right, compared, comparedIsNullInTrue, semanticModel))
+            if (compared != null &&
+                CanBeNullCoalescing(assignment1.Right, assignment2.Right, compared, comparedIsNullInTrue, semanticModel))
             {
                 isNullCoalescing = true;
             }

@@ -100,7 +100,7 @@ namespace SonarLint.Rules
             {
                 "System.Runtime.CompilerServices.CallerMemberNameAttribute",
                 "System.Runtime.CompilerServices.CallerFilePathAttribute",
-                "System.Runtime.CompilerServices.CallerLineNumberAttribute",
+                "System.Runtime.CompilerServices.CallerLineNumberAttribute"
             };
     }
 }

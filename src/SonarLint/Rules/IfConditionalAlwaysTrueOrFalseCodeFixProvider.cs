@@ -43,7 +43,7 @@ namespace SonarLint.Rules
             }
         }
 
-        private static FixAllProvider FixAllProviderInstance = new DocumentBasedFixAllProvider<IfConditionalAlwaysTrueOrFalse>(
+        private static readonly FixAllProvider FixAllProviderInstance = new DocumentBasedFixAllProvider<IfConditionalAlwaysTrueOrFalse>(
            Title,
            (root, node) => CalculateNewRoot(root, node.FirstAncestorOrSelf<IfStatementSyntax>()));
 

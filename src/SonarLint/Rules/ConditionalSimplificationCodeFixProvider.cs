@@ -149,7 +149,7 @@ namespace SonarLint.Rules
             return !(type is IErrorTypeSymbol);
         }
 
-        private StatementSyntax GetSimplified(StatementSyntax statement1, StatementSyntax statement2,
+        private static StatementSyntax GetSimplified(StatementSyntax statement1, StatementSyntax statement2,
             ExpressionSyntax condition, ExpressionSyntax compared, bool isNullCoalescing, SemanticModel semanticModel,
             SyntaxAnnotation annotation)
         {

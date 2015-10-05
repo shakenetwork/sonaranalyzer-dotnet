@@ -94,9 +94,13 @@ namespace SonarLint.Common
                         nonBlank.Remove(lineNumber);
                         noSonar.Add(lineNumber);
                     }
-                    else if (line.Any(char.IsLetter) && !noSonar.Contains(lineNumber))
+                    else
                     {
-                        nonBlank.Add(lineNumber);
+                        if (line.Any(char.IsLetter) &&
+                            !noSonar.Contains(lineNumber))
+                        {
+                            nonBlank.Add(lineNumber);
+                        }
                     }
 
                     lineNumber++;

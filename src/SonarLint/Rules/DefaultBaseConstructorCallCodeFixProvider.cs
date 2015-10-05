@@ -118,9 +118,12 @@ namespace SonarLint.Rules
                         ctor.Body,
                         ctor.Body.WithLeadingTrivia(trailingTrivia.Add(lastTrivia)));
                 }
-                else if (initializer.HasTrailingTrivia)
+                else
                 {
-                    newRoot = newRoot.ReplaceNode(ctor, ctor.WithTrailingTrivia(trailingTrivia));
+                    if (initializer.HasTrailingTrivia)
+                    {
+                        newRoot = newRoot.ReplaceNode(ctor, ctor.WithTrailingTrivia(trailingTrivia));
+                    }
                 }
             }
 

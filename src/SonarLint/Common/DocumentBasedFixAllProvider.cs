@@ -27,7 +27,7 @@ using System;
 
 namespace SonarLint.Common
 {
-    public sealed class DocumentBasedFixAllProvider<T> : FixAllProvider
+    internal sealed class DocumentBasedFixAllProvider<T> : FixAllProvider
     {
         private readonly string title;
         private readonly Func<SyntaxNode, SyntaxNode, SyntaxNode> calculateNewRoot;
@@ -53,8 +53,9 @@ namespace SonarLint.Common
                 case FixAllScope.Solution:
                     return Task.FromResult(CodeAction.Create(title,
                         ct => GetFixedSolution(fixAllContext)));
+                default:
+                    return null;
             }
-            return null;
         }
 
         private async Task<Solution> GetFixedSolution(FixAllContext fixAllContext)

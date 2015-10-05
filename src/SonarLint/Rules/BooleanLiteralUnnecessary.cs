@@ -256,7 +256,7 @@ namespace SonarLint.Rules
 
             if (EquivalenceChecker.AreEquivalent(expression, booleanContantExpression))
             {
-                Location location = null;
+                Location location;
                 switch (errorLocation)
                 {
                     case ErrorLocation.Normal:
@@ -267,6 +267,9 @@ namespace SonarLint.Rules
                         break;
                     case ErrorLocation.Inverted:
                         location = CalculateExtendedLocation(binaryExpression, !leftSide);
+                        break;
+                    default:
+                        location = null;
                         break;
                 }
 

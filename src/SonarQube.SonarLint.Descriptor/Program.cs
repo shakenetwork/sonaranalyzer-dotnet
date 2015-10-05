@@ -47,6 +47,8 @@ namespace SonarLint.Descriptor
             WriteXmlDescriptorFiles(args[0], args[1], args[2]);
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("SonarLint", "S2228:Console logging should not be used",
+            Justification = "We are logging to the console")]
         private static void Write(string text)
         {
             Console.WriteLine(text);

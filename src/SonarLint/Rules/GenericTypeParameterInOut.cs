@@ -29,6 +29,7 @@ using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
 using Microsoft.CodeAnalysis.Text;
 using System.Collections.Generic;
+using System;
 
 namespace SonarLint.Rules
 {
@@ -142,8 +143,7 @@ namespace SonarLint.Rules
             }
 
             canBe = CanTypeParameterBeVariant(typeParameter, variance, returnType,
-                requireOutputSafety: true, requireInputSafety: false,
-                context: delegateType);
+                true, false, delegateType);
 
             if (!canBe)
             {
@@ -163,14 +163,14 @@ namespace SonarLint.Rules
 
             foreach (INamedTypeSymbol baseInterface in interfaceType.AllInterfaces)
             {
-                var canBe = CanTypeParameterBeVariant(
+                var canBeVariant = CanTypeParameterBeVariant(
                     typeParameter, variance,
                     baseInterface,
-                    requireOutputSafety: true,
-                    requireInputSafety: false,
-                    context: baseInterface);
+                    true,
+                    false,
+                    baseInterface);
 
-                if (!canBe)
+                if (!canBeVariant)
                 {
                     return false;
                 }
@@ -178,22 +178,24 @@ namespace SonarLint.Rules
 
             foreach (ISymbol member in interfaceType.GetMembers())
             {
-                bool canBe = false;
+                var canBeVariant = false;
                 switch (member.Kind)
                 {
                     case SymbolKind.Method:
-                        canBe = CheckTypeParameterInMethod(typeParameter, variance, (IMethodSymbol)member);
-                        if (!canBe)
+                        canBeVariant = CheckTypeParameterInMethod(typeParameter, variance, (IMethodSymbol)member);
+                        if (!canBeVariant)
                         {
                             return false;
                         }
                         break;
                     case SymbolKind.Event:
-                        canBe = CheckTypeParameterInEvent(typeParameter, variance, (IEventSymbol)member);
-                        if (!canBe)
+                        canBeVariant = CheckTypeParameterInEvent(typeParameter, variance, (IEventSymbol)member);
+                        if (!canBeVariant)
                         {
                             return false;
                         }
+                        break;
+                    default:
                         break;
                 }
             }
@@ -239,9 +241,9 @@ namespace SonarLint.Rules
             canBe = CanTypeParameterBeVariant(
                 typeParameter, variance,
                 method.ReturnType,
-                requireOutputSafety: true,
-                requireInputSafety: false,
-                context: method);
+                true,
+                false,
+                method);
 
             if (!canBe)
             {
@@ -257,9 +259,9 @@ namespace SonarLint.Rules
             return CanTypeParameterBeVariant(
                 typeParameter, variance,
                 @event.Type,
-                requireOutputSafety: false,
-                requireInputSafety: true,
-                context: @event);
+                false,
+                true,
+                @event);
         }
 
         private static bool CheckTypeParameterInParameters(ITypeParameterSymbol typeParameter, VarianceKind variance,
@@ -270,9 +272,9 @@ namespace SonarLint.Rules
                 var canBe = CanTypeParameterBeVariant(
                     typeParameter, variance,
                     param.Type,
-                    requireOutputSafety: param.RefKind != RefKind.None,
-                    requireInputSafety: true,
-                    context: context);
+                    param.RefKind != RefKind.None,
+                    true,
+                    context);
 
                 if (!canBe)
                 {
@@ -291,9 +293,9 @@ namespace SonarLint.Rules
                     typeParameter,
                     variance,
                     constraintType,
-                    requireOutputSafety: false,
-                    requireInputSafety: true,
-                    context: context);
+                    false,
+                    true,
+                    context);
 
                 if (!canBe)
                 {
@@ -372,8 +374,8 @@ namespace SonarLint.Rules
                         return false;
                     }
 
-                    bool requireOut = false;
-                    bool requireIn = false;
+                    var requireOut = false;
+                    var requireIn = false;
 
                     switch (typeParam.Variance)
                     {
@@ -389,6 +391,8 @@ namespace SonarLint.Rules
                             requireIn = true;
                             requireOut = true;
                             break;
+                        default:
+                            throw new NotSupportedException();
                     }
 
                     if (!CanTypeParameterBeVariant(parameter, variance, typeArg, requireOut, requireIn, context))

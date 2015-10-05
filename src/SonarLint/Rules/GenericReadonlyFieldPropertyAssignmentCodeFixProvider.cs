@@ -137,7 +137,7 @@ namespace SonarLint.Rules
             return mapping;
         }
 
-        private SyntaxNode GetNewDocumentRoot(SyntaxNode docRoot, ITypeParameterSymbol typeParameterSymbol, KeyValuePair<DocumentId, List<ClassDeclarationSyntax>> classes)
+        private static SyntaxNode GetNewDocumentRoot(SyntaxNode docRoot, ITypeParameterSymbol typeParameterSymbol, KeyValuePair<DocumentId, List<ClassDeclarationSyntax>> classes)
         {
             var newDocRoot = docRoot.ReplaceNodes(classes.Value, (original, rewritten) => original.WithAdditionalAnnotations(annotation));
             var annotatedNodes = newDocRoot.GetAnnotatedNodes(annotation);
@@ -156,7 +156,7 @@ namespace SonarLint.Rules
             return newDocRoot;
         }
 
-        private SyntaxList<TypeParameterConstraintClauseSyntax> GetNewConstraintClause(
+        private static SyntaxList<TypeParameterConstraintClauseSyntax> GetNewConstraintClause(
             SyntaxList<TypeParameterConstraintClauseSyntax> constraintClauses, string typeParameterName)
         {
             if (!constraintClauses.Any())

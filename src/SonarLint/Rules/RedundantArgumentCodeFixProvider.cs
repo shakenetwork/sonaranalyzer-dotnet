@@ -93,9 +93,12 @@ namespace SonarLint.Rules
                         argumentsCanBeRemovedWithoutNamed.Add(argument);
                     }
                 }
-                else if (argument.NameColon == null)
+                else
                 {
-                    canBeRemovedWithoutNamed = false;
+                    if (argument.NameColon == null)
+                    {
+                        canBeRemovedWithoutNamed = false;
+                    }
                 }
             }
 

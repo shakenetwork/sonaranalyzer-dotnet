@@ -77,47 +77,45 @@ namespace SonarLint.Rules
             {
                 return root.ReplaceNode(baseList, newBaseList);
             }
-            else
+
+            var baseTypeHadLineEnding = HasLineEnding(baseList.Types[redundantIndex]);
+            var colonHadLineEnding = HasLineEnding(baseList.ColonToken);
+            var typeNameHadLineEnding = HasLineEnding(((BaseTypeDeclarationSyntax)baseList.Parent).Identifier);
+
+            var annotation = new SyntaxAnnotation();
+            var newRoot = root.ReplaceNode(
+                baseList.Parent,
+                baseList.Parent.WithAdditionalAnnotations(annotation));
+            var declaration = (BaseTypeDeclarationSyntax)newRoot.GetAnnotatedNodes(annotation).First();
+
+            newRoot = newRoot.RemoveNode(declaration.BaseList, SyntaxRemoveOptions.KeepNoTrivia);
+            declaration = (BaseTypeDeclarationSyntax)newRoot.GetAnnotatedNodes(annotation).First();
+
+            var needsNewLine = !typeNameHadLineEnding &&
+                (colonHadLineEnding || baseTypeHadLineEnding);
+
+            if (needsNewLine)
             {
-                var baseTypeHadLineEnding = HasLineEnding(baseList.Types[redundantIndex]);
-                var colonHadLineEnding = HasLineEnding(baseList.ColonToken);
-                var typeNameHadLineEnding = HasLineEnding(((BaseTypeDeclarationSyntax)baseList.Parent).Identifier);
-
-                var annotation = new SyntaxAnnotation();
-                var newRoot = root.ReplaceNode(
-                    baseList.Parent,
-                    baseList.Parent.WithAdditionalAnnotations(annotation));
-                var declaration = (BaseTypeDeclarationSyntax)newRoot.GetAnnotatedNodes(annotation).First();
-
-                newRoot = newRoot.RemoveNode(declaration.BaseList, SyntaxRemoveOptions.KeepNoTrivia);
-                declaration = (BaseTypeDeclarationSyntax)newRoot.GetAnnotatedNodes(annotation).First();
-
-                var needsNewLine = !typeNameHadLineEnding &&
-                    (colonHadLineEnding || baseTypeHadLineEnding);
-
-                if (needsNewLine)
+                var trivia = SyntaxFactory.TriviaList();
+                if (declaration.Identifier.HasTrailingTrivia)
                 {
-                    var trivia = SyntaxFactory.TriviaList();
-                    if (declaration.Identifier.HasTrailingTrivia)
-                    {
-                        trivia = declaration.Identifier.TrailingTrivia;
-                    }
-
-                    trivia = colonHadLineEnding
-                        ? trivia.Add(baseList.ColonToken.TrailingTrivia.Last())
-                        : trivia.AddRange(baseList.Types[redundantIndex].GetTrailingTrivia());
-
-                    newRoot = newRoot.ReplaceToken(
-                            declaration.Identifier,
-                            declaration.Identifier
-                                .WithTrailingTrivia(trivia));
+                    trivia = declaration.Identifier.TrailingTrivia;
                 }
 
-                declaration = (BaseTypeDeclarationSyntax)newRoot.GetAnnotatedNodes(annotation).First();
-                return newRoot.ReplaceNode(
-                    declaration,
-                    declaration.WithoutAnnotations(annotation));
+                trivia = colonHadLineEnding
+                    ? trivia.Add(baseList.ColonToken.TrailingTrivia.Last())
+                    : trivia.AddRange(baseList.Types[redundantIndex].GetTrailingTrivia());
+
+                newRoot = newRoot.ReplaceToken(
+                        declaration.Identifier,
+                        declaration.Identifier
+                            .WithTrailingTrivia(trivia));
             }
+
+            declaration = (BaseTypeDeclarationSyntax)newRoot.GetAnnotatedNodes(annotation).First();
+            return newRoot.ReplaceNode(
+                declaration,
+                declaration.WithoutAnnotations(annotation));
         }
 
         internal static bool HasLineEnding(SyntaxNode node)

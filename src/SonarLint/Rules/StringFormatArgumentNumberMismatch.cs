@@ -112,7 +112,7 @@ namespace SonarLint.Rules
                         return;
                     }
 
-                    int removableArgumentCount = 0;
+                    var removableArgumentCount = 0;
                     if (HasAdditionalArguments(formatString, formatArgCount, out removableArgumentCount))
                     {
                         var argument = invocation.ArgumentList.Arguments
@@ -137,7 +137,7 @@ namespace SonarLint.Rules
 
         private static bool IsFormatValid(string format)
         {
-            var maxArgCount = 100;
+            const int maxArgCount = 100;
             return FormatterAcceptsArgumentCount(format, maxArgCount);
         }
 

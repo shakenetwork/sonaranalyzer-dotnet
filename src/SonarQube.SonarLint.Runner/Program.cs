@@ -152,6 +152,8 @@ namespace SonarLint.Runner
             }
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("SonarLint", "S2228:Console logging should not be used",
+            Justification = "We are logging to the console")]
         private static void Write(string text)
         {
             Console.WriteLine(text);

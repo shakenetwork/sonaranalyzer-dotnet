@@ -83,7 +83,9 @@ namespace SonarLint.Rules
                                     var triviaStartingLineNumber = trivia.GetLocation().GetLineSpan().StartLinePosition.Line;
                                     var triviaLines = triviaContent.Split(LineTerminators, StringSplitOptions.None);
 
-                                    for (var triviaLineNumber = 0; triviaLineNumber < triviaLines.Length; triviaLineNumber++)
+                                    var issueReported = false;
+
+                                    for (var triviaLineNumber = 0; !issueReported && triviaLineNumber < triviaLines.Length; triviaLineNumber++)
                                     {
                                         if (!IsCode(triviaLines[triviaLineNumber]))
                                         {
@@ -104,7 +106,7 @@ namespace SonarLint.Rules
 
                                         var location = Location.Create(c.Tree, commentLineSpan ?? lineSpan);
                                         c.ReportDiagnostic(Diagnostic.Create(Rule, location));
-                                        break;
+                                        issueReported = true;
                                     }
                                 }
                             };
