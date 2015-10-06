@@ -20,7 +20,6 @@
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarLint.DocGenerator;
-using SonarLint.Helpers;
 using SonarLint.Utilities;
 using System.Diagnostics;
 using System.Linq;

@@ -42,7 +42,7 @@ namespace SonarLint.Rules
             }
         }
 
-        private static FixAllProvider FixAllProviderInstance = new DocumentBasedFixAllProvider<CatchRethrow>(
+        private static readonly FixAllProvider FixAllProviderInstance = new DocumentBasedFixAllProvider<CatchRethrow>(
             Title,
             (root, node, diagnostic) => CalculateNewRoot(root, node));
 
@@ -94,32 +94,6 @@ namespace SonarLint.Rules
                     tryStatement,
                     tryStatement.Block.Statements.Select(st => st.WithAdditionalAnnotations(Formatter.Annotation)))
                 : root.RemoveNode(currentNode, SyntaxRemoveOptions.KeepNoTrivia);
-        }
-
-        private static CodeAction CreateActionWithRemovedTryStatement(CodeFixContext context, SyntaxNode root, TryStatementSyntax tryStatement)
-        {
-            return CodeAction.Create(
-                Title,
-                c =>
-                {
-                    var newParent = tryStatement.Parent.ReplaceNode(
-                        tryStatement,
-                        tryStatement.Block.Statements.Select(st => st.WithAdditionalAnnotations(Formatter.Annotation)));
-
-                    var newRoot = root.ReplaceNode(tryStatement.Parent, newParent);
-                    return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
-                });
-        }
-
-        private static CodeAction CreateActionWithRemovedCatchClause(CodeFixContext context, SyntaxNode root, SyntaxNode syntaxNode)
-        {
-            return CodeAction.Create(
-                Title,
-                c =>
-                {
-                    var newRoot = root.RemoveNode(syntaxNode, SyntaxRemoveOptions.KeepNoTrivia);
-                    return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
-                });
         }
     }
 }

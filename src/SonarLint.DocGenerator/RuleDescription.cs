@@ -19,7 +19,6 @@
  */
 
 using SonarLint.Common;
-using SonarLint.Helpers;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;

@@ -25,7 +25,6 @@ using System.Linq;
 using Microsoft.CodeAnalysis.CodeActions;
 using System;
 using System.Collections.Generic;
-using System.Collections;
 
 namespace SonarLint.Common
 {
@@ -135,7 +134,7 @@ namespace SonarLint.Common
                 });
         }
 
-        private static void CreateAnnotationForDiagnostics(System.Collections.Immutable.ImmutableArray<Diagnostic> diagnostics, 
+        private static void CreateAnnotationForDiagnostics(System.Collections.Immutable.ImmutableArray<Diagnostic> diagnostics,
             BidirectionalDictionary<Diagnostic, SyntaxAnnotation> diagnosticAnnotationPairs)
         {
             foreach (var diagnostic in diagnostics)

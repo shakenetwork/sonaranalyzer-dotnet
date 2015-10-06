@@ -24,7 +24,6 @@ using Microsoft.CodeAnalysis.CodeFixes;
 using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.CodeAnalysis.CodeActions;
-using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Formatting;
 using SonarLint.Common;
@@ -43,7 +42,7 @@ namespace SonarLint.Rules
             }
         }
 
-        private static FixAllProvider FixAllProviderInstance = new DocumentBasedFixAllProvider<SillyBitwiseOperation>(
+        private static readonly FixAllProvider FixAllProviderInstance = new DocumentBasedFixAllProvider<SillyBitwiseOperation>(
             Title,
             (root, node, diagnostic) => CalculateNewRoot(root, node, diagnostic));
 

@@ -19,13 +19,7 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarLint.DocGenerator;
-using SonarLint.Helpers;
-using SonarLint.Utilities;
-using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text.RegularExpressions;
 
 namespace SonarLint.UnitTest.PackagingTests
 {
