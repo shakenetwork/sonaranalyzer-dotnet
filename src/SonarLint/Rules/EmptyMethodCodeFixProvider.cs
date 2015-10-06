@@ -85,7 +85,8 @@ namespace SonarLint.Rules
                             method.Body,
                             newMethodBody.WithTriviaFrom(method.Body).WithAdditionalAnnotations(Formatter.Annotation));
                         return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
-                    }),
+                    },
+                    TitleComment),
                 context.Diagnostics);
 
             var semanticModel = await context.Document.GetSemanticModelAsync(context.CancellationToken).ConfigureAwait(false);
@@ -119,7 +120,8 @@ namespace SonarLint.Rules
                                     .WithTriviaFrom(method.Body)
                                     .WithAdditionalAnnotations(Formatter.Annotation));
                         return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
-                    }),
+                    },
+                    TitleThrow),
                 context.Diagnostics);
         }
 
