@@ -560,6 +560,9 @@
     <None Include="TestCases\GenericReadonlyFieldPropertyAssignment.AddConstraint.Fixed.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Content Include="TestCases\TabCharacter.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Compile Include="Verifier.cs" />
     <None Include="TestCases\UseCurlyBraces.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

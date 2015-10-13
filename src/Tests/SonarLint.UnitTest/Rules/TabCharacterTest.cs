@@ -31,6 +31,7 @@ namespace SonarLint.UnitTest.Rules
         public void TabCharacter()
         {
             Verifier.VerifyAnalyzer(@"TestCases\TabCharacter.cs", new TabCharacter());
+            Verifier.VerifyAnalyzer(@"TestCases\TabCharacter.vb", new TabCharacter());
         }
     }
 }
