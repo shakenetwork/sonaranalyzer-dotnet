@@ -139,6 +139,7 @@
     <Compile Include="Rules\OnErrorStatementTest.cs" />
     <Compile Include="Rules\StringConcatenationWithPlusTest.cs" />
     <Compile Include="Rules\NegatedIsExpressionTest.cs" />
+    <Compile Include="Rules\UnsignedTypesUsageTest.cs" />
     <Compile Include="Rules\MethodOverrideNoParamsTest.cs" />
     <Compile Include="Rules\RedundantInheritanceListTest.cs" />
     <Compile Include="Rules\LiteralSuffixUpperCaseTest.cs" />
@@ -578,6 +579,9 @@
     <None Include="TestCases\NegatedIsExpression.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Content Include="TestCases\UnsignedTypesUsage.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Compile Include="Verifier.cs" />
     <None Include="TestCases\UseCurlyBraces.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
