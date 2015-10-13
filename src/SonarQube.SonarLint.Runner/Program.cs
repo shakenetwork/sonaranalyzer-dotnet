@@ -61,27 +61,33 @@ namespace SonarLint.Runner
 
                     try
                     {
-                        var solution = CompilationHelper.GetSolutionFromFiles(file);
+                        var language = file.EndsWith(".cs", StringComparison.OrdinalIgnoreCase)
+                            ? LanguageNames.CSharp
+                            : LanguageNames.VisualBasic;
+
+                        var solution = CompilationHelper.GetSolutionFromFiles(file, language);
 
                         var compilation = solution.Projects.First().GetCompilationAsync().Result;
                         var syntaxTree = compilation.SyntaxTrees.First();
 
-                        var metrics = new Metrics(syntaxTree);
+                        var metrics = language == LanguageNames.CSharp
+                            ? (MetricsBase)new Common.CSharp.Metrics(syntaxTree)
+                            : new Common.VisualBasic.Metrics(syntaxTree);
 
                         xmlOut.WriteStartElement("File");
                         xmlOut.WriteElementString("Path", file);
 
                         xmlOut.WriteStartElement("Metrics");
 
-                        xmlOut.WriteElementString("Lines", metrics.Lines().ToString(CultureInfo.InvariantCulture));
-                        xmlOut.WriteElementString("Classes", metrics.Classes().ToString(CultureInfo.InvariantCulture));
-                        xmlOut.WriteElementString("Accessors", metrics.Accessors().ToString(CultureInfo.InvariantCulture));
-                        xmlOut.WriteElementString("Statements", metrics.Statements().ToString(CultureInfo.InvariantCulture));
-                        xmlOut.WriteElementString("Functions", metrics.Functions().ToString(CultureInfo.InvariantCulture));
-                        xmlOut.WriteElementString("PublicApi", metrics.PublicApi().ToString(CultureInfo.InvariantCulture));
-                        xmlOut.WriteElementString("PublicUndocumentedApi", metrics.PublicUndocumentedApi().ToString(CultureInfo.InvariantCulture));
+                        xmlOut.WriteElementString("Lines", metrics.GetLineCount().ToString(CultureInfo.InvariantCulture));
+                        xmlOut.WriteElementString("Classes", metrics.GetClassCount().ToString(CultureInfo.InvariantCulture));
+                        xmlOut.WriteElementString("Accessors", metrics.GetAccessorCount().ToString(CultureInfo.InvariantCulture));
+                        xmlOut.WriteElementString("Statements", metrics.GetStatementCount().ToString(CultureInfo.InvariantCulture));
+                        xmlOut.WriteElementString("Functions", metrics.GetFunctionCount().ToString(CultureInfo.InvariantCulture));
+                        xmlOut.WriteElementString("PublicApi", metrics.GetPublicApiCount().ToString(CultureInfo.InvariantCulture));
+                        xmlOut.WriteElementString("PublicUndocumentedApi", metrics.GetPublicUndocumentedApiCount().ToString(CultureInfo.InvariantCulture));
 
-                        var complexity = metrics.Complexity();
+                        var complexity = metrics.GetComplexity();
                         xmlOut.WriteElementString("Complexity", complexity.ToString(CultureInfo.InvariantCulture));
 
                         // TODO This is a bit ridiculous, but is how SonarQube works
@@ -89,9 +95,9 @@ namespace SonarLint.Runner
                         fileComplexityDistribution.Add(complexity);
                         xmlOut.WriteElementString("FileComplexityDistribution", fileComplexityDistribution.ToString());
 
-                        xmlOut.WriteElementString("FunctionComplexityDistribution", metrics.FunctionComplexityDistribution().ToString());
+                        xmlOut.WriteElementString("FunctionComplexityDistribution", metrics.GetFunctionComplexityDistribution().ToString());
 
-                        var comments = metrics.Comments(configuration.IgnoreHeaderComments);
+                        var comments = metrics.GetComments(configuration.IgnoreHeaderComments);
                         xmlOut.WriteStartElement("Comments");
                         xmlOut.WriteStartElement("NoSonar");
                         foreach (var line in comments.NoSonar)
@@ -108,7 +114,7 @@ namespace SonarLint.Runner
                         xmlOut.WriteEndElement();
 
                         xmlOut.WriteStartElement("LinesOfCode");
-                        foreach (var line in metrics.LinesOfCode())
+                        foreach (var line in metrics.GetLinesOfCode())
                         {
                             xmlOut.WriteElementString("Line", line.ToString(CultureInfo.InvariantCulture));
                         }

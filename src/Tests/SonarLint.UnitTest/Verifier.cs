@@ -26,13 +26,13 @@ using System.Text;
 using System.Threading;
 using FluentAssertions;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Helpers;
 using Microsoft.CodeAnalysis.CodeFixes;
 using Microsoft.CodeAnalysis.CodeActions;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using CS = Microsoft.CodeAnalysis.CSharp;
+using VB = Microsoft.CodeAnalysis.VisualBasic;
 
 namespace SonarLint.UnitTest
 {
@@ -113,8 +113,12 @@ namespace SonarLint.UnitTest
 
         private static Document GetDocument(FileInfo file, string assemblyName, AdhocWorkspace workspace)
         {
+            var language = file.Extension == ".cs"
+                ? LanguageNames.CSharp
+                : LanguageNames.VisualBasic;
+
             return workspace.CurrentSolution.AddProject(assemblyName,
-                    string.Format("{0}.dll", assemblyName), LanguageNames.CSharp)
+                    string.Format("{0}.dll", assemblyName), language)
                 .AddMetadataReference(MetadataReference.CreateFromFile(typeof(object).Assembly.Location))
                 .AddMetadataReference(MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location))
                 .AddDocument(file.Name, File.ReadAllText(file.FullName, Encoding.UTF8));
@@ -129,7 +133,9 @@ namespace SonarLint.UnitTest
         {
             using (var tokenSource = new CancellationTokenSource())
             {
-                var compilationOptions = new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary);
+                var compilationOptions = compilation.Language == LanguageNames.CSharp
+                    ? (CompilationOptions)new CS.CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary)
+                    : new VB.VisualBasicCompilationOptions(OutputKind.DynamicallyLinkedLibrary);
                 compilationOptions = compilationOptions.WithSpecificDiagnosticOptions(
                     diagnosticAnalyzer.SupportedDiagnostics
                         .Select(diagnostic =>

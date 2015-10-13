@@ -25,6 +25,7 @@ using System.Reflection;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Rules;
 using SonarLint.Common;
+using Microsoft.CodeAnalysis;
 
 namespace SonarLint.Utilities
 {
@@ -69,6 +70,38 @@ namespace SonarLint.Utilities
         public IEnumerable<Type> GetAllAnalyzerTypes()
         {
             return diagnosticAnalyzers;
+        }
+        public IEnumerable<Type> GetAnalyzerTypes(AnalyzerLanguage language)
+        {
+            return diagnosticAnalyzers
+                .Where(type => (GetTargetLanguages(type) & language) != AnalyzerLanguage.None);
+        }
+
+        public static AnalyzerLanguage GetTargetLanguages(Type analyzerType)
+        {
+            var attribute = analyzerType.GetCustomAttributes<DiagnosticAnalyzerAttribute>().FirstOrDefault();
+            if (attribute == null)
+            {
+                return AnalyzerLanguage.None;
+            }
+
+            var language = AnalyzerLanguage.None;
+            foreach (var lang in attribute.Languages)
+            {
+                switch (lang)
+                {
+                    case LanguageNames.CSharp:
+                        language |= AnalyzerLanguage.CSharp;
+                        break;
+                    case LanguageNames.VisualBasic:
+                        language |= AnalyzerLanguage.VisualBasic;
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            return language;
         }
     }
 }

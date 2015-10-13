@@ -50,6 +50,14 @@
       <HintPath>..\..\..\packages\Microsoft.CodeAnalysis.CSharp.Workspaces.1.0.0\lib\net45\Microsoft.CodeAnalysis.CSharp.Workspaces.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.VisualBasic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.CodeAnalysis.VisualBasic.1.0.0\lib\net45\Microsoft.CodeAnalysis.VisualBasic.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.VisualBasic.Workspaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.CodeAnalysis.VisualBasic.Workspaces.1.0.0\lib\net45\Microsoft.CodeAnalysis.VisualBasic.Workspaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeAnalysis.Workspaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Microsoft.CodeAnalysis.Workspaces.Common.1.0.0\lib\net45\Microsoft.CodeAnalysis.Workspaces.dll</HintPath>
       <Private>True</Private>
@@ -123,337 +131,337 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Expected\S100.json">
+    <None Include="Expected\CSharp\S100.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S101.json">
+    <None Include="Expected\CSharp\S101.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S103.json">
+    <None Include="Expected\CSharp\S103.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S104.json">
+    <None Include="Expected\CSharp\S104.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S105.json">
+    <None Include="Expected\CSharp\S105.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1066.json">
+    <None Include="Expected\CSharp\S1066.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1067.json">
+    <None Include="Expected\CSharp\S1067.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S107.json">
+    <None Include="Expected\CSharp\S107.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S108.json">
+    <None Include="Expected\CSharp\S108.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S109.json">
+    <None Include="Expected\CSharp\S109.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1109.json">
+    <None Include="Expected\CSharp\S1109.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1116.json">
+    <None Include="Expected\CSharp\S1116.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1117.json">
+    <None Include="Expected\CSharp\S1117.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1118.json">
+    <None Include="Expected\CSharp\S1118.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1121.json">
+    <None Include="Expected\CSharp\S1121.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1125.json">
+    <None Include="Expected\CSharp\S1125.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1145.json">
+    <None Include="Expected\CSharp\S1145.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1155.json">
+    <None Include="Expected\CSharp\S1155.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1172.json">
+    <None Include="Expected\CSharp\S1172.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1186.json">
+    <None Include="Expected\CSharp\S1186.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S121.json">
+    <None Include="Expected\CSharp\S121.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1226.json">
+    <None Include="Expected\CSharp\S1226.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1227.json">
+    <None Include="Expected\CSharp\S1227.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S124-1.json">
+    <None Include="Expected\CSharp\S124-1.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1244.json">
+    <None Include="Expected\CSharp\S1244.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S125.json">
+    <None Include="Expected\CSharp\S125.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S126.json">
+    <None Include="Expected\CSharp\S126.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S127.json">
+    <None Include="Expected\CSharp\S127.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1301.json">
+    <None Include="Expected\CSharp\S1301.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S131.json">
+    <None Include="Expected\CSharp\S131.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1313.json">
+    <None Include="Expected\CSharp\S1313.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1479.json">
+    <None Include="Expected\CSharp\S1479.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1481.json">
+    <None Include="Expected\CSharp\S1481.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1541.json">
+    <None Include="Expected\CSharp\S1541.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1656.json">
+    <None Include="Expected\CSharp\S1656.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1694.json">
+    <None Include="Expected\CSharp\S1694.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1697.json">
+    <None Include="Expected\CSharp\S1697.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1699.json">
+    <None Include="Expected\CSharp\S1699.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1764.json">
+    <None Include="Expected\CSharp\S1764.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1848.json">
+    <None Include="Expected\CSharp\S1848.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1854.json">
+    <None Include="Expected\CSharp\S1854.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1862.json">
+    <None Include="Expected\CSharp\S1862.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1871.json">
+    <None Include="Expected\CSharp\S1871.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1905.json">
+    <None Include="Expected\CSharp\S1905.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1939.json">
+    <None Include="Expected\CSharp\S1939.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1940.json">
+    <None Include="Expected\CSharp\S1940.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S1994.json">
+    <None Include="Expected\CSharp\S1994.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2070.json">
+    <None Include="Expected\CSharp\S2070.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2123.json">
+    <None Include="Expected\CSharp\S2123.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2197.json">
+    <None Include="Expected\CSharp\S2197.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2219.json">
+    <None Include="Expected\CSharp\S2219.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2223.json">
+    <None Include="Expected\CSharp\S2223.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2225.json">
+    <None Include="Expected\CSharp\S2225.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2228.json">
+    <None Include="Expected\CSharp\S2228.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2234.json">
+    <None Include="Expected\CSharp\S2234.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2275.json">
+    <None Include="Expected\CSharp\S2275.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2278.json">
+    <None Include="Expected\CSharp\S2278.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2290.json">
+    <None Include="Expected\CSharp\S2290.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2292.json">
+    <None Include="Expected\CSharp\S2292.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2306.json">
+    <None Include="Expected\CSharp\S2306.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2326.json">
+    <None Include="Expected\CSharp\S2326.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2328.json">
+    <None Include="Expected\CSharp\S2328.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2330.json">
+    <None Include="Expected\CSharp\S2330.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2333.json">
+    <None Include="Expected\CSharp\S2333.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2357.json">
+    <None Include="Expected\CSharp\S2357.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2437.json">
+    <None Include="Expected\CSharp\S2437.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2387.json">
+    <None Include="Expected\CSharp\S2387.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2486.json">
+    <None Include="Expected\CSharp\S2486.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2551.json">
+    <None Include="Expected\CSharp\S2551.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2681.json">
+    <None Include="Expected\CSharp\S2681.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2696.json">
+    <None Include="Expected\CSharp\S2696.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2692.json">
+    <None Include="Expected\CSharp\S2692.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2737.json">
+    <None Include="Expected\CSharp\S2737.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2743.json">
+    <None Include="Expected\CSharp\S2743.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2757.json">
+    <None Include="Expected\CSharp\S2757.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2758.json">
+    <None Include="Expected\CSharp\S2758.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2760.json">
+    <None Include="Expected\CSharp\S2760.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2761.json">
+    <None Include="Expected\CSharp\S2761.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2930.json">
+    <None Include="Expected\CSharp\S2930.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2933.json">
+    <None Include="Expected\CSharp\S2933.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2952.json">
+    <None Include="Expected\CSharp\S2952.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2953.json">
+    <None Include="Expected\CSharp\S2953.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2955.json">
+    <None Include="Expected\CSharp\S2955.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2934.json">
+    <None Include="Expected\CSharp\S2934.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2971.json">
+    <None Include="Expected\CSharp\S2971.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2995.json">
+    <None Include="Expected\CSharp\S2995.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2996.json">
+    <None Include="Expected\CSharp\S2996.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S3005.json">
+    <None Include="Expected\CSharp\S3005.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2997.json">
+    <None Include="Expected\CSharp\S2997.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S3169.json">
+    <None Include="Expected\CSharp\S3169.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S3218.json">
+    <None Include="Expected\CSharp\S3218.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S3234.json">
+    <None Include="Expected\CSharp\S3234.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S3052.json">
+    <None Include="Expected\CSharp\S3052.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S3236.json">
+    <None Include="Expected\CSharp\S3236.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S3240.json">
+    <None Include="Expected\CSharp\S3240.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S3246.json">
+    <None Include="Expected\CSharp\S3246.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S3249.json">
+    <None Include="Expected\CSharp\S3249.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S3235.json">
+    <None Include="Expected\CSharp\S3235.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S3237.json">
+    <None Include="Expected\CSharp\S3237.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S3244.json">
+    <None Include="Expected\CSharp\S3244.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S3172.json">
+    <None Include="Expected\CSharp\S3172.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S3217.json">
+    <None Include="Expected\CSharp\S3217.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S3215.json">
+    <None Include="Expected\CSharp\S3215.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S3253.json">
+    <None Include="Expected\CSharp\S3253.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S3254.json">
+    <None Include="Expected\CSharp\S3254.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S3262.json">
+    <None Include="Expected\CSharp\S3262.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S3263.json">
+    <None Include="Expected\CSharp\S3263.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S818.json">
+    <None Include="Expected\CSharp\S818.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S907.json">
+    <None Include="Expected\CSharp\S907.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S927.json">
+    <None Include="Expected\CSharp\S927.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected\S2931.json">
+    <None Include="Expected\CSharp\S2931.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
@@ -479,6 +487,9 @@
   <ItemGroup>
     <Analyzer Include="..\..\..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
     <Analyzer Include="..\..\..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Expected\VisualBasic\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

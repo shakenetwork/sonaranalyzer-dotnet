@@ -23,8 +23,9 @@ using System.Collections.Immutable;
 using System.Linq;
 using System.Threading;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Diagnostics;
+using CS = Microsoft.CodeAnalysis.CSharp;
+using VB = Microsoft.CodeAnalysis.VisualBasic;
 
 namespace SonarLint.Runner
 {
@@ -44,7 +45,9 @@ namespace SonarLint.Runner
                 return new Diagnostic[0];
             }
 
-            var compilationOptions = new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary);
+            var compilationOptions = compilation.Language == LanguageNames.CSharp
+                ? (CompilationOptions)new CS.CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary)
+                : new VB.VisualBasicCompilationOptions(OutputKind.DynamicallyLinkedLibrary);
             compilationOptions = compilationOptions.WithSpecificDiagnosticOptions(
                 diagnosticAnalyzers.SelectMany(analyzer => analyzer.SupportedDiagnostics)
                     .Select(diagnostic =>

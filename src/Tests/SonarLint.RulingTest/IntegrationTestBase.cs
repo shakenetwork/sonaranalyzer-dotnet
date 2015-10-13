@@ -28,13 +28,14 @@ using System.Xml;
 using SonarLint.Common;
 using SonarLint.Rules;
 using SonarLint.Utilities;
+using Microsoft.CodeAnalysis;
 
 namespace SonarQube.CSharp.CodeAnalysis.RulingTest
 {
     public class IntegrationTestBase
     {
-        protected FileInfo[] CodeFiles;
-        protected IList<Type> AnalyzerTypes;
+        protected IEnumerable<FileInfo> CodeFiles;
+        protected RuleFinder RuleFinder;
         protected DirectoryInfo ItSourcesRootDirectory;
         protected string XmlInputPattern;
         protected DirectoryInfo ExpectedDirectory;
@@ -42,7 +43,10 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
 
         public const string TemplateRuleIdPattern = "{0}-1";
 
-        protected IntegrationTestBase() { }
+        protected IntegrationTestBase()
+        {
+            Setup();
+        }
 
         private static readonly XmlWriterSettings XmlWriterSettings = new XmlWriterSettings
         {
@@ -61,19 +65,28 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
             OmitXmlDeclaration = true
         };
 
-        public virtual void Setup()
+        private const string CSharpFileExtension = ".cs";
+        private const string VisualBasicFileExtension = ".vb";
+        private static readonly string[] SupportedExtensions = new[] { CSharpFileExtension, VisualBasicFileExtension };
+        public void Setup()
         {
             ItSourcesRootDirectory = GetItSourcesFolder();
             CodeFiles = ItSourcesRootDirectory
-                .GetFiles("*.cs", SearchOption.AllDirectories);
-            AnalyzerTypes = new RuleFinder().GetAllAnalyzerTypes().ToList();
+                .EnumerateFiles("*.*", SearchOption.AllDirectories)
+                .Where(file =>
+                SupportedExtensions.Contains(file.Extension, StringComparer.OrdinalIgnoreCase));
+            RuleFinder = new RuleFinder();
             XmlInputPattern = GenerateAnalysisInputFilePattern();
             ExpectedDirectory = new DirectoryInfo(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Expected"));
+            CreateOrClearMissingActualDirectory();
+        }
 
+        private void CreateOrClearMissingActualDirectory()
+        {
             AnalysisOutputDirectory = new DirectoryInfo(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Actual"));
             if (AnalysisOutputDirectory.Exists)
             {
-                foreach (FileInfo file in AnalysisOutputDirectory.GetFiles())
+                foreach (FileInfo file in AnalysisOutputDirectory.GetFiles("*", SearchOption.AllDirectories))
                 {
                     file.Delete();
                 }
@@ -115,16 +128,6 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
                 writer.WriteEndElement();
                 writer.WriteEndElement();
 
-                writer.WriteStartElement("Files");
-
-                foreach (var codeFile in CodeFiles)
-                {
-                    writer.WriteStartElement("File");
-                    writer.WriteString(codeFile.FullName);
-                    writer.WriteEndElement();
-                }
-
-                writer.WriteEndElement();
                 writer.WriteEndElement();
                 writer.WriteEndDocument();
 
@@ -213,37 +216,72 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
 
             return builder.ToString();
         }
+        private string GenerateFilesSegment(AnalyzerLanguage language)
+        {
+            var files = GetCodeFiles(language);
+            var builder = new StringBuilder();
+            using (var writer = XmlWriter.Create(builder, FragmentSettings))
+            {
+                foreach (var codeFile in files)
+                {
+                    writer.WriteStartElement("File");
+                    writer.WriteString(codeFile.FullName);
+                    writer.WriteEndElement();
+                }
+            }
 
-        private string GenerateAnalysisInputFile(string rulesContent)
+            return builder.ToString();
+        }
+
+        protected IEnumerable<FileInfo> GetCodeFiles(AnalyzerLanguage language)
+        {
+            var extension = language == AnalyzerLanguage.CSharp
+                ? CSharpFileExtension
+                : VisualBasicFileExtension;
+            return CodeFiles
+                .Where(file => file.Extension.ToLowerInvariant() == extension);
+        }
+
+        private string GenerateAnalysisInputFile(string rulesContent, string filesContent)
         {
             var xdoc = new XmlDocument();
             xdoc.LoadXml(XmlInputPattern);
 
+            var files = xdoc.CreateElement("Files");
+            files.InnerXml = filesContent;
+            xdoc.DocumentElement.AppendChild(files);
+
             var rules = xdoc.CreateElement("Rules");
             rules.InnerXml = rulesContent;
-
             xdoc.DocumentElement.AppendChild(rules);
             return xdoc.OuterXml;
         }
 
-        protected string GenerateAnalysisInputFile()
+        protected string GenerateAnalysisInputFile(AnalyzerLanguage language)
         {
-            var sb = new StringBuilder();
-            foreach (var analyzerType in AnalyzerTypes)
+            var analyzers = new StringBuilder();
+            foreach (var analyzerType in RuleFinder.GetAnalyzerTypes(language))
             {
-                sb.Append(GenerateAnalysisInputFileSegment(analyzerType));
+                analyzers.Append(GenerateAnalysisInputFileSegment(analyzerType));
+            }
+            return GenerateAnalysisInputFile(analyzers.ToString(), GenerateFilesSegment(language));
+        }
+
+        protected string GenerateEmptyAnalysisInputFile(AnalyzerLanguage language)
+        {
+            return GenerateAnalysisInputFile(string.Empty, GenerateFilesSegment(language));
+        }
+
+        protected string GenerateAnalysisInputFile(Type analyzerType, AnalyzerLanguage language)
+        {
+            if ((RuleFinder.GetTargetLanguages(analyzerType) & language) == AnalyzerLanguage.None)
+            {
+                throw new ArgumentException("Supplied analyzer doesn't support target language");
             }
 
-            return GenerateAnalysisInputFile(sb.ToString());
-        }
-        protected string GenerateEmptyAnalysisInputFile()
-        {
-            return GenerateAnalysisInputFile(string.Empty);
-        }
-
-        protected string GenerateAnalysisInputFile(Type analyzerType)
-        {
-            return GenerateAnalysisInputFile(GenerateAnalysisInputFileSegment(analyzerType));
+            return GenerateAnalysisInputFile(
+                GenerateAnalysisInputFileSegment(analyzerType),
+                GenerateFilesSegment(language));
         }
     }
 }

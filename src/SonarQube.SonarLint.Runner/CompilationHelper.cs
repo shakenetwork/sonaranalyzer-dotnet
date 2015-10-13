@@ -26,31 +26,31 @@ namespace SonarLint.Runner
 {
     public static class CompilationHelper
     {
-        public static Solution GetSolutionFromFiles(params string[] filePaths)
+        private static readonly MetadataReference SystemMetadataReference = MetadataReference.CreateFromFile(typeof(object).Assembly.Location);
+
+        public static Solution GetSolutionFromFiles(string filePath, string language)
         {
             using (var workspace = new AdhocWorkspace())
             {
-                var project = workspace.CurrentSolution.AddProject("foo", "foo.dll", LanguageNames.CSharp)
-                    .AddMetadataReference(MetadataReference.CreateFromFile(typeof (object).Assembly.Location));
+                var file = new FileInfo(filePath);
 
-                foreach (var filePath in filePaths)
-                {
-                    var file = new FileInfo(filePath);
-                    var document = project.AddDocument(file.Name, File.ReadAllText(file.FullName, Encoding.UTF8));
-                    project = document.Project;
-                }
+                var project = workspace.CurrentSolution.AddProject("foo", "foo.dll", language)
+                    .AddMetadataReference(SystemMetadataReference);
+
+                var document = project.AddDocument(file.Name, File.ReadAllText(file.FullName, Encoding.UTF8));
+                project = document.Project;
 
                 return project.Solution;
             }
         }
 
-        public static Solution GetSolutionFromText(string text)
+        public static Solution GetSolutionWithEmptyFile()
         {
             using (var workspace = new AdhocWorkspace())
             {
                 return workspace.CurrentSolution.AddProject("foo", "foo.dll", LanguageNames.CSharp)
-                    .AddMetadataReference(MetadataReference.CreateFromFile(typeof (object).Assembly.Location))
-                    .AddDocument("foo.cs", text)
+                    .AddMetadataReference(SystemMetadataReference)
+                    .AddDocument("foo.cs", string.Empty)
                     .Project
                     .Solution;
             }

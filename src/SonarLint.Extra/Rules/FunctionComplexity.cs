@@ -23,6 +23,7 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
+using SonarLint.Common.CSharp;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
 
@@ -56,7 +57,7 @@ namespace SonarLint.Rules
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
-                    var complexity = Metrics.Complexity(c.Node);
+                    var complexity = new Metrics(c.Node.SyntaxTree).GetComplexity(c.Node);
                     if (complexity > Maximum)
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, c.Node.GetLocation(), Maximum, complexity));

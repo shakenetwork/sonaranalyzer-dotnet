@@ -19,29 +19,20 @@
  */
 
 using System.Collections.Immutable;
-using System.Linq;
-using FluentAssertions;
-using Microsoft.CodeAnalysis.Diagnostics;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarLint.Runner;
 
-namespace SonarLint.UnitTest
+namespace SonarLint.Common
 {
-    [TestClass]
-    public class DiagnosticRunnerTest
+    public class FileComments
     {
-        [TestMethod]
-        public void DiagnosticRunnerTest_NoAnalyzer()
+        private readonly IImmutableSet<int> noSonar;
+        private readonly IImmutableSet<int> nonBlank;
+
+        public FileComments(IImmutableSet<int> noSonar, IImmutableSet<int> nonBlank)
         {
-            var runner = new DiagnosticsRunner(ImmutableArray.Create<DiagnosticAnalyzer>());
-
-            var solution = CompilationHelper.GetSolutionWithEmptyFile();
-
-            var compilation = solution.Projects.First().GetCompilationAsync().Result;
-
-            var diagnosticsResult = runner.GetDiagnostics(compilation);
-
-            diagnosticsResult.Should().HaveCount(0);
+            this.noSonar = noSonar;
+            this.nonBlank = nonBlank;
         }
+        public IImmutableSet<int> NoSonar { get { return noSonar; } }
+        public IImmutableSet<int> NonBlank { get { return nonBlank; } }
     }
 }

@@ -48,6 +48,13 @@ namespace SonarLint.UnitTest.Common
         }
 
         [TestMethod]
+        public void GetAnalyzerTypes()
+        {
+            var analyzers = new RuleFinder().GetAnalyzerTypes(SonarLint.Common.AnalyzerLanguage.CSharp);
+            analyzers.Should().Contain(typeof(EmptyStatement));
+        }
+
+        [TestMethod]
         public void GetAllAnalyzerTypes()
         {
             var finder = new RuleFinder();

@@ -1,4 +1,4 @@
-﻿/*
+/*
  * SonarLint for Visual Studio
  * Copyright (C) 2015 SonarSource
  * sonarqube@googlegroups.com
@@ -18,30 +18,15 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
-using System.Linq;
-using FluentAssertions;
-using Microsoft.CodeAnalysis.Diagnostics;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarLint.Runner;
+using System;
 
-namespace SonarLint.UnitTest
+namespace SonarLint.Common
 {
-    [TestClass]
-    public class DiagnosticRunnerTest
+    [Flags]
+    public enum AnalyzerLanguage
     {
-        [TestMethod]
-        public void DiagnosticRunnerTest_NoAnalyzer()
-        {
-            var runner = new DiagnosticsRunner(ImmutableArray.Create<DiagnosticAnalyzer>());
-
-            var solution = CompilationHelper.GetSolutionWithEmptyFile();
-
-            var compilation = solution.Projects.First().GetCompilationAsync().Result;
-
-            var diagnosticsResult = runner.GetDiagnostics(compilation);
-
-            diagnosticsResult.Should().HaveCount(0);
-        }
+        None = 0,
+        CSharp = 1,
+        VisualBasic = 2
     }
 }

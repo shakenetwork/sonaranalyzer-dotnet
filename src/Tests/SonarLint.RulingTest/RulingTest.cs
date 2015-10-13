@@ -33,43 +33,75 @@ using SonarLint.Common;
 using SonarQube.CSharp.CodeAnalysis.RulingTest.ErrorModels.Omstar;
 using SonarLint.Runner;
 using SonarLint.Utilities;
+using Microsoft.CodeAnalysis;
 
 namespace SonarQube.CSharp.CodeAnalysis.RulingTest
 {
     [TestClass]
     public class RulingTest : IntegrationTestBase
     {
-        [TestInitialize]
-        public override void Setup()
-        {
-            base.Setup();
-        }
-
         [TestMethod]
         [TestCategory("Integration")]
         public void All_Rules_Have_Integration_Test()
         {
-            Assert.AreEqual(AnalyzerTypes.Count, ExpectedDirectory.GetFiles("S*.json").Count());
+            CheckIntegrationTestCount(AnalyzerLanguage.CSharp);
+            CheckIntegrationTestCount(AnalyzerLanguage.VisualBasic);
+        }
+
+        private void CheckIntegrationTestCount(AnalyzerLanguage language)
+        {
+            ValidateLanguageInput(language);
+            CreateMissingExpectedDirectory(language);
+
+            Assert.AreEqual(
+                RuleFinder.GetAnalyzerTypes(language).Count(),
+                ExpectedDirectory
+                    .GetDirectories(language.ToString()).First()
+                    .GetFiles("S*.json").Count());
         }
 
         [TestMethod]
         [TestCategory("Integration")]
         public void ITSources_Expected_Number_Of_Files()
         {
-            Assert.AreEqual(6567, CodeFiles.Length);
+            CheckFileCount(AnalyzerLanguage.CSharp, 6567);
+            CheckFileCount(AnalyzerLanguage.VisualBasic, 0);
+        }
+
+        private void CheckFileCount(AnalyzerLanguage language, int expectedCount)
+        {
+            ValidateLanguageInput(language);
+
+            var CSCodeFiles = GetCodeFiles(language);
+            Assert.AreEqual(expectedCount, CSCodeFiles.Count());
         }
 
         [TestMethod]
         [TestCategory("Integration")]
-        public void ItSources_Match_Expected_All()
+        public void ItSources_Match_Expected_All_CSharp()
         {
+            RunItSourcesTest(AnalyzerLanguage.CSharp);
+        }
+
+        [TestMethod]
+        [TestCategory("Integration")]
+        public void ItSources_Match_Expected_All_VisualBasic()
+        {
+            RunItSourcesTest(AnalyzerLanguage.VisualBasic);
+        }
+        private void RunItSourcesTest(AnalyzerLanguage language)
+        {
+            ValidateLanguageInput(language);
+            CreateMissingExpectedDirectory(language);
+            CreateMissingActualDirectory(language);
+
             var tempInputFilePath = Path.GetTempFileName();
             try
             {
-                File.AppendAllText(tempInputFilePath, GenerateAnalysisInputFile());
-                var outputPath = Path.Combine(AnalysisOutputDirectory.FullName, "all.xml");
+                File.AppendAllText(tempInputFilePath, GenerateAnalysisInputFile(language));
+                var outputPath = Path.Combine(AnalysisOutputDirectory.FullName, language.ToString(), "all.xml");
 
-                CallMainAndCheckResult(tempInputFilePath, outputPath);
+                CallMainAndCheckResult(tempInputFilePath, outputPath, language);
             }
             finally
             {
@@ -77,7 +109,37 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
             }
         }
 
-        private void CallMainAndCheckResult(string tempInputFilePath, string outputPath)
+        private static void ValidateLanguageInput(AnalyzerLanguage language)
+        {
+            if (language != AnalyzerLanguage.CSharp &&
+                language != AnalyzerLanguage.VisualBasic)
+            {
+                throw new System.ArgumentException("language");
+            }
+        }
+
+        private void CreateMissingExpectedDirectory(AnalyzerLanguage language)
+        {
+            if (!ExpectedDirectory.GetDirectories(language.ToString()).Any())
+            {
+                Directory.CreateDirectory(Path.Combine(
+                    ExpectedDirectory.FullName,
+                    language.ToString()));
+            }
+        }
+
+        private void CreateMissingActualDirectory(AnalyzerLanguage language)
+        {
+            if (!AnalysisOutputDirectory.GetDirectories(language.ToString()).Any())
+            {
+                Directory.CreateDirectory(Path.Combine(
+                    AnalysisOutputDirectory.FullName,
+                    language.ToString()));
+            }
+        }
+
+        private void CallMainAndCheckResult(string tempInputFilePath, string outputPath,
+            AnalyzerLanguage language)
         {
             var retValue = Program.Main(new[]
             {
@@ -94,21 +156,21 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
 
             var output = ParseAnalysisXmlOutput(outputPath);
             var omstar = GenerateOmstarOutput(output);
-            AddMissingEntries(omstar);
-            SplitAndStoreOmstarByIssueType(omstar);
+            AddMissingEntries(omstar, language);
+            SplitAndStoreOmstarByIssueType(omstar, language);
             List<string> problematicRules;
-            if (!FilesAreEquivalent(out problematicRules))
+            if (!FilesAreEquivalent(language, out problematicRules))
             {
                 Assert.Fail("Expected and actual files are different, there are differences for rules: {0}",
                     string.Join(", ", problematicRules));
             }
         }
 
-        private void AddMissingEntries(AnalysisOutput output)
+        private void AddMissingEntries(AnalysisOutput output, AnalyzerLanguage language)
         {
             var foundKeys = output.Issues.Select(i => i.RuleId).ToList();
 
-            var notFoundKeys = AnalyzerTypes
+            var notFoundKeys = RuleFinder.GetAnalyzerTypes(language)
                 .Select(t =>
                     new
                     {
@@ -130,12 +192,16 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
             }
         }
 
-        private bool FilesAreEquivalent(out List<string> problematicRules)
+        private bool FilesAreEquivalent(AnalyzerLanguage language, out List<string> problematicRules)
         {
             problematicRules = new List<string>();
 
-            var expectedFiles = ExpectedDirectory.GetFiles("S*.json");
-            var actualFiles = AnalysisOutputDirectory.GetFiles("S*.json");
+            var expectedFiles = ExpectedDirectory
+                .GetDirectories(language.ToString()).First()
+                .GetFiles("S*.json");
+            var actualFiles = AnalysisOutputDirectory
+                .GetDirectories(language.ToString()).First()
+                .GetFiles("S*.json");
 
             var problematicFileNames =
                     expectedFiles.Select(file => file.Name)
@@ -162,7 +228,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
             return !problematicRules.Any();
         }
 
-        private void SplitAndStoreOmstarByIssueType(AnalysisOutput omstar)
+        private void SplitAndStoreOmstarByIssueType(AnalysisOutput omstar, AnalyzerLanguage language)
         {
             foreach (var issueGroup in omstar.Issues.GroupBy(issue => issue.RuleId))
             {
@@ -201,7 +267,9 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
                     });
 
                 File.WriteAllText(Path.Combine(
-                    AnalysisOutputDirectory.FullName, string.Format("{0}.json", issueGroup.Key)), content);
+                    AnalysisOutputDirectory.FullName,
+                    language.ToString(),
+                    string.Format("{0}.json", issueGroup.Key)), content);
             }
         }
 
