@@ -140,6 +140,7 @@
     <Compile Include="Rules\StringConcatenationWithPlusTest.cs" />
     <Compile Include="Rules\NegatedIsExpressionTest.cs" />
     <Compile Include="Rules\UnsignedTypesUsageTest.cs" />
+    <Compile Include="Rules\ArrayDesignatorOnVariableTest.cs" />
     <Compile Include="Rules\MethodOverrideNoParamsTest.cs" />
     <Compile Include="Rules\RedundantInheritanceListTest.cs" />
     <Compile Include="Rules\LiteralSuffixUpperCaseTest.cs" />
@@ -580,6 +581,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Content Include="TestCases\UnsignedTypesUsage.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestCases\ArrayDesignatorOnVariable.Fixed.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestCases\ArrayDesignatorOnVariable.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Compile Include="Verifier.cs" />
