@@ -15,7 +15,7 @@
 	* [Akka.NET](akka.net-dev_8b00423b29/src/Akka.sln)
 	* [Nancy](Nancy-master_6775d18fc5/src/Nancy.sln)
 
-	These solutions have been pre-configured to use the [Validation Ruleset](ValidationRuleset.ruleset) on all their projects. The ruleset file can be found in the \_ruleset solution folder.
+	These solutions have been pre-configured to use the [Validation Ruleset](https://github.com/SonarSource/sonarlint-vs-test-sources/blob/master/ValidationRuleset.ruleset) on all their projects. The ruleset file can be found in the \_ruleset solution folder.
 	
 
 5. Turn on your new rule in that ruleset, review the results, improve, and send the pull request out once your are satisfied!

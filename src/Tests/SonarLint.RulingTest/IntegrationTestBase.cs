@@ -101,7 +101,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
         private static DirectoryInfo GetItSourcesFolder()
         {
             const string navigationToRoot = "../../../../../";
-            const string navigationToItSources = "its";
+            const string navigationToItSources = "its/src";
 
             var testAssembly = new FileInfo(typeof(IntegrationTestBase).Assembly.Location);
             var solutionDirectory = new DirectoryInfo(Path.Combine(testAssembly.DirectoryName, navigationToRoot));
