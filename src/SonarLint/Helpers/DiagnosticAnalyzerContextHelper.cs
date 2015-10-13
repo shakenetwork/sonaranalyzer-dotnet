@@ -19,14 +19,15 @@
  */
 
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using System;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using CS = Microsoft.CodeAnalysis.CSharp;
+using VB = Microsoft.CodeAnalysis.VisualBasic;
 
 namespace SonarLint.Helpers
 {
@@ -182,11 +183,7 @@ namespace SonarLint.Helpers
                 return false;
             }
 
-            var firstToken = root.GetFirstToken();
-            if (firstToken == default(SyntaxToken))
-            {
-                firstToken = ((CompilationUnitSyntax)root).EndOfFileToken;
-            }
+            var firstToken = root.GetFirstToken(true);
 
             if (!firstToken.HasLeadingTrivia)
             {
@@ -195,10 +192,7 @@ namespace SonarLint.Helpers
 
             var trivia = firstToken.LeadingTrivia;
 
-            var comments = trivia.Where(t =>
-                t.IsKind(SyntaxKind.SingleLineCommentTrivia) ||
-                t.IsKind(SyntaxKind.MultiLineCommentTrivia));
-
+            var comments = trivia.Where(t => CommentKinds[t.Language].Contains(t.RawKind));
             return comments.Any(t =>
             {
                 var commentText = t.ToString().ToLowerInvariant();
@@ -206,12 +200,45 @@ namespace SonarLint.Helpers
             });
         }
 
+        private static SyntaxToken GetEndOfFileToken(SyntaxNode root)
+        {
+            var csRoot = root as CS.Syntax.CompilationUnitSyntax;
+            if (csRoot != null)
+            {
+                return csRoot.EndOfFileToken;
+            }
+
+            var vbRoot = root as VB.Syntax.CompilationUnitSyntax;
+            if (vbRoot != null)
+            {
+                return vbRoot.EndOfFileToken;
+            }
+
+            return default(SyntaxToken);
+        }
+
         private static bool HasGeneratedCodeAttribute(this SyntaxTree tree)
         {
             var attributeNames = tree.GetRoot()
                 .DescendantNodesAndSelf()
-                .OfType<AttributeSyntax>()
-                .Select(attribute => attribute.Name.ToString());
+                .Select(
+                    node =>
+                    {
+                        var csAttribute = node as CS.Syntax.AttributeSyntax;
+                        if (csAttribute != null)
+                        {
+                            return csAttribute.Name.ToString();
+                        }
+
+                        var vbAttribute = node as VB.Syntax.AttributeSyntax;
+                        if (vbAttribute != null)
+                        {
+                            return vbAttribute.Name.ToString();
+                        }
+
+                        return null;
+                    })
+                .Where(name => name != null);
 
             return attributeNames.Any(attributeName =>
                 GeneratedCodeAttributes.Any(generatedCodeAttribute =>
@@ -219,5 +246,25 @@ namespace SonarLint.Helpers
         }
 
         #endregion
+
+        private static readonly IDictionary<string, IEnumerable<int>> CommentKinds =
+            new Dictionary<string, IEnumerable<int>>
+            {
+                {
+                    LanguageNames.CSharp,
+                    new int[]
+                    {
+                        (int)CS.SyntaxKind.SingleLineCommentTrivia,
+                        (int)CS.SyntaxKind.MultiLineCommentTrivia
+                    }
+                },
+                {
+                    LanguageNames.VisualBasic,
+                    new int[]
+                    {
+                        (int)VB.SyntaxKind.CommentTrivia
+                    }
+                }
+            };
     }
 }
