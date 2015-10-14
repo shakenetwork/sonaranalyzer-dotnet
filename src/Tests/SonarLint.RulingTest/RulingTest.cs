@@ -56,7 +56,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
             Assert.AreEqual(
                 RuleFinder.GetAnalyzerTypes(language).Count(),
                 ExpectedDirectory
-                    .GetDirectories(language.ToString()).First()
+                    .GetDirectories(language.GetDirectoryName()).First()
                     .GetFiles("S*.json").Count());
         }
 
@@ -99,7 +99,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
             try
             {
                 File.AppendAllText(tempInputFilePath, GenerateAnalysisInputFile(language));
-                var outputPath = Path.Combine(AnalysisOutputDirectory.FullName, language.ToString(), "all.xml");
+                var outputPath = Path.Combine(AnalysisOutputDirectory.FullName, language.GetDirectoryName(), "all.xml");
 
                 CallMainAndCheckResult(tempInputFilePath, outputPath, language);
             }
@@ -114,27 +114,27 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
             if (language != AnalyzerLanguage.CSharp &&
                 language != AnalyzerLanguage.VisualBasic)
             {
-                throw new System.ArgumentException("Supplied language is not C# neither VB.Net", nameof(language));
+                throw new System.ArgumentException("Supplied language is neither C# nor VB.Net", nameof(language));
             }
         }
 
         private void CreateMissingExpectedDirectory(AnalyzerLanguage language)
         {
-            if (!ExpectedDirectory.GetDirectories(language.ToString()).Any())
+            if (!ExpectedDirectory.GetDirectories(language.GetDirectoryName()).Any())
             {
                 Directory.CreateDirectory(Path.Combine(
                     ExpectedDirectory.FullName,
-                    language.ToString()));
+                    language.GetDirectoryName()));
             }
         }
 
         private void CreateMissingActualDirectory(AnalyzerLanguage language)
         {
-            if (!AnalysisOutputDirectory.GetDirectories(language.ToString()).Any())
+            if (!AnalysisOutputDirectory.GetDirectories(language.GetDirectoryName()).Any())
             {
                 Directory.CreateDirectory(Path.Combine(
                     AnalysisOutputDirectory.FullName,
-                    language.ToString()));
+                    language.GetDirectoryName()));
             }
         }
 
@@ -144,7 +144,8 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
             var retValue = Program.Main(new[]
             {
                 tempInputFilePath,
-                outputPath
+                outputPath,
+                language.ToString()
             });
 
             if (retValue != 0)
@@ -197,10 +198,10 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
             problematicRules = new List<string>();
 
             var expectedFiles = ExpectedDirectory
-                .GetDirectories(language.ToString()).First()
+                .GetDirectories(language.GetDirectoryName()).First()
                 .GetFiles("S*.json");
             var actualFiles = AnalysisOutputDirectory
-                .GetDirectories(language.ToString()).First()
+                .GetDirectories(language.GetDirectoryName()).First()
                 .GetFiles("S*.json");
 
             var problematicFileNames =
@@ -268,7 +269,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
 
                 File.WriteAllText(Path.Combine(
                     AnalysisOutputDirectory.FullName,
-                    language.ToString(),
+                    language.GetDirectoryName(),
                     string.Format("{0}.json", issueGroup.Key)), content);
             }
         }

@@ -23,6 +23,7 @@ using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarLint.Rules;
 using SonarLint.Utilities;
+using SonarLint.Common;
 
 namespace SonarLint.UnitTest.Common
 {
@@ -44,13 +45,14 @@ namespace SonarLint.UnitTest.Common
         [TestMethod]
         public void GetParameterlessAnalyzerTypes()
         {
-            new RuleFinder().GetParameterlessAnalyzerTypes().Count().Should().BeGreaterThan(0);
+            new RuleFinder().GetParameterlessAnalyzerTypes(AnalyzerLanguage.CSharp).Count().Should().BeGreaterThan(0);
+            new RuleFinder().GetParameterlessAnalyzerTypes(AnalyzerLanguage.VisualBasic).Count().Should().BeGreaterThan(0);
         }
 
         [TestMethod]
         public void GetAnalyzerTypes()
         {
-            var analyzers = new RuleFinder().GetAnalyzerTypes(SonarLint.Common.AnalyzerLanguage.CSharp);
+            var analyzers = new RuleFinder().GetAnalyzerTypes(AnalyzerLanguage.CSharp);
             analyzers.Should().Contain(typeof(EmptyStatement));
         }
 
@@ -58,8 +60,14 @@ namespace SonarLint.UnitTest.Common
         public void GetAllAnalyzerTypes()
         {
             var finder = new RuleFinder();
-            var countParameterless = finder.GetParameterlessAnalyzerTypes().Count();
-            finder.GetAllAnalyzerTypes().Count().Should().BeGreaterThan(countParameterless);
+            {
+                var countParameterless = finder.GetParameterlessAnalyzerTypes(AnalyzerLanguage.CSharp).Count();
+                finder.GetAllAnalyzerTypes().Count().Should().BeGreaterThan(countParameterless);
+            }
+            {
+                var countParameterless = finder.GetParameterlessAnalyzerTypes(AnalyzerLanguage.VisualBasic).Count();
+                finder.GetAllAnalyzerTypes().Count().Should().BeGreaterThan(countParameterless);
+            }
         }
 
         [TestMethod]

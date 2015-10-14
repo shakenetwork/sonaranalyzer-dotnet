@@ -19,7 +19,8 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarLint.Rules;
+using CS = SonarLint.Rules.CSharp;
+using VB = SonarLint.Rules.VisualBasic;
 
 namespace SonarLint.UnitTest.Rules
 {
@@ -30,7 +31,8 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void SwitchWithoutDefault()
         {
-            Verifier.VerifyAnalyzer(@"TestCases\SwitchWithoutDefault.cs", new SwitchWithoutDefault());
+            Verifier.VerifyAnalyzer(@"TestCases\SwitchWithoutDefault.cs", new CS.SwitchWithoutDefault());
+            Verifier.VerifyAnalyzer(@"TestCases\SwitchWithoutDefault.vb", new VB.SwitchWithoutDefault());
         }
     }
 }

@@ -27,21 +27,24 @@ using System.Xml.Linq;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Rules;
 using SonarLint.Utilities;
+using SonarLint.Common;
 
 namespace SonarLint.Runner
 {
     public class Configuration
     {
-        private static readonly ImmutableArray<DiagnosticAnalyzer> ParameterLessAnalyzers =
-            ImmutableArray.Create(GetParameterlessAnalyzers().ToArray());
-
+        private readonly ImmutableArray<DiagnosticAnalyzer> ParameterLessAnalyzers;
+        private readonly AnalyzerLanguage language;
         public bool IgnoreHeaderComments { private set; get; }
         public IImmutableList<string> Files { private set; get; }
         public IImmutableSet<string> AnalyzerIds { private set; get; }
         public IImmutableDictionary<string, List<IImmutableDictionary<string, string>>> Parameters { private set; get; }
 
-        public Configuration(XContainer xml)
+        public Configuration(XContainer xml, AnalyzerLanguage language)
         {
+            this.language = language;
+            ParameterLessAnalyzers = ImmutableArray.Create(GetParameterlessAnalyzers(language).ToArray());
+
             var settings = xml
                 .Descendants("Setting")
                 .Select(e =>
@@ -97,16 +100,19 @@ namespace SonarLint.Runner
                 builder.Add(parameterLessAnalyzer);
             }
 
-            AddAnalyzerFileLines(builder);
-            AddAnalyzerLineLength(builder);
-            AddAnalyzerTooManyLabelsInSwitch(builder);
-            AddAnalyzerTooManyParameters(builder);
-            AddAnalyzerExpressionCOmplexity(builder);
-            AddAnalyzerFunctionalComplexity(builder);
-            AddAnalyzerClassName(builder);
-            AddAnalyzerMethodName(builder);
-            AddAnalyzerMagicNumber(builder);
-            AddAnalyzerCommentRegularExpression(builder);
+            if (language == AnalyzerLanguage.CSharp)
+            {
+                AddAnalyzerFileLines(builder);
+                AddAnalyzerLineLength(builder);
+                AddAnalyzerTooManyLabelsInSwitch(builder);
+                AddAnalyzerTooManyParameters(builder);
+                AddAnalyzerExpressionCOmplexity(builder);
+                AddAnalyzerFunctionalComplexity(builder);
+                AddAnalyzerClassName(builder);
+                AddAnalyzerMethodName(builder);
+                AddAnalyzerMagicNumber(builder);
+                AddAnalyzerCommentRegularExpression(builder);
+            }
 
             return builder.ToImmutable();
         }
@@ -253,10 +259,10 @@ namespace SonarLint.Runner
 
         #region Discover analyzers without parameters
 
-        public static IEnumerable<DiagnosticAnalyzer> GetParameterlessAnalyzers()
+        public static IEnumerable<DiagnosticAnalyzer> GetParameterlessAnalyzers(AnalyzerLanguage language)
         {
             return
-                new RuleFinder().GetParameterlessAnalyzerTypes()
+                new RuleFinder().GetParameterlessAnalyzerTypes(language)
                     .Select(type => (DiagnosticAnalyzer) Activator.CreateInstance(type));
         }
 

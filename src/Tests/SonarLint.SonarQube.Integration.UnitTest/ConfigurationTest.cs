@@ -34,7 +34,7 @@ namespace SonarLint.UnitTest
         [TestMethod]
         public void Configuration()
         {
-            var conf = new Configuration(XDocument.Load("TestResources\\ConfigurationTest.xml"));
+            var conf = new Configuration(XDocument.Load("TestResources\\ConfigurationTest.xml"), Common.AnalyzerLanguage.CSharp);
             conf.IgnoreHeaderComments.Should().BeTrue();
             conf.Files.Should().BeEquivalentTo("TestResources\\TestInput.cs");
 

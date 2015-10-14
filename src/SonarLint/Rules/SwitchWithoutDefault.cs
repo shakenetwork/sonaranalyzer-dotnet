@@ -21,59 +21,75 @@
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
-using SonarLint.Helpers;
+using SonarLint.Rules.Common;
 
-namespace SonarLint.Rules
+namespace SonarLint.Rules.CSharp
 {
+    using Microsoft.CodeAnalysis.CSharp;
+    using Microsoft.CodeAnalysis.CSharp.Syntax;
+
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("5min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.ArchitectureChangeability)]
     [Tags(Tag.Cert, Tag.Cwe, Tag.Misra)]
-    public class SwitchWithoutDefault : DiagnosticAnalyzer
+    public class SwitchWithoutDefault : SwitchWithoutDefaultBase<SyntaxKind>
     {
-        internal const string DiagnosticId = "S131";
-        internal const string Title = "\"switch\" statements should end with a \"default\" clause";
-        internal const string Description =
-            "The requirement for a final \"default\" clause is defensive programming. The clause should either " +
-            "take appropriate action, or contain a suitable comment as to why no action is taken. Even when the " +
-            "\"switch\" covers all current values of an \"enum\", a \"default\" case should still be used because " +
-            "there is no guarantee that the \"enum\" won't be extended.";
-        internal const string MessageFormat = "Add a \"default\" clause to this switch statement.";
-        internal const string Category = "SonarLint";
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
+        private static readonly ImmutableArray<SyntaxKind> kindsOfInterest = ImmutableArray.Create(SyntaxKind.SwitchStatement);
+        public override ImmutableArray<SyntaxKind> SyntaxKindsOfInterest => kindsOfInterest;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
-
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
-
-        public override void Initialize(AnalysisContext context)
+        protected override bool TryGetDiagnostic(SyntaxNode node, out Diagnostic diagnostic)
         {
-            context.RegisterSyntaxNodeActionInNonGenerated(
-                c =>
-                {
-                    var switchNode = (SwitchStatementSyntax)c.Node;
-                    if (!HasDefaultLabel(switchNode))
-                    {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, switchNode.SwitchKeyword.GetLocation()));
-                    }
-                },
-                SyntaxKind.SwitchStatement);
-        }
+            diagnostic = null;
+            var switchNode = (SwitchStatementSyntax)node;
+            if(!HasDefaultLabel(switchNode))
+            {
+                diagnostic = Diagnostic.Create(Rule, switchNode.SwitchKeyword.GetLocation(), "default", "switch");
+                return true;
+            }
 
+            return false;
+        }
         private static bool HasDefaultLabel(SwitchStatementSyntax node)
         {
             return node.Sections.Any(section => section.Labels.Any(labels => labels.IsKind(SyntaxKind.DefaultSwitchLabel)));
+        }
+    }
+}
+
+namespace SonarLint.Rules.VisualBasic
+{
+    using Microsoft.CodeAnalysis.VisualBasic;
+    using Microsoft.CodeAnalysis.VisualBasic.Syntax;
+
+    [DiagnosticAnalyzer(LanguageNames.VisualBasic)]
+    [SqaleConstantRemediation("5min")]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
+    [SqaleSubCharacteristic(SqaleSubCharacteristic.ArchitectureChangeability)]
+    [Tags(Tag.Cert, Tag.Cwe, Tag.Misra)]
+    public class SwitchWithoutDefault : SwitchWithoutDefaultBase<SyntaxKind>
+    {
+        private static readonly ImmutableArray<SyntaxKind> kindsOfInterest = ImmutableArray.Create(SyntaxKind.SelectBlock);
+        public override ImmutableArray<SyntaxKind> SyntaxKindsOfInterest => kindsOfInterest;
+
+        protected override bool TryGetDiagnostic(SyntaxNode node, out Diagnostic diagnostic)
+        {
+            diagnostic = null;
+            var switchNode = (SelectBlockSyntax)node;
+            if (!HasDefaultLabel(switchNode))
+            {
+                diagnostic = Diagnostic.Create(Rule, switchNode.SelectStatement.SelectKeyword.GetLocation(), "Case Else", "Select");
+                return true;
+            }
+
+            return false;
+        }
+        private static bool HasDefaultLabel(SelectBlockSyntax node)
+        {
+            return node.CaseBlocks.Any(section => section.IsKind(SyntaxKind.CaseElseBlock));
         }
     }
 }

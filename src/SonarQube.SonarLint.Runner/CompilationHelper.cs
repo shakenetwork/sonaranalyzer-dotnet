@@ -21,6 +21,7 @@
 using System.IO;
 using System.Text;
 using Microsoft.CodeAnalysis;
+using SonarLint.Common;
 
 namespace SonarLint.Runner
 {
@@ -28,13 +29,13 @@ namespace SonarLint.Runner
     {
         private static readonly MetadataReference SystemMetadataReference = MetadataReference.CreateFromFile(typeof(object).Assembly.Location);
 
-        public static Solution GetSolutionFromFiles(string filePath, string language)
+        public static Solution GetSolutionFromFiles(string filePath, AnalyzerLanguage language)
         {
             using (var workspace = new AdhocWorkspace())
             {
                 var file = new FileInfo(filePath);
-
-                var project = workspace.CurrentSolution.AddProject("foo", "foo.dll", language)
+                var lang = language == AnalyzerLanguage.CSharp ? LanguageNames.CSharp : LanguageNames.VisualBasic;
+                var project = workspace.CurrentSolution.AddProject("foo", "foo.dll", lang)
                     .AddMetadataReference(SystemMetadataReference);
 
                 var document = project.AddDocument(file.Name, File.ReadAllText(file.FullName, Encoding.UTF8));

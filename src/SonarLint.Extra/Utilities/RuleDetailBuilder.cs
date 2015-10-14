@@ -35,16 +35,16 @@ namespace SonarLint.Utilities
         private const string RuleDescriptionPathPattern = "SonarLint.Rules.Description.{0}.html";
         public const string CodeFixProviderSuffix = "CodeFixProvider";
 
-        public static IEnumerable<RuleDetail> GetAllRuleDetails()
+        public static IEnumerable<RuleDetail> GetAllRuleDetails(AnalyzerLanguage language)
         {
-            return new RuleFinder().GetAllAnalyzerTypes().Select(GetRuleDetail);
+            return new RuleFinder().GetAnalyzerTypes(language).Select(t => GetRuleDetail(t, language));
         }
-        public static IEnumerable<RuleDetail> GetParameterlessRuleDetails()
+        public static IEnumerable<RuleDetail> GetParameterlessRuleDetails(AnalyzerLanguage language)
         {
-            return new RuleFinder().GetParameterlessAnalyzerTypes().Select(GetRuleDetail);
+            return new RuleFinder().GetParameterlessAnalyzerTypes(language).Select(t => GetRuleDetail(t, language));
         }
 
-        private static RuleDetail GetRuleDetail(Type analyzerType)
+        private static RuleDetail GetRuleDetail(Type analyzerType, AnalyzerLanguage language)
         {
             var rule = analyzerType.GetCustomAttributes<RuleAttribute>().Single();
 
@@ -55,7 +55,7 @@ namespace SonarLint.Utilities
                 Severity = rule.Severity.ToString(),
                 IdeSeverity = (int)rule.Severity.ToDiagnosticSeverity(),
                 IsActivatedByDefault = rule.IsActivatedByDefault,
-                Description = GetResourceHtml(analyzerType, rule),
+                Description = GetResourceHtml(analyzerType, rule, language),
                 IsTemplate = RuleFinder.IsRuleTemplate(analyzerType)
             };
 
@@ -176,13 +176,10 @@ namespace SonarLint.Utilities
             }
         }
 
-        private static string GetResourceHtml(Type analyzerType, RuleAttribute rule)
+        private static string GetResourceHtml(Type analyzerType, RuleAttribute rule, AnalyzerLanguage language)
         {
             var resources = analyzerType.Assembly.GetManifestResourceNames();
-            var resource = resources.SingleOrDefault(r => r.EndsWith(
-                string.Format(CultureInfo.InvariantCulture, RuleDescriptionPathPattern, rule.Key),
-                StringComparison.OrdinalIgnoreCase));
-
+            var resource = GetResource(resources, rule.Key, language);
             if (resource == null)
             {
                 throw new InvalidDataException(string.Format("Could not locate resource for rule {0}", rule.Key));
@@ -193,6 +190,24 @@ namespace SonarLint.Utilities
             {
                 return reader.ReadToEnd();
             }
+        }
+
+        private static string GetResource(IEnumerable<string> resources, string key, AnalyzerLanguage language)
+        {
+            if (language == AnalyzerLanguage.CSharp)
+            {
+                return resources.FirstOrDefault(r =>
+                    r.EndsWith(string.Format(CultureInfo.InvariantCulture, RuleDescriptionPathPattern, key), StringComparison.OrdinalIgnoreCase) ||
+                    r.EndsWith(string.Format(CultureInfo.InvariantCulture, RuleDescriptionPathPattern, key + "_cs"), StringComparison.OrdinalIgnoreCase));
+            }
+            if (language == AnalyzerLanguage.VisualBasic)
+            {
+                return resources.FirstOrDefault(r =>
+                    r.EndsWith(string.Format(CultureInfo.InvariantCulture, RuleDescriptionPathPattern, key), StringComparison.OrdinalIgnoreCase) ||
+                    r.EndsWith(string.Format(CultureInfo.InvariantCulture, RuleDescriptionPathPattern, key + "_vb"), StringComparison.OrdinalIgnoreCase));
+            }
+
+            throw new ArgumentException(nameof(language));
         }
     }
 }

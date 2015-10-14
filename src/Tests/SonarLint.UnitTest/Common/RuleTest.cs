@@ -64,6 +64,26 @@ namespace SonarLint.UnitTest.Common
         }
 
         [TestMethod]
+        public void AbstractDiagnosticAnalyzer_Should_Have_No_RuleAttribute()
+        {
+            var analyzers = new[] { RuleFinder.GetPackagedRuleAssembly(), RuleFinder.GetExtraRuleAssembly() }
+                .SelectMany(a => a.GetTypes())
+                .Where(t =>
+                    t.IsSubclassOf(typeof(DiagnosticAnalyzer)) &&
+                    t.IsAbstract)
+                .ToList();
+
+            foreach (var analyzer in analyzers)
+            {
+                var ruleDescriptor = analyzer.GetCustomAttributes<RuleAttribute>().SingleOrDefault();
+                if (ruleDescriptor != null)
+                {
+                    Assert.Fail("RuleAttribute is added to abstract DiagnosticAnalyzer '{0}'", analyzer.Name);
+                }
+            }
+        }
+
+        [TestMethod]
         public void VisualStudio_NoRuleTemplates()
         {
             var analyzers = GetDiagnosticAnalyzerTypes(new[] { RuleFinder.GetPackagedRuleAssembly() });

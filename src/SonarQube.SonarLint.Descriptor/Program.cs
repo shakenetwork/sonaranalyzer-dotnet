@@ -26,6 +26,7 @@ using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 using SonarLint.Utilities;
+using SonarLint.Common;
 
 namespace SonarLint.Descriptor
 {
@@ -33,18 +34,19 @@ namespace SonarLint.Descriptor
     {
         public static void Main(string[] args)
         {
-            if (args.Length != 3)
+            if (args.Length != 4)
             {
                 Write("The application requires three parameters to run: ");
                 Write("[Path to RuleDescriptors.xml]");
                 Write("[Path to QualityProfile.xml]");
                 Write("[Path to SqaleDescriptors.xml]");
+                Write("[AnalyzerLanguage: 'cs' for C#, 'vbnet' for VB.Net]");
                 Write("All files will be created by the application");
 
                 return;
             }
 
-            WriteXmlDescriptorFiles(args[0], args[1], args[2]);
+            WriteXmlDescriptorFiles(args[0], args[1], args[2], args[3]);
         }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("SonarLint", "S2228:Console logging should not be used",
@@ -54,14 +56,16 @@ namespace SonarLint.Descriptor
             Console.WriteLine(text);
         }
 
-        private static void WriteXmlDescriptorFiles(string rulePath, string profilePath, string sqalePath)
+        private static void WriteXmlDescriptorFiles(string rulePath, string profilePath, string sqalePath, string lang)
         {
-            var genericRuleDetails = RuleDetailBuilder.GetAllRuleDetails().ToList();
+            var language = AnalyzerLanguage.Parse(lang);
+
+            var genericRuleDetails = RuleDetailBuilder.GetAllRuleDetails(language).ToList();
             var ruleDetails = genericRuleDetails.Select(RuleDetail.Convert).ToList();
             var sqaleDetails = genericRuleDetails.Select(SqaleDescriptor.Convert).ToList();
 
             WriteRuleDescriptorFile(rulePath, ruleDetails);
-            WriteQualityProfileFile(profilePath, ruleDetails);
+            WriteQualityProfileFile(profilePath, ruleDetails, language);
             WriteSqaleDescriptorFile(sqalePath, sqaleDetails);
         }
 
@@ -73,12 +77,12 @@ namespace SonarLint.Descriptor
             SerializeObjectToFile(filePath, root);
         }
 
-        private static void WriteQualityProfileFile(string filePath, IEnumerable<RuleDetail> ruleDetails)
+        private static void WriteQualityProfileFile(string filePath, IEnumerable<RuleDetail> ruleDetails, AnalyzerLanguage language)
         {
-            var root = new QualityProfileRoot();
+            var root = new QualityProfileRoot(language);
             root.Rules.AddRange(ruleDetails
                 .Where(descriptor => descriptor.IsActivatedByDefault)
-                .Select(descriptor => new QualityProfileRuleDescriptor
+                .Select(descriptor => new QualityProfileRuleDescriptor(language)
                 {
                     Key = descriptor.Key
                 }));

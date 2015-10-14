@@ -23,6 +23,7 @@ using System.IO;
 using System.Linq;
 using Newtonsoft.Json;
 using SonarLint.Utilities;
+using SonarLint.Common;
 
 namespace SonarLint.DocGenerator
 {
@@ -31,15 +32,25 @@ namespace SonarLint.DocGenerator
         public static void Main()
         {
             var productVersion = FileVersionInfo.GetVersionInfo(typeof(Program).Assembly.Location).ProductVersion;
-            var content = GenerateRuleJson(productVersion);
 
-            Directory.CreateDirectory(productVersion);
-            File.WriteAllText(Path.Combine(productVersion, "rules.json"), content);
+            //todo this si not the best, for the website we'll need one single file
+            WriteRuleJson(productVersion, AnalyzerLanguage.CSharp);
+            WriteRuleJson(productVersion, AnalyzerLanguage.VisualBasic);
+
         }
 
-        public static string GenerateRuleJson(string productVersion)
+        private static void WriteRuleJson(string productVersion, AnalyzerLanguage language)
         {
-            var ruleDetails = RuleDetailBuilder.GetParameterlessRuleDetails()
+            var content = GenerateRuleJson(productVersion, language);
+
+            Directory.CreateDirectory(productVersion);
+            Directory.CreateDirectory(Path.Combine(productVersion, language.GetDirectoryName()));
+            File.WriteAllText(Path.Combine(productVersion, language.GetDirectoryName(), "rules.json"), content);
+        }
+
+        public static string GenerateRuleJson(string productVersion, AnalyzerLanguage language)
+        {
+            var ruleDetails = RuleDetailBuilder.GetParameterlessRuleDetails(language)
                 .Select(ruleDetail =>
                     RuleDescription.Convert(ruleDetail, productVersion))
                 .ToList();

@@ -34,9 +34,11 @@ namespace SonarLint.Runner
     {
         public static int Main(string[] args)
         {
+            var language = AnalyzerLanguage.Parse(args[2]);
+
             Write(string.Format("SonarLint for Visual Studio version {0}", typeof (Program).Assembly.GetName().Version));
 
-            var configuration = new Configuration(XDocument.Load(args[0]));
+            var configuration = new Configuration(XDocument.Load(args[0]), language);
             var diagnosticsRunner = new DiagnosticsRunner(configuration.Analyzers());
 
             var xmlOutSettings = new XmlWriterSettings
@@ -61,16 +63,12 @@ namespace SonarLint.Runner
 
                     try
                     {
-                        var language = file.EndsWith(".cs", StringComparison.OrdinalIgnoreCase)
-                            ? LanguageNames.CSharp
-                            : LanguageNames.VisualBasic;
-
                         var solution = CompilationHelper.GetSolutionFromFiles(file, language);
 
                         var compilation = solution.Projects.First().GetCompilationAsync().Result;
                         var syntaxTree = compilation.SyntaxTrees.First();
 
-                        var metrics = language == LanguageNames.CSharp
+                        var metrics = language == AnalyzerLanguage.CSharp
                             ? (MetricsBase)new Common.CSharp.Metrics(syntaxTree)
                             : new Common.VisualBasic.Metrics(syntaxTree);
 

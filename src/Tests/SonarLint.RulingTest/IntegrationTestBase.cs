@@ -274,7 +274,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
 
         protected string GenerateAnalysisInputFile(Type analyzerType, AnalyzerLanguage language)
         {
-            if ((RuleFinder.GetTargetLanguages(analyzerType) & language) == AnalyzerLanguage.None)
+            if (!RuleFinder.GetTargetLanguages(analyzerType).IsAlso(language))
             {
                 throw new ArgumentException("Supplied analyzer doesn't support target language", nameof(language));
             }

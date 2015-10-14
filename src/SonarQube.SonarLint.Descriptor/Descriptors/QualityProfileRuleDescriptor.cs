@@ -18,6 +18,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using SonarLint.Common;
 using System.Xml.Serialization;
 
 namespace SonarLint.Descriptor
@@ -25,9 +26,11 @@ namespace SonarLint.Descriptor
     [XmlType("rule")]
     public class QualityProfileRuleDescriptor
     {
-        public QualityProfileRuleDescriptor()
+        public QualityProfileRuleDescriptor() { }
+
+        public QualityProfileRuleDescriptor(AnalyzerLanguage language)
         {
-            RepositoryKey = "csharpsquid";
+            RepositoryKey = language.GetQualityProfileRepositoryKey();
         }
         [XmlElement("repositoryKey")]
         public string RepositoryKey { get; set; }

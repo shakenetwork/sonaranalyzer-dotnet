@@ -51,13 +51,14 @@ namespace SonarLint.Utilities
                 .ToList();
         }
 
-        public IEnumerable<Type> GetParameterlessAnalyzerTypes()
+        public IEnumerable<Type> GetParameterlessAnalyzerTypes(AnalyzerLanguage language)
         {
             return diagnosticAnalyzers
                 .Where(analyzerType => !IsRuleTemplate(analyzerType))
                 .Where(analyzerType =>
                     !analyzerType.GetProperties()
-                        .Any(p => p.GetCustomAttributes<RuleParameterAttribute>().Any()));
+                        .Any(p => p.GetCustomAttributes<RuleParameterAttribute>().Any()))
+                .Where(type => GetTargetLanguages(type).IsAlso(language));
         }
 
         public static bool IsRuleTemplate(Type analyzerType)
@@ -74,7 +75,7 @@ namespace SonarLint.Utilities
         public IEnumerable<Type> GetAnalyzerTypes(AnalyzerLanguage language)
         {
             return diagnosticAnalyzers
-                .Where(type => (GetTargetLanguages(type) & language) != AnalyzerLanguage.None);
+                .Where(type => GetTargetLanguages(type).IsAlso(language));
         }
 
         public static AnalyzerLanguage GetTargetLanguages(Type analyzerType)
@@ -82,7 +83,7 @@ namespace SonarLint.Utilities
             var attribute = analyzerType.GetCustomAttributes<DiagnosticAnalyzerAttribute>().FirstOrDefault();
             if (attribute == null)
             {
-                return AnalyzerLanguage.None;
+                return null;
             }
 
             var language = AnalyzerLanguage.None;
@@ -91,10 +92,10 @@ namespace SonarLint.Utilities
                 switch (lang)
                 {
                     case LanguageNames.CSharp:
-                        language |= AnalyzerLanguage.CSharp;
+                        language = language.AddLanguage(AnalyzerLanguage.CSharp);
                         break;
                     case LanguageNames.VisualBasic:
-                        language |= AnalyzerLanguage.VisualBasic;
+                        language = language.AddLanguage(AnalyzerLanguage.VisualBasic);
                         break;
                     default:
                         break;

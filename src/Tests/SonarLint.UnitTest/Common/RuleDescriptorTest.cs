@@ -21,6 +21,7 @@
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarLint.Utilities;
+using SonarLint.Common;
 
 namespace SonarLint.UnitTest.Common
 {
@@ -30,19 +31,41 @@ namespace SonarLint.UnitTest.Common
         [TestMethod]
         public void GetAllRuleDescriptors_Count()
         {
-            Assert.AreEqual(RuleDetailBuilder.GetAllRuleDetails().Count(),
-                (new RuleFinder().GetAllAnalyzerTypes().Count()));
+            CheckRuleDescriptorsCount(AnalyzerLanguage.CSharp);
+            CheckRuleDescriptorsCount(AnalyzerLanguage.VisualBasic);
         }
+
+        private static void CheckRuleDescriptorsCount(AnalyzerLanguage language)
+        {
+            Assert.AreEqual(
+                RuleDetailBuilder.GetAllRuleDetails(language).Count(),
+                new RuleFinder().GetAnalyzerTypes(language).Count());
+        }
+
         [TestMethod]
         public void GetParameterlessRuleDescriptors_Count()
         {
-            Assert.AreEqual(RuleDetailBuilder.GetParameterlessRuleDetails().Count(),
-                (new RuleFinder().GetParameterlessAnalyzerTypes().Count()));
+            ParameterlessRuleDescriptorsCount(AnalyzerLanguage.CSharp);
+            ParameterlessRuleDescriptorsCount(AnalyzerLanguage.VisualBasic);
         }
+
+        private static void ParameterlessRuleDescriptorsCount(AnalyzerLanguage language)
+        {
+            Assert.AreEqual(
+                RuleDetailBuilder.GetParameterlessRuleDetails(language).Count(),
+                new RuleFinder().GetParameterlessAnalyzerTypes(language).Count());
+        }
+
         [TestMethod]
         public void RuleDescriptors_NotEmpty()
         {
-            var ruleDetails = RuleDetailBuilder.GetAllRuleDetails().ToList();
+            CheckRuleDescriptorsNotEmpty(AnalyzerLanguage.CSharp);
+            CheckRuleDescriptorsNotEmpty(AnalyzerLanguage.VisualBasic);
+        }
+
+        private static void CheckRuleDescriptorsNotEmpty(AnalyzerLanguage language)
+        {
+            var ruleDetails = RuleDetailBuilder.GetAllRuleDetails(language).ToList();
             foreach (var ruleDetail in ruleDetails)
             {
                 Assert.IsNotNull(ruleDetail);

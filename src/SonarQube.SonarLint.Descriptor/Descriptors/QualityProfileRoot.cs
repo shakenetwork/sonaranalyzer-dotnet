@@ -18,6 +18,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using SonarLint.Common;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 
@@ -26,10 +27,11 @@ namespace SonarLint.Descriptor
     [XmlRoot("profile", Namespace = "")]
     public class QualityProfileRoot
     {
-        public QualityProfileRoot()
+        public QualityProfileRoot() { }
+        public QualityProfileRoot(AnalyzerLanguage language)
         {
             Rules = new List<QualityProfileRuleDescriptor>();
-            Language = "cs";
+            Language = language.ToString();
             Name = "Sonar way";
         }
 

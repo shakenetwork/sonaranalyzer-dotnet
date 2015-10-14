@@ -19,6 +19,7 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SonarLint.Common;
 using SonarLint.DocGenerator;
 using SonarLint.Utilities;
 using System.Diagnostics;
@@ -34,17 +35,25 @@ namespace SonarLint.UnitTest.PackagingTests
         [TestCategory("DocGenerator")]
         public void CheckNumberOfCrossReferences()
         {
-            var crossReferenceCount = GetNumberOfCrossReferences();
+            var crossReferenceCount = GetNumberOfCrossReferences(AnalyzerLanguage.CSharp);
             Assert.AreEqual(1, crossReferenceCount);
+            crossReferenceCount = GetNumberOfCrossReferences(AnalyzerLanguage.VisualBasic);
+            Assert.AreEqual(0, crossReferenceCount);
         }
 
         [TestMethod]
         [TestCategory("DocGenerator")]
         public void CheckNumberOfCrossLinks()
         {
-            var crossReferenceCount = GetNumberOfCrossReferences();
+            CheckNumberOfCrossLinks(AnalyzerLanguage.CSharp);
+            CheckNumberOfCrossLinks(AnalyzerLanguage.VisualBasic);
+        }
+
+        private void CheckNumberOfCrossLinks(AnalyzerLanguage language)
+        {
+            var crossReferenceCount = GetNumberOfCrossReferences(language);
             var productVersion = FileVersionInfo.GetVersionInfo(typeof(Program).Assembly.Location).ProductVersion;
-            var json = Program.GenerateRuleJson(productVersion);
+            var json = Program.GenerateRuleJson(productVersion, language);
 
             var commonSubUrl = RuleDescription.HelpLinkPattern.Replace("{1}", string.Empty);
             var crossLinkCount = NumberOfOccurrences(json, string.Format(commonSubUrl, productVersion));
@@ -52,9 +61,9 @@ namespace SonarLint.UnitTest.PackagingTests
             Assert.AreEqual(crossReferenceCount, crossLinkCount);
         }
 
-        private static int GetNumberOfCrossReferences()
+        private static int GetNumberOfCrossReferences(AnalyzerLanguage language)
         {
-            return RuleDetailBuilder.GetParameterlessRuleDetails()
+            return RuleDetailBuilder.GetParameterlessRuleDetails(language)
                 .Select(rule => rule.Description)
                 .Select(description => Regex.Matches(description, RuleDescription.CrosslinkPattern).Count)
                 .Sum();

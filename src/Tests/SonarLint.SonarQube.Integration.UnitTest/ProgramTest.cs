@@ -19,6 +19,7 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SonarLint.Common;
 using SonarLint.Runner;
 using System.IO;
 using System.Linq;
@@ -31,7 +32,7 @@ namespace SonarLint.UnitTest
         [TestMethod]
         public void End_To_End()
         {
-            Program.Main(new [] { "TestResources\\ConfigurationTest.xml", "Output.xml"});
+            Program.Main(new [] { "TestResources\\ConfigurationTest.xml", "Output.xml", AnalyzerLanguage.CSharp.ToString()});
 
             var textActual = new string(File.ReadAllText("Output.xml")
                 .ToCharArray()
