@@ -114,6 +114,7 @@
     <Compile Include="Rules\UnsignedTypesUsage.cs" />
     <Compile Include="Rules\ArrayDesignatorOnVariable.cs" />
     <Compile Include="Rules\ArrayDesignatorOnVariableCodeFixProvider.cs" />
+    <Compile Include="Rules\IndexedPropertyWithMultipleParameters.cs" />
     <Compile Include="Rules\MethodOverrideNoParams.cs" />
     <Compile Include="Rules\GetTypeWithIsAssignableFromCodeFixProvider.cs" />
     <Compile Include="Rules\EmptyMethodCodeFixProvider.cs" />
@@ -579,6 +580,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S1197.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S2352.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
