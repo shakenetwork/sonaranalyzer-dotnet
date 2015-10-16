@@ -138,6 +138,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\OnErrorStatementTest.cs" />
     <Compile Include="Rules\StringConcatenationWithPlusTest.cs" />
+    <Compile Include="Rules\NegatedIsExpressionTest.cs" />
     <Compile Include="Rules\MethodOverrideNoParamsTest.cs" />
     <Compile Include="Rules\RedundantInheritanceListTest.cs" />
     <Compile Include="Rules\LiteralSuffixUpperCaseTest.cs" />
@@ -569,6 +570,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="TestCases\StringConcatenationWithPlus.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\NegatedIsExpression.Fixed.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\NegatedIsExpression.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
