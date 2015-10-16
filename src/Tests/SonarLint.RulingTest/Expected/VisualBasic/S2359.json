@@ -1,0 +1,43 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarLint.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S2359",
+      "FullMessage": "Remove this use of \"OnError\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\OnErrorTest\\OnError.vb",
+            "Region": {
+              "StartLine": 3,
+              "EndLine": 3,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2359",
+      "FullMessage": "Remove this use of \"OnError\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\OnErrorTest\\OnError.vb",
+            "Region": {
+              "StartLine": 12,
+              "EndLine": 12,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
