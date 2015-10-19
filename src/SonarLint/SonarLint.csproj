@@ -108,6 +108,7 @@
     <Compile Include="Helpers\ProjectTypeHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\PropertyWithArrayType.cs" />
+    <Compile Include="Rules\ArrayInitializationMultipleStatements.cs" />
     <Compile Include="Rules\OnErrorStatement.cs" />
     <Compile Include="Rules\StringConcatenationWithPlusCodeFixProvider.cs" />
     <Compile Include="Rules\StringConcatenationWithPlus.cs" />
@@ -587,6 +588,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S2365.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S2351.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
