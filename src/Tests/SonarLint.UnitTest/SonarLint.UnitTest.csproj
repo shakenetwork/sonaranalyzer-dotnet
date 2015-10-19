@@ -566,12 +566,12 @@
     <None Include="TestCases\GenericReadonlyFieldPropertyAssignment.AddConstraint.Fixed.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <Content Include="TestCases\TabCharacter.vb">
+    <None Include="TestCases\TabCharacter.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TestCases\OnErrorStatement.vb">
+    </None>
+    <None Include="TestCases\OnErrorStatement.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </None>
     <None Include="TestCases\StringConcatenationWithPlus.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -581,18 +581,18 @@
     <None Include="TestCases\NegatedIsExpression.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <Content Include="TestCases\UnsignedTypesUsage.vb">
+    <None Include="TestCases\UnsignedTypesUsage.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TestCases\ArrayDesignatorOnVariable.Fixed.vb">
+    </None>
+    <None Include="TestCases\ArrayDesignatorOnVariable.Fixed.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TestCases\ArrayDesignatorOnVariable.vb">
+    </None>
+    <None Include="TestCases\ArrayDesignatorOnVariable.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TestCases\IndexedPropertyWithMultipleParameters.vb">
+    </None>
+    <None Include="TestCases\IndexedPropertyWithMultipleParameters.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </None>
     <Compile Include="Verifier.cs" />
     <None Include="TestCases\UseCurlyBraces.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
