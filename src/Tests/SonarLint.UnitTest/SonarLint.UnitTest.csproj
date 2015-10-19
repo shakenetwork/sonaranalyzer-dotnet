@@ -139,6 +139,7 @@
     <Compile Include="Rules\PropertyWithArrayTypeTest.cs" />
     <Compile Include="Rules\ArrayInitializationMultipleStatementsTest.cs" />
     <Compile Include="Rules\ArrayCreationLongSyntaxTest.cs" />
+    <Compile Include="Rules\EndStatementUsageTest.cs" />
     <Compile Include="Rules\OnErrorStatementTest.cs" />
     <Compile Include="Rules\StringConcatenationWithPlusTest.cs" />
     <Compile Include="Rules\NegatedIsExpressionTest.cs" />
@@ -570,6 +571,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\ArrayCreationLongSyntax.Fixed.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\EndStatementUsage.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+      <None Include="TestCases\TabCharacter.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\TabCharacter.vb">
