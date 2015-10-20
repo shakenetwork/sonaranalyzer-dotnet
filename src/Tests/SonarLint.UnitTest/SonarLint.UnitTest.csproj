@@ -164,6 +164,7 @@
     <Compile Include="Rules\SuppressFinalizeUselessTest.cs" />
     <Compile Include="Rules\FieldInitializedToDefaultTest.cs" />
     <Compile Include="Rules\GenericTypeParameterInOutTest.cs" />
+    <Compile Include="Rules\EnumNameHasEnumSuffixTest.cs" />
     <Compile Include="Rules\UnaryPrefixOperatorRepeatedTest.cs" />
     <Compile Include="Rules\GetHashCodeEqualsOverrideTest.cs" />
     <Compile Include="Rules\RedundantParenthesesTest.cs" />
@@ -573,6 +574,12 @@
     <None Include="TestCases\ArrayCreationLongSyntax.Fixed.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="TestCases\EnumNameHasEnumSuffix.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\TabCharacter.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="TestCases\EndStatementUsage.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -619,6 +626,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\SwitchWithoutDefault.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\EnumNameHasEnumSuffix.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />

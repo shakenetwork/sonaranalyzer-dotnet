@@ -1,0 +1,78 @@
+﻿/*
+ * SonarLint for Visual Studio
+ * Copyright (C) 2015 SonarSource
+ * sonarqube@googlegroups.com
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
+ */
+
+using System.Collections.Immutable;
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.Diagnostics;
+using SonarLint.Common;
+using SonarLint.Helpers;
+using System.Linq;
+
+namespace SonarLint.Rules
+{
+    public abstract class EnumNameHasEnumSuffixBase : DiagnosticAnalyzer
+    {
+        internal const string DiagnosticId = "S2344";
+        internal const string Title = "Enumeration type names should not have \"Flags\" or \"Enum\" suffixes";
+        internal const string Description =
+            "The information that an enumeration type is actually an enumeration or a set of flags should not be duplicated in its name.";
+        internal const string MessageFormat = "Rename this enumeration to remove the \"{0}\" suffix.";
+        internal const string Category = "SonarLint";
+        internal const Severity RuleSeverity = Severity.Minor;
+        internal const bool IsActivatedByDefault = true;
+
+        internal static readonly DiagnosticDescriptor Rule =
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
+                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
+                helpLinkUri: DiagnosticId.GetHelpLink(),
+                description: Description);
+
+        protected static readonly string[] NameEndings = { "enum", "flags" };
+    }
+
+    public abstract class EnumNameHasEnumSuffixBase<TLanguageKindEnum> : EnumNameHasEnumSuffixBase
+        where TLanguageKindEnum : struct
+    {
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+
+        public override void Initialize(AnalysisContext context)
+        {
+            context.RegisterSyntaxNodeActionInNonGenerated(
+                c =>
+                {
+                    var identifier = GetIdentifier(c.Node);
+                    var name = identifier.ValueText;
+
+                    var nameEnding = NameEndings.FirstOrDefault(ending => name.EndsWith(ending, System.StringComparison.InvariantCultureIgnoreCase));
+                    if (nameEnding != null)
+                    {
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(),
+                            name.Substring(name.Length - nameEnding.Length, nameEnding.Length)));
+                    }
+                },
+                SyntaxKindsOfInterest.ToArray());
+        }
+
+        protected abstract SyntaxToken GetIdentifier(SyntaxNode node);
+        public abstract ImmutableArray<TLanguageKindEnum> SyntaxKindsOfInterest { get; }
+
+
+    }
+}
