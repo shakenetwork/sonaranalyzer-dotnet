@@ -1,0 +1,264 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarLint.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S2365",
+      "FullMessage": "Refactor \"Values\" into a method, properties should not be based on arrays.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\AllInOneCodeFramework\\Visual Studio 2008\\VBCpuUsage\\CpuUsageValueArrayChangedEventArg.vb",
+            "Region": {
+              "StartLine": 23,
+              "EndLine": 23,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2365",
+      "FullMessage": "Refactor \"Picture\" into a method, properties should not be based on arrays.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\AllInOneCodeFramework\\Visual Studio 2008\\VBLinqToSQL\\SchoolDB.vb",
+            "Region": {
+              "StartLine": 119,
+              "EndLine": 119,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2365",
+      "FullMessage": "Refactor \"Projects\" into a method, properties should not be based on arrays.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\AllInOneCodeFramework\\Visual Studio 2008\\VBLinqToXml\\MainModule.vb",
+            "Region": {
+              "StartLine": 584,
+              "EndLine": 584,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2365",
+      "FullMessage": "Refactor \"SECURITY_DESCRIPTOR\" into a method, properties should not be based on arrays.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\AllInOneCodeFramework\\Visual Studio 2008\\VBMonitorRegistryChange\\RegistryKeyChangeEventArg.vb",
+            "Region": {
+              "StartLine": 44,
+              "EndLine": 44,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2365",
+      "FullMessage": "Refactor \"DERIVATION\" into a method, properties should not be based on arrays.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\AllInOneCodeFramework\\Visual Studio 2008\\VBProcessWatcher\\Process.vb",
+            "Region": {
+              "StartLine": 2023,
+              "EndLine": 2023,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2365",
+      "FullMessage": "Refactor \"Data\" into a method, properties should not be based on arrays.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\AllInOneCodeFramework\\Visual Studio 2010\\VBASPNETFileUploadStatus\\FileUploadStatus\\UploadFile.vb",
+            "Region": {
+              "StartLine": 54,
+              "EndLine": 54,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2365",
+      "FullMessage": "Refactor \"FileData\" into a method, properties should not be based on arrays.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\AllInOneCodeFramework\\Visual Studio 2010\\VBASPNETRemoteUploadAndDownload\\RemoteUpload.vb",
+            "Region": {
+              "StartLine": 66,
+              "EndLine": 66,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2365",
+      "FullMessage": "Refactor \"Values\" into a method, properties should not be based on arrays.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\AllInOneCodeFramework\\Visual Studio 2010\\VBCheckEXEType\\IMAGE\\IMAGE_DATA_DIRECTORY_Values.vb",
+            "Region": {
+              "StartLine": 68,
+              "EndLine": 68,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2365",
+      "FullMessage": "Refactor \"Values\" into a method, properties should not be based on arrays.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\AllInOneCodeFramework\\Visual Studio 2010\\VBCpuUsage\\CpuUsageValueArrayChangedEventArg.vb",
+            "Region": {
+              "StartLine": 21,
+              "EndLine": 21,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2365",
+      "FullMessage": "Refactor \"DataSource\" into a method, properties should not be based on arrays.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\AllInOneCodeFramework\\Visual Studio 2010\\VBDynamicallyBuildLambdaExpressionWithField\\DynamicCondition\\ConditionLine.vb",
+            "Region": {
+              "StartLine": 41,
+              "EndLine": 41,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2365",
+      "FullMessage": "Refactor \"SECURITY_DESCRIPTOR\" into a method, properties should not be based on arrays.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\AllInOneCodeFramework\\Visual Studio 2010\\VBMonitorRegistryChange\\RegistryKeyChangeEventArg.vb",
+            "Region": {
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2365",
+      "FullMessage": "Refactor \"DERIVATION\" into a method, properties should not be based on arrays.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\AllInOneCodeFramework\\Visual Studio 2010\\VBProcessWatcher\\Process.VB",
+            "Region": {
+              "StartLine": 2023,
+              "EndLine": 2023,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2365",
+      "FullMessage": "Refactor \"ArgumentTypes\" into a method, properties should not be based on arrays.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\FastLightweightExpressionEvaluator\\Lib\\PublicTypes\\Miscellaneous.vb",
+            "Region": {
+              "StartLine": 180,
+              "EndLine": 180,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2365",
+      "FullMessage": "Refactor \"Arguments\" into a method, properties should not be based on arrays.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\FastLightweightExpressionEvaluator\\Lib\\PublicTypes\\Miscellaneous.vb",
+            "Region": {
+              "StartLine": 218,
+              "EndLine": 218,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2365",
+      "FullMessage": "Refactor \"Value\" into a method, properties should not be based on arrays.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\pdflib\\pdflib\\clsPDFBaseObject.vb",
+            "Region": {
+              "StartLine": 66,
+              "EndLine": 66,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
