@@ -1,0 +1,145 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarLint.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S2346",
+      "FullMessage": "Rename \"No\" to \"None\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\benchmark\\PingPong\\Program.cs",
+            "Region": {
+              "StartLine": 231,
+              "EndLine": 231,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2346",
+      "FullMessage": "Rename \"NotSuspended\" to \"None\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Dispatch\\Mailbox.cs",
+            "Region": {
+              "StartLine": 187,
+              "EndLine": 187,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2346",
+      "FullMessage": "Rename \"Plaintext\" to \"None\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\ApplicationModels\\AttributeRouteModel.cs",
+            "Region": {
+              "StartLine": 379,
+              "EndLine": 379,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2346",
+      "FullMessage": "Rename \"Zero\" to \"None\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Extensions.Test\\ModelBinding\\Metadata\\DataAnnotationsMetadataProviderTest.cs",
+            "Region": {
+              "StartLine": 738,
+              "EndLine": 738,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2346",
+      "FullMessage": "Rename \"Zero\" to \"None\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Extensions.Test\\Rendering\\HtmlHelperSelectTest.cs",
+            "Region": {
+              "StartLine": 1660,
+              "EndLine": 1660,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2346",
+      "FullMessage": "Rename \"OnlyMatchWallOffset\" to \"None\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\TimeZones\\ZoneEqualityComparer.cs",
+            "Region": {
+              "StartLine": 68,
+              "EndLine": 68,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2346",
+      "FullMessage": "Rename \"LargeIcon\" to \"None\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\DialogServices\\SolutionExplorer\\ProjectUtilities.cs",
+            "Region": {
+              "StartLine": 354,
+              "EndLine": 354,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2346",
+      "FullMessage": "Rename \"WINDOW64\" to \"None\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Rar\\Headers\\Flags.cs",
+            "Region": {
+              "StartLine": 59,
+              "EndLine": 59,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
