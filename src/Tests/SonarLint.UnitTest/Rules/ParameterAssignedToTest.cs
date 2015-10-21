@@ -19,7 +19,8 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarLint.Rules;
+using CS = SonarLint.Rules.CSharp;
+using VB = SonarLint.Rules.VisualBasic;
 
 namespace SonarLint.UnitTest.Rules
 {
@@ -30,7 +31,8 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void ParameterAssignedTo()
         {
-            Verifier.VerifyAnalyzer(@"TestCases\ParameterAssignedTo.cs", new ParameterAssignedTo());
+            Verifier.VerifyAnalyzer(@"TestCases\ParameterAssignedTo.cs", new CS.ParameterAssignedTo());
+            Verifier.VerifyAnalyzer(@"TestCases\ParameterAssignedTo.vb", new VB.ParameterAssignedTo());
         }
     }
 }
