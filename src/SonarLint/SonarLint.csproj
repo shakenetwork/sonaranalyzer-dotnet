@@ -164,6 +164,8 @@
     <Compile Include="Rules\PropertyGetterWithThrowBase.cs" />
     <Compile Include="Rules\PropertyWriteOnly.cs" />
     <Compile Include="Rules\PropertyWriteOnlyBase.cs" />
+    <Compile Include="Rules\PublicMethodWithMultidimensionalArray.cs" />
+    <Compile Include="Rules\PublicMethodWithMultidimensionalArrayBase.cs" />
     <Compile Include="Rules\SwitchWithoutDefaultBase.cs" />
     <Compile Include="Rules\UnaryPrefixOperatorRepeatedCodeFixProvider.cs" />
     <Compile Include="Rules\TernaryOperatorPointlessCodeFixProvider.cs" />
@@ -648,6 +650,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S2376_vb.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S2368_cs.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S2368_vb.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
