@@ -157,6 +157,8 @@
     <Compile Include="Rules\GenericReadonlyFieldPropertyAssignmentCodeFixProvider.cs" />
     <Compile Include="Rules\SwitchWithoutDefault.cs" />
     <Compile Include="Rules\FlagsEnumZeroMemberBase.cs" />
+    <Compile Include="Rules\FlagsEnumWithoutInitializer.cs" />
+    <Compile Include="Rules\FlagsEnumWithoutInitializerBase.cs" />
     <Compile Include="Rules\SwitchWithoutDefaultBase.cs" />
     <Compile Include="Rules\UnaryPrefixOperatorRepeatedCodeFixProvider.cs" />
     <Compile Include="Rules\TernaryOperatorPointlessCodeFixProvider.cs" />
@@ -620,6 +622,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S2346_cs.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S2345_cs.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S2345_vb.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
