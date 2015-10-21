@@ -1,0 +1,111 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarLint.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S2376",
+      "FullMessage": "Provide a getter for \"SetCharacteristic\" or replace the property with a \"SetSetCharacteristic\" method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\pdflib\\pdflib\\clsPDFAnnotationDictionnary.vb",
+            "Region": {
+              "StartLine": 27,
+              "EndLine": 27,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2376",
+      "FullMessage": "Provide a getter for \"SetString\" or replace the property with a \"SetSetString\" method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\pdflib\\pdflib\\clsPDFBaseObject.vb",
+            "Region": {
+              "StartLine": 146,
+              "EndLine": 146,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2376",
+      "FullMessage": "Provide a getter for \"SetModificationDate\" or replace the property with a \"SetSetModificationDate\" method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\pdflib\\pdflib\\clsPDFDocumentInformation.vb",
+            "Region": {
+              "StartLine": 35,
+              "EndLine": 35,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2376",
+      "FullMessage": "Provide a getter for \"LogInterface\" or replace the property with a \"SetLogInterface\" method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\ThalesSimulatorLibrary\\ThalesCore\\Log\\Logger.vb",
+            "Region": {
+              "StartLine": 102,
+              "EndLine": 102,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2376",
+      "FullMessage": "Provide a getter for \"Length\" or replace the property with a \"SetLength\" method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\ThalesSimulatorLibrary\\ThalesCore\\Message\\MessageFieldParser.vb",
+            "Region": {
+              "StartLine": 189,
+              "EndLine": 189,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2376",
+      "FullMessage": "Provide a getter for \"LogInterface\" or replace the property with a \"SetLogInterface\" method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\ThalesSimulatorLibrary\\ThalesMobileSimulator\\ThalesCoreSource\\Log\\Logger.vb",
+            "Region": {
+              "StartLine": 102,
+              "EndLine": 102,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
