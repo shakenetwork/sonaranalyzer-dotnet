@@ -67,7 +67,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
 
         private const string CSharpFileExtension = ".cs";
         private const string VisualBasicFileExtension = ".vb";
-        private static readonly string[] SupportedExtensions = new[] { CSharpFileExtension, VisualBasicFileExtension };
+        private static readonly string[] SupportedExtensions = { CSharpFileExtension, VisualBasicFileExtension };
         public void Setup()
         {
             ItSourcesRootDirectory = GetItSourcesFolder();
@@ -108,7 +108,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
             return solutionDirectory.GetDirectories(navigationToItSources).Single();
         }
 
-        private string GenerateAnalysisInputFilePattern()
+        private static string GenerateAnalysisInputFilePattern()
         {
             using (var memoryStream = new MemoryStream())
             using (var writer = XmlWriter.Create(memoryStream, XmlWriterSettings))
@@ -276,7 +276,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
         {
             if ((RuleFinder.GetTargetLanguages(analyzerType) & language) == AnalyzerLanguage.None)
             {
-                throw new ArgumentException("Supplied analyzer doesn't support target language");
+                throw new ArgumentException("Supplied analyzer doesn't support target language", nameof(language));
             }
 
             return GenerateAnalysisInputFile(

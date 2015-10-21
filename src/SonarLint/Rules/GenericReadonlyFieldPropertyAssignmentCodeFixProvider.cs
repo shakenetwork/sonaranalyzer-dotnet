@@ -48,7 +48,7 @@ namespace SonarLint.Rules
             return WellKnownFixAllProviders.BatchFixer;
         }
 
-        private static readonly SyntaxAnnotation annotation = new SyntaxAnnotation("GenericReadonlyFieldPropertyAssignmentCodeFixProvider");
+        private static readonly SyntaxAnnotation annotation = new SyntaxAnnotation(nameof(GenericReadonlyFieldPropertyAssignmentCodeFixProvider));
 
         public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
         {

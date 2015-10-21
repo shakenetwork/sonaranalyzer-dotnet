@@ -31,7 +31,7 @@ namespace SonarLint.Common
     {
         protected readonly SyntaxTree tree;
 
-        public MetricsBase(SyntaxTree tree)
+        protected MetricsBase(SyntaxTree tree)
         {
             this.tree = tree;
         }

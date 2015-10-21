@@ -200,23 +200,6 @@ namespace SonarLint.Helpers
             });
         }
 
-        private static SyntaxToken GetEndOfFileToken(SyntaxNode root)
-        {
-            var csRoot = root as CS.Syntax.CompilationUnitSyntax;
-            if (csRoot != null)
-            {
-                return csRoot.EndOfFileToken;
-            }
-
-            var vbRoot = root as VB.Syntax.CompilationUnitSyntax;
-            if (vbRoot != null)
-            {
-                return vbRoot.EndOfFileToken;
-            }
-
-            return default(SyntaxToken);
-        }
-
         private static bool HasGeneratedCodeAttribute(this SyntaxTree tree)
         {
             var attributeNames = tree.GetRoot()

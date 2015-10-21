@@ -86,10 +86,7 @@ namespace SonarLint.Rules
                 context.Diagnostics);
         }
 
-        private static readonly Type[] ExpressionTypesWithNoParens = new[]
-        {
-            typeof(AssignmentExpressionSyntax)
-        };
+        private static readonly Type[] ExpressionTypesWithNoParens = { typeof(AssignmentExpressionSyntax) };
 
         private static ExpressionSyntax ChangeOperator(BinaryExpressionSyntax binary)
         {

@@ -498,7 +498,7 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
             if (language != AnalyzerLanguage.CSharp &&
                 language != AnalyzerLanguage.VisualBasic)
             {
-                throw new ArgumentException(nameof(language));
+                throw new ArgumentException("Supplied language is not C# neither VB.Net", nameof(language));
             }
 
             return language == AnalyzerLanguage.CSharp

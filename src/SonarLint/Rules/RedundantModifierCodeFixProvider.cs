@@ -44,7 +44,7 @@ namespace SonarLint.Rules
             return WellKnownFixAllProviders.BatchFixer;
         }
 
-        private static readonly SyntaxKind[] ExpectedTokenKinds = new[]
+        private static readonly SyntaxKind[] ExpectedTokenKinds =
         {
             SyntaxKind.PartialKeyword,
             SyntaxKind.VirtualKeyword,

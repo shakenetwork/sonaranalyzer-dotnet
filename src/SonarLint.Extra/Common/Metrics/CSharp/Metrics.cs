@@ -143,7 +143,7 @@ namespace SonarLint.Common.CSharp
             SyntaxKind.AddAccessorDeclaration,
             SyntaxKind.RemoveAccessorDeclaration
         };
-        private static SyntaxKind[] ComplexityIncreasingKinds =
+        private static readonly SyntaxKind[] ComplexityIncreasingKinds =
         {
             SyntaxKind.IfStatement,
             SyntaxKind.SwitchStatement,

@@ -114,7 +114,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
             if (language != AnalyzerLanguage.CSharp &&
                 language != AnalyzerLanguage.VisualBasic)
             {
-                throw new System.ArgumentException("language");
+                throw new System.ArgumentException("Supplied language is not C# neither VB.Net", nameof(language));
             }
         }
 

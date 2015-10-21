@@ -160,7 +160,7 @@ namespace SonarLint.Rules
                 });
         }
 
-        private static readonly Accessibility[] DeniedDeclaredAccessibility = new [] { Accessibility.Public, Accessibility.Protected };
+        private static readonly Accessibility[] DeniedDeclaredAccessibility = { Accessibility.Public, Accessibility.Protected };
 
         private static bool HasDerivedClass(INamedTypeSymbol analyzedClass, ImmutableDictionary<INamedTypeSymbol, INamedTypeSymbol> classWithBaseType)
         {

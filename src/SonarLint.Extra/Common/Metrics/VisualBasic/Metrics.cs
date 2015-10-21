@@ -62,7 +62,7 @@ namespace SonarLint.Common.VisualBasic
 
             return possibleNodes.Count(n => !IsFunctionLikeLastReturnStatement(n));
         }
-        private bool IsFunctionLikeLastReturnStatement(SyntaxNode node)
+        private static bool IsFunctionLikeLastReturnStatement(SyntaxNode node)
         {
             if (!BranchKinds.Contains(node.Kind()))
             {
@@ -141,14 +141,14 @@ namespace SonarLint.Common.VisualBasic
             SyntaxKind.ConstructorBlock,
             SyntaxKind.FunctionBlock,
             SyntaxKind.SubBlock,
-            SyntaxKind.OperatorBlock,
+            SyntaxKind.OperatorBlock
             //SyntaxKind.GetAccessorBlock,
             //SyntaxKind.SetAccessorBlock,
             //SyntaxKind.RaiseEventAccessorBlock,
             //SyntaxKind.AddHandlerAccessorBlock,
             //SyntaxKind.RemoveHandlerAccessorBlock
         };
-        private static Type[] BlockTypes =
+        private static readonly Type[] BlockTypes =
         {
             typeof(MethodBlockBaseSyntax),
             typeof(CaseBlockSyntax),
@@ -165,9 +165,9 @@ namespace SonarLint.Common.VisualBasic
             typeof(UsingBlockSyntax),
             typeof(WhileBlockSyntax),
             typeof(WithBlockSyntax),
-            typeof(MultiLineLambdaExpressionSyntax),
+            typeof(MultiLineLambdaExpressionSyntax)
         };
-        private static SyntaxKind[] BranchKinds = {
+        private static readonly SyntaxKind[] BranchKinds = {
             SyntaxKind.GoToStatement,
 
             SyntaxKind.ExitDoStatement,
@@ -194,7 +194,7 @@ namespace SonarLint.Common.VisualBasic
 
             SyntaxKind.EndStatement
         };
-        private static SyntaxKind[] ComplexityIncreasingKinds =
+        private static readonly SyntaxKind[] ComplexityIncreasingKinds =
         {
             SyntaxKind.SubStatement,
             SyntaxKind.FunctionStatement,
