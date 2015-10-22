@@ -2,8 +2,9 @@
 
 if ($project.DTE.Version -eq '14.0')
 {
-	$analyzersPath = join-path $toolsPath "analyzers"
-	$analyzersPath = join-path $analyzersPath "C#"
+	$analyzersPath = split-path -path $toolsPath -parent
+	$analyzersPath = join-path $analyzersPath "analyzers"
+	$analyzersPath = join-path $analyzersPath "dotnet"
 	$analyzerFilePath = join-path $analyzersPath "SonarLint.dll"
 	if ($project.Object.AnalyzerReferences -ne $null)
 	{

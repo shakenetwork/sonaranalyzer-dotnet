@@ -22,7 +22,7 @@
     </frameworkAssemblies>
   </metadata>
   <files>
-    <file src="bin\Release\*.dll" target="tools\analyzers\C#" exclude="**\Microsoft.CodeAnalysis.*;**\System.Collections.Immutable.*;**\System.Reflection.Metadata.*" />
+    <file src="bin\Release\*.dll" target="analyzers\dotnet" exclude="**\Microsoft.CodeAnalysis.*;**\System.Collections.Immutable.*;**\System.Reflection.Metadata.*;**\System.Composition.*" />
     <file src="tools\*.ps1" target="tools\" />
   </files>
 </package>
