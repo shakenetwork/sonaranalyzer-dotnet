@@ -1,0 +1,3154 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarLint.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Cluster\\Gossip.cs",
+            "Region": {
+              "StartLine": 294,
+              "EndLine": 294,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Conductor.cs",
+            "Region": {
+              "StartLine": 39,
+              "EndLine": 39,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\MultiNodeSpec.cs",
+            "Region": {
+              "StartLine": 191,
+              "EndLine": 191,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\MultiNodeSpec.cs",
+            "Region": {
+              "StartLine": 217,
+              "EndLine": 217,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\MultiNodeSpec.cs",
+            "Region": {
+              "StartLine": 244,
+              "EndLine": 244,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\MultiNodeSpec.cs",
+            "Region": {
+              "StartLine": 264,
+              "EndLine": 264,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\MultiNodeSpec.cs",
+            "Region": {
+              "StartLine": 296,
+              "EndLine": 296,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\MultiNodeSpec.cs",
+            "Region": {
+              "StartLine": 322,
+              "EndLine": 322,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\MultiNodeSpec.cs",
+            "Region": {
+              "StartLine": 479,
+              "EndLine": 479,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\MultiNodeSpec.cs",
+            "Region": {
+              "StartLine": 480,
+              "EndLine": 480,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Player.cs",
+            "Region": {
+              "StartLine": 36,
+              "EndLine": 36,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Player.cs",
+            "Region": {
+              "StartLine": 37,
+              "EndLine": 37,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\EndpointManager.cs",
+            "Region": {
+              "StartLine": 702,
+              "EndLine": 702,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\EndpointManager.cs",
+            "Region": {
+              "StartLine": 705,
+              "EndLine": 705,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\EndpointManager.cs",
+            "Region": {
+              "StartLine": 709,
+              "EndLine": 709,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.TestKit\\Internal\\BlockingQueue.cs",
+            "Region": {
+              "StartLine": 193,
+              "EndLine": 193,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.TestKit\\Internal\\InternalTestActorRef.cs",
+            "Region": {
+              "StartLine": 84,
+              "EndLine": 84,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.TestKit\\NullMessageEnvelope.cs",
+            "Region": {
+              "StartLine": 20,
+              "EndLine": 20,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.TestKit\\NullMessageEnvelope.cs",
+            "Region": {
+              "StartLine": 25,
+              "EndLine": 25,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.TestKit\\TestKitBase.cs",
+            "Region": {
+              "StartLine": 243,
+              "EndLine": 243,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests\\Actor\\RootGuardianActorRef_Tests.cs",
+            "Region": {
+              "StartLine": 107,
+              "EndLine": 107,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests\\Serialization\\SerializationSpec.cs",
+            "Region": {
+              "StartLine": 535,
+              "EndLine": 535,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\ActorBase.cs",
+            "Region": {
+              "StartLine": 146,
+              "EndLine": 146,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\ActorCell.DeathWatch.cs",
+            "Region": {
+              "StartLine": 303,
+              "EndLine": 303,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\ActorRef.cs",
+            "Region": {
+              "StartLine": 78,
+              "EndLine": 78,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\ActorRef.cs",
+            "Region": {
+              "StartLine": 343,
+              "EndLine": 343,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\FSM.cs",
+            "Region": {
+              "StartLine": 630,
+              "EndLine": 630,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Actor\\RepointableActorRef.cs",
+            "Region": {
+              "StartLine": 171,
+              "EndLine": 171,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Event\\StandardOutLogger.cs",
+            "Region": {
+              "StartLine": 38,
+              "EndLine": 38,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Routing\\RouterConfig.cs",
+            "Region": {
+              "StartLine": 85,
+              "EndLine": 85,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Routing\\RouterPoolActor.cs",
+            "Region": {
+              "StartLine": 33,
+              "EndLine": 33,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Serialization\\JavaSerializer.cs",
+            "Region": {
+              "StartLine": 40,
+              "EndLine": 40,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Core\\Routing\\ActionSelectorDecisionTreeProvider.cs",
+            "Region": {
+              "StartLine": 35,
+              "EndLine": 35,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Rendering\\DynamicViewData.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Extensions\\Rendering\\Html\\HtmlHelper.cs",
+            "Region": {
+              "StartLine": 85,
+              "EndLine": 85,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Razor\\RazorPage.cs",
+            "Region": {
+              "StartLine": 86,
+              "EndLine": 86,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 191,
+              "EndLine": 191,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 199,
+              "EndLine": 199,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 207,
+              "EndLine": 207,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 215,
+              "EndLine": 215,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 223,
+              "EndLine": 223,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 231,
+              "EndLine": 231,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 239,
+              "EndLine": 239,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 247,
+              "EndLine": 247,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 268,
+              "EndLine": 268,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 276,
+              "EndLine": 276,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 284,
+              "EndLine": 284,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 292,
+              "EndLine": 292,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 300,
+              "EndLine": 300,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 308,
+              "EndLine": 308,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 316,
+              "EndLine": 316,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 324,
+              "EndLine": 324,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 332,
+              "EndLine": 332,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 340,
+              "EndLine": 340,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 348,
+              "EndLine": 348,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 356,
+              "EndLine": 356,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 364,
+              "EndLine": 364,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 372,
+              "EndLine": 372,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 380,
+              "EndLine": 380,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 388,
+              "EndLine": 388,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 396,
+              "EndLine": 396,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 404,
+              "EndLine": 404,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 412,
+              "EndLine": 412,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 420,
+              "EndLine": 420,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 428,
+              "EndLine": 428,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 436,
+              "EndLine": 436,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 444,
+              "EndLine": 444,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Abstractions.Test\\ModelBinding\\ModelMetadataTest.cs",
+            "Region": {
+              "StartLine": 452,
+              "EndLine": 452,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\BindAttributeTest.cs",
+            "Region": {
+              "StartLine": 136,
+              "EndLine": 136,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\ModelBinding\\Metadata\\DefaultValidationMetadataTest.cs",
+            "Region": {
+              "StartLine": 77,
+              "EndLine": 77,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\ModelBinding\\Metadata\\DefaultValidationMetadataTest.cs",
+            "Region": {
+              "StartLine": 101,
+              "EndLine": 101,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\ModelBinding\\Validation\\DefaultModelValidatorProviderTest.cs",
+            "Region": {
+              "StartLine": 178,
+              "EndLine": 178,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Extensions.Test\\ModelBinding\\Validation\\DefaultModelClientValidatorProviderTest.cs",
+            "Region": {
+              "StartLine": 225,
+              "EndLine": 225,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.TestCommon\\TestFileProvider.cs",
+            "Region": {
+              "StartLine": 92,
+              "EndLine": 92,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.TestCommon\\TestFileProvider.cs",
+            "Region": {
+              "StartLine": 100,
+              "EndLine": 100,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.TestCommon\\TestFileProvider.cs",
+            "Region": {
+              "StartLine": 108,
+              "EndLine": 108,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.TestCommon\\TestFileProvider.cs",
+            "Region": {
+              "StartLine": 116,
+              "EndLine": 116,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.TestCommon\\TestFileProvider.cs",
+            "Region": {
+              "StartLine": 124,
+              "EndLine": 124,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\HeadResponse.cs",
+            "Region": {
+              "StartLine": 117,
+              "EndLine": 117,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\NancyModule.cs",
+            "Region": {
+              "StartLine": 89,
+              "EndLine": 89,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Session\\NullSessionProvider.cs",
+            "Region": {
+              "StartLine": 41,
+              "EndLine": 41,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+            "Region": {
+              "StartLine": 2450,
+              "EndLine": 2450,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+            "Region": {
+              "StartLine": 2458,
+              "EndLine": 2458,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+            "Region": {
+              "StartLine": 2466,
+              "EndLine": 2466,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+            "Region": {
+              "StartLine": 2474,
+              "EndLine": 2474,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+            "Region": {
+              "StartLine": 2658,
+              "EndLine": 2658,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+            "Region": {
+              "StartLine": 2803,
+              "EndLine": 2803,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Config\\LoggingConfiguration.cs",
+            "Region": {
+              "StartLine": 77,
+              "EndLine": 77,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\LayoutRenderers\\ExceptionTests.cs",
+            "Region": {
+              "StartLine": 437,
+              "EndLine": 437,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Targets\\DatabaseTargetTests.cs",
+            "Region": {
+              "StartLine": 814,
+              "EndLine": 814,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Targets\\DatabaseTargetTests.cs",
+            "Region": {
+              "StartLine": 824,
+              "EndLine": 824,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Targets\\DatabaseTargetTests.cs",
+            "Region": {
+              "StartLine": 839,
+              "EndLine": 839,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Targets\\DatabaseTargetTests.cs",
+            "Region": {
+              "StartLine": 934,
+              "EndLine": 934,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Targets\\DatabaseTargetTests.cs",
+            "Region": {
+              "StartLine": 970,
+              "EndLine": 970,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Targets\\DatabaseTargetTests.cs",
+            "Region": {
+              "StartLine": 976,
+              "EndLine": 976,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Targets\\DatabaseTargetTests.cs",
+            "Region": {
+              "StartLine": 991,
+              "EndLine": 991,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Targets\\DatabaseTargetTests.cs",
+            "Region": {
+              "StartLine": 997,
+              "EndLine": 997,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Targets\\DatabaseTargetTests.cs",
+            "Region": {
+              "StartLine": 1013,
+              "EndLine": 1013,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Targets\\DatabaseTargetTests.cs",
+            "Region": {
+              "StartLine": 1019,
+              "EndLine": 1019,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Targets\\DatabaseTargetTests.cs",
+            "Region": {
+              "StartLine": 1025,
+              "EndLine": 1025,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Targets\\DatabaseTargetTests.cs",
+            "Region": {
+              "StartLine": 1056,
+              "EndLine": 1056,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Targets\\DatabaseTargetTests.cs",
+            "Region": {
+              "StartLine": 1061,
+              "EndLine": 1061,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Targets\\DatabaseTargetTests.cs",
+            "Region": {
+              "StartLine": 1066,
+              "EndLine": 1066,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Targets\\DatabaseTargetTests.cs",
+            "Region": {
+              "StartLine": 1113,
+              "EndLine": 1113,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Targets\\DatabaseTargetTests.cs",
+            "Region": {
+              "StartLine": 1118,
+              "EndLine": 1118,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Targets\\DatabaseTargetTests.cs",
+            "Region": {
+              "StartLine": 1183,
+              "EndLine": 1183,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Targets\\DatabaseTargetTests.cs",
+            "Region": {
+              "StartLine": 1188,
+              "EndLine": 1188,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Targets\\DatabaseTargetTests.cs",
+            "Region": {
+              "StartLine": 1199,
+              "EndLine": 1199,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Targets\\DatabaseTargetTests.cs",
+            "Region": {
+              "StartLine": 1204,
+              "EndLine": 1204,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\lib\\commandline\\CommandLine.cs",
+            "Region": {
+              "StartLine": 639,
+              "EndLine": 639,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\lib\\commandline\\CommandLine.cs",
+            "Region": {
+              "StartLine": 642,
+              "EndLine": 642,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\lib\\commandline\\CommandLine.cs",
+            "Region": {
+              "StartLine": 653,
+              "EndLine": 653,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\lib\\commandline\\CommandLine.cs",
+            "Region": {
+              "StartLine": 656,
+              "EndLine": 656,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\lib\\commandline\\CommandLine.cs",
+            "Region": {
+              "StartLine": 1350,
+              "EndLine": 1350,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\lib\\commandline\\CommandLine.cs",
+            "Region": {
+              "StartLine": 1354,
+              "EndLine": 1354,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\lib\\commandline\\CommandLine.cs",
+            "Region": {
+              "StartLine": 1366,
+              "EndLine": 1366,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\lib\\commandline\\CommandLine.cs",
+            "Region": {
+              "StartLine": 1370,
+              "EndLine": 1370,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.Test\\Globalization\\FailingCultureInfo.cs",
+            "Region": {
+              "StartLine": 30,
+              "EndLine": 30,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.Test\\Globalization\\FailingCultureInfo.cs",
+            "Region": {
+              "StartLine": 42,
+              "EndLine": 42,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.Test\\TimeZones\\IO\\IoStream.cs",
+            "Region": {
+              "StartLine": 171,
+              "EndLine": 171,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.Test\\TimeZones\\IO\\IoStream.cs",
+            "Region": {
+              "StartLine": 189,
+              "EndLine": 189,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.Test\\TimeZones\\IO\\IoStream.cs",
+            "Region": {
+              "StartLine": 363,
+              "EndLine": 363,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime.Test\\TimeZones\\IO\\IoStream.cs",
+            "Region": {
+              "StartLine": 381,
+              "EndLine": 381,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\CalendarSystem.cs",
+            "Region": {
+              "StartLine": 840,
+              "EndLine": 840,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Text\\ParseResult.cs",
+            "Region": {
+              "StartLine": 59,
+              "EndLine": 59,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Core\\Http\\RedirectedHttpClient.cs",
+            "Region": {
+              "StartLine": 72,
+              "EndLine": 72,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\OutputConsole\\OutputConsole.cs",
+            "Region": {
+              "StartLine": 111,
+              "EndLine": 111,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\OutputConsole\\OutputConsole.cs",
+            "Region": {
+              "StartLine": 116,
+              "EndLine": 116,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHost\\NuGetHostRawUserInterface.cs",
+            "Region": {
+              "StartLine": 53,
+              "EndLine": 53,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHost\\NuGetHostRawUserInterface.cs",
+            "Region": {
+              "StartLine": 65,
+              "EndLine": 65,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHost\\NuGetHostRawUserInterface.cs",
+            "Region": {
+              "StartLine": 105,
+              "EndLine": 105,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHost\\NuGetHostRawUserInterface.cs",
+            "Region": {
+              "StartLine": 110,
+              "EndLine": 110,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHost\\NuGetHostRawUserInterface.cs",
+            "Region": {
+              "StartLine": 154,
+              "EndLine": 154,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHost\\NuGetHostRawUserInterface.cs",
+            "Region": {
+              "StartLine": 178,
+              "EndLine": 178,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\PowerShellCmdlets.Test\\MockCommandRuntime.cs",
+            "Region": {
+              "StartLine": 138,
+              "EndLine": 138,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\PowerShellCmdlets.Test\\MockCommandRuntime.cs",
+            "Region": {
+              "StartLine": 143,
+              "EndLine": 143,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\DnsQueryResourceRecord.cs",
+            "Region": {
+              "StartLine": 38,
+              "EndLine": 38,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Dns\\DnsQueryResourceRecord.cs",
+            "Region": {
+              "StartLine": 47,
+              "EndLine": 47,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Igmp\\IgmpDatagram.cs",
+            "Region": {
+              "StartLine": 185,
+              "EndLine": 185,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Igmp\\IgmpDatagram.cs",
+            "Region": {
+              "StartLine": 201,
+              "EndLine": 201,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\Transport\\TcpOptionMood.cs",
+            "Region": {
+              "StartLine": 120,
+              "EndLine": 120,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Archive\\GZip\\GZipWritableArchiveEntry.cs",
+            "Region": {
+              "StartLine": 78,
+              "EndLine": 78,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Archive\\Tar\\TarWritableArchiveEntry.cs",
+            "Region": {
+              "StartLine": 78,
+              "EndLine": 78,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Archive\\Zip\\ZipWritableArchiveEntry.cs",
+            "Region": {
+              "StartLine": 77,
+              "EndLine": 77,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\EntryStream.cs",
+            "Region": {
+              "StartLine": 60,
+              "EndLine": 60,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\EntryStream.cs",
+            "Region": {
+              "StartLine": 67,
+              "EndLine": 67,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\SevenZipEntry.cs",
+            "Region": {
+              "StartLine": 45,
+              "EndLine": 45,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\SevenZipEntry.cs",
+            "Region": {
+              "StartLine": 50,
+              "EndLine": 50,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\SevenZipEntry.cs",
+            "Region": {
+              "StartLine": 55,
+              "EndLine": 55,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\SevenZip\\SevenZipEntry.cs",
+            "Region": {
+              "StartLine": 60,
+              "EndLine": 60,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Tar\\TarReadOnlySubStream.cs",
+            "Region": {
+              "StartLine": 79,
+              "EndLine": 79,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Tar\\TarReadOnlySubStream.cs",
+            "Region": {
+              "StartLine": 87,
+              "EndLine": 87,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Zip\\PkwareTraditionalCryptoStream.cs",
+            "Region": {
+              "StartLine": 44,
+              "EndLine": 44,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Zip\\PkwareTraditionalCryptoStream.cs",
+            "Region": {
+              "StartLine": 49,
+              "EndLine": 49,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Zip\\WinzipAesCryptoStream.cs",
+            "Region": {
+              "StartLine": 73,
+              "EndLine": 73,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Common\\Zip\\WinzipAesCryptoStream.cs",
+            "Region": {
+              "StartLine": 78,
+              "EndLine": 78,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\DeflateStream.cs",
+            "Region": {
+              "StartLine": 140,
+              "EndLine": 140,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\DeflateStream.cs",
+            "Region": {
+              "StartLine": 167,
+              "EndLine": 167,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\DeflateStream.cs",
+            "Region": {
+              "StartLine": 177,
+              "EndLine": 177,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\GZipStream.cs",
+            "Region": {
+              "StartLine": 135,
+              "EndLine": 135,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\GZipStream.cs",
+            "Region": {
+              "StartLine": 163,
+              "EndLine": 163,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\GZipStream.cs",
+            "Region": {
+              "StartLine": 173,
+              "EndLine": 173,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ParallelDeflateOutputStream.cs",
+            "Region": {
+              "StartLine": 458,
+              "EndLine": 458,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ParallelDeflateOutputStream.cs",
+            "Region": {
+              "StartLine": 466,
+              "EndLine": 466,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ZlibBaseStream.cs",
+            "Region": {
+              "StartLine": 559,
+              "EndLine": 559,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ZlibStream.cs",
+            "Region": {
+              "StartLine": 133,
+              "EndLine": 133,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ZlibStream.cs",
+            "Region": {
+              "StartLine": 159,
+              "EndLine": 159,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ZlibStream.cs",
+            "Region": {
+              "StartLine": 169,
+              "EndLine": 169,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\PpmdStream.cs",
+            "Region": {
+              "StartLine": 82,
+              "EndLine": 82,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\MultiVolumeReadOnlyStream.cs",
+            "Region": {
+              "StartLine": 142,
+              "EndLine": 142,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\MultiVolumeReadOnlyStream.cs",
+            "Region": {
+              "StartLine": 150,
+              "EndLine": 150,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\RarStream.cs",
+            "Region": {
+              "StartLine": 36,
+              "EndLine": 36,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\RarStream.cs",
+            "Region": {
+              "StartLine": 41,
+              "EndLine": 41,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\RarStream.cs",
+            "Region": {
+              "StartLine": 46,
+              "EndLine": 46,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\IO\\AppendingStream.cs",
+            "Region": {
+              "StartLine": 24,
+              "EndLine": 24,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\IO\\AppendingStream.cs",
+            "Region": {
+              "StartLine": 29,
+              "EndLine": 29,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\IO\\AppendingStream.cs",
+            "Region": {
+              "StartLine": 39,
+              "EndLine": 39,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\IO\\AppendingStream.cs",
+            "Region": {
+              "StartLine": 46,
+              "EndLine": 46,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\IO\\CountingWritableSubStream.cs",
+            "Region": {
+              "StartLine": 38,
+              "EndLine": 38,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\IO\\CountingWritableSubStream.cs",
+            "Region": {
+              "StartLine": 45,
+              "EndLine": 45,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\IO\\ReadOnlySubStream.cs",
+            "Region": {
+              "StartLine": 66,
+              "EndLine": 66,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\IO\\ReadOnlySubStream.cs",
+            "Region": {
+              "StartLine": 74,
+              "EndLine": 74,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\IO\\RewindableStream.cs",
+            "Region": {
+              "StartLine": 104,
+              "EndLine": 104,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Writer\\Zip\\ZipWriter.cs",
+            "Region": {
+              "StartLine": 210,
+              "EndLine": 210,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S2372",
+      "FullMessage": "Remove the exception throwing from this property getter, or refactor the property into a method.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Writer\\Zip\\ZipWriter.cs",
+            "Region": {
+              "StartLine": 215,
+              "EndLine": 215,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

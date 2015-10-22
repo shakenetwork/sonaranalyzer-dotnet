@@ -167,6 +167,7 @@
     <Compile Include="Rules\EnumNameHasEnumSuffixTest.cs" />
     <Compile Include="Rules\FlagsEnumZeroMemberTest.cs" />
     <Compile Include="Rules\FlagsEnumWithoutInitializerTest.cs" />
+    <Compile Include="Rules\PropertyGetterWithThrowTest.cs" />
     <Compile Include="Rules\UnaryPrefixOperatorRepeatedTest.cs" />
     <Compile Include="Rules\GetHashCodeEqualsOverrideTest.cs" />
     <Compile Include="Rules\RedundantParenthesesTest.cs" />
@@ -576,6 +577,12 @@
     <None Include="TestCases\ArrayCreationLongSyntax.Fixed.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="TestCases\PropertyGetterWithThrow.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\TabCharacter.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="TestCases\FlagsEnumWithoutInitializer.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -652,6 +659,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\ParameterAssignedTo.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\PropertyGetterWithThrow.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
