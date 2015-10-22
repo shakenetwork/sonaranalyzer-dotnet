@@ -27,6 +27,7 @@ using System.Reflection;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
 using SonarLint.Common;
+using Microsoft.CodeAnalysis.CodeFixes;
 
 namespace SonarLint.Utilities
 {
@@ -71,7 +72,6 @@ namespace SonarLint.Utilities
         {
             var typeName = analyzerType.FullName + CodeFixProviderSuffix;
             return analyzerType.Assembly.GetType(typeName);
-
         }
 
         private static void GetSqale(Type analyzerType, RuleDetail ruleDetail)
@@ -140,11 +140,24 @@ namespace SonarLint.Utilities
 
         public static IEnumerable<string> GetCodeFixTitles(Type codeFixProvider)
         {
-            return codeFixProvider.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static)
+            return GetCodeFixProvidersWithBase(codeFixProvider)
+                .SelectMany(t => t.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static))
                 .Where(field =>
                     field.Name.StartsWith("Title", StringComparison.InvariantCulture) &&
                     field.FieldType == typeof(string))
                 .Select(field => (string)field.GetRawConstantValue());
+        }
+
+        private static IEnumerable<Type> GetCodeFixProvidersWithBase(Type codeFixProvider)
+        {
+            yield return codeFixProvider;
+
+            var baseClass = codeFixProvider.BaseType;
+            while (baseClass != typeof(CodeFixProvider))
+            {
+                yield return baseClass;
+                baseClass = baseClass.BaseType;
+            }
         }
 
         private static void GetParameters(Type analyzerType, RuleDetail ruleDetail)

@@ -1,0 +1,4174 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarLint.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"ticks\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Snapshot\\LocalSnapshotStore.cs",
+            "Region": {
+              "StartLine": 204,
+              "EndLine": 204,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"b\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests\\Routing\\ConsistentHashingRouterSpec.cs",
+            "Region": {
+              "StartLine": 79,
+              "EndLine": 79,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"c\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests\\Routing\\ConsistentHashingRouterSpec.cs",
+            "Region": {
+              "StartLine": 79,
+              "EndLine": 79,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"receivedLatch\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests\\Routing\\SmallestMailboxSpec.cs",
+            "Region": {
+              "StartLine": 33,
+              "EndLine": 33,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"b\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Util\\MurmurHash.cs",
+            "Region": {
+              "StartLine": 215,
+              "EndLine": 215,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"n\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Util\\MurmurHash.cs",
+            "Region": {
+              "StartLine": 215,
+              "EndLine": 215,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"description\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\commandline\\Options.cs",
+            "Region": {
+              "StartLine": 288,
+              "EndLine": 288,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"n\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\commandline\\Options.cs",
+            "Region": {
+              "StartLine": 795,
+              "EndLine": 795,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"s\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\commandline\\Options.cs",
+            "Region": {
+              "StartLine": 795,
+              "EndLine": 795,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"v\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\commandline\\Options.cs",
+            "Region": {
+              "StartLine": 795,
+              "EndLine": 795,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"j\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\commandline\\Options.cs",
+            "Region": {
+              "StartLine": 1016,
+              "EndLine": 1016,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"end\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\commandline\\Options.cs",
+            "Region": {
+              "StartLine": 1080,
+              "EndLine": 1080,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"next_state\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Json\\JsonDeserializer.cs",
+            "Region": {
+              "StartLine": 579,
+              "EndLine": 579,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"leftLayout\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\LayoutRenderers\\Wrappers\\PaddingTests.cs",
+            "Region": {
+              "StartLine": 161,
+              "EndLine": 161,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"rightLayout\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\LayoutRenderers\\Wrappers\\PaddingTests.cs",
+            "Region": {
+              "StartLine": 161,
+              "EndLine": 161,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"v2\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tools\\DumpApiXml\\DocFileBuilder.cs",
+            "Region": {
+              "StartLine": 149,
+              "EndLine": 149,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"day\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Calendars\\IslamicYearMonthDayCalculator.cs",
+            "Region": {
+              "StartLine": 89,
+              "EndLine": 89,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"days\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Period.cs",
+            "Region": {
+              "StartLine": 422,
+              "EndLine": 422,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"months\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Period.cs",
+            "Region": {
+              "StartLine": 422,
+              "EndLine": 422,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"weeks\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Period.cs",
+            "Region": {
+              "StartLine": 422,
+              "EndLine": 422,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"milliseconds\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Period.cs",
+            "Region": {
+              "StartLine": 433,
+              "EndLine": 433,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"minutes\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Period.cs",
+            "Region": {
+              "StartLine": 433,
+              "EndLine": 433,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"nanoseconds\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Period.cs",
+            "Region": {
+              "StartLine": 433,
+              "EndLine": 433,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"seconds\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Period.cs",
+            "Region": {
+              "StartLine": 433,
+              "EndLine": 433,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"ticks\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Period.cs",
+            "Region": {
+              "StartLine": 433,
+              "EndLine": 433,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"longitudeSeconds\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\TimeZones\\TzdbZone1970Location.cs",
+            "Region": {
+              "StartLine": 26,
+              "EndLine": 26,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"longitudeSeconds\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\TimeZones\\TzdbZoneLocation.cs",
+            "Region": {
+              "StartLine": 21,
+              "EndLine": 21,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"_ignoreAll\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\CommandLine\\Commands\\UpdateCommand.cs",
+            "Region": {
+              "StartLine": 17,
+              "EndLine": 17,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"_currentPage\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Dialog10\\Nodes\\PackagesTreeNodeBase.cs",
+            "Region": {
+              "StartLine": 33,
+              "EndLine": 33,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"_isPrerelease\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Dialog10\\PackageItem.cs",
+            "Region": {
+              "StartLine": 18,
+              "EndLine": 18,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"_originalPackageId\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Dialog10\\Providers\\PackagesProviderBase.cs",
+            "Region": {
+              "StartLine": 31,
+              "EndLine": 31,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"_culture\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Dialog10\\Providers\\PackagesProviderBase.cs",
+            "Region": {
+              "StartLine": 37,
+              "EndLine": 37,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"_ignoreAll\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\Dialog10\\Providers\\PackagesProviderBase.cs",
+            "Region": {
+              "StartLine": 40,
+              "EndLine": 40,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"_collapsedIcon\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\DialogServices\\SolutionExplorer\\FolderNode.cs",
+            "Region": {
+              "StartLine": 15,
+              "EndLine": 15,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"isAllUnselected\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\DialogServices\\SolutionExplorer\\FolderNode.cs",
+            "Region": {
+              "StartLine": 146,
+              "EndLine": 146,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"newVersion\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\ProductUpdate\\ProductUpdateService.cs",
+            "Region": {
+              "StartLine": 78,
+              "EndLine": 78,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"fullPath\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VisualStudio\\PSScriptExecutor.cs",
+            "Region": {
+              "StartLine": 44,
+              "EndLine": 44,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"_ignoreAll\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellCmdlets\\NuGetBaseCommand.cs",
+            "Region": {
+              "StartLine": 30,
+              "EndLine": 30,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"fullPath\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellCmdlets\\ProcessPackageBaseCommand.cs",
+            "Region": {
+              "StartLine": 279,
+              "EndLine": 279,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"b\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\Core.Test\\AggregateRepositoryTest.cs",
+            "Region": {
+              "StartLine": 19,
+              "EndLine": 19,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"c\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\Core.Test\\AggregateRepositoryTest.cs",
+            "Region": {
+              "StartLine": 20,
+              "EndLine": 20,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"source2\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\Core.Test\\PackageSourceProviderTest.cs",
+            "Region": {
+              "StartLine": 554,
+              "EndLine": 554,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"source2\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\Core.Test\\PackageSourceProviderTest.cs",
+            "Region": {
+              "StartLine": 596,
+              "EndLine": 596,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"repoB\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\PowerShellCmdlets.Test\\InstallPackageCommandTest.cs",
+            "Region": {
+              "StartLine": 263,
+              "EndLine": 263,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"packageA11\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\test\\VisualStudio.Test\\FallbackRepositoryTest.cs",
+            "Region": {
+              "StartLine": 339,
+              "EndLine": 339,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"storedCombinedCRC\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 136,
+              "EndLine": 136,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"computedCombinedCRC\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 137,
+              "EndLine": 137,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"ch2\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 140,
+              "EndLine": 140,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"chPrev\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 140,
+              "EndLine": 140,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"count\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 140,
+              "EndLine": 140,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"tPos\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 141,
+              "EndLine": 141,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"magic2\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 243,
+              "EndLine": 243,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"magic3\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 243,
+              "EndLine": 243,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"magic4\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 243,
+              "EndLine": 243,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"magic6\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 244,
+              "EndLine": 244,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"i\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 422,
+              "EndLine": 422,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"j\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 422,
+              "EndLine": 422,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"vec\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 422,
+              "EndLine": 422,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"alphaSize\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 472,
+              "EndLine": 472,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"j\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 472,
+              "EndLine": 472,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"nGroups\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 472,
+              "EndLine": 472,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"nSelectors\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 472,
+              "EndLine": 472,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"t\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 472,
+              "EndLine": 472,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"maxLen\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 473,
+              "EndLine": 473,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"v\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 527,
+              "EndLine": 527,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"j\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 593,
+              "EndLine": 593,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"limitLast\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 593,
+              "EndLine": 593,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"nextSym\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 593,
+              "EndLine": 593,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"groupNo\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 594,
+              "EndLine": 594,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"groupPos\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 594,
+              "EndLine": 594,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"zj\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 623,
+              "EndLine": 623,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"zn\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 623,
+              "EndLine": 623,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"zvec\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 623,
+              "EndLine": 623,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"zj\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 692,
+              "EndLine": 692,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"zn\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 692,
+              "EndLine": 692,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"zvec\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 692,
+              "EndLine": 692,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"zj\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 789,
+              "EndLine": 789,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"zn\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 789,
+              "EndLine": 789,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"zvec\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2InputStream.cs",
+            "Region": {
+              "StartLine": 789,
+              "EndLine": 789,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"i\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 84,
+              "EndLine": 84,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"j\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 84,
+              "EndLine": 84,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"k\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 84,
+              "EndLine": 84,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"n1\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 84,
+              "EndLine": 84,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"n2\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 84,
+              "EndLine": 84,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"nHeap\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 84,
+              "EndLine": 84,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"tmp\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 111,
+              "EndLine": 111,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"tmp\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 133,
+              "EndLine": 133,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"yy\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 133,
+              "EndLine": 133,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"tmp\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 161,
+              "EndLine": 161,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"yy\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 161,
+              "EndLine": 161,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"tmp\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 199,
+              "EndLine": 199,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"combinedCRC\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 470,
+              "EndLine": 470,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"i\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 575,
+              "EndLine": 575,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"vec\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 575,
+              "EndLine": 575,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"bc\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 663,
+              "EndLine": 663,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"bt\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 663,
+              "EndLine": 663,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"ge\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 663,
+              "EndLine": 663,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"gs\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 663,
+              "EndLine": 663,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"i\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 663,
+              "EndLine": 663,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"iter\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 663,
+              "EndLine": 663,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"j\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 663,
+              "EndLine": 663,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"t\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 663,
+              "EndLine": 663,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"totc\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 663,
+              "EndLine": 663,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"alphaSize\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 664,
+              "EndLine": 664,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"maxLen\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 664,
+              "EndLine": 664,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"minLen\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 664,
+              "EndLine": 664,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"selCtr\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 664,
+              "EndLine": 664,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"aFreq\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 705,
+              "EndLine": 705,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"remF\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 705,
+              "EndLine": 705,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"tFreq\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 705,
+              "EndLine": 705,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"cost1\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 795,
+              "EndLine": 795,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"cost2\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 795,
+              "EndLine": 795,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"cost3\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 795,
+              "EndLine": 795,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"cost4\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 795,
+              "EndLine": 795,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"cost5\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 795,
+              "EndLine": 795,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"tmp\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 882,
+              "EndLine": 882,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"tmp2\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 882,
+              "EndLine": 882,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"bigN\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 1059,
+              "EndLine": 1059,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"h\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 1059,
+              "EndLine": 1059,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"hp\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 1059,
+              "EndLine": 1059,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"j\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 1059,
+              "EndLine": 1059,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"gtHi\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 1192,
+              "EndLine": 1192,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"ltLo\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 1192,
+              "EndLine": 1192,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"m\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 1192,
+              "EndLine": 1192,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"med\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 1192,
+              "EndLine": 1192,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"n\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 1192,
+              "EndLine": 1192,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"unHi\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 1192,
+              "EndLine": 1192,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"d\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 1193,
+              "EndLine": 1193,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"hi\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 1193,
+              "EndLine": 1193,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"lo\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 1193,
+              "EndLine": 1193,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"j\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 1331,
+              "EndLine": 1331,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"sb\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 1331,
+              "EndLine": 1331,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"ss\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 1331,
+              "EndLine": 1331,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"c2\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 1335,
+              "EndLine": 1335,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"c2\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 1625,
+              "EndLine": 1625,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"s2\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 1626,
+              "EndLine": 1626,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"j\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\BZip2\\CBZip2OutputStream.cs",
+            "Region": {
+              "StartLine": 1808,
+              "EndLine": 1808,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"j\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\CRC32.cs",
+            "Region": {
+              "StartLine": 64,
+              "EndLine": 64,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"static_lenb\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\DeflateManager.cs",
+            "Region": {
+              "StartLine": 997,
+              "EndLine": 997,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"m\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\DeflateManager.cs",
+            "Region": {
+              "StartLine": 1074,
+              "EndLine": 1074,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"c\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
+            "Region": {
+              "StartLine": 455,
+              "EndLine": 455,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"j\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
+            "Region": {
+              "StartLine": 455,
+              "EndLine": 455,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"w\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Inflate.cs",
+            "Region": {
+              "StartLine": 1832,
+              "EndLine": 1832,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"_nextToWrite\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\ParallelDeflateOutputStream.cs",
+            "Region": {
+              "StartLine": 128,
+              "EndLine": 128,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"m\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Tree.cs",
+            "Region": {
+              "StartLine": 243,
+              "EndLine": 243,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"m\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Deflate\\Tree.cs",
+            "Region": {
+              "StartLine": 327,
+              "EndLine": 327,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"code\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Filters\\BCJ2Filter.cs",
+            "Region": {
+              "StartLine": 31,
+              "EndLine": 31,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"hash2Value\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LZ\\LzBinTree.cs",
+            "Region": {
+              "StartLine": 135,
+              "EndLine": 135,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"hash3Value\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LZ\\LzBinTree.cs",
+            "Region": {
+              "StartLine": 135,
+              "EndLine": 135,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"len1\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LZ\\LzBinTree.cs",
+            "Region": {
+              "StartLine": 182,
+              "EndLine": 182,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"len1\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LZ\\LzBinTree.cs",
+            "Region": {
+              "StartLine": 291,
+              "EndLine": 291,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"rep1\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaDecoder.cs",
+            "Region": {
+              "StartLine": 156,
+              "EndLine": 156,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"rep2\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaDecoder.cs",
+            "Region": {
+              "StartLine": 156,
+              "EndLine": 156,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"rep3\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaDecoder.cs",
+            "Region": {
+              "StartLine": 156,
+              "EndLine": 156,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"numDistancePairs\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
+            "Region": {
+              "StartLine": 549,
+              "EndLine": 549,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"numDistancePairs\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\LZMA\\LzmaEncoder.cs",
+            "Region": {
+              "StartLine": 1100,
+              "EndLine": 1100,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"initEsc\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\ModelPPM.cs",
+            "Region": {
+              "StartLine": 197,
+              "EndLine": 197,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"initRL\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\ModelPPM.cs",
+            "Region": {
+              "StartLine": 197,
+              "EndLine": 197,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"maxOrder\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\ModelPPM.cs",
+            "Region": {
+              "StartLine": 197,
+              "EndLine": 197,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"orderFall\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\ModelPPM.cs",
+            "Region": {
+              "StartLine": 197,
+              "EndLine": 197,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"runLength\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\ModelPPM.cs",
+            "Region": {
+              "StartLine": 197,
+              "EndLine": 197,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"hiBitsFlag\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\ModelPPM.cs",
+            "Region": {
+              "StartLine": 208,
+              "EndLine": 208,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"prevSuccess\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\ModelPPM.cs",
+            "Region": {
+              "StartLine": 208,
+              "EndLine": 208,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"k\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\ModelPPM.cs",
+            "Region": {
+              "StartLine": 300,
+              "EndLine": 300,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"m\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\ModelPPM.cs",
+            "Region": {
+              "StartLine": 300,
+              "EndLine": 300,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"Step\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\ModelPPM.cs",
+            "Region": {
+              "StartLine": 300,
+              "EndLine": 300,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"cf\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\ModelPPM.cs",
+            "Region": {
+              "StartLine": 626,
+              "EndLine": 626,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"ns\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\ModelPPM.cs",
+            "Region": {
+              "StartLine": 626,
+              "EndLine": 626,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"s0\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\ModelPPM.cs",
+            "Region": {
+              "StartLine": 626,
+              "EndLine": 626,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"sf\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\ModelPPM.cs",
+            "Region": {
+              "StartLine": 626,
+              "EndLine": 626,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"hiCnt\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\ModelPPM.cs",
+            "Region": {
+              "StartLine": 869,
+              "EndLine": 869,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"count\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\ModelPPM.cs",
+            "Region": {
+              "StartLine": 943,
+              "EndLine": 943,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"hiCnt\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\ModelPPM.cs",
+            "Region": {
+              "StartLine": 943,
+              "EndLine": 943,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"numMasked\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\ModelPPM.cs",
+            "Region": {
+              "StartLine": 945,
+              "EndLine": 945,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"Adder\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\PPMContext.cs",
+            "Region": {
+              "StartLine": 167,
+              "EndLine": 167,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"EscFreq\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\PPMContext.cs",
+            "Region": {
+              "StartLine": 167,
+              "EndLine": 167,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"i\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\PPMContext.cs",
+            "Region": {
+              "StartLine": 167,
+              "EndLine": 167,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"n1\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\PPMContext.cs",
+            "Region": {
+              "StartLine": 243,
+              "EndLine": 243,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"i\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\PPMContext.cs",
+            "Region": {
+              "StartLine": 349,
+              "EndLine": 349,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"HiCnt\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\PPMContext.cs",
+            "Region": {
+              "StartLine": 481,
+              "EndLine": 481,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"code\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\RangeCoder.cs",
+            "Region": {
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"range\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\RangeCoder.cs",
+            "Region": {
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"highCount\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\RangeCoder.cs",
+            "Region": {
+              "StartLine": 129,
+              "EndLine": 129,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"scale\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\RangeCoder.cs",
+            "Region": {
+              "StartLine": 129,
+              "EndLine": 129,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"NU\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\RarMemBlock.cs",
+            "Region": {
+              "StartLine": 8,
+              "EndLine": 8,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"prev\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\RarMemBlock.cs",
+            "Region": {
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"mem2\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\State.cs",
+            "Region": {
+              "StartLine": 93,
+              "EndLine": 93,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"hiUnit\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\SubAllocator.cs",
+            "Region": {
+              "StartLine": 85,
+              "EndLine": 85,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"loUnit\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\SubAllocator.cs",
+            "Region": {
+              "StartLine": 85,
+              "EndLine": 85,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"fakeUnitsStart\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\SubAllocator.cs",
+            "Region": {
+              "StartLine": 91,
+              "EndLine": 91,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"heapEnd\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\SubAllocator.cs",
+            "Region": {
+              "StartLine": 91,
+              "EndLine": 91,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"unitsStart\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\SubAllocator.cs",
+            "Region": {
+              "StartLine": 91,
+              "EndLine": 91,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"uDiff\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\SubAllocator.cs",
+            "Region": {
+              "StartLine": 150,
+              "EndLine": 150,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"k\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\SubAllocator.cs",
+            "Region": {
+              "StartLine": 233,
+              "EndLine": 233,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"sz\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\SubAllocator.cs",
+            "Region": {
+              "StartLine": 233,
+              "EndLine": 233,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"k\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\PPMd\\H\\SubAllocator.cs",
+            "Region": {
+              "StartLine": 400,
+              "EndLine": 400,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"BitLength\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack.cs",
+            "Region": {
+              "StartLine": 230,
+              "EndLine": 230,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"Slot\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack.cs",
+            "Region": {
+              "StartLine": 230,
+              "EndLine": 230,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"Length\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack.cs",
+            "Region": {
+              "StartLine": 322,
+              "EndLine": 322,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"NewFile\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack.cs",
+            "Region": {
+              "StartLine": 785,
+              "EndLine": 785,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"wrPtr\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 57,
+              "EndLine": 57,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"ChSetA\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 61,
+              "EndLine": 61,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"ChSetB\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 61,
+              "EndLine": 61,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"ChSetC\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 61,
+              "EndLine": 61,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"PlaceA\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 63,
+              "EndLine": 63,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"PlaceB\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 63,
+              "EndLine": 63,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"PlaceC\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 63,
+              "EndLine": 63,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"NToPlB\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 65,
+              "EndLine": 65,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"NToPlC\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 65,
+              "EndLine": 65,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"AvrLn1\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 67,
+              "EndLine": 67,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"AvrLn2\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 67,
+              "EndLine": 67,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"AvrLn3\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 67,
+              "EndLine": 67,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"AvrPlc\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 67,
+              "EndLine": 67,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"AvrPlcB\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 67,
+              "EndLine": 67,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"FlagsCnt\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 69,
+              "EndLine": 69,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"LCount\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 69,
+              "EndLine": 69,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"NumHuf\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 69,
+              "EndLine": 69,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"StMode\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 69,
+              "EndLine": 69,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"MaxDist3\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 71,
+              "EndLine": 71,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"Nlzb\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 71,
+              "EndLine": 71,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"lastLength\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 73,
+              "EndLine": 73,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"SaveLength\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 273,
+              "EndLine": 273,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"NewDistancePlace\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 383,
+              "EndLine": 383,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"OldAvr3\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 384,
+              "EndLine": 384,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"NewBytePlace\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 506,
+              "EndLine": 506,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"NewFlagsPlace\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 609,
+              "EndLine": 609,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"J\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 663,
+              "EndLine": 663,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"pos\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack15.cs",
+            "Region": {
+              "StartLine": 663,
+              "EndLine": 663,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"UnpChannelDelta\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack20.cs",
+            "Region": {
+              "StartLine": 47,
+              "EndLine": 47,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"UnpChannels\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack20.cs",
+            "Region": {
+              "StartLine": 47,
+              "EndLine": 47,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"UnpCurChannel\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack20.cs",
+            "Region": {
+              "StartLine": 47,
+              "EndLine": 47,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"I\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack20.cs",
+            "Region": {
+              "StartLine": 253,
+              "EndLine": 253,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"N\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack20.cs",
+            "Region": {
+              "StartLine": 253,
+              "EndLine": 253,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"NumMinDif\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\Unpack20.cs",
+            "Region": {
+              "StartLine": 428,
+              "EndLine": 428,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"N\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\UnpackUtility.cs",
+            "Region": {
+              "StartLine": 168,
+              "EndLine": 168,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"posR\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
+            "Region": {
+              "StartLine": 1137,
+              "EndLine": 1137,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"width\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
+            "Region": {
+              "StartLine": 1137,
+              "EndLine": 1137,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"channels\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
+            "Region": {
+              "StartLine": 1199,
+              "EndLine": 1199,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"D2\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
+            "Region": {
+              "StartLine": 1213,
+              "EndLine": 1213,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"D3\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
+            "Region": {
+              "StartLine": 1213,
+              "EndLine": 1213,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"K2\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
+            "Region": {
+              "StartLine": 1214,
+              "EndLine": 1214,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"K3\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
+            "Region": {
+              "StartLine": 1214,
+              "EndLine": 1214,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"numMinDif\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
+            "Region": {
+              "StartLine": 1253,
+              "EndLine": 1253,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"destPos\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
+            "Region": {
+              "StartLine": 1305,
+              "EndLine": 1305,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1659",
+      "FullMessage": "Declare \"srcPos\" in a separate statement.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\sharpcompress_b855fd5bf0d1\\SharpCompress\\Compressor\\Rar\\VM\\RarVM.cs",
+            "Region": {
+              "StartLine": 1305,
+              "EndLine": 1305,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

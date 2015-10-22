@@ -114,6 +114,8 @@
     <Compile Include="Rules\EndStatementUsage.cs" />
     <Compile Include="Rules\EnumNameHasEnumSuffix.cs" />
     <Compile Include="Rules\EnumNameHasEnumSuffixBase.cs" />
+    <Compile Include="Rules\MultipleVariableDeclarationCodeFixProvider.cs" />
+    <Compile Include="Rules\MultipleVariableDeclarationCodeFixProviderBase.cs" />
     <Compile Include="Rules\OnErrorStatement.cs" />
     <Compile Include="Rules\StringConcatenationWithPlusCodeFixProvider.cs" />
     <Compile Include="Rules\StringConcatenationWithPlus.cs" />
@@ -166,6 +168,8 @@
     <Compile Include="Rules\PropertyWriteOnlyBase.cs" />
     <Compile Include="Rules\PublicMethodWithMultidimensionalArray.cs" />
     <Compile Include="Rules\PublicMethodWithMultidimensionalArrayBase.cs" />
+    <Compile Include="Rules\MultipleVariableDeclaration.cs" />
+    <Compile Include="Rules\MultipleVariableDeclarationBase.cs" />
     <Compile Include="Rules\SwitchWithoutDefaultBase.cs" />
     <Compile Include="Rules\UnaryPrefixOperatorRepeatedCodeFixProvider.cs" />
     <Compile Include="Rules\TernaryOperatorPointlessCodeFixProvider.cs" />
@@ -656,6 +660,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S2368_vb.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S1659_cs.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S1659_vb.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

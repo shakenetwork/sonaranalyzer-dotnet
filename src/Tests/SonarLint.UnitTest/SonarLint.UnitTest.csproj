@@ -170,6 +170,7 @@
     <Compile Include="Rules\PropertyGetterWithThrowTest.cs" />
     <Compile Include="Rules\PropertyWriteOnlyTest.cs" />
     <Compile Include="Rules\PublicMethodWithMultidimensionalArrayTest.cs" />
+    <Compile Include="Rules\MultipleVariableDeclarationTest.cs" />
     <Compile Include="Rules\UnaryPrefixOperatorRepeatedTest.cs" />
     <Compile Include="Rules\GetHashCodeEqualsOverrideTest.cs" />
     <Compile Include="Rules\RedundantParenthesesTest.cs" />
@@ -579,6 +580,18 @@
     <None Include="TestCases\ArrayCreationLongSyntax.Fixed.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="TestCases\MultipleVariableDeclaration.Fixed.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\MultipleVariableDeclaration.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\MultipleVariableDeclaration.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\TabCharacter.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="TestCases\PublicMethodWithMultidimensionalArray.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -682,6 +695,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\PublicMethodWithMultidimensionalArray.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\MultipleVariableDeclaration.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\MultipleVariableDeclaration.Fixed.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
