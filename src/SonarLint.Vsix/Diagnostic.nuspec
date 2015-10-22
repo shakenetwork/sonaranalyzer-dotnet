@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>SonarLint</id>
-    <version>1.3.0</version>
+    <version>1.4.0</version>
     <title>SonarLint for Visual Studio</title>
     <authors>SonarSource</authors>
     <owners>SonarSource</owners>
@@ -10,9 +10,9 @@
     <projectUrl>http://vs.sonarlint.org</projectUrl>
     <iconUrl>http://dist.sonarsource.com/csharp/download/waves-sonarqube-48.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <summary>This package provides on-the-fly feedback to developers on new bugs and quality issues injected into C# code.</summary>
-    <description>SonarLint provides on-the-fly feedback to developers on new bugs or quality issues injected into C# code. This package is based on and benefits from the .NET Compiler Platform ("Roslyn") and the related code analysis API to provide a fully-integrated user experience in Visual Studio 2015.</description>
-    <releaseNotes>https://github.com/SonarSource/sonarlint-vs/issues?q=milestone:1.3.0</releaseNotes>
+    <summary>This package provides on-the-fly feedback to developers on new bugs and quality issues injected into C# and VB.Net code.</summary>
+    <description>SonarLint provides on-the-fly feedback to developers on new bugs or quality issues injected into C# and VB.Net code. This package is based on and benefits from the .NET Compiler Platform ("Roslyn") and the related code analysis API to provide a fully-integrated user experience in Visual Studio 2015.</description>
+    <releaseNotes>https://github.com/SonarSource/sonarlint-vs/issues?q=milestone:1.4.0</releaseNotes>
     <language>en-US</language>
     <copyright>Copyright © SonarSource 2015</copyright>
     <tags>SonarLint SonarQube Analysis Roslyn CodeAnalysis Analyzer Sonar Debt Technical Tech Quality</tags>
