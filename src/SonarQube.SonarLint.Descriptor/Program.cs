@@ -34,19 +34,15 @@ namespace SonarLint.Descriptor
     {
         public static void Main(string[] args)
         {
-            if (args.Length != 4)
+            if (args.Length != 1)
             {
-                Write("The application requires three parameters to run: ");
-                Write("[Path to RuleDescriptors.xml]");
-                Write("[Path to QualityProfile.xml]");
-                Write("[Path to SqaleDescriptors.xml]");
                 Write("[AnalyzerLanguage: 'cs' for C#, 'vbnet' for VB.Net]");
                 Write("All files will be created by the application");
 
                 return;
             }
 
-            WriteXmlDescriptorFiles(args[0], args[1], args[2], args[3]);
+            WriteXmlDescriptorFiles("rules.xml", "profile.xml", "sqale.xml", args[0]);
         }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("SonarLint", "S2228:Console logging should not be used",
@@ -64,9 +60,11 @@ namespace SonarLint.Descriptor
             var ruleDetails = genericRuleDetails.Select(RuleDetail.Convert).ToList();
             var sqaleDetails = genericRuleDetails.Select(SqaleDescriptor.Convert).ToList();
 
-            WriteRuleDescriptorFile(rulePath, ruleDetails);
-            WriteQualityProfileFile(profilePath, ruleDetails, language);
-            WriteSqaleDescriptorFile(sqalePath, sqaleDetails);
+            Directory.CreateDirectory(lang);
+
+            WriteRuleDescriptorFile(Path.Combine(lang, rulePath), ruleDetails);
+            WriteQualityProfileFile(Path.Combine(lang, profilePath), ruleDetails, language);
+            WriteSqaleDescriptorFile(Path.Combine(lang, sqalePath), sqaleDetails);
         }
 
         private static void WriteSqaleDescriptorFile(string filePath, IEnumerable<SqaleDescriptor> sqaleDescriptions)

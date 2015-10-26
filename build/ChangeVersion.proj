@@ -50,11 +50,16 @@
       <ReplaceWith>$(NugetVersion)</ReplaceWith>
       <ExpectedMatchCount>1</ExpectedMatchCount>
     </NugetRunner>
-    <NugetDescriptor Include="$(SolutionRoot)\src\SonarQube.SonarLint.Descriptor\Descriptor.nuspec">
+    <NugetDescriptorCs Include="$(SolutionRoot)\src\SonarQube.SonarLint.Descriptor\Descriptor.cs.nuspec">
       <Find>(?&lt;=&lt;version&gt;)([^&lt;]*)</Find>
       <ReplaceWith>$(NugetVersion)</ReplaceWith>
       <ExpectedMatchCount>1</ExpectedMatchCount>
-    </NugetDescriptor>
+    </NugetDescriptorCs>
+	<NugetDescriptorVbNet Include="$(SolutionRoot)\src\SonarQube.SonarLint.Descriptor\Descriptor.vbnet.nuspec">
+      <Find>(?&lt;=&lt;version&gt;)([^&lt;]*)</Find>
+      <ReplaceWith>$(NugetVersion)</ReplaceWith>
+      <ExpectedMatchCount>1</ExpectedMatchCount>
+    </NugetDescriptorVbNet>
   </ItemGroup>
 
   <Target Name="UpdateAssemblyVersion">
@@ -66,6 +71,7 @@
     <RegexTransform Items="@(NugetAnalyzer)" />
     <RegexTransform Items="@(NugetReleaseNotes)" />
     <RegexTransform Items="@(NugetRunner)" />
-    <RegexTransform Items="@(NugetDescriptor)" />
+    <RegexTransform Items="@(NugetDescriptorCs)" />
+    <RegexTransform Items="@(NugetDescriptorVbNet)" />
   </Target>
 </Project>

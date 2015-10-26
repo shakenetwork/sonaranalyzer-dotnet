@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>SonarLint.Descriptor</id>
-    <version>1.4.0</version>
-    <title>SonarLint Rule Descriptor Generator</title>
+    <id>SonarLint.Descriptor.VisualBasic</id>
+    <version>1.3.0</version>
+    <title>SonarLint Rule Descriptor Generator for VB.Net</title>
     <authors>SonarSource</authors>
     <owners>SonarSource</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>SonarLint rule descriptor XML file generator</description>
+    <description>SonarLint rule descriptor XML file generator for VB.Net</description>
     <releaseNotes></releaseNotes>
     <copyright>Copyright SonarSource 2015</copyright>
     <tags></tags>
@@ -16,8 +16,8 @@
     </frameworkAssemblies>
   </metadata>
   <files>
-    <file src="bin\Release\rules.xml"  target="xml\" />
-    <file src="bin\Release\profile.xml"  target="xml\" />
-    <file src="bin\Release\sqale.xml"  target="xml\" />
+    <file src="bin\Release\vbnet\rules.xml"  target="xml\" />
+    <file src="bin\Release\vbnet\profile.xml"  target="xml\" />
+    <file src="bin\Release\vbnet\sqale.xml"  target="xml\" />
   </files>
 </package>
