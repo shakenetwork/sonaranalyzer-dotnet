@@ -33,10 +33,10 @@ namespace SonarLint.UnitTest.PackagingTests
             const string vsixFileName = "SonarLint.vsix";
 #if DEBUG
             const string pathEnding = @"bin\Debug";
-            const int approxFileSize = 1434 * 1024;
+            const int approxFileSize = 1582 * 1024;
 #else
             const string pathEnding = @"bin\Release";
-            const int approxFileSize = 340 * 1024;
+            const int approxFileSize = 373 * 1024;
 #endif
 
             var currentDirectory = Directory.GetCurrentDirectory();
