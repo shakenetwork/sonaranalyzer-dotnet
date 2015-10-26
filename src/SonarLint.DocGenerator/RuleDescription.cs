@@ -27,27 +27,41 @@ namespace SonarLint.DocGenerator
 {
     public class RuleDescription
     {
-        public static RuleDescription Convert(RuleDetail detail, string productVersion)
+        public static RuleDescription Convert(RuleDetail detail, string productVersion, AnalyzerLanguage language)
         {
             return new RuleDescription
             {
                 Key = detail.Key,
-                Title = detail.Title,
-                Description = AddLinksBetweenRulesToDescription(detail.Description, productVersion) +
-                    GetCodeFixDescription(detail),
-                Tags = detail.Tags,
-                Severity = detail.Severity,
-                IdeSeverity = detail.IdeSeverity
+                Data = new Dictionary<string, RuleMetaData>
+                {
+                    {
+                        language.ToString(),
+                        new RuleMetaData
+                        {
+                            Title = detail.Title,
+                            Description = AddLinksBetweenRulesToDescription(detail.Description, productVersion) +
+                                GetCodeFixDescription(detail),
+                            Tags = detail.Tags,
+                            Severity = detail.Severity,
+                            IdeSeverity = detail.IdeSeverity
+                        }
+                    }
+                }
             };
         }
 
         public string Key { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public string Version { get; set; }
-        public string Severity { get; set; }
-        public int IdeSeverity { get; set; }
-        public IEnumerable<string> Tags { get; set; }
+        public Dictionary<string, RuleMetaData> Data { get; set; }
+
+        public class RuleMetaData
+        {
+            public string Title { get; set; }
+            public string Description { get; set; }
+            public string Severity { get; set; }
+            public int IdeSeverity { get; set; }
+            public IEnumerable<string> Tags { get; set; }
+        }
+
 
         public const string CrosslinkPattern = "(Rule )(S[0-9]+)";
         public const string HelpLinkPattern = "#version={0}&ruleId={1}";

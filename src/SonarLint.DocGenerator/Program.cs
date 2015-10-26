@@ -33,29 +33,45 @@ namespace SonarLint.DocGenerator
         {
             var productVersion = FileVersionInfo.GetVersionInfo(typeof(Program).Assembly.Location).ProductVersion;
 
-            //todo this si not the best, for the website we'll need one single file
-            WriteRuleJson(productVersion, AnalyzerLanguage.CSharp);
-            WriteRuleJson(productVersion, AnalyzerLanguage.VisualBasic);
+            WriteRuleJson(productVersion);
 
         }
 
-        private static void WriteRuleJson(string productVersion, AnalyzerLanguage language)
+        private static void WriteRuleJson(string productVersion)
         {
-            var content = GenerateRuleJson(productVersion, language);
+            var content = GenerateRuleJson(productVersion);
 
             Directory.CreateDirectory(productVersion);
-            Directory.CreateDirectory(Path.Combine(productVersion, language.GetDirectoryName()));
-            File.WriteAllText(Path.Combine(productVersion, language.GetDirectoryName(), "rules.json"), content);
+            File.WriteAllText(Path.Combine(productVersion, "rules.json"), content);
         }
 
-        public static string GenerateRuleJson(string productVersion, AnalyzerLanguage language)
+        public static string GenerateRuleJson(string productVersion)
         {
-            var ruleDetails = RuleDetailBuilder.GetParameterlessRuleDetails(language)
-                .Select(ruleDetail =>
-                    RuleDescription.Convert(ruleDetail, productVersion))
+            var cs = RuleDetailBuilder.GetParameterlessRuleDetails(AnalyzerLanguage.CSharp)
+                .Select(ruleDetail => RuleDescription.Convert(ruleDetail, productVersion, AnalyzerLanguage.CSharp))
                 .ToList();
 
-            return JsonConvert.SerializeObject(ruleDetails,
+            var vb = RuleDetailBuilder.GetParameterlessRuleDetails(AnalyzerLanguage.VisualBasic)
+                .Select(ruleDetail => RuleDescription.Convert(ruleDetail, productVersion, AnalyzerLanguage.VisualBasic))
+                .ToList();
+
+            foreach (var vbRuleDescription in vb)
+            {
+                var csEquivalent = cs.FirstOrDefault(rd => rd.Key == vbRuleDescription.Key);
+                if (csEquivalent == null)
+                {
+                    cs.Add(vbRuleDescription);
+                }
+                else
+                {
+                    foreach (var item in vbRuleDescription.Data)
+                    {
+                        csEquivalent.Data.Add(item.Key, item.Value);
+                    }
+                }
+            }
+
+            return JsonConvert.SerializeObject(cs,
                     new JsonSerializerSettings
                     {
                         NullValueHandling = NullValueHandling.Ignore,
