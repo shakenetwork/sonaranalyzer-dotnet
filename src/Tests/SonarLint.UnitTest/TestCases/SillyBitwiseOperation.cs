@@ -38,6 +38,8 @@ namespace Tests.Diagnostics
 
             var resultULong = 1UL | 0x00000UL; // Noncompliant
             resultULong = 1UL | 18446744073709551615UL; // Compliant
+
+            m(1UL | 0x00000UL); // Noncompliant
         }
         private static long returnLong()
         {

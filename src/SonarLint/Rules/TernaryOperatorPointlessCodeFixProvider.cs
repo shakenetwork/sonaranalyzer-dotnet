@@ -51,7 +51,11 @@ namespace SonarLint.Rules
 
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
-            var conditional = root.FindNode(diagnosticSpan) as ConditionalExpressionSyntax;
+            var conditional = root.FindNode(diagnosticSpan, getInnermostNodeForTie: true) as ConditionalExpressionSyntax;
+            if (conditional == null)
+            {
+                return;
+            }
 
             context.RegisterCodeFix(
                 CodeAction.Create(

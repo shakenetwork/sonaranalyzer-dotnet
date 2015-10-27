@@ -55,7 +55,11 @@
             booleanVariable = condition ? exp : exp2;
 
             var b = !(x || booleanVariable); // Noncompliant
+
+            SomeFunc(true); // Noncompliant
         }
+
+        public static void SomeFunc(bool x) { }
 
         private bool Foo()
         {

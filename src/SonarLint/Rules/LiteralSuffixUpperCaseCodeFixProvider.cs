@@ -50,7 +50,11 @@ namespace SonarLint.Rules
             var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
-            var literal = (LiteralExpressionSyntax)root.FindNode(diagnosticSpan);
+            var literal = root.FindNode(diagnosticSpan, getInnermostNodeForTie: true) as LiteralExpressionSyntax;
+            if (literal == null)
+            {
+                return;
+            }
             var semanticModel = await context.Document.GetSemanticModelAsync(context.CancellationToken).ConfigureAwait(false);
 
             var newLiteral = GetNewLiteral(literal, semanticModel);

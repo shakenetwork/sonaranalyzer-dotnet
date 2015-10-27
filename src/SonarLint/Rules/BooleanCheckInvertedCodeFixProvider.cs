@@ -54,7 +54,12 @@ namespace SonarLint.Rules
 
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
-            var syntaxNode = (PrefixUnaryExpressionSyntax)root.FindNode(diagnosticSpan);
+            var syntaxNode = root.FindNode(diagnosticSpan, getInnermostNodeForTie: true) as PrefixUnaryExpressionSyntax;
+
+            if (syntaxNode == null)
+            {
+                return;
+            }
 
             context.RegisterCodeFix(
                 CodeAction.Create(

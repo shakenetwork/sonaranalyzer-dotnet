@@ -53,7 +53,7 @@ namespace SonarLint.Rules
 
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
-            var syntaxNode = root.FindNode(diagnosticSpan);
+            var syntaxNode = root.FindNode(diagnosticSpan, getInnermostNodeForTie: true);
 
             var binary = syntaxNode as BinaryExpressionSyntax;
             if (binary != null)

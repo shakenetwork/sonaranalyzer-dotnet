@@ -8,7 +8,7 @@ namespace Tests.TestCases
 {
     class LiteralSuffixUpperCase
     {
-        public void Test()
+        public void Test(uint ui)
         {
             const uint a = 0u;      // Noncompliant
             const long b = 0l;      // Noncompliant
@@ -22,6 +22,8 @@ namespace Tests.TestCases
             const int j = 0Xf; // Compliant
             const int k = 0; // Compliant
             const int l = 0u; // Noncompliant
+
+            Test(0u); // Noncompliant
         }
         public void TestOk()
         {

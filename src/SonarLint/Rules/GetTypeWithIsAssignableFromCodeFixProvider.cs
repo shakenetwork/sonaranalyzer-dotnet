@@ -51,7 +51,12 @@ namespace SonarLint.Rules
             var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
-            var syntaxNode = (InvocationExpressionSyntax)root.FindNode(diagnosticSpan);
+            var syntaxNode = root.FindNode(diagnosticSpan, getInnermostNodeForTie: true) as InvocationExpressionSyntax;
+            if (syntaxNode == null)
+            {
+                return;
+            }
+
             var useIsOperator = bool.Parse(diagnostic.Properties[GetTypeWithIsAssignableFrom.UseIsOperatorKey]);
 
             context.RegisterCodeFix(

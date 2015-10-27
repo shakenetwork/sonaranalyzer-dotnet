@@ -52,7 +52,7 @@ namespace SonarLint.Rules
 
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
-            var unary = root.FindNode(diagnosticSpan) as UnaryExpressionSyntax;
+            var unary = root.FindNode(diagnosticSpan, getInnermostNodeForTie: true) as UnaryExpressionSyntax;
             if (unary == null)
             {
                 return;

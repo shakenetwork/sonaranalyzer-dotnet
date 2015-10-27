@@ -6,7 +6,7 @@ namespace Tests.Diagnostics
 
     class UnaryPrefixOperatorRepeated
     {
-        static void NonComp(  )
+        static void NonComp(bool b  )
         {
             int i = 1;
 
@@ -15,6 +15,8 @@ namespace Tests.Diagnostics
 
             bool b = false;
             bool c = !b; // Noncompliant
+
+            NonComp(!b); // Noncompliant
         }
 
         static void Comp()

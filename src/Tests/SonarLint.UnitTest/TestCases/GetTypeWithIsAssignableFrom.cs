@@ -5,7 +5,7 @@ namespace Tests.Diagnostics
 {
     class GetTypeWithIsAssignableFrom
     {
-        void Test()
+        void Test(bool b)
         {
             var expr1 = new GetTypeWithIsAssignableFrom();
             var expr2 = new GetTypeWithIsAssignableFrom();
@@ -32,6 +32,8 @@ namespace Tests.Diagnostics
 
             if (t1.IsAssignableFrom(typeof(GetTypeWithIsAssignableFrom))) //Compliant
             { }
+
+            Test(t1.IsAssignableFrom(c: expr2.GetType())); //Noncompliant
         }
     }
 }

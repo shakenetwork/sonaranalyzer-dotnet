@@ -29,7 +29,11 @@ namespace Tests.Diagnostics
 
             int[] args = { };
             var a = args.Length == 0; // Noncompliant
+
+            SomeFunc(a < 10); // Noncompliant
         }
+
+        public static void SomeFunc(bool x) { }
 
         public static bool operator ==     (BooleanCheckInverted a, BooleanCheckInverted b)
         {

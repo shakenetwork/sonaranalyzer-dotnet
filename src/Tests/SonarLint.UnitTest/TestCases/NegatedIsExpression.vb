@@ -1,8 +1,9 @@
 ﻿Module Module1
-    Sub Main()
+    Sub Main(x As Boolean)
         Dim a = Not "a" Is Nothing ' Noncompliant
         a = Not "a" Is ' Noncompliant
             Nothing 'some comment
         a = "a" IsNot Nothing ' Compliant
+        Main(Not "a" Is Nothing) ' Noncompliant
     End Sub
 End Module
