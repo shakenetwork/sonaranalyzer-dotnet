@@ -47,7 +47,7 @@ namespace SonarLint.Rules
         internal const string MessageFormat = "Convert this \"abstract\" class to {0}";
         internal const string MessageToInterface = "an interface";
         internal const string MessageToConcreteClass = "a concrete class with a private constructor";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = false;
 

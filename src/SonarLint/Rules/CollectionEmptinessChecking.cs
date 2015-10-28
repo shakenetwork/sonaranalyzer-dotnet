@@ -43,7 +43,7 @@ namespace SonarLint.Rules
             "Using \".Count() > 0\" to test for emptiness works, but using \".Any()\" makes the " +
             "intent clearer, and the code more readable.";
         internal const string MessageFormat = "Use \".Any()\" to test whether this \"IEnumerable<{0}>\" is empty or not.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

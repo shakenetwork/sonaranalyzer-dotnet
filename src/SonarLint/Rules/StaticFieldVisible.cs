@@ -46,7 +46,7 @@ namespace SonarLint.Rules
             "non-changing data shared by many consumers. To enforce this intent, these fields should be marked " +
             "\"readonly\" or converted to a constant.";
         internal const string MessageFormat = "Change the visibility of \"{0}\" or make it \"const\" or \"readonly\".";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

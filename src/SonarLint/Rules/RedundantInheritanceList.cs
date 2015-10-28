@@ -47,7 +47,7 @@ namespace SonarLint.Rules
         internal const string MessageEnum = "\"int\" should not be explicitly used as the underlying type.";
         internal const string MessageObjectBase = "\"Object\" should not be explicitly extended.";
         internal const string MessageAlreadyImplements = "\"{0}\" is a \"{1}\" so \"{1}\" can be removed from the inheritance list.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;

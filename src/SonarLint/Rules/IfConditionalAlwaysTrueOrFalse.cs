@@ -48,7 +48,7 @@ namespace SonarLint.Rules
         internal const string MessageFormat = "Remove this useless {0}.";
         private const string ifStatementLiteral = "\"if\" statement";
         private const string elseClauseLiteral = "\"else\" clause";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;

@@ -44,7 +44,7 @@ namespace SonarLint.Rules
             "either take appropriate action or contain a suitable comment as to why no action is taken. This is " +
             "consistent with the requirement to have a final \"default\" clause in a \"switch\" statement.";
         internal const string MessageFormat = "Add the missing \"else\" clause.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = false;
 

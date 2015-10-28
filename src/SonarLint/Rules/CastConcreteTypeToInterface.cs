@@ -43,7 +43,7 @@ namespace SonarLint.Rules
             "likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality " +
             "should be added to the interface. Otherwise there is the risk of runtime exceptions.";
         internal const string MessageFormat = "Remove this cast and edit the interface to add the missing functionality.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

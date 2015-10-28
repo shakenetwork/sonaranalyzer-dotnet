@@ -48,7 +48,7 @@ namespace SonarLint.Rules
             "leading to a guaranteed null pointer dereference.";
         internal const string MessageFormat =
             "Either reverse the equality operator in the \"{0}\" null test, or reverse the logical operator that follows it.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Blocker;
         internal const bool IsActivatedByDefault = true;
 

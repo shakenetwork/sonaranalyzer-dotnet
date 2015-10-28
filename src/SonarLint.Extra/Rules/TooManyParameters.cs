@@ -39,7 +39,7 @@ namespace SonarLint.Rules
         internal const string DiagnosticId = "S107";
         internal const string Description = "Methods should not have too many parameters";
         internal const string MessageFormat = "Method \"{2}\" has {1} parameters, which is greater than the {0} authorized.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

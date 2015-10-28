@@ -35,7 +35,7 @@ namespace SonarLint.Rules.Common
         internal const string Description =
             "Declaring multiple variable on one line is difficult to read.";
         internal const string MessageFormat = "Declare \"{0}\" in a separate statement.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
 

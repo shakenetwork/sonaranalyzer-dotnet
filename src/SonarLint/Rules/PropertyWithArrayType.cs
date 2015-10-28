@@ -43,7 +43,7 @@ namespace SonarLint.Rules
             "deep copy of the original array or risk having the object's internal state altered unexpectedly. However, making a deep copy, especially " +
             "when the array is large, is much slower than a simple field access.Therefore, such properties should be refactored into methods.";
         internal const string MessageFormat = "Refactor \"{0}\" into a method, properties should not be based on arrays.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

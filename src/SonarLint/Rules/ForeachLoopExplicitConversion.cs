@@ -45,7 +45,7 @@ namespace SonarLint.Rules
             "performs \"explicit\" type conversion, which at runtime can result in an \"InvalidCastException\" to be thrown. New C# " +
             "code should use generics and not rely on \"foreach\" statement's silent \"explicit\" conversions.";
         internal const string MessageFormat = "Either change the type of \"{0}\" to \"{1}\" or iterate on a generic collection of type \"{2}\".";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

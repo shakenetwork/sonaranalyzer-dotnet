@@ -45,7 +45,7 @@ namespace SonarLint.Rules
             "says: remove this item from the subscription list. But because an anonymous delegate was used in both cases, the unsubscribe " +
             "attempt tries to remove a different item from the list than was added. The result: \"NOOP\".";
         internal const string MessageFormat = "Unsubscribe with the same delegate that was used for the subscription.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

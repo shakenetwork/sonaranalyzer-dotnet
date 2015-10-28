@@ -44,7 +44,7 @@ namespace SonarLint.Rules
             "Most of the time a block of code is empty when a piece of code is really missing. " +
             "So such empty block must be either filled or removed.";
         internal const string MessageFormat = "Either remove or fill this block of code.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

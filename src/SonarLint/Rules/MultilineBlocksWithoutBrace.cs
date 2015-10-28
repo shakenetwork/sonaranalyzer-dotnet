@@ -46,7 +46,7 @@ namespace SonarLint.Rules
             "will be unconditionally executed once.";
         internal const string MessageFormat =
             "Only the first line of this n-line block will be executed {0}. The rest will execute {1}.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

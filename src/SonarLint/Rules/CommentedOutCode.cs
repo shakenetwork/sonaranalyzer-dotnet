@@ -45,7 +45,7 @@ namespace SonarLint.Rules
             "readability. Unused code should be deleted and can be retrieved from source " +
             "control history if required.";
         internal const string MessageFormat = "Remove this commented out code.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

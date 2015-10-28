@@ -37,7 +37,7 @@ namespace SonarLint.Rules
         internal const string DiagnosticId = "S104";
         internal const string Description = "Files should not have too many lines";
         internal const string MessageFormat = "This file has {1} lines, which is greater than {0} authorized. Split it into smaller files.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

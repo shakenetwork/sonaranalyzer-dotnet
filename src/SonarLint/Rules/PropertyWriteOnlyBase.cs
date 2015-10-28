@@ -35,7 +35,7 @@ namespace SonarLint.Rules.Common
             "Properties with only setters are confusing and counterintuitive. Instead, a property getter should be added if possible, " +
             "or the property should be replaced with a setter method.";
         internal const string MessageFormat = "Provide a getter for \"{0}\" or replace the property with a \"Set{0}\" method.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

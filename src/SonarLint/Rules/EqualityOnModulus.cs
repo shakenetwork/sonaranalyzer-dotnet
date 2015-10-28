@@ -43,7 +43,7 @@ namespace SonarLint.Rules
             "When the modulus of a negative number is calculated, the result will either be negative or zero. Thus, comparing " +
             "the modulus of a variable for equality with a positive number (or a negative one) could result in unexpected results.";
         internal const string MessageFormat = "The result of this modulus operation may not be {0}.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = false;
 

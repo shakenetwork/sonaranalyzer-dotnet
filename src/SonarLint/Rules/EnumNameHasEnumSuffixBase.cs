@@ -34,7 +34,7 @@ namespace SonarLint.Rules
         internal const string Description =
             "The information that an enumeration type is actually an enumeration or a set of flags should not be duplicated in its name.";
         internal const string MessageFormat = "Rename this enumeration to remove the \"{0}\" suffix.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
 

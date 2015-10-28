@@ -42,7 +42,7 @@ namespace SonarLint.Rules
             "Calling an overridable method from a constructor could result in failures or strange behaviors when instantiating " +
             "a subclass which overrides the method.";
         internal const string MessageFormat = "Remove this call from a constructor to the overridable \"{0}\" method.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

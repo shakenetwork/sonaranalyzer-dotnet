@@ -40,7 +40,7 @@ namespace SonarLint.Rules
         internal const string Title = "Collapsible \"if\" statements should be merged";
         internal const string Description = "Merging collapsible \"if\" statements increases the code's readability.";
         internal const string MessageFormat = "Merge this if statement with the enclosing one.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

@@ -45,7 +45,7 @@ namespace SonarLint.Rules
             "initialization values, so there is no need to explicitly set a field to its default value, but doing. "+
             "Further, under the logic that cleaner code is better code, it's considered poor style to do so.";
         internal const string MessageFormat = "Remove this initialization to \"{0}\", the compiler will do that for you.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;

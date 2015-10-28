@@ -45,7 +45,7 @@ namespace SonarLint.Rules
             "It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should not" +
             "have side-effects. Assignments inside lambda and delegate expressions are allowed.";
         internal const string MessageFormat = "Extract the assignment of \"{0}\" from this expression.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

@@ -38,7 +38,7 @@ namespace SonarLint.Rules
         internal const string DiagnosticId = "S103";
         internal const string Description = "Lines should not be too long";
         internal const string MessageFormat = "Split this {1} characters long line (which is greater than {0} authorized).";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = false;
 

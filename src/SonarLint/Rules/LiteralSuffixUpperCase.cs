@@ -44,7 +44,7 @@ namespace SonarLint.Rules
             "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" " +
             "(letter el) for declaring literals.";
         internal const string MessageFormat = "Upper case this literal suffix.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
 

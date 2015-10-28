@@ -43,7 +43,7 @@ namespace SonarLint.Rules
         internal const string Description =
             "The \"... IsNot ...\" syntax is more compact and more readable than the \"Not ... Is ...\" syntax.";
         internal const string MessageFormat = "Replace this use of \"Not...Is...\" with \"IsNot\".";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

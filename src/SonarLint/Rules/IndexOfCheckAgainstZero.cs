@@ -45,7 +45,7 @@ namespace SonarLint.Rules
             "look for values \">0\" ignore the first element, which is likely a bug. If the intent is merely to check inclusion " +
             "of a value in a \"string\", \"List\", or an array, consider using the \"Contains\" method instead.";
         internal const string MessageFormat = "0 is a valid index, but this check ignores it.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

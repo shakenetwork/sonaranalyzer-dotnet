@@ -46,7 +46,7 @@ namespace SonarLint.Rules
             "having the same value on both sides of an operator yields predictable results, " +
             "and should be simplified.";
         internal const string MessageFormat = "Identical sub-expressions on both sides of operator \"{0}\"";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

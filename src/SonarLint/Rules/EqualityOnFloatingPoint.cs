@@ -46,7 +46,7 @@ namespace SonarLint.Rules
             "operations and the answer will be different based on the order of those operation " +
             "because of the rounding that takes place at each step.";
         internal const string MessageFormat = "Use \"<=\" or \">=\" instead of \"==\" and \"!=\".";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

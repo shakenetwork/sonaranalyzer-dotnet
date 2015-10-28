@@ -46,7 +46,7 @@ namespace SonarLint.Rules
             "base class.";
         internal const string MessageFormat =
             "A static field in a generic type is not shared among instances of different close constructed types.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

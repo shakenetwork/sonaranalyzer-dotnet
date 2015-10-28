@@ -48,7 +48,7 @@ namespace SonarLint.Rules
             "of \"Where(element => [expression]).Any()\".";
         internal const string MessageFormatType = "Use \"OfType<{0}>()\" here instead.";
         internal const string MessageFormatSimplify = "Drop \"{0}\" and move the condition into the \"{1}\".";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

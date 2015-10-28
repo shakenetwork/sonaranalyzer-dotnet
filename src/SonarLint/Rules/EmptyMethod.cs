@@ -47,7 +47,7 @@ namespace SonarLint.Rules
             "explain the reason for the blank override.";
         internal const string MessageFormat = "Add a nested comment explaining why this method is empty, throw a " +
                                               "NotSupportedException or complete the implementation.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

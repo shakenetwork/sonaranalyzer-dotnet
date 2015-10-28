@@ -35,7 +35,7 @@ namespace SonarLint.Rules.Common
         internal const string Description =
             "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method.";
         internal const string MessageFormat = "Remove the exception throwing from this property getter, or refactor the property into a method.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

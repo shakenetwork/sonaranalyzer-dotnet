@@ -41,7 +41,7 @@ namespace SonarLint.Rules
         internal const string Description =
             "A value that is incremented or decremented and then not stored is at best wasted code and at worst a bug.";
         internal const string MessageFormat = "Remove this {0} or correct the code not to waste it.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

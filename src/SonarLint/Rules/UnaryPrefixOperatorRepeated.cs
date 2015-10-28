@@ -43,7 +43,7 @@ namespace SonarLint.Rules
             "Calling the \"!\" or \"~\" prefix operator twice does nothing: the second invocation undoes the first. " +
             "Such mistakes are typically caused by accidentally double-tapping the key in question without noticing.";
         internal const string MessageFormat = "Use the \"{0}\" operator just once or not at all.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

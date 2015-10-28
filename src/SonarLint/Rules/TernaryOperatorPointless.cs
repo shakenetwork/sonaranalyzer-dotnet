@@ -44,7 +44,7 @@ namespace SonarLint.Rules
             "mistake was made in coding it.";
         internal const string MessageFormat =
             "This operation returns the same value whether the condition is \"true\" or \"false\".";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

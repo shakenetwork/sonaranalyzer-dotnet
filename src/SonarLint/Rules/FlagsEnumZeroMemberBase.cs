@@ -37,7 +37,7 @@ namespace SonarLint.Rules.Common
             "Consisitent use of \"None\" in flags enumerations indicates that all flag values are cleared. The value 0 should not be " +
             "used to indicate any other state, since there is no way to check that the bit 0 is set.";
         internal const string MessageFormat = "Rename \"{0}\" to \"None\".";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
 

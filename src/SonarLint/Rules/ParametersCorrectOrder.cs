@@ -46,7 +46,7 @@ namespace SonarLint.Rules
             "passed in a different order than the method arguments, it indicates a mistake in the " +
             "parameter order which will likely lead to unexpected results.";
         internal const string MessageFormat = "Parameters to \"{0}\" have the same names but not the same order as the method arguments.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Blocker;
         internal const bool IsActivatedByDefault = true;
 

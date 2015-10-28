@@ -43,7 +43,7 @@ namespace SonarLint.Rules
             "deadlocks because any other thread could acquire (or attempt to acquire) the same lock for another unrelated " +
             "purpose.";
         internal const string MessageFormat = "Lock on a new \"object\" instead.";
-        internal const string Category = "SonarLint";
+        internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
