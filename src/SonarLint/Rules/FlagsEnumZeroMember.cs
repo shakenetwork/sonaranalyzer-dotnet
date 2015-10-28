@@ -45,7 +45,7 @@ namespace SonarLint.Rules
             private static readonly ImmutableArray<SyntaxKind> kindsOfInterest = ImmutableArray.Create(SyntaxKind.EnumDeclaration);
             public override ImmutableArray<SyntaxKind> SyntaxKindsOfInterest => kindsOfInterest;
 
-            protected override SyntaxToken GetIdentifier(EnumMemberDeclarationSyntax member) => member.Identifier;
+            protected override SyntaxToken GetIdentifier(EnumMemberDeclarationSyntax zeroMember) => zeroMember.Identifier;
 
             protected override IEnumerable<EnumMemberDeclarationSyntax> GetMembers(EnumDeclarationSyntax node)
             {
@@ -69,7 +69,7 @@ namespace SonarLint.Rules
             private static readonly ImmutableArray<SyntaxKind> kindsOfInterest = ImmutableArray.Create(SyntaxKind.EnumStatement);
             public override ImmutableArray<SyntaxKind> SyntaxKindsOfInterest => kindsOfInterest;
 
-            protected override SyntaxToken GetIdentifier(EnumMemberDeclarationSyntax member) => member.Identifier;
+            protected override SyntaxToken GetIdentifier(EnumMemberDeclarationSyntax zeroMember) => zeroMember.Identifier;
 
             protected override IEnumerable<EnumMemberDeclarationSyntax> GetMembers(EnumStatementSyntax node)
             {

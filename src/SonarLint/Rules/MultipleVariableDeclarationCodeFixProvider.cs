@@ -84,7 +84,7 @@ namespace SonarLint.Rules
                 return root.ReplaceNode(declaration.Parent, newNodes);
             }
 
-            private IEnumerable<SyntaxTrivia> GetLeadingTriviaFor(VariableDeclaratorSyntax variable)
+            private static IEnumerable<SyntaxTrivia> GetLeadingTriviaFor(VariableDeclaratorSyntax variable)
             {
                 var previousToken = variable.GetFirstToken().GetPreviousToken();
                 return previousToken.TrailingTrivia

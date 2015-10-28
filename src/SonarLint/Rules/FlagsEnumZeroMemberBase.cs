@@ -62,7 +62,7 @@ namespace SonarLint.Rules.Common
                 {
                     var enumDeclaration = (TEnumDeclarationSyntax)c.Node;
 
-                    var hasFlagsAttribute = HasFlagsAttribute(enumDeclaration, c.SemanticModel);
+                    var hasFlagsAttribute = FlagsEnumWithoutInitializerBase.HasFlagsAttribute(enumDeclaration, c.SemanticModel);
                     if (!hasFlagsAttribute)
                     {
                         return;
@@ -117,23 +117,6 @@ namespace SonarLint.Rules.Common
             return null;
         }
         protected abstract IEnumerable<TEnumMemberSyntax> GetMembers(TEnumDeclarationSyntax node);
-
-        private bool HasFlagsAttribute(SyntaxNode node, SemanticModel semanticModel)
-        {
-            var symbol = semanticModel.GetDeclaredSymbol(node);
-            if (symbol == null)
-            {
-                return false;
-            }
-
-            var flagsAttribute = symbol.GetAttributes().FirstOrDefault(attribute =>
-            {
-                var type = attribute.AttributeClass;
-                return type != null &&
-                    type.ToDisplayString() == "System.FlagsAttribute";
-            });
-            return flagsAttribute != null;
-        }
 
         public abstract ImmutableArray<TLanguageKindEnum> SyntaxKindsOfInterest { get; }
     }

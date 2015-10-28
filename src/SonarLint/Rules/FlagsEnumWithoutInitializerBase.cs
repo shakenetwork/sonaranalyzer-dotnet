@@ -48,6 +48,23 @@ namespace SonarLint.Rules.Common
                 description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+
+        internal static bool HasFlagsAttribute(SyntaxNode node, SemanticModel semanticModel)
+        {
+            var symbol = semanticModel.GetDeclaredSymbol(node);
+            if (symbol == null)
+            {
+                return false;
+            }
+
+            var flagsAttribute = symbol.GetAttributes().FirstOrDefault(attribute =>
+            {
+                var type = attribute.AttributeClass;
+                return type != null &&
+                    type.ToDisplayString() == "System.FlagsAttribute";
+            });
+            return flagsAttribute != null;
+        }
     }
 
     public abstract class FlagsEnumWithoutInitializerBase<TLanguageKindEnum, TEnumDeclarationSyntax> : FlagsEnumWithoutInitializerBase
@@ -77,22 +94,5 @@ namespace SonarLint.Rules.Common
         public abstract ImmutableArray<TLanguageKindEnum> SyntaxKindsOfInterest { get; }
         protected abstract SyntaxToken GetIdentifier(TEnumDeclarationSyntax declaration);
         protected abstract bool AllMembersAreInitialized(TEnumDeclarationSyntax declaration);
-
-        private bool HasFlagsAttribute(SyntaxNode node, SemanticModel semanticModel)
-        {
-            var symbol = semanticModel.GetDeclaredSymbol(node);
-            if (symbol == null)
-            {
-                return false;
-            }
-
-            var flagsAttribute = symbol.GetAttributes().FirstOrDefault(attribute =>
-            {
-                var type = attribute.AttributeClass;
-                return type != null &&
-                    type.ToDisplayString() == "System.FlagsAttribute";
-            });
-            return flagsAttribute != null;
-        }
     }
 }

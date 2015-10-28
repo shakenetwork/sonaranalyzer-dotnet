@@ -43,35 +43,35 @@ namespace SonarLint.Common
             return language;
         }
 
-        public AnalyzerLanguage AddLanguage(AnalyzerLanguage language)
+        public AnalyzerLanguage AddLanguage(AnalyzerLanguage other)
         {
-            if (language == null)
+            if (other == null)
             {
-                throw new ArgumentNullException(nameof(language));
+                throw new ArgumentNullException(nameof(other));
             }
 
             if (this == None ||
-                this == language)
+                this == other)
             {
-                return language;
+                return other;
             }
 
             return Both;
         }
 
-        public bool IsAlso(AnalyzerLanguage language)
+        public bool IsAlso(AnalyzerLanguage other)
         {
-            if (language == null)
+            if (other == null)
             {
-                throw new ArgumentNullException(nameof(language));
+                throw new ArgumentNullException(nameof(other));
             }
 
-            if (language == None)
+            if (other == None)
             {
                 throw new NotSupportedException("IsAlso doesn't support AnalyzerLanguage.None.");
             }
 
-            return this == language || this == Both;
+            return this == other || this == Both;
         }
 
         public static AnalyzerLanguage Parse(string s)

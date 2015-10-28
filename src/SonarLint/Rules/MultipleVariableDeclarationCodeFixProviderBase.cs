@@ -40,7 +40,7 @@ namespace SonarLint.Rules.Common
         }
 
         private readonly FixAllProvider FixAllProviderInstance;
-        public MultipleVariableDeclarationCodeFixProviderBase()
+        protected MultipleVariableDeclarationCodeFixProviderBase()
         {
             FixAllProviderInstance = new DocumentBasedFixAllProvider<MultipleVariableDeclarationBase>(
                 Title,

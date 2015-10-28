@@ -73,7 +73,7 @@ namespace SonarLint.Rules.Common
                 FieldDeclarationKind);
         }
 
-        private void CheckAndReportVariables(IEnumerable<SyntaxToken> variables, SyntaxNodeAnalysisContext c)
+        private static void CheckAndReportVariables(IEnumerable<SyntaxToken> variables, SyntaxNodeAnalysisContext c)
         {
             if (variables.Count() <= 1)
             {
