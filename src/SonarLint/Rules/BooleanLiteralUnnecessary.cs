@@ -65,8 +65,7 @@ namespace SonarLint.Rules
                 c =>
                 {
                     var binaryExpression = (BinaryExpressionSyntax)c.Node;
-
-                    if (CheckForBooleanConstantsReport(binaryExpression, true, c))
+                    if (CheckForNullabilityAndBooleanConstantsReport(binaryExpression, true, c))
                     {
                         return;
                     }
@@ -83,8 +82,7 @@ namespace SonarLint.Rules
                 c =>
                 {
                     var binaryExpression = (BinaryExpressionSyntax)c.Node;
-
-                    if (CheckForBooleanConstantsReport(binaryExpression, true, c))
+                    if (CheckForNullabilityAndBooleanConstantsReport(binaryExpression, true, c))
                     {
                         return;
                     }
@@ -101,8 +99,7 @@ namespace SonarLint.Rules
                 c =>
                 {
                     var binaryExpression = (BinaryExpressionSyntax)c.Node;
-
-                    if (CheckForBooleanConstantsReport(binaryExpression, false, c))
+                    if (CheckForNullabilityAndBooleanConstantsReport(binaryExpression, false, c))
                     {
                         return;
                     }
@@ -119,8 +116,7 @@ namespace SonarLint.Rules
                 c =>
                 {
                     var binaryExpression = (BinaryExpressionSyntax)c.Node;
-
-                    if (CheckForBooleanConstantsReport(binaryExpression, false, c))
+                    if (CheckForNullabilityAndBooleanConstantsReport(binaryExpression, false, c))
                     {
                         return;
                     }
@@ -150,6 +146,10 @@ namespace SonarLint.Rules
                 c =>
                 {
                     var conditional = (ConditionalExpressionSyntax)c.Node;
+                    if (IsOnNullableBoolean(conditional, c.SemanticModel))
+                    {
+                        return;
+                    }
 
                     var whenTrueIsTrue = EquivalenceChecker.AreEquivalent(conditional.WhenTrue, TrueExpression);
                     var whenTrueIsFalse = EquivalenceChecker.AreEquivalent(conditional.WhenTrue, FalseExpression);
@@ -185,8 +185,49 @@ namespace SonarLint.Rules
                 SyntaxKind.ConditionalExpression);
         }
 
-        private static bool CheckForBooleanConstantsReport(BinaryExpressionSyntax binaryExpression, bool reportOnTrue, SyntaxNodeAnalysisContext c)
+        private static bool IsOnNullableBoolean(ConditionalExpressionSyntax conditionalExpression, SemanticModel semanticModel)
         {
+            var typeLeft = semanticModel.GetTypeInfo(conditionalExpression.WhenTrue).Type;
+            var typeRight = semanticModel.GetTypeInfo(conditionalExpression.WhenFalse).Type;
+            return IsOnNullableBoolean(typeLeft, typeRight);
+        }
+
+        private static bool IsOnNullableBoolean(ITypeSymbol typeLeft, ITypeSymbol typeRight)
+        {
+            if (typeLeft == null || typeRight == null)
+            {
+                return false;
+            }
+
+            return IsNullableBoolean(typeLeft) || IsNullableBoolean(typeRight);
+        }
+
+        private static bool IsNullableBoolean(ITypeSymbol type)
+        {
+            if (type.OriginalDefinition.SpecialType != SpecialType.System_Nullable_T)
+            {
+                return false;
+            }
+
+            var namedType = (INamedTypeSymbol)type;
+            if(namedType.TypeArguments.Length != 1)
+            {
+                return false;
+            }
+
+            return namedType.TypeArguments[0].SpecialType == SpecialType.System_Boolean;
+        }
+
+        private static bool CheckForNullabilityAndBooleanConstantsReport(BinaryExpressionSyntax binaryExpression, bool reportOnTrue, SyntaxNodeAnalysisContext c)
+        {
+            var typeLeft = c.SemanticModel.GetTypeInfo(binaryExpression.Left).Type;
+            var typeRight = c.SemanticModel.GetTypeInfo(binaryExpression.Right).Type;
+            var shouldntReport = IsOnNullableBoolean(typeLeft, typeRight);
+            if (shouldntReport)
+            {
+                return true;
+            }
+
             var leftIsTrue = EquivalenceChecker.AreEquivalent(binaryExpression.Left, TrueExpression);
             var leftIsFalse = EquivalenceChecker.AreEquivalent(binaryExpression.Left, FalseExpression);
             var rightIsTrue = EquivalenceChecker.AreEquivalent(binaryExpression.Right, TrueExpression);

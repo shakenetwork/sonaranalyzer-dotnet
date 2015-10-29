@@ -2,7 +2,7 @@
 {
     public class BooleanLiteralUnnecessary
     {
-        public BooleanLiteralUnnecessary(bool a, bool b)
+        public BooleanLiteralUnnecessary(bool a, bool b, bool? c)
         {
             var z = true;   // Noncompliant
             z = false;     // Noncompliant
@@ -57,6 +57,13 @@
             var b = !(x || booleanVariable); // Noncompliant
 
             SomeFunc(true); // Noncompliant
+
+            if (c == true) //Compliant
+            {
+
+            }
+
+            var d = true ? c : false;
         }
 
         public static void SomeFunc(bool x) { }
