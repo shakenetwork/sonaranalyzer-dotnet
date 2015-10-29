@@ -164,7 +164,7 @@ namespace SonarLint.Rules
 
         private static bool HasDerivedClass(INamedTypeSymbol analyzedClass, ImmutableDictionary<INamedTypeSymbol, INamedTypeSymbol> classWithBaseType)
         {
-            return classWithBaseType.Values.Any(derived => analyzedClass.Equals(derived));
+            return classWithBaseType.Values.Any(derived => analyzedClass.Equals(derived.OriginalDefinition));
         }
 
         private static SyntaxTokenList GetModifiers(MemberDeclarationSyntax memberDeclaration)

@@ -36,4 +36,20 @@ partial interface PartialInterface //Noncompliant
         public override sealed void MyOverridenMethod() { } //Noncompliant
         public override sealed int Prop { get; set; } //Noncompliant
     }
+
+    internal class BaseClass<T>
+    {
+        public virtual string Process(string input)
+        {
+            return input;
+        }
+    }
+
+    internal class SubClass : BaseClass<string>
+    {
+        public override string Process(string input)
+        {
+            return "Test";
+        }
+    }
 }
