@@ -67,7 +67,8 @@ namespace SonarLint.Rules
                     var symbol = c.Symbol as INamedTypeSymbol;
                     if (symbol == null ||
                         !symbol.IsAbstract ||
-                        symbol.TypeKind != TypeKind.Class)
+                        symbol.TypeKind != TypeKind.Class ||
+                        ClassHasInheritedAbstractMembers(symbol))
                     {
                         return;
                     }
@@ -87,6 +88,39 @@ namespace SonarLint.Rules
                 SymbolKind.NamedType);
         }
 
+        private static bool ClassHasInheritedAbstractMembers(INamedTypeSymbol classSymbol)
+        {
+            var baseTypes = GetAllBaseTypes(classSymbol);
+            var abstractMethods = baseTypes.SelectMany(baseType => GetAllAbstractMethods(baseType));
+            var baseTypesAndSelf = baseTypes.Concat(new[] { classSymbol }).ToList();
+            var overrideMethods = baseTypesAndSelf.SelectMany(baseType => GetAllOverrideMethods(baseType));
+            var overriddenMethods = overrideMethods.Select(m => m.OverriddenMethod);
+            var stillAbstractMethods = abstractMethods.Except(overriddenMethods);
+
+            return stillAbstractMethods.Any();
+        }
+
+        private static IEnumerable<IMethodSymbol> GetAllAbstractMethods(INamedTypeSymbol classSymbol)
+        {
+            return GetAllMethods(classSymbol).Where(m => m.IsAbstract);
+        }
+        private static IEnumerable<IMethodSymbol> GetAllOverrideMethods(INamedTypeSymbol classSymbol)
+        {
+            return GetAllMethods(classSymbol).Where(m => m.IsOverride);
+        }
+
+        private static IList<INamedTypeSymbol> GetAllBaseTypes(INamedTypeSymbol classSymbol)
+        {
+            var list = new List<INamedTypeSymbol>();
+            var baseType = classSymbol.BaseType;
+            while (baseType != null)
+            {
+                list.Add(baseType);
+                baseType = baseType.BaseType;
+            }
+            return list;
+        }
+
         private static void ReportClass(INamedTypeSymbol symbol, string message, SymbolAnalysisContext c)
         {
             foreach (var declaringSyntaxReference in symbol.DeclaringSyntaxReferences)
@@ -101,24 +135,24 @@ namespace SonarLint.Rules
             }
         }
 
-        private static bool AbstractClassShouldBeInterface(INamedTypeSymbol @class)
+        private static bool AbstractClassShouldBeInterface(INamedTypeSymbol classSymbol)
         {
-            var methods = GetAllMethods(@class);
-            return @class.BaseType.SpecialType == SpecialType.System_Object &&
+            var methods = GetAllMethods(classSymbol);
+            return classSymbol.BaseType.SpecialType == SpecialType.System_Object &&
                    methods.Any() &&
                    methods.All(method => method.IsAbstract);
         }
 
-        private static bool AbstractClassShouldBeConcreteClass(INamedTypeSymbol @class)
+        private static bool AbstractClassShouldBeConcreteClass(INamedTypeSymbol classSymbol)
         {
-            var methods = GetAllMethods(@class);
+            var methods = GetAllMethods(classSymbol);
             return !methods.Any() ||
                    methods.All(method => !method.IsAbstract);
         }
 
-        private static IList<IMethodSymbol> GetAllMethods(INamedTypeSymbol @class)
+        private static IList<IMethodSymbol> GetAllMethods(INamedTypeSymbol classSymbol)
         {
-            return @class.GetMembers()
+            return classSymbol.GetMembers()
                 .OfType<IMethodSymbol>()
                 .Where(method => !method.IsImplicitlyDeclared || !ConstructorKinds.Contains(method.MethodKind))
                 .ToList();

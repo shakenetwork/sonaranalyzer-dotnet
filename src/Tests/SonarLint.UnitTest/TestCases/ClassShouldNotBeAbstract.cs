@@ -91,6 +91,19 @@ namespace Tests.Diagnostics
     public abstract class View2 //Compliant, has abstract and non abstract members
     {
         public abstract string Content { get; }
+        public abstract string Content1 { get; }
         public string Content2 { get; }
+    }
+
+    public abstract class View2Derived : View2 //Compliant, still has abstract parts
+    {
+        public string Content3 { get; }
+        public override string Content1 { get { return 1; } }
+    }
+
+    public abstract class View3Derived : SomeUnknownType // Noncompliant
+    {
+        public string Content3 { get; }
+        public override string Content1 { get { return 1; } }
     }
 }
