@@ -141,6 +141,7 @@
     <Compile Include="Rules\ArrayCreationLongSyntaxTest.cs" />
     <Compile Include="Rules\EndStatementUsageTest.cs" />
     <Compile Include="Rules\OnErrorStatementTest.cs" />
+    <Compile Include="Rules\PublicConstantFieldTest.cs" />
     <Compile Include="Rules\StringConcatenationWithPlusTest.cs" />
     <Compile Include="Rules\NegatedIsExpressionTest.cs" />
     <Compile Include="Rules\UnsignedTypesUsageTest.cs" />
@@ -713,6 +714,9 @@
     <None Include="TestCases\FieldShouldNotBePublic.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="TestCases\PublicConstantField.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Compile Include="Verifier.cs" />
     <None Include="TestCases\UseCurlyBraces.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -865,6 +869,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="TestCases\StringConcatenationWithPlus.Fixed.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestCases\PublicConstantField.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

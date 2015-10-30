@@ -49,6 +49,18 @@ namespace SonarLint.Rules.Common
                 description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+
+        internal static bool IsPublic(ISymbol symbol)
+        {
+            var currentSymbol = symbol;
+            while (currentSymbol != null &&
+                currentSymbol.DeclaredAccessibility == Accessibility.Public)
+            {
+                currentSymbol = currentSymbol.ContainingSymbol;
+            }
+
+            return currentSymbol == null || currentSymbol.DeclaredAccessibility == Accessibility.NotApplicable;
+        }
     }
 
     public abstract class PublicMethodWithMultidimensionalArrayBase<TLanguageKindEnum, TMethodSyntax> : PublicMethodWithMultidimensionalArrayBase
@@ -65,7 +77,7 @@ namespace SonarLint.Rules.Common
 
                     if (methodSymbol != null &&
                         IsMethodChangeable(methodSymbol) &&
-                        IsMethodPublic(methodSymbol) &&
+                        IsPublic(methodSymbol) &&
                         MethodHasMultidimensionalArrayParameters(methodSymbol))
                     {
                         var identifier = GetIdentifier(method);
@@ -81,18 +93,6 @@ namespace SonarLint.Rules.Common
                 .Select(param => param.Type as IArrayTypeSymbol)
                 .Where(type => type != null)
                 .Any(type => type.Rank > 1 || type.ElementType is IArrayTypeSymbol);
-        }
-
-        private static bool IsMethodPublic(ISymbol method)
-        {
-            var symbol = method;
-            while (symbol != null &&
-                symbol.DeclaredAccessibility == Accessibility.Public)
-            {
-                symbol = symbol.ContainingSymbol;
-            }
-
-            return symbol == null || symbol.DeclaredAccessibility == Accessibility.NotApplicable;
         }
 
         protected abstract SyntaxToken GetIdentifier(TMethodSyntax method);
