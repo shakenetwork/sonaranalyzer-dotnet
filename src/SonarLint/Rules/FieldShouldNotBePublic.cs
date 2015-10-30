@@ -19,76 +19,54 @@
  */
 
 using System.Collections.Immutable;
-using System.Linq;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
-using SonarLint.Helpers;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules
 {
-    [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("30min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.ArchitectureChangeability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Pitfall)]
-    public class FieldShouldNotBePublic : DiagnosticAnalyzer
+    namespace CSharp
     {
-        internal const string DiagnosticId = "S2357";
-        internal const string Title = "Fields should be private";
-        internal const string Description =
-            "Fields should not be part of an API, and therefore should always be private. Indeed, they " +
-            "cannot be added to an interface for instance, and validation cannot be added later on without " +
-            "breaking backward compatiblity. Instead, developers should encapsulate their fields into " +
-            "properties. Explicit property getters and setters can be introduced for validation purposes " +
-            "or to smooth the transition to a newer system.";
-        internal const string MessageFormat = "Make \"{0}\" private.";
-        internal const string Category = Constants.SonarLint;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = false;
+        using Microsoft.CodeAnalysis.CSharp;
+        using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
-
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics
+        [DiagnosticAnalyzer(LanguageNames.CSharp)]
+        [SqaleConstantRemediation("30min")]
+        [SqaleSubCharacteristic(SqaleSubCharacteristic.ArchitectureChangeability)]
+        [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
+        [Tags(Tag.Pitfall)]
+        public class FieldShouldNotBePublic : FieldShouldNotBePublicBase<SyntaxKind, FieldDeclarationSyntax, VariableDeclaratorSyntax>
         {
-            get { return ImmutableArray.Create(Rule); }
+            private static readonly ImmutableArray<SyntaxKind> kindsOfInterest = ImmutableArray.Create(SyntaxKind.FieldDeclaration);
+            public override ImmutableArray<SyntaxKind> SyntaxKindsOfInterest => kindsOfInterest;
+            protected override SyntaxToken GetIdentifier(VariableDeclaratorSyntax variable) =>
+                variable.Identifier;
+            protected override IEnumerable<VariableDeclaratorSyntax> GetVariables(FieldDeclarationSyntax fieldDeclaration) =>
+                fieldDeclaration.Declaration.Variables;
         }
+    }
 
-        public override void Initialize(AnalysisContext context)
+    namespace VisualBasic
+    {
+        using Microsoft.CodeAnalysis.VisualBasic;
+        using Microsoft.CodeAnalysis.VisualBasic.Syntax;
+        using System.Linq;
+
+        [DiagnosticAnalyzer(LanguageNames.VisualBasic)]
+        [SqaleConstantRemediation("30min")]
+        [SqaleSubCharacteristic(SqaleSubCharacteristic.ArchitectureChangeability)]
+        [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
+        [Tags(Tag.Pitfall)]
+        public class FieldShouldNotBePublic : FieldShouldNotBePublicBase<SyntaxKind, FieldDeclarationSyntax, ModifiedIdentifierSyntax>
         {
-            context.RegisterSyntaxNodeActionInNonGenerated(
-                c =>
-                {
-                    var fieldDeclaration = (FieldDeclarationSyntax) c.Node;
-                    foreach (var field in fieldDeclaration.Declaration.Variables
-                        .Select(variableDeclaratorSyntax => new
-                        {
-                            Syntax = variableDeclaratorSyntax,
-                            Symbol = c.SemanticModel.GetDeclaredSymbol(variableDeclaratorSyntax) as IFieldSymbol
-                        })
-                        .Where(f => FieldIsRelevant(f.Symbol)))
-                    {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, field.Syntax.Identifier.GetLocation(),
-                            field.Syntax.Identifier.ValueText));
-                    }
-
-                },
-                SyntaxKind.FieldDeclaration);
-        }
-
-        private static bool FieldIsRelevant(IFieldSymbol fieldSymbol)
-        {
-            return fieldSymbol != null &&
-                   !fieldSymbol.IsStatic &&
-                   !fieldSymbol.IsConst &&
-                   fieldSymbol.DeclaredAccessibility == Accessibility.Public;
+            private static readonly ImmutableArray<SyntaxKind> kindsOfInterest = ImmutableArray.Create(SyntaxKind.FieldDeclaration);
+            public override ImmutableArray<SyntaxKind> SyntaxKindsOfInterest => kindsOfInterest;
+            protected override SyntaxToken GetIdentifier(ModifiedIdentifierSyntax variable) =>
+                variable.Identifier;
+            protected override IEnumerable<ModifiedIdentifierSyntax> GetVariables(FieldDeclarationSyntax fieldDeclaration) =>
+                fieldDeclaration.Declarators.SelectMany(d => d.Names);
         }
     }
 }

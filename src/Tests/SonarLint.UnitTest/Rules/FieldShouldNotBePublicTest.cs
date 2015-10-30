@@ -19,7 +19,8 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarLint.Rules;
+using CS = SonarLint.Rules.CSharp;
+using VB = SonarLint.Rules.VisualBasic;
 
 namespace SonarLint.UnitTest.Rules
 {
@@ -30,7 +31,8 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void FieldShouldNotBePublic()
         {
-            Verifier.VerifyAnalyzer(@"TestCases\FieldShouldNotBePublic.cs", new FieldShouldNotBePublic());
+            Verifier.VerifyAnalyzer(@"TestCases\FieldShouldNotBePublic.cs", new CS.FieldShouldNotBePublic());
+            Verifier.VerifyAnalyzer(@"TestCases\FieldShouldNotBePublic.vb", new VB.FieldShouldNotBePublic());
         }
     }
 }
