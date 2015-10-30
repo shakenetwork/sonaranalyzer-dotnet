@@ -7,7 +7,7 @@
   "Issues": [
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 192.168.107.1 address configurable.",
+      "FullMessage": "Make this IP \"192.168.107.1\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -24,7 +24,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 127.0.0.1 address configurable.",
+      "FullMessage": "Make this IP \"127.0.0.1\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -41,7 +41,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0.0.0.0 address configurable.",
+      "FullMessage": "Make this IP \"0.0.0.0\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -58,7 +58,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 127.0.0.1 address configurable.",
+      "FullMessage": "Make this IP \"127.0.0.1\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -75,7 +75,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 127.0.0.1 address configurable.",
+      "FullMessage": "Make this IP \"127.0.0.1\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -92,7 +92,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP ::1 address configurable.",
+      "FullMessage": "Make this IP \"::1\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -109,7 +109,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 84.12.65.72 address configurable.",
+      "FullMessage": "Make this IP \"84.12.65.72\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -126,7 +126,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP ::1 address configurable.",
+      "FullMessage": "Make this IP \"::1\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -143,7 +143,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 127.0.0.1 address configurable.",
+      "FullMessage": "Make this IP \"127.0.0.1\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -160,7 +160,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 86.13.73.12 address configurable.",
+      "FullMessage": "Make this IP \"86.13.73.12\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -177,7 +177,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP ::1 address configurable.",
+      "FullMessage": "Make this IP \"::1\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -194,7 +194,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 127.0.0.1 address configurable.",
+      "FullMessage": "Make this IP \"127.0.0.1\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -211,7 +211,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 192.168.0.15 address configurable.",
+      "FullMessage": "Make this IP \"192.168.0.15\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -228,7 +228,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 192.168.0.15 address configurable.",
+      "FullMessage": "Make this IP \"192.168.0.15\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -245,41 +245,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP :: address configurable.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Layouts\\SimpleLayoutParserTests.cs",
-            "Region": {
-              "StartLine": 308,
-              "EndLine": 308,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1313",
-      "FullMessage": "Make this IP :: address configurable.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Layouts\\SimpleLayoutParserTests.cs",
-            "Region": {
-              "StartLine": 347,
-              "EndLine": 347,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1313",
-      "FullMessage": "Make this IP 14.15.16.7 address configurable.",
+      "FullMessage": "Make this IP \"14.15.16.7\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -296,7 +262,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 14.15.16.78 address configurable.",
+      "FullMessage": "Make this IP \"14.15.16.78\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -313,7 +279,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 1.0.0.1 address configurable.",
+      "FullMessage": "Make this IP \"1.0.0.1\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -330,7 +296,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 1.0.0.0 address configurable.",
+      "FullMessage": "Make this IP \"1.0.0.0\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -347,7 +313,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 1.3.7.5 address configurable.",
+      "FullMessage": "Make this IP \"1.3.7.5\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -364,7 +330,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 1.3.1.0 address configurable.",
+      "FullMessage": "Make this IP \"1.3.1.0\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -381,7 +347,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 127.0.0.1 address configurable.",
+      "FullMessage": "Make this IP \"127.0.0.1\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -398,7 +364,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 2.0.3.4 address configurable.",
+      "FullMessage": "Make this IP \"2.0.3.4\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -415,7 +381,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 2.0.3.4 address configurable.",
+      "FullMessage": "Make this IP \"2.0.3.4\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -432,7 +398,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 3.0.2.1 address configurable.",
+      "FullMessage": "Make this IP \"3.0.2.1\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -449,7 +415,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 3.0.2.1 address configurable.",
+      "FullMessage": "Make this IP \"3.0.2.1\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -466,7 +432,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 3.0.2.1 address configurable.",
+      "FullMessage": "Make this IP \"3.0.2.1\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -483,7 +449,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 3.0.2.1 address configurable.",
+      "FullMessage": "Make this IP \"3.0.2.1\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -500,7 +466,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 1.2.3.4 address configurable.",
+      "FullMessage": "Make this IP \"1.2.3.4\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -517,7 +483,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 11.22.33.44 address configurable.",
+      "FullMessage": "Make this IP \"11.22.33.44\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -534,7 +500,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP ::F12:3456 address configurable.",
+      "FullMessage": "Make this IP \"::F12:3456\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -551,7 +517,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 1.2.3.4 address configurable.",
+      "FullMessage": "Make this IP \"1.2.3.4\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -568,7 +534,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 2.3.4.5 address configurable.",
+      "FullMessage": "Make this IP \"2.3.4.5\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -585,7 +551,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 224.0.0.1 address configurable.",
+      "FullMessage": "Make this IP \"224.0.0.1\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -602,7 +568,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0.0.0.0 address configurable.",
+      "FullMessage": "Make this IP \"0.0.0.0\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -619,7 +585,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0.0.0.0 address configurable.",
+      "FullMessage": "Make this IP \"0.0.0.0\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -636,7 +602,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0.0.0.1 address configurable.",
+      "FullMessage": "Make this IP \"0.0.0.1\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -653,7 +619,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0.0.0.255 address configurable.",
+      "FullMessage": "Make this IP \"0.0.0.255\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -670,7 +636,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0.0.1.0 address configurable.",
+      "FullMessage": "Make this IP \"0.0.1.0\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -687,7 +653,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0.0.255.0 address configurable.",
+      "FullMessage": "Make this IP \"0.0.255.0\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -704,7 +670,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0.1.0.0 address configurable.",
+      "FullMessage": "Make this IP \"0.1.0.0\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -721,7 +687,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0.255.0.0 address configurable.",
+      "FullMessage": "Make this IP \"0.255.0.0\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -738,7 +704,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 1.0.0.0 address configurable.",
+      "FullMessage": "Make this IP \"1.0.0.0\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -755,7 +721,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 255.0.0.0 address configurable.",
+      "FullMessage": "Make this IP \"255.0.0.0\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -772,7 +738,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 255.254.253.252 address configurable.",
+      "FullMessage": "Make this IP \"255.254.253.252\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -789,7 +755,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 145.254.160.237 address configurable.",
+      "FullMessage": "Make this IP \"145.254.160.237\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -806,7 +772,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 65.208.228.223 address configurable.",
+      "FullMessage": "Make this IP \"65.208.228.223\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -823,7 +789,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 2.3.4.5 address configurable.",
+      "FullMessage": "Make this IP \"2.3.4.5\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -840,7 +806,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 1.2.3.4 address configurable.",
+      "FullMessage": "Make this IP \"1.2.3.4\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -857,7 +823,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 1.2.3.4 address configurable.",
+      "FullMessage": "Make this IP \"1.2.3.4\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -874,7 +840,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 1.2.3.4 address configurable.",
+      "FullMessage": "Make this IP \"1.2.3.4\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -891,7 +857,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 1.2.3.4 address configurable.",
+      "FullMessage": "Make this IP \"1.2.3.4\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -908,7 +874,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 1.2.3.4 address configurable.",
+      "FullMessage": "Make this IP \"1.2.3.4\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -925,7 +891,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0000:0000:0000:0000:0000:0000:0000:0000 address configurable.",
+      "FullMessage": "Make this IP \"0000:0000:0000:0000:0000:0000:0000:0000\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -942,7 +908,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0000:0000:0000:0000:0000:0000:0.0.0.0 address configurable.",
+      "FullMessage": "Make this IP \"0000:0000:0000:0000:0000:0000:0.0.0.0\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -959,7 +925,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0000:0000:0000::0000:0000:0.0.0.0 address configurable.",
+      "FullMessage": "Make this IP \"0000:0000:0000::0000:0000:0.0.0.0\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -976,7 +942,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0000:0000:0000::0000:0.0.0.0 address configurable.",
+      "FullMessage": "Make this IP \"0000:0000:0000::0000:0.0.0.0\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -993,7 +959,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0000:0000::0000:0.0.0.0 address configurable.",
+      "FullMessage": "Make this IP \"0000:0000::0000:0.0.0.0\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1010,7 +976,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0000:0000::0000 address configurable.",
+      "FullMessage": "Make this IP \"0000:0000::0000\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1027,7 +993,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0000:0000:: address configurable.",
+      "FullMessage": "Make this IP \"0000:0000::\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1044,7 +1010,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0000:: address configurable.",
+      "FullMessage": "Make this IP \"0000::\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1061,24 +1027,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP :: address configurable.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets.Test\\IpV6AddressTests.cs",
-            "Region": {
-              "StartLine": 119,
-              "EndLine": 119,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1313",
-      "FullMessage": "Make this IP ::0.0.0.0 address configurable.",
+      "FullMessage": "Make this IP \"::0.0.0.0\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1095,7 +1044,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0001:0002:0003:0004:0005:0006:0007:0008 address configurable.",
+      "FullMessage": "Make this IP \"0001:0002:0003:0004:0005:0006:0007:0008\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1112,7 +1061,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 1:2:3:4:5:6:7:8 address configurable.",
+      "FullMessage": "Make this IP \"1:2:3:4:5:6:7:8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1129,7 +1078,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0001:0002:0003:0004:0005:0006:0.7.0.8 address configurable.",
+      "FullMessage": "Make this IP \"0001:0002:0003:0004:0005:0006:0.7.0.8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1146,7 +1095,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 1:2:3:4:5:6:7:8 address configurable.",
+      "FullMessage": "Make this IP \"1:2:3:4:5:6:7:8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1163,7 +1112,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0001:0000:0003:0004:0005:0006:0.7.0.8 address configurable.",
+      "FullMessage": "Make this IP \"0001:0000:0003:0004:0005:0006:0.7.0.8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1180,7 +1129,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 1:0:3:4:5:6:7:8 address configurable.",
+      "FullMessage": "Make this IP \"1:0:3:4:5:6:7:8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1197,7 +1146,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0001::0003:0004:0005:0006:0.7.0.8 address configurable.",
+      "FullMessage": "Make this IP \"0001::0003:0004:0005:0006:0.7.0.8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1214,7 +1163,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 1:0:3:4:5:6:7:8 address configurable.",
+      "FullMessage": "Make this IP \"1:0:3:4:5:6:7:8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1231,7 +1180,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0:0:0003:0004:0005:0006:0.7.0.8 address configurable.",
+      "FullMessage": "Make this IP \"0:0:0003:0004:0005:0006:0.7.0.8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1248,7 +1197,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0:0:3:4:5:6:7:8 address configurable.",
+      "FullMessage": "Make this IP \"0:0:3:4:5:6:7:8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1265,7 +1214,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0:0:3:4:5:6:7:8 address configurable.",
+      "FullMessage": "Make this IP \"0:0:3:4:5:6:7:8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1282,7 +1231,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP ::0003:0004:0005:0006:0.7.0.8 address configurable.",
+      "FullMessage": "Make this IP \"::0003:0004:0005:0006:0.7.0.8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1299,7 +1248,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0:0:3:4:5:6:7:8 address configurable.",
+      "FullMessage": "Make this IP \"0:0:3:4:5:6:7:8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1316,7 +1265,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0:0:0003:0000:0000:0006:0.7.0.8 address configurable.",
+      "FullMessage": "Make this IP \"0:0:0003:0000:0000:0006:0.7.0.8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1333,7 +1282,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0:0:3:0:0:6:7:8 address configurable.",
+      "FullMessage": "Make this IP \"0:0:3:0:0:6:7:8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1350,7 +1299,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0:0:0003:0:0:0006:0.7.0.8 address configurable.",
+      "FullMessage": "Make this IP \"0:0:0003:0:0:0006:0.7.0.8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1367,7 +1316,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0:0:3:0:0:6:7:8 address configurable.",
+      "FullMessage": "Make this IP \"0:0:3:0:0:6:7:8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1384,7 +1333,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0:0:0003::0:0006:0.7.0.8 address configurable.",
+      "FullMessage": "Make this IP \"0:0:0003::0:0006:0.7.0.8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1401,7 +1350,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0:0:3:0:0:6:7:8 address configurable.",
+      "FullMessage": "Make this IP \"0:0:3:0:0:6:7:8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1418,7 +1367,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0:0:0003::0006:0.7.0.8 address configurable.",
+      "FullMessage": "Make this IP \"0:0:0003::0006:0.7.0.8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1435,7 +1384,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0:0:3:0:0:6:7:8 address configurable.",
+      "FullMessage": "Make this IP \"0:0:3:0:0:6:7:8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1452,7 +1401,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0::0003:0:0:0006:0.7.0.8 address configurable.",
+      "FullMessage": "Make this IP \"0::0003:0:0:0006:0.7.0.8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1469,7 +1418,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0:0:3:0:0:6:7:8 address configurable.",
+      "FullMessage": "Make this IP \"0:0:3:0:0:6:7:8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1486,7 +1435,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP ::0003:0:0:0006:0.7.0.8 address configurable.",
+      "FullMessage": "Make this IP \"::0003:0:0:0006:0.7.0.8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1503,7 +1452,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0:0:3:0:0:6:7:8 address configurable.",
+      "FullMessage": "Make this IP \"0:0:3:0:0:6:7:8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1520,7 +1469,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0:0:3:0:0:6:7:8 address configurable.",
+      "FullMessage": "Make this IP \"0:0:3:0:0:6:7:8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1537,7 +1486,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0:0:3:0:0:6:7:8 address configurable.",
+      "FullMessage": "Make this IP \"0:0:3:0:0:6:7:8\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1554,7 +1503,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0:0:3:0:0:6:7:0 address configurable.",
+      "FullMessage": "Make this IP \"0:0:3:0:0:6:7:0\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1571,7 +1520,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0:0:3:0:0:6:0:0 address configurable.",
+      "FullMessage": "Make this IP \"0:0:3:0:0:6:0:0\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1588,7 +1537,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0:0:3:0:0:6:0:0 address configurable.",
+      "FullMessage": "Make this IP \"0:0:3:0:0:6:0:0\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1605,7 +1554,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0:0:3:0:0:6:0:0 address configurable.",
+      "FullMessage": "Make this IP \"0:0:3:0:0:6:0:0\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1622,7 +1571,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 0000:0000:0000:0000:0000:0000:0000:0000 address configurable.",
+      "FullMessage": "Make this IP \"0000:0000:0000:0000:0000:0000:0000:0000\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1639,7 +1588,7 @@
     },
     {
       "RuleId": "S1313",
-      "FullMessage": "Make this IP 224.0.0.1 address configurable.",
+      "FullMessage": "Make this IP \"224.0.0.1\" address configurable.",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1647,23 +1596,6 @@
             "Region": {
               "StartLine": 131,
               "EndLine": 131,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1313",
-      "FullMessage": "Make this IP :: address configurable.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Packets\\IpV6\\IpV6Address.cs",
-            "Region": {
-              "StartLine": 72,
-              "EndLine": 72,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }

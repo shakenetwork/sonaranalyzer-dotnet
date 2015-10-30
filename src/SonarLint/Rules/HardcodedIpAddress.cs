@@ -49,7 +49,7 @@ namespace SonarLint.Rules
             "setting the value to use in production on the shoulders of the developer; it " +
             "allows attackers to decompile the code and thereby discover a potentially " +
             "sensitive address";
-        internal const string MessageFormat = "Make this IP {0} address configurable.";
+        internal const string MessageFormat = "Make this IP \"{0}\" address configurable.";
         internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
@@ -72,6 +72,11 @@ namespace SonarLint.Rules
                 {
                     var stringLiteral = (LiteralExpressionSyntax)c.Node;
                     var text = stringLiteral.Token.ValueText;
+
+                    if (text == "::")
+                    {
+                        return;
+                    }
 
                     IPAddress address;
                     if (!IPAddress.TryParse(text, out address))

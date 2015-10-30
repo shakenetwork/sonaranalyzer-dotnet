@@ -27,6 +27,7 @@ namespace Tests.Diagnostics
 
             ip = "2001:db8:1234:ffff:ffff:ffff:ffff:ffff"; // Noncompliant
             ip = "::/0"; // Compliant, not recognized as IPv6 address
+            ip = "::"; // Compliant, this is an exception in the rule
 
             ip = "2"; // Compliant, should not be recognized as 0.0.0.2
 
