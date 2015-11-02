@@ -136,6 +136,7 @@
     <Compile Include="Helpers\EquivalenceCheckerTest.cs" />
     <Compile Include="Common\MetricsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules\EventNameContainsBeforeOrAfterTest.cs" />
     <Compile Include="Rules\PropertyWithArrayTypeTest.cs" />
     <Compile Include="Rules\ArrayInitializationMultipleStatementsTest.cs" />
     <Compile Include="Rules\ArrayCreationLongSyntaxTest.cs" />
@@ -880,6 +881,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="TestCases\SimpleDoLoop.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\EventNameContainsBeforeOrAfter.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
