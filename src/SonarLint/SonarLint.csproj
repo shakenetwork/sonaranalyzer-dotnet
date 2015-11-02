@@ -130,6 +130,8 @@
     <Compile Include="Rules\StringConcatenationWithPlus.cs" />
     <Compile Include="Rules\NegatedIsExpression.cs" />
     <Compile Include="Rules\SimpleDoLoop.cs" />
+    <Compile Include="Rules\OptionalParameter.cs" />
+    <Compile Include="Rules\OptionalParameterBase.cs" />
     <Compile Include="Rules\UnsignedTypesUsage.cs" />
     <Compile Include="Rules\ArrayDesignatorOnVariable.cs" />
     <Compile Include="Rules\ArrayDesignatorOnVariableCodeFixProvider.cs" />
@@ -700,6 +702,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S3385.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S2360_cs.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S2360_vb.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -149,6 +149,7 @@
     <Compile Include="Rules\StringConcatenationWithPlusTest.cs" />
     <Compile Include="Rules\NegatedIsExpressionTest.cs" />
     <Compile Include="Rules\LineContinuationTest.cs" />
+    <Compile Include="Rules\OptionalParameterTest.cs" />
     <Compile Include="Rules\UnsignedTypesUsageTest.cs" />
     <Compile Include="Rules\ArrayDesignatorOnVariableTest.cs" />
     <Compile Include="Rules\IndexedPropertyWithMultipleParametersTest.cs" />
@@ -722,6 +723,9 @@
     <None Include="TestCases\PublicConstantField.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="TestCases\OptionalParameter.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Compile Include="Verifier.cs" />
     <None Include="TestCases\UseCurlyBraces.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -879,6 +883,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="TestCases\PublicConstantField.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\OptionalParameter.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
