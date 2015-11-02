@@ -35,7 +35,8 @@ using System;
 using System.Threading.Tasks;
 using CS = Microsoft.CodeAnalysis.CSharp;
 using VB = Microsoft.CodeAnalysis.VisualBasic;
-
+using Microsoft.CodeAnalysis.Text;
+using System.Text.RegularExpressions;
 
 namespace SonarLint.UnitTest
 {
@@ -220,9 +221,39 @@ namespace SonarLint.UnitTest
 
         private static IEnumerable<int> ExpectedIssues(SyntaxTree syntaxTree)
         {
-            return from l in syntaxTree.GetText().Lines
-                   where l.ToString().Contains("Noncompliant")
-                   select l.LineNumber + 1;
+            return syntaxTree.GetText().Lines
+                .Where(l => l.ToString().Contains(NONCOMPLIANT_START))
+                .Select(l => GetNoncompliantLineNumber(l));
+        }
+
+        private const string NONCOMPLIANT_START = "Noncompliant";
+        private const string NONCOMPLIANT_LINE_PATTERN = NONCOMPLIANT_START + @"@([\+|-]?)([0-9]+)";
+
+        private static int GetNoncompliantLineNumber(TextLine line)
+        {
+            var text = line.ToString();
+            var match = Regex.Match(text, NONCOMPLIANT_LINE_PATTERN);
+            if (!match.Success)
+            {
+                return line.LineNumber + 1;
+            }
+            else
+            {
+                var sign = match.Groups[1];
+                var lineValue = int.Parse(match.Groups[2].Value);
+                if (sign.Value == "+")
+                {
+                    return line.LineNumber + 1 + lineValue;
+                }
+                else if (sign.Value == "-")
+                {
+                    return line.LineNumber + 1 - lineValue;
+                }
+                else
+                {
+                    return lineValue;
+                }
+            }
         }
 
         #endregion

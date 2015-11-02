@@ -147,6 +147,7 @@
     <Compile Include="Rules\RedundantExitSelectTest.cs" />
     <Compile Include="Rules\StringConcatenationWithPlusTest.cs" />
     <Compile Include="Rules\NegatedIsExpressionTest.cs" />
+    <Compile Include="Rules\LineContinuationTest.cs" />
     <Compile Include="Rules\UnsignedTypesUsageTest.cs" />
     <Compile Include="Rules\ArrayDesignatorOnVariableTest.cs" />
     <Compile Include="Rules\IndexedPropertyWithMultipleParametersTest.cs" />
@@ -888,6 +889,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\RedundantExitSelect.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\LineContinuation.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
