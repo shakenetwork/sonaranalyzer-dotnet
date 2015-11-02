@@ -144,6 +144,7 @@
     <Compile Include="Rules\OnErrorStatementTest.cs" />
     <Compile Include="Rules\PublicConstantFieldTest.cs" />
     <Compile Include="Rules\SimpleDoLoopTest.cs" />
+    <Compile Include="Rules\RedundantExitSelectTest.cs" />
     <Compile Include="Rules\StringConcatenationWithPlusTest.cs" />
     <Compile Include="Rules\NegatedIsExpressionTest.cs" />
     <Compile Include="Rules\UnsignedTypesUsageTest.cs" />
@@ -884,6 +885,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\EventNameContainsBeforeOrAfter.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\RedundantExitSelect.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
