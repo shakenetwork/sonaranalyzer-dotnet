@@ -132,6 +132,8 @@
     <Compile Include="Rules\SimpleDoLoop.cs" />
     <Compile Include="Rules\OptionalParameter.cs" />
     <Compile Include="Rules\OptionalParameterBase.cs" />
+    <Compile Include="Rules\SingleStatementPerLine.cs" />
+    <Compile Include="Rules\SingleStatementPerLineBase.cs" />
     <Compile Include="Rules\UnsignedTypesUsage.cs" />
     <Compile Include="Rules\ArrayDesignatorOnVariable.cs" />
     <Compile Include="Rules\ArrayDesignatorOnVariableCodeFixProvider.cs" />
@@ -708,6 +710,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S2360_vb.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S122_cs.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S122_vb.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
