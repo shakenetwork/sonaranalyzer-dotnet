@@ -110,6 +110,7 @@
     <Compile Include="Helpers\ProjectTypeHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\EventNameContainsBeforeOrAfter.cs" />
+    <Compile Include="Rules\ExitStatementUsage.cs" />
     <Compile Include="Rules\FieldShouldNotBePublicBase.cs" />
     <Compile Include="Rules\LineContinuation.cs" />
     <Compile Include="Rules\PublicConstantField.cs" />
@@ -696,6 +697,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S2354.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S3385.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
