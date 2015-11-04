@@ -142,6 +142,7 @@
     <Compile Include="Rules\EndStatementUsageTest.cs" />
     <Compile Include="Rules\OnErrorStatementTest.cs" />
     <Compile Include="Rules\PublicConstantFieldTest.cs" />
+    <Compile Include="Rules\SimpleDoLoopTest.cs" />
     <Compile Include="Rules\StringConcatenationWithPlusTest.cs" />
     <Compile Include="Rules\NegatedIsExpressionTest.cs" />
     <Compile Include="Rules\UnsignedTypesUsageTest.cs" />
@@ -874,6 +875,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="TestCases\PublicConstantField.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestCases\SimpleDoLoop.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
