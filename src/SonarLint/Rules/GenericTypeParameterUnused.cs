@@ -129,6 +129,7 @@ namespace SonarLint.Rules
             return declarations
                 .SelectMany(declaration => declaration.DescendantNodes())
                 .OfType<IdentifierNameSyntax>()
+                .Where(identifier => !(identifier.Parent is TypeParameterConstraintClauseSyntax))
                 .Select(identifier =>
                 {
                     var semanticModelOfThisTree = identifier.SyntaxTree == localContext.Node.SyntaxTree

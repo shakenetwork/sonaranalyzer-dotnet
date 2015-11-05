@@ -80,4 +80,23 @@ namespace Tests.Diagnostics
     public partial class SomeClass<T>
     {
     }
+
+    public class MyNotReallyGenericClass<T> // Noncompliant
+        where T : class
+    {
+
+    }
+    public class MyCompliantSpecialGenericClass<T1, T2> // Compliant
+        where T1 : class
+        where T2 : T1
+    {
+        public void MyMethod(T2 p) { }
+    }
+    public class MyNonCompliantSpecialGenericClass<
+        T1, // Compliant, not recognized that it's a non used type parameter
+        T2> // Noncompliant
+        where T1 : class
+        where T2 : T1
+    {
+    }
 }
