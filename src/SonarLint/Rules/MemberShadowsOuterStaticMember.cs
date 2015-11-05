@@ -143,7 +143,7 @@ namespace SonarLint.Rules
 
         private static void CheckMethod(SymbolAnalysisContext c, INamedTypeSymbol containerClassSymbol, IMethodSymbol method)
         {
-            CheckEventOrMethod(method, containerClassSymbol, c, (e) =>
+            CheckEventOrMethod(method, containerClassSymbol, c, e =>
             {
                 var reference = e.DeclaringSyntaxReferences.FirstOrDefault();
                 if (reference == null)
@@ -161,7 +161,7 @@ namespace SonarLint.Rules
 
         private static void CheckEvent(SymbolAnalysisContext c, INamedTypeSymbol containerClassSymbol, IEventSymbol @event)
         {
-            CheckEventOrMethod(@event, containerClassSymbol, c, (e) =>
+            CheckEventOrMethod(@event, containerClassSymbol, c, e =>
             {
                 var reference = e.DeclaringSyntaxReferences.FirstOrDefault();
                 if (reference == null)
@@ -187,7 +187,7 @@ namespace SonarLint.Rules
 
         private static void CheckField(SymbolAnalysisContext c, INamedTypeSymbol containerClassSymbol, IFieldSymbol field)
         {
-            CheckFieldOrProperty(field, containerClassSymbol, c, (f) =>
+            CheckFieldOrProperty(field, containerClassSymbol, c, f =>
             {
                 var reference = f.DeclaringSyntaxReferences.FirstOrDefault();
                 if (reference == null)
@@ -205,7 +205,7 @@ namespace SonarLint.Rules
 
         private static void CheckProperty(SymbolAnalysisContext c, INamedTypeSymbol containerClassSymbol, IPropertySymbol property)
         {
-            CheckFieldOrProperty(property, containerClassSymbol, c, (p) =>
+            CheckFieldOrProperty(property, containerClassSymbol, c, p =>
             {
                 var reference = p.DeclaringSyntaxReferences.FirstOrDefault();
                 if (reference == null)

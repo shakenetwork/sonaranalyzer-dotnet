@@ -62,7 +62,7 @@ namespace SonarLint.Rules.Common
                 c =>
                 {
                     var field = (TFieldDeclarationSyntax)c.Node;
-                    var variables = GetVariables(field);
+                    var variables = GetVariables(field).ToList();
 
                     if (!variables.Any())
                     {

@@ -19,15 +19,11 @@
  */
 
 using System.Collections.Immutable;
-using System.Linq;
-using System.Threading;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Rules.Common;
-using SonarLint.Helpers;
-using System;
 
 namespace SonarLint.Rules
 {

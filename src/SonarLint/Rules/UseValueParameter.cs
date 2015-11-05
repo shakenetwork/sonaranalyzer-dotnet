@@ -109,7 +109,7 @@ namespace SonarLint.Rules
 
         private static string GetAccessorType(AccessorDeclarationSyntax accessorDeclaration)
         {
-            var accessorType = "";
+            string accessorType;
 
             if (accessorDeclaration.IsKind(SyntaxKind.AddAccessorDeclaration) ||
                 accessorDeclaration.IsKind(SyntaxKind.RemoveAccessorDeclaration))

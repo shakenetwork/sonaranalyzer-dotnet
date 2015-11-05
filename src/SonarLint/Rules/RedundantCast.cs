@@ -193,7 +193,7 @@ namespace SonarLint.Rules
                 receiverType = methodSymbol.Parameters.First().Type as INamedTypeSymbol;
             }
 
-            return receiverType != null && receiverType.ConstructedFrom == enumerableType;
+            return receiverType != null && receiverType.ConstructedFrom.Equals(enumerableType);
         }
     }
 }

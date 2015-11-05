@@ -86,7 +86,6 @@ namespace SonarLint.Rules
 
     namespace VisualBasic
     {
-        using System;
         using Microsoft.CodeAnalysis.VisualBasic;
         using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 

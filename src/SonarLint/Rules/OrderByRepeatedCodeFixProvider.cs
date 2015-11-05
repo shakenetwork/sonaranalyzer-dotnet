@@ -56,11 +56,11 @@ namespace SonarLint.Rules
             context.RegisterCodeFix(
                 CodeAction.Create(
                     Title,
-                    c => ChangeToThenBy(context.Document, syntaxNode, c)),
+                    c => ChangeToThenByAsync(context.Document, syntaxNode, c)),
                 context.Diagnostics);
         }
 
-        private static async Task<Document> ChangeToThenBy(Document document, SyntaxNode syntaxNode, CancellationToken cancellationToken)
+        private static async Task<Document> ChangeToThenByAsync(Document document, SyntaxNode syntaxNode, CancellationToken cancellationToken)
         {
             var root = await document.GetSyntaxRootAsync(cancellationToken);
             var newRoot = root.ReplaceNode(syntaxNode,

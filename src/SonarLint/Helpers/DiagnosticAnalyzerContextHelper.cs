@@ -235,7 +235,7 @@ namespace SonarLint.Helpers
             {
                 {
                     LanguageNames.CSharp,
-                    new int[]
+                    new []
                     {
                         (int)CS.SyntaxKind.SingleLineCommentTrivia,
                         (int)CS.SyntaxKind.MultiLineCommentTrivia
@@ -243,7 +243,7 @@ namespace SonarLint.Helpers
                 },
                 {
                     LanguageNames.VisualBasic,
-                    new int[]
+                    new []
                     {
                         (int)VB.SyntaxKind.CommentTrivia
                     }

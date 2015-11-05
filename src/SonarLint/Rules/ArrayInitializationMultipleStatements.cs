@@ -73,8 +73,7 @@ namespace SonarLint.Rules
                         return;
                     }
 
-                    var name = declarator.Names.First() as ModifiedIdentifierSyntax;
-
+                    var name = declarator.Names.First();
                     if (name == null ||
                         name.ArrayBounds == null ||
                         name.ArrayBounds.Arguments.Count != 1)
@@ -100,12 +99,9 @@ namespace SonarLint.Rules
 
                     var upperBound = Math.Max(bound.Value, 0);
 
-                    foreach (var index in Enumerable.Range(0, upperBound + 1))
+                    if (Enumerable.Range(0, upperBound + 1).Any(index => !indexes.Contains(index)))
                     {
-                        if (!indexes.Contains(index))
-                        {
-                            return;
-                        }
+                        return;
                     }
 
                     c.ReportDiagnostic(Diagnostic.Create(Rule, declaration.GetLocation()));
@@ -180,12 +176,7 @@ namespace SonarLint.Rules
             }
 
             var boundValue = bound.Value as int?;
-            if (!boundValue.HasValue)
-            {
-                return null;
-            }
-
-            return boundValue.Value;
+            return boundValue;
         }
     }
 }

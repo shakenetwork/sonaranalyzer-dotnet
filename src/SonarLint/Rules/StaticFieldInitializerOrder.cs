@@ -102,7 +102,7 @@ namespace SonarLint.Rules
                 SyntaxKind.FieldDeclaration);
         }
 
-        private static IEnumerable<IdentifierClassDeclarationMapping> GetIdentifierClassMappings(List<IdentifierFieldMapping> identifierFieldMappings)
+        private static List<IdentifierClassDeclarationMapping> GetIdentifierClassMappings(List<IdentifierFieldMapping> identifierFieldMappings)
         {
             return identifierFieldMappings
                 .Select(i => new IdentifierClassDeclarationMapping
@@ -110,7 +110,8 @@ namespace SonarLint.Rules
                     Identifier = i,
                     ClassDeclaration = GetClassDeclaration(i.Field)
                 })
-                .Where(mapping => mapping.ClassDeclaration != null);
+                .Where(mapping => mapping.ClassDeclaration != null)
+                .ToList();
         }
 
         private static List<IdentifierFieldMapping> GetIdentifierFieldMappings(VariableDeclaratorSyntax variable,

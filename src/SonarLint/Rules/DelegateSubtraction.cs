@@ -83,7 +83,6 @@ namespace SonarLint.Rules
                     if (!BinaryIsValidSubstraction(binary))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, binary.GetLocation()));
-                        return;
                     }
                 },
                 SyntaxKind.SubtractExpression);

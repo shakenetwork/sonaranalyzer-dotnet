@@ -24,11 +24,7 @@ using Microsoft.CodeAnalysis.CodeFixes;
 using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.CodeAnalysis.CodeActions;
-using Microsoft.CodeAnalysis.VisualBasic;
 using Microsoft.CodeAnalysis.VisualBasic.Syntax;
-using Microsoft.CodeAnalysis.Formatting;
-using System;
-using System.Collections.Generic;
 
 namespace SonarLint.Rules
 {

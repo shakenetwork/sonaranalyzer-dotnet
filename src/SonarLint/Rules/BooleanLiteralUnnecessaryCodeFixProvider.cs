@@ -121,7 +121,7 @@ namespace SonarLint.Rules
             context.RegisterCodeFix(
                                 CodeAction.Create(
                                     Title,
-                                    c => RewriteConditional(context.Document, root, literal, conditionalParent)),
+                                    c => Task.FromResult(RewriteConditional(context.Document, root, literal, conditionalParent))),
                                 context.Diagnostics);
         }
 
@@ -130,7 +130,7 @@ namespace SonarLint.Rules
             context.RegisterCodeFix(
                 CodeAction.Create(
                     Title,
-                    c => RemovePrefixUnary(context.Document, root, literal)),
+                    c => Task.FromResult(RemovePrefixUnary(context.Document, root, literal))),
                 context.Diagnostics);
         }
 
@@ -139,7 +139,7 @@ namespace SonarLint.Rules
             context.RegisterCodeFix(
                 CodeAction.Create(
                     Title,
-                    c => RemoveConditional(context.Document, root, conditional)),
+                    c => Task.FromResult(RemoveConditional(context.Document, root, conditional))),
                 context.Diagnostics);
         }
 
@@ -229,39 +229,39 @@ namespace SonarLint.Rules
                 EquivalenceChecker.AreEquivalent(binary.Right, BooleanLiteralUnnecessary.FalseExpression));
         }
 
-        private static Task<Document> RemovePrefixUnary(Document document, SyntaxNode root,
+        private static Document RemovePrefixUnary(Document document, SyntaxNode root,
             SyntaxNode literal)
         {
             if (EquivalenceChecker.AreEquivalent(literal, BooleanLiteralUnnecessary.TrueExpression))
             {
                 var newRoot = root.ReplaceNode(literal.Parent, BooleanLiteralUnnecessary.FalseExpression);
-                return Task.FromResult(document.WithSyntaxRoot(newRoot));
+                return document.WithSyntaxRoot(newRoot);
             }
             else
             {
                 var newRoot = root.ReplaceNode(literal.Parent, BooleanLiteralUnnecessary.TrueExpression);
-                return Task.FromResult(document.WithSyntaxRoot(newRoot));
+                return document.WithSyntaxRoot(newRoot);
             }
         }
 
-        private static Task<Document> RemoveConditional(Document document, SyntaxNode root,
+        private static Document RemoveConditional(Document document, SyntaxNode root,
             ConditionalExpressionSyntax conditional)
         {
             if (EquivalenceChecker.AreEquivalent(conditional.WhenTrue, BooleanLiteralUnnecessary.TrueExpression))
             {
                 var newRoot = root.ReplaceNode(conditional,
                     conditional.Condition.WithAdditionalAnnotations(Formatter.Annotation));
-                return Task.FromResult(document.WithSyntaxRoot(newRoot));
+                return document.WithSyntaxRoot(newRoot);
             }
             else
             {
                 var newRoot = root.ReplaceNode(conditional,
                         GetNegatedExpression(conditional.Condition).WithAdditionalAnnotations(Formatter.Annotation));
-                return Task.FromResult(document.WithSyntaxRoot(newRoot));
+                return document.WithSyntaxRoot(newRoot);
             }
         }
 
-        private static Task<Document> RewriteConditional(Document document, SyntaxNode root, SyntaxNode syntaxNode,
+        private static Document RewriteConditional(Document document, SyntaxNode root, SyntaxNode syntaxNode,
             ConditionalExpressionSyntax conditional)
         {
             if (conditional.WhenTrue.Equals(syntaxNode) &&
@@ -274,7 +274,7 @@ namespace SonarLint.Rules
                         conditional.WhenFalse)
                         .WithAdditionalAnnotations(Formatter.Annotation));
 
-                return Task.FromResult(document.WithSyntaxRoot(newRoot));
+                return document.WithSyntaxRoot(newRoot);
             }
 
             if (conditional.WhenTrue.Equals(syntaxNode) &&
@@ -287,7 +287,7 @@ namespace SonarLint.Rules
                         conditional.WhenFalse)
                     .WithAdditionalAnnotations(Formatter.Annotation));
 
-                return Task.FromResult(document.WithSyntaxRoot(newRoot));
+                return document.WithSyntaxRoot(newRoot);
             }
 
             if (conditional.WhenFalse.Equals(syntaxNode) &&
@@ -300,7 +300,7 @@ namespace SonarLint.Rules
                         conditional.WhenTrue)
                     .WithAdditionalAnnotations(Formatter.Annotation));
 
-                return Task.FromResult(document.WithSyntaxRoot(newRoot));
+                return document.WithSyntaxRoot(newRoot);
             }
 
             if (conditional.WhenFalse.Equals(syntaxNode) &&
@@ -313,10 +313,10 @@ namespace SonarLint.Rules
                         conditional.WhenTrue)
                     .WithAdditionalAnnotations(Formatter.Annotation));
 
-                return Task.FromResult(document.WithSyntaxRoot(newRoot));
+                return document.WithSyntaxRoot(newRoot);
             }
 
-            return Task.FromResult(document);
+            return document;
         }
 
         private static ExpressionSyntax GetNegatedExpression(ExpressionSyntax expression)

@@ -107,7 +107,7 @@ namespace SonarLint.Rules
                 context.RegisterCodeFix(
                     CodeAction.Create(
                         TitleRemove,
-                        c => RemoveArguments(context.Document, argumentsCanBeRemovedWithoutNamed, c),
+                        c => RemoveArgumentsAsync(context.Document, argumentsCanBeRemovedWithoutNamed, c),
                         TitleRemove),
                     context.Diagnostics);
             }
@@ -118,14 +118,14 @@ namespace SonarLint.Rules
                 context.RegisterCodeFix(
                     CodeAction.Create(
                         TitleRemoveWithNameAdditions,
-                        c => RemoveArgumentsAndAddNecessaryNames(context.Document, invocation.ArgumentList,
+                        c => RemoveArgumentsAndAddNecessaryNamesAsync(context.Document, invocation.ArgumentList,
                                 argumentMappings, argumentsWithDefaultValues, semanticModel, c),
                         TitleRemoveWithNameAdditions),
                     context.Diagnostics);
             }
         }
 
-        private static async Task<Document> RemoveArgumentsAndAddNecessaryNames(Document document, ArgumentListSyntax argumentList,
+        private static async Task<Document> RemoveArgumentsAndAddNecessaryNamesAsync(Document document, ArgumentListSyntax argumentList,
             List<KeyValuePair<ArgumentSyntax, IParameterSymbol>> argumentMappings, List<ArgumentSyntax> argumentsToRemove,
             SemanticModel semanticModel, CancellationToken cancellationToken)
         {
@@ -209,7 +209,7 @@ namespace SonarLint.Rules
                             ))));
         }
 
-        private static async Task<Document> RemoveArguments(Document document, List<ArgumentSyntax> arguments,
+        private static async Task<Document> RemoveArgumentsAsync(Document document, List<ArgumentSyntax> arguments,
             CancellationToken cancellationToken)
         {
             var root = await document.GetSyntaxRootAsync(cancellationToken);

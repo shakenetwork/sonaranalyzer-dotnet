@@ -68,11 +68,11 @@ namespace SonarLint.Rules
             context.RegisterCodeFix(
                 CodeAction.Create(
                     Title,
-                    c => ChangeToIsNot(context.Document, unary, isExpression, c)),
+                    c => ChangeToIsNotAsync(context.Document, unary, isExpression, c)),
                 context.Diagnostics);
         }
 
-        private static async Task<Document> ChangeToIsNot(Document document, UnaryExpressionSyntax unary, BinaryExpressionSyntax isExpression,
+        private static async Task<Document> ChangeToIsNotAsync(Document document, UnaryExpressionSyntax unary, BinaryExpressionSyntax isExpression,
             CancellationToken cancellationToken)
         {
             var root = await document.GetSyntaxRootAsync(cancellationToken);

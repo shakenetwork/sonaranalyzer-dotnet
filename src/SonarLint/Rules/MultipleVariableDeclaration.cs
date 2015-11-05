@@ -18,21 +18,17 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
 using System.Linq;
-using System.Threading;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Rules.Common;
-using SonarLint.Helpers;
 
 namespace SonarLint.Rules
 {
     namespace CSharp
     {
-        using System;
         using System.Collections.Generic;
         using Microsoft.CodeAnalysis.CSharp;
         using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -58,7 +54,6 @@ namespace SonarLint.Rules
 
     namespace VisualBasic
     {
-        using System;
         using System.Collections.Generic;
         using Microsoft.CodeAnalysis.VisualBasic;
         using Microsoft.CodeAnalysis.VisualBasic.Syntax;

@@ -51,13 +51,13 @@ namespace SonarLint.UnitTest.PackagingTests
             const double upperBound = approxFileSize * 1.1;
             if (vsixFile.Length > upperBound)
             {
-                Assert.Fail(string.Format("VSIX file is larger than {0}B, it is {1}B", upperBound, vsixFile.Length));
+                Assert.Fail("VSIX file is larger than {0}B, it is {1}B", upperBound, vsixFile.Length);
             }
 
             const double lowerBound = approxFileSize * 0.9;
             if (vsixFile.Length < lowerBound)
             {
-                Assert.Fail(string.Format("VSIX file is smaller than {0}B, it is {1}B", lowerBound, vsixFile.Length));
+                Assert.Fail("VSIX file is smaller than {0}B, it is {1}B", lowerBound, vsixFile.Length);
             }
         }
     }

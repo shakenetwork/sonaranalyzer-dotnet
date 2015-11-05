@@ -31,7 +31,6 @@ using SonarLint.Helpers;
 using Microsoft.CodeAnalysis.CodeFixes;
 using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using System.Threading.Tasks;
 using CS = Microsoft.CodeAnalysis.CSharp;
 using VB = Microsoft.CodeAnalysis.VisualBasic;
@@ -237,23 +236,20 @@ namespace SonarLint.UnitTest
             {
                 return line.LineNumber + 1;
             }
-            else
+
+            var sign = match.Groups[1];
+            var lineValue = int.Parse(match.Groups[2].Value);
+            if (sign.Value == "+")
             {
-                var sign = match.Groups[1];
-                var lineValue = int.Parse(match.Groups[2].Value);
-                if (sign.Value == "+")
-                {
-                    return line.LineNumber + 1 + lineValue;
-                }
-                else if (sign.Value == "-")
-                {
-                    return line.LineNumber + 1 - lineValue;
-                }
-                else
-                {
-                    return lineValue;
-                }
+                return line.LineNumber + 1 + lineValue;
             }
+
+            if (sign.Value == "-")
+            {
+                return line.LineNumber + 1 - lineValue;
+            }
+
+            return lineValue;
         }
 
         #endregion

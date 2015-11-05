@@ -75,7 +75,6 @@ namespace SonarLint.Rules
                             return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                         }),
                     context.Diagnostics);
-                return;
             }
         }
 

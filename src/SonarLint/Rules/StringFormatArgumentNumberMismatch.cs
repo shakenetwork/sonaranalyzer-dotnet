@@ -129,7 +129,6 @@ namespace SonarLint.Rules
                             spanStart,
                             invocation.ArgumentList.Arguments.Last().Span.End - spanStart));
                         c.ReportDiagnostic(Diagnostic.Create(Rule, location));
-                        return;
                     }
                 },
                 SyntaxKind.InvocationExpression);

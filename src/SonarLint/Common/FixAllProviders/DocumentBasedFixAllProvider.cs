@@ -55,10 +55,7 @@ namespace SonarLint.Common
         private static string GetFixAllTitle(FixAllContext fixAllContext)
         {
             var diagnosticIds = fixAllContext.DiagnosticIds;
-            string diagnosticId;
-            diagnosticId = diagnosticIds.Count() == 1
-                ? diagnosticIds.Single()
-                : string.Join(",", diagnosticIds.ToArray());
+            var diagnosticId = string.Join(",", diagnosticIds.ToArray());
 
             switch (fixAllContext.Scope)
             {
@@ -82,33 +79,33 @@ namespace SonarLint.Common
                 case FixAllScope.Document:
                     return Task.FromResult(CodeAction.Create(title,
                         async ct => fixAllContext.Document.WithSyntaxRoot(
-                            await GetFixedDocument(fixAllContext, fixAllContext.Document).ConfigureAwait(false))));
+                            await GetFixedDocumentAsync(fixAllContext, fixAllContext.Document).ConfigureAwait(false))));
                 case FixAllScope.Project:
                     return Task.FromResult(CodeAction.Create(title,
-                        ct => GetFixedProject(fixAllContext, fixAllContext.Project)));
+                        ct => GetFixedProjectAsync(fixAllContext, fixAllContext.Project)));
                 case FixAllScope.Solution:
                     return Task.FromResult(CodeAction.Create(title,
-                        ct => GetFixedSolution(fixAllContext)));
+                        ct => GetFixedSolutionAsync(fixAllContext)));
                 default:
                     return null;
             }
         }
 
-        private static async Task<Solution> GetFixedSolution(FixAllContext fixAllContext)
+        private static async Task<Solution> GetFixedSolutionAsync(FixAllContext fixAllContext)
         {
             var newSolution = fixAllContext.Solution;
             foreach (var projectId in newSolution.ProjectIds)
             {
-                newSolution = await GetFixedProject(fixAllContext, newSolution.GetProject(projectId))
+                newSolution = await GetFixedProjectAsync(fixAllContext, newSolution.GetProject(projectId))
                     .ConfigureAwait(false);
             }
             return newSolution;
         }
 
-        private static async Task<Solution> GetFixedProject(FixAllContext fixAllContext, Project project)
+        private static async Task<Solution> GetFixedProjectAsync(FixAllContext fixAllContext, Project project)
         {
             var solution = project.Solution;
-            var newDocuments = project.Documents.ToDictionary(d => d.Id, d => GetFixedDocument(fixAllContext, d));
+            var newDocuments = project.Documents.ToDictionary(d => d.Id, d => GetFixedDocumentAsync(fixAllContext, d));
             await Task.WhenAll(newDocuments.Values).ConfigureAwait(false);
             foreach (var newDoc in newDocuments)
             {
@@ -117,7 +114,7 @@ namespace SonarLint.Common
             return solution;
         }
 
-        private static async Task<SyntaxNode> GetFixedDocument(FixAllContext fixAllContext, Document document)
+        private static async Task<SyntaxNode> GetFixedDocumentAsync(FixAllContext fixAllContext, Document document)
         {
             var annotationKind = Guid.NewGuid().ToString();
 

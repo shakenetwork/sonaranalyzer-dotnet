@@ -253,10 +253,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
                             var location = issue.Locations.FirstOrDefault();
                             return location == null ? 0 : location.AnalysisTarget.Region.EndLine;
                         })
-                        .ThenBy(issue =>
-                        {
-                            return issue.FullMessage;
-                        }, new InvariantCultureStringSortComparer())
+                        .ThenBy(issue => issue.FullMessage, new InvariantCultureStringSortComparer())
                         .ToList()
                 };
 
