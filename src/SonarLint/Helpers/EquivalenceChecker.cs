@@ -19,7 +19,8 @@
  */
 
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
+using CS=Microsoft.CodeAnalysis.CSharp;
+using VB=Microsoft.CodeAnalysis.VisualBasic;
 
 namespace SonarLint.Helpers
 {
@@ -27,7 +28,14 @@ namespace SonarLint.Helpers
     {
         public static bool AreEquivalent(SyntaxNode node1, SyntaxNode node2)
         {
-            return SyntaxFactory.AreEquivalent(node1, node2);
+            if (node1.Language != node2.Language)
+            {
+                return false;
+            }
+
+            return node1.Language == LanguageNames.CSharp
+                ? CS.SyntaxFactory.AreEquivalent(node1, node2)
+                : VB.SyntaxFactory.AreEquivalent(node1, node2);
         }
 
         public static bool AreEquivalent(SyntaxList<SyntaxNode> nodeList1, SyntaxList<SyntaxNode> nodeList2)
@@ -39,7 +47,7 @@ namespace SonarLint.Helpers
 
             for (var i = 0; i < nodeList1.Count; i++)
             {
-                if (!SyntaxFactory.AreEquivalent(nodeList1[i], nodeList2[i]))
+                if (!AreEquivalent(nodeList1[i], nodeList2[i]))
                 {
                     return false;
                 }

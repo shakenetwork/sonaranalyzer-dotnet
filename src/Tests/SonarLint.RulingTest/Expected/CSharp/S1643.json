@@ -1,0 +1,162 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarLint.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S1643",
+      "FullMessage": "Use a StringBuilder instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka\\Util\\ListPriorityQueue.cs",
+            "Region": {
+              "StartLine": 88,
+              "EndLine": 88,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1643",
+      "FullMessage": "Use a StringBuilder instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\commandline\\Options.cs",
+            "Region": {
+              "StartLine": 1095,
+              "EndLine": 1095,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1643",
+      "FullMessage": "Use a StringBuilder instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.ApiExplorer\\DefaultApiDescriptionProvider.cs",
+            "Region": {
+              "StartLine": 283,
+              "EndLine": 283,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1643",
+      "FullMessage": "Use a StringBuilder instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.ApiExplorer\\DefaultApiDescriptionProvider.cs",
+            "Region": {
+              "StartLine": 287,
+              "EndLine": 287,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1643",
+      "FullMessage": "Use a StringBuilder instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\WebSites\\ValidationWebSite\\Controllers\\ModelMetadataTypeAttributeController.cs",
+            "Region": {
+              "StartLine": 98,
+              "EndLine": 98,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1643",
+      "FullMessage": "Use a StringBuilder instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Routing\\DefaultRouteSegmentExtractor.cs",
+            "Region": {
+              "StartLine": 37,
+              "EndLine": 37,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1643",
+      "FullMessage": "Use a StringBuilder instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\Config\\NLogXmlElement.cs",
+            "Region": {
+              "StartLine": 215,
+              "EndLine": 215,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1643",
+      "FullMessage": "Use a StringBuilder instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Targets\\NetworkTargetTests.cs",
+            "Region": {
+              "StartLine": 630,
+              "EndLine": 630,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1643",
+      "FullMessage": "Use a StringBuilder instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\NLog-master_25d6863e72\\tests\\NLog.UnitTests\\Targets\\NetworkTargetTests.cs",
+            "Region": {
+              "StartLine": 718,
+              "EndLine": 718,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

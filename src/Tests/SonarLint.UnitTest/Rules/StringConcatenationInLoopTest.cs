@@ -25,14 +25,14 @@ using VB = SonarLint.Rules.VisualBasic;
 namespace SonarLint.UnitTest.Rules
 {
     [TestClass]
-    public class StringConcatenationInLoopSwitchWithoutDefaultTest
+    public class StringConcatenationInLoopTest
     {
         [TestMethod]
         [TestCategory("Rule")]
-        public void SwitchWithoutDefault()
+        public void StringConcatenationInLoop()
         {
-            Verifier.VerifyAnalyzer(@"TestCases\SwitchWithoutDefault.cs", new CS.SwitchWithoutDefault());
-            Verifier.VerifyAnalyzer(@"TestCases\SwitchWithoutDefault.vb", new VB.SwitchWithoutDefault());
+            Verifier.VerifyAnalyzer(@"TestCases\StringConcatenationInLoop.cs", new CS.StringConcatenationInLoop());
+            Verifier.VerifyAnalyzer(@"TestCases\StringConcatenationInLoop.vb", new VB.StringConcatenationInLoop());
         }
     }
 }

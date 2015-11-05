@@ -146,6 +146,7 @@
     <Compile Include="Rules\PublicConstantFieldTest.cs" />
     <Compile Include="Rules\SimpleDoLoopTest.cs" />
     <Compile Include="Rules\RedundantExitSelectTest.cs" />
+    <Compile Include="Rules\StringConcatenationInLoopTest.cs" />
     <Compile Include="Rules\StringConcatenationWithPlusTest.cs" />
     <Compile Include="Rules\NegatedIsExpressionTest.cs" />
     <Compile Include="Rules\LineContinuationTest.cs" />
@@ -699,6 +700,9 @@
     <None Include="TestCases\SingleStatementPerLine.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="TestCases\StringConcatenationInLoop.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Compile Include="Verifier.cs" />
     <None Include="TestCases\UseCurlyBraces.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -873,6 +877,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\ExitStatementUsage.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\StringConcatenationInLoop.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
