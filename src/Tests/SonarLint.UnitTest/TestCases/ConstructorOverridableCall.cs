@@ -5,9 +5,14 @@ namespace Tests.Diagnostics
 {
     public abstract class ParentAbstract
     {
-        protected ParentAbstract()
+        protected ParentAbstract(ParentAbstract other)
         {
             DoSomething();  // Noncompliant
+            this.DoSomething();  // Noncompliant
+            other.DoSomething(); // Compliant
+
+            var a = this;
+            a.DoSomething(); // Not recognized
 
             var action = new Action(() => { DoSomething(); });
         }

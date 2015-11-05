@@ -56,57 +56,37 @@ namespace SonarLint.Rules
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterCodeBlockStartActionInNonGenerated<SyntaxKind>(
-                cbc =>
+            context.RegisterSyntaxNodeActionInNonGenerated(
+                c =>
                 {
-                    var calledVirtualMethods = ImmutableDictionary<InvocationExpressionSyntax, string>.Empty;
+                    var invocationExpression = (InvocationExpressionSyntax) c.Node;
 
-                    var constructorDeclaration = cbc.CodeBlock as ConstructorDeclarationSyntax;
-                    if (constructorDeclaration == null)
+                    var calledOn = (invocationExpression.Expression as MemberAccessExpressionSyntax)?.Expression;
+                    var isCalledOnValid = calledOn == null || calledOn is ThisExpressionSyntax;
+                    if (!isCalledOnValid)
                     {
                         return;
                     }
 
-                    var constructorSymbol = cbc.SemanticModel.GetDeclaredSymbol(constructorDeclaration);
-                    if (constructorSymbol == null)
+                    var methodSymbol =
+                        c.SemanticModel.GetSymbolInfo(invocationExpression.Expression).Symbol as IMethodSymbol;
+                    var enclosingSymbol = c.SemanticModel.GetEnclosingSymbol(invocationExpression.SpanStart) as IMethodSymbol;
+                    if (methodSymbol == null ||
+                        enclosingSymbol == null ||
+                        enclosingSymbol.MethodKind != MethodKind.Constructor)
                     {
                         return;
                     }
 
-                    cbc.RegisterSyntaxNodeAction(
-                        c =>
-                        {
-                            var invocationException = (InvocationExpressionSyntax) c.Node;
-                            var methodSymbol =
-                                c.SemanticModel.GetSymbolInfo(invocationException.Expression).Symbol as IMethodSymbol;
-                            var enclosingSymbol = c.SemanticModel.GetEnclosingSymbol(invocationException.SpanStart);
-                            if (methodSymbol == null ||
-                                enclosingSymbol == null ||
-                                !enclosingSymbol.Equals(constructorSymbol))
-                            {
-                                return;
-                            }
-
-                            if ((methodSymbol.IsVirtual ||
-                                 methodSymbol.IsAbstract) &&
-                                constructorSymbol.ContainingType.Equals(methodSymbol.ContainingType))
-                            {
-                                calledVirtualMethods = calledVirtualMethods.SetItem(invocationException,
-                                    methodSymbol.Name);
-                            }
-                        },
-                        SyntaxKind.InvocationExpression);
-
-                    cbc.RegisterCodeBlockEndAction(
-                        c =>
-                        {
-                            foreach (var calledVirtualMethod in calledVirtualMethods)
-                            {
-                                c.ReportDiagnostic(Diagnostic.Create(Rule, calledVirtualMethod.Key.Expression.GetLocation(),
-                                    calledVirtualMethod.Value));
-                            }
-                        });
-                });
+                    if ((methodSymbol.IsVirtual ||
+                            methodSymbol.IsAbstract) &&
+                        enclosingSymbol.ContainingType.Equals(methodSymbol.ContainingType))
+                    {
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, invocationExpression.Expression.GetLocation(),
+                            methodSymbol.Name));
+                    }
+                },
+                SyntaxKind.InvocationExpression);
         }
     }
 }
