@@ -2359,40 +2359,6 @@
           "AnalysisTarget": {
             "Uri": "\\akka.net-dev_8b00423b29\\src\\examples\\Stocks\\SymbolLookup\\MainForm.cs",
             "Region": {
-              "StartLine": 70,
-              "EndLine": 70,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\examples\\Stocks\\SymbolLookup\\MainForm.cs",
-            "Region": {
-              "StartLine": 70,
-              "EndLine": 70,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\examples\\Stocks\\SymbolLookup\\MainForm.cs",
-            "Region": {
               "StartLine": 80,
               "EndLine": 80,
               "StartColumn": 0,
@@ -2412,40 +2378,6 @@
             "Region": {
               "StartLine": 80,
               "EndLine": 80,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\examples\\Stocks\\SymbolLookup\\MainForm.cs",
-            "Region": {
-              "StartLine": 85,
-              "EndLine": 85,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\examples\\Stocks\\SymbolLookup\\MainForm.cs",
-            "Region": {
-              "StartLine": 85,
-              "EndLine": 85,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -4138,40 +4070,6 @@
     },
     {
       "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"formatting\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\logging\\NullLog.cs",
-            "Region": {
-              "StartLine": 31,
-              "EndLine": 31,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"message\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\logging\\NullLog.cs",
-            "Region": {
-              "StartLine": 31,
-              "EndLine": 31,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
       "FullMessage": "Remove this unused method parameter \"message\".",
       "Locations": [
         {
@@ -4180,40 +4078,6 @@
             "Region": {
               "StartLine": 35,
               "EndLine": 35,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"formatting\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\logging\\NullLog.cs",
-            "Region": {
-              "StartLine": 39,
-              "EndLine": 39,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"message\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\logging\\NullLog.cs",
-            "Region": {
-              "StartLine": 39,
-              "EndLine": 39,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -4240,40 +4104,6 @@
     },
     {
       "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"formatting\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\logging\\NullLog.cs",
-            "Region": {
-              "StartLine": 47,
-              "EndLine": 47,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"message\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\logging\\NullLog.cs",
-            "Region": {
-              "StartLine": 47,
-              "EndLine": 47,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
       "FullMessage": "Remove this unused method parameter \"message\".",
       "Locations": [
         {
@@ -4282,40 +4112,6 @@
             "Region": {
               "StartLine": 51,
               "EndLine": 51,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"formatting\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\logging\\NullLog.cs",
-            "Region": {
-              "StartLine": 55,
-              "EndLine": 55,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"message\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\logging\\NullLog.cs",
-            "Region": {
-              "StartLine": 55,
-              "EndLine": 55,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -4342,40 +4138,6 @@
     },
     {
       "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"formatting\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\logging\\NullLog.cs",
-            "Region": {
-              "StartLine": 63,
-              "EndLine": 63,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"message\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\logging\\NullLog.cs",
-            "Region": {
-              "StartLine": 63,
-              "EndLine": 63,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
       "FullMessage": "Remove this unused method parameter \"message\".",
       "Locations": [
         {
@@ -4384,23 +4146,6 @@
             "Region": {
               "StartLine": 67,
               "EndLine": 67,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\registration\\Bootstrap.cs",
-            "Region": {
-              "StartLine": 56,
-              "EndLine": 56,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -14015,40 +13760,6 @@
     },
     {
       "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Demo.Hosting.Owin\\Global.asax.cs",
-            "Region": {
-              "StartLine": 11,
-              "EndLine": 11,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Demo.Hosting.Owin\\Global.asax.cs",
-            "Region": {
-              "StartLine": 11,
-              "EndLine": 11,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
       "FullMessage": "Remove this unused method parameter \"requestContext\".",
       "Locations": [
         {
@@ -16259,108 +15970,6 @@
     },
     {
       "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\NLogDemo\\Default.aspx.cs",
-            "Region": {
-              "StartLine": 14,
-              "EndLine": 14,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\NLogDemo\\Default.aspx.cs",
-            "Region": {
-              "StartLine": 14,
-              "EndLine": 14,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\NLogDemo\\Default.aspx.cs",
-            "Region": {
-              "StartLine": 27,
-              "EndLine": 27,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\NLogDemo\\Default.aspx.cs",
-            "Region": {
-              "StartLine": 27,
-              "EndLine": 27,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\NLogDemo\\Default.aspx.cs",
-            "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\NLogDemo\\Default.aspx.cs",
-            "Region": {
-              "StartLine": 32,
-              "EndLine": 32,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
       "FullMessage": "Remove this unused method parameter \"args\".",
       "Locations": [
         {
@@ -16382,40 +15991,6 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\NLogSilverlightApp.Web\\Default.aspx.cs",
-            "Region": {
-              "StartLine": 12,
-              "EndLine": 12,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\NLogSilverlightApp.Web\\Default.aspx.cs",
-            "Region": {
-              "StartLine": 12,
-              "EndLine": 12,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
             "Uri": "\\NLog-master_25d6863e72\\examples\\NLogSilverlightApp\\App.xaml.cs",
             "Region": {
               "StartLine": 48,
@@ -16437,40 +16012,6 @@
             "Region": {
               "StartLine": 48,
               "EndLine": 48,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\NLogSilverlightApp\\App.xaml.cs",
-            "Region": {
-              "StartLine": 53,
-              "EndLine": 53,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\NLogSilverlightApp\\App.xaml.cs",
-            "Region": {
-              "StartLine": 53,
-              "EndLine": 53,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -16845,176 +16386,6 @@
             "Region": {
               "StartLine": 18,
               "EndLine": 18,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\ASPNetBufferingWrapper\\Global.asax.cs",
-            "Region": {
-              "StartLine": 17,
-              "EndLine": 17,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\ASPNetBufferingWrapper\\Global.asax.cs",
-            "Region": {
-              "StartLine": 17,
-              "EndLine": 17,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\ASPNetBufferingWrapper\\Global.asax.cs",
-            "Region": {
-              "StartLine": 36,
-              "EndLine": 36,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\ASPNetBufferingWrapper\\Global.asax.cs",
-            "Region": {
-              "StartLine": 36,
-              "EndLine": 36,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\ASPNetBufferingWrapper\\NormalPage.aspx.cs",
-            "Region": {
-              "StartLine": 18,
-              "EndLine": 18,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\ASPNetBufferingWrapper\\NormalPage.aspx.cs",
-            "Region": {
-              "StartLine": 18,
-              "EndLine": 18,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\ASPNetBufferingWrapper\\PageWithWarnings.aspx.cs",
-            "Region": {
-              "StartLine": 18,
-              "EndLine": 18,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\ASPNetBufferingWrapper\\PageWithWarnings.aspx.cs",
-            "Region": {
-              "StartLine": 18,
-              "EndLine": 18,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\ASPNetTrace\\Global.asax.cs",
-            "Region": {
-              "StartLine": 17,
-              "EndLine": 17,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\ASPNetTrace\\Global.asax.cs",
-            "Region": {
-              "StartLine": 17,
-              "EndLine": 17,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -17432,40 +16803,6 @@
     },
     {
       "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\FormControl\\Form1.cs",
-            "Region": {
-              "StartLine": 16,
-              "EndLine": 16,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\FormControl\\Form1.cs",
-            "Region": {
-              "StartLine": 16,
-              "EndLine": 16,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
       "FullMessage": "Remove this unused method parameter \"args\".",
       "Locations": [
         {
@@ -17738,108 +17075,6 @@
     },
     {
       "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\RichTextBox\\RowColoring\\Form1.cs",
-            "Region": {
-              "StartLine": 17,
-              "EndLine": 17,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\RichTextBox\\RowColoring\\Form1.cs",
-            "Region": {
-              "StartLine": 17,
-              "EndLine": 17,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\RichTextBox\\Simple\\Form1.cs",
-            "Region": {
-              "StartLine": 16,
-              "EndLine": 16,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\RichTextBox\\Simple\\Form1.cs",
-            "Region": {
-              "StartLine": 16,
-              "EndLine": 16,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\RichTextBox\\WordColoring\\Form1.cs",
-            "Region": {
-              "StartLine": 17,
-              "EndLine": 17,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\examples\\targets\\Configuration API\\RichTextBox\\WordColoring\\Form1.cs",
-            "Region": {
-              "StartLine": 17,
-              "EndLine": 17,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
       "FullMessage": "Remove this unused method parameter \"args\".",
       "Locations": [
         {
@@ -18069,74 +17304,6 @@
             "Region": {
               "StartLine": 112,
               "EndLine": 112,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"args\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\LogFactory.cs",
-            "Region": {
-              "StartLine": 857,
-              "EndLine": 857,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\LogFactory.cs",
-            "Region": {
-              "StartLine": 857,
-              "EndLine": 857,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"args\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\LogManager.cs",
-            "Region": {
-              "StartLine": 404,
-              "EndLine": 404,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\src\\NLog\\LogManager.cs",
-            "Region": {
-              "StartLine": 404,
-              "EndLine": 404,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -18834,40 +18001,6 @@
             "Region": {
               "StartLine": 30,
               "EndLine": 30,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\tests\\SilverlightApp\\App.xaml.cs",
-            "Region": {
-              "StartLine": 38,
-              "EndLine": 38,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\NLog-master_25d6863e72\\tests\\SilverlightApp\\App.xaml.cs",
-            "Region": {
-              "StartLine": 38,
-              "EndLine": 38,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -20753,40 +19886,6 @@
           "AnalysisTarget": {
             "Uri": "\\nuget\\src\\Dialog10\\PackageManagerWindow.xaml.cs",
             "Region": {
-              "StartLine": 418,
-              "EndLine": 418,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\Dialog10\\PackageManagerWindow.xaml.cs",
-            "Region": {
-              "StartLine": 418,
-              "EndLine": 418,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\Dialog10\\PackageManagerWindow.xaml.cs",
-            "Region": {
               "StartLine": 423,
               "EndLine": 423,
               "StartColumn": 0,
@@ -20891,40 +19990,6 @@
             "Region": {
               "StartLine": 481,
               "EndLine": 481,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\Dialog10\\PackageManagerWindow.xaml.cs",
-            "Region": {
-              "StartLine": 490,
-              "EndLine": 490,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\Dialog10\\PackageManagerWindow.xaml.cs",
-            "Region": {
-              "StartLine": 490,
-              "EndLine": 490,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -21231,23 +20296,6 @@
             "Region": {
               "StartLine": 612,
               "EndLine": 612,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\Dialog10\\Providers\\SolutionInstalledProvider.cs",
-            "Region": {
-              "StartLine": 272,
-              "EndLine": 272,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -22434,108 +21482,6 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\DialogServices\\PackageManagerUI\\ProgressWindowOpener.cs",
-            "Region": {
-              "StartLine": 68,
-              "EndLine": 68,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\DialogServices\\PackageManagerUI\\ProgressWindowOpener.cs",
-            "Region": {
-              "StartLine": 68,
-              "EndLine": 68,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\DialogServices\\PackageManagerUI\\ProgressWindowOpener.cs",
-            "Region": {
-              "StartLine": 87,
-              "EndLine": 87,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\DialogServices\\PackageManagerUI\\ProgressWindowOpener.cs",
-            "Region": {
-              "StartLine": 87,
-              "EndLine": 87,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\DialogServices\\PackageManagerUI\\ProgressWindowOpener.cs",
-            "Region": {
-              "StartLine": 125,
-              "EndLine": 125,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\DialogServices\\PackageManagerUI\\ProgressWindowOpener.cs",
-            "Region": {
-              "StartLine": 125,
-              "EndLine": 125,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
             "Uri": "\\nuget\\src\\DialogServices\\PackageManagerUI\\SummaryWindow.xaml.cs",
             "Region": {
               "StartLine": 16,
@@ -22651,210 +21597,6 @@
     },
     {
       "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\DialogServices\\WindowSizePersistenceHelper.cs",
-            "Region": {
-              "StartLine": 52,
-              "EndLine": 52,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\Options\\GeneralOptionControl.cs",
-            "Region": {
-              "StartLine": 60,
-              "EndLine": 60,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\Options\\GeneralOptionControl.cs",
-            "Region": {
-              "StartLine": 60,
-              "EndLine": 60,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\Options\\GeneralOptionControl.cs",
-            "Region": {
-              "StartLine": 66,
-              "EndLine": 66,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\Options\\GeneralOptionControl.cs",
-            "Region": {
-              "StartLine": 66,
-              "EndLine": 66,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\Options\\OptionsPageBase.cs",
-            "Region": {
-              "StartLine": 37,
-              "EndLine": 37,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\Options\\PackageSourcesOptionsControl.cs",
-            "Region": {
-              "StartLine": 167,
-              "EndLine": 167,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\Options\\PackageSourcesOptionsControl.cs",
-            "Region": {
-              "StartLine": 167,
-              "EndLine": 167,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\Options\\PackageSourcesOptionsControl.cs",
-            "Region": {
-              "StartLine": 177,
-              "EndLine": 177,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\Options\\PackageSourcesOptionsControl.cs",
-            "Region": {
-              "StartLine": 177,
-              "EndLine": 177,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\Options\\PackageSourcesOptionsControl.cs",
-            "Region": {
-              "StartLine": 200,
-              "EndLine": 200,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\Options\\PackageSourcesOptionsControl.cs",
-            "Region": {
-              "StartLine": 200,
-              "EndLine": 200,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
       "FullMessage": "Remove this unused method parameter \"sender\".",
       "Locations": [
         {
@@ -22948,74 +21690,6 @@
             "Region": {
               "StartLine": 474,
               "EndLine": 474,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\Options\\PackageSourcesOptionsControl.cs",
-            "Region": {
-              "StartLine": 494,
-              "EndLine": 494,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\Options\\PackageSourcesOptionsControl.cs",
-            "Region": {
-              "StartLine": 494,
-              "EndLine": 494,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\Options\\PackageSourcesOptionsControl.cs",
-            "Region": {
-              "StartLine": 510,
-              "EndLine": 510,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\Options\\PackageSourcesOptionsControl.cs",
-            "Region": {
-              "StartLine": 510,
-              "EndLine": 510,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -23399,40 +22073,6 @@
     },
     {
       "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VisualStudio\\DeleteOnRestart\\RestartRequestBar.xaml.cs",
-            "Region": {
-              "StartLine": 39,
-              "EndLine": 39,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VisualStudio\\DeleteOnRestart\\RestartRequestBar.xaml.cs",
-            "Region": {
-              "StartLine": 39,
-              "EndLine": 39,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
       "FullMessage": "Remove this unused method parameter \"project\".",
       "Locations": [
         {
@@ -23705,40 +22345,6 @@
     },
     {
       "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VisualStudio\\PackageRestore\\PackageRestoreManager.cs",
-            "Region": {
-              "StartLine": 505,
-              "EndLine": 505,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VisualStudio\\PackageRestore\\PackageRestoreManager.cs",
-            "Region": {
-              "StartLine": 505,
-              "EndLine": 505,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
       "FullMessage": "Remove this unused method parameter \"sender\".",
       "Locations": [
         {
@@ -23764,40 +22370,6 @@
             "Region": {
               "StartLine": 93,
               "EndLine": 93,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VisualStudio\\PackageSource\\VSPackageSourceProvider.cs",
-            "Region": {
-              "StartLine": 96,
-              "EndLine": 96,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VisualStudio\\PackageSource\\VSPackageSourceProvider.cs",
-            "Region": {
-              "StartLine": 96,
-              "EndLine": 96,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -23985,23 +22557,6 @@
             "Region": {
               "StartLine": 64,
               "EndLine": 64,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VisualStudio\\ProductUpdate\\ProductUpdateService.cs",
-            "Region": {
-              "StartLine": 139,
-              "EndLine": 139,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -24334,40 +22889,6 @@
     },
     {
       "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VisualStudio\\VsSettings.cs",
-            "Region": {
-              "StartLine": 49,
-              "EndLine": 49,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VisualStudio\\VsSettings.cs",
-            "Region": {
-              "StartLine": 49,
-              "EndLine": 49,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
       "FullMessage": "Remove this unused method parameter \"ignoreSourceControlSetting\".",
       "Locations": [
         {
@@ -24376,74 +22897,6 @@
             "Region": {
               "StartLine": 185,
               "EndLine": 185,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VisualStudio\\VsSourceControlTracker.cs",
-            "Region": {
-              "StartLine": 58,
-              "EndLine": 58,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VisualStudio\\VsSourceControlTracker.cs",
-            "Region": {
-              "StartLine": 58,
-              "EndLine": 58,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VisualStudio\\VsSourceControlTracker.cs",
-            "Region": {
-              "StartLine": 63,
-              "EndLine": 63,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VisualStudio\\VsSourceControlTracker.cs",
-            "Region": {
-              "StartLine": 63,
-              "EndLine": 63,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -25847,40 +24300,6 @@
     },
     {
       "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsConsole\\Console\\Console\\ConsoleDispatcher.cs",
-            "Region": {
-              "StartLine": 462,
-              "EndLine": 462,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsConsole\\Console\\Console\\ConsoleDispatcher.cs",
-            "Region": {
-              "StartLine": 462,
-              "EndLine": 462,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
       "FullMessage": "Remove this unused method parameter \"sender\".",
       "Locations": [
         {
@@ -25936,193 +24355,6 @@
       "Locations": [
         {
           "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsConsole\\Console\\Console\\WpfConsoleClassifier.cs",
-            "Region": {
-              "StartLine": 98,
-              "EndLine": 98,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsConsole\\Console\\Console\\WpfConsoleClassifier.cs",
-            "Region": {
-              "StartLine": 98,
-              "EndLine": 98,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsConsole\\Console\\Console\\WpfConsoleKeyProcessor.cs",
-            "Region": {
-              "StartLine": 527,
-              "EndLine": 527,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsConsole\\Console\\PowerConsoleToolWindow.cs",
-            "Region": {
-              "StartLine": 254,
-              "EndLine": 254,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsConsole\\Console\\PowerConsoleToolWindow.cs",
-            "Region": {
-              "StartLine": 270,
-              "EndLine": 270,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsConsole\\Console\\PowerConsoleToolWindow.cs",
-            "Region": {
-              "StartLine": 291,
-              "EndLine": 291,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsConsole\\Console\\PowerConsoleToolWindow.cs",
-            "Region": {
-              "StartLine": 309,
-              "EndLine": 309,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsConsole\\Console\\PowerConsoleToolWindow.cs",
-            "Region": {
-              "StartLine": 334,
-              "EndLine": 334,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsConsole\\Console\\PowerConsoleToolWindow.cs",
-            "Region": {
-              "StartLine": 334,
-              "EndLine": 334,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsConsole\\Console\\PowerConsoleToolWindow.cs",
-            "Region": {
-              "StartLine": 342,
-              "EndLine": 342,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsConsole\\Console\\PowerConsoleToolWindow.cs",
-            "Region": {
-              "StartLine": 342,
-              "EndLine": 342,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
             "Uri": "\\nuget\\src\\VsConsole\\Console\\PowerConsoleToolWindow.cs",
             "Region": {
               "StartLine": 418,
@@ -26144,40 +24376,6 @@
             "Region": {
               "StartLine": 418,
               "EndLine": 418,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"args\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsConsole\\Console\\PowerConsoleToolWindow.cs",
-            "Region": {
-              "StartLine": 474,
-              "EndLine": 474,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsConsole\\Console\\PowerConsoleToolWindow.cs",
-            "Region": {
-              "StartLine": 474,
-              "EndLine": 474,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -26195,23 +24393,6 @@
             "Region": {
               "StartLine": 574,
               "EndLine": 574,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsConsole\\Console\\PowerConsoleToolWindow.cs",
-            "Region": {
-              "StartLine": 616,
-              "EndLine": 616,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -26501,312 +24682,6 @@
             "Region": {
               "StartLine": 65,
               "EndLine": 65,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsExtension\\NuGetPackage.cs",
-            "Region": {
-              "StartLine": 242,
-              "EndLine": 242,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsExtension\\NuGetPackage.cs",
-            "Region": {
-              "StartLine": 277,
-              "EndLine": 277,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsExtension\\NuGetPackage.cs",
-            "Region": {
-              "StartLine": 277,
-              "EndLine": 277,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsExtension\\NuGetPackage.cs",
-            "Region": {
-              "StartLine": 285,
-              "EndLine": 285,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsExtension\\NuGetPackage.cs",
-            "Region": {
-              "StartLine": 285,
-              "EndLine": 285,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsExtension\\NuGetPackage.cs",
-            "Region": {
-              "StartLine": 294,
-              "EndLine": 294,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsExtension\\NuGetPackage.cs",
-            "Region": {
-              "StartLine": 328,
-              "EndLine": 328,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"args\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsExtension\\NuGetPackage.cs",
-            "Region": {
-              "StartLine": 367,
-              "EndLine": 367,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsExtension\\NuGetPackage.cs",
-            "Region": {
-              "StartLine": 367,
-              "EndLine": 367,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"args\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsExtension\\NuGetPackage.cs",
-            "Region": {
-              "StartLine": 372,
-              "EndLine": 372,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"args\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsExtension\\NuGetPackage.cs",
-            "Region": {
-              "StartLine": 379,
-              "EndLine": 379,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"args\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsExtension\\NuGetPackage.cs",
-            "Region": {
-              "StartLine": 385,
-              "EndLine": 385,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"args\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsExtension\\NuGetPackage.cs",
-            "Region": {
-              "StartLine": 392,
-              "EndLine": 392,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"args\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsExtension\\NuGetPackage.cs",
-            "Region": {
-              "StartLine": 400,
-              "EndLine": 400,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"args\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsExtension\\NuGetPackage.cs",
-            "Region": {
-              "StartLine": 413,
-              "EndLine": 413,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsExtension\\NuGetPackage.cs",
-            "Region": {
-              "StartLine": 413,
-              "EndLine": 413,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"args\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsExtension\\NuGetPackage.cs",
-            "Region": {
-              "StartLine": 418,
-              "EndLine": 418,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\src\\VsExtension\\NuGetPackage.cs",
-            "Region": {
-              "StartLine": 418,
-              "EndLine": 418,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -27581,40 +25456,6 @@
     },
     {
       "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\test\\TestUI\\TestForm.cs",
-            "Region": {
-              "StartLine": 42,
-              "EndLine": 42,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\test\\TestUI\\TestForm.cs",
-            "Region": {
-              "StartLine": 42,
-              "EndLine": 42,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
       "FullMessage": "Remove this unused method parameter \"sender\".",
       "Locations": [
         {
@@ -27623,40 +25464,6 @@
             "Region": {
               "StartLine": 60,
               "EndLine": 60,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"e\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\test\\TestUI\\TestForm.cs",
-            "Region": {
-              "StartLine": 65,
-              "EndLine": 65,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"sender\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\nuget\\test\\TestUI\\TestForm.cs",
-            "Region": {
-              "StartLine": 65,
-              "EndLine": 65,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }

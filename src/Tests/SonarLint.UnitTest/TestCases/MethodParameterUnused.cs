@@ -42,5 +42,12 @@ namespace Tests.TestCases
 
         public void M4(int a) //okay
         { }
+
+        void MyEventHandlerMethod(object sender, EventArgs e) //okay, event handler
+        { }
+        void MyEventHandlerMethod(object sender, MyEventArgs e) //okay, event handler
+        { }
+
+        class MyEventArgs : EventArgs { }
     }
 }

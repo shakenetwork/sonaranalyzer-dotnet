@@ -110,7 +110,7 @@ namespace SonarLint.Rules
             return DerivesOrImplements(indexOfSymbol.ContainingType, possibleTypes);
         }
 
-        private static bool DerivesOrImplements(INamedTypeSymbol type, ITypeSymbol[] possibleTypes)
+        internal static bool DerivesOrImplements(INamedTypeSymbol type, ITypeSymbol[] possibleTypes)
         {
             var allInterfaces = type.AllInterfaces;
             if (allInterfaces.Intersect(possibleTypes).Any())

@@ -65,7 +65,8 @@ namespace SonarLint.Rules
                     var methodSymbol = cbc.OwningSymbol as IMethodSymbol;
                     if (methodDeclaration == null ||
                         methodSymbol == null ||
-                        !IsMethodCandidate(methodSymbol))
+                        !IsMethodCandidate(methodSymbol) ||
+                        IsMethodProbablyEventHandler(methodSymbol, cbc.SemanticModel.Compilation))
                     {
                         return;
                     }
@@ -123,6 +124,30 @@ namespace SonarLint.Rules
                 .AllInterfaces
                 .SelectMany(@interface => @interface.GetMembers().OfType<IMethodSymbol>())
                 .Any(method => methodSymbol.Equals(methodSymbol.ContainingType.FindImplementationForInterfaceMember(method)));
+        }
+
+        private static bool IsMethodProbablyEventHandler(IMethodSymbol methodSymbol, Compilation compilation)
+        {
+            if (!methodSymbol.ReturnsVoid ||
+                methodSymbol.Parameters.Length != 2)
+            {
+                return false;
+            }
+
+            var eventArgs = methodSymbol.Parameters[1];
+            var eventArgsType = eventArgs.Type as INamedTypeSymbol;
+            if (eventArgsType == null)
+            {
+                return true;
+            }
+
+            var sysEventArgs = compilation.GetTypeByMetadataName("System.EventArgs");
+            if (sysEventArgs == null)
+            {
+                return true;
+            }
+
+            return IndexOfCheckAgainstZero.DerivesOrImplements(eventArgsType, new[] { sysEventArgs });
         }
     }
 }
