@@ -88,6 +88,7 @@ namespace SonarLint.Rules
 
                         var sameClassIdentifiersAfterThis = identifierClassMappings
                             .Where(mapping => mapping.ClassDeclaration == classDeclaration)
+                            .Where(mapping => !mapping.Identifier.Field.IsConst)
                             .Where(mapping => mapping.Identifier.Field.DeclaringSyntaxReferences.First().Span.Start > variable.SpanStart);
                         var isAnyAfterInSameClass = sameClassIdentifiersAfterThis.Any();
 

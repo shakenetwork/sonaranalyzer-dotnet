@@ -14,6 +14,8 @@ namespace Tests.TestCases
         public static int Y = 42;
         public static int Z = Y; // Okay
         public static int V = W; // Noncompliant
+        public static int U = Const; // Compliant
+        public const int Const = 5;
 
         public int nonStat = W;
 
