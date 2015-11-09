@@ -69,44 +69,27 @@ namespace SonarLint.Rules
                         Action<IEnumerable<SyntaxTrivia>> check =
                             trivias =>
                             {
-                                var lastCommentedCodeLine = int.MinValue;
-
+                                var shouldReport = true;
                                 foreach (var trivia in trivias)
                                 {
-                                    if (!trivia.IsKind(SyntaxKind.SingleLineCommentTrivia) &&
-                                        !trivia.IsKind(SyntaxKind.MultiLineCommentTrivia))
+                                    if (trivia.IsKind(SyntaxKind.MultiLineCommentTrivia))
                                     {
+                                        CheckMultilineComment(c, trivia);
+                                        shouldReport = true;
                                         continue;
                                     }
 
-                                    var triviaContent = GetTriviaContent(trivia);
-                                    var triviaStartingLineNumber = trivia.GetLocation().GetLineSpan().StartLinePosition.Line;
-                                    var triviaLines = triviaContent.Split(LineTerminators, StringSplitOptions.None);
-
-                                    var issueReported = false;
-
-                                    for (var triviaLineNumber = 0; !issueReported && triviaLineNumber < triviaLines.Length; triviaLineNumber++)
+                                    if (trivia.IsKind(SyntaxKind.SingleLineCommentTrivia) && shouldReport)
                                     {
-                                        if (!IsCode(triviaLines[triviaLineNumber]))
+                                        var triviaContent = GetTriviaContent(trivia);
+                                        if (!IsCode(triviaContent))
                                         {
                                             continue;
                                         }
 
-                                        var lineNumber = triviaStartingLineNumber + triviaLineNumber;
-                                        var previousLastCommentedCodeLine = lastCommentedCodeLine;
-                                        lastCommentedCodeLine = lineNumber;
-
-                                        if (lineNumber == previousLastCommentedCodeLine + 1)
-                                        {
-                                            continue;
-                                        }
-
-                                        var lineSpan = c.Tree.GetText().Lines[lineNumber].Span;
-                                        var commentLineSpan = lineSpan.Intersection(trivia.GetLocation().SourceSpan);
-
-                                        var location = Location.Create(c.Tree, commentLineSpan ?? lineSpan);
-                                        c.ReportDiagnostic(Diagnostic.Create(Rule, location));
-                                        issueReported = true;
+                                        c.ReportDiagnostic(Diagnostic.Create(Rule, trivia.GetLocation()));
+                                        shouldReport = false;
+                                        continue;
                                     }
                                 }
                             };
@@ -115,6 +98,29 @@ namespace SonarLint.Rules
                         check(token.TrailingTrivia);
                     }
                 });
+        }
+
+        private static void CheckMultilineComment(SyntaxTreeAnalysisContext c, SyntaxTrivia comment)
+        {
+            var triviaContent = GetTriviaContent(comment);
+            var triviaLines = triviaContent.Split(LineTerminators, StringSplitOptions.None);
+
+            for (var triviaLineNumber = 0; triviaLineNumber < triviaLines.Length; triviaLineNumber++)
+            {
+                if (!IsCode(triviaLines[triviaLineNumber]))
+                {
+                    continue;
+                }
+
+                var triviaStartingLineNumber = comment.GetLocation().GetLineSpan().StartLinePosition.Line;
+                var lineNumber = triviaStartingLineNumber + triviaLineNumber;
+                var lineSpan = c.Tree.GetText().Lines[lineNumber].Span;
+                var commentLineSpan = lineSpan.Intersection(comment.GetLocation().SourceSpan);
+
+                var location = Location.Create(c.Tree, commentLineSpan ?? lineSpan);
+                c.ReportDiagnostic(Diagnostic.Create(Rule, location));
+                return;
+            }
         }
 
         private static string GetTriviaContent(SyntaxTrivia trivia)
