@@ -92,7 +92,7 @@ namespace SonarLint.Rules
                             .Select(s => string.Format("\"{0}\"", s.Name))
                             .OrderBy(s => s));
                         c.ReportDiagnostic(Diagnostic.Create(Rule, forNode.Condition.GetLocation(),
-                            string.Format(CultureInfo.InvariantCulture, MessageFormatNotEmpty, incrementedVariables, conditionVariables)));
+                            string.Format(CultureInfo.InvariantCulture, MessageFormatNotEmpty, conditionVariables, incrementedVariables)));
                     }
                     else
                     {

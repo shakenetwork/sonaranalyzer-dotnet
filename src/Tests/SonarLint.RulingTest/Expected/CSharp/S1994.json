@@ -58,7 +58,7 @@
     },
     {
       "RuleId": "S1994",
-      "FullMessage": "This loop's stop condition tests \"memoryNode\" but the incrementer updates \"counts\",\"index\".",
+      "FullMessage": "This loop's stop condition tests \"counts\",\"index\" but the incrementer updates \"memoryNode\".",
       "Locations": [
         {
           "AnalysisTarget": {
