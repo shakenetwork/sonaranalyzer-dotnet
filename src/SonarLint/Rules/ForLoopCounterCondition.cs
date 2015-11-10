@@ -36,7 +36,7 @@ namespace SonarLint.Rules
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [SqaleConstantRemediation("20min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Bug)]
+    [Tags(Tag.Suspicious)]
     public class ForLoopCounterCondition : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1994";
@@ -51,7 +51,7 @@ namespace SonarLint.Rules
         internal const string MessageFormatEmpty =
             "This loop's stop incrementer updates {0} but the stop condition doesn't test any variables.";
         internal const string Category = Constants.SonarLint;
-        internal const Severity RuleSeverity = Severity.Critical;
+        internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
