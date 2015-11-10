@@ -51,7 +51,7 @@ namespace Tests.TestCases
                 return 3;
 
             X o = null;
-            if (o == null) //Noncompliant, but there is no fix for it
+            if (o == null) //Non-compliant, but not handled because of the type difference, and there is no fix for it
             {
                 x = new Y();
             }
@@ -61,19 +61,12 @@ namespace Tests.TestCases
             }
 
             var yyy = new Y();
-            x = Identity(condition ? new Y() : yyy);
+            x = condition ? Identity(new Y()) : Identity(yyy);
 
-            if (condition) //Noncompliant
-            {
-                x = Identity(new Y());
-            }
-            else
-            {
-                x = Identity(new X());
-            }
+            x = condition ? Identity(new Y()) : Identity(new X());
 
             Base elem;
-            if (condition) //Noncompliant
+            if (condition) // Non-compliant, but not handled because of the type difference
             {
                 elem = new A();
             }
@@ -82,7 +75,17 @@ namespace Tests.TestCases
                 elem = new B();
             }
 
-            x = Identity(condition ? new Y() : yyy);
+            x = condition ? Identity(new Y()) : Identity(yyy);
+
+            elem = condition ? new A() : null;
+            if (condition) // Non-compliant, but not handled because of the type difference
+            {
+                elem = new A();
+            }
+            else
+            {
+                elem = new NonExistendType();
+            }
         }
     }
 

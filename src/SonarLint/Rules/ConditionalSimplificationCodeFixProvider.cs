@@ -35,17 +35,12 @@ namespace SonarLint.Rules
     public class ConditionalSimplificationCodeFixProvider : CodeFixProvider
     {
         internal const string Title = "Simplify condition";
-        public sealed override ImmutableArray<string> FixableDiagnosticIds
-        {
-            get
-            {
-                return ImmutableArray.Create(ConditionalSimplification.DiagnosticId);
-            }
-        }
-        public sealed override FixAllProvider GetFixAllProvider()
-        {
-            return WellKnownFixAllProviders.BatchFixer;
-        }
+
+        public sealed override ImmutableArray<string> FixableDiagnosticIds =>
+            ImmutableArray.Create(ConditionalSimplification.DiagnosticId);
+
+        public sealed override FixAllProvider GetFixAllProvider() =>
+            WellKnownFixAllProviders.BatchFixer;
 
         public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
         {
@@ -64,18 +59,14 @@ namespace SonarLint.Rules
 
                 ExpressionSyntax compared;
                 bool comparedIsNullInTrue;
-                ConditionalSimplification.TryGetComparedVariable(condition, out compared, out comparedIsNullInTrue);
+                ConditionalSimplification.TryGetExpressionComparedToNull(condition, out compared, out comparedIsNullInTrue);
 
                 var annotation = new SyntaxAnnotation();
                 var coalescing = GetNullCoalescing(whenTrue, whenFalse, compared, semanticModel, annotation);
 
-                var fixIsOkay = IsFixOkay(root, conditional, coalescing, annotation, semanticModel);
-                if (fixIsOkay)
-                {
-                    context.RegisterCodeFix(
-                        GetActionToExecute(context, root, conditional, coalescing, annotation),
-                        context.Diagnostics);
-                }
+                context.RegisterCodeFix(
+                    GetActionToExecute(context, root, conditional, coalescing, annotation),
+                    context.Diagnostics);
             }
 
             var ifStatement = syntax as IfStatementSyntax;
@@ -86,19 +77,15 @@ namespace SonarLint.Rules
 
                 ExpressionSyntax compared;
                 bool comparedIsNullInTrue;
-                ConditionalSimplification.TryGetComparedVariable(ifStatement.Condition, out compared, out comparedIsNullInTrue);
+                ConditionalSimplification.TryGetExpressionComparedToNull(ifStatement.Condition, out compared, out comparedIsNullInTrue);
                 var isNullCoalescing = bool.Parse(diagnostic.Properties[ConditionalSimplification.IsNullCoalescingKey]);
 
                 var annotation = new SyntaxAnnotation();
                 var simplified = GetSimplified(whenTrue, whenFalse, ifStatement.Condition, compared, isNullCoalescing, semanticModel, annotation);
 
-                var fixIsOkay = IsFixOkay(root, ifStatement, simplified, annotation, semanticModel);
-                if (fixIsOkay)
-                {
-                    context.RegisterCodeFix(
-                        GetActionToExecute(context, root, ifStatement, simplified, annotation),
-                        context.Diagnostics);
-                }
+                context.RegisterCodeFix(
+                    GetActionToExecute(context, root, ifStatement, simplified, annotation),
+                    context.Diagnostics);
             }
         }
 
@@ -132,19 +119,6 @@ namespace SonarLint.Rules
             }
 
             return node.ReplaceNode(annotated, annotated.WithoutAnnotations(annotation));
-        }
-
-        private static bool IsFixOkay(SyntaxNode originalRoot, SyntaxNode originalNode, SyntaxNode newNode, SyntaxAnnotation annotation,
-            SemanticModel semanticModel)
-        {
-            var newRoot = originalRoot.ReplaceNode(originalNode, newNode);
-
-            var newSemantic = semanticModel.Compilation.ReplaceSyntaxTree(originalRoot.SyntaxTree, newRoot.SyntaxTree)
-                .GetSemanticModel(newRoot.SyntaxTree);
-
-            var node = newRoot.GetAnnotatedNodes(annotation).First();
-            var type = newSemantic.GetTypeInfo(node).Type;
-            return !(type is IErrorTypeSymbol);
         }
 
         private static StatementSyntax GetSimplified(StatementSyntax statement1, StatementSyntax statement2,
@@ -205,17 +179,6 @@ namespace SonarLint.Rules
             if (!canBeSimplified)
             {
                 return null;
-            }
-
-            var callSimplification = GetSimplificationFromInvocations(assignment1.Right, assignment2.Right,
-                condition, compared, isNullCoalescing, semanticModel, annotation);
-
-            if (callSimplification != null)
-            {
-                return SyntaxFactory.AssignmentExpression(
-                    assignment1.Kind(),
-                    assignment1.Left,
-                    callSimplification);
             }
 
             var createdExpression = isNullCoalescing

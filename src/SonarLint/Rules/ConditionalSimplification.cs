@@ -73,18 +73,20 @@ namespace SonarLint.Rules
 
                     if (EquivalenceChecker.AreEquivalent(whenTrue, whenFalse))
                     {
+                        /// handled by S2758, <see cref="TernaryOperatorPointless"/>
                         return;
                     }
 
-                    ExpressionSyntax compared;
+                    ExpressionSyntax comparedToNull;
                     bool comparedIsNullInTrue;
-                    if (!TryGetComparedVariable(condition, out compared, out comparedIsNullInTrue) ||
-                        !ExpressionCanBeNull(compared, c.SemanticModel))
+                    if (!TryGetExpressionComparedToNull(condition, out comparedToNull, out comparedIsNullInTrue) ||
+                        !ExpressionCanBeNull(comparedToNull, c.SemanticModel))
                     {
+                        // expression not compared to null, or can't be null
                         return;
                     }
 
-                    if (CanBeNullCoalescing(whenTrue, whenFalse, compared, comparedIsNullInTrue, c.SemanticModel))
+                    if (CanExpressionBeNullCoalescing(whenTrue, whenFalse, comparedToNull, comparedIsNullInTrue, c.SemanticModel))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, conditional.GetLocation(), "??"));
                     }
@@ -108,20 +110,20 @@ namespace SonarLint.Rules
                         whenFalse == null ||
                         EquivalenceChecker.AreEquivalent(whenTrue, whenFalse))
                     {
+                        /// Equivalence handled by S1871, <see cref="ConditionalStructureSameImplementation"/>
                         return;
                     }
 
-                    ExpressionSyntax compared;
+                    ExpressionSyntax comparedToNull;
                     bool comparedIsNullInTrue;
-                    var possiblyTernary =
-                        TryGetComparedVariable(ifStatement.Condition, out compared, out comparedIsNullInTrue) &&
-                        ExpressionCanBeNull(compared, c.SemanticModel);
+                    var possiblyNullCoalescing =
+                        TryGetExpressionComparedToNull(ifStatement.Condition, out comparedToNull, out comparedIsNullInTrue) &&
+                        ExpressionCanBeNull(comparedToNull, c.SemanticModel);
 
                     bool isNullCoalescing;
                     if (CanBeSimplified(whenTrue, whenFalse,
-                        possiblyTernary ? compared : null,
-                        comparedIsNullInTrue,
-                        c.SemanticModel, out isNullCoalescing))
+                            possiblyNullCoalescing ? comparedToNull : null, comparedIsNullInTrue,
+                            c.SemanticModel, out isNullCoalescing))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, ifStatement.IfKeyword.GetLocation(),
                             ImmutableDictionary<string, string>.Empty.Add(IsNullCoalescingKey, isNullCoalescing.ToString()),
@@ -131,8 +133,26 @@ namespace SonarLint.Rules
                 SyntaxKind.IfStatement);
         }
 
+        private static bool AreTypesCompatible(ExpressionSyntax expression1, ExpressionSyntax expression2, SemanticModel semanticModel)
+        {
+            var type1 = semanticModel.GetTypeInfo(expression1).Type;
+            var type2 = semanticModel.GetTypeInfo(expression2).Type;
+
+            if (type1 is IErrorTypeSymbol || type2 is IErrorTypeSymbol)
+            {
+                return false;
+            }
+
+            if (type1 == null ^ type2 == null)
+            {
+                return true;
+            }
+
+            return type1.Equals(type2);
+        }
+
         private static bool CanBeSimplified(StatementSyntax statement1, StatementSyntax statement2,
-            ExpressionSyntax compared, bool comparedIsNullInTrue, SemanticModel semanticModel, out bool isNullCoalescing)
+            ExpressionSyntax comparedToNull, bool comparedIsNullInTrue, SemanticModel semanticModel, out bool isNullCoalescing)
         {
             isNullCoalescing = false;
             var return1 = statement1 as ReturnStatementSyntax;
@@ -143,7 +163,13 @@ namespace SonarLint.Rules
                 var retExpr1 = TernaryOperatorPointless.RemoveParentheses(return1.Expression);
                 var retExpr2 = TernaryOperatorPointless.RemoveParentheses(return2.Expression);
 
-                if (compared != null && CanBeNullCoalescing(retExpr1, retExpr2, compared, comparedIsNullInTrue, semanticModel))
+                if (!AreTypesCompatible(return1.Expression, return2.Expression, semanticModel))
+                {
+                    return false;
+                }
+
+                if (comparedToNull != null &&
+                    CanExpressionBeNullCoalescing(retExpr1, retExpr2, comparedToNull, comparedIsNullInTrue, semanticModel))
                 {
                     isNullCoalescing = true;
                 }
@@ -162,18 +188,20 @@ namespace SonarLint.Rules
             var expression1 = TernaryOperatorPointless.RemoveParentheses(expressionStatement1.Expression);
             var expression2 = TernaryOperatorPointless.RemoveParentheses(expressionStatement2.Expression);
 
-            if (AreCandidateAssignments(expression1, expression2, compared, comparedIsNullInTrue, semanticModel, out isNullCoalescing))
+            if (AreCandidateAssignments(expression1, expression2, comparedToNull, comparedIsNullInTrue,
+                    semanticModel, out isNullCoalescing))
             {
                 return true;
             }
 
-            if (compared != null && CanBeNullCoalescing(expression1, expression2, compared, comparedIsNullInTrue, semanticModel))
+            if (comparedToNull != null &&
+                CanExpressionBeNullCoalescing(expression1, expression2, comparedToNull, comparedIsNullInTrue, semanticModel))
             {
                 isNullCoalescing = true;
                 return true;
             }
 
-            if (AreCandidateInvocations(expression1, expression2, semanticModel, null, false))
+            if (AreCandidateInvocationsForTernary(expression1, expression2, semanticModel))
             {
                 return true;
             }
@@ -198,8 +226,13 @@ namespace SonarLint.Rules
                 return false;
             }
 
+            if (!AreTypesCompatible(assignment1.Right, assignment2.Right, semanticModel))
+            {
+                return false;
+            }
+
             if (compared != null &&
-                CanBeNullCoalescing(assignment1.Right, assignment2.Right, compared, comparedIsNullInTrue, semanticModel))
+                CanExpressionBeNullCoalescing(assignment1.Right, assignment2.Right, compared, comparedIsNullInTrue, semanticModel))
             {
                 isNullCoalescing = true;
             }
@@ -222,8 +255,22 @@ namespace SonarLint.Rules
             return statement;
         }
 
+        private static bool AreCandidateInvocationsForNullCoalescing(ExpressionSyntax expression1, ExpressionSyntax expression2,
+            ExpressionSyntax comparedToNull, bool comparedIsNullInTrue,
+            SemanticModel semanticModel)
+        {
+            return AreCandidateInvocations(expression1, expression2, comparedToNull, comparedIsNullInTrue, semanticModel);
+        }
+
+        private static bool AreCandidateInvocationsForTernary(ExpressionSyntax expression1, ExpressionSyntax expression2,
+            SemanticModel semanticModel)
+        {
+            return AreCandidateInvocations(expression1, expression2, null, false, semanticModel);
+        }
+
         private static bool AreCandidateInvocations(ExpressionSyntax expression1, ExpressionSyntax expression2,
-            SemanticModel semanticModel, ExpressionSyntax compared, bool comparedIsNullInTrue)
+            ExpressionSyntax comparedToNull, bool comparedIsNullInTrue,
+            SemanticModel semanticModel)
         {
             var methodCall1 = expression1 as InvocationExpressionSyntax;
             var methodCall2 = expression2 as InvocationExpressionSyntax;
@@ -261,51 +308,57 @@ namespace SonarLint.Rules
                 {
                     numberOfDifferences++;
 
-                    if (compared != null)
+                    if (comparedToNull != null)
                     {
-                        var arg1IsCompared = EquivalenceChecker.AreEquivalent(arg1.Expression, compared);
-                        var arg2IsCompared = EquivalenceChecker.AreEquivalent(arg2.Expression, compared);
+                        var arg1IsComparedToNull = EquivalenceChecker.AreEquivalent(arg1.Expression, comparedToNull);
+                        var arg2IsComparedToNull = EquivalenceChecker.AreEquivalent(arg2.Expression, comparedToNull);
 
-                        if (arg1IsCompared && !comparedIsNullInTrue)
+                        if (arg1IsComparedToNull && !comparedIsNullInTrue)
                         {
                             numberOfComparisonsToCondition++;
                         }
 
-                        if (arg2IsCompared && comparedIsNullInTrue)
+                        if (arg2IsComparedToNull && comparedIsNullInTrue)
                         {
                             numberOfComparisonsToCondition++;
+                        }
+
+                        if (!AreTypesCompatible(arg1.Expression, arg2.Expression, semanticModel))
+                        {
+                            return false;
                         }
                     }
                 }
                 else
                 {
-                    if (compared != null && EquivalenceChecker.AreEquivalent(arg1.Expression, compared))
+                    if (comparedToNull != null && EquivalenceChecker.AreEquivalent(arg1.Expression, comparedToNull))
                     {
                         return false;
                     }
                 }
             }
 
-            return numberOfDifferences == 1 && (compared == null || numberOfComparisonsToCondition == 1);
+            return numberOfDifferences == 1 && (comparedToNull == null || numberOfComparisonsToCondition == 1);
         }
 
-        private static bool CanBeNullCoalescing(ExpressionSyntax whenTrue, ExpressionSyntax whenFalse,
-            ExpressionSyntax compared, bool comparedIsNullInTrue, SemanticModel semanticModel)
+        private static bool CanExpressionBeNullCoalescing(ExpressionSyntax whenTrue, ExpressionSyntax whenFalse,
+            ExpressionSyntax comparedToNull, bool comparedIsNullInTrue, SemanticModel semanticModel)
         {
-            if (EquivalenceChecker.AreEquivalent(whenTrue, compared))
+            if (EquivalenceChecker.AreEquivalent(whenTrue, comparedToNull))
             {
                 return !comparedIsNullInTrue;
             }
 
-            if (EquivalenceChecker.AreEquivalent(whenFalse, compared))
+            if (EquivalenceChecker.AreEquivalent(whenFalse, comparedToNull))
             {
                 return comparedIsNullInTrue;
             }
 
-            return AreCandidateInvocations(whenTrue, whenFalse, semanticModel, compared, comparedIsNullInTrue);
+            return AreCandidateInvocationsForNullCoalescing(whenTrue, whenFalse, comparedToNull,
+                comparedIsNullInTrue, semanticModel);
         }
 
-        internal static bool TryGetComparedVariable(ExpressionSyntax expression,
+        internal static bool TryGetExpressionComparedToNull(ExpressionSyntax expression,
             out ExpressionSyntax compared, out bool comparedIsNullInTrue)
         {
             compared = null;
@@ -336,10 +389,10 @@ namespace SonarLint.Rules
 
         private static bool ExpressionCanBeNull(ExpressionSyntax expression, SemanticModel semanticModel)
         {
-            var info = semanticModel.GetTypeInfo(expression).Type;
-            return info != null &&
-                   (info.IsReferenceType ||
-                    info.SpecialType == SpecialType.System_Nullable_T);
+            var expressionType = semanticModel.GetTypeInfo(expression).Type;
+            return expressionType != null &&
+                   (expressionType.IsReferenceType ||
+                    expressionType.SpecialType == SpecialType.System_Nullable_T);
         }
 
         private static readonly SyntaxKind[] EqualsOrNotEquals = { SyntaxKind.EqualsExpression, SyntaxKind.NotEqualsExpression };
