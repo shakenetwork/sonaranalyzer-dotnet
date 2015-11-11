@@ -37,12 +37,6 @@ namespace SonarLint.UnitTest.Common
         }
 
         [TestMethod]
-        public void GetExtraRuleAssembly()
-        {
-            Assert.IsNotNull(RuleFinder.GetExtraRuleAssembly());
-        }
-
-        [TestMethod]
         public void GetParameterlessAnalyzerTypes()
         {
             new RuleFinder().GetParameterlessAnalyzerTypes(AnalyzerLanguage.CSharp).Count().Should().BeGreaterThan(0);

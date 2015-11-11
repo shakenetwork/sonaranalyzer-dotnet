@@ -28,6 +28,7 @@ using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
 using SonarLint.Common;
 using Microsoft.CodeAnalysis.CodeFixes;
+using SonarLint.RuleDescriptors;
 
 namespace SonarLint.Utilities
 {

@@ -40,7 +40,7 @@ namespace SonarLint.Rules
         internal const string MessageFormat = "Split this {1} characters long line (which is greater than {0} authorized).";
         internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = false;
+        internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
@@ -48,17 +48,17 @@ namespace SonarLint.Rules
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        [RuleParameter("maximumLineLength", PropertyType.Integer, "The maximum authorized line length.", "120")]
-        public int Maximum { get; set; }
+        private const int DefaultValueMaximum = 120;
+
+        [RuleParameter("maximumLineLength", PropertyType.Integer, "The maximum authorized line length.", DefaultValueMaximum)]
+        public int Maximum { get; set; } = DefaultValueMaximum;
 
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxTreeActionInNonGenerated(
                 c =>
                 {
-                    foreach (var line in c.Tree
-                        .GetText()
-                        .Lines
+                    foreach (var line in c.Tree.GetText().Lines
                         .Where(line => line.Span.Length > Maximum))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, c.Tree.GetLocation(line.Span), Maximum, line.Span.Length));

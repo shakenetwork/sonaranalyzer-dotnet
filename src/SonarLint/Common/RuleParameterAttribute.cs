@@ -19,6 +19,7 @@
  */
 
 using System;
+using System.Globalization;
 
 namespace SonarLint.Common
 {
@@ -36,6 +37,10 @@ namespace SonarLint.Common
             Description = description;
             Type = type;
             DefaultValue = defaultValue;
+        }
+        public RuleParameterAttribute(string key, PropertyType type, string description, int defaultValue)
+            : this(key, type, description, defaultValue.ToString(CultureInfo.InvariantCulture))
+        {
         }
         public RuleParameterAttribute(string key, PropertyType type, string description)
             : this(key, type, description, null)

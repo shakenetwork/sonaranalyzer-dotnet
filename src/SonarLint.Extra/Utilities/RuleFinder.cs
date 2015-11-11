@@ -37,15 +37,10 @@ namespace SonarLint.Utilities
         {
             return Assembly.LoadFrom(typeof(EmptyStatement).Assembly.Location);
         }
-        public static Assembly GetExtraRuleAssembly()
-        {
-            return Assembly.LoadFrom(typeof(MagicNumber).Assembly.Location);
-        }
 
         public RuleFinder()
         {
-            diagnosticAnalyzers = new[] {GetPackagedRuleAssembly(), GetExtraRuleAssembly()}
-                .SelectMany(a => a.GetTypes())
+            diagnosticAnalyzers = GetPackagedRuleAssembly().GetTypes()
                 .Where(t => t.IsSubclassOf(typeof (DiagnosticAnalyzer)))
                 .Where(t => t.GetCustomAttributes<RuleAttribute>().Any())
                 .ToList();
@@ -66,6 +61,12 @@ namespace SonarLint.Utilities
             return analyzerType.GetInterfaces()
                 .Any(type => type.IsGenericType &&
                              type.GetGenericTypeDefinition() == typeof(IRuleTemplate<>));
+        }
+
+        public static bool IsParametered(Type analyzerType)
+        {
+            return analyzerType.GetProperties()
+                .Any(p => p.GetCustomAttributes<RuleParameterAttribute>().Any());
         }
 
         public IEnumerable<Type> GetAllAnalyzerTypes()

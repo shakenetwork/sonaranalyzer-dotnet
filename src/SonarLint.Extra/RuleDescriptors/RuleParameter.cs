@@ -18,17 +18,13 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Generic;
-
-namespace SonarLint.Common
+namespace SonarLint.RuleDescriptors
 {
-    public class SqaleRemediation
+    public class RuleParameter
     {
-        public SqaleRemediation()
-        {
-            Properties = new List<SqaleRemediationProperty>();
-        }
-
-        public List<SqaleRemediationProperty> Properties { get; private set; }
+        public string Key { get; set; }
+        public string Description { get; set; }
+        public string Type { get; set; }
+        public string DefaultValue { get; set; }
     }
 }

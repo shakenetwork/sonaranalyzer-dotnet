@@ -20,8 +20,6 @@
 
 using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
@@ -30,15 +28,15 @@ using SonarLint.Helpers;
 namespace SonarLint.Rules
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.UnitTestability)]
-    [SqaleConstantRemediation("20min")]
+    [SqaleConstantRemediation("1h")]
     [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [Tags(Tag.BrainOverload)]
-    public class TooManyParameters : DiagnosticAnalyzer
+    public class FileLines : DiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S107";
-        internal const string Description = "Methods should not have too many parameters";
-        internal const string MessageFormat = "Method \"{2}\" has {1} parameters, which is greater than the {0} authorized.";
+        internal const string DiagnosticId = "S104";
+        internal const string Description = "Files should not have too many lines";
+        internal const string MessageFormat = "This file has {1} lines, which is greater than {0} authorized. Split it into smaller files.";
         internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
@@ -49,45 +47,24 @@ namespace SonarLint.Rules
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        [RuleParameter("max", PropertyType.Integer, "Maximum authorized number of parameters", "7")]
-        public int Maximum { get; set; }
+        private const int DefaultValueMaximum = 1000;
+
+        [RuleParameter("maximumFileLocThreshold", PropertyType.Integer, "Maximum authorized lines in a file.", DefaultValueMaximum)]
+        public int Maximum { get; set; } = DefaultValueMaximum;
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterSyntaxNodeActionInNonGenerated(
+            context.RegisterSyntaxTreeActionInNonGenerated(
                 c =>
                 {
-                    var parameterListNode = (ParameterListSyntax)c.Node;
-                    var parameters = parameterListNode.Parameters.Count;
+                    var root = c.Tree.GetRoot();
+                    var lines = root.GetLocation().GetLineSpan().EndLinePosition.Line + 1;
 
-                    if (parameters > Maximum)
+                    if (lines > Maximum)
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, parameterListNode.GetLocation(), Maximum, parameters, ExtractName(parameterListNode)));
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, Location.None, Maximum, lines));
                     }
-                },
-                SyntaxKind.ParameterList);
-        }
-
-        private static string ExtractName(SyntaxNode node)
-        {
-            string result;
-            if (node.IsKind(SyntaxKind.ConstructorDeclaration))
-            {
-                result = "Constructor \"" + ((ConstructorDeclarationSyntax)node).Identifier + "\"";
-            }
-            else if (node.IsKind(SyntaxKind.MethodDeclaration))
-            {
-                result = "Method \"" + ((MethodDeclarationSyntax)node).Identifier + "\"";
-            }
-            else if (node.IsKind(SyntaxKind.DelegateDeclaration))
-            {
-                result = "Delegate";
-            }
-            else
-            {
-                result = "Lambda";
-            }
-            return result;
+                });
         }
     }
 }

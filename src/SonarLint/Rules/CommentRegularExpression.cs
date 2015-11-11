@@ -62,13 +62,27 @@ namespace SonarLint.Rules
 
         public IImmutableList<CommentRegularExpressionRule> RuleInstances { get; set; }
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return RuleInstances.Select(r => r.Descriptor).ToImmutableArray(); } }
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics
+        {
+            get
+            {
+                return RuleInstances == null
+                    ? ImmutableArray<DiagnosticDescriptor>.Empty
+                    : RuleInstances.Select(r => r.Descriptor).ToImmutableArray();
+            }
+        }
 
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxTreeActionInNonGenerated(
                 c =>
                 {
+                    if (RuleInstances == null ||
+                        !RuleInstances.Any())
+                    {
+                        return;
+                    }
+
                     var comments = from t in c.Tree.GetCompilationUnitRoot().DescendantTrivia()
                                     where IsComment(t)
                                     select t;

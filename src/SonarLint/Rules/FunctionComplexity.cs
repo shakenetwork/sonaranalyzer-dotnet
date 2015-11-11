@@ -26,6 +26,8 @@ using SonarLint.Common;
 using SonarLint.Common.CSharp;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System;
 
 namespace SonarLint.Rules
 {
@@ -49,8 +51,11 @@ namespace SonarLint.Rules
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        [RuleParameter("maximumFunctionComplexityThreshold", PropertyType.Integer, "The maximum authorized complexity in function", "10")]
-        public int Maximum { get; set; }
+        private const int DefaultValueMaximum = 10;
+
+        [RuleParameter("maximumFunctionComplexityThreshold", PropertyType.Integer,
+            "The maximum authorized complexity in function", DefaultValueMaximum)]
+        public int Maximum { get; set; } = DefaultValueMaximum;
 
         public override void Initialize(AnalysisContext context)
         {

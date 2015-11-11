@@ -50,8 +50,10 @@ namespace SonarLint.Rules
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        [RuleParameter("max", PropertyType.Integer, "Maximum number of allowed conditional operators in an expression", "3")]
-        public int Maximum { get; set; }
+        private const int DefaultValueMaximum = 3;
+
+        [RuleParameter("max", PropertyType.Integer, "Maximum number of allowed conditional operators in an expression", DefaultValueMaximum)]
+        public int Maximum { get; set; } = DefaultValueMaximum;
 
         private static readonly IImmutableSet<SyntaxKind> CompoundExpressionKinds = ImmutableHashSet.Create(
             SyntaxKind.SimpleLambdaExpression,

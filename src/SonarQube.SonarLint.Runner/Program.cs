@@ -39,7 +39,7 @@ namespace SonarLint.Runner
             Write(string.Format("SonarLint for Visual Studio version {0}", typeof (Program).Assembly.GetName().Version));
 
             var configuration = new Configuration(XDocument.Load(args[0]), language);
-            var diagnosticsRunner = new DiagnosticsRunner(configuration.Analyzers());
+            var diagnosticsRunner = new DiagnosticsRunner(configuration.GetAnalyzers());
 
             var xmlOutSettings = new XmlWriterSettings
             {

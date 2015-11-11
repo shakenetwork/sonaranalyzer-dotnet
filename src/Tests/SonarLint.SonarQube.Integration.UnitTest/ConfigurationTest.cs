@@ -54,7 +54,7 @@ namespace SonarLint.UnitTest
                 "S100",
                 "S124");
 
-            var analyzers = conf.Analyzers();
+            var analyzers = conf.GetAnalyzers();
             analyzers.OfType<FileLines>().Single().Maximum.ShouldBeEquivalentTo(1000);
             analyzers.OfType<LineLength>().Single().Maximum.ShouldBeEquivalentTo(200);
             analyzers.OfType<TooManyLabelsInSwitch>().Single().Maximum.ShouldBeEquivalentTo(30);

@@ -33,12 +33,6 @@ namespace SonarLint.UnitTest.Common
     [TestClass]
     public class RuleTest
     {
-        private static IEnumerable<Type> GetDiagnosticAnalyzerTypes(IEnumerable<Assembly> assemblies)
-        {
-            return assemblies
-                .SelectMany(assembly => assembly.GetTypes())
-                .Where(t => t.IsSubclassOf(typeof(DiagnosticAnalyzer)));
-        }
 
         private static IEnumerable<Type> GetCodeFixProviderTypes(IEnumerable<Assembly> assemblies)
         {
@@ -66,8 +60,7 @@ namespace SonarLint.UnitTest.Common
         [TestMethod]
         public void AbstractDiagnosticAnalyzer_Should_Have_No_RuleAttribute()
         {
-            var analyzers = new[] { RuleFinder.GetPackagedRuleAssembly(), RuleFinder.GetExtraRuleAssembly() }
-                .SelectMany(a => a.GetTypes())
+            var analyzers = RuleFinder.GetPackagedRuleAssembly().GetTypes()
                 .Where(t =>
                     t.IsSubclassOf(typeof(DiagnosticAnalyzer)) &&
                     t.IsAbstract)
@@ -79,49 +72,6 @@ namespace SonarLint.UnitTest.Common
                 if (ruleDescriptor != null)
                 {
                     Assert.Fail("RuleAttribute is added to abstract DiagnosticAnalyzer '{0}'", analyzer.Name);
-                }
-            }
-        }
-
-        [TestMethod]
-        public void VisualStudio_NoRuleTemplates()
-        {
-            var analyzers = GetDiagnosticAnalyzerTypes(new[] { RuleFinder.GetPackagedRuleAssembly() });
-
-            foreach (var analyzer in analyzers.Where(RuleFinder.IsRuleTemplate))
-            {
-                Assert.Fail("Visual Studio rules cannot be templates, remove DiagnosticAnalyzer '{0}'.", analyzer.Name);
-            }
-        }
-
-        [TestMethod]
-        public void VisualStudio_OnlyParameterlessRules()
-        {
-            var analyzers = GetDiagnosticAnalyzerTypes(new[] { RuleFinder.GetPackagedRuleAssembly() });
-
-            foreach (var analyzer in analyzers)
-            {
-                var hasParameter = analyzer.GetProperties().Any(p => p.GetCustomAttributes<RuleParameterAttribute>().Any());
-                if (hasParameter)
-                {
-                    Assert.Fail("Visual Studio rules cannot have parameters, remove DiagnosticAnalyzer '{0}'.", analyzer.Name);
-                }
-            }
-        }
-
-        [TestMethod]
-        public void VisualStudio_AllParameterlessRulesNotRuleTemplate()
-        {
-            var analyzers = GetDiagnosticAnalyzerTypes(new[] { RuleFinder.GetExtraRuleAssembly() });
-
-            foreach (var analyzer in analyzers.Where(type => !RuleFinder.IsRuleTemplate(type)))
-            {
-                var hasParameter = analyzer.GetProperties().Any(p => p.GetCustomAttributes<RuleParameterAttribute>().Any());
-                if (!hasParameter)
-                {
-                    Assert.Fail(
-                        "DiagnosticAnalyzer '{0}' should be moved to the assembly that implements Visual Studio rules.",
-                        analyzer.Name);
                 }
             }
         }

@@ -26,7 +26,7 @@ namespace SonarLint.Descriptor
     [XmlType("chc")]
     public class SqaleDescriptor
     {
-        public static SqaleDescriptor Convert(Common.RuleDetail ruleDetail)
+        public static SqaleDescriptor Convert(RuleDescriptors.RuleDetail ruleDetail)
         {
             return ruleDetail.SqaleDescriptor == null
                 ? null

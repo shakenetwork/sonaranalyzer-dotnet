@@ -35,11 +35,11 @@ namespace SonarLint.Rules
     [SqaleConstantRemediation("5min")]
     [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
     [Tags(Tag.Convention)]
-    public class MethodName : DiagnosticAnalyzer
+    public class ClassName : DiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S100";
-        internal const string Description = "Method name should comply with a naming convention";
-        internal const string MessageFormat = "Rename this method \"{1}\" to match the regular expression {0}";
+        internal const string DiagnosticId = "S101";
+        internal const string Description = "Class names should comply with a naming convention";
+        internal const string MessageFormat = "Rename this class \"{1}\" to match the regular expression: {0}";
         internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
@@ -50,23 +50,24 @@ namespace SonarLint.Rules
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        [RuleParameter("format", PropertyType.String, "Regular expression used to check the method names against",
-            "^[A-Z][a-zA-Z0-9]+$")]
-        public string Convention { get; set; }
+        private const string DefaultValueConvention = "^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$";
+
+        [RuleParameter("format", PropertyType.String, "Regular expression used to check the class names against.", DefaultValueConvention)]
+        public string Convention { get; set; } = DefaultValueConvention;
 
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
-                    var identifierNode = ((MethodDeclarationSyntax)c.Node).Identifier;
+                    var identifier = ((ClassDeclarationSyntax)c.Node).Identifier;
 
-                    if (!Regex.IsMatch(identifierNode.Text, Convention))
+                    if (!Regex.IsMatch(identifier.Text, Convention))
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, identifierNode.GetLocation(), Convention, identifierNode.Text));
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(), Convention, identifier.Text));
                     }
                 },
-                SyntaxKind.MethodDeclaration);
+                SyntaxKind.ClassDeclaration);
         }
     }
 }

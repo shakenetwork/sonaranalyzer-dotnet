@@ -20,7 +20,7 @@
 
 using System.Collections.Generic;
 
-namespace SonarLint.Common
+namespace SonarLint.RuleDescriptors
 {
     public class RuleDetail
     {

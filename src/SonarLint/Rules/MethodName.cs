@@ -19,7 +19,10 @@
  */
 
 using System.Collections.Immutable;
+using System.Text.RegularExpressions;
 using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
@@ -28,17 +31,17 @@ using SonarLint.Helpers;
 namespace SonarLint.Rules
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("1h")]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
-    [Tags(Tag.BrainOverload)]
-    public class FileLines : DiagnosticAnalyzer
+    [SqaleConstantRemediation("5min")]
+    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Tags(Tag.Convention)]
+    public class MethodName : DiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S104";
-        internal const string Description = "Files should not have too many lines";
-        internal const string MessageFormat = "This file has {1} lines, which is greater than {0} authorized. Split it into smaller files.";
+        internal const string DiagnosticId = "S100";
+        internal const string Description = "Method name should comply with a naming convention";
+        internal const string MessageFormat = "Rename this method \"{1}\" to match the regular expression {0}";
         internal const string Category = Constants.SonarLint;
-        internal const Severity RuleSeverity = Severity.Major;
+        internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
@@ -47,22 +50,25 @@ namespace SonarLint.Rules
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        [RuleParameter("maximumFileLocThreshold", PropertyType.Integer, "Maximum authorized lines in a file.", "1000")]
-        public int Maximum { get; set; }
+        private const string DefaultValueConvention = "^[A-Z][a-zA-Z0-9]+$";
+
+        [RuleParameter("format", PropertyType.String, "Regular expression used to check the method names against",
+            DefaultValueConvention)]
+        public string Convention { get; set; } = DefaultValueConvention;
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterSyntaxTreeActionInNonGenerated(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
-                    var root = c.Tree.GetRoot();
-                    var lines = root.GetLocation().GetLineSpan().EndLinePosition.Line + 1;
+                    var identifierNode = ((MethodDeclarationSyntax)c.Node).Identifier;
 
-                    if (lines > Maximum)
+                    if (!Regex.IsMatch(identifierNode.Text, Convention))
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, Location.None, Maximum, lines));
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, identifierNode.GetLocation(), Convention, identifierNode.Text));
                     }
-                });
+                },
+                SyntaxKind.MethodDeclaration);
         }
     }
 }

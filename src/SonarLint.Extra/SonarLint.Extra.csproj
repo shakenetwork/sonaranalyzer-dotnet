@@ -89,69 +89,19 @@
     <Compile Include="..\AssemblyInfo.Shared.cs">
       <Link>Properties\AssemblyInfo.Shared.cs</Link>
     </Compile>
-    <Compile Include="Common\AnalyzerLanguage.cs" />
-    <Compile Include="Common\IRuleTemplate.cs" />
-    <Compile Include="Common\IRuleTemplateInstance.cs" />
-    <Compile Include="Common\Metrics\CSharp\Metrics.cs" />
-    <Compile Include="Common\Metrics\FileComments.cs" />
-    <Compile Include="Common\Metrics\VisualBasic\Metrics.cs" />
-    <Compile Include="Common\PropertyType.cs" />
-    <Compile Include="Common\RuleParameterAttribute.cs" />
-    <Compile Include="Common\Metrics\Distribution.cs" />
     <Compile Include="Helpers\EnumHelper.cs" />
-    <Compile Include="Common\Metrics\MetricsBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Common\RuleDescriptors\RuleDetail.cs" />
-    <Compile Include="Common\RuleDescriptors\RuleParameter.cs" />
-    <Compile Include="Common\RuleDescriptors\SqaleDescriptor.cs" />
-    <Compile Include="Common\RuleDescriptors\SqaleRemediation.cs" />
-    <Compile Include="Common\RuleDescriptors\SqaleRemediationProperty.cs" />
+    <Compile Include="RuleDescriptors\RuleDetail.cs" />
+    <Compile Include="RuleDescriptors\RuleParameter.cs" />
+    <Compile Include="RuleDescriptors\SqaleDescriptor.cs" />
+    <Compile Include="RuleDescriptors\SqaleRemediation.cs" />
+    <Compile Include="RuleDescriptors\SqaleRemediationProperty.cs" />
     <Compile Include="Utilities\RuleDetailBuilder.cs" />
     <Compile Include="Utilities\RuleFinder.cs" />
-    <Compile Include="Rules\ClassName.cs" />
-    <Compile Include="Rules\CommentRegularExpression.cs" />
-    <Compile Include="Rules\ExpressionComplexity.cs" />
-    <Compile Include="Rules\FileLines.cs" />
-    <Compile Include="Rules\FunctionComplexity.cs" />
-    <Compile Include="Rules\LineLength.cs" />
-    <Compile Include="Rules\MagicNumber.cs" />
-    <Compile Include="Rules\MethodName.cs" />
-    <Compile Include="Rules\TooManyLabelsInSwitch.cs" />
-    <Compile Include="Rules\TooManyParameters.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Rules.Description\S104.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Rules.Description\S1541.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Rules.Description\S103.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Rules.Description\S109.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Rules.Description\S100.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Rules.Description\S101.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Rules.Description\S1067.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Rules.Description\S107.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Rules.Description\S124.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Rules.Description\S1479.html" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />

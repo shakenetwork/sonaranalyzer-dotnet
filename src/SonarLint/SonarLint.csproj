@@ -97,8 +97,18 @@
     <Compile Include="..\AssemblyInfo.Shared.cs">
       <Link>Properties\AssemblyInfo.Shared.cs</Link>
     </Compile>
+    <Compile Include="Common\AnalyzerLanguage.cs" />
     <Compile Include="Common\Constants.cs" />
     <Compile Include="Common\FixAllProviders\BidirectionalDictionary.cs" />
+    <Compile Include="Common\IRuleTemplate.cs" />
+    <Compile Include="Common\IRuleTemplateInstance.cs" />
+    <Compile Include="Common\Metrics\CSharp\Metrics.cs" />
+    <Compile Include="Common\Metrics\Distribution.cs" />
+    <Compile Include="Common\Metrics\FileComments.cs" />
+    <Compile Include="Common\Metrics\MetricsBase.cs" />
+    <Compile Include="Common\Metrics\VisualBasic\Metrics.cs" />
+    <Compile Include="Common\PropertyType.cs" />
+    <Compile Include="Common\RuleParameterAttribute.cs" />
     <Compile Include="Common\Tag.cs" />
     <Compile Include="Common\IdeVisibility.cs" />
     <Compile Include="Helpers\ExpressionNumericConverter.cs" />
@@ -109,10 +119,18 @@
     <Compile Include="Helpers\EquivalenceChecker.cs" />
     <Compile Include="Helpers\ProjectTypeHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules\ClassName.cs" />
+    <Compile Include="Rules\CommentRegularExpression.cs" />
     <Compile Include="Rules\EventNameContainsBeforeOrAfter.cs" />
     <Compile Include="Rules\ExitStatementUsage.cs" />
+    <Compile Include="Rules\ExpressionComplexity.cs" />
     <Compile Include="Rules\FieldShouldNotBePublicBase.cs" />
+    <Compile Include="Rules\FileLines.cs" />
+    <Compile Include="Rules\FunctionComplexity.cs" />
     <Compile Include="Rules\LineContinuation.cs" />
+    <Compile Include="Rules\LineLength.cs" />
+    <Compile Include="Rules\MagicNumber.cs" />
+    <Compile Include="Rules\MethodName.cs" />
     <Compile Include="Rules\PublicConstantField.cs" />
     <Compile Include="Rules\PublicConstantFieldBase.cs" />
     <Compile Include="Rules\PropertyWithArrayType.cs" />
@@ -134,6 +152,8 @@
     <Compile Include="Rules\OptionalParameterBase.cs" />
     <Compile Include="Rules\SingleStatementPerLine.cs" />
     <Compile Include="Rules\SingleStatementPerLineBase.cs" />
+    <Compile Include="Rules\TooManyLabelsInSwitch.cs" />
+    <Compile Include="Rules\TooManyParameters.cs" />
     <Compile Include="Rules\UnsignedTypesUsage.cs" />
     <Compile Include="Rules\ArrayDesignatorOnVariable.cs" />
     <Compile Include="Rules\ArrayDesignatorOnVariableCodeFixProvider.cs" />
@@ -716,6 +736,36 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S122_vb.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S100.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S101.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S103.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S104.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S1067.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S107.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S109.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S124.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S1479.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rules.Description\S1541.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

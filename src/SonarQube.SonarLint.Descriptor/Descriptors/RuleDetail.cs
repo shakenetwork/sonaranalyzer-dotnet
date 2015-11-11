@@ -31,7 +31,7 @@ namespace SonarLint.Descriptor
         private const string CardinalitySingle = "SINGLE";
         private const string CardinalityMultiple = "MULTIPLE";
 
-        public static RuleDetail Convert(Common.RuleDetail ruleDetail)
+        public static RuleDetail Convert(RuleDescriptors.RuleDetail ruleDetail)
         {
             return new RuleDetail
             {

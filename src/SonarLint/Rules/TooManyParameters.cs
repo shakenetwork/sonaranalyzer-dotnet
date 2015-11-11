@@ -19,7 +19,6 @@
  */
 
 using System.Collections.Immutable;
-using System.Text.RegularExpressions;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -31,17 +30,17 @@ using SonarLint.Helpers;
 namespace SonarLint.Rules
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
-    [SqaleConstantRemediation("5min")]
+    [SqaleSubCharacteristic(SqaleSubCharacteristic.UnitTestability)]
+    [SqaleConstantRemediation("20min")]
     [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
-    [Tags(Tag.Convention)]
-    public class ClassName : DiagnosticAnalyzer
+    [Tags(Tag.BrainOverload)]
+    public class TooManyParameters : DiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S101";
-        internal const string Description = "Class names should comply with a naming convention";
-        internal const string MessageFormat = "Rename this class \"{1}\" to match the regular expression: {0}";
+        internal const string DiagnosticId = "S107";
+        internal const string Description = "Methods should not have too many parameters";
+        internal const string MessageFormat = "Method \"{2}\" has {1} parameters, which is greater than the {0} authorized.";
         internal const string Category = Constants.SonarLint;
-        internal const Severity RuleSeverity = Severity.Minor;
+        internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
@@ -50,22 +49,46 @@ namespace SonarLint.Rules
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        [RuleParameter("format", PropertyType.String, "Regular expression used to check the class names against.", "^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$")]
-        public string Convention { get; set; }
+        private const int DefaultValueMaximum = 7;
+        [RuleParameter("max", PropertyType.Integer, "Maximum authorized number of parameters", DefaultValueMaximum)]
+        public int Maximum { get; set; } = DefaultValueMaximum;
 
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
-                    var identifier = ((ClassDeclarationSyntax)c.Node).Identifier;
+                    var parameterListNode = (ParameterListSyntax)c.Node;
+                    var parameters = parameterListNode.Parameters.Count;
 
-                    if (!Regex.IsMatch(identifier.Text, Convention))
+                    if (parameters > Maximum)
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(), Convention, identifier.Text));
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, parameterListNode.GetLocation(), Maximum, parameters, ExtractName(parameterListNode)));
                     }
                 },
-                SyntaxKind.ClassDeclaration);
+                SyntaxKind.ParameterList);
+        }
+
+        private static string ExtractName(SyntaxNode node)
+        {
+            string result;
+            if (node.IsKind(SyntaxKind.ConstructorDeclaration))
+            {
+                result = "Constructor \"" + ((ConstructorDeclarationSyntax)node).Identifier + "\"";
+            }
+            else if (node.IsKind(SyntaxKind.MethodDeclaration))
+            {
+                result = "Method \"" + ((MethodDeclarationSyntax)node).Identifier + "\"";
+            }
+            else if (node.IsKind(SyntaxKind.DelegateDeclaration))
+            {
+                result = "Delegate";
+            }
+            else
+            {
+                result = "Lambda";
+            }
+            return result;
         }
     }
 }

@@ -28,24 +28,71 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Rules;
 using SonarLint.Utilities;
 using SonarLint.Common;
+using System.Reflection;
 
 namespace SonarLint.Runner
 {
     public class Configuration
     {
-        private readonly ImmutableArray<DiagnosticAnalyzer> ParameterLessAnalyzers;
+        private class RuleParameterValue
+        {
+            public string ParameterKey { get; set; }
+            public string ParameterValue { get; set; }
+        }
+        private class RuleParameterValues
+        {
+            public string RuleId { get; set; }
+            public List<RuleParameterValue> ParameterValues { get; set; } = new List<RuleParameterValue>();
+        }
+
+        private readonly ImmutableArray<DiagnosticAnalyzer> nonTemplateAnalyzers;
+        private readonly IImmutableList<RuleParameterValues> parameters;
         private readonly AnalyzerLanguage language;
-        public bool IgnoreHeaderComments { private set; get; }
-        public IImmutableList<string> Files { private set; get; }
-        public IImmutableSet<string> AnalyzerIds { private set; get; }
-        public IImmutableDictionary<string, List<IImmutableDictionary<string, string>>> Parameters { private set; get; }
+
+        public bool IgnoreHeaderComments { get; }
+        public IImmutableList<string> Files { get; }
+        public IImmutableSet<string> AnalyzerIds { get; }
 
         public Configuration(XContainer xml, AnalyzerLanguage language)
         {
             this.language = language;
-            ParameterLessAnalyzers = ImmutableArray.Create(GetParameterlessAnalyzers(language).ToArray());
+            nonTemplateAnalyzers = ImmutableArray.Create(GetNonTemplateAnalyzers(language).ToArray());
 
-            var settings = xml
+            var settings = ParseSettings(xml);
+            IgnoreHeaderComments = "true".Equals(settings["sonar.cs.ignoreHeaderComments"]);
+
+            Files = xml.Descendants("File").Select(e => e.Value).ToImmutableList();
+
+            AnalyzerIds = xml.Descendants("Rule").Select(e => e.Elements("Key").Single().Value).ToImmutableHashSet();
+
+            var builder = ImmutableList.CreateBuilder<RuleParameterValues>();
+            foreach (var rule in xml.Descendants("Rule").Where(e => e.Elements("Parameters").Any()))
+            {
+                var analyzerId = rule.Elements("Key").Single().Value;
+
+                var parameterValues = rule
+                    .Elements("Parameters").Single()
+                    .Elements("Parameter")
+                    .Select(e => new RuleParameterValue
+                    {
+                        ParameterKey = e.Elements("Key").Single().Value,
+                        ParameterValue = e.Elements("Value").Single().Value
+                    });
+
+                var pvs = new RuleParameterValues
+                {
+                    RuleId = analyzerId
+                };
+                pvs.ParameterValues.AddRange(parameterValues);
+
+                builder.Add(pvs);
+            }
+            parameters = builder.ToImmutable();
+        }
+
+        private static ImmutableDictionary<string, string> ParseSettings(XContainer xml)
+        {
+            return xml
                 .Descendants("Setting")
                 .Select(e =>
                 {
@@ -63,61 +110,67 @@ namespace SonarLint.Runner
                 })
                 .Where(e => e != null)
                 .ToImmutableDictionary(e => e.Key, e => e.Value);
-
-            IgnoreHeaderComments = "true".Equals(settings["sonar.cs.ignoreHeaderComments"]);
-
-            Files = xml.Descendants("File").Select(e => e.Value).ToImmutableList();
-
-            AnalyzerIds = xml.Descendants("Rule").Select(e => e.Elements("Key").Single().Value).ToImmutableHashSet();
-
-            var builder = ImmutableDictionary.CreateBuilder<string, List<IImmutableDictionary<string, string>>>();
-            foreach (var rule in xml.Descendants("Rule").Where(e => e.Elements("Parameters").Any()))
-            {
-                var analyzerId = rule.Elements("Key").Single().Value;
-
-                var parameters = rule
-                                 .Elements("Parameters").Single()
-                                 .Elements("Parameter")
-                                 .ToImmutableDictionary(e => e.Elements("Key").Single().Value, e => e.Elements("Value").Single().Value);
-
-                if (!builder.ContainsKey(analyzerId))
-                {
-                    builder.Add(analyzerId, new List<IImmutableDictionary<string, string>>());
-                }
-                builder[analyzerId].Add(parameters);
-            }
-            Parameters = builder.ToImmutable();
         }
 
-        public ImmutableArray<DiagnosticAnalyzer> Analyzers()
+        private void SetParameterValues(DiagnosticAnalyzer parameteredAnalyzer)
+        {
+            var propertyParameterPairs = parameteredAnalyzer.GetType()
+                .GetProperties()
+                .Select(p => new { Property = p, Descriptor = p.GetCustomAttributes<RuleParameterAttribute>().SingleOrDefault() })
+                .Where(p=> p.Descriptor != null);
+
+            foreach (var propertyParameterPair in propertyParameterPairs)
+            {
+                var value = parameters
+                    .Single(p => p.RuleId == parameteredAnalyzer.SupportedDiagnostics.Single().Id).ParameterValues
+                    .Single(pv => pv.ParameterKey == propertyParameterPair.Descriptor.Key)
+                    .ParameterValue;
+
+                object convertedValue = value;
+                switch (propertyParameterPair.Descriptor.Type)
+                {
+                    case PropertyType.String:
+                        if (typeof(IEnumerable<string>).IsAssignableFrom(propertyParameterPair.Property.PropertyType))
+                        {
+                            //todo: is this a common thing, or it's special for MagicNumbers.
+                            //If so, then it would be better to put this parsing logic directly into each class.
+                            convertedValue = value.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+                        }
+                        break;
+                    case PropertyType.Integer:
+                        convertedValue = int.Parse(value, NumberStyles.None, CultureInfo.InvariantCulture);
+                        break;
+                    default:
+                        throw new NotImplementedException();
+                }
+
+                propertyParameterPair.Property.SetValue(parameteredAnalyzer, convertedValue);
+            }
+        }
+
+        public ImmutableArray<DiagnosticAnalyzer> GetAnalyzers()
         {
             var builder = ImmutableArray.CreateBuilder<DiagnosticAnalyzer>();
 
-            foreach (var parameterLessAnalyzer in ParameterLessAnalyzers
-                .Where(parameterLessAnalyzer =>
-                    AnalyzerIds.Contains(parameterLessAnalyzer.SupportedDiagnostics.Single().Id)))
+            foreach (var analyzer in nonTemplateAnalyzers
+                .Where(analyzer => AnalyzerIds.Contains(analyzer.SupportedDiagnostics.Single().Id)))
             {
-                builder.Add(parameterLessAnalyzer);
+                if (RuleFinder.IsParametered(analyzer.GetType()))
+                {
+                    SetParameterValues(analyzer);
+                }
+                builder.Add(analyzer);
             }
 
             if (language == AnalyzerLanguage.CSharp)
             {
-                AddAnalyzerFileLines(builder);
-                AddAnalyzerLineLength(builder);
-                AddAnalyzerTooManyLabelsInSwitch(builder);
-                AddAnalyzerTooManyParameters(builder);
-                AddAnalyzerExpressionCOmplexity(builder);
-                AddAnalyzerFunctionalComplexity(builder);
-                AddAnalyzerClassName(builder);
-                AddAnalyzerMethodName(builder);
-                AddAnalyzerMagicNumber(builder);
                 AddAnalyzerCommentRegularExpression(builder);
             }
 
             return builder.ToImmutable();
         }
 
-        #region Add analyzers with parameters
+        #region Add template analyzers
 
         private void AddAnalyzerCommentRegularExpression(ImmutableArray<DiagnosticAnalyzer>.Builder builder)
         {
@@ -126,143 +179,31 @@ namespace SonarLint.Runner
                 return;
             }
             var rules = ImmutableArray.CreateBuilder<CommentRegularExpressionRule>();
-            foreach (var parameters in Parameters[CommentRegularExpression.DiagnosticId])
+            foreach (var parameterValues in parameters.Where(p => p.RuleId == CommentRegularExpression.DiagnosticId).Select(p=>p.ParameterValues))
             {
                 rules.Add(
                     new CommentRegularExpressionRule
                     {
                         // TODO: Add rule description
-                        Descriptor = CommentRegularExpression.CreateDiagnosticDescriptor(parameters["RuleKey"], parameters["message"]),
-                        RegularExpression = parameters["regularExpression"]
+                        Descriptor = CommentRegularExpression.CreateDiagnosticDescriptor(
+                            parameterValues.Single(pv =>pv.ParameterKey == "RuleKey").ParameterValue,
+                            parameterValues.Single(pv => pv.ParameterKey == "message").ParameterValue),
+                        RegularExpression = parameterValues.Single(pv => pv.ParameterKey == "regularExpression").ParameterValue
                     });
             }
             var analyzer = new CommentRegularExpression {RuleInstances = rules.ToImmutable()};
             builder.Add(analyzer);
         }
 
-        private void AddAnalyzerMagicNumber(ImmutableArray<DiagnosticAnalyzer>.Builder builder)
-        {
-            var analyzer = new MagicNumber();
-            if (!AnalyzerIds.Contains(analyzer.SupportedDiagnostics.Single().Id))
-            {
-                return;
-            }
-            analyzer.Exceptions =
-                Parameters[analyzer.SupportedDiagnostics.Single().Id].Single()["exceptions"]
-                    .Split(new [] {','}, StringSplitOptions.RemoveEmptyEntries)
-                    .Select(e => e.Trim())
-                    .ToImmutableHashSet();
-            builder.Add(analyzer);
-        }
-
-        private void AddAnalyzerMethodName(ImmutableArray<DiagnosticAnalyzer>.Builder builder)
-        {
-            var analyzer = new MethodName();
-            if (!AnalyzerIds.Contains(analyzer.SupportedDiagnostics.Single().Id))
-            {
-                return;
-            }
-            analyzer.Convention = Parameters[analyzer.SupportedDiagnostics.Single().Id].Single()["format"];
-            builder.Add(analyzer);
-        }
-
-        private void AddAnalyzerClassName(ImmutableArray<DiagnosticAnalyzer>.Builder builder)
-        {
-            var analyzer = new ClassName();
-            if (!AnalyzerIds.Contains(analyzer.SupportedDiagnostics.Single().Id))
-            {
-                return;
-            }
-            analyzer.Convention = Parameters[analyzer.SupportedDiagnostics.Single().Id].Single()["format"];
-            builder.Add(analyzer);
-        }
-
-        private void AddAnalyzerFunctionalComplexity(ImmutableArray<DiagnosticAnalyzer>.Builder builder)
-        {
-            var analyzer = new FunctionComplexity();
-            if (!AnalyzerIds.Contains(analyzer.SupportedDiagnostics.Single().Id))
-            {
-                return;
-            }
-            analyzer.Maximum = int.Parse(
-                Parameters[analyzer.SupportedDiagnostics.Single().Id].Single()["maximumFunctionComplexityThreshold"],
-                NumberStyles.None, CultureInfo.InvariantCulture);
-            builder.Add(analyzer);
-        }
-
-        private void AddAnalyzerExpressionCOmplexity(ImmutableArray<DiagnosticAnalyzer>.Builder builder)
-        {
-            var analyzer = new ExpressionComplexity();
-            if (!AnalyzerIds.Contains(analyzer.SupportedDiagnostics.Single().Id))
-            {
-                return;
-            }
-            analyzer.Maximum = int.Parse(
-                Parameters[analyzer.SupportedDiagnostics.Single().Id].Single()["max"],
-                NumberStyles.None, CultureInfo.InvariantCulture);
-            builder.Add(analyzer);
-        }
-
-        private void AddAnalyzerTooManyParameters(ImmutableArray<DiagnosticAnalyzer>.Builder builder)
-        {
-            var analyzer = new TooManyParameters();
-            if (!AnalyzerIds.Contains(analyzer.SupportedDiagnostics.Single().Id))
-            {
-                return;
-            }
-            analyzer.Maximum = int.Parse(
-                Parameters[analyzer.SupportedDiagnostics.Single().Id].Single()["max"],
-                NumberStyles.None, CultureInfo.InvariantCulture);
-            builder.Add(analyzer);
-        }
-
-        private void AddAnalyzerTooManyLabelsInSwitch(ImmutableArray<DiagnosticAnalyzer>.Builder builder)
-        {
-            var analyzer = new TooManyLabelsInSwitch();
-            if (!AnalyzerIds.Contains(analyzer.SupportedDiagnostics.Single().Id))
-            {
-                return;
-            }
-            analyzer.Maximum = int.Parse(
-                Parameters[analyzer.SupportedDiagnostics.Single().Id].Single()["maximum"],
-                NumberStyles.None, CultureInfo.InvariantCulture);
-            builder.Add(analyzer);
-        }
-
-        private void AddAnalyzerLineLength(ImmutableArray<DiagnosticAnalyzer>.Builder builder)
-        {
-            var analyzer = new LineLength();
-            if (!AnalyzerIds.Contains(analyzer.SupportedDiagnostics.Single().Id))
-            {
-                return;
-            }
-            analyzer.Maximum = int.Parse(
-                Parameters[analyzer.SupportedDiagnostics.Single().Id].Single()["maximumLineLength"],
-                NumberStyles.None, CultureInfo.InvariantCulture);
-            builder.Add(analyzer);
-        }
-
-        private void AddAnalyzerFileLines(ImmutableArray<DiagnosticAnalyzer>.Builder builder)
-        {
-            var analyzer = new FileLines();
-            if (!AnalyzerIds.Contains(analyzer.SupportedDiagnostics.Single().Id))
-            {
-                return;
-            }
-            analyzer.Maximum = int.Parse(
-                Parameters[analyzer.SupportedDiagnostics.Single().Id].Single()["maximumFileLocThreshold"],
-                NumberStyles.None, CultureInfo.InvariantCulture);
-            builder.Add(analyzer);
-        }
-
         #endregion
 
-        #region Discover analyzers without parameters
+        #region Discover analyzers
 
-        public static IEnumerable<DiagnosticAnalyzer> GetParameterlessAnalyzers(AnalyzerLanguage language)
+        public static IEnumerable<DiagnosticAnalyzer> GetNonTemplateAnalyzers(AnalyzerLanguage language)
         {
             return
-                new RuleFinder().GetParameterlessAnalyzerTypes(language)
+                new RuleFinder().GetAnalyzerTypes(language)
+                    .Where(type => !RuleFinder.IsRuleTemplate(type))
                     .Select(type => (DiagnosticAnalyzer) Activator.CreateInstance(type));
         }
 
