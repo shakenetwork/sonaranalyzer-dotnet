@@ -29,6 +29,7 @@ using System.Threading;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Text;
+using System;
 
 namespace SonarLint.Rules
 {
@@ -64,9 +65,8 @@ namespace SonarLint.Rules
             var methodParameterLookup = new ArrayCovariance.MethodParameterLookup(invocation, semanticModel);
             var argumentMappings = invocation.ArgumentList.Arguments
                 .Select(argument =>
-                    new KeyValuePair<ArgumentSyntax, IParameterSymbol>(argument,
-                        methodParameterLookup.GetParameterSymbol(argument)))
-                .ToList();
+                    new RedundantArgument.ArgumentParameterMapping(argument,
+                        methodParameterLookup.GetParameterSymbol(argument)));
 
             var methodSymbol = methodParameterLookup.MethodSymbol;
             if (methodSymbol == null)
@@ -78,11 +78,10 @@ namespace SonarLint.Rules
             var argumentsCanBeRemovedWithoutNamed = new List<ArgumentSyntax>();
             var canBeRemovedWithoutNamed = true;
 
-            var reversedMappings =
-                ((IEnumerable<KeyValuePair<ArgumentSyntax, IParameterSymbol>>) argumentMappings).Reverse();
+            var reversedMappings = argumentMappings.Reverse();
             foreach (var argumentMapping in reversedMappings)
             {
-                var argument = argumentMapping.Key;
+                var argument = argumentMapping.Argument;
 
                 if (RedundantArgument.ArgumentHasDefaultValue(argumentMapping, semanticModel))
                 {
@@ -126,7 +125,7 @@ namespace SonarLint.Rules
         }
 
         private static async Task<Document> RemoveArgumentsAndAddNecessaryNamesAsync(Document document, ArgumentListSyntax argumentList,
-            List<KeyValuePair<ArgumentSyntax, IParameterSymbol>> argumentMappings, List<ArgumentSyntax> argumentsToRemove,
+            IEnumerable<RedundantArgument.ArgumentParameterMapping> argumentMappings, List<ArgumentSyntax> argumentsToRemove,
             SemanticModel semanticModel, CancellationToken cancellationToken)
         {
             var root = await document.GetSyntaxRootAsync(cancellationToken);
@@ -134,20 +133,20 @@ namespace SonarLint.Rules
             var alreadyRemovedOne = false;
 
             foreach (var argumentMapping in argumentMappings
-                .Where(argumentMapping => !argumentMapping.Value.IsParams))
+                .Where(argumentMapping => !argumentMapping.Parameter.IsParams))
             {
-                var argument = argumentMapping.Key;
+                var argument = argumentMapping.Argument;
                 if (argumentsToRemove.Contains(argument))
                 {
                     alreadyRemovedOne = true;
                     continue;
                 }
 
-                newArgumentList = AddArgument(alreadyRemovedOne, newArgumentList, argumentMapping.Value.Name, argument);
+                newArgumentList = AddArgument(alreadyRemovedOne, newArgumentList, argumentMapping.Parameter.Name, argument);
             }
 
             var paramsArguments = argumentMappings
-                .Where(mapping => mapping.Value.IsParams)
+                .Where(mapping => mapping.Parameter.IsParams)
                 .ToList();
 
             if (paramsArguments.Any())
@@ -173,11 +172,11 @@ namespace SonarLint.Rules
         }
 
         private static ArgumentListSyntax AddParamsArguments(SemanticModel semanticModel,
-            List<KeyValuePair<ArgumentSyntax, IParameterSymbol>> paramsArguments, ArgumentListSyntax argumentList)
+            List<RedundantArgument.ArgumentParameterMapping> paramsArguments, ArgumentListSyntax argumentList)
         {
             var firstParamsMapping = paramsArguments.First();
-            var firstParamsArgument = firstParamsMapping.Key;
-            var paramsParameter = firstParamsMapping.Value;
+            var firstParamsArgument = firstParamsMapping.Argument;
+            var paramsParameter = firstParamsMapping.Parameter;
 
             if (firstParamsArgument.NameColon != null)
             {
@@ -205,7 +204,7 @@ namespace SonarLint.Rules
                         SyntaxFactory.InitializerExpression(
                             SyntaxKind.ArrayInitializerExpression,
                             SyntaxFactory.SeparatedList(
-                                paramsArguments.Select(arg => arg.Key.Expression))
+                                paramsArguments.Select(arg => arg.Argument.Expression))
                             ))));
         }
 

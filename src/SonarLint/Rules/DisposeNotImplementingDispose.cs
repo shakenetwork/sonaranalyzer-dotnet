@@ -26,6 +26,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules
 {
@@ -68,7 +69,7 @@ namespace SonarLint.Rules
                         return;
                     }
 
-                    var disposeMethodsCalledFromDispose = ImmutableDictionary<INamedTypeSymbol, ImmutableHashSet<IMethodSymbol>>.Empty;
+                    var disposeMethodsCalledFromDispose = MultiValueDictionary<INamedTypeSymbol, IMethodSymbol>.Create<HashSet<IMethodSymbol>>();
                     var implementingDisposeMethods = ImmutableHashSet<IMethodSymbol>.Empty;
                     var allDisposeMethods = ImmutableHashSet<IMethodSymbol>.Empty;
 
@@ -94,16 +95,9 @@ namespace SonarLint.Rules
                             }
 
                             var disposableType = declaredMethodSymbol.ContainingType;
-                            if (!disposeMethodsCalledFromDispose.ContainsKey(disposableType))
-                            {
-                                disposeMethodsCalledFromDispose =
-                                    disposeMethodsCalledFromDispose.Add(disposableType,
-                                        ImmutableHashSet<IMethodSymbol>.Empty);
-                            }
-
                             cbc.RegisterSyntaxNodeAction(
                                 c => CollectDisposeMethodsCalledFromDispose((InvocationExpressionSyntax) c.Node,
-                                    c.SemanticModel, disposableType, ref disposeMethodsCalledFromDispose),
+                                    c.SemanticModel, disposableType, disposeMethodsCalledFromDispose),
                                 SyntaxKind.InvocationExpression);
                         });
 
@@ -116,7 +110,7 @@ namespace SonarLint.Rules
 
         private static void CollectDisposeMethodsCalledFromDispose(InvocationExpressionSyntax invocationExpression,
             SemanticModel semanticModel, INamedTypeSymbol disposableType,
-            ref ImmutableDictionary<INamedTypeSymbol, ImmutableHashSet<IMethodSymbol>> disposeMethodsCalledFromDispose)
+            MultiValueDictionary<INamedTypeSymbol, IMethodSymbol> disposeMethodsCalledFromDispose)
         {
             var invokedMethod = semanticModel.GetSymbolInfo(invocationExpression).Symbol as IMethodSymbol;
             if (invokedMethod == null ||
@@ -126,13 +120,11 @@ namespace SonarLint.Rules
                 return;
             }
 
-            disposeMethodsCalledFromDispose =
-                disposeMethodsCalledFromDispose.SetItem(disposableType,
-                    disposeMethodsCalledFromDispose[disposableType].Add(invokedMethod));
+            disposeMethodsCalledFromDispose.AddWithKey(disposableType, invokedMethod);
         }
 
         private static void ReportDisposeMethods(ImmutableHashSet<IMethodSymbol> allDisposeMethods, ImmutableHashSet<IMethodSymbol> implementingDisposeMethods,
-            ImmutableDictionary<INamedTypeSymbol, ImmutableHashSet<IMethodSymbol>> disposeMethodsCalledFromDispose, CompilationAnalysisContext c)
+            MultiValueDictionary<INamedTypeSymbol, IMethodSymbol> disposeMethodsCalledFromDispose, CompilationAnalysisContext c)
         {
             foreach (var dispose in allDisposeMethods.Except(implementingDisposeMethods))
             {
@@ -177,7 +169,7 @@ namespace SonarLint.Rules
             }
         }
 
-        private static bool MethodCalledFromDispose(ImmutableDictionary<INamedTypeSymbol, ImmutableHashSet<IMethodSymbol>> disposeMethodsCalledFromDispose, IMethodSymbol dispose)
+        private static bool MethodCalledFromDispose(MultiValueDictionary<INamedTypeSymbol, IMethodSymbol> disposeMethodsCalledFromDispose, IMethodSymbol dispose)
         {
             return disposeMethodsCalledFromDispose.ContainsKey(dispose.ContainingType) &&
                    disposeMethodsCalledFromDispose[dispose.ContainingType].Contains(dispose);

@@ -238,11 +238,25 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
             Accessors(AnalyzerLanguage.CSharp, "class MyClass { public event EventHandler OnSomething { add { } remove {} }").Should().Be(2);
 
             Accessors(AnalyzerLanguage.VisualBasic, "").Should().Be(0);
-            Accessors(AnalyzerLanguage.VisualBasic, "Class MyClass \n Public MyField As Integer \n Public Sub New() \n End Sub \n Public Function MyFunc() \n Return 42 \n End Function \n End Class").Should().Be(0);
-            Accessors(AnalyzerLanguage.VisualBasic, "Class MyClass \n Public ReadOnly Property MyProperty As Integer \n End Class").Should().Be(0); //Is this the expected?
-            Accessors(AnalyzerLanguage.VisualBasic, "Class MyClass \n Public Property MyProperty As Integer \n End Class").Should().Be(0); //Is this the expected?
-            Accessors(AnalyzerLanguage.VisualBasic, "Class MyClass \n Public Property MyProperty As Integer \n Get \n Return 0 \n End Get \n Set(value As Integer) \n End Set \n End Property \n End Class").Should().Be(2);
-            Accessors(AnalyzerLanguage.VisualBasic, "Class MyClass \n Public Custom Event Click As EventHandler \n AddHandler(ByVal value As EventHandler) \n EventHandlerList.Add(value) \n End AddHandler \n RemoveHandler(ByVal value As EventHandler) \n EventHandlerList.Remove(value) \n End RemoveHandler \n RaiseEvent(ByVal sender As Object, ByVal e As EventArgs) \n End RaiseEvent \n End Event \n End Class").Should().Be(0);
+            Accessors(AnalyzerLanguage.VisualBasic,
+                "Class MyClass \n Public MyField As Integer \n Public Sub New() \n End Sub \n " +
+                "Public Function MyFunc() \n Return 42 \n End Function \n End Class")
+                .Should().Be(0);
+            Accessors(AnalyzerLanguage.VisualBasic,
+                "Class MyClass \n Public ReadOnly Property MyProperty As Integer \n End Class").Should().Be(0); //Is this the expected?
+            Accessors(AnalyzerLanguage.VisualBasic,
+                "Class MyClass \n Public Property MyProperty As Integer \n End Class")
+                .Should().Be(0); //Is this the expected?
+            Accessors(AnalyzerLanguage.VisualBasic,
+                "Class MyClass \n Public Property MyProperty As Integer \n Get \n Return 0 \n End " +
+                "Get \n Set(value As Integer) \n End Set \n End Property \n End Class")
+                .Should().Be(2);
+            Accessors(AnalyzerLanguage.VisualBasic,
+                "Class MyClass \n Public Custom Event Click As EventHandler \n AddHandler(ByVal value As EventHandler) \n " +
+                "EventHandlerList.Add(value) \n End AddHandler \n RemoveHandler(ByVal value As EventHandler) \n " +
+                "EventHandlerList.Remove(value) \n End RemoveHandler \n " +
+                "RaiseEvent(ByVal sender As Object, ByVal e As EventArgs) \n End RaiseEvent \n End Event \n End Class")
+                .Should().Be(0);
         }
 
         private static int Accessors(AnalyzerLanguage language, string text)
@@ -308,7 +322,10 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
             Statements(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n Try \n Catch \n End Try \n End Sub \n End Class").Should().Be(1);
             Statements(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n Try \n Finally \n End Try \n End Sub \n End Class").Should().Be(1);
             Statements(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n Try \n Catch \n Finally \n End Try \n End Sub \n End Class").Should().Be(1);
-            Statements(AnalyzerLanguage.VisualBasic, "Class MyClass \n Function MyFunc() As Integer \n Dim a As Integer = 42 \n Console.WriteLine(a) \n Return a \n End Function \n End Class").Should().Be(3);
+            Statements(AnalyzerLanguage.VisualBasic,
+                "Class MyClass \n Function MyFunc() As Integer \n Dim a As Integer = 42 \n Console.WriteLine(a) \n Return a \n End " +
+                "Function \n End Class")
+                .Should().Be(3);
         }
 
         private static int Statements(AnalyzerLanguage language, string text)
@@ -345,8 +362,14 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
             Functions(AnalyzerLanguage.VisualBasic, "Class MyClass \n Public Shared Operator +(a As MyClass) As MyClass \n Return a \n End Operator \n End Class").Should().Be(0);
             Functions(AnalyzerLanguage.VisualBasic, "Class MyClass \n Public ReadOnly Property MyProperty2() As Integer \n Get \n Return 0 \n End Get \n End Property \n End Class").Should().Be(0);
             Functions(AnalyzerLanguage.VisualBasic, "Class MyClass \n Public WriteOnly Property MyProperty3() As Integer \n Set \n End Set \n End Property \n End Class").Should().Be(0);
-            Functions(AnalyzerLanguage.VisualBasic, "Class MyClass \n Public Property MyProperty4() As Integer \n Get \n Return 0 \n End Get \n Set \n End Set \n End Property \n End Class").Should().Be(0);
-            Functions(AnalyzerLanguage.VisualBasic, "Class MyClass \n Public Custom Event OnSomething As EventHandler \n AddHandler(ByVal value As EventHandler) \n End AddHandler \n RemoveHandler(ByVal value As EventHandler) \n End RemoveHandler \n End Event \n End Class").Should().Be(0);
+            Functions(AnalyzerLanguage.VisualBasic,
+                "Class MyClass \n Public Property MyProperty4() As Integer \n Get \n Return 0 \n End " +
+                "Get \n Set \n End Set \n End Property \n End Class")
+                .Should().Be(0);
+            Functions(AnalyzerLanguage.VisualBasic,
+                "Class MyClass \n Public Custom Event OnSomething As EventHandler \n AddHandler(ByVal value As EventHandler) \n End " +
+                "AddHandler \n RemoveHandler(ByVal value As EventHandler) \n End RemoveHandler \n End Event \n End Class")
+                .Should().Be(0);
         }
 
         private static int Functions(AnalyzerLanguage language, string text)
@@ -439,7 +462,9 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
             Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n If False Then \n End If \n End Sub \n End Class").Should().Be(2);
             Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n If False Then \n Else \n End If \n End Sub \n End Class").Should().Be(2);
             Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n Select Case p \n Case Else \n Exit Select \n End Select \n End Sub \n End Class").Should().Be(2);
-            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n Select Case p \n Case 3 \n Exit Select \n Case Else \n Exit Select \n End Select \n End Sub \n End Class").Should().Be(4);
+            Complexity(AnalyzerLanguage.VisualBasic,
+                "Class MyClass \n Sub MyMethod() \n Select Case p \n Case 3 \n Exit Select \n Case Else \n Exit Select \n " +
+                "End Select \n End Sub \n End Class").Should().Be(4);
             Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n Foo: \n End Sub \n End Class").Should().Be(1);
             Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n Do \n Loop While True \n End Sub \n End Class").Should().Be(2);
             Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n For i As Integer = 0 To -1 \n Next \n End Sub \n End Class").Should().Be(2);
@@ -448,19 +473,26 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
             Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n Dim a As Boolean = False And False\n End Sub \n End Class").Should().Be(1);
             Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub MyMethod() \n Dim a As Boolean = False Or False\n End Sub \n End Class").Should().Be(1);
             Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Public Property MyProperty As Integer \n End Class").Should().Be(0);
-            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Public Property MyProperty As Integer \n Get \n End Get \n Set(value As Integer) \n End Set \n End Property \n End Class").Should().Be(0);
+            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Public Property MyProperty As Integer \n Get \n End Get " +
+                "\n Set(value As Integer) \n End Set \n End Property \n End Class").Should().Be(0);
             Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub New() \n End Sub \n End Class").Should().Be(1);
             Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Protected Overrides Sub Finalize() \n End Sub \n End Class").Should().Be(1);
             Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Public Shared Operator +(a As MyClass) As MyClass \n Return a \n End Operator \n End Class").Should().Be(1);
-            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Public Custom Event OnSomething As EventHandler \n AddHandler(ByVal value As EventHandler) \n End AddHandler \n RemoveHandler(ByVal value As EventHandler) \n End RemoveHandler \n End Event \n End Class").Should().Be(0);
+            Complexity(AnalyzerLanguage.VisualBasic, "Class MyClass \n Public Custom Event OnSomething As EventHandler \n " +
+                "AddHandler(ByVal value As EventHandler) \n End AddHandler \n RemoveHandler(ByVal value As EventHandler) \n " +
+                "End RemoveHandler \n End Event \n End Class").Should().Be(0);
 
             Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n Function Bar() \n Return 0\n End Function \n End Class\n End Module").Should().Be(1);
-            Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n Function Bar() \n If False Then \n Return 1 \n Else \n Return 0 \n End If\n End Function\n End Class\n End Module").Should().Be(4);
+            Complexity(AnalyzerLanguage.VisualBasic,
+                "Module Module1\n Class Foo\n Function Bar() \n If False Then \n Return 1 \n Else \n Return 0 " +
+                "\n End If\n End Function\n End Class\n End Module").Should().Be(4);
             Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n Sub Foo() \n Dim foo = Sub() Return 42\n End Sub\n End Class\n End Module").Should().Be(2);
             Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n ReadOnly Property MyProp \n Get \n Return \"\" \n End Get \n End Property\n End Class\n End Module").Should().Be(0);
             Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n Sub Foo() \n Dim Foo = If(True, True, False)\n End Sub\n End Class\n End Module").Should().Be(1);
             Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n Sub Foo() \n Dim Foo = Function() 0\n End Sub\n End Class\n End Module").Should().Be(1);
-            Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n Sub Foo() \n Dim Foo = Function() \n Return False \n End Function\n End Sub\n End Class\n End Module").Should().Be(1);
+            Complexity(AnalyzerLanguage.VisualBasic,
+                "Module Module1\n Class Foo\n Sub Foo() \n Dim Foo = Function() \n Return False \n " +
+                "End Function\n End Sub\n End Class\n End Module").Should().Be(1);
             Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n Sub Foo() \n Throw New AccessViolationException()\n End Sub\n End Class\n End Module").Should().Be(2);
             Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n Sub Foo() \n GoTo Foo\n End Sub\n End Class\n End Module").Should().Be(2);
         }
@@ -484,8 +516,11 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
             FunctionComplexityDistribution(AnalyzerLanguage.VisualBasic, "").Values.Should().BeEquivalentTo(0, 0, 0, 0, 0, 0, 0);
             FunctionComplexityDistribution(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub M1() \n End Sub \n End Class").Values.Should().BeEquivalentTo(1, 0, 0, 0, 0, 0, 0);
             FunctionComplexityDistribution(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub M1() \n End Sub \n Sub M2() \n End Sub \nEnd Class").Values.Should().BeEquivalentTo(2, 0, 0, 0, 0, 0, 0);
-            FunctionComplexityDistribution(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub M1() \n If False Then \n End If \n End Sub \n End Class").Values.Should().BeEquivalentTo(0, 1, 0, 0, 0, 0, 0);
-            FunctionComplexityDistribution(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub M1() \n If False Then \n End If \n If False Then \n End If \n If False Then \n End If \n End Sub \n End Class").Values.Should().BeEquivalentTo(0, 0, 1, 0, 0, 0, 0);
+            FunctionComplexityDistribution(AnalyzerLanguage.VisualBasic, 
+                "Class MyClass \n Sub M1() \n If False Then \n End If \n End Sub \n End Class").Values.Should().BeEquivalentTo(0, 1, 0, 0, 0, 0, 0);
+            FunctionComplexityDistribution(AnalyzerLanguage.VisualBasic, 
+                "Class MyClass \n Sub M1() \n If False Then \n End If \n If False Then \n End If \n If False Then \n End If " +
+                "\n End Sub \n End Class").Values.Should().BeEquivalentTo(0, 0, 1, 0, 0, 0, 0);
         }
 
         private static Distribution FunctionComplexityDistribution(AnalyzerLanguage language, string text)

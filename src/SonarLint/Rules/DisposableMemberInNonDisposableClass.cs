@@ -64,7 +64,7 @@ namespace SonarLint.Rules
         {
             context.RegisterCompilationStartAction(analysisContext =>
             {
-                var fieldsByNamedType = new Dictionary<INamedTypeSymbol, ImmutableHashSet<IFieldSymbol>>();
+                var fieldsByNamedType = MultiValueDictionary<INamedTypeSymbol, IFieldSymbol>.Create<HashSet<IFieldSymbol>>();
                 var fieldsAssigned = ImmutableHashSet<IFieldSymbol>.Empty;
 
                 analysisContext.RegisterSymbolAction(c =>
@@ -81,14 +81,7 @@ namespace SonarLint.Rules
                         .Where(IsNonStaticNonPublicDisposableField)
                         .ToImmutableHashSet();
 
-                    if (!fieldsByNamedType.ContainsKey(namedTypeSymbol))
-                    {
-                        fieldsByNamedType.Add(namedTypeSymbol, disposableFields);
-                    }
-                    else
-                    {
-                        fieldsByNamedType[namedTypeSymbol] = fieldsByNamedType[namedTypeSymbol].Union(disposableFields);
-                    }
+                    fieldsByNamedType.AddRangeWithKey(namedTypeSymbol, disposableFields);
                 }, SymbolKind.NamedType);
 
 

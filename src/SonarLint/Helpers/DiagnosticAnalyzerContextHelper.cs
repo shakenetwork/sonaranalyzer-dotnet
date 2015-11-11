@@ -20,6 +20,7 @@
 
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
+using SonarLint.Common;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -235,24 +236,12 @@ namespace SonarLint.Helpers
 
         #endregion
 
-        private static readonly IDictionary<string, IEnumerable<int>> CommentKinds =
-            new Dictionary<string, IEnumerable<int>>
+        private static readonly MultiValueDictionary<string, int> CommentKinds =
+            new MultiValueDictionary<string, int>
             {
-                {
-                    LanguageNames.CSharp,
-                    new []
-                    {
-                        (int)CS.SyntaxKind.SingleLineCommentTrivia,
-                        (int)CS.SyntaxKind.MultiLineCommentTrivia
-                    }
-                },
-                {
-                    LanguageNames.VisualBasic,
-                    new []
-                    {
-                        (int)VB.SyntaxKind.CommentTrivia
-                    }
-                }
+                { LanguageNames.CSharp, (int)CS.SyntaxKind.SingleLineCommentTrivia },
+                { LanguageNames.CSharp, (int)CS.SyntaxKind.MultiLineCommentTrivia },
+                { LanguageNames.VisualBasic, (int)VB.SyntaxKind.CommentTrivia }
             };
     }
 }

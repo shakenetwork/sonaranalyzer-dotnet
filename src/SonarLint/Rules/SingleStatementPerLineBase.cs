@@ -60,7 +60,7 @@ namespace SonarLint.Rules.Common
                 {
                     var statements = GetStatements(c.Tree);
 
-                    var statementsByLines = new Dictionary<int, List<TStatementSyntax>>();
+                    var statementsByLines = MultiValueDictionary<int, TStatementSyntax>.Create<HashSet<TStatementSyntax>>();
                     foreach (var statement in statements)
                     {
                         AddStatementToLineCache(statement, statementsByLines);
@@ -69,7 +69,7 @@ namespace SonarLint.Rules.Common
                     var lines = c.Tree.GetText().Lines;
                     foreach (var statementsByLine in statementsByLines.Where(pair => pair.Value.Count > 1))
                     {
-                        var location = CalculateLocationForLine(lines, c.Tree, statementsByLine);
+                        var location = CalculateLocationForLine(lines[statementsByLine.Key], c.Tree, statementsByLine.Value);
                         c.ReportDiagnostic(Diagnostic.Create(Rule, location));
                     }
                 });
@@ -99,19 +99,18 @@ namespace SonarLint.Rules.Common
             return statement;
         }
 
-        private static Location CalculateLocationForLine(TextLineCollection lines, SyntaxTree tree,
-            KeyValuePair<int, List<TStatementSyntax>> statementsByLine)
+        private static Location CalculateLocationForLine(TextLine line, SyntaxTree tree,
+            ICollection<TStatementSyntax> statements)
         {
-            var line = statementsByLine.Key;
-            var lineSpan = lines[line].Span;
+            var lineSpan = line.Span;
 
-            var min = statementsByLine.Value.Min(st => lineSpan.Intersection(st.Span).Value.Start);
-            var max = statementsByLine.Value.Max(st => lineSpan.Intersection(st.Span).Value.End);
+            var min = statements.Min(st => lineSpan.Intersection(st.Span).Value.Start);
+            var max = statements.Max(st => lineSpan.Intersection(st.Span).Value.End);
 
             return Location.Create(tree, TextSpan.FromBounds(min, max));
         }
 
-        private void AddStatementToLineCache(TStatementSyntax statement, Dictionary<int, List<TStatementSyntax>> statementsByLines)
+        private void AddStatementToLineCache(TStatementSyntax statement, MultiValueDictionary<int, TStatementSyntax> statementsByLines)
         {
             var startLine = statement.GetLocation().GetLineSpan().StartLinePosition.Line;
             AddStatementWithLine(statement, startLine, statementsByLines);
@@ -125,17 +124,10 @@ namespace SonarLint.Rules.Common
             }
         }
 
-        private static void AddStatementWithLine(TStatementSyntax statement, int line, Dictionary<int, List<TStatementSyntax>> statementsByLines)
+        private static void AddStatementWithLine(TStatementSyntax statement, int line,
+            MultiValueDictionary<int, TStatementSyntax> statementsByLines)
         {
-            if (!statementsByLines.ContainsKey(line))
-            {
-                statementsByLines.Add(line, new List<TStatementSyntax>());
-            }
-
-            if (!statementsByLines[line].Contains(statement))
-            {
-                statementsByLines[line].Add(statement);
-            }
+            statementsByLines.AddWithKey(line, statement);
         }
     }
 }

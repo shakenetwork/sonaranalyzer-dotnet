@@ -99,6 +99,7 @@
     </Compile>
     <Compile Include="Common\AnalyzerLanguage.cs" />
     <Compile Include="Common\Constants.cs" />
+    <Compile Include="Common\FixAllProviders\MultiValueDictionary.cs" />
     <Compile Include="Common\FixAllProviders\BidirectionalDictionary.cs" />
     <Compile Include="Common\IRuleTemplate.cs" />
     <Compile Include="Common\IRuleTemplateInstance.cs" />

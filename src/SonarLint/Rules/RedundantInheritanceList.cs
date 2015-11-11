@@ -181,14 +181,14 @@ namespace SonarLint.Rules
             }
         }
 
-        private static Dictionary<INamedTypeSymbol, ImmutableArray<INamedTypeSymbol>> GetImplementedInterfaceMappings(
+        private static MultiValueDictionary<INamedTypeSymbol, INamedTypeSymbol> GetImplementedInterfaceMappings(
             BaseListSyntax baseList, SemanticModel semanticModel)
         {
             return baseList.Types
                 .Select(baseType => semanticModel.GetSymbolInfo(baseType.Type).Symbol as INamedTypeSymbol)
                 .Where(symbol => symbol != null)
-                .Select(symbol => new KeyValuePair<INamedTypeSymbol, ImmutableArray<INamedTypeSymbol>>(symbol, symbol.AllInterfaces))
-                .ToDictionary(kv => kv.Key, kv => kv.Value);
+                .Select(symbol => new Tuple<INamedTypeSymbol, ICollection<INamedTypeSymbol>>(symbol, symbol.AllInterfaces))
+                .ToMultiValueDictionary(kv => kv.Item1, kv => kv.Item2);
         }
 
         private static bool HasInterfaceMember(INamedTypeSymbol classSymbol, INamedTypeSymbol interfaceType)

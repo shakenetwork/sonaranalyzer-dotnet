@@ -28,6 +28,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System;
 
 namespace SonarLint.Rules
 {
@@ -65,7 +66,7 @@ namespace SonarLint.Rules
                     var methodCall = (InvocationExpressionSyntax) c.Node;
                     var methodParameterLookup = new ArrayCovariance.MethodParameterLookup(methodCall, c.SemanticModel);
                     var argumentMappings = methodCall.ArgumentList.Arguments.Select(argument =>
-                        new KeyValuePair<ArgumentSyntax, IParameterSymbol>(argument,
+                        new ArgumentParameterMapping(argument,
                             methodParameterLookup.GetParameterSymbol(argument)))
                         .ToList();
 
@@ -79,8 +80,8 @@ namespace SonarLint.Rules
                     {
                         if (ArgumentHasDefaultValue(argumentMapping, c.SemanticModel))
                         {
-                            var argument = argumentMapping.Key;
-                            var parameter = argumentMapping.Value;
+                            var argument = argumentMapping.Argument;
+                            var parameter = argumentMapping.Parameter;
                             c.ReportDiagnostic(Diagnostic.Create(Rule, argument.GetLocation(), parameter.Name));
                         }
                     }
@@ -89,11 +90,11 @@ namespace SonarLint.Rules
         }
 
         internal static bool ArgumentHasDefaultValue(
-            KeyValuePair<ArgumentSyntax, IParameterSymbol> argumentMapping,
+            ArgumentParameterMapping argumentMapping,
             SemanticModel semanticModel)
         {
-            var argument = argumentMapping.Key;
-            var parameter = argumentMapping.Value;
+            var argument = argumentMapping.Argument;
+            var parameter = argumentMapping.Parameter;
 
             if (!parameter.HasExplicitDefaultValue)
             {
@@ -104,6 +105,18 @@ namespace SonarLint.Rules
             var argumentValue = semanticModel.GetConstantValue(argument.Expression);
             return argumentValue.HasValue &&
                    object.Equals(argumentValue.Value, defaultValue);
+        }
+
+        public class ArgumentParameterMapping
+        {
+            public ArgumentSyntax Argument { get; set; }
+            public IParameterSymbol Parameter { get; set; }
+
+            public ArgumentParameterMapping(ArgumentSyntax argument, IParameterSymbol parameter)
+            {
+                Argument = argument;
+                Parameter = parameter;
+            }
         }
     }
 }

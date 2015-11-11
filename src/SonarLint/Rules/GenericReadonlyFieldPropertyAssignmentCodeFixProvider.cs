@@ -28,6 +28,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Formatting;
 using Microsoft.CodeAnalysis.CSharp;
 using System.Collections.Generic;
+using SonarLint.Common;
 
 namespace SonarLint.Rules
 {
@@ -114,24 +115,21 @@ namespace SonarLint.Rules
                 context.Diagnostics);
         }
 
-        private static Dictionary<DocumentId, List<ClassDeclarationSyntax>> GetDocumentIdClassDeclarationMapping(
+        private static MultiValueDictionary<DocumentId, ClassDeclarationSyntax> GetDocumentIdClassDeclarationMapping(
             List<ClassDeclarationSyntax> classDeclarations, Solution currentSolution)
         {
-            var mapping = new Dictionary<DocumentId, List<ClassDeclarationSyntax>>();
+            var mapping = new MultiValueDictionary<DocumentId, ClassDeclarationSyntax>();
             foreach (var classDeclaration in classDeclarations)
             {
                 var documentId = currentSolution.GetDocument(classDeclaration.SyntaxTree).Id;
-                if (!mapping.ContainsKey(documentId))
-                {
-                    mapping.Add(documentId, new List<ClassDeclarationSyntax>());
-                }
-                mapping[documentId].Add(classDeclaration);
+                mapping.AddWithKey(documentId, classDeclaration);
             }
 
             return mapping;
         }
 
-        private static SyntaxNode GetNewDocumentRoot(SyntaxNode docRoot, ITypeParameterSymbol typeParameterSymbol, KeyValuePair<DocumentId, List<ClassDeclarationSyntax>> classes)
+        private static SyntaxNode GetNewDocumentRoot(SyntaxNode docRoot, ITypeParameterSymbol typeParameterSymbol,
+            KeyValuePair<DocumentId, ICollection<ClassDeclarationSyntax>> classes)
         {
             var newDocRoot = docRoot.ReplaceNodes(classes.Value, (original, rewritten) => original.WithAdditionalAnnotations(annotation));
             var annotatedNodes = newDocRoot.GetAnnotatedNodes(annotation);
