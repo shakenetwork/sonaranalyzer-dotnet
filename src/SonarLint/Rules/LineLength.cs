@@ -48,7 +48,7 @@ namespace SonarLint.Rules
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        private const int DefaultValueMaximum = 120;
+        private const int DefaultValueMaximum = 200;
 
         [RuleParameter("maximumLineLength", PropertyType.Integer, "The maximum authorized line length.", DefaultValueMaximum)]
         public int Maximum { get; set; } = DefaultValueMaximum;
