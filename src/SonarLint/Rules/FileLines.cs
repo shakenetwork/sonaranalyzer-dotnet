@@ -24,6 +24,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Linq;
 
 namespace SonarLint.Rules
 {
@@ -62,7 +63,8 @@ namespace SonarLint.Rules
 
                     if (lines > Maximum)
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, Location.None, Maximum, lines));
+                        var firstLine = c.Tree.GetText().Lines.First();
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, c.Tree.GetLocation(firstLine.Span), Maximum, lines));
                     }
                 });
         }
