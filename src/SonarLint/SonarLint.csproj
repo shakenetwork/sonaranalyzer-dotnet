@@ -129,7 +129,6 @@
     <Compile Include="Rules\FunctionComplexity.cs" />
     <Compile Include="Rules\LineContinuation.cs" />
     <Compile Include="Rules\LineLength.cs" />
-    <Compile Include="Rules\MagicNumber.cs" />
     <Compile Include="Rules\MethodName.cs" />
     <Compile Include="Rules\PublicConstantField.cs" />
     <Compile Include="Rules\PublicConstantFieldBase.cs" />
@@ -754,9 +753,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S107.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Rules.Description\S109.html" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Rules.Description\S124.html" />

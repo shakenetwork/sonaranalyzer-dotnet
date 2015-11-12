@@ -49,8 +49,6 @@ namespace SonarLint.UnitTest
             {
                 @"<AnalysisOutput><Files><File><Path>TestResources\TestInput.cs</Path>",
                 @"<Metrics><Lines>16</Lines>",
-                @"<Issue><Id>S109</Id><Line>10</Line>",
-                @"<Issue><Id>S109</Id><Line>13</Line>",
                 @"<Issue><Id>FIXME</Id><Line>3</Line>",
                 @"<Issue><Id>TODO</Id><Line>5</Line>"
             };

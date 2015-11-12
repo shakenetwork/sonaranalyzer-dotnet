@@ -49,7 +49,6 @@ namespace SonarLint.UnitTest
                 "S1479",
                 "S1067",
                 "S107",
-                "S109",
                 "S101",
                 "S100",
                 "S124");
@@ -63,7 +62,6 @@ namespace SonarLint.UnitTest
             analyzers.OfType<FunctionComplexity>().Single().Maximum.ShouldBeEquivalentTo(10);
             analyzers.OfType<ClassName>().Single().Convention.ShouldBeEquivalentTo("^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$");
             analyzers.OfType<MethodName>().Single().Convention.ShouldBeEquivalentTo("^[A-Z][a-zA-Z0-9]+$");
-            analyzers.OfType<MagicNumber>().Single().Exceptions.ShouldBeEquivalentTo(ImmutableHashSet.Create("0", "1", "0x0", "0x00", ".0", ".1", "0.0", "1.0"));
 
             var commentAnalyzer = analyzers.OfType<CommentRegularExpression>().Single();
             var ruleInstances = commentAnalyzer.RuleInstances.ToList();

@@ -249,7 +249,6 @@
     <Compile Include="Rules\BinaryOperationWithIdenticalExpressionsTest.cs" />
     <Compile Include="Rules\IfConditionalAlwaysTrueOrFalseTest.cs" />
     <Compile Include="Rules\LineLengthTest.cs" />
-    <Compile Include="Rules\MagicNumberTest.cs" />
     <Compile Include="Rules\MethodNameTest.cs" />
     <Compile Include="Rules\MultilineBlocksWithoutBraceTest.cs" />
     <Compile Include="Rules\ObjectCreatedDroppedTest.cs" />
@@ -744,9 +743,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\MethodName.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="TestCases\MagicNumber.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\LineLength.cs">

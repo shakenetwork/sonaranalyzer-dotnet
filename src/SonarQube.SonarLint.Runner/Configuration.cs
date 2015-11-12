@@ -130,12 +130,6 @@ namespace SonarLint.Runner
                 switch (propertyParameterPair.Descriptor.Type)
                 {
                     case PropertyType.String:
-                        if (typeof(IEnumerable<string>).IsAssignableFrom(propertyParameterPair.Property.PropertyType))
-                        {
-                            //todo: is this a common thing, or it's special for MagicNumbers.
-                            //If so, then it would be better to put this parsing logic directly into each class.
-                            convertedValue = value.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
-                        }
                         break;
                     case PropertyType.Integer:
                         convertedValue = int.Parse(value, NumberStyles.None, CultureInfo.InvariantCulture);
