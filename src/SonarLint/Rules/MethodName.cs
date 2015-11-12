@@ -50,7 +50,7 @@ namespace SonarLint.Rules
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        private const string DefaultValueConvention = "^[A-Z][a-zA-Z0-9]+$";
+        private const string DefaultValueConvention = "^[A-Z][a-zA-Z0-9_]*[a-zA-Z0-9]$";
 
         [RuleParameter("format", PropertyType.String, "Regular expression used to check the method names against",
             DefaultValueConvention)]

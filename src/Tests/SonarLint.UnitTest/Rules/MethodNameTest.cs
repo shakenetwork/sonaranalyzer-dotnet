@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void MethodName()
         {
-            var diagnostic = new MethodName {Convention = "^[A-Z][a-zA-Z0-9]+$"};
+            var diagnostic = new MethodName();
             Verifier.VerifyAnalyzer(@"TestCases\MethodName.cs", diagnostic);
         }
     }

@@ -5,16 +5,14 @@
 
 <p>The following code:</p>
 
+<h2>Noncompliant Code Example</h2>
+<p>With default provided regular expression <code>^[A-Z][a-zA-Z0-9_]*[a-zA-Z0-9]$</code>:</p>
 <pre>
-void foo() // Non-Compliant
-{
-}
+public int doSomething(){...}
 </pre>
 
 <p>should be refactored into:</p>
 
 <pre>
-void Foo() // Compliant
-{
-}
+public int DoSomething(){...}
 </pre>

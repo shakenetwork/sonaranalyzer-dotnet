@@ -19,6 +19,11 @@
 
         public event MyEventHandler foo_bar;
         public delegate void MyEventHandler();
+
+        void Do_Some_Test() { }
+        void Do_Some_Test_() { } // Noncompliant
+        protected void Application_Start() { }
+
     }
 
 }
