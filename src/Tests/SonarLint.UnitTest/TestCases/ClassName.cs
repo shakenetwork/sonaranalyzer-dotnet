@@ -29,4 +29,9 @@
     IBar // Noncompliant
     {
     }
+
+    partial class
+    AbClass_Bar // Noncompliant
+    {
+    }
 }

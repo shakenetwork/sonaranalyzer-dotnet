@@ -7,7 +7,7 @@
   "Issues": [
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"TestKit_Config_Tests\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"TestKit_Config_Tests\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -24,7 +24,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"TestKit_Config_Tests\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"TestKit_Config_Tests\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -41,7 +41,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"RootGuardianActorRef_Tests\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"RootGuardianActorRef_Tests\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -58,7 +58,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"DedicatedThreadScheduler_ActionScheduler_Cancellation_Tests\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"DedicatedThreadScheduler_ActionScheduler_Cancellation_Tests\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -75,7 +75,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"DedicatedThreadScheduler_ActionScheduler_Schedule_Tests\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"DedicatedThreadScheduler_ActionScheduler_Schedule_Tests\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -92,7 +92,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"DedicatedThreadScheduler_TellScheduler_Cancellation_Tests\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"DedicatedThreadScheduler_TellScheduler_Cancellation_Tests\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -109,7 +109,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"DedicatedThreadScheduler_TellScheduler_Schedule_Tests\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"DedicatedThreadScheduler_TellScheduler_Schedule_Tests\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -126,7 +126,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"DedicatedThreadScheduler_Verify_TimeProvider\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"DedicatedThreadScheduler_Verify_TimeProvider\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -143,7 +143,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"M\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"M\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -160,7 +160,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"A\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"A\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -177,7 +177,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"C\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"C\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -194,7 +194,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"MatchExpressionBuilder_BuildLambdaExpression_Tests\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"MatchExpressionBuilder_BuildLambdaExpression_Tests\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -211,7 +211,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"MatchExpressionBuilder_CreateArgumentValuesArray_Tests\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"MatchExpressionBuilder_CreateArgumentValuesArray_Tests\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -228,7 +228,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_FilesService_encounters_locked_files\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_FilesService_encounters_locked_files\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -245,7 +245,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_CommandExecutor_errors\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_CommandExecutor_errors\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -262,7 +262,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_CommandExecutor_is_given_a_nonexisting_process\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_CommandExecutor_is_given_a_nonexisting_process\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -279,7 +279,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_HashProvider_provides_a_hash\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_HashProvider_provides_a_hash\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -296,7 +296,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_finding_paths_to_executables_with_dotNetFileSystem\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_finding_paths_to_executables_with_dotNetFileSystem\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -313,7 +313,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_doing_file_system_operations_with_dotNetFileSystem\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_doing_file_system_operations_with_dotNetFileSystem\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -330,7 +330,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_running_fileMove_with_dotNetFileSystem\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_running_fileMove_with_dotNetFileSystem\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -347,7 +347,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_running_fileCopy_with_dotNetFileSystem\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_running_fileCopy_with_dotNetFileSystem\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -364,7 +364,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_running_fileDelete_with_dotNetFileSystem\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_running_fileDelete_with_dotNetFileSystem\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -381,7 +381,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_running_createDirectory_with_dotNetFileSystem\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_running_createDirectory_with_dotNetFileSystem\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -398,7 +398,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_running_getFileModDate_with_dotNetFileSystem\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_running_getFileModDate_with_dotNetFileSystem\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -415,7 +415,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_noop_installing_a_package\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_noop_installing_a_package\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -432,7 +432,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_noop_installing_a_package_that_does_not_exist\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_noop_installing_a_package_that_does_not_exist\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -449,7 +449,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_installing_a_package_happy_path\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_installing_a_package_happy_path\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -466,7 +466,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_installing_packages_with_packages_config\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_installing_packages_with_packages_config\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -483,7 +483,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_installing_an_already_installed_package\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_installing_an_already_installed_package\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -500,7 +500,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_force_installing_an_already_installed_package\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_force_installing_an_already_installed_package\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -517,7 +517,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_force_installing_an_already_installed_package_that_errors\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_force_installing_an_already_installed_package_that_errors\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -534,7 +534,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_force_installing_an_already_installed_package_with_a_read_and_delete_share_locked_file\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_force_installing_an_already_installed_package_with_a_read_and_delete_share_locked_file\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -551,7 +551,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_force_installing_an_already_installed_package_with_with_an_exclusively_locked_file\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_force_installing_an_already_installed_package_with_with_an_exclusively_locked_file\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -568,7 +568,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_installing_a_package_that_exists_but_a_version_that_does_not_exist\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_installing_a_package_that_exists_but_a_version_that_does_not_exist\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -585,7 +585,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_installing_a_package_that_does_not_exist\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_installing_a_package_that_does_not_exist\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -602,7 +602,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_installing_a_package_that_errors\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_installing_a_package_that_errors\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -619,7 +619,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_installing_a_side_by_side_package\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_installing_a_side_by_side_package\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -636,7 +636,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_switching_a_normal_package_to_a_side_by_side_package\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_switching_a_normal_package_to_a_side_by_side_package\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -653,7 +653,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_switching_a_side_by_side_package_to_a_normal_package\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_switching_a_side_by_side_package_to_a_normal_package\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -670,7 +670,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_installing_a_package_with_dependencies_happy\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_installing_a_package_with_dependencies_happy\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -687,7 +687,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_force_installing_an_already_installed_package_with_dependencies\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_force_installing_an_already_installed_package_with_dependencies\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -704,7 +704,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_force_installing_an_already_installed_package_forcing_dependencies\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_force_installing_an_already_installed_package_forcing_dependencies\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -721,7 +721,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_force_installing_an_already_installed_package_ignoring_dependencies\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_force_installing_an_already_installed_package_ignoring_dependencies\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -738,7 +738,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_force_installing_an_already_installed_package_forcing_and_ignoring_dependencies\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_force_installing_an_already_installed_package_forcing_and_ignoring_dependencies\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -755,7 +755,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_installing_a_package_with_dependencies_and_dependency_cannot_be_found\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_installing_a_package_with_dependencies_and_dependency_cannot_be_found\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -772,7 +772,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_installing_a_package_ignoring_dependencies_that_cannot_be_found\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_installing_a_package_ignoring_dependencies_that_cannot_be_found\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -789,7 +789,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_installing_a_package_that_depends_on_a_newer_version_of_an_installed_dependency\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_installing_a_package_that_depends_on_a_newer_version_of_an_installed_dependency\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -806,7 +806,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_installing_a_package_that_depends_on_an_unavailable_newer_version_of_an_installed_dependency\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_installing_a_package_that_depends_on_an_unavailable_newer_version_of_an_installed_dependency\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -823,7 +823,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_installing_a_package_that_depends_on_an_unavailable_newer_version_of_an_installed_dependency_ignoring_dependencies\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_installing_a_package_that_depends_on_an_unavailable_newer_version_of_an_installed_dependency_ignoring_dependencies\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -840,7 +840,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_force_installing_a_package_that_depends_on_an_unavailable_newer_version_of_an_installed_dependency_forcing_dependencies\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_force_installing_a_package_that_depends_on_an_unavailable_newer_version_of_an_installed_dependency_forcing_dependencies\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -857,7 +857,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_installing_a_package_with_dependencies_on_a_newer_version_of_a_package_than_an_existing_package_has_with_that_dependency\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_installing_a_package_with_dependencies_on_a_newer_version_of_a_package_than_an_existing_package_has_with_that_dependency\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -874,7 +874,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_installing_a_package_with_dependencies_on_a_newer_version_of_a_package_than_are_allowed_by_an_existing_package_with_that_dependency\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_installing_a_package_with_dependencies_on_a_newer_version_of_a_package_than_are_allowed_by_an_existing_package_with_that_dependency\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -891,7 +891,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_installing_a_package_from_a_nupkg_file\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_installing_a_package_from_a_nupkg_file\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -908,7 +908,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_installing_a_package_with_config_transforms\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_installing_a_package_with_config_transforms\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -925,7 +925,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_noop_uninstalling_a_package\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_noop_uninstalling_a_package\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -942,7 +942,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_noop_uninstalling_a_package_that_does_not_exist\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_noop_uninstalling_a_package_that_does_not_exist\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -959,7 +959,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_uninstalling_a_package_happy_path\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_uninstalling_a_package_happy_path\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -976,7 +976,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_force_uninstalling_a_package\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_force_uninstalling_a_package\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -993,7 +993,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_uninstalling_packages_with_packages_config\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_uninstalling_packages_with_packages_config\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1010,7 +1010,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_uninstalling_a_package_with_a_read_and_delete_share_locked_file\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_uninstalling_a_package_with_a_read_and_delete_share_locked_file\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1027,7 +1027,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_uninstalling_a_package_with_an_exclusively_locked_file\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_uninstalling_a_package_with_an_exclusively_locked_file\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1044,7 +1044,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_uninstalling_a_package_with_added_files\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_uninstalling_a_package_with_added_files\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1061,7 +1061,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_uninstalling_a_package_with_changed_files\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_uninstalling_a_package_with_changed_files\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1078,7 +1078,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_force_uninstalling_a_package_with_added_and_changed_files\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_force_uninstalling_a_package_with_added_and_changed_files\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1095,7 +1095,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_uninstalling_a_package_that_does_not_exist\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_uninstalling_a_package_that_does_not_exist\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1112,7 +1112,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_uninstalling_a_package_that_errors\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_uninstalling_a_package_that_errors\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1129,7 +1129,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_noop_upgrading_a_package_that_has_available_upgrades\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_noop_upgrading_a_package_that_has_available_upgrades\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1146,7 +1146,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_noop_upgrading_a_package_that_does_not_have_available_upgrades\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_noop_upgrading_a_package_that_does_not_have_available_upgrades\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1163,7 +1163,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_noop_upgrading_a_package_that_does_not_exist\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_noop_upgrading_a_package_that_does_not_exist\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1180,7 +1180,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_upgrading_an_existing_package_happy_path\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_upgrading_an_existing_package_happy_path\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1197,7 +1197,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_force_upgrading_a_package\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_force_upgrading_a_package\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1214,7 +1214,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_upgrading_a_package_that_does_not_have_available_upgrades\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_upgrading_a_package_that_does_not_have_available_upgrades\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1231,7 +1231,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_force_upgrading_a_package_that_does_not_have_available_upgrades\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_force_upgrading_a_package_that_does_not_have_available_upgrades\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1248,7 +1248,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_upgrading_packages_with_packages_config\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_upgrading_packages_with_packages_config\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1265,7 +1265,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_upgrading_a_package_with_a_read_and_delete_share_locked_file\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_upgrading_a_package_with_a_read_and_delete_share_locked_file\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1282,7 +1282,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_upgrading_a_package_with_an_exclusively_locked_file\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_upgrading_a_package_with_an_exclusively_locked_file\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1299,7 +1299,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_upgrading_a_package_with_added_files\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_upgrading_a_package_with_added_files\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1316,7 +1316,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_upgrading_a_package_with_changed_files\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_upgrading_a_package_with_changed_files\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1333,7 +1333,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_upgrading_a_package_that_does_not_exist\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_upgrading_a_package_that_does_not_exist\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1350,7 +1350,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_upgrading_a_package_that_is_not_installed\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_upgrading_a_package_that_is_not_installed\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1367,7 +1367,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_upgrading_a_package_that_is_not_installed_and_failing_on_not_installed\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_upgrading_a_package_that_is_not_installed_and_failing_on_not_installed\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1384,7 +1384,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_upgrading_a_package_that_errors\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_upgrading_a_package_that_errors\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1401,7 +1401,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_upgrading_a_package_with_dependencies_happy\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_upgrading_a_package_with_dependencies_happy\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1418,7 +1418,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_upgrading_a_package_with_unavailable_dependencies\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_upgrading_a_package_with_unavailable_dependencies\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1435,7 +1435,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_upgrading_a_package_with_unavailable_dependencies_ignoring_dependencies\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_upgrading_a_package_with_unavailable_dependencies_ignoring_dependencies\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1452,7 +1452,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_upgrading_a_dependency_happy\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_upgrading_a_dependency_happy\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1469,7 +1469,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_upgrading_a_dependency_legacy_folder_version\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_upgrading_a_dependency_legacy_folder_version\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1486,7 +1486,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_upgrading_a_dependency_with_parent_that_depends_on_a_range_less_than_upgrade_version\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_upgrading_a_dependency_with_parent_that_depends_on_a_range_less_than_upgrade_version\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1503,7 +1503,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_upgrading_a_legacy_folder_dependency_with_parent_that_depends_on_a_range_less_than_upgrade_version\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_upgrading_a_legacy_folder_dependency_with_parent_that_depends_on_a_range_less_than_upgrade_version\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1520,7 +1520,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_upgrading_a_package_with_config_transforms\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_upgrading_a_package_with_config_transforms\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1537,7 +1537,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_upgrading_a_package_with_config_transforms_when_config_was_edited\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_upgrading_a_package_with_config_transforms_when_config_was_edited\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1554,7 +1554,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_getting_chocolatey\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_getting_chocolatey\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1571,7 +1571,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_getting_chocolatey_more_than_once\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_getting_chocolatey_more_than_once\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1588,7 +1588,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_CommandForAttribute_is_set_with_string\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_CommandForAttribute_is_set_with_string\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1605,7 +1605,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_CommandForAttribute_is_set_with_CommandNameType\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_CommandForAttribute_is_set_with_CommandNameType\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1622,7 +1622,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1639,7 +1639,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_configuring_the_argument_parser\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_configuring_the_argument_parser\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1656,7 +1656,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_handling_validation\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_handling_validation\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1673,7 +1673,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1690,7 +1690,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_run_is_called_without_key_set\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_run_is_called_without_key_set\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1707,7 +1707,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_run_is_called_with_key_set\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_run_is_called_with_key_set\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1724,7 +1724,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1741,7 +1741,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_configurating_the_argument_parser\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_configurating_the_argument_parser\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1758,7 +1758,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_handling_additional_argument_parsing\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_handling_additional_argument_parsing\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1775,7 +1775,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_handling_validation\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_handling_validation\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1792,7 +1792,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1809,7 +1809,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_run_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_run_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1826,7 +1826,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1843,7 +1843,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_configurating_the_argument_parser\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_configurating_the_argument_parser\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1860,7 +1860,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_handling_additional_argument_parsing\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_handling_additional_argument_parsing\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1877,7 +1877,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_handling_validation\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_handling_validation\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1894,7 +1894,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1911,7 +1911,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_run_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_run_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1928,7 +1928,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1945,7 +1945,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_configurating_the_argument_parser\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_configurating_the_argument_parser\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1962,7 +1962,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_handling_additional_argument_parsing\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_handling_additional_argument_parsing\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1979,7 +1979,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -1996,7 +1996,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_run_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_run_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2013,7 +2013,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2030,7 +2030,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_configurating_the_argument_parser\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_configurating_the_argument_parser\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2047,7 +2047,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_handling_additional_argument_parsing\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_handling_additional_argument_parsing\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2064,7 +2064,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_handling_validation\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_handling_validation\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2081,7 +2081,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2098,7 +2098,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_run_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_run_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2115,7 +2115,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2132,7 +2132,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_configurating_the_argument_parser\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_configurating_the_argument_parser\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2149,7 +2149,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2166,7 +2166,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_run_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_run_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2183,7 +2183,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2200,7 +2200,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_configurating_the_argument_parser\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_configurating_the_argument_parser\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2217,7 +2217,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_handling_additional_argument_parsing\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_handling_additional_argument_parsing\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2234,7 +2234,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2251,7 +2251,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_run_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_run_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2268,7 +2268,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2285,7 +2285,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_configurating_the_argument_parser\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_configurating_the_argument_parser\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2302,7 +2302,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_handling_additional_argument_parsing\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_handling_additional_argument_parsing\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2319,7 +2319,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_handling_validation\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_handling_validation\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2336,7 +2336,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2353,7 +2353,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_list_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_list_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2370,7 +2370,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_run_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_run_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2387,7 +2387,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2404,7 +2404,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_configurating_the_argument_parser\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_configurating_the_argument_parser\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2421,7 +2421,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_handling_additional_argument_parsing\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_handling_additional_argument_parsing\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2438,7 +2438,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_handling_validation\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_handling_validation\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2455,7 +2455,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2472,7 +2472,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_run_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_run_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2489,7 +2489,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2506,7 +2506,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_configurating_the_argument_parser\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_configurating_the_argument_parser\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2523,7 +2523,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_handling_additional_argument_parsing\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_handling_additional_argument_parsing\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2540,7 +2540,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_handling_validation\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_handling_validation\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2557,7 +2557,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2574,7 +2574,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_run_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_run_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2591,7 +2591,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_list_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_list_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2608,7 +2608,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2625,7 +2625,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_configurating_the_argument_parser\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_configurating_the_argument_parser\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2642,7 +2642,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_handling_additional_argument_parsing\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_handling_additional_argument_parsing\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2659,7 +2659,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_handling_validation\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_handling_validation\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2676,7 +2676,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2693,7 +2693,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_run_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_run_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2710,7 +2710,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2727,7 +2727,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2744,7 +2744,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_run_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_run_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2761,7 +2761,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_implementing_command_for\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2778,7 +2778,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_configurating_the_argument_parser\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_configurating_the_argument_parser\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2795,7 +2795,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_handling_additional_argument_parsing\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_handling_additional_argument_parsing\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2812,7 +2812,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_handling_validation\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_handling_validation\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2829,7 +2829,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_noop_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2846,7 +2846,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_run_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_run_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2863,7 +2863,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_ConfigurationOptions_parses_arguments_and_updates_configuration_method\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_ConfigurationOptions_parses_arguments_and_updates_configuration_method\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2880,7 +2880,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_autouninstall_feature_is_off\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_autouninstall_feature_is_off\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2897,7 +2897,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_registry_snapshot_is_null\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_registry_snapshot_is_null\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2914,7 +2914,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_registry_keys_are_empty\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_registry_keys_are_empty\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2931,7 +2931,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_install_location_does_not_exist\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_install_location_does_not_exist\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2948,7 +2948,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_install_location_is_empty\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_install_location_is_empty\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2965,7 +2965,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_registry_location_does_not_exist\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_registry_location_does_not_exist\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2982,7 +2982,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_registry_location_and_install_location_both_do_not_exist\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_registry_location_and_install_location_both_do_not_exist\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -2999,7 +2999,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_AutomaticUninstallerService_is_run_normally\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_AutomaticUninstallerService_is_run_normally\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3016,7 +3016,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_AutomaticUninstallerService_cannot_determine_silent_install_arguments\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_AutomaticUninstallerService_cannot_determine_silent_install_arguments\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3033,7 +3033,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_AutomaticUninstallerService_defines_uninstall_switches\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_AutomaticUninstallerService_defines_uninstall_switches\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3050,7 +3050,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_FilesService_reads_from_files\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_FilesService_reads_from_files\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3067,7 +3067,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_FilesService_saves_files\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_FilesService_saves_files\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3084,7 +3084,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_FilesService_captures_files_and_install_directory_reports_choco_install_location\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_FilesService_captures_files_and_install_directory_reports_choco_install_location\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3101,7 +3101,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_FilesService_captures_files_and_install_directory_reports_packages_location\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_FilesService_captures_files_and_install_directory_reports_packages_location\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3118,7 +3118,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_FilesService_captures_files_and_package_result_is_null\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_FilesService_captures_files_and_package_result_is_null\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3135,7 +3135,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_FilesService_captures_files_happy_path\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_FilesService_captures_files_happy_path\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3152,7 +3152,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_NugetService_backs_up_changed_files\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_NugetService_backs_up_changed_files\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3169,7 +3169,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_NugetService_removes_installation_files_on_uninstall\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_NugetService_removes_installation_files_on_uninstall\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3186,7 +3186,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_RegistryService_get_installer_keys_is_called\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_RegistryService_get_installer_keys_is_called\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3203,7 +3203,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_RegistryService_get_key_is_called_for_a_value_that_exists\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_RegistryService_get_key_is_called_for_a_value_that_exists\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3220,7 +3220,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_RegistryService_get_key_is_called_for_a_value_that_does_not_exist\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_RegistryService_get_key_is_called_for_a_value_that_does_not_exist\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3237,7 +3237,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_prompting_with_interactivePrompt\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_prompting_with_interactivePrompt\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3254,7 +3254,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_prompting_with_interactivePrompt_without_default_and_answer_is_not_required\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_prompting_with_interactivePrompt_without_default_and_answer_is_not_required\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3271,7 +3271,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_prompting_with_interactivePrompt_without_default_and_answer_is_required\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_prompting_with_interactivePrompt_without_default_and_answer_is_required\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3288,7 +3288,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_prompting_with_interactivePrompt_with_default_and_answer_is_not_required\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_prompting_with_interactivePrompt_with_default_and_answer_is_not_required\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3305,7 +3305,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_prompting_with_interactivePrompt_with_default_and_answer_is_required\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_prompting_with_interactivePrompt_with_default_and_answer_is_required\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3322,7 +3322,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_CommandExecutor_is_executed_normally\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_CommandExecutor_is_executed_normally\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3339,7 +3339,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_CommandExecutor_has_a_long_running_process_that_takes_longer_than_wait_time\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_CommandExecutor_has_a_long_running_process_that_takes_longer_than_wait_time\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3356,7 +3356,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_CommandExecutor_does_not_wait_for_exit\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_CommandExecutor_does_not_wait_for_exit\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3373,7 +3373,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_using_ExternalCommandArgsBuilder\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_using_ExternalCommandArgsBuilder\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3390,7 +3390,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_powershellExecutor_is_searching_for_powershell_locations_and_all_locations_exist\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_powershellExecutor_is_searching_for_powershell_locations_and_all_locations_exist\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3407,7 +3407,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_powershellExecutor_is_searching_for_powershell_locations_there_is_no_sysnative\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_powershellExecutor_is_searching_for_powershell_locations_there_is_no_sysnative\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3424,7 +3424,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_powershellExecutor_is_searching_for_powershell_locations_and_powershell_is_not_found\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_powershellExecutor_is_searching_for_powershell_locations_and_powershell_is_not_found\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3441,7 +3441,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_Config_is_set_normally\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_Config_is_set_normally\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3458,7 +3458,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_Config_is_overridden\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_Config_is_overridden\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3475,7 +3475,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_HashProvider_provides_a_hash\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_HashProvider_provides_a_hash\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3492,7 +3492,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_HashProvider_attempts_to_provide_a_hash_for_a_file_over_2GB\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_HashProvider_attempts_to_provide_a_hash_for_a_file_over_2GB\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3509,7 +3509,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_using_eventSubscriptionManager_to_subscribe_to_an_event\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_using_eventSubscriptionManager_to_subscribe_to_an_event\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3526,7 +3526,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_using_eventSubscriptionManager_with_long_running_event_subscriber\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_using_eventSubscriptionManager_with_long_running_event_subscriber\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3543,7 +3543,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_using_eventSubscriptionManager_to_subscribe_to_an_event_with_a_filter_that_the_event_satisfies\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_using_eventSubscriptionManager_to_subscribe_to_an_event_with_a_filter_that_the_event_satisfies\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3560,7 +3560,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_using_eventSubscriptionManager_to_subscribe_to_an_event_with_a_filter_that_the_event_does_not_satisfy\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_using_eventSubscriptionManager_to_subscribe_to_an_event_with_a_filter_that_the_event_does_not_satisfy\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3577,7 +3577,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_using_eventSubscriptionManager_and_multiple_parties_subscribe_to_the_same_event\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_using_eventSubscriptionManager_and_multiple_parties_subscribe_to_the_same_event\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3594,7 +3594,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_using_eventSubscriptionManager_to_send_a_null_event_message\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_using_eventSubscriptionManager_to_send_a_null_event_message\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3611,7 +3611,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_doing_file_system_path_operations_with_dotNetFileSystem\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_doing_file_system_path_operations_with_dotNetFileSystem\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3628,7 +3628,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_finding_paths_to_executables_with_dotNetFileSystem\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_finding_paths_to_executables_with_dotNetFileSystem\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3645,7 +3645,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_finding_paths_to_executables_with_dotNetFileSystem_with_empty_path_extensions\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_finding_paths_to_executables_with_dotNetFileSystem_with_empty_path_extensions\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3662,7 +3662,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_Ensure_is_being_set_to_a_type\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_Ensure_is_being_set_to_a_type\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3679,7 +3679,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_using_Ensure\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_using_Ensure\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3696,7 +3696,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_testing_Ensure_meets_against_a_string_value_that_passes\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_testing_Ensure_meets_against_a_string_value_that_passes\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3713,7 +3713,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_testing_Ensure_meets_against_a_string_value_that_fails\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_testing_Ensure_meets_against_a_string_value_that_fails\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3730,7 +3730,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_testing_Ensure_meets_against_a_null_value_without_guarding_the_value\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_testing_Ensure_meets_against_a_null_value_without_guarding_the_value\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3747,7 +3747,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_calling_VersionInformation_to_get_current_assembly_version\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_calling_VersionInformation_to_get_current_assembly_version\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3764,7 +3764,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_calling_Platform_get_platform\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_calling_Platform_get_platform\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3781,7 +3781,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_calling_Platform_get_platform_on_Windows\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_calling_Platform_get_platform_on_Windows\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3798,7 +3798,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_calling_Platform_get_platform_on_MacOSX\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_calling_Platform_get_platform_on_MacOSX\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3815,7 +3815,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_calling_Platform_get_platform_on_Linux\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_calling_Platform_get_platform_on_Linux\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3832,7 +3832,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_calling_Platform_get_platform_on_PlatformId_Linux_with_MacOSX_folder_structure\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_calling_Platform_get_platform_on_PlatformId_Linux_with_MacOSX_folder_structure\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3849,7 +3849,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_using_TokenReplacer\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_using_TokenReplacer\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3866,7 +3866,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_retrying_an_action\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_retrying_an_action\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3883,7 +3883,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"when_wrapping_a_function_with_try_catch\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"when_wrapping_a_function_with_try_catch\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3900,7 +3900,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"ILogExtensions\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"ILogExtensions\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3917,7 +3917,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"HasCollection_Complex\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"HasCollection_Complex\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3934,7 +3934,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"IDisposablePocoController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"IDisposablePocoController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3951,7 +3951,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"HttpMethodAttributeTests_RestOnlyController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"HttpMethodAttributeTests_RestOnlyController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3968,7 +3968,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"ASPV_TestFiles_Input_Basic_cshtml\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"ASPV_TestFiles_Input_Basic_cshtml\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -3985,7 +3985,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"ASPV_TestFiles_Input_Inject_cshtml\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"ASPV_TestFiles_Input_Inject_cshtml\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4002,7 +4002,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"ASPV_TestFiles_Input_InjectWithModel_cshtml\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"ASPV_TestFiles_Input_InjectWithModel_cshtml\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4019,7 +4019,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"ASPV_TestFiles_Input_InjectWithSemicolon_cshtml\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"ASPV_TestFiles_Input_InjectWithSemicolon_cshtml\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4036,7 +4036,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"ASPV_TestFiles_Input_Model_cshtml\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"ASPV_TestFiles_Input_Model_cshtml\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4053,7 +4053,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"ASPV_TestFiles_Input_ModelExpressionTagHelper_cshtml\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"ASPV_TestFiles_Input_ModelExpressionTagHelper_cshtml\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4070,7 +4070,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"ASPV_TestFiles_Input_Basic_cshtml\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"ASPV_TestFiles_Input_Basic_cshtml\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4087,7 +4087,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"ASPV_TestFiles_Input_Inject_cshtml\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"ASPV_TestFiles_Input_Inject_cshtml\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4104,7 +4104,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"ASPV_TestFiles_Input_InjectWithModel_cshtml\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"ASPV_TestFiles_Input_InjectWithModel_cshtml\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4121,7 +4121,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"ASPV_TestFiles_Input_InjectWithSemicolon_cshtml\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"ASPV_TestFiles_Input_InjectWithSemicolon_cshtml\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4138,7 +4138,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"ASPV_TestFiles_Input_Model_cshtml\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"ASPV_TestFiles_Input_Model_cshtml\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4155,7 +4155,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"ASPV_TestFiles_Input_ModelExpressionTagHelper_cshtml\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"ASPV_TestFiles_Input_ModelExpressionTagHelper_cshtml\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4172,7 +4172,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"ConsumesAttribute_NoFallBackActionController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"ConsumesAttribute_NoFallBackActionController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4189,7 +4189,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"ConsumesAttribute_OverridesBaseController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"ConsumesAttribute_OverridesBaseController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4206,7 +4206,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"ConsumesAttribute_OverridesController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"ConsumesAttribute_OverridesController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4223,7 +4223,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"ConsumesAttribute_PassThroughController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"ConsumesAttribute_PassThroughController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4240,7 +4240,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"ConsumesAttribute_WithFallbackActionController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"ConsumesAttribute_WithFallbackActionController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4257,7 +4257,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"Product_Json\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"Product_Json\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4274,7 +4274,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"Product_Text\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"Product_Text\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4291,7 +4291,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"Product_Xml\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"Product_Xml\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4308,7 +4308,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"VCardFormatter_V3\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"VCardFormatter_V3\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4325,7 +4325,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"VCardFormatter_V4\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"VCardFormatter_V4\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4342,7 +4342,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"CustomRoute_ProductsController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"CustomRoute_ProductsController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4359,7 +4359,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"CustomRoute_OrdersControlller\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"CustomRoute_OrdersControlller\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4376,7 +4376,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"CustomRoute_ProductsController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"CustomRoute_ProductsController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4393,7 +4393,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"CustomRoute_ProductsController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"CustomRoute_ProductsController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4410,7 +4410,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"HtmlGeneration_CustomerController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"HtmlGeneration_CustomerController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4427,7 +4427,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"Catalog_CacheTagHelperController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"Catalog_CacheTagHelperController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4444,7 +4444,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"HtmlGeneration_HomeController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"HtmlGeneration_HomeController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4461,7 +4461,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"HtmlGeneration_OrderController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"HtmlGeneration_OrderController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4478,7 +4478,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"HtmlGeneration_ProductController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"HtmlGeneration_ProductController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4495,7 +4495,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"InlineConstraints_Isbn10Controller\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"InlineConstraints_Isbn10Controller\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4512,7 +4512,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"InlineConstraints_Isbn13Controller\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"InlineConstraints_Isbn13Controller\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4529,7 +4529,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"InlineConstraints_ProductsController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"InlineConstraints_ProductsController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4546,7 +4546,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"InlineConstraints_StoreController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"InlineConstraints_StoreController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4563,7 +4563,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"LowercaseUrls_BlogController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"LowercaseUrls_BlogController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4580,7 +4580,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"LowercaseUrls_EmployeeController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"LowercaseUrls_EmployeeController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4597,7 +4597,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"FromFormAttribute_CompanyController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"FromFormAttribute_CompanyController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4614,7 +4614,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"FromForm_Department\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"FromForm_Department\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4631,7 +4631,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"FromHeader_BlogController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"FromHeader_BlogController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4648,7 +4648,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"FromQueryAttribute_CompanyController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"FromQueryAttribute_CompanyController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4665,7 +4665,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"FromQuery_Department\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"FromQuery_Department\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4682,7 +4682,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"FromRouteAttribute_CompanyController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"FromRouteAttribute_CompanyController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4699,7 +4699,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"FromRoute_Department\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"FromRoute_Department\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4716,7 +4716,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"FromServices_CalculatorController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"FromServices_CalculatorController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4733,7 +4733,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"ModelBinderAttribute_CompanyController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"ModelBinderAttribute_CompanyController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4750,7 +4750,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"ModelBinderAttribute_ProductController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"ModelBinderAttribute_ProductController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4767,7 +4767,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"Person_CollectionBinderController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"Person_CollectionBinderController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4784,7 +4784,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"User_FromBody\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"User_FromBody\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4801,7 +4801,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"User_FromForm\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"User_FromForm\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4818,7 +4818,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"RazorEmbeddedViews_AdminController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"RazorEmbeddedViews_AdminController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4835,7 +4835,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"RazorEmbeddedViews_HomeController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"RazorEmbeddedViews_HomeController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4852,7 +4852,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"ViewNameSpecification_HomeController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"ViewNameSpecification_HomeController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4869,7 +4869,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"RemoteAttribute_VerifyController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"RemoteAttribute_VerifyController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4886,7 +4886,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"RemoteAttribute_HomeController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"RemoteAttribute_HomeController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4903,7 +4903,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"RemoteAttribute_VerifyController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"RemoteAttribute_VerifyController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4920,7 +4920,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"RemoteAttribute_HomeController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"RemoteAttribute_HomeController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4937,7 +4937,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"RemoteAttribute_VerifyController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"RemoteAttribute_VerifyController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4954,7 +4954,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"IEnumerableController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"IEnumerableController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4971,7 +4971,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"IQueryableController\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"IQueryableController\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -4988,7 +4988,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"_Default\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"_Default\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -5005,7 +5005,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"_Default\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"_Default\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -5022,7 +5022,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"IDictionaryExtensionsTests\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"IDictionaryExtensionsTests\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -5039,7 +5039,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"IEnumerableExtensionsTests\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"IEnumerableExtensionsTests\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -5056,7 +5056,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"IDictionaryExtensions\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"IDictionaryExtensions\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -5073,7 +5073,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"IEnumerableExtensions\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"IEnumerableExtensions\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -5090,7 +5090,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"IListExtensions\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"IListExtensions\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -5107,7 +5107,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"Release_3_0_TestFixture\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"Release_3_0_TestFixture\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -5124,7 +5124,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"IArchiveExtensions\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"IArchiveExtensions\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -5141,7 +5141,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"IArchiveEntryExtensions\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"IArchiveEntryExtensions\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -5158,7 +5158,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"IReaderExtensions\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"IReaderExtensions\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
@@ -5175,7 +5175,7 @@
     },
     {
       "RuleId": "S101",
-      "FullMessage": "Rename this class \"IWriterExtensions\" to match the regular expression: ^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
+      "FullMessage": "Rename this class \"IWriterExtensions\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$",
       "Locations": [
         {
           "AnalysisTarget": {
