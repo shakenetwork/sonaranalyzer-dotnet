@@ -60,22 +60,38 @@ namespace SonarLint.Rules
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c =>
-                {
-                    var complexity = new Metrics(c.Node.SyntaxTree).GetComplexity(c.Node);
-                    if (complexity > Maximum)
-                    {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, c.Node.GetLocation(), Maximum, complexity));
-                    }
-                },
-                SyntaxKind.ConstructorDeclaration,
-                SyntaxKind.DestructorDeclaration,
-                SyntaxKind.MethodDeclaration,
-                SyntaxKind.OperatorDeclaration,
+                c => CheckComplexity<MethodDeclarationSyntax>(c, m => m.Identifier.GetLocation()),
+                SyntaxKind.MethodDeclaration);
+
+            context.RegisterSyntaxNodeActionInNonGenerated(
+                c => CheckComplexity<OperatorDeclarationSyntax>(c, o => o.OperatorKeyword.GetLocation()),
+                SyntaxKind.OperatorDeclaration);
+
+            context.RegisterSyntaxNodeActionInNonGenerated(
+                c => CheckComplexity<ConstructorDeclarationSyntax>(c, co => co.Identifier.GetLocation()),
+                SyntaxKind.ConstructorDeclaration);
+
+            context.RegisterSyntaxNodeActionInNonGenerated(
+                c => CheckComplexity<DestructorDeclarationSyntax>(c, d => d.Identifier.GetLocation()),
+                SyntaxKind.DestructorDeclaration);
+
+            context.RegisterSyntaxNodeActionInNonGenerated(
+                c => CheckComplexity<AccessorDeclarationSyntax>(c, a => a.Keyword.GetLocation()),
                 SyntaxKind.GetAccessorDeclaration,
                 SyntaxKind.SetAccessorDeclaration,
                 SyntaxKind.AddAccessorDeclaration,
                 SyntaxKind.RemoveAccessorDeclaration);
+        }
+
+        private void CheckComplexity<TSyntax>(SyntaxNodeAnalysisContext c, Func<TSyntax, Location> location)
+            where TSyntax : SyntaxNode
+        {
+            var complexity = new Metrics(c.Node.SyntaxTree).GetComplexity(c.Node);
+            if (complexity > Maximum)
+            {
+                var syntax = (TSyntax)c.Node;
+                c.ReportDiagnostic(Diagnostic.Create(Rule, location(syntax), Maximum, complexity));
+            }
         }
     }
 }
