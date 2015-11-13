@@ -47,11 +47,13 @@ namespace SonarLint.DocGenerator
 
         public static string GenerateRuleJson(string productVersion)
         {
-            var cs = RuleDetailBuilder.GetParameterlessRuleDetails(AnalyzerLanguage.CSharp)
+            var cs = RuleDetailBuilder.GetAllRuleDetails(AnalyzerLanguage.CSharp)
+                .Where(ruleDetail => !ruleDetail.IsTemplate)
                 .Select(ruleDetail => RuleDescription.Convert(ruleDetail, productVersion, AnalyzerLanguage.CSharp))
                 .ToList();
 
-            var vb = RuleDetailBuilder.GetParameterlessRuleDetails(AnalyzerLanguage.VisualBasic)
+            var vb = RuleDetailBuilder.GetAllRuleDetails(AnalyzerLanguage.VisualBasic)
+                .Where(ruleDetail => !ruleDetail.IsTemplate)
                 .Select(ruleDetail => RuleDescription.Convert(ruleDetail, productVersion, AnalyzerLanguage.VisualBasic))
                 .ToList();
 

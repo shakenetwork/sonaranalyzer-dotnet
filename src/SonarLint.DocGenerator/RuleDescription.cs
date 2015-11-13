@@ -23,6 +23,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using SonarLint.RuleDescriptors;
+using System.Text;
+using System.Globalization;
 
 namespace SonarLint.DocGenerator
 {
@@ -40,7 +42,9 @@ namespace SonarLint.DocGenerator
                         new RuleMetaData
                         {
                             Title = detail.Title,
-                            Description = AddLinksBetweenRulesToDescription(detail.Description, productVersion) +
+                            Description =
+                                GetParameterDescription(detail.Parameters) +
+                                AddLinksBetweenRulesToDescription(detail.Description, productVersion) +
                                 GetCodeFixDescription(detail),
                             Tags = detail.Tags,
                             Severity = detail.Severity,
@@ -71,6 +75,30 @@ namespace SonarLint.DocGenerator
             var urlRegexPattern = string.Format(HelpLinkPattern, productVersion, "$2");
             var linkPattern = string.Format("<a class=\"rule-link\" href=\"{0}\">{1}</a>", urlRegexPattern, "$1$2");
             return Regex.Replace(description, CrosslinkPattern, linkPattern);
+        }
+        private static string GetParameterDescription(IList<RuleParameter> parameters)
+        {
+            if (!parameters.Any())
+            {
+                return string.Empty;
+            }
+
+            var sb = new StringBuilder();
+            sb.Append("<h2 class=\"param-header\">Parameters</h2>");
+            sb.Append("<dl>");
+            foreach (var parameter in parameters)
+            {
+                sb.AppendFormat(CultureInfo.InvariantCulture, "<dt class=\"param-key\">{0}</dt>", parameter.Key);
+                sb.AppendFormat(CultureInfo.InvariantCulture,
+                    "<dd>" +
+                    "<span class=\"param-description\">{0}</span>" +
+                    "<span class=\"param-type\">{1}</span>" +
+                    "<span class=\"param-default\">{2}</span>" +
+                    "</dd>",
+                    parameter.Description, parameter.Type, parameter.DefaultValue);
+            }
+            sb.Append("</dl>");
+            return sb.ToString();
         }
 
         private static string GetCodeFixDescription(RuleDetail detail)
