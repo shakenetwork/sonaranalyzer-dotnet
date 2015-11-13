@@ -128,13 +128,13 @@ namespace SonarLint.Rules
                     var delegateSyntax = syntax as DelegateDeclarationSyntax;
                     if (delegateSyntax != null)
                     {
-                        context.ReportDiagnostic(Diagnostic.Create(Rule, delegateSyntax.Identifier.GetLocation(), "delegate"));
+                        context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, delegateSyntax.Identifier.GetLocation(), "delegate"));
                         continue;
                     }
                     var classSyntax = syntax as ClassDeclarationSyntax;
                     if (classSyntax != null)
                     {
-                        context.ReportDiagnostic(Diagnostic.Create(Rule, classSyntax.Identifier.GetLocation(), "class"));
+                        context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, classSyntax.Identifier.GetLocation(), "class"));
                         continue;
                     }
                 }
@@ -238,7 +238,7 @@ namespace SonarLint.Rules
                 var location = locationSelector(propertyOrField);
                 if (location != null)
                 {
-                    context.ReportDiagnostic(Diagnostic.Create(Rule, location, memberType));
+                    context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, location, memberType));
                 }
             }
         }
@@ -260,7 +260,7 @@ namespace SonarLint.Rules
                 var location = locationSelector(eventOrMethod);
                 if (location != null)
                 {
-                    context.ReportDiagnostic(Diagnostic.Create(Rule, location, memberType));
+                    context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, location, memberType));
                 }
             }
         }

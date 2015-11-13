@@ -105,6 +105,11 @@ namespace SonarLint.Helpers
             }
         }
 
+        public static void ReportDiagnosticIfNonGenerated(this SymbolAnalysisContext context, Diagnostic diagnostic)
+        {
+            context.ReportDiagnosticIfNonGenerated(diagnostic, context.Compilation);
+        }
+
         #endregion
 
         #region SyntaxTree.IsGenerated
