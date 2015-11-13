@@ -26,7 +26,7 @@ namespace SonarLint.Helpers
     {
         public const string TestAssemblyNamePattern = "test";
 
-        internal static bool IsTest(this Compilation compilation)
+        public static bool IsTest(this Compilation compilation)
         {
             var assemblyName = string.Empty;
             if (compilation.AssemblyName != null)

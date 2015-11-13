@@ -60,7 +60,8 @@ namespace SonarLint.UnitTest.Common
         [TestMethod]
         public void AbstractDiagnosticAnalyzer_Should_Have_No_RuleAttribute()
         {
-            var analyzers = RuleFinder.GetPackagedRuleAssembly().GetTypes()
+            var analyzers = RuleFinder.GetPackagedRuleAssemblies()
+                .SelectMany(assembly => assembly.GetTypes())
                 .Where(t =>
                     t.IsSubclassOf(typeof(DiagnosticAnalyzer)) &&
                     t.IsAbstract)
@@ -96,7 +97,7 @@ namespace SonarLint.UnitTest.Common
         [TestMethod]
         public void CodeFixProviders_Named_Properly()
         {
-            var codeFixProviders = GetCodeFixProviderTypes(new[] { RuleFinder.GetPackagedRuleAssembly() });
+            var codeFixProviders = GetCodeFixProviderTypes(RuleFinder.GetPackagedRuleAssemblies());
 
             foreach (var codeFixProvider in codeFixProviders)
             {
@@ -113,7 +114,7 @@ namespace SonarLint.UnitTest.Common
         [TestMethod]
         public void CodeFixProviders_Have_Title()
         {
-            var codeFixProviders = GetCodeFixProviderTypes(new[] { RuleFinder.GetPackagedRuleAssembly() });
+            var codeFixProviders = GetCodeFixProviderTypes(RuleFinder.GetPackagedRuleAssemblies());
 
             foreach (var codeFixProvider in codeFixProviders)
             {

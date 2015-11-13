@@ -37,6 +37,8 @@ namespace SonarLint.Utilities
         private const string RuleDescriptionPathPattern = "SonarLint.Rules.Description.{0}.html";
         public const string CodeFixProviderSuffix = "CodeFixProvider";
 
+        private static readonly Assembly SonarLintExtraAssembly = typeof(RuleDetailBuilder).Assembly;
+
         public static IEnumerable<RuleDetail> GetAllRuleDetails(AnalyzerLanguage language)
         {
             return new RuleFinder().GetAnalyzerTypes(language).Select(t => GetRuleDetail(t, language));
@@ -192,14 +194,14 @@ namespace SonarLint.Utilities
 
         private static string GetResourceHtml(Type analyzerType, RuleAttribute rule, AnalyzerLanguage language)
         {
-            var resources = analyzerType.Assembly.GetManifestResourceNames();
+            var resources = SonarLintExtraAssembly.GetManifestResourceNames();
             var resource = GetResource(resources, rule.Key, language);
             if (resource == null)
             {
                 throw new InvalidDataException(string.Format("Could not locate resource for rule {0}", rule.Key));
             }
 
-            using (var stream = analyzerType.Assembly.GetManifestResourceStream(resource))
+            using (var stream = SonarLintExtraAssembly.GetManifestResourceStream(resource))
             using (var reader = new StreamReader(stream))
             {
                 return reader.ReadToEnd();

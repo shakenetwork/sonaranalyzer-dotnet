@@ -25,10 +25,10 @@ using System.Globalization;
 using System.Linq;
 using System.Xml.Linq;
 using Microsoft.CodeAnalysis.Diagnostics;
-using SonarLint.Rules;
 using SonarLint.Utilities;
 using SonarLint.Common;
 using System.Reflection;
+using SonarLint.Rules.CSharp;
 
 namespace SonarLint.Runner
 {
@@ -168,7 +168,7 @@ namespace SonarLint.Runner
 
         private void AddAnalyzerCommentRegularExpression(ImmutableArray<DiagnosticAnalyzer>.Builder builder)
         {
-            if (!AnalyzerIds.Contains(CommentRegularExpression.DiagnosticId))
+            if (!AnalyzerIds.Contains(Rules.CSharp.CommentRegularExpression.DiagnosticId))
             {
                 return;
             }

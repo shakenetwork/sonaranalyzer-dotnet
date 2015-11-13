@@ -7,12 +7,30 @@ if ($project.DTE.Version -ne '14.0')
 
 if ($project.Object.AnalyzerReferences -eq $null)
 {
-	throw 'The package cannot be installed as an analyzer reference.'
+    throw 'The package cannot be installed as an analyzer reference.'
 }
+
+# $project.Type gives the language name like (C# or VB.NET)
+$languageSpecificAnalyzer = ""
+if($project.Type -eq "C#")
+{
+    $languageSpecificAnalyzer = "SonarLint.CSharp.dll"
+}
+if($project.Type -eq "VB.NET")
+{
+    $languageSpecificAnalyzer = "SonarLint.VisualBasic.dll"
+}
+if($languageFolder -eq "")
+{
+    return
+}
+
 
 $analyzersPath = split-path -path $toolsPath -parent
 $analyzersPath = join-path $analyzersPath "analyzers"
-$analyzersPath = join-path $analyzersPath "dotnet"
 
 $analyzerFilePath = join-path $analyzersPath "SonarLint.dll"
+$project.Object.AnalyzerReferences.Add($analyzerFilePath)
+
+$analyzerFilePath = join-path $analyzersPath $languageSpecificAnalyzer
 $project.Object.AnalyzerReferences.Add($analyzerFilePath)

@@ -28,11 +28,11 @@ using System.Collections.Generic;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class OptionalParameterBase : DiagnosticAnalyzer
+    public abstract class OptionalParameterBase : MultiLanguageDiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S2360";
-        internal const string Title = "Optional parameters should not be used";
-        internal const string Description =
+        protected const string DiagnosticId = "S2360";
+        protected const string Title = "Optional parameters should not be used";
+        protected const string Description =
             "The overloading mechanism should be used in place of optional parameters for several reasons. " +
             "Optional parameter values are baked into the method call site code, thus, if a default " +
             "value has been changed, all referencing assemblies need to be rebuilt, otherwise the original values will be used. The " +
@@ -41,12 +41,12 @@ namespace SonarLint.Rules.Common
             "like C++ or Java, the overloading mechanism is the only way to get the same behavior. " +
             "Optional parameters prevent muddying the definition of the function contract. Here is a simple " +
             "example: if there are two optional parameters, when one is defined, is the second one still optional or mandatory?";
-        internal const string MessageFormat = "Use the overloading mechanism instead of the optional parameters.";
-        internal const string Category = Constants.SonarLint;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
+        protected const string MessageFormat = "Use the overloading mechanism instead of the optional parameters.";
+        protected const string Category = Constants.SonarLint;
+        protected const Severity RuleSeverity = Severity.Major;
+        protected const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
+        protected static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
@@ -63,6 +63,7 @@ namespace SonarLint.Rules.Common
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
+                GeneratedCodeRecognizer,
                 c =>
                 {
                     var method = (TMethodSyntax)c.Node;

@@ -138,6 +138,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\SonarLint.VisualBasic\SonarLint.VisualBasic.csproj">
+      <Project>{01df3cb0-2213-42f3-bb8e-0c3bc330de7a}</Project>
+      <Name>SonarLint.VisualBasic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SonarLint.CSharp\SonarLint.CSharp.csproj">
+      <Project>{39ccd086-a7f8-42a0-b402-3c9bd9eb4825}</Project>
+      <Name>SonarLint.CSharp</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\SonarLint.Extra\SonarLint.Extra.csproj">
       <Project>{4c1bb6ce-645f-400b-b491-af7bb40e5c01}</Project>
       <Name>SonarLint.Extra</Name>

@@ -20,7 +20,7 @@
 
 using System.Collections.Immutable;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarLint.Rules;
+using SonarLint.Rules.CSharp;
 
 namespace SonarLint.UnitTest.Rules
 {
@@ -34,7 +34,7 @@ namespace SonarLint.UnitTest.Rules
             var rules = ImmutableArray.Create(
                 new CommentRegularExpressionRule
                 {
-                    Descriptor = SonarLint.Rules.CommentRegularExpression.CreateDiagnosticDescriptor("id1", ""),
+                    Descriptor = SonarLint.Rules.CSharp.CommentRegularExpression.CreateDiagnosticDescriptor("id1", ""),
                     RegularExpression = "(?i)TODO"
                 });
 

@@ -28,18 +28,18 @@ using System.Collections.Generic;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class MultipleVariableDeclarationBase : DiagnosticAnalyzer
+    public abstract class MultipleVariableDeclarationBase : MultiLanguageDiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S1659";
-        internal const string Title = "Multiple variables should not be declared on the same line";
-        internal const string Description =
+        public const string DiagnosticId = "S1659";
+        protected const string Title = "Multiple variables should not be declared on the same line";
+        protected const string Description =
             "Declaring multiple variable on one line is difficult to read.";
-        internal const string MessageFormat = "Declare \"{0}\" in a separate statement.";
-        internal const string Category = Constants.SonarLint;
-        internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = true;
+        protected const string MessageFormat = "Declare \"{0}\" in a separate statement.";
+        protected const string Category = Constants.SonarLint;
+        protected const Severity RuleSeverity = Severity.Minor;
+        protected const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
+        protected static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
@@ -57,6 +57,7 @@ namespace SonarLint.Rules.Common
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
+                GeneratedCodeRecognizer,
                 c =>
                 {
                     var local = (TLocalDeclarationSyntax)c.Node;
@@ -65,6 +66,7 @@ namespace SonarLint.Rules.Common
                 LocalDeclarationKind);
 
             context.RegisterSyntaxNodeActionInNonGenerated(
+                GeneratedCodeRecognizer,
                 c =>
                 {
                     var field = (TFieldDeclarationSyntax)c.Node;

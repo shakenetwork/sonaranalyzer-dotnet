@@ -1,16 +1,43 @@
 ﻿param($installPath, $toolsPath, $package, $project)
 
+# $project.Type gives the language name like (C# or VB.NET)
+$languageSpecificAnalyzer = ""
+if($project.Type -eq "C#")
+{
+    $languageSpecificAnalyzer = "SonarLint.CSharp.dll"
+}
+if($project.Type -eq "VB.NET")
+{
+    $languageSpecificAnalyzer = "SonarLint.VisualBasic.dll"
+}
+if($languageFolder -eq "")
+{
+    return
+}
+
 if ($project.DTE.Version -eq '14.0')
 {
-	$analyzersPath = split-path -path $toolsPath -parent
-	$analyzersPath = join-path $analyzersPath "analyzers"
-	$analyzersPath = join-path $analyzersPath "dotnet"
-	$analyzerFilePath = join-path $analyzersPath "SonarLint.dll"
-	if ($project.Object.AnalyzerReferences -ne $null)
-	{
-		if ($project.Object.AnalyzerReferences -Contains $analyzerFilePath)
+    if ($project.Object.AnalyzerReferences -ne $null)
+    {
+        $analyzersPath = split-path -path $toolsPath -parent
+        $analyzersPath = join-path $analyzersPath "analyzers"
+
+        $analyzerFilePath = join-path $analyzersPath "SonarLint.dll"
+        try
         {
             $project.Object.AnalyzerReferences.Remove($analyzerFilePath)
         }
-	}
+        catch
+        {
+        }
+
+        $analyzerFilePath = join-path $analyzersPath $languageSpecificAnalyzer
+        try
+        {
+            $project.Object.AnalyzerReferences.Remove($analyzerFilePath)
+        }
+        catch
+        {
+        }
+    }
 }

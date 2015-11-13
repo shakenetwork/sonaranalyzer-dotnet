@@ -27,21 +27,21 @@ using SonarLint.Helpers;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class FlagsEnumWithoutInitializerBase : DiagnosticAnalyzer
+    public abstract class FlagsEnumWithoutInitializerBase : MultiLanguageDiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S2345";
-        internal const string Title = "Flags enumerations should explicitly initialize all their members";
-        internal const string Description =
+        protected const string DiagnosticId = "S2345";
+        protected const string Title = "Flags enumerations should explicitly initialize all their members";
+        protected const string Description =
             "Flags enumerations should not rely on the language to initialize the values of their members. Implicit initialization will set " +
             "the first member to 0, and increment the value by one for each subsequent member. This implicit behavior does not allow members " +
             "to be combined using the bitwise or operator. Instead, powers of two, i.e. 1, 2, 4, 8, 16, etc. should be used to explicitly " +
             "initialize all the members.";
-        internal const string MessageFormat = "Initialize all the members of this enumeration.";
-        internal const string Category = Constants.SonarLint;
-        internal const Severity RuleSeverity = Severity.Critical;
-        internal const bool IsActivatedByDefault = true;
+        protected const string MessageFormat = "Initialize all the members of this enumeration.";
+        protected const string Category = Constants.SonarLint;
+        protected const Severity RuleSeverity = Severity.Critical;
+        protected const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
+        protected static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
@@ -74,6 +74,7 @@ namespace SonarLint.Rules.Common
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
+                GeneratedCodeRecognizer,
                 c =>
                 {
                     var enumDeclaration = (TEnumDeclarationSyntax)c.Node;

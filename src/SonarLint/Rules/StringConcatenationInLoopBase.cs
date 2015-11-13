@@ -27,18 +27,18 @@ using System.Linq;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class StringConcatenationInLoopBase : DiagnosticAnalyzer
+    public abstract class StringConcatenationInLoopBase : MultiLanguageDiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S1643";
-        internal const string Title = "Strings should not be concatenated using \"+\" in a loop";
-        internal const string Description =
+        protected const string DiagnosticId = "S1643";
+        protected const string Title = "Strings should not be concatenated using \"+\" in a loop";
+        protected const string Description =
             "\"StringBuilder\" is more efficient than string concatenation, especially when the operator is repeated over and over as in loops.";
-        internal const string MessageFormat = "Use a StringBuilder instead.";
-        internal const string Category = Constants.SonarLint;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
+        protected const string MessageFormat = "Use a StringBuilder instead.";
+        protected const string Category = Constants.SonarLint;
+        protected const Severity RuleSeverity = Severity.Major;
+        protected const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
+        protected static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
@@ -56,6 +56,7 @@ namespace SonarLint.Rules.Common
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
+                GeneratedCodeRecognizer,
                 c =>
                 {
                     var addAssignment = (TAssignmentExpression)c.Node;
@@ -82,6 +83,7 @@ namespace SonarLint.Rules.Common
                 CompoundAssignmentKinds.ToArray());
 
             context.RegisterSyntaxNodeActionInNonGenerated(
+                GeneratedCodeRecognizer,
                 c =>
                 {
                     var assignment = (TAssignmentExpression)c.Node;
@@ -93,7 +95,7 @@ namespace SonarLint.Rules.Common
                     var addExpression = GetRight(assignment) as TBinaryExpression;
                     if (addExpression == null ||
                         !ExpressionIsConcatenation(addExpression) ||
-                        !EquivalenceChecker.AreEquivalent(GetLeft(assignment), GetLeft(addExpression)))
+                        !AreEquivalent(GetLeft(assignment), GetLeft(addExpression)))
                     {
                         return;
                     }
@@ -118,6 +120,7 @@ namespace SonarLint.Rules.Common
         protected abstract SyntaxNode GetLeft(TAssignmentExpression assignment);
         protected abstract SyntaxNode GetRight(TAssignmentExpression assignment);
         protected abstract SyntaxNode GetLeft(TBinaryExpression binary);
+        protected abstract bool AreEquivalent(SyntaxNode node1, SyntaxNode node2);
 
         protected abstract ImmutableArray<TLanguageKindEnum> SimpleAssignmentKinds { get; }
         protected abstract ImmutableArray<TLanguageKindEnum> CompoundAssignmentKinds { get; }

@@ -27,19 +27,19 @@ using SonarLint.Helpers;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class PropertyWriteOnlyBase : DiagnosticAnalyzer
+    public abstract class PropertyWriteOnlyBase : MultiLanguageDiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S2376";
-        internal const string Title = "Write-only properties should not be used";
-        internal const string Description =
+        protected const string DiagnosticId = "S2376";
+        protected const string Title = "Write-only properties should not be used";
+        protected const string Description =
             "Properties with only setters are confusing and counterintuitive. Instead, a property getter should be added if possible, " +
             "or the property should be replaced with a setter method.";
-        internal const string MessageFormat = "Provide a getter for \"{0}\" or replace the property with a \"Set{0}\" method.";
-        internal const string Category = Constants.SonarLint;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
+        protected const string MessageFormat = "Provide a getter for \"{0}\" or replace the property with a \"Set{0}\" method.";
+        protected const string Category = Constants.SonarLint;
+        protected const Severity RuleSeverity = Severity.Major;
+        protected const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
+        protected static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
@@ -55,6 +55,7 @@ namespace SonarLint.Rules.Common
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
+                GeneratedCodeRecognizer,
                 c =>
                 {
                     var prop = (TPropertyDeclaration)c.Node;

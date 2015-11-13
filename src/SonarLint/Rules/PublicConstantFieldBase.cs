@@ -28,21 +28,21 @@ using System.Collections.Generic;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class PublicConstantFieldBase : DiagnosticAnalyzer
+    public abstract class PublicConstantFieldBase : MultiLanguageDiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S2339";
-        internal const string Title = "Public constant members should not be used";
-        internal const string Description =
+        protected const string DiagnosticId = "S2339";
+        protected const string Title = "Public constant members should not be used";
+        protected const string Description =
             "Constant members are copied at compile time to the call sites, instead of being fetched at runtime. " +
             "This means that you should use constants to hold values that by definition will never change, such as " +
             "\"Zero\". In practice, those cases are uncommon, and therefore it is generally better to avoid constant " +
             "members.";
-        internal const string MessageFormat = "Change this constant to a {0} property.";
-        internal const string Category = Constants.SonarLint;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = false;
+        protected const string MessageFormat = "Change this constant to a {0} property.";
+        protected const string Category = Constants.SonarLint;
+        protected const Severity RuleSeverity = Severity.Major;
+        protected const bool IsActivatedByDefault = false;
 
-        internal static readonly DiagnosticDescriptor Rule =
+        protected static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
@@ -59,6 +59,7 @@ namespace SonarLint.Rules.Common
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
+                GeneratedCodeRecognizer,
                 c =>
                 {
                     var field = (TFieldDeclarationSyntax)c.Node;

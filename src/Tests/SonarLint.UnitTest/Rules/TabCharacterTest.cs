@@ -19,7 +19,8 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarLint.Rules;
+using CS = SonarLint.Rules.CSharp;
+using VB = SonarLint.Rules.VisualBasic;
 
 namespace SonarLint.UnitTest.Rules
 {
@@ -30,8 +31,8 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void TabCharacter()
         {
-            Verifier.VerifyAnalyzer(@"TestCases\TabCharacter.cs", new TabCharacter());
-            Verifier.VerifyAnalyzer(@"TestCases\TabCharacter.vb", new TabCharacter());
+            Verifier.VerifyAnalyzer(@"TestCases\TabCharacter.cs", new CS.TabCharacter());
+            Verifier.VerifyAnalyzer(@"TestCases\TabCharacter.vb", new VB.TabCharacter());
         }
     }
 }

@@ -27,11 +27,11 @@ using SonarLint.Helpers;
 
 namespace SonarLint.Rules
 {
-    public abstract class ParameterAssignedToBase : DiagnosticAnalyzer
+    public abstract class ParameterAssignedToBase : MultiLanguageDiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S1226";
-        internal const string Title = "Method parameters and caught exceptions should not be reassigned";
-        internal const string Description =
+        protected const string DiagnosticId = "S1226";
+        protected const string Title = "Method parameters and caught exceptions should not be reassigned";
+        protected const string Description =
             "While it is technically correct to assign to parameters from within method bodies, it is better to " +
             "use temporary variables to store intermediate results. This rule will typically detect cases where a " +
             "constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was " +
@@ -40,12 +40,12 @@ namespace SonarLint.Rules
             "going through the whole method. Moreover, some developers might also expect assignments of method " +
             "parameters to be visible from callers, which is not the case and can confuse them. All parameters " +
             "should be treated as read-only.";
-        internal const string MessageFormat = "Introduce a new variable instead of reusing the parameter \"{0}\".";
-        internal const string Category = Constants.SonarLint;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
+        protected const string MessageFormat = "Introduce a new variable instead of reusing the parameter \"{0}\".";
+        protected const string Category = Constants.SonarLint;
+        protected const Severity RuleSeverity = Severity.Major;
+        protected const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
+        protected static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
@@ -61,6 +61,7 @@ namespace SonarLint.Rules
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
+                GeneratedCodeRecognizer,
                 c =>
                 {
                     var assignment = (TAssignmentStatementSyntax)c.Node;

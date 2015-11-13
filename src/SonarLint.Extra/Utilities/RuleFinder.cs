@@ -23,7 +23,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Microsoft.CodeAnalysis.Diagnostics;
-using SonarLint.Rules;
 using SonarLint.Common;
 using Microsoft.CodeAnalysis;
 
@@ -33,14 +32,20 @@ namespace SonarLint.Utilities
     {
         private readonly List<Type> diagnosticAnalyzers;
 
-        public static Assembly GetPackagedRuleAssembly()
+        public static IEnumerable<Assembly> GetPackagedRuleAssemblies()
         {
-            return Assembly.LoadFrom(typeof(EmptyStatement).Assembly.Location);
+            return new[]
+            {
+                Assembly.LoadFrom(typeof(Rules.CSharp.FlagsEnumZeroMember).Assembly.Location),
+                Assembly.LoadFrom(typeof(Rules.VisualBasic.FlagsEnumZeroMember).Assembly.Location),
+                Assembly.LoadFrom(typeof(Rules.Common.FlagsEnumZeroMemberBase).Assembly.Location)
+            };
         }
 
         public RuleFinder()
         {
-            diagnosticAnalyzers = GetPackagedRuleAssembly().GetTypes()
+            diagnosticAnalyzers = GetPackagedRuleAssemblies()
+                .SelectMany(assembly => assembly.GetTypes())
                 .Where(t => t.IsSubclassOf(typeof (DiagnosticAnalyzer)))
                 .Where(t => t.GetCustomAttributes<RuleAttribute>().Any())
                 .ToList();

@@ -23,12 +23,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using CS = Microsoft.CodeAnalysis.CSharp;
-using VB = Microsoft.CodeAnalysis.VisualBasic;
 
 namespace SonarLint.Helpers
 {
@@ -38,13 +33,14 @@ namespace SonarLint.Helpers
 
         public static void RegisterSyntaxNodeActionInNonGenerated<TLanguageKindEnum>(
             this AnalysisContext context,
+            GeneratedCodeRecognizer generatedCodeRecognizer,
             Action<SyntaxNodeAnalysisContext> action,
             params TLanguageKindEnum[] syntaxKinds) where TLanguageKindEnum : struct
         {
             context.RegisterSyntaxNodeAction(
                 c =>
                 {
-                    if (!c.Node.SyntaxTree.IsGenerated(c.SemanticModel.Compilation))
+                    if (!c.Node.SyntaxTree.IsGenerated(generatedCodeRecognizer, c.SemanticModel.Compilation))
                     {
                         action(c);
                     }
@@ -54,6 +50,7 @@ namespace SonarLint.Helpers
 
         public static void RegisterSyntaxTreeActionInNonGenerated(
             this AnalysisContext context,
+            GeneratedCodeRecognizer generatedCodeRecognizer,
             Action<SyntaxTreeAnalysisContext> action)
         {
             context.RegisterCompilationStartAction(
@@ -62,7 +59,7 @@ namespace SonarLint.Helpers
                     csac.RegisterSyntaxTreeAction(
                         c =>
                         {
-                            if (!c.Tree.IsGenerated(csac.Compilation))
+                            if (!c.Tree.IsGenerated(generatedCodeRecognizer, csac.Compilation))
                             {
                                 action(c);
                             }
@@ -72,12 +69,13 @@ namespace SonarLint.Helpers
 
         public static void RegisterCodeBlockStartActionInNonGenerated<TLanguageKindEnum>(
             this AnalysisContext context,
+            GeneratedCodeRecognizer generatedCodeRecognizer,
             Action<CodeBlockStartAnalysisContext<TLanguageKindEnum>> action) where TLanguageKindEnum : struct
         {
             context.RegisterCodeBlockStartAction<TLanguageKindEnum>(
                 c =>
                 {
-                    if (!c.CodeBlock.SyntaxTree.IsGenerated(c.SemanticModel.Compilation))
+                    if (!c.CodeBlock.SyntaxTree.IsGenerated(generatedCodeRecognizer, c.SemanticModel.Compilation))
                     {
                         action(c);
                     }
@@ -88,27 +86,36 @@ namespace SonarLint.Helpers
 
         #region ReportDiagnosticIfNonGenerated
 
-        public static void ReportDiagnosticIfNonGenerated(this CompilationAnalysisContext context, Diagnostic diagnostic,
+        public static void ReportDiagnosticIfNonGenerated(
+            this CompilationAnalysisContext context,
+            GeneratedCodeRecognizer generatedCodeRecognizer,
+            Diagnostic diagnostic,
             Compilation compilation)
         {
-            if (!diagnostic.Location.SourceTree.IsGenerated(compilation))
+            if (!diagnostic.Location.SourceTree.IsGenerated(generatedCodeRecognizer, compilation))
             {
                 context.ReportDiagnostic(diagnostic);
             }
         }
 
-        public static void ReportDiagnosticIfNonGenerated(this SymbolAnalysisContext context, Diagnostic diagnostic,
+        public static void ReportDiagnosticIfNonGenerated(
+            this SymbolAnalysisContext context,
+            GeneratedCodeRecognizer generatedCodeRecognizer,
+            Diagnostic diagnostic,
             Compilation compilation)
         {
-            if (!diagnostic.Location.SourceTree.IsGenerated(compilation))
+            if (!diagnostic.Location.SourceTree.IsGenerated(generatedCodeRecognizer, compilation))
             {
                 context.ReportDiagnostic(diagnostic);
             }
         }
 
-        public static void ReportDiagnosticIfNonGenerated(this SymbolAnalysisContext context, Diagnostic diagnostic)
+        public static void ReportDiagnosticIfNonGenerated(
+            this SymbolAnalysisContext context,
+            GeneratedCodeRecognizer generatedCodeRecognizer,
+            Diagnostic diagnostic)
         {
-            context.ReportDiagnosticIfNonGenerated(diagnostic, context.Compilation);
+            context.ReportDiagnosticIfNonGenerated(generatedCodeRecognizer, diagnostic, context.Compilation);
         }
 
         #endregion
@@ -118,7 +125,9 @@ namespace SonarLint.Helpers
         private static readonly ConditionalWeakTable<Compilation, ConcurrentDictionary<SyntaxTree, bool>> Cache
             = new ConditionalWeakTable<Compilation, ConcurrentDictionary<SyntaxTree, bool>>();
 
-        private static bool IsGenerated(this SyntaxTree tree, Compilation compilation)
+        private static bool IsGenerated(this SyntaxTree tree,
+            GeneratedCodeRecognizer generatedCodeRecognizer,
+            Compilation compilation)
         {
             if (tree == null)
             {
@@ -133,115 +142,11 @@ namespace SonarLint.Helpers
                 return result;
             }
 
-            var generated = tree.HasGeneratedFileName() ||
-                            tree.HasAutoGeneratedComment() ||
-                            tree.HasGeneratedCodeAttribute();
+            var generated = generatedCodeRecognizer.IsGenerated(tree);
             cache.TryAdd(tree, generated);
             return generated;
         }
 
         #endregion
-
-        #region Utilities
-
-        private static readonly string[] GeneratedFileParts =
-            {
-                ".g.",
-                ".generated.",
-                ".designer.",
-                ".generated.",
-                "_generated.",
-                "temporarygeneratedfile_"
-            };
-        private static readonly string[] AutoGeneratedCommentParts =
-            {
-                "<auto-generated>",
-                "<autogenerated>"
-            };
-        private static readonly string[] GeneratedCodeAttributes =
-            {
-                "DebuggerNonUserCode",
-                "DebuggerNonUserCodeAttribute",
-                "GeneratedCode",
-                "GeneratedCodeAttribute",
-                "ExcludeFromCodeCoverage",
-                "ExcludeFromCodeCoverageAttribute",
-                "CompilerGenerated",
-                "CompilerGeneratedAttribute"
-            };
-
-        private static bool HasGeneratedFileName(this SyntaxTree tree)
-        {
-            if (string.IsNullOrEmpty(tree.FilePath))
-            {
-                return false;
-            }
-
-            var fileName = Path.GetFileName(tree.FilePath).ToLowerInvariant();
-            return GeneratedFileParts.Any(part => fileName.Contains(part));
-        }
-
-        private static bool HasAutoGeneratedComment(this SyntaxTree tree)
-        {
-            var root = tree.GetRoot();
-            if (root == null)
-            {
-                return false;
-            }
-
-            var firstToken = root.GetFirstToken(true);
-
-            if (!firstToken.HasLeadingTrivia)
-            {
-                return false;
-            }
-
-            var trivia = firstToken.LeadingTrivia;
-
-            var comments = trivia.Where(t => CommentKinds[t.Language].Contains(t.RawKind));
-            return comments.Any(t =>
-            {
-                var commentText = t.ToString().ToLowerInvariant();
-                return AutoGeneratedCommentParts.Any(part => commentText.Contains(part));
-            });
-        }
-
-        private static bool HasGeneratedCodeAttribute(this SyntaxTree tree)
-        {
-            var attributeNames = tree.GetRoot()
-                .DescendantNodesAndSelf()
-                .Select(
-                    node =>
-                    {
-                        var csAttribute = node as CS.Syntax.AttributeSyntax;
-                        if (csAttribute != null)
-                        {
-                            return csAttribute.Name.ToString();
-                        }
-
-                        var vbAttribute = node as VB.Syntax.AttributeSyntax;
-                        if (vbAttribute != null)
-                        {
-                            return vbAttribute.Name.ToString();
-                        }
-
-                        return null;
-                    })
-                .Where(name => name != null);
-
-            return attributeNames.Any(attributeName =>
-                GeneratedCodeAttributes.Any(generatedCodeAttribute =>
-                    attributeName.EndsWith(generatedCodeAttribute, StringComparison.InvariantCulture)));
-        }
-
-        #endregion
-
-        private static readonly MultiValueDictionary<string, int> CommentKinds =
-            new MultiValueDictionary<string, int>
-            {
-                { LanguageNames.CSharp, (int)CS.SyntaxKind.SingleLineCommentTrivia },
-                { LanguageNames.CSharp, (int)CS.SyntaxKind.MultiLineCommentTrivia },
-                { LanguageNames.VisualBasic, (int)VB.SyntaxKind.CommentTrivia }
-            };
     }
 }

@@ -27,18 +27,18 @@ using SonarLint.Helpers;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class PropertyGetterWithThrowBase : DiagnosticAnalyzer
+    public abstract class PropertyGetterWithThrowBase : MultiLanguageDiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S2372";
-        internal const string Title = "Exceptions should not be thrown from property getters";
-        internal const string Description =
+        protected const string DiagnosticId = "S2372";
+        protected const string Title = "Exceptions should not be thrown from property getters";
+        protected const string Description =
             "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method.";
-        internal const string MessageFormat = "Remove the exception throwing from this property getter, or refactor the property into a method.";
-        internal const string Category = Constants.SonarLint;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
+        protected const string MessageFormat = "Remove the exception throwing from this property getter, or refactor the property into a method.";
+        protected const string Category = Constants.SonarLint;
+        protected const Severity RuleSeverity = Severity.Major;
+        protected const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
+        protected static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
@@ -54,6 +54,7 @@ namespace SonarLint.Rules.Common
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterCodeBlockStartActionInNonGenerated<TLanguageKindEnum>(
+                GeneratedCodeRecognizer,
                 cbc =>
                 {
                     var propertyGetter = cbc.CodeBlock as TAccessorSyntax;

@@ -26,7 +26,6 @@ using System.Reflection;
 using System.Text;
 using System.Xml;
 using SonarLint.Common;
-using SonarLint.Rules;
 using SonarLint.Utilities;
 using Microsoft.CodeAnalysis;
 
@@ -148,7 +147,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
                 writer.WriteString(rule.Key);
                 writer.WriteEndElement();
 
-                if (rule.Key == CommentRegularExpression.DiagnosticId)
+                if (rule.Key == SonarLint.Rules.CSharp.CommentRegularExpression.DiagnosticId)
                 {
                     writer.WriteStartElement("Parameters");
                     {
@@ -157,7 +156,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
                         writer.WriteString("RuleKey");
                         writer.WriteEndElement();
                         writer.WriteStartElement("Value");
-                        writer.WriteString(string.Format(TemplateRuleIdPattern, CommentRegularExpression.DiagnosticId));
+                        writer.WriteString(string.Format(TemplateRuleIdPattern, SonarLint.Rules.CSharp.CommentRegularExpression.DiagnosticId));
                         writer.WriteEndElement();
                         writer.WriteEndElement();
                     }

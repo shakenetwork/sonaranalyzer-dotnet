@@ -26,22 +26,21 @@ using SonarLint.Common;
 using SonarLint.Helpers;
 using System.Collections.Generic;
 using Microsoft.CodeAnalysis.Text;
-using System;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class SingleStatementPerLineBase : DiagnosticAnalyzer
+    public abstract class SingleStatementPerLineBase : MultiLanguageDiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S122";
-        internal const string Title = "Statements should be on separate lines";
-        internal const string Description =
+        protected const string DiagnosticId = "S122";
+        protected const string Title = "Statements should be on separate lines";
+        protected const string Description =
             "For better readability, do not put more than one statement on a single line.";
-        internal const string MessageFormat = "Reformat the code to have only one statement per line.";
-        internal const string Category = Constants.SonarLint;
-        internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = true;
+        protected const string MessageFormat = "Reformat the code to have only one statement per line.";
+        protected const string Category = Constants.SonarLint;
+        protected const Severity RuleSeverity = Severity.Minor;
+        protected const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
+        protected static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
@@ -56,6 +55,7 @@ namespace SonarLint.Rules.Common
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxTreeActionInNonGenerated(
+                GeneratedCodeRecognizer,
                 c =>
                 {
                     var statements = GetStatements(c.Tree);

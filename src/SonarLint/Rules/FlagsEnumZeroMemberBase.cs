@@ -29,19 +29,19 @@ using System.Collections.Generic;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class FlagsEnumZeroMemberBase : DiagnosticAnalyzer
+    public abstract class FlagsEnumZeroMemberBase : MultiLanguageDiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S2346";
-        internal const string Title = "Flags enumerations zero-value members should be named \"None\"";
-        internal const string Description =
+        protected const string DiagnosticId = "S2346";
+        protected const string Title = "Flags enumerations zero-value members should be named \"None\"";
+        protected const string Description =
             "Consisitent use of \"None\" in flags enumerations indicates that all flag values are cleared. The value 0 should not be " +
             "used to indicate any other state, since there is no way to check that the bit 0 is set.";
-        internal const string MessageFormat = "Rename \"{0}\" to \"None\".";
-        internal const string Category = Constants.SonarLint;
-        internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = true;
+        protected const string MessageFormat = "Rename \"{0}\" to \"None\".";
+        protected const string Category = Constants.SonarLint;
+        protected const Severity RuleSeverity = Severity.Minor;
+        protected const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
+        protected static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
@@ -58,6 +58,7 @@ namespace SonarLint.Rules.Common
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
+                GeneratedCodeRecognizer,
                 c =>
                 {
                     var enumDeclaration = (TEnumDeclarationSyntax)c.Node;

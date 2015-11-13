@@ -27,18 +27,18 @@ using System.Linq;
 
 namespace SonarLint.Rules
 {
-    public abstract class EnumNameHasEnumSuffixBase : DiagnosticAnalyzer
+    public abstract class EnumNameHasEnumSuffixBase : MultiLanguageDiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S2344";
-        internal const string Title = "Enumeration type names should not have \"Flags\" or \"Enum\" suffixes";
-        internal const string Description =
+        protected const string DiagnosticId = "S2344";
+        protected const string Title = "Enumeration type names should not have \"Flags\" or \"Enum\" suffixes";
+        protected const string Description =
             "The information that an enumeration type is actually an enumeration or a set of flags should not be duplicated in its name.";
-        internal const string MessageFormat = "Rename this enumeration to remove the \"{0}\" suffix.";
-        internal const string Category = Constants.SonarLint;
-        internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = true;
+        protected const string MessageFormat = "Rename this enumeration to remove the \"{0}\" suffix.";
+        protected const string Category = Constants.SonarLint;
+        protected const Severity RuleSeverity = Severity.Minor;
+        protected const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
+        protected static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
@@ -55,6 +55,7 @@ namespace SonarLint.Rules
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
+                GeneratedCodeRecognizer,
                 c =>
                 {
                     var identifier = GetIdentifier(c.Node);

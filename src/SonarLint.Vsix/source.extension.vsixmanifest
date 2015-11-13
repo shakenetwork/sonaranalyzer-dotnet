@@ -17,10 +17,14 @@
     <InstallationTarget Version="[14.0,15.0)" Id="Microsoft.VisualStudio.Enterprise" />
   </Installation>
   <Dependencies>
-    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.6,)" />
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5.2,)" />
   </Dependencies>
   <Assets>
     <Asset Type="Microsoft.VisualStudio.Analyzer" d:Source="Project" d:ProjectName="SonarLint" Path="|SonarLint|" />
     <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" Path="|SonarLint|" d:ProjectName="SonarLint" />
+    <Asset Type="Microsoft.VisualStudio.Analyzer" d:Source="Project" d:ProjectName="SonarLint.CSharp" Path="|SonarLint.CSharp|" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="SonarLint.CSharp" Path="|SonarLint.CSharp|" />
+    <Asset Type="Microsoft.VisualStudio.Analyzer" d:Source="Project" d:ProjectName="SonarLint.VisualBasic" Path="|SonarLint.VisualBasic|" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="SonarLint.VisualBasic" Path="|SonarLint.VisualBasic|" />
   </Assets>
 </PackageManifest>

@@ -5,7 +5,7 @@ if not defined NUGET_PATH ( set NUGET_PATH=nuget )
 if not defined MSBUILD_PATH ( set MSBUILD_PATH=msbuild )
 
 rem delete Nuget packages (shouldn't be any)
-del /s /q %SolutionRoot%src*.nupkg 
+DEL /F /S /Q /A "%SolutionRoot%src\*.nupkg"
 
 rem call the normal build
 call %SolutionRoot%build\build.bat

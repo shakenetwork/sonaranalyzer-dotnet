@@ -28,22 +28,22 @@ using System.Collections.Generic;
 
 namespace SonarLint.Rules
 {
-    public abstract class FieldShouldNotBePublicBase : DiagnosticAnalyzer
+    public abstract class FieldShouldNotBePublicBase : MultiLanguageDiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S2357";
-        internal const string Title = "Fields should be private";
-        internal const string Description =
+        protected const string DiagnosticId = "S2357";
+        protected const string Title = "Fields should be private";
+        protected const string Description =
             "Fields should not be part of an API, and therefore should always be private. Indeed, they " +
             "cannot be added to an interface for instance, and validation cannot be added later on without " +
             "breaking backward compatiblity. Instead, developers should encapsulate their fields into " +
             "properties. Explicit property getters and setters can be introduced for validation purposes " +
             "or to smooth the transition to a newer system.";
-        internal const string MessageFormat = "Make \"{0}\" private.";
-        internal const string Category = Constants.SonarLint;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = false;
+        protected const string MessageFormat = "Make \"{0}\" private.";
+        protected const string Category = Constants.SonarLint;
+        protected const Severity RuleSeverity = Severity.Major;
+        protected const bool IsActivatedByDefault = false;
 
-        internal static readonly DiagnosticDescriptor Rule =
+        protected static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
@@ -68,25 +68,26 @@ namespace SonarLint.Rules
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
-                    c =>
-                    {
-                        var fieldDeclaration = (TFieldDeclarationSyntax)c.Node;
-                        var variables = GetVariables(fieldDeclaration);
+                GeneratedCodeRecognizer,
+                c =>
+                {
+                    var fieldDeclaration = (TFieldDeclarationSyntax)c.Node;
+                    var variables = GetVariables(fieldDeclaration);
 
-                        foreach (var variable in variables
-                            .Select(variableDeclaratorSyntax => new
-                            {
-                                Syntax = variableDeclaratorSyntax,
-                                Symbol = c.SemanticModel.GetDeclaredSymbol(variableDeclaratorSyntax) as IFieldSymbol
-                            })
-                            .Where(f => FieldIsRelevant(f.Symbol)))
+                    foreach (var variable in variables
+                        .Select(variableDeclaratorSyntax => new
                         {
-                            var identifier = GetIdentifier(variable.Syntax);
-                            c.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(),
-                                identifier.ValueText));
-                        }
-                    },
-                    SyntaxKindsOfInterest.ToArray());
+                            Syntax = variableDeclaratorSyntax,
+                            Symbol = c.SemanticModel.GetDeclaredSymbol(variableDeclaratorSyntax) as IFieldSymbol
+                        })
+                        .Where(f => FieldIsRelevant(f.Symbol)))
+                    {
+                        var identifier = GetIdentifier(variable.Syntax);
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(),
+                            identifier.ValueText));
+                    }
+                },
+                SyntaxKindsOfInterest.ToArray());
         }
 
         public abstract ImmutableArray<TLanguageKindEnum> SyntaxKindsOfInterest { get; }

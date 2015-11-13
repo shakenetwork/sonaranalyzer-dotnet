@@ -22,7 +22,9 @@
     </frameworkAssemblies>
   </metadata>
   <files>
-    <file src="bin\Release\*.dll" target="analyzers\dotnet" exclude="**\Microsoft.CodeAnalysis.*;**\System.Collections.Immutable.*;**\System.Reflection.Metadata.*;**\System.Composition.*" />
+    <file src="bin\Release\SonarLint.dll" target="analyzers" />
+    <file src="bin\Release\SonarLint.CSharp.dll" target="analyzers" />
+    <file src="bin\Release\SonarLint.VisualBasic.dll" target="analyzers" />
     <file src="tools\*.ps1" target="tools\" />
   </files>
 </package>

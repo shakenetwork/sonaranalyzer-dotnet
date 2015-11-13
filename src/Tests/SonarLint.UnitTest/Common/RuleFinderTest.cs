@@ -21,9 +21,9 @@
 using System.Linq;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarLint.Rules;
 using SonarLint.Utilities;
 using SonarLint.Common;
+using SonarLint.Rules.CSharp;
 
 namespace SonarLint.UnitTest.Common
 {
@@ -33,7 +33,7 @@ namespace SonarLint.UnitTest.Common
         [TestMethod]
         public void GetPackagedRuleAssembly()
         {
-            Assert.IsNotNull(RuleFinder.GetPackagedRuleAssembly());
+            Assert.AreEqual(3, RuleFinder.GetPackagedRuleAssemblies().Count());
         }
 
         [TestMethod]

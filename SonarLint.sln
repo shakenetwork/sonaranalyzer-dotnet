@@ -35,6 +35,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarLint.DocGenerator", "s
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{CCEE2C5C-96D9-4427-B980-71DC0A49E23F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarLint.CSharp", "src\SonarLint.CSharp\SonarLint.CSharp.csproj", "{39CCD086-A7F8-42A0-B402-3C9BD9EB4825}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarLint.VisualBasic", "SonarLint.VisualBasic\SonarLint.VisualBasic.csproj", "{01DF3CB0-2213-42F3-BB8E-0C3BC330DE7A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +81,14 @@ Global
 		{98EF48F7-28D7-44CA-8C7F-6042EA4898E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98EF48F7-28D7-44CA-8C7F-6042EA4898E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98EF48F7-28D7-44CA-8C7F-6042EA4898E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39CCD086-A7F8-42A0-B402-3C9BD9EB4825}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39CCD086-A7F8-42A0-B402-3C9BD9EB4825}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39CCD086-A7F8-42A0-B402-3C9BD9EB4825}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39CCD086-A7F8-42A0-B402-3C9BD9EB4825}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01DF3CB0-2213-42F3-BB8E-0C3BC330DE7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01DF3CB0-2213-42F3-BB8E-0C3BC330DE7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01DF3CB0-2213-42F3-BB8E-0C3BC330DE7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01DF3CB0-2213-42F3-BB8E-0C3BC330DE7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

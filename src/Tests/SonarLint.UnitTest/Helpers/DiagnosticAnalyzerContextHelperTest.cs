@@ -21,9 +21,10 @@
 using System.Linq;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarLint.Rules;
 using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.CodeAnalysis;
+using VB = SonarLint.Rules.VisualBasic;
+using CS = SonarLint.Rules.CSharp;
 
 namespace SonarLint.UnitTest.Helpers
 {
@@ -62,7 +63,7 @@ namespace SonarLint.UnitTest.Helpers
         }
     }
 }";
-            VerifyEmpty("test.g.cs", SourceCs, new EmptyStatement());
+            VerifyEmpty("test.g.cs", SourceCs, new CS.EmptyStatement());
 
             const string SourceVb =
 @"Module Module1
@@ -70,7 +71,7 @@ namespace SonarLint.UnitTest.Helpers
         Dim foo() As String ' Noncompliant
     End Sub
 End Module";
-            VerifyEmpty("test.g.vb", SourceVb, new ArrayDesignatorOnVariable());
+            VerifyEmpty("test.g.vb", SourceVb, new VB.ArrayDesignatorOnVariable());
         }
 
         [TestMethod]
@@ -96,7 +97,7 @@ namespace Generated
         }
     }
 }";
-            VerifyEmpty("test.cs", SourceCs, new EmptyStatement());
+            VerifyEmpty("test.cs", SourceCs, new CS.EmptyStatement());
 
             const string SourceVb =
 @"'------------------------------------------------------------------------------
@@ -113,7 +114,7 @@ Module Module1
         Dim foo() As String ' Noncompliant
     End Sub
 End Module";
-            VerifyEmpty("test.vb", SourceVb, new ArrayDesignatorOnVariable());
+            VerifyEmpty("test.vb", SourceVb, new VB.ArrayDesignatorOnVariable());
         }
 
         [TestMethod]
@@ -131,7 +132,7 @@ End Module";
         }
     }
 }";
-            VerifyEmpty("test.cs", SourceCs, new EmptyStatement());
+            VerifyEmpty("test.cs", SourceCs, new CS.EmptyStatement());
 
             const string SourceVb =
 @"Module Module1
@@ -140,7 +141,7 @@ End Module";
         Dim foo() As String ' Noncompliant
     End Sub
 End Module";
-            VerifyEmpty("test.vb", SourceVb, new ArrayDesignatorOnVariable());
+            VerifyEmpty("test.vb", SourceVb, new VB.ArrayDesignatorOnVariable());
         }
     }
 }

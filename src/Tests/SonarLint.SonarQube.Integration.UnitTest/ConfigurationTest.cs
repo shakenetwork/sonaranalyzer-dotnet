@@ -23,8 +23,8 @@ using System.Linq;
 using System.Xml.Linq;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarLint.Rules;
 using SonarLint.Runner;
+using SonarLint.Rules.CSharp;
 
 namespace SonarLint.UnitTest
 {

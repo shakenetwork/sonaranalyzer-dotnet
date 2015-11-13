@@ -27,21 +27,21 @@ using SonarLint.Helpers;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class SwitchWithoutDefaultBase : DiagnosticAnalyzer
+    public abstract class SwitchWithoutDefaultBase : MultiLanguageDiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S131";
-        internal const string Title = "\"switch/Select\" statements should end with a \"default/Case Else\" clause";
-        internal const string Description =
+        protected const string DiagnosticId = "S131";
+        protected const string Title = "\"switch/Select\" statements should end with a \"default/Case Else\" clause";
+        protected const string Description =
             "The requirement for a final \"default/Case Else\" clause is defensive programming. The clause should either " +
             "take appropriate action, or contain a suitable comment as to why no action is taken. Even when the " +
             "\"switch/Select\" covers all current values of an enumeration, a \"default/Case Else\" case should still be used because " +
             "there is no guarantee that the enumeration won't be extended.";
-        internal const string MessageFormat = "Add a \"{0}\" clause to this \"{1}\" statement.";
-        internal const string Category = Constants.SonarLint;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
+        protected const string MessageFormat = "Add a \"{0}\" clause to this \"{1}\" statement.";
+        protected const string Category = Constants.SonarLint;
+        protected const Severity RuleSeverity = Severity.Major;
+        protected const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
+        protected static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
@@ -56,6 +56,7 @@ namespace SonarLint.Rules.Common
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
+                GeneratedCodeRecognizer,
                 c =>
                 {
                     Diagnostic diagnostic = null;

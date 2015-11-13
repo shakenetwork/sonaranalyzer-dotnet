@@ -28,23 +28,26 @@ using System;
 
 namespace SonarLint.Common
 {
-    internal class DocumentBasedFixAllProvider : FixAllProvider
+    public class DocumentBasedFixAllProvider : FixAllProvider
     {
         #region Singleton implementation
-
-        private static readonly DocumentBasedFixAllProvider instance = new DocumentBasedFixAllProvider();
-
-        // Explicit static constructor to tell C# compiler
-        // not to mark type as beforefieldinit
-        static DocumentBasedFixAllProvider()
-        {
-        }
 
         private DocumentBasedFixAllProvider()
         {
         }
 
-        public static DocumentBasedFixAllProvider Instance => instance;
+        private class Nested
+        {
+            // Explicit static constructor to tell C# compiler
+            // not to mark type as beforefieldinit
+            static Nested()
+            {
+            }
+
+            internal static readonly DocumentBasedFixAllProvider instance = new DocumentBasedFixAllProvider();
+        }
+
+        public static DocumentBasedFixAllProvider Instance => Nested.instance;
 
         #endregion
 

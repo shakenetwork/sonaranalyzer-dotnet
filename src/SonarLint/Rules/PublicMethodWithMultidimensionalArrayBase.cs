@@ -27,20 +27,20 @@ using SonarLint.Helpers;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class PublicMethodWithMultidimensionalArrayBase : DiagnosticAnalyzer
+    public abstract class PublicMethodWithMultidimensionalArrayBase : MultiLanguageDiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S2368";
-        internal const string Title = "Public methods should not have multidimensional array parameters";
-        internal const string Description =
+        protected const string DiagnosticId = "S2368";
+        protected const string Title = "Public methods should not have multidimensional array parameters";
+        protected const string Description =
             "Exposing methods with multidimensional array parameters require developers to have advanced knowledge about the language in " +
             "order to be able to use them. Moreover, what exactly to pass to such parameters is not intuitive. Therefore, such methods " +
             "should not be exposed, but can be used internally.";
-        internal const string MessageFormat = "Make this method private or simplify its parameters to not use multidimensional arrays.";
-        internal const string Category = Constants.SonarLint;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
+        protected const string MessageFormat = "Make this method private or simplify its parameters to not use multidimensional arrays.";
+        protected const string Category = Constants.SonarLint;
+        protected const Severity RuleSeverity = Severity.Major;
+        protected const bool IsActivatedByDefault = true;
 
-        internal static readonly DiagnosticDescriptor Rule =
+        protected static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
@@ -68,6 +68,7 @@ namespace SonarLint.Rules.Common
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
+                GeneratedCodeRecognizer,
                 c =>
                 {
                     var method = (TMethodSyntax)c.Node;
