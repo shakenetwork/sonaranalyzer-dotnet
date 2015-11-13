@@ -23,7 +23,7 @@ using System.Collections.Generic;
 
 namespace SonarLint.Common
 {
-    public class MultiValueDictionary<TKey, TValue> : Dictionary<TKey, ICollection<TValue>>
+    internal class MultiValueDictionary<TKey, TValue> : Dictionary<TKey, ICollection<TValue>>
     {
         public static MultiValueDictionary<TKey, TValue> Create<TUnderlying>()
             where TUnderlying : ICollection<TValue>, new()
@@ -69,9 +69,9 @@ namespace SonarLint.Common
 
     #region Extensions
 
-    public static class MultiValueDictionaryExtensions
+    internal static class MultiValueDictionaryExtensions
     {
-        public static MultiValueDictionary<TKey, TElement> ToMultiValueDictionary<TSource, TKey, TElement>(
+        internal static MultiValueDictionary<TKey, TElement> ToMultiValueDictionary<TSource, TKey, TElement>(
             this IEnumerable<TSource> source,
             Func<TSource, TKey> keySelector,
             Func<TSource, ICollection<TElement>> elementSelector)
