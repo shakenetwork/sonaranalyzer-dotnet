@@ -33,20 +33,25 @@ namespace SonarLint.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [SqaleConstantRemediation("5min")]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Convention)]
     public class MethodName : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S100";
-        internal const string Description = "Method name should comply with a naming convention";
+        internal const string Title = "Method name should comply with a naming convention";
+        internal const string Description =
+            "Shared naming conventions allow teams to collaborate efficiently. This rule checks that all method names match a provided " +
+            "regular expression.";
         internal const string MessageFormat = "Rename this method \"{1}\" to match the regular expression {0}";
         internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault);
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
+                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
+                helpLinkUri: DiagnosticId.GetHelpLink(),
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

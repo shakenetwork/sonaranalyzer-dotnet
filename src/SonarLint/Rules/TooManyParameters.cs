@@ -32,20 +32,25 @@ namespace SonarLint.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.UnitTestability)]
     [SqaleConstantRemediation("20min")]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.BrainOverload)]
     public class TooManyParameters : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S107";
-        internal const string Description = "Methods should not have too many parameters";
+        internal const string Title = "Methods should not have too many parameters";
+        internal const string Description =
+            "A long parameter list can indicate that a new structure should be created to wrap the numerous parameters or that the function is doing " +
+            "too many things.";
         internal const string MessageFormat = "Method \"{2}\" has {1} parameters, which is greater than the {0} authorized.";
         internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault);
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
+                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
+                helpLinkUri: DiagnosticId.GetHelpLink(),
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

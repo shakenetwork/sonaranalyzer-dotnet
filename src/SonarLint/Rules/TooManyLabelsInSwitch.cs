@@ -33,20 +33,25 @@ namespace SonarLint.Rules
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.DataChangeability)]
     [SqaleConstantRemediation("30min")]
-    [Rule(DiagnosticId, RuleSeverity, Description, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.BrainOverload)]
     public class TooManyLabelsInSwitch : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1479";
-        internal const string Description = "\"switch\" statements should not have too many \"case\" clauses";
+        internal const string Title = "\"switch\" statements should not have too many \"case\" clauses";
+        internal const string Description =
+            "When \"switch\" statements have a large set of \"case\" clauses, it is usually an attempt to map two sets of data. A real map structure " +
+            "would be more readable and maintainable, and should be used instead.";
         internal const string MessageFormat = "Reduce the number of switch cases from {1} to at most {0}.";
         internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Description, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault);
+            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
+                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
+                helpLinkUri: DiagnosticId.GetHelpLink(),
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
