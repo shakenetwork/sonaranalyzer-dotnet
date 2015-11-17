@@ -33,6 +33,11 @@ namespace SonarLint.Common.CSharp
     {
         public Metrics(SyntaxTree tree) : base(tree)
         {
+            var root = tree.GetRoot();
+            if (root.Language != LanguageNames.CSharp)
+            {
+                throw new ArgumentException(InitalizationErrorTextPattern, nameof(tree));
+            }
         }
         protected override Func<string, bool> HasValidCommentContent => line => line.Any(char.IsLetter);
         protected override Func<SyntaxToken, bool> IsEndOfFile => token => token.IsKind(SyntaxKind.EndOfFileToken);
@@ -49,13 +54,7 @@ namespace SonarLint.Common.CSharp
         protected override IEnumerable<SyntaxNode> GetPublicApiNodes()
         {
             var root = tree.GetRoot();
-            if (root.Language == LanguageNames.VisualBasic)
-            {
-                return new SyntaxNode[0];
-            }
-
             var publicNodes = ImmutableArray.CreateBuilder<SyntaxNode>();
-
             var toVisit = new Stack<SyntaxNode>();
 
             var members = root.ChildNodes()

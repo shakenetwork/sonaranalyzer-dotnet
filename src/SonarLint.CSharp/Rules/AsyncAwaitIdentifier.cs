@@ -76,10 +76,10 @@ namespace SonarLint.Rules.CSharp
 
         private static IEnumerable<SyntaxToken> GetAsyncOrAwaitTokens(SyntaxNode node)
         {
-            return from token in node.DescendantTokens()
-                   where token.IsKind(SyntaxKind.IdentifierToken) &&
-                   AsyncOrAwait.Contains(token.ToString())
-                   select token;
+            return node.DescendantTokens()
+                .Where(token =>
+                    token.IsKind(SyntaxKind.IdentifierToken) &&
+                    AsyncOrAwait.Contains(token.ToString()));
         }
     }
 }

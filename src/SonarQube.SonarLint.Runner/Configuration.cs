@@ -168,22 +168,20 @@ namespace SonarLint.Runner
 
         private void AddAnalyzerCommentRegularExpression(ImmutableArray<DiagnosticAnalyzer>.Builder builder)
         {
-            if (!AnalyzerIds.Contains(Rules.CSharp.CommentRegularExpression.DiagnosticId))
+            if (!AnalyzerIds.Contains(Rules.CSharp.CommentRegularExpression.TemplateDiagnosticId))
             {
                 return;
             }
-            var rules = ImmutableArray.CreateBuilder<CommentRegularExpressionRule>();
-            foreach (var parameterValues in parameters.Where(p => p.RuleId == CommentRegularExpression.DiagnosticId).Select(p=>p.ParameterValues))
+            var rules = ImmutableArray.CreateBuilder<CommentRegularExpression.CommentRegularExpressionRule>();
+            foreach (var parameterValues in parameters
+                .Where(p => p.RuleId == CommentRegularExpression.TemplateDiagnosticId)
+                .Select(p => p.ParameterValues))
             {
                 rules.Add(
-                    new CommentRegularExpressionRule
-                    {
-                        // TODO: Add rule description
-                        Descriptor = CommentRegularExpression.CreateDiagnosticDescriptor(
-                            parameterValues.Single(pv =>pv.ParameterKey == "RuleKey").ParameterValue,
-                            parameterValues.Single(pv => pv.ParameterKey == "message").ParameterValue),
-                        RegularExpression = parameterValues.Single(pv => pv.ParameterKey == "regularExpression").ParameterValue
-                    });
+                    new CommentRegularExpression.CommentRegularExpressionRule(
+                        parameterValues.Single(pv => pv.ParameterKey == "RuleKey").ParameterValue,
+                        parameterValues.Single(pv => pv.ParameterKey == "regularExpression").ParameterValue,
+                        parameterValues.Single(pv => pv.ParameterKey == "message").ParameterValue));
             }
             var analyzer = new CommentRegularExpression {RuleInstances = rules.ToImmutable()};
             builder.Add(analyzer);

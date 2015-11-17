@@ -32,6 +32,11 @@ namespace SonarLint.Common.VisualBasic
     {
         public Metrics(SyntaxTree tree) : base(tree)
         {
+            var root = tree.GetRoot();
+            if (root.Language != LanguageNames.VisualBasic)
+            {
+                throw new ArgumentException(InitalizationErrorTextPattern, nameof(tree));
+            }
         }
 
         protected override Func<string, bool> HasValidCommentContent => line => (line.Any(char.IsLetter) || line.Any(char.IsDigit));

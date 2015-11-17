@@ -30,35 +30,47 @@ using SonarLint.Helpers;
 
 namespace SonarLint.Rules.CSharp
 {
-    public class CommentRegularExpressionRule : IRuleTemplateInstance
-    {
-        public DiagnosticDescriptor Descriptor { get; set; }
-
-        [RuleParameter("regularExpression", PropertyType.String, "The regular expression")]
-        public string RegularExpression { get; set; }
-
-        [RuleParameter("message", PropertyType.String, "The issue message", MessageFormat)]
-        public string Message { get; set; }
-
-        private const string MessageFormat = "The regular expression matches this comment.";
-    }
-
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [NoSqaleRemediation]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    public class CommentRegularExpression : DiagnosticAnalyzer, IRuleTemplate<CommentRegularExpressionRule>
+    [Rule(TemplateDiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
+    public class CommentRegularExpression : DiagnosticAnalyzer, IRuleTemplate<CommentRegularExpression.CommentRegularExpressionRule>
     {
-        public const string DiagnosticId = "S124";
+        public sealed class CommentRegularExpressionRule : IRuleTemplateInstance
+        {
+            public CommentRegularExpressionRule(string diagnosticId, string regularExpression, string message)
+            {
+                DiagnosticId = diagnosticId;
+                RegularExpression = regularExpression;
+                Message = message;
+
+                descriptor = new DiagnosticDescriptor(DiagnosticId, Title, Message, Category,
+                    RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault);
+            }
+            public CommentRegularExpressionRule(string diagnosticId, string regularExpression)
+                : this(diagnosticId, regularExpression, DefaultMessage)
+            {
+            }
+
+            private readonly DiagnosticDescriptor descriptor;
+            public DiagnosticDescriptor Descriptor => descriptor;
+
+            public string DiagnosticId { get; private set; }
+
+            [RuleParameter("regularExpression", PropertyType.String, "The regular expression")]
+            public string RegularExpression { get; private set; }
+
+            [RuleParameter("message", PropertyType.String, "The issue message", DefaultMessage)]
+            public string Message { get; private set; }
+
+            private const string DefaultMessage = "The regular expression matches this comment.";
+        }
+
+
+        public const string TemplateDiagnosticId = "S124";
         internal const string Title = "Comments matching a regular expression should be handled";
         internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = false;
-
-        public static DiagnosticDescriptor CreateDiagnosticDescriptor(string diagnosticId, string messageFormat)
-        {
-            return new DiagnosticDescriptor(diagnosticId, Title, messageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault);
-        }
 
         public IImmutableList<CommentRegularExpressionRule> RuleInstances { get; set; }
 
@@ -83,9 +95,8 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
-                    var comments = from t in c.Tree.GetCompilationUnitRoot().DescendantTrivia()
-                                    where IsComment(t)
-                                    select t;
+                    var comments = c.Tree.GetCompilationUnitRoot().DescendantTrivia()
+                        .Where(trivia => IsComment(trivia));
 
                     foreach (var comment in comments)
                     {

@@ -36,12 +36,10 @@ namespace SonarLint.Common
         {
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("SonarLint", "S1118:Utility classes should not have public constructors", 
+            Justification = "Nested private class for lazy singleton instantiation")]
         private class Nested
         {
-            private Nested()
-            {
-            }
-
             // Explicit static constructor to tell C# compiler
             // not to mark type as beforefieldinit
             static Nested()

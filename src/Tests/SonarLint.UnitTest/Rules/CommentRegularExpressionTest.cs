@@ -32,14 +32,12 @@ namespace SonarLint.UnitTest.Rules
         public void CommentRegularExpression()
         {
             var rules = ImmutableArray.Create(
-                new CommentRegularExpressionRule
-                {
-                    Descriptor = SonarLint.Rules.CSharp.CommentRegularExpression.CreateDiagnosticDescriptor("id1", ""),
-                    RegularExpression = "(?i)TODO"
-                });
+                new CommentRegularExpression.CommentRegularExpressionRule(
+                    "id1",
+                    "(?i)TODO"));
 
-            var diagnostic = new CommentRegularExpression {RuleInstances = rules};
-            Verifier.VerifyAnalyzer(@"TestCases\CommentRegularExpression.cs", diagnostic);
+            var analyzer = new CommentRegularExpression { RuleInstances = rules };
+            Verifier.VerifyAnalyzer(@"TestCases\CommentRegularExpression.cs", analyzer);
         }
     }
 }

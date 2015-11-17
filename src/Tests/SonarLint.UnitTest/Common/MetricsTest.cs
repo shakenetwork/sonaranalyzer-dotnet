@@ -138,7 +138,7 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
             CommentsWithoutHeaders(AnalyzerLanguage.VisualBasic, "Imports System ' nosonar").NoSonar.Should().BeEquivalentTo();
             CommentsWithoutHeaders(AnalyzerLanguage.VisualBasic, "Imports System ' nOSonAr").NoSonar.Should().BeEquivalentTo();
 
-            CommentsWithoutHeaders(AnalyzerLanguage.VisualBasic, "Imports System ' fndskgjsdkl \n ' {00000000-0000-0000-0000-000000000000}\n").NonBlank.Should().BeEquivalentTo(1,2);
+            CommentsWithoutHeaders(AnalyzerLanguage.VisualBasic, "Imports System ' fndskgjsdkl \n ' {00000000-0000-0000-0000-000000000000}\n").NonBlank.Should().BeEquivalentTo(1, 2);
         }
 
         private static FileComments CommentsWithoutHeaders(AnalyzerLanguage language, string text)
@@ -539,6 +539,20 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
             return language == AnalyzerLanguage.CSharp
                 ? (MetricsBase)new SonarLint.Common.CSharp.Metrics(CSharpSyntaxTree.ParseText(text))
                 : new SonarLint.Common.VisualBasic.Metrics(VisualBasicSyntaxTree.ParseText(text));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void WrongMetrics_CSharp()
+        {
+            new SonarLint.Common.CSharp.Metrics(VisualBasicSyntaxTree.ParseText(""));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void WrongMetrics_VisualBasic()
+        {
+            new SonarLint.Common.VisualBasic.Metrics(CSharpSyntaxTree.ParseText(""));
         }
     }
 }

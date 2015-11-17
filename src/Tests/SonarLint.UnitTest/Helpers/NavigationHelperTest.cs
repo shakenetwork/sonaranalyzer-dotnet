@@ -127,6 +127,13 @@ namespace Test
             sections.Last().GetPrecedingSections().First().ShouldBeEquivalentTo(sections.First());
         }
 
+        [TestMethod]
+        public void GetPrecedingSections_Empty()
+        {
+            var sections = ifMethod.DescendantNodes().OfType<SwitchSectionSyntax>().ToList();
+
+            sections.FirstOrDefault().GetPrecedingSections().Should().HaveCount(0);
+        }
 
         [TestMethod]
         public void GetPrecedingStatement()

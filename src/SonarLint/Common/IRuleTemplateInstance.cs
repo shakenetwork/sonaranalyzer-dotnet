@@ -24,6 +24,6 @@ namespace SonarLint.Common
 {
     public interface IRuleTemplateInstance
     {
-        DiagnosticDescriptor Descriptor { get; set; }
+        DiagnosticDescriptor Descriptor { get; }
     }
 }

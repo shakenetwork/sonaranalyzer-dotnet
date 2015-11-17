@@ -40,7 +40,11 @@ namespace Tests.TestCases
             }
             if (a == c) // Compliant, c might be updated in the previous if
             {
-
+                ++c;
+            }
+            if (a == c) // Compliant, c might be updated in the previous if
+            {
+                ++c;
             }
 
         }

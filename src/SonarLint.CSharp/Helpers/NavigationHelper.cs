@@ -67,9 +67,7 @@ namespace SonarLint.Helpers
             }
 
             var switchStatement = (SwitchStatementSyntax)caseStatement.Parent;
-
             var currentSectionIndex = switchStatement.Sections.IndexOf(caseStatement);
-
             return switchStatement.Sections.Take(currentSectionIndex);
         }
 

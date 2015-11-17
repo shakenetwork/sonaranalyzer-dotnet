@@ -30,6 +30,7 @@ namespace SonarLint.Common
     public abstract class MetricsBase
     {
         protected readonly SyntaxTree tree;
+        protected const string InitalizationErrorTextPattern = "The input tree is not of the expected language.";
 
         protected MetricsBase(SyntaxTree tree)
         {
