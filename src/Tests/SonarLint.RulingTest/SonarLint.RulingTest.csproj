@@ -587,7 +587,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\SonarLint.VisualBasic\SonarLint.VisualBasic.csproj">
+    <ProjectReference Include="..\..\SonarLint.VisualBasic\SonarLint.VisualBasic.csproj">
       <Project>{01df3cb0-2213-42f3-bb8e-0c3bc330de7a}</Project>
       <Name>SonarLint.VisualBasic</Name>
     </ProjectReference>

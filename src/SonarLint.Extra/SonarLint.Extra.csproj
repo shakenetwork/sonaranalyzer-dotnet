@@ -108,7 +108,7 @@
     <Analyzer Include="..\..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\SonarLint.VisualBasic\SonarLint.VisualBasic.csproj">
+    <ProjectReference Include="..\SonarLint.VisualBasic\SonarLint.VisualBasic.csproj">
       <Project>{01df3cb0-2213-42f3-bb8e-0c3bc330de7a}</Project>
       <Name>SonarLint.VisualBasic</Name>
     </ProjectReference>
