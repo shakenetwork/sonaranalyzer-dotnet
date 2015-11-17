@@ -74,7 +74,7 @@ namespace SonarLint.Rules.CSharp
                         prevStartPosition.Line == opStartPosition.Line &&
                         prevStartPosition.Character == opStartPosition.Character - 1)
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, opLocation, string.Format("{0}=", op.Text)));
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, opLocation, $"{op.Text}="));
                     }
                 },
                 SyntaxKind.UnaryMinusExpression,

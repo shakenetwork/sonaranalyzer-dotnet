@@ -84,12 +84,12 @@ namespace SonarLint.Rules.CSharp
                     }
 
                     var incrementedVariables = string.Join(",", incrementedSymbols
-                        .Select(s => string.Format("\"{0}\"", s.Name))
+                        .Select(s => $"\"{s.Name}\"")
                         .OrderBy(s => s));
                     if (conditionSymbols.Any())
                     {
                         var conditionVariables = string.Join(",", conditionSymbols
-                            .Select(s => string.Format("\"{0}\"", s.Name))
+                            .Select(s => $"\"{s.Name}\"")
                             .OrderBy(s => s));
                         c.ReportDiagnostic(Diagnostic.Create(Rule, forNode.Condition.GetLocation(),
                             string.Format(CultureInfo.InvariantCulture, MessageFormatNotEmpty, conditionVariables, incrementedVariables)));

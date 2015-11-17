@@ -104,7 +104,7 @@ namespace SonarLint.Rules.CSharp
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, usingStatement.UsingKeyword.GetLocation(),
                             string.Join(", ",
-                                returnedSymbols.Select(s => string.Format("\"{0}\"", s.Name)).OrderBy(s => s))));
+                                returnedSymbols.Select(s => $"\"{s.Name}\"").OrderBy(s => s))));
                     }
                 },
                 SyntaxKind.UsingStatement);

@@ -72,8 +72,8 @@ namespace SonarLint.DocGenerator
         public const string HelpLinkPattern = "#version={0}&ruleId={1}";
         private static string AddLinksBetweenRulesToDescription(string description, string productVersion)
         {
-            var urlRegexPattern = string.Format(HelpLinkPattern, productVersion, "$2");
-            var linkPattern = string.Format("<a class=\"rule-link\" href=\"{0}\">{1}</a>", urlRegexPattern, "$1$2");
+            var urlRegexPattern = string.Format(HelpLinkPattern, productVersion, @"$2");
+            var linkPattern = $"<a class=\"rule-link\" href=\"{urlRegexPattern}\">{"$1$2"}</a>";
             return Regex.Replace(description, CrosslinkPattern, linkPattern);
         }
         private static string GetParameterDescription(IList<RuleParameter> parameters)

@@ -166,7 +166,7 @@ namespace SonarLint.UnitTest
                 : LanguageNames.VisualBasic;
 
             return workspace.CurrentSolution.AddProject(assemblyName,
-                    string.Format("{0}.dll", assemblyName), language)
+                    $"{assemblyName}.dll", language)
                 .AddMetadataReference(MetadataReference.CreateFromFile(typeof(object).Assembly.Location))
                 .AddMetadataReference(MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location))
                 .AddDocument(file.Name, File.ReadAllText(file.FullName, Encoding.UTF8));
@@ -191,7 +191,7 @@ namespace SonarLint.UnitTest
 
                 var compilationWithOptions = compilation.WithOptions(compilationOptions);
                 var compilationWithAnalyzer = compilationWithOptions
-                    .WithAnalyzers(ImmutableArray.Create(diagnosticAnalyzer), null, tokenSource.Token);
+                    .WithAnalyzers(ImmutableArray.Create(diagnosticAnalyzer), cancellationToken: tokenSource.Token);
 
                 return compilationWithAnalyzer.GetAnalyzerDiagnosticsAsync().Result
                     .Where(diag => diag.Id == diagnosticAnalyzer.SupportedDiagnostics.Single().Id);

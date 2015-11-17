@@ -110,40 +110,5 @@ namespace SonarLint.Helpers
 
         protected abstract bool IsTriviaComment(SyntaxTrivia trivia);
         protected abstract string GetAttributeName(SyntaxNode node);
-        /*
-        var csAttribute = node as CS.Syntax.AttributeSyntax;
-                        if (csAttribute != null)
-                        {
-                            return csAttribute.Name.ToString();
-                        }
-
-                        var vbAttribute = node as VB.Syntax.AttributeSyntax;
-                        if (vbAttribute != null)
-                        {
-                            return vbAttribute.Name.ToString();
-                        }
-
-                        return string.Empty;
-            */
-
-        //private static readonly IDictionary<string, IEnumerable<int>> CommentKinds =
-        //    new Dictionary<string, IEnumerable<int>>
-        //    {
-        //        {
-        //            LanguageNames.CSharp,
-        //            new []
-        //            {
-        //                (int)CS.SyntaxKind.SingleLineCommentTrivia,
-        //                (int)CS.SyntaxKind.MultiLineCommentTrivia
-        //            }
-        //        },
-        //        {
-        //            LanguageNames.VisualBasic,
-        //            new []
-        //            {
-        //                (int)VB.SyntaxKind.CommentTrivia
-        //            }
-        //        }
-        //    };
     }
 }

@@ -66,71 +66,77 @@ namespace SonarLint.Rules.CSharp
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c =>
-                {
-                    var enumDeclaration = (EnumDeclarationSyntax)c.Node;
-                    if (enumDeclaration.BaseList == null ||
-                        enumDeclaration.BaseList.Types.Count == 0)
-                    {
-                        return;
-                    }
-
-                    var baseTypeSyntax = enumDeclaration.BaseList.Types.First().Type;
-                    var baseTypeSymbol = c.SemanticModel.GetSymbolInfo(baseTypeSyntax).Symbol as ITypeSymbol;
-                    if (baseTypeSymbol == null ||
-                        baseTypeSymbol.SpecialType != SpecialType.System_Int32)
-                    {
-                        return;
-                    }
-
-                    c.ReportDiagnostic(Diagnostic.Create(Rule, enumDeclaration.BaseList.GetLocation(),
-                        ImmutableDictionary<string, string>.Empty.Add(RedundantIndexKey, "0"),
-                        MessageEnum));
-                },
+                c => CheckEnum(c),
                 SyntaxKind.EnumDeclaration);
 
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c =>
-                {
-                    var interfaceDeclaration = (InterfaceDeclarationSyntax)c.Node;
-                    if (interfaceDeclaration.BaseList == null ||
-                        interfaceDeclaration.BaseList.Types.Count == 0)
-                    {
-                        return;
-                    }
-
-                    CheckIfInterfaceIsRedundantForInterface(c, interfaceDeclaration);
-                },
+                c => CheckInterface(c),
                 SyntaxKind.InterfaceDeclaration);
 
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c =>
-                {
-                    var classDeclaration = (ClassDeclarationSyntax)c.Node;
-                    if (classDeclaration.BaseList == null ||
-                        classDeclaration.BaseList.Types.Count == 0)
-                    {
-                        return;
-                    }
-
-                    var baseTypeSyntax = classDeclaration.BaseList.Types.First().Type;
-                    var baseTypeSymbol = c.SemanticModel.GetSymbolInfo(baseTypeSyntax).Symbol as ITypeSymbol;
-                    if (baseTypeSymbol == null)
-                    {
-                        return;
-                    }
-
-                    if (baseTypeSymbol.SpecialType == SpecialType.System_Object)
-                    {
-                        var location = GetLocationWithToken(baseTypeSyntax, classDeclaration.BaseList.Types);
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, location,
-                            ImmutableDictionary<string, string>.Empty.Add(RedundantIndexKey, "0"),
-                            MessageObjectBase));
-                    }
-
-                    CheckIfInterfaceIsRedundantForClass(c, classDeclaration);
-                },
+                c => CheckClass(c),
                 SyntaxKind.ClassDeclaration);
+        }
+
+        private static void CheckClass(SyntaxNodeAnalysisContext c)
+        {
+            var classDeclaration = (ClassDeclarationSyntax)c.Node;
+            if (classDeclaration.BaseList == null ||
+                classDeclaration.BaseList.Types.Count == 0)
+            {
+                return;
+            }
+
+            var baseTypeSyntax = classDeclaration.BaseList.Types.First().Type;
+            var baseTypeSymbol = c.SemanticModel.GetSymbolInfo(baseTypeSyntax).Symbol as ITypeSymbol;
+            if (baseTypeSymbol == null)
+            {
+                return;
+            }
+
+            if (baseTypeSymbol.SpecialType == SpecialType.System_Object)
+            {
+                var location = GetLocationWithToken(baseTypeSyntax, classDeclaration.BaseList.Types);
+                c.ReportDiagnostic(Diagnostic.Create(Rule, location,
+                    ImmutableDictionary<string, string>.Empty.Add(RedundantIndexKey, "0"),
+                    MessageObjectBase));
+            }
+
+            CheckIfInterfaceIsRedundantForClass(c, classDeclaration);
+        }
+
+        private static void CheckInterface(SyntaxNodeAnalysisContext c)
+        {
+            var interfaceDeclaration = (InterfaceDeclarationSyntax)c.Node;
+            if (interfaceDeclaration.BaseList == null ||
+                interfaceDeclaration.BaseList.Types.Count == 0)
+            {
+                return;
+            }
+
+            CheckIfInterfaceIsRedundantForInterface(c, interfaceDeclaration);
+        }
+
+        private static void CheckEnum(SyntaxNodeAnalysisContext c)
+        {
+            var enumDeclaration = (EnumDeclarationSyntax)c.Node;
+            if (enumDeclaration.BaseList == null ||
+                enumDeclaration.BaseList.Types.Count == 0)
+            {
+                return;
+            }
+
+            var baseTypeSyntax = enumDeclaration.BaseList.Types.First().Type;
+            var baseTypeSymbol = c.SemanticModel.GetSymbolInfo(baseTypeSyntax).Symbol as ITypeSymbol;
+            if (baseTypeSymbol == null ||
+                baseTypeSymbol.SpecialType != SpecialType.System_Int32)
+            {
+                return;
+            }
+
+            c.ReportDiagnostic(Diagnostic.Create(Rule, enumDeclaration.BaseList.GetLocation(),
+                ImmutableDictionary<string, string>.Empty.Add(RedundantIndexKey, "0"),
+                MessageEnum));
         }
 
         private static void CheckIfInterfaceIsRedundantForInterface(SyntaxNodeAnalysisContext c, InterfaceDeclarationSyntax interfaceDeclaration)

@@ -135,7 +135,7 @@ namespace SonarLint.Runner
                         convertedValue = int.Parse(value, NumberStyles.None, CultureInfo.InvariantCulture);
                         break;
                     default:
-                        throw new NotImplementedException();
+                        throw new NotSupportedException();
                 }
 
                 propertyParameterPair.Property.SetValue(parameteredAnalyzer, convertedValue);

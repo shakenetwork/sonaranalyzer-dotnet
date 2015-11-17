@@ -73,49 +73,53 @@ namespace SonarLint.Rules.CSharp
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c =>
-                {
-                    var equals = (BinaryExpressionSyntax) c.Node;
-                    var equalitySymbol = c.SemanticModel.GetSymbolInfo(equals).Symbol as IMethodSymbol;
-
-                    if (equalitySymbol != null &&
-                        equalitySymbol.ContainingType != null &&
-                        FloatingPointTypes.Contains(equalitySymbol.ContainingType.SpecialType) &&
-                        EqualityOperators.Contains(equalitySymbol.Name))
-                    {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, equals.OperatorToken.GetLocation()));
-                    }
-                },
+                c => CheckEquality(c),
                 SyntaxKind.EqualsExpression,
                 SyntaxKind.NotEqualsExpression);
 
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c =>
-                {
-                    var binaryExpression = (BinaryExpressionSyntax) c.Node;
-                    var left = TryGetBinaryExpression(binaryExpression.Left);
-                    var right = TryGetBinaryExpression(binaryExpression.Right);
-
-                    if (right == null || left == null)
-                    {
-                        return;
-                    }
-
-                    var eqRight = EquivalenceChecker.AreEquivalent(right.Right, left.Right);
-                    var eqLeft = EquivalenceChecker.AreEquivalent(right.Left, left.Left);
-                    if (!eqRight || !eqLeft)
-                    {
-                        return;
-                    }
-
-                    if (IsIndirectEquality(binaryExpression, right, left, c) ||
-                        IsIndirectInequality(binaryExpression, right, left, c))
-                    {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, binaryExpression.GetLocation()));
-                    }
-                },
+                c => CheckLogicalExpression(c),
                 SyntaxKind.LogicalAndExpression,
                 SyntaxKind.LogicalOrExpression);
+        }
+
+        private static void CheckLogicalExpression(SyntaxNodeAnalysisContext c)
+        {
+            var binaryExpression = (BinaryExpressionSyntax)c.Node;
+            var left = TryGetBinaryExpression(binaryExpression.Left);
+            var right = TryGetBinaryExpression(binaryExpression.Right);
+
+            if (right == null || left == null)
+            {
+                return;
+            }
+
+            var eqRight = EquivalenceChecker.AreEquivalent(right.Right, left.Right);
+            var eqLeft = EquivalenceChecker.AreEquivalent(right.Left, left.Left);
+            if (!eqRight || !eqLeft)
+            {
+                return;
+            }
+
+            if (IsIndirectEquality(binaryExpression, right, left, c) ||
+                IsIndirectInequality(binaryExpression, right, left, c))
+            {
+                c.ReportDiagnostic(Diagnostic.Create(Rule, binaryExpression.GetLocation()));
+            }
+        }
+
+        private static void CheckEquality(SyntaxNodeAnalysisContext c)
+        {
+            var equals = (BinaryExpressionSyntax)c.Node;
+            var equalitySymbol = c.SemanticModel.GetSymbolInfo(equals).Symbol as IMethodSymbol;
+
+            if (equalitySymbol != null &&
+                equalitySymbol.ContainingType != null &&
+                FloatingPointTypes.Contains(equalitySymbol.ContainingType.SpecialType) &&
+                EqualityOperators.Contains(equalitySymbol.Name))
+            {
+                c.ReportDiagnostic(Diagnostic.Create(Rule, equals.OperatorToken.GetLocation()));
+            }
         }
 
         private static BinaryExpressionSyntax TryGetBinaryExpression(ExpressionSyntax expression)

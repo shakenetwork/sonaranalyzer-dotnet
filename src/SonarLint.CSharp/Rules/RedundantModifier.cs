@@ -61,37 +61,12 @@ namespace SonarLint.Rules.CSharp
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c =>
-                {
-                    var memberDeclaration = (MemberDeclarationSyntax)c.Node;
-                    var memberSymbol = c.SemanticModel.GetDeclaredSymbol(memberDeclaration);
-                    if (memberSymbol == null)
-                    {
-                        return;
-                    }
-
-                    CheckSealedMemberInSealedClass(c, memberDeclaration, memberSymbol);
-                    CheckVirtualMemberInSealedClass(c, memberDeclaration, memberSymbol);
-                },
+                c => CheckMethodOrProperty(c),
                 SyntaxKind.MethodDeclaration,
                 SyntaxKind.PropertyDeclaration);
 
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c =>
-                {
-                    var classDeclaration = (TypeDeclarationSyntax)c.Node;
-                    var classSymbol = c.SemanticModel.GetDeclaredSymbol(classDeclaration);
-
-                    if (classSymbol == null ||
-                        !classDeclaration.Modifiers.Any(m => m.IsKind(SyntaxKind.PartialKeyword)) ||
-                        classSymbol.DeclaringSyntaxReferences.Count() > 1)
-                    {
-                        return;
-                    }
-
-                    var keyword = classDeclaration.Modifiers.First(m => m.IsKind(SyntaxKind.PartialKeyword));
-                    c.ReportDiagnostic(Diagnostic.Create(Rule, keyword.GetLocation(), "partial", "gratuitous"));
-                },
+                c => CheckTypeDeclaration(c),
                 SyntaxKind.ClassDeclaration,
                 SyntaxKind.InterfaceDeclaration,
                 SyntaxKind.StructDeclaration);
@@ -130,34 +105,67 @@ namespace SonarLint.Rules.CSharp
                                     continue;
                                 }
 
-                                foreach (var member in analyzedClass.GetMembers()
-                                    .Where(member => member.IsVirtual))
-                                {
-                                    var syntax = member.DeclaringSyntaxReferences.First().GetSyntax();
-
-                                    var methodDeclaration = syntax as MethodDeclarationSyntax;
-                                    if (methodDeclaration != null)
-                                    {
-                                        var keyword = methodDeclaration.Modifiers.First(m => m.IsKind(SyntaxKind.VirtualKeyword));
-                                        c.ReportDiagnosticIfNonGenerated(
-                                            Diagnostic.Create(Rule, keyword.GetLocation(), "virtual", "gratuitous"),
-                                            c.Compilation);
-                                        continue;
-                                    }
-
-                                    var propertyDeclaration = syntax as PropertyDeclarationSyntax;
-                                    if (propertyDeclaration != null)
-                                    {
-                                        var keyword = propertyDeclaration.Modifiers.First(m => m.IsKind(SyntaxKind.VirtualKeyword));
-                                        c.ReportDiagnosticIfNonGenerated(
-                                            Diagnostic.Create(Rule, keyword.GetLocation(), "virtual", "gratuitous"),
-                                            c.Compilation);
-                                        continue;
-                                    }
-                                }
+                                CheckMembers(c, analyzedClass);
                             }
                         });
                 });
+        }
+
+        private static void CheckMembers(CompilationAnalysisContext c, INamedTypeSymbol analyzedClass)
+        {
+            foreach (var member in analyzedClass.GetMembers().Where(member => member.IsVirtual))
+            {
+                var syntax = member.DeclaringSyntaxReferences.First().GetSyntax();
+
+                var methodDeclaration = syntax as MethodDeclarationSyntax;
+                if (methodDeclaration != null)
+                {
+                    var keyword = methodDeclaration.Modifiers.First(m => m.IsKind(SyntaxKind.VirtualKeyword));
+                    c.ReportDiagnosticIfNonGenerated(
+                        Diagnostic.Create(Rule, keyword.GetLocation(), "virtual", "gratuitous"),
+                        c.Compilation);
+                    continue;
+                }
+
+                var propertyDeclaration = syntax as PropertyDeclarationSyntax;
+                if (propertyDeclaration != null)
+                {
+                    var keyword = propertyDeclaration.Modifiers.First(m => m.IsKind(SyntaxKind.VirtualKeyword));
+                    c.ReportDiagnosticIfNonGenerated(
+                        Diagnostic.Create(Rule, keyword.GetLocation(), "virtual", "gratuitous"),
+                        c.Compilation);
+                    continue;
+                }
+            }
+        }
+
+        private static void CheckTypeDeclaration(SyntaxNodeAnalysisContext c)
+        {
+            var classDeclaration = (TypeDeclarationSyntax)c.Node;
+            var classSymbol = c.SemanticModel.GetDeclaredSymbol(classDeclaration);
+
+            if (classSymbol == null ||
+                !classDeclaration.Modifiers.Any(m => m.IsKind(SyntaxKind.PartialKeyword)) ||
+                classSymbol.DeclaringSyntaxReferences.Count() > 1)
+            {
+                return;
+            }
+
+            var keyword = classDeclaration.Modifiers.First(m => m.IsKind(SyntaxKind.PartialKeyword));
+            c.ReportDiagnostic(Diagnostic.Create(Rule, keyword.GetLocation(), "partial", "gratuitous"));
+        }
+
+        private static void CheckMethodOrProperty(SyntaxNodeAnalysisContext c)
+        {
+            var memberDeclaration = (MemberDeclarationSyntax)c.Node;
+            var memberSymbol = c.SemanticModel.GetDeclaredSymbol(memberDeclaration);
+            if (memberSymbol == null)
+            {
+                return;
+            }
+
+            CheckSealedMemberInSealedClass(c, memberDeclaration, memberSymbol);
+            CheckVirtualMemberInSealedClass(c, memberDeclaration, memberSymbol);
         }
 
         private static readonly Accessibility[] DeniedDeclaredAccessibility = { Accessibility.Public, Accessibility.Protected };

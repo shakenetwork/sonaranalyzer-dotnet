@@ -57,8 +57,7 @@ namespace SonarLint.Runner
 
             using (var tokenSource = new CancellationTokenSource())
             {
-                var compilationWithAnalyzer = modifiedCompilation.WithAnalyzers(diagnosticAnalyzers, null,
-                    tokenSource.Token);
+                var compilationWithAnalyzer = modifiedCompilation.WithAnalyzers(diagnosticAnalyzers, cancellationToken: tokenSource.Token);
 
                 return compilationWithAnalyzer.GetAnalyzerDiagnosticsAsync().Result;
             }

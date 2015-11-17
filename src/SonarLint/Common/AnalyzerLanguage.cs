@@ -85,7 +85,7 @@ namespace SonarLint.Common
                 return VisualBasic;
             }
 
-            throw new NotSupportedException(string.Format("Supplied language needs to be '{0}' or '{1}', but found: '{2}'.", CsLiteral, VbNetLiteral, s));
+            throw new NotSupportedException($"Supplied language needs to be '{CsLiteral}' or '{VbNetLiteral}', but found: '{s}'.");
         }
 
         public string GetQualityProfileRepositoryKey()
@@ -100,7 +100,7 @@ namespace SonarLint.Common
                 return "vbnet";
             }
 
-            throw new NotSupportedException(string.Format("Quality profile can only be queried for a single language. But was called on '{0}'.", ToString()));
+            throw new NotSupportedException($"Quality profile can only be queried for a single language. But was called on '{ToString()}'.");
         }
 
         public string GetDirectoryName()
@@ -115,7 +115,7 @@ namespace SonarLint.Common
                 return "VisualBasic";
             }
 
-            throw new NotSupportedException(string.Format("Can't get folder name for '{0}'.", ToString()));
+            throw new NotSupportedException($"Can't get folder name for '{ToString()}'.");
         }
     }
 }

@@ -59,7 +59,7 @@ namespace SonarLint.Utilities
                 Severity = rule.Severity.ToString(),
                 IdeSeverity = (int)rule.Severity.ToDiagnosticSeverity(),
                 IsActivatedByDefault = rule.IsActivatedByDefault,
-                Description = GetResourceHtml(analyzerType, rule, language),
+                Description = GetResourceHtml(rule, language),
                 IsTemplate = RuleFinder.IsRuleTemplate(analyzerType)
             };
 
@@ -192,13 +192,13 @@ namespace SonarLint.Utilities
             }
         }
 
-        private static string GetResourceHtml(Type analyzerType, RuleAttribute rule, AnalyzerLanguage language)
+        private static string GetResourceHtml(RuleAttribute rule, AnalyzerLanguage language)
         {
             var resources = SonarLintExtraAssembly.GetManifestResourceNames();
             var resource = GetResource(resources, rule.Key, language);
             if (resource == null)
             {
-                throw new InvalidDataException(string.Format("Could not locate resource for rule {0}", rule.Key));
+                throw new InvalidDataException($"Could not locate resource for rule {rule.Key}");
             }
 
             using (var stream = SonarLintExtraAssembly.GetManifestResourceStream(resource))

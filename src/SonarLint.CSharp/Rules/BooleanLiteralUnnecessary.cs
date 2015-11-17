@@ -62,127 +62,139 @@ namespace SonarLint.Rules.CSharp
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c =>
-                {
-                    var binaryExpression = (BinaryExpressionSyntax)c.Node;
-                    if (CheckForNullabilityAndBooleanConstantsReport(binaryExpression, true, c))
-                    {
-                        return;
-                    }
-
-                    CheckForBooleanConstantOnLeftReportOnExtendedLocation(binaryExpression, TrueExpression, c);
-                    CheckForBooleanConstantOnLeftReportOnNormalLocation(binaryExpression, FalseExpression, c);
-
-                    CheckForBooleanConstantOnRightReportOnExtendedLocation(binaryExpression, TrueExpression, c);
-                    CheckForBooleanConstantOnRightReportOnNormalLocation(binaryExpression, FalseExpression, c);
-                },
+                c => CheckEquals(c),
                 SyntaxKind.EqualsExpression);
 
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c =>
-                {
-                    var binaryExpression = (BinaryExpressionSyntax)c.Node;
-                    if (CheckForNullabilityAndBooleanConstantsReport(binaryExpression, true, c))
-                    {
-                        return;
-                    }
-
-                    CheckForBooleanConstantOnLeftReportOnExtendedLocation(binaryExpression, TrueExpression, c);
-                    CheckForBooleanConstantOnLeftReportOnInvertedLocation(binaryExpression, FalseExpression, c);
-
-                    CheckForBooleanConstantOnRightReportOnExtendedLocation(binaryExpression, TrueExpression, c);
-                    CheckForBooleanConstantOnRightReportOnInvertedLocation(binaryExpression, FalseExpression, c);
-                },
+                c => CheckLogicalAnd(c),
                 SyntaxKind.LogicalAndExpression);
 
             context.RegisterSyntaxNodeAction(
-                c =>
-                {
-                    var binaryExpression = (BinaryExpressionSyntax)c.Node;
-                    if (CheckForNullabilityAndBooleanConstantsReport(binaryExpression, false, c))
-                    {
-                        return;
-                    }
-
-                    CheckForBooleanConstantOnLeftReportOnExtendedLocation(binaryExpression, FalseExpression, c);
-                    CheckForBooleanConstantOnLeftReportOnNormalLocation(binaryExpression, TrueExpression, c);
-
-                    CheckForBooleanConstantOnRightReportOnExtendedLocation(binaryExpression, FalseExpression, c);
-                    CheckForBooleanConstantOnRightReportOnNormalLocation(binaryExpression, TrueExpression, c);
-                },
+                c => CheckNotEquals(c),
                 SyntaxKind.NotEqualsExpression);
 
             context.RegisterSyntaxNodeAction(
-                c =>
-                {
-                    var binaryExpression = (BinaryExpressionSyntax)c.Node;
-                    if (CheckForNullabilityAndBooleanConstantsReport(binaryExpression, false, c))
-                    {
-                        return;
-                    }
-
-                    CheckForBooleanConstantOnLeftReportOnExtendedLocation(binaryExpression, FalseExpression, c);
-                    CheckForBooleanConstantOnLeftReportOnInvertedLocation(binaryExpression, TrueExpression, c);
-
-                    CheckForBooleanConstantOnRightReportOnExtendedLocation(binaryExpression, FalseExpression, c);
-                    CheckForBooleanConstantOnRightReportOnInvertedLocation(binaryExpression, TrueExpression, c);
-                },
+                c => CheckLogicalOr(c),
                 SyntaxKind.LogicalOrExpression);
 
             context.RegisterSyntaxNodeAction(
-                c =>
-                {
-                    var logicalNot = (PrefixUnaryExpressionSyntax)c.Node;
-
-                    if (EquivalenceChecker.AreEquivalent(logicalNot.Operand, TrueExpression) ||
-                        EquivalenceChecker.AreEquivalent(logicalNot.Operand, FalseExpression))
-                    {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, logicalNot.Operand.GetLocation()));
-                    }
-                },
+                c => CheckLogicalNot(c),
                 SyntaxKind.LogicalNotExpression);
 
             context.RegisterSyntaxNodeAction(
-                c =>
-                {
-                    var conditional = (ConditionalExpressionSyntax)c.Node;
-                    if (IsOnNullableBoolean(conditional, c.SemanticModel))
-                    {
-                        return;
-                    }
-
-                    var whenTrueIsTrue = EquivalenceChecker.AreEquivalent(conditional.WhenTrue, TrueExpression);
-                    var whenTrueIsFalse = EquivalenceChecker.AreEquivalent(conditional.WhenTrue, FalseExpression);
-                    var whenFalseIsTrue = EquivalenceChecker.AreEquivalent(conditional.WhenFalse, TrueExpression);
-                    var whenFalseIsFalse = EquivalenceChecker.AreEquivalent(conditional.WhenFalse, FalseExpression);
-
-                    var whenTrueIsBooleanConstant = whenTrueIsTrue || whenTrueIsFalse;
-                    var whenFalseIsBooleanConstant = whenFalseIsTrue || whenFalseIsFalse;
-
-                    if (whenTrueIsBooleanConstant ^ whenFalseIsBooleanConstant)
-                    {
-                        var side = whenTrueIsBooleanConstant
-                            ? conditional.WhenTrue
-                            : conditional.WhenFalse;
-
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, side.GetLocation()));
-                        return;
-                    }
-
-                    var bothSideBool = whenTrueIsBooleanConstant && whenFalseIsBooleanConstant;
-                    var bothSideTrue = whenTrueIsTrue && whenFalseIsTrue;
-                    var bothSideFalse = whenTrueIsFalse && whenFalseIsFalse;
-
-                    if (bothSideBool && !bothSideFalse && !bothSideTrue)
-                    {
-                        var location = Location.Create(conditional.SyntaxTree,
-                            new TextSpan(conditional.WhenTrue.SpanStart, conditional.WhenFalse.Span.End - conditional.WhenTrue.SpanStart));
-
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, location));
-                        return;
-                    }
-                },
+                c => CheckConditional(c),
                 SyntaxKind.ConditionalExpression);
+        }
+
+        private static void CheckConditional(SyntaxNodeAnalysisContext c)
+        {
+            var conditional = (ConditionalExpressionSyntax)c.Node;
+            if (IsOnNullableBoolean(conditional, c.SemanticModel))
+            {
+                return;
+            }
+
+            var whenTrueIsTrue = EquivalenceChecker.AreEquivalent(conditional.WhenTrue, TrueExpression);
+            var whenTrueIsFalse = EquivalenceChecker.AreEquivalent(conditional.WhenTrue, FalseExpression);
+            var whenFalseIsTrue = EquivalenceChecker.AreEquivalent(conditional.WhenFalse, TrueExpression);
+            var whenFalseIsFalse = EquivalenceChecker.AreEquivalent(conditional.WhenFalse, FalseExpression);
+
+            var whenTrueIsBooleanConstant = whenTrueIsTrue || whenTrueIsFalse;
+            var whenFalseIsBooleanConstant = whenFalseIsTrue || whenFalseIsFalse;
+
+            if (whenTrueIsBooleanConstant ^ whenFalseIsBooleanConstant)
+            {
+                var side = whenTrueIsBooleanConstant
+                    ? conditional.WhenTrue
+                    : conditional.WhenFalse;
+
+                c.ReportDiagnostic(Diagnostic.Create(Rule, side.GetLocation()));
+                return;
+            }
+
+            var bothSideBool = whenTrueIsBooleanConstant && whenFalseIsBooleanConstant;
+            var bothSideTrue = whenTrueIsTrue && whenFalseIsTrue;
+            var bothSideFalse = whenTrueIsFalse && whenFalseIsFalse;
+
+            if (bothSideBool && !bothSideFalse && !bothSideTrue)
+            {
+                var location = Location.Create(conditional.SyntaxTree,
+                    new TextSpan(conditional.WhenTrue.SpanStart, conditional.WhenFalse.Span.End - conditional.WhenTrue.SpanStart));
+
+                c.ReportDiagnostic(Diagnostic.Create(Rule, location));
+                return;
+            }
+        }
+
+        private static void CheckLogicalNot(SyntaxNodeAnalysisContext c)
+        {
+            var logicalNot = (PrefixUnaryExpressionSyntax)c.Node;
+
+            if (EquivalenceChecker.AreEquivalent(logicalNot.Operand, TrueExpression) ||
+                EquivalenceChecker.AreEquivalent(logicalNot.Operand, FalseExpression))
+            {
+                c.ReportDiagnostic(Diagnostic.Create(Rule, logicalNot.Operand.GetLocation()));
+            }
+        }
+
+        private static void CheckLogicalOr(SyntaxNodeAnalysisContext c)
+        {
+            var binaryExpression = (BinaryExpressionSyntax)c.Node;
+            if (CheckForNullabilityAndBooleanConstantsReport(binaryExpression, false, c))
+            {
+                return;
+            }
+
+            CheckForBooleanConstantOnLeftReportOnExtendedLocation(binaryExpression, FalseExpression, c);
+            CheckForBooleanConstantOnLeftReportOnInvertedLocation(binaryExpression, TrueExpression, c);
+
+            CheckForBooleanConstantOnRightReportOnExtendedLocation(binaryExpression, FalseExpression, c);
+            CheckForBooleanConstantOnRightReportOnInvertedLocation(binaryExpression, TrueExpression, c);
+        }
+
+        private static void CheckNotEquals(SyntaxNodeAnalysisContext c)
+        {
+            var binaryExpression = (BinaryExpressionSyntax)c.Node;
+            if (CheckForNullabilityAndBooleanConstantsReport(binaryExpression, false, c))
+            {
+                return;
+            }
+
+            CheckForBooleanConstantOnLeftReportOnExtendedLocation(binaryExpression, FalseExpression, c);
+            CheckForBooleanConstantOnLeftReportOnNormalLocation(binaryExpression, TrueExpression, c);
+
+            CheckForBooleanConstantOnRightReportOnExtendedLocation(binaryExpression, FalseExpression, c);
+            CheckForBooleanConstantOnRightReportOnNormalLocation(binaryExpression, TrueExpression, c);
+        }
+
+        private static void CheckLogicalAnd(SyntaxNodeAnalysisContext c)
+        {
+            var binaryExpression = (BinaryExpressionSyntax)c.Node;
+            if (CheckForNullabilityAndBooleanConstantsReport(binaryExpression, true, c))
+            {
+                return;
+            }
+
+            CheckForBooleanConstantOnLeftReportOnExtendedLocation(binaryExpression, TrueExpression, c);
+            CheckForBooleanConstantOnLeftReportOnInvertedLocation(binaryExpression, FalseExpression, c);
+
+            CheckForBooleanConstantOnRightReportOnExtendedLocation(binaryExpression, TrueExpression, c);
+            CheckForBooleanConstantOnRightReportOnInvertedLocation(binaryExpression, FalseExpression, c);
+        }
+
+        private static void CheckEquals(SyntaxNodeAnalysisContext c)
+        {
+            var binaryExpression = (BinaryExpressionSyntax)c.Node;
+            if (CheckForNullabilityAndBooleanConstantsReport(binaryExpression, true, c))
+            {
+                return;
+            }
+
+            CheckForBooleanConstantOnLeftReportOnExtendedLocation(binaryExpression, TrueExpression, c);
+            CheckForBooleanConstantOnLeftReportOnNormalLocation(binaryExpression, FalseExpression, c);
+
+            CheckForBooleanConstantOnRightReportOnExtendedLocation(binaryExpression, TrueExpression, c);
+            CheckForBooleanConstantOnRightReportOnNormalLocation(binaryExpression, FalseExpression, c);
         }
 
         private static bool IsOnNullableBoolean(ConditionalExpressionSyntax conditionalExpression, SemanticModel semanticModel)
@@ -218,7 +230,8 @@ namespace SonarLint.Rules.CSharp
             return namedType.TypeArguments[0].SpecialType == SpecialType.System_Boolean;
         }
 
-        private static bool CheckForNullabilityAndBooleanConstantsReport(BinaryExpressionSyntax binaryExpression, bool reportOnTrue, SyntaxNodeAnalysisContext c)
+        private static bool CheckForNullabilityAndBooleanConstantsReport(BinaryExpressionSyntax binaryExpression,
+            bool reportOnTrue, SyntaxNodeAnalysisContext c)
         {
             var typeLeft = c.SemanticModel.GetTypeInfo(binaryExpression.Left).Type;
             var typeRight = c.SemanticModel.GetTypeInfo(binaryExpression.Right).Type;
@@ -238,7 +251,8 @@ namespace SonarLint.Rules.CSharp
 
             if (leftIsBoolean && rightIsBoolean)
             {
-                var errorLocation = (leftIsTrue && rightIsTrue) || (leftIsFalse && rightIsFalse)
+                var bothAreSame = (leftIsTrue && rightIsTrue) || (leftIsFalse && rightIsFalse);
+                var errorLocation = bothAreSame
                     ? CalculateExtendedLocation(binaryExpression, false)
                     : CalculateExtendedLocation(binaryExpression, reportOnTrue == leftIsTrue);
 

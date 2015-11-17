@@ -34,6 +34,10 @@ namespace SonarLint.Helpers.CSharp
 
         private class Nested
         {
+            private Nested()
+            {
+            }
+
             // Explicit static constructor to tell C# compiler
             // not to mark type as beforefieldinit
             static Nested()

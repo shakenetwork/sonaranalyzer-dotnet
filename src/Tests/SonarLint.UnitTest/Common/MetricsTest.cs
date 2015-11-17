@@ -516,9 +516,9 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
             FunctionComplexityDistribution(AnalyzerLanguage.VisualBasic, "").Values.Should().BeEquivalentTo(0, 0, 0, 0, 0, 0, 0);
             FunctionComplexityDistribution(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub M1() \n End Sub \n End Class").Values.Should().BeEquivalentTo(1, 0, 0, 0, 0, 0, 0);
             FunctionComplexityDistribution(AnalyzerLanguage.VisualBasic, "Class MyClass \n Sub M1() \n End Sub \n Sub M2() \n End Sub \nEnd Class").Values.Should().BeEquivalentTo(2, 0, 0, 0, 0, 0, 0);
-            FunctionComplexityDistribution(AnalyzerLanguage.VisualBasic, 
+            FunctionComplexityDistribution(AnalyzerLanguage.VisualBasic,
                 "Class MyClass \n Sub M1() \n If False Then \n End If \n End Sub \n End Class").Values.Should().BeEquivalentTo(0, 1, 0, 0, 0, 0, 0);
-            FunctionComplexityDistribution(AnalyzerLanguage.VisualBasic, 
+            FunctionComplexityDistribution(AnalyzerLanguage.VisualBasic,
                 "Class MyClass \n Sub M1() \n If False Then \n End If \n If False Then \n End If \n If False Then \n End If " +
                 "\n End Sub \n End Class").Values.Should().BeEquivalentTo(0, 0, 1, 0, 0, 0, 0);
         }

@@ -139,19 +139,29 @@
     <Rule Id="C6320" Action="Warning" />
     <Rule Id="C6322" Action="Warning" />
   </Rules>
-  <Rules AnalyzerId="SonarLint" RuleNamespace="SonarLint">
+  <Rules AnalyzerId="SonarLint.CSharp" RuleNamespace="SonarLint.CSharp">
     <Rule Id="S105" Action="Warning" />
     <Rule Id="S1109" Action="Warning" />
+    <Rule Id="S1116" Action="Warning" />
+    <Rule Id="S1125" Action="Warning" />
     <Rule Id="S121" Action="Warning" />
     <Rule Id="S1227" Action="Warning" />
     <Rule Id="S126" Action="Warning" />
     <Rule Id="S1301" Action="Warning" />
     <Rule Id="S1694" Action="Warning" />
+    <Rule Id="S1905" Action="Warning" />
+    <Rule Id="S1939" Action="Warning" />
     <Rule Id="S2070" Action="Warning" />
     <Rule Id="S2197" Action="Warning" />
     <Rule Id="S2278" Action="Warning" />
     <Rule Id="S2330" Action="Warning" />
+    <Rule Id="S2339" Action="Warning" />
     <Rule Id="S2357" Action="Warning" />
     <Rule Id="S2760" Action="Warning" />
+    <Rule Id="S3052" Action="Warning" />
+    <Rule Id="S3234" Action="Warning" />
+    <Rule Id="S3235" Action="Warning" />
+    <Rule Id="S3253" Action="Warning" />
+    <Rule Id="S3254" Action="Warning" />
   </Rules>
 </RuleSet>

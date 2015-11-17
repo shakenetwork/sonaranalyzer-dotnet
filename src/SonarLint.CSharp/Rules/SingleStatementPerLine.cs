@@ -66,4 +66,3 @@ namespace SonarLint.Rules.CSharp
         protected sealed override GeneratedCodeRecognizer GeneratedCodeRecognizer => Helpers.CSharp.GeneratedCodeRecognizer.Instance;
     }
 }
-    

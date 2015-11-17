@@ -141,15 +141,8 @@ namespace SonarLint.Rules.CSharp
             }
 
             var methodSymbol = semanticModel.GetSymbolInfo(memberAccess).Symbol as IMethodSymbol;
-            if (methodSymbol == null ||
-                methodSymbol.Name != "Count" ||
-                !methodSymbol.IsExtensionMethod ||
-                methodSymbol.ReceiverType == null)
-            {
-                return false;
-            }
-
-            if (!MethodIsOnIEnumerable(methodSymbol, semanticModel))
+            if (!IsMethodCountExtension(methodSymbol) ||
+                !MethodIsOnIEnumerable(methodSymbol, semanticModel))
             {
                 return false;
             }
@@ -161,6 +154,14 @@ namespace SonarLint.Rules.CSharp
 
             countLocation = memberAccess.Name.GetLocation();
             return true;
+        }
+
+        private static bool IsMethodCountExtension(IMethodSymbol methodSymbol)
+        {
+            return methodSymbol != null &&
+                methodSymbol.Name == "Count" &&
+                methodSymbol.IsExtensionMethod &&
+                methodSymbol.ReceiverType != null;
         }
 
         internal static bool MethodIsOnIEnumerable(IMethodSymbol methodSymbol, SemanticModel semanticModel)

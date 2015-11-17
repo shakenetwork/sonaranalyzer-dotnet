@@ -79,46 +79,50 @@ namespace SonarLint.Rules.CSharp
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c =>
-                {
-                    var objectCreation = (ObjectCreationExpressionSyntax)c.Node;
-
-                    var typeInfo = c.SemanticModel.GetTypeInfo(objectCreation);
-                    if (typeInfo.ConvertedType == null || typeInfo.ConvertedType is IErrorTypeSymbol)
-                    {
-                        return;
-                    }
-
-                    var insecureArgorithmType = GetInsecureAlgorithmBase(typeInfo.ConvertedType);
-
-                    if (insecureArgorithmType != null &&
-                        BaseClassNamesForEncryptionAlgorithm.Contains(insecureArgorithmType.ToString()))
-                    {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, objectCreation.Type.GetLocation()));
-                    }
-                },
+                c => CheckObjectCreation(c),
                 SyntaxKind.ObjectCreationExpression);
 
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c =>
-                {
-                    var invocation = (InvocationExpressionSyntax)c.Node;
-
-                    var methodSymbol = c.SemanticModel.GetSymbolInfo(invocation.Expression).Symbol;
-                    if (methodSymbol == null ||
-                        methodSymbol.ContainingType == null)
-                    {
-                        return;
-                    }
-
-                    var methodName = string.Format("{0}.{1}", methodSymbol.ContainingType.ToString(), methodSymbol.Name);
-                    if (MethodNamesToReachEncryptionAlgorithm.Contains(methodName) ||
-                        IsBaseEncryptionCreateCalled(methodName, invocation.ArgumentList))
-                    {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation()));
-                    }
-                },
+                c => CheckInvocation(c),
                 SyntaxKind.InvocationExpression);
+        }
+
+        private static void CheckInvocation(SyntaxNodeAnalysisContext c)
+        {
+            var invocation = (InvocationExpressionSyntax)c.Node;
+
+            var methodSymbol = c.SemanticModel.GetSymbolInfo(invocation.Expression).Symbol;
+            if (methodSymbol == null ||
+                methodSymbol.ContainingType == null)
+            {
+                return;
+            }
+
+            var methodName = $"{methodSymbol.ContainingType.ToString()}.{methodSymbol.Name}";
+            if (MethodNamesToReachEncryptionAlgorithm.Contains(methodName) ||
+                IsBaseEncryptionCreateCalled(methodName, invocation.ArgumentList))
+            {
+                c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation()));
+            }
+        }
+
+        private static void CheckObjectCreation(SyntaxNodeAnalysisContext c)
+        {
+            var objectCreation = (ObjectCreationExpressionSyntax)c.Node;
+
+            var typeInfo = c.SemanticModel.GetTypeInfo(objectCreation);
+            if (typeInfo.ConvertedType == null || typeInfo.ConvertedType is IErrorTypeSymbol)
+            {
+                return;
+            }
+
+            var insecureArgorithmType = GetInsecureAlgorithmBase(typeInfo.ConvertedType);
+
+            if (insecureArgorithmType != null &&
+                BaseClassNamesForEncryptionAlgorithm.Contains(insecureArgorithmType.ToString()))
+            {
+                c.ReportDiagnostic(Diagnostic.Create(Rule, objectCreation.Type.GetLocation()));
+            }
         }
 
         private static bool IsBaseEncryptionCreateCalled(string methodName, ArgumentListSyntax argumentList)

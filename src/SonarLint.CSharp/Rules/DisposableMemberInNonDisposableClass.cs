@@ -124,7 +124,7 @@ namespace SonarLint.Rules.CSharp
                                 continue;
                             }
                             var variableNames = string.Join(", ",
-                                assignedFields.Select(symbol => string.Format("\"{0}\"", symbol.Name)).OrderBy(s => s));
+                                assignedFields.Select(symbol => $"\"{symbol.Name}\"").OrderBy(s => s));
 
                             c.ReportDiagnosticIfNonGenerated(
                                 Diagnostic.Create(Rule, classSyntax.Identifier.GetLocation(), variableNames),

@@ -261,18 +261,26 @@ namespace SonarLint.Rules.CSharp
             }
         }
 
+        private static SyntaxNode ReplaceExpressionWithBinary(SyntaxNode nodeToReplace, SyntaxNode root,
+            SyntaxKind binaryKind, ExpressionSyntax left, ExpressionSyntax right)
+        {
+            return root.ReplaceNode(nodeToReplace,
+                    SyntaxFactory.BinaryExpression(
+                        binaryKind,
+                        left,
+                        right).WithAdditionalAnnotations(Formatter.Annotation));
+        }
+
         private static Document RewriteConditional(Document document, SyntaxNode root, SyntaxNode syntaxNode,
             ConditionalExpressionSyntax conditional)
         {
             if (conditional.WhenTrue.Equals(syntaxNode) &&
                 EquivalenceChecker.AreEquivalent(syntaxNode, BooleanLiteralUnnecessary.TrueExpression))
             {
-                var newRoot = root.ReplaceNode(conditional,
-                    SyntaxFactory.BinaryExpression(
-                        SyntaxKind.LogicalOrExpression,
-                        conditional.Condition,
-                        conditional.WhenFalse)
-                        .WithAdditionalAnnotations(Formatter.Annotation));
+                var newRoot = ReplaceExpressionWithBinary(conditional, root,
+                    SyntaxKind.LogicalOrExpression,
+                    conditional.Condition,
+                    conditional.WhenFalse);
 
                 return document.WithSyntaxRoot(newRoot);
             }
@@ -280,12 +288,10 @@ namespace SonarLint.Rules.CSharp
             if (conditional.WhenTrue.Equals(syntaxNode) &&
                 EquivalenceChecker.AreEquivalent(syntaxNode, BooleanLiteralUnnecessary.FalseExpression))
             {
-                var newRoot = root.ReplaceNode(conditional,
-                    SyntaxFactory.BinaryExpression(
-                        SyntaxKind.LogicalAndExpression,
-                        GetNegatedExpression(conditional.Condition),
-                        conditional.WhenFalse)
-                    .WithAdditionalAnnotations(Formatter.Annotation));
+                var newRoot = ReplaceExpressionWithBinary(conditional, root,
+                    SyntaxKind.LogicalAndExpression,
+                    GetNegatedExpression(conditional.Condition),
+                    conditional.WhenFalse);
 
                 return document.WithSyntaxRoot(newRoot);
             }
@@ -293,12 +299,10 @@ namespace SonarLint.Rules.CSharp
             if (conditional.WhenFalse.Equals(syntaxNode) &&
                 EquivalenceChecker.AreEquivalent(syntaxNode, BooleanLiteralUnnecessary.TrueExpression))
             {
-                var newRoot = root.ReplaceNode(conditional,
-                    SyntaxFactory.BinaryExpression(
-                        SyntaxKind.LogicalOrExpression,
-                        GetNegatedExpression(conditional.Condition),
-                        conditional.WhenTrue)
-                    .WithAdditionalAnnotations(Formatter.Annotation));
+                var newRoot = ReplaceExpressionWithBinary(conditional, root,
+                    SyntaxKind.LogicalOrExpression,
+                    GetNegatedExpression(conditional.Condition),
+                    conditional.WhenTrue);
 
                 return document.WithSyntaxRoot(newRoot);
             }
@@ -306,12 +310,10 @@ namespace SonarLint.Rules.CSharp
             if (conditional.WhenFalse.Equals(syntaxNode) &&
                 EquivalenceChecker.AreEquivalent(syntaxNode, BooleanLiteralUnnecessary.FalseExpression))
             {
-                var newRoot = root.ReplaceNode(conditional,
-                    SyntaxFactory.BinaryExpression(
-                        SyntaxKind.LogicalAndExpression,
-                        conditional.Condition,
-                        conditional.WhenTrue)
-                    .WithAdditionalAnnotations(Formatter.Annotation));
+                var newRoot = ReplaceExpressionWithBinary(conditional, root,
+                    SyntaxKind.LogicalAndExpression,
+                    conditional.Condition,
+                    conditional.WhenTrue);
 
                 return document.WithSyntaxRoot(newRoot);
             }

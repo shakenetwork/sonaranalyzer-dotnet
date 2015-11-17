@@ -31,8 +31,10 @@ namespace SonarLint.UnitTest.PackagingTests
     [TestClass]
     public class DocGeneratorTest
     {
+        private const string TestCategoryName = "DocGenerator";
+
         [TestMethod]
-        [TestCategory("DocGenerator")]
+        [TestCategory(TestCategoryName)]
         public void CheckNumberOfCrossReferences()
         {
             var crossReferenceCount = GetNumberOfCrossReferences(AnalyzerLanguage.CSharp);
@@ -42,7 +44,7 @@ namespace SonarLint.UnitTest.PackagingTests
         }
 
         [TestMethod]
-        [TestCategory("DocGenerator")]
+        [TestCategory(TestCategoryName)]
         public void CheckNumberOfCrossLinks()
         {
             var crossReferenceCount = GetNumberOfCrossReferences(AnalyzerLanguage.VisualBasic) + GetNumberOfCrossReferences(AnalyzerLanguage.CSharp);

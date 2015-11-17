@@ -267,7 +267,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
                 File.WriteAllText(Path.Combine(
                     AnalysisOutputDirectory.FullName,
                     language.GetDirectoryName(),
-                    string.Format("{0}.json", issueGroup.Key)), content);
+                    $"{issueGroup.Key}.json"), content);
             }
         }
 

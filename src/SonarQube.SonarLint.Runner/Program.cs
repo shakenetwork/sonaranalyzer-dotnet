@@ -36,7 +36,7 @@ namespace SonarLint.Runner
         {
             var language = AnalyzerLanguage.Parse(args[2]);
 
-            Write(string.Format("SonarLint for Visual Studio version {0}", typeof (Program).Assembly.GetName().Version));
+            Write($"SonarLint for Visual Studio version {typeof (Program).Assembly.GetName().Version}");
 
             var configuration = new Configuration(XDocument.Load(args[0]), language);
             var diagnosticsRunner = new DiagnosticsRunner(configuration.GetAnalyzers());

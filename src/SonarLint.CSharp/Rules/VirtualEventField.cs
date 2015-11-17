@@ -72,7 +72,7 @@ namespace SonarLint.Rules.CSharp
                     {
                         var virt = eventField.Modifiers.First(modifier => modifier.IsKind(SyntaxKind.VirtualKeyword));
                         var names = string.Join(", ", eventField.Declaration.Variables
-                            .Select(syntax => string.Format("\"{0}\"", syntax.Identifier.ValueText))
+                            .Select(syntax => $"\"{syntax.Identifier.ValueText}\"")
                             .OrderBy(s => s));
                         c.ReportDiagnostic(Diagnostic.Create(Rule, virt.GetLocation(), names));
                     }

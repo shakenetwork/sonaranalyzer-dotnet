@@ -63,74 +63,78 @@ namespace SonarLint.Rules.CSharp
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c =>
-                {
-                    var conditional = (ConditionalExpressionSyntax)c.Node;
-
-                    var condition = TernaryOperatorPointless.RemoveParentheses(conditional.Condition);
-                    var whenTrue = TernaryOperatorPointless.RemoveParentheses(conditional.WhenTrue);
-                    var whenFalse = TernaryOperatorPointless.RemoveParentheses(conditional.WhenFalse);
-
-                    if (EquivalenceChecker.AreEquivalent(whenTrue, whenFalse))
-                    {
-                        /// handled by S2758, <see cref="TernaryOperatorPointless"/>
-                        return;
-                    }
-
-                    ExpressionSyntax comparedToNull;
-                    bool comparedIsNullInTrue;
-                    if (!TryGetExpressionComparedToNull(condition, out comparedToNull, out comparedIsNullInTrue) ||
-                        !ExpressionCanBeNull(comparedToNull, c.SemanticModel))
-                    {
-                        // expression not compared to null, or can't be null
-                        return;
-                    }
-
-                    if (CanExpressionBeNullCoalescing(whenTrue, whenFalse, comparedToNull, comparedIsNullInTrue, c.SemanticModel))
-                    {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, conditional.GetLocation(), "??"));
-                    }
-                },
+                c => CheckConditionalExpression(c),
                 SyntaxKind.ConditionalExpression);
 
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c =>
-                {
-                    var ifStatement = (IfStatementSyntax)c.Node;
-                    if (ifStatement.Else == null ||
-                        ifStatement.Parent is ElseClauseSyntax)
-                    {
-                        return;
-                    }
-
-                    var whenTrue = ExtractSingleStatement(ifStatement.Statement);
-                    var whenFalse = ExtractSingleStatement(ifStatement.Else.Statement);
-
-                    if (whenTrue == null ||
-                        whenFalse == null ||
-                        EquivalenceChecker.AreEquivalent(whenTrue, whenFalse))
-                    {
-                        /// Equivalence handled by S1871, <see cref="ConditionalStructureSameImplementation"/>
-                        return;
-                    }
-
-                    ExpressionSyntax comparedToNull;
-                    bool comparedIsNullInTrue;
-                    var possiblyNullCoalescing =
-                        TryGetExpressionComparedToNull(ifStatement.Condition, out comparedToNull, out comparedIsNullInTrue) &&
-                        ExpressionCanBeNull(comparedToNull, c.SemanticModel);
-
-                    bool isNullCoalescing;
-                    if (CanBeSimplified(whenTrue, whenFalse,
-                            possiblyNullCoalescing ? comparedToNull : null, comparedIsNullInTrue,
-                            c.SemanticModel, out isNullCoalescing))
-                    {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, ifStatement.IfKeyword.GetLocation(),
-                            ImmutableDictionary<string, string>.Empty.Add(IsNullCoalescingKey, isNullCoalescing.ToString()),
-                            isNullCoalescing ? "??" : "?:"));
-                    }
-                },
+                c => CheckIfStatement(c),
                 SyntaxKind.IfStatement);
+        }
+
+        private static void CheckIfStatement(SyntaxNodeAnalysisContext c)
+        {
+            var ifStatement = (IfStatementSyntax)c.Node;
+            if (ifStatement.Else == null ||
+                ifStatement.Parent is ElseClauseSyntax)
+            {
+                return;
+            }
+
+            var whenTrue = ExtractSingleStatement(ifStatement.Statement);
+            var whenFalse = ExtractSingleStatement(ifStatement.Else.Statement);
+
+            if (whenTrue == null ||
+                whenFalse == null ||
+                EquivalenceChecker.AreEquivalent(whenTrue, whenFalse))
+            {
+                /// Equivalence handled by S1871, <see cref="ConditionalStructureSameImplementation"/>
+                return;
+            }
+
+            ExpressionSyntax comparedToNull;
+            bool comparedIsNullInTrue;
+            var possiblyNullCoalescing =
+                TryGetExpressionComparedToNull(ifStatement.Condition, out comparedToNull, out comparedIsNullInTrue) &&
+                ExpressionCanBeNull(comparedToNull, c.SemanticModel);
+
+            bool isNullCoalescing;
+            if (CanBeSimplified(whenTrue, whenFalse,
+                    possiblyNullCoalescing ? comparedToNull : null, comparedIsNullInTrue,
+                    c.SemanticModel, out isNullCoalescing))
+            {
+                c.ReportDiagnostic(Diagnostic.Create(Rule, ifStatement.IfKeyword.GetLocation(),
+                    ImmutableDictionary<string, string>.Empty.Add(IsNullCoalescingKey, isNullCoalescing.ToString()),
+                    isNullCoalescing ? "??" : "?:"));
+            }
+        }
+
+        private static void CheckConditionalExpression(SyntaxNodeAnalysisContext c)
+        {
+            var conditional = (ConditionalExpressionSyntax)c.Node;
+
+            var condition = TernaryOperatorPointless.RemoveParentheses(conditional.Condition);
+            var whenTrue = TernaryOperatorPointless.RemoveParentheses(conditional.WhenTrue);
+            var whenFalse = TernaryOperatorPointless.RemoveParentheses(conditional.WhenFalse);
+
+            if (EquivalenceChecker.AreEquivalent(whenTrue, whenFalse))
+            {
+                /// handled by S2758, <see cref="TernaryOperatorPointless"/>
+                return;
+            }
+
+            ExpressionSyntax comparedToNull;
+            bool comparedIsNullInTrue;
+            if (!TryGetExpressionComparedToNull(condition, out comparedToNull, out comparedIsNullInTrue) ||
+                !ExpressionCanBeNull(comparedToNull, c.SemanticModel))
+            {
+                // expression not compared to null, or can't be null
+                return;
+            }
+
+            if (CanExpressionBeNullCoalescing(whenTrue, whenFalse, comparedToNull, comparedIsNullInTrue, c.SemanticModel))
+            {
+                c.ReportDiagnostic(Diagnostic.Create(Rule, conditional.GetLocation(), "??"));
+            }
         }
 
         private static bool AreTypesCompatible(ExpressionSyntax expression1, ExpressionSyntax expression2, SemanticModel semanticModel)
