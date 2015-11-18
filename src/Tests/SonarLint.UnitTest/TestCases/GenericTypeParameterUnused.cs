@@ -15,6 +15,15 @@ namespace Tests.Diagnostics
         int Add<T>(int a, int b); //Compliant
     }
 
+    public class InterfaceImplementation : Interface, IDummyInterface
+    {
+        public int Add<T>(int a, int b) //Compliant, it is implementing the interface.
+        { }
+
+        public int IDummyInterface.MyMethod<T>(int a, int b) //Compliant, it is implementing the interface, although we don't know anything about it
+        { }
+    }
+
     public class MoreMath<T> // Noncompliant; <T> is ignored
     {
         public int Add<T>(int a, int b) // Noncompliant; <T> is ignored

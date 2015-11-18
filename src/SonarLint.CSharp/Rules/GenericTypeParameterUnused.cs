@@ -69,8 +69,7 @@ namespace SonarLint.Rules.CSharp
                         var classDeclaration = c.Node as ClassDeclarationSyntax;
 
                         if (methodDeclaration != null &&
-                            (methodDeclaration.Modifiers.Any(modifier => ModifiersToSkip.Contains(modifier.Kind())) ||
-                             methodDeclaration.Body == null))
+                            !IsMethodCandidate(methodDeclaration, c.SemanticModel))
                         {
                             return;
                         }
@@ -81,45 +80,72 @@ namespace SonarLint.Rules.CSharp
                             return;
                         }
 
-                        TypeParameterListSyntax typeParameterList;
-                        string typeOfContainer;
-                        if (classDeclaration == null)
-                        {
-                            typeParameterList = methodDeclaration.TypeParameterList;
-                            typeOfContainer = "method";
-                        }
-                        else
-                        {
-                            typeParameterList = classDeclaration.TypeParameterList;
-                            typeOfContainer = "class";
-                        }
-
-                        if (typeParameterList == null || typeParameterList.Parameters.Count == 0)
+                        var helper = GetTypeParameterHelper(methodDeclaration, classDeclaration);
+                        if (helper.TypeParameterList == null || helper.TypeParameterList.Parameters.Count == 0)
                         {
                             return;
                         }
-
-                        var typeParameters = typeParameterList.Parameters
-                            .Select(typeParameter => typeParameter.Identifier.Text)
-                            .ToList();
 
                         var declarations = declarationSymbol.DeclaringSyntaxReferences
                             .Select(reference => reference.GetSyntax());
 
                         var usedTypeParameters = GetUsedTypeParameters(declarations, c, analysisContext.Compilation);
 
-                        foreach (var typeParameter in
-                                typeParameters.Where(typeParameter => !usedTypeParameters.Contains(typeParameter)))
+                        foreach (var typeParameter in helper.TypeParameterList.Parameters
+                            .Select(typeParameter => typeParameter.Identifier.Text)
+                            .Where(typeParameter => !usedTypeParameters.Contains(typeParameter)))
                         {
                             c.ReportDiagnostic(Diagnostic.Create(Rule,
-                                typeParameterList.Parameters.First(tp => tp.Identifier.Text == typeParameter)
+                                helper.TypeParameterList.Parameters.First(tp => tp.Identifier.Text == typeParameter)
                                     .GetLocation(),
-                                typeParameter, typeOfContainer));
+                                typeParameter, helper.ContainerSyntaxTypeName));
                         }
                     },
                     SyntaxKind.MethodDeclaration,
                     SyntaxKind.ClassDeclaration);
             });
+        }
+
+        private static TypeParameterHelper GetTypeParameterHelper(MethodDeclarationSyntax methodDeclaration, ClassDeclarationSyntax classDeclaration)
+        {
+            return classDeclaration == null
+                ? new TypeParameterHelper
+                {
+                    TypeParameterList = methodDeclaration.TypeParameterList,
+                    ContainerSyntaxTypeName = "method"
+                }
+                : new TypeParameterHelper
+                {
+                    TypeParameterList = classDeclaration.TypeParameterList,
+                    ContainerSyntaxTypeName = "class"
+                };
+        }
+
+        private class TypeParameterHelper
+        {
+            public TypeParameterListSyntax TypeParameterList { get; set; }
+            public string ContainerSyntaxTypeName { get; set; }
+        }
+
+        private static bool IsMethodCandidate(MethodDeclarationSyntax methodDeclaration, SemanticModel semanticModel)
+        {
+            var syntaxValid =
+                !methodDeclaration.Modifiers.Any(modifier => MethodModifiersToSkip.Contains(modifier.Kind())) &&
+                methodDeclaration.ExplicitInterfaceSpecifier == null &&
+                methodDeclaration.Body != null;
+
+            if (!syntaxValid)
+            {
+                return false;
+            }
+
+            var methodSymbol = semanticModel.GetDeclaredSymbol(methodDeclaration);
+            if (methodSymbol == null)
+            {
+                return false;
+            }
+
+            return methodSymbol.IsChangeable();
         }
 
         private static List<string> GetUsedTypeParameters(IEnumerable<SyntaxNode> declarations,
@@ -145,7 +171,7 @@ namespace SonarLint.Rules.CSharp
                 .ToList();
         }
 
-        public static readonly SyntaxKind[] ModifiersToSkip =
+        public static readonly SyntaxKind[] MethodModifiersToSkip =
         {
             SyntaxKind.AbstractKeyword,
             SyntaxKind.VirtualKeyword,

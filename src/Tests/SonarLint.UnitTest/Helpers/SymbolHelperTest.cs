@@ -35,6 +35,8 @@ public class Base
   public virtual void Method1() { }
   protected virtual void Method2() { }
   public abstract int Property { get; set; }
+
+  public void Method4(){}
 }
 private class Derived1 : Base
 {
@@ -45,6 +47,9 @@ public class Derived2 : Base, IInterface
   public override int Property { get; set; }
   public int Property2 { get; set; }
   public void Method3(){}
+
+  public abstract void Method5();
+  public void EventHandler(object o, System.EventArgs args){}
 }
 public interface IInterface
 {
@@ -145,6 +150,64 @@ public interface IInterface
             symbol = semanticModel.GetDeclaredSymbol(method);
 
             Assert.IsTrue(symbol.IsInterfaceImplementationOrMemberOverride());
+        }
+
+        [TestMethod]
+        public void Symbol_DerivesOrImplementsAny()
+        {
+            var baseType = semanticModel.GetDeclaredSymbol(baseClassDeclaration) as INamedTypeSymbol;
+            var derived1Type = semanticModel.GetDeclaredSymbol(derivedClassDeclaration1) as INamedTypeSymbol;
+            var derived2Type = semanticModel.GetDeclaredSymbol(derivedClassDeclaration2) as INamedTypeSymbol;
+            var interfaceType = semanticModel.GetDeclaredSymbol(interfaceDeclaration) as INamedTypeSymbol;
+
+            Assert.IsTrue(derived2Type.DerivesOrImplementsAny(interfaceType));
+            Assert.IsFalse(derived1Type.DerivesOrImplementsAny(interfaceType));
+
+            Assert.IsTrue(derived1Type.DerivesOrImplementsAny(interfaceType, baseType));
+        }
+
+        [TestMethod]
+        public void Symbol_IsChangeable()
+        {
+            var method = baseClassDeclaration.DescendantNodes().OfType<MethodDeclarationSyntax>()
+                .First(m => m.Identifier.ValueText == "Method1");
+            var symbol = semanticModel.GetDeclaredSymbol(method) as IMethodSymbol;
+
+            Assert.IsFalse(symbol.IsChangeable());
+
+            method = baseClassDeclaration.DescendantNodes().OfType<MethodDeclarationSyntax>()
+                .First(m => m.Identifier.ValueText == "Method4");
+            symbol = semanticModel.GetDeclaredSymbol(method) as IMethodSymbol;
+
+            Assert.IsTrue(symbol.IsChangeable());
+
+            method = derivedClassDeclaration2.DescendantNodes().OfType<MethodDeclarationSyntax>()
+                .First(m => m.Identifier.ValueText == "Method5");
+            symbol = semanticModel.GetDeclaredSymbol(method) as IMethodSymbol;
+
+            Assert.IsFalse(symbol.IsChangeable());
+
+            method = derivedClassDeclaration2.DescendantNodes().OfType<MethodDeclarationSyntax>()
+                .First(m => m.Identifier.ValueText == "Method3");
+            symbol = semanticModel.GetDeclaredSymbol(method) as IMethodSymbol;
+
+            Assert.IsFalse(symbol.IsChangeable());
+        }
+
+        [TestMethod]
+        public void Symbol_IsProbablyEventHandler()
+        {
+            var method = derivedClassDeclaration2.DescendantNodes().OfType<MethodDeclarationSyntax>()
+                .First(m => m.Identifier.ValueText == "Method3");
+            var symbol = semanticModel.GetDeclaredSymbol(method) as IMethodSymbol;
+
+            Assert.IsFalse(symbol.IsProbablyEventHandler(semanticModel.Compilation));
+
+            method = derivedClassDeclaration2.DescendantNodes().OfType<MethodDeclarationSyntax>()
+                .First(m => m.Identifier.ValueText == "EventHandler");
+            symbol = semanticModel.GetDeclaredSymbol(method) as IMethodSymbol;
+
+            Assert.IsTrue(symbol.IsProbablyEventHandler(semanticModel.Compilation));
         }
     }
 }

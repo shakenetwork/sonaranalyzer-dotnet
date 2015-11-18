@@ -61,5 +61,57 @@ namespace SonarLint.Helpers
 
             return currentSymbol == null || currentSymbol.DeclaredAccessibility == Accessibility.NotApplicable;
         }
+
+        public static bool DerivesOrImplementsAny(this INamedTypeSymbol type, params ITypeSymbol[] possibleTypes)
+        {
+            var allInterfaces = type.AllInterfaces.Select(inter => inter.ConstructedFrom);
+            if (allInterfaces.Intersect(possibleTypes).Any())
+            {
+                return true;
+            }
+
+            var baseType = type;
+            while (baseType != null &&
+                !(baseType is IErrorTypeSymbol))
+            {
+                if (possibleTypes.Contains(baseType))
+                {
+                    return true;
+                }
+                baseType = baseType.BaseType;
+            }
+            return false;
+        }
+
+        public static bool IsChangeable(this IMethodSymbol methodSymbol)
+        {
+            return !methodSymbol.IsAbstract &&
+                !methodSymbol.IsVirtual &&
+                !methodSymbol.IsInterfaceImplementationOrMemberOverride();
+        }
+
+        public static bool IsProbablyEventHandler(this IMethodSymbol methodSymbol, Compilation compilation)
+        {
+            if (!methodSymbol.ReturnsVoid ||
+                methodSymbol.Parameters.Length != 2)
+            {
+                return false;
+            }
+
+            var eventArgs = methodSymbol.Parameters[1];
+            var eventArgsType = eventArgs.Type as INamedTypeSymbol;
+            if (eventArgsType == null)
+            {
+                return true;
+            }
+
+            var sysEventArgs = compilation.GetTypeByMetadataName("System.EventArgs");
+            if (sysEventArgs == null)
+            {
+                return true;
+            }
+
+            return eventArgsType.DerivesOrImplementsAny(sysEventArgs);
+        }
     }
 }
