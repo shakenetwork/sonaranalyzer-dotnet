@@ -36,3 +36,21 @@ public class Point
 }
 </pre>
 
+<h2>Exceptions</h2>
+<p>
+    This rule doesn't report on guard conditions checking for reference equality.
+</p>
+<pre>
+public class Point
+{
+  public override bool Equals(object obj)
+  {
+    if (base.Equals(obj)) // Compliant, although it could be replaced with object.ReferenceEquals(obj, this), which is clearer
+    {
+      return true;
+    }
+    ...
+  }
+}
+</pre>
+

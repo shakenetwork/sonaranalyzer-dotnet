@@ -18,6 +18,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
@@ -56,7 +57,9 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        private static readonly string[] MethodNames = { "GetHashCode", "Equals" };
+        private const string EqualsName = "Equals";
+        private static readonly string[] MethodNames = { "GetHashCode", EqualsName };
+        private static readonly SyntaxNode TrueLiteral = SyntaxFactory.LiteralExpression(SyntaxKind.TrueLiteralExpression);
 
         public override void Initialize(AnalysisContext context)
         {
@@ -79,35 +82,89 @@ namespace SonarLint.Rules.CSharp
                     cb.RegisterSyntaxNodeAction(
                         c =>
                         {
-                            var invocation = (InvocationExpressionSyntax)c.Node;
-                            var invokedMethod = c.SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
-                            if (invokedMethod == null ||
-                                invokedMethod.Name != methodSymbol.Name)
-                            {
-                                return;
-                            }
-
-                            var memberAccess = invocation.Expression as MemberAccessExpressionSyntax;
-                            if (memberAccess == null)
-                            {
-                                return;
-                            }
-
-                            var baseCall = memberAccess.Expression as BaseExpressionSyntax;
-                            if (baseCall == null)
-                            {
-                                return;
-                            }
-
-                            var objectType = invokedMethod.ContainingType;
-                            if (objectType != null &&
-                                objectType.SpecialType == SpecialType.System_Object)
-                            {
-                                c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation()));
-                            }
+                            CheckInvocationInsideMethod(c, methodSymbol);
                         },
                         SyntaxKind.InvocationExpression);
                 });
+        }
+
+        private static void CheckInvocationInsideMethod(SyntaxNodeAnalysisContext c, IMethodSymbol methodSymbol)
+        {
+            var invocation = (InvocationExpressionSyntax)c.Node;
+            var invokedMethod = c.SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
+            if (invokedMethod == null ||
+                invokedMethod.Name != methodSymbol.Name)
+            {
+                return;
+            }
+
+            var memberAccess = invocation.Expression as MemberAccessExpressionSyntax;
+            if (memberAccess == null)
+            {
+                return;
+            }
+
+            var baseCall = memberAccess.Expression as BaseExpressionSyntax;
+            if (baseCall == null)
+            {
+                return;
+            }
+
+            var objectType = invokedMethod.ContainingType;
+            if (objectType != null &&
+                objectType.SpecialType == SpecialType.System_Object &&
+                !IsEqualsCallInGuardCondition(invocation, invokedMethod, methodSymbol, c.SemanticModel))
+            {
+                c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation()));
+            }
+        }
+
+        private static bool IsEqualsCallInGuardCondition(InvocationExpressionSyntax invocation, IMethodSymbol invokedMethod,
+            IMethodSymbol declaredMethod, SemanticModel semanticModel)
+        {
+            if (invokedMethod.Name != EqualsName)
+            {
+                return false;
+            }
+
+            var ifStatement = invocation.Parent as IfStatementSyntax;
+            if (ifStatement == null ||
+                ifStatement.Condition != invocation)
+            {
+                return false;
+            }
+
+            if (invocation.ArgumentList == null ||
+                invocation.ArgumentList.Arguments.Count != 1)
+            {
+                return false;
+            }
+
+            return IfStatementWithSingleReturnTrue(ifStatement);
+        }
+
+        private static bool IfStatementWithSingleReturnTrue(IfStatementSyntax ifStatement)
+        {
+            var statement = ifStatement.Statement;
+            var returnStatement = statement as ReturnStatementSyntax;
+            var block = statement as BlockSyntax;
+            if (block != null)
+            {
+                if (!block.Statements.Any())
+                {
+                    return false;
+                }
+
+                returnStatement = block.Statements.First() as ReturnStatementSyntax;
+            }
+
+            if (returnStatement == null)
+            {
+                return false;
+            }
+
+            return returnStatement.Expression != null &&
+                EquivalenceChecker.AreEquivalent(returnStatement.Expression, TrueLiteral);
         }
 
         private static bool MethodIsRelevant(IMethodSymbol methodSymbol)

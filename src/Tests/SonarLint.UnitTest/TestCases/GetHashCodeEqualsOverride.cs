@@ -11,12 +11,49 @@ namespace Tests.Diagnostics
         {
             this.x = x;
         }
+
+        public bool Somemethod()
+        {
+            object obj = null;
+            if (base.Equals(obj)) // Compliant
+            {
+                return true;
+            }
+            if (base.Equals(obj)) // Compliant
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         public override int GetHashCode()
         {
             return x.GetHashCode() ^ base.GetHashCode(); //Noncompliant
         }
         public override bool Equals(object obj)
         {
+            if (base.Equals(obj)) //Compliant, guard condition
+            {
+                return true;
+            }
+
+            if (base.Equals(obj)) //Compliant, guard condition
+            {
+                return true;
+                return true;
+            }
+
+            if (base.Equals(obj)) //Noncompliant
+            {
+                return false;
+            }
+
+            if (true)
+            {
+                return base.Equals(obj); //Noncompliant
+            }
+
             return base.Equals(obj); //Noncompliant
         }
 
