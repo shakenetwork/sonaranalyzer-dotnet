@@ -28,6 +28,7 @@ namespace SonarLint.UnitTest.Common
     public class DistributionTest
     {
         [TestMethod]
+        [TestCategory(MetricsTest.MetricsTestCategoryName)]
         public void Distribution()
         {
             var distribution = new Distribution(0, 10, 20);

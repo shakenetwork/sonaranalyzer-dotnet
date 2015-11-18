@@ -31,7 +31,10 @@ namespace SonarLint.UnitTest.Common
     [TestClass]
     public class MetricsTest
     {
+        internal const string MetricsTestCategoryName = "Metrics";
+
         [TestMethod]
+        [TestCategory(MetricsTestCategoryName)]
         public void Lines()
         {
             Lines(AnalyzerLanguage.CSharp, "").Should().Be(1);
@@ -57,6 +60,7 @@ namespace SonarLint.UnitTest.Common
         }
 
         [TestMethod]
+        [TestCategory(MetricsTestCategoryName)]
         public void LinesOfCode()
         {
             LinesOfCode(AnalyzerLanguage.CSharp, "").Should().BeEquivalentTo();
@@ -86,6 +90,7 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
         }
 
         [TestMethod]
+        [TestCategory(MetricsTestCategoryName)]
         public void CommentsWithoutHeaders()
         {
             CommentsWithoutHeaders(AnalyzerLanguage.CSharp, "").NonBlank.Should().BeEquivalentTo();
@@ -147,6 +152,7 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
         }
 
         [TestMethod]
+        [TestCategory(MetricsTestCategoryName)]
         public void CommentsWithHeaders()
         {
             CommentsWithHeaders(AnalyzerLanguage.CSharp, "").NonBlank.Should().BeEquivalentTo();
@@ -208,6 +214,7 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
         }
 
         [TestMethod]
+        [TestCategory(MetricsTestCategoryName)]
         public void Classes()
         {
             Classes(AnalyzerLanguage.CSharp, "").Should().Be(0);
@@ -228,6 +235,7 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
         }
 
         [TestMethod]
+        [TestCategory(MetricsTestCategoryName)]
         public void Accessors()
         {
             Accessors(AnalyzerLanguage.CSharp, "").Should().Be(0);
@@ -265,6 +273,7 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
         }
 
         [TestMethod]
+        [TestCategory(MetricsTestCategoryName)]
         public void Statements()
         {
             Statements(AnalyzerLanguage.CSharp, "").Should().Be(0);
@@ -334,6 +343,7 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
         }
 
         [TestMethod]
+        [TestCategory(MetricsTestCategoryName)]
         public void Functions()
         {
             Functions(AnalyzerLanguage.CSharp, "").Should().Be(0);
@@ -378,6 +388,7 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
         }
 
         [TestMethod]
+        [TestCategory(MetricsTestCategoryName)]
         public void PublicApi()
         {
             PublicApi(AnalyzerLanguage.CSharp, "").Should().Be(0);
@@ -408,6 +419,7 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
         }
 
         [TestMethod]
+        [TestCategory(MetricsTestCategoryName)]
         public void PublicUndocumentedApi()
         {
             PublicUndocumentedApi(AnalyzerLanguage.CSharp, "").Should().Be(0);
@@ -426,6 +438,7 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
         }
 
         [TestMethod]
+        [TestCategory(MetricsTestCategoryName)]
         public void Complexity()
         {
             Complexity(AnalyzerLanguage.CSharp, "").Should().Be(0);
@@ -503,6 +516,7 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
         }
 
         [TestMethod]
+        [TestCategory(MetricsTestCategoryName)]
         public void FunctionComplexityDistribution()
         {
             FunctionComplexityDistribution(AnalyzerLanguage.CSharp, "").Ranges.Should().BeEquivalentTo(1, 2, 4, 6, 8, 10, 12);
@@ -542,6 +556,7 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
         }
 
         [TestMethod]
+        [TestCategory(MetricsTestCategoryName)]
         [ExpectedException(typeof(ArgumentException))]
         public void WrongMetrics_CSharp()
         {
@@ -549,6 +564,7 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
         }
 
         [TestMethod]
+        [TestCategory(MetricsTestCategoryName)]
         [ExpectedException(typeof(ArgumentException))]
         public void WrongMetrics_VisualBasic()
         {

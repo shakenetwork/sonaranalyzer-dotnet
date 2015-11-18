@@ -29,7 +29,7 @@ namespace SonarLint.UnitTest.Common
     public class MultiValueDictionaryTest
     {
         [TestMethod]
-        public void Add()
+        public void MultiValueDictionary_Add()
         {
             var mvd = new MultiValueDictionary<int, int>();
             mvd.Add(5, 42);
@@ -41,7 +41,7 @@ namespace SonarLint.UnitTest.Common
         }
 
         [TestMethod]
-        public void Add_Set()
+        public void MultiValueDictionary_Add_Set()
         {
             var mvd = MultiValueDictionary<int, int>.Create<HashSet<int>>();
             mvd.Add(5, 42);
@@ -53,7 +53,7 @@ namespace SonarLint.UnitTest.Common
         }
 
         [TestMethod]
-        public void AddRange()
+        public void MultiValueDictionary_AddRange()
         {
             var mvd = new MultiValueDictionary<int, int>();
             mvd.AddRangeWithKey(5, new int[] { 42, 42 });
