@@ -194,7 +194,9 @@ namespace SonarLint.UnitTest
 
                 var compilationWithOptions = compilation.WithOptions(compilationOptions);
                 var compilationWithAnalyzer = compilationWithOptions
-                    .WithAnalyzers(ImmutableArray.Create(diagnosticAnalyzer), cancellationToken: tokenSource.Token);
+                    .WithAnalyzers(
+                        ImmutableArray.Create(diagnosticAnalyzer),
+                        cancellationToken: tokenSource.Token);
 
                 return compilationWithAnalyzer.GetAnalyzerDiagnosticsAsync().Result
                     .Where(diag => diag.Id == diagnosticAnalyzer.SupportedDiagnostics.Single().Id);

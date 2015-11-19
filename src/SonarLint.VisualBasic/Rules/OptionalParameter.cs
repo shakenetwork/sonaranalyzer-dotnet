@@ -47,7 +47,9 @@ namespace SonarLint.Rules.VisualBasic
             parameter.Modifiers.First(m => m.IsKind(SyntaxKind.OptionalKeyword)).GetLocation();
 
         protected override IEnumerable<ParameterSyntax> GetParameters(MethodBaseSyntax method) =>
-            method.ParameterList.Parameters;
+            method.ParameterList == null
+            ? Enumerable.Empty<ParameterSyntax>()
+            : method.ParameterList.Parameters;
 
         protected override bool IsOptional(ParameterSyntax parameter) =>
             parameter.Modifiers.Any(m => m.IsKind(SyntaxKind.OptionalKeyword));

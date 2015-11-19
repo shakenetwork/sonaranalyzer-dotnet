@@ -25,6 +25,7 @@ using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarLint.Runner;
 using SonarLint.Rules.CSharp;
+using SonarLint.Helpers;
 
 namespace SonarLint.UnitTest
 {
@@ -34,11 +35,15 @@ namespace SonarLint.UnitTest
         [TestMethod]
         public void Configuration()
         {
-            var conf = new Configuration(XDocument.Load("TestResources\\ConfigurationTest.xml"), Common.AnalyzerLanguage.CSharp);
+            var conf = new Configuration(
+                $@"TestResources\{ParameterLoader.ParameterConfigurationFileName}",
+                Common.AnalyzerLanguage.CSharp);
+
             conf.IgnoreHeaderComments.Should().BeTrue();
             conf.Files.Should().BeEquivalentTo("TestResources\\TestInput.cs");
 
-            conf.AnalyzerIds.Should().BeEquivalentTo(
+            string[] expectedAnalyzerIds =
+            {
                 "S1121",
                 "S2306",
                 "S1227",
@@ -51,18 +56,15 @@ namespace SonarLint.UnitTest
                 "S107",
                 "S101",
                 "S100",
-                "S124");
+                "S124"
+            };
+
+            conf.AnalyzerIds.Should().BeEquivalentTo(expectedAnalyzerIds);
 
             var analyzers = conf.GetAnalyzers();
-            analyzers.OfType<FileLines>().Single().Maximum.ShouldBeEquivalentTo(1000);
-            analyzers.OfType<LineLength>().Single().Maximum.ShouldBeEquivalentTo(200);
-            analyzers.OfType<TooManyLabelsInSwitch>().Single().Maximum.ShouldBeEquivalentTo(30);
-            analyzers.OfType<TooManyParameters>().Single().Maximum.ShouldBeEquivalentTo(7);
-            analyzers.OfType<ExpressionComplexity>().Single().Maximum.ShouldBeEquivalentTo(3);
-            analyzers.OfType<FunctionComplexity>().Single().Maximum.ShouldBeEquivalentTo(10);
-            analyzers.OfType<ClassName>().Single().Convention.ShouldBeEquivalentTo("^(?:[A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*)$");
-            analyzers.OfType<MethodName>().Single().Convention.ShouldBeEquivalentTo("^[A-Z][a-zA-Z0-9]+$");
+            Assert.AreEqual(expectedAnalyzerIds.Length, analyzers.Count());
 
+            // only the template rule's parameters are set in the Configuration class, so we only check that
             var commentAnalyzer = analyzers.OfType<CommentRegularExpression>().Single();
             var ruleInstances = commentAnalyzer.RuleInstances.ToList();
             ruleInstances.Should().HaveCount(2);

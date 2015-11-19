@@ -29,66 +29,47 @@ using SonarLint.Utilities;
 using SonarLint.Common;
 using System.Reflection;
 using SonarLint.Rules.CSharp;
+using SonarLint.Helpers;
+using System.IO;
 
 namespace SonarLint.Runner
 {
     public class Configuration
     {
-        private class RuleParameterValue
-        {
-            public string ParameterKey { get; set; }
-            public string ParameterValue { get; set; }
-        }
-        private class RuleParameterValues
-        {
-            public string RuleId { get; set; }
-            public List<RuleParameterValue> ParameterValues { get; set; } = new List<RuleParameterValue>();
-        }
-
         private readonly ImmutableArray<DiagnosticAnalyzer> nonTemplateAnalyzers;
-        private readonly IImmutableList<RuleParameterValues> parameters;
         private readonly AnalyzerLanguage language;
+        private readonly XDocument xml;
+
+        public string Path { get; private set; }
 
         public bool IgnoreHeaderComments { get; }
         public IImmutableList<string> Files { get; }
         public IImmutableSet<string> AnalyzerIds { get; }
 
-        public Configuration(XContainer xml, AnalyzerLanguage language)
+        public Configuration(string path, AnalyzerLanguage language)
         {
+            if (!ParameterLoader.ConfigurationFilePathMatchesExpected(path))
+            {
+                throw new ArgumentException(
+                    $"Input configuration doesn't match expected file name: '{ParameterLoader.ParameterConfigurationFileName}'",
+                    nameof(path));
+            }
+
+            Path = path;
             this.language = language;
+
             nonTemplateAnalyzers = ImmutableArray.Create(GetNonTemplateAnalyzers(language).ToArray());
 
+            this.xml = XDocument.Load(path);
             var settings = ParseSettings(xml);
             IgnoreHeaderComments = "true".Equals(settings["sonar.cs.ignoreHeaderComments"], StringComparison.InvariantCultureIgnoreCase);
 
             Files = xml.Descendants("File").Select(e => e.Value).ToImmutableList();
 
             AnalyzerIds = xml.Descendants("Rule").Select(e => e.Elements("Key").Single().Value).ToImmutableHashSet();
-
-            var builder = ImmutableList.CreateBuilder<RuleParameterValues>();
-            foreach (var rule in xml.Descendants("Rule").Where(e => e.Elements("Parameters").Any()))
-            {
-                var analyzerId = rule.Elements("Key").Single().Value;
-
-                var parameterValues = rule
-                    .Elements("Parameters").Single()
-                    .Elements("Parameter")
-                    .Select(e => new RuleParameterValue
-                    {
-                        ParameterKey = e.Elements("Key").Single().Value,
-                        ParameterValue = e.Elements("Value").Single().Value
-                    });
-
-                var pvs = new RuleParameterValues
-                {
-                    RuleId = analyzerId
-                };
-                pvs.ParameterValues.AddRange(parameterValues);
-
-                builder.Add(pvs);
-            }
-            parameters = builder.ToImmutable();
         }
+
+
 
         private static ImmutableDictionary<string, string> ParseSettings(XContainer xml)
         {
@@ -112,35 +93,7 @@ namespace SonarLint.Runner
                 .ToImmutableDictionary(e => e.Key, e => e.Value);
         }
 
-        private void SetParameterValues(DiagnosticAnalyzer parameteredAnalyzer)
-        {
-            var propertyParameterPairs = parameteredAnalyzer.GetType()
-                .GetProperties()
-                .Select(p => new { Property = p, Descriptor = p.GetCustomAttributes<RuleParameterAttribute>().SingleOrDefault() })
-                .Where(p=> p.Descriptor != null);
 
-            foreach (var propertyParameterPair in propertyParameterPairs)
-            {
-                var value = parameters
-                    .Single(p => p.RuleId == parameteredAnalyzer.SupportedDiagnostics.Single().Id).ParameterValues
-                    .Single(pv => pv.ParameterKey == propertyParameterPair.Descriptor.Key)
-                    .ParameterValue;
-
-                object convertedValue = value;
-                switch (propertyParameterPair.Descriptor.Type)
-                {
-                    case PropertyType.String:
-                        break;
-                    case PropertyType.Integer:
-                        convertedValue = int.Parse(value, NumberStyles.None, CultureInfo.InvariantCulture);
-                        break;
-                    default:
-                        throw new NotSupportedException();
-                }
-
-                propertyParameterPair.Property.SetValue(parameteredAnalyzer, convertedValue);
-            }
-        }
 
         public ImmutableArray<DiagnosticAnalyzer> GetAnalyzers()
         {
@@ -149,10 +102,6 @@ namespace SonarLint.Runner
             foreach (var analyzer in nonTemplateAnalyzers
                 .Where(analyzer => AnalyzerIds.Contains(analyzer.SupportedDiagnostics.Single().Id)))
             {
-                if (RuleFinder.IsParametered(analyzer.GetType()))
-                {
-                    SetParameterValues(analyzer);
-                }
                 builder.Add(analyzer);
             }
 
@@ -173,7 +122,7 @@ namespace SonarLint.Runner
                 return;
             }
             var rules = ImmutableArray.CreateBuilder<CommentRegularExpression.CommentRegularExpressionRule>();
-            foreach (var parameterValues in parameters
+            foreach (var parameterValues in ParameterLoader.ParseParameters(xml)
                 .Where(p => p.RuleId == CommentRegularExpression.TemplateDiagnosticId)
                 .Select(p => p.ParameterValues))
             {

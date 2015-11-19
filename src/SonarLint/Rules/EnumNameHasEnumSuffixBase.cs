@@ -24,10 +24,11 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Helpers;
 using System.Linq;
+using System;
 
 namespace SonarLint.Rules
 {
-    public abstract class EnumNameHasEnumSuffixBase : MultiLanguageDiagnosticAnalyzer
+    public abstract class EnumNameHasEnumSuffixBase : DiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S2344";
         protected const string Title = "Enumeration type names should not have \"Flags\" or \"Enum\" suffixes";
@@ -45,6 +46,9 @@ namespace SonarLint.Rules
                 description: Description);
 
         protected static readonly string[] NameEndings = { "enum", "flags" };
+
+        protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
+        GeneratedCodeRecognizer IMultiLanguageDiagnosticAnalyzer.GeneratedCodeRecognizer => GeneratedCodeRecognizer;
     }
 
     public abstract class EnumNameHasEnumSuffixBase<TLanguageKindEnum> : EnumNameHasEnumSuffixBase

@@ -34,12 +34,15 @@ using SonarQube.CSharp.CodeAnalysis.RulingTest.ErrorModels.Omstar;
 using SonarLint.Runner;
 using SonarLint.Utilities;
 using Microsoft.CodeAnalysis;
+using SonarLint.Helpers;
 
 namespace SonarQube.CSharp.CodeAnalysis.RulingTest
 {
     [TestClass]
     public class RulingTest : IntegrationTestBase
     {
+        public TestContext TestContext { get; set; }
+
         [TestMethod]
         [TestCategory("Integration")]
         public void All_Rules_Have_Integration_Test()
@@ -95,7 +98,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
             CreateMissingExpectedDirectory(language);
             CreateMissingActualDirectory(language);
 
-            var tempInputFilePath = Path.GetTempFileName();
+            var tempInputFilePath = Path.Combine(TestContext.DeploymentDirectory, ParameterLoader.ParameterConfigurationFileName);
             try
             {
                 File.AppendAllText(tempInputFilePath, GenerateAnalysisInputFile(language));

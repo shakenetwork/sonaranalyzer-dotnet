@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.UnitTestability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.BrainOverload)]
-    public class ExpressionComplexity : DiagnosticAnalyzer
+    public class ExpressionComplexity : ParameteredDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1067";
         internal const string Title = "Expressions should not be too complex";
@@ -67,7 +67,7 @@ namespace SonarLint.Rules.CSharp
             SyntaxKind.ObjectInitializerExpression,
             SyntaxKind.InvocationExpression);
 
-        public override void Initialize(AnalysisContext context)
+        public override void Initialize(WrappingAnalysisContext context)
         {
             context.RegisterSyntaxTreeActionInNonGenerated(
                 c =>

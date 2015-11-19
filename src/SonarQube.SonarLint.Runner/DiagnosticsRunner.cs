@@ -26,20 +26,23 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using CS = Microsoft.CodeAnalysis.CSharp;
 using VB = Microsoft.CodeAnalysis.VisualBasic;
+using SonarLint.Common;
 
 namespace SonarLint.Runner
 {
     public class DiagnosticsRunner
     {
-        private readonly ImmutableArray<DiagnosticAnalyzer> diagnosticAnalyzers;
+        private readonly Configuration configuration;
 
-        public DiagnosticsRunner(ImmutableArray<DiagnosticAnalyzer> diagnosticAnalyzers)
+        public DiagnosticsRunner(Configuration configuration)
         {
-            this.diagnosticAnalyzers = diagnosticAnalyzers;
+            this.configuration = configuration;
         }
 
         public IEnumerable<Diagnostic> GetDiagnostics(Compilation compilation)
         {
+            var diagnosticAnalyzers = configuration.GetAnalyzers();
+
             if (diagnosticAnalyzers.IsDefaultOrEmpty)
             {
                 return new Diagnostic[0];
@@ -57,7 +60,10 @@ namespace SonarLint.Runner
 
             using (var tokenSource = new CancellationTokenSource())
             {
-                var compilationWithAnalyzer = modifiedCompilation.WithAnalyzers(diagnosticAnalyzers, cancellationToken: tokenSource.Token);
+                var compilationWithAnalyzer = modifiedCompilation.WithAnalyzers(
+                    diagnosticAnalyzers,
+                    new AnalyzerOptions(ImmutableArray.Create<AdditionalText>(new AnalyzerAdditionalFile(configuration.Path))),
+                    tokenSource.Token);
 
                 return compilationWithAnalyzer.GetAnalyzerDiagnosticsAsync().Result;
             }

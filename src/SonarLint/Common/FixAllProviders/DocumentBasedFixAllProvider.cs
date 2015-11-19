@@ -36,7 +36,7 @@ namespace SonarLint.Common
         {
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("SonarLint", "S1118:Utility classes should not have public constructors", 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("SonarLint", "S1118:Utility classes should not have public constructors",
             Justification = "Nested private class for lazy singleton instantiation")]
         private class Nested
         {

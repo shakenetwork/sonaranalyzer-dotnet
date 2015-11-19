@@ -28,7 +28,7 @@ using System.Collections.Generic;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class MultipleVariableDeclarationBase : MultiLanguageDiagnosticAnalyzer
+    public abstract class MultipleVariableDeclarationBase : DiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
     {
         public const string DiagnosticId = "S1659";
         protected const string Title = "Multiple variables should not be declared on the same line";
@@ -46,6 +46,9 @@ namespace SonarLint.Rules.Common
                 description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+
+        protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
+        GeneratedCodeRecognizer IMultiLanguageDiagnosticAnalyzer.GeneratedCodeRecognizer => GeneratedCodeRecognizer;
     }
 
     public abstract class MultipleVariableDeclarationBase<TLanguageKindEnum,

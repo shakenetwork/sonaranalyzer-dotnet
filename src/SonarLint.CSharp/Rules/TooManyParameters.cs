@@ -34,7 +34,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("20min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.BrainOverload)]
-    public class TooManyParameters : DiagnosticAnalyzer
+    public class TooManyParameters : ParameteredDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S107";
         internal const string Title = "Methods should not have too many parameters";
@@ -58,7 +58,7 @@ namespace SonarLint.Rules.CSharp
         [RuleParameter("max", PropertyType.Integer, "Maximum authorized number of parameters", DefaultValueMaximum)]
         public int Maximum { get; set; } = DefaultValueMaximum;
 
-        public override void Initialize(AnalysisContext context)
+        public override void Initialize(WrappingAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

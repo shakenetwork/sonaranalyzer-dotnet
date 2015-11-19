@@ -28,7 +28,7 @@ using System.Collections.Generic;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class OptionalParameterBase : MultiLanguageDiagnosticAnalyzer
+    public abstract class OptionalParameterBase : DiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S2360";
         protected const string Title = "Optional parameters should not be used";
@@ -53,6 +53,9 @@ namespace SonarLint.Rules.Common
                 description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
+
+        protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
+        GeneratedCodeRecognizer IMultiLanguageDiagnosticAnalyzer.GeneratedCodeRecognizer => GeneratedCodeRecognizer;
     }
 
     public abstract class OptionalParameterBase<TLanguageKindEnum, TMethodSyntax, TParameterSyntax> : OptionalParameterBase

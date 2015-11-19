@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.UnitTestability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.BrainOverload)]
-    public class FunctionComplexity : DiagnosticAnalyzer
+    public class FunctionComplexity : ParameteredDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1541";
         internal const string Title = "Methods should not be too complex";
@@ -62,7 +62,7 @@ namespace SonarLint.Rules.CSharp
             "The maximum authorized complexity in function", DefaultValueMaximum)]
         public int Maximum { get; set; } = DefaultValueMaximum;
 
-        public override void Initialize(AnalysisContext context)
+        public override void Initialize(WrappingAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckComplexity<MethodDeclarationSyntax>(c, m => m.Identifier.GetLocation()),

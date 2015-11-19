@@ -23,7 +23,6 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Xml;
-using System.Xml.Linq;
 using Microsoft.CodeAnalysis;
 using SonarLint.Helpers;
 using SonarLint.Common;
@@ -34,12 +33,22 @@ namespace SonarLint.Runner
     {
         public static int Main(string[] args)
         {
+            if (args.Length != 3)
+            {
+                Write("Expected parameters: ");
+                Write("[Input configuration path]");
+                Write("[Output file path]");
+                Write("[AnalyzerLanguage: 'cs' for C#, 'vbnet' for VB.Net]");
+
+                return -1;
+            }
+            
             var language = AnalyzerLanguage.Parse(args[2]);
 
             Write($"SonarLint for Visual Studio version {typeof (Program).Assembly.GetName().Version}");
 
-            var configuration = new Configuration(XDocument.Load(args[0]), language);
-            var diagnosticsRunner = new DiagnosticsRunner(configuration.GetAnalyzers());
+            var configuration = new Configuration(args[0], language);
+            var diagnosticsRunner = new DiagnosticsRunner(configuration);
 
             var xmlOutSettings = new XmlWriterSettings
             {

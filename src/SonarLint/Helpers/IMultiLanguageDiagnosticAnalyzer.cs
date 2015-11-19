@@ -18,12 +18,10 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using Microsoft.CodeAnalysis.Diagnostics;
-
 namespace SonarLint.Helpers
 {
-    public abstract class MultiLanguageDiagnosticAnalyzer : DiagnosticAnalyzer
+    internal interface IMultiLanguageDiagnosticAnalyzer
     {
-        protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
+        GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
     }
 }

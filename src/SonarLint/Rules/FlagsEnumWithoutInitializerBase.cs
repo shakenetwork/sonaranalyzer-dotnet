@@ -27,7 +27,7 @@ using SonarLint.Helpers;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class FlagsEnumWithoutInitializerBase : MultiLanguageDiagnosticAnalyzer
+    public abstract class FlagsEnumWithoutInitializerBase : DiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S2345";
         protected const string Title = "Flags enumerations should explicitly initialize all their members";
@@ -65,6 +65,9 @@ namespace SonarLint.Rules.Common
             });
             return flagsAttribute != null;
         }
+
+        protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
+        GeneratedCodeRecognizer IMultiLanguageDiagnosticAnalyzer.GeneratedCodeRecognizer => GeneratedCodeRecognizer;
     }
 
     public abstract class FlagsEnumWithoutInitializerBase<TLanguageKindEnum, TEnumDeclarationSyntax> : FlagsEnumWithoutInitializerBase

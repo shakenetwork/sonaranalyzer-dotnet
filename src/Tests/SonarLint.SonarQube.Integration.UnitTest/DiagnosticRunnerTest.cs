@@ -18,22 +18,27 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
 using System.Linq;
 using FluentAssertions;
-using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarLint.Runner;
+using SonarLint.Helpers;
+using System.IO;
 
 namespace SonarLint.UnitTest
 {
     [TestClass]
     public class DiagnosticRunnerTest
     {
+        public TestContext TestContext { get; set; }
+
         [TestMethod]
         public void DiagnosticRunnerTest_NoAnalyzer()
         {
-            var runner = new DiagnosticsRunner(ImmutableArray.Create<DiagnosticAnalyzer>());
+            var tempInputFilePath = Path.Combine(TestContext.DeploymentDirectory, ParameterLoader.ParameterConfigurationFileName);
+            File.Copy("TestResources\\ConfigurationTest.Empty.xml", tempInputFilePath, true);
+
+            var runner = new DiagnosticsRunner(new Configuration(tempInputFilePath, Common.AnalyzerLanguage.CSharp));
 
             var solution = CompilationHelper.GetSolutionWithEmptyFile();
 

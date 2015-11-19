@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("30min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.BrainOverload)]
-    public class TooManyLabelsInSwitch : DiagnosticAnalyzer
+    public class TooManyLabelsInSwitch : ParameteredDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1479";
         internal const string Title = "\"switch\" statements should not have too many \"case\" clauses";
@@ -60,7 +60,7 @@ namespace SonarLint.Rules.CSharp
         [RuleParameter("maximum", PropertyType.Integer, "Maximum number of case", DefaultValueMaximum)]
         public int Maximum { get; set; } = DefaultValueMaximum;
 
-        public override void Initialize(AnalysisContext context)
+        public override void Initialize(WrappingAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

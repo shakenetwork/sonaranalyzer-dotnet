@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("5min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Convention)]
-    public class ClassName : DiagnosticAnalyzer
+    public class ClassName : ParameteredDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S101";
         internal const string Title = "Class names should comply with a naming convention";
@@ -60,7 +60,7 @@ namespace SonarLint.Rules.CSharp
         [RuleParameter("format", PropertyType.String, "Regular expression used to check the class names against.", DefaultValueConvention)]
         public string Convention { get; set; } = DefaultValueConvention;
 
-        public override void Initialize(AnalysisContext context)
+        public override void Initialize(WrappingAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

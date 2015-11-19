@@ -20,6 +20,7 @@
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarLint.Common;
+using SonarLint.Helpers;
 using SonarLint.Runner;
 using System.IO;
 using System.Linq;
@@ -32,7 +33,10 @@ namespace SonarLint.UnitTest
         [TestMethod]
         public void End_To_End()
         {
-            Program.Main(new [] { "TestResources\\ConfigurationTest.xml", "Output.xml", AnalyzerLanguage.CSharp.ToString()});
+            Program.Main(new [] {
+                $@"TestResources\{ParameterLoader.ParameterConfigurationFileName}",
+                "Output.xml",
+                AnalyzerLanguage.CSharp.ToString()});
 
             var textActual = new string(File.ReadAllText("Output.xml")
                 .ToCharArray()
@@ -50,7 +54,11 @@ namespace SonarLint.UnitTest
                 @"<AnalysisOutput><Files><File><Path>TestResources\TestInput.cs</Path>",
                 @"<Metrics><Lines>16</Lines>",
                 @"<Issue><Id>FIXME</Id><Line>3</Line>",
-                @"<Issue><Id>TODO</Id><Line>5</Line>"
+                @"<Issue><Id>TODO</Id><Line>5</Line>",
+                @"<Id>S101</Id><Line>1</Line><Message>Renamethisclass""TestClass""tomatchtheregularexpression:^(?:[A-HJ-Z][a-zA-Z0-9])$</Message>",
+                @"<Id>S103</Id><Line>10</Line><Message>Splitthis21characterslongline(whichisgreaterthan10authorized).</Message>",
+                @"<Id>S103</Id><Line>13</Line><Message>Splitthis17characterslongline(whichisgreaterthan10authorized).</Message>",
+                @"<Id>S104</Id><Line>1</Line><Message>Thisfilehas16lines,whichisgreaterthan10authorized.Splititintosmallerfiles.</Message>"
             };
 
             foreach (var expected in expectedContent)

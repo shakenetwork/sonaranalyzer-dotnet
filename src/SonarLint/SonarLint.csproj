@@ -76,12 +76,15 @@
       <HintPath>..\..\packages\System.Reflection.Metadata.1.0.21\lib\portable-net45+win8\System.Reflection.Metadata.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\AssemblyInfo.Shared.cs">
       <Link>Properties\AssemblyInfo.Shared.cs</Link>
     </Compile>
     <Compile Include="Common\AnalyzerLanguage.cs" />
+    <Compile Include="Common\AnalyzerAdditionalFile.cs" />
     <Compile Include="Common\MultiValueDictionary.cs" />
     <Compile Include="Common\FixAllProviders\BidirectionalDictionary.cs" />
     <Compile Include="Common\IRuleTemplate.cs" />
@@ -92,8 +95,11 @@
     <Compile Include="Common\Tag.cs" />
     <Compile Include="Common\IdeVisibility.cs" />
     <Compile Include="Helpers\DiagnosticReportHelper.cs" />
-    <Compile Include="Helpers\DiagnosticAnalyzerBase.cs" />
     <Compile Include="Helpers\SymbolHelper.cs" />
+    <Compile Include="Helpers\AnalysisContext.cs" />
+    <Compile Include="Helpers\ParameteredDiagnosticAnalyzer.cs" />
+    <Compile Include="Helpers\IMultiLanguageDiagnosticAnalyzer.cs" />
+    <Compile Include="Helpers\ParameterLoader.cs" />
     <Compile Include="Helpers\GeneratedCodeRecognizer.cs" />
     <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="Helpers\DiagnosticAnalyzerContextHelper.cs" />
