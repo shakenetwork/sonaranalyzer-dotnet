@@ -74,7 +74,7 @@ namespace SonarLint.Rules.Common
                     var symbol = c.SemanticModel.GetDeclaredSymbol(anyVariable) as IFieldSymbol;
                     if (symbol == null ||
                         !symbol.IsConst ||
-                        !PublicMethodWithMultidimensionalArrayBase.IsPublic(symbol))
+                        !symbol.IsPublicApi())
                     {
                         return;
                     }

@@ -65,8 +65,7 @@ namespace SonarLint.Rules.CSharp
                     var methodSymbol = cbc.OwningSymbol as IMethodSymbol;
                     if (methodDeclaration == null ||
                         methodSymbol == null ||
-                        !IsMethodCandidate(methodSymbol) ||
-                        IsMethodProbablyEventHandler(methodSymbol, cbc.SemanticModel.Compilation))
+                        !IsMethodCandidate(methodSymbol, cbc.SemanticModel.Compilation))
                     {
                         return;
                     }
@@ -111,19 +110,12 @@ namespace SonarLint.Rules.CSharp
                 });
         }
 
-        private static bool IsMethodCandidate(IMethodSymbol methodSymbol)
+        private static bool IsMethodCandidate(IMethodSymbol methodSymbol, Compilation compilation)
         {
-            if (methodSymbol.IsAbstract ||
-                methodSymbol.IsVirtual ||
-                methodSymbol.IsOverride)
-            {
-                return false;
-            }
-
-            return !methodSymbol.ContainingType
-                .AllInterfaces
-                .SelectMany(@interface => @interface.GetMembers().OfType<IMethodSymbol>())
-                .Any(method => methodSymbol.Equals(methodSymbol.ContainingType.FindImplementationForInterfaceMember(method)));
+            return !methodSymbol.IsAbstract &&
+                !methodSymbol.IsVirtual &&
+                !IsMethodProbablyEventHandler(methodSymbol, compilation) &&
+                !methodSymbol.IsInterfaceImplementationOrMemberOverride();
         }
 
         private static bool IsMethodProbablyEventHandler(IMethodSymbol methodSymbol, Compilation compilation)

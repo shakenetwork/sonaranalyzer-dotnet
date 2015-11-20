@@ -48,17 +48,7 @@ namespace SonarLint.Rules.Common
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        internal static bool IsPublic(ISymbol symbol)
-        {
-            var currentSymbol = symbol;
-            while (currentSymbol != null &&
-                currentSymbol.DeclaredAccessibility == Accessibility.Public)
-            {
-                currentSymbol = currentSymbol.ContainingSymbol;
-            }
-
-            return currentSymbol == null || currentSymbol.DeclaredAccessibility == Accessibility.NotApplicable;
-        }
+        
     }
 
     public abstract class PublicMethodWithMultidimensionalArrayBase<TLanguageKindEnum, TMethodSyntax> : PublicMethodWithMultidimensionalArrayBase
@@ -76,7 +66,7 @@ namespace SonarLint.Rules.Common
 
                     if (methodSymbol != null &&
                         IsMethodChangeable(methodSymbol) &&
-                        IsPublic(methodSymbol) &&
+                        methodSymbol.IsPublicApi() &&
                         MethodHasMultidimensionalArrayParameters(methodSymbol))
                     {
                         var identifier = GetIdentifier(method);

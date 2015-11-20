@@ -2,8 +2,23 @@
 
 namespace Tests.Diagnostics
 {
-    public class OptionalParameter
+    public interface IInterface
     {
+        void Method(int i = 42); //Noncompliant
+    }
+
+    public class Base
+    {
+        public virtual void Method(int i = 42) //Noncompliant
+        { }
+    }
+
+    public class OptionalParameter : Base
+    {
+        public override void Method(int i = 42) //Compliant
+        {
+            base.Method(i);
+        }
         public OptionalParameter(int i = 0, // Noncompliant
             int j = 1) // Noncompliant
         {

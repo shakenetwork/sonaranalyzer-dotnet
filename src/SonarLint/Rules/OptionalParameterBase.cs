@@ -68,7 +68,10 @@ namespace SonarLint.Rules.Common
                 {
                     var method = (TMethodSyntax)c.Node;
                     var symbol = c.SemanticModel.GetDeclaredSymbol(method);
-                    if (!PublicMethodWithMultidimensionalArrayBase.IsPublic(symbol))
+
+                    if (symbol == null ||
+                        !symbol.IsPublicApi() ||
+                        symbol.IsInterfaceImplementationOrMemberOverride())
                     {
                         return;
                     }
