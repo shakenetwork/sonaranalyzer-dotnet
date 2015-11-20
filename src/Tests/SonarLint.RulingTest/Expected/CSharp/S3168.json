@@ -1,0 +1,94 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarLint.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S3168",
+      "FullMessage": "Return \"Task\" instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\benchmark\\PingPong\\Program.cs",
+            "Region": {
+              "StartLine": 47,
+              "EndLine": 47,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3168",
+      "FullMessage": "Return \"Task\" instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Conductor.cs",
+            "Region": {
+              "StartLine": 262,
+              "EndLine": 262,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3168",
+      "FullMessage": "Return \"Task\" instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Core.Test\\DefaultActionSelectorTests.cs",
+            "Region": {
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3168",
+      "FullMessage": "Return \"Task\" instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Extensions.Test\\RedirectToActionResultTest.cs",
+            "Region": {
+              "StartLine": 16,
+              "EndLine": 16,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3168",
+      "FullMessage": "Return \"Task\" instead.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\Microsoft.AspNet.Mvc.Extensions.Test\\RedirectToRouteResultTest.cs",
+            "Region": {
+              "StartLine": 20,
+              "EndLine": 20,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

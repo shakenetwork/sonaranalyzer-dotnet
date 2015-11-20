@@ -99,6 +99,7 @@
     <Compile Include="Rules\ArgumentSpecifiedForCallerInfoParameter.cs" />
     <Compile Include="Rules\ArrayCovariance.cs" />
     <Compile Include="Rules\AssignmentInsideSubExpression.cs" />
+    <Compile Include="Rules\AsyncVoidMethod.cs" />
     <Compile Include="Rules\AsyncAwaitIdentifier.cs" />
     <Compile Include="Rules\BinaryOperationWithIdenticalExpressions.cs" />
     <Compile Include="Rules\BooleanCheckInverted.cs" />

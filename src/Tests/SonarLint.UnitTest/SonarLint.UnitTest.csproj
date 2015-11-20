@@ -143,6 +143,7 @@
     <Compile Include="Rules\EqualsOverrideTest.cs" />
     <Compile Include="Rules\StreamReadStatementTest.cs" />
     <Compile Include="Rules\EnumerableSumInUncheckedTest.cs" />
+    <Compile Include="Rules\AsyncVoidMethodTest.cs" />
     <Compile Include="Rules\EventNameContainsBeforeOrAfterTest.cs" />
     <Compile Include="Rules\ExitStatementUsageTest.cs" />
     <Compile Include="Rules\InvocationResolvesToOverrideWithParamsTest.cs" />
@@ -736,6 +737,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\TaskConfigureAwait.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\AsyncVoidMethod.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />

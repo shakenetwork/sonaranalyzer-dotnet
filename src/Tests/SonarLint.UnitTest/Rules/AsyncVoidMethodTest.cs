@@ -20,18 +20,17 @@
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarLint.Rules.CSharp;
-using System.Threading.Tasks;
 
 namespace SonarLint.UnitTest.Rules
 {
     [TestClass]
-    public class AsyncAwaitIdentifierTest
+    public class AsyncVoidMethodTest
     {
         [TestMethod]
         [TestCategory("Rule")]
-        public void AsyncAwaitIdentifier()
+        public void AsyncVoidMethod()
         {
-            Verifier.VerifyAnalyzer(@"TestCases\AsyncAwaitIdentifier.cs", new AsyncAwaitIdentifier());
+            Verifier.VerifyAnalyzer(@"TestCases\AsyncVoidMethod.cs", new AsyncVoidMethod());
         }
     }
 }
