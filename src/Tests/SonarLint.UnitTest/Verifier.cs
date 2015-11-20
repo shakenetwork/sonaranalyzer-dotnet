@@ -52,7 +52,8 @@ namespace SonarLint.UnitTest
 
         public static void VerifyAnalyzerInTest(string path, DiagnosticAnalyzer diagnosticAnalyzer)
         {
-            Verify(path, ProjectTypeHelper.TestAssemblyNamePattern, diagnosticAnalyzer);
+            Verify(path, GeneratedAssemblyName, diagnosticAnalyzer,
+                MetadataReference.CreateFromFile(typeof(TestMethodAttribute).Assembly.Location));
         }
 
         public static void VerifyCodeFix(string path, string pathToExpected, DiagnosticAnalyzer diagnosticAnalyzer,
@@ -158,7 +159,8 @@ namespace SonarLint.UnitTest
 
         #region Generic helper
 
-        private static Document GetDocument(string filePath, string assemblyName, AdhocWorkspace workspace)
+        private static Document GetDocument(string filePath, string assemblyName,
+            AdhocWorkspace workspace, params MetadataReference[] additionalReferences)
         {
             var file = new FileInfo(filePath);
             var language = file.Extension == ".cs"
@@ -169,6 +171,7 @@ namespace SonarLint.UnitTest
                     $"{assemblyName}.dll", language)
                 .AddMetadataReference(MetadataReference.CreateFromFile(typeof(object).Assembly.Location))
                 .AddMetadataReference(MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location))
+                .AddMetadataReferences(additionalReferences)
                 .AddDocument(file.Name, File.ReadAllText(file.FullName, Encoding.UTF8));
         }
 
@@ -198,11 +201,12 @@ namespace SonarLint.UnitTest
             }
         }
 
-        private static void Verify(string path, string assemblyName, DiagnosticAnalyzer diagnosticAnalyzer)
+        private static void Verify(string path, string assemblyName, DiagnosticAnalyzer diagnosticAnalyzer,
+            params MetadataReference[] additionalReferences)
         {
             using (var workspace = new AdhocWorkspace())
             {
-                var document = GetDocument(path, assemblyName, workspace);
+                var document = GetDocument(path, assemblyName, workspace, additionalReferences);
                 var compilation = document.Project.GetCompilationAsync().Result;
                 var diagnostics = GetDiagnostics(compilation, diagnosticAnalyzer);
                 var expected = ExpectedIssues(compilation.SyntaxTrees.First()).ToList();

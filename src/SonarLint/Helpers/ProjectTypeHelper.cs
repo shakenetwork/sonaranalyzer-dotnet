@@ -19,13 +19,12 @@
  */
 
 using Microsoft.CodeAnalysis;
+using System.Linq;
 
 namespace SonarLint.Helpers
 {
     public static class ProjectTypeHelper
     {
-        public const string TestAssemblyNamePattern = "test";
-
         public static bool IsTest(this Compilation compilation)
         {
             var assemblyName = string.Empty;
@@ -33,7 +32,20 @@ namespace SonarLint.Helpers
             {
                 assemblyName = compilation.AssemblyName;
             }
-            return assemblyName.ToLowerInvariant().Contains(TestAssemblyNamePattern);
+
+            return
+                assemblyName.ToLowerInvariant().Contains(TestAssemblyNamePattern) ||
+                compilation.ReferencedAssemblyNames
+                    .Any(assembly => TestAssemblyNames.Contains(assembly.Name.ToLowerInvariant()));
         }
+
+        private const string TestAssemblyNamePattern = "test";
+
+        private static readonly string[] TestAssemblyNames =
+        {
+            "microsoft.visualstudio.qualitytools.unittestframework",
+            "xunit.core",
+            "nunit.framework"
+        };
     }
 }
