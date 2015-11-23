@@ -138,6 +138,7 @@
     <Compile Include="Rules\EmptyMethod.cs" />
     <Compile Include="Rules\EmptyMethodCodeFixProvider.cs" />
     <Compile Include="Rules\EmptyNestedBlock.cs" />
+    <Compile Include="Rules\EnumerableSumInUnchecked.cs" />
     <Compile Include="Rules\EmptyStatement.cs" />
     <Compile Include="Rules\EmptyStatementCodeFixProvider.cs" />
     <Compile Include="Rules\EnumNameHasEnumSuffix.cs" />

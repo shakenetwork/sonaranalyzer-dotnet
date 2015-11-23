@@ -142,6 +142,7 @@
     <Compile Include="Rules\CommentTodoTest.cs" />
     <Compile Include="Rules\EqualsOverrideTest.cs" />
     <Compile Include="Rules\StreamReadStatementTest.cs" />
+    <Compile Include="Rules\EnumerableSumInUncheckedTest.cs" />
     <Compile Include="Rules\EventNameContainsBeforeOrAfterTest.cs" />
     <Compile Include="Rules\ExitStatementUsageTest.cs" />
     <Compile Include="Rules\InvocationResolvesToOverrideWithParamsTest.cs" />
@@ -728,6 +729,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\StreamReadStatement.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\EnumerableSumInUnchecked.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
