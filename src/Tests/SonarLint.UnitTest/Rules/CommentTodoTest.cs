@@ -1,4 +1,4 @@
-/*
+﻿/*
  * SonarLint for Visual Studio
  * Copyright (C) 2015 SonarSource
  * sonarqube@googlegroups.com
@@ -18,12 +18,19 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using Microsoft.CodeAnalysis;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SonarLint.Rules.CSharp;
 
-namespace SonarLint.Common
+namespace SonarLint.UnitTest.Rules
 {
-    public interface IRuleTemplateInstance
+    [TestClass]
+    public class CommentTodoTest
     {
-        DiagnosticDescriptor Descriptor { get; }
+        [TestMethod]
+        [TestCategory("Rule")]
+        public void CommentTodo()
+        {
+            Verifier.VerifyAnalyzer(@"TestCases\CommentTodo.cs", new CommentTodo());
+        }
     }
 }

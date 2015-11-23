@@ -63,12 +63,5 @@ namespace SonarLint.UnitTest.Common
                 finder.GetAllAnalyzerTypes().Count().Should().BeGreaterThan(countParameterless);
             }
         }
-
-        [TestMethod]
-        public void IsRuleTemplate()
-        {
-            Assert.IsTrue(RuleFinder.IsRuleTemplate(typeof(CommentRegularExpression)));
-            Assert.IsFalse(RuleFinder.IsRuleTemplate(typeof(AsyncAwaitIdentifier)));
-        }
     }
 }

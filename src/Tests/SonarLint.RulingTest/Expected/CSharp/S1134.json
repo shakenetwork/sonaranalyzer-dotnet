@@ -1,0 +1,417 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarLint.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S1134",
+      "FullMessage": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence.Tests\\AtLeastOnceDeliverySpec.cs",
+            "Region": {
+              "StartLine": 219,
+              "EndLine": 219,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1134",
+      "FullMessage": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence.Tests\\AtLeastOnceDeliverySpec.cs",
+            "Region": {
+              "StartLine": 416,
+              "EndLine": 416,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1134",
+      "FullMessage": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
+            "Region": {
+              "StartLine": 691,
+              "EndLine": 691,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1134",
+      "FullMessage": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\Eventsourced.Recovery.cs",
+            "Region": {
+              "StartLine": 142,
+              "EndLine": 142,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1134",
+      "FullMessage": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence\\PersistentView.Recovery.cs",
+            "Region": {
+              "StartLine": 137,
+              "EndLine": 137,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1134",
+      "FullMessage": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Controller.cs",
+            "Region": {
+              "StartLine": 328,
+              "EndLine": 328,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1134",
+      "FullMessage": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Player.cs",
+            "Region": {
+              "StartLine": 459,
+              "EndLine": 459,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1134",
+      "FullMessage": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Player.cs",
+            "Region": {
+              "StartLine": 460,
+              "EndLine": 460,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1134",
+      "FullMessage": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Player.cs",
+            "Region": {
+              "StartLine": 482,
+              "EndLine": 482,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1134",
+      "FullMessage": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Endpoint.cs",
+            "Region": {
+              "StartLine": 1114,
+              "EndLine": 1114,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1134",
+      "FullMessage": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote\\Endpoint.cs",
+            "Region": {
+              "StartLine": 1323,
+              "EndLine": 1323,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1134",
+      "FullMessage": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\Helpers\\HttpEncoder.cs",
+            "Region": {
+              "StartLine": 578,
+              "EndLine": 578,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1134",
+      "FullMessage": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Duration.cs",
+            "Region": {
+              "StartLine": 977,
+              "EndLine": 977,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1134",
+      "FullMessage": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Instant.cs",
+            "Region": {
+              "StartLine": 669,
+              "EndLine": 669,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1134",
+      "FullMessage": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Interval.cs",
+            "Region": {
+              "StartLine": 291,
+              "EndLine": 291,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1134",
+      "FullMessage": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\LocalDateTime.cs",
+            "Region": {
+              "StartLine": 1029,
+              "EndLine": 1029,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1134",
+      "FullMessage": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Period.cs",
+            "Region": {
+              "StartLine": 501,
+              "EndLine": 501,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1134",
+      "FullMessage": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Period.cs",
+            "Region": {
+              "StartLine": 526,
+              "EndLine": 526,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1134",
+      "FullMessage": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Period.cs",
+            "Region": {
+              "StartLine": 728,
+              "EndLine": 728,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1134",
+      "FullMessage": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Period.cs",
+            "Region": {
+              "StartLine": 754,
+              "EndLine": 754,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1134",
+      "FullMessage": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Text\\LocalDatePatternParser.cs",
+            "Region": {
+              "StartLine": 162,
+              "EndLine": 162,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1134",
+      "FullMessage": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\Text\\LocalDateTimePattern.cs",
+            "Region": {
+              "StartLine": 56,
+              "EndLine": 56,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1134",
+      "FullMessage": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nodatime-master_f551fe4d5e\\src\\NodaTime\\ZonedDateTime.cs",
+            "Region": {
+              "StartLine": 796,
+              "EndLine": 796,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S1134",
+      "FullMessage": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\nuget\\src\\VsConsole\\PowerShellHost\\NuGetHostUserInterface.cs",
+            "Region": {
+              "StartLine": 197,
+              "EndLine": 197,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

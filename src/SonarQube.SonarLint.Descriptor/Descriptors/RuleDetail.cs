@@ -50,9 +50,7 @@ namespace SonarLint.Descriptor
                             Description = parameter.Description,
                             DefaultValue = parameter.DefaultValue
                         }).ToList(),
-                Cardinality = ruleDetail.IsTemplate
-                    ? CardinalityMultiple
-                    : CardinalitySingle
+                Cardinality = CardinalitySingle
             };
         }
 

@@ -17,6 +17,12 @@
       <Key>S1227</Key>
     </Rule>
     <Rule>
+      <Key>S1134</Key>
+    </Rule>
+    <Rule>
+      <Key>S1135</Key>
+    </Rule>
+    <Rule>
       <Key>S104</Key>
       <Parameters>
         <Parameter>
@@ -85,40 +91,6 @@
         <Parameter>
           <Key>format</Key>
           <Value>^[A-Z][a-zA-Z0-9]+$</Value>
-        </Parameter>
-      </Parameters>
-    </Rule>
-    <Rule>
-      <Key>S124</Key>
-      <Parameters>
-        <Parameter>
-          <Key>message</Key>
-          <Value>Fix this TODO</Value>
-        </Parameter>
-        <Parameter>
-          <Key>regularExpression</Key>
-          <Value>.*TODO.*</Value>
-        </Parameter>
-        <Parameter>
-          <Key>RuleKey</Key>
-          <Value>TODO</Value>
-        </Parameter>
-      </Parameters>
-    </Rule>
-    <Rule>
-      <Key>S124</Key>
-      <Parameters>
-        <Parameter>
-          <Key>message</Key>
-          <Value>Fix this FIXME</Value>
-        </Parameter>
-        <Parameter>
-          <Key>regularExpression</Key>
-          <Value>.*FIXME.*</Value>
-        </Parameter>
-        <Parameter>
-          <Key>RuleKey</Key>
-          <Value>FIXME</Value>
         </Parameter>
       </Parameters>
     </Rule>

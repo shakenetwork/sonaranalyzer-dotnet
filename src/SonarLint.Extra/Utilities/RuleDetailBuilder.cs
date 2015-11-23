@@ -59,8 +59,7 @@ namespace SonarLint.Utilities
                 Severity = rule.Severity.ToString(),
                 IdeSeverity = (int)rule.Severity.ToDiagnosticSeverity(),
                 IsActivatedByDefault = rule.IsActivatedByDefault,
-                Description = GetResourceHtml(rule, language),
-                IsTemplate = RuleFinder.IsRuleTemplate(analyzerType)
+                Description = GetResourceHtml(rule, language)
             };
 
             GetParameters(analyzerType, ruleDetail);
@@ -165,17 +164,7 @@ namespace SonarLint.Utilities
 
         private static void GetParameters(Type analyzerType, RuleDetail ruleDetail)
         {
-            var typeToGetParametersFrom = analyzerType;
-            var templateInterface = analyzerType.GetInterfaces()
-                .FirstOrDefault(type => type.IsGenericType &&
-                                        type.GetGenericTypeDefinition() == typeof (IRuleTemplate<>));
-
-            if (templateInterface != null)
-            {
-                typeToGetParametersFrom = templateInterface.GetGenericArguments().First();
-            }
-
-            var parameters = typeToGetParametersFrom.GetProperties()
+            var parameters = analyzerType.GetProperties()
                 .Select(p => p.GetCustomAttributes<RuleParameterAttribute>().SingleOrDefault());
 
             foreach (var ruleParameter in parameters

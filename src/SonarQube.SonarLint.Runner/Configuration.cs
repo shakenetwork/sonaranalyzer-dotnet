@@ -36,7 +36,19 @@ namespace SonarLint.Runner
 {
     public class Configuration
     {
-        private readonly ImmutableArray<DiagnosticAnalyzer> nonTemplateAnalyzers;
+        private class RuleParameterValue
+        {
+            public string ParameterKey { get; set; }
+            public string ParameterValue { get; set; }
+        }
+        private class RuleParameterValues
+        {
+            public string RuleId { get; set; }
+            public List<RuleParameterValue> ParameterValues { get; set; } = new List<RuleParameterValue>();
+        }
+
+        private readonly ImmutableArray<DiagnosticAnalyzer> analyzers;
+        private readonly IImmutableList<RuleParameterValues> parameters;
         private readonly AnalyzerLanguage language;
         private readonly XDocument xml;
 
@@ -57,8 +69,7 @@ namespace SonarLint.Runner
 
             Path = path;
             this.language = language;
-
-            nonTemplateAnalyzers = ImmutableArray.Create(GetNonTemplateAnalyzers(language).ToArray());
+            analyzers = ImmutableArray.Create(GetAnalyzers(language).ToArray());
 
             this.xml = XDocument.Load(path);
             var settings = ParseSettings(xml);
@@ -99,52 +110,21 @@ namespace SonarLint.Runner
         {
             var builder = ImmutableArray.CreateBuilder<DiagnosticAnalyzer>();
 
-            foreach (var analyzer in nonTemplateAnalyzers
+            foreach (var analyzer in analyzers
                 .Where(analyzer => AnalyzerIds.Contains(analyzer.SupportedDiagnostics.Single().Id)))
             {
                 builder.Add(analyzer);
             }
 
-            if (language == AnalyzerLanguage.CSharp)
-            {
-                AddAnalyzerCommentRegularExpression(builder);
-            }
-
             return builder.ToImmutable();
         }
 
-        #region Add template analyzers
-
-        private void AddAnalyzerCommentRegularExpression(ImmutableArray<DiagnosticAnalyzer>.Builder builder)
-        {
-            if (!AnalyzerIds.Contains(Rules.CSharp.CommentRegularExpression.TemplateDiagnosticId))
-            {
-                return;
-            }
-            var rules = ImmutableArray.CreateBuilder<CommentRegularExpression.CommentRegularExpressionRule>();
-            foreach (var parameterValues in ParameterLoader.ParseParameters(xml)
-                .Where(p => p.RuleId == CommentRegularExpression.TemplateDiagnosticId)
-                .Select(p => p.ParameterValues))
-            {
-                rules.Add(
-                    new CommentRegularExpression.CommentRegularExpressionRule(
-                        parameterValues.Single(pv => pv.ParameterKey == "RuleKey").ParameterValue,
-                        parameterValues.Single(pv => pv.ParameterKey == "regularExpression").ParameterValue,
-                        parameterValues.Single(pv => pv.ParameterKey == "message").ParameterValue));
-            }
-            var analyzer = new CommentRegularExpression {RuleInstances = rules.ToImmutable()};
-            builder.Add(analyzer);
-        }
-
-        #endregion
-
         #region Discover analyzers
 
-        public static IEnumerable<DiagnosticAnalyzer> GetNonTemplateAnalyzers(AnalyzerLanguage language)
+        public static IEnumerable<DiagnosticAnalyzer> GetAnalyzers(AnalyzerLanguage language)
         {
             return
                 new RuleFinder().GetAnalyzerTypes(language)
-                    .Where(type => !RuleFinder.IsRuleTemplate(type))
                     .Select(type => (DiagnosticAnalyzer) Activator.CreateInstance(type));
         }
 

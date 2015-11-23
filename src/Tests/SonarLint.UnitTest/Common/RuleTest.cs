@@ -78,23 +78,6 @@ namespace SonarLint.UnitTest.Common
         }
 
         [TestMethod]
-        public void TemplateRule_With_Direct_Parameters()
-        {
-            var analyzers = new RuleFinder().GetAllAnalyzerTypes();
-
-            foreach (var analyzer in analyzers.Where(RuleFinder.IsRuleTemplate))
-            {
-                var hasParameter = analyzer.GetProperties().Any(p => p.GetCustomAttributes<RuleParameterAttribute>().Any());
-                if (hasParameter)
-                {
-                    Assert.Fail(
-                        "DiagnosticAnalyzer '{0}' has parameters that are defined outside of IRuleTemplateInstance.",
-                        analyzer.Name);
-                }
-            }
-        }
-
-        [TestMethod]
         public void CodeFixProviders_Named_Properly()
         {
             var codeFixProviders = GetCodeFixProviderTypes(RuleFinder.GetPackagedRuleAssemblies());

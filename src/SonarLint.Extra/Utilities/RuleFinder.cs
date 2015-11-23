@@ -54,18 +54,10 @@ namespace SonarLint.Utilities
         public IEnumerable<Type> GetParameterlessAnalyzerTypes(AnalyzerLanguage language)
         {
             return diagnosticAnalyzers
-                .Where(analyzerType => !IsRuleTemplate(analyzerType))
                 .Where(analyzerType =>
                     !analyzerType.GetProperties()
                         .Any(p => p.GetCustomAttributes<RuleParameterAttribute>().Any()))
                 .Where(type => GetTargetLanguages(type).IsAlso(language));
-        }
-
-        public static bool IsRuleTemplate(Type analyzerType)
-        {
-            return analyzerType.GetInterfaces()
-                .Any(type => type.IsGenericType &&
-                             type.GetGenericTypeDefinition() == typeof(IRuleTemplate<>));
         }
 
         public static bool IsParametered(Type analyzerType)

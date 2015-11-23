@@ -72,12 +72,6 @@ namespace SonarLint.UnitTest.Common
                 Assert.IsNotNull(ruleDetail.Description);
                 Assert.IsNotNull(ruleDetail.Key);
                 Assert.IsNotNull(ruleDetail.Title);
-
-                if (!ruleDetail.IsTemplate)
-                {
-                    Assert.IsNotNull(ruleDetail.SqaleDescriptor);
-                    Assert.IsNotNull(ruleDetail.SqaleDescriptor.Remediation);
-                }
             }
 
             Assert.AreEqual(ruleDetails.Count(),

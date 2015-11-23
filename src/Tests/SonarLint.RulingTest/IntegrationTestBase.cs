@@ -40,8 +40,6 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
         protected DirectoryInfo ExpectedDirectory;
         protected DirectoryInfo AnalysisOutputDirectory;
 
-        public const string TemplateRuleIdPattern = "{0}-1";
-
         protected IntegrationTestBase()
         {
             Setup();
@@ -147,67 +145,29 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
                 writer.WriteString(rule.Key);
                 writer.WriteEndElement();
 
-                if (rule.Key == SonarLint.Rules.CSharp.CommentRegularExpression.TemplateDiagnosticId)
+                var parameters = analyzerType.GetProperties()
+                    .Where(p => p.GetCustomAttributes<RuleParameterAttribute>().Any())
+                    .ToList();
+
+                if (parameters.Any())
                 {
                     writer.WriteStartElement("Parameters");
+
+                    foreach (var propertyInfo in parameters)
                     {
+                        var ruleParameter = propertyInfo.GetCustomAttribute<RuleParameterAttribute>();
+
                         writer.WriteStartElement("Parameter");
                         writer.WriteStartElement("Key");
-                        writer.WriteString("RuleKey");
+                        writer.WriteString(ruleParameter.Key);
                         writer.WriteEndElement();
                         writer.WriteStartElement("Value");
-                        writer.WriteString(string.Format(TemplateRuleIdPattern, SonarLint.Rules.CSharp.CommentRegularExpression.TemplateDiagnosticId));
+                        writer.WriteString(ruleParameter.DefaultValue);
                         writer.WriteEndElement();
                         writer.WriteEndElement();
                     }
-                    {
-                        writer.WriteStartElement("Parameter");
-                        writer.WriteStartElement("Key");
-                        writer.WriteString("message");
-                        writer.WriteEndElement();
-                        writer.WriteStartElement("Value");
-                        writer.WriteString("Some message");
-                        writer.WriteEndElement();
-                        writer.WriteEndElement();
-                    }
-                    {
-                        writer.WriteStartElement("Parameter");
-                        writer.WriteStartElement("Key");
-                        writer.WriteString("regularExpression");
-                        writer.WriteEndElement();
-                        writer.WriteStartElement("Value");
-                        writer.WriteString("(?i)TODO");
-                        writer.WriteEndElement();
-                        writer.WriteEndElement();
-                    }
+
                     writer.WriteEndElement();
-                }
-                else
-                {
-                    var parameters = analyzerType.GetProperties()
-                        .Where(p => p.GetCustomAttributes<RuleParameterAttribute>().Any())
-                        .ToList();
-
-                    if (parameters.Any())
-                    {
-                        writer.WriteStartElement("Parameters");
-
-                        foreach (var propertyInfo in parameters)
-                        {
-                            var ruleParameter = propertyInfo.GetCustomAttribute<RuleParameterAttribute>();
-
-                            writer.WriteStartElement("Parameter");
-                            writer.WriteStartElement("Key");
-                            writer.WriteString(ruleParameter.Key);
-                            writer.WriteEndElement();
-                            writer.WriteStartElement("Value");
-                            writer.WriteString(ruleParameter.DefaultValue);
-                            writer.WriteEndElement();
-                            writer.WriteEndElement();
-                        }
-
-                        writer.WriteEndElement();
-                    }
                 }
 
                 writer.WriteEndElement();

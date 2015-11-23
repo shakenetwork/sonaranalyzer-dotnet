@@ -1,21 +1,22 @@
 ﻿using System;
 
-/* Noncompliant:
+/*
 hello
-TODO */
+todo - Noncompliant
+TODO */ //Noncompliant
 
 // Noncompliant: hello TODO world
 
 // ok
 
 
-/// Noncompliant:
+///
 /// <summary>
-/// TODO
+/// TODO - Noncompliant
 /// </summary>
 
-/** Noncompliant:
-toDo
+/**
+toDo - Noncompliant
 */
 
 /**

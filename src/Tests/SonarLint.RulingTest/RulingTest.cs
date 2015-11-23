@@ -181,10 +181,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
                         Type = t,
                         RuleAttribute = t.GetCustomAttribute<RuleAttribute>()
                     })
-                .Select(rule =>
-                    RuleFinder.IsRuleTemplate(rule.Type)
-                        ? string.Format(TemplateRuleIdPattern, rule.RuleAttribute.Key)
-                        : rule.RuleAttribute.Key)
+                .Select(rule => rule.RuleAttribute.Key)
                 .Where(s => !foundKeys.Contains(s));
 
             foreach (var notFoundKey in notFoundKeys)

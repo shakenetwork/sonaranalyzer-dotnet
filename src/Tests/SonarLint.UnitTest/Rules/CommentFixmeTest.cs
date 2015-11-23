@@ -18,26 +18,19 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarLint.Rules.CSharp;
 
 namespace SonarLint.UnitTest.Rules
 {
     [TestClass]
-    public class CommentRegularExpressionTest
+    public class CommentFixmeTest
     {
         [TestMethod]
         [TestCategory("Rule")]
-        public void CommentRegularExpression()
+        public void CommentFixme()
         {
-            var rules = ImmutableArray.Create(
-                new CommentRegularExpression.CommentRegularExpressionRule(
-                    "id1",
-                    "(?i)TODO"));
-
-            var analyzer = new CommentRegularExpression { RuleInstances = rules };
-            Verifier.VerifyAnalyzer(@"TestCases\CommentRegularExpression.cs", analyzer);
+            Verifier.VerifyAnalyzer(@"TestCases\CommentFixme.cs", new CommentFixme());
         }
     }
 }

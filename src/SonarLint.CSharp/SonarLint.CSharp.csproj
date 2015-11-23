@@ -115,7 +115,9 @@
     <Compile Include="Rules\CollectionEmptinessChecking.cs" />
     <Compile Include="Rules\CollectionQuerySimplification.cs" />
     <Compile Include="Rules\CommentedOutCode.cs" />
-    <Compile Include="Rules\CommentRegularExpression.cs" />
+    <Compile Include="Rules\CommentFixme.cs" />
+    <Compile Include="Rules\CommentTodo.cs" />
+    <Compile Include="Rules\CommentRegularExpressionBase.cs" />
     <Compile Include="Rules\ConditionalSimplification.cs" />
     <Compile Include="Rules\ConditionalSimplificationCodeFixProvider.cs" />
     <Compile Include="Rules\ConditionalStructureSameCondition.cs" />

@@ -56,24 +56,14 @@ namespace SonarLint.UnitTest
                 "S107",
                 "S101",
                 "S100",
-                "S124"
+                "S1134",
+                "S1135"
             };
 
             conf.AnalyzerIds.Should().BeEquivalentTo(expectedAnalyzerIds);
 
             var analyzers = conf.GetAnalyzers();
             Assert.AreEqual(expectedAnalyzerIds.Length, analyzers.Count());
-
-            // only the template rule's parameters are set in the Configuration class, so we only check that
-            var commentAnalyzer = analyzers.OfType<CommentRegularExpression>().Single();
-            var ruleInstances = commentAnalyzer.RuleInstances.ToList();
-            ruleInstances.Should().HaveCount(2);
-            ruleInstances[0].Descriptor.Id.ShouldBeEquivalentTo("TODO");
-            ruleInstances[0].Descriptor.MessageFormat.ToString().ShouldBeEquivalentTo("Fix this TODO");
-            ruleInstances[0].RegularExpression.ShouldBeEquivalentTo(".*TODO.*");
-            ruleInstances[1].Descriptor.Id.ShouldBeEquivalentTo("FIXME");
-            ruleInstances[1].Descriptor.MessageFormat.ToString().ShouldBeEquivalentTo("Fix this FIXME");
-            ruleInstances[1].RegularExpression.ShouldBeEquivalentTo(".*FIXME.*");
         }
     }
 }
