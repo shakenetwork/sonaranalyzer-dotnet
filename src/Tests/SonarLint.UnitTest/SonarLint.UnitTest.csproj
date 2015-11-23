@@ -162,6 +162,7 @@
     <Compile Include="Rules\OptionalParameterTest.cs" />
     <Compile Include="Rules\SingleStatementPerLineTest.cs" />
     <Compile Include="Rules\StringOperationWithoutCultureTest.cs" />
+    <Compile Include="Rules\TaskConfigureAwaitTest.cs" />
     <Compile Include="Rules\UnsignedTypesUsageTest.cs" />
     <Compile Include="Rules\ArrayDesignatorOnVariableTest.cs" />
     <Compile Include="Rules\IndexedPropertyWithMultipleParametersTest.cs" />
@@ -732,6 +733,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\EnumerableSumInUnchecked.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\TaskConfigureAwait.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
