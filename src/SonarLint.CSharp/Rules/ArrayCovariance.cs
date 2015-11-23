@@ -136,7 +136,7 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.CastExpression);
         }
 
-        
+
         private static bool AreCovariantArrayTypes(ITypeSymbol typeDerivedArray, ITypeSymbol typeBaseArray)
         {
             if (typeDerivedArray == null ||
@@ -150,17 +150,7 @@ namespace SonarLint.Rules.CSharp
             var typeDerivedElement = ((IArrayTypeSymbol) typeDerivedArray).ElementType;
             var typeBaseElement = ((IArrayTypeSymbol)typeBaseArray).ElementType;
 
-            var parentType = typeDerivedElement.BaseType;
-            while (parentType != null)
-            {
-                if (parentType.Equals(typeBaseElement))
-                {
-                    return true;
-                }
-                parentType = parentType.BaseType;
-            }
-
-            return false;
+            return typeDerivedElement.BaseType.GetSelfAndBaseTypes().Any(parentType => parentType.Equals(typeBaseElement));
         }
     }
 }

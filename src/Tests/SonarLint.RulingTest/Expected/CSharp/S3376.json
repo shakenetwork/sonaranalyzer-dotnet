@@ -1,0 +1,162 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarLint.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S3376",
+      "FullMessage": "Make this class name end with \"Exception\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\BarrierCoordinator.cs",
+            "Region": {
+              "StartLine": 124,
+              "EndLine": 124,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3376",
+      "FullMessage": "Make this class name end with \"Exception\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\BarrierCoordinator.cs",
+            "Region": {
+              "StartLine": 162,
+              "EndLine": 162,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3376",
+      "FullMessage": "Make this class name end with \"Exception\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\BarrierCoordinator.cs",
+            "Region": {
+              "StartLine": 200,
+              "EndLine": 200,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3376",
+      "FullMessage": "Make this class name end with \"Exception\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\BarrierCoordinator.cs",
+            "Region": {
+              "StartLine": 244,
+              "EndLine": 244,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3376",
+      "FullMessage": "Make this class name end with \"Exception\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\BarrierCoordinator.cs",
+            "Region": {
+              "StartLine": 294,
+              "EndLine": 294,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3376",
+      "FullMessage": "Make this class name end with \"Exception\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\BarrierCoordinator.cs",
+            "Region": {
+              "StartLine": 332,
+              "EndLine": 332,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3376",
+      "FullMessage": "Make this class name end with \"Exception\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Remote.TestKit\\Player.cs",
+            "Region": {
+              "StartLine": 267,
+              "EndLine": 267,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3376",
+      "FullMessage": "Make this class name end with \"Exception\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Tests\\Actor\\SupervisorHierarchySpec.cs",
+            "Region": {
+              "StartLine": 68,
+              "EndLine": 68,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3376",
+      "FullMessage": "Make this class name end with \"Attribute\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\Mvc-dev_b245996949\\test\\WebSites\\FiltersWebSite\\Filters\\TracingResourceFilter.cs",
+            "Region": {
+              "StartLine": 9,
+              "EndLine": 9,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

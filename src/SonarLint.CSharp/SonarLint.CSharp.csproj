@@ -155,6 +155,7 @@
     <Compile Include="Rules\FileLines.cs" />
     <Compile Include="Rules\FlagsEnumWithoutInitializer.cs" />
     <Compile Include="Rules\FlagsEnumZeroMember.cs" />
+    <Compile Include="Rules\FrameworkTypeNaming.cs" />
     <Compile Include="Rules\ForeachLoopExplicitConversion.cs" />
     <Compile Include="Rules\ForeachLoopExplicitConversionCodeFixProvider.cs" />
     <Compile Include="Rules\ForLoopCounterChanged.cs" />

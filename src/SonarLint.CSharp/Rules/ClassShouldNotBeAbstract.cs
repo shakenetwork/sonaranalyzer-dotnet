@@ -90,7 +90,7 @@ namespace SonarLint.Rules.CSharp
 
         private static bool ClassHasInheritedAbstractMembers(INamedTypeSymbol classSymbol)
         {
-            var baseTypes = GetAllBaseTypes(classSymbol);
+            var baseTypes = classSymbol.BaseType.GetSelfAndBaseTypes().ToList();
             var abstractMethods = baseTypes.SelectMany(baseType => GetAllAbstractMethods(baseType));
             var baseTypesAndSelf = baseTypes.Concat(new[] { classSymbol }).ToList();
             var overrideMethods = baseTypesAndSelf.SelectMany(baseType => GetAllOverrideMethods(baseType));
@@ -107,18 +107,6 @@ namespace SonarLint.Rules.CSharp
         private static IEnumerable<IMethodSymbol> GetAllOverrideMethods(INamedTypeSymbol classSymbol)
         {
             return GetAllMethods(classSymbol).Where(m => m.IsOverride);
-        }
-
-        private static IList<INamedTypeSymbol> GetAllBaseTypes(INamedTypeSymbol classSymbol)
-        {
-            var list = new List<INamedTypeSymbol>();
-            var baseType = classSymbol.BaseType;
-            while (baseType != null)
-            {
-                list.Add(baseType);
-                baseType = baseType.BaseType;
-            }
-            return list;
         }
 
         private static void ReportClass(INamedTypeSymbol symbol, string message, SymbolAnalysisContext c)

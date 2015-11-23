@@ -148,6 +148,7 @@
     <Compile Include="Rules\ExitStatementUsageTest.cs" />
     <Compile Include="Rules\InvocationResolvesToOverrideWithParamsTest.cs" />
     <Compile Include="Rules\MethodOverloadOptionalParameterTest.cs" />
+    <Compile Include="Rules\FrameworkTypeNamingTest.cs" />
     <Compile Include="Rules\PropertyWithArrayTypeTest.cs" />
     <Compile Include="Rules\ArrayInitializationMultipleStatementsTest.cs" />
     <Compile Include="Rules\ArrayCreationLongSyntaxTest.cs" />
@@ -672,7 +673,7 @@
     <None Include="TestCases\FlagsEnumZeroMember.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="TestCases\FlagsEnumWithoutInitializer.cs">
+    <None Include="TestCases\FrameworkTypeNaming.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\ParameterAssignedTo.vb">
@@ -740,6 +741,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\AsyncVoidMethod.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\FlagsEnumWithoutInitializer.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />

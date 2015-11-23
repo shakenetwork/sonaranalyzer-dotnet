@@ -209,5 +209,21 @@ public interface IInterface
 
             Assert.IsTrue(symbol.IsProbablyEventHandler(semanticModel.Compilation));
         }
+
+        [TestMethod]
+        public void Symbol_GetSelfAndBaseTypes()
+        {
+            var objectType = semanticModel.Compilation.GetTypeByMetadataName("System.Object");
+            var baseTypes = objectType.GetSelfAndBaseTypes().ToList();
+            Assert.AreEqual(1, baseTypes.Count);
+            Assert.AreEqual(objectType, baseTypes.First());
+
+            var derived1Type = semanticModel.GetDeclaredSymbol(derivedClassDeclaration1) as INamedTypeSymbol;
+            baseTypes = derived1Type.GetSelfAndBaseTypes().ToList();
+            Assert.AreEqual(3, baseTypes.Count);
+            Assert.AreEqual(derived1Type, baseTypes[0]);
+            Assert.AreEqual(semanticModel.GetDeclaredSymbol(baseClassDeclaration) as INamedTypeSymbol, baseTypes[1]);
+            Assert.AreEqual(objectType, baseTypes[2]);
+        }
     }
 }

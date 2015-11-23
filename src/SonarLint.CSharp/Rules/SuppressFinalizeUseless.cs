@@ -89,7 +89,7 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
-                    var hasFinalizer = GetBaseTypesAndSelf(argumentType)
+                    var hasFinalizer = argumentType.GetSelfAndBaseTypes()
                         .Where(type => type.SpecialType != SpecialType.System_Object)
                         .SelectMany(type => type.GetMembers())
                         .OfType<IMethodSymbol>()
@@ -101,16 +101,6 @@ namespace SonarLint.Rules.CSharp
                     }
                 },
                 SyntaxKind.InvocationExpression);
-        }
-
-        private static IEnumerable<INamedTypeSymbol> GetBaseTypesAndSelf(INamedTypeSymbol type)
-        {
-            var currentType = type;
-            while(currentType != null)
-            {
-                yield return currentType;
-                currentType = currentType.BaseType;
-            }
         }
     }
 }

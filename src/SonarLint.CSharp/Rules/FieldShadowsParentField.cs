@@ -83,9 +83,9 @@ namespace SonarLint.Rules.CSharp
             var fieldName = fieldSymbol.Name;
             var fieldNameLower = fieldSymbol.Name.ToLowerInvariant();
             var declaringType = fieldSymbol.ContainingType;
-            var baseType = declaringType.BaseType;
-            while (baseType != null &&
-                   !(baseType is IErrorTypeSymbol))
+            var baseTypes = declaringType.BaseType.GetSelfAndBaseTypes();
+
+            foreach (var baseType in baseTypes)
             {
                 var similarFields = baseType.GetMembers()
                     .OfType<IFieldSymbol>()
@@ -106,8 +106,6 @@ namespace SonarLint.Rules.CSharp
                         string.Format(MessageSimilar, fieldName, baseType.Name, similarFields.First().Name)));
                     return;
                 }
-
-                baseType = baseType.BaseType;
             }
         }
     }

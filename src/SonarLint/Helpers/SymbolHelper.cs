@@ -19,6 +19,7 @@
  */
 
 using Microsoft.CodeAnalysis;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace SonarLint.Helpers
@@ -62,6 +63,22 @@ namespace SonarLint.Helpers
             return currentSymbol == null || currentSymbol.DeclaredAccessibility == Accessibility.NotApplicable;
         }
 
+        public static IEnumerable<INamedTypeSymbol> GetSelfAndBaseTypes(this INamedTypeSymbol type)
+        {
+            if (type == null)
+            {
+                yield break;
+            }
+
+            var baseType = type;
+            while (baseType != null &&
+                !(baseType is IErrorTypeSymbol))
+            {
+                yield return baseType;
+                baseType = baseType.BaseType;
+            }
+        }
+
         public static bool DerivesOrImplementsAny(this INamedTypeSymbol type, params ITypeSymbol[] possibleTypes)
         {
             var allInterfaces = type.AllInterfaces.Select(inter => inter.ConstructedFrom);
@@ -70,17 +87,7 @@ namespace SonarLint.Helpers
                 return true;
             }
 
-            var baseType = type;
-            while (baseType != null &&
-                !(baseType is IErrorTypeSymbol))
-            {
-                if (possibleTypes.Contains(baseType))
-                {
-                    return true;
-                }
-                baseType = baseType.BaseType;
-            }
-            return false;
+            return type.GetSelfAndBaseTypes().Any(baseType => possibleTypes.Contains(baseType));
         }
 
         public static bool IsChangeable(this IMethodSymbol methodSymbol)
