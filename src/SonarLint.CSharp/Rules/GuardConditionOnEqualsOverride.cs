@@ -19,7 +19,6 @@
  */
 
 using System.Collections.Immutable;
-using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -31,19 +30,20 @@ using SonarLint.Helpers;
 namespace SonarLint.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("15min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
+    [SqaleConstantRemediation("5min")]
+    [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Bug)]
-    public class GetHashCodeEqualsOverride : DiagnosticAnalyzer
+    public class GuardConditionOnEqualsOverride : DiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S3249";
-        internal const string Title = "Classes directly extending \"Object\" should not call \"base\" in \"GetHashCode\" or \"Equals\"";
+        internal const string DiagnosticId = "S3397";
+        internal const string Title = "\"base.Equals\" should not be used to check for reference equality in \"Equals\" if \"base\" is not \"object\"";
         internal const string Description =
-            "Making a \"base\" call in an overridden method is generally a good idea, but not in \"GetHashCode\" and \"Equals\" for " +
-            "classes that directly extend \"Object\" because those methods are based on the object reference. Meaning that no two \"Objects\" " +
-            "that use those \"base\" methods will ever be equal or have the same hash.";
-        internal const string MessageFormat = "Remove this \"base\" call.";
+            "\"object.Equals()\" overrides can be optimized by checking first for reference equality between \"this\" and the " +
+            "parameter. This check can be implemented by calling \"object.ReferenceEquals()\" or \"base.Equals()\", where \"base\" " +
+            "is \"object\". However, using \"base.Equals()\" is a maintenance hazard because while it works if you extend \"Object\" " +
+            "directly, if you introduce a new base class that overrides \"Equals\", it suddenly stops working.";
+        internal const string MessageFormat = "Change this guard condition to call \"object.ReferenceEquals\".";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
@@ -56,9 +56,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        internal const string EqualsName = "Equals";
-        private static readonly string[] MethodNames = { "GetHashCode", EqualsName };
-        internal static readonly SyntaxNode TrueLiteral = SyntaxFactory.LiteralExpression(SyntaxKind.TrueLiteralExpression);
+        private static readonly string[] MethodNames = { GetHashCodeEqualsOverride.EqualsName };
 
         public override void Initialize(AnalysisContext context)
         {
@@ -73,7 +71,7 @@ namespace SonarLint.Rules.CSharp
 
                     var methodSymbol = cb.OwningSymbol as IMethodSymbol;
                     if (methodSymbol == null ||
-                        !MethodIsRelevant(methodSymbol, MethodNames))
+                        !GetHashCodeEqualsOverride.MethodIsRelevant(methodSymbol, MethodNames))
                     {
                         return;
                     }
@@ -86,7 +84,6 @@ namespace SonarLint.Rules.CSharp
                         SyntaxKind.InvocationExpression);
                 });
         }
-
         private static void CheckInvocationInsideMethod(SyntaxNodeAnalysisContext c,
             IMethodSymbol methodSymbol)
         {
@@ -112,63 +109,11 @@ namespace SonarLint.Rules.CSharp
 
             var objectType = invokedMethod.ContainingType;
             if (objectType != null &&
-                objectType.SpecialType == SpecialType.System_Object &&
-                !IsEqualsCallInGuardCondition(invocation, invokedMethod))
+                objectType.SpecialType != SpecialType.System_Object &&
+                GetHashCodeEqualsOverride.IsEqualsCallInGuardCondition(invocation, invokedMethod))
             {
                 c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation()));
             }
-        }
-
-        internal static bool IsEqualsCallInGuardCondition(InvocationExpressionSyntax invocation, IMethodSymbol invokedMethod)
-        {
-            if (invokedMethod.Name != EqualsName)
-            {
-                return false;
-            }
-
-            var ifStatement = invocation.Parent as IfStatementSyntax;
-            if (ifStatement == null ||
-                ifStatement.Condition != invocation)
-            {
-                return false;
-            }
-
-            if (invocation.ArgumentList == null ||
-                invocation.ArgumentList.Arguments.Count != 1)
-            {
-                return false;
-            }
-
-            return IfStatementWithSingleReturnTrue(ifStatement);
-        }
-
-        private static bool IfStatementWithSingleReturnTrue(IfStatementSyntax ifStatement)
-        {
-            var statement = ifStatement.Statement;
-            var returnStatement = statement as ReturnStatementSyntax;
-            var block = statement as BlockSyntax;
-            if (block != null)
-            {
-                if (!block.Statements.Any())
-                {
-                    return false;
-                }
-
-                returnStatement = block.Statements.First() as ReturnStatementSyntax;
-            }
-
-            if (returnStatement == null)
-            {
-                return false;
-            }
-
-            return returnStatement.Expression != null &&
-                EquivalenceChecker.AreEquivalent(returnStatement.Expression, TrueLiteral);
-        }
-
-        internal static bool MethodIsRelevant(IMethodSymbol methodSymbol, string[] methodNames)
-        {
-            return methodNames.Contains(methodSymbol.Name) && methodSymbol.IsOverride;
         }
     }
 }

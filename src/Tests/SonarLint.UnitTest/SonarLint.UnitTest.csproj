@@ -140,6 +140,7 @@
     <Compile Include="Common\MetricsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\CommentTodoTest.cs" />
+    <Compile Include="Rules\EqualsOverrideTest.cs" />
     <Compile Include="Rules\EventNameContainsBeforeOrAfterTest.cs" />
     <Compile Include="Rules\ExitStatementUsageTest.cs" />
     <Compile Include="Rules\InvocationResolvesToOverrideWithParamsTest.cs" />
@@ -720,6 +721,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\MethodOverloadOptionalParameter.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\GuardConditionOnEqualsOverride.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />

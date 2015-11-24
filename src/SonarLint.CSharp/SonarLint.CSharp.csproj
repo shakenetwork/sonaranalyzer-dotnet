@@ -163,6 +163,7 @@
     <Compile Include="Rules\GenericTypeParameterEmptinessCheckingCodeFixProvider.cs" />
     <Compile Include="Rules\GenericTypeParameterInOut.cs" />
     <Compile Include="Rules\GenericTypeParameterUnused.cs" />
+    <Compile Include="Rules\GuardConditionOnEqualsOverride.cs" />
     <Compile Include="Rules\GetHashCodeEqualsOverride.cs" />
     <Compile Include="Rules\GetHashCodeMutable.cs" />
     <Compile Include="Rules\GetHashCodeMutableCodeFixProvider.cs" />
