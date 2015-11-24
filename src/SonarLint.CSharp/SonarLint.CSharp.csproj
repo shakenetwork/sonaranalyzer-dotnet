@@ -222,6 +222,7 @@
     <Compile Include="Rules\SillyBitwiseOperation.cs" />
     <Compile Include="Rules\SillyBitwiseOperationCodeFixProvider.cs" />
     <Compile Include="Rules\SingleStatementPerLine.cs" />
+    <Compile Include="Rules\StreamReadStatement.cs" />
     <Compile Include="Rules\StaticFieldInGenericClass.cs" />
     <Compile Include="Rules\StaticFieldInitializerOrder.cs" />
     <Compile Include="Rules\StaticFieldVisible.cs" />
