@@ -46,7 +46,7 @@ namespace SonarLint.Rules.CSharp
             "\"Hashtable\". Any subsequent test to see if the object is in the \"Hashtable\" " +
             "will return a false negative.";
         internal const string MessageFormat = "Remove this use of \"{0}\" or make it \"readonly\".";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

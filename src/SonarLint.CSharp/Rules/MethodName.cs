@@ -43,7 +43,7 @@ namespace SonarLint.Rules.CSharp
             "Shared naming conventions allow teams to collaborate efficiently. This rule checks that all method names match a provided " +
             "regular expression.";
         internal const string MessageFormat = "Rename this method \"{1}\" to match the regular expression {0}";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Naming;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = false;
 

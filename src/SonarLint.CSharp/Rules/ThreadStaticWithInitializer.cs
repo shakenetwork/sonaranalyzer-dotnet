@@ -44,7 +44,7 @@ namespace SonarLint.Rules.CSharp
             "but unique across threads. Since a class' static initializer is only invoked for " +
             "the first thread created, it also means that only the first thread will have the expected initial values.";
         internal const string MessageFormat = "Remove this initialization of \"{0}\" or make it lazy.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;

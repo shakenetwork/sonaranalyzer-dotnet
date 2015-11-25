@@ -45,7 +45,7 @@ namespace SonarLint.Rules.CSharp
             "use the \"out\" and \"in\" modifiers when possible to make the interfaces and delegates covariant and contravariant, " +
             "respectively.";
         internal const string MessageFormat = "Add the \"{0}\" keyword to parameter \"{1}\" to make it \"{2}\".";
-        internal const string Category = "SonarQube";
+        internal const string Category = SonarLint.Common.Category.Design;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

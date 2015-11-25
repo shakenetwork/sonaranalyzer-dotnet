@@ -45,7 +45,7 @@ namespace SonarLint.Rules.CSharp
             "their heads. Such clauses should either be eliminated or populated with the " +
             "appropriate logic.";
         internal const string MessageFormat = @"Add logic to this catch clause or eliminate it and rethrow the exception automatically.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;

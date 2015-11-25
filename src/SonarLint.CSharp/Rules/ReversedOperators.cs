@@ -44,7 +44,7 @@ namespace SonarLint.Rules.CSharp
             "This rule raises an issue when \"=+\", and \"=-\" are used, but ignores the operators " +
             "when they're spaced out: \"= +\", \"= -\".";
         internal const string MessageFormat = "Was \"{0}\" meant instead?";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

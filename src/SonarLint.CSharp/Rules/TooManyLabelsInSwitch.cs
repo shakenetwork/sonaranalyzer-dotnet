@@ -43,7 +43,7 @@ namespace SonarLint.Rules.CSharp
             "When \"switch\" statements have a large set of \"case\" clauses, it is usually an attempt to map two sets of data. A real map structure " +
             "would be more readable and maintainable, and should be used instead.";
         internal const string MessageFormat = "Reduce the number of switch cases from {1} to at most {0}.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

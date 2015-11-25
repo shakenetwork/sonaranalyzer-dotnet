@@ -36,7 +36,7 @@ namespace SonarLint.Rules.Common
             "order to be able to use them. Moreover, what exactly to pass to such parameters is not intuitive. Therefore, such methods " +
             "should not be exposed, but can be used internally.";
         protected const string MessageFormat = "Make this method private or simplify its parameters to not use multidimensional arrays.";
-        protected const string Category = Constants.SonarLint;
+        protected const string Category = SonarLint.Common.Category.Maintainability;
         protected const Severity RuleSeverity = Severity.Major;
         protected const bool IsActivatedByDefault = true;
 

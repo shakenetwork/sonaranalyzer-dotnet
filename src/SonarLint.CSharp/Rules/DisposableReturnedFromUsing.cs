@@ -46,7 +46,7 @@ namespace SonarLint.Rules.CSharp
             "of it, likely causing exceptions at runtime. So you should either remove \"using\" or avoid returning the " +
             "\"IDisposable\".";
         internal const string MessageFormat = "Remove the \"using\" statement; it will cause automatic disposal of {0}.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Blocker;
         internal const bool IsActivatedByDefault = true;
 

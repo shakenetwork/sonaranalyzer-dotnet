@@ -43,7 +43,7 @@ namespace SonarLint.Rules.CSharp
             "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop " +
             "should have a single termination condition.";
         internal const string MessageFormat = "Refactor the code in order to remove this break statement.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = false;
 

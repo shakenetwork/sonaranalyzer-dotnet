@@ -37,7 +37,7 @@ namespace SonarLint.Rules.Common
             "\"switch/Select\" covers all current values of an enumeration, a \"default/Case Else\" case should still be used because " +
             "there is no guarantee that the enumeration won't be extended.";
         protected const string MessageFormat = "Add a \"{0}\" clause to this \"{1}\" statement.";
-        protected const string Category = Constants.SonarLint;
+        protected const string Category = SonarLint.Common.Category.Reliability;
         protected const Severity RuleSeverity = Severity.Major;
         protected const bool IsActivatedByDefault = true;
 

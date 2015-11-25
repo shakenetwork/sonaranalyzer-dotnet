@@ -43,7 +43,7 @@ namespace SonarLint.Rules.CSharp
             "Correctly updating a \"static\" field from a non-static method is tricky to get right and could easily lead to " +
             "bugs if there are multiple class instances and/or multiple threads in play.";
         internal const string MessageFormat = "Make the enclosing {0} \"static\" or remove this set.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

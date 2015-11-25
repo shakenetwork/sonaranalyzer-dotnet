@@ -43,7 +43,7 @@ namespace SonarLint.Rules.CSharp
             "Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate. " +
             "This rule allows to check that all class names match a provided regular expression.";
         internal const string MessageFormat = "Rename this class \"{1}\" to match the regular expression: {0}";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Naming;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = false;
 

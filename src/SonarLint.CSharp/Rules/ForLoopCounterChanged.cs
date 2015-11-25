@@ -48,7 +48,7 @@ namespace SonarLint.Rules.CSharp
             "not invariant are difficult to understand and maintain, and will likely lead to " +
             "the introduction of errors in the future.";
         internal const string MessageFormat = "Do not update the loop counter \"{0}\" within the loop body.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

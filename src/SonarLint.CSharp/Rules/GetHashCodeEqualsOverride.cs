@@ -44,7 +44,7 @@ namespace SonarLint.Rules.CSharp
             "classes that directly extend \"Object\" because those methods are based on the object reference. Meaning that no two \"Objects\" " +
             "that use those \"base\" methods will ever be equal or have the same hash.";
         internal const string MessageFormat = "Remove this \"base\" call.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

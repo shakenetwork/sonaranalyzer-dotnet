@@ -42,7 +42,7 @@ namespace SonarLint.Rules.CSharp
         internal const string Description =
             "Unnecessary keywords simply clutter the code and should be removed.";
         internal const string MessageFormat = "\"{0}\" is {1} in this context.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;

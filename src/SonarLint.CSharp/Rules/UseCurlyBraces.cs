@@ -44,7 +44,7 @@ namespace SonarLint.Rules.CSharp
             "While not technically incorrect, the omission of curly braces can be misleading, and may " +
             "lead to the introduction of errors during maintenance.";
         internal const string MessageFormat = "Add curly braces around the nested statement(s) in this \"{0}\" block.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = false;
 

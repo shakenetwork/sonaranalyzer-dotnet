@@ -42,7 +42,7 @@ namespace SonarLint.Rules.VisualBasic
             "A \"Do ... Loop\" without a \"While\" or \"Until\" condition must be terminated by an unstructured \"Exit Do\" " +
             "statement. It is safer and more readable to use structured loops instead.";
         internal const string MessageFormat = "Use a structured loop instead.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

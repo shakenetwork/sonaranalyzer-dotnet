@@ -44,7 +44,7 @@ namespace SonarLint.Rules.CSharp
             "When the same condition is checked twice in a row, it is either confusing - why have separate checks? - or an error - some other " +
             "condition should have been checked in the second test.";
         internal const string MessageFormat = "This condition was just checked on line {0}.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = false;
 

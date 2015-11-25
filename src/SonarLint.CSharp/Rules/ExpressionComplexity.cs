@@ -43,7 +43,7 @@ namespace SonarLint.Rules.CSharp
            "The complexity of an expression is defined by the number of \"&&\", \"||\" and \"condition ? ifTrue : ifFalse\" operators it contains. " +
             "A single expression's complexity should not become too high to keep the code readable.";
         internal const string MessageFormat = "Reduce the number of conditional operators ({1}) used in the expression (maximum allowed {0}).";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

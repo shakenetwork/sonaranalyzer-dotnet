@@ -46,7 +46,7 @@ namespace SonarLint.Rules.CSharp
             "optional parameters are only generated if they are not explicitly defined in the call. Thus, specifying the argument values " +
             "defeats the purpose of the attributes.";
         internal const string MessageFormat = "Remove this argument from the method call; it hides the caller information.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

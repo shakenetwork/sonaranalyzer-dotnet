@@ -44,7 +44,7 @@ namespace SonarLint.Rules.VisualBasic
         internal const string Description =
             "The \"... = {}\" syntax is more compact, more readable and less error-prone.";
         internal const string MessageFormat = "Refactor this code to use the \"... = {}\" syntax.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = false;
 

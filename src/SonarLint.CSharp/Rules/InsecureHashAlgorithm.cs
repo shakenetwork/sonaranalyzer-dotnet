@@ -48,7 +48,7 @@ namespace SonarLint.Rules.CSharp
             "if he had the originally-hashed value.This applies as well to the other Message-Digest" +
             " algorithms: MD2, MD4, MD6.";
         internal const string MessageFormat = "Use a stronger encryption algorithm than {0}.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Security;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = false;
 

@@ -45,7 +45,7 @@ namespace SonarLint.Rules.VisualBasic
             "(\"Exit Function\" and in some cases \"Exit Property\") they could result in a \"NullReferenceException\". This rule raises " +
             "an issue for all uses of \"Exit\" except \"Exit Select\" and \"Exit Do\" statements in loops without condition.";
         internal const string MessageFormat = "Remove this \"Exit\" statement.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

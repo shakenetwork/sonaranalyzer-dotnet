@@ -45,7 +45,7 @@ namespace SonarLint.Rules.CSharp
             "possible, but a bad idea. That's because maintainers may be confused about which members are being used where. " +
             "Instead the inner class' members should be renamed and all the references updated.";
         internal const string MessageFormat = "Rename this {0} to not shadow the outer class' member with the same name.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Design;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

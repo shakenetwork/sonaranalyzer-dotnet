@@ -43,7 +43,7 @@ namespace SonarLint.Rules.VisualBasic
             "Array designators should always be located on the type for better code readability. Otherwise, developers must look both at " +
             "the type and the variable name to know whether or not a variable is an array.";
         internal const string MessageFormat = "Move the array designator from the variable to the type.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
 

@@ -44,7 +44,7 @@ namespace SonarLint.Rules.CSharp
             "means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" " +
             "for assignment to a single variable.";
         internal const string MessageFormat = "Use the \"{0}\" operator here.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
 

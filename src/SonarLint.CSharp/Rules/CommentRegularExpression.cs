@@ -68,7 +68,7 @@ namespace SonarLint.Rules.CSharp
 
         public const string TemplateDiagnosticId = "S124";
         internal const string Title = "Comments matching a regular expression should be handled";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = false;
 

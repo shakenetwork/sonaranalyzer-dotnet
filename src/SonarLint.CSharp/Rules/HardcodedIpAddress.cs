@@ -50,7 +50,7 @@ namespace SonarLint.Rules.CSharp
             "allows attackers to decompile the code and thereby discover a potentially " +
             "sensitive address";
         internal const string MessageFormat = "Make this IP \"{0}\" address configurable.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

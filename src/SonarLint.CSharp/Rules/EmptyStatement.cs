@@ -42,7 +42,7 @@ namespace SonarLint.Rules.CSharp
             "because: It was meant to be replaced by an actual statement, but this was forgotten. " +
             "There was a typo which lead the semicolon to be doubled, i.e. \";;\".";
         internal const string MessageFormat = "Remove this empty statement.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;

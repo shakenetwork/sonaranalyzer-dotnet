@@ -42,7 +42,7 @@ namespace SonarLint.Rules.VisualBasic
             "stops code execution immediately without executing \"Dispose\" or \"Finalize\" methods, or executing \"Finally\" " +
             "blocks. Therefore, it should be avoided.";
         internal const string MessageFormat = "Remove this call to \"End\" or ensure it is really required.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

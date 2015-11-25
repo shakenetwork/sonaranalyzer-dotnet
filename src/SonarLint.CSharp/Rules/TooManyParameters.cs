@@ -42,7 +42,7 @@ namespace SonarLint.Rules.CSharp
             "A long parameter list can indicate that a new structure should be created to wrap the numerous parameters or that the function is doing " +
             "too many things.";
         internal const string MessageFormat = "Method \"{2}\" has {1} parameters, which is greater than the {0} authorized.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

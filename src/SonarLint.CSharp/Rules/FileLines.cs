@@ -42,7 +42,7 @@ namespace SonarLint.Rules.CSharp
             "therefore to maintain. Above a specific threshold, it is strongly advised to refactor it into smaller pieces of code which focus " +
             "on well defined tasks. Those smaller files will not only be easier to understand but also probably easier to test.";
         internal const string MessageFormat = "This file has {1} lines, which is greater than {0} authorized. Split it into smaller files.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = false;
 

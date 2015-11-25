@@ -41,7 +41,7 @@ namespace SonarLint.Rules.CSharp
         internal const string Description =
             "Redundant parentheses are simply wasted keystrokes, and should be removed.";
         internal const string MessageFormat = "Remove these redundant parentheses.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;

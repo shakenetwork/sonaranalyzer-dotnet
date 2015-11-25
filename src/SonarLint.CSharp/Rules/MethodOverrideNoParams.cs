@@ -43,7 +43,7 @@ namespace SonarLint.Rules.CSharp
             "Overriding methods automatically inherit the \"params\" behavior. To ease readability, this modifier should be explicitly used " +
             "in the overriding method as well.";
         internal const string MessageFormat = "\"params\" should not be removed from an override.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
 

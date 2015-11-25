@@ -43,7 +43,7 @@ namespace SonarLint.Rules.VisualBasic
             "convert its operands to strings and perform an actual concatenation. \"+\" on the other hand can be an addition, or a " +
             "concatenation, depending on the operand types.";
         internal const string MessageFormat = "Switch this use of the \"+\" operator to the \"&\".";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

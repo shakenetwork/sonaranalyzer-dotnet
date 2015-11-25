@@ -42,7 +42,7 @@ namespace SonarLint.Rules.CSharp
             "There is no good reason to create a new object to not do anything with it. Most of the time, " +
             "this is due to a missing piece of code and so could lead to an unexpected behavior in production.";
         internal const string MessageFormat = "Either remove this useless object instantiation of class \"{0}\" or use it";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

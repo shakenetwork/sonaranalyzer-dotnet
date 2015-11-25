@@ -42,7 +42,7 @@ namespace SonarLint.Rules.VisualBasic
             "\"After\" and \"Before\" prefixes or suffixes should not be used to indicate pre and post events. The concepts of " +
             "before and after should be given to events using the present and past tense.";
         internal const string MessageFormat = "Rename this event to remove the \"{0}\" {1}.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Naming;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
 

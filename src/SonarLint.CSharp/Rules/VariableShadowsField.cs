@@ -45,7 +45,7 @@ namespace SonarLint.Rules.CSharp
             "that reduces code readability: It makes it confusing to know whether the field or the " +
             "variable is being used.";
         internal const string MessageFormat = "Rename \"{0}\" which hides the {1} with the same name.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

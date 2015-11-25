@@ -38,7 +38,7 @@ namespace SonarLint.Rules.Common
             "\"Zero\". In practice, those cases are uncommon, and therefore it is generally better to avoid constant " +
             "members.";
         protected const string MessageFormat = "Change this constant to a {0} property.";
-        protected const string Category = Constants.SonarLint;
+        protected const string Category = SonarLint.Common.Category.Reliability;
         protected const Severity RuleSeverity = Severity.Major;
         protected const bool IsActivatedByDefault = false;
 

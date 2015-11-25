@@ -42,7 +42,7 @@ namespace SonarLint.Rules.VisualBasic
             "Visual Basic .NET, unlike many other programming languages, has no \"fall-through\" for its \"Select\" cases. Each " +
             "case already has an implicit \"Exit Select\" as its last instruction. It therefore is redundant to explicitly add one.";
         internal const string MessageFormat = "Remove this redundant use of \"Exit Select\".";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;

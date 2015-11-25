@@ -42,7 +42,7 @@ namespace SonarLint.Rules.VisualBasic
         internal const string Description =
             "Array literals are more compact than array creation expressions.";
         internal const string MessageFormat = "Use an array literal here instead.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

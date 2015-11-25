@@ -41,7 +41,7 @@ namespace SonarLint.Rules
             "parameters to be visible from callers, which is not the case and can confuse them. All parameters " +
             "should be treated as read-only.";
         protected const string MessageFormat = "Introduce a new variable instead of reusing the parameter \"{0}\".";
-        protected const string Category = Constants.SonarLint;
+        protected const string Category = SonarLint.Common.Category.Maintainability;
         protected const Severity RuleSeverity = Severity.Major;
         protected const bool IsActivatedByDefault = true;
 

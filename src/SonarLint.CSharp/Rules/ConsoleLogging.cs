@@ -44,7 +44,7 @@ namespace SonarLint.Rules.CSharp
             "code - particularly in code that runs client-side - and you run the risk of " +
             "inadvertently exposing sensitive information.";
         internal const string MessageFormat = "Remove this logging statement.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Portability;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

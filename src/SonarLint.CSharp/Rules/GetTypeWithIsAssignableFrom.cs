@@ -45,7 +45,7 @@ namespace SonarLint.Rules.CSharp
         internal const string MessageFormat = "Use the {0} instead.";
         internal const string IsOperator = "\"is\" operator";
         internal const string IsInstanceOfType = "\"IsInstanceOfType()\" method";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

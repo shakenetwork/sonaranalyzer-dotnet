@@ -42,7 +42,7 @@ namespace SonarLint.Rules.VisualBasic
             "To improve the code readability, the explicit line continuation character, \"_\", should not be used. Instead, it is " +
             "better to break lines after an operator.";
         internal const string MessageFormat = "Reformat the code to remove this use of the line continuation character.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = false;
 

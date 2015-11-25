@@ -17,10 +17,17 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
+
 namespace SonarLint.Common
 {
-    public static class Constants
+    public static class Category
     {
-        public const string SonarLint = "SonarLint";
+        public const string Design = nameof(Design);
+        public const string Maintainability = nameof(Maintainability);
+        public const string Naming = nameof(Naming);
+        public const string Performance = nameof(Performance);
+        public const string Portability = nameof(Portability);
+        public const string Reliability = nameof(Reliability);
+        public const string Security = nameof(Security);
     }
 }

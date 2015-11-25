@@ -43,7 +43,7 @@ namespace SonarLint.Rules.CSharp
             "be removed, or the re-assignment is a mistake and some other value or variable was intended for the " +
             "assignment instead.";
         internal const string MessageFormat = "Remove or correct this useless self-assignment";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

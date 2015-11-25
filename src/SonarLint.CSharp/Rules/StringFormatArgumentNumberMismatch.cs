@@ -44,7 +44,7 @@ namespace SonarLint.Rules.CSharp
             "Use fewer arguments than are expected in your format string, and you'll get an error at runtime. Use more arguments " +
             "than are expected, and you probably won't get the output you expect. Either way, it's a bug.";
         internal const string MessageFormat = "The passed arguments do not match the format string.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

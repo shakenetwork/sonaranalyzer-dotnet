@@ -48,7 +48,7 @@ namespace SonarLint.Rules.CSharp
         internal const string MessageFormatConstructor = "Hide this public constructor by making it \"{0}\".";
         internal const string MessageFormatStaticClass =
             "Add a \"{0}\" constructor or the \"static\" keyword to the class declaration.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Design;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

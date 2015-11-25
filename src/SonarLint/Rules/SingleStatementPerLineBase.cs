@@ -36,7 +36,7 @@ namespace SonarLint.Rules.Common
         protected const string Description =
             "For better readability, do not put more than one statement on a single line.";
         protected const string MessageFormat = "Reformat the code to have only one statement per line.";
-        protected const string Category = Constants.SonarLint;
+        protected const string Category = SonarLint.Common.Category.Maintainability;
         protected const Severity RuleSeverity = Severity.Minor;
         protected const bool IsActivatedByDefault = true;
 

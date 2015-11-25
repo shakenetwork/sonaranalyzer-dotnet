@@ -40,7 +40,7 @@ namespace SonarLint.Rules.CSharp
         internal const string Description =
             "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.";
         internal const string MessageFormat = "Split this {1} characters long line (which is greater than {0} authorized).";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = false;
 

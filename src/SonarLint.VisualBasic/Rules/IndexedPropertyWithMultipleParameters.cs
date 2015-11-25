@@ -42,7 +42,7 @@ namespace SonarLint.Rules.VisualBasic
             "Indexed properties are meant to represent access to a logical collection. When multiple parameters are required, " +
             "this design guideline may be violated, and refactoring the property into a method is preferable.";
         internal const string MessageFormat = "This indexed property has {0} parameters, use methods instead.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

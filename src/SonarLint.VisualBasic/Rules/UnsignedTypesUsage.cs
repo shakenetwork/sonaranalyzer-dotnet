@@ -43,7 +43,7 @@ namespace SonarLint.Rules.VisualBasic
             "Unsigned integers have different arithmetic operators than signed ones - operators that few developers understand. " +
             "Therefore, signed types should be preferred where possible.";
         internal const string MessageFormat = "Change this unsigned type to \"{0}\".";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

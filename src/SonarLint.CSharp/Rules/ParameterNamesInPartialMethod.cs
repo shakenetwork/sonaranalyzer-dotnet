@@ -44,7 +44,7 @@ namespace SonarLint.Rules.CSharp
             "confused when he renamed, swapped or mangled the parameter names in the implementation, or " +
             "callers will be confused.";
         internal const string MessageFormat = "Rename parameter \"{0}\" to \"{1}\".";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Design;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

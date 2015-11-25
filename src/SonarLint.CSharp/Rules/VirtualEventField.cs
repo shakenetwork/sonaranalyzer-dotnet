@@ -47,7 +47,7 @@ namespace SonarLint.Rules.CSharp
             "parent's field. This results in multiple and separate events being created, which is rarely what's actually " +
             "intended.";
         internal const string MessageFormat = "Remove this virtual of {0}.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;

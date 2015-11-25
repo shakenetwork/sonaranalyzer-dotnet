@@ -43,7 +43,7 @@ namespace SonarLint.Rules.CSharp
             "Trivial properties, which include no logic but setting and getting a backing field should be converted to auto-implemented " +
             "properties, yielding cleaner and more readable code.";
         internal const string MessageFormat = "Make this an auto-implemented property and remove its backing field.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
 

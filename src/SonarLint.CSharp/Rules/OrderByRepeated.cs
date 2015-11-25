@@ -43,7 +43,7 @@ namespace SonarLint.Rules.CSharp
             "because each subsequent call completely reorders the list. Thus, calling \"OrderBy\" multiple times is a performance " +
             "issue as well, because all of the sorting will be executed, but only the result of the last sort will be kept.";
         internal const string MessageFormat = "Use \"ThenBy\" instead.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Performance;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

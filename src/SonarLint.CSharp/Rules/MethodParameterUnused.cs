@@ -42,7 +42,7 @@ namespace SonarLint.Rules.CSharp
         internal const string Description =
             "Unused parameters are misleading. Whatever the value passed to such parameters is, the behavior will be the same.";
         internal const string MessageFormat = "Remove this unused method parameter \"{0}\".";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;

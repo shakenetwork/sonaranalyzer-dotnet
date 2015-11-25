@@ -37,7 +37,7 @@ namespace SonarLint.Rules.Common
             "to be combined using the bitwise or operator. Instead, powers of two, i.e. 1, 2, 4, 8, 16, etc. should be used to explicitly " +
             "initialize all the members.";
         protected const string MessageFormat = "Initialize all the members of this enumeration.";
-        protected const string Category = Constants.SonarLint;
+        protected const string Category = SonarLint.Common.Category.Reliability;
         protected const Severity RuleSeverity = Severity.Critical;
         protected const bool IsActivatedByDefault = true;
 

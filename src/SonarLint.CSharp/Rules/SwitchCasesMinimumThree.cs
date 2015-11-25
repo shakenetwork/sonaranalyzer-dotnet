@@ -44,7 +44,7 @@ namespace SonarLint.Rules.CSharp
             "the value of the same expression. For just one or two cases however, the code will " +
             "be more readable with \"if\" statements.";
         internal const string MessageFormat = "Replace this \"switch\" statement with \"if\" statements to increase readability.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = false;
 

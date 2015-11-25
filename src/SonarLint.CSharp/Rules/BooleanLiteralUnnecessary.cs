@@ -42,7 +42,7 @@ namespace SonarLint.Rules.CSharp
         internal const string Description =
             "Redundant Boolean literals should be removed from expressions to improve readability.";
         internal const string MessageFormat = "Remove the unnecessary Boolean literal(s).";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;

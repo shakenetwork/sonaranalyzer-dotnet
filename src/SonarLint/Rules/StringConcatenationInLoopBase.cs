@@ -34,7 +34,7 @@ namespace SonarLint.Rules.Common
         protected const string Description =
             "\"StringBuilder\" is more efficient than string concatenation, especially when the operator is repeated over and over as in loops.";
         protected const string MessageFormat = "Use a StringBuilder instead.";
-        protected const string Category = Constants.SonarLint;
+        protected const string Category = SonarLint.Common.Category.Performance;
         protected const Severity RuleSeverity = Severity.Major;
         protected const bool IsActivatedByDefault = true;
 

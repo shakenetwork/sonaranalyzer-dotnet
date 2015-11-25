@@ -47,7 +47,7 @@ namespace SonarLint.Rules.CSharp
             "are not valid variable names. To avoid any confusion though, it is best to not use " +
             "\"async\" and \"await\" as identifiers.";
         internal const string MessageFormat = "Rename \"{0}\".";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Naming;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

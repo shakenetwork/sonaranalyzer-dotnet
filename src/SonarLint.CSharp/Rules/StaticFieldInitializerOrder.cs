@@ -45,7 +45,7 @@ namespace SonarLint.Rules.CSharp
             "Thus, placing a static field in a class above the field or fields required for its initialization will yield " +
             "unexpected results.";
         internal const string MessageFormat = "Move this field's initializer into a static constructor.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Blocker;
         internal const bool IsActivatedByDefault = true;
 

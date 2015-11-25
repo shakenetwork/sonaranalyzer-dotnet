@@ -42,7 +42,7 @@ namespace SonarLint.Rules.CSharp
             "Calling \"ToString()\" on an object should always return a string. Returning \"null\" instead " +
             "contravenes the method's implicit contract.";
         internal const string MessageFormat = "Return empty string instead.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

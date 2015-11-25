@@ -42,7 +42,7 @@ namespace SonarLint.Rules.Common
             "Optional parameters prevent muddying the definition of the function contract. Here is a simple " +
             "example: if there are two optional parameters, when one is defined, is the second one still optional or mandatory?";
         protected const string MessageFormat = "Use the overloading mechanism instead of the optional parameters.";
-        protected const string Category = Constants.SonarLint;
+        protected const string Category = SonarLint.Common.Category.Design;
         protected const Severity RuleSeverity = Severity.Major;
         protected const bool IsActivatedByDefault = true;
 

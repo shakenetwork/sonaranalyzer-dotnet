@@ -44,7 +44,7 @@ namespace SonarLint.Rules.CSharp
             "field can have different values for different calling threads, but that's not the case, since the " +
             "\"ThreadStatic\" attribute is simply ignored on non-static fields.";
         internal const string MessageFormat = "Remove the \"ThreadStatic\" attribute from this definition.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;

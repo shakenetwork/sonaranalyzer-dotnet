@@ -43,7 +43,7 @@ namespace SonarLint.Rules.VisualBasic
             "Prefer the use of \"Try ... Catch\" blocks instead of \"On Error\" statements. Structured exception handling is " +
             "more powerful because it allows you to nest error handlers inside other error handlers within the same procedure.";
         internal const string MessageFormat = "Remove this use of \"OnError\".";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

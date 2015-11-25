@@ -45,7 +45,7 @@ namespace SonarLint.Rules.CSharp
             "Doing so will improve maintainability because developers will not wonder what the variable " +
             "is used for.";
         internal const string MessageFormat = "Remove this unused \"{0}\" local variable.";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 

@@ -49,7 +49,7 @@ namespace SonarLint.Rules.CSharp
             "then it should be instantiated with a \"using\" clause to prompt automatic cleanup when " +
             "it goes out of scope.";
         internal const string MessageFormat = "\"Dispose\" of \"{0}\".";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 

@@ -43,7 +43,7 @@ namespace SonarLint.Rules.CSharp
         internal const string Description =
             "Unnecessary casting expressions make the code harder to read and understand.";
         internal const string MessageFormat = "Remove this unnecessary cast to \"{0}\".";
-        internal const string Category = Constants.SonarLint;
+        internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
