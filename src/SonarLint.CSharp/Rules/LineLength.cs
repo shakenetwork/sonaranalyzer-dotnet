@@ -42,7 +42,7 @@ namespace SonarLint.Rules.CSharp
         internal const string MessageFormat = "Split this {1} characters long line (which is greater than {0} authorized).";
         internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = true;
+        internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
