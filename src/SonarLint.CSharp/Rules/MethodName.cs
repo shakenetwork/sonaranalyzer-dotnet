@@ -45,7 +45,7 @@ namespace SonarLint.Rules.CSharp
         internal const string MessageFormat = "Rename this method \"{1}\" to match the regular expression {0}";
         internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = true;
+        internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
