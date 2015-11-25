@@ -140,6 +140,10 @@
     <Rule Id="C6322" Action="Warning" />
   </Rules>
   <Rules AnalyzerId="SonarLint.CSharp" RuleNamespace="SonarLint.CSharp">
+    <Rule Id="S100" Action="Warning" />
+    <Rule Id="S101" Action="Warning" />
+    <Rule Id="S103" Action="Warning" />
+    <Rule Id="S104" Action="Warning" />
     <Rule Id="S105" Action="Warning" />
     <Rule Id="S1109" Action="Warning" />
     <Rule Id="S1116" Action="Warning" />
