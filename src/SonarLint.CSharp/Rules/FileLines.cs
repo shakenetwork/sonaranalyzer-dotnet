@@ -44,7 +44,7 @@ namespace SonarLint.Rules.CSharp
         internal const string MessageFormat = "This file has {1} lines, which is greater than {0} authorized. Split it into smaller files.";
         internal const string Category = Constants.SonarLint;
         internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
+        internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
