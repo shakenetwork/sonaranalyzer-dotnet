@@ -1,0 +1,25 @@
+<p>
+    <code>String.ToLower()</code>, <code>.ToUpper</code>, <code>.StartsWith</code>, <code>.EndsWith</code>, <code>.Compare</code>, and
+    <code>.Equals</code> are all culture-dependent, as are some (floating point number-related) calls to ToString. Fortunately, all have
+    variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the
+    system default culture, possibly creating problems with international characters.
+</p>
+<p>
+    Such calls without a culture may work fine in the system's "home" environment, but break in ways that are extremely difficult to
+    diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it's
+    time to fix them.
+</p>
+
+<h2>Noncompliant Code Example</h2>
+<pre>
+var lowered = someString.ToLower(); //Noncompliant
+</pre>
+
+<h2>Compliant Solution</h2>
+<pre>
+var lowered = someString.ToLower(CultureInfo.InvariantCulture);
+</pre>
+or
+<pre>
+var lowered = someString.ToLowerInvariant();
+</pre>

@@ -221,6 +221,7 @@
     <Compile Include="Rules\StaticFieldVisible.cs" />
     <Compile Include="Rules\StaticFieldWrittenFromInstanceMember.cs" />
     <Compile Include="Rules\StringConcatenationInLoop.cs" />
+    <Compile Include="Rules\StringOperationWithoutCulture.cs" />
     <Compile Include="Rules\StringFormatArgumentNumberMismatch.cs" />
     <Compile Include="Rules\SuppressFinalizeUseless.cs" />
     <Compile Include="Rules\SuppressFinalizeUselessCodeFixProvider.cs" />

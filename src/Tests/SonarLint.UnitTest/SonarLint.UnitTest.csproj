@@ -155,6 +155,7 @@
     <Compile Include="Rules\LineContinuationTest.cs" />
     <Compile Include="Rules\OptionalParameterTest.cs" />
     <Compile Include="Rules\SingleStatementPerLineTest.cs" />
+    <Compile Include="Rules\StringOperationWithoutCultureTest.cs" />
     <Compile Include="Rules\UnsignedTypesUsageTest.cs" />
     <Compile Include="Rules\ArrayDesignatorOnVariableTest.cs" />
     <Compile Include="Rules\IndexedPropertyWithMultipleParametersTest.cs" />
@@ -704,6 +705,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\StringConcatenationInLoop.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\StringOperationWithoutCulture.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />

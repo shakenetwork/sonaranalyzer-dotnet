@@ -41,6 +41,7 @@ namespace SonarLint.Common
         public const string Security = "security";
         public const string Suspicious = "suspicious";
         public const string Sql = "sql";
+        public const string Unpredictable = "unpredictable";
         public const string Unused = "unused";
     }
 }
