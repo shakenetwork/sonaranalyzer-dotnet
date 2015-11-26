@@ -59,7 +59,7 @@ namespace SonarLint.Runner
             nonTemplateAnalyzers = ImmutableArray.Create(GetNonTemplateAnalyzers(language).ToArray());
 
             var settings = ParseSettings(xml);
-            IgnoreHeaderComments = "true".Equals(settings["sonar.cs.ignoreHeaderComments"]);
+            IgnoreHeaderComments = "true".Equals(settings["sonar.cs.ignoreHeaderComments"], StringComparison.InvariantCultureIgnoreCase);
 
             Files = xml.Descendants("File").Select(e => e.Value).ToImmutableList();
 
