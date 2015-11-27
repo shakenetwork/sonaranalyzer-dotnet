@@ -89,6 +89,12 @@ namespace SonarLint.Rules.CSharp
                         c =>
                         {
                             var unusedParameters = methodSymbol.Parameters.Except(usedParameters);
+
+                            if (methodSymbol.IsExtensionMethod)
+                            {
+                                unusedParameters = unusedParameters.Except(new[] { methodSymbol.Parameters.First() });
+                            }
+
                             foreach (var unusedParameter in unusedParameters)
                             {
                                 var reference = unusedParameter.DeclaringSyntaxReferences.FirstOrDefault();

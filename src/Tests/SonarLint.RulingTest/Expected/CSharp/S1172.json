@@ -211,40 +211,6 @@
     },
     {
       "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"system\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence.TestKit.Tests\\Cleanup.cs",
-            "Region": {
-              "StartLine": 15,
-              "EndLine": 15,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"system\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\akka.net-dev_8b00423b29\\src\\core\\Akka.Persistence.TestKit.Tests\\Cleanup.cs",
-            "Region": {
-              "StartLine": 23,
-              "EndLine": 23,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
       "FullMessage": "Remove this unused method parameter \"remoteAddress\".",
       "Locations": [
         {
@@ -4155,23 +4121,6 @@
     },
     {
       "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"type\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\LogExtensions.cs",
-            "Region": {
-              "StartLine": 51,
-              "EndLine": 51,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
       "FullMessage": "Remove this unused method parameter \"product\".",
       "Locations": [
         {
@@ -5081,23 +5030,6 @@
             "Region": {
               "StartLine": 31,
               "EndLine": 31,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"results\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\Mvc-dev_b245996949\\src\\Microsoft.AspNet.Mvc.Razor\\Precompilation\\GeneratorResultExtensions.cs",
-            "Region": {
-              "StartLine": 15,
-              "EndLine": 15,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }
@@ -13539,40 +13471,6 @@
     },
     {
       "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"module\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Authentication.Forms\\ModuleExtensions.cs",
-            "Region": {
-              "StartLine": 46,
-              "EndLine": 46,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"module\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.Authentication.Forms\\ModuleExtensions.cs",
-            "Region": {
-              "StartLine": 80,
-              "EndLine": 80,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
       "FullMessage": "Remove this unused method parameter \"context\".",
       "Locations": [
         {
@@ -14746,23 +14644,6 @@
     },
     {
       "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"helpers\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy.ViewEngines.Razor\\HtmlHelpersExtensions.cs",
-            "Region": {
-              "StartLine": 15,
-              "EndLine": 15,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
       "FullMessage": "Remove this unused method parameter \"name\".",
       "Locations": [
         {
@@ -15077,108 +14958,6 @@
             "Region": {
               "StartLine": 118,
               "EndLine": 118,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"formatter\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\FormatterExtensions.cs",
-            "Region": {
-              "StartLine": 16,
-              "EndLine": 16,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"formatter\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\FormatterExtensions.cs",
-            "Region": {
-              "StartLine": 21,
-              "EndLine": 21,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"formatter\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\FormatterExtensions.cs",
-            "Region": {
-              "StartLine": 26,
-              "EndLine": 26,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"formatter\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\FormatterExtensions.cs",
-            "Region": {
-              "StartLine": 31,
-              "EndLine": 31,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"formatter\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\FormatterExtensions.cs",
-            "Region": {
-              "StartLine": 63,
-              "EndLine": 63,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S1172",
-      "FullMessage": "Remove this unused method parameter \"formatter\".",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\Nancy-master_6775d18fc5\\src\\Nancy\\FormatterExtensions.cs",
-            "Region": {
-              "StartLine": 68,
-              "EndLine": 68,
               "StartColumn": 0,
               "EndColumn": 2147483647
             }

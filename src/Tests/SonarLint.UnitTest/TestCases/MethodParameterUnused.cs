@@ -6,6 +6,15 @@ using System.Threading.Tasks;
 
 namespace Tests.TestCases
 {
+    public static class Extensions
+    {
+        public static void MyMethod(this string s,
+            int i) // Noncompliant
+        {
+
+        }
+    }
+
     abstract class BaseAbstract
     {
         public abstract void M3(int a); //okay

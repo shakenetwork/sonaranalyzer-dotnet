@@ -29,6 +29,19 @@ override void DoSomething(int a, int b) // no issue reported on b
 }
 </pre>
 
+<p>
+    Furthermore, the <code>this</code> parameter of extension methods is also ignored.
+</p>
+<pre>
+public static class Extensions
+{
+  public static void MyHelper(this HtmlHelper helper) //no issue reported here
+  {
+    // no use of helper here
+  }
+}
+</pre>
+
 <h2>See</h2>
 
 <ul>
