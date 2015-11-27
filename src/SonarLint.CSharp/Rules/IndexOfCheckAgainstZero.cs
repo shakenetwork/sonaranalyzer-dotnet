@@ -19,7 +19,6 @@
  */
 
 using System.Collections.Immutable;
-using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -107,28 +106,7 @@ namespace SonarLint.Rules.CSharp
                 semanticModel.Compilation.GetTypeByMetadataName("System.Collections.IList")
             };
 
-            return DerivesOrImplements(indexOfSymbol.ContainingType, possibleTypes);
-        }
-
-        internal static bool DerivesOrImplements(INamedTypeSymbol type, ITypeSymbol[] possibleTypes)
-        {
-            var allInterfaces = type.AllInterfaces;
-            if (allInterfaces.Intersect(possibleTypes).Any())
-            {
-                return true;
-            }
-
-            var baseType = type;
-            while (baseType != null &&
-                !(baseType is IErrorTypeSymbol))
-            {
-                if (possibleTypes.Contains(baseType))
-                {
-                    return true;
-                }
-                baseType = baseType.BaseType;
-            }
-            return false;
+            return indexOfSymbol.ContainingType.DerivesOrImplementsAny(possibleTypes);
         }
     }
 }

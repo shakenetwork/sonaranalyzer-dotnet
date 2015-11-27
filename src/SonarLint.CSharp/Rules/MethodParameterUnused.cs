@@ -145,7 +145,7 @@ namespace SonarLint.Rules.CSharp
                 return true;
             }
 
-            return IndexOfCheckAgainstZero.DerivesOrImplements(eventArgsType, new[] { sysEventArgs });
+            return eventArgsType.DerivesOrImplementsAny(sysEventArgs);
         }
     }
 }

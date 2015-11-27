@@ -45,9 +45,11 @@ namespace SonarLint.Rules.CSharp
             "ways \"IEnumerable LINQ\"s can be simplified. Use \"OfType\" instead of using \"Select\" with \"as\" to type cast " +
             "elements and then null-checking in a query expression to choose elements based on type. Use \"OfType\" instead of " +
             "using \"Where\" and the \"is\" operator, followed by a cast in a \"Select\". Use an expression in \"Any\" instead " +
-            "of \"Where(element => [expression]).Any()\".";
-        internal const string MessageFormatType = "Use \"OfType<{0}>()\" here instead.";
-        internal const string MessageFormatSimplify = "Drop \"{0}\" and move the condition into the \"{1}\".";
+            "of \"Where(element => [expression]).Any()\". Use \"Count\" instead of \"Count()\" when it's available. Don't call " +
+            "\"ToArray()\" or \"ToList()\" in the middle of a query chain.";
+        internal const string MessageUseInstead = "Use {0} here instead.";
+        internal const string MessageDropAndChange = "Drop \"{0}\" and move the condition into the \"{1}\".";
+        internal const string MessageDropFromMiddle = "Drop \"{0}\" from the middle of the call chain.";
         internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
@@ -74,6 +76,10 @@ namespace SonarLint.Rules.CSharp
             "First", "FirstOrDefault", "Last", "LastOrDefault",
             "Single", "SingleOrDefault", "SkipWhile", "TakeWhile"
         };
+        private static readonly string[] MethodNamesToCollection =
+        {
+            "ToList", "ToArray"
+        };
 
         private static readonly SyntaxKind[] AsIsSyntaxKinds = {SyntaxKind.AsExpression, SyntaxKind.IsExpression};
         private const string WhereMethodName = "Where";
@@ -84,61 +90,166 @@ namespace SonarLint.Rules.CSharp
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
-                    var outerInvocation = (InvocationExpressionSyntax) c.Node;
-                    var outerMethodSymbol = c.SemanticModel.GetSymbolInfo(outerInvocation).Symbol as IMethodSymbol;
-                    if (outerMethodSymbol == null ||
-                        !CollectionEmptinessChecking.MethodIsOnIEnumerable(outerMethodSymbol, c.SemanticModel))
-                    {
-                        return;
-                    }
-
-                    InvocationExpressionSyntax innerInvocation;
-                    if (outerMethodSymbol.MethodKind == MethodKind.ReducedExtension)
-                    {
-                        var memberAccess = outerInvocation.Expression as MemberAccessExpressionSyntax;
-                        if (memberAccess == null)
-                        {
-                            return;
-                        }
-                        innerInvocation = memberAccess.Expression as InvocationExpressionSyntax;
-                    }
-                    else
-                    {
-                        var argument = outerInvocation.ArgumentList.Arguments.FirstOrDefault();
-                        if (argument == null)
-                        {
-                            return;
-                        }
-                        innerInvocation = argument.Expression as InvocationExpressionSyntax;
-                    }
-
-                    if (innerInvocation == null)
-                    {
-                        return;
-                    }
-
-                    var innerMethodSymbol = c.SemanticModel.GetSymbolInfo(innerInvocation).Symbol as IMethodSymbol;
-                    if (innerMethodSymbol == null ||
-                        !CollectionEmptinessChecking.MethodIsOnIEnumerable(innerMethodSymbol, c.SemanticModel))
-                    {
-                        return;
-                    }
-
-                    var outerArguments = GetReducedArguments(outerMethodSymbol, outerInvocation);
-
-                    if (CheckForSimplifiable(outerArguments, outerMethodSymbol, innerMethodSymbol, c,
-                        innerInvocation))
-                    {
-                        return;
-                    }
-
-                    if (CheckForCastSimplification(outerMethodSymbol, innerMethodSymbol, innerInvocation,
-                        outerInvocation, c))
-                    {
-                        return;
-                    }
+                    CheckExtensionMethodsOnIEnumerable(c);
                 },
                 SyntaxKind.InvocationExpression);
+
+            context.RegisterSyntaxNodeActionInNonGenerated(
+                c =>
+                {
+                    CheckToCollectionCalls(c);
+                },
+                SyntaxKind.InvocationExpression);
+
+            context.RegisterSyntaxNodeActionInNonGenerated(
+                c =>
+                {
+                    CheckCountCall(c);
+                },
+                SyntaxKind.InvocationExpression);
+        }
+
+        private static void CheckCountCall(SyntaxNodeAnalysisContext c)
+        {
+            var invocation = (InvocationExpressionSyntax)c.Node;
+            var methodSymbol = c.SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
+            if (invocation.ArgumentList == null ||
+                invocation.ArgumentList.Arguments.Any() ||
+                methodSymbol == null ||
+                !CollectionEmptinessChecking.MethodIsOnIEnumerable(methodSymbol, c.SemanticModel) ||
+                methodSymbol.Name != "Count")
+            {
+                return;
+            }
+
+            var memberAccess = invocation.Expression as MemberAccessExpressionSyntax;
+            if (memberAccess == null)
+            {
+                return;
+            }
+
+            var symbol = c.SemanticModel.GetTypeInfo(memberAccess.Expression).Type;
+            if (symbol.GetMembers("Count").OfType<IPropertySymbol>().Any())
+            {
+                c.ReportDiagnostic(Diagnostic.Create(Rule, GetReportLocation(invocation),
+                    string.Format(MessageUseInstead, "\"Count\" property")));
+            }
+        }
+
+        private static void CheckToCollectionCalls(SyntaxNodeAnalysisContext c)
+        {
+            var outerInvocation = (InvocationExpressionSyntax)c.Node;
+            var outerMethodSymbol = c.SemanticModel.GetSymbolInfo(outerInvocation).Symbol as IMethodSymbol;
+            if (outerMethodSymbol == null ||
+                !MethodCanBeCalledOnIEnumerable(outerMethodSymbol, c.SemanticModel))
+            {
+                return;
+            }
+
+            var innerInvocation = GetInnerInvocation(outerInvocation, outerMethodSymbol);
+            if (innerInvocation == null)
+            {
+                return;
+            }
+
+            var innerMethodSymbol = c.SemanticModel.GetSymbolInfo(innerInvocation).Symbol as IMethodSymbol;
+            if (innerMethodSymbol == null ||
+                !MethodCanBeCalledOnIEnumerable(innerMethodSymbol, c.SemanticModel))
+            {
+                return;
+            }
+
+            if (MethodNamesToCollection.Contains(innerMethodSymbol.Name))
+            {
+                c.ReportDiagnostic(Diagnostic.Create(Rule, GetReportLocation(innerInvocation),
+                    string.Format(MessageDropFromMiddle, innerMethodSymbol.Name)));
+            }
+        }
+
+        private static bool MethodCanBeCalledOnIEnumerable(IMethodSymbol methodSymbol, SemanticModel semanticModel)
+        {
+            if (methodSymbol == null)
+            {
+                return false;
+            }
+
+            var enumerableType = semanticModel.Compilation.GetSpecialType(SpecialType.System_Collections_Generic_IEnumerable_T);
+            var receiverType = methodSymbol.ReceiverType as INamedTypeSymbol;
+
+            if (methodSymbol.MethodKind == MethodKind.Ordinary &&
+                methodSymbol.IsExtensionMethod)
+            {
+                receiverType = methodSymbol.Parameters.First().Type as INamedTypeSymbol;
+            }
+
+            return receiverType != null &&
+                receiverType.ConstructedFrom.DerivesOrImplementsAny(enumerableType);
+        }
+
+        private static void CheckExtensionMethodsOnIEnumerable(SyntaxNodeAnalysisContext c)
+        {
+            var outerInvocation = (InvocationExpressionSyntax)c.Node;
+            var outerMethodSymbol = c.SemanticModel.GetSymbolInfo(outerInvocation).Symbol as IMethodSymbol;
+            if (outerMethodSymbol == null ||
+                !CollectionEmptinessChecking.MethodIsOnIEnumerable(outerMethodSymbol, c.SemanticModel))
+            {
+                return;
+            }
+
+            var innerInvocation = GetInnerInvocation(outerInvocation, outerMethodSymbol);
+            if (innerInvocation == null)
+            {
+                return;
+            }
+
+            var innerMethodSymbol = c.SemanticModel.GetSymbolInfo(innerInvocation).Symbol as IMethodSymbol;
+            if (innerMethodSymbol == null ||
+                !CollectionEmptinessChecking.MethodIsOnIEnumerable(innerMethodSymbol, c.SemanticModel))
+            {
+                return;
+            }
+
+            if (CheckForSimplifiable(outerMethodSymbol, outerInvocation, innerMethodSymbol, innerInvocation, c))
+            {
+                return;
+            }
+
+            if (CheckForCastSimplification(outerMethodSymbol, innerMethodSymbol, innerInvocation,
+                outerInvocation, c))
+            {
+                return;
+            }
+        }
+
+        private static InvocationExpressionSyntax GetInnerInvocation(InvocationExpressionSyntax outerInvocation, IMethodSymbol outerMethodSymbol)
+        {
+            InvocationExpressionSyntax innerInvocation = null;
+            if (outerMethodSymbol.MethodKind == MethodKind.ReducedExtension)
+            {
+                var memberAccess = outerInvocation.Expression as MemberAccessExpressionSyntax;
+                if (memberAccess != null)
+                {
+                    innerInvocation = memberAccess.Expression as InvocationExpressionSyntax;
+                }
+            }
+            else
+            {
+                var argument = outerInvocation.ArgumentList.Arguments.FirstOrDefault();
+                if (argument != null)
+                {
+                    innerInvocation = argument.Expression as InvocationExpressionSyntax;
+                }
+                else
+                {
+                    var memberAccess = outerInvocation.Expression as MemberAccessExpressionSyntax;
+                    if (memberAccess != null)
+                    {
+                        innerInvocation = memberAccess.Expression as InvocationExpressionSyntax;
+                    }
+                }
+            }
+
+            return innerInvocation;
         }
 
         private static List<ArgumentSyntax> GetReducedArguments(IMethodSymbol methodSymbol, InvocationExpressionSyntax invocation)
@@ -158,7 +269,7 @@ namespace SonarLint.Rules.CSharp
                 TryGetCastInLambda(SyntaxKind.AsExpression, innerMethodSymbol, innerInvocation, out typeNameInInner))
             {
                 c.ReportDiagnostic(Diagnostic.Create(Rule, GetReportLocation(innerInvocation),
-                    string.Format(MessageFormatType, typeNameInInner)));
+                    string.Format(MessageUseInstead, $"\"OfType<{typeNameInInner}>()\"")));
                 return true;
             }
 
@@ -170,7 +281,7 @@ namespace SonarLint.Rules.CSharp
                 typeNameInOuter == typeNameInInner)
             {
                 c.ReportDiagnostic(Diagnostic.Create(Rule, GetReportLocation(innerInvocation),
-                    string.Format(MessageFormatType, typeNameInInner)));
+                    string.Format(MessageUseInstead, $"\"OfType<{typeNameInInner}>()\"")));
                 return true;
             }
 
@@ -341,11 +452,10 @@ namespace SonarLint.Rules.CSharp
             return true;
         }
 
-        private static bool CheckForSimplifiable(List<ArgumentSyntax> outerArguments, IMethodSymbol outerMethodSymbol,
-            IMethodSymbol innerMethodSymbol, SyntaxNodeAnalysisContext c, InvocationExpressionSyntax innerInvocation)
+        private static bool CheckForSimplifiable(IMethodSymbol outerMethodSymbol, InvocationExpressionSyntax outerInvocation,
+            IMethodSymbol innerMethodSymbol, InvocationExpressionSyntax innerInvocation, SyntaxNodeAnalysisContext c)
         {
-            if (!outerArguments.Any() &&
-                MethodNamesWithPredicate.Contains(outerMethodSymbol.Name) &&
+            if (MethodIsNotUsingPredicate(outerMethodSymbol, outerInvocation) &&
                 innerMethodSymbol.Name == WhereMethodName &&
                 innerMethodSymbol.Parameters.Any(symbol =>
                 {
@@ -358,10 +468,18 @@ namespace SonarLint.Rules.CSharp
                 }))
             {
                 c.ReportDiagnostic(Diagnostic.Create(Rule, GetReportLocation(innerInvocation),
-                    string.Format(MessageFormatSimplify, WhereMethodName, outerMethodSymbol.Name)));
+                    string.Format(MessageDropAndChange, WhereMethodName, outerMethodSymbol.Name)));
                 return true;
             }
+
             return false;
+        }
+
+        private static bool MethodIsNotUsingPredicate(IMethodSymbol methodSymbol, InvocationExpressionSyntax invocation)
+        {
+            var arguments = GetReducedArguments(methodSymbol, invocation);
+
+            return !arguments.Any() && MethodNamesWithPredicate.Contains(methodSymbol.Name);
         }
     }
 }
