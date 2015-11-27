@@ -1,5 +1,10 @@
 ﻿namespace Tests.Diagnostics
 {
+    static class IEnumerableExtensions // Compliant
+    {
+
+    }
+
     class foo // Noncompliant
     {
     }
