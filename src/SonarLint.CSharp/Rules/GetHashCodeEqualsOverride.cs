@@ -113,14 +113,13 @@ namespace SonarLint.Rules.CSharp
             var objectType = invokedMethod.ContainingType;
             if (objectType != null &&
                 objectType.SpecialType == SpecialType.System_Object &&
-                !IsEqualsCallInGuardCondition(invocation, invokedMethod, methodSymbol, c.SemanticModel))
+                !IsEqualsCallInGuardCondition(invocation, invokedMethod))
             {
                 c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation()));
             }
         }
 
-        private static bool IsEqualsCallInGuardCondition(InvocationExpressionSyntax invocation, IMethodSymbol invokedMethod,
-            IMethodSymbol declaredMethod, SemanticModel semanticModel)
+        private static bool IsEqualsCallInGuardCondition(InvocationExpressionSyntax invocation, IMethodSymbol invokedMethod)
         {
             if (invokedMethod.Name != EqualsName)
             {
