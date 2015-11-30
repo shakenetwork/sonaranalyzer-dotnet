@@ -143,6 +143,7 @@
     <Compile Include="Rules\EventNameContainsBeforeOrAfterTest.cs" />
     <Compile Include="Rules\ExitStatementUsageTest.cs" />
     <Compile Include="Rules\InvocationResolvesToOverrideWithParamsTest.cs" />
+    <Compile Include="Rules\MethodOverloadOptionalParameterTest.cs" />
     <Compile Include="Rules\PropertyWithArrayTypeTest.cs" />
     <Compile Include="Rules\ArrayInitializationMultipleStatementsTest.cs" />
     <Compile Include="Rules\ArrayCreationLongSyntaxTest.cs" />
@@ -716,6 +717,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\InvocationResolvesToOverrideWithParams.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\MethodOverloadOptionalParameter.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />

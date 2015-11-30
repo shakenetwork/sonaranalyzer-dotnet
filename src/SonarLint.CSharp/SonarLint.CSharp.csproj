@@ -183,6 +183,7 @@
     <Compile Include="Rules\LockOnThisOrType.cs" />
     <Compile Include="Rules\MemberShadowsOuterStaticMember.cs" />
     <Compile Include="Rules\MethodName.cs" />
+    <Compile Include="Rules\MethodOverloadOptionalParameter.cs" />
     <Compile Include="Rules\MethodOverrideNoParams.cs" />
     <Compile Include="Rules\MethodOverrideNoParamsCodeFixProvider.cs" />
     <Compile Include="Rules\MethodParameterUnused.cs" />

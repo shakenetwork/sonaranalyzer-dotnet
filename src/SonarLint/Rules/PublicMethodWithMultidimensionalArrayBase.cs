@@ -48,18 +48,6 @@ namespace SonarLint.Rules.Common
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        internal static bool IsPublic(ISymbol symbol)
-        {
-            var currentSymbol = symbol;
-            while (currentSymbol != null &&
-                currentSymbol.DeclaredAccessibility == Accessibility.Public)
-            {
-                currentSymbol = currentSymbol.ContainingSymbol;
-            }
-
-            return currentSymbol == null || currentSymbol.DeclaredAccessibility == Accessibility.NotApplicable;
-        }
-
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
         GeneratedCodeRecognizer IMultiLanguageDiagnosticAnalyzer.GeneratedCodeRecognizer => GeneratedCodeRecognizer;
     }
@@ -78,7 +66,7 @@ namespace SonarLint.Rules.Common
                     var methodSymbol = c.SemanticModel.GetDeclaredSymbol(method) as IMethodSymbol;
 
                     if (methodSymbol != null &&
-                        IsMethodChangeable(methodSymbol) &&
+                        !methodSymbol.IsInterfaceImplementationOrMemberOverride() &&
                         methodSymbol.IsPublicApi() &&
                         MethodHasMultidimensionalArrayParameters(methodSymbol))
                     {
@@ -100,18 +88,5 @@ namespace SonarLint.Rules.Common
         protected abstract SyntaxToken GetIdentifier(TMethodSyntax method);
 
         public abstract ImmutableArray<TLanguageKindEnum> SyntaxKindsOfInterest { get; }
-
-        private static bool IsMethodChangeable(IMethodSymbol methodSymbol)
-        {
-            if (methodSymbol.IsOverride)
-            {
-                return false;
-            }
-
-            return !methodSymbol.ContainingType
-                .AllInterfaces
-                .SelectMany(@interface => @interface.GetMembers().OfType<IMethodSymbol>())
-                .Any(method => methodSymbol.Equals(methodSymbol.ContainingType.FindImplementationForInterfaceMember(method)));
-        }
     }
 }
