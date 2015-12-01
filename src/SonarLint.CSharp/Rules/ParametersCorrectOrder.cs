@@ -64,7 +64,7 @@ namespace SonarLint.Rules.CSharp
                 c =>
                 {
                     var methodCall = (InvocationExpressionSyntax) c.Node;
-                    var methodParameterLookup = new ArrayCovariance.MethodParameterLookup(methodCall, c.SemanticModel);
+                    var methodParameterLookup = new MethodParameterLookup(methodCall, c.SemanticModel);
                     var argumentParameterMappings = methodCall.ArgumentList.Arguments.Select(argument =>
                         new KeyValuePair<ArgumentSyntax, IParameterSymbol>(argument,
                             methodParameterLookup.GetParameterSymbol(argument)))

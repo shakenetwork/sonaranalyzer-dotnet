@@ -18,7 +18,6 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
@@ -28,7 +27,6 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
-using System;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -64,7 +62,7 @@ namespace SonarLint.Rules.CSharp
                 c =>
                 {
                     var methodCall = (InvocationExpressionSyntax) c.Node;
-                    var methodParameterLookup = new ArrayCovariance.MethodParameterLookup(methodCall, c.SemanticModel);
+                    var methodParameterLookup = new MethodParameterLookup(methodCall, c.SemanticModel);
                     var argumentMappings = methodCall.ArgumentList.Arguments.Select(argument =>
                         new ArgumentParameterMapping(argument,
                             methodParameterLookup.GetParameterSymbol(argument)))

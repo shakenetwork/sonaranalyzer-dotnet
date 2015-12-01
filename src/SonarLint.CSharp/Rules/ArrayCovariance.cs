@@ -136,52 +136,7 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.CastExpression);
         }
 
-        // todo: this should come from the Roslyn API (https://github.com/dotnet/roslyn/issues/9)
-        internal class MethodParameterLookup
-        {
-            private readonly InvocationExpressionSyntax invocation;
-            private readonly IMethodSymbol methodSymbol;
-
-            public MethodParameterLookup(InvocationExpressionSyntax invocation, SemanticModel semanticModel)
-            {
-                this.invocation = invocation;
-                methodSymbol = semanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
-            }
-
-            public IMethodSymbol MethodSymbol
-            {
-                get
-                {
-                    return methodSymbol;
-                }
-            }
-
-            public IParameterSymbol GetParameterSymbol(ArgumentSyntax argument)
-            {
-                if (!invocation.ArgumentList.Arguments.Contains(argument) ||
-                    methodSymbol == null)
-                {
-                    return null;
-                }
-
-                if (argument.NameColon != null)
-                {
-                    return methodSymbol.Parameters
-                        .FirstOrDefault(symbol => symbol.Name == argument.NameColon.Name.Identifier.ValueText);
-                }
-
-                var argumentIndex = invocation.ArgumentList.Arguments.IndexOf(argument);
-                var parameterIndex = argumentIndex;
-
-                if (parameterIndex >= methodSymbol.Parameters.Length)
-                {
-                    return methodSymbol.Parameters[methodSymbol.Parameters.Length - 1];
-                }
-                var parameter = methodSymbol.Parameters[parameterIndex];
-                return parameter;
-            }
-        }
-
+        
         private static bool AreCovariantArrayTypes(ITypeSymbol typeDerivedArray, ITypeSymbol typeBaseArray)
         {
             if (typeDerivedArray == null ||

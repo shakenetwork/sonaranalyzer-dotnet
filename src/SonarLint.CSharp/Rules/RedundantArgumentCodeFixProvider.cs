@@ -30,6 +30,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Text;
 using System;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -62,7 +63,7 @@ namespace SonarLint.Rules.CSharp
             }
 
             var semanticModel = await context.Document.GetSemanticModelAsync(context.CancellationToken);
-            var methodParameterLookup = new ArrayCovariance.MethodParameterLookup(invocation, semanticModel);
+            var methodParameterLookup = new MethodParameterLookup(invocation, semanticModel);
             var argumentMappings = invocation.ArgumentList.Arguments
                 .Select(argument =>
                     new RedundantArgument.ArgumentParameterMapping(argument,

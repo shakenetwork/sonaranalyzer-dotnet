@@ -142,6 +142,7 @@
     <Compile Include="Rules\CommentTodoTest.cs" />
     <Compile Include="Rules\EventNameContainsBeforeOrAfterTest.cs" />
     <Compile Include="Rules\ExitStatementUsageTest.cs" />
+    <Compile Include="Rules\InvocationResolvesToOverrideWithParamsTest.cs" />
     <Compile Include="Rules\PropertyWithArrayTypeTest.cs" />
     <Compile Include="Rules\ArrayInitializationMultipleStatementsTest.cs" />
     <Compile Include="Rules\ArrayCreationLongSyntaxTest.cs" />
@@ -712,6 +713,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\CommentFixme.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\InvocationResolvesToOverrideWithParams.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />

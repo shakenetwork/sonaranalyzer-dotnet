@@ -1,0 +1,43 @@
+{
+  "Version": "0.1",
+  "ToolInfo": {
+    "ToolName": "SonarLint.RulingTest",
+    "FileVersion": "1.0.0"
+  },
+  "Issues": [
+    {
+      "RuleId": "S3220",
+      "FullMessage": "Review this call, which partially matches an overload without \"params\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\choco-master_3a5f2b6843\\src\\chocolatey\\infrastructure\\commandline\\Options.cs",
+            "Region": {
+              "StartLine": 822,
+              "EndLine": 822,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    },
+    {
+      "RuleId": "S3220",
+      "FullMessage": "Review this call, which partially matches an overload without \"params\".",
+      "Locations": [
+        {
+          "AnalysisTarget": {
+            "Uri": "\\PcapDotNet-71480\\PcapDotNet.Core.Test\\WiresharkCompareTests.cs",
+            "Region": {
+              "StartLine": 73,
+              "EndLine": 73,
+              "StartColumn": 0,
+              "EndColumn": 2147483647
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

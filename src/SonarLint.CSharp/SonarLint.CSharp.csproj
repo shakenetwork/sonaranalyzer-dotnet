@@ -91,6 +91,7 @@
     <Compile Include="Helpers\EquivalenceChecker.cs" />
     <Compile Include="Helpers\ExpressionNumericConverter.cs" />
     <Compile Include="Helpers\GeneratedCodeRecognizer.cs" />
+    <Compile Include="Helpers\MethodParameterLookup.cs" />
     <Compile Include="Helpers\NavigationHelper.cs" />
     <Compile Include="Metrics\Metrics.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -190,6 +191,7 @@
     <Compile Include="Rules\MultipleVariableDeclarationCodeFixProvider.cs" />
     <Compile Include="Rules\ObjectCreatedDropped.cs" />
     <Compile Include="Rules\OptionalParameter.cs" />
+    <Compile Include="Rules\InvocationResolvesToOverrideWithParams.cs" />
     <Compile Include="Rules\OrderByRepeated.cs" />
     <Compile Include="Rules\OrderByRepeatedCodeFixProvider.cs" />
     <Compile Include="Rules\ParameterAssignedTo.cs" />
