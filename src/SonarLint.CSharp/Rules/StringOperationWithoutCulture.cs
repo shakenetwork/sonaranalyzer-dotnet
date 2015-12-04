@@ -40,7 +40,7 @@ namespace SonarLint.Rules.CSharp
         internal const string DiagnosticId = "S1449";
         internal const string Title = "Culture should be specified for String operations";
         internal const string Description =
-            "\"String.ToLower()\", \".ToUpper\", \".StartsWith\", \".EndsWith\", \".Compare\", and \".Equals\" are all culture-dependent, " +
+            "\"String.ToLower()\", \".ToUpper\", \".Compare\", and \".Equals\" are all culture-dependent, " +
             "as are some (floating point number-related) calls to \"ToString\". Fortunately, all have variants which accept an argument " +
             "specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, " +
             "possibly creating problems with international characters. Such calls without a culture may work fine in the system's \"home\" " +
