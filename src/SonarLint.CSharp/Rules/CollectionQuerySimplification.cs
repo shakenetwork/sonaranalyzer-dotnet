@@ -305,7 +305,7 @@ namespace SonarLint.Rules.CSharp
         private static bool IsFirstExpressionInLambdaIsNullChecking(IMethodSymbol methodSymbol, InvocationExpressionSyntax invocation)
         {
             var arguments = GetReducedArguments(methodSymbol, invocation);
-            if (arguments.Count() != 1)
+            if (arguments.Count != 1)
             {
                 return false;
             }
@@ -400,7 +400,7 @@ namespace SonarLint.Rules.CSharp
             }
 
             var arguments = GetReducedArguments(methodSymbol, invocation);
-            if (arguments.Count() != 1)
+            if (arguments.Count != 1)
             {
                 return false;
             }
@@ -428,7 +428,7 @@ namespace SonarLint.Rules.CSharp
         {
             type = null;
             var arguments = GetReducedArguments(methodSymbol, invocation);
-            if (arguments.Count() != 1)
+            if (arguments.Count != 1)
             {
                 return false;
             }

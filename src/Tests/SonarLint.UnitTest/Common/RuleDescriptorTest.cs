@@ -74,7 +74,7 @@ namespace SonarLint.UnitTest.Common
                 Assert.IsNotNull(ruleDetail.Title);
             }
 
-            Assert.AreEqual(ruleDetails.Count(),
+            Assert.AreEqual(ruleDetails.Count,
                 ruleDetails.Select(descriptor => descriptor.Key).Distinct().Count());
         }
     }

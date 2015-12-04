@@ -142,7 +142,7 @@ namespace SonarLint.Rules.CSharp
 
         private static List<IdentifierArgument> GetIdentifierArguments(InvocationExpressionSyntax methodCall)
         {
-            return methodCall.ArgumentList.Arguments.ToList()
+            return methodCall.ArgumentList.Arguments
                 .Select((argument, index) =>
                 {
                     var identifier = argument.Expression as IdentifierNameSyntax;
