@@ -225,40 +225,6 @@
           }
         }
       ]
-    },
-    {
-      "RuleId": "S2340",
-      "FullMessage": "Use a structured loop instead.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\ThalesSimulatorLibrary\\ThalesCore\\Message\\XML\\MessageParser.vb",
-            "Region": {
-              "StartLine": 180,
-              "EndLine": 180,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S2340",
-      "FullMessage": "Use a structured loop instead.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\ThalesSimulatorLibrary\\ThalesMobileSimulator\\ThalesCoreSource\\Message\\XML\\MessageParser.vb",
-            "Region": {
-              "StartLine": 180,
-              "EndLine": 180,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
     }
   ]
 }

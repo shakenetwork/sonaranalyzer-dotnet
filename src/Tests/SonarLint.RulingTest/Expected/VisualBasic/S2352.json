@@ -72,40 +72,6 @@
           }
         }
       ]
-    },
-    {
-      "RuleId": "S2352",
-      "FullMessage": "This indexed property has 2 parameters, use methods instead.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\ThalesSimulatorLibrary\\ThalesCore\\Cryptography\\LMK\\LMKStorage.vb",
-            "Region": {
-              "StartLine": 106,
-              "EndLine": 106,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
-    },
-    {
-      "RuleId": "S2352",
-      "FullMessage": "This indexed property has 2 parameters, use methods instead.",
-      "Locations": [
-        {
-          "AnalysisTarget": {
-            "Uri": "\\ThalesSimulatorLibrary\\ThalesMobileSimulator\\ThalesCoreSource\\Cryptography\\LMK\\LMKStorage.vb",
-            "Region": {
-              "StartLine": 106,
-              "EndLine": 106,
-              "StartColumn": 0,
-              "EndColumn": 2147483647
-            }
-          }
-        }
-      ]
     }
   ]
 }

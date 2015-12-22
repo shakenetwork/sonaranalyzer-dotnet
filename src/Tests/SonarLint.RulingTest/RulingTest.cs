@@ -68,7 +68,7 @@ namespace SonarQube.CSharp.CodeAnalysis.RulingTest
         public void ITSources_Expected_Number_Of_Files()
         {
             CheckFileCount(AnalyzerLanguage.CSharp, 6569);
-            CheckFileCount(AnalyzerLanguage.VisualBasic, 3098);
+            CheckFileCount(AnalyzerLanguage.VisualBasic, 2654);
         }
 
         private void CheckFileCount(AnalyzerLanguage language, int expectedCount)
