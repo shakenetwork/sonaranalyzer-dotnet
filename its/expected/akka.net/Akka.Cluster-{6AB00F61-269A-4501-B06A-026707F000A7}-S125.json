@@ -1,0 +1,190 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S125",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Cluster\\Cluster.cs",
+"region":  {
+"startLine":  34,
+"startColumn":  4,
+"endLine":  34,
+"endColumn":  97
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this commented out code.",
+"fullMessage":  "Programmers should not comment out code as it bloats programs and reduces readability. Unused code should be deleted and can be retrieved from source control history if required.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Sections of code should not be \"commented out\"",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S125",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S125",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterEvent.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  4,
+"endLine":  20,
+"endColumn":  11
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this commented out code.",
+"fullMessage":  "Programmers should not comment out code as it bloats programs and reduces readability. Unused code should be deleted and can be retrieved from source control history if required.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Sections of code should not be \"commented out\"",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S125",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S125",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterRemoteWatcher.cs",
+"region":  {
+"startLine":  72,
+"startColumn":  24,
+"endLine":  72,
+"endColumn":  74
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this commented out code.",
+"fullMessage":  "Programmers should not comment out code as it bloats programs and reduces readability. Unused code should be deleted and can be retrieved from source control history if required.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Sections of code should not be \"commented out\"",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S125",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S125",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Cluster\\Util.cs",
+"region":  {
+"startLine":  50,
+"startColumn":  12,
+"endLine":  50,
+"endColumn":  43
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this commented out code.",
+"fullMessage":  "Programmers should not comment out code as it bloats programs and reduces readability. Unused code should be deleted and can be retrieved from source control history if required.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Sections of code should not be \"commented out\"",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S125",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S125",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Cluster\\VectorClock.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  4,
+"endLine":  20,
+"endColumn":  11
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this commented out code.",
+"fullMessage":  "Programmers should not comment out code as it bloats programs and reduces readability. Unused code should be deleted and can be retrieved from source control history if required.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Sections of code should not be \"commented out\"",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S125",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S125",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Cluster\\VectorClock.cs",
+"region":  {
+"startLine":  251,
+"startColumn":  0,
+"endLine":  251,
+"endColumn":  14
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this commented out code.",
+"fullMessage":  "Programmers should not comment out code as it bloats programs and reduces readability. Unused code should be deleted and can be retrieved from source control history if required.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Sections of code should not be \"commented out\"",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S125",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

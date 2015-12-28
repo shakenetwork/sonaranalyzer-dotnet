@@ -1,0 +1,70 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S127",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests.Performance\\Transports\\RemoteMessagingThroughputSpecBase.cs",
+"region":  {
+"startLine":  105,
+"startColumn":  18,
+"endLine":  105,
+"endColumn":  19
+}
+}
+]
+}
+],
+"shortMessage":  "Do not update the loop counter \"i\" within the loop body.",
+"fullMessage":  "\"for\" loop stop conditions must be invariant (i.e. true at both the beginning and ending of every loop iteration). Ideally, this means that the stop condition is set to a local variable just before the loop begins. Stop conditions that are not invariant are difficult to understand and maintain, and will likely lead to the introduction of errors in the future.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"for\" loop stop conditions should be invariant",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S127",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S127",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests.Performance\\Transports\\RemoteMessagingThroughputSpecBase.cs",
+"region":  {
+"startLine":  122,
+"startColumn":  18,
+"endLine":  122,
+"endColumn":  19
+}
+}
+]
+}
+],
+"shortMessage":  "Do not update the loop counter \"i\" within the loop body.",
+"fullMessage":  "\"for\" loop stop conditions must be invariant (i.e. true at both the beginning and ending of every loop iteration). Ideally, this means that the stop condition is set to a local variable just before the loop begins. Stop conditions that are not invariant are difficult to understand and maintain, and will likely lead to the introduction of errors in the future.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"for\" loop stop conditions should be invariant",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S127",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

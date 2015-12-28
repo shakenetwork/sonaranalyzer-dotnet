@@ -1,0 +1,340 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S101",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\RootGuardianActorRef_Tests.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  17,
+"endLine":  18,
+"endColumn":  43
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this class \"RootGuardianActorRef_Tests\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*|[A-Z][a-zA-Z0-9]+Extensions)$",
+"fullMessage":  "Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate. This rule allows to check that all class names match a provided regular expression.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Class names should comply with a naming convention",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S101",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S101",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Scheduler\\TaskBasedScheduler_ActionScheduler_Cancellation_Tests.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  17,
+"endLine":  14,
+"endColumn":  76
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this class \"DedicatedThreadScheduler_ActionScheduler_Cancellation_Tests\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*|[A-Z][a-zA-Z0-9]+Extensions)$",
+"fullMessage":  "Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate. This rule allows to check that all class names match a provided regular expression.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Class names should comply with a naming convention",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S101",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S101",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Scheduler\\TaskBasedScheduler_ActionScheduler_Schedule_Tests.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  17,
+"endLine":  18,
+"endColumn":  72
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this class \"DedicatedThreadScheduler_ActionScheduler_Schedule_Tests\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*|[A-Z][a-zA-Z0-9]+Extensions)$",
+"fullMessage":  "Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate. This rule allows to check that all class names match a provided regular expression.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Class names should comply with a naming convention",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S101",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S101",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Scheduler\\TaskBasedScheduler_TellScheduler_Cancellation_Tests.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  17,
+"endLine":  14,
+"endColumn":  74
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this class \"DedicatedThreadScheduler_TellScheduler_Cancellation_Tests\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*|[A-Z][a-zA-Z0-9]+Extensions)$",
+"fullMessage":  "Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate. This rule allows to check that all class names match a provided regular expression.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Class names should comply with a naming convention",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S101",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S101",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Scheduler\\TaskBasedScheduler_TellScheduler_Schedule_Tests.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  17,
+"endLine":  17,
+"endColumn":  70
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this class \"DedicatedThreadScheduler_TellScheduler_Schedule_Tests\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*|[A-Z][a-zA-Z0-9]+Extensions)$",
+"fullMessage":  "Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate. This rule allows to check that all class names match a provided regular expression.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Class names should comply with a naming convention",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S101",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S101",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Scheduler\\TaskBasedScheduler_Verify_TimeProvider.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  17,
+"endLine":  15,
+"endColumn":  61
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this class \"DedicatedThreadScheduler_Verify_TimeProvider\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*|[A-Z][a-zA-Z0-9]+Extensions)$",
+"fullMessage":  "Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate. This rule allows to check that all class names match a provided regular expression.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Class names should comply with a naming convention",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S101",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S101",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Event\\EventStreamSpec.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  21,
+"endLine":  26,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this class \"M\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*|[A-Z][a-zA-Z0-9]+Extensions)$",
+"fullMessage":  "Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate. This rule allows to check that all class names match a provided regular expression.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Class names should comply with a naming convention",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S101",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S101",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Event\\EventStreamSpec.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  21,
+"endLine":  31,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this class \"A\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*|[A-Z][a-zA-Z0-9]+Extensions)$",
+"fullMessage":  "Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate. This rule allows to check that all class names match a provided regular expression.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Class names should comply with a naming convention",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S101",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S101",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Event\\EventStreamSpec.cs",
+"region":  {
+"startLine":  43,
+"startColumn":  21,
+"endLine":  43,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this class \"C\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*|[A-Z][a-zA-Z0-9]+Extensions)$",
+"fullMessage":  "Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate. This rule allows to check that all class names match a provided regular expression.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Class names should comply with a naming convention",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S101",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S101",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchExpressionBuilder_BuildLambdaExpression_Tests.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  17,
+"endLine":  16,
+"endColumn":  67
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this class \"MatchExpressionBuilder_BuildLambdaExpression_Tests\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*|[A-Z][a-zA-Z0-9]+Extensions)$",
+"fullMessage":  "Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate. This rule allows to check that all class names match a provided regular expression.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Class names should comply with a naming convention",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S101",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S101",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchExpressionBuilder_CreateArgumentValuesArray_Tests.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  17,
+"endLine":  17,
+"endColumn":  71
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this class \"MatchExpressionBuilder_CreateArgumentValuesArray_Tests\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*|[A-Z][a-zA-Z0-9]+Extensions)$",
+"fullMessage":  "Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate. This rule allows to check that all class names match a provided regular expression.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Class names should comply with a naming convention",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S101",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

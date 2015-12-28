@@ -1,0 +1,40 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S3220",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\Conventions\\DefaultViewLocationConventions.cs",
+"region":  {
+"startLine":  125,
+"startColumn":  27,
+"endLine":  125,
+"endColumn":  102
+}
+}
+]
+}
+],
+"shortMessage":  "Review this call, which partially matches an overload without \"params\".",
+"fullMessage":  "The rules for method resolution are complex and perhaps not properly understood by all coders. The \"params\" keyword can make method declarations overlap in non-obvious ways, so that slight changes in the argument types of an invocation can resolve to different methods. This rule raises an issue when an invocation resolves to a method declaration with \"params\", but could also resolve to another non-\"params\" method too.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Method calls should not resolve ambiguously to overloads with \"params\"",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3220",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

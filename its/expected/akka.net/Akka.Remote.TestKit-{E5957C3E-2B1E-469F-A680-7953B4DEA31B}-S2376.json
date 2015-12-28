@@ -1,0 +1,70 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S2376",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\MultiNodeSpec.cs",
+"region":  {
+"startLine":  40,
+"startColumn":  22,
+"endLine":  40,
+"endColumn":  34
+}
+}
+]
+}
+],
+"shortMessage":  "Provide a getter for \"CommonConfig\" or replace the property with a \"SetCommonConfig\" method.",
+"fullMessage":  "Properties with only setters are confusing and counterintuitive. Instead, a property getter should be added if possible, or the property should be replaced with a setter method.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Write-only properties should not be used",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2376",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2376",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\MultiNodeSpec.cs",
+"region":  {
+"startLine":  103,
+"startColumn":  20,
+"endLine":  103,
+"endColumn":  33
+}
+}
+]
+}
+],
+"shortMessage":  "Provide a getter for \"TestTransport\" or replace the property with a \"SetTestTransport\" method.",
+"fullMessage":  "Properties with only setters are confusing and counterintuitive. Instead, a property getter should be added if possible, or the property should be replaced with a setter method.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Write-only properties should not be used",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2376",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

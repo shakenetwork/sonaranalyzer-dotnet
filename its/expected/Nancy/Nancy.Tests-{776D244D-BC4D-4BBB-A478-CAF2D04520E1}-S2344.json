@@ -1,0 +1,100 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S2344",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\DynamicDictionaryValueFixture.cs",
+"region":  {
+"startLine":  1645,
+"startColumn":  21,
+"endLine":  1645,
+"endColumn":  29
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this enumeration to remove the \"Enum\" suffix.",
+"fullMessage":  "The information that an enumeration type is actually an enumeration or a set of flags should not be duplicated in its name.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Enumeration type names should not have \"Flags\" or \"Enum\" suffixes",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2344",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2344",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\DynamicDictionaryValueFixture.cs",
+"region":  {
+"startLine":  1651,
+"startColumn":  21,
+"endLine":  1651,
+"endColumn":  28
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this enumeration to remove the \"Enum\" suffix.",
+"fullMessage":  "The information that an enumeration type is actually an enumeration or a set of flags should not be duplicated in its name.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Enumeration type names should not have \"Flags\" or \"Enum\" suffixes",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2344",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2344",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\JsonBodyDeserializerFixture.cs",
+"region":  {
+"startLine":  424,
+"startColumn":  20,
+"endLine":  424,
+"endColumn":  28
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this enumeration to remove the \"Enum\" suffix.",
+"fullMessage":  "The information that an enumeration type is actually an enumeration or a set of flags should not be duplicated in its name.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Enumeration type names should not have \"Flags\" or \"Enum\" suffixes",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2344",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

@@ -1,0 +1,40 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S1449",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\examples\\Cluster\\Roles\\Samples.Cluster.Transformation\\TransformationBackend.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  91,
+"endLine":  37,
+"endColumn":  98
+}
+}
+]
+}
+],
+"shortMessage":  "Define the locale to be used in this String operation.",
+"fullMessage":  "\"String.ToLower()\", \".ToUpper\", \".Compare\", and \".Equals\" are all culture-dependent, as are some (floating point number-related) calls to \"ToString\". Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters. Such calls without a culture may work fine in the system\u0027s \"home\" environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it\u0027s time to fix them.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Culture should be specified for String operations",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1449",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

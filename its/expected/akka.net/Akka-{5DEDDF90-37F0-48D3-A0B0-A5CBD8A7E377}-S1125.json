@@ -1,0 +1,41 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S1125",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Pattern\\CircuitBreakerState.cs",
+"region":  {
+"startLine":  151,
+"startColumn":  126,
+"endLine":  151,
+"endColumn":  133
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the unnecessary Boolean literal(s).",
+"fullMessage":  "Redundant Boolean literals should be removed from expressions to improve readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Boolean literals should not be redundant",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1125",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+}
+]
+}

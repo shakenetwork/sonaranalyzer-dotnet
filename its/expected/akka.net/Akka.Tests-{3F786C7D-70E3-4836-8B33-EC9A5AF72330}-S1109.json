@@ -1,0 +1,40 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S1109",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Dispatch\\DispatchersSpec.cs",
+"region":  {
+"startLine":  59,
+"startColumn":  16,
+"endLine":  59,
+"endColumn":  17
+}
+}
+]
+}
+],
+"shortMessage":  "Move this closing curly brace to the next line.",
+"fullMessage":  "Shared coding conventions make it possible for a team to efficiently collaborate. This rule makes it mandatory to place a close curly brace at the beginning of a line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "A close curly brace should be located at the beginning of a line",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1109",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

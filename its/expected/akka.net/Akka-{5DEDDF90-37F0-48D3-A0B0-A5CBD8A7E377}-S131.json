@@ -1,0 +1,310 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S131",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\SupervisorStrategy.cs",
+"region":  {
+"startLine":  51,
+"startColumn":  12,
+"endLine":  51,
+"endColumn":  18
+}
+}
+]
+}
+],
+"shortMessage":  "Add a \"default\" clause to this \"switch\" statement.",
+"fullMessage":  "The requirement for a final \"default/Case Else\" clause is defensive programming. The clause should either take appropriate action, or contain a suitable comment as to why no action is taken. Even when the \"switch/Select\" covers all current values of an enumeration, a \"default/Case Else\" case should still be used because there is no guarantee that the enumeration won\u0027t be extended.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"switch/Select\" statements should end with a \"default/Case Else\" clause",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S131",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S131",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Configuration\\Hocon\\HoconParser.cs",
+"region":  {
+"startLine":  76,
+"startColumn":  16,
+"endLine":  76,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "Add a \"default\" clause to this \"switch\" statement.",
+"fullMessage":  "The requirement for a final \"default/Case Else\" clause is defensive programming. The clause should either take appropriate action, or contain a suitable comment as to why no action is taken. Even when the \"switch/Select\" covers all current values of an enumeration, a \"default/Case Else\" case should still be used because there is no guarantee that the enumeration won\u0027t be extended.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"switch/Select\" statements should end with a \"default/Case Else\" clause",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S131",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S131",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Configuration\\Hocon\\HoconParser.cs",
+"region":  {
+"startLine":  112,
+"startColumn":  16,
+"endLine":  112,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "Add a \"default\" clause to this \"switch\" statement.",
+"fullMessage":  "The requirement for a final \"default/Case Else\" clause is defensive programming. The clause should either take appropriate action, or contain a suitable comment as to why no action is taken. Even when the \"switch/Select\" covers all current values of an enumeration, a \"default/Case Else\" case should still be used because there is no guarantee that the enumeration won\u0027t be extended.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"switch/Select\" statements should end with a \"default/Case Else\" clause",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S131",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S131",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Configuration\\Hocon\\HoconParser.cs",
+"region":  {
+"startLine":  150,
+"startColumn":  16,
+"endLine":  150,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "Add a \"default\" clause to this \"switch\" statement.",
+"fullMessage":  "The requirement for a final \"default/Case Else\" clause is defensive programming. The clause should either take appropriate action, or contain a suitable comment as to why no action is taken. Even when the \"switch/Select\" covers all current values of an enumeration, a \"default/Case Else\" case should still be used because there is no guarantee that the enumeration won\u0027t be extended.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"switch/Select\" statements should end with a \"default/Case Else\" clause",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S131",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S131",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Dispatch\\ActorTaskScheduler.cs",
+"region":  {
+"startLine":  119,
+"startColumn":  12,
+"endLine":  119,
+"endColumn":  18
+}
+}
+]
+}
+],
+"shortMessage":  "Add a \"default\" clause to this \"switch\" statement.",
+"fullMessage":  "The requirement for a final \"default/Case Else\" clause is defensive programming. The clause should either take appropriate action, or contain a suitable comment as to why no action is taken. Even when the \"switch/Select\" covers all current values of an enumeration, a \"default/Case Else\" case should still be used because there is no guarantee that the enumeration won\u0027t be extended.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"switch/Select\" statements should end with a \"default/Case Else\" clause",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S131",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S131",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Event\\StandardOutLogger.cs",
+"region":  {
+"startLine":  105,
+"startColumn":  16,
+"endLine":  105,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "Add a \"default\" clause to this \"switch\" statement.",
+"fullMessage":  "The requirement for a final \"default/Case Else\" clause is defensive programming. The clause should either take appropriate action, or contain a suitable comment as to why no action is taken. Even when the \"switch/Select\" covers all current values of an enumeration, a \"default/Case Else\" case should still be used because there is no guarantee that the enumeration won\u0027t be extended.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"switch/Select\" statements should end with a \"default/Case Else\" clause",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S131",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S131",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\SelectionHandler.cs",
+"region":  {
+"startLine":  260,
+"startColumn":  16,
+"endLine":  260,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "Add a \"default\" clause to this \"switch\" statement.",
+"fullMessage":  "The requirement for a final \"default/Case Else\" clause is defensive programming. The clause should either take appropriate action, or contain a suitable comment as to why no action is taken. Even when the \"switch/Select\" covers all current values of an enumeration, a \"default/Case Else\" case should still be used because there is no guarantee that the enumeration won\u0027t be extended.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"switch/Select\" statements should end with a \"default/Case Else\" clause",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S131",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S131",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\SelectionHandler.cs",
+"region":  {
+"startLine":  284,
+"startColumn":  16,
+"endLine":  284,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "Add a \"default\" clause to this \"switch\" statement.",
+"fullMessage":  "The requirement for a final \"default/Case Else\" clause is defensive programming. The clause should either take appropriate action, or contain a suitable comment as to why no action is taken. Even when the \"switch/Select\" covers all current values of an enumeration, a \"default/Case Else\" case should still be used because there is no guarantee that the enumeration won\u0027t be extended.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"switch/Select\" statements should end with a \"default/Case Else\" clause",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S131",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S131",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Util\\ByteString.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  12,
+"endLine":  23,
+"endColumn":  18
+}
+}
+]
+}
+],
+"shortMessage":  "Add a \"default\" clause to this \"switch\" statement.",
+"fullMessage":  "The requirement for a final \"default/Case Else\" clause is defensive programming. The clause should either take appropriate action, or contain a suitable comment as to why no action is taken. Even when the \"switch/Select\" covers all current values of an enumeration, a \"default/Case Else\" case should still be used because there is no guarantee that the enumeration won\u0027t be extended.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"switch/Select\" statements should end with a \"default/Case Else\" clause",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S131",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S131",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\Collections\\ImmutableAvlTreeBase.cs",
+"region":  {
+"startLine":  114,
+"startColumn":  4,
+"endLine":  114,
+"endColumn":  10
+}
+}
+]
+}
+],
+"shortMessage":  "Add a \"default\" clause to this \"switch\" statement.",
+"fullMessage":  "The requirement for a final \"default/Case Else\" clause is defensive programming. The clause should either take appropriate action, or contain a suitable comment as to why no action is taken. Even when the \"switch/Select\" covers all current values of an enumeration, a \"default/Case Else\" case should still be used because there is no guarantee that the enumeration won\u0027t be extended.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"switch/Select\" statements should end with a \"default/Case Else\" clause",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S131",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

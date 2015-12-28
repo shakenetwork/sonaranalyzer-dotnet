@@ -1,0 +1,320 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\..\\Nancy.Tests\\Fakes\\FakeModuleCatalog.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  57,
+"endLine":  15,
+"endColumn":  59
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationConfigurationFixture.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  62,
+"endLine":  18,
+"endColumn":  64
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
+"region":  {
+"startLine":  49,
+"startColumn":  62,
+"endLine":  49,
+"endColumn":  64
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
+"region":  {
+"startLine":  57,
+"startColumn":  68,
+"endLine":  57,
+"endColumn":  70
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
+"region":  {
+"startLine":  65,
+"startColumn":  72,
+"endLine":  65,
+"endColumn":  74
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
+"region":  {
+"startLine":  503,
+"startColumn":  47,
+"endLine":  503,
+"endColumn":  49
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
+"region":  {
+"startLine":  525,
+"startColumn":  47,
+"endLine":  525,
+"endColumn":  49
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
+"region":  {
+"startLine":  547,
+"startColumn":  47,
+"endLine":  547,
+"endColumn":  49
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
+"region":  {
+"startLine":  569,
+"startColumn":  47,
+"endLine":  569,
+"endColumn":  49
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
+"region":  {
+"startLine":  586,
+"startColumn":  47,
+"endLine":  586,
+"endColumn":  49
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+}
+]
+}

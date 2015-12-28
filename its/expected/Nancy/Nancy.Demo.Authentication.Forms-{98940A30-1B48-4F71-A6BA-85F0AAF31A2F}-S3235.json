@@ -1,0 +1,41 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Demo.Authentication.Forms\\FormsAuthBootstrapper.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  52,
+"endLine":  33,
+"endColumn":  54
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+}
+]
+}

@@ -1,0 +1,130 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S103",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Persistence\\Eventsourced.Lifecycle.cs",
+"region":  {
+"startLine":  75,
+"startColumn":  0,
+"endLine":  75,
+"endColumn":  253
+}
+}
+]
+}
+],
+"shortMessage":  "Split this 253 characters long line (which is greater than 200 authorized).",
+"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Lines should not be too long",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S103",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S103",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Persistence\\Eventsourced.Lifecycle.cs",
+"region":  {
+"startLine":  83,
+"startColumn":  0,
+"endLine":  83,
+"endColumn":  295
+}
+}
+]
+}
+],
+"shortMessage":  "Split this 295 characters long line (which is greater than 200 authorized).",
+"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Lines should not be too long",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S103",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S103",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistent.cs",
+"region":  {
+"startLine":  183,
+"startColumn":  0,
+"endLine":  183,
+"endColumn":  244
+}
+}
+]
+}
+],
+"shortMessage":  "Split this 244 characters long line (which is greater than 200 authorized).",
+"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Lines should not be too long",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S103",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S103",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Persistence\\PersistentView.Lifecycle.cs",
+"region":  {
+"startLine":  60,
+"startColumn":  0,
+"endLine":  60,
+"endColumn":  297
+}
+}
+]
+}
+],
+"shortMessage":  "Split this 297 characters long line (which is greater than 200 authorized).",
+"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Lines should not be too long",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S103",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

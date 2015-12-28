@@ -1,0 +1,40 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S1066",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\testkits\\Akka.TestKit.Xunit2\\TestKit.cs",
+"region":  {
+"startLine":  123,
+"startColumn":  20,
+"endLine":  123,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "Merge this if statement with the enclosing one.",
+"fullMessage":  "Merging collapsible \"if\" statements increases the code\u0027s readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Collapsible \"if\" statements should be merged",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1066",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

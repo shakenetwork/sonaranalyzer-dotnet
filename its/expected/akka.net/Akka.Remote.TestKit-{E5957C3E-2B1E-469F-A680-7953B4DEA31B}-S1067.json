@@ -1,0 +1,40 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S1067",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\BarrierCoordinator.cs",
+"region":  {
+"startLine":  87,
+"startColumn":  23,
+"endLine":  90,
+"endColumn":  55
+}
+}
+]
+}
+],
+"shortMessage":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
+"fullMessage":  "The complexity of an expression is defined by the number of \"\u0026\u0026\", \"||\" and \"condition ? ifTrue : ifFalse\" operators it contains. A single expression\u0027s complexity should not become too high to keep the code readable.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Expressions should not be too complex",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1067",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

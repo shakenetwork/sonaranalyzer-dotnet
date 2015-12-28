@@ -1,0 +1,160 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S1871",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
+"region":  {
+"startLine":  233,
+"startColumn":  12,
+"endLine":  235,
+"endColumn":  13
+}
+}
+]
+}
+],
+"shortMessage":  "Either merge this branch with the identical one on line \"215\" or change one of the implementations.",
+"fullMessage":  "Having two \"cases\" in the same \"switch\" statement or branches in the same \"if\" structure with the same implementation is at best duplicate code, and at worst a coding error.If the same logic is truly needed for both instances, then in an \"if\" structure they should be combined, or for a \"switch\", one should fall through to the other.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Two branches in the same conditional structure should not have exactly the same implementation",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1871",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1871",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
+"region":  {
+"startLine":  588,
+"startColumn":  64,
+"endLine":  588,
+"endColumn":  107
+}
+}
+]
+}
+],
+"shortMessage":  "Either merge this branch with the identical one on line \"588\" or change one of the implementations.",
+"fullMessage":  "Having two \"cases\" in the same \"switch\" statement or branches in the same \"if\" structure with the same implementation is at best duplicate code, and at worst a coding error.If the same logic is truly needed for both instances, then in an \"if\" structure they should be combined, or for a \"switch\", one should fall through to the other.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Two branches in the same conditional structure should not have exactly the same implementation",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1871",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1871",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
+"region":  {
+"startLine":  603,
+"startColumn":  56,
+"endLine":  603,
+"endColumn":  99
+}
+}
+]
+}
+],
+"shortMessage":  "Either merge this branch with the identical one on line \"588\" or change one of the implementations.",
+"fullMessage":  "Having two \"cases\" in the same \"switch\" statement or branches in the same \"if\" structure with the same implementation is at best duplicate code, and at worst a coding error.If the same logic is truly needed for both instances, then in an \"if\" structure they should be combined, or for a \"switch\", one should fall through to the other.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Two branches in the same conditional structure should not have exactly the same implementation",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1871",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1871",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
+"region":  {
+"startLine":  604,
+"startColumn":  58,
+"endLine":  604,
+"endColumn":  101
+}
+}
+]
+}
+],
+"shortMessage":  "Either merge this branch with the identical one on line \"588\" or change one of the implementations.",
+"fullMessage":  "Having two \"cases\" in the same \"switch\" statement or branches in the same \"if\" structure with the same implementation is at best duplicate code, and at worst a coding error.If the same logic is truly needed for both instances, then in an \"if\" structure they should be combined, or for a \"switch\", one should fall through to the other.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Two branches in the same conditional structure should not have exactly the same implementation",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1871",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1871",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
+"region":  {
+"startLine":  422,
+"startColumn":  46,
+"endLine":  422,
+"endColumn":  78
+}
+}
+]
+}
+],
+"shortMessage":  "Either merge this branch with the identical one on line \"422\" or change one of the implementations.",
+"fullMessage":  "Having two \"cases\" in the same \"switch\" statement or branches in the same \"if\" structure with the same implementation is at best duplicate code, and at worst a coding error.If the same logic is truly needed for both instances, then in an \"if\" structure they should be combined, or for a \"switch\", one should fall through to the other.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Two branches in the same conditional structure should not have exactly the same implementation",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1871",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

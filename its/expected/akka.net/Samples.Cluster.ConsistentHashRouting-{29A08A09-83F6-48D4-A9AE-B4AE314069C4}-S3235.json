@@ -1,0 +1,72 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\examples\\Cluster\\Routing\\Samples.Cluster.ConsistentHashRouting\\FrontendActor.cs",
+"region":  {
+"startLine":  61,
+"startColumn":  54,
+"endLine":  61,
+"endColumn":  56
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\examples\\Cluster\\Routing\\Samples.Cluster.ConsistentHashRouting\\FrontendActor.cs",
+"region":  {
+"startLine":  66,
+"startColumn":  54,
+"endLine":  66,
+"endColumn":  56
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+}
+]
+}

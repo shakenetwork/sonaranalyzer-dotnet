@@ -1,0 +1,310 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S2931",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Bootstrapper\\NancyBootstrapperBaseFixture.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  17,
+"endLine":  17,
+"endColumn":  45
+}
+}
+]
+}
+],
+"shortMessage":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"bootstrapper\".",
+"fullMessage":  "Classes with \"IDisposable\" members are responsible for cleaning up those members by calling their \"Dispose\" methods.The best practice here is for the owning class to itself implement \"IDisposable\" and call its members\u0027 \"Dispose\" methods from its own \"Dispose\" method.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Classes with \"IDisposable\" members should implement \"IDisposable\"",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2931",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2931",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Bootstrapper\\NancyBootstrapperWithRequestContainerBaseFixture.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  17,
+"endLine":  17,
+"endColumn":  65
+}
+}
+]
+}
+],
+"shortMessage":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"bootstrapper\".",
+"fullMessage":  "Classes with \"IDisposable\" members are responsible for cleaning up those members by calling their \"Dispose\" methods.The best practice here is for the owning class to itself implement \"IDisposable\" and call its members\u0027 \"Dispose\" methods from its own \"Dispose\" method.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Classes with \"IDisposable\" members should implement \"IDisposable\"",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2931",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2931",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\DefaultNancyBootstrapperBootstrapperBaseFixture.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  17,
+"endLine":  10,
+"endColumn":  64
+}
+}
+]
+}
+],
+"shortMessage":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"bootstrapper\".",
+"fullMessage":  "Classes with \"IDisposable\" members are responsible for cleaning up those members by calling their \"Dispose\" methods.The best practice here is for the owning class to itself implement \"IDisposable\" and call its members\u0027 \"Dispose\" methods from its own \"Dispose\" method.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Classes with \"IDisposable\" members should implement \"IDisposable\"",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2931",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2931",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\DefaultNancyBootstrapperFixture.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  17,
+"endLine":  14,
+"endColumn":  48
+}
+}
+]
+}
+],
+"shortMessage":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"bootstrapper\".",
+"fullMessage":  "Classes with \"IDisposable\" members are responsible for cleaning up those members by calling their \"Dispose\" methods.The best practice here is for the owning class to itself implement \"IDisposable\" and call its members\u0027 \"Dispose\" methods from its own \"Dispose\" method.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Classes with \"IDisposable\" members should implement \"IDisposable\"",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2931",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2931",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\DefaultNancyBootstrapperModuleCatalogFixture.cs",
+"region":  {
+"startLine":  7,
+"startColumn":  17,
+"endLine":  7,
+"endColumn":  61
+}
+}
+]
+}
+],
+"shortMessage":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"bootstrapper\".",
+"fullMessage":  "Classes with \"IDisposable\" members are responsible for cleaning up those members by calling their \"Dispose\" methods.The best practice here is for the owning class to itself implement \"IDisposable\" and call its members\u0027 \"Dispose\" methods from its own \"Dispose\" method.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Classes with \"IDisposable\" members should implement \"IDisposable\"",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2931",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2931",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\FormatterExtensionsFixture.cs",
+"region":  {
+"startLine":  6,
+"startColumn":  17,
+"endLine":  6,
+"endColumn":  43
+}
+}
+]
+}
+],
+"shortMessage":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"context\".",
+"fullMessage":  "Classes with \"IDisposable\" members are responsible for cleaning up those members by calling their \"Dispose\" methods.The best practice here is for the owning class to itself implement \"IDisposable\" and call its members\u0027 \"Dispose\" methods from its own \"Dispose\" method.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Classes with \"IDisposable\" members should implement \"IDisposable\"",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2931",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2931",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\NancyContextFixture.cs",
+"region":  {
+"startLine":  8,
+"startColumn":  17,
+"endLine":  8,
+"endColumn":  36
+}
+}
+]
+}
+],
+"shortMessage":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"context\".",
+"fullMessage":  "Classes with \"IDisposable\" members are responsible for cleaning up those members by calling their \"Dispose\" methods.The best practice here is for the owning class to itself implement \"IDisposable\" and call its members\u0027 \"Dispose\" methods from its own \"Dispose\" method.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Classes with \"IDisposable\" members should implement \"IDisposable\"",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2931",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2931",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\NancyEngineFixture.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  17,
+"endLine":  21,
+"endColumn":  35
+}
+}
+]
+}
+],
+"shortMessage":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"context\", \"engine\", \"response\".",
+"fullMessage":  "Classes with \"IDisposable\" members are responsible for cleaning up those members by calling their \"Dispose\" methods.The best practice here is for the owning class to itself implement \"IDisposable\" and call its members\u0027 \"Dispose\" methods from its own \"Dispose\" method.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Classes with \"IDisposable\" members should implement \"IDisposable\"",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2931",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2931",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Security\\CsrfFixture.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  17,
+"endLine":  16,
+"endColumn":  28
+}
+}
+]
+}
+],
+"shortMessage":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"optionsRequest\", \"request\", \"response\".",
+"fullMessage":  "Classes with \"IDisposable\" members are responsible for cleaning up those members by calling their \"Dispose\" methods.The best practice here is for the owning class to itself implement \"IDisposable\" and call its members\u0027 \"Dispose\" methods from its own \"Dispose\" method.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Classes with \"IDisposable\" members should implement \"IDisposable\"",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2931",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2931",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Validation\\ModuleExtensionsFixture.cs",
+"region":  {
+"startLine":  11,
+"startColumn":  17,
+"endLine":  11,
+"endColumn":  40
+}
+}
+]
+}
+],
+"shortMessage":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"context\".",
+"fullMessage":  "Classes with \"IDisposable\" members are responsible for cleaning up those members by calling their \"Dispose\" methods.The best practice here is for the owning class to itself implement \"IDisposable\" and call its members\u0027 \"Dispose\" methods from its own \"Dispose\" method.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Classes with \"IDisposable\" members should implement \"IDisposable\"",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2931",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

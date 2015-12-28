@@ -1,0 +1,850 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AccrualFailureDetectorSpec.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  74,
+"endLine":  36,
+"endColumn":  75
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AccrualFailureDetectorSpec.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  78,
+"endLine":  37,
+"endColumn":  79
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AccrualFailureDetectorSpec.cs",
+"region":  {
+"startLine":  38,
+"startColumn":  79,
+"endLine":  38,
+"endColumn":  80
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AccrualFailureDetectorSpec.cs",
+"region":  {
+"startLine":  39,
+"startColumn":  80,
+"endLine":  39,
+"endColumn":  81
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AccrualFailureDetectorSpec.cs",
+"region":  {
+"startLine":  40,
+"startColumn":  80,
+"endLine":  40,
+"endColumn":  81
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AccrualFailureDetectorSpec.cs",
+"region":  {
+"startLine":  41,
+"startColumn":  80,
+"endLine":  41,
+"endColumn":  81
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AccrualFailureDetectorSpec.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  80,
+"endLine":  42,
+"endColumn":  81
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AccrualFailureDetectorSpec.cs",
+"region":  {
+"startLine":  49,
+"startColumn":  80,
+"endLine":  49,
+"endColumn":  81
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AccrualFailureDetectorSpec.cs",
+"region":  {
+"startLine":  57,
+"startColumn":  44,
+"endLine":  57,
+"endColumn":  45
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AccrualFailureDetectorSpec.cs",
+"region":  {
+"startLine":  57,
+"startColumn":  50,
+"endLine":  57,
+"endColumn":  51
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AccrualFailureDetectorSpec.cs",
+"region":  {
+"startLine":  86,
+"startColumn":  73,
+"endLine":  86,
+"endColumn":  74
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AccrualFailureDetectorSpec.cs",
+"region":  {
+"startLine":  99,
+"startColumn":  73,
+"endLine":  99,
+"endColumn":  74
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AccrualFailureDetectorSpec.cs",
+"region":  {
+"startLine":  103,
+"startColumn":  43,
+"endLine":  103,
+"endColumn":  44
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AccrualFailureDetectorSpec.cs",
+"region":  {
+"startLine":  105,
+"startColumn":  43,
+"endLine":  105,
+"endColumn":  44
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AccrualFailureDetectorSpec.cs",
+"region":  {
+"startLine":  112,
+"startColumn":  73,
+"endLine":  112,
+"endColumn":  74
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AccrualFailureDetectorSpec.cs",
+"region":  {
+"startLine":  127,
+"startColumn":  73,
+"endLine":  127,
+"endColumn":  74
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AccrualFailureDetectorSpec.cs",
+"region":  {
+"startLine":  144,
+"startColumn":  73,
+"endLine":  144,
+"endColumn":  74
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AccrualFailureDetectorSpec.cs",
+"region":  {
+"startLine":  162,
+"startColumn":  73,
+"endLine":  162,
+"endColumn":  74
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AccrualFailureDetectorSpec.cs",
+"region":  {
+"startLine":  179,
+"startColumn":  73,
+"endLine":  179,
+"endColumn":  74
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AccrualFailureDetectorSpec.cs",
+"region":  {
+"startLine":  197,
+"startColumn":  73,
+"endLine":  197,
+"endColumn":  74
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AccrualFailureDetectorSpec.cs",
+"region":  {
+"startLine":  251,
+"startColumn":  86,
+"endLine":  251,
+"endColumn":  87
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AccrualFailureDetectorSpec.cs",
+"region":  {
+"startLine":  286,
+"startColumn":  44,
+"endLine":  286,
+"endColumn":  45
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\AccrualFailureDetectorSpec.cs",
+"region":  {
+"startLine":  309,
+"startColumn":  22,
+"endLine":  309,
+"endColumn":  23
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\FailureDetectorRegistrySpec.cs",
+"region":  {
+"startLine":  52,
+"startColumn":  76,
+"endLine":  52,
+"endColumn":  77
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\FailureDetectorRegistrySpec.cs",
+"region":  {
+"startLine":  69,
+"startColumn":  76,
+"endLine":  69,
+"endColumn":  77
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\RemoteConfigSpec.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  49,
+"endLine":  42,
+"endColumn":  50
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\RemoteConfigSpec.cs",
+"region":  {
+"startLine":  103,
+"startColumn":  32,
+"endLine":  103,
+"endColumn":  33
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\RemoteConfigSpec.cs",
+"region":  {
+"startLine":  111,
+"startColumn":  32,
+"endLine":  111,
+"endColumn":  33
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

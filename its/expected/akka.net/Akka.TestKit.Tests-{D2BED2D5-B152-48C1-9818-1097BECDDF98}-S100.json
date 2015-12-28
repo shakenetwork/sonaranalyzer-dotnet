@@ -1,0 +1,220 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\TestSchedulerTests.cs",
+"region":  {
+"startLine":  26,
+"startColumn":  20,
+"endLine":  26,
+"endColumn":  64
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this method \"delivers_message_when_scheduled_time_reached\" to match the regular expression ^[A-Z][a-zA-Z0-9_]*[a-zA-Z0-9]$",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks that all method names match a provided regular expression.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Method name should comply with a naming convention",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S100",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\TestSchedulerTests.cs",
+"region":  {
+"startLine":  34,
+"startColumn":  20,
+"endLine":  34,
+"endColumn":  56
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this method \"does_not_deliver_message_prematurely\" to match the regular expression ^[A-Z][a-zA-Z0-9_]*[a-zA-Z0-9]$",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks that all method names match a provided regular expression.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Method name should comply with a naming convention",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S100",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\TestSchedulerTests.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  20,
+"endLine":  42,
+"endColumn":  86
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this method \"delivers_messages_scheduled_for_same_time_in_order_they_were_added\" to match the regular expression ^[A-Z][a-zA-Z0-9_]*[a-zA-Z0-9]$",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks that all method names match a provided regular expression.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Method name should comply with a naming convention",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S100",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\TestSchedulerTests.cs",
+"region":  {
+"startLine":  54,
+"startColumn":  20,
+"endLine":  54,
+"endColumn":  56
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this method \"keeps_delivering_rescheduled_message\" to match the regular expression ^[A-Z][a-zA-Z0-9_]*[a-zA-Z0-9]$",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks that all method names match a provided regular expression.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Method name should comply with a naming convention",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S100",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\TestSchedulerTests.cs",
+"region":  {
+"startLine":  66,
+"startColumn":  20,
+"endLine":  66,
+"endColumn":  76
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this method \"uses_initial_delay_to_schedule_first_rescheduled_message\" to match the regular expression ^[A-Z][a-zA-Z0-9_]*[a-zA-Z0-9]$",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks that all method names match a provided regular expression.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Method name should comply with a naming convention",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S100",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\TestSchedulerTests.cs",
+"region":  {
+"startLine":  74,
+"startColumn":  20,
+"endLine":  74,
+"endColumn":  47
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this method \"doesnt_reschedule_cancelled\" to match the regular expression ^[A-Z][a-zA-Z0-9_]*[a-zA-Z0-9]$",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks that all method names match a provided regular expression.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Method name should comply with a naming convention",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S100",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\TestSchedulerTests.cs",
+"region":  {
+"startLine":  86,
+"startColumn":  20,
+"endLine":  86,
+"endColumn":  55
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this method \"advance_to_takes_us_to_correct_time\" to match the regular expression ^[A-Z][a-zA-Z0-9_]*[a-zA-Z0-9]$",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks that all method names match a provided regular expression.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Method name should comply with a naming convention",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S100",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

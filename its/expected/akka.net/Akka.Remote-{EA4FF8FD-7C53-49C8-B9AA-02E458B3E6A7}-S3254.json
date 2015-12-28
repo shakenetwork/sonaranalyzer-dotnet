@@ -1,0 +1,165 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S3254",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
+"region":  {
+"startLine":  532,
+"startColumn":  28,
+"endLine":  532,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this default value assigned to parameter \"handleOption\".",
+"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Default parameter values should not be passed as arguments",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3254",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3254",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
+"region":  {
+"startLine":  769,
+"startColumn":  85,
+"endLine":  769,
+"endColumn":  100
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this default value assigned to parameter \"refuseUid\".",
+"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Default parameter values should not be passed as arguments",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3254",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3254",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
+"region":  {
+"startLine":  840,
+"startColumn":  28,
+"endLine":  840,
+"endColumn":  60
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this default value assigned to parameter \"reliableDeliverySupervisor\".",
+"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Default parameter values should not be passed as arguments",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3254",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3254",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
+"region":  {
+"startLine":  547,
+"startColumn":  71,
+"endLine":  547,
+"endColumn":  84
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this default value assigned to parameter \"repeat\".",
+"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Default parameter values should not be passed as arguments",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3254",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3254",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
+"region":  {
+"startLine":  1039,
+"startColumn":  65,
+"endLine":  1039,
+"endColumn":  77
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this default value assigned to parameter \"repeat\".",
+"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Default parameter values should not be passed as arguments",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3254",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+}
+]
+}

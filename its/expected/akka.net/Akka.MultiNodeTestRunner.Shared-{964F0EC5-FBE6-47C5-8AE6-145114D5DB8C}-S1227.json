@@ -1,0 +1,40 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S1227",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Persistence\\VisualizerRuntimeTemplate.Tree.cs",
+"region":  {
+"startLine":  133,
+"startColumn":  24,
+"endLine":  133,
+"endColumn":  30
+}
+}
+]
+}
+],
+"shortMessage":  "Refactor the code in order to remove this break statement.",
+"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "break statements should not be used except for switch cases",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1227",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

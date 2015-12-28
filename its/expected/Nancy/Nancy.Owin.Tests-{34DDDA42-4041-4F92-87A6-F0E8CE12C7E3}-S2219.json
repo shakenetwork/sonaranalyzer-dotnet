@@ -1,0 +1,76 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S2219",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Owin.Tests\\..\\Nancy.Tests\\ShouldExtensions.cs",
+"region":  {
+"startLine":  49,
+"startColumn":  22,
+"endLine":  49,
+"endColumn":  61
+}
+}
+]
+}
+],
+"shortMessage":  "Use the \"is\" operator instead.",
+"fullMessage":  "To check the type of an object there are at least three options: the simplest and shortest one uses the \"expr is SomeType\" operator, the slightly longer \"typeInstance.IsInstanceOfType(expr)\", and the cumbersome and error-prone one uses \"expr1.GetType().IsAssignableFrom(expr2.GetType())\"",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"Type.IsAssignableFrom()\" should not be used to check object type",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2219",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customProperties":  {
+"UseIsOperator":  "True"
+}
+}
+},
+{
+"ruleId":  "S2219",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Owin.Tests\\..\\Nancy.Tests\\ShouldExtensions.cs",
+"region":  {
+"startLine":  59,
+"startColumn":  22,
+"endLine":  59,
+"endColumn":  61
+}
+}
+]
+}
+],
+"shortMessage":  "Use the \"is\" operator instead.",
+"fullMessage":  "To check the type of an object there are at least three options: the simplest and shortest one uses the \"expr is SomeType\" operator, the slightly longer \"typeInstance.IsInstanceOfType(expr)\", and the cumbersome and error-prone one uses \"expr1.GetType().IsAssignableFrom(expr2.GetType())\"",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"Type.IsAssignableFrom()\" should not be used to check object type",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2219",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customProperties":  {
+"UseIsOperator":  "True"
+}
+}
+}
+]
+}

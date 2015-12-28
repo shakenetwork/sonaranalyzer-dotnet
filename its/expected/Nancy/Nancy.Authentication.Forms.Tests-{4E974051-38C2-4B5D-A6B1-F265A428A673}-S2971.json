@@ -1,0 +1,460 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S2971",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
+"region":  {
+"startLine":  170,
+"startColumn":  27,
+"endLine":  170,
+"endColumn":  32
+}
+}
+]
+}
+],
+"shortMessage":  "Drop \"Where\" and move the condition into the \"Any\".",
+"fullMessage":  "In the interests of readability, code that can be simplified should be simplified. To that end, there are several ways \"IEnumerable LINQ\"s can be simplified. Use \"OfType\" instead of using \"Select\" with \"as\" to type cast elements and then null-checking in a query expression to choose elements based on type. Use \"OfType\" instead of using \"Where\" and the \"is\" operator, followed by a cast in a \"Select\". Use an expression in \"Any\" instead of \"Where(element =\u003e [expression]).Any()\". Use \"Count\" instead of \"Count()\" when it\u0027s available. Don\u0027t call \"ToArray()\" or \"ToList()\" in the middle of a query chain.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IEnumerable\" LINQs should be simplified",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2971",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2971",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
+"region":  {
+"startLine":  183,
+"startColumn":  27,
+"endLine":  183,
+"endColumn":  32
+}
+}
+]
+}
+],
+"shortMessage":  "Drop \"Where\" and move the condition into the \"Any\".",
+"fullMessage":  "In the interests of readability, code that can be simplified should be simplified. To that end, there are several ways \"IEnumerable LINQ\"s can be simplified. Use \"OfType\" instead of using \"Select\" with \"as\" to type cast elements and then null-checking in a query expression to choose elements based on type. Use \"OfType\" instead of using \"Where\" and the \"is\" operator, followed by a cast in a \"Select\". Use an expression in \"Any\" instead of \"Where(element =\u003e [expression]).Any()\". Use \"Count\" instead of \"Count()\" when it\u0027s available. Don\u0027t call \"ToArray()\" or \"ToList()\" in the middle of a query chain.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IEnumerable\" LINQs should be simplified",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2971",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2971",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
+"region":  {
+"startLine":  196,
+"startColumn":  27,
+"endLine":  196,
+"endColumn":  32
+}
+}
+]
+}
+],
+"shortMessage":  "Drop \"Where\" and move the condition into the \"First\".",
+"fullMessage":  "In the interests of readability, code that can be simplified should be simplified. To that end, there are several ways \"IEnumerable LINQ\"s can be simplified. Use \"OfType\" instead of using \"Select\" with \"as\" to type cast elements and then null-checking in a query expression to choose elements based on type. Use \"OfType\" instead of using \"Where\" and the \"is\" operator, followed by a cast in a \"Select\". Use an expression in \"Any\" instead of \"Where(element =\u003e [expression]).Any()\". Use \"Count\" instead of \"Count()\" when it\u0027s available. Don\u0027t call \"ToArray()\" or \"ToList()\" in the middle of a query chain.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IEnumerable\" LINQs should be simplified",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2971",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2971",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
+"region":  {
+"startLine":  210,
+"startColumn":  27,
+"endLine":  210,
+"endColumn":  32
+}
+}
+]
+}
+],
+"shortMessage":  "Drop \"Where\" and move the condition into the \"First\".",
+"fullMessage":  "In the interests of readability, code that can be simplified should be simplified. To that end, there are several ways \"IEnumerable LINQ\"s can be simplified. Use \"OfType\" instead of using \"Select\" with \"as\" to type cast elements and then null-checking in a query expression to choose elements based on type. Use \"OfType\" instead of using \"Where\" and the \"is\" operator, followed by a cast in a \"Select\". Use an expression in \"Any\" instead of \"Where(element =\u003e [expression]).Any()\". Use \"Count\" instead of \"Count()\" when it\u0027s available. Don\u0027t call \"ToArray()\" or \"ToList()\" in the middle of a query chain.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IEnumerable\" LINQs should be simplified",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2971",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2971",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
+"region":  {
+"startLine":  221,
+"startColumn":  27,
+"endLine":  221,
+"endColumn":  32
+}
+}
+]
+}
+],
+"shortMessage":  "Drop \"Where\" and move the condition into the \"First\".",
+"fullMessage":  "In the interests of readability, code that can be simplified should be simplified. To that end, there are several ways \"IEnumerable LINQ\"s can be simplified. Use \"OfType\" instead of using \"Select\" with \"as\" to type cast elements and then null-checking in a query expression to choose elements based on type. Use \"OfType\" instead of using \"Where\" and the \"is\" operator, followed by a cast in a \"Select\". Use an expression in \"Any\" instead of \"Where(element =\u003e [expression]).Any()\". Use \"Count\" instead of \"Count()\" when it\u0027s available. Don\u0027t call \"ToArray()\" or \"ToList()\" in the middle of a query chain.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IEnumerable\" LINQs should be simplified",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2971",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2971",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
+"region":  {
+"startLine":  235,
+"startColumn":  27,
+"endLine":  235,
+"endColumn":  32
+}
+}
+]
+}
+],
+"shortMessage":  "Drop \"Where\" and move the condition into the \"First\".",
+"fullMessage":  "In the interests of readability, code that can be simplified should be simplified. To that end, there are several ways \"IEnumerable LINQ\"s can be simplified. Use \"OfType\" instead of using \"Select\" with \"as\" to type cast elements and then null-checking in a query expression to choose elements based on type. Use \"OfType\" instead of using \"Where\" and the \"is\" operator, followed by a cast in a \"Select\". Use an expression in \"Any\" instead of \"Where(element =\u003e [expression]).Any()\". Use \"Count\" instead of \"Count()\" when it\u0027s available. Don\u0027t call \"ToArray()\" or \"ToList()\" in the middle of a query chain.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IEnumerable\" LINQs should be simplified",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2971",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2971",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
+"region":  {
+"startLine":  246,
+"startColumn":  27,
+"endLine":  246,
+"endColumn":  32
+}
+}
+]
+}
+],
+"shortMessage":  "Drop \"Where\" and move the condition into the \"First\".",
+"fullMessage":  "In the interests of readability, code that can be simplified should be simplified. To that end, there are several ways \"IEnumerable LINQ\"s can be simplified. Use \"OfType\" instead of using \"Select\" with \"as\" to type cast elements and then null-checking in a query expression to choose elements based on type. Use \"OfType\" instead of using \"Where\" and the \"is\" operator, followed by a cast in a \"Select\". Use an expression in \"Any\" instead of \"Where(element =\u003e [expression]).Any()\". Use \"Count\" instead of \"Count()\" when it\u0027s available. Don\u0027t call \"ToArray()\" or \"ToList()\" in the middle of a query chain.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IEnumerable\" LINQs should be simplified",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2971",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2971",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
+"region":  {
+"startLine":  260,
+"startColumn":  27,
+"endLine":  260,
+"endColumn":  32
+}
+}
+]
+}
+],
+"shortMessage":  "Drop \"Where\" and move the condition into the \"First\".",
+"fullMessage":  "In the interests of readability, code that can be simplified should be simplified. To that end, there are several ways \"IEnumerable LINQ\"s can be simplified. Use \"OfType\" instead of using \"Select\" with \"as\" to type cast elements and then null-checking in a query expression to choose elements based on type. Use \"OfType\" instead of using \"Where\" and the \"is\" operator, followed by a cast in a \"Select\". Use an expression in \"Any\" instead of \"Where(element =\u003e [expression]).Any()\". Use \"Count\" instead of \"Count()\" when it\u0027s available. Don\u0027t call \"ToArray()\" or \"ToList()\" in the middle of a query chain.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IEnumerable\" LINQs should be simplified",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2971",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2971",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
+"region":  {
+"startLine":  362,
+"startColumn":  40,
+"endLine":  362,
+"endColumn":  45
+}
+}
+]
+}
+],
+"shortMessage":  "Drop \"Where\" and move the condition into the \"First\".",
+"fullMessage":  "In the interests of readability, code that can be simplified should be simplified. To that end, there are several ways \"IEnumerable LINQ\"s can be simplified. Use \"OfType\" instead of using \"Select\" with \"as\" to type cast elements and then null-checking in a query expression to choose elements based on type. Use \"OfType\" instead of using \"Where\" and the \"is\" operator, followed by a cast in a \"Select\". Use an expression in \"Any\" instead of \"Where(element =\u003e [expression]).Any()\". Use \"Count\" instead of \"Count()\" when it\u0027s available. Don\u0027t call \"ToArray()\" or \"ToList()\" in the middle of a query chain.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IEnumerable\" LINQs should be simplified",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2971",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2971",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
+"region":  {
+"startLine":  611,
+"startColumn":  21,
+"endLine":  611,
+"endColumn":  26
+}
+}
+]
+}
+],
+"shortMessage":  "Drop \"Where\" and move the condition into the \"First\".",
+"fullMessage":  "In the interests of readability, code that can be simplified should be simplified. To that end, there are several ways \"IEnumerable LINQ\"s can be simplified. Use \"OfType\" instead of using \"Select\" with \"as\" to type cast elements and then null-checking in a query expression to choose elements based on type. Use \"OfType\" instead of using \"Where\" and the \"is\" operator, followed by a cast in a \"Select\". Use an expression in \"Any\" instead of \"Where(element =\u003e [expression]).Any()\". Use \"Count\" instead of \"Count()\" when it\u0027s available. Don\u0027t call \"ToArray()\" or \"ToList()\" in the middle of a query chain.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IEnumerable\" LINQs should be simplified",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2971",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2971",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
+"region":  {
+"startLine":  627,
+"startColumn":  21,
+"endLine":  627,
+"endColumn":  26
+}
+}
+]
+}
+],
+"shortMessage":  "Drop \"Where\" and move the condition into the \"First\".",
+"fullMessage":  "In the interests of readability, code that can be simplified should be simplified. To that end, there are several ways \"IEnumerable LINQ\"s can be simplified. Use \"OfType\" instead of using \"Select\" with \"as\" to type cast elements and then null-checking in a query expression to choose elements based on type. Use \"OfType\" instead of using \"Where\" and the \"is\" operator, followed by a cast in a \"Select\". Use an expression in \"Any\" instead of \"Where(element =\u003e [expression]).Any()\". Use \"Count\" instead of \"Count()\" when it\u0027s available. Don\u0027t call \"ToArray()\" or \"ToList()\" in the middle of a query chain.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IEnumerable\" LINQs should be simplified",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2971",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2971",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
+"region":  {
+"startLine":  639,
+"startColumn":  40,
+"endLine":  639,
+"endColumn":  45
+}
+}
+]
+}
+],
+"shortMessage":  "Drop \"Where\" and move the condition into the \"First\".",
+"fullMessage":  "In the interests of readability, code that can be simplified should be simplified. To that end, there are several ways \"IEnumerable LINQ\"s can be simplified. Use \"OfType\" instead of using \"Select\" with \"as\" to type cast elements and then null-checking in a query expression to choose elements based on type. Use \"OfType\" instead of using \"Where\" and the \"is\" operator, followed by a cast in a \"Select\". Use an expression in \"Any\" instead of \"Where(element =\u003e [expression]).Any()\". Use \"Count\" instead of \"Count()\" when it\u0027s available. Don\u0027t call \"ToArray()\" or \"ToList()\" in the middle of a query chain.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IEnumerable\" LINQs should be simplified",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2971",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2971",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
+"region":  {
+"startLine":  653,
+"startColumn":  40,
+"endLine":  653,
+"endColumn":  45
+}
+}
+]
+}
+],
+"shortMessage":  "Drop \"Where\" and move the condition into the \"First\".",
+"fullMessage":  "In the interests of readability, code that can be simplified should be simplified. To that end, there are several ways \"IEnumerable LINQ\"s can be simplified. Use \"OfType\" instead of using \"Select\" with \"as\" to type cast elements and then null-checking in a query expression to choose elements based on type. Use \"OfType\" instead of using \"Where\" and the \"is\" operator, followed by a cast in a \"Select\". Use an expression in \"Any\" instead of \"Where(element =\u003e [expression]).Any()\". Use \"Count\" instead of \"Count()\" when it\u0027s available. Don\u0027t call \"ToArray()\" or \"ToList()\" in the middle of a query chain.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IEnumerable\" LINQs should be simplified",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2971",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2971",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
+"region":  {
+"startLine":  706,
+"startColumn":  40,
+"endLine":  706,
+"endColumn":  45
+}
+}
+]
+}
+],
+"shortMessage":  "Drop \"Where\" and move the condition into the \"First\".",
+"fullMessage":  "In the interests of readability, code that can be simplified should be simplified. To that end, there are several ways \"IEnumerable LINQ\"s can be simplified. Use \"OfType\" instead of using \"Select\" with \"as\" to type cast elements and then null-checking in a query expression to choose elements based on type. Use \"OfType\" instead of using \"Where\" and the \"is\" operator, followed by a cast in a \"Select\". Use an expression in \"Any\" instead of \"Where(element =\u003e [expression]).Any()\". Use \"Count\" instead of \"Count()\" when it\u0027s available. Don\u0027t call \"ToArray()\" or \"ToList()\" in the middle of a query chain.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IEnumerable\" LINQs should be simplified",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2971",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2971",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
+"region":  {
+"startLine":  720,
+"startColumn":  40,
+"endLine":  720,
+"endColumn":  45
+}
+}
+]
+}
+],
+"shortMessage":  "Drop \"Where\" and move the condition into the \"First\".",
+"fullMessage":  "In the interests of readability, code that can be simplified should be simplified. To that end, there are several ways \"IEnumerable LINQ\"s can be simplified. Use \"OfType\" instead of using \"Select\" with \"as\" to type cast elements and then null-checking in a query expression to choose elements based on type. Use \"OfType\" instead of using \"Where\" and the \"is\" operator, followed by a cast in a \"Select\". Use an expression in \"Any\" instead of \"Where(element =\u003e [expression]).Any()\". Use \"Count\" instead of \"Count()\" when it\u0027s available. Don\u0027t call \"ToArray()\" or \"ToList()\" in the middle of a query chain.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IEnumerable\" LINQs should be simplified",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2971",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

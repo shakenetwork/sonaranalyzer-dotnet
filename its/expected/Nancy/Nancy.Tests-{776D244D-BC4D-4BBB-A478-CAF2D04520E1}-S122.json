@@ -1,0 +1,820 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\BeforePipelineFixture.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  12,
+"endLine":  33,
+"endColumn":  93
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\BeforePipelineFixture.cs",
+"region":  {
+"startLine":  35,
+"startColumn":  12,
+"endLine":  35,
+"endColumn":  105
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\BeforePipelineFixture.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  12,
+"endLine":  37,
+"endColumn":  93
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\BeforePipelineFixture.cs",
+"region":  {
+"startLine":  125,
+"startColumn":  12,
+"endLine":  125,
+"endColumn":  91
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\BeforePipelineFixture.cs",
+"region":  {
+"startLine":  127,
+"startColumn":  12,
+"endLine":  127,
+"endColumn":  91
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\BeforePipelineFixture.cs",
+"region":  {
+"startLine":  129,
+"startColumn":  12,
+"endLine":  129,
+"endColumn":  91
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\BeforePipelineFixture.cs",
+"region":  {
+"startLine":  181,
+"startColumn":  12,
+"endLine":  181,
+"endColumn":  93
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\BeforePipelineFixture.cs",
+"region":  {
+"startLine":  183,
+"startColumn":  12,
+"endLine":  183,
+"endColumn":  93
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\BeforePipelineFixture.cs",
+"region":  {
+"startLine":  185,
+"startColumn":  12,
+"endLine":  185,
+"endColumn":  93
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\BeforePipelineFixture.cs",
+"region":  {
+"startLine":  187,
+"startColumn":  12,
+"endLine":  187,
+"endColumn":  93
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ErrorPipelineFixture.cs",
+"region":  {
+"startLine":  56,
+"startColumn":  12,
+"endLine":  56,
+"endColumn":  109
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ErrorPipelineFixture.cs",
+"region":  {
+"startLine":  58,
+"startColumn":  12,
+"endLine":  58,
+"endColumn":  109
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ErrorPipelineFixture.cs",
+"region":  {
+"startLine":  60,
+"startColumn":  12,
+"endLine":  60,
+"endColumn":  109
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ErrorPipelineFixture.cs",
+"region":  {
+"startLine":  92,
+"startColumn":  12,
+"endLine":  92,
+"endColumn":  109
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ErrorPipelineFixture.cs",
+"region":  {
+"startLine":  94,
+"startColumn":  12,
+"endLine":  94,
+"endColumn":  109
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ErrorPipelineFixture.cs",
+"region":  {
+"startLine":  96,
+"startColumn":  12,
+"endLine":  96,
+"endColumn":  109
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ErrorPipelineFixture.cs",
+"region":  {
+"startLine":  98,
+"startColumn":  12,
+"endLine":  98,
+"endColumn":  109
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\XmlBodyDeserializerfixture.cs",
+"region":  {
+"startLine":  149,
+"startColumn":  16,
+"endLine":  149,
+"endColumn":  63
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\XmlBodyDeserializerfixture.cs",
+"region":  {
+"startLine":  150,
+"startColumn":  16,
+"endLine":  150,
+"endColumn":  62
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\XmlBodyDeserializerfixture.cs",
+"region":  {
+"startLine":  156,
+"startColumn":  16,
+"endLine":  156,
+"endColumn":  61
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\XmlBodyDeserializerfixture.cs",
+"region":  {
+"startLine":  157,
+"startColumn":  16,
+"endLine":  157,
+"endColumn":  60
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\XmlBodyDeserializerfixture.cs",
+"region":  {
+"startLine":  158,
+"startColumn":  16,
+"endLine":  158,
+"endColumn":  69
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\NancyContextFixture.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  16,
+"endLine":  32,
+"endColumn":  52
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\RequestHeadersFixture.cs",
+"region":  {
+"startLine":  746,
+"startColumn":  12,
+"endLine":  746,
+"endColumn":  41
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRequestDispatcherFixture.cs",
+"region":  {
+"startLine":  766,
+"startColumn":  31,
+"endLine":  766,
+"endColumn":  96
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRequestDispatcherFixture.cs",
+"region":  {
+"startLine":  808,
+"startColumn":  31,
+"endLine":  808,
+"endColumn":  96
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRequestDispatcherFixture.cs",
+"region":  {
+"startLine":  850,
+"startColumn":  31,
+"endLine":  850,
+"endColumn":  96
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

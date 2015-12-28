@@ -1,0 +1,820 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"region":  {
+"startLine":  142,
+"startColumn":  42,
+"endLine":  142,
+"endColumn":  50
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"region":  {
+"startLine":  164,
+"startColumn":  41,
+"endLine":  164,
+"endColumn":  49
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"region":  {
+"startLine":  184,
+"startColumn":  50,
+"endLine":  184,
+"endColumn":  58
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"region":  {
+"startLine":  205,
+"startColumn":  41,
+"endLine":  205,
+"endColumn":  49
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"region":  {
+"startLine":  225,
+"startColumn":  41,
+"endLine":  225,
+"endColumn":  49
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"region":  {
+"startLine":  428,
+"startColumn":  49,
+"endLine":  428,
+"endColumn":  57
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"region":  {
+"startLine":  438,
+"startColumn":  41,
+"endLine":  438,
+"endColumn":  49
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"region":  {
+"startLine":  451,
+"startColumn":  40,
+"endLine":  451,
+"endColumn":  48
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"region":  {
+"startLine":  537,
+"startColumn":  41,
+"endLine":  537,
+"endColumn":  49
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"region":  {
+"startLine":  561,
+"startColumn":  34,
+"endLine":  561,
+"endColumn":  42
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"region":  {
+"startLine":  601,
+"startColumn":  42,
+"endLine":  601,
+"endColumn":  50
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"region":  {
+"startLine":  613,
+"startColumn":  34,
+"endLine":  613,
+"endColumn":  42
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"region":  {
+"startLine":  631,
+"startColumn":  42,
+"endLine":  631,
+"endColumn":  50
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"region":  {
+"startLine":  648,
+"startColumn":  37,
+"endLine":  648,
+"endColumn":  45
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Udp.cs",
+"region":  {
+"startLine":  66,
+"startColumn":  41,
+"endLine":  66,
+"endColumn":  49
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Udp.cs",
+"region":  {
+"startLine":  145,
+"startColumn":  42,
+"endLine":  145,
+"endColumn":  50
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Udp.cs",
+"region":  {
+"startLine":  162,
+"startColumn":  48,
+"endLine":  162,
+"endColumn":  56
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Udp.cs",
+"region":  {
+"startLine":  180,
+"startColumn":  50,
+"endLine":  180,
+"endColumn":  58
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Udp.cs",
+"region":  {
+"startLine":  192,
+"startColumn":  49,
+"endLine":  192,
+"endColumn":  57
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Udp.cs",
+"region":  {
+"startLine":  248,
+"startColumn":  53,
+"endLine":  248,
+"endColumn":  61
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Udp.cs",
+"region":  {
+"startLine":  259,
+"startColumn":  43,
+"endLine":  259,
+"endColumn":  51
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\UdpConnected.cs",
+"region":  {
+"startLine":  64,
+"startColumn":  41,
+"endLine":  64,
+"endColumn":  49
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\UdpConnected.cs",
+"region":  {
+"startLine":  139,
+"startColumn":  46,
+"endLine":  139,
+"endColumn":  54
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\UdpConnected.cs",
+"region":  {
+"startLine":  155,
+"startColumn":  50,
+"endLine":  155,
+"endColumn":  58
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\UdpConnected.cs",
+"region":  {
+"startLine":  167,
+"startColumn":  49,
+"endLine":  167,
+"endColumn":  57
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\UdpConnected.cs",
+"region":  {
+"startLine":  213,
+"startColumn":  45,
+"endLine":  213,
+"endColumn":  53
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3218",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\UdpConnected.cs",
+"region":  {
+"startLine":  225,
+"startColumn":  48,
+"endLine":  225,
+"endColumn":  56
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inner class members should not shadow outer class \"static\" or type members",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3218",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

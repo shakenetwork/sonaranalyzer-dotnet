@@ -1,0 +1,103 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S3253",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\Exceptions.cs",
+"region":  {
+"startLine":  121,
+"startColumn":  12,
+"endLine":  121,
+"endColumn":  20
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this redundant \"base()\" call.",
+"fullMessage":  "Since the compiler will automatically invoke the base type\u0027s no-argument constructor, there\u0027s no need to specify its invocation explicitly. Doing so just clutters the code.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "\"base()\" constructor calls should not be explicitly made",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3253",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3253",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\Exceptions.cs",
+"region":  {
+"startLine":  193,
+"startColumn":  12,
+"endLine":  193,
+"endColumn":  20
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this redundant \"base()\" call.",
+"fullMessage":  "Since the compiler will automatically invoke the base type\u0027s no-argument constructor, there\u0027s no need to specify its invocation explicitly. Doing so just clutters the code.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "\"base()\" constructor calls should not be explicitly made",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3253",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3253",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\Exceptions.cs",
+"region":  {
+"startLine":  427,
+"startColumn":  12,
+"endLine":  427,
+"endColumn":  20
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this redundant \"base()\" call.",
+"fullMessage":  "Since the compiler will automatically invoke the base type\u0027s no-argument constructor, there\u0027s no need to specify its invocation explicitly. Doing so just clutters the code.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "\"base()\" constructor calls should not be explicitly made",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3253",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+}
+]
+}

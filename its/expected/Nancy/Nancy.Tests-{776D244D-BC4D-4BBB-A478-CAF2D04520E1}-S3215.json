@@ -1,0 +1,700 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S3215",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Bootstrapper\\Base\\BootstrapperBaseFixtureBase.cs",
+"region":  {
+"startLine":  98,
+"startColumn":  27,
+"endLine":  98,
+"endColumn":  126
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
+"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"interface\" instances should not be cast to concrete types",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3215",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3215",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Bootstrapper\\Base\\BootstrapperBaseFixtureBase.cs",
+"region":  {
+"startLine":  99,
+"startColumn":  27,
+"endLine":  99,
+"endColumn":  126
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
+"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"interface\" instances should not be cast to concrete types",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3215",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3215",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Bootstrapper\\Base\\BootstrapperBaseFixtureBase.cs",
+"region":  {
+"startLine":  112,
+"startColumn":  27,
+"endLine":  112,
+"endColumn":  126
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
+"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"interface\" instances should not be cast to concrete types",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3215",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3215",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Bootstrapper\\Base\\BootstrapperBaseFixtureBase.cs",
+"region":  {
+"startLine":  113,
+"startColumn":  27,
+"endLine":  113,
+"endColumn":  126
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
+"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"interface\" instances should not be cast to concrete types",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3215",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3215",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  273,
+"startColumn":  13,
+"endLine":  273,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
+"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"interface\" instances should not be cast to concrete types",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3215",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3215",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  286,
+"startColumn":  13,
+"endLine":  286,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
+"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"interface\" instances should not be cast to concrete types",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3215",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3215",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  999,
+"startColumn":  13,
+"endLine":  999,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
+"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"interface\" instances should not be cast to concrete types",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3215",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3215",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  1013,
+"startColumn":  13,
+"endLine":  1013,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
+"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"interface\" instances should not be cast to concrete types",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3215",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3215",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  1029,
+"startColumn":  13,
+"endLine":  1029,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
+"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"interface\" instances should not be cast to concrete types",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3215",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3215",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  1043,
+"startColumn":  13,
+"endLine":  1043,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
+"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"interface\" instances should not be cast to concrete types",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3215",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3215",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  1057,
+"startColumn":  13,
+"endLine":  1057,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
+"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"interface\" instances should not be cast to concrete types",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3215",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3215",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  1071,
+"startColumn":  13,
+"endLine":  1071,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
+"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"interface\" instances should not be cast to concrete types",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3215",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3215",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  1086,
+"startColumn":  13,
+"endLine":  1086,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
+"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"interface\" instances should not be cast to concrete types",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3215",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3215",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  1109,
+"startColumn":  13,
+"endLine":  1109,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
+"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"interface\" instances should not be cast to concrete types",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3215",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3215",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  1168,
+"startColumn":  13,
+"endLine":  1168,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
+"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"interface\" instances should not be cast to concrete types",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3215",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3215",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  1181,
+"startColumn":  13,
+"endLine":  1181,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
+"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"interface\" instances should not be cast to concrete types",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3215",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3215",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  1194,
+"startColumn":  13,
+"endLine":  1194,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
+"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"interface\" instances should not be cast to concrete types",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3215",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3215",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  1207,
+"startColumn":  13,
+"endLine":  1207,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
+"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"interface\" instances should not be cast to concrete types",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3215",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3215",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  1220,
+"startColumn":  13,
+"endLine":  1220,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
+"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"interface\" instances should not be cast to concrete types",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3215",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3215",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  1233,
+"startColumn":  13,
+"endLine":  1233,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
+"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"interface\" instances should not be cast to concrete types",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3215",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3215",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  1246,
+"startColumn":  13,
+"endLine":  1246,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
+"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"interface\" instances should not be cast to concrete types",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3215",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3215",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  1259,
+"startColumn":  13,
+"endLine":  1259,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
+"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"interface\" instances should not be cast to concrete types",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3215",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3215",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  1272,
+"startColumn":  13,
+"endLine":  1272,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
+"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"interface\" instances should not be cast to concrete types",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3215",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

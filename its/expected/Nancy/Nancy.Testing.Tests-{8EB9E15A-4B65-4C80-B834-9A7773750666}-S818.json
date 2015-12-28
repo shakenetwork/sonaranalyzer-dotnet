@@ -1,0 +1,160 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Testing.Tests\\BrowserContextExtensionsFixture.cs",
+"region":  {
+"startLine":  46,
+"startColumn":  50,
+"endLine":  46,
+"endColumn":  51
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Testing.Tests\\BrowserContextExtensionsFixture.cs",
+"region":  {
+"startLine":  59,
+"startColumn":  50,
+"endLine":  59,
+"endColumn":  51
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Testing.Tests\\BrowserContextExtensionsFixture.cs",
+"region":  {
+"startLine":  60,
+"startColumn":  37,
+"endLine":  60,
+"endColumn":  38
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Testing.Tests\\BrowserContextExtensionsFixture.cs",
+"region":  {
+"startLine":  61,
+"startColumn":  49,
+"endLine":  61,
+"endColumn":  50
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Testing.Tests\\BrowserContextExtensionsFixture.cs",
+"region":  {
+"startLine":  87,
+"startColumn":  50,
+"endLine":  87,
+"endColumn":  51
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

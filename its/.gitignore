@@ -1,2 +1,5 @@
-# include packages folders in nuget IT sources 
-!nuget/**/Packages
+# SonarLint binaries
+binaries/
+
+# Actual SARIF files
+actual/

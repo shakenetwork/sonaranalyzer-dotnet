@@ -1,0 +1,370 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S2372",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorBase.cs",
+"region":  {
+"startLine":  145,
+"startColumn":  20,
+"endLine":  146,
+"endColumn":  135
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"fullMessage":  "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Exceptions should not be thrown from property getters",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2372",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2372",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorCell.DeathWatch.cs",
+"region":  {
+"startLine":  302,
+"startColumn":  16,
+"endLine":  302,
+"endColumn":  91
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"fullMessage":  "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Exceptions should not be thrown from property getters",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2372",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2372",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorRef.cs",
+"region":  {
+"startLine":  77,
+"startColumn":  18,
+"endLine":  77,
+"endColumn":  54
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"fullMessage":  "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Exceptions should not be thrown from property getters",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2372",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2372",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorRef.cs",
+"region":  {
+"startLine":  349,
+"startColumn":  18,
+"endLine":  349,
+"endColumn":  77
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"fullMessage":  "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Exceptions should not be thrown from property getters",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2372",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2372",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\FSM.cs",
+"region":  {
+"startLine":  629,
+"startColumn":  39,
+"endLine":  629,
+"endColumn":  130
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"fullMessage":  "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Exceptions should not be thrown from property getters",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2372",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2372",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\RepointableActorRef.cs",
+"region":  {
+"startLine":  169,
+"startColumn":  20,
+"endLine":  169,
+"endColumn":  91
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"fullMessage":  "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Exceptions should not be thrown from property getters",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2372",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2372",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Event\\StandardOutLogger.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  18,
+"endLine":  36,
+"endColumn":  88
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"fullMessage":  "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Exceptions should not be thrown from property getters",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2372",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2372",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Dns.cs",
+"region":  {
+"startLine":  74,
+"startColumn":  39,
+"endLine":  74,
+"endColumn":  75
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"fullMessage":  "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Exceptions should not be thrown from property getters",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2372",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2372",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\TcpConnection.cs",
+"region":  {
+"startLine":  793,
+"startColumn":  22,
+"endLine":  793,
+"endColumn":  68
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"fullMessage":  "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Exceptions should not be thrown from property getters",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2372",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2372",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Routing\\RouterConfig.cs",
+"region":  {
+"startLine":  151,
+"startColumn":  18,
+"endLine":  151,
+"endColumn":  76
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"fullMessage":  "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Exceptions should not be thrown from property getters",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2372",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2372",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Routing\\RouterPoolActor.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  20,
+"endLine":  33,
+"endColumn":  88
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"fullMessage":  "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Exceptions should not be thrown from property getters",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2372",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2372",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Serialization\\JavaSerializer.cs",
+"region":  {
+"startLine":  39,
+"startColumn":  18,
+"endLine":  39,
+"endColumn":  52
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"fullMessage":  "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Exceptions should not be thrown from property getters",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2372",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

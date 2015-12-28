@@ -1,0 +1,109 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S3240",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
+"region":  {
+"startLine":  617,
+"startColumn":  20,
+"endLine":  617,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "Use the \"?:\" operator here.",
+"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "The simplest possible condition syntax should be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3240",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customProperties":  {
+"isNullCoalescing":  "False"
+}
+}
+},
+{
+"ruleId":  "S3240",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
+"region":  {
+"startLine":  550,
+"startColumn":  20,
+"endLine":  550,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "Use the \"?:\" operator here.",
+"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "The simplest possible condition syntax should be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3240",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customProperties":  {
+"isNullCoalescing":  "False"
+}
+}
+},
+{
+"ruleId":  "S3240",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
+"region":  {
+"startLine":  695,
+"startColumn":  20,
+"endLine":  695,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "Use the \"?:\" operator here.",
+"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "The simplest possible condition syntax should be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3240",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customProperties":  {
+"isNullCoalescing":  "False"
+}
+}
+}
+]
+}

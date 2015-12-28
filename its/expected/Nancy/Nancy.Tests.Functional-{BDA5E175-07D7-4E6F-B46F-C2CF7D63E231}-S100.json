@@ -1,0 +1,130 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\RouteConstraintTests.cs",
+"region":  {
+"startLine":  30,
+"startColumn":  26,
+"endLine":  30,
+"endColumn":  84
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this method \"multiple_parameters_per_segment_should_support_constraints\" to match the regular expression ^[A-Z][a-zA-Z0-9_]*[a-zA-Z0-9]$",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks that all method names match a provided regular expression.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Method name should comply with a naming convention",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S100",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\RouteConstraintTests.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  26,
+"endLine":  42,
+"endColumn":  123
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this method \"versionsegmentrouteconstraint_should_match_on_version_numbers_on_segment_with_multiple_parameters\" to match the regular expression ^[A-Z][a-zA-Z0-9_]*[a-zA-Z0-9]$",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks that all method names match a provided regular expression.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Method name should comply with a naming convention",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S100",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\RouteConstraintTests.cs",
+"region":  {
+"startLine":  54,
+"startColumn":  26,
+"endLine":  54,
+"endColumn":  92
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this method \"versionsegmentrouteconstraint_should_match_on_valid_version_number\" to match the regular expression ^[A-Z][a-zA-Z0-9_]*[a-zA-Z0-9]$",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks that all method names match a provided regular expression.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Method name should comply with a naming convention",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S100",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\RouteConstraintTests.cs",
+"region":  {
+"startLine":  66,
+"startColumn":  26,
+"endLine":  66,
+"endColumn":  98
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this method \"versionsegmentrouteconstraint_should_not_match_on_invalid_version_number\" to match the regular expression ^[A-Z][a-zA-Z0-9_]*[a-zA-Z0-9]$",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks that all method names match a provided regular expression.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Method name should comply with a naming convention",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S100",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

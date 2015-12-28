@@ -1,0 +1,3296 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Fakes\\FakeModuleCatalog.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  57,
+"endLine":  15,
+"endColumn":  59
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Bootstrapper\\NancyBootstrapperBaseFixture.cs",
+"region":  {
+"startLine":  505,
+"startColumn":  62,
+"endLine":  505,
+"endColumn":  64
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Bootstrapper\\NancyBootstrapperWithRequestContainerBaseFixture.cs",
+"region":  {
+"startLine":  179,
+"startColumn":  51,
+"endLine":  179,
+"endColumn":  53
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Conventions\\DefaultViewLocationConventionsFixture.cs",
+"region":  {
+"startLine":  153,
+"startColumn":  95,
+"endLine":  153,
+"endColumn":  97
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Conventions\\DefaultViewLocationConventionsFixture.cs",
+"region":  {
+"startLine":  189,
+"startColumn":  95,
+"endLine":  189,
+"endColumn":  97
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Conventions\\DefaultViewLocationConventionsFixture.cs",
+"region":  {
+"startLine":  225,
+"startColumn":  95,
+"endLine":  225,
+"endColumn":  97
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Conventions\\DefaultViewLocationConventionsFixture.cs",
+"region":  {
+"startLine":  261,
+"startColumn":  96,
+"endLine":  261,
+"endColumn":  98
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Conventions\\DefaultViewLocationConventionsFixture.cs",
+"region":  {
+"startLine":  297,
+"startColumn":  95,
+"endLine":  297,
+"endColumn":  97
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Conventions\\DefaultViewLocationConventionsFixture.cs",
+"region":  {
+"startLine":  333,
+"startColumn":  87,
+"endLine":  333,
+"endColumn":  89
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Conventions\\DefaultViewLocationConventionsFixture.cs",
+"region":  {
+"startLine":  369,
+"startColumn":  95,
+"endLine":  369,
+"endColumn":  97
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Conventions\\DefaultViewLocationConventionsFixture.cs",
+"region":  {
+"startLine":  405,
+"startColumn":  95,
+"endLine":  405,
+"endColumn":  97
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Conventions\\DefaultViewLocationConventionsFixture.cs",
+"region":  {
+"startLine":  441,
+"startColumn":  87,
+"endLine":  441,
+"endColumn":  89
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Conventions\\DefaultViewLocationConventionsFixture.cs",
+"region":  {
+"startLine":  477,
+"startColumn":  96,
+"endLine":  477,
+"endColumn":  98
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Conventions\\DefaultViewLocationConventionsFixture.cs",
+"region":  {
+"startLine":  513,
+"startColumn":  95,
+"endLine":  513,
+"endColumn":  97
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Conventions\\DefaultViewLocationConventionsFixture.cs",
+"region":  {
+"startLine":  549,
+"startColumn":  95,
+"endLine":  549,
+"endColumn":  97
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Conventions\\DefaultViewLocationConventionsFixture.cs",
+"region":  {
+"startLine":  585,
+"startColumn":  122,
+"endLine":  585,
+"endColumn":  124
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Conventions\\DefaultViewLocationConventionsFixture.cs",
+"region":  {
+"startLine":  621,
+"startColumn":  122,
+"endLine":  621,
+"endColumn":  124
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Conventions\\DefaultViewLocationConventionsFixture.cs",
+"region":  {
+"startLine":  657,
+"startColumn":  123,
+"endLine":  657,
+"endColumn":  125
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Conventions\\DefaultViewLocationConventionsFixture.cs",
+"region":  {
+"startLine":  693,
+"startColumn":  123,
+"endLine":  693,
+"endColumn":  125
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ErrorHandling\\DefaultStatusCodeHandlerFixture.cs",
+"region":  {
+"startLine":  109,
+"startColumn":  43,
+"endLine":  109,
+"endColumn":  45
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Extensions\\ContextExtensionsFixture.cs",
+"region":  {
+"startLine":  225,
+"startColumn":  30,
+"endLine":  225,
+"endColumn":  32
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Extensions\\ContextExtensionsFixture.cs",
+"region":  {
+"startLine":  227,
+"startColumn":  35,
+"endLine":  227,
+"endColumn":  37
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Json\\JavaScriptSerializerFixture.cs",
+"region":  {
+"startLine":  29,
+"startColumn":  28,
+"endLine":  29,
+"endColumn":  30
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Json\\JavaScriptSerializerFixture.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  45,
+"endLine":  32,
+"endColumn":  47
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Json\\JavaScriptSerializerFixture.cs",
+"region":  {
+"startLine":  38,
+"startColumn":  54,
+"endLine":  38,
+"endColumn":  56
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Json\\JavaScriptSerializerFixture.cs",
+"region":  {
+"startLine":  70,
+"startColumn":  28,
+"endLine":  70,
+"endColumn":  30
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Json\\JavaScriptSerializerFixture.cs",
+"region":  {
+"startLine":  73,
+"startColumn":  45,
+"endLine":  73,
+"endColumn":  47
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Json\\JavaScriptSerializerFixture.cs",
+"region":  {
+"startLine":  79,
+"startColumn":  54,
+"endLine":  79,
+"endColumn":  56
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Json\\JavaScriptSerializerFixture.cs",
+"region":  {
+"startLine":  102,
+"startColumn":  63,
+"endLine":  102,
+"endColumn":  65
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Json\\JavaScriptSerializerFixture.cs",
+"region":  {
+"startLine":  104,
+"startColumn":  114,
+"endLine":  104,
+"endColumn":  116
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Json\\JavaScriptSerializerFixture.cs",
+"region":  {
+"startLine":  116,
+"startColumn":  54,
+"endLine":  116,
+"endColumn":  56
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Json\\JavaScriptSerializerFixture.cs",
+"region":  {
+"startLine":  118,
+"startColumn":  108,
+"endLine":  118,
+"endColumn":  110
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
+"region":  {
+"startLine":  237,
+"startColumn":  29,
+"endLine":  237,
+"endColumn":  31
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
+"region":  {
+"startLine":  1334,
+"startColumn":  33,
+"endLine":  1334,
+"endColumn":  35
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
+"region":  {
+"startLine":  1340,
+"startColumn":  33,
+"endLine":  1340,
+"endColumn":  35
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\JsonBodyDeserializerFixture.cs",
+"region":  {
+"startLine":  30,
+"startColumn":  42,
+"endLine":  30,
+"endColumn":  44
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\JsonBodyDeserializerFixture.cs",
+"region":  {
+"startLine":  113,
+"startColumn":  44,
+"endLine":  113,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\JsonBodyDeserializerFixture.cs",
+"region":  {
+"startLine":  135,
+"startColumn":  44,
+"endLine":  135,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\JsonBodyDeserializerFixture.cs",
+"region":  {
+"startLine":  156,
+"startColumn":  44,
+"endLine":  156,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\JsonBodyDeserializerFixture.cs",
+"region":  {
+"startLine":  182,
+"startColumn":  44,
+"endLine":  182,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\JsonBodyDeserializerFixture.cs",
+"region":  {
+"startLine":  221,
+"startColumn":  44,
+"endLine":  221,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\JsonBodyDeserializerFixture.cs",
+"region":  {
+"startLine":  232,
+"startColumn":  49,
+"endLine":  232,
+"endColumn":  51
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\JsonBodyDeserializerFixture.cs",
+"region":  {
+"startLine":  233,
+"startColumn":  49,
+"endLine":  233,
+"endColumn":  51
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\JsonBodyDeserializerFixture.cs",
+"region":  {
+"startLine":  237,
+"startColumn":  49,
+"endLine":  237,
+"endColumn":  51
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\JsonBodyDeserializerFixture.cs",
+"region":  {
+"startLine":  238,
+"startColumn":  49,
+"endLine":  238,
+"endColumn":  51
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\XmlBodyDeserializerfixture.cs",
+"region":  {
+"startLine":  84,
+"startColumn":  44,
+"endLine":  84,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\XmlBodyDeserializerfixture.cs",
+"region":  {
+"startLine":  110,
+"startColumn":  44,
+"endLine":  110,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\XmlBodyDeserializerfixture.cs",
+"region":  {
+"startLine":  144,
+"startColumn":  23,
+"endLine":  144,
+"endColumn":  25
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultConverters\\CollectionConverterFixture.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  45,
+"endLine":  24,
+"endColumn":  47
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultConverters\\CollectionConverterFixture.cs",
+"region":  {
+"startLine":  46,
+"startColumn":  48,
+"endLine":  46,
+"endColumn":  50
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultConverters\\CollectionConverterFixture.cs",
+"region":  {
+"startLine":  69,
+"startColumn":  48,
+"endLine":  69,
+"endColumn":  50
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultConverters\\CollectionConverterFixture.cs",
+"region":  {
+"startLine":  92,
+"startColumn":  48,
+"endLine":  92,
+"endColumn":  50
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultModelBinderLocatorFixture.cs",
+"region":  {
+"startLine":  97,
+"startColumn":  42,
+"endLine":  97,
+"endColumn":  44
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\RequestFixture.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  29,
+"endLine":  25,
+"endColumn":  31
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\RequestFixture.cs",
+"region":  {
+"startLine":  156,
+"startColumn":  69,
+"endLine":  156,
+"endColumn":  71
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Sessions\\CookieBasedSessionsConfigurationFixture.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  62,
+"endLine":  20,
+"endColumn":  64
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Sessions\\CookieBasedSessionsFixture.cs",
+"region":  {
+"startLine":  205,
+"startColumn":  47,
+"endLine":  205,
+"endColumn":  49
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Sessions\\CookieBasedSessionsFixture.cs",
+"region":  {
+"startLine":  225,
+"startColumn":  47,
+"endLine":  225,
+"endColumn":  49
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Sessions\\CookieBasedSessionsFixture.cs",
+"region":  {
+"startLine":  273,
+"startColumn":  47,
+"endLine":  273,
+"endColumn":  49
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  40,
+"endLine":  32,
+"endColumn":  42
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  48,
+"startColumn":  40,
+"endLine":  48,
+"endColumn":  42
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  61,
+"startColumn":  40,
+"endLine":  61,
+"endColumn":  42
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  81,
+"startColumn":  47,
+"endLine":  81,
+"endColumn":  49
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  95,
+"startColumn":  47,
+"endLine":  95,
+"endColumn":  49
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  100,
+"startColumn":  45,
+"endLine":  100,
+"endColumn":  47
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  105,
+"startColumn":  52,
+"endLine":  105,
+"endColumn":  54
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  119,
+"startColumn":  47,
+"endLine":  119,
+"endColumn":  49
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  124,
+"startColumn":  45,
+"endLine":  124,
+"endColumn":  47
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  129,
+"startColumn":  40,
+"endLine":  129,
+"endColumn":  42
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  157,
+"startColumn":  47,
+"endLine":  157,
+"endColumn":  49
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  187,
+"startColumn":  47,
+"endLine":  187,
+"endColumn":  49
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  242,
+"startColumn":  42,
+"endLine":  242,
+"endColumn":  44
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  257,
+"startColumn":  42,
+"endLine":  257,
+"endColumn":  44
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  387,
+"startColumn":  42,
+"endLine":  387,
+"endColumn":  44
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  399,
+"startColumn":  42,
+"endLine":  399,
+"endColumn":  44
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  424,
+"startColumn":  42,
+"endLine":  424,
+"endColumn":  44
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  448,
+"startColumn":  42,
+"endLine":  448,
+"endColumn":  44
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  470,
+"startColumn":  54,
+"endLine":  470,
+"endColumn":  56
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  481,
+"startColumn":  63,
+"endLine":  481,
+"endColumn":  65
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  492,
+"startColumn":  63,
+"endLine":  492,
+"endColumn":  65
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  514,
+"startColumn":  63,
+"endLine":  514,
+"endColumn":  65
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  569,
+"startColumn":  54,
+"endLine":  569,
+"endColumn":  56
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  580,
+"startColumn":  54,
+"endLine":  580,
+"endColumn":  56
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  602,
+"startColumn":  72,
+"endLine":  602,
+"endColumn":  74
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  620,
+"startColumn":  42,
+"endLine":  620,
+"endColumn":  44
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  632,
+"startColumn":  40,
+"endLine":  632,
+"endColumn":  42
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  693,
+"startColumn":  66,
+"endLine":  693,
+"endColumn":  68
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  704,
+"startColumn":  64,
+"endLine":  704,
+"endColumn":  66
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  728,
+"startColumn":  42,
+"endLine":  728,
+"endColumn":  44
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  740,
+"startColumn":  42,
+"endLine":  740,
+"endColumn":  44
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  752,
+"startColumn":  42,
+"endLine":  752,
+"endColumn":  44
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  763,
+"startColumn":  63,
+"endLine":  763,
+"endColumn":  65
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  774,
+"startColumn":  63,
+"endLine":  774,
+"endColumn":  65
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  785,
+"startColumn":  40,
+"endLine":  785,
+"endColumn":  42
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  796,
+"startColumn":  40,
+"endLine":  796,
+"endColumn":  42
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  819,
+"startColumn":  40,
+"endLine":  819,
+"endColumn":  42
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  837,
+"startColumn":  42,
+"endLine":  837,
+"endColumn":  44
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  1166,
+"startColumn":  63,
+"endLine":  1166,
+"endColumn":  65
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  1179,
+"startColumn":  63,
+"endLine":  1179,
+"endColumn":  65
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  1194,
+"startColumn":  104,
+"endLine":  1194,
+"endColumn":  106
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  1207,
+"startColumn":  104,
+"endLine":  1207,
+"endColumn":  106
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  1220,
+"startColumn":  104,
+"endLine":  1220,
+"endColumn":  106
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  1231,
+"startColumn":  63,
+"endLine":  1231,
+"endColumn":  65
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  1244,
+"startColumn":  63,
+"endLine":  1244,
+"endColumn":  65
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  1257,
+"startColumn":  63,
+"endLine":  1257,
+"endColumn":  65
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3235",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
+"region":  {
+"startLine":  1270,
+"startColumn":  63,
+"endLine":  1270,
+"endColumn":  65
+}
+}
+]
+}
+],
+"shortMessage":  "Remove these redundant parentheses.",
+"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Redundant parentheses should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3235",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+}
+]
+}

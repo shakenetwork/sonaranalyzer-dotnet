@@ -1,0 +1,196 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S3254",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\DeathWatchSpec.cs",
+"region":  {
+"startLine":  207,
+"startColumn":  37,
+"endLine":  207,
+"endColumn":  38
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this default value assigned to parameter \"count\".",
+"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Default parameter values should not be passed as arguments",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3254",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3254",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\DeathWatchSpec.cs",
+"region":  {
+"startLine":  208,
+"startColumn":  37,
+"endLine":  208,
+"endColumn":  38
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this default value assigned to parameter \"count\".",
+"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Default parameter values should not be passed as arguments",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3254",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3254",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTimingSpec.cs",
+"region":  {
+"startLine":  287,
+"startColumn":  95,
+"endLine":  287,
+"endColumn":  100
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this default value assigned to parameter \"repeat\".",
+"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Default parameter values should not be passed as arguments",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3254",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3254",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ReceiveActorTests.cs",
+"region":  {
+"startLine":  199,
+"startColumn":  65,
+"endLine":  199,
+"endColumn":  69
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this default value assigned to parameter \"shouldHandle\".",
+"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Default parameter values should not be passed as arguments",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3254",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3254",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ReceiveActorTests.cs",
+"region":  {
+"startLine":  220,
+"startColumn":  73,
+"endLine":  220,
+"endColumn":  77
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this default value assigned to parameter \"shouldHandle\".",
+"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Default parameter values should not be passed as arguments",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3254",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3254",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Routing\\ResizerSpec.cs",
+"region":  {
+"startLine":  229,
+"startColumn":  19,
+"endLine":  229,
+"endColumn":  23
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this default value assigned to parameter \"duration\".",
+"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Default parameter values should not be passed as arguments",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3254",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+}
+]
+}

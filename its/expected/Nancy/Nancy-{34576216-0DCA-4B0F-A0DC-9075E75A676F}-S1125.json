@@ -1,0 +1,351 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S1125",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\Cryptography\\HmacComparer.cs",
+"region":  {
+"startLine":  40,
+"startColumn":  32,
+"endLine":  40,
+"endColumn":  37
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the unnecessary Boolean literal(s).",
+"fullMessage":  "Redundant Boolean literals should be removed from expressions to improve readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Boolean literals should not be redundant",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1125",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S1125",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+"region":  {
+"startLine":  3091,
+"startColumn":  82,
+"endLine":  3091,
+"endColumn":  87
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the unnecessary Boolean literal(s).",
+"fullMessage":  "Redundant Boolean literals should be removed from expressions to improve readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Boolean literals should not be redundant",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1125",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S1125",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+"region":  {
+"startLine":  3261,
+"startColumn":  100,
+"endLine":  3261,
+"endColumn":  112
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the unnecessary Boolean literal(s).",
+"fullMessage":  "Redundant Boolean literals should be removed from expressions to improve readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Boolean literals should not be redundant",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1125",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S1125",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+"region":  {
+"startLine":  3269,
+"startColumn":  107,
+"endLine":  3269,
+"endColumn":  112
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the unnecessary Boolean literal(s).",
+"fullMessage":  "Redundant Boolean literals should be removed from expressions to improve readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Boolean literals should not be redundant",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1125",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S1125",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+"region":  {
+"startLine":  3279,
+"startColumn":  100,
+"endLine":  3279,
+"endColumn":  112
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the unnecessary Boolean literal(s).",
+"fullMessage":  "Redundant Boolean literals should be removed from expressions to improve readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Boolean literals should not be redundant",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1125",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S1125",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+"region":  {
+"startLine":  3294,
+"startColumn":  86,
+"endLine":  3294,
+"endColumn":  90
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the unnecessary Boolean literal(s).",
+"fullMessage":  "Redundant Boolean literals should be removed from expressions to improve readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Boolean literals should not be redundant",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1125",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S1125",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+"region":  {
+"startLine":  3294,
+"startColumn":  177,
+"endLine":  3294,
+"endColumn":  182
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the unnecessary Boolean literal(s).",
+"fullMessage":  "Redundant Boolean literals should be removed from expressions to improve readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Boolean literals should not be redundant",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1125",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S1125",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
+"region":  {
+"startLine":  283,
+"startColumn":  43,
+"endLine":  283,
+"endColumn":  48
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the unnecessary Boolean literal(s).",
+"fullMessage":  "Redundant Boolean literals should be removed from expressions to improve readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Boolean literals should not be redundant",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1125",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S1125",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
+"region":  {
+"startLine":  305,
+"startColumn":  44,
+"endLine":  305,
+"endColumn":  49
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the unnecessary Boolean literal(s).",
+"fullMessage":  "Redundant Boolean literals should be removed from expressions to improve readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Boolean literals should not be redundant",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1125",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S1125",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
+"region":  {
+"startLine":  486,
+"startColumn":  52,
+"endLine":  486,
+"endColumn":  57
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the unnecessary Boolean literal(s).",
+"fullMessage":  "Redundant Boolean literals should be removed from expressions to improve readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Boolean literals should not be redundant",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1125",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S1125",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
+"region":  {
+"startLine":  660,
+"startColumn":  48,
+"endLine":  660,
+"endColumn":  52
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the unnecessary Boolean literal(s).",
+"fullMessage":  "Redundant Boolean literals should be removed from expressions to improve readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Boolean literals should not be redundant",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1125",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+}
+]
+}

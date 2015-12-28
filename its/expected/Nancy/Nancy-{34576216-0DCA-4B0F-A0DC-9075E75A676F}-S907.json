@@ -1,0 +1,40 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S907",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
+"region":  {
+"startLine":  184,
+"startColumn":  5,
+"endLine":  184,
+"endColumn":  9
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this use of \"goto\".",
+"fullMessage":  "\"goto\" is an unstructured control flow statement. It makes code less readable and maintainable. Structured control flow statements such as \"if\", \"for\", \"while\", \"continue\" or \"break\" should be used instead.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"goto\" statement should not be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S907",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

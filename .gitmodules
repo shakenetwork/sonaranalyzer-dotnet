@@ -1,3 +1,6 @@
-[submodule "its/src"]
-	path = its/src
-	url = https://github.com/SonarSource/sonarlint-vs-test-sources
+[submodule "its/Nancy"]
+	path = its/Nancy
+	url = https://github.com/dbolkensteyn/Nancy.git
+[submodule "its/akka.net"]
+	path = its/akka.net
+	url = https://github.com/dbolkensteyn/akka.net.git

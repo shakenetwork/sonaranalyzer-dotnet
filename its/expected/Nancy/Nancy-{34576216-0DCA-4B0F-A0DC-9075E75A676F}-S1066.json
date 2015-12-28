@@ -1,0 +1,250 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S1066",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\Helpers\\ReflectionUtils.cs",
+"region":  {
+"startLine":  87,
+"startColumn":  16,
+"endLine":  87,
+"endColumn":  18
+}
+}
+]
+}
+],
+"shortMessage":  "Merge this if statement with the enclosing one.",
+"fullMessage":  "Merging collapsible \"if\" statements increases the code\u0027s readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Collapsible \"if\" statements should be merged",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1066",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1066",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
+"region":  {
+"startLine":  206,
+"startColumn":  20,
+"endLine":  206,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "Merge this if statement with the enclosing one.",
+"fullMessage":  "Merging collapsible \"if\" statements increases the code\u0027s readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Collapsible \"if\" statements should be merged",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1066",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1066",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
+"region":  {
+"startLine":  320,
+"startColumn":  16,
+"endLine":  320,
+"endColumn":  18
+}
+}
+]
+}
+],
+"shortMessage":  "Merge this if statement with the enclosing one.",
+"fullMessage":  "Merging collapsible \"if\" statements increases the code\u0027s readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Collapsible \"if\" statements should be merged",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1066",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1066",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\Security\\SSLProxy.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  20,
+"endLine":  23,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "Merge this if statement with the enclosing one.",
+"fullMessage":  "Merging collapsible \"if\" statements increases the code\u0027s readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Collapsible \"if\" statements should be merged",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1066",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1066",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+"region":  {
+"startLine":  3274,
+"startColumn":  16,
+"endLine":  3274,
+"endColumn":  18
+}
+}
+]
+}
+],
+"shortMessage":  "Merge this if statement with the enclosing one.",
+"fullMessage":  "Merging collapsible \"if\" statements increases the code\u0027s readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Collapsible \"if\" statements should be merged",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1066",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1066",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+"region":  {
+"startLine":  3431,
+"startColumn":  16,
+"endLine":  3431,
+"endColumn":  18
+}
+}
+]
+}
+],
+"shortMessage":  "Merge this if statement with the enclosing one.",
+"fullMessage":  "Merging collapsible \"if\" statements increases the code\u0027s readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Collapsible \"if\" statements should be merged",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1066",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1066",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+"region":  {
+"startLine":  3459,
+"startColumn":  16,
+"endLine":  3459,
+"endColumn":  18
+}
+}
+]
+}
+],
+"shortMessage":  "Merge this if statement with the enclosing one.",
+"fullMessage":  "Merging collapsible \"if\" statements increases the code\u0027s readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Collapsible \"if\" statements should be merged",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1066",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1066",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\ViewEngines\\DefaultViewCache.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  16,
+"endLine":  31,
+"endColumn":  18
+}
+}
+]
+}
+],
+"shortMessage":  "Merge this if statement with the enclosing one.",
+"fullMessage":  "Merging collapsible \"if\" statements increases the code\u0027s readability.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Collapsible \"if\" statements should be merged",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1066",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

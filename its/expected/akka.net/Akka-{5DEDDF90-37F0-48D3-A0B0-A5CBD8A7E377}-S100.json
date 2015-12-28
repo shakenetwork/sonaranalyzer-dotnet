@@ -1,0 +1,70 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Util\\ByteString.cs",
+"region":  {
+"startLine":  173,
+"startColumn":  24,
+"endLine":  173,
+"endColumn":  41
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this method \"checkRangeConvert\" to match the regular expression ^[A-Z][a-zA-Z0-9_]*[a-zA-Z0-9]$",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks that all method names match a provided regular expression.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Method name should comply with a naming convention",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S100",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Util\\ByteString.cs",
+"region":  {
+"startLine":  362,
+"startColumn":  44,
+"endLine":  362,
+"endColumn":  54
+}
+}
+]
+}
+],
+"shortMessage":  "Rename this method \"newBuilder\" to match the regular expression ^[A-Z][a-zA-Z0-9_]*[a-zA-Z0-9]$",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks that all method names match a provided regular expression.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Method name should comply with a naming convention",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S100",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

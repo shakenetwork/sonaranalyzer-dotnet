@@ -1,0 +1,40 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S3427",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.TestKit\\EventFilter\\EventFilterFactory.cs",
+"region":  {
+"startLine":  222,
+"startColumn":  56,
+"endLine":  222,
+"endColumn":  76
+}
+}
+]
+}
+],
+"shortMessage":  "This method signature overlaps the one defined on line 213, the default parameter value can\u0027t be used.",
+"fullMessage":  "The rules for method resolution are complex and perhaps not properly understood by all coders. Having overloads with optional parameter values make the matter even harder to understand. An overload with default parameter values can be hidden by one without the optional parameters.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Method overloads with default parameter values should not overlap",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3427",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

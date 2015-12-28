@@ -1,0 +1,40 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S1862",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
+"region":  {
+"startLine":  441,
+"startColumn":  33,
+"endLine":  441,
+"endColumn":  60
+}
+}
+]
+}
+],
+"shortMessage":  "This branch duplicates the one on line 441.",
+"fullMessage":  "A chain of \"if\"/\"else if\" statements is evaluated from top to bottom. At most, only one branch will be executed: the first one with a condition that evaluates to \"true\". Therefore, duplicating a condition automatically leads to dead code. Usually, this is due to a copy/paste error. At best, it\u0027s simply dead code and at worst, it\u0027s a bug that is likely to induce further bugs as the code is maintained, and obviously it could lead to unexpected behavior.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Related \"if/else if\" statements should not have the same condition",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1862",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

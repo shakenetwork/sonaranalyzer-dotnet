@@ -1,0 +1,130 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S2339",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\RazorConfigurationSection.cs",
+"region":  {
+"startLine":  53,
+"startColumn":  22,
+"endLine":  53,
+"endColumn":  42
+}
+}
+]
+}
+],
+"shortMessage":  "Change this constant to a \"static\" read-only property.",
+"fullMessage":  "Constant members are copied at compile time to the call sites, instead of being fetched at runtime. This means that you should use constants to hold values that by definition will never change, such as \"Zero\". In practice, those cases are uncommon, and therefore it is generally better to avoid constant members.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Public constant members should not be used",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2339",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2339",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\RazorConfigurationSection.cs",
+"region":  {
+"startLine":  72,
+"startColumn":  22,
+"endLine":  72,
+"endColumn":  43
+}
+}
+]
+}
+],
+"shortMessage":  "Change this constant to a \"static\" read-only property.",
+"fullMessage":  "Constant members are copied at compile time to the call sites, instead of being fetched at runtime. This means that you should use constants to hold values that by definition will never change, such as \"Zero\". In practice, those cases are uncommon, and therefore it is generally better to avoid constant members.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Public constant members should not be used",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2339",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2339",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\RazorConfigurationSection.cs",
+"region":  {
+"startLine":  90,
+"startColumn":  22,
+"endLine":  90,
+"endColumn":  40
+}
+}
+]
+}
+],
+"shortMessage":  "Change this constant to a \"static\" read-only property.",
+"fullMessage":  "Constant members are copied at compile time to the call sites, instead of being fetched at runtime. This means that you should use constants to hold values that by definition will never change, such as \"Zero\". In practice, those cases are uncommon, and therefore it is generally better to avoid constant members.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Public constant members should not be used",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2339",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2339",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\RazorConfigurationSection.cs",
+"region":  {
+"startLine":  127,
+"startColumn":  21,
+"endLine":  127,
+"endColumn":  39
+}
+}
+]
+}
+],
+"shortMessage":  "Change this constant to a \"static\" read-only property.",
+"fullMessage":  "Constant members are copied at compile time to the call sites, instead of being fetched at runtime. This means that you should use constants to hold values that by definition will never change, such as \"Zero\". In practice, those cases are uncommon, and therefore it is generally better to avoid constant members.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Public constant members should not be used",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2339",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

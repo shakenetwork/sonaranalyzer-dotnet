@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0C3E0519-DB5C-47C0-ABB3-9D1FB23DFBAF}"
 	ProjectSection(SolutionItems) = preProject
@@ -28,8 +28,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Descriptor", "src\SonarQube.SonarLint.Descriptor\Descriptor.csproj", "{E4D5FF22-C1A4-4CAD-B068-E47817F25848}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runner", "src\SonarQube.SonarLint.Runner\Runner.csproj", "{79F0B359-8275-4F3B-B919-82C493B74665}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarLint.RulingTest", "src\Tests\SonarLint.RulingTest\SonarLint.RulingTest.csproj", "{F99B7664-D557-438B-B051-6292DA97450C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarLint.DocGenerator", "src\SonarLint.DocGenerator\SonarLint.DocGenerator.csproj", "{98EF48F7-28D7-44CA-8C7F-6042EA4898E1}"
 EndProject
@@ -73,10 +71,6 @@ Global
 		{79F0B359-8275-4F3B-B919-82C493B74665}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79F0B359-8275-4F3B-B919-82C493B74665}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79F0B359-8275-4F3B-B919-82C493B74665}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F99B7664-D557-438B-B051-6292DA97450C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F99B7664-D557-438B-B051-6292DA97450C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F99B7664-D557-438B-B051-6292DA97450C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F99B7664-D557-438B-B051-6292DA97450C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{98EF48F7-28D7-44CA-8C7F-6042EA4898E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{98EF48F7-28D7-44CA-8C7F-6042EA4898E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98EF48F7-28D7-44CA-8C7F-6042EA4898E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -98,7 +92,6 @@ Global
 		{980FF643-2605-46F3-8C63-2F76290F84A8} = {CCEE2C5C-96D9-4427-B980-71DC0A49E23F}
 		{E4D5FF22-C1A4-4CAD-B068-E47817F25848} = {F51A8C2A-A0F5-4282-956F-549D05860396}
 		{79F0B359-8275-4F3B-B919-82C493B74665} = {F51A8C2A-A0F5-4282-956F-549D05860396}
-		{F99B7664-D557-438B-B051-6292DA97450C} = {B7233F78-E142-4882-B084-7C83BE472109}
 		{CCEE2C5C-96D9-4427-B980-71DC0A49E23F} = {F51A8C2A-A0F5-4282-956F-549D05860396}
 	EndGlobalSection
 EndGlobal

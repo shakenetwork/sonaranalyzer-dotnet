@@ -1,0 +1,370 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\ContentNegotiationFixture.cs",
+"region":  {
+"startLine":  277,
+"startColumn":  50,
+"endLine":  277,
+"endColumn":  51
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\ContentNegotiationFixture.cs",
+"region":  {
+"startLine":  278,
+"startColumn":  44,
+"endLine":  278,
+"endColumn":  45
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\ContentNegotiationFixture.cs",
+"region":  {
+"startLine":  313,
+"startColumn":  50,
+"endLine":  313,
+"endColumn":  51
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\ContentNegotiationFixture.cs",
+"region":  {
+"startLine":  314,
+"startColumn":  44,
+"endLine":  314,
+"endColumn":  45
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\ContentNegotiationFixture.cs",
+"region":  {
+"startLine":  342,
+"startColumn":  42,
+"endLine":  342,
+"endColumn":  43
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\ContentNegotiationFixture.cs",
+"region":  {
+"startLine":  387,
+"startColumn":  44,
+"endLine":  387,
+"endColumn":  45
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\ContentNegotiationFixture.cs",
+"region":  {
+"startLine":  416,
+"startColumn":  44,
+"endLine":  416,
+"endColumn":  45
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\ContentNegotiationFixture.cs",
+"region":  {
+"startLine":  488,
+"startColumn":  44,
+"endLine":  488,
+"endColumn":  45
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\ContentNegotiationFixture.cs",
+"region":  {
+"startLine":  515,
+"startColumn":  44,
+"endLine":  515,
+"endColumn":  45
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\ContentNegotiationFixture.cs",
+"region":  {
+"startLine":  545,
+"startColumn":  44,
+"endLine":  545,
+"endColumn":  45
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\ContentNegotiationFixture.cs",
+"region":  {
+"startLine":  565,
+"startColumn":  58,
+"endLine":  565,
+"endColumn":  59
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S818",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\ContentNegotiationFixture.cs",
+"region":  {
+"startLine":  593,
+"startColumn":  50,
+"endLine":  593,
+"endColumn":  51
+}
+}
+]
+}
+],
+"shortMessage":  "Upper case this literal suffix.",
+"fullMessage":  "Using upper case literal suffixes removes the potential ambiguity between \"1\" (digit 1) and \"l\" (letter el) for declaring literals.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Literal suffixes should be upper case",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S818",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

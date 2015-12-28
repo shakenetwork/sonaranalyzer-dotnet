@@ -1,0 +1,580 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S1121",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\Bootstrapper\\AppDomainAssemblyTypeScanner.cs",
+"region":  {
+"startLine":  68,
+"startColumn":  61,
+"endLine":  68,
+"endColumn":  62
+}
+}
+]
+}
+],
+"shortMessage":  "Extract the assignment of \"assembliesToScan\" from this expression.",
+"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Assignments should not be made from within sub-expressions",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1121",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1121",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\Bootstrapper\\FavIconApplicationStartup.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  45,
+"endLine":  33,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Extract the assignment of \"favIcon\" from this expression.",
+"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Assignments should not be made from within sub-expressions",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1121",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1121",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\Bootstrapper\\MultipleRootPathProvidersLocatedException.cs",
+"region":  {
+"startLine":  99,
+"startColumn":  64,
+"endLine":  99,
+"endColumn":  65
+}
+}
+]
+}
+],
+"shortMessage":  "Extract the assignment of \"this.errorMessage\" from this expression.",
+"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Assignments should not be made from within sub-expressions",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1121",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1121",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\Bootstrapper\\NancyBootstrapperBase.cs",
+"region":  {
+"startLine":  88,
+"startColumn":  81,
+"endLine":  88,
+"endColumn":  82
+}
+}
+]
+}
+],
+"shortMessage":  "Extract the assignment of \"this.internalConfiguration\" from this expression.",
+"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Assignments should not be made from within sub-expressions",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1121",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1121",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\Bootstrapper\\NancyBootstrapperBase.cs",
+"region":  {
+"startLine":  114,
+"startColumn":  34,
+"endLine":  114,
+"endColumn":  35
+}
+}
+]
+}
+],
+"shortMessage":  "Extract the assignment of \"this.modules\" from this expression.",
+"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Assignments should not be made from within sub-expressions",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1121",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1121",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\Bootstrapper\\NancyBootstrapperBase.cs",
+"region":  {
+"startLine":  192,
+"startColumn":  73,
+"endLine":  192,
+"endColumn":  74
+}
+}
+]
+}
+],
+"shortMessage":  "Extract the assignment of \"this.rootPathProvider\" from this expression.",
+"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Assignments should not be made from within sub-expressions",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1121",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1121",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\Bootstrapper\\NancyBootstrapperLocator.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  47,
+"endLine":  21,
+"endColumn":  48
+}
+}
+]
+}
+],
+"shortMessage":  "Extract the assignment of \"instance\" from this expression.",
+"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Assignments should not be made from within sub-expressions",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1121",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1121",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\FormatterExtensions.cs",
+"region":  {
+"startLine":  100,
+"startColumn":  63,
+"endLine":  100,
+"endColumn":  64
+}
+}
+]
+}
+],
+"shortMessage":  "Extract the assignment of \"jsonSerializer\" from this expression.",
+"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Assignments should not be made from within sub-expressions",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1121",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1121",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\FormatterExtensions.cs",
+"region":  {
+"startLine":  129,
+"startColumn":  61,
+"endLine":  129,
+"endColumn":  62
+}
+}
+]
+}
+],
+"shortMessage":  "Extract the assignment of \"xmlSerializer\" from this expression.",
+"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Assignments should not be made from within sub-expressions",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1121",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1121",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
+"region":  {
+"startLine":  167,
+"startColumn":  36,
+"endLine":  167,
+"endColumn":  37
+}
+}
+]
+}
+],
+"shortMessage":  "Extract the assignment of \"xchar\" from this expression.",
+"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Assignments should not be made from within sub-expressions",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1121",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1121",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
+"region":  {
+"startLine":  288,
+"startColumn":  36,
+"endLine":  288,
+"endColumn":  37
+}
+}
+]
+}
+],
+"shortMessage":  "Extract the assignment of \"xchar\" from this expression.",
+"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Assignments should not be made from within sub-expressions",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1121",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1121",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\NancyContext.cs",
+"region":  {
+"startLine":  99,
+"startColumn":  83,
+"endLine":  99,
+"endColumn":  84
+}
+}
+]
+}
+],
+"shortMessage":  "Extract the assignment of \"this.modelValidationResult\" from this expression.",
+"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Assignments should not be made from within sub-expressions",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1121",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1121",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\Request.cs",
+"region":  {
+"startLine":  160,
+"startColumn":  55,
+"endLine":  160,
+"endColumn":  56
+}
+}
+]
+}
+],
+"shortMessage":  "Extract the assignment of \"this.cookies\" from this expression.",
+"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Assignments should not be made from within sub-expressions",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1121",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1121",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\ResourceAssemblyProvider.cs",
+"region":  {
+"startLine":  24,
+"startColumn":  72,
+"endLine":  24,
+"endColumn":  73
+}
+}
+]
+}
+],
+"shortMessage":  "Extract the assignment of \"this.filteredAssemblies\" from this expression.",
+"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Assignments should not be made from within sub-expressions",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1121",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1121",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\StaticConfiguration.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  49,
+"endLine":  18,
+"endColumn":  50
+}
+}
+]
+}
+],
+"shortMessage":  "Extract the assignment of \"disableCaches\" from this expression.",
+"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Assignments should not be made from within sub-expressions",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1121",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1121",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\StaticConfiguration.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  71,
+"endLine":  32,
+"endColumn":  72
+}
+}
+]
+}
+],
+"shortMessage":  "Extract the assignment of \"disableErrorTraces\" from this expression.",
+"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Assignments should not be made from within sub-expressions",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1121",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1121",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\StaticConfiguration.cs",
+"region":  {
+"startLine":  67,
+"startColumn":  63,
+"endLine":  67,
+"endColumn":  64
+}
+}
+]
+}
+],
+"shortMessage":  "Extract the assignment of \"isRunningDebug\" from this expression.",
+"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Assignments should not be made from within sub-expressions",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1121",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1121",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\StaticConfiguration.cs",
+"region":  {
+"startLine":  131,
+"startColumn":  91,
+"endLine":  131,
+"endColumn":  92
+}
+}
+]
+}
+],
+"shortMessage":  "Extract the assignment of \"enableRuntimeViewDiscovery\" from this expression.",
+"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Assignments should not be made from within sub-expressions",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1121",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1121",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\StaticConfiguration.cs",
+"region":  {
+"startLine":  148,
+"startColumn":  87,
+"endLine":  148,
+"endColumn":  88
+}
+}
+]
+}
+],
+"shortMessage":  "Extract the assignment of \"enableRuntimeViewUpdates\" from this expression.",
+"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Assignments should not be made from within sub-expressions",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1121",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

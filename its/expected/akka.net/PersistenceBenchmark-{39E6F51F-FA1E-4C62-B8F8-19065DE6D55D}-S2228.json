@@ -1,0 +1,100 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S2228",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\benchmark\\PersistenceBenchmark\\PerformanceActors.cs",
+"region":  {
+"startLine":  116,
+"startColumn":  44,
+"endLine":  116,
+"endColumn":  57
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this logging statement.",
+"fullMessage":  "Debug statements are always useful during development. But include them in production code - particularly in code that runs client-side - and you run the risk of inadvertently exposing sensitive information.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Console logging should not be used",
+"category":  "Portability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2228",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2228",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\benchmark\\PersistenceBenchmark\\Program.cs",
+"region":  {
+"startLine":  64,
+"startColumn":  12,
+"endLine":  64,
+"endColumn":  29
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this logging statement.",
+"fullMessage":  "Debug statements are always useful during development. But include them in production code - particularly in code that runs client-side - and you run the risk of inadvertently exposing sensitive information.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Console logging should not be used",
+"category":  "Portability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2228",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2228",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\benchmark\\PersistenceBenchmark\\Program.cs",
+"region":  {
+"startLine":  78,
+"startColumn":  12,
+"endLine":  78,
+"endColumn":  29
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this logging statement.",
+"fullMessage":  "Debug statements are always useful during development. But include them in production code - particularly in code that runs client-side - and you run the risk of inadvertently exposing sensitive information.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Console logging should not be used",
+"category":  "Portability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2228",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

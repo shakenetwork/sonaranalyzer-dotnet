@@ -1,0 +1,208 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S3240",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\EndToEndEventAdapterSpec.cs",
+"region":  {
+"startLine":  121,
+"startColumn":  16,
+"endLine":  121,
+"endColumn":  18
+}
+}
+]
+}
+],
+"shortMessage":  "Use the \"?:\" operator here.",
+"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "The simplest possible condition syntax should be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3240",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customProperties":  {
+"isNullCoalescing":  "False"
+}
+}
+},
+{
+"ruleId":  "S3240",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\EndToEndEventAdapterSpec.cs",
+"region":  {
+"startLine":  148,
+"startColumn":  16,
+"endLine":  148,
+"endColumn":  18
+}
+}
+]
+}
+],
+"shortMessage":  "Use the \"?:\" operator here.",
+"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "The simplest possible condition syntax should be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3240",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customProperties":  {
+"isNullCoalescing":  "False"
+}
+}
+},
+{
+"ruleId":  "S3240",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\EndToEndEventAdapterSpec.cs",
+"region":  {
+"startLine":  175,
+"startColumn":  16,
+"endLine":  175,
+"endColumn":  18
+}
+}
+]
+}
+],
+"shortMessage":  "Use the \"?:\" operator here.",
+"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "The simplest possible condition syntax should be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3240",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customProperties":  {
+"isNullCoalescing":  "False"
+}
+}
+},
+{
+"ruleId":  "S3240",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\EndToEndEventAdapterSpec.cs",
+"region":  {
+"startLine":  202,
+"startColumn":  16,
+"endLine":  202,
+"endColumn":  18
+}
+}
+]
+}
+],
+"shortMessage":  "Use the \"?:\" operator here.",
+"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "The simplest possible condition syntax should be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3240",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customProperties":  {
+"isNullCoalescing":  "False"
+}
+}
+},
+{
+"ruleId":  "S3240",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\Journal\\ChaosJournal.cs",
+"region":  {
+"startLine":  80,
+"startColumn":  12,
+"endLine":  80,
+"endColumn":  14
+}
+}
+]
+}
+],
+"shortMessage":  "Use the \"?:\" operator here.",
+"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "The simplest possible condition syntax should be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3240",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customProperties":  {
+"isNullCoalescing":  "False"
+}
+}
+},
+{
+"ruleId":  "S3240",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorFailureSpec.cs",
+"region":  {
+"startLine":  41,
+"startColumn":  20,
+"endLine":  41,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "Use the \"?:\" operator here.",
+"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "The simplest possible condition syntax should be used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3240",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customProperties":  {
+"isNullCoalescing":  "False"
+}
+}
+}
+]
+}

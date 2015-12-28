@@ -111,11 +111,19 @@
     <PostBuildEvent>
     </PostBuildEvent>
   </PropertyGroup>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
+
+  <PropertyGroup>
+    <BinariesFolder>$(MSBuildThisFileFullPath)\..\..\..\its\binaries</BinariesFolder>
+  </PropertyGroup>
+  <Target Name="CopyBinaries" AfterTargets="Build">
+    <ItemGroup>
+      <BinariesToCopy Include="$(OutputPath)\SonarLint.dll" />
+      <BinariesToCopy Include="$(OutputPath)\SonarLint.CSharp.dll" />
+      <BinariesToCopy Include="$(OutputPath)\SonarLint.VisualBasic.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(BinariesToCopy)" DestinationFolder="$(BinariesFolder)" />
   </Target>
-  <Target Name="AfterBuild">
+  <Target Name="CleanBinaries" AfterTargets="Clean">
+    <RemoveDir Directories="$(BinariesFolder)" />
   </Target>
-  -->
 </Project>

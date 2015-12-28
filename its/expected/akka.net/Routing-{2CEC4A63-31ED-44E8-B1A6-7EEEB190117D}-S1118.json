@@ -1,0 +1,40 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S1118",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\examples\\Routing\\Program.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  19,
+"endLine":  31,
+"endColumn":  26
+}
+}
+]
+}
+],
+"shortMessage":  "Add a \"protected\" constructor or the \"static\" keyword to the class declaration.",
+"fullMessage":  "Utility classes, which are collections of \"static\" members, are not meant to be instantiated. Even \"abstract\" utility classes, which can be extended, should not have \"public\" constructors. C# adds an implicit public constructor to every class which does not explicitly define at least one constructor. Hence, at least one \"protected\" constructor should be defined if you wish to subclass this utility class. Or the \"static\" keyword should be added to the class declaration to prevent subclassing.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Utility classes should not have public constructors",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1118",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

@@ -1,0 +1,3010 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\AckedDelivery.cs",
+"region":  {
+"startLine":  72,
+"startColumn":  12,
+"endLine":  72,
+"endColumn":  59
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\AckedDelivery.cs",
+"region":  {
+"startLine":  73,
+"startColumn":  12,
+"endLine":  73,
+"endColumn":  58
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\AckedDelivery.cs",
+"region":  {
+"startLine":  109,
+"startColumn":  12,
+"endLine":  109,
+"endColumn":  57
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\AckedDelivery.cs",
+"region":  {
+"startLine":  110,
+"startColumn":  12,
+"endLine":  110,
+"endColumn":  56
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\AckedDelivery.cs",
+"region":  {
+"startLine":  144,
+"startColumn":  16,
+"endLine":  144,
+"endColumn":  54
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\AckedDelivery.cs",
+"region":  {
+"startLine":  145,
+"startColumn":  21,
+"endLine":  145,
+"endColumn":  58
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\AckedDelivery.cs",
+"region":  {
+"startLine":  146,
+"startColumn":  16,
+"endLine":  146,
+"endColumn":  72
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\AckedDelivery.cs",
+"region":  {
+"startLine":  170,
+"startColumn":  12,
+"endLine":  170,
+"endColumn":  39
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\AckedDelivery.cs",
+"region":  {
+"startLine":  295,
+"startColumn":  12,
+"endLine":  295,
+"endColumn":  92
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\AckedDelivery.cs",
+"region":  {
+"startLine":  308,
+"startColumn":  12,
+"endLine":  308,
+"endColumn":  172
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\AckedDelivery.cs",
+"region":  {
+"startLine":  310,
+"startColumn":  12,
+"endLine":  310,
+"endColumn":  101
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\DeadlineFailureDetector.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  12,
+"endLine":  36,
+"endColumn":  144
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\DeadlineFailureDetector.cs",
+"region":  {
+"startLine":  74,
+"startColumn":  12,
+"endLine":  74,
+"endColumn":  117
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\DefaultFailureDetectorRegistry.cs",
+"region":  {
+"startLine":  94,
+"startColumn":  20,
+"endLine":  94,
+"endColumn":  95
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\DefaultFailureDetectorRegistry.cs",
+"region":  {
+"startLine":  106,
+"startColumn":  16,
+"endLine":  106,
+"endColumn":  119
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
+"region":  {
+"startLine":  67,
+"startColumn":  16,
+"endLine":  67,
+"endColumn":  99
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
+"region":  {
+"startLine":  426,
+"startColumn":  20,
+"endLine":  426,
+"endColumn":  61
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
+"region":  {
+"startLine":  459,
+"startColumn":  20,
+"endLine":  459,
+"endColumn":  50
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
+"region":  {
+"startLine":  475,
+"startColumn":  20,
+"endLine":  475,
+"endColumn":  68
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
+"region":  {
+"startLine":  613,
+"startColumn":  16,
+"endLine":  613,
+"endColumn":  62
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
+"region":  {
+"startLine":  904,
+"startColumn":  12,
+"endLine":  904,
+"endColumn":  67
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
+"region":  {
+"startLine":  987,
+"startColumn":  20,
+"endLine":  987,
+"endColumn":  58
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
+"region":  {
+"startLine":  1308,
+"startColumn":  20,
+"endLine":  1308,
+"endColumn":  68
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
+"region":  {
+"startLine":  1333,
+"startColumn":  16,
+"endLine":  1333,
+"endColumn":  52
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
+"region":  {
+"startLine":  1664,
+"startColumn":  12,
+"endLine":  1664,
+"endColumn":  133
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
+"region":  {
+"startLine":  308,
+"startColumn":  16,
+"endLine":  308,
+"endColumn":  106
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
+"region":  {
+"startLine":  542,
+"startColumn":  28,
+"endLine":  542,
+"endColumn":  112
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
+"region":  {
+"startLine":  631,
+"startColumn":  16,
+"endLine":  631,
+"endColumn":  124
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
+"region":  {
+"startLine":  646,
+"startColumn":  28,
+"endLine":  646,
+"endColumn":  113
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\PhiAccrualFailureDetector.cs",
+"region":  {
+"startLine":  159,
+"startColumn":  16,
+"endLine":  159,
+"endColumn":  96
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\PhiAccrualFailureDetector.cs",
+"region":  {
+"startLine":  165,
+"startColumn":  12,
+"endLine":  165,
+"endColumn":  70
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteActorRef.cs",
+"region":  {
+"startLine":  167,
+"startColumn":  12,
+"endLine":  167,
+"endColumn":  93
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteActorRefProvider.cs",
+"region":  {
+"startLine":  143,
+"startColumn":  12,
+"endLine":  143,
+"endColumn":  119
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteActorRefProvider.cs",
+"region":  {
+"startLine":  174,
+"startColumn":  16,
+"endLine":  174,
+"endColumn":  101
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteActorRefProvider.cs",
+"region":  {
+"startLine":  175,
+"startColumn":  21,
+"endLine":  175,
+"endColumn":  98
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteActorRefProvider.cs",
+"region":  {
+"startLine":  243,
+"startColumn":  12,
+"endLine":  243,
+"endColumn":  58
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteActorRefProvider.cs",
+"region":  {
+"startLine":  244,
+"startColumn":  12,
+"endLine":  244,
+"endColumn":  75
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteActorRefProvider.cs",
+"region":  {
+"startLine":  245,
+"startColumn":  12,
+"endLine":  245,
+"endColumn":  75
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteActorRefProvider.cs",
+"region":  {
+"startLine":  348,
+"startColumn":  12,
+"endLine":  348,
+"endColumn":  72
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteDeployer.cs",
+"region":  {
+"startLine":  30,
+"startColumn":  12,
+"endLine":  30,
+"endColumn":  44
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteSettings.cs",
+"region":  {
+"startLine":  38,
+"startColumn":  12,
+"endLine":  38,
+"endColumn":  100
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteSettings.cs",
+"region":  {
+"startLine":  39,
+"startColumn":  12,
+"endLine":  39,
+"endColumn":  103
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteSettings.cs",
+"region":  {
+"startLine":  142,
+"startColumn":  12,
+"endLine":  142,
+"endColumn":  68
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteSystemDaemon.cs",
+"region":  {
+"startLine":  112,
+"startColumn":  16,
+"endLine":  112,
+"endColumn":  96
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteSystemDaemon.cs",
+"region":  {
+"startLine":  123,
+"startColumn":  20,
+"endLine":  123,
+"endColumn":  97
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteWatcher.cs",
+"region":  {
+"startLine":  181,
+"startColumn":  16,
+"endLine":  181,
+"endColumn":  48
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteWatcher.cs",
+"region":  {
+"startLine":  236,
+"startColumn":  20,
+"endLine":  236,
+"endColumn":  56
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteWatcher.cs",
+"region":  {
+"startLine":  275,
+"startColumn":  12,
+"endLine":  275,
+"endColumn":  73
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteWatcher.cs",
+"region":  {
+"startLine":  306,
+"startColumn":  12,
+"endLine":  306,
+"endColumn":  58
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteWatcher.cs",
+"region":  {
+"startLine":  307,
+"startColumn":  17,
+"endLine":  307,
+"endColumn":  62
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteWatcher.cs",
+"region":  {
+"startLine":  308,
+"startColumn":  17,
+"endLine":  308,
+"endColumn":  102
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteWatcher.cs",
+"region":  {
+"startLine":  309,
+"startColumn":  17,
+"endLine":  309,
+"endColumn":  71
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteWatcher.cs",
+"region":  {
+"startLine":  310,
+"startColumn":  17,
+"endLine":  310,
+"endColumn":  118
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteWatcher.cs",
+"region":  {
+"startLine":  333,
+"startColumn":  17,
+"endLine":  333,
+"endColumn":  115
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteWatcher.cs",
+"region":  {
+"startLine":  462,
+"startColumn":  12,
+"endLine":  462,
+"endColumn":  61
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\RemotingLifecycleEvent.cs",
+"region":  {
+"startLine":  219,
+"startColumn":  12,
+"endLine":  219,
+"endColumn":  96
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Routing\\RemoteRouterConfig.cs",
+"region":  {
+"startLine":  62,
+"startColumn":  12,
+"endLine":  62,
+"endColumn":  112
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Routing\\RemoteRouterConfig.cs",
+"region":  {
+"startLine":  131,
+"startColumn":  12,
+"endLine":  131,
+"endColumn":  50
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Routing\\RemoteRouterConfig.cs",
+"region":  {
+"startLine":  133,
+"startColumn":  12,
+"endLine":  133,
+"endColumn":  50
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaPduCodec.cs",
+"region":  {
+"startLine":  160,
+"startColumn":  16,
+"endLine":  160,
+"endColumn":  67
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaPduCodec.cs",
+"region":  {
+"startLine":  161,
+"startColumn":  21,
+"endLine":  161,
+"endColumn":  86
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaPduCodec.cs",
+"region":  {
+"startLine":  259,
+"startColumn":  12,
+"endLine":  259,
+"endColumn":  162
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaPduCodec.cs",
+"region":  {
+"startLine":  260,
+"startColumn":  12,
+"endLine":  260,
+"endColumn":  107
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaPduCodec.cs",
+"region":  {
+"startLine":  261,
+"startColumn":  12,
+"endLine":  261,
+"endColumn":  115
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaPduCodec.cs",
+"region":  {
+"startLine":  344,
+"startColumn":  12,
+"endLine":  344,
+"endColumn":  191
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
+"region":  {
+"startLine":  247,
+"startColumn":  12,
+"endLine":  247,
+"endColumn":  57
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
+"region":  {
+"startLine":  248,
+"startColumn":  12,
+"endLine":  248,
+"endColumn":  56
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
+"region":  {
+"startLine":  302,
+"startColumn":  12,
+"endLine":  302,
+"endColumn":  57
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
+"region":  {
+"startLine":  303,
+"startColumn":  12,
+"endLine":  303,
+"endColumn":  56
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
+"region":  {
+"startLine":  304,
+"startColumn":  12,
+"endLine":  304,
+"endColumn":  62
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
+"region":  {
+"startLine":  234,
+"startColumn":  12,
+"endLine":  234,
+"endColumn":  47
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
+"region":  {
+"startLine":  240,
+"startColumn":  20,
+"endLine":  240,
+"endColumn":  111
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
+"region":  {
+"startLine":  252,
+"startColumn":  12,
+"endLine":  252,
+"endColumn":  47
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
+"region":  {
+"startLine":  269,
+"startColumn":  12,
+"endLine":  269,
+"endColumn":  156
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Helios\\HeliosTcpTransport.cs",
+"region":  {
+"startLine":  147,
+"startColumn":  16,
+"endLine":  147,
+"endColumn":  137
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Helios\\HeliosTransport.cs",
+"region":  {
+"startLine":  66,
+"startColumn":  12,
+"endLine":  66,
+"endColumn":  72
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Helios\\HeliosTransport.cs",
+"region":  {
+"startLine":  67,
+"startColumn":  17,
+"endLine":  67,
+"endColumn":  77
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Helios\\HeliosTransport.cs",
+"region":  {
+"startLine":  76,
+"startColumn":  12,
+"endLine":  76,
+"endColumn":  139
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Helios\\HeliosTransport.cs",
+"region":  {
+"startLine":  137,
+"startColumn":  12,
+"endLine":  137,
+"endColumn":  57
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Helios\\HeliosTransport.cs",
+"region":  {
+"startLine":  138,
+"startColumn":  12,
+"endLine":  138,
+"endColumn":  114
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Helios\\HeliosTransport.cs",
+"region":  {
+"startLine":  300,
+"startColumn":  12,
+"endLine":  300,
+"endColumn":  117
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Helios\\HeliosTransport.cs",
+"region":  {
+"startLine":  344,
+"startColumn":  12,
+"endLine":  344,
+"endColumn":  181
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Helios\\HeliosTransport.cs",
+"region":  {
+"startLine":  352,
+"startColumn":  12,
+"endLine":  352,
+"endColumn":  42
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
+"region":  {
+"startLine":  410,
+"startColumn":  12,
+"endLine":  410,
+"endColumn":  83
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
+"region":  {
+"startLine":  578,
+"startColumn":  12,
+"endLine":  578,
+"endColumn":  57
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
+"region":  {
+"startLine":  579,
+"startColumn":  12,
+"endLine":  579,
+"endColumn":  56
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
+"region":  {
+"startLine":  629,
+"startColumn":  12,
+"endLine":  629,
+"endColumn":  57
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
+"region":  {
+"startLine":  630,
+"startColumn":  12,
+"endLine":  630,
+"endColumn":  56
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
+"region":  {
+"startLine":  702,
+"startColumn":  12,
+"endLine":  702,
+"endColumn":  55
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
+"region":  {
+"startLine":  944,
+"startColumn":  20,
+"endLine":  944,
+"endColumn":  86
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
+"region":  {
+"startLine":  993,
+"startColumn":  20,
+"endLine":  993,
+"endColumn":  100
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
+"region":  {
+"startLine":  1035,
+"startColumn":  12,
+"endLine":  1035,
+"endColumn":  57
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
+"region":  {
+"startLine":  1036,
+"startColumn":  12,
+"endLine":  1036,
+"endColumn":  65
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Transport.cs",
+"region":  {
+"startLine":  313,
+"startColumn":  12,
+"endLine":  313,
+"endColumn":  57
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Transport.cs",
+"region":  {
+"startLine":  314,
+"startColumn":  12,
+"endLine":  314,
+"endColumn":  56
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Transport.cs",
+"region":  {
+"startLine":  315,
+"startColumn":  12,
+"endLine":  315,
+"endColumn":  62
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TransportAdapters.cs",
+"region":  {
+"startLine":  62,
+"startColumn":  12,
+"endLine":  62,
+"endColumn":  62
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TransportAdapters.cs",
+"region":  {
+"startLine":  225,
+"startColumn":  12,
+"endLine":  225,
+"endColumn":  57
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TransportAdapters.cs",
+"region":  {
+"startLine":  226,
+"startColumn":  12,
+"endLine":  226,
+"endColumn":  56
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S122",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TransportAdapters.cs",
+"region":  {
+"startLine":  227,
+"startColumn":  12,
+"endLine":  227,
+"endColumn":  62
+}
+}
+]
+}
+],
+"shortMessage":  "Reformat the code to have only one statement per line.",
+"fullMessage":  "For better readability, do not put more than one statement on a single line.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Statements should be on separate lines",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S122",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

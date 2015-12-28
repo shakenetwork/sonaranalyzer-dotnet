@@ -1,0 +1,103 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S3052",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\ExitCodeContainer.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  35,
+"endLine":  18,
+"endColumn":  38
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this initialization to \"ExitCode\", the compiler will do that for you.",
+"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Fields should not be initialized to default values",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3052",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3052",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\SinkCoordinator.cs",
+"region":  {
+"startLine":  84,
+"startColumn":  54,
+"endLine":  84,
+"endColumn":  57
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this initialization to \"TotalReceiveClosedConfirmations\", the compiler will do that for you.",
+"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Fields should not be initialized to default values",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3052",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S3052",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\SinkCoordinator.cs",
+"region":  {
+"startLine":  85,
+"startColumn":  53,
+"endLine":  85,
+"endColumn":  56
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this initialization to \"ReceivedSinkCloseConfirmations\", the compiler will do that for you.",
+"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Fields should not be initialized to default values",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3052",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+}
+]
+}

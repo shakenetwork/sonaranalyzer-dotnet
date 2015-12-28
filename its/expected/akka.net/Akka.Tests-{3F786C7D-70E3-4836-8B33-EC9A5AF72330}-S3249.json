@@ -1,0 +1,40 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S3249",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Stash\\ActorWithStashSpec.cs",
+"region":  {
+"startLine":  352,
+"startColumn":  23,
+"endLine":  352,
+"endColumn":  41
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this \"base\" call.",
+"fullMessage":  "Making a \"base\" call in an overridden method is generally a good idea, but not in \"GetHashCode\" and \"Equals\" for classes that directly extend \"Object\" because those methods are based on the object reference. Meaning that no two \"Objects\" that use those \"base\" methods will ever be equal or have the same hash.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Classes directly extending \"Object\" should not call \"base\" in \"GetHashCode\" or \"Equals\"",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3249",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

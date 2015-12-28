@@ -1,0 +1,40 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S3217",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Configuration\\Hocon\\CDataConfigurationElement.cs",
+"region":  {
+"startLine":  44,
+"startColumn":  21,
+"endLine":  44,
+"endColumn":  42
+}
+}
+]
+}
+],
+"shortMessage":  "Either change the type of \"configurationProperty\" to \"object\" or iterate on a generic collection of type \"ConfigurationProperty\".",
+"fullMessage":  "The \"foreach\" statement was introduced in the C# language prior to generics. To make it easier to work with non-generic collections available at that time such as \"ArrayList\", the \"foreach\" statements allows to downcast the collection\u0027s element of type \"Object\" into any other type. The problem is that, to achieve that, the \"foreach\" statements silently performs \"explicit\" type conversion, which at runtime can result in an \"InvalidCastException\" to be thrown. New C# code should use generics and not rely on \"foreach\" statement\u0027s silent \"explicit\" conversions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"Explicit\" conversions of \"foreach\" loops should not be used",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3217",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

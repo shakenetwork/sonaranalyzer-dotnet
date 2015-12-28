@@ -1,0 +1,30 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="OverrideRoslynCodeAnalysisPropertiesWithSonarLint"
+          AfterTargets="ResolveCodeAnalysisRuleSet"
+          BeforeTargets="CoreCompile">
+    <Error Text="Not running a SonarLint test build? Or forgot to build SonarLint first? Delete this file: $(MSBuildThisFileFullPath) to remove this error" Condition="!Exists('$(MSBuildStartupDirectory)\binaries\SonarLint.dll')" />
+
+    <ItemGroup>
+      <!-- Remove all previously added analyzers -->
+      <Analyzer Remove="@(Analyzer)" />
+      
+      <!-- Add the SonarLint analyzer DLLs -->
+      <Analyzer Include="$(MSBuildStartupDirectory)\binaries\SonarLint*.dll" />
+    </ItemGroup>
+
+    <PropertyGroup>
+      <!-- Set the path to the SARIF report -->
+      <ErrorLog>$(MSBuildStartupDirectory)\actual\$(PROJECT)\$(MSBuildProjectName)-$(ProjectGuid).json</ErrorLog>
+      
+      <!-- Override the ruleset with all SonarLint rules -->
+      <ResolvedCodeAnalysisRuleSet>$(MSBuildStartupDirectory)\binaries\AllSonarLintRules.ruleset</ResolvedCodeAnalysisRuleSet>
+
+      <!-- Don't fail the build -->
+      <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+      <WarningsAsErrors></WarningsAsErrors> <!-- TODO: Add AD0001 -->
+
+      <!-- Keep all messages, including AD0001 -->
+      <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+  </Target>
+</Project>

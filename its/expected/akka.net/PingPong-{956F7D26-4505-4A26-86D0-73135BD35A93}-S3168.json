@@ -1,0 +1,40 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S3168",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\benchmark\\PingPong\\Program.cs",
+"region":  {
+"startLine":  54,
+"startColumn":  29,
+"endLine":  54,
+"endColumn":  33
+}
+}
+]
+}
+],
+"shortMessage":  "Return \"Task\" instead.",
+"fullMessage":  "An \"async\" method with a \"void\" return type is a \"fire and forget\" method best reserved for event handlers because there\u0027s no way to wait for the method\u0027s execution to complete and respond accordingly. There\u0027s also no way to \"catch\" exceptions thrown from the method. Having an \"async void\" method that is not an event handler could mean your program works some times and not others because of timing issues. Instead, \"async\" methods should return \"Task\".",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"async\" methods should not return \"void\"",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3168",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

@@ -1,0 +1,910 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  30,
+"startColumn":  41,
+"endLine":  30,
+"endColumn":  47
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"engine\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  78,
+"startColumn":  16,
+"endLine":  78,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  108,
+"startColumn":  16,
+"endLine":  108,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  140,
+"startColumn":  16,
+"endLine":  140,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  159,
+"startColumn":  16,
+"endLine":  159,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  186,
+"startColumn":  16,
+"endLine":  186,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  215,
+"startColumn":  16,
+"endLine":  215,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  249,
+"startColumn":  16,
+"endLine":  249,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  277,
+"startColumn":  16,
+"endLine":  277,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  298,
+"startColumn":  16,
+"endLine":  298,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  317,
+"startColumn":  16,
+"endLine":  317,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  334,
+"startColumn":  16,
+"endLine":  334,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  354,
+"startColumn":  16,
+"endLine":  354,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  374,
+"startColumn":  16,
+"endLine":  374,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  395,
+"startColumn":  16,
+"endLine":  395,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  412,
+"startColumn":  16,
+"endLine":  412,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  430,
+"startColumn":  16,
+"endLine":  430,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  449,
+"startColumn":  16,
+"endLine":  449,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  475,
+"startColumn":  16,
+"endLine":  475,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  504,
+"startColumn":  16,
+"endLine":  504,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  531,
+"startColumn":  16,
+"endLine":  531,
+"endColumn":  20
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"wait\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  533,
+"startColumn":  16,
+"endLine":  533,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  555,
+"startColumn":  16,
+"endLine":  555,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  581,
+"startColumn":  16,
+"endLine":  581,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  597,
+"startColumn":  16,
+"endLine":  597,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  613,
+"startColumn":  16,
+"endLine":  613,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  631,
+"startColumn":  16,
+"endLine":  631,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  648,
+"startColumn":  16,
+"endLine":  648,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  696,
+"startColumn":  16,
+"endLine":  696,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S2930",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor.Tests\\RazorViewEngineFixture.cs",
+"region":  {
+"startLine":  741,
+"startColumn":  16,
+"endLine":  741,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "\"Dispose\" of \"stream\".",
+"fullMessage":  "You can\u0027t rely on garbage collection to clean up everything. Specifically, you can\u0027t count on it to release non-memory resources such as \"File\"s. For that, there\u0027s the \"IDisposable\" interface, and the contract that \"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it\u0027s up to that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it\u0027s a local variable, then it should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"IDisposables\" should be disposed",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S2930",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

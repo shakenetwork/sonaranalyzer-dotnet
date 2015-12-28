@@ -1,0 +1,460 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S1227",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Configuration\\Hocon\\HoconTokenizer.cs",
+"region":  {
+"startLine":  189,
+"startColumn":  20,
+"endLine":  189,
+"endColumn":  26
+}
+}
+]
+}
+],
+"shortMessage":  "Refactor the code in order to remove this break statement.",
+"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "break statements should not be used except for switch cases",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1227",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1227",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Dispatch\\ConcurrentQueueMailbox.cs",
+"region":  {
+"startLine":  85,
+"startColumn":  24,
+"endLine":  85,
+"endColumn":  30
+}
+}
+]
+}
+],
+"shortMessage":  "Refactor the code in order to remove this break statement.",
+"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "break statements should not be used except for switch cases",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1227",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1227",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Dispatch\\ConcurrentQueueMailbox.cs",
+"region":  {
+"startLine":  96,
+"startColumn":  24,
+"endLine":  96,
+"endColumn":  30
+}
+}
+]
+}
+],
+"shortMessage":  "Refactor the code in order to remove this break statement.",
+"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "break statements should not be used except for switch cases",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1227",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1227",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Dispatch\\ConcurrentQueueMailbox.cs",
+"region":  {
+"startLine":  102,
+"startColumn":  24,
+"endLine":  102,
+"endColumn":  30
+}
+}
+]
+}
+],
+"shortMessage":  "Refactor the code in order to remove this break statement.",
+"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "break statements should not be used except for switch cases",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1227",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1227",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Dispatch\\GenericMailbox.cs",
+"region":  {
+"startLine":  106,
+"startColumn":  24,
+"endLine":  106,
+"endColumn":  30
+}
+}
+]
+}
+],
+"shortMessage":  "Refactor the code in order to remove this break statement.",
+"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "break statements should not be used except for switch cases",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1227",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1227",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Dispatch\\GenericMailbox.cs",
+"region":  {
+"startLine":  117,
+"startColumn":  24,
+"endLine":  117,
+"endColumn":  30
+}
+}
+]
+}
+],
+"shortMessage":  "Refactor the code in order to remove this break statement.",
+"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "break statements should not be used except for switch cases",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1227",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1227",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Dispatch\\GenericMailbox.cs",
+"region":  {
+"startLine":  123,
+"startColumn":  24,
+"endLine":  123,
+"endColumn":  30
+}
+}
+]
+}
+],
+"shortMessage":  "Refactor the code in order to remove this break statement.",
+"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "break statements should not be used except for switch cases",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1227",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1227",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Event\\AddressTerminatedTopic.cs",
+"region":  {
+"startLine":  44,
+"startColumn":  16,
+"endLine":  44,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "Refactor the code in order to remove this break statement.",
+"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "break statements should not be used except for switch cases",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1227",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1227",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Event\\AddressTerminatedTopic.cs",
+"region":  {
+"startLine":  57,
+"startColumn":  16,
+"endLine":  57,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "Refactor the code in order to remove this break statement.",
+"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "break statements should not be used except for switch cases",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1227",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1227",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Helios.Concurrency.DedicatedThreadPool.cs",
+"region":  {
+"startLine":  162,
+"startColumn":  20,
+"endLine":  162,
+"endColumn":  26
+}
+}
+]
+}
+],
+"shortMessage":  "Refactor the code in order to remove this break statement.",
+"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "break statements should not be used except for switch cases",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1227",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1227",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Helios.Concurrency.DedicatedThreadPool.cs",
+"region":  {
+"startLine":  176,
+"startColumn":  20,
+"endLine":  176,
+"endColumn":  26
+}
+}
+]
+}
+],
+"shortMessage":  "Refactor the code in order to remove this break statement.",
+"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "break statements should not be used except for switch cases",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1227",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1227",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Helios.Concurrency.DedicatedThreadPool.cs",
+"region":  {
+"startLine":  200,
+"startColumn":  32,
+"endLine":  200,
+"endColumn":  38
+}
+}
+]
+}
+],
+"shortMessage":  "Refactor the code in order to remove this break statement.",
+"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "break statements should not be used except for switch cases",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1227",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1227",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Util\\ListPriorityQueue.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  115,
+"endLine":  42,
+"endColumn":  121
+}
+}
+]
+}
+],
+"shortMessage":  "Refactor the code in order to remove this break statement.",
+"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "break statements should not be used except for switch cases",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1227",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1227",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Util\\ListPriorityQueue.cs",
+"region":  {
+"startLine":  61,
+"startColumn":  29,
+"endLine":  61,
+"endColumn":  35
+}
+}
+]
+}
+],
+"shortMessage":  "Refactor the code in order to remove this break statement.",
+"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "break statements should not be used except for switch cases",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1227",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1227",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Util\\ListPriorityQueue.cs",
+"region":  {
+"startLine":  65,
+"startColumn":  115,
+"endLine":  65,
+"endColumn":  121
+}
+}
+]
+}
+],
+"shortMessage":  "Refactor the code in order to remove this break statement.",
+"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "break statements should not be used except for switch cases",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1227",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

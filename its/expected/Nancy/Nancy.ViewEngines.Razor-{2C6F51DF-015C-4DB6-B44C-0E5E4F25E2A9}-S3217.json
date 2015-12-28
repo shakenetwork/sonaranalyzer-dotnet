@@ -1,0 +1,70 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S3217",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\RazorConfigurationSection.cs",
+"region":  {
+"startLine":  115,
+"startColumn":  12,
+"endLine":  115,
+"endColumn":  37
+}
+}
+]
+}
+],
+"shortMessage":  "Either change the type of \"item\" to \"object\" or iterate on a generic collection of type \"AssemblyConfigurationItem\".",
+"fullMessage":  "The \"foreach\" statement was introduced in the C# language prior to generics. To make it easier to work with non-generic collections available at that time such as \"ArrayList\", the \"foreach\" statements allows to downcast the collection\u0027s element of type \"Object\" into any other type. The problem is that, to achieve that, the \"foreach\" statements silently performs \"explicit\" type conversion, which at runtime can result in an \"InvalidCastException\" to be thrown. New C# code should use generics and not rely on \"foreach\" statement\u0027s silent \"explicit\" conversions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"Explicit\" conversions of \"foreach\" loops should not be used",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3217",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3217",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.ViewEngines.Razor\\RazorConfigurationSection.cs",
+"region":  {
+"startLine":  152,
+"startColumn":  11,
+"endLine":  152,
+"endColumn":  37
+}
+}
+]
+}
+],
+"shortMessage":  "Either change the type of \"item\" to \"object\" or iterate on a generic collection of type \"NamespaceConfigurationItem\".",
+"fullMessage":  "The \"foreach\" statement was introduced in the C# language prior to generics. To make it easier to work with non-generic collections available at that time such as \"ArrayList\", the \"foreach\" statements allows to downcast the collection\u0027s element of type \"Object\" into any other type. The problem is that, to achieve that, the \"foreach\" statements silently performs \"explicit\" type conversion, which at runtime can result in an \"InvalidCastException\" to be thrown. New C# code should use generics and not rely on \"foreach\" statement\u0027s silent \"explicit\" conversions.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"Explicit\" conversions of \"foreach\" loops should not be used",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S3217",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

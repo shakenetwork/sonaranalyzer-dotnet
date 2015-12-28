@@ -1,0 +1,280 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S107",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\PartialActionBuilderTests.cs",
+"region":  {
+"startLine":  171,
+"startColumn":  87,
+"endLine":  171,
+"endColumn":  122
+}
+}
+]
+}
+],
+"shortMessage":  "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
+"fullMessage":  "A long parameter list can indicate that a new structure should be created to wrap the numerous parameters or that the function is doing too many things.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods should not have too many parameters",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S107",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S107",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\PartialActionBuilderTests.cs",
+"region":  {
+"startLine":  197,
+"startColumn":  92,
+"endLine":  197,
+"endColumn":  131
+}
+}
+]
+}
+],
+"shortMessage":  "Method \"Lambda\" has 9 parameters, which is greater than the 7 authorized.",
+"fullMessage":  "A long parameter list can indicate that a new structure should be created to wrap the numerous parameters or that the function is doing too many things.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods should not have too many parameters",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S107",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S107",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\PartialActionBuilderTests.cs",
+"region":  {
+"startLine":  224,
+"startColumn":  99,
+"endLine":  224,
+"endColumn":  142
+}
+}
+]
+}
+],
+"shortMessage":  "Method \"Lambda\" has 10 parameters, which is greater than the 7 authorized.",
+"fullMessage":  "A long parameter list can indicate that a new structure should be created to wrap the numerous parameters or that the function is doing too many things.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods should not have too many parameters",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S107",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S107",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\PartialActionBuilderTests.cs",
+"region":  {
+"startLine":  253,
+"startColumn":  107,
+"endLine":  253,
+"endColumn":  155
+}
+}
+]
+}
+],
+"shortMessage":  "Method \"Lambda\" has 11 parameters, which is greater than the 7 authorized.",
+"fullMessage":  "A long parameter list can indicate that a new structure should be created to wrap the numerous parameters or that the function is doing too many things.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods should not have too many parameters",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S107",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S107",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\PartialActionBuilderTests.cs",
+"region":  {
+"startLine":  282,
+"startColumn":  112,
+"endLine":  282,
+"endColumn":  165
+}
+}
+]
+}
+],
+"shortMessage":  "Method \"Lambda\" has 12 parameters, which is greater than the 7 authorized.",
+"fullMessage":  "A long parameter list can indicate that a new structure should be created to wrap the numerous parameters or that the function is doing too many things.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods should not have too many parameters",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S107",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S107",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\PartialActionBuilderTests.cs",
+"region":  {
+"startLine":  312,
+"startColumn":  119,
+"endLine":  312,
+"endColumn":  177
+}
+}
+]
+}
+],
+"shortMessage":  "Method \"Lambda\" has 13 parameters, which is greater than the 7 authorized.",
+"fullMessage":  "A long parameter list can indicate that a new structure should be created to wrap the numerous parameters or that the function is doing too many things.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods should not have too many parameters",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S107",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S107",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\PartialActionBuilderTests.cs",
+"region":  {
+"startLine":  343,
+"startColumn":  127,
+"endLine":  343,
+"endColumn":  190
+}
+}
+]
+}
+],
+"shortMessage":  "Method \"Lambda\" has 14 parameters, which is greater than the 7 authorized.",
+"fullMessage":  "A long parameter list can indicate that a new structure should be created to wrap the numerous parameters or that the function is doing too many things.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods should not have too many parameters",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S107",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S107",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\PartialActionBuilderTests.cs",
+"region":  {
+"startLine":  375,
+"startColumn":  132,
+"endLine":  375,
+"endColumn":  200
+}
+}
+]
+}
+],
+"shortMessage":  "Method \"Lambda\" has 15 parameters, which is greater than the 7 authorized.",
+"fullMessage":  "A long parameter list can indicate that a new structure should be created to wrap the numerous parameters or that the function is doing too many things.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods should not have too many parameters",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S107",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S107",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\PartialActionBuilderTests.cs",
+"region":  {
+"startLine":  409,
+"startColumn":  138,
+"endLine":  409,
+"endColumn":  211
+}
+}
+]
+}
+],
+"shortMessage":  "Method \"Lambda\" has 16 parameters, which is greater than the 7 authorized.",
+"fullMessage":  "A long parameter list can indicate that a new structure should be created to wrap the numerous parameters or that the function is doing too many things.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods should not have too many parameters",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S107",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

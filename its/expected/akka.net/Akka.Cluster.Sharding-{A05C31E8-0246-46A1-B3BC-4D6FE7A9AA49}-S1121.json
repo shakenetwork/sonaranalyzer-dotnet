@@ -1,0 +1,130 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S1121",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShard.cs",
+"region":  {
+"startLine":  56,
+"startColumn":  28,
+"endLine":  56,
+"endColumn":  29
+}
+}
+]
+}
+],
+"shortMessage":  "Extract the assignment of \"offer\" from this expression.",
+"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Assignments should not be made from within sub-expressions",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1121",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1121",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
+"region":  {
+"startLine":  183,
+"startColumn":  64,
+"endLine":  183,
+"endColumn":  65
+}
+}
+]
+}
+],
+"shortMessage":  "Extract the assignment of \"_log\" from this expression.",
+"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Assignments should not be made from within sub-expressions",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1121",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1121",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\Shard.cs",
+"region":  {
+"startLine":  206,
+"startColumn":  39,
+"endLine":  206,
+"endColumn":  40
+}
+}
+]
+}
+],
+"shortMessage":  "Extract the assignment of \"_log\" from this expression.",
+"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Assignments should not be made from within sub-expressions",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1121",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1121",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
+"region":  {
+"startLine":  355,
+"startColumn":  64,
+"endLine":  355,
+"endColumn":  65
+}
+}
+]
+}
+],
+"shortMessage":  "Extract the assignment of \"_log\" from this expression.",
+"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Assignments should not be made from within sub-expressions",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1121",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}
