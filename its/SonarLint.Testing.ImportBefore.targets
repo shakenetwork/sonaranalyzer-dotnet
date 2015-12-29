@@ -14,10 +14,10 @@
 
     <PropertyGroup>
       <!-- Set the path to the SARIF report -->
-      <ErrorLog>$(MSBuildStartupDirectory)\actual\$(PROJECT)\$(MSBuildProjectName)-$(ProjectGuid).json</ErrorLog>
+      <ErrorLog>$(MSBuildStartupDirectory)\output\$(PROJECT)\$(MSBuildProjectName)-$(ProjectGuid).json</ErrorLog>
       
       <!-- Override the ruleset with all SonarLint rules -->
-      <ResolvedCodeAnalysisRuleSet>$(MSBuildStartupDirectory)\binaries\AllSonarLintRules.ruleset</ResolvedCodeAnalysisRuleSet>
+      <ResolvedCodeAnalysisRuleSet>$(MSBuildStartupDirectory)\output\AllSonarLintRules.ruleset</ResolvedCodeAnalysisRuleSet>
 
       <!-- Don't fail the build -->
       <TreatWarningsAsErrors>false</TreatWarningsAsErrors>

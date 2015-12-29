@@ -3,10 +3,6 @@
 REM Set the current working directory to the script's folder
 pushd %~dp0
 
-REM Generate the SonarLint all rules ruleset
-powershell.exe -executionpolicy bypass ./AllRulesGenerator.ps1 > binaries/AllSonarLintRules.ruleset
-if not %ERRORLEVEL%==0 goto ps_error
-
 REM Setup the actual folder with the expected files
 echo Initializing the actual issues Git repo with the expected ones...
 rmdir /S /Q actual 2>NUL
@@ -21,6 +17,14 @@ git commit -m "Initial commit with expected files" >NUL
 del /F /S /Q *.json >NUL
 popd
 
+REM Setup output folder
+rmdir /S /Q output 2>NUL
+mkdir output
+
+REM Generate the SonarLint all rules ruleset
+powershell.exe -executionpolicy bypass ./AllRulesGenerator.ps1 > output/AllSonarLintRules.ruleset
+if not %ERRORLEVEL%==0 goto ps_error
+
 REM Install the imports before targets file
 mkdir %USERPROFILE%\AppData\Local\Microsoft\MSBuild\14.0\Microsoft.Common.targets\ImportBefore 2>NUL
 copy SonarLint.Testing.ImportBefore.targets %USERPROFILE%\AppData\Local\Microsoft\MSBuild\14.0\Microsoft.Common.targets\ImportBefore
@@ -28,14 +32,14 @@ copy SonarLint.Testing.ImportBefore.targets %USERPROFILE%\AppData\Local\Microsof
 REM Building projects
 echo Building: Akka.NET
 set PROJECT=akka.net
-mkdir actual\%PROJECT% 2>NUL
-call %PROJECT%\sonarlint-build.bat
+mkdir output\%PROJECT% 2>NUL
+call %PROJECT%\sonarlint-build.bat > output\%PROJECT%.txt
 if not %ERRORLEVEL%==0 goto build_error
 
 echo Building: Nancy
 set PROJECT=Nancy
-mkdir actual\%PROJECT% 2>NUL
-call %PROJECT%\sonarlint-build.bat
+mkdir output\%PROJECT% 2>NUL
+call %PROJECT%\sonarlint-build.bat > output\%PROJECT%.txt
 if not %ERRORLEVEL%==0 goto build_error
 
 REM Normalize SARIF reports

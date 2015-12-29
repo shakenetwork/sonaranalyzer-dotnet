@@ -35,20 +35,18 @@ function NormalizeAndSplitSarifReport
 
     # Split the SARIF report into 1 per rule and remove leading spaces
     $file = [System.IO.FileInfo]$sarifReportPath
+    $project = ([System.IO.FileInfo]$file.DirectoryName).Name
     $issuesByRule |
       Foreach-Object {
         $json.issues = $_.Group
-        $path = (Join-Path $file.DirectoryName $file.BaseName) + '-' + $_.Name + $file.Extension
+        $path = Join-Path (Join-Path 'actual' $project) ($file.BaseName + '-' + $_.Name + $file.Extension)
         $lines = ((ConvertTo-Json $json -Depth 42) -split "`r`n") |  # Convert JSON to String and split lines
           Foreach-Object { $_.TrimStart() }                          # Remove leading spaces
         Set-Content $path $lines
     }
   }
-
-  # Delete the original monolithic SARIF report
-  Remove-Item $sarifReportPath
 }
 
 # Normalize & overwrite all *.json SARIF files found under the "actual" folder
-Get-ChildItem actual -filter *.json -recurse |
+Get-ChildItem output -filter *.json -recurse |
   Foreach-Object { NormalizeAndSplitSarifReport($_.FullName) }
