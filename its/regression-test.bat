@@ -47,6 +47,11 @@ echo Normalizing the SARIF reports
 powershell.exe -executionpolicy bypass ./NormalizeSarifReports.ps1
 if not %ERRORLEVEL%==0 goto ps_error
 
+REM Compute analyzer performances
+echo Computing analyzer performances
+powershell.exe -executionpolicy bypass ./ExtractAnalyzerPerformancesFromLogs.ps1
+if not %ERRORLEVEL%==0 goto ps_error
+
 REM Assert no differences
 echo Checking for differences...
 pushd actual

@@ -25,6 +25,9 @@
 
       <!-- Keep all messages, including AD0001 -->
       <WarningLevel>4</WarningLevel>
+
+      <!-- Enable the reporting of analyzer performances -->
+      <ReportAnalyzer>true</ReportAnalyzer>
     </PropertyGroup>
   </Target>
 </Project>
