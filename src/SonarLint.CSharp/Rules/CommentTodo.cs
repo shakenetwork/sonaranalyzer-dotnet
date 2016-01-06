@@ -29,9 +29,9 @@ namespace SonarLint.Rules.CSharp
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [NoSqaleRemediation]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    public class CommentTodo : CommentRegularExpressionBase
+    public class CommentTodo : CommentWordBase
     {
-        protected override string RegularExpression => "(?i).*(TODO).*";
+        protected override string Word => "TODO";
 
         internal const string DiagnosticId = "S1135";
         internal const string Title = "\"TODO\" tags should be handled";

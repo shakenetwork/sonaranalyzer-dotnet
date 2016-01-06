@@ -29,9 +29,9 @@ namespace SonarLint.Rules.CSharp
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [NoSqaleRemediation]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    public class CommentFixme : CommentRegularExpressionBase
+    public class CommentFixme : CommentWordBase
     {
-        protected override string RegularExpression => "(?i).*(FIXME).*";
+        protected override string Word => "FIXME";
 
         internal const string DiagnosticId = "S1134";
         internal const string Title = "\"FIXME\" tags should be handled";

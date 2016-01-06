@@ -20,18 +20,18 @@
 
 using System.Collections.Immutable;
 using System.Linq;
-using System.Text.RegularExpressions;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Helpers;
 using Microsoft.CodeAnalysis.Text;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules.CSharp
 {
-    public abstract class CommentRegularExpressionBase : DiagnosticAnalyzer
+    public abstract class CommentWordBase : DiagnosticAnalyzer
     {
-        protected abstract string RegularExpression { get; }
+        protected abstract string Word { get; }
         protected abstract DiagnosticDescriptor Rule { get; }
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
@@ -48,18 +48,12 @@ namespace SonarLint.Rules.CSharp
                     {
                         var text = comment.ToString();
 
-                        foreach (var match in Regex.Matches(text, RegularExpression).OfType<Match>())
+                        foreach (var i in AllCaseInsensitiveIndexesOf(text, Word))
                         {
-                            if (match.Groups.Count < 2)
-                            {
-                                continue;
-                            }
-
-                            var group = match.Groups[1];
-                            var startLocation = comment.SpanStart + group.Index;
+                            var startLocation = comment.SpanStart + i;
                             var location = Location.Create(
                                 c.Tree,
-                                TextSpan.FromBounds(startLocation, startLocation + group.Length));
+                                TextSpan.FromBounds(startLocation, startLocation + Word.Length));
 
                             c.ReportDiagnostic(Diagnostic.Create(Rule, location));
                         }
@@ -73,6 +67,16 @@ namespace SonarLint.Rules.CSharp
                 trivia.IsKind(SyntaxKind.MultiLineCommentTrivia) ||
                 trivia.IsKind(SyntaxKind.SingleLineDocumentationCommentTrivia) ||
                 trivia.IsKind(SyntaxKind.MultiLineDocumentationCommentTrivia);
+        }
+
+        private static IEnumerable<int> AllCaseInsensitiveIndexesOf(string str, string value)
+        {
+            int i = 0;
+            while ((i = str.IndexOf(value, i, str.Length - i, System.StringComparison.InvariantCultureIgnoreCase)) != -1)
+            {
+                yield return i;
+                i += value.Length;
+            }
         }
     }
 }
