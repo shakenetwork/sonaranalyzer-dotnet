@@ -19,6 +19,13 @@ TODO */ //Noncompliant
 toDo - Noncompliant
 */
 
+// The following should be compliant:
+// aaaTODO000
+
+// !TODO! Noncompliant
+
+/*TODO*/ // Noncompliant
+
 /**
 */
 namespace Tests.Diagnostics

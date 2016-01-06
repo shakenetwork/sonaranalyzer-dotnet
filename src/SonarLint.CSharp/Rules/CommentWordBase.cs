@@ -48,7 +48,7 @@ namespace SonarLint.Rules.CSharp
                     {
                         var text = comment.ToString();
 
-                        foreach (var i in AllCaseInsensitiveIndexesOf(text, Word))
+                        foreach (var i in AllCaseInsensitiveIndexesOf(text, Word).Where(i => IsWordAt(text, i, Word.Length)))
                         {
                             var startLocation = comment.SpanStart + i;
                             var location = Location.Create(
@@ -77,6 +77,24 @@ namespace SonarLint.Rules.CSharp
                 yield return i;
                 i += value.Length;
             }
+        }
+
+        private static bool IsWordAt(string str, int i, int count)
+        {
+            bool leftBoundary = true;
+            if (i > 0)
+            {
+                leftBoundary = !char.IsLetterOrDigit(str[i - 1]);
+            }
+
+            bool rightBoundary = true;
+            var rightOffset = i + count;
+            if (rightOffset < str.Length)
+            {
+                rightBoundary = !char.IsLetterOrDigit(str[rightOffset]);
+            }
+
+            return leftBoundary && rightBoundary;
         }
     }
 }

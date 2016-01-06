@@ -19,6 +19,13 @@ FIXME */ //Noncompliant
 fixMe - Noncompliant
 */
 
+// The following should be compliant:
+// aaaFIXME000
+
+// !FIXME! Noncompliant
+
+/*FIXME*/ // Noncompliant
+
 /**
 */
 namespace Tests.Diagnostics
