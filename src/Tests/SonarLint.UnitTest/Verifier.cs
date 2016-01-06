@@ -190,7 +190,12 @@ namespace SonarLint.UnitTest
                 compilationOptions = compilationOptions.WithSpecificDiagnosticOptions(
                     diagnosticAnalyzer.SupportedDiagnostics
                         .Select(diagnostic =>
-                            new KeyValuePair<string, ReportDiagnostic>(diagnostic.Id, ReportDiagnostic.Warn)));
+                            new KeyValuePair<string, ReportDiagnostic>(diagnostic.Id, ReportDiagnostic.Warn))
+                        .Union(
+                            new KeyValuePair<string, ReportDiagnostic>[]
+                            {
+                                new KeyValuePair<string, ReportDiagnostic>("AD0001", ReportDiagnostic.Error)
+                            }));
 
                 var compilationWithOptions = compilation.WithOptions(compilationOptions);
                 var compilationWithAnalyzer = compilationWithOptions
@@ -198,8 +203,10 @@ namespace SonarLint.UnitTest
                         ImmutableArray.Create(diagnosticAnalyzer),
                         cancellationToken: tokenSource.Token);
 
-                return compilationWithAnalyzer.GetAnalyzerDiagnosticsAsync().Result
-                    .Where(diag => diag.Id == diagnosticAnalyzer.SupportedDiagnostics.Single().Id);
+                var diagnostics = compilationWithAnalyzer.GetAllDiagnosticsAsync().Result;
+                diagnostics.Where(d => d.Id == "AD0001").Should().BeEmpty();
+
+                return diagnostics.Where(d => d.Id == diagnosticAnalyzer.SupportedDiagnostics.Single().Id);
             }
         }
 
