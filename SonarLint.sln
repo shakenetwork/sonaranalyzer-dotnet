@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarLint.Vsix", "src\SonarLint.Vsix\SonarLint.Vsix.csproj", "{9D2DF65B-8BB4-4F85-8B71-C4B636513EF3}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0C3E0519-DB5C-47C0-ABB3-9D1FB23DFBAF}"
 	ProjectSection(SolutionItems) = preProject
 		src\AssemblyInfo.Shared.cs = src\AssemblyInfo.Shared.cs
@@ -14,8 +16,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarLint", "src\SonarLint\SonarLint.csproj", "{D1AE804F-AE78-4883-B3D6-9E3C4026DEF6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarLint.Extra", "src\SonarLint.Extra\SonarLint.Extra.csproj", "{4C1BB6CE-645F-400B-B491-AF7BB40E5C01}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarLint.Vsix", "src\SonarLint.Vsix\SonarLint.Vsix.csproj", "{9D2DF65B-8BB4-4F85-8B71-C4B636513EF3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B7233F78-E142-4882-B084-7C83BE472109}"
 EndProject

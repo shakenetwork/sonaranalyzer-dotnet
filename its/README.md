@@ -1,23 +1,15 @@
 # How to validate the quality of a new rule?
 
-1. In the Solution Explorer, right click SonarLint.Vsix and set it as the start-up project.
+1. Hit `F5` to launch the experimental instance of Visual Studio with the .vsix deployed.
 
-	![](SolutionExplorer.png)
-
-2. In the SonarLint.Vsix Debug Properties, set the external program to start to the experimental instance of `devenv.exe`.
-
-	![](DebugProperties.png)
-
-3. Hit `F5` to launch the experimental instance of Visual Studio with the .vsix deployed.
-
-4. Open one of the following solutions in `Debug` configuration from the experimental Visual Studio instance:
+2. Open one of the following solutions in `Debug` configuration from the experimental Visual Studio instance:
 
   * [Akka.NET](akka.net/src/Akka.sln)
   * [Nancy](Nancy/src/Nancy.sln)
 
 	These solutions have been pre-configured to use the [Validation Ruleset](ValidationRuleset.ruleset) on all their projects.
 
-5. Turn on your new rule in that ruleset, review the results, improve, and setup the regression test once you are satisfied
+3. Turn on your new rule in that ruleset, review the results, improve, and setup the regression test once you are satisfied
 
 # How to run the rule regression tests?
 
