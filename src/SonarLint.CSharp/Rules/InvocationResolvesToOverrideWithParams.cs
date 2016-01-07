@@ -107,7 +107,7 @@ namespace SonarLint.Rules.CSharp
                 .OfType<IMethodSymbol>()
                 .Where(m => m.MethodKind == invokedMethodSymbol.MethodKind)
                 .Where(m => !invokedMethodSymbol.Equals(m))
-                .Where(m => !m.Parameters.Last().IsParams);
+                .Where(m => m.Parameters.Any() && !m.Parameters.Last().IsParams);
 
             if (possibleOtherMethods.Any(possibleOtherMethod =>
                     ArgumentsMatchParameters(

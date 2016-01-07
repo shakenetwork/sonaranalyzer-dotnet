@@ -64,4 +64,15 @@ namespace Tests.Diagnostics
             string.Concat("aaaa"); //Noncompliant, resolves to params, but there's a single object version too.
         }
     }
+
+    public class MyClass
+    {
+        public void Format(string a, params object[] b) { }
+        public void Format() { } // The presence of this method causes the issue
+
+        public void Test()
+        {
+            Format("", null, null);
+        }
+    }
 }
