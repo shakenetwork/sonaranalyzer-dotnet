@@ -147,7 +147,7 @@ namespace SonarLint.Rules.CSharp
                 return false;
             }
 
-            if (type1 == null ^ type2 == null)
+            if (type1 == null || type2 == null)
             {
                 return true;
             }

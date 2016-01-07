@@ -86,6 +86,13 @@ namespace Tests.TestCases
             {
                 elem = new NonExistendType();
             }
+
+            elem = false ? null : (null);
+
+            Action myAction;
+            myAction = false ? () => { }
+
+            : () => { Console.WriteLine(); };
         }
     }
 

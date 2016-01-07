@@ -146,6 +146,25 @@ namespace Tests.TestCases
             {
                 elem = new NonExistendType();
             }
+
+            if (false) // Noncompliant
+            {
+                elem = null;
+            }
+            else
+            {
+                elem = (null);
+            }
+
+            Action myAction;
+            if (false) // Noncompliant
+            {
+                myAction = () => { };
+            }
+            else
+            {
+                myAction = () => { Console.WriteLine(); };
+            }
         }
     }
 
