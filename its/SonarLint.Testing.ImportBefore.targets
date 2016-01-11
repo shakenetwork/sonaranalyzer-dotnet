@@ -2,9 +2,15 @@
   <Target Name="OverrideRoslynCodeAnalysisPropertiesWithSonarLint"
           AfterTargets="ResolveCodeAnalysisRuleSet"
           BeforeTargets="CoreCompile">
-    <Error Text="Not running a SonarLint test build? Or forgot to build SonarLint first? Delete this file: $(MSBuildThisFileFullPath) to remove this error" Condition="!Exists('$(MSBuildStartupDirectory)\binaries\SonarLint.dll')" />
 
-    <ItemGroup>
+    <PropertyGroup>
+      <SonarLintRegressionTestRunning Condition="Exists('$(MSBuildStartupDirectory)\binaries\SonarLint.dll')">true</SonarLintRegressionTestRunning>
+      <SonarLintRegressionTestRunning Condition="$(SonarLintRegressionTestRunning) == ''">false</SonarLintRegressionTestRunning>
+    </PropertyGroup>
+
+    <Warning Text="Not running a SonarLint test build? Or forgot to build SonarLint first? Delete this file: $(MSBuildThisFileFullPath) to remove this error" Condition="!$(SonarLintRegressionTestRunning)" />
+
+    <ItemGroup Condition="$(SonarLintRegressionTestRunning)">
       <!-- Remove all previously added analyzers -->
       <Analyzer Remove="@(Analyzer)" />
       
@@ -12,7 +18,7 @@
       <Analyzer Include="$(MSBuildStartupDirectory)\binaries\SonarLint*.dll" />
     </ItemGroup>
 
-    <PropertyGroup>
+    <PropertyGroup Condition="$(SonarLintRegressionTestRunning)">
       <!-- Set the path to the SARIF report -->
       <ErrorLog>$(MSBuildStartupDirectory)\output\$(PROJECT)\$(MSBuildProjectName)-$(ProjectGuid).json</ErrorLog>
       
