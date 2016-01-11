@@ -14,4 +14,6 @@ Visit http://vs.sonarlint.org for more information.
 
 ## How to contribute?
 
-Feeback is welcome on [StackOverflow with the [sonarlint] [c#]](http://stackoverflow.com/search?q=%5Bsonarlint%5D%2C+%5Bc%23%5D) tags or on [the Jira issue tracker](https://jira.sonarsource.com/browse/SLVS).
+Questions are welcome on [StackOverflow using the [sonarlint] and [c#] tags](http://stackoverflow.com/questions/ask?tags=sonarlint+c%23) and suggestions or bugs on [the Jira issue tracker](https://jira.sonarsource.com/browse/SLVS).
+
+Of course, feel free to submit pull requests!
