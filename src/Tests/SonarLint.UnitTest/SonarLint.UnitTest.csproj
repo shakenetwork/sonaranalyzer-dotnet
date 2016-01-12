@@ -141,6 +141,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\CommentTodoTest.cs" />
     <Compile Include="Rules\EqualsOverrideTest.cs" />
+    <Compile Include="Rules\MemberOverrideCallsBaseMember.cs" />
     <Compile Include="Rules\StreamReadStatementTest.cs" />
     <Compile Include="Rules\EnumerableSumInUncheckedTest.cs" />
     <Compile Include="Rules\AsyncVoidMethodTest.cs" />
@@ -754,6 +755,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\StringFormatWithNoArgument.Fixed.Batch.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\MemberOverrideCallsBaseMember.Fixed.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\MemberOverrideCallsBaseMember.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />

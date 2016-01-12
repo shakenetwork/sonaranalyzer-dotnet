@@ -118,6 +118,8 @@
     <Compile Include="Rules\CollectionQuerySimplification.cs" />
     <Compile Include="Rules\StringFormatWithNoArgument.cs" />
     <Compile Include="Rules\StringFormatWithNoArgumentCodeFixProvider.cs" />
+    <Compile Include="Rules\MemberOverrideCallsBaseMemberCodeFixProvider.cs" />
+    <Compile Include="Rules\MemberOverrideCallsBaseMember.cs" />
     <Compile Include="Rules\TaskConfigureAwait.cs" />
     <Compile Include="Rules\CommentedOutCode.cs" />
     <Compile Include="Rules\CommentFixme.cs" />
@@ -273,7 +275,7 @@
     <Analyzer Include="..\..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

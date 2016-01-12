@@ -1,0 +1,21 @@
+<p>
+    Overriding a member just to call the same member from the base class without performing any other actions is useless and
+    misleading. The only time this is justified is in <code>sealed</code> overriding methods, where the effect is to lock in
+    the parent class behavior.
+</p>
+
+<h2>Noncompliant Code Example</h2>
+<pre>
+public override void Method() // Noncompliant
+{
+  base.Method();
+}
+</pre>
+
+<h2>Compliant Solution</h2>
+<pre>
+public override void Method()
+{
+  //do something else
+}
+</pre>
