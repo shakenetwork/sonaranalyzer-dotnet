@@ -29,7 +29,7 @@
       <ExpectedMatchCount>1</ExpectedMatchCount>
     </VsixVersion>
     <VsixReleaseNotes Include="$(SolutionRoot)\src\SonarLint.Vsix\source.extension.vsixmanifest">
-      <Find>(?&lt;=&lt;ReleaseNotes&gt;https:\/\/github\.com\/SonarSource\/sonarlint\-vs\/issues\?q=milestone:)([^&lt;]*)</Find>
+      <Find>(?&lt;=&lt;ReleaseNotes&gt;http:\/\/www\.sonarlint\.org\/visualstudio\/rules\/index.html#version=)([^&lt;]*)</Find>
       <ReplaceWith>$(VsixVersion)</ReplaceWith>
       <ExpectedMatchCount>1</ExpectedMatchCount>
     </VsixReleaseNotes>
@@ -40,7 +40,7 @@
       <ExpectedMatchCount>1</ExpectedMatchCount>
     </NugetAnalyzer>
     <NugetReleaseNotes Include="$(SolutionRoot)\src\SonarLint.Vsix\Diagnostic.nuspec">
-      <Find>(?&lt;=&lt;releaseNotes&gt;https:\/\/github\.com\/SonarSource\/sonarlint\-vs\/issues\?q=milestone:)([^&lt;]*)</Find>
+      <Find>(?&lt;=&lt;releaseNotes&gt;http:\/\/www\.sonarlint\.org\/visualstudio\/rules\/index.html#version=)([^&lt;]*)</Find>
       <ReplaceWith>$(VsixVersion)</ReplaceWith>
       <ExpectedMatchCount>1</ExpectedMatchCount>
     </NugetReleaseNotes>
