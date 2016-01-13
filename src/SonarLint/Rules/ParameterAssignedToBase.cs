@@ -43,7 +43,7 @@ namespace SonarLint.Rules
         protected const string MessageFormat = "Introduce a new variable instead of reusing the parameter \"{0}\".";
         protected const string Category = SonarLint.Common.Category.Maintainability;
         protected const Severity RuleSeverity = Severity.Major;
-        protected const bool IsActivatedByDefault = true;
+        protected const bool IsActivatedByDefault = false;
 
         protected static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
