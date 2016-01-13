@@ -10,7 +10,7 @@ if($project.Type -eq "VB.NET")
 {
     $languageSpecificAnalyzer = "SonarLint.VisualBasic.dll"
 }
-if($languageFolder -eq "")
+if($languageSpecificAnalyzer -eq "")
 {
     return
 }
