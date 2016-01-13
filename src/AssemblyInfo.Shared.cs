@@ -1,7 +1,7 @@
 ﻿/*
  * SonarLint for Visual Studio
- * Copyright (C) 2015 SonarSource
- * sonarqube@googlegroups.com
+ * Copyright (C) 2015-2016 SonarSource SA
+ * mailto:contact@sonarsource.com
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -28,7 +28,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 
 [assembly: AssemblyCompany("SonarSource")]
-[assembly: AssemblyCopyright("Copyright © SonarSource 2015")]
+[assembly: AssemblyCopyright("Copyright © 2015-2016 SonarSource SA")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
