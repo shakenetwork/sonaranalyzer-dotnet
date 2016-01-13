@@ -66,7 +66,8 @@ namespace SonarLint.Rules.CSharp
                     if (methodDeclaration == null ||
                         methodSymbol == null ||
                         !methodSymbol.IsChangeable() ||
-                        methodSymbol.IsProbablyEventHandler(cbc.SemanticModel.Compilation))
+                        methodSymbol.IsProbablyEventHandler(cbc.SemanticModel.Compilation) ||
+                        methodSymbol.GetAttributes().Any())
                     {
                         return;
                     }

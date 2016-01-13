@@ -6,10 +6,19 @@ using System.Threading.Tasks;
 
 namespace Tests.TestCases
 {
+    public class AnyAttribute : Attribute { }
+
     public static class Extensions
     {
         public static void MyMethod(this string s,
             int i) // Noncompliant
+        {
+
+        }
+
+        [Any]
+        public static void MyMethod(this string s,
+            int i) // Compliant because of the attribute
         {
 
         }

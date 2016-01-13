@@ -42,6 +42,22 @@ public static class Extensions
 }
 </pre>
 
+<p>
+    Methods that have attributes defined on them are also ignored.
+</p>
+<pre>
+public class MyDto
+{
+  public string Name { get; set; }
+
+  [OnDeserialized]
+  private void OnDeserialized(StreamingContext context)
+  {
+    // ...
+  }
+}
+</pre>
+
 <h2>See</h2>
 
 <ul>
