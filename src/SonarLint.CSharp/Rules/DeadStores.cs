@@ -117,8 +117,8 @@ namespace SonarLint.Rules.CSharp
                         {
                             if (variableDeclarator.Initializer != null)
                             {
-                                c.ReportDiagnostic(Diagnostic.Create(Rule, variableDeclarator.Initializer.EqualsToken.GetLocation(),
-                                    variableDeclarator.Identifier.Text));
+                                ReportIfNotInTry(variableDeclarator.Initializer.EqualsToken, variableDeclarator.Identifier.Text,
+                                    c);
                             }
                             continue;
                         }
@@ -145,8 +145,8 @@ namespace SonarLint.Rules.CSharp
                             !MightHaveReferenceBetween(variableDeclarator.Initializer, firstAssignment, references) &&
                             !InConditional(firstAssignment, declaringBlock))
                         {
-                            c.ReportDiagnostic(Diagnostic.Create(Rule, variableDeclarator.Initializer.EqualsToken.GetLocation(),
-                                variableDeclarator.Identifier.Text));
+                            ReportIfNotInTry(variableDeclarator.Initializer.EqualsToken, variableDeclarator.Identifier.Text,
+                                c);
                         }
 
                         for (var i = 1; i < assignments.Count; i++)
@@ -169,8 +169,7 @@ namespace SonarLint.Rules.CSharp
                                 continue;
                             }
 
-                            c.ReportDiagnostic(Diagnostic.Create(Rule, first.OperatorToken.GetLocation(),
-                                variableDeclarator.Identifier.Text));
+                            ReportIfNotInTry(first.OperatorToken, variableDeclarator.Identifier.Text, c);
                         }
 
                         var lastAssignment = assignments.Last();
@@ -183,12 +182,29 @@ namespace SonarLint.Rules.CSharp
                         if (!references.Any(reference => reference.SpanStart > lastAssignment.Span.End) &&
                             !InLoop(lastAssignment, declaringBlock))
                         {
-                            c.ReportDiagnostic(Diagnostic.Create(Rule, lastAssignment.OperatorToken.GetLocation(),
-                                variableDeclarator.Identifier.Text));
+                            ReportIfNotInTry(lastAssignment.OperatorToken, variableDeclarator.Identifier.Text, c);
                         }
                     }
                 },
                 SyntaxKind.VariableDeclaration);
+        }
+
+        private static void ReportIfNotInTry(SyntaxToken tokenToReportOn, string name,
+            SyntaxNodeAnalysisContext context)
+        {
+            var currentNode = tokenToReportOn.Parent;
+            while (currentNode.Parent != null)
+            {
+                var tryStatement = currentNode.Parent as TryStatementSyntax;
+                if (tryStatement != null && tryStatement.Block == currentNode)
+                {
+                    return;
+                }
+
+                currentNode = currentNode.Parent;
+            }
+
+            context.ReportDiagnostic(Diagnostic.Create(Rule, tokenToReportOn.GetLocation(), name));
         }
 
         private static bool MightHaveReferenceBetween(SyntaxNode first, AssignmentExpressionSyntax second, List<IdentifierNameSyntax> references)

@@ -47,6 +47,24 @@ namespace Tests.Diagnostics
             {
                 resource.DoSomething();
             }
+
+            var x = 0; // Noncompliant;
+            x = 1;
+            try
+            {
+                x = 11;
+                x = 12;
+                Console.Write(x);
+                x = 13;
+            }
+            catch (Exception)
+            {
+                x = 21; // Noncompliant
+                x = 22;
+                Console.Write(x);
+                x = 23; // Non-compliant, but not recognized
+            }
+            x = 31; // Noncompliant
         }
 
         void calculateRate2(int a, int b)
