@@ -120,6 +120,8 @@
     <Compile Include="Rules\StringFormatWithNoArgumentCodeFixProvider.cs" />
     <Compile Include="Rules\MemberOverrideCallsBaseMemberCodeFixProvider.cs" />
     <Compile Include="Rules\MemberOverrideCallsBaseMember.cs" />
+    <Compile Include="Rules\RedundantToCharArrayCallCodeFixProvider.cs" />
+    <Compile Include="Rules\RedundantToCharArrayCall.cs" />
     <Compile Include="Rules\TaskConfigureAwait.cs" />
     <Compile Include="Rules\CommentedOutCode.cs" />
     <Compile Include="Rules\CommentFixme.cs" />

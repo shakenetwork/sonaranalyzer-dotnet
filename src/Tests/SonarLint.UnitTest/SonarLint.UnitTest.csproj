@@ -142,6 +142,7 @@
     <Compile Include="Rules\CommentTodoTest.cs" />
     <Compile Include="Rules\EqualsOverrideTest.cs" />
     <Compile Include="Rules\MemberOverrideCallsBaseMember.cs" />
+    <Compile Include="Rules\RedundantToCharArrayCallTest.cs" />
     <Compile Include="Rules\StreamReadStatementTest.cs" />
     <Compile Include="Rules\EnumerableSumInUncheckedTest.cs" />
     <Compile Include="Rules\AsyncVoidMethodTest.cs" />
@@ -761,6 +762,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\MemberOverrideCallsBaseMember.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\RedundantToCharArrayCall.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\RedundantToCharArrayCall.Fixed.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
