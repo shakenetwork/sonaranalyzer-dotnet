@@ -163,6 +163,7 @@
     <Compile Include="Rules\LineContinuationTest.cs" />
     <Compile Include="Rules\OptionalParameterTest.cs" />
     <Compile Include="Rules\SingleStatementPerLineTest.cs" />
+    <Compile Include="Rules\StringFormatWithNoArgumentTest.cs" />
     <Compile Include="Rules\StringOperationWithoutCultureTest.cs" />
     <Compile Include="Rules\TaskConfigureAwaitTest.cs" />
     <Compile Include="Rules\UnsignedTypesUsageTest.cs" />
@@ -744,6 +745,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\FlagsEnumWithoutInitializer.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\StringFormatWithNoArgument.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\StringFormatWithNoArgument.Fixed.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\StringFormatWithNoArgument.Fixed.Batch.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />

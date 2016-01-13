@@ -162,7 +162,7 @@ namespace SonarLint.Rules.CSharp
             return true;
         }
 
-        private static bool FormatterAcceptsArgumentCount(string format, int expectedArgCount)
+        internal static bool FormatterAcceptsArgumentCount(string format, int expectedArgCount)
         {
             try
             {
