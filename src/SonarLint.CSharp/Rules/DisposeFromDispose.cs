@@ -83,7 +83,7 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
-                    var disposeMethod = DisposableNotDisposed.GetDisposeMethod(c.SemanticModel.Compilation);
+                    var disposeMethod = DisposeNotImplementingDispose.GetDisposeMethod(c.SemanticModel.Compilation);
                     if (disposeMethod == null)
                     {
                         return;

@@ -1,124 +1,97 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
+using System.Net;
 
 namespace Tests.Diagnostics
 {
     public class DisposableNotDisposed
     {
-        public Stream field1 = new MemoryStream(), field5; //Compliant
-        private static Stream field2; //Compliant
+        private FileStream field_fs1; // Compliant - not instantiated
+        public FileStream field_fs2 = new FileStream(@"c:\foo.txt", FileMode.Open); // Compliant - public
+        private FileStream field_fs3 = new FileStream(@"c:\foo.txt", FileMode.Open); // Noncompliant
+        private FileStream field_fs4 = new FileStream(@"c:\foo.txt", FileMode.Open); // Compliant - disposed
+        private FileStream field_fs5;
+        private FileStream field_fs6;
+        private object field_fs7;
+        private FileStream field_fs8 = new FileStream(@"c:\foo.txt", FileMode.Open); // Compliant - passed to method using this.
 
-        private Stream field3; //Noncompliant
-        private Stream field6 = new MemoryStream(); //Noncompliant
-        private Stream field4; //Compliant, disposed
-        private Stream field7; //Compliant, disposed
-
-        public void Init()
+        private FileStream Return()
         {
-            field3 = new MemoryStream();
-            field4 = new MemoryStream();
-            field7 = new MemoryStream();
-        }
-
-        public void DoSomething()
-        {
-            field4.Dispose();
-            field7?.Dispose();
-        }
-        public void WriteToFile(string path, string text)
-        {
-            var fs = new FileStream(path, FileMode.Open);  // Noncompliant
-            var bytes = Encoding.UTF8.GetBytes(text);
-            fs.Write(bytes, 0, bytes.Length);
-        }
-
-        public void WriteToFileOk(string path, string text)
-        {
-            using (var fs = new FileStream(path, FileMode.Open))
-            {
-                var bytes = Encoding.UTF8.GetBytes(text);
-                fs.Write(bytes, 0, bytes.Length);
-            }
-        }
-        public void WriteToFileReturned(string path, string text)
-        {
-            var fs = new FileStream(path, FileMode.Open); // Compliant as it is returned
-            var bytes = Encoding.UTF8.GetBytes(text);
-            fs.Write(bytes, 0, bytes.Length);
+            var fs = new FileStream(@"c:\foo.txt", FileMode.Open); // Compliant - returned
             return fs;
         }
 
-        public void WriteToFileEx2(Streams ss)
+        public DisposableNotDisposed(FileStream fs)
         {
-            var fs = new BinaryReader(s.Stream); // Compliant as it is getting a non-local IDisposable as an argument
-        }
+            var fs1 = new FileStream(@"c:\foo.txt", FileMode.Open); // Noncompliant - directly instantiated with new
+            var fs2 = File.Open(@"c:\foo.txt", FileMode.Open); // Noncompliant - instantiated with factory method
+            Stream fs3 = new FileStream(@"c:\foo.txt", FileMode.Open); // Noncompliant - declaration type should not matter
+            var s = new WebClient(); // Noncompliant - another tracked type
 
-        public void WriteToFileEx5(Streams ss)
-        {
-            var fs = new BinaryReader() // Compliant as it is getting a non-local IDisposable as an argument
+            var fs4 = new FileStream(@"c:\foo.txt", FileMode.Open); // Compliant - passed to a method
+            NoOperation(fs4);
+
+            FileStream fs5; // Compliant - used properly
+            using (fs5 = new FileStream(@"c:\foo.txt", FileMode.Open))
             {
-                BaseStream = ss.Stream
-            };
-        }
-
-        public void WriteToFileEx3()
-        {
-            Stream sl = null;
-            var fs = new BinaryReader(sl); // Noncompliant
-        }
-
-        public Stream WriteToFileEx4()
-        {
-            Stream sr = null;
-            var fs = new BinaryReader(sr); // Noncompliant, this is a false positive
-            return sr;
-        }
-
-        public Stream WriteToFileEx6()
-        {
-            Stream sr = null;
-            var fs = new BinaryReader() // Noncompliant, this is a false positive
-            {
-                BaseStream = sr
-            };
-            return sr;
-        }
-
-        public void WriteElvis()
-        {
-            var fs = new BinaryReader();
-            fs?.Dispose();
-        }
-    }
-
-    public interface IContainer : IDisposable
-    { }
-    public class Container : IContainer
-    {
-        public void Dispose()
-        { }
-    }
-
-    class Form1
-    {
-        private IContainer components = null; // Compliant
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
+                // do nothing but dispose
             }
-            base.Dispose(disposing);
+
+            using (var fs6 = new FileStream(@"c:\foo.txt", FileMode.Open)) // Compliant - used properly
+            {
+                // do nothing but dispose
+            }
+
+            var fs7 = new FileStream(@"c:\foo.txt", FileMode.Open); // Compliant - Dispose()
+            fs7.Dispose();
+
+            var fs8 = new FileStream(@"c:\foo.txt", FileMode.Open); // Compliant - Close()
+            fs8.Close();
+
+            var fs9 = new FileStream(@"c:\foo.txt", FileMode.Open); // Compliant - disposed using elvis operator
+            fs9?.Dispose();
+
+            FileStream fs10 = fs; // Compliant - not instantiated directly
+
+            var fs11 = new FileStream(@"c:\foo.txt", FileMode.Open); // Compliant - aliased
+            var newFs = fs11;
+
+            var fs12 = new BufferedStream(fs); // Compliant - constructed from another stream
+            var fs13 = new StreamReader(fs); // Compliant - constructed from another stream
+
+            var fs14 = new FileStream(@"c:\foo.txt", FileMode.Open); // Compliant - passed to another method (or constructor)
+            var fs15 = new BufferedStream(fs14); // Compliant - not tracked
+
+            var fs16 = new FileStream(@"c:\foo.txt", FileMode.Open); // Compliant - aliased
+            var myAnonymousType = new { SomeField = fs16 };
+
+            FileStream fs17; // Compliant - no initializer, should not fail
+
+            FileStream
+                fs18 = new FileStream(@"c:\foo.txt", FileMode.Open), // Noncompliant - test issue location
+                fs19; // Compliant - not instantiated
+
+            FileStream fs20 = new FileStream(@"c:\foo.txt", FileMode.Open); // Compliant - aliased
+            Stream fs21;
+            fs21 = fs20;
+
+            FileStream fs22;
+            fs22 = new FileStream(@"c:\foo.txt", FileMode.Open); // Noncompliant
+
+            field_fs4.Dispose();
+
+            field_fs5 = new FileStream(@"c:\foo.txt", FileMode.Open); // Noncompliant
+
+            NoOperation(field_fs6);
+            field_fs6 = new FileStream(@"c:\foo.txt", FileMode.Open); // Compliant - field_fs6 gets passed to a method
+
+            field_fs7 = new FileStream(@"c:\foo.txt", FileMode.Open); // Noncompliant - even if field_fs7's type is object
+
+            NoOperation(this.field_fs8);
         }
 
-        #region Windows Form Designer generated code
-
-        private void InitializeComponent()
+        private void NoOperation(FileStream fs)
         {
-            this.components = new Container();
+            // do nothing
         }
-
-        #endregion
     }
 }

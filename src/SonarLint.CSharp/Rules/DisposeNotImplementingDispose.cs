@@ -27,6 +27,7 @@ using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -63,7 +64,7 @@ namespace SonarLint.Rules.CSharp
             context.RegisterCompilationStartAction(
                 analysisContext =>
                 {
-                    var disposeMethod = DisposableNotDisposed.GetDisposeMethod(analysisContext.Compilation);
+                    var disposeMethod = GetDisposeMethod(analysisContext.Compilation);
                     if (disposeMethod == null)
                     {
                         return;
@@ -207,6 +208,13 @@ namespace SonarLint.Rules.CSharp
                 }
             }
             return false;
+        }
+
+        internal static IMethodSymbol GetDisposeMethod(Compilation compilation)
+        {
+            return (IMethodSymbol)compilation.GetSpecialType(SpecialType.System_IDisposable)
+                .GetMembers("Dispose")
+                .SingleOrDefault();
         }
     }
 }

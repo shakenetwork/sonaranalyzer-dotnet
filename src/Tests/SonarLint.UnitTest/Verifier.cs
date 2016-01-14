@@ -36,11 +36,17 @@ using CS = Microsoft.CodeAnalysis.CSharp;
 using VB = Microsoft.CodeAnalysis.VisualBasic;
 using Microsoft.CodeAnalysis.Text;
 using System.Text.RegularExpressions;
+using System.Net;
 
 namespace SonarLint.UnitTest
 {
     public static class Verifier
     {
+        private static readonly MetadataReference systemAssembly = MetadataReference.CreateFromFile(typeof(object).Assembly.Location);
+        private static readonly MetadataReference systemLinqAssembly = MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location);
+        private static readonly MetadataReference systemNetAssembly = MetadataReference.CreateFromFile(typeof(WebClient).Assembly.Location);
+        private static readonly MetadataReference testAssembly = MetadataReference.CreateFromFile(typeof(TestMethodAttribute).Assembly.Location);
+
         private const string GeneratedAssemblyName = "foo";
 
         #region Verify*
@@ -52,8 +58,7 @@ namespace SonarLint.UnitTest
 
         public static void VerifyAnalyzerInTest(string path, DiagnosticAnalyzer diagnosticAnalyzer)
         {
-            Verify(path, GeneratedAssemblyName, diagnosticAnalyzer,
-                MetadataReference.CreateFromFile(typeof(TestMethodAttribute).Assembly.Location));
+            Verify(path, GeneratedAssemblyName, diagnosticAnalyzer, testAssembly);
         }
 
         public static void VerifyCodeFix(string path, string pathToExpected, DiagnosticAnalyzer diagnosticAnalyzer,
@@ -169,8 +174,9 @@ namespace SonarLint.UnitTest
 
             return workspace.CurrentSolution.AddProject(assemblyName,
                     $"{assemblyName}.dll", language)
-                .AddMetadataReference(MetadataReference.CreateFromFile(typeof(object).Assembly.Location))
-                .AddMetadataReference(MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location))
+                .AddMetadataReference(systemAssembly)
+                .AddMetadataReference(systemLinqAssembly)
+                .AddMetadataReference(systemNetAssembly)
                 .AddMetadataReferences(additionalReferences)
                 .AddDocument(file.Name, File.ReadAllText(file.FullName, Encoding.UTF8));
         }

@@ -156,10 +156,10 @@ namespace SonarLint.Rules.CSharp
                    ImplementsIDisposable(fieldSymbol.Type as INamedTypeSymbol);
         }
 
-        internal static bool ImplementsIDisposable(INamedTypeSymbol namedTypeSymbol)
+        internal static bool ImplementsIDisposable(ITypeSymbol typeSymbol)
         {
-            return namedTypeSymbol != null &&
-                   namedTypeSymbol.AllInterfaces.Any(symbol =>
+            return typeSymbol != null &&
+                   typeSymbol.AllInterfaces.Any(symbol =>
                        symbol.SpecialType == SpecialType.System_IDisposable);
         }
     }

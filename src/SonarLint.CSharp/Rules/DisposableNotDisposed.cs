@@ -28,6 +28,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -40,14 +41,6 @@ namespace SonarLint.Rules.CSharp
     {
         internal const string DiagnosticId = "S2930";
         internal const string Title = "\"IDisposables\" should be disposed";
-        internal const string Description =
-            "You can't rely on garbage collection to clean up everything. Specifically, you can't " +
-            "count on it to release non-memory resources such as \"File\"s. For that, there's the " +
-            "\"IDisposable\" interface, and the contract that \"Dispose\" will always be called on " +
-            "such objects. When an \"IDisposable\" is a class member, then it's up to that class " +
-            "to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it's a local variable, " +
-            "then it should be instantiated with a \"using\" clause to prompt automatic cleanup when " +
-            "it goes out of scope.";
         internal const string MessageFormat = "\"Dispose\" of \"{0}\".";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
@@ -56,383 +49,274 @@ namespace SonarLint.Rules.CSharp
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
+                helpLinkUri: DiagnosticId.GetHelpLink());
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
+        private static readonly IImmutableSet<string> TrackedTypes = new []
+        {
+            "System.IO.FileStream",
+            "System.IO.StreamReader",
+            "System.IO.StreamWriter",
+
+            "System.Net.WebClient",
+
+            "System.Net.Sockets.TcpClient",
+            "System.Net.Sockets.TcpListener",
+            "System.Net.Sockets.UdpClient",
+
+            "System.Drawing.Image",
+            "System.Drawing.Bitmap"
+        }.ToImmutableHashSet();
+
+        private static readonly IImmutableSet<string> DisposeMethods = new []
+        {
+            "Dispose",
+            "Close"
+        }.ToImmutableHashSet();
+
+        private static readonly IImmutableSet<string> FactoryMethods = new []
+        {
+            "System.IO.File.Create",
+            "System.IO.File.Open",
+            "System.Drawing.Image.FromFile",
+            "System.Drawing.Image.FromStream"
+        }.ToImmutableHashSet();
+
+        private class NodeAndSymbol
+        {
+            public SyntaxNode Node { get; set; }
+            public ISymbol Symbol { get; set; }
+        }
+
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterCodeBlockStartActionInNonGenerated<SyntaxKind>(analysisContext =>
-            {
-                var localsAssigned = ImmutableHashSet<ILocalSymbol>.Empty;
-                var localsAssignedInUsing = ImmutableHashSet<ILocalSymbol>.Empty;
-                var localsDisposed = ImmutableHashSet<ILocalSymbol>.Empty;
-                var localsReturned = ImmutableHashSet<ILocalSymbol>.Empty;
-                var disposeMethod = GetDisposeMethod(analysisContext.SemanticModel.Compilation);
-
-                if (disposeMethod == null)
+            context.RegisterCompilationStartAction(
+                analysisContext =>
                 {
-                    return;
-                }
+                    var trackedNodesAndSymbols = new HashSet<NodeAndSymbol>();
+                    var excludedSymbols = new HashSet<ISymbol>();
 
-                analysisContext.RegisterSyntaxNodeAction(
-                    c => CollectAssignedLocalDisposables((AssignmentExpressionSyntax)c.Node, c.SemanticModel,
-                        ref localsAssigned),
-                    SyntaxKind.SimpleAssignmentExpression);
+                    TrackInitializedLocalsAndPrivateFields(analysisContext, trackedNodesAndSymbols);
+                    TrackAssignmentsToLocalsAndPrivateFields(analysisContext, trackedNodesAndSymbols);
 
-                analysisContext.RegisterSyntaxNodeAction(
-                    c => CollectInitializedLocalDisposables((VariableDeclaratorSyntax)c.Node, c.SemanticModel,
-                        ref localsAssigned),
-                    SyntaxKind.VariableDeclarator);
+                    ExcludeDisposedAndClosedLocalsAndPrivateFields(analysisContext, excludedSymbols);
+                    ExcludeReturnedPassedAndAliasedLocalsAndPrivateFields(analysisContext, excludedSymbols);
 
-                analysisContext.RegisterSyntaxNodeAction(
-                    c => CollectDisposableLocalFromUsing((UsingStatementSyntax)c.Node, c.SemanticModel,
-                        ref localsAssignedInUsing),
-                    SyntaxKind.UsingStatement);
-
-                analysisContext.RegisterSyntaxNodeAction(
-                    c => CollectDisposedSymbol((InvocationExpressionSyntax)c.Node, c.SemanticModel, disposeMethod,
-                        IsDisposableLocalSymbol, ref localsDisposed),
-                    SyntaxKind.InvocationExpression);
-
-                analysisContext.RegisterSyntaxNodeAction(
-                    c => CollectDisposedSymbol((ConditionalAccessExpressionSyntax)c.Node, c.SemanticModel, disposeMethod,
-                    IsDisposableLocalSymbol, ref localsDisposed),
-                    SyntaxKind.ConditionalAccessExpression);
-
-                analysisContext.RegisterSyntaxNodeAction(
-                    c => CollectReturnedLocals((ReturnStatementSyntax)c.Node, c.SemanticModel,
-                        ref localsReturned),
-                    SyntaxKind.ReturnStatement);
-
-                analysisContext.RegisterCodeBlockEndAction(c =>
-                {
-                    var internallyInitializedLocals = localsAssigned.Except(localsAssignedInUsing);
-                    var nonDisposedLocals = internallyInitializedLocals
-                        .Except(localsDisposed)
-                        .Except(localsReturned);
-
-                    ReportIssues(nonDisposedLocals, c.ReportDiagnostic);
+                    analysisContext.RegisterCompilationEndAction(
+                        c =>
+                        {
+                            foreach (var trackedNodeAndSymbol in trackedNodesAndSymbols)
+                            {
+                                if (!excludedSymbols.Contains(trackedNodeAndSymbol.Symbol))
+                                {
+                                    c.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, trackedNodeAndSymbol.Node.GetLocation(), trackedNodeAndSymbol.Symbol.Name), c.Compilation);
+                                }
+                            }
+                        });
                 });
-            });
+        }
 
-            context.RegisterCompilationStartAction(analysisContext =>
-            {
-                var disposableFields = ImmutableHashSet<IFieldSymbol>.Empty;
-                var fieldsAssigned = ImmutableHashSet<IFieldSymbol>.Empty;
-                var fieldsDisposed = ImmutableHashSet<IFieldSymbol>.Empty;
-
-                var disposeMethod = GetDisposeMethod(analysisContext.Compilation);
-                if (disposeMethod == null)
+        private static void TrackInitializedLocalsAndPrivateFields(CompilationStartAnalysisContext context, ISet<NodeAndSymbol> trackedNodesAndSymbols)
+        {
+            context.RegisterSyntaxNodeAction(
+                c =>
                 {
-                    return;
-                }
-
-                analysisContext.RegisterSyntaxNodeAction(
-                    c => CollectDisposableFields((FieldDeclarationSyntax)c.Node, c.SemanticModel,
-                        ref disposableFields, ref fieldsAssigned),
-                    SyntaxKind.FieldDeclaration);
-
-                analysisContext.RegisterSyntaxNodeAction(
-                    c => CollectAssignedDisposableFields((AssignmentExpressionSyntax)c.Node, c.SemanticModel,
-                        ref fieldsAssigned),
-                    SyntaxKind.SimpleAssignmentExpression);
-
-                analysisContext.RegisterSyntaxNodeAction(
-                    c => CollectDisposedSymbol((InvocationExpressionSyntax)c.Node, c.SemanticModel, disposeMethod,
-                    DisposableMemberInNonDisposableClass.IsNonStaticNonPublicDisposableField, ref fieldsDisposed),
-                    SyntaxKind.InvocationExpression);
-
-                analysisContext.RegisterSyntaxNodeAction(
-                    c => CollectDisposedSymbol((ConditionalAccessExpressionSyntax)c.Node, c.SemanticModel, disposeMethod,
-                    DisposableMemberInNonDisposableClass.IsNonStaticNonPublicDisposableField, ref fieldsDisposed),
-                    SyntaxKind.ConditionalAccessExpression);
-
-                analysisContext.RegisterCompilationEndAction(c =>
-                {
-                    var internallyInitializedFields = disposableFields.Intersect(fieldsAssigned);
-                    var nonDisposedFields = internallyInitializedFields.Except(fieldsDisposed);
-
-                    ReportIssues(nonDisposedFields, diagnostic => c.ReportDiagnosticIfNonGenerated(diagnostic, c.Compilation));
-                });
-            });
-        }
-
-        internal static IMethodSymbol GetDisposeMethod(Compilation compilation)
-        {
-            return (IMethodSymbol)compilation.GetSpecialType(SpecialType.System_IDisposable)
-                .GetMembers("Dispose")
-                .SingleOrDefault();
-        }
-
-        private static void CollectDisposedSymbol<T>(InvocationExpressionSyntax invocation, SemanticModel semanticModel,
-            IMethodSymbol disposeMethod, Predicate<T> isSymbolRelevant, ref ImmutableHashSet<T> fieldsDisposed)
-             where T : class, ISymbol
-        {
-            T fieldSymbol;
-            if (TryGetDisposedSymbol(invocation, semanticModel, disposeMethod,
-                isSymbolRelevant, out fieldSymbol))
-            {
-                fieldsDisposed = fieldsDisposed.Add(fieldSymbol);
-            }
-        }
-        private static void CollectDisposedSymbol<T>(ConditionalAccessExpressionSyntax conditionalAccess, SemanticModel semanticModel,
-            IMethodSymbol disposeMethod, Predicate<T> isSymbolRelevant, ref ImmutableHashSet<T> fieldsDisposed)
-             where T : class, ISymbol
-        {
-            T fieldSymbol;
-            if (TryGetDisposedSymbol(conditionalAccess, semanticModel, disposeMethod,
-                isSymbolRelevant, out fieldSymbol))
-            {
-                fieldsDisposed = fieldsDisposed.Add(fieldSymbol);
-            }
-        }
-
-        private static void CollectAssignedDisposableFields(AssignmentExpressionSyntax assignment, SemanticModel semanticModel,
-            ref ImmutableHashSet<IFieldSymbol> fieldsAssigned)
-        {
-            IFieldSymbol fieldSymbol;
-            if (TryGetLocallyConstructedSymbol(assignment, semanticModel,
-                DisposableMemberInNonDisposableClass.IsNonStaticNonPublicDisposableField, out fieldSymbol))
-            {
-                fieldsAssigned = fieldsAssigned.Add(fieldSymbol);
-            }
-        }
-
-        private static void CollectDisposableFields(FieldDeclarationSyntax field, SemanticModel semanticModel,
-            ref ImmutableHashSet<IFieldSymbol> disposableFields, ref ImmutableHashSet<IFieldSymbol> fieldsAssigned)
-        {
-            foreach (var variableDeclaratorSyntax in field.Declaration.Variables)
-            {
-                var fieldSymbol = semanticModel.GetDeclaredSymbol(variableDeclaratorSyntax) as IFieldSymbol;
-
-                if (!DisposableMemberInNonDisposableClass.IsNonStaticNonPublicDisposableField(fieldSymbol))
-                {
-                    continue;
-                }
-
-                disposableFields = disposableFields.Add(fieldSymbol);
-
-                if (variableDeclaratorSyntax.Initializer == null ||
-                    !(variableDeclaratorSyntax.Initializer.Value is ObjectCreationExpressionSyntax))
-                {
-                    return;
-                }
-
-                fieldsAssigned = fieldsAssigned.Add(fieldSymbol);
-            }
-        }
-
-        private static void CollectReturnedLocals(ReturnStatementSyntax returnStatement, SemanticModel semanticModel,
-            ref ImmutableHashSet<ILocalSymbol> localsReturned)
-        {
-            if (returnStatement.Expression == null)
-            {
-                return;
-            }
-
-            var localSymbol = semanticModel.GetSymbolInfo(returnStatement.Expression).Symbol as ILocalSymbol;
-            if (IsDisposableLocalSymbol(localSymbol))
-            {
-                localsReturned = localsReturned.Add(localSymbol);
-            }
-        }
-
-        private static void CollectDisposableLocalFromUsing(UsingStatementSyntax usingStatement, SemanticModel semanticModel,
-            ref ImmutableHashSet<ILocalSymbol> localsAssignedInUsing)
-        {
-            if (usingStatement.Declaration == null)
-            {
-                return;
-            }
-
-            foreach (var declarator in usingStatement.Declaration.Variables)
-            {
-                ILocalSymbol localSymbol;
-                if (TryGetLocallyConstructedInitializedLocalSymbol(declarator, semanticModel, out localSymbol))
-                {
-                    localsAssignedInUsing = localsAssignedInUsing.Add(localSymbol);
-                }
-            }
-        }
-
-        private static void CollectInitializedLocalDisposables(VariableDeclaratorSyntax variableDeclarator, SemanticModel semanticModel, ref ImmutableHashSet<ILocalSymbol> localsAssigned)
-        {
-            ILocalSymbol localSymbol;
-            if (TryGetLocallyConstructedInitializedLocalSymbol(variableDeclarator, semanticModel, out localSymbol))
-            {
-                localsAssigned = localsAssigned.Add(localSymbol);
-            }
-        }
-
-        private static void CollectAssignedLocalDisposables(AssignmentExpressionSyntax assignment, SemanticModel semanticModel, ref ImmutableHashSet<ILocalSymbol> localsAssigned)
-        {
-            ILocalSymbol localSymbol;
-            if (TryGetLocallyConstructedSymbol(assignment, semanticModel, IsDisposableLocalSymbol, out localSymbol, true))
-            {
-                localsAssigned = localsAssigned.Add(localSymbol);
-            }
-        }
-
-        private static void ReportIssues<T>(ImmutableHashSet<T> nonDisposedSymbols, Action<Diagnostic> report)
-            where T : class, ISymbol
-        {
-            foreach (var nonDisposedSymbol in nonDisposedSymbols)
-            {
-                var declarationReference = nonDisposedSymbol.DeclaringSyntaxReferences.FirstOrDefault();
-                if (declarationReference == null)
-                {
-                    continue;
-                }
-                var declarator = declarationReference.GetSyntax() as VariableDeclaratorSyntax;
-                if (declarator == null)
-                {
-                    continue;
-                }
-
-                report(Diagnostic.Create(Rule, declarator.Identifier.GetLocation(), declarator.Identifier.ValueText));
-            }
-        }
-
-        private static bool TryGetDisposedSymbol<T>(InvocationExpressionSyntax invocation, SemanticModel semanticModel,
-            IMethodSymbol disposeMethod, Predicate<T> isSymbolRelevant, out T localSymbol) where T : class, ISymbol
-        {
-            localSymbol = null;
-            var memberAccess = invocation.Expression as MemberAccessExpressionSyntax;
-            if (memberAccess == null)
-            {
-                return false;
-            }
-
-            localSymbol = semanticModel.GetSymbolInfo(memberAccess.Expression).Symbol as T;
-            if (!isSymbolRelevant(localSymbol))
-            {
-                return false;
-            }
-
-            var methodSymbol = semanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
-            return methodSymbol != null &&
-                   (methodSymbol.Equals(disposeMethod) ||
-                   methodSymbol.Equals(methodSymbol.ContainingType.FindImplementationForInterfaceMember(disposeMethod)));
-        }
-
-        private static bool TryGetDisposedSymbol<T>(ConditionalAccessExpressionSyntax conditionalAccess, SemanticModel semanticModel,
-            IMethodSymbol disposeMethod, Predicate<T> isSymbolRelevant, out T localSymbol) where T : class, ISymbol
-        {
-            localSymbol = null;
-
-            localSymbol = semanticModel.GetSymbolInfo(conditionalAccess.Expression).Symbol as T;
-            if (!isSymbolRelevant(localSymbol))
-            {
-                return false;
-            }
-
-            var methodSymbol = semanticModel.GetSymbolInfo(conditionalAccess.WhenNotNull).Symbol as IMethodSymbol;
-            return methodSymbol != null &&
-                   (methodSymbol.Equals(disposeMethod) ||
-                   methodSymbol.Equals(methodSymbol.ContainingType.FindImplementationForInterfaceMember(disposeMethod)));
-        }
-
-        private static bool TryGetLocallyConstructedSymbol<T>(AssignmentExpressionSyntax assignment, SemanticModel semanticModel,
-            Predicate<T> isSymbolRelevant, out T localSymbol, bool doCheckNonLocalDisposables = false) where T : class, ISymbol
-        {
-            localSymbol = null;
-            var objectCreation = assignment.Right as ObjectCreationExpressionSyntax;
-            if (objectCreation == null ||
-                (doCheckNonLocalDisposables && MightUseNonLocalDisposable(objectCreation, semanticModel)))
-            {
-                return false;
-            }
-
-            localSymbol = semanticModel.GetSymbolInfo(assignment.Left).Symbol as T;
-            return isSymbolRelevant(localSymbol);
-        }
-
-        private static bool TryGetLocallyConstructedInitializedLocalSymbol(VariableDeclaratorSyntax declarator, SemanticModel semanticModel,
-            out ILocalSymbol localSymbol)
-        {
-            localSymbol = null;
-            if (declarator.Initializer == null)
-            {
-                return false;
-            }
-
-            var objectCreation = declarator.Initializer.Value as ObjectCreationExpressionSyntax;
-            if (objectCreation == null || MightUseNonLocalDisposable(objectCreation, semanticModel))
-            {
-                return false;
-            }
-
-            localSymbol = semanticModel.GetDeclaredSymbol(declarator) as ILocalSymbol;
-            return IsDisposableLocalSymbol(localSymbol);
-        }
-
-        private static bool MightUseNonLocalDisposable(ObjectCreationExpressionSyntax objectCreation,
-            SemanticModel semanticModel)
-        {
-            return MightUseNonLocalDisposableInArguments(objectCreation, semanticModel) ||
-                   MightUseNonLocalDisposableInInitializer(objectCreation, semanticModel);
-        }
-
-        private static bool MightUseNonLocalDisposableInInitializer(ObjectCreationExpressionSyntax objectCreation,
-            SemanticModel semanticModel)
-        {
-            if (objectCreation.Initializer == null)
-            {
-                return false;
-            }
-
-            return objectCreation.Initializer.Expressions
-                .Select(
-                    expression =>
+                    VariableDeclarationSyntax declaration;
+                    if (c.Node.IsKind(SyntaxKind.LocalDeclarationStatement))
                     {
-                        var assignment = expression as AssignmentExpressionSyntax;
-                        return assignment == null ? expression : assignment.Right;
-                    })
-                .Any(expression => HasDisposableNotLocalIdentifier(expression, semanticModel));
+                        declaration = ((LocalDeclarationStatementSyntax)c.Node).Declaration;
+                    }
+                    else if (c.Node.IsKind(SyntaxKind.FieldDeclaration))
+                    {
+                        var fieldDeclaration = (FieldDeclarationSyntax)c.Node;
+                        if (!fieldDeclaration.Modifiers.Any(m => m.IsKind(SyntaxKind.PrivateKeyword)))
+                        {
+                            return;
+                        }
+
+                        declaration = fieldDeclaration.Declaration;
+                    }
+                    else
+                    {
+                        throw new ArgumentException();
+                    }
+
+                    foreach (var variableNode in declaration.Variables.Where(v => v.Initializer != null && IsInstantiation(v.Initializer.Value, c.SemanticModel)))
+                    {
+                        trackedNodesAndSymbols.Add(new NodeAndSymbol { Node = variableNode, Symbol = c.SemanticModel.GetDeclaredSymbol(variableNode) });
+                    }
+                },
+                SyntaxKind.LocalDeclarationStatement,
+                SyntaxKind.FieldDeclaration);
         }
 
-        private static bool MightUseNonLocalDisposableInArguments(ObjectCreationExpressionSyntax objectCreation,
-            SemanticModel semanticModel)
+        private static void TrackAssignmentsToLocalsAndPrivateFields(CompilationStartAnalysisContext context, ISet<NodeAndSymbol> trackedNodesAndSymbols)
         {
-            if (objectCreation.ArgumentList == null)
+            context.RegisterSyntaxNodeAction(
+                c =>
+                {
+                    var assignment = c.Node as AssignmentExpressionSyntax;
+                    if (assignment.Parent.IsKind(SyntaxKind.UsingStatement))
+                    {
+                        return;
+                    }
+
+                    var referencedSymbol = c.SemanticModel.GetSymbolInfo(assignment.Left).Symbol;
+                    if (referencedSymbol == null || !IsLocalOrPrivateField(referencedSymbol))
+                    {
+                        return;
+                    }
+
+                    if (IsInstantiation(assignment.Right, c.SemanticModel))
+                    {
+                        trackedNodesAndSymbols.Add(new NodeAndSymbol { Node = assignment, Symbol = referencedSymbol });
+                    }
+                },
+                SyntaxKind.SimpleAssignmentExpression);
+        }
+
+        private static bool IsLocalOrPrivateField(ISymbol symbol)
+        {
+            return symbol.Kind == SymbolKind.Local ||
+                (symbol.Kind == SymbolKind.Field && symbol.DeclaredAccessibility == Accessibility.Private);
+        }
+
+        private static void ExcludeDisposedAndClosedLocalsAndPrivateFields(CompilationStartAnalysisContext context, ISet<ISymbol> excludedSymbols)
+        {
+            context.RegisterSyntaxNodeAction(
+                c =>
+                {
+                    SimpleNameSyntax name;
+                    ExpressionSyntax expression;
+
+                    if (c.Node.IsKind(SyntaxKind.InvocationExpression))
+                    {
+                        var invocation = (InvocationExpressionSyntax)c.Node;
+                        var memberAccessNode = invocation.Expression as MemberAccessExpressionSyntax;
+
+                        name = memberAccessNode?.Name;
+                        expression = memberAccessNode?.Expression;
+                    }
+                    else if (c.Node.IsKind(SyntaxKind.ConditionalAccessExpression))
+                    {
+                        var conditionalAccess = (ConditionalAccessExpressionSyntax)c.Node;
+                        var invocation = conditionalAccess.WhenNotNull as InvocationExpressionSyntax;
+                        if (invocation == null)
+                        {
+                            return;
+                        }
+
+                        var memberBindingNode = invocation.Expression as MemberBindingExpressionSyntax;
+
+                        name = memberBindingNode?.Name;
+                        expression = conditionalAccess.Expression;
+                    }
+                    else
+                    {
+                        throw new ArgumentException();
+                    }
+
+                    if (name == null || !DisposeMethods.Contains(name.Identifier.Text))
+                    {
+                        return;
+                    }
+
+                    var referencedSymbol = c.SemanticModel.GetSymbolInfo(expression).Symbol;
+                    if (referencedSymbol != null && IsLocalOrPrivateField(referencedSymbol))
+                    {
+                        excludedSymbols.Add(referencedSymbol);
+                    }
+                },
+                SyntaxKind.InvocationExpression,
+                SyntaxKind.ConditionalAccessExpression);
+        }
+
+        private static void ExcludeReturnedPassedAndAliasedLocalsAndPrivateFields(CompilationStartAnalysisContext context, ISet<ISymbol> excludedSymbols)
+        {
+            context.RegisterSyntaxNodeAction(
+                c =>
+                {
+                    ExpressionSyntax expression;
+                    if (c.Node.IsKind(SyntaxKind.IdentifierName))
+                    {
+                        expression = (IdentifierNameSyntax)c.Node;
+                    }
+                    else if (c.Node.IsKind(SyntaxKind.SimpleMemberAccessExpression))
+                    {
+
+                        var memberAccess = (MemberAccessExpressionSyntax)c.Node;
+                        if (!memberAccess.Expression.IsKind(SyntaxKind.ThisExpression))
+                        {
+                            return;
+                        }
+                        expression = memberAccess;
+                    }
+                    else
+                    {
+                        throw new ArgumentException();
+                    }
+
+                    if (IsStandaloneExpression(expression))
+                    {
+                        var referencedSymbol = c.SemanticModel.GetSymbolInfo(c.Node).Symbol;
+                        if (referencedSymbol != null && IsLocalOrPrivateField(referencedSymbol))
+                        {
+                            excludedSymbols.Add(referencedSymbol);
+                        }
+                    }
+                },
+                SyntaxKind.IdentifierName,
+                SyntaxKind.SimpleMemberAccessExpression);
+        }
+
+        private static bool IsStandaloneExpression(ExpressionSyntax expression)
+        {
+            var parentAsAssignment = expression.Parent as AssignmentExpressionSyntax;
+
+            return !(expression.Parent is ExpressionSyntax) ||
+                (parentAsAssignment != null && object.ReferenceEquals(expression, parentAsAssignment.Right));
+        }
+
+        private static bool IsInstantiation(ExpressionSyntax expression, SemanticModel semanticModel)
+        {
+            return IsNewTrackedTypeObjectCreation(expression, semanticModel) ||
+                IsFactoryMethodInvocation(expression, semanticModel);
+        }
+
+        private static bool IsNewTrackedTypeObjectCreation(ExpressionSyntax expression, SemanticModel semanticModel)
+        {
+            if (!expression.IsKind(SyntaxKind.ObjectCreationExpression))
             {
                 return false;
             }
 
-            return objectCreation.ArgumentList.Arguments
-                .Any(argument => HasDisposableNotLocalIdentifier(argument.Expression, semanticModel));
-        }
-
-        private static bool HasDisposableNotLocalIdentifier(ExpressionSyntax expression, SemanticModel semanticModel)
-        {
-            return expression
-                .DescendantNodesAndSelf()
-                .OfType<IdentifierNameSyntax>()
-                .Any(identifier => IsDisposableNotLocalIdentifier(identifier, semanticModel));
-        }
-
-        private static bool IsDisposableNotLocalIdentifier(IdentifierNameSyntax identifier, SemanticModel semanticModel)
-        {
-            var expressionSymbol = semanticModel.GetSymbolInfo(identifier).Symbol;
-            if (expressionSymbol == null)
+            ITypeSymbol type = semanticModel.GetTypeInfo(expression).Type;
+            if (type == null || !TrackedTypes.Contains(type.ToDisplayString()))
             {
-                return true;
+                return false;
             }
 
-            var localSymbol = expressionSymbol as ILocalSymbol;
-            var expressionType = semanticModel.GetTypeInfo(identifier).Type;
-
-            return localSymbol == null &&
-                   expressionType != null &&
-                   DisposableMemberInNonDisposableClass.ImplementsIDisposable(expressionType as INamedTypeSymbol);
+            var constructor = semanticModel.GetSymbolInfo(expression).Symbol as IMethodSymbol;
+            return constructor != null && !constructor.Parameters.Any(p => DisposableMemberInNonDisposableClass.ImplementsIDisposable(p.Type));
         }
 
-        private static bool IsDisposableLocalSymbol(ILocalSymbol localSymbol)
+        private static bool IsFactoryMethodInvocation(ExpressionSyntax expression, SemanticModel semanticModel)
         {
-            return localSymbol != null &&
-                   DisposableMemberInNonDisposableClass.ImplementsIDisposable(localSymbol.Type as INamedTypeSymbol);
+            var n = expression as InvocationExpressionSyntax;
+            if (n == null)
+            {
+                return false;
+            }
+
+            var methodSymbol = semanticModel.GetSymbolInfo(n).Symbol as IMethodSymbol;
+            if (methodSymbol == null)
+            {
+                return false;
+            }
+
+            var methodQualifiedName = methodSymbol.ContainingType.ToDisplayString() + "." + methodSymbol.Name;
+            return FactoryMethods.Contains(methodQualifiedName);
         }
     }
 }
