@@ -117,6 +117,8 @@
     <Compile Include="Rules\CollectionEmptinessChecking.cs" />
     <Compile Include="Rules\CollectionQuerySimplification.cs" />
     <Compile Include="Rules\MethodParameterUnusedCodeFixProvider.cs" />
+    <Compile Include="Rules\RedundantToStringCallCodeFixProvider.cs" />
+    <Compile Include="Rules\RedundantToStringCall.cs" />
     <Compile Include="Rules\StringFormatWithNoArgument.cs" />
     <Compile Include="Rules\StringFormatWithNoArgumentCodeFixProvider.cs" />
     <Compile Include="Rules\MemberOverrideCallsBaseMemberCodeFixProvider.cs" />

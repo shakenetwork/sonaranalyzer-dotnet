@@ -1,0 +1,41 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S1858",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
+"region":  {
+"startLine":  364,
+"startColumn":  94,
+"endLine":  364,
+"endColumn":  105
+}
+}
+]
+}
+],
+"shortMessage":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"fullMessage":  "Invoking a method designed to return a string representation of an object which is already a string is a waste of keystrokes. Similarly, explicitly invoking \"ToString()\" when the compiler would do it implicitly is also needless code-bloat.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "\"ToString()\" calls should not be redundant",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1858",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+}
+]
+}
