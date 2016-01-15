@@ -158,5 +158,31 @@ End Module";
 End Module";
             VerifyEmpty("test.vb", SourceVb, new VB.ArrayDesignatorOnVariable());
         }
+
+        [TestMethod]
+        public void No_Issue_On_Partially_Generated_Legacy_WinForms_File()
+        {
+            var format =
+@"namespace PartiallyGenerated
+{
+    class MyClass
+    {
+        // For the time being, the whole file is considered as generated
+        void HandWrittenEventHandler()
+        {
+            ;;;;
+        }
+
+#region {0}
+        void GeneratedStuff()
+        {
+            ;;;;
+        }
+#endregion
+    }
+}";
+            VerifyEmpty("test.cs", format.Replace("{0}", "Windows Form Designer generated code"), new CS.EmptyStatement());
+            VerifyEmpty("test.cs", format.Replace("{0}", "Windows Form Designer GeNeRaTeD code"), new CS.EmptyStatement());
+        }
     }
 }

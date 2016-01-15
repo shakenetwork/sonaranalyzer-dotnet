@@ -22,6 +22,8 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
+using System.Globalization;
+using System.Linq;
 
 namespace SonarLint.Helpers.CSharp
 {
@@ -37,6 +39,23 @@ namespace SonarLint.Helpers.CSharp
         public static GeneratedCodeRecognizer Instance => lazy.Value;
 
         #endregion
+
+        public override bool IsGenerated(SyntaxTree tree)
+        {
+            return base.IsGenerated(tree) ||
+                HasGeneratedRegion(tree);
+        }
+
+        private bool HasGeneratedRegion(SyntaxTree tree)
+        {
+            return tree
+                .GetRoot()
+                .DescendantTrivia()
+                .Any(
+                    t =>
+                        t.IsKind(SyntaxKind.RegionDirectiveTrivia) &&
+                        CultureInfo.InvariantCulture.CompareInfo.IndexOf(t.ToString(), "generated", CompareOptions.IgnoreCase) >= 0);
+        }
 
         protected override bool IsTriviaComment(SyntaxTrivia trivia) =>
             trivia.IsKind(SyntaxKind.SingleLineCommentTrivia) || trivia.IsKind(SyntaxKind.MultiLineCommentTrivia);
