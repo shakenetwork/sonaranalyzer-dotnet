@@ -199,6 +199,7 @@
     <Compile Include="Rules\UnaryPrefixOperatorRepeatedTest.cs" />
     <Compile Include="Rules\GetHashCodeEqualsOverrideTest.cs" />
     <Compile Include="Rules\RedundantParenthesesTest.cs" />
+    <Compile Include="Rules\UnusedPrivateMemberTest.cs" />
     <Compile Include="Rules\UseValueParameterTest.cs" />
     <Compile Include="Rules\AnonymousDelegateEventUnsubscribeTest.cs" />
     <Compile Include="Rules\DelegateSubtractionTest.cs" />
@@ -771,6 +772,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\MethodParameterUnused.Fixed.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\UnusedPrivateMember.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\UnusedPrivateMember.Fixed.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\UnusedPrivateMember.Fixed.Batch.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />

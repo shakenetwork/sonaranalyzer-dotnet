@@ -1,0 +1,196 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S1144",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
+"region":  {
+"startLine":  591,
+"startColumn":  8,
+"endLine":  591,
+"endColumn":  68
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this unused private member.",
+"fullMessage":  "Private types or members that are never executed or referenced are dead code: unnecessary, inoperative code that should be removed. Cleaning out dead code decreases the size of the maintained codebase, making it easier to understand the program and preventing bugs from being introduced.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Info",
+"title":  "Unused private types or members should be removed",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1144",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S1144",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
+"region":  {
+"startLine":  1770,
+"startColumn":  8,
+"endLine":  1770,
+"endColumn":  60
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this unused private member.",
+"fullMessage":  "Private types or members that are never executed or referenced are dead code: unnecessary, inoperative code that should be removed. Cleaning out dead code decreases the size of the maintained codebase, making it easier to understand the program and preventing bugs from being introduced.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Info",
+"title":  "Unused private types or members should be removed",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1144",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S1144",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
+"region":  {
+"startLine":  1845,
+"startColumn":  8,
+"endLine":  1845,
+"endColumn":  60
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this unused private member.",
+"fullMessage":  "Private types or members that are never executed or referenced are dead code: unnecessary, inoperative code that should be removed. Cleaning out dead code decreases the size of the maintained codebase, making it easier to understand the program and preventing bugs from being introduced.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Info",
+"title":  "Unused private types or members should be removed",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1144",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S1144",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
+"region":  {
+"startLine":  1851,
+"startColumn":  8,
+"endLine":  1851,
+"endColumn":  32
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this unused private member.",
+"fullMessage":  "Private types or members that are never executed or referenced are dead code: unnecessary, inoperative code that should be removed. Cleaning out dead code decreases the size of the maintained codebase, making it easier to understand the program and preventing bugs from being introduced.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Info",
+"title":  "Unused private types or members should be removed",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1144",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S1144",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterEvent.cs",
+"region":  {
+"startLine":  800,
+"startColumn":  8,
+"endLine":  803,
+"endColumn":  9
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this unused private member.",
+"fullMessage":  "Private types or members that are never executed or referenced are dead code: unnecessary, inoperative code that should be removed. Cleaning out dead code decreases the size of the maintained codebase, making it easier to understand the program and preventing bugs from being introduced.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Info",
+"title":  "Unused private types or members should be removed",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1144",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S1144",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
+"region":  {
+"startLine":  34,
+"startColumn":  8,
+"endLine":  34,
+"endColumn":  68
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this unused private member.",
+"fullMessage":  "Private types or members that are never executed or referenced are dead code: unnecessary, inoperative code that should be removed. Cleaning out dead code decreases the size of the maintained codebase, making it easier to understand the program and preventing bugs from being introduced.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Info",
+"title":  "Unused private types or members should be removed",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1144",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+}
+]
+}

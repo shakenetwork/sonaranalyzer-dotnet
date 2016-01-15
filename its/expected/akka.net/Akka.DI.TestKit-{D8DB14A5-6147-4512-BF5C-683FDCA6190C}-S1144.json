@@ -1,0 +1,196 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S1144",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.TestKit\\DiResolverSpec.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  12,
+"endLine":  38,
+"endColumn":  13
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this unused private member.",
+"fullMessage":  "Private types or members that are never executed or referenced are dead code: unnecessary, inoperative code that should be removed. Cleaning out dead code decreases the size of the maintained codebase, making it easier to understand the program and preventing bugs from being introduced.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Info",
+"title":  "Unused private types or members should be removed",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1144",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S1144",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.TestKit\\DiResolverSpec.cs",
+"region":  {
+"startLine":  45,
+"startColumn":  12,
+"endLine":  51,
+"endColumn":  13
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this unused private member.",
+"fullMessage":  "Private types or members that are never executed or referenced are dead code: unnecessary, inoperative code that should be removed. Cleaning out dead code decreases the size of the maintained codebase, making it easier to understand the program and preventing bugs from being introduced.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Info",
+"title":  "Unused private types or members should be removed",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1144",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S1144",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.TestKit\\DiResolverSpec.cs",
+"region":  {
+"startLine":  60,
+"startColumn":  12,
+"endLine":  63,
+"endColumn":  13
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this unused private member.",
+"fullMessage":  "Private types or members that are never executed or referenced are dead code: unnecessary, inoperative code that should be removed. Cleaning out dead code decreases the size of the maintained codebase, making it easier to understand the program and preventing bugs from being introduced.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Info",
+"title":  "Unused private types or members should be removed",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1144",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S1144",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.TestKit\\DiResolverSpec.cs",
+"region":  {
+"startLine":  80,
+"startColumn":  12,
+"endLine":  86,
+"endColumn":  13
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this unused private member.",
+"fullMessage":  "Private types or members that are never executed or referenced are dead code: unnecessary, inoperative code that should be removed. Cleaning out dead code decreases the size of the maintained codebase, making it easier to understand the program and preventing bugs from being introduced.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Info",
+"title":  "Unused private types or members should be removed",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1144",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S1144",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.TestKit\\DiResolverSpec.cs",
+"region":  {
+"startLine":  168,
+"startColumn":  12,
+"endLine":  171,
+"endColumn":  13
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this unused private member.",
+"fullMessage":  "Private types or members that are never executed or referenced are dead code: unnecessary, inoperative code that should be removed. Cleaning out dead code decreases the size of the maintained codebase, making it easier to understand the program and preventing bugs from being introduced.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Info",
+"title":  "Unused private types or members should be removed",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1144",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+},
+{
+"ruleId":  "S1144",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.TestKit\\DiResolverSpec.cs",
+"region":  {
+"startLine":  180,
+"startColumn":  12,
+"endLine":  183,
+"endColumn":  13
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this unused private member.",
+"fullMessage":  "Private types or members that are never executed or referenced are dead code: unnecessary, inoperative code that should be removed. Cleaning out dead code decreases the size of the maintained codebase, making it easier to understand the program and preventing bugs from being introduced.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Info",
+"title":  "Unused private types or members should be removed",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1144",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+}
+]
+}

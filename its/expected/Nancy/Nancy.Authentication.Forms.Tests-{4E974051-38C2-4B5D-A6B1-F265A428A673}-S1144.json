@@ -1,0 +1,41 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S1144",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\..\\Nancy.Tests\\Fakes\\FakeRoute.cs",
+"region":  {
+"startLine":  10,
+"startColumn":  8,
+"endLine":  10,
+"endColumn":  114
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this unused private member.",
+"fullMessage":  "Private types or members that are never executed or referenced are dead code: unnecessary, inoperative code that should be removed. Cleaning out dead code decreases the size of the maintained codebase, making it easier to understand the program and preventing bugs from being introduced.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Info",
+"title":  "Unused private types or members should be removed",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1144",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+}
+]
+}

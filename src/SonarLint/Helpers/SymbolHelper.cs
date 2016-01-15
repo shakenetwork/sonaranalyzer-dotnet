@@ -28,13 +28,8 @@ namespace SonarLint.Helpers
     {
         public static bool IsInterfaceImplementationOrMemberOverride(this ISymbol symbol)
         {
-            if (symbol == null)
-            {
-                return false;
-            }
-
-            if (!(symbol is IMethodSymbol) &&
-                !(symbol is IPropertySymbol))
+            if (symbol == null ||
+                !CanSymbolBeInterfaceMemberOrOverride(symbol))
             {
                 return false;
             }
@@ -47,8 +42,14 @@ namespace SonarLint.Helpers
             return symbol.ContainingType
                 .AllInterfaces
                 .SelectMany(@interface => @interface.GetMembers())
-                .Where(member => member is IMethodSymbol || member is IPropertySymbol)
                 .Any(member => symbol.Equals(symbol.ContainingType.FindImplementationForInterfaceMember(member)));
+        }
+
+        private static bool CanSymbolBeInterfaceMemberOrOverride(ISymbol symbol)
+        {
+            return symbol is IMethodSymbol ||
+                symbol is IPropertySymbol ||
+                symbol is IPropertySymbol;
         }
 
         public static bool IsPublicApi(this ISymbol symbol)
@@ -90,11 +91,11 @@ namespace SonarLint.Helpers
             return type.GetSelfAndBaseTypes().Any(baseType => possibleTypes.Contains(baseType));
         }
 
-        public static bool IsChangeable(this IMethodSymbol methodSymbol)
+        public static bool IsChangeable(this ISymbol symbol)
         {
-            return !methodSymbol.IsAbstract &&
-                !methodSymbol.IsVirtual &&
-                !methodSymbol.IsInterfaceImplementationOrMemberOverride();
+            return !symbol.IsAbstract &&
+                !symbol.IsVirtual &&
+                !symbol.IsInterfaceImplementationOrMemberOverride();
         }
 
         public static bool IsProbablyEventHandler(this IMethodSymbol methodSymbol, Compilation compilation)

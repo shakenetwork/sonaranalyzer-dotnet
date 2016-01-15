@@ -18,37 +18,31 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System;
-using System.Collections.Generic;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SonarLint.Rules.CSharp;
 
-namespace SonarLint.Common
+namespace SonarLint.UnitTest.Rules
 {
-    //todo mark it internal, when the internalsvisibleto attribute is added
-    public class BidirectionalDictionary<TA, TB>
+    [TestClass]
+    public class UnusedPrivateMemberTest
     {
-        private readonly IDictionary<TA, TB> aToB = new Dictionary<TA, TB>();
-        private readonly IDictionary<TB, TA> bToA = new Dictionary<TB, TA>();
-
-        public void Add(TA a, TB b)
+        [TestMethod]
+        [TestCategory("Rule")]
+        public void UnusedPrivateMember()
         {
-            if (aToB.ContainsKey(a) || bToA.ContainsKey(b))
-            {
-                throw new ArgumentException("An element with the same key already exists in the BidirectionalDictionary");
-            }
-
-            aToB.Add(a, b);
-            bToA.Add(b, a);
+            Verifier.VerifyAnalyzer(@"TestCases\UnusedPrivateMember.cs", new UnusedPrivateMember());
         }
 
-        public TB GetByA(TA a)
+        [TestMethod]
+        [TestCategory("CodeFix")]
+        public void UnusedPrivateMember_CodeFix()
         {
-            return aToB[a];
-        }
-
-        public TA GetByB(TB b)
-        {
-            return bToA[b];
+            Verifier.VerifyCodeFix(
+                @"TestCases\UnusedPrivateMember.cs",
+                @"TestCases\UnusedPrivateMember.Fixed.cs",
+                @"TestCases\UnusedPrivateMember.Fixed.Batch.cs",
+                new UnusedPrivateMember(),
+                new UnusedPrivateMemberCodeFixProvider());
         }
     }
 }
-

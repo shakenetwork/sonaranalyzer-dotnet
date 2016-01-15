@@ -254,6 +254,8 @@
     <Compile Include="Rules\TooManyLabelsInSwitch.cs" />
     <Compile Include="Rules\TooManyParameters.cs" />
     <Compile Include="Rules\ToStringNoNull.cs" />
+    <Compile Include="Rules\UnusedPrivateMemberCodeFixProvider.cs" />
+    <Compile Include="Rules\UnusedPrivateMember.cs" />
     <Compile Include="Rules\UnaryPrefixOperatorRepeated.cs" />
     <Compile Include="Rules\UnaryPrefixOperatorRepeatedCodeFixProvider.cs" />
     <Compile Include="Rules\UseCurlyBraces.cs" />
