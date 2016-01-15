@@ -21,31 +21,19 @@
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.VisualBasic;
 using Microsoft.CodeAnalysis.VisualBasic.Syntax;
+using System;
 
 namespace SonarLint.Helpers.VisualBasic
 {
     public class GeneratedCodeRecognizer : Helpers.GeneratedCodeRecognizer
     {
         #region Singleton implementation
-
         private GeneratedCodeRecognizer()
         {
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("SonarLint", "S1118:Utility classes should not have public constructors",
-            Justification = "Nested private class for lazy singleton instantiation")]
-        private class Nested
-        {
-            // Explicit static constructor to tell C# compiler
-            // not to mark type as beforefieldinit
-            static Nested()
-            {
-            }
-
-            internal static readonly GeneratedCodeRecognizer instance = new GeneratedCodeRecognizer();
-        }
-
-        public static GeneratedCodeRecognizer Instance => Nested.instance;
+        private static readonly Lazy<GeneratedCodeRecognizer> lazy = new Lazy<GeneratedCodeRecognizer>(() => new GeneratedCodeRecognizer());
+        public static GeneratedCodeRecognizer Instance => lazy.Value;
 
         #endregion
 

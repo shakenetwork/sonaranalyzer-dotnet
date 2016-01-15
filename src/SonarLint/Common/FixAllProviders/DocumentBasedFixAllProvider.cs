@@ -36,20 +36,8 @@ namespace SonarLint.Common
         {
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("SonarLint", "S1118:Utility classes should not have public constructors",
-            Justification = "Nested private class for lazy singleton instantiation")]
-        private class Nested
-        {
-            // Explicit static constructor to tell C# compiler
-            // not to mark type as beforefieldinit
-            static Nested()
-            {
-            }
-
-            internal static readonly DocumentBasedFixAllProvider instance = new DocumentBasedFixAllProvider();
-        }
-
-        public static DocumentBasedFixAllProvider Instance => Nested.instance;
+        private static readonly Lazy<DocumentBasedFixAllProvider> lazy = new Lazy<DocumentBasedFixAllProvider>(() => new DocumentBasedFixAllProvider());
+        public static DocumentBasedFixAllProvider Instance => lazy.Value;
 
         #endregion
 
