@@ -70,4 +70,32 @@ namespace Tests.TestCases
             Console.WriteLine(point.X);
         }
     }
+
+    class P2<A, B> where A : class, IPoint where B : A
+    {
+        readonly A pointA;
+        readonly B pointB;
+
+        public P2(A a, B b)
+        {
+            this.pointA = a;
+            this.pointB = b;
+        }
+
+        public void Add(int i)
+        {
+            pointA.X += i;
+            pointB.X += i;   // Compliant
+        }
+    }
+
+    class SelfReferencing2<T> where T : SelfReferencing2<T>, IPoint
+    {
+        readonly T pointA;
+
+        public void Add(int i)
+        {
+            pointA.X += i; // Compliant
+        }
+    }
 }

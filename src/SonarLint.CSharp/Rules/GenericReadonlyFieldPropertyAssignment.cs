@@ -121,17 +121,8 @@ namespace SonarLint.Rules.CSharp
             }
 
             var fieldSymbol = semanticModel.GetSymbolInfo(memberAccess.Expression).Symbol as IFieldSymbol;
-            if (fieldSymbol == null ||
-                !fieldSymbol.IsReadOnly ||
-                !RelevantFieldType(fieldSymbol.Type))
-            {
-                return;
-            }
-
-            var constructorSymbol = semanticModel.GetEnclosingSymbol(expression.SpanStart) as IMethodSymbol;
-            if (constructorSymbol != null &&
-                constructorSymbol.MethodKind == MethodKind.Constructor &&
-                constructorSymbol.ContainingType.Equals(fieldSymbol.ContainingType))
+            if (!IsFieldReadonlyAndPossiblyValueType(fieldSymbol) ||
+                IsInsideConstructorDeclaration(expression, fieldSymbol.ContainingType, semanticModel))
             {
                 return;
             }
@@ -139,16 +130,52 @@ namespace SonarLint.Rules.CSharp
             context.ReportDiagnostic(Diagnostic.Create(Rule, expression.GetLocation(), fieldSymbol.Name, propertySymbol.Name));
         }
 
-        private static bool RelevantFieldType(ITypeSymbol type)
+        private static bool IsFieldReadonlyAndPossiblyValueType(IFieldSymbol fieldSymbol)
         {
-            var typeParameterSymbol = type as ITypeParameterSymbol;
-            return typeParameterSymbol != null &&
-                   !typeParameterSymbol.HasReferenceTypeConstraint &&
-                   !typeParameterSymbol.HasValueTypeConstraint &&
-                   !typeParameterSymbol.ConstraintTypes.OfType<IErrorTypeSymbol>().Any() &&
-                   !typeParameterSymbol.ConstraintTypes.Any(typeSymbol =>
-                       typeSymbol.IsReferenceType &&
-                       typeSymbol.TypeKind == TypeKind.Class);
+            return fieldSymbol != null &&
+                fieldSymbol.IsReadOnly &&
+                GenericParameterMightBeValueType(fieldSymbol.Type as ITypeParameterSymbol);
+        }
+
+        private static bool IsInsideConstructorDeclaration(ExpressionSyntax expression, INamedTypeSymbol currentType,
+            SemanticModel semanticModel)
+        {
+            var constructorSymbol = semanticModel.GetEnclosingSymbol(expression.SpanStart) as IMethodSymbol;
+            return constructorSymbol != null &&
+                constructorSymbol.MethodKind == MethodKind.Constructor &&
+                constructorSymbol.ContainingType.Equals(currentType);
+        }
+
+        private static bool GenericParameterMightBeValueType(ITypeParameterSymbol typeParameterSymbol)
+        {
+            if (typeParameterSymbol == null ||
+                typeParameterSymbol.HasReferenceTypeConstraint ||
+                typeParameterSymbol.HasValueTypeConstraint ||
+                typeParameterSymbol.ConstraintTypes.OfType<IErrorTypeSymbol>().Any())
+            {
+                return false;
+            }
+
+            foreach (var constraintType in typeParameterSymbol.ConstraintTypes)
+            {
+                var basedOnPossiblyValueType = MightBeValueType(constraintType);
+                if (!basedOnPossiblyValueType)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        private static bool MightBeValueType(ITypeSymbol type)
+        {
+            if (type.TypeKind == TypeKind.Interface)
+            {
+                return true;
+            }
+
+            return GenericParameterMightBeValueType(type as ITypeParameterSymbol);
         }
     }
 }
