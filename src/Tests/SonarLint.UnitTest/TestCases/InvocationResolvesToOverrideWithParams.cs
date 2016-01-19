@@ -62,6 +62,8 @@ namespace Tests.Diagnostics
 
             Format3(null); //Noncompliant, maybe it could be compliant
             string.Concat("aaaa"); //Noncompliant, resolves to params, but there's a single object version too.
+
+            Console.WriteLine("format", 0, 1, "", ""); //Compliant
         }
     }
 
@@ -73,6 +75,29 @@ namespace Tests.Diagnostics
         public void Test()
         {
             Format("", null, null);
+        }
+    }
+
+    public class Test
+    {
+        public void MyMethod(params string[] s) { }
+        public void MyMethod(Test s) { }
+
+        public Test()
+        {
+            MyMethod(""); // Compliant
+        }
+    }
+    public class Test2
+    {
+        public static implicit operator Test2(string s) { return null; }
+
+        public void MyMethod(params string[] s) { }
+        public void MyMethod(Test2 s) { }
+
+        public Test2()
+        {
+            MyMethod(""); // Noncompliant
         }
     }
 }

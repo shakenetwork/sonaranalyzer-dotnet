@@ -47,7 +47,7 @@ namespace SonarLint.Rules.CSharp
             "method declarations overlap in non-obvious ways, so that slight changes in the argument types of an invocation can resolve to " +
             "different methods. This rule raises an issue when an invocation resolves to a method declaration with \"params\", but could also " +
             "resolve to another non-\"params\" method too.";
-        internal const string MessageFormat = "Review this call, which partially matches an overload without \"params\".";
+        internal const string MessageFormat = "Review this call, which partially matches an overload without \"params\". The partial match is \"{0}\".";
         internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
@@ -105,18 +105,24 @@ namespace SonarLint.Rules.CSharp
 
             var possibleOtherMethods = invokedMethodSymbol.ContainingType.GetMembers(invokedMethodSymbol.Name)
                 .OfType<IMethodSymbol>()
+                .Where(m => !m.IsVararg)
                 .Where(m => m.MethodKind == invokedMethodSymbol.MethodKind)
                 .Where(m => !invokedMethodSymbol.Equals(m))
                 .Where(m => m.Parameters.Any() && !m.Parameters.Last().IsParams);
 
-            if (possibleOtherMethods.Any(possibleOtherMethod =>
+            var otherMethod = possibleOtherMethods.FirstOrDefault(possibleOtherMethod =>
                     ArgumentsMatchParameters(
                         argumentList,
                         argumentTypes.Select(t => t as INamedTypeSymbol).ToList(),
                         possibleOtherMethod,
-                        context.SemanticModel)))
+                        context.SemanticModel));
+
+            if (otherMethod != null)
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, node.GetLocation()));
+                context.ReportDiagnostic(Diagnostic.Create(
+                    Rule,
+                    node.GetLocation(),
+                    otherMethod.ToMinimalDisplayString(context.SemanticModel, node.SpanStart)));
             }
         }
 
@@ -174,7 +180,8 @@ namespace SonarLint.Rules.CSharp
                 matchedParameters.Add(parameter);
             }
 
-            return !possibleOtherMethod.Parameters.Except(matchedParameters).Any(p => !p.HasExplicitDefaultValue);
+            var nonMatchedParameters = possibleOtherMethod.Parameters.Except(matchedParameters);
+            return nonMatchedParameters.All(p => p.HasExplicitDefaultValue);
         }
     }
 }
