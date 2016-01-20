@@ -32,5 +32,16 @@ namespace SonarLint.UnitTest.Rules
         {
             Verifier.VerifyAnalyzer(@"TestCases\MethodParameterUnused.cs", new MethodParameterUnused());
         }
+
+        [TestMethod]
+        [TestCategory("CodeFix")]
+        public void MethodParameterUnused_CodeFix()
+        {
+            Verifier.VerifyCodeFix(
+                @"TestCases\MethodParameterUnused.cs",
+                @"TestCases\MethodParameterUnused.Fixed.cs",
+                new MethodParameterUnused(),
+                new MethodParameterUnusedCodeFixProvider());
+        }
     }
 }
