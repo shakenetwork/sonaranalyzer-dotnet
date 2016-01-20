@@ -12,12 +12,28 @@ namespace Tests.Diagnostics
         private FileStream field_fs5;
         private FileStream field_fs6;
         private object field_fs7;
-        private FileStream field_fs8 = new FileStream(@"c:\foo.txt", FileMode.Open); // Compliant - passed to method using this.
+        private FileStream field_fs8 = new FileStream(@"c:\foo.txt", FileMode.Open); // Compliant - passed to method using this
+        FileStream field_fs9 = new FileStream(@"c:\foo.txt", FileMode.Open); // Noncompliant - effectively private
+        private FileStream field_fs10 = new FileStream(@"c:\foo.txt", FileMode.Open); // Compliant - aliased in constructor initializer
+
+        private class InnerClass
+        {
+            private FileStream inner_field_fs1 = new FileStream(@"c:\foo.txt", FileMode.Open); // Noncompliant - should be reported on once
+        }
+
+        private struct InnerStruct
+        {
+            private FileStream inner_field_fs1 = new FileStream(@"c:\foo.txt", FileMode.Open); // Noncompliant - should be reported on once
+        }
 
         private FileStream Return()
         {
             var fs = new FileStream(@"c:\foo.txt", FileMode.Open); // Compliant - returned
             return fs;
+        }
+
+        public DisposableNotDisposed() : this(field_fs10)
+        {
         }
 
         public DisposableNotDisposed(FileStream fs)

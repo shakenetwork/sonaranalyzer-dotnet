@@ -91,89 +91,107 @@ namespace SonarLint.Rules.CSharp
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterCompilationStartAction(
-                analysisContext =>
-                {
-                    var trackedNodesAndSymbols = new HashSet<NodeAndSymbol>();
-                    var excludedSymbols = new HashSet<ISymbol>();
-
-                    TrackInitializedLocalsAndPrivateFields(analysisContext, trackedNodesAndSymbols);
-                    TrackAssignmentsToLocalsAndPrivateFields(analysisContext, trackedNodesAndSymbols);
-
-                    ExcludeDisposedAndClosedLocalsAndPrivateFields(analysisContext, excludedSymbols);
-                    ExcludeReturnedPassedAndAliasedLocalsAndPrivateFields(analysisContext, excludedSymbols);
-
-                    analysisContext.RegisterCompilationEndAction(
-                        c =>
-                        {
-                            foreach (var trackedNodeAndSymbol in trackedNodesAndSymbols)
-                            {
-                                if (!excludedSymbols.Contains(trackedNodeAndSymbol.Symbol))
-                                {
-                                    c.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, trackedNodeAndSymbol.Node.GetLocation(), trackedNodeAndSymbol.Symbol.Name), c.Compilation);
-                                }
-                            }
-                        });
-                });
-        }
-
-        private static void TrackInitializedLocalsAndPrivateFields(CompilationStartAnalysisContext context, ISet<NodeAndSymbol> trackedNodesAndSymbols)
-        {
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSymbolAction(
                 c =>
                 {
-                    VariableDeclarationSyntax declaration;
-                    if (c.Node.IsKind(SyntaxKind.LocalDeclarationStatement))
+                    var namedType = (INamedTypeSymbol)c.Symbol;
+                    if (namedType.ContainingType != null || (namedType.TypeKind != TypeKind.Class && namedType.TypeKind != TypeKind.Struct))
                     {
-                        declaration = ((LocalDeclarationStatementSyntax)c.Node).Declaration;
+                        return;
                     }
-                    else if (c.Node.IsKind(SyntaxKind.FieldDeclaration))
+
+                    var typesDeclarationsAndSemanticModels =
+                        namedType.DeclaringSyntaxReferences
+                        .Select(r => new { SyntaxNode = r.GetSyntax(), SemanticModel = c.Compilation.GetSemanticModel(r.SyntaxTree) });
+
+                    var trackedNodesAndSymbols = new HashSet<NodeAndSymbol>();
+                    foreach (var typeDeclarationAndSemanticModel in typesDeclarationsAndSemanticModels)
                     {
-                        var fieldDeclaration = (FieldDeclarationSyntax)c.Node;
-                        if (!fieldDeclaration.Modifiers.Any(m => m.IsKind(SyntaxKind.PrivateKeyword)))
+                        TrackInitializedLocalsAndPrivateFields(typeDeclarationAndSemanticModel.SyntaxNode, typeDeclarationAndSemanticModel.SemanticModel, trackedNodesAndSymbols);
+                        TrackAssignmentsToLocalsAndPrivateFields(typeDeclarationAndSemanticModel.SyntaxNode, typeDeclarationAndSemanticModel.SemanticModel, trackedNodesAndSymbols);
+                    }
+
+                    if (trackedNodesAndSymbols.Any())
+                    {
+                        var excludedSymbols = new HashSet<ISymbol>();
+                        foreach (var typeDeclarationAndSemanticModel in typesDeclarationsAndSemanticModels)
                         {
-                            return;
+                            ExcludeDisposedAndClosedLocalsAndPrivateFields(typeDeclarationAndSemanticModel.SyntaxNode, typeDeclarationAndSemanticModel.SemanticModel, excludedSymbols);
+                            ExcludeReturnedPassedAndAliasedLocalsAndPrivateFields(typeDeclarationAndSemanticModel.SyntaxNode, typeDeclarationAndSemanticModel.SemanticModel, excludedSymbols);
                         }
 
-                        declaration = fieldDeclaration.Declaration;
-                    }
-                    else
-                    {
-                        throw new ArgumentException();
-                    }
-
-                    foreach (var variableNode in declaration.Variables.Where(v => v.Initializer != null && IsInstantiation(v.Initializer.Value, c.SemanticModel)))
-                    {
-                        trackedNodesAndSymbols.Add(new NodeAndSymbol { Node = variableNode, Symbol = c.SemanticModel.GetDeclaredSymbol(variableNode) });
+                        foreach (var trackedNodeAndSymbol in trackedNodesAndSymbols)
+                        {
+                            if (!excludedSymbols.Contains(trackedNodeAndSymbol.Symbol))
+                            {
+                                c.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, trackedNodeAndSymbol.Node.GetLocation(), trackedNodeAndSymbol.Symbol.Name), c.Compilation);
+                            }
+                        }
                     }
                 },
-                SyntaxKind.LocalDeclarationStatement,
-                SyntaxKind.FieldDeclaration);
+                SymbolKind.NamedType);
         }
 
-        private static void TrackAssignmentsToLocalsAndPrivateFields(CompilationStartAnalysisContext context, ISet<NodeAndSymbol> trackedNodesAndSymbols)
+        private static void TrackInitializedLocalsAndPrivateFields(SyntaxNode typeDeclaration, SemanticModel semanticModel, ISet<NodeAndSymbol> trackedNodesAndSymbols)
         {
-            context.RegisterSyntaxNodeAction(
-                c =>
+            var localAndFieldDeclarations = typeDeclaration
+                .DescendantNodes()
+                .Where(n => n.IsKind(SyntaxKind.LocalDeclarationStatement) || n.IsKind(SyntaxKind.FieldDeclaration));
+
+            foreach (var localOrFieldDeclaration in localAndFieldDeclarations)
+            {
+                VariableDeclarationSyntax declaration;
+                if (localOrFieldDeclaration.IsKind(SyntaxKind.LocalDeclarationStatement))
                 {
-                    var assignment = c.Node as AssignmentExpressionSyntax;
-                    if (assignment.Parent.IsKind(SyntaxKind.UsingStatement))
+                    declaration = ((LocalDeclarationStatementSyntax)localOrFieldDeclaration).Declaration;
+                }
+                else if (localOrFieldDeclaration.IsKind(SyntaxKind.FieldDeclaration))
+                {
+                    var fieldDeclaration = (FieldDeclarationSyntax)localOrFieldDeclaration;
+                    if (fieldDeclaration.Modifiers.Any() && !fieldDeclaration.Modifiers.Any(m => m.IsKind(SyntaxKind.PrivateKeyword)))
                     {
-                        return;
+                        continue;
                     }
 
-                    var referencedSymbol = c.SemanticModel.GetSymbolInfo(assignment.Left).Symbol;
-                    if (referencedSymbol == null || !IsLocalOrPrivateField(referencedSymbol))
-                    {
-                        return;
-                    }
+                    declaration = fieldDeclaration.Declaration;
+                }
+                else
+                {
+                    throw new ArgumentException();
+                }
 
-                    if (IsInstantiation(assignment.Right, c.SemanticModel))
-                    {
-                        trackedNodesAndSymbols.Add(new NodeAndSymbol { Node = assignment, Symbol = referencedSymbol });
-                    }
-                },
-                SyntaxKind.SimpleAssignmentExpression);
+                foreach (var variableNode in declaration.Variables.Where(v => v.Initializer != null && IsInstantiation(v.Initializer.Value, semanticModel)))
+                {
+                    trackedNodesAndSymbols.Add(new NodeAndSymbol { Node = variableNode, Symbol = semanticModel.GetDeclaredSymbol(variableNode) });
+                }
+            }
+        }
+
+        private static void TrackAssignmentsToLocalsAndPrivateFields(SyntaxNode typeDeclaration, SemanticModel semanticModel, ISet<NodeAndSymbol> trackedNodesAndSymbols)
+        {
+            var simpleAssignments = typeDeclaration
+                .DescendantNodes()
+                .Where(n => n.IsKind(SyntaxKind.SimpleAssignmentExpression))
+                .Cast<AssignmentExpressionSyntax>();
+
+            foreach (var simpleAssignment in simpleAssignments)
+            {
+                if (simpleAssignment.Parent.IsKind(SyntaxKind.UsingStatement))
+                {
+                    continue;
+                }
+
+                if (!IsInstantiation(simpleAssignment.Right, semanticModel))
+                {
+                    continue;
+                }
+
+                var referencedSymbol = semanticModel.GetSymbolInfo(simpleAssignment.Left).Symbol;
+                if (referencedSymbol != null && IsLocalOrPrivateField(referencedSymbol))
+                {
+                    trackedNodesAndSymbols.Add(new NodeAndSymbol { Node = simpleAssignment, Symbol = referencedSymbol });
+                }
+            }
         }
 
         private static bool IsLocalOrPrivateField(ISymbol symbol)
@@ -182,92 +200,94 @@ namespace SonarLint.Rules.CSharp
                 (symbol.Kind == SymbolKind.Field && symbol.DeclaredAccessibility == Accessibility.Private);
         }
 
-        private static void ExcludeDisposedAndClosedLocalsAndPrivateFields(CompilationStartAnalysisContext context, ISet<ISymbol> excludedSymbols)
+        private static void ExcludeDisposedAndClosedLocalsAndPrivateFields(SyntaxNode typeDeclaration, SemanticModel semanticModel, ISet<ISymbol> excludedSymbols)
         {
-            context.RegisterSyntaxNodeAction(
-                c =>
+            var incovationsAndConditionalAccesses = typeDeclaration
+                .DescendantNodes()
+                .Where(n => n.IsKind(SyntaxKind.InvocationExpression) || n.IsKind(SyntaxKind.ConditionalAccessExpression));
+
+            foreach (SyntaxNode incovationOrConditionalAccess in incovationsAndConditionalAccesses)
+            {
+                SimpleNameSyntax name;
+                ExpressionSyntax expression;
+
+                if (incovationOrConditionalAccess.IsKind(SyntaxKind.InvocationExpression))
                 {
-                    SimpleNameSyntax name;
-                    ExpressionSyntax expression;
+                    var invocation = (InvocationExpressionSyntax)incovationOrConditionalAccess;
+                    var memberAccessNode = invocation.Expression as MemberAccessExpressionSyntax;
 
-                    if (c.Node.IsKind(SyntaxKind.InvocationExpression))
+                    name = memberAccessNode?.Name;
+                    expression = memberAccessNode?.Expression;
+                }
+                else if (incovationOrConditionalAccess.IsKind(SyntaxKind.ConditionalAccessExpression))
+                {
+                    var conditionalAccess = (ConditionalAccessExpressionSyntax)incovationOrConditionalAccess;
+                    var invocation = conditionalAccess.WhenNotNull as InvocationExpressionSyntax;
+                    if (invocation == null)
                     {
-                        var invocation = (InvocationExpressionSyntax)c.Node;
-                        var memberAccessNode = invocation.Expression as MemberAccessExpressionSyntax;
-
-                        name = memberAccessNode?.Name;
-                        expression = memberAccessNode?.Expression;
-                    }
-                    else if (c.Node.IsKind(SyntaxKind.ConditionalAccessExpression))
-                    {
-                        var conditionalAccess = (ConditionalAccessExpressionSyntax)c.Node;
-                        var invocation = conditionalAccess.WhenNotNull as InvocationExpressionSyntax;
-                        if (invocation == null)
-                        {
-                            return;
-                        }
-
-                        var memberBindingNode = invocation.Expression as MemberBindingExpressionSyntax;
-
-                        name = memberBindingNode?.Name;
-                        expression = conditionalAccess.Expression;
-                    }
-                    else
-                    {
-                        throw new ArgumentException();
+                        continue;
                     }
 
-                    if (name == null || !DisposeMethods.Contains(name.Identifier.Text))
-                    {
-                        return;
-                    }
+                    var memberBindingNode = invocation.Expression as MemberBindingExpressionSyntax;
 
-                    var referencedSymbol = c.SemanticModel.GetSymbolInfo(expression).Symbol;
+                    name = memberBindingNode?.Name;
+                    expression = conditionalAccess.Expression;
+                }
+                else
+                {
+                    throw new ArgumentException();
+                }
+
+                if (name == null || !DisposeMethods.Contains(name.Identifier.Text))
+                {
+                    continue;
+                }
+
+                var referencedSymbol = semanticModel.GetSymbolInfo(expression).Symbol;
+                if (referencedSymbol != null && IsLocalOrPrivateField(referencedSymbol))
+                {
+                    excludedSymbols.Add(referencedSymbol);
+                }
+            }
+        }
+
+        private static void ExcludeReturnedPassedAndAliasedLocalsAndPrivateFields(SyntaxNode typeDeclaration, SemanticModel semanticModel, ISet<ISymbol> excludedSymbols)
+        {
+            var identifiersAndSimpleMemberAccesses = typeDeclaration
+                .DescendantNodes()
+                .Where(n => n.IsKind(SyntaxKind.IdentifierName) || n.IsKind(SyntaxKind.SimpleMemberAccessExpression));
+
+            foreach (var identifierOrSimpleMemberAccess in identifiersAndSimpleMemberAccesses)
+            {
+                ExpressionSyntax expression;
+                if (identifierOrSimpleMemberAccess.IsKind(SyntaxKind.IdentifierName))
+                {
+                    expression = (IdentifierNameSyntax)identifierOrSimpleMemberAccess;
+                }
+                else if (identifierOrSimpleMemberAccess.IsKind(SyntaxKind.SimpleMemberAccessExpression))
+                {
+
+                    var memberAccess = (MemberAccessExpressionSyntax)identifierOrSimpleMemberAccess;
+                    if (!memberAccess.Expression.IsKind(SyntaxKind.ThisExpression))
+                    {
+                        continue;
+                    }
+                    expression = memberAccess;
+                }
+                else
+                {
+                    throw new ArgumentException();
+                }
+
+                if (IsStandaloneExpression(expression))
+                {
+                    var referencedSymbol = semanticModel.GetSymbolInfo(identifierOrSimpleMemberAccess).Symbol;
                     if (referencedSymbol != null && IsLocalOrPrivateField(referencedSymbol))
                     {
                         excludedSymbols.Add(referencedSymbol);
                     }
-                },
-                SyntaxKind.InvocationExpression,
-                SyntaxKind.ConditionalAccessExpression);
-        }
-
-        private static void ExcludeReturnedPassedAndAliasedLocalsAndPrivateFields(CompilationStartAnalysisContext context, ISet<ISymbol> excludedSymbols)
-        {
-            context.RegisterSyntaxNodeAction(
-                c =>
-                {
-                    ExpressionSyntax expression;
-                    if (c.Node.IsKind(SyntaxKind.IdentifierName))
-                    {
-                        expression = (IdentifierNameSyntax)c.Node;
-                    }
-                    else if (c.Node.IsKind(SyntaxKind.SimpleMemberAccessExpression))
-                    {
-
-                        var memberAccess = (MemberAccessExpressionSyntax)c.Node;
-                        if (!memberAccess.Expression.IsKind(SyntaxKind.ThisExpression))
-                        {
-                            return;
-                        }
-                        expression = memberAccess;
-                    }
-                    else
-                    {
-                        throw new ArgumentException();
-                    }
-
-                    if (IsStandaloneExpression(expression))
-                    {
-                        var referencedSymbol = c.SemanticModel.GetSymbolInfo(c.Node).Symbol;
-                        if (referencedSymbol != null && IsLocalOrPrivateField(referencedSymbol))
-                        {
-                            excludedSymbols.Add(referencedSymbol);
-                        }
-                    }
-                },
-                SyntaxKind.IdentifierName,
-                SyntaxKind.SimpleMemberAccessExpression);
+                }
+            }
         }
 
         private static bool IsStandaloneExpression(ExpressionSyntax expression)
