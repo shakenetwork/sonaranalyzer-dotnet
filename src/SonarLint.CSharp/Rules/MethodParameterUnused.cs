@@ -27,6 +27,8 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Collections.Generic;
+using System;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -58,64 +60,132 @@ namespace SonarLint.Rules.CSharp
 
         public override void Initialize(AnalysisContext context)
         {
-            context.RegisterCodeBlockStartActionInNonGenerated<SyntaxKind>(
-                cbc =>
+            context.RegisterSymbolAction(
+                c =>
                 {
-                    var methodDeclaration = cbc.CodeBlock as MethodDeclarationSyntax;
-                    var methodSymbol = cbc.OwningSymbol as IMethodSymbol;
-                    if (methodDeclaration == null ||
-                        methodSymbol == null ||
-                        !methodSymbol.IsChangeable() ||
-                        methodSymbol.IsProbablyEventHandler(cbc.SemanticModel.Compilation) ||
-                        methodSymbol.GetAttributes().Any())
+                    var namedType = (INamedTypeSymbol)c.Symbol;
+                    if (namedType.TypeKind != TypeKind.Class && namedType.TypeKind != TypeKind.Struct)
                     {
                         return;
                     }
 
-                    var usedParameters = ImmutableHashSet<IParameterSymbol>.Empty;
+                    foreach (var methodSymbol in namedType.GetMembers().OfType<IMethodSymbol>())
+                    {
+                        ReportUnusedParametersOnMethod(methodSymbol, c);
+                    }
+                },
+                SymbolKind.NamedType);
+        }
 
-                    cbc.RegisterSyntaxNodeAction(
-                        c =>
+        private static void ReportUnusedParametersOnMethod(IMethodSymbol methodSymbol, SymbolAnalysisContext c)
+        {
+            if (!MethodCanBeSafelyChanged(methodSymbol, c.Compilation))
+            {
+                return;
+            }
+
+            var unusedParameters = GetUnusedParameters(methodSymbol, c.Compilation);
+            if (!unusedParameters.Any() || IsUsedAsEventHandlerFunctionOrAction(methodSymbol, c.Compilation))
+            {
+                return;
+            }
+
+            foreach (var unusedParameter in unusedParameters)
+            {
+                foreach (var unusedParameterDeclaration in unusedParameter.DeclaringSyntaxReferences.Select(r => r.GetSyntax()))
+                {
+                    c.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, unusedParameterDeclaration.GetLocation(), unusedParameter.Name));
+                }
+            }
+        }
+
+        private static bool MethodCanBeSafelyChanged(IMethodSymbol methodSymbol, Compilation compilation)
+        {
+            return methodSymbol.DeclaredAccessibility == Accessibility.Private &&
+                !methodSymbol.GetAttributes().Any() &&
+                methodSymbol.IsChangeable() &&
+                !methodSymbol.IsProbablyEventHandler(compilation);
+        }
+
+        private static IImmutableList<IParameterSymbol> GetUnusedParameters(IMethodSymbol methodSymbol, Compilation compilation)
+        {
+            var usedParameters = new HashSet<IParameterSymbol>();
+
+            var bodies = methodSymbol.DeclaringSyntaxReferences
+                .Select(r => r.GetSyntax())
+                .Where(n => n.IsKind(SyntaxKind.MethodDeclaration) || n.IsKind(SyntaxKind.ConstructorDeclaration))
+                .SelectMany(
+                    n =>
+                    {
+                        if (n.IsKind(SyntaxKind.MethodDeclaration))
                         {
-                            var identifier = (IdentifierNameSyntax)c.Node;
-                            var parameter = c.SemanticModel.GetSymbolInfo(identifier).Symbol as IParameterSymbol;
-                            if (parameter != null &&
-                                methodSymbol.Parameters.Contains(parameter))
-                            {
-                                usedParameters = usedParameters.Add(parameter);
-                            }
-                        },
-                        SyntaxKind.IdentifierName);
-
-                    cbc.RegisterCodeBlockEndAction(
-                        c =>
+                            var methodDeclararion = (MethodDeclarationSyntax)n;
+                            return new SyntaxNode[] { methodDeclararion.Body, methodDeclararion.ExpressionBody };
+                        }
+                        else if (n.IsKind(SyntaxKind.ConstructorDeclaration))
                         {
-                            var unusedParameters = methodSymbol.Parameters.Except(usedParameters);
+                            var constructorDeclaration = (ConstructorDeclarationSyntax)n;
+                            return new SyntaxNode[] { constructorDeclaration.Body, constructorDeclaration.Initializer };
+                        }
+                        else
+                        {
+                            throw new InvalidOperationException();
+                        }
+                    });
 
-                            if (methodSymbol.IsExtensionMethod)
-                            {
-                                unusedParameters = unusedParameters.Except(new[] { methodSymbol.Parameters.First() });
-                            }
+            foreach (var body in bodies.Where(b => b != null))
+            {
+                usedParameters.UnionWith(GetUsedParameters(methodSymbol.Parameters, body, compilation.GetSemanticModel(body.SyntaxTree)));
+            }
 
-                            foreach (var unusedParameter in unusedParameters)
-                            {
-                                var reference = unusedParameter.DeclaringSyntaxReferences.FirstOrDefault();
-                                if (reference == null)
-                                {
-                                    continue;
-                                }
+            var unusedParameter = methodSymbol.Parameters.Except(usedParameters);
+            if (methodSymbol.IsExtensionMethod)
+            {
+                unusedParameter = unusedParameter.Except(new[] { methodSymbol.Parameters.First() });
+            }
 
-                                var parameter = reference.GetSyntax() as ParameterSyntax;
-                                if (parameter == null)
-                                {
-                                    continue;
-                                }
+            return unusedParameter.Except(usedParameters).ToImmutableArray();
+        }
 
-                                var location = parameter.Identifier.GetLocation();
-                                c.ReportDiagnostic(Diagnostic.Create(Rule, location, unusedParameter.Name));
-                            }
-                        });
-                });
+        private static IImmutableSet<IParameterSymbol> GetUsedParameters(ImmutableArray<IParameterSymbol> parameters, SyntaxNode body, SemanticModel semanticModel)
+        {
+            return body.DescendantNodes()
+                       .Where(n => n.IsKind(SyntaxKind.IdentifierName))
+                       .Select(identierName => semanticModel.GetSymbolInfo(identierName).Symbol as IParameterSymbol)
+                       .Where(symbol => symbol != null && parameters.Contains(symbol))
+                       .ToImmutableHashSet();
+        }
+
+        private static bool IsUsedAsEventHandlerFunctionOrAction(IMethodSymbol methodSymbol, Compilation compilation)
+        {
+            return methodSymbol
+                .ContainingType
+                .DeclaringSyntaxReferences
+                .Select(r => r.GetSyntax())
+                .Any(n => IsMethodUsedAsEventHandlerFunctionOrActionWithinNode(methodSymbol, n, compilation.GetSemanticModel(n.SyntaxTree)));
+        }
+
+        private static bool IsMethodUsedAsEventHandlerFunctionOrActionWithinNode(IMethodSymbol methodSymbol, SyntaxNode syntaxNode, SemanticModel semanticModel)
+        {
+            return syntaxNode
+                .DescendantNodes()
+                .OfType<ExpressionSyntax>()
+                .Any(n => IsMethodUsedAsEventHandlerFunctionOrActionInExpression(methodSymbol, n, semanticModel));
+        }
+
+        private static bool IsMethodUsedAsEventHandlerFunctionOrActionInExpression(IMethodSymbol methodSymbol, ExpressionSyntax expression, SemanticModel semanticModel)
+        {
+            return !expression.IsKind(SyntaxKind.InvocationExpression) &&
+                IsStandaloneExpression(expression) &&
+                methodSymbol.Equals(semanticModel.GetSymbolInfo(expression).Symbol?.OriginalDefinition);
+        }
+
+        private static bool IsStandaloneExpression(ExpressionSyntax expression)
+        {
+            var parentAsAssignment = expression.Parent as AssignmentExpressionSyntax;
+
+            return !(expression.Parent is ExpressionSyntax) ||
+                (parentAsAssignment != null && object.ReferenceEquals(expression, parentAsAssignment.Right));
         }
     }
 }

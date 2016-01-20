@@ -6,18 +6,56 @@ using System.Threading.Tasks;
 
 namespace Tests.TestCases
 {
+    internal interface MyPrivateInterface
+    {
+        void MyPrivateMethod(int a);
+    }
+
+    public class BasicTests : MyPrivateInterface
+    {
+        private BasicTests(int a) : this(a, 42) // Compliant
+        { }
+
+        private BasicTests(
+            int a,
+            int b) // Noncompliant
+        {
+            Console.WriteLine(a);
+
+            Action<string> x = WriteLine;
+            Action<string> y = WriteLine<int>;
+        }
+
+        private void BasicTest1(int a) { } // Noncompliant
+        void BasicTest2(int a) { } // Noncompliant
+        private void BasicTest3(int a) { } // Noncompliant
+        public void Caller()
+        {
+            BasicTest3(42); // Doesn't make it compliant
+        }
+
+        void MyPrivateInterface.MyPrivateMethod(int a) // Compliant
+        {
+        }
+
+        public int MyMethod(int a) => a; // Compliant
+
+        private static void WriteLine(string format) { } // Compliant
+        private static void WriteLine<T>(string format) { } // Compliant
+    }
+
     public class AnyAttribute : Attribute { }
 
     public static class Extensions
     {
-        public static void MyMethod(this string s,
+        private static void MyMethod(this string s,
             int i) // Noncompliant
         {
 
         }
 
         [Any]
-        public static void MyMethod(this string s,
+        private static void MyMethod(this string s,
             int i) // Compliant because of the attribute
         {
 
@@ -41,11 +79,20 @@ namespace Tests.TestCases
 
     class MethodParameterUnused : Base, IMy
     {
-        public void M1(int a) //Noncompliant
+        private void M1(int a) //Noncompliant
         {
         }
 
-        public void M1okay(int a)
+        void M1Bis(
+            int a,
+            int b, // Noncompliant
+            int c,
+            int d) // Noncompliant
+        {
+            var result = a + c;
+        }
+
+        private void M1okay(int a)
         {
             Console.Write(a);
         }
@@ -61,11 +108,80 @@ namespace Tests.TestCases
         public void M4(int a) //okay
         { }
 
-        void MyEventHandlerMethod(object sender, EventArgs e) //okay, event handler
+        private void MyEventHandlerMethod(object sender, EventArgs e) //okay, event handler
         { }
-        void MyEventHandlerMethod(object sender, MyEventArgs e) //okay, event handler
+        private void MyEventHandlerMethod(object sender, MyEventArgs e) //okay, event handler
         { }
 
         class MyEventArgs : EventArgs { }
+    }
+
+    class MethodAsEvent
+    {
+        delegate void CustomDelegate(string arg1, int arg2);
+        event CustomDelegate SomeEventAdd;
+        event CustomDelegate SomeEventSub;
+
+        public MethodAsEvent()
+        {
+            SomeEventAdd += MyMethodAdd;
+            SomeEventSub -= MyMethodSub;
+        }
+
+        private void MyMethodAdd(string arg1, int arg2) // Compliant
+        {
+        }
+
+        private void MyMethodSub(string arg1, int arg2) // Compliant
+        {
+        }
+    }
+
+    class MethodAssignedToActionFromInitializer
+    {
+        private static void MyMethod1(int arg) { } // Compliant
+
+        public System.Action<int> MyReference = MyMethod1;
+    }
+
+    class MethodAssignedToActionFromInitializerQualified
+    {
+        private static void MyMethod2(int arg) { } // Compliant
+
+        public System.Action<int> MyReference = MethodAssignedToActionFromInitializerQualified.MyMethod2;
+    }
+
+    class MethodAssignedToFromVariable
+    {
+        private static void MyMethod3(int arg) { } // Compliant
+
+        public void Foo()
+        {
+            System.Action<int> MyReference;
+            MyReference = MyMethod3;
+        }
+    }
+
+    class MethodAssignedToFromVariableQualified
+    {
+        private static void MyMethod4(int arg) { } // Compliant
+
+        public void Foo()
+        {
+            System.Action<int> MyReference;
+            MyReference = MethodAssignedToFromVariableQualified.MyMethod4;
+        }
+    }
+
+    partial class MethodAssignedToActionFromPartialClass
+    {
+        private static void MyMethod5(int arg) { } // Compliant
+
+        private static void MyNoncompliantMethod(int arg) { } // Noncompliant
+    }
+
+    partial class MethodAssignedToActionFromPartialClass
+    {
+        public System.Action<int> MyReference = MethodAssignedToActionFromPartialClass.MyMethod5;
     }
 }

@@ -12,134 +12,10 @@
 {
 "analysisTarget":  [
 {
-"uri":  "Nancy\\src\\Nancy\\Conventions\\BuiltInAcceptHeaderCoercions.cs",
-"region":  {
-"startLine":  24,
-"startColumn":  153,
-"endLine":  24,
-"endColumn":  160
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused method parameter \"context\".",
-"fullMessage":  "Unused parameters are misleading. Whatever the value passed to such parameters is, the behavior will be the same.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused method parameters should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1172",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
-}
-},
-{
-"ruleId":  "S1172",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Conventions\\BuiltInAcceptHeaderCoercions.cs",
-"region":  {
-"startLine":  52,
-"startColumn":  139,
-"endLine":  52,
-"endColumn":  146
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused method parameter \"context\".",
-"fullMessage":  "Unused parameters are misleading. Whatever the value passed to such parameters is, the behavior will be the same.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused method parameters should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1172",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
-}
-},
-{
-"ruleId":  "S1172",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Conventions\\BuiltInCultureConventions.cs",
-"region":  {
-"startLine":  139,
-"startColumn":  61,
-"endLine":  139,
-"endColumn":  68
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused method parameter \"context\".",
-"fullMessage":  "Unused parameters are misleading. Whatever the value passed to such parameters is, the behavior will be the same.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused method parameters should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1172",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
-}
-},
-{
-"ruleId":  "S1172",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Diagnostics\\DiagnosticsHook.cs",
-"region":  {
-"startLine":  36,
-"startColumn":  283,
-"endLine":  36,
-"endColumn":  301
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused method parameter \"responseProcessors\".",
-"fullMessage":  "Unused parameters are misleading. Whatever the value passed to such parameters is, the behavior will be the same.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused method parameters should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1172",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
-}
-},
-{
-"ruleId":  "S1172",
-"locations":  [
-{
-"analysisTarget":  [
-{
 "uri":  "Nancy\\src\\Nancy\\Diagnostics\\DiagnosticsHook.cs",
 "region":  {
 "startLine":  258,
-"startColumn":  152,
+"startColumn":  128,
 "endLine":  258,
 "endColumn":  162
 }
@@ -170,7 +46,7 @@
 "uri":  "Nancy\\src\\Nancy\\Diagnostics\\InteractiveDiagnostics.cs",
 "region":  {
 "startLine":  175,
-"startColumn":  79,
+"startColumn":  58,
 "endLine":  175,
 "endColumn":  98
 }
@@ -198,41 +74,10 @@
 {
 "analysisTarget":  [
 {
-"uri":  "Nancy\\src\\Nancy\\FormatterExtensions.cs",
-"region":  {
-"startLine":  127,
-"startColumn":  109,
-"endLine":  127,
-"endColumn":  119
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused method parameter \"statusCode\".",
-"fullMessage":  "Unused parameters are misleading. Whatever the value passed to such parameters is, the behavior will be the same.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused method parameters should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.7.0\u0026ruleId=S1172",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
-}
-},
-{
-"ruleId":  "S1172",
-"locations":  [
-{
-"analysisTarget":  [
-{
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
 "region":  {
 "startLine":  376,
-"startColumn":  82,
+"startColumn":  75,
 "endLine":  376,
 "endColumn":  87
 }
@@ -263,7 +108,7 @@
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
 "region":  {
 "startLine":  438,
-"startColumn":  82,
+"startColumn":  75,
 "endLine":  438,
 "endColumn":  87
 }
@@ -294,7 +139,7 @@
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
 "region":  {
 "startLine":  596,
-"startColumn":  79,
+"startColumn":  72,
 "endLine":  596,
 "endColumn":  84
 }
@@ -325,7 +170,7 @@
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
 "region":  {
 "startLine":  632,
-"startColumn":  91,
+"startColumn":  84,
 "endLine":  632,
 "endColumn":  96
 }
@@ -356,7 +201,7 @@
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\ViewEngineApplicationStartup.cs",
 "region":  {
 "startLine":  41,
-"startColumn":  84,
+"startColumn":  72,
 "endLine":  41,
 "endColumn":  94
 }
