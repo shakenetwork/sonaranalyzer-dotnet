@@ -45,7 +45,7 @@ namespace SonarLint.Rules.CSharp
         internal const string MessageFormat = "Use the recommended AES (Advanced Encryption Standard) instead.";
         internal const string Category = SonarLint.Common.Category.Security;
         internal const Severity RuleSeverity = Severity.Critical;
-        internal const bool IsActivatedByDefault = false;
+        internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,

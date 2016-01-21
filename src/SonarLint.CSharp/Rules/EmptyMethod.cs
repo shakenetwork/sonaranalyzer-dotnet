@@ -49,7 +49,7 @@ namespace SonarLint.Rules.CSharp
                                               "NotSupportedException or complete the implementation.";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
+        internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,

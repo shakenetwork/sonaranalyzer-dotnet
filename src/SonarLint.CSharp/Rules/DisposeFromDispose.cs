@@ -45,7 +45,7 @@ namespace SonarLint.Rules.CSharp
         internal const string MessageFormat = "Move this \"Dispose\" call into this class' own \"Dispose\" method.";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
-        internal const bool IsActivatedByDefault = true;
+        internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,

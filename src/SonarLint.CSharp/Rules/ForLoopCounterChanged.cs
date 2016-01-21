@@ -50,7 +50,7 @@ namespace SonarLint.Rules.CSharp
         internal const string MessageFormat = "Do not update the loop counter \"{0}\" within the loop body.";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
+        internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,

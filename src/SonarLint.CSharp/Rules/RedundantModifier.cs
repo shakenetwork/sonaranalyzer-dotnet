@@ -44,7 +44,7 @@ namespace SonarLint.Rules.CSharp
         internal const string MessageFormat = "\"{0}\" is {1} in this context.";
         internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = true;
+        internal const bool IsActivatedByDefault = false;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         //the severity is set to warning, because otherwise the issue doesn't show up in the IDE

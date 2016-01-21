@@ -44,7 +44,7 @@ namespace SonarLint.Rules.CSharp
         internal const string MessageFormat = "Remove the unnecessary Boolean literal(s).";
         internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = true;
+        internal const bool IsActivatedByDefault = false;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         internal static readonly DiagnosticDescriptor Rule =

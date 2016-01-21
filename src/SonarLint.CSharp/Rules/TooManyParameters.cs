@@ -44,7 +44,7 @@ namespace SonarLint.Rules.CSharp
         internal const string MessageFormat = "Method \"{2}\" has {1} parameters, which is greater than the {0} authorized.";
         internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
+        internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,

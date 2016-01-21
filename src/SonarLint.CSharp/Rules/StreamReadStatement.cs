@@ -49,7 +49,7 @@ namespace SonarLint.Rules.CSharp
             "Check the return value of the \"{0}\" call to see how many bytes were read.";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Blocker;
-        internal const bool IsActivatedByDefault = true;
+        internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,

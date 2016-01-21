@@ -45,7 +45,7 @@ namespace SonarLint.Rules.CSharp
         internal const string MessageFormat = "Remove this cast and edit the interface to add the missing functionality.";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
+        internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,

@@ -44,7 +44,7 @@ namespace SonarLint.Rules.CSharp
         internal const string MessageFormat = "Handle the exception, rather than swallow it with an empty statement.";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
+        internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,

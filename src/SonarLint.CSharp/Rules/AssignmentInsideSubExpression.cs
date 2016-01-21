@@ -47,7 +47,7 @@ namespace SonarLint.Rules.CSharp
         internal const string MessageFormat = "Extract the assignment of \"{0}\" from this expression.";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
+        internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,

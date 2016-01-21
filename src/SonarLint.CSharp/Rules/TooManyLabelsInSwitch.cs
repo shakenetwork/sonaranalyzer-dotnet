@@ -45,7 +45,7 @@ namespace SonarLint.Rules.CSharp
         internal const string MessageFormat = "Reduce the number of switch cases from {1} to at most {0}.";
         internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
+        internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,

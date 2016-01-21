@@ -50,7 +50,7 @@ namespace SonarLint.Rules.CSharp
             "Use a comparison to \"default({0})\" instead or add a constraint to \"{0}\" so that it can't be a value type.";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
-        internal const bool IsActivatedByDefault = true;
+        internal const bool IsActivatedByDefault = false;
 
         private static readonly ExpressionSyntax NullExpression = SyntaxFactory.LiteralExpression(SyntaxKind.NullLiteralExpression);
 

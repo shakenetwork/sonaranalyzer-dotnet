@@ -48,7 +48,7 @@ namespace SonarLint.Rules.CSharp
         internal const string MessageSimilar = "\"{0}\" differs only by case from \"{2}\" in \"{1}\".";
         internal const string Category = SonarLint.Common.Category.Design;
         internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
+        internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,

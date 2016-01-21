@@ -46,7 +46,7 @@ namespace SonarLint.Rules.CSharp
         internal const string MessageFormat = "The Cyclomatic Complexity of this method is {1} which is greater than {0} authorized.";
         internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
+        internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,

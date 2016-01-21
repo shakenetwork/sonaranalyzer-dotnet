@@ -39,7 +39,7 @@ namespace SonarLint.Rules.Common
         protected const string MessageFormat = "Add a \"{0}\" clause to this \"{1}\" statement.";
         protected const string Category = SonarLint.Common.Category.Reliability;
         protected const Severity RuleSeverity = Severity.Major;
-        protected const bool IsActivatedByDefault = true;
+        protected const bool IsActivatedByDefault = false;
 
         protected static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,

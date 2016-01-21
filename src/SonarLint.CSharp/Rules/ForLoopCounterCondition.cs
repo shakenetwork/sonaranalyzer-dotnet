@@ -52,7 +52,7 @@ namespace SonarLint.Rules.CSharp
             "This loop's stop incrementer updates {0} but the stop condition doesn't test any variables.";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
+        internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, "{0}", Category,
