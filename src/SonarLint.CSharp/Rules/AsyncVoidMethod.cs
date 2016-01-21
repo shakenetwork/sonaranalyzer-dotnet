@@ -18,9 +18,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Generic;
 using System.Collections.Immutable;
-using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -28,7 +26,6 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
-using SonarLint.Rules.Common;
 
 namespace SonarLint.Rules.CSharp
 {

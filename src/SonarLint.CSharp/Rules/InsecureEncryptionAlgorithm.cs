@@ -98,7 +98,7 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            var methodName = $"{methodSymbol.ContainingType.ToString()}.{methodSymbol.Name}";
+            var methodName = $"{methodSymbol.ContainingType}.{methodSymbol.Name}";
             if (MethodNamesToReachEncryptionAlgorithm.Contains(methodName) ||
                 IsBaseEncryptionCreateCalled(methodName, invocation.ArgumentList))
             {
@@ -141,7 +141,7 @@ namespace SonarLint.Rules.CSharp
             var algorithmNameCandidate = ((LiteralExpressionSyntax)argumentList.Arguments.First().Expression).Token.ValueText;
             var algorithmName = AlgorithmNames
                 .FirstOrDefault(alg =>
-                    algorithmNameCandidate.StartsWith(alg, System.StringComparison.InvariantCulture));
+                    algorithmNameCandidate.StartsWith(alg, System.StringComparison.Ordinal));
 
             return algorithmName != null;
         }

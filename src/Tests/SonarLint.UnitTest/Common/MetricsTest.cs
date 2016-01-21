@@ -54,10 +54,7 @@ namespace SonarLint.UnitTest.Common
             Lines(AnalyzerLanguage.VisualBasic, "Imports System;\r\n/*hello\r\nworld*/").Should().Be(3);
         }
 
-        private static int Lines(AnalyzerLanguage language, string text)
-        {
-            return MetricsFor(language, text).GetLineCount();
-        }
+        private static int Lines(AnalyzerLanguage language, string text) => MetricsFor(language, text).LineCount;
 
         [TestMethod]
         [TestCategory(MetricsTestCategoryName)]
@@ -84,10 +81,7 @@ line 4"")
 End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
         }
 
-        private static IImmutableSet<int> LinesOfCode(AnalyzerLanguage language, string text)
-        {
-            return MetricsFor(language, text).GetLinesOfCode();
-        }
+        private static IImmutableSet<int> LinesOfCode(AnalyzerLanguage language, string text) => MetricsFor(language, text).LinesOfCode;
 
         [TestMethod]
         [TestCategory(MetricsTestCategoryName)]
@@ -229,10 +223,7 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
 
         }
 
-        private static int Classes(AnalyzerLanguage language, string text)
-        {
-            return MetricsFor(language, text).GetClassCount();
-        }
+        private static int Classes(AnalyzerLanguage language, string text) => MetricsFor(language, text).ClassCount;
 
         [TestMethod]
         [TestCategory(MetricsTestCategoryName)]
@@ -267,10 +258,7 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
                 .Should().Be(0);
         }
 
-        private static int Accessors(AnalyzerLanguage language, string text)
-        {
-            return MetricsFor(language, text).GetAccessorCount();
-        }
+        private static int Accessors(AnalyzerLanguage language, string text) => MetricsFor(language, text).AccessorCount;
 
         [TestMethod]
         [TestCategory(MetricsTestCategoryName)]
@@ -337,10 +325,7 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
                 .Should().Be(3);
         }
 
-        private static int Statements(AnalyzerLanguage language, string text)
-        {
-            return MetricsFor(language, text).GetStatementCount();
-        }
+        private static int Statements(AnalyzerLanguage language, string text) => MetricsFor(language, text).StatementCount;
 
         [TestMethod]
         [TestCategory(MetricsTestCategoryName)]
@@ -382,10 +367,7 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
                 .Should().Be(0);
         }
 
-        private static int Functions(AnalyzerLanguage language, string text)
-        {
-            return MetricsFor(language, text).GetFunctionCount();
-        }
+        private static int Functions(AnalyzerLanguage language, string text) => MetricsFor(language, text).FunctionCount;
 
         [TestMethod]
         [TestCategory(MetricsTestCategoryName)]
@@ -413,10 +395,7 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
             PublicApi(AnalyzerLanguage.CSharp, "public class MyClass { protected MyMethod() { } }").Should().Be(1);
         }
 
-        private static int PublicApi(AnalyzerLanguage language, string text)
-        {
-            return MetricsFor(language, text).GetPublicApiCount();
-        }
+        private static int PublicApi(AnalyzerLanguage language, string text) => MetricsFor(language, text).PublicApiCount;
 
         [TestMethod]
         [TestCategory(MetricsTestCategoryName)]
@@ -432,10 +411,7 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
             PublicUndocumentedApi(AnalyzerLanguage.CSharp, "/// ... \n public class MyClass { \n /* ... */ public int MyField; }").Should().Be(0);
         }
 
-        private static int PublicUndocumentedApi(AnalyzerLanguage language, string text)
-        {
-            return MetricsFor(language, text).GetPublicUndocumentedApiCount();
-        }
+        private static int PublicUndocumentedApi(AnalyzerLanguage language, string text) => MetricsFor(language, text).PublicUndocumentedApiCount;
 
         [TestMethod]
         [TestCategory(MetricsTestCategoryName)]
@@ -510,10 +486,7 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
             Complexity(AnalyzerLanguage.VisualBasic, "Module Module1\n Class Foo\n Sub Foo() \n GoTo Foo\n End Sub\n End Class\n End Module").Should().Be(2);
         }
 
-        private static int Complexity(AnalyzerLanguage language, string text)
-        {
-            return MetricsFor(language, text).GetComplexity();
-        }
+        private static int Complexity(AnalyzerLanguage language, string text) => MetricsFor(language, text).Complexity;
 
         [TestMethod]
         [TestCategory(MetricsTestCategoryName)]
@@ -537,10 +510,8 @@ End Class").Should().BeEquivalentTo(1, 2, 3, 4, 5, 6, 7, 8);
                 "\n End Sub \n End Class").Values.Should().BeEquivalentTo(0, 0, 1, 0, 0, 0, 0);
         }
 
-        private static Distribution FunctionComplexityDistribution(AnalyzerLanguage language, string text)
-        {
-            return MetricsFor(language, text).GetFunctionComplexityDistribution();
-        }
+        private static Distribution FunctionComplexityDistribution(AnalyzerLanguage language, string text) =>
+            MetricsFor(language, text).FunctionComplexityDistribution;
 
         private static MetricsBase MetricsFor(AnalyzerLanguage language, string text)
         {

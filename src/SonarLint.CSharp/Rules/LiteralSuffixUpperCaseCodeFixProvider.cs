@@ -78,7 +78,7 @@ namespace SonarLint.Rules.CSharp
         {
             var type = semanticModel.GetTypeInfo(literal).Type;
             var text = literal.Token.Text;
-            var reversedText = text.Reverse();
+            var reversedText = text.Reverse().ToList();
             var reversedTextEnding = new string(reversedText.TakeWhile(char.IsLetter).ToArray());
             var reversedTextBeginning = new string(reversedText.SkipWhile(char.IsLetter).ToArray());
             var newText = new string((reversedTextEnding.ToUpperInvariant() + reversedTextBeginning).Reverse().ToArray());

@@ -77,8 +77,8 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
-                    IFieldSymbol getterField = null;
-                    IFieldSymbol setterField = null;
+                    IFieldSymbol getterField;
+                    IFieldSymbol setterField;
                     if (TryGetFieldFromGetter(getter, c.SemanticModel, out getterField) &&
                         TryGetFieldFromSetter(setter, c.SemanticModel, out setterField) &&
                         getterField.Equals(setterField) &&

@@ -39,27 +39,33 @@ namespace SonarLint.Common
 
         #region LinesOfCode
 
-        public int GetLineCount()
+        public int LineCount
         {
-            return tree
-                .GetLineSpan(TextSpan.FromBounds(tree.Length, tree.Length))
-                .EndLinePosition
-                .Line + 1;
+            get
+            {
+                return tree
+                    .GetLineSpan(TextSpan.FromBounds(tree.Length, tree.Length))
+                    .EndLinePosition
+                    .Line + 1;
+            }
         }
 
-        public IImmutableSet<int> GetLinesOfCode()
+        public IImmutableSet<int> LinesOfCode
         {
-            return tree.GetRoot()
-                .DescendantTokens()
-                .Where(token => !IsEndOfFile(token))
-                .SelectMany(
-                    t =>
-                    {
-                        var start = t.GetLocation().GetLineSpan().StartLinePosition.Line + 1;
-                        var end = t.GetLocation().GetLineSpan().EndLinePosition.Line + 1;
-                        return Enumerable.Range(start, end - start + 1);
-                    })
-                .ToImmutableHashSet();
+            get
+            {
+                return tree.GetRoot()
+                    .DescendantTokens()
+                    .Where(token => !IsEndOfFile(token))
+                    .SelectMany(
+                        t =>
+                        {
+                            var start = t.GetLocation().GetLineSpan().StartLinePosition.Line + 1;
+                            var end = t.GetLocation().GetLineSpan().EndLinePosition.Line + 1;
+                            return Enumerable.Range(start, end - start + 1);
+                        })
+                    .ToImmutableHashSet();
+            }
         }
 
         protected abstract Func<SyntaxToken, bool> IsEndOfFile { get; }
@@ -125,40 +131,49 @@ namespace SonarLint.Common
 
         #region Classes, Accessors, Functions, Statements
 
-        public int GetClassCount()
+        public int ClassCount
         {
-            return tree.GetRoot()
-                .DescendantNodes()
-                .Count(IsClass);
+            get
+            {
+                return tree.GetRoot()
+                    .DescendantNodes()
+                    .Count(IsClass);
+            }
         }
         protected abstract Func<SyntaxNode, bool> IsClass { get; }
 
-        public int GetAccessorCount()
+        public int AccessorCount
         {
-            return tree.GetRoot()
-                .DescendantNodes()
-                .Count(IsAccessor);
+            get
+            {
+                return tree.GetRoot()
+                    .DescendantNodes()
+                    .Count(IsAccessor);
+            }
         }
         protected abstract Func<SyntaxNode, bool> IsAccessor { get; }
 
-        public int GetStatementCount()
+        public int StatementCount
         {
-            return tree.GetRoot()
-                .DescendantNodes()
-                .Count(IsStatement);
+            get
+            {
+                return tree.GetRoot()
+                    .DescendantNodes()
+                    .Count(IsStatement);
+            }
         }
         protected abstract Func<SyntaxNode, bool> IsStatement { get; }
 
-        public int GetFunctionCount()
-        {
-            return GetFunctionNodes().Count();
-        }
+        public int FunctionCount => FunctionNodes.Count();
 
-        public IEnumerable<SyntaxNode> GetFunctionNodes()
+        public IEnumerable<SyntaxNode> FunctionNodes
         {
-            return tree.GetRoot()
-                .DescendantNodes()
-                .Where(IsFunctionWithBody);
+            get
+            {
+                return tree.GetRoot()
+                    .DescendantNodes()
+                    .Where(IsFunctionWithBody);
+            }
         }
 
         protected abstract Func<SyntaxNode, bool> IsFunction { get; }
@@ -168,39 +183,31 @@ namespace SonarLint.Common
 
         #region PublicApi
 
-        public int GetPublicApiCount()
-        {
-            return GetPublicApiNodes().Count();
-        }
+        public int PublicApiCount => PublicApiNodes.Count();
 
-        public int GetPublicUndocumentedApiCount()
-        {
-            return GetPublicApiNodes()
-                .Count(n =>
-                    !n.GetLeadingTrivia().Any(IsCommentTrivia));
-        }
+        public int PublicUndocumentedApiCount => PublicApiNodes.Count(n => !n.GetLeadingTrivia().Any(IsCommentTrivia));
 
-        protected abstract IEnumerable<SyntaxNode> GetPublicApiNodes();
+        protected abstract IEnumerable<SyntaxNode> PublicApiNodes { get; }
 
         #endregion
 
         #region Complexity
 
-        public int GetComplexity()
-        {
-            return GetComplexity(tree.GetRoot());
-        }
+        public int Complexity => GetComplexity(tree.GetRoot());
 
         public abstract int GetComplexity(SyntaxNode node);
 
-        public Distribution GetFunctionComplexityDistribution()
+        public Distribution FunctionComplexityDistribution
         {
-            var distribution = new Distribution(1, 2, 4, 6, 8, 10, 12);
-            foreach (var node in GetFunctionNodes())
+            get
             {
-                distribution.Add(GetComplexity(node));
+                var distribution = new Distribution(1, 2, 4, 6, 8, 10, 12);
+                foreach (var node in FunctionNodes)
+                {
+                    distribution.Add(GetComplexity(node));
+                }
+                return distribution;
             }
-            return distribution;
         }
 
         #endregion

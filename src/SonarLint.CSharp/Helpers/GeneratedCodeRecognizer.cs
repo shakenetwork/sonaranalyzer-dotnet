@@ -46,7 +46,7 @@ namespace SonarLint.Helpers.CSharp
                 HasGeneratedRegion(tree);
         }
 
-        private bool HasGeneratedRegion(SyntaxTree tree)
+        private static bool HasGeneratedRegion(SyntaxTree tree)
         {
             return tree
                 .GetRoot()

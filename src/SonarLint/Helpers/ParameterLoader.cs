@@ -20,7 +20,6 @@
 
 using System;
 using System.Globalization;
-using Microsoft.CodeAnalysis;
 using SonarLint.Common;
 using System.Collections.Immutable;
 using System.Collections.Generic;

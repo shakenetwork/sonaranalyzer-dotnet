@@ -42,7 +42,7 @@ namespace SonarLint.Runner
 
                 return -1;
             }
-            
+
             var language = AnalyzerLanguage.Parse(args[2]);
 
             Write($"SonarLint for Visual Studio version {typeof (Program).Assembly.GetName().Version}");
@@ -86,15 +86,15 @@ namespace SonarLint.Runner
 
                         xmlOut.WriteStartElement("Metrics");
 
-                        xmlOut.WriteElementString("Lines", metrics.GetLineCount().ToString(CultureInfo.InvariantCulture));
-                        xmlOut.WriteElementString("Classes", metrics.GetClassCount().ToString(CultureInfo.InvariantCulture));
-                        xmlOut.WriteElementString("Accessors", metrics.GetAccessorCount().ToString(CultureInfo.InvariantCulture));
-                        xmlOut.WriteElementString("Statements", metrics.GetStatementCount().ToString(CultureInfo.InvariantCulture));
-                        xmlOut.WriteElementString("Functions", metrics.GetFunctionCount().ToString(CultureInfo.InvariantCulture));
-                        xmlOut.WriteElementString("PublicApi", metrics.GetPublicApiCount().ToString(CultureInfo.InvariantCulture));
-                        xmlOut.WriteElementString("PublicUndocumentedApi", metrics.GetPublicUndocumentedApiCount().ToString(CultureInfo.InvariantCulture));
+                        xmlOut.WriteElementString("Lines", metrics.LineCount.ToString(CultureInfo.InvariantCulture));
+                        xmlOut.WriteElementString("Classes", metrics.ClassCount.ToString(CultureInfo.InvariantCulture));
+                        xmlOut.WriteElementString("Accessors", metrics.AccessorCount.ToString(CultureInfo.InvariantCulture));
+                        xmlOut.WriteElementString("Statements", metrics.StatementCount.ToString(CultureInfo.InvariantCulture));
+                        xmlOut.WriteElementString("Functions", metrics.FunctionCount.ToString(CultureInfo.InvariantCulture));
+                        xmlOut.WriteElementString("PublicApi", metrics.PublicApiCount.ToString(CultureInfo.InvariantCulture));
+                        xmlOut.WriteElementString("PublicUndocumentedApi", metrics.PublicUndocumentedApiCount.ToString(CultureInfo.InvariantCulture));
 
-                        var complexity = metrics.GetComplexity();
+                        var complexity = metrics.Complexity;
                         xmlOut.WriteElementString("Complexity", complexity.ToString(CultureInfo.InvariantCulture));
 
                         // TODO This is a bit ridiculous, but is how SonarQube works
@@ -102,7 +102,7 @@ namespace SonarLint.Runner
                         fileComplexityDistribution.Add(complexity);
                         xmlOut.WriteElementString("FileComplexityDistribution", fileComplexityDistribution.ToString());
 
-                        xmlOut.WriteElementString("FunctionComplexityDistribution", metrics.GetFunctionComplexityDistribution().ToString());
+                        xmlOut.WriteElementString("FunctionComplexityDistribution", metrics.FunctionComplexityDistribution.ToString());
 
                         var comments = metrics.GetComments(configuration.IgnoreHeaderComments);
                         xmlOut.WriteStartElement("Comments");
@@ -121,7 +121,7 @@ namespace SonarLint.Runner
                         xmlOut.WriteEndElement();
 
                         xmlOut.WriteStartElement("LinesOfCode");
-                        foreach (var line in metrics.GetLinesOfCode())
+                        foreach (var line in metrics.LinesOfCode)
                         {
                             xmlOut.WriteElementString("Line", line.ToString(CultureInfo.InvariantCulture));
                         }

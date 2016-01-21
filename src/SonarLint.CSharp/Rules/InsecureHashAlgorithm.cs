@@ -95,7 +95,7 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            var methodName = $"{methodSymbol.ContainingType.ToString()}.{methodSymbol.Name}";
+            var methodName = $"{methodSymbol.ContainingType}.{methodSymbol.Name}";
             string algorithmName;
             if (MethodNamesToReachHashAlgorithm.Contains(methodName) &&
                 TryGetAlgorithmName(invocation.ArgumentList, out algorithmName))
@@ -137,7 +137,7 @@ namespace SonarLint.Rules.CSharp
             var algorithmNameCandidate = ((LiteralExpressionSyntax)argumentList.Arguments.First().Expression).Token.ValueText;
             algorithmName = InsecureHashAlgorithmTypeNames.Values
                 .FirstOrDefault(alg =>
-                    algorithmNameCandidate.StartsWith(alg, System.StringComparison.InvariantCulture));
+                    algorithmNameCandidate.StartsWith(alg, System.StringComparison.Ordinal));
 
             return algorithmName != null;
         }

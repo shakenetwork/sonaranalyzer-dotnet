@@ -49,7 +49,7 @@ namespace SonarLint.Helpers
         {
             return symbol is IMethodSymbol ||
                 symbol is IPropertySymbol ||
-                symbol is IPropertySymbol;
+                symbol is IEventSymbol;
         }
 
         public static bool IsPublicApi(this ISymbol symbol)

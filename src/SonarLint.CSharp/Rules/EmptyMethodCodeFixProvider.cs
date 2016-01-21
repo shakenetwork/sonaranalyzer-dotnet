@@ -48,6 +48,9 @@ namespace SonarLint.Rules.CSharp
             return WellKnownFixAllProviders.BatchFixer;
         }
 
+        private const string LiteralNotSupportedException = "NotSupportedException";
+        private const string LiteralSystem = "System";
+
         public override sealed async Task RegisterCodeFixesAsync(CodeFixContext context)
         {
             var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
@@ -91,9 +94,7 @@ namespace SonarLint.Rules.CSharp
 
             var semanticModel = await context.Document.GetSemanticModelAsync(context.CancellationToken).ConfigureAwait(false);
 
-            const string LiteralNotSupportedException = "NotSupportedException";
-            const string LiteralSystem = "System";
-            var systemNeedsToBeAdded = NamespaceNeedsToBeAdded(method, semanticModel, LiteralNotSupportedException, LiteralSystem);
+            var systemNeedsToBeAdded = NamespaceNeedsToBeAdded(method, semanticModel);
 
             var memberAccessRoot = systemNeedsToBeAdded
                 ? (NameSyntax)SyntaxFactory.QualifiedName(
@@ -126,7 +127,7 @@ namespace SonarLint.Rules.CSharp
         }
 
         private static bool NamespaceNeedsToBeAdded(MethodDeclarationSyntax method,
-            SemanticModel semanticModel, string LiteralNotSupportedException, string LiteralSystem)
+            SemanticModel semanticModel)
         {
             return !semanticModel.LookupNamespacesAndTypes(method.Body.CloseBraceToken.SpanStart)
                 .OfType<INamedTypeSymbol>()

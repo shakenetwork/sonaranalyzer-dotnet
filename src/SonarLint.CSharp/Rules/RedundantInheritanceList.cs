@@ -30,6 +30,7 @@ using Microsoft.CodeAnalysis.Text;
 using System.Linq;
 using System.Collections.Generic;
 using System;
+using System.Globalization;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -141,7 +142,7 @@ namespace SonarLint.Rules.CSharp
 
         private static void CheckIfInterfaceIsRedundantForInterface(SyntaxNodeAnalysisContext c, InterfaceDeclarationSyntax interfaceDeclaration)
         {
-            CheckIfInterfaceIsRedundant(c, interfaceDeclaration.BaseList, (interfaceType) => false);
+            CheckIfInterfaceIsRedundant(c, interfaceDeclaration.BaseList, interfaceType => false);
         }
 
         private static void CheckIfInterfaceIsRedundantForClass(SyntaxNodeAnalysisContext c, ClassDeclarationSyntax classDeclaration)
@@ -153,7 +154,7 @@ namespace SonarLint.Rules.CSharp
             }
 
             CheckIfInterfaceIsRedundant(c, classDeclaration.BaseList,
-                (interfaceType) => HasInterfaceMember(classSymbol, interfaceType));
+                interfaceType => HasInterfaceMember(classSymbol, interfaceType));
         }
 
         private static void CheckIfInterfaceIsRedundant(SyntaxNodeAnalysisContext c, BaseListSyntax baseList,
@@ -179,7 +180,7 @@ namespace SonarLint.Rules.CSharp
                     {
                         var location = GetLocationWithToken(baseType.Type, baseList.Types);
                         c.ReportDiagnostic(Diagnostic.Create(Rule, location,
-                            ImmutableDictionary<string, string>.Empty.Add(RedundantIndexKey, i.ToString()),
+                            ImmutableDictionary<string, string>.Empty.Add(RedundantIndexKey, i.ToString(CultureInfo.InvariantCulture)),
                             string.Format(MessageAlreadyImplements, interfaceTypeWithAllInterfaces.Key.Name, interfaceType.Name)));
                         break;
                     }

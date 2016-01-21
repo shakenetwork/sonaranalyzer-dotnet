@@ -81,7 +81,7 @@ namespace SonarLint.Rules.CSharp
             }
 
             var fieldName = fieldSymbol.Name;
-            var fieldNameLower = fieldSymbol.Name.ToLowerInvariant();
+            var fieldNameLower = fieldSymbol.Name.ToUpperInvariant();
             var declaringType = fieldSymbol.ContainingType;
             var baseTypes = declaringType.BaseType.GetSelfAndBaseTypes();
 
@@ -90,7 +90,7 @@ namespace SonarLint.Rules.CSharp
                 var similarFields = baseType.GetMembers()
                     .OfType<IFieldSymbol>()
                     .Where(field => field.DeclaredAccessibility != Accessibility.Private)
-                    .Where(field => field.Name.ToLowerInvariant() == fieldNameLower)
+                    .Where(field => field.Name.ToUpperInvariant() == fieldNameLower)
                     .ToList();
 
                 if (similarFields.Any(field => field.Name == fieldName))

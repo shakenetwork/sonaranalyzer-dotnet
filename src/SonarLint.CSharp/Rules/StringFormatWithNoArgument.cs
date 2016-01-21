@@ -27,6 +27,7 @@ using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
 using System.Linq;
+using System.Globalization;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -112,7 +113,7 @@ namespace SonarLint.Rules.CSharp
                         c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.Expression.GetLocation(),
                             ImmutableDictionary<string, string>.Empty.Add(
                                 FormatStringIndexKey,
-                                invocation.ArgumentList.Arguments.IndexOf(formatArgument).ToString())));
+                                invocation.ArgumentList.Arguments.IndexOf(formatArgument).ToString(CultureInfo.InvariantCulture))));
                     }
                 },
                 SyntaxKind.InvocationExpression);

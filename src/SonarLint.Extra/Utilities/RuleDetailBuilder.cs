@@ -155,7 +155,7 @@ namespace SonarLint.Utilities
             yield return codeFixProvider;
 
             var baseClass = codeFixProvider.BaseType;
-            while (baseClass != typeof(CodeFixProvider))
+            while (baseClass!= null && baseClass != typeof(CodeFixProvider))
             {
                 yield return baseClass;
                 baseClass = baseClass.BaseType;

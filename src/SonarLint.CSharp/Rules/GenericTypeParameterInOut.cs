@@ -176,7 +176,7 @@ namespace SonarLint.Rules.CSharp
 
             foreach (ISymbol member in interfaceType.GetMembers())
             {
-                var canBeVariant = false;
+                bool canBeVariant;
                 switch (member.Kind)
                 {
                     case SymbolKind.Method:
@@ -372,8 +372,8 @@ namespace SonarLint.Rules.CSharp
                         return false;
                     }
 
-                    var requireOut = false;
-                    var requireIn = false;
+                    bool requireOut;
+                    bool requireIn;
 
                     switch (typeParam.Variance)
                     {

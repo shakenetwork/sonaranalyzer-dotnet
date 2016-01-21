@@ -70,22 +70,22 @@ namespace SonarLint.Rules.VisualBasic
                     string part;
                     string matched;
 
-                    if (name.StartsWith(BeforeLiteral, System.StringComparison.InvariantCultureIgnoreCase))
+                    if (name.StartsWith(BeforeLiteral, System.StringComparison.OrdinalIgnoreCase))
                     {
                         part = PrefixLiteral;
                         matched = name.Substring(0, BeforeLiteral.Length);
                     }
-                    else if (name.StartsWith(AfterLiteral, System.StringComparison.InvariantCultureIgnoreCase))
+                    else if (name.StartsWith(AfterLiteral, System.StringComparison.OrdinalIgnoreCase))
                     {
                         part = PrefixLiteral;
                         matched = name.Substring(0, AfterLiteral.Length);
                     }
-                    else if (name.EndsWith(BeforeLiteral, System.StringComparison.InvariantCultureIgnoreCase))
+                    else if (name.EndsWith(BeforeLiteral, System.StringComparison.OrdinalIgnoreCase))
                     {
                         part = SuffixLiteral;
                         matched = name.Substring(name.Length - 1 - BeforeLiteral.Length);
                     }
-                    else if (name.EndsWith(AfterLiteral, System.StringComparison.InvariantCultureIgnoreCase))
+                    else if (name.EndsWith(AfterLiteral, System.StringComparison.OrdinalIgnoreCase))
                     {
                         part = SuffixLiteral;
                         matched = name.Substring(name.Length - 1 - AfterLiteral.Length);

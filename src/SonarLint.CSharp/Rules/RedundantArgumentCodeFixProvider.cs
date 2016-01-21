@@ -29,7 +29,6 @@ using System.Threading;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Text;
-using System;
 using SonarLint.Helpers;
 
 namespace SonarLint.Rules.CSharp
@@ -67,7 +66,8 @@ namespace SonarLint.Rules.CSharp
             var argumentMappings = invocation.ArgumentList.Arguments
                 .Select(argument =>
                     new RedundantArgument.ArgumentParameterMapping(argument,
-                        methodParameterLookup.GetParameterSymbol(argument)));
+                        methodParameterLookup.GetParameterSymbol(argument)))
+                .ToList();
 
             var methodSymbol = methodParameterLookup.MethodSymbol;
             if (methodSymbol == null)
@@ -79,7 +79,8 @@ namespace SonarLint.Rules.CSharp
             var argumentsCanBeRemovedWithoutNamed = new List<ArgumentSyntax>();
             var canBeRemovedWithoutNamed = true;
 
-            var reversedMappings = argumentMappings.Reverse();
+            var reversedMappings = new List<RedundantArgument.ArgumentParameterMapping>(argumentMappings);
+            reversedMappings.Reverse();
             foreach (var argumentMapping in reversedMappings)
             {
                 var argument = argumentMapping.Argument;
@@ -126,7 +127,7 @@ namespace SonarLint.Rules.CSharp
         }
 
         private static async Task<Document> RemoveArgumentsAndAddNecessaryNamesAsync(Document document, ArgumentListSyntax argumentList,
-            IEnumerable<RedundantArgument.ArgumentParameterMapping> argumentMappings, List<ArgumentSyntax> argumentsToRemove,
+            List<RedundantArgument.ArgumentParameterMapping> argumentMappings, List<ArgumentSyntax> argumentsToRemove,
             SemanticModel semanticModel, CancellationToken cancellationToken)
         {
             var root = await document.GetSyntaxRootAsync(cancellationToken);

@@ -51,44 +51,47 @@ namespace SonarLint.Common.CSharp
             IsFunction(node) &&
             node.ChildNodes().Any(c => c.IsKind(SyntaxKind.Block));
 
-        protected override IEnumerable<SyntaxNode> GetPublicApiNodes()
+        protected override IEnumerable<SyntaxNode> PublicApiNodes
         {
-            var root = tree.GetRoot();
-            var publicNodes = ImmutableArray.CreateBuilder<SyntaxNode>();
-            var toVisit = new Stack<SyntaxNode>();
-
-            var members = root.ChildNodes()
-                .Where(childNode => childNode is MemberDeclarationSyntax);
-            foreach (var member in members)
+            get
             {
-                toVisit.Push(member);
-            }
+                var root = tree.GetRoot();
+                var publicNodes = ImmutableArray.CreateBuilder<SyntaxNode>();
+                var toVisit = new Stack<SyntaxNode>();
 
-            while (toVisit.Any())
-            {
-                var member = toVisit.Pop();
-
-                var isPublic = member.ChildTokens().Any(t => t.IsKind(SyntaxKind.PublicKeyword));
-                if (isPublic)
-                {
-                    publicNodes.Add(member);
-                }
-
-                if (!isPublic &&
-                    !member.IsKind(SyntaxKind.NamespaceDeclaration))
-                {
-                    continue;
-                }
-
-                members = member.ChildNodes()
+                var members = root.ChildNodes()
                     .Where(childNode => childNode is MemberDeclarationSyntax);
-                foreach (var child in members)
+                foreach (var member in members)
                 {
-                    toVisit.Push(child);
+                    toVisit.Push(member);
                 }
-            }
 
-            return publicNodes.ToImmutable();
+                while (toVisit.Any())
+                {
+                    var member = toVisit.Pop();
+
+                    var isPublic = member.ChildTokens().Any(t => t.IsKind(SyntaxKind.PublicKeyword));
+                    if (isPublic)
+                    {
+                        publicNodes.Add(member);
+                    }
+
+                    if (!isPublic &&
+                        !member.IsKind(SyntaxKind.NamespaceDeclaration))
+                    {
+                        continue;
+                    }
+
+                    members = member.ChildNodes()
+                        .Where(childNode => childNode is MemberDeclarationSyntax);
+                    foreach (var child in members)
+                    {
+                        toVisit.Push(child);
+                    }
+                }
+
+                return publicNodes.ToImmutable();
+            }
         }
 
         public override int GetComplexity(SyntaxNode node)

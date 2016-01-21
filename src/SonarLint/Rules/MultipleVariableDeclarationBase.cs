@@ -64,7 +64,7 @@ namespace SonarLint.Rules.Common
                 c =>
                 {
                     var local = (TLocalDeclarationSyntax)c.Node;
-                    CheckAndReportVariables(GetIdentifiers(local), c);
+                    CheckAndReportVariables(GetIdentifiers(local).ToList(), c);
                 },
                 LocalDeclarationKind);
 
@@ -73,14 +73,14 @@ namespace SonarLint.Rules.Common
                 c =>
                 {
                     var field = (TFieldDeclarationSyntax)c.Node;
-                    CheckAndReportVariables(GetIdentifiers(field), c);
+                    CheckAndReportVariables(GetIdentifiers(field).ToList(), c);
                 },
                 FieldDeclarationKind);
         }
 
-        private static void CheckAndReportVariables(IEnumerable<SyntaxToken> variables, SyntaxNodeAnalysisContext c)
+        private static void CheckAndReportVariables(IList<SyntaxToken> variables, SyntaxNodeAnalysisContext c)
         {
-            if (variables.Count() <= 1)
+            if (variables.Count <= 1)
             {
                 return;
             }

@@ -28,7 +28,6 @@ using SonarLint.Rules.Common;
 using Microsoft.CodeAnalysis.VisualBasic;
 using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 using SonarLint.Helpers;
-using System;
 
 namespace SonarLint.Rules.VisualBasic
 {

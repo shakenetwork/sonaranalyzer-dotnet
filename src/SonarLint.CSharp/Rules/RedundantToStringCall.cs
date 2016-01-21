@@ -216,8 +216,8 @@ namespace SonarLint.Rules.CSharp
         {
             return stringFormatSymbol != null &&
                 stringFormatSymbol.Name == "Format" &&
-                stringFormatSymbol.ContainingType == null ||
-                stringFormatSymbol.ContainingType.SpecialType == SpecialType.System_String;
+                (stringFormatSymbol.ContainingType == null ||
+                stringFormatSymbol.ContainingType.SpecialType == SpecialType.System_String);
         }
 
         private static bool IsOperationAddOnString(IMethodSymbol operation)

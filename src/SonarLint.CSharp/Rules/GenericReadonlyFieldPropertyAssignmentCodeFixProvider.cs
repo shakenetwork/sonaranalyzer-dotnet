@@ -132,7 +132,7 @@ namespace SonarLint.Rules.CSharp
             KeyValuePair<DocumentId, ICollection<ClassDeclarationSyntax>> classes)
         {
             var newDocRoot = docRoot.ReplaceNodes(classes.Value, (original, rewritten) => original.WithAdditionalAnnotations(annotation));
-            var annotatedNodes = newDocRoot.GetAnnotatedNodes(annotation);
+            var annotatedNodes = newDocRoot.GetAnnotatedNodes(annotation).ToList();
             while (annotatedNodes.Any())
             {
                 var classDeclaration = (ClassDeclarationSyntax)annotatedNodes.First();
@@ -142,7 +142,7 @@ namespace SonarLint.Rules.CSharp
                     classDeclaration
                         .WithConstraintClauses(constraintClauses)
                         .WithoutAnnotations(annotation));
-                annotatedNodes = newDocRoot.GetAnnotatedNodes(annotation);
+                annotatedNodes = newDocRoot.GetAnnotatedNodes(annotation).ToList();
             }
 
             return newDocRoot;

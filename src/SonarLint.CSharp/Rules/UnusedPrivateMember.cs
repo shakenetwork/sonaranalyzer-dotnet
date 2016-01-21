@@ -29,7 +29,6 @@ using SonarLint.Helpers;
 using System.Collections.Generic;
 using System.Linq;
 using System;
-using System.Threading.Tasks;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -132,7 +131,8 @@ namespace SonarLint.Rules.CSharp
             BidirectionalDictionary<ISymbol, SyntaxNode> fieldLikeSymbols)
         {
             var unusedSymbols = declaredPrivateSymbols
-                .Except(usedSymbols.Union(emptyConstructors));
+                .Except(usedSymbols.Union(emptyConstructors))
+                .ToList();
 
             var alreadyReportedFieldLikeSymbols = new HashSet<ISymbol>();
 
@@ -342,7 +342,7 @@ namespace SonarLint.Rules.CSharp
             {
                 if (!ctor.SyntaxNode.Body.Statements.Any())
                 {
-                    var ctorSymbol = ctor.SemanticModel.GetDeclaredSymbol(ctor.SyntaxNode) as IMethodSymbol;
+                    var ctorSymbol = ctor.SemanticModel.GetDeclaredSymbol(ctor.SyntaxNode);
                     if (ctorSymbol != null &&
                         !ctorSymbol.Parameters.Any())
                     {
@@ -361,7 +361,7 @@ namespace SonarLint.Rules.CSharp
             }
         }
 
-        private static void CollectUsedSymbols(IEnumerable<SyntaxNodeWithSemanticModel<SyntaxNode>> containers,
+        private static void CollectUsedSymbols(IList<SyntaxNodeWithSemanticModel<SyntaxNode>> containers,
             HashSet<ISymbol> usedSymbols, ImmutableHashSet<string> symbolNames,
             bool anyRemovableIndexers, bool anyRemovableCtors)
         {

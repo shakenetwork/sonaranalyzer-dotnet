@@ -51,11 +51,7 @@ namespace SonarLint.Common.VisualBasic
             IsFunction(node) &&
             MethodBlocks.Contains(node.Parent.Kind());
 
-        protected override IEnumerable<SyntaxNode> GetPublicApiNodes()
-        {
-            //not calculated for VB.Net
-            return new SyntaxNode[0];
-        }
+        protected override IEnumerable<SyntaxNode> PublicApiNodes => new SyntaxNode[0]; // not calculated for VB.Net
 
         public override int GetComplexity(SyntaxNode node)
         {

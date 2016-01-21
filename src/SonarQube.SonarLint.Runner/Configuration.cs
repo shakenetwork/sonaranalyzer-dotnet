@@ -21,34 +21,18 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
-using System.Globalization;
 using System.Linq;
 using System.Xml.Linq;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Utilities;
 using SonarLint.Common;
-using System.Reflection;
-using SonarLint.Rules.CSharp;
 using SonarLint.Helpers;
-using System.IO;
 
 namespace SonarLint.Runner
 {
     public class Configuration
     {
-        private class RuleParameterValue
-        {
-            public string ParameterKey { get; set; }
-            public string ParameterValue { get; set; }
-        }
-        private class RuleParameterValues
-        {
-            public string RuleId { get; set; }
-            public List<RuleParameterValue> ParameterValues { get; set; } = new List<RuleParameterValue>();
-        }
-
         private readonly ImmutableArray<DiagnosticAnalyzer> analyzers;
-        private readonly IImmutableList<RuleParameterValues> parameters;
         private readonly AnalyzerLanguage language;
         private readonly XDocument xml;
 

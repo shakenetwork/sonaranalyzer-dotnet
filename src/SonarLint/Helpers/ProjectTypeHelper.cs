@@ -34,18 +34,18 @@ namespace SonarLint.Helpers
             }
 
             return
-                assemblyName.ToLowerInvariant().Contains(TestAssemblyNamePattern) ||
+                assemblyName.ToUpperInvariant().Contains(TestAssemblyNamePattern) ||
                 compilation.ReferencedAssemblyNames
-                    .Any(assembly => TestAssemblyNames.Contains(assembly.Name.ToLowerInvariant()));
+                    .Any(assembly => TestAssemblyNames.Contains(assembly.Name.ToUpperInvariant()));
         }
 
-        private const string TestAssemblyNamePattern = "test";
+        private const string TestAssemblyNamePattern = "TEST";
 
         private static readonly string[] TestAssemblyNames =
         {
-            "microsoft.visualstudio.qualitytools.unittestframework",
-            "xunit.core",
-            "nunit.framework"
+            "MICROSOFT.VISUALSTUDIO.QUALITYTOOLS.UNITTESTFRAMEWORK",
+            "XUNIT.CORE",
+            "NUNIT.FRAMEWORK"
         };
     }
 }

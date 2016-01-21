@@ -20,7 +20,6 @@
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarLint.Common;
-using System;
 using System.Collections.Generic;
 
 namespace SonarLint.UnitTest.Common
@@ -56,7 +55,7 @@ namespace SonarLint.UnitTest.Common
         public void MultiValueDictionary_AddRange()
         {
             var mvd = new MultiValueDictionary<int, int>();
-            mvd.AddRangeWithKey(5, new int[] { 42, 42 });
+            mvd.AddRangeWithKey(5, new [] { 42, 42 });
 
             Assert.AreEqual(2, mvd[5].Count);
         }

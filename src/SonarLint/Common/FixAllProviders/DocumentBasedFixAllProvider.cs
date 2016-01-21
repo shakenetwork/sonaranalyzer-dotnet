@@ -123,7 +123,7 @@ namespace SonarLint.Common
             root = GetRootWithAnnotatedElements(root, elementDiagnosticPairs, diagnosticAnnotationPairs);
 
             var currentDocument = document.WithSyntaxRoot(root);
-            var annotatedElements = root.GetAnnotatedNodesAndTokens(annotationKind);
+            var annotatedElements = root.GetAnnotatedNodesAndTokens(annotationKind).ToList();
 
             while(annotatedElements.Any())
             {
@@ -163,7 +163,7 @@ namespace SonarLint.Common
                 }
                 root = RemoveAnnotationIfExists(root, annotation);
                 currentDocument = document.WithSyntaxRoot(root);
-                annotatedElements = root.GetAnnotatedNodesAndTokens(annotationKind);
+                annotatedElements = root.GetAnnotatedNodesAndTokens(annotationKind).ToList();
             }
 
             return await currentDocument.GetSyntaxRootAsync(fixAllContext.CancellationToken).ConfigureAwait(false);

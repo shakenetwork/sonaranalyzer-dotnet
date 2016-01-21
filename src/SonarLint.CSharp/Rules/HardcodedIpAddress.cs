@@ -62,7 +62,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        private static readonly string[] SkippedWords = {"version", "assembly"};
+        private static readonly string[] SkippedWords = {"VERSION", "ASSEMBLY"};
         private static readonly Type[] NodeTypesToCheck = {typeof(StatementSyntax), typeof(VariableDeclaratorSyntax), typeof(ParameterSyntax) };
 
         public override void Initialize(AnalysisContext context)
@@ -93,7 +93,7 @@ namespace SonarLint.Rules.CSharp
                     foreach (var type in NodeTypesToCheck)
                     {
                         var ancestorOrSelf = stringLiteral.FirstAncestorOrSelf<SyntaxNode>(type.IsInstanceOfType);
-                        if (ancestorOrSelf != null && SkippedWords.Any(s => ancestorOrSelf.ToString().ToLowerInvariant().Contains(s)))
+                        if (ancestorOrSelf != null && SkippedWords.Any(s => ancestorOrSelf.ToString().ToUpperInvariant().Contains(s)))
                         {
                             return;
                         }

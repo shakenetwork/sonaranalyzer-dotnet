@@ -20,7 +20,6 @@
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarLint.Rules.CSharp;
-using System.Threading.Tasks;
 
 namespace SonarLint.UnitTest.Rules
 {

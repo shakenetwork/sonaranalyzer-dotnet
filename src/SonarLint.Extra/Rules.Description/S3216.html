@@ -1,6 +1,6 @@
 <p>
     After an <code>await</code>ed <code>Task</code> has executed, you can continue execution in the original, calling
-    thread or any arbitrary thread. Unless the rest of the code needs the context from which the <oode>Task</oode> was
+    thread or any arbitrary thread. Unless the rest of the code needs the context from which the <code>Task</code> was
     spawned, <code>Task.ConfigureAwait(false)</code> should be used to keep execution in the <code>Task</code> thread
     to avoid the need of context switching and the possibility of deadlocks.
 </p>

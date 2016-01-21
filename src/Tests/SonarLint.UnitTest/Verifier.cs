@@ -198,7 +198,7 @@ namespace SonarLint.UnitTest
                         .Select(diagnostic =>
                             new KeyValuePair<string, ReportDiagnostic>(diagnostic.Id, ReportDiagnostic.Warn))
                         .Union(
-                            new KeyValuePair<string, ReportDiagnostic>[]
+                            new []
                             {
                                 new KeyValuePair<string, ReportDiagnostic>("AD0001", ReportDiagnostic.Error)
                             }));

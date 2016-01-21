@@ -64,7 +64,7 @@ namespace SonarLint.Rules.CSharp
                     var literal = (LiteralExpressionSyntax)c.Node;
                     var text = literal.Token.Text;
 
-                    if (text.StartsWith("0x", System.StringComparison.InvariantCultureIgnoreCase))
+                    if (text.StartsWith("0x", System.StringComparison.OrdinalIgnoreCase))
                     {
                         return;
                     }

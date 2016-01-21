@@ -126,12 +126,12 @@ namespace SonarLint.Rules.CSharp
             var triviaContent = trivia.ToString();
             if (trivia.IsKind(SyntaxKind.MultiLineCommentTrivia))
             {
-                if (triviaContent.StartsWith("/*", StringComparison.InvariantCulture))
+                if (triviaContent.StartsWith("/*", StringComparison.Ordinal))
                 {
                     triviaContent = triviaContent.Substring(2);
                 }
 
-                if (triviaContent.EndsWith("*/", StringComparison.InvariantCulture))
+                if (triviaContent.EndsWith("*/", StringComparison.Ordinal))
                 {
                     triviaContent = triviaContent.Substring(0, triviaContent.Length-2);
                 }
@@ -140,7 +140,7 @@ namespace SonarLint.Rules.CSharp
 
             if (trivia.IsKind(SyntaxKind.SingleLineCommentTrivia))
             {
-                if (triviaContent.StartsWith("//", StringComparison.InvariantCulture))
+                if (triviaContent.StartsWith("//", StringComparison.Ordinal))
                 {
                     triviaContent = triviaContent.Substring(2);
                 }
@@ -157,13 +157,12 @@ namespace SonarLint.Rules.CSharp
                 .Replace(" ", string.Empty)
                 .Replace("\t", string.Empty);
 
-            return
-                (
-                    EndsWithCode(checkedLine) ||
+            var isPossiblyCode = EndsWithCode(checkedLine) ||
                     ContainsCodeParts(checkedLine) ||
                     ContainsMultipleLogicalOperators(checkedLine) ||
-                    ContainsCodePartsWithRelationalOperator(checkedLine)
-                ) &&
+                    ContainsCodePartsWithRelationalOperator(checkedLine);
+
+            return  isPossiblyCode &&
                 !checkedLine.Contains("License");
         }
 
@@ -189,8 +188,8 @@ namespace SonarLint.Rules.CSharp
         {
             return CodePartsWithRelationalOperator.Any(codePart =>
             {
-                var index = checkedLine.IndexOf(codePart, StringComparison.InvariantCulture);
-                return index >= 0 && RelationalOperators.Any(op => checkedLine.IndexOf(op, index, StringComparison.InvariantCulture) >= 0);
+                var index = checkedLine.IndexOf(codePart, StringComparison.Ordinal);
+                return index >= 0 && RelationalOperators.Any(op => checkedLine.IndexOf(op, index, StringComparison.Ordinal) >= 0);
             });
         }
 

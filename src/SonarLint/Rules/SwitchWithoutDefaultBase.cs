@@ -62,7 +62,7 @@ namespace SonarLint.Rules.Common
                 GeneratedCodeRecognizer,
                 c =>
                 {
-                    Diagnostic diagnostic = null;
+                    Diagnostic diagnostic;
                     if (TryGetDiagnostic(c.Node, out diagnostic))
                     {
                         c.ReportDiagnostic(diagnostic);

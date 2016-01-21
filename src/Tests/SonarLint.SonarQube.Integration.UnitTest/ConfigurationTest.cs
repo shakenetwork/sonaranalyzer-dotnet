@@ -18,13 +18,10 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
 using System.Linq;
-using System.Xml.Linq;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarLint.Runner;
-using SonarLint.Rules.CSharp;
 using SonarLint.Helpers;
 
 namespace SonarLint.UnitTest

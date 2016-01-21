@@ -20,7 +20,6 @@
 
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
-using SonarLint.Common;
 using System;
 using System.Collections.Concurrent;
 using System.Runtime.CompilerServices;

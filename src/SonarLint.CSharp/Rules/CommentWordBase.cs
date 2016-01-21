@@ -71,7 +71,7 @@ namespace SonarLint.Rules.CSharp
 
         private static IEnumerable<int> AllCaseInsensitiveIndexesOf(string str, string value)
         {
-            int i = 0;
+            var i = 0;
             while ((i = str.IndexOf(value, i, str.Length - i, System.StringComparison.InvariantCultureIgnoreCase)) != -1)
             {
                 yield return i;
@@ -81,13 +81,13 @@ namespace SonarLint.Rules.CSharp
 
         private static bool IsWordAt(string str, int i, int count)
         {
-            bool leftBoundary = true;
+            var leftBoundary = true;
             if (i > 0)
             {
                 leftBoundary = !char.IsLetterOrDigit(str[i - 1]);
             }
 
-            bool rightBoundary = true;
+            var rightBoundary = true;
             var rightOffset = i + count;
             if (rightOffset < str.Length)
             {

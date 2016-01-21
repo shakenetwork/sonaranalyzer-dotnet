@@ -23,7 +23,6 @@ using Microsoft.CodeAnalysis.CodeFixes;
 using SonarLint.Rules.Common;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.CodeAnalysis.Formatting;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
