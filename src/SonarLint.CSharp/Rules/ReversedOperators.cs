@@ -37,7 +37,7 @@ namespace SonarLint.Rules.CSharp
     public class ReversedOperators : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2757";
-        internal const string Title = "Reversed operators should not be used";
+        internal const string Title = "\"=+\" should not be used instead of \"+=\"";
         internal const string Description =
             "The use of operators pairs (\"=+\" or \"=-\") where the reversed, single operator " +
             "was meant (\"+=\" or \"-=\") will compile and run, but not produce the expected results. " +
