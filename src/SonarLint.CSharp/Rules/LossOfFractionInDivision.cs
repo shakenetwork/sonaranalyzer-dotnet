@@ -104,8 +104,8 @@ namespace SonarLint.Rules.CSharp
             }
 
             var lookup = new MethodParameterLookup(invocation, semanticModel);
-            var parameter = lookup.GetParameterSymbol(argument);
-            if (parameter == null)
+            IParameterSymbol parameter;
+            if (!lookup.TryGetParameterSymbol(argument, out parameter))
             {
                 floatType = null;
                 return false;

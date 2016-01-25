@@ -135,8 +135,9 @@ namespace SonarLint.Rules.CSharp
                         if (IsStringFormatCall(stringFormatSymbol))
                         {
                             var parameterLookup = new MethodParameterLookup(stringFormatInvocation, c.SemanticModel);
-                            var argParameter = parameterLookup.GetParameterSymbol(stringFormatArgument);
-                            if (argParameter != null && argParameter.Name.StartsWith("arg", StringComparison.Ordinal))
+                            IParameterSymbol argParameter;
+                            if (parameterLookup.TryGetParameterSymbol(stringFormatArgument, out argParameter) &&
+                                argParameter.Name.StartsWith("arg", StringComparison.Ordinal))
                             {
                                 c.ReportDiagnostic(Diagnostic.Create(Rule, location, MessageCompiler));
                                 return;

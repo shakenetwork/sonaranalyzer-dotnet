@@ -48,8 +48,21 @@ namespace SonarLint.UnitTest
         private static readonly MetadataReference testAssembly = MetadataReference.CreateFromFile(typeof(TestMethodAttribute).Assembly.Location);
 
         private const string GeneratedAssemblyName = "foo";
+        private const string AnalyzerFailedDiagnosticId = "AD0001";
 
         #region Verify*
+
+        internal static void VerifyNoExceptionThrown(string path,
+            IEnumerable<DiagnosticAnalyzer> diagnosticAnalyzers)
+        {
+            using (var workspace = new AdhocWorkspace())
+            {
+                var document = GetDocument(path, GeneratedAssemblyName, workspace);
+                var compilation = document.Project.GetCompilationAsync().Result;
+                var diagnostics = GetAllDiagnostics(compilation, diagnosticAnalyzers);
+                VerifyNoExceptionThrown(diagnostics);
+            }
+        }
 
         public static void VerifyAnalyzer(string path, DiagnosticAnalyzer diagnosticAnalyzer)
         {
@@ -188,31 +201,47 @@ namespace SonarLint.UnitTest
         internal static IEnumerable<Diagnostic> GetDiagnostics(Compilation compilation,
             DiagnosticAnalyzer diagnosticAnalyzer)
         {
+            var id = diagnosticAnalyzer.SupportedDiagnostics.Single().Id;
+
+            var diagnostics = GetAllDiagnostics(compilation, new[] { diagnosticAnalyzer }).ToList();
+            VerifyNoExceptionThrown(diagnostics);
+
+            return diagnostics.Where(d => id == d.Id);
+        }
+
+        private static void VerifyNoExceptionThrown(IEnumerable<Diagnostic> diagnostics)
+        {
+            diagnostics.Where(d => d.Id == AnalyzerFailedDiagnosticId).Should().BeEmpty();
+        }
+
+        private static IEnumerable<Diagnostic> GetAllDiagnostics(Compilation compilation,
+            IEnumerable<DiagnosticAnalyzer> diagnosticAnalyzers)
+        {
             using (var tokenSource = new CancellationTokenSource())
             {
                 var compilationOptions = compilation.Language == LanguageNames.CSharp
                     ? (CompilationOptions)new CS.CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary)
                     : new VB.VisualBasicCompilationOptions(OutputKind.DynamicallyLinkedLibrary);
+                var supportedDiagnostics = diagnosticAnalyzers
+                        .SelectMany(analyzer => analyzer.SupportedDiagnostics)
+                        .ToList();
                 compilationOptions = compilationOptions.WithSpecificDiagnosticOptions(
-                    diagnosticAnalyzer.SupportedDiagnostics
+                    supportedDiagnostics
                         .Select(diagnostic =>
                             new KeyValuePair<string, ReportDiagnostic>(diagnostic.Id, ReportDiagnostic.Warn))
                         .Union(
-                            new []
+                            new[]
                             {
-                                new KeyValuePair<string, ReportDiagnostic>("AD0001", ReportDiagnostic.Error)
+                                new KeyValuePair<string, ReportDiagnostic>(AnalyzerFailedDiagnosticId, ReportDiagnostic.Error)
                             }));
 
                 var compilationWithOptions = compilation.WithOptions(compilationOptions);
                 var compilationWithAnalyzer = compilationWithOptions
                     .WithAnalyzers(
-                        ImmutableArray.Create(diagnosticAnalyzer),
+                        diagnosticAnalyzers.ToImmutableArray(),
                         cancellationToken: tokenSource.Token);
 
-                var diagnostics = compilationWithAnalyzer.GetAllDiagnosticsAsync().Result;
-                diagnostics.Where(d => d.Id == "AD0001").Should().BeEmpty();
-
-                return diagnostics.Where(d => d.Id == diagnosticAnalyzer.SupportedDiagnostics.Single().Id);
+                return compilationWithAnalyzer.GetAllDiagnosticsAsync().Result;
             }
         }
 

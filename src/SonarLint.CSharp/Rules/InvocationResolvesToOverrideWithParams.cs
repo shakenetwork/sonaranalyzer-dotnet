@@ -130,7 +130,11 @@ namespace SonarLint.Rules.CSharp
             var allParameterMatches = new List<IParameterSymbol>();
             foreach (var argument in argumentList.Arguments)
             {
-                var parameter = MethodParameterLookup.GetParameterSymbol(argument, argumentList, invokedMethodSymbol);
+                IParameterSymbol parameter;
+                if (!MethodParameterLookup.TryGetParameterSymbol(argument, argumentList, invokedMethodSymbol, out parameter))
+                {
+                    return false;
+                }
                 allParameterMatches.Add(parameter);
                 if (parameter.IsParams)
                 {
@@ -153,8 +157,8 @@ namespace SonarLint.Rules.CSharp
             {
                 var argument = argumentList.Arguments[i];
                 var argumentType = argumentTypes[i];
-                var parameter = MethodParameterLookup.GetParameterSymbol(argument, argumentList, possibleOtherMethod);
-                if (parameter == null)
+                IParameterSymbol parameter;
+                if (!MethodParameterLookup.TryGetParameterSymbol(argument, argumentList, possibleOtherMethod, out parameter))
                 {
                     return false;
                 }

@@ -101,13 +101,9 @@ namespace SonarLint.Rules.CSharp
 
                     foreach (var argument in invocation.ArgumentList.Arguments)
                     {
-                        var parameter = methodParameterLookup.GetParameterSymbol(argument);
-                        if (parameter == null)
-                        {
-                            continue;
-                        }
-
-                        if (parameter.IsParams)
+                        IParameterSymbol parameter;
+                        if (!methodParameterLookup.TryGetParameterSymbol(argument, out parameter) ||
+                            parameter.IsParams)
                         {
                             continue;
                         }

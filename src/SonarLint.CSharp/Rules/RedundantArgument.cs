@@ -63,9 +63,7 @@ namespace SonarLint.Rules.CSharp
                 {
                     var methodCall = (InvocationExpressionSyntax) c.Node;
                     var methodParameterLookup = new MethodParameterLookup(methodCall, c.SemanticModel);
-                    var argumentMappings = methodCall.ArgumentList.Arguments.Select(argument =>
-                        new ArgumentParameterMapping(argument,
-                            methodParameterLookup.GetParameterSymbol(argument)))
+                    var argumentMappings = methodParameterLookup.GetAllArgumentParameterMappings()
                         .ToList();
 
                     var methodSymbol = methodParameterLookup.MethodSymbol;
@@ -88,7 +86,7 @@ namespace SonarLint.Rules.CSharp
         }
 
         internal static bool ArgumentHasDefaultValue(
-            ArgumentParameterMapping argumentMapping,
+            MethodParameterLookup.ArgumentParameterMapping argumentMapping,
             SemanticModel semanticModel)
         {
             var argument = argumentMapping.Argument;
@@ -102,19 +100,7 @@ namespace SonarLint.Rules.CSharp
             var defaultValue = parameter.ExplicitDefaultValue;
             var argumentValue = semanticModel.GetConstantValue(argument.Expression);
             return argumentValue.HasValue &&
-                   object.Equals(argumentValue.Value, defaultValue);
-        }
-
-        public class ArgumentParameterMapping
-        {
-            public ArgumentSyntax Argument { get; set; }
-            public IParameterSymbol Parameter { get; set; }
-
-            public ArgumentParameterMapping(ArgumentSyntax argument, IParameterSymbol parameter)
-            {
-                Argument = argument;
-                Parameter = parameter;
-            }
+                object.Equals(argumentValue.Value, defaultValue);
         }
     }
 }

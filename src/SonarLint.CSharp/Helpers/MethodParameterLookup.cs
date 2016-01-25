@@ -21,6 +21,8 @@
 using System.Linq;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis;
+using System;
+using System.Collections.Generic;
 
 namespace SonarLint.Helpers
 {
@@ -44,18 +46,22 @@ namespace SonarLint.Helpers
             }
         }
 
-        public static IParameterSymbol GetParameterSymbol(ArgumentSyntax argument, ArgumentListSyntax argumentList, IMethodSymbol method)
+        public static bool TryGetParameterSymbol(ArgumentSyntax argument, ArgumentListSyntax argumentList,
+            IMethodSymbol method, out IParameterSymbol parameter)
         {
+            parameter = null;
             if (!argumentList.Arguments.Contains(argument) ||
-                method == null)
+                method == null ||
+                method.IsVararg)
             {
-                return null;
+                return false;
             }
 
             if (argument.NameColon != null)
             {
-                return method.Parameters
+                parameter = method.Parameters
                     .FirstOrDefault(symbol => symbol.Name == argument.NameColon.Name.Identifier.ValueText);
+                return parameter != null;
             }
 
             var argumentIndex = argumentList.Arguments.IndexOf(argument);
@@ -64,15 +70,40 @@ namespace SonarLint.Helpers
             if (parameterIndex >= method.Parameters.Length)
             {
                 var p = method.Parameters.Last();
-                return p.IsParams ? p : null;
+                parameter = p.IsParams ? p : null;
+                return parameter != null;
             }
-            var parameter = method.Parameters[parameterIndex];
-            return parameter;
+            parameter = method.Parameters[parameterIndex];
+            return true;
         }
 
-        public IParameterSymbol GetParameterSymbol(ArgumentSyntax argument)
+        public bool TryGetParameterSymbol(ArgumentSyntax argument, out IParameterSymbol parameter)
         {
-            return GetParameterSymbol(argument, invocation.ArgumentList, methodSymbol);
+            return TryGetParameterSymbol(argument, invocation.ArgumentList, methodSymbol, out parameter);
+        }
+
+        internal IEnumerable<ArgumentParameterMapping> GetAllArgumentParameterMappings()
+        {
+            foreach (var argument in invocation.ArgumentList.Arguments)
+            {
+                IParameterSymbol parameter;
+                if (TryGetParameterSymbol(argument, out parameter))
+                {
+                    yield return new ArgumentParameterMapping(argument, parameter);
+                }
+            }
+        }
+
+        public class ArgumentParameterMapping
+        {
+            public ArgumentSyntax Argument { get; set; }
+            public IParameterSymbol Parameter { get; set; }
+
+            public ArgumentParameterMapping(ArgumentSyntax argument, IParameterSymbol parameter)
+            {
+                Argument = argument;
+                Parameter = parameter;
+            }
         }
     }
 }

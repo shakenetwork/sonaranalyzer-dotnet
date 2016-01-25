@@ -110,5 +110,16 @@ namespace SonarLint.UnitTest.Common
                 }
             }
         }
+
+        [TestMethod]
+        public void Rules_DoNot_Throw()
+        {
+            var analyzers = new RuleFinder().GetAnalyzerTypes(AnalyzerLanguage.CSharp)
+                .Select(type => (DiagnosticAnalyzer)Activator.CreateInstance(type))
+                .ToList();
+
+            Verifier.VerifyNoExceptionThrown(@"TestCasesForRuleFailure\InvalidSyntax.cs", analyzers);
+            Verifier.VerifyNoExceptionThrown(@"TestCasesForRuleFailure\SpecialCases.cs", analyzers);
+        }
     }
 }

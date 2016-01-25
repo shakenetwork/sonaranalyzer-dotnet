@@ -65,13 +65,10 @@ namespace SonarLint.Rules.CSharp
                 {
                     var methodCall = (InvocationExpressionSyntax) c.Node;
                     var methodParameterLookup = new MethodParameterLookup(methodCall, c.SemanticModel);
-                    var argumentParameterMappings = methodCall.ArgumentList.Arguments.Select(argument =>
-                        new KeyValuePair<ArgumentSyntax, IParameterSymbol>(argument,
-                            methodParameterLookup.GetParameterSymbol(argument)))
-                        .ToDictionary(pair => pair.Key, pair => pair.Value);
+                    var argumentParameterMappings = methodParameterLookup.GetAllArgumentParameterMappings()
+                        .ToDictionary(pair => pair.Argument, pair => pair.Parameter);
 
                     var methodSymbol = methodParameterLookup.MethodSymbol;
-
                     if (methodSymbol == null)
                     {
                         return;

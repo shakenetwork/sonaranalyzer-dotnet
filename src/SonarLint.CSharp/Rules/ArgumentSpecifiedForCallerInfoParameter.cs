@@ -65,9 +65,7 @@ namespace SonarLint.Rules.CSharp
                 {
                     var methodCall = (InvocationExpressionSyntax)c.Node;
                     var methodParameterLookup = new MethodParameterLookup(methodCall, c.SemanticModel);
-                    var argumentMappings = methodCall.ArgumentList.Arguments.Select(argument =>
-                        new KeyValuePair<ArgumentSyntax, IParameterSymbol>(argument,
-                            methodParameterLookup.GetParameterSymbol(argument)))
+                    var argumentMappings = methodParameterLookup.GetAllArgumentParameterMappings()
                         .ToList();
 
                     var methodSymbol = methodParameterLookup.MethodSymbol;
@@ -80,7 +78,7 @@ namespace SonarLint.Rules.CSharp
                     {
                         if (ParameterHasCallerInfoAttribute(argumentMapping))
                         {
-                            var argument = argumentMapping.Key;
+                            var argument = argumentMapping.Argument;
                             c.ReportDiagnostic(Diagnostic.Create(Rule, argument.GetLocation()));
                         }
                     }
@@ -88,10 +86,9 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.InvocationExpression);
         }
 
-        internal static bool ParameterHasCallerInfoAttribute(
-            KeyValuePair<ArgumentSyntax, IParameterSymbol> argumentMapping)
+        internal static bool ParameterHasCallerInfoAttribute(MethodParameterLookup.ArgumentParameterMapping argumentMapping)
         {
-            var parameter = argumentMapping.Value;
+            var parameter = argumentMapping.Parameter;
             var attributes = parameter.GetAttributes();
             return attributes.Any(attr => CallerInfoAttributeNames.Contains(attr.AttributeClass.ToDisplayString()));
         }

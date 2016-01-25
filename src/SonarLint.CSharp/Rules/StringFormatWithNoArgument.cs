@@ -85,7 +85,12 @@ namespace SonarLint.Rules.CSharp
                     if (!InvocationHasFormatArgument(invocation, lookup))
                     {
                         var formatArgument = invocation.ArgumentList.Arguments
-                            .FirstOrDefault(arg => lookup.GetParameterSymbol(arg).Name == "format");
+                            .FirstOrDefault(arg =>
+                            {
+                                IParameterSymbol parameter;
+                                return lookup.TryGetParameterSymbol(arg, out parameter) &&
+                                    parameter.Name == "format";
+                            });
                         if (formatArgument == null)
                         {
                             return;
@@ -123,8 +128,9 @@ namespace SonarLint.Rules.CSharp
         {
             return invocation.ArgumentList.Arguments.Any(arg =>
             {
-                var param = lookup.GetParameterSymbol(arg);
-                return param != null && param.Name.StartsWith("arg", System.StringComparison.Ordinal);
+                IParameterSymbol parameter;
+                return lookup.TryGetParameterSymbol(arg, out parameter) &&
+                    parameter.Name.StartsWith("arg", System.StringComparison.Ordinal);
             });
         }
     }

@@ -63,10 +63,7 @@ namespace SonarLint.Rules.CSharp
 
             var semanticModel = await context.Document.GetSemanticModelAsync(context.CancellationToken);
             var methodParameterLookup = new MethodParameterLookup(invocation, semanticModel);
-            var argumentMappings = invocation.ArgumentList.Arguments
-                .Select(argument =>
-                    new RedundantArgument.ArgumentParameterMapping(argument,
-                        methodParameterLookup.GetParameterSymbol(argument)))
+            var argumentMappings = methodParameterLookup.GetAllArgumentParameterMappings()
                 .ToList();
 
             var methodSymbol = methodParameterLookup.MethodSymbol;
@@ -79,7 +76,7 @@ namespace SonarLint.Rules.CSharp
             var argumentsCanBeRemovedWithoutNamed = new List<ArgumentSyntax>();
             var canBeRemovedWithoutNamed = true;
 
-            var reversedMappings = new List<RedundantArgument.ArgumentParameterMapping>(argumentMappings);
+            var reversedMappings = new List<MethodParameterLookup.ArgumentParameterMapping>(argumentMappings);
             reversedMappings.Reverse();
             foreach (var argumentMapping in reversedMappings)
             {
@@ -127,7 +124,7 @@ namespace SonarLint.Rules.CSharp
         }
 
         private static async Task<Document> RemoveArgumentsAndAddNecessaryNamesAsync(Document document, ArgumentListSyntax argumentList,
-            List<RedundantArgument.ArgumentParameterMapping> argumentMappings, List<ArgumentSyntax> argumentsToRemove,
+            List<MethodParameterLookup.ArgumentParameterMapping> argumentMappings, List<ArgumentSyntax> argumentsToRemove,
             SemanticModel semanticModel, CancellationToken cancellationToken)
         {
             var root = await document.GetSyntaxRootAsync(cancellationToken);
@@ -174,7 +171,7 @@ namespace SonarLint.Rules.CSharp
         }
 
         private static ArgumentListSyntax AddParamsArguments(SemanticModel semanticModel,
-            List<RedundantArgument.ArgumentParameterMapping> paramsArguments, ArgumentListSyntax argumentList)
+            List<MethodParameterLookup.ArgumentParameterMapping> paramsArguments, ArgumentListSyntax argumentList)
         {
             var firstParamsMapping = paramsArguments.First();
             var firstParamsArgument = firstParamsMapping.Argument;
