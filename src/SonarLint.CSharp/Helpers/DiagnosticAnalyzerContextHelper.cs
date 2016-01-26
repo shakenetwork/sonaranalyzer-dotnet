@@ -36,6 +36,14 @@ namespace SonarLint.Helpers
             context.RegisterSyntaxNodeActionInNonGenerated(CSharp.GeneratedCodeRecognizer.Instance, action, syntaxKinds);
         }
 
+        public static void RegisterSyntaxNodeActionInNonGenerated<TLanguageKindEnum>(
+            this WrappingAnalysisContext context,
+            Action<SyntaxNodeAnalysisContext> action,
+            params TLanguageKindEnum[] syntaxKinds) where TLanguageKindEnum : struct
+        {
+            context.RegisterSyntaxNodeActionInNonGenerated(CSharp.GeneratedCodeRecognizer.Instance, action, syntaxKinds);
+        }
+
         public static void RegisterSyntaxTreeActionInNonGenerated(
             this AnalysisContext context,
             Action<SyntaxTreeAnalysisContext> action)
@@ -43,8 +51,22 @@ namespace SonarLint.Helpers
             context.RegisterSyntaxTreeActionInNonGenerated(CSharp.GeneratedCodeRecognizer.Instance, action);
         }
 
+        public static void RegisterSyntaxTreeActionInNonGenerated(
+            this WrappingAnalysisContext context,
+            Action<SyntaxTreeAnalysisContext> action)
+        {
+            context.RegisterSyntaxTreeActionInNonGenerated(CSharp.GeneratedCodeRecognizer.Instance, action);
+        }
+
         public static void RegisterCodeBlockStartActionInNonGenerated<TLanguageKindEnum>(
             this AnalysisContext context,
+            Action<CodeBlockStartAnalysisContext<TLanguageKindEnum>> action) where TLanguageKindEnum : struct
+        {
+            context.RegisterCodeBlockStartActionInNonGenerated(CSharp.GeneratedCodeRecognizer.Instance, action);
+        }
+
+        public static void RegisterCodeBlockStartActionInNonGenerated<TLanguageKindEnum>(
+            this WrappingAnalysisContext context,
             Action<CodeBlockStartAnalysisContext<TLanguageKindEnum>> action) where TLanguageKindEnum : struct
         {
             context.RegisterCodeBlockStartActionInNonGenerated(CSharp.GeneratedCodeRecognizer.Instance, action);

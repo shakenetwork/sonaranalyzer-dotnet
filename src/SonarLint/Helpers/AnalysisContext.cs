@@ -26,7 +26,7 @@ using System.Collections.Generic;
 
 namespace SonarLint.Helpers
 {
-    public class WrappingAnalysisContext : AnalysisContext
+    public class WrappingAnalysisContext
     {
         private readonly AnalysisContext context;
 
@@ -35,43 +35,43 @@ namespace SonarLint.Helpers
             this.context = context;
         }
 
-        public override void RegisterCodeBlockAction(Action<CodeBlockAnalysisContext> action)
+        public void RegisterCodeBlockAction(Action<CodeBlockAnalysisContext> action)
         {
             context.RegisterCodeBlockAction(action);
         }
 
-        public override void RegisterCompilationAction(Action<CompilationAnalysisContext> action)
+        public void RegisterCompilationAction(Action<CompilationAnalysisContext> action)
         {
             context.RegisterCompilationAction(action);
         }
 
         public List<Action<CompilationStartAnalysisContext>> CompilationStartActions { get; set; } = new List<Action<CompilationStartAnalysisContext>>();
-        public override void RegisterCompilationStartAction(Action<CompilationStartAnalysisContext> action)
+        public void RegisterCompilationStartAction(Action<CompilationStartAnalysisContext> action)
         {
             CompilationStartActions.Add(action);
         }
 
-        public override void RegisterSemanticModelAction(Action<SemanticModelAnalysisContext> action)
+        public void RegisterSemanticModelAction(Action<SemanticModelAnalysisContext> action)
         {
             context.RegisterSemanticModelAction(action);
         }
 
-        public override void RegisterSymbolAction(Action<SymbolAnalysisContext> action, ImmutableArray<SymbolKind> symbolKinds)
+        public void RegisterSymbolAction(Action<SymbolAnalysisContext> action, ImmutableArray<SymbolKind> symbolKinds)
         {
             context.RegisterSymbolAction(action, symbolKinds);
         }
 
-        public override void RegisterSyntaxNodeAction<TLanguageKindEnum>(Action<SyntaxNodeAnalysisContext> action, ImmutableArray<TLanguageKindEnum> syntaxKinds)
+        public void RegisterSyntaxNodeAction<TLanguageKindEnum>(Action<SyntaxNodeAnalysisContext> action, ImmutableArray<TLanguageKindEnum> syntaxKinds) where TLanguageKindEnum : struct
         {
             context.RegisterSyntaxNodeAction(action, syntaxKinds);
         }
 
-        public override void RegisterCodeBlockStartAction<TLanguageKindEnum>(Action<CodeBlockStartAnalysisContext<TLanguageKindEnum>> action)
+        public void RegisterCodeBlockStartAction<TLanguageKindEnum>(Action<CodeBlockStartAnalysisContext<TLanguageKindEnum>> action) where TLanguageKindEnum : struct
         {
             context.RegisterCodeBlockStartAction(action);
         }
 
-        public override void RegisterSyntaxTreeAction(Action<SyntaxTreeAnalysisContext> action)
+        public void RegisterSyntaxTreeAction(Action<SyntaxTreeAnalysisContext> action)
         {
             context.RegisterSyntaxTreeAction(action);
         }

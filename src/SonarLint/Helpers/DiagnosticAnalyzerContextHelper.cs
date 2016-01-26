@@ -22,6 +22,7 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using System;
 using System.Collections.Concurrent;
+using System.Collections.Immutable;
 using System.Runtime.CompilerServices;
 
 namespace SonarLint.Helpers
@@ -47,6 +48,23 @@ namespace SonarLint.Helpers
                 syntaxKinds);
         }
 
+        public static void RegisterSyntaxNodeActionInNonGenerated<TLanguageKindEnum>(
+            this WrappingAnalysisContext context,
+            GeneratedCodeRecognizer generatedCodeRecognizer,
+            Action<SyntaxNodeAnalysisContext> action,
+            params TLanguageKindEnum[] syntaxKinds) where TLanguageKindEnum : struct
+        {
+            context.RegisterSyntaxNodeAction(
+                c =>
+                {
+                    if (!c.Node.SyntaxTree.IsGenerated(generatedCodeRecognizer, c.SemanticModel.Compilation))
+                    {
+                        action(c);
+                    }
+                },
+                syntaxKinds.ToImmutableArray());
+        }
+
         public static void RegisterSyntaxTreeActionInNonGenerated(
             this AnalysisContext context,
             GeneratedCodeRecognizer generatedCodeRecognizer,
@@ -66,8 +84,42 @@ namespace SonarLint.Helpers
                 });
         }
 
+        public static void RegisterSyntaxTreeActionInNonGenerated(
+            this WrappingAnalysisContext context,
+            GeneratedCodeRecognizer generatedCodeRecognizer,
+            Action<SyntaxTreeAnalysisContext> action)
+        {
+            context.RegisterCompilationStartAction(
+                csac =>
+                {
+                    csac.RegisterSyntaxTreeAction(
+                        c =>
+                        {
+                            if (!c.Tree.IsGenerated(generatedCodeRecognizer, csac.Compilation))
+                            {
+                                action(c);
+                            }
+                        });
+                });
+        }
+
         public static void RegisterCodeBlockStartActionInNonGenerated<TLanguageKindEnum>(
             this AnalysisContext context,
+            GeneratedCodeRecognizer generatedCodeRecognizer,
+            Action<CodeBlockStartAnalysisContext<TLanguageKindEnum>> action) where TLanguageKindEnum : struct
+        {
+            context.RegisterCodeBlockStartAction<TLanguageKindEnum>(
+                c =>
+                {
+                    if (!c.CodeBlock.SyntaxTree.IsGenerated(generatedCodeRecognizer, c.SemanticModel.Compilation))
+                    {
+                        action(c);
+                    }
+                });
+        }
+
+        public static void RegisterCodeBlockStartActionInNonGenerated<TLanguageKindEnum>(
+            this WrappingAnalysisContext context,
             GeneratedCodeRecognizer generatedCodeRecognizer,
             Action<CodeBlockStartAnalysisContext<TLanguageKindEnum>> action) where TLanguageKindEnum : struct
         {

@@ -39,16 +39,7 @@ namespace SonarLint.Common
 
         #region LinesOfCode
 
-        public int LineCount
-        {
-            get
-            {
-                return tree
-                    .GetLineSpan(TextSpan.FromBounds(tree.Length, tree.Length))
-                    .EndLinePosition
-                    .Line + 1;
-            }
-        }
+        public int LineCount => tree.GetText().Lines.Count;
 
         public IImmutableSet<int> LinesOfCode
         {
