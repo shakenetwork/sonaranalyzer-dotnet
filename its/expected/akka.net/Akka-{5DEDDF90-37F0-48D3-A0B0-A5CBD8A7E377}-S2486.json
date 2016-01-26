@@ -12,156 +12,6 @@
 {
 "analysisTarget":  [
 {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorCell.DefaultMessages.cs",
-"region":  {
-"startLine":  239,
-"startColumn":  12,
-"endLine":  242,
-"endColumn":  13
-}
-}
-]
-}
-],
-"shortMessage":  "Handle the exception, rather than swallow it with an empty statement.",
-"fullMessage":  "When exceptions occur, it is usually a bad idea to simply ignore them. Instead, it is better to handle them properly, or at least to log them.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Exceptions should not be ignored",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.8.0\u0026ruleId=S2486",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2486",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorCell.FaultHandling.cs",
-"region":  {
-"startLine":  461,
-"startColumn":  12,
-"endLine":  464,
-"endColumn":  13
-}
-}
-]
-}
-],
-"shortMessage":  "Handle the exception, rather than swallow it with an empty statement.",
-"fullMessage":  "When exceptions occur, it is usually a bad idea to simply ignore them. Instead, it is better to handle them properly, or at least to log them.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Exceptions should not be ignored",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.8.0\u0026ruleId=S2486",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2486",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\Scheduler\\DedicatedThreadScheduler.cs",
-"region":  {
-"startLine":  116,
-"startColumn":  16,
-"endLine":  116,
-"endColumn":  54
-}
-}
-]
-}
-],
-"shortMessage":  "Handle the exception, rather than swallow it with an empty statement.",
-"fullMessage":  "When exceptions occur, it is usually a bad idea to simply ignore them. Instead, it is better to handle them properly, or at least to log them.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Exceptions should not be ignored",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.8.0\u0026ruleId=S2486",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2486",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\Scheduler\\DedicatedThreadScheduler.cs",
-"region":  {
-"startLine":  143,
-"startColumn":  16,
-"endLine":  143,
-"endColumn":  54
-}
-}
-]
-}
-],
-"shortMessage":  "Handle the exception, rather than swallow it with an empty statement.",
-"fullMessage":  "When exceptions occur, it is usually a bad idea to simply ignore them. Instead, it is better to handle them properly, or at least to log them.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Exceptions should not be ignored",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.8.0\u0026ruleId=S2486",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2486",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\SupervisorStrategy.cs",
-"region":  {
-"startLine":  164,
-"startColumn":  12,
-"endLine":  167,
-"endColumn":  13
-}
-}
-]
-}
-],
-"shortMessage":  "Handle the exception, rather than swallow it with an empty statement.",
-"fullMessage":  "When exceptions occur, it is usually a bad idea to simply ignore them. Instead, it is better to handle them properly, or at least to log them.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Exceptions should not be ignored",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.8.0\u0026ruleId=S2486",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2486",
-"locations":  [
-{
-"analysisTarget":  [
-{
 "uri":  "akka.net\\src\\core\\Akka\\IO\\SelectionHandler.cs",
 "region":  {
 "startLine":  180,
@@ -173,16 +23,16 @@
 ]
 }
 ],
-"shortMessage":  "Handle the exception, rather than swallow it with an empty statement.",
+"shortMessage":  "Handle the exception or explain in a comment why it can be ignored.",
 "fullMessage":  "When exceptions occur, it is usually a bad idea to simply ignore them. Instead, it is better to handle them properly, or at least to log them.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
 "defaultSeverity":  "Warning",
-"title":  "Exceptions should not be ignored",
+"title":  "Generic exceptions should not be ignored",
 "category":  "Reliability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.8.0\u0026ruleId=S2486",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 },
@@ -203,76 +53,16 @@
 ]
 }
 ],
-"shortMessage":  "Handle the exception, rather than swallow it with an empty statement.",
+"shortMessage":  "Handle the exception or explain in a comment why it can be ignored.",
 "fullMessage":  "When exceptions occur, it is usually a bad idea to simply ignore them. Instead, it is better to handle them properly, or at least to log them.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
 "defaultSeverity":  "Warning",
-"title":  "Exceptions should not be ignored",
+"title":  "Generic exceptions should not be ignored",
 "category":  "Reliability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.8.0\u0026ruleId=S2486",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2486",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka\\IO\\SelectionHandler.cs",
-"region":  {
-"startLine":  421,
-"startColumn":  12,
-"endLine":  424,
-"endColumn":  13
-}
-}
-]
-}
-],
-"shortMessage":  "Handle the exception, rather than swallow it with an empty statement.",
-"fullMessage":  "When exceptions occur, it is usually a bad idea to simply ignore them. Instead, it is better to handle them properly, or at least to log them.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Exceptions should not be ignored",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.8.0\u0026ruleId=S2486",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2486",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka\\IO\\TcpListener.cs",
-"region":  {
-"startLine":  127,
-"startColumn":  20,
-"endLine":  130,
-"endColumn":  21
-}
-}
-]
-}
-],
-"shortMessage":  "Handle the exception, rather than swallow it with an empty statement.",
-"fullMessage":  "When exceptions occur, it is usually a bad idea to simply ignore them. Instead, it is better to handle them properly, or at least to log them.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Exceptions should not be ignored",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.8.0\u0026ruleId=S2486",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 }

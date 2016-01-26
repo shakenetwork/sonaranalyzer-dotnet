@@ -18,6 +18,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System.Linq;
 using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
@@ -26,6 +27,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -33,18 +35,18 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.ExceptionHandling)]
     [SqaleConstantRemediation("1h")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Cwe, Tag.ErrorHandling, Tag.Security)]
+    [Tags(Tag.Cwe, Tag.ErrorHandling)]
     public class CatchEmpty : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2486";
-        internal const string Title = "Exceptions should not be ignored";
+        internal const string Title = "Generic exceptions should not be ignored";
         internal const string Description =
             "When exceptions occur, it is usually a bad idea to simply ignore them. Instead, it " +
             "is better to handle them properly, or at least to log them.";
-        internal const string MessageFormat = "Handle the exception, rather than swallow it with an empty statement.";
+        internal const string MessageFormat = "Handle the exception or explain in a comment why it can be ignored.";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = false;
+        internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
@@ -61,12 +63,52 @@ namespace SonarLint.Rules.CSharp
                 {
                     var catchClause = (CatchClauseSyntax)c.Node;
 
-                    if (!catchClause.Block.Statements.Any())
+                    if (!HasStatements(catchClause) &&
+                        !HasComments(catchClause) &&
+                        !c.SemanticModel.Compilation.IsTest() &&
+                        IsGenericCatch(catchClause, c.SemanticModel))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, c.Node.GetLocation()));
                     }
                 },
                 SyntaxKind.CatchClause);
+        }
+
+        private static bool IsGenericCatch(CatchClauseSyntax catchClause, SemanticModel semanticModel)
+        {
+            if (catchClause.Declaration == null)
+            {
+                return true;
+            }
+
+            if (catchClause.Filter != null)
+            {
+                return false;
+            }
+
+            var type = semanticModel.GetTypeInfo(catchClause.Declaration.Type).Type;
+            if (type == null)
+            {
+                return false;
+            }
+
+            return type.ToDisplayString() == "System.Exception";
+        }
+
+        private static bool HasComments(CatchClauseSyntax catchClause)
+        {
+            return catchClause.Block.OpenBraceToken.TrailingTrivia.Any(IsCommentTrivia) ||
+                catchClause.Block.CloseBraceToken.LeadingTrivia.Any(IsCommentTrivia);
+        }
+
+        private static bool IsCommentTrivia(SyntaxTrivia trivia)
+        {
+            return trivia.IsKind(SyntaxKind.MultiLineCommentTrivia) || trivia.IsKind(SyntaxKind.SingleLineCommentTrivia);
+        }
+
+        private static bool HasStatements(CatchClauseSyntax catchClause)
+        {
+            return catchClause.Block.Statements.Any();
         }
     }
 }

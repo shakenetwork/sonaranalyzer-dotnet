@@ -37,7 +37,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void UseValueParameter_InTest()
         {
-            Verifier.VerifyAnalyzerInTest(@"TestCases\UseValueParameterInTest.cs", new UseValueParameter());
+            Verifier.VerifyNoIssueReportedInTest(@"TestCases\UseValueParameter.cs", new UseValueParameter());
         }
     }
 }

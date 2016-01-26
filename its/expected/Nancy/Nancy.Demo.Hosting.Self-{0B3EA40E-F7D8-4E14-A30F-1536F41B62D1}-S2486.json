@@ -23,16 +23,16 @@
 ]
 }
 ],
-"shortMessage":  "Handle the exception, rather than swallow it with an empty statement.",
+"shortMessage":  "Handle the exception or explain in a comment why it can be ignored.",
 "fullMessage":  "When exceptions occur, it is usually a bad idea to simply ignore them. Instead, it is better to handle them properly, or at least to log them.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
 "defaultSeverity":  "Warning",
-"title":  "Exceptions should not be ignored",
+"title":  "Generic exceptions should not be ignored",
 "category":  "Reliability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.8.0\u0026ruleId=S2486",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 }

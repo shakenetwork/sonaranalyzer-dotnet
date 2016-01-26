@@ -14,9 +14,18 @@ namespace Tests.TestCases
             {
 
             }
-            catch (Exception exc) //Noncompliant
+            catch (Exception exc) // Compliant because of the comment
             {
                 /*some comment here*/
+            }
+
+            try
+            {
+
+            }
+            catch (Exception exc) // Compliant because of the comment
+            {
+                // comment
             }
 
             try
@@ -32,10 +41,32 @@ namespace Tests.TestCases
             {
 
             }
-            catch (ArgumentException) //Noncompliant
+            catch (ArgumentException)
             {
             }
             catch (Exception) //Noncompliant
+            {
+            }
+
+            try
+            {
+
+            }
+            catch (ArgumentException)
+            {
+            }
+            catch //Noncompliant
+            {
+            }
+
+            try
+            {
+
+            }
+            catch (ArgumentException)
+            {
+            }
+            catch (Exception ex) when (ex is ArgumentException)  // Compliant
             {
             }
         }

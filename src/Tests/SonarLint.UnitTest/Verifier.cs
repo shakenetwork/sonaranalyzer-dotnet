@@ -45,9 +45,9 @@ namespace SonarLint.UnitTest
         private static readonly MetadataReference systemAssembly = MetadataReference.CreateFromFile(typeof(object).Assembly.Location);
         private static readonly MetadataReference systemLinqAssembly = MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location);
         private static readonly MetadataReference systemNetAssembly = MetadataReference.CreateFromFile(typeof(WebClient).Assembly.Location);
-        private static readonly MetadataReference testAssembly = MetadataReference.CreateFromFile(typeof(TestMethodAttribute).Assembly.Location);
 
         private const string GeneratedAssemblyName = "foo";
+        private const string TestAssemblyName = "fooTest";
         private const string AnalyzerFailedDiagnosticId = "AD0001";
 
         #region Verify*
@@ -69,9 +69,16 @@ namespace SonarLint.UnitTest
             Verify(path, GeneratedAssemblyName, diagnosticAnalyzer);
         }
 
-        public static void VerifyAnalyzerInTest(string path, DiagnosticAnalyzer diagnosticAnalyzer)
+        public static void VerifyNoIssueReportedInTest(string path, DiagnosticAnalyzer diagnosticAnalyzer)
         {
-            Verify(path, GeneratedAssemblyName, diagnosticAnalyzer, testAssembly);
+            using (var workspace = new AdhocWorkspace())
+            {
+                var document = GetDocument(path, TestAssemblyName, workspace);
+                var compilation = document.Project.GetCompilationAsync().Result;
+                var diagnostics = Verifier.GetDiagnostics(compilation, diagnosticAnalyzer);
+
+                diagnostics.Should().HaveCount(0);
+            }
         }
 
         public static void VerifyCodeFix(string path, string pathToExpected, DiagnosticAnalyzer diagnosticAnalyzer,
