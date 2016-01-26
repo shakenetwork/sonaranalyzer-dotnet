@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 namespace Tests.Diagnostics
 {
@@ -32,6 +33,16 @@ namespace Tests.Diagnostics
 
             chain23 -= first + fourth; // Noncompliant
             chain23 -= first; // Compliant
+
+            unsafe
+            {
+                GCHandle pinnedArray = GCHandle.Alloc(byteArray, GCHandleType.Pinned);
+                IntPtr pointer = pinnedArray.AddrOfPinnedObject();
+
+                int* a = (int*)pointer.ToPointer();
+                int* b = (int*)pointer.ToPointer();
+                var zero = a - b;
+            }
         }
     }
 }
