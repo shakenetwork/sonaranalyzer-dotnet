@@ -42,8 +42,8 @@ namespace SonarLint.Rules.CSharp
             "The \"foreach\" statement was introduced in the C# language prior to generics. To make it easier to work with non-generic " +
             "collections available at that time such as \"ArrayList\", the \"foreach\" statements allows to downcast the collection's " +
             "element of type \"Object\" into any other type. The problem is that, to achieve that, the \"foreach\" statements silently " +
-            "performs \"explicit\" type conversion, which at runtime can result in an \"InvalidCastException\" to be thrown. New C# " +
-            "code should use generics and not rely on \"foreach\" statement's silent \"explicit\" conversions.";
+            "performs \"explicit\" type conversion, which at runtime can result in an \"InvalidCastException\" to be thrown. C# code " +
+            "iterating on generic collections or arrays should not rely on \"foreach\" statement's silent \"explicit\" conversions.";
         internal const string MessageFormat = "Either change the type of \"{0}\" to \"{1}\" or iterate on a generic collection of type \"{2}\".";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Major;
@@ -67,7 +67,9 @@ namespace SonarLint.Rules.CSharp
 
                     if (foreachInfo.Equals(default(ForEachStatementInfo)) ||
                         foreachInfo.ElementConversion.IsImplicit ||
-                        !foreachInfo.ElementConversion.Exists)
+                        foreachInfo.ElementConversion.IsUserDefined ||
+                        !foreachInfo.ElementConversion.Exists ||
+                        foreachInfo.ElementType.SpecialType == SpecialType.System_Object)
                     {
                         return;
                     }

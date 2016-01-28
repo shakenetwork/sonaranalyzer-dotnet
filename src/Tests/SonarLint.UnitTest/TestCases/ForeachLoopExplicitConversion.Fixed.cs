@@ -59,14 +59,52 @@ namespace Tests.Diagnostics
         }
         public void M5(ArrayList list)
         {
-            foreach (A i in list.OfType<A>()) // Noncompliant
+            foreach (A i in list)
             { }
             foreach (var i in list)
             { }
             foreach (object i in list)
             { }
-            foreach (B i in list.OfType<B>()) // Noncompliant
+            foreach (B i in list)
             { }
+        }
+    }
+
+    public interface IMyInterface
+    { }
+
+    public class Base
+    {
+
+    }
+    public class Derived : Base, IMyInterface
+    { }
+
+    public class OtherType
+    {
+        public static implicit operator OtherType(Derived self)
+        {
+            return null;
+        }
+    }
+
+    class MyTest
+    {
+        public void Test()
+        {
+            foreach (Derived x in new Base[12].OfType<Derived>()) { } // Noncompliant
+            foreach (Derived x in new object[12]) { }
+
+            foreach (Derived x in new List<Base>().OfType<Derived>()) { } // Noncompliant
+            foreach (Derived x in new List<object>()) { }
+            foreach (Base x in new List<Derived>()) { }
+            foreach (Derived x in new List<IMyInterface>().OfType<Derived>()) { } // Noncompliant
+
+            foreach (Derived x in new ArrayList()) { }
+            //We decided to not add the necessary complexity to recognize the following corner case
+            foreach (OtherType x in new List<Base>()) { } // Compliant, although it can throw
+
+            foreach (OtherType x in new List<Derived>()) { }
         }
     }
 }
