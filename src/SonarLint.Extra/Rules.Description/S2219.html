@@ -1,29 +1,65 @@
 <p>
-    To check the type of an object there are at least three options:
+    To check the type of an object there are several options:
     <ul>
-        <li>The simplest and shortest one uses the <code>expr is SomeType</code> operator</li>
-        <li>The slightly longer <code>typeInstance.IsInstanceOfType(expr)</code></li>
-        <li>The cumbersome and error-prone one uses <code>expr1.GetType().IsAssignableFrom(expr2.GetType())</code></li>
+        <li>
+            <code>expr is SomeType</code> or <code>expr.GetType() == typeof(SomeType)</code> if the
+            type is known at compile time,</li>
+        <li><code>typeInstance.IsInstanceOfType(expr)</code> if the type is calculated during runtime.</li>
     </ul>
+</p>
+<p>
+    If runtime calculated <code>Type</code>s need to be compared:
+    <ul>
+        <li><code>typeInstance1.IsAssignableFrom(typeInstance2)</code>.</li>
+    </ul>
+</p>
+<p>
+    Depending on whether the type is returned by a <code>GetType()</code> or <code>typeof()</code> call, the <code>IsAssignableFrom()</code> and
+    <code>IsInstanceOfType()</code> might be simplified. Similarly, if the type is sealed, the type comparison with <code>==</code> can be converted
+    to an <code>is</code> call. Simplifying the calls also make <code>null</code> checking unnecessary because both <code>is</code> and
+    <code>IsInstanceOfType</code> performs it already.
 </p>
 
 <h2>Noncompliant Code Example</h2>
 <pre>
-A expr1;
-B expr2;
-if (expr2.GetType().IsAssignableFrom(expr1.GetType())) { /* ... */ } // Noncompliant
+class Fruit { }
+sealed class Apple : Fruit { }
+
+class Program
+{
+  static void Main()
+  {
+    var apple = new Apple();
+    var b = apple != null &amp;&amp; apple.GetType() == typeof (Apple); // Noncompliant
+    b = typeof(Apple).IsInstanceOfType(apple); // Noncompliant
+    if (apple != null)
+    {
+      b = typeof(Apple).IsAssignableFrom(apple.GetType()); // Noncompliant
+    }
+    var appleType = typeof (Apple);
+    if (apple != null)
+    {
+      b = appleType.IsAssignableFrom(apple.GetType()); // Noncompliant
+    }
+  }
+}
 </pre>
 
 <h2>Compliant Solution</h2>
 <pre>
-A expr;
-if (expr is MyType) { /* ... */ }
-</pre>
+class Fruit { }
+sealed class Apple : Fruit { }
 
-or, when the type is not known at compile time:
-
-<pre>
-A expr;
-Type myType;
-if (myType.IsInstanceOfType(expr)) { /* ... */ }
+class Program
+{
+  static void Main()
+  {
+    var apple = new Apple();
+    var b = apple is Apple;
+    b = apple is Apple;
+    b = apple is Apple;
+    var appleType = typeof(Apple);
+    b = appleType.IsInstanceOfType(apple);
+  }
+}
 </pre>

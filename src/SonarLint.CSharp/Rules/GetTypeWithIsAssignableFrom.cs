@@ -37,16 +37,16 @@ namespace SonarLint.Rules.CSharp
     public class GetTypeWithIsAssignableFrom : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2219";
-        internal const string Title = "\"Type.IsAssignableFrom()\" should not be used to check object type";
+        internal const string Title = "Runtime type checking should be simplified";
         internal const string Description =
-            "To check the type of an object there are at least three options: the simplest and shortest one uses the \"expr is SomeType\" " +
-            "operator, the slightly longer \"typeInstance.IsInstanceOfType(expr)\", and the cumbersome and error-prone one uses " +
-            "\"expr1.GetType().IsAssignableFrom(expr2.GetType())\"";
+            "To check the type of an object there are several options: \"is\", \"IsInstanceOfType\" or \"IsAssignableFrom\". Depending on whether " +
+            "the type is returned by a \"GetType()\" or \"typeof()\" call, the \"IsAssignableFrom()\" and \"IsInstanceOfType()\" might be simplified. " +
+            "Simplifying the calls make \"null\" checking unnecessary because both \"is\" and \"IsInstanceOfType\" performs it already.";
         internal const string MessageFormat = "Use the {0} instead.";
         internal const string IsOperator = "\"is\" operator";
         internal const string IsInstanceOfType = "\"IsInstanceOfType()\" method";
         internal const string Category = SonarLint.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Major;
+        internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
@@ -58,6 +58,7 @@ namespace SonarLint.Rules.CSharp
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         internal const string UseIsOperatorKey = "UseIsOperator";
+        internal const string ShouldRemoveGetType = "ShouldRemoveGetType";
 
         public override void Initialize(AnalysisContext context)
         {
@@ -74,30 +75,95 @@ namespace SonarLint.Rules.CSharp
                     var methodSymbol = c.SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
                     if (methodSymbol == null ||
                         methodSymbol.ContainingType.ToDisplayString() != "System.Type" ||
-                        methodSymbol.Name != "IsAssignableFrom" ||
                         invocation.ArgumentList.Arguments.Count != 1)
                     {
                         return;
                     }
 
                     var argument = invocation.ArgumentList.Arguments.First().Expression;
-                    if (IsGetTypeCall(argument, c.SemanticModel))
-                    {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(),
-                            ImmutableDictionary<string, string>.Empty.Add(UseIsOperatorKey, false.ToString()),
-                            IsInstanceOfType));
-                        return;
-                    }
-
-                    if (IsInvocationOnGetTypeAndTypeOfArgument(memberAccess.Expression, argument, c.SemanticModel))
-                    {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(),
-                            ImmutableDictionary<string, string>.Empty.Add(UseIsOperatorKey, true.ToString()),
-                            IsOperator));
-                        return;
-                    }
+                    CheckForIsAssignableFrom(c, invocation, memberAccess, methodSymbol, argument);
+                    CheckForIsInstanceOfType(c, invocation, memberAccess, methodSymbol);
                 },
                 SyntaxKind.InvocationExpression);
+
+            context.RegisterSyntaxNodeActionInNonGenerated(
+                c =>
+                {
+                    var binary = (BinaryExpressionSyntax)c.Node;
+                    CheckGetTypeAndTypeOfEquality(binary.Left, binary.Right, binary.GetLocation(), c);
+                    CheckGetTypeAndTypeOfEquality(binary.Right, binary.Left, binary.GetLocation(), c);
+                },
+                SyntaxKind.EqualsExpression,
+                SyntaxKind.NotEqualsExpression);
+        }
+
+        private void CheckGetTypeAndTypeOfEquality(ExpressionSyntax sideA, ExpressionSyntax sideB, Location location,
+            SyntaxNodeAnalysisContext context)
+        {
+            if (!IsGetTypeCall(sideA, context.SemanticModel))
+            {
+                return;
+            }
+
+            var typeSyntax = (sideB as TypeOfExpressionSyntax)?.Type;
+            if (typeSyntax == null)
+            {
+                return;
+            }
+
+            var typeSymbol = context.SemanticModel.GetTypeInfo(typeSyntax).Type;
+            if (typeSymbol == null || !typeSymbol.IsSealed)
+            {
+                return;
+            }
+
+            context.ReportDiagnostic(Diagnostic.Create(Rule, location, IsOperator));
+        }
+
+        private static void CheckForIsInstanceOfType(SyntaxNodeAnalysisContext c, InvocationExpressionSyntax invocation,
+            MemberAccessExpressionSyntax memberAccess, IMethodSymbol methodSymbol)
+        {
+            if (methodSymbol.Name != "IsInstanceOfType")
+            {
+                return;
+            }
+
+            if (memberAccess.Expression is TypeOfExpressionSyntax)
+            {
+                c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(),
+                    ImmutableDictionary<string, string>.Empty
+                        .Add(UseIsOperatorKey, true.ToString())
+                        .Add(ShouldRemoveGetType, false.ToString()),
+                    IsOperator));
+            }
+        }
+
+        private static void CheckForIsAssignableFrom(SyntaxNodeAnalysisContext c, InvocationExpressionSyntax invocation,
+            MemberAccessExpressionSyntax memberAccess, IMethodSymbol methodSymbol,
+            ExpressionSyntax argument)
+        {
+            if (methodSymbol.Name != "IsAssignableFrom" ||
+                !IsGetTypeCall(argument, c.SemanticModel))
+            {
+                return;
+            }
+
+            if (memberAccess.Expression is TypeOfExpressionSyntax)
+            {
+                c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(),
+                    ImmutableDictionary<string, string>.Empty
+                        .Add(UseIsOperatorKey, true.ToString())
+                        .Add(ShouldRemoveGetType, true.ToString()),
+                    IsOperator));
+            }
+            else
+            {
+                c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(),
+                    ImmutableDictionary<string, string>.Empty
+                        .Add(UseIsOperatorKey, false.ToString())
+                        .Add(ShouldRemoveGetType, true.ToString()),
+                    IsInstanceOfType));
+            }
         }
 
         private static bool IsGetTypeCall(ExpressionSyntax expression, SemanticModel semanticModel)
@@ -116,13 +182,6 @@ namespace SonarLint.Rules.CSharp
 
             return methodCall.Name == "GetType" &&
                 methodCall.ContainingType.SpecialType == SpecialType.System_Object;
-        }
-
-        private static bool IsInvocationOnGetTypeAndTypeOfArgument(ExpressionSyntax expression, ExpressionSyntax argument,
-            SemanticModel semanticModel)
-        {
-            return argument is TypeOfExpressionSyntax &&
-                IsGetTypeCall(expression, semanticModel);
         }
     }
 }

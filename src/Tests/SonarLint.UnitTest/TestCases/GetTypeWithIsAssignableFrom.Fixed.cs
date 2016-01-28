@@ -15,8 +15,9 @@ namespace Tests.Diagnostics
             if (expr1.GetType().IsInstanceOfType(expr2)) //Compliant
             { }
 
-            if (expr1 is GetTypeWithIsAssignableFrom) //Noncompliant
+            if (!(expr1 is GetTypeWithIsAssignableFrom)) //Noncompliant
             { }
+            var x = expr1 is GetTypeWithIsAssignableFrom; //Noncompliant
             if (expr1 is GetTypeWithIsAssignableFrom) //Compliant
             { }
 
@@ -34,6 +35,22 @@ namespace Tests.Diagnostics
             { }
 
             Test(t1.IsInstanceOfType(expr2)); //Noncompliant
+        }
+    }
+    class Fruit { }
+    sealed class Apple : Fruit { }
+
+    class Program
+    {
+        static void Main()
+        {
+            var apple = new Apple();
+            var b = apple is Apple; // Noncompliant
+            b = apple is Apple; // Noncompliant
+            b = apple is Apple; // Noncompliant
+            b = apple is Apple; // Noncompliant
+            var appleType = typeof(Apple);
+            b = appleType.IsInstanceOfType(apple); // Noncompliant
         }
     }
 }
