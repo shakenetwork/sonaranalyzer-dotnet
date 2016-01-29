@@ -119,6 +119,8 @@
     <Compile Include="Rules\LossOfFractionInDivision.cs" />
     <Compile Include="Rules\MethodParameterMissingOptional.cs" />
     <Compile Include="Rules\MethodParameterMissingOptionalCodeFixProvider.cs" />
+    <Compile Include="Rules\MethodOverrideChangedDefaultValue.cs" />
+    <Compile Include="Rules\MethodOverrideChangedDefaultValueCodeFixProvider.cs" />
     <Compile Include="Rules\MethodParameterUnusedCodeFixProvider.cs" />
     <Compile Include="Rules\OptionalRefOutParameter.cs" />
     <Compile Include="Rules\OptionalRefOutParameterCodeFixProvider.cs" />

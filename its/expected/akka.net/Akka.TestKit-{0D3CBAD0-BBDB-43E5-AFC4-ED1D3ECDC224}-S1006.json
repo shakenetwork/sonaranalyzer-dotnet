@@ -1,0 +1,100 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S1006",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestActorRefBase.cs",
+"region":  {
+"startLine":  217,
+"startColumn":  48,
+"endLine":  217,
+"endColumn":  63
+}
+}
+]
+}
+],
+"shortMessage":  "Add the default parameter value defined in the overridden method.",
+"fullMessage":  "Default arguments are determined by the static type of the object. If a default argument is different for a parameter in an overriding method, the value used in the call will be different when calls are made via the base or derived object, which may be contrary to developer expectations.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Method overrides should use the same default parameter values as the base methods",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.8.0\u0026ruleId=S1006",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1006",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_ActorOf.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  53,
+"endLine":  32,
+"endColumn":  57
+}
+}
+]
+}
+],
+"shortMessage":  "Add the default parameter value defined in the overridden method.",
+"fullMessage":  "Default arguments are determined by the static type of the object. If a default argument is different for a parameter in an overriding method, the value used in the call will be different when calls are made via the base or derived object, which may be contrary to developer expectations.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Method overrides should use the same default parameter values as the base methods",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.8.0\u0026ruleId=S1006",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1006",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestProbe.cs",
+"region":  {
+"startLine":  117,
+"startColumn":  48,
+"endLine":  117,
+"endColumn":  63
+}
+}
+]
+}
+],
+"shortMessage":  "Add the default parameter value defined in the overridden method.",
+"fullMessage":  "Default arguments are determined by the static type of the object. If a default argument is different for a parameter in an overriding method, the value used in the call will be different when calls are made via the base or derived object, which may be contrary to developer expectations.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Method overrides should use the same default parameter values as the base methods",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.8.0\u0026ruleId=S1006",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

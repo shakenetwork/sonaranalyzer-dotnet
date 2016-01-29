@@ -153,6 +153,38 @@ public interface IInterface
         }
 
         [TestMethod]
+        public void Symbol_TryGetOverriddenOrInterfaceMember()
+        {
+            var method = baseClassDeclaration.DescendantNodes().OfType<MethodDeclarationSyntax>()
+                .First(m => m.Identifier.ValueText == "Method1");
+            var methodSymbol = (IMethodSymbol)semanticModel.GetDeclaredSymbol(method);
+            IMethodSymbol overriddenMethod;
+            Assert.IsFalse(methodSymbol.TryGetOverriddenOrInterfaceMember(out overriddenMethod));
+
+            var property = derivedClassDeclaration2.DescendantNodes().OfType<PropertyDeclarationSyntax>()
+                .First(p => p.Identifier.ValueText == "Property");
+            var propertySymbol = (IPropertySymbol)semanticModel.GetDeclaredSymbol(property);
+
+            IPropertySymbol overriddenProperty;
+            Assert.IsTrue(propertySymbol.TryGetOverriddenOrInterfaceMember(out overriddenProperty));
+
+            property = baseClassDeclaration.DescendantNodes().OfType<PropertyDeclarationSyntax>()
+                .First(p => p.Identifier.ValueText == "Property");
+            Assert.AreEqual((IPropertySymbol)semanticModel.GetDeclaredSymbol(property), overriddenProperty);
+
+
+            method = derivedClassDeclaration2.DescendantNodes().OfType<MethodDeclarationSyntax>()
+                .First(m => m.Identifier.ValueText == "Method3");
+            methodSymbol = (IMethodSymbol)semanticModel.GetDeclaredSymbol(method);
+
+            Assert.IsTrue(methodSymbol.TryGetOverriddenOrInterfaceMember(out overriddenMethod));
+
+            method = interfaceDeclaration.DescendantNodes().OfType<MethodDeclarationSyntax>()
+                .First(m => m.Identifier.ValueText == "Method3");
+            Assert.AreEqual((IMethodSymbol)semanticModel.GetDeclaredSymbol(method), overriddenMethod);
+        }
+
+        [TestMethod]
         public void Symbol_DerivesOrImplementsAny()
         {
             var baseType = semanticModel.GetDeclaredSymbol(baseClassDeclaration) as INamedTypeSymbol;

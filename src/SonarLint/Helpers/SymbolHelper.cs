@@ -19,6 +19,7 @@
  */
 
 using Microsoft.CodeAnalysis;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -28,21 +29,50 @@ namespace SonarLint.Helpers
     {
         public static bool IsInterfaceImplementationOrMemberOverride(this ISymbol symbol)
         {
+            ISymbol overriddenSymbol;
+            return TryGetOverriddenOrInterfaceMember(symbol, out overriddenSymbol);
+        }
+
+        public static bool TryGetOverriddenOrInterfaceMember<T>(this T symbol, out T overriddenSymbol)
+            where T : class, ISymbol
+        {
             if (symbol == null ||
                 !CanSymbolBeInterfaceMemberOrOverride(symbol))
             {
+                overriddenSymbol = null;
                 return false;
             }
 
             if (symbol.IsOverride)
             {
+                overriddenSymbol = GetOverriddenMember(symbol);
                 return true;
             }
 
-            return symbol.ContainingType
+            overriddenSymbol = symbol.ContainingType
                 .AllInterfaces
                 .SelectMany(@interface => @interface.GetMembers())
-                .Any(member => symbol.Equals(symbol.ContainingType.FindImplementationForInterfaceMember(member)));
+                .OfType<T>()
+                .FirstOrDefault(member => symbol.Equals(symbol.ContainingType.FindImplementationForInterfaceMember(member)));
+            return overriddenSymbol != null;
+        }
+
+        private static T GetOverriddenMember<T>(this T symbol)
+            where T : class, ISymbol
+        {
+            switch (symbol.Kind)
+            {
+                case SymbolKind.Method:
+                    return (T)((IMethodSymbol)symbol).OverriddenMethod;
+                case SymbolKind.Property:
+                    return (T)((IPropertySymbol)symbol).OverriddenProperty;
+                case SymbolKind.Event:
+                    return (T)((IEventSymbol)symbol).OverriddenEvent;
+                default:
+                    throw new ArgumentException(
+                        $"Only methods, properties and events can be overriden. {typeof(T).Name} was provided",
+                        nameof(symbol));
+            }
         }
 
         private static bool CanSymbolBeInterfaceMemberOrOverride(ISymbol symbol)
