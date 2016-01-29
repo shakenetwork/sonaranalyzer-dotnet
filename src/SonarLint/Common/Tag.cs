@@ -38,6 +38,7 @@ namespace SonarLint.Common
         public const string Performance = "performance";
         public const string Pitfall = "pitfall";
         public const string SansTop25Porous = "sans-top25-porous";
+        public const string SansTop25Risky = "sans-top25-risky";
         public const string Security = "security";
         public const string Suspicious = "suspicious";
         public const string Sql = "sql";

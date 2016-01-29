@@ -116,6 +116,7 @@
     <Compile Include="Rules\ClassWithOnlyStaticMember.cs" />
     <Compile Include="Rules\CollectionEmptinessChecking.cs" />
     <Compile Include="Rules\CollectionQuerySimplification.cs" />
+    <Compile Include="Rules\LossOfFractionInDivision.cs" />
     <Compile Include="Rules\MethodParameterUnusedCodeFixProvider.cs" />
     <Compile Include="Rules\RedundantToStringCallCodeFixProvider.cs" />
     <Compile Include="Rules\RedundantToStringCall.cs" />
