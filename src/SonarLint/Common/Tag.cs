@@ -21,6 +21,7 @@ namespace SonarLint.Common
 {
     public static class Tag
     {
+        public const string ApiDesign = "api-design";
         public const string BadPractice = "bad-practice";
         public const string BrainOverload = "brain-overload";
         public const string Bug = "bug";

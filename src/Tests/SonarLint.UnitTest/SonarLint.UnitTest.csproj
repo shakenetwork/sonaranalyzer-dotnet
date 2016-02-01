@@ -142,6 +142,7 @@
     <Compile Include="Rules\CommentTodoTest.cs" />
     <Compile Include="Rules\EqualsOverrideTest.cs" />
     <Compile Include="Rules\MemberOverrideCallsBaseMemberTest.cs" />
+    <Compile Include="Rules\OptionalRefOutParameterTest.cs" />
     <Compile Include="Rules\RedundantToCharArrayCallTest.cs" />
     <Compile Include="Rules\RedundantToStringCallTest.cs" />
     <Compile Include="Rules\LossOfFractionInDivisionTest.cs" />
@@ -798,6 +799,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCasesForRuleFailure\SpecialCases.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\OptionalRefOutParameter.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\OptionalRefOutParameter.Fixed.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
