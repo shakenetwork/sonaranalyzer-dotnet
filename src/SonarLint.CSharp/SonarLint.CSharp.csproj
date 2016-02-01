@@ -117,6 +117,8 @@
     <Compile Include="Rules\CollectionEmptinessChecking.cs" />
     <Compile Include="Rules\CollectionQuerySimplification.cs" />
     <Compile Include="Rules\LossOfFractionInDivision.cs" />
+    <Compile Include="Rules\MethodParameterMissingOptional.cs" />
+    <Compile Include="Rules\MethodParameterMissingOptionalCodeFixProvider.cs" />
     <Compile Include="Rules\MethodParameterUnusedCodeFixProvider.cs" />
     <Compile Include="Rules\OptionalRefOutParameter.cs" />
     <Compile Include="Rules\OptionalRefOutParameterCodeFixProvider.cs" />

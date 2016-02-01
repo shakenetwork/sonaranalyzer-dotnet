@@ -57,8 +57,6 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        private const string OptionalAttributeName = "System.Runtime.InteropServices.OptionalAttribute";
-
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
@@ -71,15 +69,9 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
-                    var optionalAttribute = parameter.AttributeLists
-                        .SelectMany(al => al.Attributes)
-                        .Select(attr => new AttributeSyntaxSymbolMapping
-                        {
-                            SyntaxNode = attr,
-                            Symbol = c.SemanticModel.GetSymbolInfo(attr).Symbol as IMethodSymbol
-                        })
-                        .Where(attr => attr.Symbol != null)
-                        .FirstOrDefault(attr => attr.Symbol.ContainingType.ToDisplayString() == OptionalAttributeName);
+                    var optionalAttribute = MethodParameterMissingOptional.GetAttributesForParameter(parameter, c.SemanticModel)
+                        .FirstOrDefault(a =>
+                            MethodParameterMissingOptional.IsAttributeWithName(a, MethodParameterMissingOptional.OptionalAttributeName));
 
                     if (optionalAttribute != null)
                     {
@@ -88,12 +80,6 @@ namespace SonarLint.Rules.CSharp
                     }
                 },
                 SyntaxKind.Parameter);
-        }
-
-        private class AttributeSyntaxSymbolMapping
-        {
-            public AttributeSyntax SyntaxNode { get; set; }
-            public IMethodSymbol Symbol { get; set; }
         }
     }
 }

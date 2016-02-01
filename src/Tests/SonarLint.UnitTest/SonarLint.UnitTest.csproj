@@ -143,6 +143,7 @@
     <Compile Include="Rules\EqualsOverrideTest.cs" />
     <Compile Include="Rules\MemberOverrideCallsBaseMemberTest.cs" />
     <Compile Include="Rules\OptionalRefOutParameterTest.cs" />
+    <Compile Include="Rules\MethodParameterMissingOptionalTest.cs" />
     <Compile Include="Rules\RedundantToCharArrayCallTest.cs" />
     <Compile Include="Rules\RedundantToStringCallTest.cs" />
     <Compile Include="Rules\LossOfFractionInDivisionTest.cs" />
@@ -805,6 +806,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\OptionalRefOutParameter.Fixed.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\MethodParameterMissingOptional.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\MethodParameterMissingOptional.Fixed.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
