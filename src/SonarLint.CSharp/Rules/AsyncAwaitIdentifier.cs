@@ -46,7 +46,7 @@ namespace SonarLint.Rules.CSharp
             "names for example. Keywords, on the other hand, are always reserved, and therefore " +
             "are not valid variable names. To avoid any confusion though, it is best to not use " +
             "\"async\" and \"await\" as identifiers.";
-        internal const string MessageFormat = "Rename \"{0}\".";
+        internal const string MessageFormat = "Rename \"{0}\" to not use a contextual keyword as an identifier.";
         internal const string Category = SonarLint.Common.Category.Naming;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
