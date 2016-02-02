@@ -26,6 +26,9 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Linq;
+using System;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -41,7 +44,7 @@ namespace SonarLint.Rules.CSharp
         internal const string Description =
             "A long parameter list can indicate that a new structure should be created to wrap the numerous parameters or that the function is doing " +
             "too many things.";
-        internal const string MessageFormat = "Method \"{2}\" has {1} parameters, which is greater than the {0} authorized.";
+        internal const string MessageFormat = "{2} has {1} parameters, which is greater than the {0} authorized.";
         internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = false;
@@ -66,34 +69,27 @@ namespace SonarLint.Rules.CSharp
                     var parameterListNode = (ParameterListSyntax)c.Node;
                     var parameters = parameterListNode.Parameters.Count;
 
-                    if (parameters > Maximum)
+                    string declarationName;
+
+                    if (parameters > Maximum &&
+                        parameterListNode.Parent != null &&
+                        Mapping.TryGetValue(parameterListNode.Parent.Kind(), out declarationName))
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, parameterListNode.GetLocation(), Maximum, parameters, ExtractName(parameterListNode)));
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, parameterListNode.GetLocation(),
+                            Maximum, parameters, declarationName));
                     }
                 },
                 SyntaxKind.ParameterList);
         }
 
-        private static string ExtractName(SyntaxNode node)
+        private static readonly Dictionary<SyntaxKind, string> Mapping = new Dictionary<SyntaxKind, string>
         {
-            string result;
-            if (node.IsKind(SyntaxKind.ConstructorDeclaration))
-            {
-                result = "Constructor \"" + ((ConstructorDeclarationSyntax)node).Identifier + "\"";
-            }
-            else if (node.IsKind(SyntaxKind.MethodDeclaration))
-            {
-                result = "Method \"" + ((MethodDeclarationSyntax)node).Identifier + "\"";
-            }
-            else if (node.IsKind(SyntaxKind.DelegateDeclaration))
-            {
-                result = "Delegate";
-            }
-            else
-            {
-                result = "Lambda";
-            }
-            return result;
-        }
+            { SyntaxKind.ConstructorDeclaration, "Constructor" },
+            { SyntaxKind.MethodDeclaration, "Method" },
+            { SyntaxKind.DelegateDeclaration, "Delegate" },
+            { SyntaxKind.AnonymousMethodExpression, "Delegate" },
+            { SyntaxKind.ParenthesizedLambdaExpression, "Lambda" },
+            { SyntaxKind.SimpleLambdaExpression, "Lambda" }
+        };
     }
 }

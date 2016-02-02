@@ -23,7 +23,7 @@
 ]
 }
 ],
-"shortMessage":  "Method \"Lambda\" has 8 parameters, which is greater than the 7 authorized.",
+"shortMessage":  "Method has 8 parameters, which is greater than the 7 authorized.",
 "fullMessage":  "A long parameter list can indicate that a new structure should be created to wrap the numerous parameters or that the function is doing too many things.",
 "properties":  {
 "severity":  "Warning",
@@ -53,7 +53,7 @@
 ]
 }
 ],
-"shortMessage":  "Method \"Lambda\" has 9 parameters, which is greater than the 7 authorized.",
+"shortMessage":  "Constructor has 9 parameters, which is greater than the 7 authorized.",
 "fullMessage":  "A long parameter list can indicate that a new structure should be created to wrap the numerous parameters or that the function is doing too many things.",
 "properties":  {
 "severity":  "Warning",
