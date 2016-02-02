@@ -50,9 +50,14 @@ namespace SonarLint.Rules.CSharp
             var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
-            var syntaxNode = (IdentifierNameSyntax)root.FindNode(diagnosticSpan);
+            var identifierName = root.FindNode(diagnosticSpan, getInnermostNodeForTie: true) as IdentifierNameSyntax;
+            if (identifierName == null)
+            {
+                return;
+            }
+
             var semanticModel = await context.Document.GetSemanticModelAsync(context.CancellationToken).ConfigureAwait(false);
-            var fieldSymbol = semanticModel.GetSymbolInfo(syntaxNode).Symbol as IFieldSymbol;
+            var fieldSymbol = semanticModel.GetSymbolInfo(identifierName).Symbol as IFieldSymbol;
 
             if (fieldSymbol == null ||
                 !fieldSymbol.DeclaringSyntaxReferences.Any())

@@ -28,10 +28,10 @@ namespace Tests.Diagnostics
             hash += age.GetHashCode(); // Noncompliant
             hash += this.name.GetHashCode(); // Noncompliant
             hash += this.birthday.GetHashCode();
-            hash += Field; // Noncompliant
+            hash += SomeMethod(Field); // Noncompliant
             return hash;
         }
-        public int SomeMethod()
+        public int SomeMethod(int value)
         {
             int hash = Zero;
             hash += this.age.GetHashCode();
