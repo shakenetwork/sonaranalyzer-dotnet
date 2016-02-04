@@ -76,21 +76,32 @@ namespace SonarLint.Rules.CSharp
 
                     foreach (var argumentMapping in argumentMappings)
                     {
-                        if (ParameterHasCallerInfoAttribute(argumentMapping))
+                        var parameter = argumentMapping.Parameter;
+                        var argument = argumentMapping.Argument;
+
+                        var callerInfoAttributeDataOnCall = GetCallerInfoAttribute(parameter);
+                        if (callerInfoAttributeDataOnCall == null)
                         {
-                            var argument = argumentMapping.Argument;
-                            c.ReportDiagnostic(Diagnostic.Create(Rule, argument.GetLocation()));
+                            continue;
                         }
+
+                        var symbolForArgument = c.SemanticModel.GetSymbolInfo(argument.Expression).Symbol as IParameterSymbol;
+                        if (symbolForArgument != null &&
+                            object.Equals(callerInfoAttributeDataOnCall.AttributeClass, GetCallerInfoAttribute(symbolForArgument)?.AttributeClass))
+                        {
+                            continue;
+                        }
+
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, argument.GetLocation()));
                     }
                 },
                 SyntaxKind.InvocationExpression);
         }
 
-        internal static bool ParameterHasCallerInfoAttribute(MethodParameterLookup.ArgumentParameterMapping argumentMapping)
+        private static AttributeData GetCallerInfoAttribute(IParameterSymbol parameter)
         {
-            var parameter = argumentMapping.Parameter;
-            var attributes = parameter.GetAttributes();
-            return attributes.Any(attr => CallerInfoAttributeNames.Contains(attr.AttributeClass.ToDisplayString()));
+            return parameter.GetAttributes()
+                .FirstOrDefault(attr => CallerInfoAttributeNames.Contains(attr.AttributeClass.ToDisplayString()));
         }
 
         private static readonly string[] CallerInfoAttributeNames =

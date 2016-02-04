@@ -14,6 +14,18 @@ namespace Tests.Diagnostics
             /* ... */
         }
 
+        void TransmitCall(string message,
+          [CallerMemberName] string memberName = "")
+        {
+            TraceMessage(message, memberName); // Compliant
+        }
+
+        void TransmitCall2(string message,
+          [CallerMemberName] string memberName = "")
+        {
+            TraceMessage(message, filePath: memberName); // Noncompliant
+        }
+
         void MyMethod()
         {
             TraceMessage("my message", "MyMethod"); // Noncompliant
