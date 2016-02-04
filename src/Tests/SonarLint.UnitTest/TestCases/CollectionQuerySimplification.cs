@@ -39,5 +39,29 @@ namespace Tests.Diagnostics
         {
             return true;
         }
+
+        public void Method(IEnumerable<int> ints)
+        {
+            var x = ints.ToList().AsReadOnly(); // compliant, AsReadOnly is defined on List<>
+        }
+    }
+
+    public partial struct SyntaxList<TNode> : IReadOnlyList<TNode>, IEquatable<SyntaxList<TNode>>
+    {
+        public int Count => 0;
+
+        public TNode this[int index] => default(TNode);
+
+        public void Method(IEnumerable<TNode> ints)
+        {
+            CreateList(ints.Where(x => true).ToList());
+        }
+        private static SyntaxList<TNode> CreateList(List<TNode> items) => default(SyntaxList<TNode>);
+
+        public IEnumerator<TNode> GetEnumerator() => null;
+
+        IEnumerator IEnumerable.GetEnumerator() => null;
+
+        public bool Equals(SyntaxList<TNode> other) => true;
     }
 }

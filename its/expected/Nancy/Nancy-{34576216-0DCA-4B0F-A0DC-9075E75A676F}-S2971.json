@@ -12,36 +12,6 @@
 {
 "analysisTarget":  [
 {
-"uri":  "Nancy\\src\\Nancy\\Bootstrapper\\MultipleRootPathProvidersLocatedException.cs",
-"region":  {
-"startLine":  78,
-"startColumn":  30,
-"endLine":  78,
-"endColumn":  36
-}
-}
-]
-}
-],
-"shortMessage":  "Drop \"ToList\" from the middle of the call chain.",
-"fullMessage":  "In the interests of readability, code that can be simplified should be simplified. To that end, there are several ways \"IEnumerable LINQ\"s can be simplified. Use \"OfType\" instead of using \"Select\" with \"as\" to type cast elements and then null-checking in a query expression to choose elements based on type. Use \"OfType\" instead of using \"Where\" and the \"is\" operator, followed by a cast in a \"Select\". Use an expression in \"Any\" instead of \"Where(element =\u003e [expression]).Any()\". Use \"Count\" instead of \"Count()\" when it\u0027s available. Don\u0027t call \"ToArray()\" or \"ToList()\" in the middle of a query chain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"IEnumerable\" LINQs should be simplified",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.8.0\u0026ruleId=S2971",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2971",
-"locations":  [
-{
-"analysisTarget":  [
-{
 "uri":  "Nancy\\src\\Nancy\\NegotiatorExtensions.cs",
 "region":  {
 "startLine":  255,
