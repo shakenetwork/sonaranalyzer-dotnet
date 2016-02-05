@@ -94,33 +94,19 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
-                    var cultureInfoType = c.SemanticModel.Compilation.GetTypeByMetadataName("System.Globalization.CultureInfo");
-                    var compareOptionsType = c.SemanticModel.Compilation.GetTypeByMetadataName("System.Globalization.CompareOptions");
-
-                    if (cultureInfoType == null || compareOptionsType == null)
-                    {
-                        return;
-                    }
-
                     if (calledMethod.ContainingType.SpecialType == SpecialType.System_String &&
                         calledMethod.Name == CompareMethodName &&
                         !calledMethod.Parameters
-                            .Any(param => param.Type.Equals(cultureInfoType) || param.Type.Equals(compareOptionsType)))
+                            .Any(param => StringCultureSpecifierNames.Contains(param.Type.ToDisplayString())))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, memberAccess.Name.GetLocation()));
-                        return;
-                    }
-
-                    var iFormatProviderType = c.SemanticModel.Compilation.GetTypeByMetadataName("System.IFormatProvider");
-                    if (iFormatProviderType == null)
-                    {
                         return;
                     }
 
                     if (IsMethodOnNonIntegerNumeric(calledMethod) &&
                         calledMethod.Name == ToStringMethodName &&
                         !calledMethod.Parameters
-                            .Any(param => param.Type.Equals(iFormatProviderType)))
+                            .Any(param => param.Type.ToDisplayString() == IFormatProviderName))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, memberAccess.Name.GetLocation()));
                         return;
@@ -142,5 +128,14 @@ namespace SonarLint.Rules.CSharp
         private const string EqualsMethodName = "Equals";
         private const string CompareMethodName = "Compare";
         private const string ToStringMethodName = "ToString";
+
+        private const string IFormatProviderName = "System.IFormatProvider";
+
+        private static readonly string[] StringCultureSpecifierNames =
+        {
+            "System.Globalization.CultureInfo",
+            "System.Globalization.CompareOptions",
+            "System.StringComparison"
+        };
     }
 }

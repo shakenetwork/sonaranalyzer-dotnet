@@ -25,12 +25,12 @@ namespace Tests.Diagnostics
             var i = string.Compare("", "", true); // Noncompliant
             i = string.Compare("", 1, "",2,3, true); // Noncompliant
             i = string.Compare("", 1, "",2,3, true, CultureInfo.InstalledUICulture);
+            i = string.Compare("", "", StringComparison.CurrentCulture);
 
             s = 1.8.ToString(); //Noncompliant
             s = 1.8m.ToString("d"); //Noncompliant
             s = 1.8f.ToString("d"); //Noncompliant
             s = 1.8.ToString("d", CultureInfo.InstalledUICulture);
-
         }
     }
 }
