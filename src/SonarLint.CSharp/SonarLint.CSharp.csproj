@@ -124,6 +124,7 @@
     <Compile Include="Rules\MethodParameterUnusedCodeFixProvider.cs" />
     <Compile Include="Rules\OptionalRefOutParameter.cs" />
     <Compile Include="Rules\OptionalRefOutParameterCodeFixProvider.cs" />
+    <Compile Include="Rules\PartialMethodNoImplementation.cs" />
     <Compile Include="Rules\RedundantToStringCallCodeFixProvider.cs" />
     <Compile Include="Rules\RedundantToStringCall.cs" />
     <Compile Include="Rules\StringFormatWithNoArgument.cs" />

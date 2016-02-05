@@ -141,6 +141,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\CommentTodoTest.cs" />
     <Compile Include="Rules\EqualsOverrideTest.cs" />
+    <Compile Include="Rules\PartialMethodNoImplementationTest.cs" />
     <Compile Include="Rules\MemberOverrideCallsBaseMemberTest.cs" />
     <Compile Include="Rules\OptionalRefOutParameterTest.cs" />
     <Compile Include="Rules\MethodParameterMissingOptionalTest.cs" />
@@ -819,6 +820,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestCases\MethodOverrideChangedDefaultValue.Fixed.Batch.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestCases\PartialMethodNoImplementation.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Verifier.cs" />
