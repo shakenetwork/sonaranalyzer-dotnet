@@ -33,6 +33,7 @@ namespace SonarLint.Common
         public const string DenialOfService = "denial-of-service";
         public const string Design = "design";
         public const string ErrorHandling = "error-handling";
+        public const string Finding = "finding";
         public const string Misra = "misra";
         public const string MultiThreading = "multi-threading";
         public const string OwaspA6 = "owasp-a6";
