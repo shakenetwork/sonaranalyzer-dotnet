@@ -38,12 +38,12 @@ namespace SonarLint.Rules.CSharp
     public class GetHashCodeEqualsOverride : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3249";
-        internal const string Title = "Classes directly extending \"Object\" should not call \"base\" in \"GetHashCode\" or \"Equals\"";
+        internal const string Title = "Classes directly extending \"object\" should not call \"base\" in \"GetHashCode\" or \"Equals\"";
         internal const string Description =
             "Making a \"base\" call in an overridden method is generally a good idea, but not in \"GetHashCode\" and \"Equals\" for " +
-            "classes that directly extend \"Object\" because those methods are based on the object reference. Meaning that no two \"Objects\" " +
+            "classes that directly extend \"object\" because those methods are based on the object reference. Meaning that no two \"objects\" " +
             "that use those \"base\" methods will ever be equal or have the same hash.";
-        internal const string MessageFormat = "Remove this \"base\" call.";
+        internal const string MessageFormat = "Remove this \"base\" call to \"object.{0}\", which is directly based on the object reference.";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
@@ -115,7 +115,7 @@ namespace SonarLint.Rules.CSharp
                 objectType.SpecialType == SpecialType.System_Object &&
                 !IsEqualsCallInGuardCondition(invocation, invokedMethod))
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation()));
+                c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(), invokedMethod.Name));
             }
         }
 

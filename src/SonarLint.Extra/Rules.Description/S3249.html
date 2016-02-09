@@ -1,7 +1,7 @@
 <p>
     Making a <code>base</code> call in an overridden method is generally a good idea, but not in <code>GetHashCode</code> and
-    <code>Equals</code> for classes that directly extend <code>Object</code> because those methods are based on the object reference.
-    Meaning that no two <code>Objects</code> that use those <code>base</code> methods will ever be equal or have the same hash.
+    <code>Equals</code> for classes that directly extend <code>object</code> because those methods are based on the object reference.
+    Meaning that no two <code>objects</code> that use those <code>base</code> methods will ever be equal or have the same hash.
 </p>
 
 <h2>Noncompliant Code Example</h2>
