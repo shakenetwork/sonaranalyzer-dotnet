@@ -44,6 +44,14 @@ namespace SonarLint.Helpers
             context.RegisterSyntaxNodeActionInNonGenerated(CSharp.GeneratedCodeRecognizer.Instance, action, syntaxKinds);
         }
 
+        public static void RegisterSyntaxNodeActionInNonGenerated<TLanguageKindEnum>(
+            this CompilationStartAnalysisContext context,
+            Action<SyntaxNodeAnalysisContext> action,
+            params TLanguageKindEnum[] syntaxKinds) where TLanguageKindEnum : struct
+        {
+            context.RegisterSyntaxNodeActionInNonGenerated(CSharp.GeneratedCodeRecognizer.Instance, action, syntaxKinds);
+        }
+
         public static void RegisterSyntaxTreeActionInNonGenerated(
             this AnalysisContext context,
             Action<SyntaxTreeAnalysisContext> action)

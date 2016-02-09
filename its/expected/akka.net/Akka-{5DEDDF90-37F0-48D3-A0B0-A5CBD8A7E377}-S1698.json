@@ -1,0 +1,340 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S1698",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\BuiltInActors.cs",
+"region":  {
+"startLine":  181,
+"startColumn":  29,
+"endLine":  181,
+"endColumn":  31
+}
+}
+]
+}
+],
+"shortMessage":  "Consider using \"Equals\" if value comparison was intended.",
+"fullMessage":  "Using the equality \"==\" and inequality \"!=\" operators to compare two objects generally works. The operators can be overloaded, and therefore the comparison can resolve to the appropriate method. However, when the operators are used on interface instances, then \"==\" resolves to reference equality, which may result in unexpected behavior  if implementing classes override \"Equals\". Similarly, when a class overrides \"Equals\", but instances are compared with non-overloaded \"==\", there is a high chance that value comparison was meant instead of the reference one.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"==\" should not be used when \"Equals\" is overridden",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.8.0\u0026ruleId=S1698",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1698",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\BuiltInActors.cs",
+"region":  {
+"startLine":  181,
+"startColumn":  50,
+"endLine":  181,
+"endColumn":  52
+}
+}
+]
+}
+],
+"shortMessage":  "Consider using \"Equals\" if value comparison was intended.",
+"fullMessage":  "Using the equality \"==\" and inequality \"!=\" operators to compare two objects generally works. The operators can be overloaded, and therefore the comparison can resolve to the appropriate method. However, when the operators are used on interface instances, then \"==\" resolves to reference equality, which may result in unexpected behavior  if implementing classes override \"Equals\". Similarly, when a class overrides \"Equals\", but instances are compared with non-overloaded \"==\", there is a high chance that value comparison was meant instead of the reference one.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"==\" should not be used when \"Equals\" is overridden",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.8.0\u0026ruleId=S1698",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1698",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\EmptyLocalActorRef.cs",
+"region":  {
+"startLine":  74,
+"startColumn":  29,
+"endLine":  74,
+"endColumn":  31
+}
+}
+]
+}
+],
+"shortMessage":  "Consider using \"Equals\" if value comparison was intended.",
+"fullMessage":  "Using the equality \"==\" and inequality \"!=\" operators to compare two objects generally works. The operators can be overloaded, and therefore the comparison can resolve to the appropriate method. However, when the operators are used on interface instances, then \"==\" resolves to reference equality, which may result in unexpected behavior  if implementing classes override \"Equals\". Similarly, when a class overrides \"Equals\", but instances are compared with non-overloaded \"==\", there is a high chance that value comparison was meant instead of the reference one.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"==\" should not be used when \"Equals\" is overridden",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.8.0\u0026ruleId=S1698",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1698",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\EmptyLocalActorRef.cs",
+"region":  {
+"startLine":  74,
+"startColumn":  50,
+"endLine":  74,
+"endColumn":  52
+}
+}
+]
+}
+],
+"shortMessage":  "Consider using \"Equals\" if value comparison was intended.",
+"fullMessage":  "Using the equality \"==\" and inequality \"!=\" operators to compare two objects generally works. The operators can be overloaded, and therefore the comparison can resolve to the appropriate method. However, when the operators are used on interface instances, then \"==\" resolves to reference equality, which may result in unexpected behavior  if implementing classes override \"Equals\". Similarly, when a class overrides \"Equals\", but instances are compared with non-overloaded \"==\", there is a high chance that value comparison was meant instead of the reference one.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"==\" should not be used when \"Equals\" is overridden",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.8.0\u0026ruleId=S1698",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1698",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\Futures.cs",
+"region":  {
+"startLine":  361,
+"startColumn":  34,
+"endLine":  361,
+"endColumn":  36
+}
+}
+]
+}
+],
+"shortMessage":  "Consider using \"Equals\" if value comparison was intended.",
+"fullMessage":  "Using the equality \"==\" and inequality \"!=\" operators to compare two objects generally works. The operators can be overloaded, and therefore the comparison can resolve to the appropriate method. However, when the operators are used on interface instances, then \"==\" resolves to reference equality, which may result in unexpected behavior  if implementing classes override \"Equals\". Similarly, when a class overrides \"Equals\", but instances are compared with non-overloaded \"==\", there is a high chance that value comparison was meant instead of the reference one.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"==\" should not be used when \"Equals\" is overridden",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.8.0\u0026ruleId=S1698",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1698",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\Futures.cs",
+"region":  {
+"startLine":  379,
+"startColumn":  35,
+"endLine":  379,
+"endColumn":  37
+}
+}
+]
+}
+],
+"shortMessage":  "Consider using \"Equals\" if value comparison was intended.",
+"fullMessage":  "Using the equality \"==\" and inequality \"!=\" operators to compare two objects generally works. The operators can be overloaded, and therefore the comparison can resolve to the appropriate method. However, when the operators are used on interface instances, then \"==\" resolves to reference equality, which may result in unexpected behavior  if implementing classes override \"Equals\". Similarly, when a class overrides \"Equals\", but instances are compared with non-overloaded \"==\", there is a high chance that value comparison was meant instead of the reference one.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"==\" should not be used when \"Equals\" is overridden",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.8.0\u0026ruleId=S1698",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1698",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\Futures.cs",
+"region":  {
+"startLine":  379,
+"startColumn":  62,
+"endLine":  379,
+"endColumn":  64
+}
+}
+]
+}
+],
+"shortMessage":  "Consider using \"Equals\" if value comparison was intended.",
+"fullMessage":  "Using the equality \"==\" and inequality \"!=\" operators to compare two objects generally works. The operators can be overloaded, and therefore the comparison can resolve to the appropriate method. However, when the operators are used on interface instances, then \"==\" resolves to reference equality, which may result in unexpected behavior  if implementing classes override \"Equals\". Similarly, when a class overrides \"Equals\", but instances are compared with non-overloaded \"==\", there is a high chance that value comparison was meant instead of the reference one.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"==\" should not be used when \"Equals\" is overridden",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.8.0\u0026ruleId=S1698",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1698",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\Message.cs",
+"region":  {
+"startLine":  30,
+"startColumn":  67,
+"endLine":  30,
+"endColumn":  69
+}
+}
+]
+}
+],
+"shortMessage":  "Consider using \"Equals\" if value comparison was intended.",
+"fullMessage":  "Using the equality \"==\" and inequality \"!=\" operators to compare two objects generally works. The operators can be overloaded, and therefore the comparison can resolve to the appropriate method. However, when the operators are used on interface instances, then \"==\" resolves to reference equality, which may result in unexpected behavior  if implementing classes override \"Equals\". Similarly, when a class overrides \"Equals\", but instances are compared with non-overloaded \"==\", there is a high chance that value comparison was meant instead of the reference one.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"==\" should not be used when \"Equals\" is overridden",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.8.0\u0026ruleId=S1698",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1698",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Event\\DeadLetterListener.cs",
+"region":  {
+"startLine":  48,
+"startColumn":  34,
+"endLine":  48,
+"endColumn":  36
+}
+}
+]
+}
+],
+"shortMessage":  "Consider using \"Equals\" if value comparison was intended.",
+"fullMessage":  "Using the equality \"==\" and inequality \"!=\" operators to compare two objects generally works. The operators can be overloaded, and therefore the comparison can resolve to the appropriate method. However, when the operators are used on interface instances, then \"==\" resolves to reference equality, which may result in unexpected behavior  if implementing classes override \"Equals\". Similarly, when a class overrides \"Equals\", but instances are compared with non-overloaded \"==\", there is a high chance that value comparison was meant instead of the reference one.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"==\" should not be used when \"Equals\" is overridden",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.8.0\u0026ruleId=S1698",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1698",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Event\\DeadLetterListener.cs",
+"region":  {
+"startLine":  49,
+"startColumn":  34,
+"endLine":  49,
+"endColumn":  36
+}
+}
+]
+}
+],
+"shortMessage":  "Consider using \"Equals\" if value comparison was intended.",
+"fullMessage":  "Using the equality \"==\" and inequality \"!=\" operators to compare two objects generally works. The operators can be overloaded, and therefore the comparison can resolve to the appropriate method. However, when the operators are used on interface instances, then \"==\" resolves to reference equality, which may result in unexpected behavior  if implementing classes override \"Equals\". Similarly, when a class overrides \"Equals\", but instances are compared with non-overloaded \"==\", there is a high chance that value comparison was meant instead of the reference one.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"==\" should not be used when \"Equals\" is overridden",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.8.0\u0026ruleId=S1698",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1698",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\TcpConnection.cs",
+"region":  {
+"startLine":  78,
+"startColumn":  41,
+"endLine":  78,
+"endColumn":  43
+}
+}
+]
+}
+],
+"shortMessage":  "Consider using \"Equals\" if value comparison was intended.",
+"fullMessage":  "Using the equality \"==\" and inequality \"!=\" operators to compare two objects generally works. The operators can be overloaded, and therefore the comparison can resolve to the appropriate method. However, when the operators are used on interface instances, then \"==\" resolves to reference equality, which may result in unexpected behavior  if implementing classes override \"Equals\". Similarly, when a class overrides \"Equals\", but instances are compared with non-overloaded \"==\", there is a high chance that value comparison was meant instead of the reference one.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "\"==\" should not be used when \"Equals\" is overridden",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.8.0\u0026ruleId=S1698",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

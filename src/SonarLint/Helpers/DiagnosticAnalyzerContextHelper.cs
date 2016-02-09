@@ -65,6 +65,23 @@ namespace SonarLint.Helpers
                 syntaxKinds.ToImmutableArray());
         }
 
+        public static void RegisterSyntaxNodeActionInNonGenerated<TLanguageKindEnum>(
+            this CompilationStartAnalysisContext context,
+            GeneratedCodeRecognizer generatedCodeRecognizer,
+            Action<SyntaxNodeAnalysisContext> action,
+            params TLanguageKindEnum[] syntaxKinds) where TLanguageKindEnum : struct
+        {
+            context.RegisterSyntaxNodeAction(
+                c =>
+                {
+                    if (!c.Node.SyntaxTree.IsGenerated(generatedCodeRecognizer, c.SemanticModel.Compilation))
+                    {
+                        action(c);
+                    }
+                },
+                syntaxKinds);
+        }
+
         public static void RegisterSyntaxTreeActionInNonGenerated(
             this AnalysisContext context,
             GeneratedCodeRecognizer generatedCodeRecognizer,
