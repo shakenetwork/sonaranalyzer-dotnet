@@ -28,7 +28,7 @@ namespace SonarLint.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [NoSqaleRemediation]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, true)]
     public class CommentTodo : CommentWordBase
     {
         protected override string Word => "TODO";
@@ -43,11 +43,10 @@ namespace SonarLint.Rules.CSharp
             "Complete the task associated to this \"TODO\" comment.";
         internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Info;
-        internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
+                RuleSeverity.ToDiagnosticSeverity(), false /*disabled by default in VS not to overlap functionality with the Task List window*/,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
 
