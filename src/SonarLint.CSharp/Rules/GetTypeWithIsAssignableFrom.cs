@@ -97,7 +97,7 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.NotEqualsExpression);
         }
 
-        private void CheckGetTypeAndTypeOfEquality(ExpressionSyntax sideA, ExpressionSyntax sideB, Location location,
+        private static void CheckGetTypeAndTypeOfEquality(ExpressionSyntax sideA, ExpressionSyntax sideB, Location location,
             SyntaxNodeAnalysisContext context)
         {
             if (!IsGetTypeCall(sideA, context.SemanticModel))
