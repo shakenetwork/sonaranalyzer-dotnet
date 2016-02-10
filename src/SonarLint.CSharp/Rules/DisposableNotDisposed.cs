@@ -157,7 +157,7 @@ namespace SonarLint.Rules.CSharp
                 }
                 else
                 {
-                    throw new ArgumentException();
+                    throw new NotSupportedException("Syntax node should be either a local declaration or a field declaration");
                 }
 
                 foreach (var variableNode in declaration.Variables.Where(v => v.Initializer != null && IsInstantiation(v.Initializer.Value, semanticModel)))
@@ -206,7 +206,7 @@ namespace SonarLint.Rules.CSharp
                 .DescendantNodes()
                 .Where(n => n.IsKind(SyntaxKind.InvocationExpression) || n.IsKind(SyntaxKind.ConditionalAccessExpression));
 
-            foreach (SyntaxNode incovationOrConditionalAccess in incovationsAndConditionalAccesses)
+            foreach (var incovationOrConditionalAccess in incovationsAndConditionalAccesses)
             {
                 SimpleNameSyntax name;
                 ExpressionSyntax expression;
@@ -235,7 +235,7 @@ namespace SonarLint.Rules.CSharp
                 }
                 else
                 {
-                    throw new ArgumentException();
+                    throw new NotSupportedException("Syntax node should be either an invocation or a conditional access expression");
                 }
 
                 if (name == null || !DisposeMethods.Contains(name.Identifier.Text))
@@ -276,7 +276,7 @@ namespace SonarLint.Rules.CSharp
                 }
                 else
                 {
-                    throw new ArgumentException();
+                    throw new NotSupportedException("Syntax node should be either an identifier or a simple member access expression");
                 }
 
                 if (IsStandaloneExpression(expression))

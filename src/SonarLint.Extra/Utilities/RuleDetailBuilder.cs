@@ -145,7 +145,7 @@ namespace SonarLint.Utilities
             return GetCodeFixProvidersWithBase(codeFixProvider)
                 .SelectMany(t => t.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static))
                 .Where(field =>
-                    field.Name.StartsWith("Title", StringComparison.InvariantCulture) &&
+                    field.Name.StartsWith("Title", StringComparison.Ordinal) &&
                     field.FieldType == typeof(string))
                 .Select(field => (string)field.GetRawConstantValue());
         }
@@ -212,7 +212,7 @@ namespace SonarLint.Utilities
                     r.EndsWith(string.Format(CultureInfo.InvariantCulture, RuleDescriptionPathPattern, key + "_vb"), StringComparison.OrdinalIgnoreCase));
             }
 
-            throw new ArgumentException(nameof(language));
+            throw new ArgumentException("Language needs to be either C# or VB.NET", nameof(language));
         }
     }
 }

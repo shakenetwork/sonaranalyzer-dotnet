@@ -144,7 +144,7 @@ namespace SonarLint.Helpers
 
         public static bool ConfigurationFilePathMatchesExpected(string path)
         {
-            return new FileInfo(path).Name.Equals(ParameterConfigurationFileName, StringComparison.InvariantCultureIgnoreCase);
+            return new FileInfo(path).Name.Equals(ParameterConfigurationFileName, StringComparison.OrdinalIgnoreCase);
         }
     }
 }

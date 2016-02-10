@@ -79,7 +79,7 @@ namespace SonarLint.Rules.CSharp
                     }
 
                     var baseTypeKey = FrameworkTypesWithEnding.Keys
-                        .FirstOrDefault(ft => baseTypes[baseTypes.Count-2].ToDisplayString().Equals(ft, System.StringComparison.InvariantCulture));
+                        .FirstOrDefault(ft => baseTypes[baseTypes.Count-2].ToDisplayString().Equals(ft, System.StringComparison.Ordinal));
 
                     if (baseTypeKey == null)
                     {
@@ -88,8 +88,8 @@ namespace SonarLint.Rules.CSharp
 
                     var baseTypeName = FrameworkTypesWithEnding[baseTypeKey];
 
-                    if (symbol.Name.EndsWith(baseTypeName, System.StringComparison.InvariantCulture) ||
-                        !baseTypes[0].Name.EndsWith(baseTypeName, System.StringComparison.InvariantCulture))
+                    if (symbol.Name.EndsWith(baseTypeName, System.StringComparison.Ordinal) ||
+                        !baseTypes[0].Name.EndsWith(baseTypeName, System.StringComparison.Ordinal))
                     {
                         return;
                     }

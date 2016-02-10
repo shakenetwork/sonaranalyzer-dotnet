@@ -64,7 +64,7 @@ namespace SonarLint.Rules
                     var identifier = GetIdentifier(c.Node);
                     var name = identifier.ValueText;
 
-                    var nameEnding = NameEndings.FirstOrDefault(ending => name.EndsWith(ending, System.StringComparison.InvariantCultureIgnoreCase));
+                    var nameEnding = NameEndings.FirstOrDefault(ending => name.EndsWith(ending, System.StringComparison.OrdinalIgnoreCase));
                     if (nameEnding != null)
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(),

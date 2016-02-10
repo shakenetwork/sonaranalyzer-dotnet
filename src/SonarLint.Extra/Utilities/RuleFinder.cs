@@ -32,19 +32,16 @@ namespace SonarLint.Utilities
     {
         private readonly List<Type> diagnosticAnalyzers;
 
-        public static IEnumerable<Assembly> GetPackagedRuleAssemblies()
-        {
-            return new[]
+        public static IEnumerable<Assembly> PackagedRuleAssemblies => new[]
             {
                 Assembly.LoadFrom(typeof(Rules.CSharp.FlagsEnumZeroMember).Assembly.Location),
                 Assembly.LoadFrom(typeof(Rules.VisualBasic.FlagsEnumZeroMember).Assembly.Location),
                 Assembly.LoadFrom(typeof(Rules.Common.FlagsEnumZeroMemberBase).Assembly.Location)
             };
-        }
 
         public RuleFinder()
         {
-            diagnosticAnalyzers = GetPackagedRuleAssemblies()
+            diagnosticAnalyzers = PackagedRuleAssemblies
                 .SelectMany(assembly => assembly.GetTypes())
                 .Where(t => t.IsSubclassOf(typeof (DiagnosticAnalyzer)))
                 .Where(t => t.GetCustomAttributes<RuleAttribute>().Any())
@@ -60,7 +57,7 @@ namespace SonarLint.Utilities
                 .Where(type => GetTargetLanguages(type).IsAlso(language));
         }
 
-        public static bool IsParametered(Type analyzerType)
+        public static bool IsParameterized(Type analyzerType)
         {
             return analyzerType.GetProperties()
                 .Any(p => p.GetCustomAttributes<RuleParameterAttribute>().Any());

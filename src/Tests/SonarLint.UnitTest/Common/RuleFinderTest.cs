@@ -33,7 +33,7 @@ namespace SonarLint.UnitTest.Common
         [TestMethod]
         public void GetPackagedRuleAssembly()
         {
-            Assert.AreEqual(3, RuleFinder.GetPackagedRuleAssemblies().Count());
+            Assert.AreEqual(3, RuleFinder.PackagedRuleAssemblies.Count());
         }
 
         [TestMethod]

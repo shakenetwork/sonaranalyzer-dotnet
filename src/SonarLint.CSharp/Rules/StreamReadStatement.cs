@@ -75,7 +75,7 @@ namespace SonarLint.Rules.CSharp
 
                     var method = c.SemanticModel.GetSymbolInfo(expression).Symbol as IMethodSymbol;
                     if (method == null ||
-                        !ReadMethodNames.Contains(method.Name, StringComparer.InvariantCulture))
+                        !ReadMethodNames.Contains(method.Name, StringComparer.Ordinal))
                     {
                         return;
                     }

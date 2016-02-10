@@ -45,7 +45,7 @@ namespace SonarLint.Helpers
             context.RegisterCompilationAction(action);
         }
 
-        public List<Action<CompilationStartAnalysisContext>> CompilationStartActions { get; set; } = new List<Action<CompilationStartAnalysisContext>>();
+        public List<Action<CompilationStartAnalysisContext>> CompilationStartActions { get; } = new List<Action<CompilationStartAnalysisContext>>();
         public void RegisterCompilationStartAction(Action<CompilationStartAnalysisContext> action)
         {
             CompilationStartActions.Add(action);

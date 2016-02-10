@@ -74,18 +74,18 @@ namespace SonarLint.Common
             return this == other || this == Both;
         }
 
-        public static AnalyzerLanguage Parse(string s)
+        public static AnalyzerLanguage Parse(string language)
         {
-            if (s == CsLiteral)
+            if (language == CsLiteral)
             {
                 return CSharp;
             }
-            if (s == VbNetLiteral)
+            if (language == VbNetLiteral)
             {
                 return VisualBasic;
             }
 
-            throw new NotSupportedException($"Supplied language needs to be '{CsLiteral}' or '{VbNetLiteral}', but found: '{s}'.");
+            throw new NotSupportedException($"Supplied language needs to be '{CsLiteral}' or '{VbNetLiteral}', but found: '{language}'.");
         }
 
         public string GetQualityProfileRepositoryKey()
