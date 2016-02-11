@@ -1,0 +1,44 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S3257",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\examples\\Cluster\\Samples.Cluster.Simple\\Program.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  43,
+"endLine":  19,
+"endColumn":  49
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the array type; it is redundant.",
+"fullMessage":  "Unnecessarily verbose declarations and initializations make it harder to read the code, and should be simplified.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Declarations and initializations should be as concise as possible",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S3257",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary",
+"customProperties":  {
+"diagnosticType":  "ArrayType"
+}
+}
+}
+]
+}

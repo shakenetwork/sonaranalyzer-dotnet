@@ -1,0 +1,214 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S3257",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\AbsoluteUrlTests.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  63,
+"endLine":  17,
+"endColumn":  67
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the array type; it is redundant.",
+"fullMessage":  "Unnecessarily verbose declarations and initializations make it harder to read the code, and should be simplified.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Declarations and initializations should be as concise as possible",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S3257",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary",
+"customProperties":  {
+"diagnosticType":  "ArrayType"
+}
+}
+},
+{
+"ruleId":  "S3257",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\JsonpTests.cs",
+"region":  {
+"startLine":  21,
+"startColumn":  54,
+"endLine":  21,
+"endColumn":  58
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the array type; it is redundant.",
+"fullMessage":  "Unnecessarily verbose declarations and initializations make it harder to read the code, and should be simplified.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Declarations and initializations should be as concise as possible",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S3257",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary",
+"customProperties":  {
+"diagnosticType":  "ArrayType"
+}
+}
+},
+{
+"ruleId":  "S3257",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\RouteConstraintTests.cs",
+"region":  {
+"startLine":  23,
+"startColumn":  46,
+"endLine":  23,
+"endColumn":  50
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the array type; it is redundant.",
+"fullMessage":  "Unnecessarily verbose declarations and initializations make it harder to read the code, and should be simplified.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Declarations and initializations should be as concise as possible",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S3257",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary",
+"customProperties":  {
+"diagnosticType":  "ArrayType"
+}
+}
+},
+{
+"ruleId":  "S3257",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\SerializerTests.cs",
+"region":  {
+"startLine":  17,
+"startColumn":  59,
+"endLine":  17,
+"endColumn":  63
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the array type; it is redundant.",
+"fullMessage":  "Unnecessarily verbose declarations and initializations make it harder to read the code, and should be simplified.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Declarations and initializations should be as concise as possible",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S3257",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary",
+"customProperties":  {
+"diagnosticType":  "ArrayType"
+}
+}
+},
+{
+"ruleId":  "S3257",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\SerializeTests.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  63,
+"endLine":  19,
+"endColumn":  67
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the array type; it is redundant.",
+"fullMessage":  "Unnecessarily verbose declarations and initializations make it harder to read the code, and should be simplified.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Declarations and initializations should be as concise as possible",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S3257",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary",
+"customProperties":  {
+"diagnosticType":  "ArrayType"
+}
+}
+},
+{
+"ruleId":  "S3257",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\TracingSmokeTests.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  63,
+"endLine":  19,
+"endColumn":  67
+}
+}
+]
+}
+],
+"shortMessage":  "Remove the array type; it is redundant.",
+"fullMessage":  "Unnecessarily verbose declarations and initializations make it harder to read the code, and should be simplified.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Declarations and initializations should be as concise as possible",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S3257",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary",
+"customProperties":  {
+"diagnosticType":  "ArrayType"
+}
+}
+}
+]
+}
