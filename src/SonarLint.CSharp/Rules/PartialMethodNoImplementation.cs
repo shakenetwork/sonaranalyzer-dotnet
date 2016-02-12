@@ -64,55 +64,59 @@ namespace SonarLint.Rules.CSharp
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c =>
-                {
-                    var invocation = (InvocationExpressionSyntax)c.Node;
-                    var methodSymbol = c.SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
-                    if (methodSymbol == null)
-                    {
-                        return;
-                    }
-
-                    // from the method symbol it's not possible to tell if it's a partial method or not.
-                    // https://github.com/dotnet/roslyn/issues/48
-
-                    var partialDeclarations = methodSymbol.DeclaringSyntaxReferences
-                        .Select(r => r.GetSyntax())
-                        .OfType<MethodDeclarationSyntax>()
-                        .Where(method => method.Body == null && method.Modifiers.Any(m => m.IsKind(SyntaxKind.PartialKeyword)));
-
-                    if (methodSymbol.PartialImplementationPart == null &&
-                        partialDeclarations.Any())
-                    {
-                        var statement = invocation.Parent as StatementSyntax;
-                        if (statement == null)
-                        {
-                            return;
-                        }
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, statement.GetLocation(), "the", MessageAdditional));
-                    }
-                },
+                c => CheckForCandidatePartialInvocation(c),
                 SyntaxKind.InvocationExpression);
 
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c =>
-                {
-                    var declaration = (MethodDeclarationSyntax)c.Node;
-                    var partialKeyword = declaration.Modifiers.FirstOrDefault(m => m.IsKind(SyntaxKind.PartialKeyword));
-                    if (declaration.Body != null ||
-                        partialKeyword == default(SyntaxToken))
-                    {
-                        return;
-                    }
-
-                    var methodSymbol = c.SemanticModel.GetDeclaredSymbol(declaration);
-                    if (methodSymbol != null &&
-                        methodSymbol.PartialImplementationPart == null)
-                    {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, partialKeyword.GetLocation(), "this", string.Empty));
-                    }
-                },
+                c => CheckForCandidatePartialDeclaration(c),
                 SyntaxKind.MethodDeclaration);
+        }
+
+        private static void CheckForCandidatePartialDeclaration(SyntaxNodeAnalysisContext c)
+        {
+            var declaration = (MethodDeclarationSyntax)c.Node;
+            var partialKeyword = declaration.Modifiers.FirstOrDefault(m => m.IsKind(SyntaxKind.PartialKeyword));
+            if (declaration.Body != null ||
+                partialKeyword == default(SyntaxToken))
+            {
+                return;
+            }
+
+            var methodSymbol = c.SemanticModel.GetDeclaredSymbol(declaration);
+            if (methodSymbol != null &&
+                methodSymbol.PartialImplementationPart == null)
+            {
+                c.ReportDiagnostic(Diagnostic.Create(Rule, partialKeyword.GetLocation(), "this", string.Empty));
+            }
+        }
+
+        private static void CheckForCandidatePartialInvocation(SyntaxNodeAnalysisContext c)
+        {
+            var invocation = (InvocationExpressionSyntax)c.Node;
+            var methodSymbol = c.SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
+            if (methodSymbol == null)
+            {
+                return;
+            }
+
+            // from the method symbol it's not possible to tell if it's a partial method or not.
+            // https://github.com/dotnet/roslyn/issues/48
+
+            var partialDeclarations = methodSymbol.DeclaringSyntaxReferences
+                .Select(r => r.GetSyntax())
+                .OfType<MethodDeclarationSyntax>()
+                .Where(method => method.Body == null && method.Modifiers.Any(m => m.IsKind(SyntaxKind.PartialKeyword)));
+
+            if (methodSymbol.PartialImplementationPart == null &&
+                partialDeclarations.Any())
+            {
+                var statement = invocation.Parent as StatementSyntax;
+                if (statement == null)
+                {
+                    return;
+                }
+                c.ReportDiagnostic(Diagnostic.Create(Rule, statement.GetLocation(), "the", MessageAdditional));
+            }
         }
     }
 }

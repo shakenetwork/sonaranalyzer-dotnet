@@ -65,7 +65,6 @@ namespace SonarLint.Rules.CSharp
                     var methodDeclaration = (MethodDeclarationSyntax)c.Node;
                     var methodSymbol = c.SemanticModel.GetDeclaredSymbol(methodDeclaration);
 
-                    //todo: change this to SymbolHelper.IsInterfaceImplementationOrMemberOverride
                     if (methodSymbol != null &&
                         IsMethodCandidate(methodSymbol, c.SemanticModel.Compilation))
                     {

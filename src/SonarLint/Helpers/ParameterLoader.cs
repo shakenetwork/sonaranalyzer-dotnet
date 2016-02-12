@@ -47,8 +47,7 @@ namespace SonarLint.Helpers
             public List<RuleParameterValue> ParameterValues { get; set; } = new List<RuleParameterValue>();
         }
 
-        //todo: this can become private when we remove the template rule
-        public static ImmutableList<RuleParameterValues> ParseParameters(XContainer xml)
+        private static ImmutableList<RuleParameterValues> ParseParameters(XContainer xml)
         {
             var builder = ImmutableList.CreateBuilder<RuleParameterValues>();
             foreach (var rule in xml.Descendants("Rule").Where(e => e.Elements("Parameters").Any()))
