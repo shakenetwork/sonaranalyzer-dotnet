@@ -32,7 +32,7 @@ namespace SonarLint.Rules.CSharp
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("2min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, false)]
     [Tags(Tag.Unused)]
     public class RedundantParentheses : DiagnosticAnalyzer
     {
@@ -43,12 +43,11 @@ namespace SonarLint.Rules.CSharp
         internal const string MessageFormat = "Remove these redundant parentheses.";
         internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(ideVisibility), IsActivatedByDefault,
+                RuleSeverity.ToDiagnosticSeverity(ideVisibility), true,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description,
                 customTags: ideVisibility.ToCustomTags());

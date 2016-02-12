@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("2min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, false)]
     [Tags(Tag.Clumsy)]
     public class RedundantToStringCall : DiagnosticAnalyzer
     {
@@ -50,12 +50,11 @@ namespace SonarLint.Rules.CSharp
         internal const string MessageCompiler = ", the compiler will do it for you";
         internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(ideVisibility), IsActivatedByDefault,
+                RuleSeverity.ToDiagnosticSeverity(ideVisibility), true,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description,
                 customTags: ideVisibility.ToCustomTags());
