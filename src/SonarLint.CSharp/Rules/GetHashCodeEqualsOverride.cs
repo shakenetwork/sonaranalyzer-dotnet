@@ -128,13 +128,8 @@ namespace SonarLint.Rules.CSharp
 
             var ifStatement = invocation.Parent as IfStatementSyntax;
             if (ifStatement == null ||
-                ifStatement.Condition != invocation)
-            {
-                return false;
-            }
-
-            if (invocation.ArgumentList == null ||
-                invocation.ArgumentList.Arguments.Count != 1)
+                ifStatement.Condition != invocation ||
+                !invocation.HasExactlyNArguments(1))
             {
                 return false;
             }

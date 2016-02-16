@@ -68,12 +68,8 @@ namespace SonarLint.Rules.CSharp
 
                     if (suppressFinalizeSymbol == null ||
                         suppressFinalizeSymbol.Name != "SuppressFinalize" ||
-                        suppressFinalizeSymbol.ContainingType.ToDisplayString() != "System.GC")
-                    {
-                        return;
-                    }
-
-                    if (invocation.ArgumentList.Arguments.Count != 1)
+                        suppressFinalizeSymbol.ContainingType.ToDisplayString() != "System.GC" ||
+                        !invocation.HasExactlyNArguments(1))
                     {
                         return;
                     }

@@ -70,13 +70,8 @@ namespace SonarLint.Rules.CSharp
 
                     if (methodSymbol == null ||
                         methodSymbol.ContainingType.SpecialType != SpecialType.System_String ||
-                        methodSymbol.Name != "Format")
-                    {
-                        return;
-                    }
-
-                    if (invocation.ArgumentList == null ||
-                        invocation.ArgumentList.Arguments.Count == 0)
+                        methodSymbol.Name != "Format" ||
+                        invocation.HasExactlyNArguments(0))
                     {
                         return;
                     }

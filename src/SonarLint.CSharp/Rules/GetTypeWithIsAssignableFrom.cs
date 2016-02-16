@@ -67,15 +67,15 @@ namespace SonarLint.Rules.CSharp
                 {
                     var invocation = (InvocationExpressionSyntax)c.Node;
                     var memberAccess = invocation.Expression as MemberAccessExpressionSyntax;
-                    if (memberAccess == null)
+                    if (memberAccess == null ||
+                        !invocation.HasExactlyNArguments(1))
                     {
                         return;
                     }
 
                     var methodSymbol = c.SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
                     if (methodSymbol == null ||
-                        methodSymbol.ContainingType.ToDisplayString() != "System.Type" ||
-                        invocation.ArgumentList.Arguments.Count != 1)
+                        methodSymbol.ContainingType.ToDisplayString() != "System.Type")
                     {
                         return;
                     }
@@ -100,7 +100,7 @@ namespace SonarLint.Rules.CSharp
         private static void CheckGetTypeAndTypeOfEquality(ExpressionSyntax sideA, ExpressionSyntax sideB, Location location,
             SyntaxNodeAnalysisContext context)
         {
-            if (!IsGetTypeCall(sideA, context.SemanticModel))
+            if (!TypeExaminationOnSystemType.IsGetTypeCall(sideA as InvocationExpressionSyntax, context.SemanticModel))
             {
                 return;
             }
@@ -143,7 +143,7 @@ namespace SonarLint.Rules.CSharp
             ExpressionSyntax argument)
         {
             if (methodSymbol.Name != "IsAssignableFrom" ||
-                !IsGetTypeCall(argument, context.SemanticModel))
+                !TypeExaminationOnSystemType.IsGetTypeCall(argument as InvocationExpressionSyntax, context.SemanticModel))
             {
                 return;
             }
@@ -164,24 +164,6 @@ namespace SonarLint.Rules.CSharp
                         .Add(ShouldRemoveGetType, true.ToString()),
                     IsInstanceOfType));
             }
-        }
-
-        private static bool IsGetTypeCall(ExpressionSyntax expression, SemanticModel semanticModel)
-        {
-            var invocation = expression as InvocationExpressionSyntax;
-            if (invocation == null)
-            {
-                return false;
-            }
-
-            var methodCall = semanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
-            if (methodCall == null)
-            {
-                return false;
-            }
-
-            return methodCall.Name == "GetType" &&
-                methodCall.ContainingType.SpecialType == SpecialType.System_Object;
         }
     }
 }
