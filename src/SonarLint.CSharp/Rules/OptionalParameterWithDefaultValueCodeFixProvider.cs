@@ -24,20 +24,19 @@ using Microsoft.CodeAnalysis.CodeFixes;
 using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.CodeAnalysis.CodeActions;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using SonarLint.Common;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.Formatting;
 using SonarLint.Helpers;
 
 namespace SonarLint.Rules.CSharp
 {
     [ExportCodeFixProvider(LanguageNames.CSharp)]
-    public class MethodParameterMissingOptionalCodeFixProvider : CodeFixProvider
+    public class OptionalParameterWithDefaultValueCodeFixProvider : CodeFixProvider
     {
-        private const string Title = "Add missing \"[Optional]\" attribute";
-
-        public sealed override ImmutableArray<string> FixableDiagnosticIds => ImmutableArray.Create(MethodParameterMissingOptional.DiagnosticId);
+        internal const string Title = "Change to \"[DefaultParameterValue]\"";
+        public sealed override ImmutableArray<string> FixableDiagnosticIds =>
+            ImmutableArray.Create(OptionalParameterWithDefaultValue.DiagnosticId);
 
         public sealed override FixAllProvider GetFixAllProvider() => DocumentBasedFixAllProvider.Instance;
 
@@ -47,18 +46,19 @@ namespace SonarLint.Rules.CSharp
 
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
-            var attribute = root.FindNode(diagnosticSpan, getInnermostNodeForTie: true) as AttributeSyntax;
-            var attributeList = attribute?.Parent as AttributeListSyntax;
-            if (attribute == null ||
-                attributeList == null)
+            var attribute = root.FindNode(diagnosticSpan) as AttributeSyntax;
+
+            if (attribute.ArgumentList == null ||
+                attribute.ArgumentList.Arguments.Count != 1)
             {
                 return;
             }
 
             var semanticModel = await context.Document.GetSemanticModelAsync().ConfigureAwait(false);
-            var optionalAttribute = semanticModel?.Compilation?.GetTypeByMetadataName(
-                KnownType.System_Runtime_InteropServices_OptionalAttribute.TypeName);
-            if (optionalAttribute == null)
+
+            var defaultParameterValueAttributeType = semanticModel?.Compilation?.GetTypeByMetadataName(
+                KnownType.System_Runtime_InteropServices_DefaultParameterValueAttribute.TypeName);
+            if (defaultParameterValueAttributeType == null)
             {
                 return;
             }
@@ -68,24 +68,16 @@ namespace SonarLint.Rules.CSharp
                     Title,
                     c =>
                     {
-                        var newRoot = root.ReplaceNode(
-                            attributeList,
-                            GetNewAttributeList(attributeList, optionalAttribute, semanticModel));
+                        var attributeName = defaultParameterValueAttributeType
+                            .ToMinimalDisplayString(semanticModel, attribute.SpanStart);
+                        attributeName = attributeName.Remove(attributeName.IndexOf("Attribute"));
+
+                        var newAttribute = attribute.WithName(SyntaxFactory.ParseName(attributeName));
+                        var newRoot = root.ReplaceNode(attribute, newAttribute);
                         return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                     }),
                 context.Diagnostics);
         }
-
-        private static AttributeListSyntax GetNewAttributeList(AttributeListSyntax attributeList, ITypeSymbol optionalAttribute,
-            SemanticModel semanticModel)
-        {
-            var attributeName = optionalAttribute.ToMinimalDisplayString(semanticModel, attributeList.SpanStart);
-            attributeName = attributeName.Remove(attributeName.IndexOf("Attribute"));
-
-            return attributeList.AddAttributes(
-                SyntaxFactory.Attribute(
-                    SyntaxFactory.ParseName(attributeName)))
-                    .WithAdditionalAnnotations(Formatter.Annotation);
-        }
     }
 }
+

@@ -19,7 +19,6 @@
  */
 
 using System.Collections.Immutable;
-using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -27,7 +26,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
-using System.Collections.Generic;
+using System.Linq;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -35,15 +34,16 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("2min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Pitfall)]
-    public class MethodParameterMissingOptional : DiagnosticAnalyzer
+    [Tags(Tag.Suspicious)]
+    public class OptionalParameterWithDefaultValue : DiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S3450";
-        internal const string Title = "Parameters with \"[DefaultParameterValue]\" attributes should also be marked with \"[Optional]\"";
+        internal const string DiagnosticId = "S3451";
+        internal const string Title = "\"[DefaultValue]\" should not be used when \"[DefaultParameterValue]\" is meant";
         internal const string Description =
-            "There is no point in providing a default value for a parameter if callers are required to provide a value for it anyway. Thus, " +
-            "\"[DefaultParameterValue]\" should always be used in conjunction with \"[Optional]\".";
-        internal const string MessageFormat = "Add the \"[Optional]\" attribute to this parameter.";
+            "The use of \"[DefaultValue]\" with \"[Optional]\" has no more effect than \"[Optional]\" alone. That's because \"[DefaultValue]\" doesn't " +
+            "actually do anything; it merely indicates the intent for the value. More than likely, \"[DefaultValue]\" was used in confusion instead of " +
+            "\"[DefaultParameterValue]\".";
+        internal const string MessageFormat = "Use \"[DefaultParameterValue]\" instead.";
         internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
@@ -67,44 +67,30 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
-                    var attributes = GetAttributesForParameter(parameter, c.SemanticModel)
-                        .ToList();
+                    var attributes = MethodParameterMissingOptional.GetAttributesForParameter(parameter, c.SemanticModel).ToList();
 
-                    var defaultParameterValueAttribute = attributes
-                        .FirstOrDefault(a => a.Symbol.IsInType(KnownType.System_Runtime_InteropServices_DefaultParameterValueAttribute));
-
-                    if (defaultParameterValueAttribute == null)
+                    var hasNoOptional = attributes.All(attr => !attr.Symbol.IsInType(KnownType.System_Runtime_InteropServices_OptionalAttribute));
+                    if (hasNoOptional)
                     {
                         return;
                     }
 
-                    var optionalAttribute = attributes
-                        .FirstOrDefault(a => a.Symbol.IsInType(KnownType.System_Runtime_InteropServices_OptionalAttribute));
-
-                    if (optionalAttribute == null)
+                    var hasDefaultParameterValue = attributes.Any(attr =>
+                        attr.Symbol.IsInType(KnownType.System_Runtime_InteropServices_DefaultParameterValueAttribute));
+                    if (hasDefaultParameterValue)
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, defaultParameterValueAttribute.SyntaxNode.GetLocation()));
+                        return;
+                    }
+
+                    var defaultValueAttribute = attributes
+                        .FirstOrDefault(a => a.Symbol.IsInType(KnownType.System_ComponentModel_DefaultValueAttribute));
+
+                    if (defaultValueAttribute != null)
+                    {
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, defaultValueAttribute.SyntaxNode.GetLocation()));
                     }
                 },
                 SyntaxKind.Parameter);
-        }
-
-        internal static IEnumerable<AttributeSyntaxSymbolMapping> GetAttributesForParameter(ParameterSyntax parameter, SemanticModel semanticModel)
-        {
-            return parameter.AttributeLists
-                .SelectMany(al => al.Attributes)
-                .Select(attr => new AttributeSyntaxSymbolMapping
-                {
-                    SyntaxNode = attr,
-                    Symbol = semanticModel.GetSymbolInfo(attr).Symbol as IMethodSymbol
-                })
-                .Where(attr => attr.Symbol != null);
-        }
-
-        internal class AttributeSyntaxSymbolMapping
-        {
-            public AttributeSyntax SyntaxNode { get; set; }
-            public IMethodSymbol Symbol { get; set; }
         }
     }
 }

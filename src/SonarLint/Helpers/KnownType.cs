@@ -106,6 +106,7 @@ namespace SonarLint.Helpers
 
         public static readonly KnownType System_Runtime_InteropServices_DefaultParameterValueAttribute = new KnownType("System.Runtime.InteropServices.DefaultParameterValueAttribute");
         public static readonly KnownType System_Runtime_InteropServices_OptionalAttribute = new KnownType("System.Runtime.InteropServices.OptionalAttribute");
+        public static readonly KnownType System_ComponentModel_DefaultValueAttribute = new KnownType("System.ComponentModel.DefaultValueAttribute");
 
         public static readonly KnownType System_Globalization_CultureInfo = new KnownType("System.Globalization.CultureInfo");
         public static readonly KnownType System_Globalization_CompareOptions = new KnownType("System.Globalization.CompareOptions");
