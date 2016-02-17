@@ -14,6 +14,10 @@ namespace Tests.Diagnostics
         {
             Console.WriteLine(i);
         }
+
+        public virtual void Write2()
+        {
+        }
     }
 
     public class Derived1 : Base
@@ -22,6 +26,10 @@ namespace Tests.Diagnostics
             int j = 42) // Noncompliant
         {
             Console.WriteLine(i);
+        }
+
+        public override void Write2(int i)
+        {
         }
     }
     public class Derived2 : Base

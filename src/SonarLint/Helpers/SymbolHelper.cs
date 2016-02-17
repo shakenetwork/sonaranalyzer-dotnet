@@ -46,7 +46,7 @@ namespace SonarLint.Helpers
             if (symbol.IsOverride)
             {
                 overriddenSymbol = GetOverriddenMember(symbol);
-                return true;
+                return overriddenSymbol != null;
             }
 
             overriddenSymbol = symbol.ContainingType

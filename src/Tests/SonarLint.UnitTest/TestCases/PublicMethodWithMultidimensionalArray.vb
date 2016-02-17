@@ -10,7 +10,8 @@ Namespace Tests.Diagnostics
     End Class
 
     Public Class PublicMethodWithMultidimensionalArray
-        Implements Base, IFace
+        Inherits Base
+        Implements IFace
         Public Sub Method(a As Integer)
         End Sub
         Public Sub MethodX(a As Integer())
