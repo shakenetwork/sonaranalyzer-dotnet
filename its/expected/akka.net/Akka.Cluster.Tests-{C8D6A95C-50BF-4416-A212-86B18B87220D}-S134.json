@@ -1,0 +1,130 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S134",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\ClusterHeartBeatSenderStateSpec.cs",
+"region":  {
+"startLine":  212,
+"startColumn":  28,
+"endLine":  212,
+"endColumn":  30
+}
+}
+]
+}
+],
+"shortMessage":  "Refactor this code to not nest more than 3 control flow statements",
+"fullMessage":  "Nested \"if\", \"switch\", \"for\", \"foreach\", \"while\", \"do\", and \"try\" statements are key ingredients for making what\u0027s known as \"Spaghetti code\". Such code is hard to read, refactor and therefore maintain.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Control flow statements \"if\", \"for\", \"foreach\", \"do\", \"while\", \"switch\" and \"try\" should not be nested too deeply",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S134",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S134",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\ClusterHeartBeatSenderStateSpec.cs",
+"region":  {
+"startLine":  223,
+"startColumn":  28,
+"endLine":  223,
+"endColumn":  30
+}
+}
+]
+}
+],
+"shortMessage":  "Refactor this code to not nest more than 3 control flow statements",
+"fullMessage":  "Nested \"if\", \"switch\", \"for\", \"foreach\", \"while\", \"do\", and \"try\" statements are key ingredients for making what\u0027s known as \"Spaghetti code\". Such code is hard to read, refactor and therefore maintain.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Control flow statements \"if\", \"for\", \"foreach\", \"do\", \"while\", \"switch\" and \"try\" should not be nested too deeply",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S134",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S134",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\ClusterHeartBeatSenderStateSpec.cs",
+"region":  {
+"startLine":  239,
+"startColumn":  28,
+"endLine":  239,
+"endColumn":  30
+}
+}
+]
+}
+],
+"shortMessage":  "Refactor this code to not nest more than 3 control flow statements",
+"fullMessage":  "Nested \"if\", \"switch\", \"for\", \"foreach\", \"while\", \"do\", and \"try\" statements are key ingredients for making what\u0027s known as \"Spaghetti code\". Such code is hard to read, refactor and therefore maintain.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Control flow statements \"if\", \"for\", \"foreach\", \"do\", \"while\", \"switch\" and \"try\" should not be nested too deeply",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S134",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S134",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\ClusterHeartBeatSenderStateSpec.cs",
+"region":  {
+"startLine":  248,
+"startColumn":  28,
+"endLine":  248,
+"endColumn":  30
+}
+}
+]
+}
+],
+"shortMessage":  "Refactor this code to not nest more than 3 control flow statements",
+"fullMessage":  "Nested \"if\", \"switch\", \"for\", \"foreach\", \"while\", \"do\", and \"try\" statements are key ingredients for making what\u0027s known as \"Spaghetti code\". Such code is hard to read, refactor and therefore maintain.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Control flow statements \"if\", \"for\", \"foreach\", \"do\", \"while\", \"switch\" and \"try\" should not be nested too deeply",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S134",
+"isEnabledByDefault":  "False",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}
