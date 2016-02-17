@@ -58,12 +58,6 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        internal class SyntaxNodeWithSemanticModel<T> where T : SyntaxNode
-        {
-            public T SyntaxNode { get; set; }
-            public SemanticModel SemanticModel { get; set; }
-        }
-
         protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSymbolAction(
@@ -80,16 +74,7 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
-                    var classDeclarations = namedType.DeclaringSyntaxReferences
-                        .Select(n => n.GetSyntax())
-                        .Select(n =>
-                            new SyntaxNodeWithSemanticModel<SyntaxNode>
-                            {
-                                SyntaxNode = n,
-                                SemanticModel = c.Compilation.GetSemanticModel(n.SyntaxTree)
-                            })
-                        .Where(n => n.SemanticModel != null)
-                        .ToList();
+                    var classDeclarations = GetClassDeclarations(namedType, c);
 
                     var declaredPrivateSymbols = new HashSet<ISymbol>();
                     var fieldLikeSymbols = new BidirectionalDictionary<ISymbol, SyntaxNode>();
@@ -123,6 +108,21 @@ namespace SonarLint.Rules.CSharp
                     ReportIssues(c, usedSymbols, declaredPrivateSymbols, emptyConstructors, fieldLikeSymbols);
                 },
                 SymbolKind.NamedType);
+        }
+
+        internal static List<SyntaxNodeWithSemanticModel<ClassDeclarationSyntax>> GetClassDeclarations(INamedTypeSymbol namedType, SymbolAnalysisContext context)
+        {
+            return namedType.DeclaringSyntaxReferences
+                .Select(reference => reference.GetSyntax())
+                .OfType<ClassDeclarationSyntax>()
+                .Select(node =>
+                    new SyntaxNodeWithSemanticModel<ClassDeclarationSyntax>
+                    {
+                        SyntaxNode = node,
+                        SemanticModel = context.Compilation.GetSemanticModel(node.SyntaxTree)
+                    })
+                .Where(n => n.SemanticModel != null)
+                .ToList();
         }
 
         private static void ReportIssues(SymbolAnalysisContext context, HashSet<ISymbol> usedSymbols,
@@ -184,7 +184,7 @@ namespace SonarLint.Rules.CSharp
             node => IsNodeStructOrClassDeclaration(node) ||
                     node.IsKind(SyntaxKind.InterfaceDeclaration);
 
-        private static void CollectRemovableMethods(IEnumerable<SyntaxNodeWithSemanticModel<SyntaxNode>> containers,
+        private static void CollectRemovableMethods(IEnumerable<SyntaxNodeWithSemanticModel<ClassDeclarationSyntax>> containers,
             HashSet<ISymbol> declaredPrivateSymbols)
         {
             var methodSymbols = containers
@@ -214,7 +214,7 @@ namespace SonarLint.Rules.CSharp
                 !IsMainMethod(methodSymbol);
         }
 
-        private static void CollectRemovableEventsAndProperties(IEnumerable<SyntaxNodeWithSemanticModel<SyntaxNode>> containers,
+        private static void CollectRemovableEventsAndProperties(IEnumerable<SyntaxNodeWithSemanticModel<ClassDeclarationSyntax>> containers,
             HashSet<ISymbol> declaredPrivateSymbols)
         {
             var symbols = containers
@@ -235,7 +235,7 @@ namespace SonarLint.Rules.CSharp
             declaredPrivateSymbols.UnionWith(symbols);
         }
 
-        private static void CollectRemovableEventFieldDeclarations(IEnumerable<SyntaxNodeWithSemanticModel<SyntaxNode>> containers,
+        private static void CollectRemovableEventFieldDeclarations(IEnumerable<SyntaxNodeWithSemanticModel<ClassDeclarationSyntax>> containers,
             HashSet<ISymbol> declaredPrivateSymbols, BidirectionalDictionary<ISymbol, SyntaxNode> fieldLikeSymbols)
         {
             var fields = containers
@@ -268,7 +268,7 @@ namespace SonarLint.Rules.CSharp
             }
         }
 
-        private static void CollectRemovableFieldDeclarations(IEnumerable<SyntaxNodeWithSemanticModel<SyntaxNode>> containers,
+        private static void CollectRemovableFieldDeclarations(IEnumerable<SyntaxNodeWithSemanticModel<ClassDeclarationSyntax>> containers,
             HashSet<ISymbol> declaredPrivateSymbols, BidirectionalDictionary<ISymbol, SyntaxNode> fieldLikeSymbols)
         {
             var fields = containers
@@ -301,7 +301,7 @@ namespace SonarLint.Rules.CSharp
             }
         }
 
-        private static void CollectRemovableNamedTypes(IEnumerable<SyntaxNodeWithSemanticModel<SyntaxNode>> containers,
+        private static void CollectRemovableNamedTypes(IEnumerable<SyntaxNodeWithSemanticModel<ClassDeclarationSyntax>> containers,
             HashSet<ISymbol> declaredPrivateSymbols)
         {
             var symbols = containers
@@ -324,7 +324,7 @@ namespace SonarLint.Rules.CSharp
         }
 
         private static void CollectUsedSymbolsFromCtorInitializerAndCollectEmptyCtors(
-            IEnumerable<SyntaxNodeWithSemanticModel<SyntaxNode>> containers,
+            IEnumerable<SyntaxNodeWithSemanticModel<ClassDeclarationSyntax>> containers,
             HashSet<ISymbol> usedSymbols, HashSet<ISymbol> emptyConstructors)
         {
             var ctors = containers
@@ -361,7 +361,7 @@ namespace SonarLint.Rules.CSharp
             }
         }
 
-        private static void CollectUsedSymbols(IList<SyntaxNodeWithSemanticModel<SyntaxNode>> containers,
+        private static void CollectUsedSymbols(IList<SyntaxNodeWithSemanticModel<ClassDeclarationSyntax>> containers,
             HashSet<ISymbol> usedSymbols, ImmutableHashSet<string> symbolNames,
             bool anyRemovableIndexers, bool anyRemovableCtors)
         {

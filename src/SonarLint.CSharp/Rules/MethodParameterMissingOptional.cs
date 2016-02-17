@@ -27,7 +27,6 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
-using System.Collections.Generic;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -67,7 +66,7 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
-                    var attributes = GetAttributesForParameter(parameter, c.SemanticModel)
+                    var attributes = AttributeSyntaxSymbolMapping.GetAttributesForParameter(parameter, c.SemanticModel)
                         .ToList();
 
                     var defaultParameterValueAttribute = attributes
@@ -87,24 +86,6 @@ namespace SonarLint.Rules.CSharp
                     }
                 },
                 SyntaxKind.Parameter);
-        }
-
-        internal static IEnumerable<AttributeSyntaxSymbolMapping> GetAttributesForParameter(ParameterSyntax parameter, SemanticModel semanticModel)
-        {
-            return parameter.AttributeLists
-                .SelectMany(al => al.Attributes)
-                .Select(attr => new AttributeSyntaxSymbolMapping
-                {
-                    SyntaxNode = attr,
-                    Symbol = semanticModel.GetSymbolInfo(attr).Symbol as IMethodSymbol
-                })
-                .Where(attr => attr.Symbol != null);
-        }
-
-        internal class AttributeSyntaxSymbolMapping
-        {
-            public AttributeSyntax SyntaxNode { get; set; }
-            public IMethodSymbol Symbol { get; set; }
         }
     }
 }

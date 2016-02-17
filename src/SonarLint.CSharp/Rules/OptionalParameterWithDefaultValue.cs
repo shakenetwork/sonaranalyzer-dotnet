@@ -67,7 +67,7 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
-                    var attributes = MethodParameterMissingOptional.GetAttributesForParameter(parameter, c.SemanticModel).ToList();
+                    var attributes = AttributeSyntaxSymbolMapping.GetAttributesForParameter(parameter, c.SemanticModel).ToList();
 
                     var hasNoOptional = attributes.All(attr => !attr.Symbol.IsInType(KnownType.System_Runtime_InteropServices_OptionalAttribute));
                     if (hasNoOptional)

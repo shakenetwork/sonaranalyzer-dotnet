@@ -1,0 +1,40 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S3453",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
+"region":  {
+"startLine":  1657,
+"startColumn":  21,
+"endLine":  1657,
+"endColumn":  58
+}
+}
+]
+}
+],
+"shortMessage":  "This class can\u0027t be instantiated; make its constructor \"public\".",
+"fullMessage":  "A class with only \"private\" constructors can\u0027t be instantiated, thus, it seems to be pointless code.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Classes should not have only \"private\" constructors",
+"category":  "Design",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3453",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}
