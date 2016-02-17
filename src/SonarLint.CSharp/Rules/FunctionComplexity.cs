@@ -88,14 +88,14 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.RemoveAccessorDeclaration);
         }
 
-        private void CheckComplexity<TSyntax>(SyntaxNodeAnalysisContext c, Func<TSyntax, Location> location)
+        private void CheckComplexity<TSyntax>(SyntaxNodeAnalysisContext context, Func<TSyntax, Location> location)
             where TSyntax : SyntaxNode
         {
-            var complexity = new Metrics(c.Node.SyntaxTree).GetComplexity(c.Node);
+            var complexity = new Metrics(context.Node.SyntaxTree).GetComplexity(context.Node);
             if (complexity > Maximum)
             {
-                var syntax = (TSyntax)c.Node;
-                c.ReportDiagnostic(Diagnostic.Create(Rule, location(syntax), Maximum, complexity));
+                var syntax = (TSyntax)context.Node;
+                context.ReportDiagnostic(Diagnostic.Create(Rule, location(syntax), Maximum, complexity));
             }
         }
     }

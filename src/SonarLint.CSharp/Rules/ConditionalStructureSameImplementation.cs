@@ -100,7 +100,7 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.SwitchSection);
         }
 
-        private static void CheckStatement(SyntaxNodeAnalysisContext c, StatementSyntax statementToCheck,
+        private static void CheckStatement(SyntaxNodeAnalysisContext context, StatementSyntax statementToCheck,
             IEnumerable<StatementSyntax> precedingStatements)
         {
             var precedingStatement = precedingStatements
@@ -108,23 +108,23 @@ namespace SonarLint.Rules.CSharp
 
             if (precedingStatement != null)
             {
-                ReportStatement(c, statementToCheck, precedingStatement);
+                ReportStatement(context, statementToCheck, precedingStatement);
             }
         }
 
-        private static void ReportSection(SyntaxNodeAnalysisContext c, SwitchSectionSyntax switchSection, SwitchSectionSyntax precedingSection)
+        private static void ReportSection(SyntaxNodeAnalysisContext context, SwitchSectionSyntax switchSection, SwitchSectionSyntax precedingSection)
         {
-            ReportSyntaxNode(c, switchSection, precedingSection, "case");
+            ReportSyntaxNode(context, switchSection, precedingSection, "case");
         }
 
-        private static void ReportStatement(SyntaxNodeAnalysisContext c, StatementSyntax statement, StatementSyntax precedingStatement)
+        private static void ReportStatement(SyntaxNodeAnalysisContext context, StatementSyntax statement, StatementSyntax precedingStatement)
         {
-            ReportSyntaxNode(c, statement, precedingStatement, "branch");
+            ReportSyntaxNode(context, statement, precedingStatement, "branch");
         }
 
-        private static void ReportSyntaxNode(SyntaxNodeAnalysisContext c, SyntaxNode node, SyntaxNode precedingNode, string errorMessageDiscriminator)
+        private static void ReportSyntaxNode(SyntaxNodeAnalysisContext context, SyntaxNode node, SyntaxNode precedingNode, string errorMessageDiscriminator)
         {
-            c.ReportDiagnostic(Diagnostic.Create(
+            context.ReportDiagnostic(Diagnostic.Create(
                            Rule,
                            node.GetLocation(),
                            precedingNode.GetLineNumberToReport(),

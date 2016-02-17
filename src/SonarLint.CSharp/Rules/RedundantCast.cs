@@ -73,17 +73,17 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.InvocationExpression);
         }
 
-        private static void CheckCastExpression(SyntaxNodeAnalysisContext c)
+        private static void CheckCastExpression(SyntaxNodeAnalysisContext context)
         {
-            var castExpression = (CastExpressionSyntax)c.Node;
+            var castExpression = (CastExpressionSyntax)context.Node;
 
-            var expressionType = c.SemanticModel.GetTypeInfo(castExpression.Expression).Type;
+            var expressionType = context.SemanticModel.GetTypeInfo(castExpression.Expression).Type;
             if (expressionType == null)
             {
                 return;
             }
 
-            var castType = c.SemanticModel.GetTypeInfo(castExpression.Type).Type;
+            var castType = context.SemanticModel.GetTypeInfo(castExpression.Type).Type;
             if (castType == null)
             {
                 return;
@@ -91,23 +91,23 @@ namespace SonarLint.Rules.CSharp
 
             if (expressionType.Equals(castType))
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, castExpression.Type.GetLocation(),
+                context.ReportDiagnostic(Diagnostic.Create(Rule, castExpression.Type.GetLocation(),
                     castType.ToDisplayString()));
             }
         }
 
-        private static void CheckExtensionMethodInvocation(SyntaxNodeAnalysisContext c)
+        private static void CheckExtensionMethodInvocation(SyntaxNodeAnalysisContext context)
         {
-            var invocation = (InvocationExpressionSyntax)c.Node;
-            var methodSymbol = c.SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
+            var invocation = (InvocationExpressionSyntax)context.Node;
+            var methodSymbol = context.SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
             if (methodSymbol == null ||
-                !MethodIsOnIEnumerable(methodSymbol, c.SemanticModel) ||
+                !MethodIsOnIEnumerable(methodSymbol, context.SemanticModel) ||
                 !CastIEnumerableMethods.Contains(methodSymbol.Name))
             {
                 return;
             }
 
-            var elementType = GetElementType(invocation, methodSymbol, c.SemanticModel);
+            var elementType = GetElementType(invocation, methodSymbol, context.SemanticModel);
             if (elementType == null)
             {
                 return;
@@ -125,7 +125,7 @@ namespace SonarLint.Rules.CSharp
             if (elementType.Equals(castType))
             {
                 var methodCalledAsStatic = methodSymbol.MethodKind == MethodKind.Ordinary;
-                c.ReportDiagnostic(Diagnostic.Create(Rule, GetReportLocation(invocation, methodCalledAsStatic),
+                context.ReportDiagnostic(Diagnostic.Create(Rule, GetReportLocation(invocation, methodCalledAsStatic),
                     returnType.ToDisplayString()));
             }
         }

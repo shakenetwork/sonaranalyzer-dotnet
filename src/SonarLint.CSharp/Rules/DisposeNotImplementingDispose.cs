@@ -125,7 +125,7 @@ namespace SonarLint.Rules.CSharp
         }
 
         private static void ReportDisposeMethods(ImmutableHashSet<IMethodSymbol> allDisposeMethods, ImmutableHashSet<IMethodSymbol> implementingDisposeMethods,
-            MultiValueDictionary<INamedTypeSymbol, IMethodSymbol> disposeMethodsCalledFromDispose, CompilationAnalysisContext c)
+            MultiValueDictionary<INamedTypeSymbol, IMethodSymbol> disposeMethodsCalledFromDispose, CompilationAnalysisContext context)
         {
             foreach (var dispose in allDisposeMethods.Except(implementingDisposeMethods))
             {
@@ -140,20 +140,20 @@ namespace SonarLint.Rules.CSharp
                         declaringSyntaxReference.GetSyntax() as MethodDeclarationSyntax;
                     if (methodDeclaration != null)
                     {
-                        c.ReportDiagnosticIfNonGenerated(
+                        context.ReportDiagnosticIfNonGenerated(
                             Diagnostic.Create(Rule, methodDeclaration.Identifier.GetLocation()),
-                            c.Compilation);
+                            context.Compilation);
                     }
                 }
             }
         }
 
-        private static void CollectDisposeMethods(SymbolAnalysisContext c, IMethodSymbol disposeMethod,
+        private static void CollectDisposeMethods(SymbolAnalysisContext context, IMethodSymbol disposeMethod,
             ref ImmutableHashSet<IMethodSymbol> allDisposeMethods,
             ref ImmutableHashSet<IMethodSymbol> implementingDisposeMethods)
         {
 
-            var methodSymbol = c.Symbol as IMethodSymbol;
+            var methodSymbol = context.Symbol as IMethodSymbol;
             if (methodSymbol == null ||
                 methodSymbol.Name != DisposeMethodName)
             {

@@ -141,9 +141,9 @@ namespace SonarLint.Rules.CSharp
             }
         }
 
-        private static void CheckMethod(SymbolAnalysisContext c, INamedTypeSymbol containerClassSymbol, IMethodSymbol method)
+        private static void CheckMethod(SymbolAnalysisContext context, INamedTypeSymbol containerClassSymbol, IMethodSymbol method)
         {
-            CheckEventOrMethod(method, containerClassSymbol, c, e =>
+            CheckEventOrMethod(method, containerClassSymbol, context, e =>
             {
                 var reference = e.DeclaringSyntaxReferences.FirstOrDefault();
                 if (reference == null)

@@ -126,7 +126,7 @@ namespace SonarLint.Rules.CSharp
                 SymbolKind.NamedType);
         }
 
-        private static void ReportIssues(SymbolAnalysisContext c, HashSet<ISymbol> usedSymbols,
+        private static void ReportIssues(SymbolAnalysisContext context, HashSet<ISymbol> usedSymbols,
             HashSet<ISymbol> declaredPrivateSymbols, HashSet<ISymbol> emptyConstructors,
             BidirectionalDictionary<ISymbol, SyntaxNode> fieldLikeSymbols)
         {
@@ -172,7 +172,7 @@ namespace SonarLint.Rules.CSharp
                         }
                     }
 
-                    c.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, location), c.Compilation);
+                    context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, location), context.Compilation);
                 }
             }
         }
@@ -369,7 +369,7 @@ namespace SonarLint.Rules.CSharp
                 .SelectMany(container => container.SyntaxNode.DescendantNodes()
                     .Where(node =>
                         node.IsKind(SyntaxKind.IdentifierName))
-                    .Select(node => (IdentifierNameSyntax)node)
+                    .Cast<IdentifierNameSyntax>()
                     .Where(node => symbolNames.Contains(node.Identifier.ValueText))
                     .Select(node =>
                         new SyntaxNodeWithSemanticModel<SyntaxNode>
@@ -382,7 +382,7 @@ namespace SonarLint.Rules.CSharp
                 .SelectMany(container => container.SyntaxNode.DescendantNodes()
                     .Where(node =>
                         node.IsKind(SyntaxKind.GenericName))
-                    .Select(node => (GenericNameSyntax)node)
+                    .Cast<GenericNameSyntax>()
                     .Where(node => symbolNames.Contains(node.Identifier.ValueText))
                     .Select(node =>
                         new SyntaxNodeWithSemanticModel<SyntaxNode>

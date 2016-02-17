@@ -74,7 +74,7 @@ namespace SonarLint.Rules.CSharp
         }
 
         private static void CheckMatchingExpressionsInSucceedingStatements<T>(T statement,
-            Func<T, ExpressionSyntax> expressionSelector, SyntaxNodeAnalysisContext c) where T : StatementSyntax
+            Func<T, ExpressionSyntax> expressionSelector, SyntaxNodeAnalysisContext context) where T : StatementSyntax
         {
             var previousStatement = statement.GetPrecedingStatement() as T;
             if (previousStatement == null)
@@ -86,9 +86,9 @@ namespace SonarLint.Rules.CSharp
             var previousExpression = expressionSelector(previousStatement);
 
             if (EquivalenceChecker.AreEquivalent(currentExpression, previousExpression) &&
-                !ContainsPossibleUpdate(previousStatement, currentExpression, c.SemanticModel))
+                !ContainsPossibleUpdate(previousStatement, currentExpression, context.SemanticModel))
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, currentExpression.GetLocation(),
+                context.ReportDiagnostic(Diagnostic.Create(Rule, currentExpression.GetLocation(),
                     previousExpression.GetLineNumberToReport()));
             }
         }

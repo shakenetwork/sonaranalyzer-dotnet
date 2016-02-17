@@ -63,12 +63,12 @@ namespace SonarLint.Runner
                 xmlOut.WriteStartElement("AnalysisOutput");
 
                 xmlOut.WriteStartElement("Files");
-                var n = 0;
+                var currentFileIndex = 0;
                 foreach (var file in configuration.Files)
                 {
                     xmlOut.Flush();
-                    Write(n + "/" + configuration.Files.Count() + " files analyzed, starting to analyze: " + file);
-                    n++;
+                    Write(currentFileIndex + "/" + configuration.Files.Count() + " files analyzed, starting to analyze: " + file);
+                    currentFileIndex++;
 
                     try
                     {

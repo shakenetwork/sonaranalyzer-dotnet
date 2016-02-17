@@ -109,16 +109,16 @@ namespace SonarLint.Rules.CSharp
             return GetAllMethods(classSymbol).Where(m => m.IsOverride);
         }
 
-        private static void ReportClass(INamedTypeSymbol symbol, string message, SymbolAnalysisContext c)
+        private static void ReportClass(INamedTypeSymbol symbol, string message, SymbolAnalysisContext context)
         {
             foreach (var declaringSyntaxReference in symbol.DeclaringSyntaxReferences)
             {
                 var classDeclaration = declaringSyntaxReference.GetSyntax() as ClassDeclarationSyntax;
                 if (classDeclaration != null)
                 {
-                    c.ReportDiagnosticIfNonGenerated(
+                    context.ReportDiagnosticIfNonGenerated(
                         Diagnostic.Create(Rule, classDeclaration.Identifier.GetLocation(), message),
-                        c.Compilation);
+                        context.Compilation);
                 }
             }
         }

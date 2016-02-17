@@ -87,11 +87,11 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.InvocationExpression);
         }
 
-        private static void CheckInvocation(SyntaxNodeAnalysisContext c)
+        private static void CheckInvocation(SyntaxNodeAnalysisContext context)
         {
-            var invocation = (InvocationExpressionSyntax)c.Node;
+            var invocation = (InvocationExpressionSyntax)context.Node;
 
-            var methodSymbol = c.SemanticModel.GetSymbolInfo(invocation.Expression).Symbol;
+            var methodSymbol = context.SemanticModel.GetSymbolInfo(invocation.Expression).Symbol;
             if (methodSymbol == null ||
                 methodSymbol.ContainingType == null)
             {
@@ -102,15 +102,15 @@ namespace SonarLint.Rules.CSharp
             if (MethodNamesToReachEncryptionAlgorithm.Contains(methodName) ||
                 IsBaseEncryptionCreateCalled(methodName, invocation.ArgumentList))
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation()));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation()));
             }
         }
 
-        private static void CheckObjectCreation(SyntaxNodeAnalysisContext c)
+        private static void CheckObjectCreation(SyntaxNodeAnalysisContext context)
         {
-            var objectCreation = (ObjectCreationExpressionSyntax)c.Node;
+            var objectCreation = (ObjectCreationExpressionSyntax)context.Node;
 
-            var typeInfo = c.SemanticModel.GetTypeInfo(objectCreation);
+            var typeInfo = context.SemanticModel.GetTypeInfo(objectCreation);
             if (typeInfo.ConvertedType == null || typeInfo.ConvertedType is IErrorTypeSymbol)
             {
                 return;
@@ -121,7 +121,7 @@ namespace SonarLint.Rules.CSharp
             if (insecureArgorithmType != null &&
                 BaseClassNamesForEncryptionAlgorithm.Contains(insecureArgorithmType.ToString()))
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, objectCreation.Type.GetLocation()));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, objectCreation.Type.GetLocation()));
             }
         }
 

@@ -81,9 +81,9 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.ExclusiveOrAssignmentExpression);
         }
 
-        private static void CheckAssignment(SyntaxNodeAnalysisContext c, int constValueToLookFor)
+        private static void CheckAssignment(SyntaxNodeAnalysisContext context, int constValueToLookFor)
         {
-            var assignment = (AssignmentExpressionSyntax)c.Node;
+            var assignment = (AssignmentExpressionSyntax)context.Node;
             int constValue;
             if (ExpressionNumericConverter.TryGetConstantIntValue(assignment.Right, out constValue) &&
                 constValue == constValueToLookFor)
@@ -91,19 +91,19 @@ namespace SonarLint.Rules.CSharp
                 var location = assignment.Parent is StatementSyntax
                     ? assignment.Parent.GetLocation()
                     : GetReportLocation(assignment.OperatorToken.Span, assignment.Right.Span, assignment.SyntaxTree);
-                c.ReportDiagnostic(Diagnostic.Create(Rule, location));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, location));
             }
         }
 
-        private static void CheckBinary(SyntaxNodeAnalysisContext c, int constValueToLookFor)
+        private static void CheckBinary(SyntaxNodeAnalysisContext context, int constValueToLookFor)
         {
-            var binary = (BinaryExpressionSyntax) c.Node;
+            var binary = (BinaryExpressionSyntax) context.Node;
             int constValue;
             if (ExpressionNumericConverter.TryGetConstantIntValue(binary.Left, out constValue) &&
                 constValue == constValueToLookFor)
             {
                 var location = GetReportLocation(binary.Left.Span, binary.OperatorToken.Span, binary.SyntaxTree);
-                c.ReportDiagnostic(Diagnostic.Create(Rule, location, ImmutableDictionary<string, string>.Empty.Add(IsReportingOnLeftKey, true.ToString())));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, location, ImmutableDictionary<string, string>.Empty.Add(IsReportingOnLeftKey, true.ToString())));
                 return;
             }
 
@@ -111,7 +111,7 @@ namespace SonarLint.Rules.CSharp
                 constValue == constValueToLookFor)
             {
                 var location = GetReportLocation(binary.OperatorToken.Span, binary.Right.Span, binary.SyntaxTree);
-                c.ReportDiagnostic(Diagnostic.Create(Rule, location, ImmutableDictionary<string, string>.Empty.Add(IsReportingOnLeftKey, false.ToString())));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, location, ImmutableDictionary<string, string>.Empty.Add(IsReportingOnLeftKey, false.ToString())));
             }
         }
 

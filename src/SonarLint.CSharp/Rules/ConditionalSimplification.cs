@@ -71,9 +71,9 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.IfStatement);
         }
 
-        private static void CheckIfStatement(SyntaxNodeAnalysisContext c)
+        private static void CheckIfStatement(SyntaxNodeAnalysisContext context)
         {
-            var ifStatement = (IfStatementSyntax)c.Node;
+            var ifStatement = (IfStatementSyntax)context.Node;
             if (ifStatement.Else == null ||
                 ifStatement.Parent is ElseClauseSyntax)
             {
@@ -95,22 +95,22 @@ namespace SonarLint.Rules.CSharp
             bool comparedIsNullInTrue;
             var possiblyNullCoalescing =
                 TryGetExpressionComparedToNull(ifStatement.Condition, out comparedToNull, out comparedIsNullInTrue) &&
-                ExpressionCanBeNull(comparedToNull, c.SemanticModel);
+                ExpressionCanBeNull(comparedToNull, context.SemanticModel);
 
             bool isNullCoalescing;
             if (CanBeSimplified(whenTrue, whenFalse,
                     possiblyNullCoalescing ? comparedToNull : null, comparedIsNullInTrue,
-                    c.SemanticModel, out isNullCoalescing))
+                    context.SemanticModel, out isNullCoalescing))
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, ifStatement.IfKeyword.GetLocation(),
+                context.ReportDiagnostic(Diagnostic.Create(Rule, ifStatement.IfKeyword.GetLocation(),
                     ImmutableDictionary<string, string>.Empty.Add(IsNullCoalescingKey, isNullCoalescing.ToString()),
                     isNullCoalescing ? "??" : "?:"));
             }
         }
 
-        private static void CheckConditionalExpression(SyntaxNodeAnalysisContext c)
+        private static void CheckConditionalExpression(SyntaxNodeAnalysisContext context)
         {
-            var conditional = (ConditionalExpressionSyntax)c.Node;
+            var conditional = (ConditionalExpressionSyntax)context.Node;
 
             var condition = TernaryOperatorPointless.RemoveParentheses(conditional.Condition);
             var whenTrue = TernaryOperatorPointless.RemoveParentheses(conditional.WhenTrue);
@@ -125,15 +125,15 @@ namespace SonarLint.Rules.CSharp
             ExpressionSyntax comparedToNull;
             bool comparedIsNullInTrue;
             if (!TryGetExpressionComparedToNull(condition, out comparedToNull, out comparedIsNullInTrue) ||
-                !ExpressionCanBeNull(comparedToNull, c.SemanticModel))
+                !ExpressionCanBeNull(comparedToNull, context.SemanticModel))
             {
                 // expression not compared to null, or can't be null
                 return;
             }
 
-            if (CanExpressionBeNullCoalescing(whenTrue, whenFalse, comparedToNull, comparedIsNullInTrue, c.SemanticModel))
+            if (CanExpressionBeNullCoalescing(whenTrue, whenFalse, comparedToNull, comparedIsNullInTrue, context.SemanticModel))
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, conditional.GetLocation(), "??"));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, conditional.GetLocation(), "??"));
             }
         }
 

@@ -101,24 +101,25 @@ namespace SonarLint.Rules.CSharp
         }
 
         private static void CheckMember(SyntaxNode root, Location location, IEnumerable<string> typeParameterNames,
-            SyntaxNodeAnalysisContext c)
+            SyntaxNodeAnalysisContext context)
         {
-            if (HasGenericType(root, typeParameterNames, c))
+            if (HasGenericType(root, typeParameterNames, context))
             {
                 return;
             }
 
-            c.ReportDiagnostic(Diagnostic.Create(Rule, location));
+            context.ReportDiagnostic(Diagnostic.Create(Rule, location));
         }
 
-        private static bool HasGenericType(SyntaxNode root, IEnumerable<string> typeParameterNames, SyntaxNodeAnalysisContext c)
+        private static bool HasGenericType(SyntaxNode root, IEnumerable<string> typeParameterNames, 
+            SyntaxNodeAnalysisContext context)
         {
             var typeParameters = root.DescendantNodes()
-                            .OfType<IdentifierNameSyntax>()
-                            .Select(identifier => c.SemanticModel.GetSymbolInfo(identifier).Symbol)
-                            .Where(symbol => symbol != null && symbol.Kind == SymbolKind.TypeParameter)
-                            .Select(symbol => symbol.Name)
-                            .ToList();
+                .OfType<IdentifierNameSyntax>()
+                .Select(identifier => context.SemanticModel.GetSymbolInfo(identifier).Symbol)
+                .Where(symbol => symbol != null && symbol.Kind == SymbolKind.TypeParameter)
+                .Select(symbol => symbol.Name)
+                .ToList();
 
             return typeParameters.Intersect(typeParameterNames).Any();
         }

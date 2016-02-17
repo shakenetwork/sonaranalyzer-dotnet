@@ -77,15 +77,15 @@ namespace SonarLint.Rules.CSharp
                 SymbolKind.NamedType);
         }
 
-        private static void ReportUnusedParametersOnMethod(IMethodSymbol methodSymbol, SymbolAnalysisContext c)
+        private static void ReportUnusedParametersOnMethod(IMethodSymbol methodSymbol, SymbolAnalysisContext context)
         {
-            if (!MethodCanBeSafelyChanged(methodSymbol, c.Compilation))
+            if (!MethodCanBeSafelyChanged(methodSymbol, context.Compilation))
             {
                 return;
             }
 
-            var unusedParameters = GetUnusedParameters(methodSymbol, c.Compilation);
-            if (!unusedParameters.Any() || IsUsedAsEventHandlerFunctionOrAction(methodSymbol, c.Compilation))
+            var unusedParameters = GetUnusedParameters(methodSymbol, context.Compilation);
+            if (!unusedParameters.Any() || IsUsedAsEventHandlerFunctionOrAction(methodSymbol, context.Compilation))
             {
                 return;
             }
@@ -94,7 +94,7 @@ namespace SonarLint.Rules.CSharp
             {
                 foreach (var unusedParameterDeclaration in unusedParameter.DeclaringSyntaxReferences.Select(r => r.GetSyntax()))
                 {
-                    c.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, unusedParameterDeclaration.GetLocation(), unusedParameter.Name));
+                    context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, unusedParameterDeclaration.GetLocation(), unusedParameter.Name));
                 }
             }
         }

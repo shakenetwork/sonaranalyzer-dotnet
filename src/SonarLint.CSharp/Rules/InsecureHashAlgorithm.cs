@@ -85,10 +85,10 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.InvocationExpression);
         }
 
-        private static void CheckInvocation(SyntaxNodeAnalysisContext c)
+        private static void CheckInvocation(SyntaxNodeAnalysisContext context)
         {
-            var invocation = (InvocationExpressionSyntax)c.Node;
-            var methodSymbol = c.SemanticModel.GetSymbolInfo(invocation.Expression).Symbol;
+            var invocation = (InvocationExpressionSyntax)context.Node;
+            var methodSymbol = context.SemanticModel.GetSymbolInfo(invocation.Expression).Symbol;
             if (methodSymbol == null ||
                 methodSymbol.ContainingType == null)
             {
@@ -100,15 +100,15 @@ namespace SonarLint.Rules.CSharp
             if (MethodNamesToReachHashAlgorithm.Contains(methodName) &&
                 TryGetAlgorithmName(invocation.ArgumentList, out algorithmName))
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(), algorithmName));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(), algorithmName));
             }
         }
 
-        private static void CheckObjectCreation(SyntaxNodeAnalysisContext c)
+        private static void CheckObjectCreation(SyntaxNodeAnalysisContext context)
         {
-            var objectCreation = (ObjectCreationExpressionSyntax)c.Node;
+            var objectCreation = (ObjectCreationExpressionSyntax)context.Node;
 
-            var typeInfo = c.SemanticModel.GetTypeInfo(objectCreation);
+            var typeInfo = context.SemanticModel.GetTypeInfo(objectCreation);
 
             if (typeInfo.ConvertedType == null || typeInfo.ConvertedType is IErrorTypeSymbol)
             {
@@ -120,7 +120,7 @@ namespace SonarLint.Rules.CSharp
             if (insecureArgorithmType != null &&
                 InsecureHashAlgorithmTypeNames.ContainsKey(insecureArgorithmType.ToString()))
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, objectCreation.Type.GetLocation(), InsecureHashAlgorithmTypeNames[insecureArgorithmType.ToString()]));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, objectCreation.Type.GetLocation(), InsecureHashAlgorithmTypeNames[insecureArgorithmType.ToString()]));
             }
         }
 

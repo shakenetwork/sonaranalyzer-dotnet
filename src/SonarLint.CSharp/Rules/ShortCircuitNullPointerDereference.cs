@@ -82,7 +82,7 @@ namespace SonarLint.Rules.CSharp
         }
 
         private static void ReportDereference(BinaryExpressionSyntax binaryExpression, SyntaxKind comparisonOperator,
-            SyntaxNodeAnalysisContext c)
+            SyntaxNodeAnalysisContext context)
         {
             if (IsMidLevelExpression(binaryExpression))
             {
@@ -116,7 +116,7 @@ namespace SonarLint.Rules.CSharp
                 }
 
                 var expressionComparedToNull = leftNull ? comparisonToNull.Right : comparisonToNull.Left;
-                CheckFollowingExpressions(c, i, expressionsInChain, expressionComparedToNull, comparisonToNull);
+                CheckFollowingExpressions(context, i, expressionsInChain, expressionComparedToNull, comparisonToNull);
             }
         }
 
@@ -127,7 +127,7 @@ namespace SonarLint.Rules.CSharp
                    SyntaxFactory.AreEquivalent(binaryExpression.OperatorToken, binaryParent.OperatorToken);
         }
 
-        private static void CheckFollowingExpressions(SyntaxNodeAnalysisContext c, int currentExpressionIndex,
+        private static void CheckFollowingExpressions(SyntaxNodeAnalysisContext context, int currentExpressionIndex,
             List<ExpressionSyntax> expressionsInChain,
             ExpressionSyntax expressionComparedToNull, BinaryExpressionSyntax comparisonToNull)
         {
@@ -148,7 +148,7 @@ namespace SonarLint.Rules.CSharp
 
                 if (descendantNodes.Any())
                 {
-                    c.ReportDiagnostic(Diagnostic.Create(Rule, comparisonToNull.GetLocation(),
+                    context.ReportDiagnostic(Diagnostic.Create(Rule, comparisonToNull.GetLocation(),
                         expressionComparedToNull.ToString()));
                 }
             }

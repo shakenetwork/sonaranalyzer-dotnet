@@ -138,9 +138,9 @@ namespace SonarLint.Rules.CSharp
                 .ToList();
         }
 
-        private static ClassDeclarationSyntax GetClassDeclaration(IFieldSymbol f)
+        private static ClassDeclarationSyntax GetClassDeclaration(IFieldSymbol field)
         {
-            var reference = f.DeclaringSyntaxReferences.FirstOrDefault();
+            var reference = field.DeclaringSyntaxReferences.FirstOrDefault();
             if (reference == null ||
                 reference.SyntaxTree == null)
             {

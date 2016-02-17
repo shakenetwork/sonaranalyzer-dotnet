@@ -78,7 +78,7 @@ namespace SonarLint.Rules.Common
                 FieldDeclarationKind);
         }
 
-        private static void CheckAndReportVariables(IList<SyntaxToken> variables, SyntaxNodeAnalysisContext c)
+        private static void CheckAndReportVariables(IList<SyntaxToken> variables, SyntaxNodeAnalysisContext context)
         {
             if (variables.Count <= 1)
             {
@@ -86,7 +86,7 @@ namespace SonarLint.Rules.Common
             }
             foreach (var variable in variables.Skip(1))
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, variable.GetLocation(), variable.ValueText));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, variable.GetLocation(), variable.ValueText));
             }
         }
 

@@ -69,8 +69,8 @@ namespace SonarLint.Helpers
 
             if (parameterIndex >= method.Parameters.Length)
             {
-                var p = method.Parameters.Last();
-                parameter = p.IsParams ? p : null;
+                var lastParameter = method.Parameters.Last();
+                parameter = lastParameter.IsParams ? lastParameter : null;
                 return parameter != null;
             }
             parameter = method.Parameters[parameterIndex];

@@ -79,9 +79,9 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.ClassDeclaration);
         }
 
-        private static void CheckClass(SyntaxNodeAnalysisContext c)
+        private static void CheckClass(SyntaxNodeAnalysisContext context)
         {
-            var classDeclaration = (ClassDeclarationSyntax)c.Node;
+            var classDeclaration = (ClassDeclarationSyntax)context.Node;
             if (classDeclaration.BaseList == null ||
                 classDeclaration.BaseList.Types.Count == 0)
             {
@@ -89,7 +89,7 @@ namespace SonarLint.Rules.CSharp
             }
 
             var baseTypeSyntax = classDeclaration.BaseList.Types.First().Type;
-            var baseTypeSymbol = c.SemanticModel.GetSymbolInfo(baseTypeSyntax).Symbol as ITypeSymbol;
+            var baseTypeSymbol = context.SemanticModel.GetSymbolInfo(baseTypeSyntax).Symbol as ITypeSymbol;
             if (baseTypeSymbol == null)
             {
                 return;
@@ -98,29 +98,29 @@ namespace SonarLint.Rules.CSharp
             if (baseTypeSymbol.SpecialType == SpecialType.System_Object)
             {
                 var location = GetLocationWithToken(baseTypeSyntax, classDeclaration.BaseList.Types);
-                c.ReportDiagnostic(Diagnostic.Create(Rule, location,
+                context.ReportDiagnostic(Diagnostic.Create(Rule, location,
                     ImmutableDictionary<string, string>.Empty.Add(RedundantIndexKey, "0"),
                     MessageObjectBase));
             }
 
-            CheckIfInterfaceIsRedundantForClass(c, classDeclaration);
+            CheckIfInterfaceIsRedundantForClass(context, classDeclaration);
         }
 
-        private static void CheckInterface(SyntaxNodeAnalysisContext c)
+        private static void CheckInterface(SyntaxNodeAnalysisContext context)
         {
-            var interfaceDeclaration = (InterfaceDeclarationSyntax)c.Node;
+            var interfaceDeclaration = (InterfaceDeclarationSyntax)context.Node;
             if (interfaceDeclaration.BaseList == null ||
                 interfaceDeclaration.BaseList.Types.Count == 0)
             {
                 return;
             }
 
-            CheckIfInterfaceIsRedundantForInterface(c, interfaceDeclaration);
+            CheckIfInterfaceIsRedundantForInterface(context, interfaceDeclaration);
         }
 
-        private static void CheckEnum(SyntaxNodeAnalysisContext c)
+        private static void CheckEnum(SyntaxNodeAnalysisContext context)
         {
-            var enumDeclaration = (EnumDeclarationSyntax)c.Node;
+            var enumDeclaration = (EnumDeclarationSyntax)context.Node;
             if (enumDeclaration.BaseList == null ||
                 enumDeclaration.BaseList.Types.Count == 0)
             {
@@ -128,45 +128,45 @@ namespace SonarLint.Rules.CSharp
             }
 
             var baseTypeSyntax = enumDeclaration.BaseList.Types.First().Type;
-            var baseTypeSymbol = c.SemanticModel.GetSymbolInfo(baseTypeSyntax).Symbol as ITypeSymbol;
+            var baseTypeSymbol = context.SemanticModel.GetSymbolInfo(baseTypeSyntax).Symbol as ITypeSymbol;
             if (baseTypeSymbol == null ||
                 baseTypeSymbol.SpecialType != SpecialType.System_Int32)
             {
                 return;
             }
 
-            c.ReportDiagnostic(Diagnostic.Create(Rule, enumDeclaration.BaseList.GetLocation(),
+            context.ReportDiagnostic(Diagnostic.Create(Rule, enumDeclaration.BaseList.GetLocation(),
                 ImmutableDictionary<string, string>.Empty.Add(RedundantIndexKey, "0"),
                 MessageEnum));
         }
 
-        private static void CheckIfInterfaceIsRedundantForInterface(SyntaxNodeAnalysisContext c, InterfaceDeclarationSyntax interfaceDeclaration)
+        private static void CheckIfInterfaceIsRedundantForInterface(SyntaxNodeAnalysisContext context, InterfaceDeclarationSyntax interfaceDeclaration)
         {
-            CheckIfInterfaceIsRedundant(c, interfaceDeclaration.BaseList, interfaceType => false);
+            CheckIfInterfaceIsRedundant(context, interfaceDeclaration.BaseList, interfaceType => false);
         }
 
-        private static void CheckIfInterfaceIsRedundantForClass(SyntaxNodeAnalysisContext c, ClassDeclarationSyntax classDeclaration)
+        private static void CheckIfInterfaceIsRedundantForClass(SyntaxNodeAnalysisContext context, ClassDeclarationSyntax classDeclaration)
         {
-            var classSymbol = c.SemanticModel.GetDeclaredSymbol(classDeclaration);
+            var classSymbol = context.SemanticModel.GetDeclaredSymbol(classDeclaration);
             if (classSymbol == null)
             {
                 return;
             }
 
-            CheckIfInterfaceIsRedundant(c, classDeclaration.BaseList,
+            CheckIfInterfaceIsRedundant(context, classDeclaration.BaseList,
                 interfaceType => HasInterfaceMember(classSymbol, interfaceType));
         }
 
-        private static void CheckIfInterfaceIsRedundant(SyntaxNodeAnalysisContext c, BaseListSyntax baseList,
+        private static void CheckIfInterfaceIsRedundant(SyntaxNodeAnalysisContext context, BaseListSyntax baseList,
             Predicate<INamedTypeSymbol> additionalCheck)
         {
             var interfaceTypesWithAllInterfaces =
-                GetImplementedInterfaceMappings(baseList, c.SemanticModel);
+                GetImplementedInterfaceMappings(baseList, context.SemanticModel);
 
             for (int i = 0; i < baseList.Types.Count; i++)
             {
                 var baseType = baseList.Types[i];
-                var interfaceType = c.SemanticModel.GetSymbolInfo(baseType.Type).Symbol as INamedTypeSymbol;
+                var interfaceType = context.SemanticModel.GetSymbolInfo(baseType.Type).Symbol as INamedTypeSymbol;
                 if (interfaceType == null ||
                     interfaceType.TypeKind != TypeKind.Interface)
                 {
@@ -179,7 +179,7 @@ namespace SonarLint.Rules.CSharp
                         !additionalCheck(interfaceType))
                     {
                         var location = GetLocationWithToken(baseType.Type, baseList.Types);
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, location,
+                        context.ReportDiagnostic(Diagnostic.Create(Rule, location,
                             ImmutableDictionary<string, string>.Empty.Add(RedundantIndexKey, i.ToString(CultureInfo.InvariantCulture)),
                             string.Format(MessageAlreadyImplements, interfaceTypeWithAllInterfaces.Key.Name, interfaceType.Name)));
                         break;

@@ -169,13 +169,13 @@ namespace SonarLint.Common
             return await currentDocument.GetSyntaxRootAsync(fixAllContext.CancellationToken).ConfigureAwait(false);
         }
 
-        private static SyntaxNodeOrToken GetReportedElement(Diagnostic d, SyntaxNode root)
+        private static SyntaxNodeOrToken GetReportedElement(Diagnostic diagnostic, SyntaxNode root)
         {
-            var token = root.FindToken(d.Location.SourceSpan.Start);
-            var exactMatch = token.Span == d.Location.SourceSpan;
+            var token = root.FindToken(diagnostic.Location.SourceSpan.Start);
+            var exactMatch = token.Span == diagnostic.Location.SourceSpan;
             return exactMatch
                 ? (SyntaxNodeOrToken)token
-                : root.FindNode(d.Location.SourceSpan, getInnermostNodeForTie: true);
+                : root.FindNode(diagnostic.Location.SourceSpan, getInnermostNodeForTie: true);
         }
 
         private static SyntaxNode RemoveAnnotationIfExists(SyntaxNode root, SyntaxAnnotation annotation)

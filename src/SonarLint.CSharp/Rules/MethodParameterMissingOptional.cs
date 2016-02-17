@@ -92,9 +92,9 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.Parameter);
         }
 
-        internal static bool IsAttributeWithName(AttributeSyntaxSymbolMapping a, string name)
+        internal static bool IsAttributeWithName(AttributeSyntaxSymbolMapping attributeMapping, string name)
         {
-            return a.Symbol.ContainingType.ToDisplayString() == name;
+            return attributeMapping.Symbol.ContainingType.ToDisplayString() == name;
         }
 
         internal static IEnumerable<AttributeSyntaxSymbolMapping> GetAttributesForParameter(ParameterSyntax parameter, SemanticModel semanticModel)

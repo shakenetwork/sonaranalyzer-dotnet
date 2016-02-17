@@ -80,12 +80,10 @@ namespace SonarLint.Rules.Common
 
         private IEnumerable<TStatementSyntax> GetStatements(SyntaxTree tree)
         {
-            var statements = tree.GetRoot()
+            return tree.GetRoot()
                     .DescendantNodesAndSelf()
                     .OfType<TStatementSyntax>()
                     .Where(st => !StatementShouldBeExcluded(st));
-
-            return statements;
         }
 
         protected abstract bool StatementShouldBeExcluded(TStatementSyntax statement);

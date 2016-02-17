@@ -72,9 +72,9 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.FieldDeclaration);
         }
 
-        private static void CheckField(SyntaxNodeAnalysisContext c, VariableDeclaratorSyntax variableDeclarator)
+        private static void CheckField(SyntaxNodeAnalysisContext context, VariableDeclaratorSyntax variableDeclarator)
         {
-            var fieldSymbol = c.SemanticModel.GetDeclaredSymbol(variableDeclarator) as IFieldSymbol;
+            var fieldSymbol = context.SemanticModel.GetDeclaredSymbol(variableDeclarator) as IFieldSymbol;
             if (fieldSymbol == null)
             {
                 return;
@@ -95,14 +95,14 @@ namespace SonarLint.Rules.CSharp
 
                 if (similarFields.Any(field => field.Name == fieldName))
                 {
-                    c.ReportDiagnostic(Diagnostic.Create(Rule, variableDeclarator.Identifier.GetLocation(),
+                    context.ReportDiagnostic(Diagnostic.Create(Rule, variableDeclarator.Identifier.GetLocation(),
                         string.Format(MessageMatch, fieldName, baseType.Name)));
                     return;
                 }
 
                 if (similarFields.Any())
                 {
-                    c.ReportDiagnostic(Diagnostic.Create(Rule, variableDeclarator.Identifier.GetLocation(),
+                    context.ReportDiagnostic(Diagnostic.Create(Rule, variableDeclarator.Identifier.GetLocation(),
                         string.Format(MessageSimilar, fieldName, baseType.Name, similarFields.First().Name)));
                     return;
                 }

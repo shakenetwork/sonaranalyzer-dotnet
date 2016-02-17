@@ -74,18 +74,18 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.IfStatement);
         }
 
-        private static void CheckLoop(SyntaxNodeAnalysisContext c, StatementSyntax statement)
+        private static void CheckLoop(SyntaxNodeAnalysisContext context, StatementSyntax statement)
         {
-            CheckStatement(c, statement, "in a loop", "only once");
+            CheckStatement(context, statement, "in a loop", "only once");
         }
 
-        private static void CheckIf(SyntaxNodeAnalysisContext c, IfStatementSyntax ifStatement)
+        private static void CheckIf(SyntaxNodeAnalysisContext context, IfStatementSyntax ifStatement)
         {
-            CheckStatement(c, ifStatement.Else == null ? ifStatement.Statement : ifStatement.Else.Statement,
+            CheckStatement(context, ifStatement.Else == null ? ifStatement.Statement : ifStatement.Else.Statement,
                 "conditionally", "unconditionally");
         }
 
-        private static void CheckStatement(SyntaxNodeAnalysisContext c, StatementSyntax statement,
+        private static void CheckStatement(SyntaxNodeAnalysisContext context, StatementSyntax statement,
             string executed, string execute)
         {
             if (statement is BlockSyntax)
@@ -93,7 +93,7 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            var nextStatement = c.Node.GetLastToken().GetNextToken().Parent;
+            var nextStatement = context.Node.GetLastToken().GetNextToken().Parent;
             if (nextStatement == null)
             {
                 return;
@@ -104,7 +104,7 @@ namespace SonarLint.Rules.CSharp
 
             if (charPositionWithinLine1 == charPositionWithinLine2)
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, nextStatement.GetLocation(), executed, execute));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, nextStatement.GetLocation(), executed, execute));
             }
         }
     }

@@ -30,6 +30,9 @@ namespace SonarLint.DocGenerator
 {
     public class RuleDescription
     {
+        public const string CrosslinkPattern = "(Rule )(S[0-9]+)";
+        public const string HelpLinkPattern = "#version={0}&ruleId={1}";
+
         public static RuleDescription Convert(RuleDetail detail, string productVersion, AnalyzerLanguage language)
         {
             return new RuleDescription
@@ -66,10 +69,7 @@ namespace SonarLint.DocGenerator
             public int IdeSeverity { get; set; }
             public IEnumerable<string> Tags { get; set; }
         }
-
-
-        public const string CrosslinkPattern = "(Rule )(S[0-9]+)";
-        public const string HelpLinkPattern = "#version={0}&ruleId={1}";
+        
         private static string AddLinksBetweenRulesToDescription(string description, string productVersion)
         {
             var urlRegexPattern = string.Format(HelpLinkPattern, productVersion, @"$2");

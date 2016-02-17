@@ -311,7 +311,7 @@ namespace SonarLint.Rules.CSharp
                 return false;
             }
 
-            ITypeSymbol type = semanticModel.GetTypeInfo(expression).Type;
+            var type = semanticModel.GetTypeInfo(expression).Type;
             if (type == null || !TrackedTypes.Contains(type.ToDisplayString()))
             {
                 return false;
@@ -323,13 +323,13 @@ namespace SonarLint.Rules.CSharp
 
         private static bool IsFactoryMethodInvocation(ExpressionSyntax expression, SemanticModel semanticModel)
         {
-            var n = expression as InvocationExpressionSyntax;
-            if (n == null)
+            var invocation = expression as InvocationExpressionSyntax;
+            if (invocation == null)
             {
                 return false;
             }
 
-            var methodSymbol = semanticModel.GetSymbolInfo(n).Symbol as IMethodSymbol;
+            var methodSymbol = semanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
             if (methodSymbol == null)
             {
                 return false;

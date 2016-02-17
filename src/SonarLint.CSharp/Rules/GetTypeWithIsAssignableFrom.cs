@@ -120,7 +120,7 @@ namespace SonarLint.Rules.CSharp
             context.ReportDiagnostic(Diagnostic.Create(Rule, location, IsOperator));
         }
 
-        private static void CheckForIsInstanceOfType(SyntaxNodeAnalysisContext c, InvocationExpressionSyntax invocation,
+        private static void CheckForIsInstanceOfType(SyntaxNodeAnalysisContext context, InvocationExpressionSyntax invocation,
             MemberAccessExpressionSyntax memberAccess, IMethodSymbol methodSymbol)
         {
             if (methodSymbol.Name != "IsInstanceOfType")
@@ -130,7 +130,7 @@ namespace SonarLint.Rules.CSharp
 
             if (memberAccess.Expression is TypeOfExpressionSyntax)
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(),
+                context.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(),
                     ImmutableDictionary<string, string>.Empty
                         .Add(UseIsOperatorKey, true.ToString())
                         .Add(ShouldRemoveGetType, false.ToString()),
@@ -138,19 +138,19 @@ namespace SonarLint.Rules.CSharp
             }
         }
 
-        private static void CheckForIsAssignableFrom(SyntaxNodeAnalysisContext c, InvocationExpressionSyntax invocation,
+        private static void CheckForIsAssignableFrom(SyntaxNodeAnalysisContext context, InvocationExpressionSyntax invocation,
             MemberAccessExpressionSyntax memberAccess, IMethodSymbol methodSymbol,
             ExpressionSyntax argument)
         {
             if (methodSymbol.Name != "IsAssignableFrom" ||
-                !IsGetTypeCall(argument, c.SemanticModel))
+                !IsGetTypeCall(argument, context.SemanticModel))
             {
                 return;
             }
 
             if (memberAccess.Expression is TypeOfExpressionSyntax)
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(),
+                context.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(),
                     ImmutableDictionary<string, string>.Empty
                         .Add(UseIsOperatorKey, true.ToString())
                         .Add(ShouldRemoveGetType, true.ToString()),
@@ -158,7 +158,7 @@ namespace SonarLint.Rules.CSharp
             }
             else
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(),
+                context.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(),
                     ImmutableDictionary<string, string>.Empty
                         .Add(UseIsOperatorKey, false.ToString())
                         .Add(ShouldRemoveGetType, true.ToString()),

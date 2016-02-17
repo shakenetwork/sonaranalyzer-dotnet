@@ -82,7 +82,7 @@ namespace SonarLint.Rules.CSharp
                 SymbolKind.NamedType);
         }
 
-        private static void CheckClasses(INamedTypeSymbol utilityClass, SymbolAnalysisContext c)
+        private static void CheckClasses(INamedTypeSymbol utilityClass, SymbolAnalysisContext context)
         {
             if (!ClassIsRelevant(utilityClass))
             {
@@ -97,9 +97,9 @@ namespace SonarLint.Rules.CSharp
                 var classDeclarationSyntax = syntaxReference.GetSyntax() as ClassDeclarationSyntax;
                 if (classDeclarationSyntax != null)
                 {
-                    c.ReportDiagnosticIfNonGenerated(
+                    context.ReportDiagnosticIfNonGenerated(
                         Diagnostic.Create(Rule, classDeclarationSyntax.Identifier.GetLocation(), reportMessage),
-                        c.Compilation);
+                        context.Compilation);
                 }
             }
         }
@@ -110,7 +110,7 @@ namespace SonarLint.Rules.CSharp
             Accessibility.Internal
         };
 
-        private static void CheckConstructors(INamedTypeSymbol utilityClass, SymbolAnalysisContext c)
+        private static void CheckConstructors(INamedTypeSymbol utilityClass, SymbolAnalysisContext context)
         {
             if (!ClassQualifiesForIssue(utilityClass) ||
                 !HasMembersAndAllAreStaticExceptConstructors(utilityClass))
@@ -131,9 +131,9 @@ namespace SonarLint.Rules.CSharp
                     var constructorDeclaration = syntaxReference.GetSyntax() as ConstructorDeclarationSyntax;
                     if (constructorDeclaration != null)
                     {
-                        c.ReportDiagnosticIfNonGenerated(
+                        context.ReportDiagnosticIfNonGenerated(
                             Diagnostic.Create(Rule, constructorDeclaration.Identifier.GetLocation(), reportMessage),
-                            c.Compilation);
+                            context.Compilation);
                     }
                 }
             }

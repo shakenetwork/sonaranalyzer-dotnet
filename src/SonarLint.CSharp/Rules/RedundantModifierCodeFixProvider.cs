@@ -84,10 +84,9 @@ namespace SonarLint.Rules.CSharp
                 token,
                 SyntaxFactory.Token(SyntaxKind.None));
 
-            var newRoot = root.ReplaceNode(
+            return root.ReplaceNode(
                 oldParent,
                 newParent.WithLeadingTrivia(oldParent.GetLeadingTrivia()));
-            return newRoot;
         }
     }
 }

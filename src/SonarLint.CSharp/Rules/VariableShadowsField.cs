@@ -110,13 +110,13 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.LocalDeclarationStatement);
         }
 
-        private static void CheckMatch(IEnumerable<ISymbol> members, SyntaxToken identifier, SyntaxNodeAnalysisContext c)
+        private static void CheckMatch(IEnumerable<ISymbol> members, SyntaxToken identifier, SyntaxNodeAnalysisContext context)
         {
             var matchingMember = members.FirstOrDefault(m => m.Name == identifier.Text);
 
             if (matchingMember != null)
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(),
+                context.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(),
                     identifier.Text,
                     (matchingMember is IFieldSymbol) ? "field" : "property"));
             }

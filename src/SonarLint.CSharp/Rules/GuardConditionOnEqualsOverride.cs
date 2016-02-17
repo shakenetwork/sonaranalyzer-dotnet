@@ -84,11 +84,11 @@ namespace SonarLint.Rules.CSharp
                         SyntaxKind.InvocationExpression);
                 });
         }
-        private static void CheckInvocationInsideMethod(SyntaxNodeAnalysisContext c,
+        private static void CheckInvocationInsideMethod(SyntaxNodeAnalysisContext context,
             IMethodSymbol methodSymbol)
         {
-            var invocation = (InvocationExpressionSyntax)c.Node;
-            var invokedMethod = c.SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
+            var invocation = (InvocationExpressionSyntax)context.Node;
+            var invokedMethod = context.SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
             if (invokedMethod == null ||
                 invokedMethod.Name != methodSymbol.Name)
             {
@@ -112,7 +112,7 @@ namespace SonarLint.Rules.CSharp
                 objectType.SpecialType != SpecialType.System_Object &&
                 GetHashCodeEqualsOverride.IsEqualsCallInGuardCondition(invocation, invokedMethod))
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation()));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation()));
             }
         }
     }

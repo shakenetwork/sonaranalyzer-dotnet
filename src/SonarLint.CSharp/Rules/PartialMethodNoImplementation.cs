@@ -72,9 +72,9 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.MethodDeclaration);
         }
 
-        private static void CheckForCandidatePartialDeclaration(SyntaxNodeAnalysisContext c)
+        private static void CheckForCandidatePartialDeclaration(SyntaxNodeAnalysisContext context)
         {
-            var declaration = (MethodDeclarationSyntax)c.Node;
+            var declaration = (MethodDeclarationSyntax)context.Node;
             var partialKeyword = declaration.Modifiers.FirstOrDefault(m => m.IsKind(SyntaxKind.PartialKeyword));
             if (declaration.Body != null ||
                 partialKeyword == default(SyntaxToken))
@@ -82,18 +82,18 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            var methodSymbol = c.SemanticModel.GetDeclaredSymbol(declaration);
+            var methodSymbol = context.SemanticModel.GetDeclaredSymbol(declaration);
             if (methodSymbol != null &&
                 methodSymbol.PartialImplementationPart == null)
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, partialKeyword.GetLocation(), "this", string.Empty));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, partialKeyword.GetLocation(), "this", string.Empty));
             }
         }
 
-        private static void CheckForCandidatePartialInvocation(SyntaxNodeAnalysisContext c)
+        private static void CheckForCandidatePartialInvocation(SyntaxNodeAnalysisContext context)
         {
-            var invocation = (InvocationExpressionSyntax)c.Node;
-            var methodSymbol = c.SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
+            var invocation = (InvocationExpressionSyntax)context.Node;
+            var methodSymbol = context.SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
             if (methodSymbol == null)
             {
                 return;
@@ -115,7 +115,7 @@ namespace SonarLint.Rules.CSharp
                 {
                     return;
                 }
-                c.ReportDiagnostic(Diagnostic.Create(Rule, statement.GetLocation(), "the", MessageAdditional));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, statement.GetLocation(), "the", MessageAdditional));
             }
         }
     }

@@ -98,7 +98,7 @@ namespace SonarLint.Rules.CSharp
                 });
         }
 
-        private static void CheckMultilineComment(SyntaxTreeAnalysisContext c, SyntaxTrivia comment)
+        private static void CheckMultilineComment(SyntaxTreeAnalysisContext context, SyntaxTrivia comment)
         {
             var triviaContent = GetTriviaContent(comment);
             var triviaLines = triviaContent.Split(MetricsBase.LineTerminators, StringSplitOptions.None);
@@ -112,11 +112,11 @@ namespace SonarLint.Rules.CSharp
 
                 var triviaStartingLineNumber = comment.GetLocation().GetLineSpan().StartLinePosition.Line;
                 var lineNumber = triviaStartingLineNumber + triviaLineNumber;
-                var lineSpan = c.Tree.GetText().Lines[lineNumber].Span;
+                var lineSpan = context.Tree.GetText().Lines[lineNumber].Span;
                 var commentLineSpan = lineSpan.Intersection(comment.GetLocation().SourceSpan);
 
-                var location = Location.Create(c.Tree, commentLineSpan ?? lineSpan);
-                c.ReportDiagnostic(Diagnostic.Create(Rule, location));
+                var location = Location.Create(context.Tree, commentLineSpan ?? lineSpan);
+                context.ReportDiagnostic(Diagnostic.Create(Rule, location));
                 return;
             }
         }

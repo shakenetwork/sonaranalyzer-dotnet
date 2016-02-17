@@ -111,7 +111,7 @@ namespace SonarLint.Rules.CSharp
                 });
         }
 
-        private static void CheckMembers(CompilationAnalysisContext c, INamedTypeSymbol analyzedClass)
+        private static void CheckMembers(CompilationAnalysisContext context, INamedTypeSymbol analyzedClass)
         {
             foreach (var member in analyzedClass.GetMembers().Where(member => member.IsVirtual))
             {
@@ -121,9 +121,9 @@ namespace SonarLint.Rules.CSharp
                 if (methodDeclaration != null)
                 {
                     var keyword = methodDeclaration.Modifiers.First(m => m.IsKind(SyntaxKind.VirtualKeyword));
-                    c.ReportDiagnosticIfNonGenerated(
+                    context.ReportDiagnosticIfNonGenerated(
                         Diagnostic.Create(Rule, keyword.GetLocation(), "virtual", "gratuitous"),
-                        c.Compilation);
+                        context.Compilation);
                     continue;
                 }
 
@@ -131,18 +131,18 @@ namespace SonarLint.Rules.CSharp
                 if (propertyDeclaration != null)
                 {
                     var keyword = propertyDeclaration.Modifiers.First(m => m.IsKind(SyntaxKind.VirtualKeyword));
-                    c.ReportDiagnosticIfNonGenerated(
+                    context.ReportDiagnosticIfNonGenerated(
                         Diagnostic.Create(Rule, keyword.GetLocation(), "virtual", "gratuitous"),
-                        c.Compilation);
+                        context.Compilation);
                     continue;
                 }
             }
         }
 
-        private static void CheckTypeDeclaration(SyntaxNodeAnalysisContext c)
+        private static void CheckTypeDeclaration(SyntaxNodeAnalysisContext context)
         {
-            var classDeclaration = (TypeDeclarationSyntax)c.Node;
-            var classSymbol = c.SemanticModel.GetDeclaredSymbol(classDeclaration);
+            var classDeclaration = (TypeDeclarationSyntax)context.Node;
+            var classSymbol = context.SemanticModel.GetDeclaredSymbol(classDeclaration);
 
             if (classSymbol == null ||
                 !classDeclaration.Modifiers.Any(m => m.IsKind(SyntaxKind.PartialKeyword)) ||
@@ -152,20 +152,20 @@ namespace SonarLint.Rules.CSharp
             }
 
             var keyword = classDeclaration.Modifiers.First(m => m.IsKind(SyntaxKind.PartialKeyword));
-            c.ReportDiagnostic(Diagnostic.Create(Rule, keyword.GetLocation(), "partial", "gratuitous"));
+            context.ReportDiagnostic(Diagnostic.Create(Rule, keyword.GetLocation(), "partial", "gratuitous"));
         }
 
-        private static void CheckMethodOrProperty(SyntaxNodeAnalysisContext c)
+        private static void CheckMethodOrProperty(SyntaxNodeAnalysisContext context)
         {
-            var memberDeclaration = (MemberDeclarationSyntax)c.Node;
-            var memberSymbol = c.SemanticModel.GetDeclaredSymbol(memberDeclaration);
+            var memberDeclaration = (MemberDeclarationSyntax)context.Node;
+            var memberSymbol = context.SemanticModel.GetDeclaredSymbol(memberDeclaration);
             if (memberSymbol == null)
             {
                 return;
             }
 
-            CheckSealedMemberInSealedClass(c, memberDeclaration, memberSymbol);
-            CheckVirtualMemberInSealedClass(c, memberDeclaration, memberSymbol);
+            CheckSealedMemberInSealedClass(context, memberDeclaration, memberSymbol);
+            CheckVirtualMemberInSealedClass(context, memberDeclaration, memberSymbol);
         }
 
         private static readonly Accessibility[] DeniedDeclaredAccessibility = { Accessibility.Public, Accessibility.Protected };
@@ -192,7 +192,7 @@ namespace SonarLint.Rules.CSharp
             return default(SyntaxTokenList);
         }
 
-        private static void CheckSealedMemberInSealedClass(SyntaxNodeAnalysisContext c,
+        private static void CheckSealedMemberInSealedClass(SyntaxNodeAnalysisContext context,
             MemberDeclarationSyntax memberDeclaration, ISymbol memberSymbol)
         {
             if (!memberSymbol.IsSealed ||
@@ -205,10 +205,10 @@ namespace SonarLint.Rules.CSharp
             if (modifiers.Any(m => m.IsKind(SyntaxKind.SealedKeyword)))
             {
                 var keyword = modifiers.First(m => m.IsKind(SyntaxKind.SealedKeyword));
-                c.ReportDiagnostic(Diagnostic.Create(Rule, keyword.GetLocation(), "sealed", "redundant"));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, keyword.GetLocation(), "sealed", "redundant"));
             }
         }
-        private static void CheckVirtualMemberInSealedClass(SyntaxNodeAnalysisContext c,
+        private static void CheckVirtualMemberInSealedClass(SyntaxNodeAnalysisContext context,
             MemberDeclarationSyntax memberDeclaration, ISymbol memberSymbol)
         {
             if (!memberSymbol.IsVirtual ||
@@ -221,7 +221,7 @@ namespace SonarLint.Rules.CSharp
             if (modifiers.Any(m => m.IsKind(SyntaxKind.VirtualKeyword)))
             {
                 var keyword = modifiers.First(m => m.IsKind(SyntaxKind.VirtualKeyword));
-                c.ReportDiagnostic(Diagnostic.Create(Rule, keyword.GetLocation(), "virtual", "gratuitous"));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, keyword.GetLocation(), "virtual", "gratuitous"));
             }
         }
     }

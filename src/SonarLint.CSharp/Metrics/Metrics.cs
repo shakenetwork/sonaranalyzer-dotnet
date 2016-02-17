@@ -105,9 +105,9 @@ namespace SonarLint.Common.CSharp
                             IsReturnButNotLast(n) ||
                             IsFunctionWithBody(n));
         }
-        private bool IsReturnButNotLast(SyntaxNode n)
+        private bool IsReturnButNotLast(SyntaxNode node)
         {
-            return n.IsKind(SyntaxKind.ReturnStatement) && !IsLastStatement(n);
+            return node.IsKind(SyntaxKind.ReturnStatement) && !IsLastStatement(node);
         }
         private bool IsLastStatement(SyntaxNode node)
         {

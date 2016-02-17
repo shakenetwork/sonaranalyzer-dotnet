@@ -99,28 +99,28 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.EqualsExpression);
         }
 
-        private static void CheckCountZero(ExpressionSyntax zero, ExpressionSyntax count, SyntaxNodeAnalysisContext c)
+        private static void CheckCountZero(ExpressionSyntax zero, ExpressionSyntax count, SyntaxNodeAnalysisContext context)
         {
             Location reportLocation;
             string typeArgument;
             int value;
             if (ExpressionNumericConverter.TryGetConstantIntValue(zero, out value) &&
                 value == 0 &&
-                TryGetCountCall(count, c.SemanticModel, out reportLocation, out typeArgument))
+                TryGetCountCall(count, context.SemanticModel, out reportLocation, out typeArgument))
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, reportLocation, typeArgument));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, reportLocation, typeArgument));
             }
         }
-        private static void CheckCountOne(ExpressionSyntax one, ExpressionSyntax count, SyntaxNodeAnalysisContext c)
+        private static void CheckCountOne(ExpressionSyntax one, ExpressionSyntax count, SyntaxNodeAnalysisContext context)
         {
             Location reportLocation;
             string typeArgument;
             int value;
             if (ExpressionNumericConverter.TryGetConstantIntValue(one, out value) &&
                 value == 1 &&
-                TryGetCountCall(count, c.SemanticModel, out reportLocation, out typeArgument))
+                TryGetCountCall(count, context.SemanticModel, out reportLocation, out typeArgument))
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, reportLocation, typeArgument));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, reportLocation, typeArgument));
             }
         }
 

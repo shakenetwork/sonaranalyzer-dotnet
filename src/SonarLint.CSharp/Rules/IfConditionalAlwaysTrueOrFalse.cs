@@ -87,7 +87,7 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.IfStatement);
         }
 
-        private static void ReportIfFalse(IfStatementSyntax ifStatement, SyntaxNodeAnalysisContext c)
+        private static void ReportIfFalse(IfStatementSyntax ifStatement, SyntaxNodeAnalysisContext context)
         {
             var location = ifStatement.Else == null
                 ? ifStatement.GetLocation()
@@ -95,20 +95,20 @@ namespace SonarLint.Rules.CSharp
                     ifStatement.SyntaxTree,
                     new TextSpan(ifStatement.IfKeyword.SpanStart, ifStatement.Else.ElseKeyword.Span.End - ifStatement.IfKeyword.SpanStart));
 
-            c.ReportDiagnostic(Diagnostic.Create(Rule, location, ifStatementLiteral));
+            context.ReportDiagnostic(Diagnostic.Create(Rule, location, ifStatementLiteral));
         }
 
-        private static void ReportIfTrue(IfStatementSyntax ifStatement, SyntaxNodeAnalysisContext c)
+        private static void ReportIfTrue(IfStatementSyntax ifStatement, SyntaxNodeAnalysisContext context)
         {
             var location = Location.Create(
                 ifStatement.SyntaxTree,
                 new TextSpan(ifStatement.IfKeyword.SpanStart, ifStatement.CloseParenToken.Span.End - ifStatement.IfKeyword.SpanStart));
 
-            c.ReportDiagnostic(Diagnostic.Create(Rule, location, ifStatementLiteral));
+            context.ReportDiagnostic(Diagnostic.Create(Rule, location, ifStatementLiteral));
 
             if (ifStatement.Else != null)
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, ifStatement.Else.GetLocation(), elseClauseLiteral));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, ifStatement.Else.GetLocation(), elseClauseLiteral));
             }
         }
     }

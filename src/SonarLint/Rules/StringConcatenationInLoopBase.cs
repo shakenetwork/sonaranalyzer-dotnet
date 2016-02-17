@@ -69,10 +69,10 @@ namespace SonarLint.Rules.Common
                 SimpleAssignmentKinds.ToArray());
         }
 
-        private void CheckSimpleAssignment(SyntaxNodeAnalysisContext c)
+        private void CheckSimpleAssignment(SyntaxNodeAnalysisContext context)
         {
-            var assignment = (TAssignmentExpression)c.Node;
-            if (!IsString(GetLeft(assignment), c.SemanticModel))
+            var assignment = (TAssignmentExpression)context.Node;
+            if (!IsString(GetLeft(assignment), context.SemanticModel))
             {
                 return;
             }
@@ -91,18 +91,18 @@ namespace SonarLint.Rules.Common
                 return;
             }
 
-            if (IsDefinedInLoop(GetLeft(assignment), nearestLoop, c.SemanticModel))
+            if (IsDefinedInLoop(GetLeft(assignment), nearestLoop, context.SemanticModel))
             {
                 return;
             }
 
-            c.ReportDiagnostic(Diagnostic.Create(Rule, assignment.GetLocation()));
+            context.ReportDiagnostic(Diagnostic.Create(Rule, assignment.GetLocation()));
         }
 
-        private void CheckCompoundAssignment(SyntaxNodeAnalysisContext c)
+        private void CheckCompoundAssignment(SyntaxNodeAnalysisContext context)
         {
-            var addAssignment = (TAssignmentExpression)c.Node;
-            if (!IsString(GetLeft(addAssignment), c.SemanticModel))
+            var addAssignment = (TAssignmentExpression)context.Node;
+            if (!IsString(GetLeft(addAssignment), context.SemanticModel))
             {
                 return;
             }
@@ -113,14 +113,14 @@ namespace SonarLint.Rules.Common
                 return;
             }
 
-            var symbol = c.SemanticModel.GetSymbolInfo(GetLeft(addAssignment)).Symbol as ILocalSymbol;
+            var symbol = context.SemanticModel.GetSymbolInfo(GetLeft(addAssignment)).Symbol as ILocalSymbol;
             if (symbol != null &&
-                IsDefinedInLoop(GetLeft(addAssignment), nearestLoop, c.SemanticModel))
+                IsDefinedInLoop(GetLeft(addAssignment), nearestLoop, context.SemanticModel))
             {
                 return;
             }
 
-            c.ReportDiagnostic(Diagnostic.Create(Rule, addAssignment.GetLocation()));
+            context.ReportDiagnostic(Diagnostic.Create(Rule, addAssignment.GetLocation()));
         }
 
         protected abstract bool ExpressionIsConcatenation(TBinaryExpression addExpression);
