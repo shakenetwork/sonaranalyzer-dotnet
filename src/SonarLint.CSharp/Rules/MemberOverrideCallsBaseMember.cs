@@ -33,7 +33,7 @@ namespace SonarLint.Rules.CSharp
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("2min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
+    [Rule(DiagnosticId, Severity.Minor, Title, IsActivatedByDefault)]
     [Tags(Tag.Clumsy)]
     public class MemberOverrideCallsBaseMember : DiagnosticAnalyzer
     {
@@ -45,16 +45,14 @@ namespace SonarLint.Rules.CSharp
             "parent class behavior.";
         internal const string MessageFormat = "Remove this {1} \"{0}\" to simply inherit its behavior.";
         internal const string Category = SonarLint.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
-        private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(ideVisibility), IsActivatedByDefault,
+                DiagnosticSeverity.Info, IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description,
-                customTags: ideVisibility.ToCustomTags());
+                customTags: IdeVisibility.Hidden.ToCustomTags());
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
