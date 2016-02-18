@@ -23,5 +23,21 @@ namespace Tests.TestCases
         }
 
         static void Method(float f) { }
+
+        static double Calc()
+        {
+            Func<float> f = () => { return 3 / 2; }; // Noncompliant
+            f = () => 3 / 2; // Noncompliant
+            var x = 3 / 2;
+            return 3 / 2; // Noncompliant
+        }
+
+        static double GetCalc
+        {
+            get
+            {
+                return 3 / 2; // Noncompliant
+            }
+        }
     }
 }

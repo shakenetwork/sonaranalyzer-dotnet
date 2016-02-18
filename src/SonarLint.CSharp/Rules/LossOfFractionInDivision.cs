@@ -75,7 +75,8 @@ namespace SonarLint.Rules.CSharp
 
                     ITypeSymbol floatType;
                     if (TryGetTypeFromAssignmentToFloatType(division, c.SemanticModel, out floatType) ||
-                        TryGetTypeFromArgumentMappedToFloatType(division, c.SemanticModel, out floatType))
+                        TryGetTypeFromArgumentMappedToFloatType(division, c.SemanticModel, out floatType) ||
+                        TryGetTypeFromReturnMappedToFloatType(division, c.SemanticModel, out floatType))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(
                             Rule,
@@ -84,6 +85,20 @@ namespace SonarLint.Rules.CSharp
                     }
                 },
                 SyntaxKind.DivideExpression);
+        }
+
+        private static bool TryGetTypeFromReturnMappedToFloatType(BinaryExpressionSyntax division, SemanticModel semanticModel, 
+            out ITypeSymbol floatType)
+        {
+            if (division.Parent is ReturnStatementSyntax ||
+                division.Parent is LambdaExpressionSyntax)
+            {
+                floatType = (semanticModel.GetEnclosingSymbol(division.SpanStart) as IMethodSymbol)?.ReturnType;
+                return floatType != null && NonIntegralTypes.Contains(floatType.SpecialType);
+            }
+
+            floatType = null;
+            return false;
         }
 
         private static bool TryGetTypeFromArgumentMappedToFloatType(BinaryExpressionSyntax division, SemanticModel semanticModel,
