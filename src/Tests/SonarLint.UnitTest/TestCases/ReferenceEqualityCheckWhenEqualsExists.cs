@@ -3,6 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 
+// Faking DependencyObject and CollectionViewSource
+namespace System.Windows
+{
+    public class DependencyObject
+    {
+        public sealed override bool Equals(object obj)
+        {
+            return base.Equals(obj);
+        }
+    }
+}
+
+namespace System.Windows.Data
+{
+    public class CollectionViewSource : DependencyObject
+    {
+    }
+}
+
 namespace Tests.Diagnostics
 {
     interface IMyInterface { }
@@ -47,9 +66,13 @@ namespace Tests.Diagnostics
             b = new object() == new object();
 
             // The following is compliant
-            // mscorlib defines Type.operator==, but System.Runtime doesn't
-            // we can't test it here though, because in the test we have the mscorlib's Type
+            // mscorlib defines Type.operator==, but System.Runtime doesn't, and System.Type defines Equals,
+            // which performs reference equals.
+            // We can't test it here though, because in the test we have the mscorlib's Type
             b = typeof(object) == typeof(object);
+
+            var dependencyObject = new System.Windows.Data.CollectionViewSource();
+            b = dependencyObject == dependencyObject;
         }
 
         private static T1 CompareExchange<T1>(ref T1 reference, T1 expectedValue, T1 newValue) where T1 : class

@@ -60,6 +60,20 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
 
+        private const string EqualsName = "Equals";
+        private static readonly string[] AllowedTypes =
+        {
+            "System.Type",
+            "System.Reflection.Assembly",
+            "System.Reflection.MemberInfo",
+            "System.Reflection.Module",
+            "System.Data.Common.CommandTrees.DbExpression"
+        };
+        private static readonly string[] AllowedTypesWithAllDerived =
+        {
+            "System.Windows.DependencyObject"
+        };
+
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterCompilationStartAction(
@@ -83,13 +97,10 @@ namespace SonarLint.Rules.CSharp
 
                             var typeLeft = c.SemanticModel.GetTypeInfo(binary.Left).Type;
                             var typeRight = c.SemanticModel.GetTypeInfo(binary.Right).Type;
-                            if (typeLeft == null || typeRight == null)
-                            {
-                                return;
-                            }
-
-                            if (IsSystemType(typeLeft) ||
-                                IsSystemType(typeRight))
+                            if (typeLeft == null || 
+                                typeRight == null ||
+                                IsAllowedType(typeLeft) ||
+                                IsAllowedType(typeRight))
                             {
                                 return;
                             }
@@ -139,9 +150,24 @@ namespace SonarLint.Rules.CSharp
             }
         }
 
-        private static bool IsSystemType(ITypeSymbol type)
+        private static bool IsAllowedType(ITypeSymbol type)
         {
-            return type.ToDisplayString() == SystemTypeName;
+            return AllowedTypes.Contains(type.ToDisplayString()) ||
+                HasAllowedBaseType(type);
+        }
+
+        private static bool HasAllowedBaseType(ITypeSymbol type)
+        {
+            var currentType = type;
+            while (currentType != null)
+            {
+                if (AllowedTypesWithAllDerived.Contains(currentType.ToDisplayString()))
+                {
+                    return true;
+                }
+                currentType = currentType.BaseType;
+            }
+            return false;
         }
 
         private static bool IsBinaryCandidateForReporting(BinaryExpressionSyntax binary, SemanticModel semanticModel)
@@ -151,9 +177,6 @@ namespace SonarLint.Rules.CSharp
             return IsMethodDefinedOnObject(equalitySymbol) &&
                 !IsInEqualsOverride(semanticModel.GetEnclosingSymbol(binary.SpanStart) as IMethodSymbol);
         }
-
-        private const string EqualsName = "Equals";
-        private const string SystemTypeName = "System.Type";
 
         private static bool IsMethodDefinedOnObject(IMethodSymbol equalitySymbol)
         {
