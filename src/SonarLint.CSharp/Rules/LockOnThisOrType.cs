@@ -52,9 +52,7 @@ namespace SonarLint.Rules.CSharp
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
-
-        private const string SystemTypeFullName = "System.Type";
-
+        
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         public override void Initialize(AnalysisContext context)
@@ -65,7 +63,7 @@ namespace SonarLint.Rules.CSharp
                     var lockStatement = (LockStatementSyntax) c.Node;
 
                     if (LockOnThis(lockStatement.Expression) ||
-                        LockOnType(lockStatement.Expression, c.SemanticModel))
+                        LockOnSystemType(lockStatement.Expression, c.SemanticModel))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, lockStatement.Expression.GetLocation()));
                     }
@@ -73,10 +71,9 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.LockStatement);
         }
 
-        private static bool LockOnType(ExpressionSyntax expression, SemanticModel semanticModel)
+        private static bool LockOnSystemType(ExpressionSyntax expression, SemanticModel semanticModel)
         {
-            var type = semanticModel.GetTypeInfo(expression).Type;
-            return type != null && type.ToDisplayString() == SystemTypeFullName;
+            return semanticModel.GetTypeInfo(expression).Type.Is(KnownType.System_Type);
         }
 
         private static bool LockOnThis(ExpressionSyntax expression)

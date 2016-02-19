@@ -72,7 +72,7 @@ namespace SonarLint.Rules.CSharp
                     var fieldSymbol = c.SemanticModel.GetSymbolInfo(memberAccess.Expression).Symbol as IFieldSymbol;
                     if (fieldSymbol == null ||
                         !DisposableMemberInNonDisposableClass.IsNonStaticNonPublicDisposableField(fieldSymbol) ||
-                        !DisposableMemberInNonDisposableClass.ImplementsIDisposable(fieldSymbol.ContainingType))
+                        !fieldSymbol.ContainingType.Implements(KnownType.System_IDisposable))
                     {
                         return;
                     }

@@ -396,7 +396,7 @@ namespace SonarLint.Rules.CSharp
             var expressionType = semanticModel.GetTypeInfo(expression).Type;
             return expressionType != null &&
                    (expressionType.IsReferenceType ||
-                    expressionType.SpecialType == SpecialType.System_Nullable_T);
+                    expressionType.Is(KnownType.System_Nullable_T));
         }
 
         private static readonly SyntaxKind[] EqualsOrNotEquals = { SyntaxKind.EqualsExpression, SyntaxKind.NotEqualsExpression };

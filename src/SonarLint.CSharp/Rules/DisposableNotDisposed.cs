@@ -53,29 +53,29 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        private static readonly IImmutableSet<string> TrackedTypes = new []
+        private static readonly ISet<KnownType> TrackedTypes = new []
         {
-            "System.IO.FileStream",
-            "System.IO.StreamReader",
-            "System.IO.StreamWriter",
+            KnownType.System_IO_FileStream,
+            KnownType.System_IO_StreamReader,
+            KnownType.System_IO_StreamWriter,
 
-            "System.Net.WebClient",
+            KnownType.System_Net_WebClient,
 
-            "System.Net.Sockets.TcpClient",
-            "System.Net.Sockets.TcpListener",
-            "System.Net.Sockets.UdpClient",
+            KnownType.System_Net_Sockets_TcpClient,
+            KnownType.System_Net_Sockets_TcpListener,
+            KnownType.System_Net_Sockets_UdpClient,
 
-            "System.Drawing.Image",
-            "System.Drawing.Bitmap"
+            KnownType.System_Drawing_Image,
+            KnownType.System_Drawing_Bitmap
         }.ToImmutableHashSet();
 
-        private static readonly IImmutableSet<string> DisposeMethods = new []
+        private static readonly ISet<string> DisposeMethods = new []
         {
             "Dispose",
             "Close"
         }.ToImmutableHashSet();
 
-        private static readonly IImmutableSet<string> FactoryMethods = new []
+        private static readonly ISet<string> FactoryMethods = new []
         {
             "System.IO.File.Create",
             "System.IO.File.Open",
@@ -95,14 +95,19 @@ namespace SonarLint.Rules.CSharp
                 c =>
                 {
                     var namedType = (INamedTypeSymbol)c.Symbol;
-                    if (namedType.ContainingType != null || (namedType.TypeKind != TypeKind.Class && namedType.TypeKind != TypeKind.Struct))
+                    if (namedType.ContainingType != null ||
+                        !namedType.IsClassOrStruct())
                     {
                         return;
                     }
 
                     var typesDeclarationsAndSemanticModels =
                         namedType.DeclaringSyntaxReferences
-                        .Select(r => new { SyntaxNode = r.GetSyntax(), SemanticModel = c.Compilation.GetSemanticModel(r.SyntaxTree) });
+                        .Select(r => new UnusedPrivateMember.SyntaxNodeWithSemanticModel<SyntaxNode>
+                        {
+                            SyntaxNode = r.GetSyntax(),
+                            SemanticModel = c.Compilation.GetSemanticModel(r.SyntaxTree)
+                        });
 
                     var trackedNodesAndSymbols = new HashSet<NodeAndSymbol>();
                     foreach (var typeDeclarationAndSemanticModel in typesDeclarationsAndSemanticModels)
@@ -312,13 +317,13 @@ namespace SonarLint.Rules.CSharp
             }
 
             var type = semanticModel.GetTypeInfo(expression).Type;
-            if (type == null || !TrackedTypes.Contains(type.ToDisplayString()))
+            if (!type.IsAny(TrackedTypes))
             {
                 return false;
             }
 
             var constructor = semanticModel.GetSymbolInfo(expression).Symbol as IMethodSymbol;
-            return constructor != null && !constructor.Parameters.Any(p => DisposableMemberInNonDisposableClass.ImplementsIDisposable(p.Type));
+            return constructor != null && !constructor.Parameters.Any(p => p.Type.Implements(KnownType.System_IDisposable));
         }
 
         private static bool IsFactoryMethodInvocation(ExpressionSyntax expression, SemanticModel semanticModel)

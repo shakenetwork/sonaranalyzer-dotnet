@@ -84,7 +84,7 @@ namespace SonarLint.Rules.CSharp
                         !typeInfo.ConstraintTypes.OfType<IErrorTypeSymbol>().Any() &&
                         !typeInfo.ConstraintTypes.Any(typeSymbol =>
                             typeSymbol.IsReferenceType &&
-                            typeSymbol.TypeKind == TypeKind.Class))
+                            typeSymbol.IsClass()))
                     {
                         var expressionToReportOn = leftIsNull ? equalsExpression.Left : equalsExpression.Right;
 

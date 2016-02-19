@@ -115,8 +115,7 @@ namespace SonarLint.Rules.CSharp
         {
             var subtractMethod = semanticModel.GetSymbolInfo(node).Symbol as IMethodSymbol;
             return subtractMethod != null &&
-                subtractMethod.ReceiverType != null &&
-                subtractMethod.ReceiverType.TypeKind == TypeKind.Delegate;
+                subtractMethod.ReceiverType.Is(TypeKind.Delegate);
         }
 
         private static bool ExpressionIsSimple(ExpressionSyntax expression)

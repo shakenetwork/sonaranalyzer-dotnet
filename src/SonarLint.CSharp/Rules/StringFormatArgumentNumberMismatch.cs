@@ -65,14 +65,14 @@ namespace SonarLint.Rules.CSharp
                     var methodSymbol = c.SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
 
                     if (methodSymbol == null ||
-                        methodSymbol.ContainingType.SpecialType != SpecialType.System_String ||
+                        !methodSymbol.IsInType(KnownType.System_String) ||
                         methodSymbol.Name != "Format")
                     {
                         return;
                     }
 
                     var formatIndex = 0;
-                    if (methodSymbol.Parameters[0].Type.SpecialType != SpecialType.System_String)
+                    if (!methodSymbol.Parameters[0].IsType(KnownType.System_String))
                     {
                         formatIndex = 1;
                     }
@@ -80,8 +80,7 @@ namespace SonarLint.Rules.CSharp
                     if (invocation.ArgumentList.Arguments.Count == formatIndex + 2)
                     {
                         var argType = c.SemanticModel.GetTypeInfo(invocation.ArgumentList.Arguments[formatIndex + 1].Expression).Type;
-                        if (argType != null &&
-                            argType.TypeKind == TypeKind.Array)
+                        if (argType.Is(TypeKind.Array))
                         {
                             // can't statically check the override that supplies args in an array
                             return;

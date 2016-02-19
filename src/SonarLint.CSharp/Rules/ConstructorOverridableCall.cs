@@ -78,9 +78,8 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
-                    if ((methodSymbol.IsVirtual ||
-                            methodSymbol.IsAbstract) &&
-                        enclosingSymbol.ContainingType.Equals(methodSymbol.ContainingType))
+                    if ((methodSymbol.IsVirtual || methodSymbol.IsAbstract) &&
+                        enclosingSymbol.IsInType(methodSymbol.ContainingType))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, invocationExpression.Expression.GetLocation(),
                             methodSymbol.Name));

@@ -67,8 +67,7 @@ namespace SonarLint.Rules.CSharp
                     var methodSymbol = c.SemanticModel.GetSymbolInfo(methodCall.Expression).Symbol;
 
                     if (methodSymbol != null &&
-                        methodSymbol.ContainingType != null &&
-                        methodSymbol.ContainingType.ToString() == "System.Console" &&
+                        methodSymbol.IsInType(KnownType.System_Console) &&
                         BannedConsoleMembers.Contains(methodSymbol.Name))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, methodCall.Expression.GetLocation()));

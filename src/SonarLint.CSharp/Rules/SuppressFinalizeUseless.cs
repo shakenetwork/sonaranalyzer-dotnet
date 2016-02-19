@@ -66,10 +66,9 @@ namespace SonarLint.Rules.CSharp
                     var invocation = (InvocationExpressionSyntax)c.Node;
                     var suppressFinalizeSymbol = c.SemanticModel.GetSymbolInfo(invocation.Expression).Symbol as IMethodSymbol;
 
-                    if (suppressFinalizeSymbol == null ||
-                        suppressFinalizeSymbol.Name != "SuppressFinalize" ||
-                        suppressFinalizeSymbol.ContainingType.ToDisplayString() != "System.GC" ||
-                        !invocation.HasExactlyNArguments(1))
+                    if (suppressFinalizeSymbol?.Name != "SuppressFinalize" ||
+                        !invocation.HasExactlyNArguments(1) ||
+                        !suppressFinalizeSymbol.IsInType(KnownType.System_GC))
                     {
                         return;
                     }
@@ -77,15 +76,14 @@ namespace SonarLint.Rules.CSharp
                     var argument = invocation.ArgumentList.Arguments.First();
                     var argumentType = c.SemanticModel.GetTypeInfo(argument.Expression).Type as INamedTypeSymbol;
 
-                    if (argumentType == null ||
-                        argumentType.TypeKind != TypeKind.Class ||
+                    if (!argumentType.IsClass() ||
                         !argumentType.IsSealed)
                     {
                         return;
                     }
 
                     var hasFinalizer = argumentType.GetSelfAndBaseTypes()
-                        .Where(type => type.SpecialType != SpecialType.System_Object)
+                        .Where(type => !type.Is(KnownType.System_Object))
                         .SelectMany(type => type.GetMembers())
                         .OfType<IMethodSymbol>()
                         .Any(methodSymbol => methodSymbol.MethodKind == MethodKind.Destructor);

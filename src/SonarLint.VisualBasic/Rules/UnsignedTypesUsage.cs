@@ -67,14 +67,7 @@ namespace SonarLint.Rules.VisualBasic
                     }
 
                     var typeSymbol = c.SemanticModel.GetTypeInfo(typeSyntax).Type;
-                    if (typeSymbol == null)
-                    {
-                        return;
-                    }
-
-                    if (typeSymbol.SpecialType == SpecialType.System_UInt16 ||
-                        typeSymbol.SpecialType == SpecialType.System_UInt32 ||
-                        typeSymbol.SpecialType == SpecialType.System_UInt64)
+                    if (typeSymbol.IsAny(KnownType.UnsignedIntegers))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, typeSyntax.GetLocation(),
                             SignedPairs[typeSymbol.SpecialType]));

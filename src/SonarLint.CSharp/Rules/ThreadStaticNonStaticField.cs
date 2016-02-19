@@ -55,9 +55,7 @@ namespace SonarLint.Rules.CSharp
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description,
                 customTags: ideVisibility.ToCustomTags());
-
-        private const string ThreadStaticAttributeName = "System.ThreadStaticAttribute";
-
+        
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         public override void Initialize(AnalysisContext context)
@@ -91,8 +89,7 @@ namespace SonarLint.Rules.CSharp
                 {
                     var attributeType = semanticModel.GetTypeInfo(attribute).Type;
 
-                    if (attributeType != null &&
-                        attributeType.ToDisplayString() == ThreadStaticAttributeName)
+                    if (attributeType.Is(KnownType.System_ThreadStaticAttribute))
                     {
                         threadStaticAttribute = attribute;
                         return true;

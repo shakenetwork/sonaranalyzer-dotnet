@@ -65,7 +65,7 @@ namespace SonarLint.Rules.CSharp
 
                     if (methodSymbol == null ||
                         methodSymbol.Name != "ToCharArray" ||
-                        methodSymbol.ContainingType.SpecialType != SpecialType.System_String ||
+                        !methodSymbol.IsInType(KnownType.System_String) ||
                         methodSymbol.Parameters.Length != 0)
                     {
                         return;

@@ -61,18 +61,18 @@ namespace SonarLint.Rules.CSharp
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
 
         private const string EqualsName = "Equals";
-        private static readonly string[] AllowedTypes =
+        private static readonly ISet<KnownType> AllowedTypes = ImmutableHashSet.Create(new []
         {
-            "System.Type",
-            "System.Reflection.Assembly",
-            "System.Reflection.MemberInfo",
-            "System.Reflection.Module",
-            "System.Data.Common.CommandTrees.DbExpression"
-        };
-        private static readonly string[] AllowedTypesWithAllDerived =
+            KnownType.System_Type,
+            KnownType.System_Reflection_Assembly,
+            KnownType.System_Reflection_MemberInfo,
+            KnownType.System_Reflection_Module,
+            KnownType.System_Data_Common_CommandTrees_DbExpression
+        });
+        private static readonly ISet<KnownType> AllowedTypesWithAllDerived = ImmutableHashSet.Create(new[]
         {
-            "System.Windows.DependencyObject"
-        };
+            KnownType.System_Windows_DependencyObject
+        });
 
         public override void Initialize(AnalysisContext context)
         {
@@ -97,7 +97,7 @@ namespace SonarLint.Rules.CSharp
 
                             var typeLeft = c.SemanticModel.GetTypeInfo(binary.Left).Type;
                             var typeRight = c.SemanticModel.GetTypeInfo(binary.Right).Type;
-                            if (typeLeft == null || 
+                            if (typeLeft == null ||
                                 typeRight == null ||
                                 IsAllowedType(typeLeft) ||
                                 IsAllowedType(typeRight))
@@ -152,8 +152,7 @@ namespace SonarLint.Rules.CSharp
 
         private static bool IsAllowedType(ITypeSymbol type)
         {
-            return AllowedTypes.Contains(type.ToDisplayString()) ||
-                HasAllowedBaseType(type);
+            return type.IsAny(AllowedTypes) || HasAllowedBaseType(type);
         }
 
         private static bool HasAllowedBaseType(ITypeSymbol type)
@@ -161,7 +160,7 @@ namespace SonarLint.Rules.CSharp
             var currentType = type;
             while (currentType != null)
             {
-                if (AllowedTypesWithAllDerived.Contains(currentType.ToDisplayString()))
+                if (currentType.IsAny(AllowedTypesWithAllDerived))
                 {
                     return true;
                 }
@@ -174,20 +173,13 @@ namespace SonarLint.Rules.CSharp
         {
             var equalitySymbol = semanticModel.GetSymbolInfo(binary).Symbol as IMethodSymbol;
 
-            return IsMethodDefinedOnObject(equalitySymbol) &&
+            return equalitySymbol.IsInType(KnownType.System_Object) &&
                 !IsInEqualsOverride(semanticModel.GetEnclosingSymbol(binary.SpanStart) as IMethodSymbol);
-        }
-
-        private static bool IsMethodDefinedOnObject(IMethodSymbol equalitySymbol)
-        {
-            return equalitySymbol != null &&
-                equalitySymbol.ContainingType != null &&
-                equalitySymbol.ContainingType.SpecialType == SpecialType.System_Object;
         }
 
         private static bool HasEqualsOverride(ITypeSymbol type)
         {
-            return GetEqualsOverrides(type).Any(m => IsMethodDefinedOnObject(m.OverriddenMethod));
+            return GetEqualsOverrides(type).Any(m => m.OverriddenMethod.IsInType(KnownType.System_Object));
         }
 
         private static IEnumerable<IMethodSymbol> GetEqualsOverrides(ITypeSymbol type)
@@ -200,8 +192,8 @@ namespace SonarLint.Rules.CSharp
             var candidateEqualsMethods = new HashSet<IMethodSymbol>();
 
             var currentType = type;
-            while(currentType != null &&
-                currentType.SpecialType != SpecialType.System_Object)
+            while (currentType != null &&
+                !currentType.Is(KnownType.System_Object))
             {
                 candidateEqualsMethods.UnionWith(currentType.GetMembers(EqualsName)
                     .OfType<IMethodSymbol>()
@@ -224,7 +216,7 @@ namespace SonarLint.Rules.CSharp
             while (currentMethod != null)
             {
                 if (currentMethod.Name == EqualsName &&
-                    IsMethodDefinedOnObject(currentMethod))
+                    currentMethod.IsInType(KnownType.System_Object))
                 {
                     return true;
                 }

@@ -81,11 +81,9 @@ namespace SonarLint.Rules.CSharp
         public static void CheckForIssue(ITypeSymbol castedTo, ITypeSymbol castedFrom,
             SyntaxNodeAnalysisContext context)
         {
-            if (castedFrom == null ||
-                castedTo == null ||
-                castedFrom.TypeKind != TypeKind.Interface ||
-                castedTo.TypeKind != TypeKind.Class ||
-                castedTo.SpecialType == SpecialType.System_Object)
+            if (!castedFrom.Is(TypeKind.Interface) ||
+                !castedTo.Is(TypeKind.Class) ||
+                castedTo.Is(KnownType.System_Object))
             {
                 return;
             }

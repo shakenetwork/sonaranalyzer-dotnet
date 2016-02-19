@@ -58,7 +58,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        private class SyntaxNodeWithSemanticModel<T> where T : SyntaxNode
+        internal class SyntaxNodeWithSemanticModel<T> where T : SyntaxNode
         {
             public T SyntaxNode { get; set; }
             public SemanticModel SemanticModel { get; set; }
@@ -70,8 +70,7 @@ namespace SonarLint.Rules.CSharp
                 c =>
                 {
                     var namedType = (INamedTypeSymbol)c.Symbol;
-                    if (namedType.TypeKind != TypeKind.Class &&
-                        namedType.TypeKind != TypeKind.Struct)
+                    if (!namedType.IsClassOrStruct())
                     {
                         return;
                     }
@@ -210,7 +209,7 @@ namespace SonarLint.Rules.CSharp
             return methodSymbol != null &&
                 IsSymbolRemovable(methodSymbol) &&
                 new[] { MethodKind.Ordinary, MethodKind.Constructor }.Contains(methodSymbol.MethodKind) &&
-                methodSymbol.ContainingType.TypeKind != TypeKind.Interface &&
+                !methodSymbol.ContainingType.IsInterface() &&
                 !methodSymbol.IsInterfaceImplementationOrMemberOverride() &&
                 !IsMainMethod(methodSymbol);
         }
@@ -456,7 +455,7 @@ namespace SonarLint.Rules.CSharp
         private static bool IsCandidateSymbolNotInInterfaceAndChangeable(ISymbol symbol)
         {
             return IsSymbolRemovable(symbol) &&
-                symbol.ContainingType.TypeKind != TypeKind.Interface &&
+                !symbol.ContainingType.IsInterface() &&
                 !symbol.IsInterfaceImplementationOrMemberOverride();
         }
 

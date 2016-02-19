@@ -204,7 +204,7 @@ namespace SonarLint.Rules.CSharp
         {
             return MethodNamesToCollection.Contains(methodSymbol.Name) &&
                 (CollectionEmptinessChecking.MethodIsOnIEnumerable(methodSymbol, semanticModel) ||
-                methodSymbol.ContainingType.ConstructedFrom.ToDisplayString() == "System.Collections.Generic.List<T>");
+                methodSymbol.ContainingType.ConstructedFrom.Is(KnownType.System_Collections_Generic_List_T));
         }
 
         private static void CheckExtensionMethodsOnIEnumerable(SyntaxNodeAnalysisContext context)

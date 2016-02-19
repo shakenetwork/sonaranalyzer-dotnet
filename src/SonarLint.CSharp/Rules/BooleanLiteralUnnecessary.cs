@@ -216,7 +216,7 @@ namespace SonarLint.Rules.CSharp
 
         private static bool IsNullableBoolean(ITypeSymbol type)
         {
-            if (type.OriginalDefinition.SpecialType != SpecialType.System_Nullable_T)
+            if (!type.OriginalDefinition.Is(KnownType.System_Nullable_T))
             {
                 return false;
             }
@@ -227,7 +227,7 @@ namespace SonarLint.Rules.CSharp
                 return false;
             }
 
-            return namedType.TypeArguments[0].SpecialType == SpecialType.System_Boolean;
+            return namedType.TypeArguments[0].Is(KnownType.System_Boolean);
         }
 
         private static bool CheckForNullabilityAndBooleanConstantsReport(BinaryExpressionSyntax binaryExpression,

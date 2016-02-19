@@ -170,12 +170,8 @@ namespace SonarLint.Rules.CSharp
 
         private static bool MightBeValueType(ITypeSymbol type)
         {
-            if (type.TypeKind == TypeKind.Interface)
-            {
-                return true;
-            }
-
-            return GenericParameterMightBeValueType(type as ITypeParameterSymbol);
+            return type.IsInterface() || 
+                GenericParameterMightBeValueType(type as ITypeParameterSymbol);
         }
     }
 }

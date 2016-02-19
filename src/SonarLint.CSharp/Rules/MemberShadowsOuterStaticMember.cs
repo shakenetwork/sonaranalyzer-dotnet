@@ -64,8 +64,8 @@ namespace SonarLint.Rules.CSharp
                 {
                     var innerClassSymbol = c.Symbol as INamedTypeSymbol;
                     var containerClassSymbol = innerClassSymbol.ContainingType;
-                    if (!IsSymbolClass(innerClassSymbol) ||
-                        !IsSymbolClass(containerClassSymbol))
+                    if (!innerClassSymbol.IsClass() ||
+                        !containerClassSymbol.IsClass())
                     {
                         return;
                     }
@@ -118,7 +118,7 @@ namespace SonarLint.Rules.CSharp
             var shadowsClassOrDelegate = GetSelfAndOuterClasses(containerClassSymbol)
                 .SelectMany(c => c.GetMembers(namedType.Name))
                 .OfType<INamedTypeSymbol>()
-                .Any(nt => nt.TypeKind == TypeKind.Class || nt.TypeKind == TypeKind.Delegate);
+                .Any(nt => nt.Is(TypeKind.Class) || nt.Is(TypeKind.Delegate));
 
             if (shadowsClassOrDelegate)
             {
@@ -265,16 +265,11 @@ namespace SonarLint.Rules.CSharp
             }
         }
 
-        private static bool IsSymbolClass(INamedTypeSymbol symbol)
-        {
-            return symbol != null && symbol.TypeKind == TypeKind.Class;
-        }
-
         private static IEnumerable<INamedTypeSymbol> GetSelfAndOuterClasses(INamedTypeSymbol symbol)
         {
             var classes = new List<INamedTypeSymbol>();
             var currentClass = symbol;
-            while(IsSymbolClass(currentClass))
+            while(currentClass.IsClass())
             {
                 classes.Add(currentClass);
                 currentClass = currentClass.ContainingType;

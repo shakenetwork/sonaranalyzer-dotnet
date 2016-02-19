@@ -57,13 +57,11 @@ namespace SonarLint.Rules.CSharp
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
-
-        private const string HashAlgorithmTypeName = "System.Security.Cryptography.HashAlgorithm";
-
-        private static readonly Dictionary<string, string> InsecureHashAlgorithmTypeNames = new Dictionary<string, string>
+        
+        private static readonly Dictionary<KnownType, string> InsecureHashAlgorithmTypeNames = new Dictionary<KnownType, string>
         {
-            { "System.Security.Cryptography.SHA1", "SHA1"},
-            { "System.Security.Cryptography.MD5", "MD5"}
+            { KnownType.System_Security_Cryptography_SHA1, "SHA1"},
+            { KnownType.System_Security_Cryptography_MD5, "MD5"}
         };
 
         private static readonly string[] MethodNamesToReachHashAlgorithm =
@@ -115,12 +113,14 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            var insecureArgorithmType = GetInsecureAlgorithmBase(typeInfo.ConvertedType);
-
-            if (insecureArgorithmType != null &&
-                InsecureHashAlgorithmTypeNames.ContainsKey(insecureArgorithmType.ToString()))
+            ITypeSymbol insecureArgorithmType;
+            if (TryGetInsecureAlgorithmBase(typeInfo.ConvertedType, out insecureArgorithmType))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, objectCreation.Type.GetLocation(), InsecureHashAlgorithmTypeNames[insecureArgorithmType.ToString()]));
+                var insecureHashAlgorithmType = InsecureHashAlgorithmTypeNames.FirstOrDefault(t => insecureArgorithmType.Is(t.Key));
+                if (!insecureHashAlgorithmType.Equals(default(KeyValuePair<KnownType, string>)))
+                {
+                    context.ReportDiagnostic(Diagnostic.Create(Rule, objectCreation.Type.GetLocation(), insecureHashAlgorithmType.Value));
+                }
             }
         }
 
@@ -142,18 +142,19 @@ namespace SonarLint.Rules.CSharp
             return algorithmName != null;
         }
 
-        private static ITypeSymbol GetInsecureAlgorithmBase(ITypeSymbol type)
+        private static bool TryGetInsecureAlgorithmBase(ITypeSymbol type, out ITypeSymbol insecureAlgorithmBase)
         {
-            ITypeSymbol insecureAlgorithmBase = null;
-            ITypeSymbol currentType = type;
+            insecureAlgorithmBase = null;
+            var currentType = type;
 
-            while (currentType != null && currentType.ToString() != HashAlgorithmTypeName)
+            while (currentType != null && 
+                !currentType.Is(KnownType.System_Security_Cryptography_HashAlgorithm))
             {
                 insecureAlgorithmBase = currentType;
                 currentType = currentType.BaseType;
             }
 
-            return currentType == null ? null : insecureAlgorithmBase;
+            return insecureAlgorithmBase != null;
         }
     }
 }

@@ -69,9 +69,7 @@ namespace SonarLint.Rules.CSharp
                 c =>
                 {
                     var namedType = c.Symbol as INamedTypeSymbol;
-                    if (namedType == null ||
-                        !namedType.IsType ||
-                        namedType.TypeKind != TypeKind.Class)
+                    if (!namedType.IsClass())
                     {
                         return;
                     }
@@ -151,7 +149,7 @@ namespace SonarLint.Rules.CSharp
         {
             return !@class.IsStatic &&
                    !@class.AllInterfaces.Any() &&
-                   @class.BaseType.SpecialType == SpecialType.System_Object;
+                   @class.BaseType.Is(KnownType.System_Object);
         }
 
         private static bool HasOnlyQualifyingMembers(INamedTypeSymbol @class, IList<ISymbol> members)

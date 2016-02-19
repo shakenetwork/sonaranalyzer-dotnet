@@ -109,7 +109,7 @@ namespace SonarLint.Rules.CSharp
 
             var objectType = invokedMethod.ContainingType;
             if (objectType != null &&
-                objectType.SpecialType != SpecialType.System_Object &&
+                !objectType.Is(KnownType.System_Object) &&
                 GetHashCodeEqualsOverride.IsEqualsCallInGuardCondition(invocation, invokedMethod))
             {
                 context.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation()));

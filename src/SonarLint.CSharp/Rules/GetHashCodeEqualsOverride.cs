@@ -109,10 +109,8 @@ namespace SonarLint.Rules.CSharp
             {
                 return;
             }
-
-            var objectType = invokedMethod.ContainingType;
-            if (objectType != null &&
-                objectType.SpecialType == SpecialType.System_Object &&
+            
+            if (invokedMethod.IsInType(KnownType.System_Object) &&
                 !IsEqualsCallInGuardCondition(invocation, invokedMethod))
             {
                 context.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(), invokedMethod.Name));

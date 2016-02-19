@@ -18,7 +18,6 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System;
 using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
@@ -68,53 +67,53 @@ namespace SonarLint.Rules.CSharp
                     var symbol = c.SemanticModel.GetSymbolInfo(division).Symbol as IMethodSymbol;
                     if (symbol == null ||
                         symbol.ContainingType == null ||
-                        !IntegralTypes.Contains(symbol.ContainingType.SpecialType))
+                        !symbol.ContainingType.IsAny(KnownType.IntegralNumbers))
                     {
                         return;
                     }
 
-                    ITypeSymbol floatType;
-                    if (TryGetTypeFromAssignmentToFloatType(division, c.SemanticModel, out floatType) ||
-                        TryGetTypeFromArgumentMappedToFloatType(division, c.SemanticModel, out floatType) ||
-                        TryGetTypeFromReturnMappedToFloatType(division, c.SemanticModel, out floatType))
+                    ITypeSymbol assignedToType;
+                    if (TryGetTypeFromAssignmentToFloatType(division, c.SemanticModel, out assignedToType) ||
+                        TryGetTypeFromArgumentMappedToFloatType(division, c.SemanticModel, out assignedToType) ||
+                        TryGetTypeFromReturnMappedToFloatType(division, c.SemanticModel, out assignedToType))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(
                             Rule,
                             division.GetLocation(),
-                            floatType.ToMinimalDisplayString(c.SemanticModel, division.SpanStart)));
+                            assignedToType.ToMinimalDisplayString(c.SemanticModel, division.SpanStart)));
                     }
                 },
                 SyntaxKind.DivideExpression);
         }
 
-        private static bool TryGetTypeFromReturnMappedToFloatType(BinaryExpressionSyntax division, SemanticModel semanticModel, 
-            out ITypeSymbol floatType)
+        private static bool TryGetTypeFromReturnMappedToFloatType(BinaryExpressionSyntax division, SemanticModel semanticModel,
+            out ITypeSymbol type)
         {
             if (division.Parent is ReturnStatementSyntax ||
                 division.Parent is LambdaExpressionSyntax)
             {
-                floatType = (semanticModel.GetEnclosingSymbol(division.SpanStart) as IMethodSymbol)?.ReturnType;
-                return floatType != null && NonIntegralTypes.Contains(floatType.SpecialType);
+                type = (semanticModel.GetEnclosingSymbol(division.SpanStart) as IMethodSymbol)?.ReturnType;
+                return type.IsAny(KnownType.NonIntegralNumbers);
             }
 
-            floatType = null;
+            type = null;
             return false;
         }
 
         private static bool TryGetTypeFromArgumentMappedToFloatType(BinaryExpressionSyntax division, SemanticModel semanticModel,
-            out ITypeSymbol floatType)
+            out ITypeSymbol type)
         {
             var argument = division.Parent as ArgumentSyntax;
             if (argument == null)
             {
-                floatType = null;
+                type = null;
                 return false;
             }
 
             var invocation = argument.Parent.Parent as InvocationExpressionSyntax;
             if (invocation == null)
             {
-                floatType = null;
+                type = null;
                 return false;
             }
 
@@ -122,53 +121,33 @@ namespace SonarLint.Rules.CSharp
             IParameterSymbol parameter;
             if (!lookup.TryGetParameterSymbol(argument, out parameter))
             {
-                floatType = null;
+                type = null;
                 return false;
             }
 
-            floatType = parameter.Type;
-            return floatType != null && NonIntegralTypes.Contains(floatType.SpecialType);
+            type = parameter.Type;
+            return type.IsAny(KnownType.NonIntegralNumbers);
         }
 
         private static bool TryGetTypeFromAssignmentToFloatType(BinaryExpressionSyntax division, SemanticModel semanticModel,
-            out ITypeSymbol floatType)
+            out ITypeSymbol type)
         {
             var assignment = division.Parent as AssignmentExpressionSyntax;
             if (assignment != null)
             {
-                floatType = semanticModel.GetTypeInfo(assignment.Left).Type;
-                return floatType != null && NonIntegralTypes.Contains(floatType.SpecialType);
+                type = semanticModel.GetTypeInfo(assignment.Left).Type;
+                return type.IsAny(KnownType.NonIntegralNumbers);
             }
 
             var variableDecl = division.Parent.Parent.Parent as VariableDeclarationSyntax;
             if (variableDecl != null)
             {
-                floatType = semanticModel.GetTypeInfo(variableDecl.Type).Type;
-                return floatType != null && NonIntegralTypes.Contains(floatType.SpecialType);
+                type = semanticModel.GetTypeInfo(variableDecl.Type).Type;
+                return type.IsAny(KnownType.NonIntegralNumbers);
             }
 
-            floatType = null;
+            type = null;
             return false;
         }
-
-        private static readonly ImmutableHashSet<SpecialType> IntegralTypes = new[]
-        {
-            SpecialType.System_Int16,
-            SpecialType.System_Int32,
-            SpecialType.System_Int64,
-            SpecialType.System_UInt16,
-            SpecialType.System_UInt32,
-            SpecialType.System_UInt64,
-            SpecialType.System_Char,
-            SpecialType.System_Byte,
-            SpecialType.System_SByte,
-        }.ToImmutableHashSet();
-
-        private static readonly ImmutableHashSet<SpecialType> NonIntegralTypes = new[]
-        {
-            SpecialType.System_Single,
-            SpecialType.System_Double,
-            SpecialType.System_Decimal
-        }.ToImmutableHashSet();
     }
 }

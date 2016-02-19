@@ -27,6 +27,7 @@ using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -129,7 +130,7 @@ namespace SonarLint.Rules.CSharp
         private static bool IsReturnTypeCandidate(IMethodSymbol methodSymbol)
         {
             var returnType = methodSymbol.ReturnType;
-            if (returnType.OriginalDefinition.SpecialType == SpecialType.System_Nullable_T)
+            if (returnType.OriginalDefinition.Is(KnownType.System_Nullable_T))
             {
                 var nullableType = (INamedTypeSymbol)returnType;
                 if (nullableType.TypeArguments.Length != 1)
@@ -139,14 +140,14 @@ namespace SonarLint.Rules.CSharp
                 returnType = nullableType.TypeArguments[0];
             }
 
-            return DisAllowedTypes.Any(type => returnType.SpecialType == type);
+            return returnType.IsAny(DisallowedTypes);;
         }
 
-        private static readonly SpecialType[] DisAllowedTypes =
+        private static readonly ISet<KnownType> DisallowedTypes = new []
         {
-            SpecialType.System_Int64,
-            SpecialType.System_Int32,
-            SpecialType.System_Decimal,
-        };
+            KnownType.System_Int64,
+            KnownType.System_Int32,
+            KnownType.System_Decimal,
+        }.ToImmutableHashSet();
     }
 }

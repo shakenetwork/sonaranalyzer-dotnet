@@ -52,18 +52,9 @@ namespace SonarLint.Rules.Common
         internal static bool HasFlagsAttribute(SyntaxNode node, SemanticModel semanticModel)
         {
             var symbol = semanticModel.GetDeclaredSymbol(node);
-            if (symbol == null)
-            {
-                return false;
-            }
 
-            var flagsAttribute = symbol.GetAttributes().FirstOrDefault(attribute =>
-            {
-                var type = attribute.AttributeClass;
-                return type != null &&
-                    type.ToDisplayString() == "System.FlagsAttribute";
-            });
-            return flagsAttribute != null;
+            return symbol != null && 
+                symbol.GetAttributes().Any(attribute => attribute.AttributeClass.Is(KnownType.System_FlagsAttribute));
         }
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }

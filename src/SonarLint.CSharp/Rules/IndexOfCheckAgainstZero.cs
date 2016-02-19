@@ -98,13 +98,13 @@ namespace SonarLint.Rules.CSharp
                 return false;
             }
 
-            ITypeSymbol[] possibleTypes =
+            var possibleTypes = new[]
             {
-                semanticModel.Compilation.GetSpecialType(SpecialType.System_Array),
-                semanticModel.Compilation.GetSpecialType(SpecialType.System_Collections_Generic_IList_T),
-                semanticModel.Compilation.GetSpecialType(SpecialType.System_String),
-                semanticModel.Compilation.GetTypeByMetadataName("System.Collections.IList")
-            };
+                KnownType.System_Array,
+                KnownType.System_Collections_Generic_IList_T,
+                KnownType.System_String,
+                KnownType.System_Collections_IList
+            }.ToImmutableHashSet();
 
             return indexOfSymbol.ContainingType.DerivesOrImplementsAny(possibleTypes);
         }

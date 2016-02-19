@@ -70,8 +70,8 @@ namespace SonarLint.Rules.CSharp
                 analysisContext.RegisterSymbolAction(c =>
                 {
                     var namedTypeSymbol = (INamedTypeSymbol)c.Symbol;
-                    if (namedTypeSymbol.TypeKind != TypeKind.Class ||
-                        ImplementsIDisposable(namedTypeSymbol))
+                    if (!namedTypeSymbol.IsClass() ||
+                        namedTypeSymbol.Implements(KnownType.System_IDisposable))
                     {
                         return;
                     }
@@ -153,14 +153,7 @@ namespace SonarLint.Rules.CSharp
             return fieldSymbol != null &&
                    !fieldSymbol.IsStatic &&
                    Accessibilities.Contains(fieldSymbol.DeclaredAccessibility) &&
-                   ImplementsIDisposable(fieldSymbol.Type as INamedTypeSymbol);
-        }
-
-        internal static bool ImplementsIDisposable(ITypeSymbol typeSymbol)
-        {
-            return typeSymbol != null &&
-                   typeSymbol.AllInterfaces.Any(symbol =>
-                       symbol.SpecialType == SpecialType.System_IDisposable);
+                   fieldSymbol.Type.Implements(KnownType.System_IDisposable);
         }
     }
 }

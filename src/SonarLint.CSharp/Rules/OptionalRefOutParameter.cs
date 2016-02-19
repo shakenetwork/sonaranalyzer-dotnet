@@ -70,8 +70,7 @@ namespace SonarLint.Rules.CSharp
                     }
 
                     var optionalAttribute = MethodParameterMissingOptional.GetAttributesForParameter(parameter, c.SemanticModel)
-                        .FirstOrDefault(a =>
-                            MethodParameterMissingOptional.IsAttributeWithName(a, MethodParameterMissingOptional.OptionalAttributeName));
+                        .FirstOrDefault(a => a.Symbol.IsInType(KnownType.System_Runtime_InteropServices_OptionalAttribute));
 
                     if (optionalAttribute != null)
                     {

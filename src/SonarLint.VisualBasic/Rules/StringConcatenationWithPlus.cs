@@ -65,18 +65,13 @@ namespace SonarLint.Rules.VisualBasic
                     var leftType = c.SemanticModel.GetTypeInfo(binary.Left).Type;
                     var rightType = c.SemanticModel.GetTypeInfo(binary.Right).Type;
 
-                    if (IsStringType(leftType) ||
-                        IsStringType(rightType))
+                    if (leftType.Is(KnownType.System_String) ||
+                        rightType.Is(KnownType.System_String))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, binary.OperatorToken.GetLocation()));
                     }
                 },
                 SyntaxKind.AddExpression);
-        }
-
-        private static bool IsStringType(ITypeSymbol type)
-        {
-            return type != null && type.SpecialType == SpecialType.System_String;
         }
     }
 }

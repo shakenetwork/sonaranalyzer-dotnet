@@ -80,13 +80,7 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
-                    var streamType = c.SemanticModel.Compilation.GetTypeByMetadataName("System.IO.Stream");
-                    if (streamType == null)
-                    {
-                        return;
-                    }
-
-                    if (method.ContainingType.DerivesOrImplementsAny(streamType))
+                    if (method.ContainingType.DerivesOrImplements(KnownType.System_IO_Stream))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, expression.GetLocation(), method.Name));
                     }

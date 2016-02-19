@@ -87,12 +87,7 @@ namespace SonarLint.Rules.CSharp
             }
 
             var type = semanticModel.GetTypeInfo(catchClause.Declaration.Type).Type;
-            if (type == null)
-            {
-                return false;
-            }
-
-            return type.ToDisplayString() == "System.Exception";
+            return type.Is(KnownType.System_Exception);
         }
 
         private static bool HasComments(CatchClauseSyntax catchClause)

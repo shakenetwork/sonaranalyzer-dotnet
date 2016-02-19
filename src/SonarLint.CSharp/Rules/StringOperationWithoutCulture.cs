@@ -80,19 +80,19 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
-                    if (calledMethod.ContainingType.SpecialType == SpecialType.System_String &&
+                    if (calledMethod.IsInType(KnownType.System_String)  &&
                         CommonCultureSpecificMethodNames.Contains(calledMethod.Name) &&
                         !calledMethod.Parameters
-                            .Any(param => StringCultureSpecifierNames.Contains(param.Type.ToDisplayString())))
+                            .Any(param => param.Type.IsAny(StringCultureSpecifierNames)))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, memberAccess.Name.GetLocation(), MessageDefineLocale));
                         return;
                     }
 
-                    if (calledMethod.ContainingType.SpecialType == SpecialType.System_String &&
+                    if (calledMethod.IsInType(KnownType.System_String) &&
                         IndexLookupMethodNames.Contains(calledMethod.Name) &&
                         calledMethod.Parameters.Any(param => param.Type.SpecialType == SpecialType.System_String) &&
-                        !calledMethod.Parameters.Any(param => StringCultureSpecifierNames.Contains(param.Type.ToDisplayString())))
+                        !calledMethod.Parameters.Any(param => param.Type.IsAny(StringCultureSpecifierNames)))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, memberAccess.Name.GetLocation(), MessageDefineLocale));
                         return;
@@ -106,7 +106,7 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
-                    if (calledMethod.ContainingType.SpecialType == SpecialType.System_String &&
+                    if (calledMethod.IsInType(KnownType.System_String) &&
                         calledMethod.Name == CompareToMethodName)
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, memberAccess.Name.GetLocation(), MessageChangeCompareTo));
@@ -118,21 +118,19 @@ namespace SonarLint.Rules.CSharp
 
         private static bool IsMethodOnNonIntegralOrDateTime(IMethodSymbol methodSymbol)
         {
-            return methodSymbol.ContainingType.SpecialType == SpecialType.System_Single ||
-                methodSymbol.ContainingType.SpecialType == SpecialType.System_Double ||
-                methodSymbol.ContainingType.SpecialType == SpecialType.System_Decimal ||
-                methodSymbol.ContainingType.SpecialType == SpecialType.System_DateTime;
+            return methodSymbol.IsInType(KnownType.NonIntegralNumbers) ||
+                methodSymbol.IsInType(KnownType.System_DateTime);
         }
 
-        private static readonly ISet<string> CommonCultureSpecificMethodNames = new HashSet<string>(new[] 
+        private static readonly ISet<string> CommonCultureSpecificMethodNames = ImmutableHashSet.Create(new[]
         {
             "ToLower",
             "ToUpper",
             "Compare"
         });
 
-        private static readonly ISet<string> IndexLookupMethodNames = new HashSet<string>(new[]
-        {            
+        private static readonly ISet<string> IndexLookupMethodNames = ImmutableHashSet.Create(new[]
+        {
             "IndexOf",
             "LastIndexOf",
         });
@@ -140,11 +138,11 @@ namespace SonarLint.Rules.CSharp
         private const string CompareToMethodName = "CompareTo";
         private const string ToStringMethodName = "ToString";
 
-        private static readonly ISet<string> StringCultureSpecifierNames = new HashSet<string>(new []
+        private static readonly ISet<KnownType> StringCultureSpecifierNames = ImmutableHashSet.Create(new []
         {
-            "System.Globalization.CultureInfo",
-            "System.Globalization.CompareOptions",
-            "System.StringComparison"
+            KnownType.System_Globalization_CultureInfo,
+            KnownType.System_Globalization_CompareOptions,
+            KnownType.System_StringComparison
         });
     }
 }

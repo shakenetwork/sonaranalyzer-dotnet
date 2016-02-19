@@ -28,6 +28,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using SonarLint.Common;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Formatting;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -55,7 +56,7 @@ namespace SonarLint.Rules.CSharp
             }
 
             var semanticModel = await context.Document.GetSemanticModelAsync().ConfigureAwait(false);
-            var optionalAttribute = semanticModel?.Compilation?.GetTypeByMetadataName(MethodParameterMissingOptional.OptionalAttributeName);
+            var optionalAttribute = semanticModel?.Compilation?.GetTypeByMetadataName(KnownType.System_Runtime_InteropServices_OptionalAttribute.TypeName);
             if (optionalAttribute == null)
             {
                 return;

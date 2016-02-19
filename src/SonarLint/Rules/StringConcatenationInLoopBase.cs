@@ -134,8 +134,8 @@ namespace SonarLint.Rules.Common
 
         private static bool IsString(SyntaxNode node, SemanticModel semanticModel)
         {
-            var type = semanticModel.GetTypeInfo(node).Type;
-            return type != null && type.SpecialType == SpecialType.System_String;
+            return semanticModel.GetTypeInfo(node).Type
+                .Is(KnownType.System_String);
         }
 
         private bool TryGetNearestLoop(SyntaxNode node, out SyntaxNode nearestLoop)

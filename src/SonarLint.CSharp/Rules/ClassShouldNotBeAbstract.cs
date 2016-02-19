@@ -65,9 +65,8 @@ namespace SonarLint.Rules.CSharp
                 c =>
                 {
                     var symbol = c.Symbol as INamedTypeSymbol;
-                    if (symbol == null ||
+                    if (!symbol.IsClass() ||
                         !symbol.IsAbstract ||
-                        symbol.TypeKind != TypeKind.Class ||
                         ClassHasInheritedAbstractMembers(symbol))
                     {
                         return;
@@ -126,7 +125,7 @@ namespace SonarLint.Rules.CSharp
         private static bool AbstractClassShouldBeInterface(INamedTypeSymbol classSymbol)
         {
             var methods = GetAllMethods(classSymbol);
-            return classSymbol.BaseType.SpecialType == SpecialType.System_Object &&
+            return classSymbol.BaseType.Is(KnownType.System_Object) &&
                    methods.Any() &&
                    methods.All(method => method.IsAbstract);
         }

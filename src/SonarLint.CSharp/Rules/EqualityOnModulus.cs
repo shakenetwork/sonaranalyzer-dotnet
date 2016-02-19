@@ -27,6 +27,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -99,19 +100,7 @@ namespace SonarLint.Rules.CSharp
         private static bool ExpressionIsNonNegative(ExpressionSyntax expression, SemanticModel semantic)
         {
             var type = semantic.GetTypeInfo(expression).Type;
-            if (type == null)
-            {
-                return false;
-            }
-
-            return UnsingedSpecialTypes.Contains(type.SpecialType);
+            return type.IsAny(KnownType.UnsignedIntegers);
         }
-
-        private static readonly SpecialType[] UnsingedSpecialTypes =
-        {
-            SpecialType.System_UInt16,
-            SpecialType.System_UInt32,
-            SpecialType.System_UInt64
-        };
     }
 }

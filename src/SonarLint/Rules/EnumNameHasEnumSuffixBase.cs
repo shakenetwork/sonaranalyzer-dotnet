@@ -76,7 +76,5 @@ namespace SonarLint.Rules
 
         protected abstract SyntaxToken GetIdentifier(SyntaxNode node);
         public abstract ImmutableArray<TLanguageKindEnum> SyntaxKindsOfInterest { get; }
-
-
     }
 }

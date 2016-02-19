@@ -55,10 +55,7 @@ namespace SonarLint.Rules.CSharp
                 description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
-
-        private const string DefaultParameterValueAttributeName = "System.Runtime.InteropServices.DefaultParameterValueAttribute";
-        internal const string OptionalAttributeName = "System.Runtime.InteropServices.OptionalAttribute";
-
+        
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
@@ -74,7 +71,7 @@ namespace SonarLint.Rules.CSharp
                         .ToList();
 
                     var defaultParameterValueAttribute = attributes
-                        .FirstOrDefault(a => IsAttributeWithName(a, DefaultParameterValueAttributeName));
+                        .FirstOrDefault(a => a.Symbol.IsInType(KnownType.System_Runtime_InteropServices_DefaultParameterValueAttribute));
 
                     if (defaultParameterValueAttribute == null)
                     {
@@ -82,7 +79,7 @@ namespace SonarLint.Rules.CSharp
                     }
 
                     var optionalAttribute = attributes
-                        .FirstOrDefault(a => IsAttributeWithName(a, OptionalAttributeName));
+                        .FirstOrDefault(a => a.Symbol.IsInType(KnownType.System_Runtime_InteropServices_OptionalAttribute));
 
                     if (optionalAttribute == null)
                     {
@@ -90,11 +87,6 @@ namespace SonarLint.Rules.CSharp
                     }
                 },
                 SyntaxKind.Parameter);
-        }
-
-        internal static bool IsAttributeWithName(AttributeSyntaxSymbolMapping attributeMapping, string name)
-        {
-            return attributeMapping.Symbol.ContainingType.ToDisplayString() == name;
         }
 
         internal static IEnumerable<AttributeSyntaxSymbolMapping> GetAttributesForParameter(ParameterSyntax parameter, SemanticModel semanticModel)

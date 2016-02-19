@@ -27,6 +27,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -57,13 +58,7 @@ namespace SonarLint.Rules.CSharp
                 description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
-
-        private static readonly SpecialType[] FloatingPointTypes =
-        {
-            SpecialType.System_Single,
-            SpecialType.System_Double
-        };
-
+        
         private static readonly string[] EqualityOperators =
         {
             "op_Equality",
@@ -115,7 +110,7 @@ namespace SonarLint.Rules.CSharp
 
             if (equalitySymbol != null &&
                 equalitySymbol.ContainingType != null &&
-                FloatingPointTypes.Contains(equalitySymbol.ContainingType.SpecialType) &&
+                equalitySymbol.ContainingType.IsAny(KnownType.FloatingPointNumbers) &&
                 EqualityOperators.Contains(equalitySymbol.Name))
             {
                 context.ReportDiagnostic(Diagnostic.Create(Rule, equals.OperatorToken.GetLocation()));
@@ -151,14 +146,13 @@ namespace SonarLint.Rules.CSharp
 
         private static bool HasFloatingType(ExpressionSyntax right, ExpressionSyntax left, SemanticModel semanticModel)
         {
-            var rightType = semanticModel.GetTypeInfo(right);
-            if (rightType.Type != null && FloatingPointTypes.Contains(rightType.Type.SpecialType))
-            {
-                return true;
-            }
+            return IsExpressionFloatingType(right, semanticModel) || 
+                IsExpressionFloatingType(left, semanticModel);
+        }
 
-            var leftType = semanticModel.GetTypeInfo(left);
-            return leftType.Type != null && FloatingPointTypes.Contains(leftType.Type.SpecialType);
+        private static bool IsExpressionFloatingType(ExpressionSyntax expression, SemanticModel semanticModel)
+        {
+            return semanticModel.GetTypeInfo(expression).Type.IsAny(KnownType.FloatingPointNumbers);
         }
 
         private static bool HasAppropriateOperatorsForEquality(BinaryExpressionSyntax right, BinaryExpressionSyntax left)

@@ -74,8 +74,7 @@ namespace SonarLint.Rules.CSharp
                     }
 
                     var methodSymbol = c.SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
-                    if (methodSymbol == null ||
-                        methodSymbol.ContainingType.ToDisplayString() != "System.Type")
+                    if (!methodSymbol.IsInType(KnownType.System_Type))
                     {
                         return;
                     }

@@ -69,7 +69,7 @@ namespace SonarLint.Rules.CSharp
                         foreachInfo.ElementConversion.IsImplicit ||
                         foreachInfo.ElementConversion.IsUserDefined ||
                         !foreachInfo.ElementConversion.Exists ||
-                        foreachInfo.ElementType.SpecialType == SpecialType.System_Object)
+                        foreachInfo.ElementType.Is(KnownType.System_Object))
                     {
                         return;
                     }

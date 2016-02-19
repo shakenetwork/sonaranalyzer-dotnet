@@ -65,8 +65,7 @@ namespace SonarLint.Rules.CSharp
                     var invocation = (InvocationExpressionSyntax) c.Node;
 
                     var methodSymbol = c.SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
-                    if (methodSymbol != null &&
-                        methodSymbol.ContainingType.SpecialType == SpecialType.System_Object &&
+                    if (methodSymbol.IsInType(KnownType.System_Object) &&
                         methodSymbol.Name == ReferenceEqualsName &&
                         AnyArgumentIsValueType(invocation.ArgumentList, c.SemanticModel))
                     {

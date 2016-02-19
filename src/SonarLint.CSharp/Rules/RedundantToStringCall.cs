@@ -119,7 +119,7 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
-                    if (methodSymbol.ContainingType.SpecialType == SpecialType.System_String)
+                    if (methodSymbol.IsInType(KnownType.System_String))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, location, MessageCallOnString));
                         return;
@@ -169,14 +169,13 @@ namespace SonarLint.Rules.CSharp
             Location location;
             IMethodSymbol methodSymbol;
             if (!IsArgumentlessToStringCallNotOnBaseExpression(expressionWithToStringCall, context.SemanticModel, out location, out methodSymbol) ||
-                methodSymbol.ContainingType.SpecialType == SpecialType.System_String)
+                methodSymbol.IsInType(KnownType.System_String))
             {
                 return;
             }
 
             var sideBType = context.SemanticModel.GetTypeInfo(otherOperandOfAddition).Type;
-            if (sideBType == null ||
-                sideBType.SpecialType != SpecialType.System_String)
+            if (!sideBType.Is(KnownType.System_String))
             {
                 return;
             }
@@ -209,23 +208,21 @@ namespace SonarLint.Rules.CSharp
                     method.MethodKind == MethodKind.UserDefinedOperator)
                 .Any(method =>
                     method.Parameters.Length == 2 &&
-                    method.Parameters[stringParameterIndex].Type.SpecialType == SpecialType.System_String);
+                    method.Parameters[stringParameterIndex].IsType(KnownType.System_String));
         }
 
         private static bool IsStringFormatCall(IMethodSymbol stringFormatSymbol)
         {
             return stringFormatSymbol != null &&
                 stringFormatSymbol.Name == "Format" &&
-                (stringFormatSymbol.ContainingType == null ||
-                stringFormatSymbol.ContainingType.SpecialType == SpecialType.System_String);
+                (stringFormatSymbol.ContainingType == null || stringFormatSymbol.IsInType(KnownType.System_String));
         }
 
         private static bool IsOperationAddOnString(IMethodSymbol operation)
         {
             return operation != null &&
                 operation.Name == additionOperatorName &&
-                operation.ContainingType != null &&
-                operation.ContainingType.SpecialType == SpecialType.System_String;
+                operation.IsInType(KnownType.System_String);
         }
 
         private static bool IsArgumentlessToStringCallNotOnBaseExpression(ExpressionSyntax expression, SemanticModel semanticModel,

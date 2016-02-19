@@ -117,7 +117,7 @@ namespace SonarLint.Rules.CSharp
                 var followingType = caughtExceptionTypes[i];
 
                 if (followingType == null ||
-                    currentType.DerivesOrImplementsAny(followingType))
+                    currentType.DerivesOrImplements(followingType))
                 {
                     return !redundantCatches.Contains(catches[i]);
                 }

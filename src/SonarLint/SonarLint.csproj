@@ -93,6 +93,8 @@
     <Compile Include="Common\Tag.cs" />
     <Compile Include="Common\IdeVisibility.cs" />
     <Compile Include="Helpers\DiagnosticReportHelper.cs" />
+    <Compile Include="Helpers\KnownType.cs" />
+    <Compile Include="Helpers\TypeHelper.cs" />
     <Compile Include="Helpers\SymbolHelper.cs" />
     <Compile Include="Helpers\AnalysisContext.cs" />
     <Compile Include="Helpers\ParameteredDiagnosticAnalyzer.cs" />

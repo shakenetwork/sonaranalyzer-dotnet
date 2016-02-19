@@ -109,18 +109,7 @@ namespace SonarLint.Helpers
                 baseType = baseType.BaseType;
             }
         }
-
-        public static bool DerivesOrImplementsAny(this INamedTypeSymbol type, params ITypeSymbol[] possibleTypes)
-        {
-            var allInterfaces = type.AllInterfaces.Select(inter => inter.ConstructedFrom);
-            if (allInterfaces.Intersect(possibleTypes).Any())
-            {
-                return true;
-            }
-
-            return type.GetSelfAndBaseTypes().Any(baseType => possibleTypes.Contains(baseType));
-        }
-
+        
         public static bool IsChangeable(this ISymbol symbol)
         {
             return !symbol.IsAbstract &&
@@ -143,13 +132,7 @@ namespace SonarLint.Helpers
                 return true;
             }
 
-            var sysEventArgs = compilation.GetTypeByMetadataName("System.EventArgs");
-            if (sysEventArgs == null)
-            {
-                return true;
-            }
-
-            return eventArgsType.DerivesOrImplementsAny(sysEventArgs);
+            return eventArgsType.DerivesOrImplements(KnownType.System_EventArgs);
         }
     }
 }

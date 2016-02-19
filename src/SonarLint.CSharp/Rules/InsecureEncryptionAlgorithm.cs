@@ -27,6 +27,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -70,11 +71,11 @@ namespace SonarLint.Rules.CSharp
             "System.Security.Cryptography.TripleDES.Create"
         };
 
-        private static readonly string[] BaseClassNamesForEncryptionAlgorithm =
+        private static readonly ISet<KnownType> BaseClassNamesForEncryptionAlgorithm = new HashSet<KnownType>(new []
         {
-            "System.Security.Cryptography.DES",
-            "System.Security.Cryptography.TripleDES"
-        };
+            KnownType.System_Security_Cryptography_DES,
+            KnownType.System_Security_Cryptography_TripleDES
+        });
 
         public override void Initialize(AnalysisContext context)
         {
@@ -119,7 +120,7 @@ namespace SonarLint.Rules.CSharp
             var insecureArgorithmType = GetInsecureAlgorithmBase(typeInfo.ConvertedType);
 
             if (insecureArgorithmType != null &&
-                BaseClassNamesForEncryptionAlgorithm.Contains(insecureArgorithmType.ToString()))
+                insecureArgorithmType.IsAny(BaseClassNamesForEncryptionAlgorithm))
             {
                 context.ReportDiagnostic(Diagnostic.Create(Rule, objectCreation.Type.GetLocation()));
             }
@@ -151,7 +152,7 @@ namespace SonarLint.Rules.CSharp
             var currentType = type;
 
             while (currentType != null &&
-                !BaseClassNamesForEncryptionAlgorithm.Contains(currentType.ToString()))
+                !currentType.IsAny(BaseClassNamesForEncryptionAlgorithm))
             {
                 currentType = currentType.BaseType;
             }

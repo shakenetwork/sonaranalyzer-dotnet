@@ -64,7 +64,7 @@ namespace SonarLint.Rules.CSharp
                 c =>
                 {
                     var namedType = (INamedTypeSymbol)c.Symbol;
-                    if (namedType.TypeKind != TypeKind.Class && namedType.TypeKind != TypeKind.Struct)
+                    if (!namedType.IsClassOrStruct())
                     {
                         return;
                     }

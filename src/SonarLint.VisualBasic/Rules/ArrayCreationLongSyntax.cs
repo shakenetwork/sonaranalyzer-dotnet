@@ -73,7 +73,7 @@ namespace SonarLint.Rules.VisualBasic
                         return;
                     }
 
-                    if (arrayType.ElementType.SpecialType == SpecialType.System_Object &&
+                    if (arrayType.ElementType.Is(KnownType.System_Object) &&
                         !arrayCreation.Initializer.Initializers.Any())
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, arrayCreation.GetLocation()));

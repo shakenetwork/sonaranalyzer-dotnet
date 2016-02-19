@@ -29,7 +29,7 @@ namespace SonarLint.UnitTest.Helpers
     [TestClass]
     public class SymbolHelperTest
     {
-        private const string input = @"
+        internal const string TestInput = @"
 public class Base
 {
   public virtual void Method1() { }
@@ -74,7 +74,7 @@ public interface IInterface
                 var document = workspace.CurrentSolution.AddProject("foo", "foo.dll", LanguageNames.CSharp)
                     .AddMetadataReference(MetadataReference.CreateFromFile(typeof(object).Assembly.Location))
                     .AddMetadataReference(MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location))
-                    .AddDocument("test", input);
+                    .AddDocument("test", TestInput);
                 compilation = document.Project.GetCompilationAsync().Result;
                 tree = compilation.SyntaxTrees.First();
                 semanticModel = compilation.GetSemanticModel(tree);
@@ -182,21 +182,7 @@ public interface IInterface
             method = interfaceDeclaration.DescendantNodes().OfType<MethodDeclarationSyntax>()
                 .First(m => m.Identifier.ValueText == "Method3");
             Assert.AreEqual((IMethodSymbol)semanticModel.GetDeclaredSymbol(method), overriddenMethod);
-        }
-
-        [TestMethod]
-        public void Symbol_DerivesOrImplementsAny()
-        {
-            var baseType = semanticModel.GetDeclaredSymbol(baseClassDeclaration) as INamedTypeSymbol;
-            var derived1Type = semanticModel.GetDeclaredSymbol(derivedClassDeclaration1) as INamedTypeSymbol;
-            var derived2Type = semanticModel.GetDeclaredSymbol(derivedClassDeclaration2) as INamedTypeSymbol;
-            var interfaceType = semanticModel.GetDeclaredSymbol(interfaceDeclaration) as INamedTypeSymbol;
-
-            Assert.IsTrue(derived2Type.DerivesOrImplementsAny(interfaceType));
-            Assert.IsFalse(derived1Type.DerivesOrImplementsAny(interfaceType));
-
-            Assert.IsTrue(derived1Type.DerivesOrImplementsAny(interfaceType, baseType));
-        }
+        }        
 
         [TestMethod]
         public void Symbol_IsChangeable()

@@ -73,7 +73,7 @@ namespace SonarLint.Rules.CSharp
                     var baseTypes = symbol.BaseType.GetSelfAndBaseTypes().ToList();
 
                     if (baseTypes.Count < 2 ||
-                        baseTypes.Last().SpecialType != SpecialType.System_Object)
+                        !baseTypes.Last().Is(KnownType.System_Object))
                     {
                         return;
                     }

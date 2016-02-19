@@ -95,7 +95,7 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            if (baseTypeSymbol.SpecialType == SpecialType.System_Object)
+            if (baseTypeSymbol.Is(KnownType.System_Object))
             {
                 var location = GetLocationWithToken(baseTypeSyntax, classDeclaration.BaseList.Types);
                 context.ReportDiagnostic(Diagnostic.Create(Rule, location,
@@ -129,8 +129,7 @@ namespace SonarLint.Rules.CSharp
 
             var baseTypeSyntax = enumDeclaration.BaseList.Types.First().Type;
             var baseTypeSymbol = context.SemanticModel.GetSymbolInfo(baseTypeSyntax).Symbol as ITypeSymbol;
-            if (baseTypeSymbol == null ||
-                baseTypeSymbol.SpecialType != SpecialType.System_Int32)
+            if (!baseTypeSymbol.Is(KnownType.System_Int32))
             {
                 return;
             }
@@ -167,8 +166,7 @@ namespace SonarLint.Rules.CSharp
             {
                 var baseType = baseList.Types[i];
                 var interfaceType = context.SemanticModel.GetSymbolInfo(baseType.Type).Symbol as INamedTypeSymbol;
-                if (interfaceType == null ||
-                    interfaceType.TypeKind != TypeKind.Interface)
+                if (!interfaceType.IsInterface())
                 {
                     continue;
                 }

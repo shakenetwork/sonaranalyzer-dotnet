@@ -171,7 +171,6 @@ namespace SonarLint.Rules.CSharp
                 return false;
             }
 
-            var enumerableType = semanticModel.Compilation.GetSpecialType(SpecialType.System_Collections_Generic_IEnumerable_T);
             var receiverType = methodSymbol.ReceiverType as INamedTypeSymbol;
 
             if (methodSymbol.MethodKind == MethodKind.Ordinary &&
@@ -180,7 +179,8 @@ namespace SonarLint.Rules.CSharp
                 receiverType = methodSymbol.Parameters.First().Type as INamedTypeSymbol;
             }
 
-            return receiverType != null && receiverType.ConstructedFrom.Equals(enumerableType);
+            var constructedFrom = receiverType?.ConstructedFrom;
+            return constructedFrom.Is(KnownType.System_Collections_Generic_IEnumerable_T);
         }
     }
 }
