@@ -12,126 +12,6 @@
 {
 "analysisTarget":  [
 {
-"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
-"region":  {
-"startLine":  170,
-"startColumn":  71,
-"endLine":  170,
-"endColumn":  77
-}
-}
-]
-}
-],
-"shortMessage":  "Define the locale to be used in this String operation.",
-"fullMessage":  "\"String.ToLower()\", \".ToUpper\", \".Compare\", and \".Equals\" are all culture-dependent, as are some (floating point number-related) calls to \"ToString\". Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters. Such calls without a culture may work fine in the system\u0027s \"home\" environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it\u0027s time to fix them.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Culture should be specified for String operations",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S1449",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1449",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterEvent.cs",
-"region":  {
-"startLine":  355,
-"startColumn":  29,
-"endLine":  355,
-"endColumn":  35
-}
-}
-]
-}
-],
-"shortMessage":  "Define the locale to be used in this String operation.",
-"fullMessage":  "\"String.ToLower()\", \".ToUpper\", \".Compare\", and \".Equals\" are all culture-dependent, as are some (floating point number-related) calls to \"ToString\". Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters. Such calls without a culture may work fine in the system\u0027s \"home\" environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it\u0027s time to fix them.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Culture should be specified for String operations",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S1449",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1449",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
-"region":  {
-"startLine":  361,
-"startColumn":  64,
-"endLine":  361,
-"endColumn":  70
-}
-}
-]
-}
-],
-"shortMessage":  "Define the locale to be used in this String operation.",
-"fullMessage":  "\"String.ToLower()\", \".ToUpper\", \".Compare\", and \".Equals\" are all culture-dependent, as are some (floating point number-related) calls to \"ToString\". Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters. Such calls without a culture may work fine in the system\u0027s \"home\" environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it\u0027s time to fix them.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Culture should be specified for String operations",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S1449",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1449",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Cluster\\Member.cs",
-"region":  {
-"startLine":  133,
-"startColumn":  28,
-"endLine":  133,
-"endColumn":  34
-}
-}
-]
-}
-],
-"shortMessage":  "Define the locale to be used in this String operation.",
-"fullMessage":  "\"String.ToLower()\", \".ToUpper\", \".Compare\", and \".Equals\" are all culture-dependent, as are some (floating point number-related) calls to \"ToString\". Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters. Such calls without a culture may work fine in the system\u0027s \"home\" environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it\u0027s time to fix them.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Culture should be specified for String operations",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S1449",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1449",
-"locations":  [
-{
-"analysisTarget":  [
-{
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Util.cs",
 "region":  {
 "startLine":  85,
@@ -143,43 +23,13 @@
 ]
 }
 ],
-"shortMessage":  "Define the locale to be used in this String operation.",
-"fullMessage":  "\"String.ToLower()\", \".ToUpper\", \".Compare\", and \".Equals\" are all culture-dependent, as are some (floating point number-related) calls to \"ToString\". Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters. Such calls without a culture may work fine in the system\u0027s \"home\" environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it\u0027s time to fix them.",
+"shortMessage":  "Define the locale to be used in this string operation.",
+"fullMessage":  "\"string.ToLower()\", \"ToUpper\", \"IndexOf\", \"LastIndexOf\", and \"Compare\" are all culture-dependent, as are some (floating point number and \"DateTime\"-related) calls to \"ToString\". Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters. \"string.CompareTo()\" is also culture specific, but has no overload that takes a culture information, so instead it\u0027s better to use \"CompareOrdinal\", or \"Compare\" with culture. Calls without a culture may work fine in the system\u0027s \"home\" environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it\u0027s time to fix them.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
 "defaultSeverity":  "Warning",
-"title":  "Culture should be specified for String operations",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S1449",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1449",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Cluster\\VectorClock.cs",
-"region":  {
-"startLine":  85,
-"startColumn":  30,
-"endLine":  85,
-"endColumn":  36
-}
-}
-]
-}
-],
-"shortMessage":  "Define the locale to be used in this String operation.",
-"fullMessage":  "\"String.ToLower()\", \".ToUpper\", \".Compare\", and \".Equals\" are all culture-dependent, as are some (floating point number-related) calls to \"ToString\". Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters. Such calls without a culture may work fine in the system\u0027s \"home\" environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it\u0027s time to fix them.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Culture should be specified for String operations",
+"title":  "Culture should be specified for \"string\" operations",
 "category":  "Reliability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S1449",
 "isEnabledByDefault":  "True",

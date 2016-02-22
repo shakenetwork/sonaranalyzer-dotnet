@@ -27,6 +27,7 @@ using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -34,25 +35,27 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("5min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Unpredictable)]
+    [Tags(Tag.Cert, Tag.Unpredictable)]
     public class StringOperationWithoutCulture : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1449";
-        internal const string Title = "Culture should be specified for String operations";
+        internal const string Title = "Culture should be specified for \"string\" operations";
         internal const string Description =
-            "\"String.ToLower()\", \".ToUpper\", \".Compare\", and \".Equals\" are all culture-dependent, " +
-            "as are some (floating point number-related) calls to \"ToString\". Fortunately, all have variants which accept an argument " +
+            "\"string.ToLower()\", \"ToUpper\", \"IndexOf\", \"LastIndexOf\", and \"Compare\" are all culture-dependent, " +
+            "as are some (floating point number and \"DateTime\"-related) calls to \"ToString\". Fortunately, all have variants which accept an argument " +
             "specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, " +
-            "possibly creating problems with international characters. Such calls without a culture may work fine in the system's \"home\" " +
-            "environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs " +
-            "can be nearly, if not completely, impossible to reproduce when it's time to fix them.";
-        internal const string MessageFormat = "Define the locale to be used in this String operation.";
+            "possibly creating problems with international characters. \"string.CompareTo()\" is also culture specific, but has no overload that " +
+            "takes a culture information, so instead it's better to use \"CompareOrdinal\", or \"Compare\" with culture. Calls without a " +
+            "culture may work fine in the system's \"home\" environment, but break in ways that are extremely difficult to diagnose for customers " +
+            "who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it's time to fix them.";
+        internal const string MessageDefineLocale = "Define the locale to be used in this string operation.";
+        internal const string MessageChangeCompareTo = "Use \"CompareOrdinal\" or \"Compare\" with the locale specified instead of \"CompareTo\".";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, "{0}", Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
@@ -78,64 +81,70 @@ namespace SonarLint.Rules.CSharp
                     }
 
                     if (calledMethod.ContainingType.SpecialType == SpecialType.System_String &&
-                        ZeroParameterMethods.Contains(calledMethod.Name) &&
-                        !calledMethod.Parameters.Any())
-                    {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, memberAccess.Name.GetLocation()));
-                        return;
-                    }
-
-                    if (calledMethod.ContainingType.SpecialType == SpecialType.System_String &&
-                        calledMethod.Name == EqualsMethodName &&
-                        calledMethod.Parameters.Count() == 1 &&
-                        calledMethod.Parameters.First().Type.SpecialType == SpecialType.System_String)
-                    {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, memberAccess.Name.GetLocation()));
-                        return;
-                    }
-
-                    if (calledMethod.ContainingType.SpecialType == SpecialType.System_String &&
-                        calledMethod.Name == CompareMethodName &&
+                        CommonCultureSpecificMethodNames.Contains(calledMethod.Name) &&
                         !calledMethod.Parameters
                             .Any(param => StringCultureSpecifierNames.Contains(param.Type.ToDisplayString())))
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, memberAccess.Name.GetLocation()));
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, memberAccess.Name.GetLocation(), MessageDefineLocale));
                         return;
                     }
 
-                    if (IsMethodOnNonIntegerNumeric(calledMethod) &&
-                        calledMethod.Name == ToStringMethodName &&
-                        !calledMethod.Parameters
-                            .Any(param => param.Type.ToDisplayString() == IFormatProviderName))
+                    if (calledMethod.ContainingType.SpecialType == SpecialType.System_String &&
+                        IndexLookupMethodNames.Contains(calledMethod.Name) &&
+                        calledMethod.Parameters.Any(param => param.Type.SpecialType == SpecialType.System_String) &&
+                        !calledMethod.Parameters.Any(param => StringCultureSpecifierNames.Contains(param.Type.ToDisplayString())))
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, memberAccess.Name.GetLocation()));
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, memberAccess.Name.GetLocation(), MessageDefineLocale));
+                        return;
+                    }
+
+                    if (IsMethodOnNonIntegralOrDateTime(calledMethod) &&
+                        calledMethod.Name == ToStringMethodName &&
+                        !calledMethod.Parameters.Any())
+                    {
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, memberAccess.Name.GetLocation(), MessageDefineLocale));
+                        return;
+                    }
+
+                    if (calledMethod.ContainingType.SpecialType == SpecialType.System_String &&
+                        calledMethod.Name == CompareToMethodName)
+                    {
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, memberAccess.Name.GetLocation(), MessageChangeCompareTo));
                         return;
                     }
                 },
                 SyntaxKind.InvocationExpression);
         }
 
-        private static bool IsMethodOnNonIntegerNumeric(IMethodSymbol methodSymbol)
+        private static bool IsMethodOnNonIntegralOrDateTime(IMethodSymbol methodSymbol)
         {
             return methodSymbol.ContainingType.SpecialType == SpecialType.System_Single ||
                 methodSymbol.ContainingType.SpecialType == SpecialType.System_Double ||
-                methodSymbol.ContainingType.SpecialType == SpecialType.System_Decimal;
+                methodSymbol.ContainingType.SpecialType == SpecialType.System_Decimal ||
+                methodSymbol.ContainingType.SpecialType == SpecialType.System_DateTime;
         }
 
-        private static readonly string[] ZeroParameterMethods = { ToLowerMethodName, ToUpperMethodName };
-        private const string ToLowerMethodName = "ToLower";
-        private const string ToUpperMethodName = "ToUpper";
-        private const string EqualsMethodName = "Equals";
-        private const string CompareMethodName = "Compare";
+        private static readonly ISet<string> CommonCultureSpecificMethodNames = new HashSet<string>(new[] 
+        {
+            "ToLower",
+            "ToUpper",
+            "Compare"
+        });
+
+        private static readonly ISet<string> IndexLookupMethodNames = new HashSet<string>(new[]
+        {            
+            "IndexOf",
+            "LastIndexOf",
+        });
+
+        private const string CompareToMethodName = "CompareTo";
         private const string ToStringMethodName = "ToString";
 
-        private const string IFormatProviderName = "System.IFormatProvider";
-
-        private static readonly string[] StringCultureSpecifierNames =
+        private static readonly ISet<string> StringCultureSpecifierNames = new HashSet<string>(new []
         {
             "System.Globalization.CultureInfo",
             "System.Globalization.CompareOptions",
             "System.StringComparison"
-        };
+        });
     }
 }

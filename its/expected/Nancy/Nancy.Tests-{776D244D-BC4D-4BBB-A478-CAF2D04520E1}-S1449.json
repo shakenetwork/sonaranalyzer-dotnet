@@ -12,24 +12,24 @@
 {
 "analysisTarget":  [
 {
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Configuration\\DefaultNancyEnvironmentConfiguratorFixture.cs",
+"uri":  "Nancy\\src\\Nancy.Tests\\ShouldExtensions.cs",
 "region":  {
-"startLine":  155,
-"startColumn":  70,
-"endLine":  155,
-"endColumn":  76
+"startLine":  70,
+"startColumn":  39,
+"endLine":  70,
+"endColumn":  46
 }
 }
 ]
 }
 ],
-"shortMessage":  "Define the locale to be used in this String operation.",
-"fullMessage":  "\"String.ToLower()\", \".ToUpper\", \".Compare\", and \".Equals\" are all culture-dependent, as are some (floating point number-related) calls to \"ToString\". Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters. Such calls without a culture may work fine in the system\u0027s \"home\" environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it\u0027s time to fix them.",
+"shortMessage":  "Define the locale to be used in this string operation.",
+"fullMessage":  "\"string.ToLower()\", \"ToUpper\", \"IndexOf\", \"LastIndexOf\", and \"Compare\" are all culture-dependent, as are some (floating point number and \"DateTime\"-related) calls to \"ToString\". Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters. \"string.CompareTo()\" is also culture specific, but has no overload that takes a culture information, so instead it\u0027s better to use \"CompareOrdinal\", or \"Compare\" with culture. Calls without a culture may work fine in the system\u0027s \"home\" environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it\u0027s time to fix them.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
 "defaultSeverity":  "Warning",
-"title":  "Culture should be specified for String operations",
+"title":  "Culture should be specified for \"string\" operations",
 "category":  "Reliability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S1449",
 "isEnabledByDefault":  "True",
@@ -44,22 +44,22 @@
 {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\DynamicDictionaryFixture.cs",
 "region":  {
-"startLine":  891,
-"startColumn":  37,
-"endLine":  891,
-"endColumn":  43
+"startLine":  286,
+"startColumn":  41,
+"endLine":  286,
+"endColumn":  49
 }
 }
 ]
 }
 ],
-"shortMessage":  "Define the locale to be used in this String operation.",
-"fullMessage":  "\"String.ToLower()\", \".ToUpper\", \".Compare\", and \".Equals\" are all culture-dependent, as are some (floating point number-related) calls to \"ToString\". Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters. Such calls without a culture may work fine in the system\u0027s \"home\" environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it\u0027s time to fix them.",
+"shortMessage":  "Define the locale to be used in this string operation.",
+"fullMessage":  "\"string.ToLower()\", \"ToUpper\", \"IndexOf\", \"LastIndexOf\", and \"Compare\" are all culture-dependent, as are some (floating point number and \"DateTime\"-related) calls to \"ToString\". Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters. \"string.CompareTo()\" is also culture specific, but has no overload that takes a culture information, so instead it\u0027s better to use \"CompareOrdinal\", or \"Compare\" with culture. Calls without a culture may work fine in the system\u0027s \"home\" environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it\u0027s time to fix them.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
 "defaultSeverity":  "Warning",
-"title":  "Culture should be specified for String operations",
+"title":  "Culture should be specified for \"string\" operations",
 "category":  "Reliability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S1449",
 "isEnabledByDefault":  "True",
@@ -74,52 +74,22 @@
 {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\DynamicDictionaryFixture.cs",
 "region":  {
-"startLine":  892,
-"startColumn":  37,
-"endLine":  892,
-"endColumn":  43
+"startLine":  300,
+"startColumn":  41,
+"endLine":  300,
+"endColumn":  49
 }
 }
 ]
 }
 ],
-"shortMessage":  "Define the locale to be used in this String operation.",
-"fullMessage":  "\"String.ToLower()\", \".ToUpper\", \".Compare\", and \".Equals\" are all culture-dependent, as are some (floating point number-related) calls to \"ToString\". Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters. Such calls without a culture may work fine in the system\u0027s \"home\" environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it\u0027s time to fix them.",
+"shortMessage":  "Define the locale to be used in this string operation.",
+"fullMessage":  "\"string.ToLower()\", \"ToUpper\", \"IndexOf\", \"LastIndexOf\", and \"Compare\" are all culture-dependent, as are some (floating point number and \"DateTime\"-related) calls to \"ToString\". Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters. \"string.CompareTo()\" is also culture specific, but has no overload that takes a culture information, so instead it\u0027s better to use \"CompareOrdinal\", or \"Compare\" with culture. Calls without a culture may work fine in the system\u0027s \"home\" environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it\u0027s time to fix them.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
 "defaultSeverity":  "Warning",
-"title":  "Culture should be specified for String operations",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S1449",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1449",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\DynamicDictionaryFixture.cs",
-"region":  {
-"startLine":  952,
-"startColumn":  47,
-"endLine":  952,
-"endColumn":  53
-}
-}
-]
-}
-],
-"shortMessage":  "Define the locale to be used in this String operation.",
-"fullMessage":  "\"String.ToLower()\", \".ToUpper\", \".Compare\", and \".Equals\" are all culture-dependent, as are some (floating point number-related) calls to \"ToString\". Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters. Such calls without a culture may work fine in the system\u0027s \"home\" environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it\u0027s time to fix them.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Culture should be specified for String operations",
+"title":  "Culture should be specified for \"string\" operations",
 "category":  "Reliability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S1449",
 "isEnabledByDefault":  "True",
@@ -143,13 +113,13 @@
 ]
 }
 ],
-"shortMessage":  "Define the locale to be used in this String operation.",
-"fullMessage":  "\"String.ToLower()\", \".ToUpper\", \".Compare\", and \".Equals\" are all culture-dependent, as are some (floating point number-related) calls to \"ToString\". Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters. Such calls without a culture may work fine in the system\u0027s \"home\" environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it\u0027s time to fix them.",
+"shortMessage":  "Define the locale to be used in this string operation.",
+"fullMessage":  "\"string.ToLower()\", \"ToUpper\", \"IndexOf\", \"LastIndexOf\", and \"Compare\" are all culture-dependent, as are some (floating point number and \"DateTime\"-related) calls to \"ToString\". Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters. \"string.CompareTo()\" is also culture specific, but has no overload that takes a culture information, so instead it\u0027s better to use \"CompareOrdinal\", or \"Compare\" with culture. Calls without a culture may work fine in the system\u0027s \"home\" environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it\u0027s time to fix them.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
 "defaultSeverity":  "Warning",
-"title":  "Culture should be specified for String operations",
+"title":  "Culture should be specified for \"string\" operations",
 "category":  "Reliability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S1449",
 "isEnabledByDefault":  "True",
@@ -162,114 +132,24 @@
 {
 "analysisTarget":  [
 {
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\DefaultViewFactoryFixture.cs",
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultConverters\\FallbackConverterFixture.cs",
 "region":  {
-"startLine":  215,
-"startColumn":  149,
-"endLine":  215,
-"endColumn":  155
-}
-}
-]
-}
-],
-"shortMessage":  "Define the locale to be used in this String operation.",
-"fullMessage":  "\"String.ToLower()\", \".ToUpper\", \".Compare\", and \".Equals\" are all culture-dependent, as are some (floating point number-related) calls to \"ToString\". Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters. Such calls without a culture may work fine in the system\u0027s \"home\" environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it\u0027s time to fix them.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Culture should be specified for String operations",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S1449",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1449",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
-"region":  {
-"startLine":  46,
-"startColumn":  26,
-"endLine":  46,
-"endColumn":  32
-}
-}
-]
-}
-],
-"shortMessage":  "Define the locale to be used in this String operation.",
-"fullMessage":  "\"String.ToLower()\", \".ToUpper\", \".Compare\", and \".Equals\" are all culture-dependent, as are some (floating point number-related) calls to \"ToString\". Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters. Such calls without a culture may work fine in the system\u0027s \"home\" environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it\u0027s time to fix them.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Culture should be specified for String operations",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S1449",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1449",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
-"region":  {
-"startLine":  145,
-"startColumn":  30,
-"endLine":  145,
+"startLine":  51,
+"startColumn":  28,
+"endLine":  51,
 "endColumn":  36
 }
 }
 ]
 }
 ],
-"shortMessage":  "Define the locale to be used in this String operation.",
-"fullMessage":  "\"String.ToLower()\", \".ToUpper\", \".Compare\", and \".Equals\" are all culture-dependent, as are some (floating point number-related) calls to \"ToString\". Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters. Such calls without a culture may work fine in the system\u0027s \"home\" environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it\u0027s time to fix them.",
+"shortMessage":  "Define the locale to be used in this string operation.",
+"fullMessage":  "\"string.ToLower()\", \"ToUpper\", \"IndexOf\", \"LastIndexOf\", and \"Compare\" are all culture-dependent, as are some (floating point number and \"DateTime\"-related) calls to \"ToString\". Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters. \"string.CompareTo()\" is also culture specific, but has no overload that takes a culture information, so instead it\u0027s better to use \"CompareOrdinal\", or \"Compare\" with culture. Calls without a culture may work fine in the system\u0027s \"home\" environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it\u0027s time to fix them.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
 "defaultSeverity":  "Warning",
-"title":  "Culture should be specified for String operations",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S1449",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1449",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
-"region":  {
-"startLine":  173,
-"startColumn":  30,
-"endLine":  173,
-"endColumn":  36
-}
-}
-]
-}
-],
-"shortMessage":  "Define the locale to be used in this String operation.",
-"fullMessage":  "\"String.ToLower()\", \".ToUpper\", \".Compare\", and \".Equals\" are all culture-dependent, as are some (floating point number-related) calls to \"ToString\". Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters. Such calls without a culture may work fine in the system\u0027s \"home\" environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it\u0027s time to fix them.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Culture should be specified for String operations",
+"title":  "Culture should be specified for \"string\" operations",
 "category":  "Reliability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S1449",
 "isEnabledByDefault":  "True",

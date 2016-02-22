@@ -12,18 +12,18 @@
 {
 "analysisTarget":  [
 {
-"uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Queries\\Hints.cs",
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedPubSubMediator.cs",
 "region":  {
-"startLine":  178,
-"startColumn":  43,
-"endLine":  178,
-"endColumn":  51
+"startLine":  471,
+"startColumn":  73,
+"endLine":  471,
+"endColumn":  82
 }
 }
 ]
 }
 ],
-"shortMessage":  "Define the locale to be used in this string operation.",
+"shortMessage":  "Use \"CompareOrdinal\" or \"Compare\" with the locale specified instead of \"CompareTo\".",
 "fullMessage":  "\"string.ToLower()\", \"ToUpper\", \"IndexOf\", \"LastIndexOf\", and \"Compare\" are all culture-dependent, as are some (floating point number and \"DateTime\"-related) calls to \"ToString\". Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters. \"string.CompareTo()\" is also culture specific, but has no overload that takes a culture information, so instead it\u0027s better to use \"CompareOrdinal\", or \"Compare\" with culture. Calls without a culture may work fine in the system\u0027s \"home\" environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it\u0027s time to fix them.",
 "properties":  {
 "severity":  "Warning",
@@ -42,18 +42,18 @@
 {
 "analysisTarget":  [
 {
-"uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Queries\\Hints.cs",
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedPubSubMediator.cs",
 "region":  {
-"startLine":  179,
-"startColumn":  39,
-"endLine":  179,
-"endColumn":  47
+"startLine":  471,
+"startColumn":  107,
+"endLine":  471,
+"endColumn":  116
 }
 }
 ]
 }
 ],
-"shortMessage":  "Define the locale to be used in this string operation.",
+"shortMessage":  "Use \"CompareOrdinal\" or \"Compare\" with the locale specified instead of \"CompareTo\".",
 "fullMessage":  "\"string.ToLower()\", \"ToUpper\", \"IndexOf\", \"LastIndexOf\", and \"Compare\" are all culture-dependent, as are some (floating point number and \"DateTime\"-related) calls to \"ToString\". Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters. \"string.CompareTo()\" is also culture specific, but has no overload that takes a culture information, so instead it\u0027s better to use \"CompareOrdinal\", or \"Compare\" with culture. Calls without a culture may work fine in the system\u0027s \"home\" environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it\u0027s time to fix them.",
 "properties":  {
 "severity":  "Warning",
