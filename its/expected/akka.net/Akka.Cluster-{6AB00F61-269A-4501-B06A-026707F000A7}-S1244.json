@@ -23,7 +23,7 @@
 ]
 }
 ],
-"shortMessage":  "Use \"\u003c=\" or \"\u003e=\" instead of \"==\" and \"!=\".",
+"shortMessage":  "Do not check equality with exact values, use a range instead.",
 "fullMessage":  "Floating point math is imprecise because of the challenges of storing such values in a binary representation.Even worse, floating point math is not associative; push a \"float\" or a \"double\" through a series of simple mathematical operations and the answer will be different based on the order of those operation because of the rounding that takes place at each step.",
 "properties":  {
 "severity":  "Warning",

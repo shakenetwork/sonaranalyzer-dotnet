@@ -46,7 +46,7 @@ namespace SonarLint.Rules.CSharp
             "push a \"float\" or a \"double\" through a series of simple mathematical " +
             "operations and the answer will be different based on the order of those operation " +
             "because of the rounding that takes place at each step.";
-        internal const string MessageFormat = "Use \"<=\" or \">=\" instead of \"==\" and \"!=\".";
+        internal const string MessageFormat = "Do not check {0} with exact values, use a range instead.";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
@@ -58,12 +58,12 @@ namespace SonarLint.Rules.CSharp
                 description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
-        
-        private static readonly string[] EqualityOperators =
+
+        private static readonly ISet<string> EqualityOperators = ImmutableHashSet.Create(new[]
         {
             "op_Equality",
             "op_Inequality"
-        };
+        });
 
         public override void Initialize(AnalysisContext context)
         {
@@ -99,7 +99,7 @@ namespace SonarLint.Rules.CSharp
             if (IsIndirectEquality(binaryExpression, right, left, context) ||
                 IsIndirectInequality(binaryExpression, right, left, context))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, binaryExpression.GetLocation()));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, binaryExpression.GetLocation(), "inequality"));
             }
         }
 
@@ -113,7 +113,7 @@ namespace SonarLint.Rules.CSharp
                 equalitySymbol.ContainingType.IsAny(KnownType.FloatingPointNumbers) &&
                 EqualityOperators.Contains(equalitySymbol.Name))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, equals.OperatorToken.GetLocation()));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, equals.OperatorToken.GetLocation(), "equality"));
             }
         }
 
@@ -128,7 +128,7 @@ namespace SonarLint.Rules.CSharp
             return currentExpression as BinaryExpressionSyntax;
         }
 
-        private static bool IsIndirectInequality(BinaryExpressionSyntax binaryExpression, BinaryExpressionSyntax right, 
+        private static bool IsIndirectInequality(BinaryExpressionSyntax binaryExpression, BinaryExpressionSyntax right,
             BinaryExpressionSyntax left, SyntaxNodeAnalysisContext context)
         {
             return binaryExpression.IsKind(SyntaxKind.LogicalOrExpression) &&
@@ -136,7 +136,7 @@ namespace SonarLint.Rules.CSharp
                    HasFloatingType(right.Right, right.Left, context.SemanticModel);
         }
 
-        private static bool IsIndirectEquality(BinaryExpressionSyntax binaryExpression, BinaryExpressionSyntax right, 
+        private static bool IsIndirectEquality(BinaryExpressionSyntax binaryExpression, BinaryExpressionSyntax right,
             BinaryExpressionSyntax left, SyntaxNodeAnalysisContext context)
         {
             return binaryExpression.IsKind(SyntaxKind.LogicalAndExpression) &&
@@ -146,7 +146,7 @@ namespace SonarLint.Rules.CSharp
 
         private static bool HasFloatingType(ExpressionSyntax right, ExpressionSyntax left, SemanticModel semanticModel)
         {
-            return IsExpressionFloatingType(right, semanticModel) || 
+            return IsExpressionFloatingType(right, semanticModel) ||
                 IsExpressionFloatingType(left, semanticModel);
         }
 
