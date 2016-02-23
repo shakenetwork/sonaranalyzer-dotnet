@@ -26,6 +26,9 @@ using System.Linq;
 using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CSharp;
 using SonarLint.Common;
+using System;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.CodeAnalysis.Formatting;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -46,7 +49,7 @@ namespace SonarLint.Rules.CSharp
             return DocumentBasedFixAllProvider.Instance;
         }
 
-        private static readonly SyntaxKind[] ExpectedTokenKinds =
+        private static readonly SyntaxKind[] SimpleTokenKinds =
         {
             SyntaxKind.PartialKeyword,
             SyntaxKind.SealedKeyword
@@ -60,20 +63,54 @@ namespace SonarLint.Rules.CSharp
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var token = root.FindToken(diagnosticSpan.Start);
 
-            if (!ExpectedTokenKinds.Contains(token.Kind()))
+            if (token.IsKind(SyntaxKind.UnsafeKeyword))
             {
+                context.RegisterCodeFix(
+                    CodeAction.Create(
+                        Title,
+                        c =>
+                        {
+                            var newRoot = RemoveRedundantUnsafe(root, token);
+                            return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
+                        }),
+                    context.Diagnostics);
                 return;
             }
 
-            context.RegisterCodeFix(
-                CodeAction.Create(
-                    Title,
-                    c =>
-                    {
-                        var newRoot = RemoveRedundantToken(root, token);
-                        return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
-                    }),
-                context.Diagnostics);
+            if (SimpleTokenKinds.Contains(token.Kind()))
+            {
+                context.RegisterCodeFix(
+                    CodeAction.Create(
+                        Title,
+                        c =>
+                        {
+                            var newRoot = RemoveRedundantToken(root, token);
+                            return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
+                        }),
+                    context.Diagnostics);
+            }
+        }
+
+        private static SyntaxNode RemoveRedundantUnsafe(SyntaxNode root, SyntaxToken token)
+        {
+            var unsafeStatement = token.Parent as UnsafeStatementSyntax;
+            if (unsafeStatement != null)
+            {
+                var parentBlock = unsafeStatement.Parent as BlockSyntax;
+                if (parentBlock != null &&
+                    parentBlock.Statements.Count == 1)
+                {
+                    return root.ReplaceNode(
+                        parentBlock,
+                        parentBlock.WithStatements(unsafeStatement.Block.Statements).WithAdditionalAnnotations(Formatter.Annotation));
+                }
+
+                return root.ReplaceNode(
+                    unsafeStatement,
+                    unsafeStatement.Block.WithAdditionalAnnotations(Formatter.Annotation));
+            }
+
+            return RemoveRedundantToken(root, token);
         }
 
         private static SyntaxNode RemoveRedundantToken(SyntaxNode root, SyntaxToken token)

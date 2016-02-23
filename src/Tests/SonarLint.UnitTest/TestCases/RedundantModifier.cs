@@ -49,4 +49,94 @@ partial interface PartialInterface //Noncompliant
             return "Test";
         }
     }
+
+    unsafe class UnsafeClass
+    {
+        int* pointer;
+    }
+
+    unsafe class UnsafeClass2 // Noncompliant
+    {
+        int num;
+    }
+    unsafe class UnsafeClass3 // Noncompliant
+    {
+        unsafe void M() // Noncompliant
+        {
+
+        }
+    }
+
+    class Class4
+    {
+        unsafe interface MyInterface
+        {
+            unsafe int* Method(); // Noncompliant
+        }
+
+        private unsafe delegate void MyDelegate(int* p);
+        private unsafe delegate void MyDelegate2(int i); // Noncompliant
+
+        unsafe class Inner { } // Noncompliant
+
+        unsafe event MyDelegate MyEvent; // Noncompliant
+        unsafe event MyDelegate MyEvent2
+        {
+            add
+            {
+                int* p;
+            }
+            remove { }
+        }
+
+        unsafe ~Class4() // Noncompliant
+        {
+        }
+        void M()
+        {
+            Point pt = new Point();
+            unsafe
+            {
+                fixed (int* p = &pt.x)
+                {
+                    *p = 1;
+                }
+            }
+
+            unsafe
+            {
+                unsafe // Noncompliant
+                {
+                    unsafe // Noncompliant
+                    {
+                        var i = 1;
+                        int* p = &i;
+                    }
+                }
+            }
+        }
+    }
+
+    public class Foo
+    {
+        public class Bar
+        {
+            public unsafe class Baz // Noncompliant
+            {
+            }
+        }
+    }
+
+    public unsafe class Foo2
+    {
+        public unsafe class Bar // Noncompliant
+        {
+            private int* p;
+
+            public unsafe class Baz // Noncompliant
+            {
+                private int* p2;
+            }
+        }
+    }
 }

@@ -18,6 +18,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
@@ -27,6 +28,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -66,6 +68,138 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.ClassDeclaration,
                 SyntaxKind.InterfaceDeclaration,
                 SyntaxKind.StructDeclaration);
+
+            context.RegisterSyntaxNodeActionInNonGenerated(
+                c => CheckForUnnecessaryUnsafeBlocks(c),
+                SyntaxKind.ClassDeclaration,
+                SyntaxKind.StructDeclaration,
+                SyntaxKind.InterfaceDeclaration);
+        }
+
+        private static void CheckForUnnecessaryUnsafeBlocks(SyntaxNodeAnalysisContext context)
+        {
+            var typeDeclaration = (TypeDeclarationSyntax)context.Node;
+            if (typeDeclaration.Parent is TypeDeclarationSyntax)
+            {
+                // only process top level type declarations
+                return;
+            }
+
+            CheckForUnnecessaryUnsafeBlocksBelow(typeDeclaration, context);
+        }
+
+        private static void CheckForUnnecessaryUnsafeBlocksBelow(TypeDeclarationSyntax typeDeclaration, SyntaxNodeAnalysisContext context)
+        {
+            SyntaxToken unsafeKeyword;
+            if (TryGetUnsafeKeyword(typeDeclaration, out unsafeKeyword))
+            {
+                MarkAllUnsafeBlockInside(typeDeclaration, context);
+                if (!HasUnsafeConstructInside(typeDeclaration))
+                {
+                    ReportOnUnsafeBlock(context, unsafeKeyword.GetLocation());
+                }
+                return;
+            }
+
+            foreach (var member in typeDeclaration.Members)
+            {
+                if (TryGetUnsafeKeyword(member, out unsafeKeyword))
+                {
+                    MarkAllUnsafeBlockInside(member, context);
+                    if (!HasUnsafeConstructInside(member))
+                    {
+                        ReportOnUnsafeBlock(context, unsafeKeyword.GetLocation());
+                    }
+                    continue;
+                }
+
+                var nestedTypeDeclaration = member as TypeDeclarationSyntax;
+                if (nestedTypeDeclaration != null)
+                {
+                    CheckForUnnecessaryUnsafeBlocksBelow(nestedTypeDeclaration, context);
+                    continue;
+                }
+
+                var topLevelUnsafeBlocks = member.DescendantNodes(n => !n.IsKind(SyntaxKind.UnsafeStatement)).OfType<UnsafeStatementSyntax>();
+                foreach (var topLevelUnsafeBlock in topLevelUnsafeBlocks)
+                {
+                    MarkAllUnsafeBlockInside(topLevelUnsafeBlock, context);
+                    if (!HasUnsafeConstructInside(member))
+                    {
+                        ReportOnUnsafeBlock(context, topLevelUnsafeBlock.UnsafeKeyword.GetLocation());
+                    }
+                }
+            }
+        }
+
+        private static bool HasUnsafeConstructInside(SyntaxNode container)
+        {
+            return container.DescendantNodes().Any(node => UnsafeConstructKinds.Contains(node.Kind()));
+        }
+
+        private static readonly ISet<SyntaxKind> UnsafeConstructKinds = new HashSet<SyntaxKind>(new[]
+        {
+            SyntaxKind.AddressOfExpression,
+            SyntaxKind.PointerIndirectionExpression,
+            SyntaxKind.SizeOfExpression,
+            SyntaxKind.PointerType,
+            SyntaxKind.FixedStatement
+        });
+
+        private static void MarkAllUnsafeBlockInside(SyntaxNode container, SyntaxNodeAnalysisContext context)
+        {
+            foreach (var @unsafe in container.DescendantNodes()
+                .SelectMany(node => node.ChildTokens())
+                .Where(token => token.IsKind(SyntaxKind.UnsafeKeyword)))
+            {
+                ReportOnUnsafeBlock(context, @unsafe.GetLocation());
+            }
+        }
+
+        private static void ReportOnUnsafeBlock(SyntaxNodeAnalysisContext context, Location issueLocation)
+        {
+            context.ReportDiagnostic(Diagnostic.Create(Rule, issueLocation, "unsafe", "redundant"));
+        }
+
+        private static bool TryGetUnsafeKeyword(MemberDeclarationSyntax memberDeclaration, out SyntaxToken unsafeKeyword)
+        {
+            var delegateDeclaration = memberDeclaration as DelegateDeclarationSyntax;
+            if (delegateDeclaration != null)
+            {
+                unsafeKeyword = delegateDeclaration.Modifiers.FirstOrDefault(m => m.IsKind(SyntaxKind.UnsafeKeyword));
+                return unsafeKeyword != default(SyntaxToken);
+            }
+
+            var propertyDeclaration = memberDeclaration as BasePropertyDeclarationSyntax;
+            if (propertyDeclaration != null)
+            {
+                unsafeKeyword = propertyDeclaration.Modifiers.FirstOrDefault(m => m.IsKind(SyntaxKind.UnsafeKeyword));
+                return unsafeKeyword != default(SyntaxToken);
+            }
+
+            var methodDeclaration = memberDeclaration as BaseMethodDeclarationSyntax;
+            if (methodDeclaration != null)
+            {
+                unsafeKeyword = methodDeclaration.Modifiers.FirstOrDefault(m => m.IsKind(SyntaxKind.UnsafeKeyword));
+                return unsafeKeyword != default(SyntaxToken);
+            }
+
+            var fieldDeclaration = memberDeclaration as BaseFieldDeclarationSyntax;
+            if (fieldDeclaration != null)
+            {
+                unsafeKeyword = fieldDeclaration.Modifiers.FirstOrDefault(m => m.IsKind(SyntaxKind.UnsafeKeyword));
+                return unsafeKeyword != default(SyntaxToken);
+            }
+
+            var typeDeclaration = memberDeclaration as BaseTypeDeclarationSyntax;
+            if (typeDeclaration != null)
+            {
+                unsafeKeyword = typeDeclaration.Modifiers.FirstOrDefault(m => m.IsKind(SyntaxKind.UnsafeKeyword));
+                return unsafeKeyword != default(SyntaxToken);
+            }
+
+            unsafeKeyword = default(SyntaxToken);
+            return false;
         }
 
         private static void CheckTypeDeclarationForRedundantPartial(SyntaxNodeAnalysisContext context)
