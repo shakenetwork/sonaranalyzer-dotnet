@@ -7,8 +7,6 @@
     internal partial class Partial1Part //Noncompliant
     {
         void Method() { }
-        public virtual void MyNotOverridenMethod() { } //Noncompliant
-        public virtual int Prop { get; set; } //Noncompliant
     }
     partial struct PartialStruct //Noncompliant
     {
@@ -32,7 +30,6 @@ partial interface PartialInterface //Noncompliant
     }
     sealed class SealedClass : Partial2Part
     {
-        public virtual void MyNotOverridenMethod() { } //Noncompliant, reported by VS as well, but we need it for the codefix
         public override sealed void MyOverridenMethod() { } //Noncompliant
         public override sealed int Prop { get; set; } //Noncompliant
     }

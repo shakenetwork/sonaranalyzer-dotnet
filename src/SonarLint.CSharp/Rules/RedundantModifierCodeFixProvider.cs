@@ -49,7 +49,6 @@ namespace SonarLint.Rules.CSharp
         private static readonly SyntaxKind[] ExpectedTokenKinds =
         {
             SyntaxKind.PartialKeyword,
-            SyntaxKind.VirtualKeyword,
             SyntaxKind.SealedKeyword
         };
 

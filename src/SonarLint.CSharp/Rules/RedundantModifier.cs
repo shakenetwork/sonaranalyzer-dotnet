@@ -31,9 +31,8 @@ using SonarLint.Helpers;
 namespace SonarLint.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [SqaleConstantRemediation("2min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
+    [NoSqaleRemediation]
+    [Rule(DiagnosticId, RuleSeverity, Title, false)]
     [Tags(Tag.Unused)]
     public class RedundantModifier : DiagnosticAnalyzer
     {
@@ -44,14 +43,11 @@ namespace SonarLint.Rules.CSharp
         internal const string MessageFormat = "\"{0}\" is {1} in this context.";
         internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = false;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
-        //the severity is set to warning, because otherwise the issue doesn't show up in the IDE
-        //this is due to a bug in Roslyn (https://github.com/dotnet/roslyn/issues/4068)
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
+                RuleSeverity.ToDiagnosticSeverity(ideVisibility), true,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description,
                 customTags: ideVisibility.ToCustomTags());
@@ -61,85 +57,18 @@ namespace SonarLint.Rules.CSharp
         public override void Initialize(AnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c => CheckMethodOrProperty(c),
+                c => CheckSealedMemberInSealedClass(c),
                 SyntaxKind.MethodDeclaration,
                 SyntaxKind.PropertyDeclaration);
 
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c => CheckTypeDeclaration(c),
+                c => CheckTypeDeclarationForRedundantPartial(c),
                 SyntaxKind.ClassDeclaration,
                 SyntaxKind.InterfaceDeclaration,
                 SyntaxKind.StructDeclaration);
-
-            context.RegisterCompilationStartAction(
-                analysisContext =>
-                {
-                    var classWithBaseType = ImmutableDictionary<INamedTypeSymbol, INamedTypeSymbol>.Empty;
-
-                    analysisContext.RegisterSymbolAction(
-                        c =>
-                        {
-                            var classSymbol = c.Symbol as INamedTypeSymbol;
-                            if (classSymbol == null ||
-                                classSymbol.TypeKind != TypeKind.Class)
-                            {
-                                return;
-                            }
-
-                            if (!classWithBaseType.ContainsKey(classSymbol))
-                            {
-                                classWithBaseType = classWithBaseType.Add(classSymbol, classSymbol.BaseType);
-                            }
-                        },
-                        SymbolKind.NamedType);
-
-                    analysisContext.RegisterCompilationEndAction(
-                        c =>
-                        {
-                            foreach (var analyzedClass in classWithBaseType.Keys)
-                            {
-                                if (DeniedDeclaredAccessibility.Contains(analyzedClass.DeclaredAccessibility) ||
-                                    analyzedClass.IsSealed ||
-                                    HasDerivedClass(analyzedClass, classWithBaseType))
-                                {
-                                    continue;
-                                }
-
-                                CheckMembers(c, analyzedClass);
-                            }
-                        });
-                });
         }
 
-        private static void CheckMembers(CompilationAnalysisContext context, INamedTypeSymbol analyzedClass)
-        {
-            foreach (var member in analyzedClass.GetMembers().Where(member => member.IsVirtual))
-            {
-                var syntax = member.DeclaringSyntaxReferences.First().GetSyntax();
-
-                var methodDeclaration = syntax as MethodDeclarationSyntax;
-                if (methodDeclaration != null)
-                {
-                    var keyword = methodDeclaration.Modifiers.First(m => m.IsKind(SyntaxKind.VirtualKeyword));
-                    context.ReportDiagnosticIfNonGenerated(
-                        Diagnostic.Create(Rule, keyword.GetLocation(), "virtual", "gratuitous"),
-                        context.Compilation);
-                    continue;
-                }
-
-                var propertyDeclaration = syntax as PropertyDeclarationSyntax;
-                if (propertyDeclaration != null)
-                {
-                    var keyword = propertyDeclaration.Modifiers.First(m => m.IsKind(SyntaxKind.VirtualKeyword));
-                    context.ReportDiagnosticIfNonGenerated(
-                        Diagnostic.Create(Rule, keyword.GetLocation(), "virtual", "gratuitous"),
-                        context.Compilation);
-                    continue;
-                }
-            }
-        }
-
-        private static void CheckTypeDeclaration(SyntaxNodeAnalysisContext context)
+        private static void CheckTypeDeclarationForRedundantPartial(SyntaxNodeAnalysisContext context)
         {
             var classDeclaration = (TypeDeclarationSyntax)context.Node;
             var classSymbol = context.SemanticModel.GetDeclaredSymbol(classDeclaration);
@@ -153,26 +82,6 @@ namespace SonarLint.Rules.CSharp
 
             var keyword = classDeclaration.Modifiers.First(m => m.IsKind(SyntaxKind.PartialKeyword));
             context.ReportDiagnostic(Diagnostic.Create(Rule, keyword.GetLocation(), "partial", "gratuitous"));
-        }
-
-        private static void CheckMethodOrProperty(SyntaxNodeAnalysisContext context)
-        {
-            var memberDeclaration = (MemberDeclarationSyntax)context.Node;
-            var memberSymbol = context.SemanticModel.GetDeclaredSymbol(memberDeclaration);
-            if (memberSymbol == null)
-            {
-                return;
-            }
-
-            CheckSealedMemberInSealedClass(context, memberDeclaration, memberSymbol);
-            CheckVirtualMemberInSealedClass(context, memberDeclaration, memberSymbol);
-        }
-
-        private static readonly Accessibility[] DeniedDeclaredAccessibility = { Accessibility.Public, Accessibility.Protected };
-
-        private static bool HasDerivedClass(INamedTypeSymbol analyzedClass, ImmutableDictionary<INamedTypeSymbol, INamedTypeSymbol> classWithBaseType)
-        {
-            return classWithBaseType.Values.Any(derived => analyzedClass.Equals(derived.OriginalDefinition));
         }
 
         private static SyntaxTokenList GetModifiers(MemberDeclarationSyntax memberDeclaration)
@@ -192,9 +101,15 @@ namespace SonarLint.Rules.CSharp
             return default(SyntaxTokenList);
         }
 
-        private static void CheckSealedMemberInSealedClass(SyntaxNodeAnalysisContext context,
-            MemberDeclarationSyntax memberDeclaration, ISymbol memberSymbol)
+        private static void CheckSealedMemberInSealedClass(SyntaxNodeAnalysisContext context)
         {
+            var memberDeclaration = (MemberDeclarationSyntax)context.Node;
+            var memberSymbol = context.SemanticModel.GetDeclaredSymbol(memberDeclaration);
+            if (memberSymbol == null)
+            {
+                return;
+            }
+
             if (!memberSymbol.IsSealed ||
                 !memberSymbol.ContainingType.IsSealed)
             {
@@ -206,22 +121,6 @@ namespace SonarLint.Rules.CSharp
             {
                 var keyword = modifiers.First(m => m.IsKind(SyntaxKind.SealedKeyword));
                 context.ReportDiagnostic(Diagnostic.Create(Rule, keyword.GetLocation(), "sealed", "redundant"));
-            }
-        }
-        private static void CheckVirtualMemberInSealedClass(SyntaxNodeAnalysisContext context,
-            MemberDeclarationSyntax memberDeclaration, ISymbol memberSymbol)
-        {
-            if (!memberSymbol.IsVirtual ||
-                !memberSymbol.ContainingType.IsSealed)
-            {
-                return;
-            }
-
-            var modifiers = GetModifiers(memberDeclaration);
-            if (modifiers.Any(m => m.IsKind(SyntaxKind.VirtualKeyword)))
-            {
-                var keyword = modifiers.First(m => m.IsKind(SyntaxKind.VirtualKeyword));
-                context.ReportDiagnostic(Diagnostic.Create(Rule, keyword.GetLocation(), "virtual", "gratuitous"));
             }
         }
     }
