@@ -31,8 +31,7 @@ namespace Tests.TestCases
             {
                 doSomething();
             }
-            catch (ArgumentException) // Compliant now, but if the following catch is removed it is not.
-            // So, this will also be removed by the codefix, as it is doing an iterative run
+            catch (ArgumentException) //Noncompliant
             {
                 throw;
             }
@@ -47,10 +46,37 @@ namespace Tests.TestCases
             }
             catch (ArgumentException)
             {
+                throw;
+            }
+            catch
+            {
                 Console.WriteLine("");
                 throw;
             }
-            catch (Exception)
+
+            try
+            {
+                doSomething();
+            }
+            catch (ArgumentException) // Noncompliant
+            {
+                throw;
+            }
+            catch (NotSupportedException)
+            {
+                Console.WriteLine("");
+                throw;
+            }
+
+            try
+            {
+                doSomething();
+            }
+            catch (ArgumentException) when (true)
+            {
+                throw;
+            }
+            catch (NotSupportedException)
             {
                 Console.WriteLine("");
                 throw;
@@ -67,6 +93,55 @@ namespace Tests.TestCases
             finally
             {
 
+            }
+
+            try
+            {
+                doSomething();
+            }
+            catch (ArgumentNullException) //Noncompliant
+            {
+                throw;
+            }
+            catch (NotImplementedException)
+            {
+                Console.WriteLine("");
+                throw;
+            }
+            catch (ArgumentException) //Noncompliant
+            {
+                throw;
+            }
+            catch //Noncompliant
+            {
+                throw;
+            }
+
+            try
+            {
+                doSomething();
+            }
+            catch (ArgumentNullException)
+            {
+                throw;
+            }
+            catch (NotImplementedException)
+            {
+                Console.WriteLine("");
+                throw;
+            }
+            catch (ArgumentException)
+            {
+                ;
+                throw;
+            }
+            catch(SystemException) //Noncompliant
+            {
+                throw;
+            }
+            catch //Noncompliant
+            {
+                throw;
             }
         }
     }

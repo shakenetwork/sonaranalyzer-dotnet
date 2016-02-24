@@ -18,10 +18,33 @@ namespace Tests.TestCases
             }
             catch (ArgumentException)
             {
+                throw;
+            }
+            catch
+            {
                 Console.WriteLine("");
                 throw;
             }
-            catch (Exception)
+
+            try
+            {
+                doSomething();
+            }
+            catch (NotSupportedException)
+            {
+                Console.WriteLine("");
+                throw;
+            }
+
+            try
+            {
+                doSomething();
+            }
+            catch (ArgumentException) when (true)
+            {
+                throw;
+            }
+            catch (NotSupportedException)
             {
                 Console.WriteLine("");
                 throw;
@@ -34,6 +57,35 @@ namespace Tests.TestCases
             finally
             {
 
+            }
+
+            try
+            {
+                doSomething();
+            }
+            catch (NotImplementedException)
+            {
+                Console.WriteLine("");
+                throw;
+            }
+
+            try
+            {
+                doSomething();
+            }
+            catch (ArgumentNullException)
+            {
+                throw;
+            }
+            catch (NotImplementedException)
+            {
+                Console.WriteLine("");
+                throw;
+            }
+            catch (ArgumentException)
+            {
+                ;
+                throw;
             }
         }
     }

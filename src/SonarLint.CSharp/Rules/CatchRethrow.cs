@@ -26,13 +26,16 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Linq;
+using System.Collections.Generic;
+using System;
 
 namespace SonarLint.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [SqaleConstantRemediation("5min")]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, false)]
     [Tags(Tag.Clumsy, Tag.Unused)]
     public class CatchRethrow : DiagnosticAnalyzer
     {
@@ -46,15 +49,14 @@ namespace SonarLint.Rules.CSharp
             "appropriate logic.";
         internal const string MessageFormat = @"Add logic to this catch clause or eliminate it and rethrow the exception automatically.";
         internal const string Category = SonarLint.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
+        internal const Severity RuleSeverity = Severity.Minor;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         private static readonly BlockSyntax ThrowBlock = SyntaxFactory.Block(SyntaxFactory.ThrowStatement());
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(ideVisibility), IsActivatedByDefault,
+                RuleSeverity.ToDiagnosticSeverity(ideVisibility), true,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description,
                 customTags: ideVisibility.ToCustomTags());
@@ -67,18 +69,70 @@ namespace SonarLint.Rules.CSharp
                 c =>
                 {
                     var tryStatement = (TryStatementSyntax)c.Node;
+                    var catches = tryStatement.Catches.ToList();
+                    var caughtExceptionTypes = new Lazy<List<INamedTypeSymbol>>(() => ComputeExceptionTypesIfNeeded(catches, c.SemanticModel));
+                    var redundantCatches = new HashSet<CatchClauseSyntax>();
+                    var isIntermediate = false;
 
-                    var lastCatchClause = tryStatement.Catches.LastOrDefault();
-
-                    if (lastCatchClause!=null &&
-                        EquivalenceChecker.AreEquivalent(lastCatchClause.Block, ThrowBlock))
+                    for (int i = catches.Count - 1; i >= 0; i--)
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(
-                                Rule,
-                                lastCatchClause.GetLocation()));
+                        var currentCatch = catches[i];
+                        if (!EquivalenceChecker.AreEquivalent(currentCatch.Block, ThrowBlock))
+                        {
+                            isIntermediate = true;
+                            continue;
+                        }
+
+                        if (!isIntermediate)
+                        {
+                            redundantCatches.Add(currentCatch);
+                            continue;
+                        }
+
+                        if (currentCatch.Filter != null)
+                        {
+                            continue;
+                        }
+
+                        if (!IsMoreSpecificTypeThanANotRedundantCatch(i, catches, caughtExceptionTypes.Value, redundantCatches))
+                        {
+                            redundantCatches.Add(currentCatch);
+                        }
+                    }
+
+                    foreach (var redundantCatch in redundantCatches)
+                    {
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, redundantCatch.GetLocation()));
                     }
                 },
                 SyntaxKind.TryStatement);
+        }
+
+        private static bool IsMoreSpecificTypeThanANotRedundantCatch(int catchIndex, List<CatchClauseSyntax> catches, List<INamedTypeSymbol> caughtExceptionTypes,
+            HashSet<CatchClauseSyntax> redundantCatches)
+        {
+            var currentType = caughtExceptionTypes[catchIndex];
+            for (int i = catchIndex + 1; i < caughtExceptionTypes.Count; i++)
+            {
+                var followingType = caughtExceptionTypes[i];
+
+                if (followingType == null ||
+                    currentType.DerivesOrImplementsAny(followingType))
+                {
+                    return !redundantCatches.Contains(catches[i]);
+                }
+            }
+            return false;
+        }
+
+        private static List<INamedTypeSymbol> ComputeExceptionTypesIfNeeded(List<CatchClauseSyntax> catches, SemanticModel semanticModel)
+        {
+            return catches
+                .Select(clause =>
+                    clause.Declaration?.Type != null
+                        ? semanticModel.GetTypeInfo(clause.Declaration?.Type).Type as INamedTypeSymbol
+                        : null)
+                .ToList();
         }
     }
 }

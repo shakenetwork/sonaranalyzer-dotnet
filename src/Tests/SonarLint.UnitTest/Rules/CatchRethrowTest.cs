@@ -40,7 +40,6 @@ namespace SonarLint.UnitTest.Rules
             Verifier.VerifyCodeFix(
                 @"TestCases\CatchRethrow.cs",
                 @"TestCases\CatchRethrow.Fixed.cs",
-                @"TestCases\CatchRethrow.Fixed.Batch.cs",
                 new CatchRethrow(),
                 new CatchRethrowCodeFixProvider());
         }
