@@ -33,9 +33,10 @@ using System.Collections.Generic;
 namespace SonarLint.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [NoSqaleRemediation]
+    [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
+    [SqaleConstantRemediation("2min")]
     [Rule(DiagnosticId, RuleSeverity, Title, false)]
-    [Tags(Tag.Unused)]
+    [Tags(Tag.Unused, Tag.Finding)]
     public class RedundantModifier : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2333";

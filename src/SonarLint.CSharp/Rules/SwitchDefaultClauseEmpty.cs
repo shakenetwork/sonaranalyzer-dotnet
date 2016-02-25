@@ -31,9 +31,10 @@ using System.Linq;
 namespace SonarLint.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    [NoSqaleRemediation]
+    [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
+    [SqaleConstantRemediation("1min")]
     [Rule(DiagnosticId, RuleSeverity, Title, false)]
-    [Tags(Tag.Clumsy, Tag.Unused)]
+    [Tags(Tag.Clumsy, Tag.Unused, Tag.Finding)]
     public class SwitchDefaultClauseEmpty : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3532";

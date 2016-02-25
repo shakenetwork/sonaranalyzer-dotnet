@@ -33,7 +33,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("2min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [Rule(DiagnosticId, RuleSeverity, Title, false)]
-    [Tags("clumsy")]
+    [Tags(Tag.Clumsy, Tag.Finding)]
     public class DefaultBaseConstructorCall : DiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3253";
