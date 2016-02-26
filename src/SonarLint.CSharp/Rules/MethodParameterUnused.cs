@@ -104,7 +104,7 @@ namespace SonarLint.Rules.CSharp
             return methodSymbol.DeclaredAccessibility == Accessibility.Private &&
                 !methodSymbol.GetAttributes().Any() &&
                 methodSymbol.IsChangeable() &&
-                !methodSymbol.IsProbablyEventHandler(compilation);
+                !methodSymbol.IsProbablyEventHandler();
         }
 
         private static IImmutableList<IParameterSymbol> GetUnusedParameters(IMethodSymbol methodSymbol, Compilation compilation)

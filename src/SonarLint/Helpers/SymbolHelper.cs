@@ -117,7 +117,7 @@ namespace SonarLint.Helpers
                 !symbol.IsInterfaceImplementationOrMemberOverride();
         }
 
-        public static bool IsProbablyEventHandler(this IMethodSymbol methodSymbol, Compilation compilation)
+        public static bool IsProbablyEventHandler(this IMethodSymbol methodSymbol)
         {
             if (!methodSymbol.ReturnsVoid ||
                 methodSymbol.Parameters.Length != 2)

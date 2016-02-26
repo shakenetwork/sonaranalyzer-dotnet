@@ -219,13 +219,13 @@ public interface IInterface
                 .First(m => m.Identifier.ValueText == "Method3");
             var symbol = semanticModel.GetDeclaredSymbol(method) as IMethodSymbol;
 
-            Assert.IsFalse(symbol.IsProbablyEventHandler(semanticModel.Compilation));
+            Assert.IsFalse(symbol.IsProbablyEventHandler());
 
             method = derivedClassDeclaration2.DescendantNodes().OfType<MethodDeclarationSyntax>()
                 .First(m => m.Identifier.ValueText == "EventHandler");
             symbol = semanticModel.GetDeclaredSymbol(method) as IMethodSymbol;
 
-            Assert.IsTrue(symbol.IsProbablyEventHandler(semanticModel.Compilation));
+            Assert.IsTrue(symbol.IsProbablyEventHandler());
         }
 
         [TestMethod]

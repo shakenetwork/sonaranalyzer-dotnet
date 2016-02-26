@@ -79,7 +79,7 @@ namespace SonarLint.Rules.CSharp
             return methodSymbol.IsAsync &&
                 methodSymbol.ReturnsVoid &&
                 methodSymbol.IsChangeable() &&
-                !methodSymbol.IsProbablyEventHandler(compilation);
+                !methodSymbol.IsProbablyEventHandler();
         }
     }
 }

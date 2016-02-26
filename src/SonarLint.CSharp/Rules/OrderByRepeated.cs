@@ -95,7 +95,7 @@ namespace SonarLint.Rules.CSharp
             return methodSymbol != null &&
                    methodSymbol.Name == "OrderBy" &&
                    methodSymbol.MethodKind == MethodKind.ReducedExtension &&
-                   CollectionEmptinessChecking.MethodIsOnIEnumerable(methodSymbol, semanticModel);
+                   CollectionEmptinessChecking.MethodIsOnGenericIEnumerable(methodSymbol);
         }
         private static bool IsMethodThenByExtension(InvocationExpressionSyntax invocation, SemanticModel semanticModel)
         {

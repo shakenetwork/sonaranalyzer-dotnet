@@ -146,7 +146,8 @@ namespace SonarLint.Rules.CSharp
             var typeDerivedElement = ((IArrayTypeSymbol) typeDerivedArray).ElementType;
             var typeBaseElement = ((IArrayTypeSymbol)typeBaseArray).ElementType;
 
-            return typeDerivedElement.BaseType.DerivesFrom(typeBaseElement);
+            return typeDerivedElement.BaseType != null &&
+                typeDerivedElement.BaseType.ConstructedFrom.DerivesFrom(typeBaseElement);
         }
     }
 }

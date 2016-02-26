@@ -107,12 +107,12 @@ namespace SonarLint.Helpers
                 typeSymbol.AllInterfaces.Any(symbol => symbol.ConstructedFrom.IsAny(types));
         }
 
-        public static bool DerivesFrom(this INamedTypeSymbol typeSymbol, KnownType type)
+        public static bool DerivesFrom(this ITypeSymbol typeSymbol, KnownType type)
         {
             var currentType = typeSymbol;
             while(currentType != null)
             {
-                if (currentType.ConstructedFrom.Is(type))
+                if (currentType.Is(type))
                 {
                     return true;
                 }
@@ -122,12 +122,12 @@ namespace SonarLint.Helpers
             return false;
         }
 
-        public static bool DerivesFrom(this INamedTypeSymbol typeSymbol, ITypeSymbol type)
+        public static bool DerivesFrom(this ITypeSymbol typeSymbol, ITypeSymbol type)
         {
             var currentType = typeSymbol;
             while (currentType != null)
             {
-                if (currentType.ConstructedFrom.Equals(type))
+                if (currentType.Equals(type))
                 {
                     return true;
                 }
@@ -152,19 +152,19 @@ namespace SonarLint.Helpers
             return false;
         }
 
-        public static bool DerivesOrImplements(this INamedTypeSymbol type, KnownType baseType)
+        public static bool DerivesOrImplements(this ITypeSymbol type, KnownType baseType)
         {
             return type.Implements(baseType) ||
                 type.DerivesFrom(baseType);
         }
 
-        public static bool DerivesOrImplements(this INamedTypeSymbol type, ITypeSymbol baseType)
+        public static bool DerivesOrImplements(this ITypeSymbol type, ITypeSymbol baseType)
         {
             return type.Implements(baseType) ||
                 type.DerivesFrom(baseType);
         }
 
-        public static bool DerivesOrImplementsAny(this INamedTypeSymbol type, ISet<KnownType> baseTypes)
+        public static bool DerivesOrImplementsAny(this ITypeSymbol type, ISet<KnownType> baseTypes)
         {
             return type.ImplementsAny(baseTypes) ||
                 type.DerivesFromAny(baseTypes);

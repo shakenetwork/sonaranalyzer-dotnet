@@ -142,7 +142,7 @@ namespace SonarLint.Rules.CSharp
 
             var methodSymbol = semanticModel.GetSymbolInfo(memberAccess).Symbol as IMethodSymbol;
             if (!IsMethodCountExtension(methodSymbol) ||
-                !MethodIsOnIEnumerable(methodSymbol, semanticModel))
+                !MethodIsOnGenericIEnumerable(methodSymbol))
             {
                 return false;
             }
@@ -164,7 +164,7 @@ namespace SonarLint.Rules.CSharp
                 methodSymbol.ReceiverType != null;
         }
 
-        internal static bool MethodIsOnIEnumerable(IMethodSymbol methodSymbol, SemanticModel semanticModel)
+        internal static bool MethodIsOnGenericIEnumerable(IMethodSymbol methodSymbol)
         {
             if (methodSymbol == null)
             {

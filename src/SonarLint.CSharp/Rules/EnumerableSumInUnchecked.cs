@@ -122,7 +122,7 @@ namespace SonarLint.Rules.CSharp
         private static bool IsSumOnInteger(IMethodSymbol methodSymbol, SemanticModel semanticModel)
         {
             return methodSymbol != null &&
-                CollectionEmptinessChecking.MethodIsOnIEnumerable(methodSymbol, semanticModel) &&
+                CollectionEmptinessChecking.MethodIsOnGenericIEnumerable(methodSymbol) &&
                 methodSymbol.Name == "Sum" &&
                 IsReturnTypeCandidate(methodSymbol);
         }
@@ -140,7 +140,7 @@ namespace SonarLint.Rules.CSharp
                 returnType = nullableType.TypeArguments[0];
             }
 
-            return returnType.IsAny(DisallowedTypes);;
+            return returnType.IsAny(DisallowedTypes);
         }
 
         private static readonly ISet<KnownType> DisallowedTypes = new []
