@@ -65,7 +65,7 @@ namespace SonarLint.Rules.CSharp
                     var invocation = (InvocationExpressionSyntax)c.Node;
                     var methodSymbol = c.SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
 
-                    if (IsSumOnInteger(methodSymbol, c.SemanticModel) &&
+                    if (IsSumOnInteger(methodSymbol) &&
                         IsSumInsideUnchecked(invocation))
                     {
                         var expression = invocation.Expression;
@@ -119,7 +119,7 @@ namespace SonarLint.Rules.CSharp
                 uncheckedExpression.IsKind(SyntaxKind.UncheckedStatement);
         }
 
-        private static bool IsSumOnInteger(IMethodSymbol methodSymbol, SemanticModel semanticModel)
+        private static bool IsSumOnInteger(IMethodSymbol methodSymbol)
         {
             return methodSymbol != null &&
                 CollectionEmptinessChecking.MethodIsOnGenericIEnumerable(methodSymbol) &&

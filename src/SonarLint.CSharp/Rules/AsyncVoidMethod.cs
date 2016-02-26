@@ -66,7 +66,7 @@ namespace SonarLint.Rules.CSharp
                     var methodSymbol = c.SemanticModel.GetDeclaredSymbol(methodDeclaration);
 
                     if (methodSymbol != null &&
-                        IsMethodCandidate(methodSymbol, c.SemanticModel.Compilation))
+                        IsMethodCandidate(methodSymbol))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, methodDeclaration.ReturnType.GetLocation()));
                     }
@@ -74,7 +74,7 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.MethodDeclaration);
         }
 
-        private static bool IsMethodCandidate(IMethodSymbol methodSymbol, Compilation compilation)
+        private static bool IsMethodCandidate(IMethodSymbol methodSymbol)
         {
             return methodSymbol.IsAsync &&
                 methodSymbol.ReturnsVoid &&

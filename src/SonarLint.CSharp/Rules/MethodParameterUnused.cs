@@ -79,7 +79,7 @@ namespace SonarLint.Rules.CSharp
 
         private static void ReportUnusedParametersOnMethod(IMethodSymbol methodSymbol, SymbolAnalysisContext context)
         {
-            if (!MethodCanBeSafelyChanged(methodSymbol, context.Compilation))
+            if (!MethodCanBeSafelyChanged(methodSymbol))
             {
                 return;
             }
@@ -99,7 +99,7 @@ namespace SonarLint.Rules.CSharp
             }
         }
 
-        private static bool MethodCanBeSafelyChanged(IMethodSymbol methodSymbol, Compilation compilation)
+        private static bool MethodCanBeSafelyChanged(IMethodSymbol methodSymbol)
         {
             return methodSymbol.DeclaredAccessibility == Accessibility.Private &&
                 !methodSymbol.GetAttributes().Any() &&

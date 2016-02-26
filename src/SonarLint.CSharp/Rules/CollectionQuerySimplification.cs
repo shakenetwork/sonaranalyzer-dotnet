@@ -156,7 +156,7 @@ namespace SonarLint.Rules.CSharp
 
             var innerMethodSymbol = context.SemanticModel.GetSymbolInfo(innerInvocation).Symbol as IMethodSymbol;
             if (innerMethodSymbol != null &&
-                IsToCollectionCall(innerMethodSymbol, context.SemanticModel))
+                IsToCollectionCall(innerMethodSymbol))
             {
                 context.ReportDiagnostic(Diagnostic.Create(Rule, GetReportLocation(innerInvocation),
                     string.Format(MessageDropFromMiddle, innerMethodSymbol.Name)));
@@ -200,7 +200,7 @@ namespace SonarLint.Rules.CSharp
             return true;
         }
 
-        private static bool IsToCollectionCall(IMethodSymbol methodSymbol, SemanticModel semanticModel)
+        private static bool IsToCollectionCall(IMethodSymbol methodSymbol)
         {
             return MethodNamesToCollection.Contains(methodSymbol.Name) &&
                 (CollectionEmptinessChecking.MethodIsOnGenericIEnumerable(methodSymbol) ||
