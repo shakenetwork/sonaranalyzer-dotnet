@@ -16,5 +16,10 @@ namespace SonarLint.UnitTest.TestCasesForRuleFailure
             var x = 6
             for (int i = 0; i < 5; i++)
             }
+
+        private class C
+        {
+            public C()
+        }
     }
 }

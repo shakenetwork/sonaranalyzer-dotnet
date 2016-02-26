@@ -339,7 +339,8 @@ namespace SonarLint.Rules.CSharp
 
             foreach (var ctor in ctors)
             {
-                if (!ctor.SyntaxNode.Body.Statements.Any())
+                if (ctor.SyntaxNode.Body == null ||
+                    !ctor.SyntaxNode.Body.Statements.Any())
                 {
                     var ctorSymbol = ctor.SemanticModel.GetDeclaredSymbol(ctor.SyntaxNode);
                     if (ctorSymbol != null &&
