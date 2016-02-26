@@ -79,7 +79,7 @@ namespace SonarLint.Rules.CSharp
             context.RegisterCompilationStartAction(
                 compilationStartContext =>
                 {
-                    var allNamedTypeSymbols = AllNamedTypeSymbols(compilationStartContext.Compilation.GlobalNamespace);
+                    var allNamedTypeSymbols = compilationStartContext.Compilation.GlobalNamespace.GetAllNamedTypes();
                     var allInterfacesWithImplementationsOverridenEquals =
                         allNamedTypeSymbols
                             .Where(t => t.AllInterfaces.Any() && HasEqualsOverride(t))
@@ -132,22 +132,6 @@ namespace SonarLint.Rules.CSharp
 
             var typeParameter = (ITypeParameterSymbol)type;
             return typeParameter.ConstraintTypes.Any(t => MightOverrideEquals(t, allInterfacesWithImplementationsOverridenEquals));
-        }
-
-        private static IEnumerable<INamedTypeSymbol> AllNamedTypeSymbols(INamespaceSymbol ns)
-        {
-            foreach (var typeMember in ns.GetTypeMembers())
-            {
-                yield return typeMember;
-            }
-
-            foreach (var nestedNs in ns.GetNamespaceMembers())
-            {
-                foreach (var nestedTypeMember in AllNamedTypeSymbols(nestedNs))
-                {
-                    yield return nestedTypeMember;
-                }
-            }
         }
 
         private static bool IsAllowedType(ITypeSymbol type)

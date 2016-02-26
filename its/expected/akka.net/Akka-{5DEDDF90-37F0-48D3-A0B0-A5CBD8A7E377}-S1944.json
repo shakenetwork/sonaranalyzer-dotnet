@@ -1,0 +1,40 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S1944",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorCell.cs",
+"region":  {
+"startLine":  302,
+"startColumn":  42,
+"endLine":  302,
+"endColumn":  53
+}
+}
+]
+}
+],
+"shortMessage":  "Review this cast; in this project there\u0027s no type that extends \"ActorBase\" and implements \"IDisposable\".",
+"fullMessage":  "Inappropriate casts are issues that will lead to unexpected behavior or runtime errors, such as \"InvalidCastException\"s. The compiler will catch bad casts from one class to another, but not bad casts to interfaces.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Inappropriate casts should not be made",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.9.0\u0026ruleId=S1944",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}

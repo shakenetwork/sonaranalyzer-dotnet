@@ -30,33 +30,41 @@ namespace SonarLint.UnitTest.Helpers
     public class SymbolHelperTest
     {
         internal const string TestInput = @"
-public class Base
+namespace NS
 {
-  public virtual void Method1() { }
-  protected virtual void Method2() { }
-  public abstract int Property { get; set; }
+  public class Base
+  {
+    public class Nested
+    {
+      public class NestedMore
+      {}
+    }
 
-  public void Method4(){}
-}
-private class Derived1 : Base
-{
-  public override int Property { get; set; }
-}
-public class Derived2 : Base, IInterface
-{
-  public override int Property { get; set; }
-  public int Property2 { get; set; }
-  public void Method3(){}
+    public virtual void Method1() { }
+    protected virtual void Method2() { }
+    public abstract int Property { get; set; }
 
-  public abstract void Method5();
-  public void EventHandler(object o, System.EventArgs args){}
-}
-public interface IInterface
-{
-  int Property2 { get; set; }
-  void Method3();
-}
+    public void Method4(){}
+  }
+  private class Derived1 : Base
+  {
+    public override int Property { get; set; }
+  }
+  public class Derived2 : Base, IInterface
+  {
+    public override int Property { get; set; }
+    public int Property2 { get; set; }
+    public void Method3(){}
 
+    public abstract void Method5();
+    public void EventHandler(object o, System.EventArgs args){}
+  }
+  public interface IInterface
+  {
+    int Property2 { get; set; }
+    void Method3();
+  }
+}
 ";
         private Compilation compilation;
         private ClassDeclarationSyntax baseClassDeclaration;
@@ -182,7 +190,7 @@ public interface IInterface
             method = interfaceDeclaration.DescendantNodes().OfType<MethodDeclarationSyntax>()
                 .First(m => m.Identifier.ValueText == "Method3");
             Assert.AreEqual((IMethodSymbol)semanticModel.GetDeclaredSymbol(method), overriddenMethod);
-        }        
+        }
 
         [TestMethod]
         public void Symbol_IsChangeable()
@@ -242,6 +250,24 @@ public interface IInterface
             Assert.AreEqual(derived1Type, baseTypes[0]);
             Assert.AreEqual(semanticModel.GetDeclaredSymbol(baseClassDeclaration) as INamedTypeSymbol, baseTypes[1]);
             Assert.AreEqual(objectType, baseTypes[2]);
+        }
+
+        [TestMethod]
+        public void Symbol_GetAllNamedTypes_Namespace()
+        {
+            var ns = (NamespaceDeclarationSyntax)tree.GetRoot().ChildNodes().First();
+            var nsSymbol = semanticModel.GetDeclaredSymbol(ns) as INamespaceSymbol;
+
+            var typeSymbols = nsSymbol.GetAllNamedTypes();
+            Assert.AreEqual(6, typeSymbols.Count());
+        }
+
+        [TestMethod]
+        public void Symbol_GetAllNamedTypes_Type()
+        {
+            var typeSymbol = semanticModel.GetDeclaredSymbol(baseClassDeclaration) as INamedTypeSymbol;
+            var typeSymbols = typeSymbol.GetAllNamedTypes();
+            Assert.AreEqual(3, typeSymbols.Count());
         }
     }
 }

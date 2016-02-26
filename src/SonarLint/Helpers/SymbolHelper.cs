@@ -22,11 +22,45 @@ using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace SonarLint.Helpers
 {
     public static class SymbolHelper
     {
+        public static IEnumerable<INamedTypeSymbol> GetAllNamedTypes(this INamespaceSymbol @namespace)
+        {
+            if (@namespace == null)
+            {
+                yield break;
+            }
+
+            foreach (var typeMember in @namespace.GetTypeMembers().SelectMany(t => GetAllNamedTypes(t)))
+            {
+                yield return typeMember;
+            }
+
+            foreach (var typeMember in @namespace.GetNamespaceMembers().SelectMany(t => GetAllNamedTypes(t)))
+            {
+                yield return typeMember;
+            }
+        }
+
+        public static IEnumerable<INamedTypeSymbol> GetAllNamedTypes(this INamedTypeSymbol type)
+        {
+            if (type == null)
+            {
+                yield break;
+            }
+
+            yield return type;
+
+            foreach (var nestedType in type.GetTypeMembers().SelectMany(t => GetAllNamedTypes(t)))
+            {
+                yield return nestedType;
+            }
+        }
+
         public static bool IsInterfaceImplementationOrMemberOverride(this ISymbol symbol)
         {
             ISymbol overriddenSymbol;
@@ -109,7 +143,7 @@ namespace SonarLint.Helpers
                 baseType = baseType.BaseType;
             }
         }
-        
+
         public static bool IsChangeable(this ISymbol symbol)
         {
             return !symbol.IsAbstract &&

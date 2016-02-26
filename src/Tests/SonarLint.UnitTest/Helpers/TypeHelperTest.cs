@@ -29,7 +29,7 @@ namespace SonarLint.UnitTest.Helpers
 {
     [TestClass]
     public class TypeHelperTest
-    {        
+    {
         private Compilation compilation;
         private ClassDeclarationSyntax baseClassDeclaration;
         private ClassDeclarationSyntax derivedClassDeclaration1;
@@ -68,9 +68,9 @@ namespace SonarLint.UnitTest.Helpers
             var ctor = typeof(KnownType).GetConstructors(System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
                 .Single(m => m.GetParameters().Length == 1);
 
-            var baseType = (KnownType)ctor.Invoke(new object[] { semanticModel.GetDeclaredSymbol(baseClassDeclaration).Name });
-            var interfaceType = (KnownType)ctor.Invoke(new object[] { semanticModel.GetDeclaredSymbol(interfaceDeclaration).Name });
-            
+            var baseType = (KnownType)ctor.Invoke(new object[] { "NS.Base" });
+            var interfaceType = (KnownType)ctor.Invoke(new object[] { "NS.IInterface" });
+
             var derived1Type = semanticModel.GetDeclaredSymbol(derivedClassDeclaration1) as INamedTypeSymbol;
             var derived2Type = semanticModel.GetDeclaredSymbol(derivedClassDeclaration2) as INamedTypeSymbol;
 
@@ -87,12 +87,12 @@ namespace SonarLint.UnitTest.Helpers
             var ctor = typeof(KnownType).GetConstructors(System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
                 .Single(m => m.GetParameters().Length == 1);
 
-            var baseKnownType = (KnownType)ctor.Invoke(new object[] { semanticModel.GetDeclaredSymbol(baseClassDeclaration).Name });
+            var baseKnownType = (KnownType)ctor.Invoke(new object[] { "NS.Base" });
             var baseKnownTypes = new HashSet<KnownType>(new[] { baseKnownType });
 
             var baseType = semanticModel.GetDeclaredSymbol(baseClassDeclaration) as INamedTypeSymbol;
 
-            Assert.IsTrue(baseType.Is(baseKnownType));           
+            Assert.IsTrue(baseType.Is(baseKnownType));
             Assert.IsTrue(baseType.IsAny(baseKnownTypes));
         }
     }

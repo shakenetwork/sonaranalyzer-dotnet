@@ -1,0 +1,42 @@
+<p>
+    Inappropriate casts are issues that will lead to unexpected behavior or runtime errors, such as
+    <code>InvalidCastException</code>s. The compiler will catch bad casts from one class to another, but not bad casts to
+    interfaces.
+</p>
+
+<h2>Noncompliant Code Example</h2>
+<pre>
+public interface MyInterface
+{ /* ... */ }
+
+public class Implementer : MyInterface
+{ /* ... */ }
+
+public class MyClass
+{ /* ... */ }
+
+public static class Program
+{
+  public static void Main()
+  {
+    var myclass = new MyClass();
+    var x = (MyInterface) myclass; // Noncompliant, InvalidCastException is being thrown
+    var b = myclass is MyInterface; // Noncompliant, always false
+  }
+}
+</pre>
+
+<h2>Exceptions</h2>
+<p>
+    No issue is reported if the interface has no implementing class in the assembly.
+</p>
+
+<h2>See</h2>
+<ul>
+    <li>MISRA C:2004, 11.4 - A cast should not be performed between a pointer to object type and an integral type.</li>
+    <li>MISRA C++:2008, 5-2-3 - Casts to a base class from a derived class should not be performed on polymorphic types.</li>
+    <li><a href="https://www.securecoding.cert.org/confluence/x/tgAV">CERT, EXP36-C.</a> - Do not cast pointers into more strictly aligned pointer types</li>
+    <li><a href="https://www.securecoding.cert.org/confluence/x/j4AyAQ">CERT, EXP56-CPP.</a> - Do not cast pointers into more strictly aligned pointer types</li>
+    <li><a href="http://cwe.mitre.org/data/definitions/588.html">MITRE, CWE-588</a> - Attempt to Access Child of a Non-structure Pointer</li>
+    <li><a href="http://cwe.mitre.org/data/definitions/704.html">MITRE, CWE-704</a> - Incorrect Type Conversion or Cast</li>
+</ul>
