@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("2min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Bug, Tag.Cwe, Tag.Misra, Tag.Security)]
-    public class IfConditionalAlwaysTrueOrFalse : DiagnosticAnalyzer
+    public class IfConditionalAlwaysTrueOrFalse : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1145";
         internal const string Title = "Useless \"if(true) {...}\" and \"if(false){...}\" blocks should be removed";
@@ -62,7 +62,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

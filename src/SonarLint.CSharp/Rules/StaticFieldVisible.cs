@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.SynchronizationReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Pitfall)]
-    public class StaticFieldVisible : DiagnosticAnalyzer
+    public class StaticFieldVisible : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2223";
         internal const string Title = "Non-constant static fields should not be visible";
@@ -61,7 +61,7 @@ namespace SonarLint.Rules.CSharp
             get { return ImmutableArray.Create(Rule); }
         }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

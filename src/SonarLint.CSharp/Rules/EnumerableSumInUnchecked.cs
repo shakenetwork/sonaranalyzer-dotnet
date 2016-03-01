@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("15min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.ErrorHandling, Tag.Security)]
-    public class EnumerableSumInUnchecked : DiagnosticAnalyzer
+    public class EnumerableSumInUnchecked : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2291";
         internal const string Title = "Overflow checking should not be disabled for \"Enumerable.Sum\"";
@@ -57,7 +57,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

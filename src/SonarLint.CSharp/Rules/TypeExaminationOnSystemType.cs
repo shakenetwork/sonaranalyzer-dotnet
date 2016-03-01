@@ -37,7 +37,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Suspicious)]
-    public class TypeExaminationOnSystemType : DiagnosticAnalyzer
+    public class TypeExaminationOnSystemType : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3443";
         internal const string Title = "Type examining methods should be avoided on \"System.Type\" instances";
@@ -61,7 +61,7 @@ namespace SonarLint.Rules.CSharp
 
         private const string SystemTypeName = "System.Type";
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

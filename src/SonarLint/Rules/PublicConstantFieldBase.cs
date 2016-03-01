@@ -28,7 +28,7 @@ using System.Collections.Generic;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class PublicConstantFieldBase : DiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
+    public abstract class PublicConstantFieldBase : SonarDiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S2339";
         protected const string Title = "Public constant members should not be used";
@@ -59,7 +59,7 @@ namespace SonarLint.Rules.Common
         where TFieldDeclarationSyntax: SyntaxNode
         where TFieldName: SyntaxNode
     {
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 GeneratedCodeRecognizer,

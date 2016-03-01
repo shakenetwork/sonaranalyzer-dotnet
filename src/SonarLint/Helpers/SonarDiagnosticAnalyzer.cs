@@ -1,4 +1,4 @@
-﻿/*
+/*
  * SonarLint for Visual Studio
  * Copyright (C) 2015-2016 SonarSource SA
  * mailto:contact@sonarsource.com
@@ -19,24 +19,18 @@
  */
 
 using Microsoft.CodeAnalysis.Diagnostics;
+using System;
+using System.Diagnostics;
 
 namespace SonarLint.Helpers
 {
-    public abstract class ParameteredDiagnosticAnalyzer : DiagnosticAnalyzer
+    public abstract class SonarDiagnosticAnalyzer : DiagnosticAnalyzer
     {
         public sealed override void Initialize(AnalysisContext context)
         {
-            var analysisContext = new WrappingAnalysisContext(context);
-            Initialize(analysisContext);
-
-            context.RegisterCompilationStartAction(
-                cac =>
-                {
-                    ParameterLoader.SetParameterValues(this, cac.Options);
-                    analysisContext.CompilationStartActions.ForEach(startAction => startAction(cac));
-                });
+            Initialize(new SonarAnalysisContext(context));
         }
 
-        public abstract void Initialize(WrappingAnalysisContext context);
+        protected abstract void Initialize(SonarAnalysisContext context);
     }
 }

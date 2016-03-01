@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("1min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Convention)]
-    public class RightCurlyBraceStartsLine : DiagnosticAnalyzer
+    public class RightCurlyBraceStartsLine : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1109";
         internal const string Title = "A close curly brace should be located at the beginning of a line";
@@ -55,7 +55,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxTreeActionInNonGenerated(
                 c =>

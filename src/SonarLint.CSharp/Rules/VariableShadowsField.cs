@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Pitfall)]
-    public class VariableShadowsField : DiagnosticAnalyzer
+    public class VariableShadowsField : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1117";
         internal const string Title = "Local variables should not shadow class fields";
@@ -57,7 +57,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

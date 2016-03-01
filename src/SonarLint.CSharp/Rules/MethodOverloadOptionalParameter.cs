@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Pitfall, Tag.Unused)]
-    public class MethodOverloadOptionalParameter : DiagnosticAnalyzer
+    public class MethodOverloadOptionalParameter : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3427";
         internal const string Title = "Method overloads with default parameter values should not overlap";
@@ -64,7 +64,7 @@ namespace SonarLint.Rules.CSharp
             public IMethodSymbol HiddenMethod { get; set; }
         }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSymbolAction(
                 c =>

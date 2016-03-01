@@ -75,9 +75,10 @@ namespace SonarLint.Helpers
             return builder.ToImmutable();
         }
 
-        private readonly static ConcurrentDictionary<DiagnosticAnalyzer, byte> ProcessedAnalyzers = new ConcurrentDictionary<DiagnosticAnalyzer, byte>();
+        private readonly static ConcurrentDictionary<ParameterLoadingDiagnosticAnalyzer, byte> ProcessedAnalyzers =
+            new ConcurrentDictionary<ParameterLoadingDiagnosticAnalyzer, byte>();
 
-        public static void SetParameterValues(DiagnosticAnalyzer parameteredAnalyzer,
+        public static void SetParameterValues(ParameterLoadingDiagnosticAnalyzer parameteredAnalyzer,
             AnalyzerOptions options)
         {
             if (ProcessedAnalyzers.ContainsKey(parameteredAnalyzer))

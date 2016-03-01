@@ -34,7 +34,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("3min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Bug, Tag.Cert)]
-    public class SelfAssignment : DiagnosticAnalyzer
+    public class SelfAssignment : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1656";
         internal const string Title = "Variables should not be self-assigned";
@@ -58,7 +58,7 @@ namespace SonarLint.Rules.CSharp
             get { return ImmutableArray.Create(Rule); }
         }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

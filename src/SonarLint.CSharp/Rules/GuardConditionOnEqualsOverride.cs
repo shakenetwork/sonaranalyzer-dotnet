@@ -34,7 +34,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Bug)]
-    public class GuardConditionOnEqualsOverride : DiagnosticAnalyzer
+    public class GuardConditionOnEqualsOverride : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3397";
         internal const string Title = "\"base.Equals\" should not be used to check for reference equality in \"Equals\" if \"base\" is not \"object\"";
@@ -58,7 +58,7 @@ namespace SonarLint.Rules.CSharp
 
         private static readonly string[] MethodNames = { GetHashCodeEqualsOverride.EqualsName };
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterCodeBlockStartActionInNonGenerated<SyntaxKind>(
                 cb =>

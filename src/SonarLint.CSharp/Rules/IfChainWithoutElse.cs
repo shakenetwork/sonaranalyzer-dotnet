@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("5min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Cert, Tag.Misra)]
-    public class IfChainWithoutElse : DiagnosticAnalyzer
+    public class IfChainWithoutElse : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S126";
         internal const string Title = "\"if ... else if\" constructs should end with \"else\" clause";
@@ -56,7 +56,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

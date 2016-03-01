@@ -33,7 +33,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.BrainOverload, Tag.Misra)]
-    public class GotoStatement : DiagnosticAnalyzer
+    public class GotoStatement : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S907";
         internal const string Title = "\"goto\" statement should not be used";
@@ -54,7 +54,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

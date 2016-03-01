@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Suspicious, Tag.Cert, Tag.Cwe, Tag.Unused)]
-    public class DeadStores : DiagnosticAnalyzer
+    public class DeadStores : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1854";
         internal const string Title = "Dead stores should be removed";
@@ -84,7 +84,7 @@ namespace SonarLint.Rules.CSharp
             SyntaxKind.DoStatement
         };
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

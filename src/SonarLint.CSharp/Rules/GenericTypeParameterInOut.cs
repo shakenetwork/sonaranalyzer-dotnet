@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("api-design")]
-    public class GenericTypeParameterInOut : DiagnosticAnalyzer
+    public class GenericTypeParameterInOut : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3246";
         internal const string Title = "Generic type parameters should be co/contravariant when possible";
@@ -57,7 +57,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeAction(
                 c => CheckInterfaceVariance((InterfaceDeclarationSyntax)c.Node, c),

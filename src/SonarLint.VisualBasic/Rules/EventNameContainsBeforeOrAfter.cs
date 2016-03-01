@@ -34,7 +34,7 @@ namespace SonarLint.Rules.VisualBasic
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Convention)]
-    public class EventNameContainsBeforeOrAfter : DiagnosticAnalyzer
+    public class EventNameContainsBeforeOrAfter : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2349";
         internal const string Title = "Event names should not have \"Before\" or \"After\" as a prefix or suffix";
@@ -59,7 +59,7 @@ namespace SonarLint.Rules.VisualBasic
         private const string AfterLiteral = "after";
         private const string BeforeLiteral = "before";
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

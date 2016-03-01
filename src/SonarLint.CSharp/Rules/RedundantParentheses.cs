@@ -34,7 +34,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [Rule(DiagnosticId, RuleSeverity, Title, false)]
     [Tags(Tag.Unused, Tag.Finding)]
-    public class RedundantParentheses : DiagnosticAnalyzer
+    public class RedundantParentheses : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3235";
         internal const string Title = "Redundant parentheses should not be used";
@@ -54,7 +54,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

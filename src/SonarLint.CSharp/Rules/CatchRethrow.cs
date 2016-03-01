@@ -37,7 +37,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("5min")]
     [Rule(DiagnosticId, RuleSeverity, Title, false)]
     [Tags(Tag.Clumsy, Tag.Unused, Tag.Finding)]
-    public class CatchRethrow : DiagnosticAnalyzer
+    public class CatchRethrow : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2737";
         internal const string Title = "\"catch\" clauses should do more than rethrow";
@@ -63,7 +63,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

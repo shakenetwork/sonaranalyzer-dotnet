@@ -28,7 +28,7 @@ using System.Collections.Generic;
 
 namespace SonarLint.Rules
 {
-    public abstract class FieldShouldNotBePublicBase : DiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
+    public abstract class FieldShouldNotBePublicBase : SonarDiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S2357";
         protected const string Title = "Fields should be private";
@@ -68,7 +68,7 @@ namespace SonarLint.Rules
         where TFieldDeclarationSyntax : SyntaxNode
         where TVariableSyntax : SyntaxNode
     {
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 GeneratedCodeRecognizer,

@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.SecurityFeatures)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Cwe, Tag.OwaspA6, Tag.SansTop25Porous, Tag.Security)]
-    public class InsecureHashAlgorithm : DiagnosticAnalyzer
+    public class InsecureHashAlgorithm : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2070";
         internal const string Title = "SHA-1 and Message-Digest hash algorithms should not be used";
@@ -72,7 +72,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckObjectCreation(c),

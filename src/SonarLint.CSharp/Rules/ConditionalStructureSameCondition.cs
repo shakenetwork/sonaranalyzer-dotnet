@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("10min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Bug, Tag.Cert, Tag.Pitfall, Tag.Unused)]
-    public class ConditionalStructureSameCondition : DiagnosticAnalyzer
+    public class ConditionalStructureSameCondition : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1862";
         internal const string Title = "Related \"if/else if\" statements should not have the same condition";
@@ -59,7 +59,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

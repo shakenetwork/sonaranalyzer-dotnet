@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("5min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Convention)]
-    public class MethodName : ParameteredDiagnosticAnalyzer
+    public class MethodName : ParameterLoadingDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S100";
         internal const string Title = "Method name should comply with a naming convention";
@@ -61,7 +61,7 @@ namespace SonarLint.Rules.CSharp
             DefaultValueConvention)]
         public string Convention { get; set; } = DefaultValueConvention;
 
-        public override void Initialize(WrappingAnalysisContext context)
+        protected override void Initialize(ParameterLoadingAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

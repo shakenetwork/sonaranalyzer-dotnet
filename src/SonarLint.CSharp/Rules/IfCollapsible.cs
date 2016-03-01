@@ -34,7 +34,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Clumsy)]
-    public class IfCollapsible : DiagnosticAnalyzer
+    public class IfCollapsible : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1066";
         internal const string Title = "Collapsible \"if\" statements should be merged";
@@ -52,7 +52,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

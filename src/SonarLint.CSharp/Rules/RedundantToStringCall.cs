@@ -37,7 +37,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, false)]
     [Tags(Tag.Clumsy, Tag.Finding)]
-    public class RedundantToStringCall : DiagnosticAnalyzer
+    public class RedundantToStringCall : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1858";
         internal const string Title = "\"ToString()\" calls should not be redundant";
@@ -63,14 +63,14 @@ namespace SonarLint.Rules.CSharp
 
         private const string additionOperatorName = "op_Addition";
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             CheckToStringInvocationsOnStringAndInStringFormat(context);
             CheckSidesOfAddExpressionsForToStringCall(context);
             CheckRightSideOfAddAssignmentsForToStringCall(context);
         }
 
-        private static void CheckRightSideOfAddAssignmentsForToStringCall(AnalysisContext context)
+        private static void CheckRightSideOfAddAssignmentsForToStringCall(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
@@ -87,7 +87,7 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.AddAssignmentExpression);
         }
 
-        private static void CheckSidesOfAddExpressionsForToStringCall(AnalysisContext context)
+        private static void CheckSidesOfAddExpressionsForToStringCall(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
@@ -105,7 +105,7 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.AddExpression);
         }
 
-        private static void CheckToStringInvocationsOnStringAndInStringFormat(AnalysisContext context)
+        private static void CheckToStringInvocationsOnStringAndInStringFormat(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Pitfall)]
-    public class AsyncAwaitIdentifier : DiagnosticAnalyzer
+    public class AsyncAwaitIdentifier : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2306";
         internal const string Title = "\"async\" and \"await\" should not be used as identifiers";
@@ -61,7 +61,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxTreeActionInNonGenerated(
                 c =>

@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
     [SqaleConstantRemediation("10min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    public class StaticFieldInGenericClass : DiagnosticAnalyzer
+    public class StaticFieldInGenericClass : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2743";
         internal const string Title = "Static fields should not be used in generic types";
@@ -58,7 +58,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

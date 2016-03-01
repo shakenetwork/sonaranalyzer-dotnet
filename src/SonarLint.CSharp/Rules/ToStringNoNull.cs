@@ -34,7 +34,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Bug, Tag.Cwe)]
-    public class ToStringNoNull : DiagnosticAnalyzer
+    public class ToStringNoNull : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2225";
         internal const string Title = "\"ToString()\" method should not return null";
@@ -54,7 +54,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterCodeBlockStartActionInNonGenerated<SyntaxKind>(
                 cbc =>

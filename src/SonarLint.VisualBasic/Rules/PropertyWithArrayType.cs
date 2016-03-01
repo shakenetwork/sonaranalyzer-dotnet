@@ -34,7 +34,7 @@ namespace SonarLint.Rules.VisualBasic
     [SqaleConstantRemediation("5min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Performance)]
-    public class PropertyWithArrayType : DiagnosticAnalyzer
+    public class PropertyWithArrayType : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2365";
         internal const string Title = "Properties should not be based on arrays";
@@ -55,7 +55,7 @@ namespace SonarLint.Rules.VisualBasic
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

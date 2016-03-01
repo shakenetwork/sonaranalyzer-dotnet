@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Bug)]
-    public class OptionalParameterNotPassedToBaseCall : DiagnosticAnalyzer
+    public class OptionalParameterNotPassedToBaseCall : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3466";
         internal const string Title = "Optional parameters should be passed to \"base\" calls";
@@ -57,7 +57,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

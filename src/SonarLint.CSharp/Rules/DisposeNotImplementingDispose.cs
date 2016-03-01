@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.ArchitectureReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Pitfall)]
-    public class DisposeNotImplementingDispose : DiagnosticAnalyzer
+    public class DisposeNotImplementingDispose : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2953";
         internal const string Title = "Methods named \"Dispose\" should implement \"IDisposable.Dispose\"";
@@ -59,7 +59,7 @@ namespace SonarLint.Rules.CSharp
 
         private const string DisposeMethodName = "Dispose";
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterCompilationStartAction(
                 analysisContext =>

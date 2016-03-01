@@ -39,7 +39,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Clumsy)]
-    public class RedundantInheritanceList : DiagnosticAnalyzer
+    public class RedundantInheritanceList : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1939";
         internal const string Title = "Inheritance list should not be redundant";
@@ -64,7 +64,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckEnum(c),

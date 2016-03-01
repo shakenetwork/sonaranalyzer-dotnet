@@ -37,7 +37,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("10min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Misra, Tag.Pitfall)]
-    public class ForLoopCounterChanged : DiagnosticAnalyzer
+    public class ForLoopCounterChanged : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S127";
         internal const string Title = "\"for\" loop stop conditions should be invariant";
@@ -94,7 +94,7 @@ namespace SonarLint.Rules.CSharp
                 AffectedExpression = node => ((AssignmentExpressionSyntax)node).Left
             });
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Bug, Tag.Misra)]
-    public class EqualityOnFloatingPoint : DiagnosticAnalyzer
+    public class EqualityOnFloatingPoint : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1244";
         internal const string Title = "Floating point numbers should not be tested for equality";
@@ -65,7 +65,7 @@ namespace SonarLint.Rules.CSharp
             "op_Inequality"
         });
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckEquality(c),

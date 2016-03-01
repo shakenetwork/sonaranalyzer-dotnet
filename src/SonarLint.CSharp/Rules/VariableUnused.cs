@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("5min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Unused)]
-    public class VariableUnused : DiagnosticAnalyzer
+    public class VariableUnused : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1481";
         internal const string Title = "Unused local variables should be removed";
@@ -57,7 +57,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterCodeBlockStartActionInNonGenerated<SyntaxKind>(cbc =>
             {

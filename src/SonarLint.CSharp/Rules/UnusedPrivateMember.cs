@@ -37,7 +37,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, Severity.Major, Title, IsActivatedByDefault)]
     [Tags(Tag.Unused)]
-    public class UnusedPrivateMember : DiagnosticAnalyzer
+    public class UnusedPrivateMember : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1144";
         internal const string Title = "Unused private types or members should be removed";
@@ -64,7 +64,7 @@ namespace SonarLint.Rules.CSharp
             public SemanticModel SemanticModel { get; set; }
         }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSymbolAction(
                 c =>

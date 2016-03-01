@@ -34,7 +34,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Design)]
-    public class CastConcreteTypeToInterface : DiagnosticAnalyzer
+    public class CastConcreteTypeToInterface : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3215";
         internal const string Title = "\"interface\" instances should not be cast to concrete types";
@@ -55,7 +55,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

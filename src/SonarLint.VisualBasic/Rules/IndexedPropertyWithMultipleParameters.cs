@@ -34,7 +34,7 @@ namespace SonarLint.Rules.VisualBasic
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Clumsy)]
-    public class IndexedPropertyWithMultipleParameters : DiagnosticAnalyzer
+    public class IndexedPropertyWithMultipleParameters : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2352";
         internal const string Title = "Indexed properties with more than one parameter should not be used";
@@ -54,7 +54,7 @@ namespace SonarLint.Rules.VisualBasic
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

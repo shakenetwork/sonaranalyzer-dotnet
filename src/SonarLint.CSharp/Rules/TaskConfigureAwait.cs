@@ -34,7 +34,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.SynchronizationReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.MultiThreading, Tag.Suspicious)]
-    public class TaskConfigureAwait : DiagnosticAnalyzer
+    public class TaskConfigureAwait : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3216";
         internal const string Title = "\"ConfigureAwait(false)\" should be used";
@@ -58,7 +58,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

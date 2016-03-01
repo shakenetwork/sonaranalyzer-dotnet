@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Bug)]
-    public class ReferenceEqualsOnValueType : DiagnosticAnalyzer
+    public class ReferenceEqualsOnValueType : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2995";
         internal const string Title = "\"Object.ReferenceEquals\" should not be used for value types";
@@ -57,7 +57,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

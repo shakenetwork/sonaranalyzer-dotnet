@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Bug)]
-    public class DisposableReturnedFromUsing : DiagnosticAnalyzer
+    public class DisposableReturnedFromUsing : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2997";
         internal const string Title = "\"IDisposables\" created in a \"using\" statement should not be returned";
@@ -58,7 +58,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

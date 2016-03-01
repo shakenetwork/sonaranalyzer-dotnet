@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Confusing)]
-    public class StringFormatWithNoArgument : DiagnosticAnalyzer
+    public class StringFormatWithNoArgument : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3457";
         internal const string Title = "\"string.Format()\" should not be called without placeholders";
@@ -60,7 +60,7 @@ namespace SonarLint.Rules.CSharp
 
         internal const string FormatStringIndexKey = "formatStringIndex";
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

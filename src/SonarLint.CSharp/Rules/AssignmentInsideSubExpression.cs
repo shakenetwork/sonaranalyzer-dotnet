@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Suspicious, Tag.Cwe, Tag.Misra)]
-    public class AssignmentInsideSubExpression : DiagnosticAnalyzer
+    public class AssignmentInsideSubExpression : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1121";
         internal const string Title = "Assignments should not be made from within sub-expressions";
@@ -57,7 +57,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

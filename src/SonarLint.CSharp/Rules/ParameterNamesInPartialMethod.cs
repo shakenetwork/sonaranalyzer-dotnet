@@ -34,7 +34,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Cert, Tag.Misra, Tag.Pitfall)]
-    public class ParameterNamesInPartialMethod : DiagnosticAnalyzer
+    public class ParameterNamesInPartialMethod : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S927";
         internal const string Title = "\"partial\" method parameter names should match";
@@ -56,7 +56,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

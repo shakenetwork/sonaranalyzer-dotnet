@@ -34,7 +34,7 @@ namespace SonarLint.Rules.VisualBasic
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Pitfall)]
-    public class SimpleDoLoop : DiagnosticAnalyzer
+    public class SimpleDoLoop : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2340";
         internal const string Title = "\"Do\" loops should not be used without a \"While\" or \"Until\" condition";
@@ -54,7 +54,7 @@ namespace SonarLint.Rules.VisualBasic
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

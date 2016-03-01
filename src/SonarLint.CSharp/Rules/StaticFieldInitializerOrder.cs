@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags("bug")]
-    public class StaticFieldInitializerOrder : DiagnosticAnalyzer
+    public class StaticFieldInitializerOrder : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3263";
         internal const string Title = "Static fields should appear in the order they must be initialized";
@@ -60,7 +60,7 @@ namespace SonarLint.Rules.CSharp
             get { return ImmutableArray.Create(Rule); }
         }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

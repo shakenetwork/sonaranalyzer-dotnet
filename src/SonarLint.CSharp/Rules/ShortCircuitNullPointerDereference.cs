@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("2min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Bug)]
-    public class ShortCircuitNullPointerDereference : DiagnosticAnalyzer
+    public class ShortCircuitNullPointerDereference : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1697";
         internal const string Title =
@@ -62,7 +62,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

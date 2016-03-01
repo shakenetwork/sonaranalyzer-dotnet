@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Cert, Tag.Unpredictable)]
-    public class StringOperationWithoutCulture : DiagnosticAnalyzer
+    public class StringOperationWithoutCulture : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1449";
         internal const string Title = "Culture should be specified for \"string\" operations";
@@ -62,7 +62,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

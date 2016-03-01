@@ -27,7 +27,7 @@ using SonarLint.Helpers;
 
 namespace SonarLint.Rules
 {
-    public abstract class TabCharacterBase : DiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
+    public abstract class TabCharacterBase : SonarDiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S105";
         protected const string Title = "Tabulation characters should not be used";
@@ -47,7 +47,7 @@ namespace SonarLint.Rules
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxTreeActionInNonGenerated(
                 GeneratedCodeRecognizer,

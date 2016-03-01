@@ -33,7 +33,7 @@ namespace SonarLint.Rules.VisualBasic
     [SqaleSubCharacteristic(SqaleSubCharacteristic.SecurityFeatures)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Cwe, Tag.Pitfall)]
-    public class EndStatementUsage : DiagnosticAnalyzer
+    public class EndStatementUsage : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1147";
         internal const string Title = "\"End\" statements should not be used";
@@ -54,7 +54,7 @@ namespace SonarLint.Rules.VisualBasic
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c => c.ReportDiagnostic(Diagnostic.Create(Rule, c.Node.GetLocation())),

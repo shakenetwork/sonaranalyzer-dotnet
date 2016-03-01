@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [Rule(DiagnosticId, RuleSeverity, Title, false)]
     [Tags(Tag.Clumsy, Tag.Finding)]
-    public class RedundantPropertyNamesInAnonymousClass : DiagnosticAnalyzer
+    public class RedundantPropertyNamesInAnonymousClass : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3441";
         internal const string Title = "Redundant property names should be omitted in anonymous classes";
@@ -57,7 +57,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

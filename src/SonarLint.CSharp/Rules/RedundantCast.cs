@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Clumsy)]
-    public class RedundantCast : DiagnosticAnalyzer
+    public class RedundantCast : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1905";
         internal const string Title = "Redundant casts should not be used";
@@ -62,7 +62,7 @@ namespace SonarLint.Rules.CSharp
             "Cast", "OfType"
         };
 
-    public override void Initialize(AnalysisContext context)
+    protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckCastExpression(c),

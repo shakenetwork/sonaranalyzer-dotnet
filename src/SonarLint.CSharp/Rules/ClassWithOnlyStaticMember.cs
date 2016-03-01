@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("10min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Design)]
-    public class ClassWithOnlyStaticMember : DiagnosticAnalyzer
+    public class ClassWithOnlyStaticMember : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1118";
         internal const string Title = "Utility classes should not have public constructors";
@@ -63,7 +63,7 @@ namespace SonarLint.Rules.CSharp
             get { return ImmutableArray.Create(Rule); }
         }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSymbolAction(
                 c =>

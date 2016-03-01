@@ -34,7 +34,7 @@ namespace SonarLint.Rules.VisualBasic
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Convention)]
-    public class LineContinuation : DiagnosticAnalyzer
+    public class LineContinuation : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2354";
         internal const string Title = "Line continuations should not be used";
@@ -54,7 +54,7 @@ namespace SonarLint.Rules.VisualBasic
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxTreeActionInNonGenerated(
                 c =>

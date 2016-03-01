@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Suspicious)]
-    public class EqualityOnModulus : DiagnosticAnalyzer
+    public class EqualityOnModulus : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2197";
         internal const string Title = "Modulus results should not be checked for direct equality";
@@ -56,7 +56,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

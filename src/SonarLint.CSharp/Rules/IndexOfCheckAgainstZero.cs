@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Pitfall)]
-    public class IndexOfCheckAgainstZero : DiagnosticAnalyzer
+    public class IndexOfCheckAgainstZero : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2692";
         internal const string Title = "\"IndexOf\" checks should not be for positive numbers";
@@ -56,7 +56,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

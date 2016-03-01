@@ -37,7 +37,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Misra, Tag.Unused)]
-    public class MethodParameterUnused : DiagnosticAnalyzer
+    public class MethodParameterUnused : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1172";
         internal const string Title = "Unused method parameters should be removed";
@@ -58,7 +58,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSymbolAction(
                 c =>

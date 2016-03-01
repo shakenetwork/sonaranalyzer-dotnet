@@ -35,7 +35,7 @@ namespace SonarLint.Rules.VisualBasic
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Clumsy)]
-    public class ArrayCreationLongSyntax : DiagnosticAnalyzer
+    public class ArrayCreationLongSyntax : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2355";
         internal const string Title = "Array literals should be used instead of array creation expressions";
@@ -54,7 +54,7 @@ namespace SonarLint.Rules.VisualBasic
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

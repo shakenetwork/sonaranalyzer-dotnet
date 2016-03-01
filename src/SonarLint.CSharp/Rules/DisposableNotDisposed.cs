@@ -37,7 +37,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("10min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Bug, Tag.Cwe, Tag.DenialOfService, Tag.Security)]
-    public class DisposableNotDisposed : DiagnosticAnalyzer
+    public class DisposableNotDisposed : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2930";
         internal const string Title = "\"IDisposables\" should be disposed";
@@ -89,7 +89,7 @@ namespace SonarLint.Rules.CSharp
             public ISymbol Symbol { get; set; }
         }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSymbolAction(
                 c =>

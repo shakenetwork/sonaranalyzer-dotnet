@@ -34,7 +34,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("2min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Bug, Tag.Cert)]
-    public class BinaryOperationWithIdenticalExpressions : DiagnosticAnalyzer
+    public class BinaryOperationWithIdenticalExpressions : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1764";
         internal const string Title = "Identical expressions should not be used on both sides of a binary operator";
@@ -70,7 +70,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

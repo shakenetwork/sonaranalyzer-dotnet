@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Convention)]
-    public class NonFlagsEnumInBitwiseOperation : DiagnosticAnalyzer
+    public class NonFlagsEnumInBitwiseOperation : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3265";
         internal const string Title = "Non-flags enums should not be used in bitwise operations";
@@ -57,7 +57,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckExpressionWithOperator<BinaryExpressionSyntax>(b => b.OperatorToken, c),

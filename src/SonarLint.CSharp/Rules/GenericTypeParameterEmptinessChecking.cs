@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Bug)]
-    public class GenericTypeParameterEmptinessChecking : DiagnosticAnalyzer
+    public class GenericTypeParameterEmptinessChecking : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2955";
         internal const string Title = "Generic parameters not constrained to reference types should not be compared to \"null\"";
@@ -62,7 +62,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

@@ -33,7 +33,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("2min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Cert, Tag.Misra, Tag.Unused)]
-    public class EmptyStatement : DiagnosticAnalyzer
+    public class EmptyStatement : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1116";
         internal const string Title = "Empty statements should be removed";
@@ -56,7 +56,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c => c.ReportDiagnostic(Diagnostic.Create(Rule, c.Node.GetLocation())),

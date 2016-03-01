@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Suspicious)]
-    public class PartialMethodNoImplementation : DiagnosticAnalyzer
+    public class PartialMethodNoImplementation : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3251";
         internal const string Title = "Implementations should be provided for \"partial\" methods";
@@ -61,7 +61,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckForCandidatePartialInvocation(c),

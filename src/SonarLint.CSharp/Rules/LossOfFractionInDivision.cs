@@ -34,7 +34,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Bug, Tag.Cwe, Tag.SansTop25Risky, Tag.Security)]
-    public class LossOfFractionInDivision : DiagnosticAnalyzer
+    public class LossOfFractionInDivision : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2184";
         internal const string Title = "Result of integer division should not be assigned to floating point variable";
@@ -57,7 +57,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

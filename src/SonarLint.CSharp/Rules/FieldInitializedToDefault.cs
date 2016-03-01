@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [Rule(DiagnosticId, RuleSeverity, Title, false)]
     [Tags(Tag.Convention, Tag.Finding)]
-    public class FieldInitializedToDefault : DiagnosticAnalyzer
+    public class FieldInitializedToDefault : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3052";
         internal const string Title = "Fields should not be initialized to default values";
@@ -61,7 +61,7 @@ namespace SonarLint.Rules.CSharp
         private static readonly ExpressionSyntax NullExpression = SyntaxFactory.LiteralExpression(SyntaxKind.NullLiteralExpression);
         private static readonly ExpressionSyntax FalseExpression = SyntaxFactory.LiteralExpression(SyntaxKind.FalseLiteralExpression);
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

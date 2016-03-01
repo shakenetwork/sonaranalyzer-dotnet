@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.SecurityFeatures)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Cwe, Tag.OwaspA6, Tag.Security)]
-    public class InsecureEncryptionAlgorithm : DiagnosticAnalyzer
+    public class InsecureEncryptionAlgorithm : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2278";
         internal const string Title = "Neither DES (Data Encryption Standard) nor DESede (3DES) should be used";
@@ -77,7 +77,7 @@ namespace SonarLint.Rules.CSharp
             KnownType.System_Security_Cryptography_TripleDES
         });
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckObjectCreation(c),

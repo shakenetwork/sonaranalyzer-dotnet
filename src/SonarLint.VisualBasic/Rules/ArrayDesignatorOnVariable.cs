@@ -35,7 +35,7 @@ namespace SonarLint.Rules.VisualBasic
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Convention)]
-    public class ArrayDesignatorOnVariable : DiagnosticAnalyzer
+    public class ArrayDesignatorOnVariable : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1197";
         internal const string Title = "Array designators \"()\" should be on the type, not the variable";
@@ -55,7 +55,7 @@ namespace SonarLint.Rules.VisualBasic
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

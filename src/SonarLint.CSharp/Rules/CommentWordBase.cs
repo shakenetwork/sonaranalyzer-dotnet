@@ -29,14 +29,14 @@ using System.Collections.Generic;
 
 namespace SonarLint.Rules.CSharp
 {
-    public abstract class CommentWordBase : DiagnosticAnalyzer
+    public abstract class CommentWordBase : SonarDiagnosticAnalyzer
     {
         protected abstract string Word { get; }
         protected abstract DiagnosticDescriptor Rule { get; }
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxTreeActionInNonGenerated(
                 c =>

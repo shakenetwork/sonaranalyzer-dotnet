@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Bug)]
-    public class UnaryPrefixOperatorRepeated : DiagnosticAnalyzer
+    public class UnaryPrefixOperatorRepeated : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2761";
         internal const string Title = "Doubled prefix operators \"!!\" and \"~~\" should not be used";
@@ -55,7 +55,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

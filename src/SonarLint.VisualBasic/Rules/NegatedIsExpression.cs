@@ -34,7 +34,7 @@ namespace SonarLint.Rules.VisualBasic
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Clumsy)]
-    public class NegatedIsExpression : DiagnosticAnalyzer
+    public class NegatedIsExpression : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2358";
         internal const string Title = "\"IsNot\" should be used instead of \"Not ... Is ...\"";
@@ -53,7 +53,7 @@ namespace SonarLint.Rules.VisualBasic
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

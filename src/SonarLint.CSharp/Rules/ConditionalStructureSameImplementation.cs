@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("10min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Design, Tag.Suspicious)]
-    public class ConditionalStructureSameImplementation : DiagnosticAnalyzer
+    public class ConditionalStructureSameImplementation : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1871";
         internal const string Title = "Two branches in the same conditional structure should not have exactly the same " +
@@ -60,7 +60,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

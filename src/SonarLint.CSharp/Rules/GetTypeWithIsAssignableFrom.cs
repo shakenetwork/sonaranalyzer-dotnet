@@ -34,7 +34,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Clumsy)]
-    public class GetTypeWithIsAssignableFrom : DiagnosticAnalyzer
+    public class GetTypeWithIsAssignableFrom : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2219";
         internal const string Title = "Runtime type checking should be simplified";
@@ -60,7 +60,7 @@ namespace SonarLint.Rules.CSharp
         internal const string UseIsOperatorKey = "UseIsOperator";
         internal const string ShouldRemoveGetType = "ShouldRemoveGetType";
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

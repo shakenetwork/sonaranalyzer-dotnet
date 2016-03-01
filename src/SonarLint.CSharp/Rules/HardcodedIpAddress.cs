@@ -38,7 +38,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.ArchitectureChangeability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Cert, Tag.Security)]
-    public class HardcodedIpAddress : DiagnosticAnalyzer
+    public class HardcodedIpAddress : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1313";
         internal const string Title = "IP addresses should not be hardcoded";
@@ -65,7 +65,7 @@ namespace SonarLint.Rules.CSharp
         private static readonly string[] SkippedWords = {"VERSION", "ASSEMBLY"};
         private static readonly Type[] NodeTypesToCheck = {typeof(StatementSyntax), typeof(VariableDeclaratorSyntax), typeof(ParameterSyntax) };
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

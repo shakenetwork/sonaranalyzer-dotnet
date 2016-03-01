@@ -34,7 +34,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("5min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Bug)]
-    public class ObjectCreatedDropped : DiagnosticAnalyzer
+    public class ObjectCreatedDropped : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1848";
         internal const string Title = "Objects should not be created to be dropped immediately without being used";
@@ -54,7 +54,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

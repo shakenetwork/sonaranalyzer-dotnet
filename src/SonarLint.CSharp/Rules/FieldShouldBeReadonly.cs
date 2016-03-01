@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Confusing)]
-    public class FieldShouldBeReadonly : DiagnosticAnalyzer
+    public class FieldShouldBeReadonly : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2933";
         internal const string Title = "Fields that are only assigned in the constructor should be \"readonly\"";
@@ -58,7 +58,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterCompilationStartAction(analysisContext =>
             {

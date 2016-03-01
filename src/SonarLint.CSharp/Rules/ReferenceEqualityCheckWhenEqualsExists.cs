@@ -37,7 +37,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Cert, Tag.Cwe)]
-    public class ReferenceEqualityCheckWhenEqualsExists : DiagnosticAnalyzer
+    public class ReferenceEqualityCheckWhenEqualsExists : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1698";
         internal const string Title = "\"==\" should not be used when \"Equals\" is overridden";
@@ -74,7 +74,7 @@ namespace SonarLint.Rules.CSharp
             KnownType.System_Windows_DependencyObject
         });
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterCompilationStartAction(
                 compilationStartContext =>

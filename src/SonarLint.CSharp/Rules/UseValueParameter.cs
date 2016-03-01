@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Bug)]
-    public class UseValueParameter : DiagnosticAnalyzer
+    public class UseValueParameter : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3237";
         internal const string Title = "\"value\" parameters should be used";
@@ -56,7 +56,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterCodeBlockStartActionInNonGenerated<SyntaxKind>(
                 cbc =>

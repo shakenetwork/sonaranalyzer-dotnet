@@ -28,7 +28,7 @@ using System.Collections.Generic;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class MultipleVariableDeclarationBase : DiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
+    public abstract class MultipleVariableDeclarationBase : SonarDiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
     {
         public const string DiagnosticId = "S1659";
         protected const string Title = "Multiple variables should not be declared on the same line";
@@ -57,7 +57,7 @@ namespace SonarLint.Rules.Common
         where TFieldDeclarationSyntax: SyntaxNode
         where TLocalDeclarationSyntax: SyntaxNode
     {
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 GeneratedCodeRecognizer,

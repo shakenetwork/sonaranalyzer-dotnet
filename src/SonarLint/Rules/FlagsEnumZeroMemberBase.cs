@@ -29,7 +29,7 @@ using System.Collections.Generic;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class FlagsEnumZeroMemberBase : DiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
+    public abstract class FlagsEnumZeroMemberBase : SonarDiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S2346";
         protected const string Title = "Flags enumerations zero-value members should be named \"None\"";
@@ -58,7 +58,7 @@ namespace SonarLint.Rules.Common
         where TEnumDeclarationSyntax : SyntaxNode
         where TEnumMemberSyntax : SyntaxNode
     {
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 GeneratedCodeRecognizer,

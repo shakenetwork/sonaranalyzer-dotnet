@@ -27,7 +27,7 @@ using System.Linq;
 
 namespace SonarLint.Rules
 {
-    public abstract class EnumNameHasEnumSuffixBase : DiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
+    public abstract class EnumNameHasEnumSuffixBase : SonarDiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S2344";
         protected const string Title = "Enumeration type names should not have \"Flags\" or \"Enum\" suffixes";
@@ -55,7 +55,7 @@ namespace SonarLint.Rules
     {
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 GeneratedCodeRecognizer,

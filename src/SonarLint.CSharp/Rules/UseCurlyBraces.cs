@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("2min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Cert, Tag.Cwe, Tag.Misra, Tag.Pitfall)]
-    public class UseCurlyBraces : DiagnosticAnalyzer
+    public class UseCurlyBraces : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S121";
         internal const string Title = "Control structures should use curly braces";
@@ -113,7 +113,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

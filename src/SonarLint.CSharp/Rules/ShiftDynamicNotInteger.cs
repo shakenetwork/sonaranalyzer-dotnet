@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.InstructionReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Bug)]
-    public class ShiftDynamicNotInteger : DiagnosticAnalyzer
+    public class ShiftDynamicNotInteger : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3449";
         internal const string Title = "Right operands of shift operators should be integers";
@@ -57,7 +57,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckExpressionWithTwoParts<BinaryExpressionSyntax>(c.Node, b => b.Left, b => b.Right, c),

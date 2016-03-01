@@ -92,12 +92,14 @@
     <Compile Include="Common\Category.cs" />
     <Compile Include="Common\Tag.cs" />
     <Compile Include="Common\IdeVisibility.cs" />
+    <Compile Include="Helpers\SonarAnalysisContext.cs" />
     <Compile Include="Helpers\DiagnosticReportHelper.cs" />
     <Compile Include="Helpers\KnownType.cs" />
+    <Compile Include="Helpers\SonarDiagnosticAnalyzer.cs" />
     <Compile Include="Helpers\TypeHelper.cs" />
     <Compile Include="Helpers\SymbolHelper.cs" />
-    <Compile Include="Helpers\AnalysisContext.cs" />
-    <Compile Include="Helpers\ParameteredDiagnosticAnalyzer.cs" />
+    <Compile Include="Helpers\ParameterLoadingAnalysisContext.cs" />
+    <Compile Include="Helpers\ParameterLoadingDiagnosticAnalyzer.cs" />
     <Compile Include="Helpers\IMultiLanguageDiagnosticAnalyzer.cs" />
     <Compile Include="Helpers\ParameterLoader.cs" />
     <Compile Include="Helpers\GeneratedCodeRecognizer.cs" />

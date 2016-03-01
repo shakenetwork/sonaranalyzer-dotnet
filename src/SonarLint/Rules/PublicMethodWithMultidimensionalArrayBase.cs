@@ -27,7 +27,7 @@ using SonarLint.Helpers;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class PublicMethodWithMultidimensionalArrayBase : DiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
+    public abstract class PublicMethodWithMultidimensionalArrayBase : SonarDiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S2368";
         protected const string Title = "Public methods should not have multidimensional array parameters";
@@ -56,7 +56,7 @@ namespace SonarLint.Rules.Common
         where TLanguageKindEnum : struct
         where TMethodSyntax: SyntaxNode
     {
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 GeneratedCodeRecognizer,

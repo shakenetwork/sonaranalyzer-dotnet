@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [Rule(DiagnosticId, RuleSeverity, Title, false)]
     [Tags(Tag.Clumsy, Tag.Finding)]
-    public class RedundantArgument : DiagnosticAnalyzer
+    public class RedundantArgument : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3254";
         internal const string Title = "Default parameter values should not be passed as arguments";
@@ -55,7 +55,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

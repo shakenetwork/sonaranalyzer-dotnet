@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Design, Tag.Pitfall)]
-    public class MemberShadowsOuterStaticMember : DiagnosticAnalyzer
+    public class MemberShadowsOuterStaticMember : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3218";
         internal const string Title = "Inner class members should not shadow outer class \"static\" or type members";
@@ -57,7 +57,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSymbolAction(
                 c =>

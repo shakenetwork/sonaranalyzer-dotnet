@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Misra, Tag.Pitfall)]
-    public class MethodOverrideChangedDefaultValue : DiagnosticAnalyzer
+    public class MethodOverrideChangedDefaultValue : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1006";
         internal const string Title = "Method overrides should use the same default parameter values as the base methods";
@@ -59,7 +59,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

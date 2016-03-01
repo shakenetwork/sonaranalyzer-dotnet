@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Suspicious)]
-    public class OptionalParameterWithDefaultValue : DiagnosticAnalyzer
+    public class OptionalParameterWithDefaultValue : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3451";
         internal const string Title = "\"[DefaultValue]\" should not be used when \"[DefaultParameterValue]\" is meant";
@@ -56,7 +56,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

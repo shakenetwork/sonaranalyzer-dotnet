@@ -34,7 +34,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.SynchronizationReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Bug, Tag.MultiThreading)]
-    public class LockOnThisOrType : DiagnosticAnalyzer
+    public class LockOnThisOrType : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2551";
         internal const string Title = "Types and \"this\" should not be used for locking";
@@ -55,7 +55,7 @@ namespace SonarLint.Rules.CSharp
         
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

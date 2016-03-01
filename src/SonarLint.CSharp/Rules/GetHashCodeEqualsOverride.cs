@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Bug)]
-    public class GetHashCodeEqualsOverride : DiagnosticAnalyzer
+    public class GetHashCodeEqualsOverride : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3249";
         internal const string Title = "Classes directly extending \"object\" should not call \"base\" in \"GetHashCode\" or \"Equals\"";
@@ -60,7 +60,7 @@ namespace SonarLint.Rules.CSharp
         private static readonly string[] MethodNames = { "GetHashCode", EqualsName };
         internal static readonly SyntaxNode TrueLiteral = SyntaxFactory.LiteralExpression(SyntaxKind.TrueLiteralExpression);
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterCodeBlockStartActionInNonGenerated<SyntaxKind>(
                 cb =>

@@ -27,7 +27,7 @@ using SonarLint.Helpers;
 
 namespace SonarLint.Rules
 {
-    public abstract class ParameterAssignedToBase : DiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
+    public abstract class ParameterAssignedToBase : SonarDiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S1226";
         protected const string Title = "Method parameters and caught exceptions should not be reassigned";
@@ -61,7 +61,7 @@ namespace SonarLint.Rules
         where TLanguageKindEnum : struct
         where TAssignmentStatementSyntax : SyntaxNode
     {
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 GeneratedCodeRecognizer,

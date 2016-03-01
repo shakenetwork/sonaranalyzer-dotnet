@@ -29,7 +29,7 @@ using Microsoft.CodeAnalysis.Text;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class SingleStatementPerLineBase : DiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
+    public abstract class SingleStatementPerLineBase : SonarDiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S122";
         protected const string Title = "Statements should be on separate lines";
@@ -55,7 +55,7 @@ namespace SonarLint.Rules.Common
     public abstract class SingleStatementPerLineBase<TStatementSyntax> : SingleStatementPerLineBase
         where TStatementSyntax : SyntaxNode
     {
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxTreeActionInNonGenerated(
                 GeneratedCodeRecognizer,

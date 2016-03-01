@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Suspicious)]
-    public class ArgumentSpecifiedForCallerInfoParameter : DiagnosticAnalyzer
+    public class ArgumentSpecifiedForCallerInfoParameter : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3236";
         internal const string Title = "Methods with caller info attributes should not be invoked with explicit arguments";
@@ -58,7 +58,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

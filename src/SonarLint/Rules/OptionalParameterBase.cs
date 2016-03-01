@@ -28,7 +28,7 @@ using System.Collections.Generic;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class OptionalParameterBase : DiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
+    public abstract class OptionalParameterBase : SonarDiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S2360";
         protected const string Title = "Optional parameters should not be used";
@@ -63,7 +63,7 @@ namespace SonarLint.Rules.Common
         where TMethodSyntax : SyntaxNode
         where TParameterSyntax: SyntaxNode
     {
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 GeneratedCodeRecognizer,

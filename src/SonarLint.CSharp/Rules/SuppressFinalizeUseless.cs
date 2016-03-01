@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Confusing, Tag.Unused)]
-    public class SuppressFinalizeUseless : DiagnosticAnalyzer
+    public class SuppressFinalizeUseless : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3234";
         internal const string Title = "\"GC.SuppressFinalize\" should not be invoked for types without destructors";
@@ -58,7 +58,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

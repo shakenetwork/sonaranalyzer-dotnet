@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Cert, Tag.Convention, Tag.Misra, Tag.Pitfall)]
-    public class LiteralSuffixUpperCase : DiagnosticAnalyzer
+    public class LiteralSuffixUpperCase : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S818";
         internal const string Title = "Literal suffixes should be upper case";
@@ -56,7 +56,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

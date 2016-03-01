@@ -34,7 +34,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Bug, Tag.Cwe, Tag.DenialOfService, Tag.Security)]
-    public class DisposeFromDispose : DiagnosticAnalyzer
+    public class DisposeFromDispose : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2952";
         internal const string Title = "Classes should \"Dispose\" of members from the classes' own \"Dispose\" methods";
@@ -57,7 +57,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

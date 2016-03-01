@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("5min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Clumsy, Tag.Suspicious)]
-    public class ConditionalsWithSameCondition : DiagnosticAnalyzer
+    public class ConditionalsWithSameCondition : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2760";
         internal const string Title = "Sequential tests should not check the same condition";
@@ -56,7 +56,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

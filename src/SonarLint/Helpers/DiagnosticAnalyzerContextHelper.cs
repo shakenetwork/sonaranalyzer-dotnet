@@ -32,12 +32,12 @@ namespace SonarLint.Helpers
         #region Register*ActionInNonGenerated
 
         public static void RegisterSyntaxNodeActionInNonGenerated<TLanguageKindEnum>(
-            this AnalysisContext context,
+            this SonarAnalysisContext context,
             GeneratedCodeRecognizer generatedCodeRecognizer,
             Action<SyntaxNodeAnalysisContext> action,
             params TLanguageKindEnum[] syntaxKinds) where TLanguageKindEnum : struct
         {
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeAction<TLanguageKindEnum>(
                 c =>
                 {
                     if (!c.Node.SyntaxTree.IsGenerated(generatedCodeRecognizer, c.SemanticModel.Compilation))
@@ -49,7 +49,7 @@ namespace SonarLint.Helpers
         }
 
         public static void RegisterSyntaxNodeActionInNonGenerated<TLanguageKindEnum>(
-            this WrappingAnalysisContext context,
+            this ParameterLoadingAnalysisContext context,
             GeneratedCodeRecognizer generatedCodeRecognizer,
             Action<SyntaxNodeAnalysisContext> action,
             params TLanguageKindEnum[] syntaxKinds) where TLanguageKindEnum : struct
@@ -83,7 +83,7 @@ namespace SonarLint.Helpers
         }
 
         public static void RegisterSyntaxTreeActionInNonGenerated(
-            this AnalysisContext context,
+            this SonarAnalysisContext context,
             GeneratedCodeRecognizer generatedCodeRecognizer,
             Action<SyntaxTreeAnalysisContext> action)
         {
@@ -102,7 +102,7 @@ namespace SonarLint.Helpers
         }
 
         public static void RegisterSyntaxTreeActionInNonGenerated(
-            this WrappingAnalysisContext context,
+            this ParameterLoadingAnalysisContext context,
             GeneratedCodeRecognizer generatedCodeRecognizer,
             Action<SyntaxTreeAnalysisContext> action)
         {
@@ -121,7 +121,7 @@ namespace SonarLint.Helpers
         }
 
         public static void RegisterCodeBlockStartActionInNonGenerated<TLanguageKindEnum>(
-            this AnalysisContext context,
+            this SonarAnalysisContext context,
             GeneratedCodeRecognizer generatedCodeRecognizer,
             Action<CodeBlockStartAnalysisContext<TLanguageKindEnum>> action) where TLanguageKindEnum : struct
         {
@@ -136,7 +136,7 @@ namespace SonarLint.Helpers
         }
 
         public static void RegisterCodeBlockStartActionInNonGenerated<TLanguageKindEnum>(
-            this WrappingAnalysisContext context,
+            this ParameterLoadingAnalysisContext context,
             GeneratedCodeRecognizer generatedCodeRecognizer,
             Action<CodeBlockStartAnalysisContext<TLanguageKindEnum>> action) where TLanguageKindEnum : struct
         {

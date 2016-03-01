@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.SynchronizationReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Bug, Tag.MultiThreading)]
-    public class StaticFieldWrittenFromInstanceMember : DiagnosticAnalyzer
+    public class StaticFieldWrittenFromInstanceMember : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2696";
         internal const string Title = "Instance members should not write to \"static\" fields";
@@ -55,7 +55,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterCodeBlockStartActionInNonGenerated<SyntaxKind>(
                 cbc =>

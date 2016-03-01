@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Clumsy)]
-    public class CollectionQuerySimplification : DiagnosticAnalyzer
+    public class CollectionQuerySimplification : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2971";
         internal const string Title = "\"IEnumerable\" LINQs should be simplified";
@@ -85,7 +85,7 @@ namespace SonarLint.Rules.CSharp
         private const string WhereMethodName = "Where";
         private const string SelectMethodName = "Select";
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

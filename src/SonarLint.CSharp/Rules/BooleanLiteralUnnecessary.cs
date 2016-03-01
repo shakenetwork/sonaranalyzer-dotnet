@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("2min")]
     [Tags(Tag.Clumsy)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    public class BooleanLiteralUnnecessary : DiagnosticAnalyzer
+    public class BooleanLiteralUnnecessary : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1125";
         internal const string Title = "Boolean literals should not be redundant";
@@ -59,7 +59,7 @@ namespace SonarLint.Rules.CSharp
         internal static readonly ExpressionSyntax TrueExpression = SyntaxFactory.LiteralExpression(SyntaxKind.TrueLiteralExpression);
         internal static readonly ExpressionSyntax FalseExpression = SyntaxFactory.LiteralExpression(SyntaxKind.FalseLiteralExpression);
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckEquals(c),

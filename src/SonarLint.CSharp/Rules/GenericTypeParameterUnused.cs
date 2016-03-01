@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Unused)]
-    public class GenericTypeParameterUnused : DiagnosticAnalyzer
+    public class GenericTypeParameterUnused : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2326";
         internal const string Title = "Unused type parameters should be removed";
@@ -58,7 +58,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterCompilationStartAction(analysisContext =>
             {

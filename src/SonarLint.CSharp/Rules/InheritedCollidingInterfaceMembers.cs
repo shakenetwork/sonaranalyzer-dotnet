@@ -37,7 +37,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Design)]
-    public class InheritedCollidingInterfaceMembers : DiagnosticAnalyzer
+    public class InheritedCollidingInterfaceMembers : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3444";
         internal const string Title = "Interfaces with colliding, inherited members should explicitly redefine interface members";
@@ -64,7 +64,7 @@ namespace SonarLint.Rules.CSharp
 
         private const int MaxMemberDisplayCount = 2;
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

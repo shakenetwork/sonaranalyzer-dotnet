@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicChangeability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.BrainOverload)]
-    public class FunctionNestingDepth : ParameteredDiagnosticAnalyzer
+    public class FunctionNestingDepth : ParameterLoadingDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S134";
         internal const string Title = "Control flow statements \"if\", \"for\", \"foreach\", \"do\", \"while\", \"switch\" and \"try\" should not be nested too deeply";
@@ -74,7 +74,7 @@ namespace SonarLint.Rules.CSharp
             SyntaxKind.RemoveAccessorDeclaration
         };
 
-        public override void Initialize(WrappingAnalysisContext context) =>
+        protected override void Initialize(ParameterLoadingAnalysisContext context) =>
             context.RegisterSyntaxNodeActionInNonGenerated(c => CheckFunctionNestingDepth(c), FunctionKinds);
 
         private void CheckFunctionNestingDepth(SyntaxNodeAnalysisContext context)

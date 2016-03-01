@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
     [Rule(DiagnosticId, Severity.Minor, Title, IsActivatedByDefault)]
     [Tags(Tag.Clumsy)]
-    public class MemberOverrideCallsBaseMember : DiagnosticAnalyzer
+    public class MemberOverrideCallsBaseMember : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1185";
         internal const string Title = "Overriding members should do more than simply call the same member in the super class";
@@ -58,7 +58,7 @@ namespace SonarLint.Rules.CSharp
 
         private static readonly string[] IgnoredMethodNames = { "Equals", "GetHashCode" };
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

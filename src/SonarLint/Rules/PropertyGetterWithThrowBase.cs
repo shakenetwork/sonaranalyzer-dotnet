@@ -27,7 +27,7 @@ using SonarLint.Helpers;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class PropertyGetterWithThrowBase : DiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
+    public abstract class PropertyGetterWithThrowBase : SonarDiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
     {
         protected const string DiagnosticId = "S2372";
         protected const string Title = "Exceptions should not be thrown from property getters";
@@ -54,7 +54,7 @@ namespace SonarLint.Rules.Common
         where TLanguageKindEnum : struct
         where TAccessorSyntax : SyntaxNode
     {
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterCodeBlockStartActionInNonGenerated<TLanguageKindEnum>(
                 GeneratedCodeRecognizer,

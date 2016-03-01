@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("2min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Clumsy)]
-    public class ConditionalSimplification : DiagnosticAnalyzer
+    public class ConditionalSimplification : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3240";
         internal const string Title = "The simplest possible condition syntax should be used";
@@ -60,7 +60,7 @@ namespace SonarLint.Rules.CSharp
 
         internal const string IsNullCoalescingKey = "isNullCoalescing";
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckConditionalExpression(c),

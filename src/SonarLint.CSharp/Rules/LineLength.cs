@@ -33,7 +33,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Convention)]
-    public class LineLength : ParameteredDiagnosticAnalyzer
+    public class LineLength : ParameterLoadingDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S103";
         internal const string Title = "Lines should not be too long";
@@ -57,7 +57,7 @@ namespace SonarLint.Rules.CSharp
         [RuleParameter("maximumLineLength", PropertyType.Integer, "The maximum authorized line length.", DefaultValueMaximum)]
         public int Maximum { get; set; } = DefaultValueMaximum;
 
-        public override void Initialize(WrappingAnalysisContext context)
+        protected override void Initialize(ParameterLoadingAnalysisContext context)
         {
             context.RegisterSyntaxTreeActionInNonGenerated(
                 c =>

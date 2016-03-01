@@ -33,7 +33,7 @@ namespace SonarLint.Rules.CSharp
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [Tags(Tag.BrainOverload)]
-    public class FileLines : ParameteredDiagnosticAnalyzer
+    public class FileLines : ParameterLoadingDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S104";
         internal const string Title = "Files should not have too many lines";
@@ -59,7 +59,7 @@ namespace SonarLint.Rules.CSharp
         [RuleParameter("maximumFileLocThreshold", PropertyType.Integer, "Maximum authorized lines in a file.", DefaultValueMaximum)]
         public int Maximum { get; set; } = DefaultValueMaximum;
 
-        public override void Initialize(WrappingAnalysisContext context)
+        protected override void Initialize(ParameterLoadingAnalysisContext context)
         {
             context.RegisterSyntaxTreeActionInNonGenerated(
                 c =>

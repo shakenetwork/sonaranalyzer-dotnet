@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("1min")]
     [Rule(DiagnosticId, RuleSeverity, Title, false)]
     [Tags(Tag.Clumsy, Tag.Unused, Tag.Finding)]
-    public class SwitchDefaultClauseEmpty : DiagnosticAnalyzer
+    public class SwitchDefaultClauseEmpty : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3532";
         internal const string Title = "Empty \"default\" clauses in a \"switch\" should be removed";
@@ -55,7 +55,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

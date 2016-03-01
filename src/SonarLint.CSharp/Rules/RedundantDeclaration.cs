@@ -37,7 +37,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [Rule(DiagnosticId, RuleSeverity, Title, false)]
     [Tags(Tag.Clumsy, Tag.Finding)]
-    public class RedundantDeclaration : DiagnosticAnalyzer
+    public class RedundantDeclaration : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S3257";
         internal const string Title = "Declarations and initializations should be as concise as possible";
@@ -70,7 +70,7 @@ namespace SonarLint.Rules.CSharp
             DelegateParameterList
         }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

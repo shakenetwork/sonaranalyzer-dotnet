@@ -35,7 +35,7 @@ namespace SonarLint.Rules.VisualBasic
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Pitfall)]
-    public class UnsignedTypesUsage : DiagnosticAnalyzer
+    public class UnsignedTypesUsage : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2374";
         internal const string Title = "Signed types should be preferred to unsigned ones";
@@ -55,7 +55,7 @@ namespace SonarLint.Rules.VisualBasic
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>

@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.ArchitectureReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Bug, Tag.Cwe, Tag.DenialOfService, Tag.Security)]
-    public class DisposableMemberInNonDisposableClass : DiagnosticAnalyzer
+    public class DisposableMemberInNonDisposableClass : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2931";
         internal const string Title = "Classes with \"IDisposable\" members should implement \"IDisposable\"";
@@ -60,7 +60,7 @@ namespace SonarLint.Rules.CSharp
 
         private static readonly Accessibility[] Accessibilities = { Accessibility.Protected, Accessibility.Private };
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterCompilationStartAction(analysisContext =>
             {

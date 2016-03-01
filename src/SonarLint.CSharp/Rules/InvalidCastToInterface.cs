@@ -36,7 +36,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Bug, Tag.Cert, Tag.Cwe, Tag.Misra, Tag.Pitfall)]
-    public class InvalidCastToInterface : DiagnosticAnalyzer
+    public class InvalidCastToInterface : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1944";
         internal const string Title = "Inappropriate casts should not be made";
@@ -57,7 +57,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
 
-        public override void Initialize(AnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterCompilationStartAction(
                 compilationStartContext =>
