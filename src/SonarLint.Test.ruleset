@@ -140,6 +140,9 @@
     <Rule Id="C6320" Action="Warning" />
     <Rule Id="C6322" Action="Warning" />
   </Rules>
+  <Rules AnalyzerId="Microsoft.CodeAnalysis.CSharp" RuleNamespace="Microsoft.CodeAnalysis.CSharp">
+    <Rule Id="AD0001" Action="Error" />
+  </Rules>
   <Rules AnalyzerId="SonarLint.CSharp" RuleNamespace="SonarLint.CSharp">
     <Rule Id="S100" Action="Warning" />
     <Rule Id="S101" Action="Warning" />
@@ -165,6 +168,7 @@
     <Rule Id="S1301" Action="Warning" />
     <Rule Id="S131" Action="Warning" />
     <Rule Id="S1313" Action="Warning" />
+    <Rule Id="S134" Action="Warning" />
     <Rule Id="S1479" Action="Warning" />
     <Rule Id="S1541" Action="Warning" />
     <Rule Id="S1659" Action="Warning" />
@@ -181,7 +185,6 @@
     <Rule Id="S2339" Action="Warning" />
     <Rule Id="S2357" Action="Warning" />
     <Rule Id="S2387" Action="Warning" />
-    <Rule Id="S2486" Action="Warning" />
     <Rule Id="S2551" Action="Warning" />
     <Rule Id="S2674" Action="Warning" />
     <Rule Id="S2760" Action="Warning" />
