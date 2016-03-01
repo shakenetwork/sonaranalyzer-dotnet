@@ -22,6 +22,7 @@ using Microsoft.CodeAnalysis.Text;
 using Microsoft.CodeAnalysis;
 using System.Threading;
 using System.IO;
+using System;
 
 namespace SonarLint.Common
 {
@@ -36,7 +37,7 @@ namespace SonarLint.Common
 
         public override string Path => path;
 
-        public override SourceText GetText(CancellationToken cancellationToken)
+        public override SourceText GetText(CancellationToken cancellationToken = default(CancellationToken))
         {
             return SourceText.From(File.ReadAllText(path));
         }

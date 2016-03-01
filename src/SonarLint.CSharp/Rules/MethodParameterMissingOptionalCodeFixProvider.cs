@@ -80,7 +80,7 @@ namespace SonarLint.Rules.CSharp
             SemanticModel semanticModel)
         {
             var attributeName = optionalAttribute.ToMinimalDisplayString(semanticModel, attributeList.SpanStart);
-            attributeName = attributeName.Remove(attributeName.IndexOf("Attribute"));
+            attributeName = attributeName.Remove(attributeName.IndexOf("Attribute", System.StringComparison.Ordinal));
 
             return attributeList.AddAttributes(
                 SyntaxFactory.Attribute(

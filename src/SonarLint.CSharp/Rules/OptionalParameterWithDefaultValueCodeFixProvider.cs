@@ -70,7 +70,7 @@ namespace SonarLint.Rules.CSharp
                     {
                         var attributeName = defaultParameterValueAttributeType
                             .ToMinimalDisplayString(semanticModel, attribute.SpanStart);
-                        attributeName = attributeName.Remove(attributeName.IndexOf("Attribute"));
+                        attributeName = attributeName.Remove(attributeName.IndexOf("Attribute", System.StringComparison.Ordinal));
 
                         var newAttribute = attribute.WithName(SyntaxFactory.ParseName(attributeName));
                         var newRoot = root.ReplaceNode(attribute, newAttribute);
