@@ -140,9 +140,6 @@
     <Rule Id="C6320" Action="Warning" />
     <Rule Id="C6322" Action="Warning" />
   </Rules>
-  <Rules AnalyzerId="Microsoft.CodeAnalysis.CSharp" RuleNamespace="Microsoft.CodeAnalysis.CSharp">
-    <Rule Id="AD0001" Action="Error" />
-  </Rules>
   <Rules AnalyzerId="SonarLint.CSharp" RuleNamespace="SonarLint.CSharp">
     <Rule Id="S100" Action="Warning" />
     <Rule Id="S101" Action="Warning" />
