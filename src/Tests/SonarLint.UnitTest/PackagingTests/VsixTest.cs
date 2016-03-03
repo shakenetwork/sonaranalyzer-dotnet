@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.PackagingTests
         [TestCategory("Vsix")]
         public void Size_Check()
         {
-            const string vsixFileName = "SonarLint.vsix";
+            const string vsixFileName = "SonarAnalyzer.vsix";
 #if DEBUG
             const string pathEnding = @"bin\Debug";
             const int approxFileSize = 883 * 1024;
