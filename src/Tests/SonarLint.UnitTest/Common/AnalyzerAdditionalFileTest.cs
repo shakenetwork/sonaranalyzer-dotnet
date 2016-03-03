@@ -1,4 +1,4 @@
-/*
+﻿/*
  * SonarLint for Visual Studio
  * Copyright (C) 2015-2016 SonarSource SA
  * mailto:contact@sonarsource.com
@@ -18,27 +18,21 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using Microsoft.CodeAnalysis.Text;
-using Microsoft.CodeAnalysis;
-using System.Threading;
-using System.IO;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SonarLint.Common;
+using System;
 
-namespace SonarLint.Common
+namespace SonarLint.UnitTest.Common
 {
-    public sealed class AnalyzerAdditionalFile : AdditionalText
+    [TestClass]
+    public class AnalyzerAdditionalFileTest
     {
-        private readonly string path;
-
-        public AnalyzerAdditionalFile(string path)
+        [TestMethod]
+        public void AnalyzerAdditionalFile_GetText()
         {
-            this.path = path;
-        }
-
-        public override string Path => path;
-
-        public override SourceText GetText(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            return SourceText.From(File.ReadAllText(path));
+            var additionalFile = new AnalyzerAdditionalFile(@"Common\Resources\input.txt");
+            var content = additionalFile.GetText();
+            Assert.AreEqual("some sample content", content.ToString());
         }
     }
 }
