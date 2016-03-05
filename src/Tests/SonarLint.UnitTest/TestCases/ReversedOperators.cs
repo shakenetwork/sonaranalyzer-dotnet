@@ -20,6 +20,12 @@ namespace Tests.Diagnostics
             target += -num;
             target =
                 +num;
+
+            bool a, b;
+            if (a =! b) ; // Noncompliant
+            if (a != b) ;
+
+            if (a = !b) ;
         }
     }
 }

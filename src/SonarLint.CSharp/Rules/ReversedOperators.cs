@@ -39,10 +39,10 @@ namespace SonarLint.Rules.CSharp
         internal const string DiagnosticId = "S2757";
         internal const string Title = "\"=+\" should not be used instead of \"+=\"";
         internal const string Description =
-            "The use of operators pairs (\"=+\" or \"=-\") where the reversed, single operator " +
-            "was meant (\"+=\" or \"-=\") will compile and run, but not produce the expected results. " +
-            "This rule raises an issue when \"=+\", and \"=-\" are used, but ignores the operators " +
-            "when they're spaced out: \"= +\", \"= -\".";
+            "The use of operators pairs (\"=+\", \"=-\" or \"=!\") where the reversed, single operator " +
+            "was meant (\"+=\", \"-=\" or \"!=\") will compile and run, but not produce the expected results. " +
+            "This rule raises an issue when \"=+\", \"=-\" and \"=!\" are used, but ignores the operators " +
+            "when they're spaced out: \"= +\", \"= -\", \"= !\".";
         internal const string MessageFormat = "Was \"{0}\" meant instead?";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
@@ -78,7 +78,8 @@ namespace SonarLint.Rules.CSharp
                     }
                 },
                 SyntaxKind.UnaryMinusExpression,
-                SyntaxKind.UnaryPlusExpression);
+                SyntaxKind.UnaryPlusExpression,
+                SyntaxKind.LogicalNotExpression);
         }
     }
 }
