@@ -113,17 +113,7 @@ namespace SonarLint.Helpers
             ImmutableArray<TLanguageKindEnum> syntaxKinds)
             where TLanguageKindEnum : struct
         {
-            context.RegisterSyntaxNodeAction(
-                c =>
-                {
-                    if (IsAnalysisDisabled(c.Node.SyntaxTree))
-                    {
-                        return;
-                    }
-
-                    action(c);
-                },
-                syntaxKinds);
+            RegisterSyntaxNodeAction(action, syntaxKinds.ToArray());
         }
 
         public void RegisterSyntaxNodeAction<TLanguageKindEnum>(Action<SyntaxNodeAnalysisContext> action,
