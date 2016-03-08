@@ -29,6 +29,10 @@ namespace SonarLint.Helpers
     public class ParameterLoadingAnalysisContext
     {
         private readonly SonarAnalysisContext context;
+        private readonly ICollection<Action<CompilationStartAnalysisContext>> compilationStartActions =
+            new List<Action<CompilationStartAnalysisContext>>();
+
+        public IEnumerable<Action<CompilationStartAnalysisContext>> CompilationStartActions => compilationStartActions;
 
         public ParameterLoadingAnalysisContext(SonarAnalysisContext context)
         {
@@ -45,10 +49,9 @@ namespace SonarLint.Helpers
             context.RegisterCompilationAction(action);
         }
 
-        private ICollection<Action<CompilationStartAnalysisContext>> compilationStartActions = new List<Action<CompilationStartAnalysisContext>>();
-        public IEnumerable<Action<CompilationStartAnalysisContext>> CompilationStartActions => compilationStartActions;
         public void RegisterCompilationStartAction(Action<CompilationStartAnalysisContext> action)
         {
+            // only collect compilation start actions and call them later
             compilationStartActions.Add(action);
         }
 
