@@ -45,10 +45,11 @@ namespace SonarLint.Helpers
             context.RegisterCompilationAction(action);
         }
 
-        public List<Action<CompilationStartAnalysisContext>> CompilationStartActions { get; } = new List<Action<CompilationStartAnalysisContext>>();
+        private ICollection<Action<CompilationStartAnalysisContext>> compilationStartActions = new List<Action<CompilationStartAnalysisContext>>();
+        public IEnumerable<Action<CompilationStartAnalysisContext>> CompilationStartActions => compilationStartActions;
         public void RegisterCompilationStartAction(Action<CompilationStartAnalysisContext> action)
         {
-            CompilationStartActions.Add(action);
+            compilationStartActions.Add(action);
         }
 
         public void RegisterSemanticModelAction(Action<SemanticModelAnalysisContext> action)

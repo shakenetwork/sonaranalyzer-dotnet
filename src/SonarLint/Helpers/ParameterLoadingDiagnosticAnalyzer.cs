@@ -31,7 +31,10 @@ namespace SonarLint.Helpers
                 cac =>
                 {
                     ParameterLoader.SetParameterValues(this, cac.Options);
-                    analysisContext.CompilationStartActions.ForEach(startAction => startAction(cac));
+                    foreach (var compilationStartActions in analysisContext.CompilationStartActions)
+                    {
+                        compilationStartActions(cac);
+                    }
                 });
         }
 
