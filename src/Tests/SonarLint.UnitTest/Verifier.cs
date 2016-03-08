@@ -71,9 +71,19 @@ namespace SonarLint.UnitTest
 
         public static void VerifyNoIssueReportedInTest(string path, DiagnosticAnalyzer diagnosticAnalyzer)
         {
+            VerifyNoIssueReported(path, TestAssemblyName, diagnosticAnalyzer);
+        }
+
+        public static void VerifyNoIssueReported(string path, DiagnosticAnalyzer diagnosticAnalyzer)
+        {
+            VerifyNoIssueReported(path, GeneratedAssemblyName, diagnosticAnalyzer);
+        }
+
+        private static void VerifyNoIssueReported(string path, string assemblyName, DiagnosticAnalyzer diagnosticAnalyzer)
+        {
             using (var workspace = new AdhocWorkspace())
             {
-                var document = GetDocument(path, TestAssemblyName, workspace);
+                var document = GetDocument(path, assemblyName, workspace);
                 var compilation = document.Project.GetCompilationAsync().Result;
                 var diagnostics = Verifier.GetDiagnostics(compilation, diagnosticAnalyzer);
 
