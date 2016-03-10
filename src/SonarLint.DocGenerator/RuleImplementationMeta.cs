@@ -25,51 +25,48 @@ using System.Text.RegularExpressions;
 using SonarLint.RuleDescriptors;
 using System.Text;
 using System.Globalization;
+using Newtonsoft.Json;
 
 namespace SonarLint.DocGenerator
 {
-    public class RuleDescription
+    public class RuleImplementationMeta
     {
         public const string CrosslinkPattern = "(Rule )(S[0-9]+)";
         public const string HelpLinkPattern = "#version={0}&ruleId={1}";
 
-        public static RuleDescription Convert(RuleDetail detail, string productVersion, AnalyzerLanguage language)
+        [JsonProperty("key")]
+        public string Id { get; set; }
+
+        [JsonProperty("language")]
+        public string Language { get; set; }
+
+        [JsonProperty("title")]
+        public string Title { get; set; }
+
+        [JsonProperty("description")]
+        public string Description { get; set; }
+
+        [JsonProperty("severity")]
+        public string Severity { get; set; }
+
+        [JsonProperty("tags")]
+        public IEnumerable<string> Tags { get; set; }
+
+        public static RuleImplementationMeta Convert(RuleDetail detail, string productVersion, AnalyzerLanguage language)
         {
-            return new RuleDescription
+            return new RuleImplementationMeta
             {
-                Key = detail.Key,
-                Data = new Dictionary<string, RuleMetaData>
-                {
-                    {
-                        language.ToString(),
-                        new RuleMetaData
-                        {
-                            Title = detail.Title,
-                            Description =
-                                GetParameterDescription(detail.Parameters) +
-                                AddLinksBetweenRulesToDescription(detail.Description, productVersion) +
-                                GetCodeFixDescription(detail),
-                            Tags = detail.Tags,
-                            Severity = detail.Severity,
-                            IdeSeverity = detail.IdeSeverity
-                        }
-                    }
-                }
+                Id = detail.Key,
+                Language = language.GetFriendlyName(),
+                Severity = detail.Severity,
+                Title = detail.Title,
+                Description = GetParameterDescription(detail.Parameters) +
+                    AddLinksBetweenRulesToDescription(detail.Description, productVersion) +
+                    GetCodeFixDescription(detail),
+                Tags = detail.Tags
             };
         }
 
-        public string Key { get; set; }
-        public Dictionary<string, RuleMetaData> Data { get; set; }
-
-        public class RuleMetaData
-        {
-            public string Title { get; set; }
-            public string Description { get; set; }
-            public string Severity { get; set; }
-            public int IdeSeverity { get; set; }
-            public IEnumerable<string> Tags { get; set; }
-        }
-        
         private static string AddLinksBetweenRulesToDescription(string description, string productVersion)
         {
             var urlRegexPattern = string.Format(HelpLinkPattern, productVersion, @"$2");

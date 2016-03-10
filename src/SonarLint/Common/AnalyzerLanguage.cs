@@ -117,5 +117,20 @@ namespace SonarLint.Common
 
             throw new NotSupportedException($"Can't get folder name for '{ToString()}'.");
         }
+
+        public string GetFriendlyName()
+        {
+            if (this == CSharp)
+            {
+                return "C#";
+            }
+
+            if (this == VisualBasic)
+            {
+                return "VB.NET";
+            }
+
+            throw new NotSupportedException($"Can't get friendly name for '{ToString()}'.");
+        }
     }
 }

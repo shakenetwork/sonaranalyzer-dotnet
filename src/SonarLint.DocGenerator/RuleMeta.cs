@@ -19,26 +19,22 @@
  */
 
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
-namespace SonarLint.RuleDescriptors
+namespace SonarLint.DocGenerator
 {
-    public class RuleDetail
+    public class RuleMeta
     {
-        public RuleDetail()
-        {
-            Tags = new List<string>();
-            Parameters = new List<RuleParameter>();
-            CodeFixTitles = new List<string>();
-        }
+        [JsonProperty("key")]
+        public string Id { get; set; }
 
-        public string Key { get; set; }
+        [JsonProperty("title")]
         public string Title { get; set; }
-        public string Severity { get; set; }
-        public string Description { get; set; }
-        public List<string> Tags { get; private set; }
-        public List<RuleParameter> Parameters { get; private set; }
-        public bool IsActivatedByDefault { get; set; }
-        public SqaleDescriptor SqaleDescriptor { get; set; }
-        public List<string> CodeFixTitles { get; private set; }
+
+        [JsonProperty("tags")]
+        public IEnumerable<string> Tags { get; set; }
+
+        [JsonProperty("implementations")]
+        public ICollection<RuleImplementationMeta> Implementations { get; set; }
     }
 }

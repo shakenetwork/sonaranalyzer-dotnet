@@ -104,7 +104,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RuleDescription.cs" />
+    <Compile Include="RuleMeta.cs" />
+    <Compile Include="SonarLintDescriptor.cs" />
+    <Compile Include="RuleImplementationMeta.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

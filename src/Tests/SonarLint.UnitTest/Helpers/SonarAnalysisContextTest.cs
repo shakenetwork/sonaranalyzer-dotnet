@@ -18,14 +18,11 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarLint.Helpers;
 using SonarLint.Rules.CSharp;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 
 namespace SonarLint.UnitTest.Helpers
 {

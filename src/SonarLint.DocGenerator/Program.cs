@@ -24,6 +24,7 @@ using System.Linq;
 using Newtonsoft.Json;
 using SonarLint.Utilities;
 using SonarLint.Common;
+using System.Collections.Generic;
 
 namespace SonarLint.DocGenerator
 {
@@ -32,9 +33,7 @@ namespace SonarLint.DocGenerator
         public static void Main()
         {
             var productVersion = FileVersionInfo.GetVersionInfo(typeof(Program).Assembly.Location).ProductVersion;
-
             WriteRuleJson(productVersion);
-
         }
 
         private static void WriteRuleJson(string productVersion)
@@ -47,36 +46,61 @@ namespace SonarLint.DocGenerator
 
         public static string GenerateRuleJson(string productVersion)
         {
-            var cs = RuleDetailBuilder.GetAllRuleDetails(AnalyzerLanguage.CSharp)
-                .Select(ruleDetail => RuleDescription.Convert(ruleDetail, productVersion, AnalyzerLanguage.CSharp))
+            var csImplementations = RuleDetailBuilder.GetAllRuleDetails(AnalyzerLanguage.CSharp)
+                .Select(ruleDetail => RuleImplementationMeta.Convert(ruleDetail, productVersion, AnalyzerLanguage.CSharp))
                 .ToList();
 
-            var vb = RuleDetailBuilder.GetAllRuleDetails(AnalyzerLanguage.VisualBasic)
-                .Select(ruleDetail => RuleDescription.Convert(ruleDetail, productVersion, AnalyzerLanguage.VisualBasic))
+            var vbImplementations = RuleDetailBuilder.GetAllRuleDetails(AnalyzerLanguage.VisualBasic)
+                .Select(ruleDetail => RuleImplementationMeta.Convert(ruleDetail, productVersion, AnalyzerLanguage.VisualBasic))
                 .ToList();
 
-            foreach (var vbRuleDescription in vb)
+            var sonarLintDescriptor = new SonarLintDescriptor
             {
-                var csEquivalent = cs.FirstOrDefault(rd => rd.Key == vbRuleDescription.Key);
-                if (csEquivalent == null)
+                Version = productVersion,
+                Rules = new List<RuleMeta>()
+            };
+
+            foreach (var csImplementation in csImplementations)
+            {
+                var rule = new RuleMeta
                 {
-                    cs.Add(vbRuleDescription);
+                    Id = csImplementation.Id,
+                    Title = csImplementation.Title,
+                    Implementations = new List<RuleImplementationMeta>(new[] { csImplementation })
+                };
+                sonarLintDescriptor.Rules.Add(rule);
+            }
+
+            foreach (var vbImplementation in vbImplementations)
+            {
+                var rule = sonarLintDescriptor.Rules.FirstOrDefault(r => r.Implementations.First().Id == vbImplementation.Id);
+                if (rule == null)
+                {
+                    rule = new RuleMeta
+                    {
+                        Id = vbImplementation.Id,
+                        Title = vbImplementation.Title,
+                        Implementations = new List<RuleImplementationMeta>(new[] { vbImplementation })
+                    };
+                    sonarLintDescriptor.Rules.Add(rule);
                 }
                 else
                 {
-                    foreach (var item in vbRuleDescription.Data)
-                    {
-                        csEquivalent.Data.Add(item.Key, item.Value);
-                    }
+                    rule.Implementations.Add(vbImplementation);
                 }
             }
 
-            return JsonConvert.SerializeObject(cs,
-                    new JsonSerializerSettings
-                    {
-                        NullValueHandling = NullValueHandling.Ignore,
-                        Formatting = Formatting.Indented
-                    });
+            foreach (var rule in sonarLintDescriptor.Rules)
+            {
+                rule.Tags = rule.Implementations.SelectMany(i => i.Tags).Distinct();
+            }
+
+            return JsonConvert.SerializeObject(sonarLintDescriptor,
+                new JsonSerializerSettings
+                {
+                    NullValueHandling = NullValueHandling.Ignore,
+                    Formatting = Formatting.Indented
+                });
         }
     }
 }

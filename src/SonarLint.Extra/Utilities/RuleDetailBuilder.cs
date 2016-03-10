@@ -57,7 +57,6 @@ namespace SonarLint.Utilities
                 Key = rule.Key,
                 Title = rule.Title,
                 Severity = rule.Severity.ToString(),
-                IdeSeverity = (int)rule.Severity.ToDiagnosticSeverity(),
                 IsActivatedByDefault = rule.IsActivatedByDefault,
                 Description = GetResourceHtml(rule, language)
             };

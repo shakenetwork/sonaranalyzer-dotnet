@@ -51,7 +51,7 @@ namespace SonarLint.UnitTest.PackagingTests
             var productVersion = FileVersionInfo.GetVersionInfo(typeof(Program).Assembly.Location).ProductVersion;
             var json = Program.GenerateRuleJson(productVersion);
 
-            var commonSubUrl = RuleDescription.HelpLinkPattern.Replace("{1}", string.Empty);
+            var commonSubUrl = RuleImplementationMeta.HelpLinkPattern.Replace("{1}", string.Empty);
             var crossLinkCount = NumberOfOccurrences(json, string.Format(commonSubUrl, productVersion));
 
             Assert.AreEqual(crossReferenceCount, crossLinkCount);
@@ -61,7 +61,7 @@ namespace SonarLint.UnitTest.PackagingTests
         {
             return RuleDetailBuilder.GetParameterlessRuleDetails(language)
                 .Select(rule => rule.Description)
-                .Select(description => Regex.Matches(description, RuleDescription.CrosslinkPattern).Count)
+                .Select(description => Regex.Matches(description, RuleImplementationMeta.CrosslinkPattern).Count)
                 .Sum();
         }
 
