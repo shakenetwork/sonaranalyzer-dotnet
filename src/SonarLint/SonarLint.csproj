@@ -90,6 +90,7 @@
     <Compile Include="Common\PropertyType.cs" />
     <Compile Include="Common\RuleParameterAttribute.cs" />
     <Compile Include="Common\Category.cs" />
+    <Compile Include="Common\WellKnownDiagnosticIds.cs" />
     <Compile Include="Common\Tag.cs" />
     <Compile Include="Common\IdeVisibility.cs" />
     <Compile Include="Helpers\SonarAnalysisContext.cs" />

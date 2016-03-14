@@ -8,22 +8,21 @@ namespace Tests.TestCases
 {
     class LiteralSuffixUpperCase
     {
-        public void Test(uint ui)
+        public void Test(long ui)
         {
-            const uint a = 0u;      // Noncompliant
             const long b = 0l;      // Noncompliant
-            const ulong c = 0Ul;     // Noncompliant
-            const ulong d = 0uL;     // Noncompliant
-            const decimal e = 1.2m;  // Noncompliant
-            const float f = 1.2f;    // Noncompliant
-            const double g = 1.2d;    // Noncompliant
-            const double h = 1.2e-10f; // Noncompliant
+            const ulong c = 0Ul;
+            const ulong d = 0uL;
+            const decimal e = 1.2m;
+            const float f = 1.2f;
+            const double g = 1.2d;
+            const double h = 1.2e-10f;
             const int i = 0xf; // Compliant
             const int j = 0Xf; // Compliant
             const int k = 0; // Compliant
-            const int l = 0u; // Noncompliant
+            const int l = 0u;
 
-            Test(0u); // Noncompliant
+            Test(45l); // Noncompliant
         }
         public void TestOk()
         {

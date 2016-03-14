@@ -34,7 +34,7 @@ namespace SonarLint.Rules.CSharp
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("2min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
-    [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
+    [Rule(DiagnosticId, RuleSeverity, Title, true /* we are keeping this rule for SQ, CS0078 does the same in the IDE */)]
     [Tags(Tag.Cert, Tag.Convention, Tag.Misra, Tag.Pitfall)]
     public class LiteralSuffixUpperCase : SonarDiagnosticAnalyzer
     {
@@ -46,11 +46,10 @@ namespace SonarLint.Rules.CSharp
         internal const string MessageFormat = "Upper case this literal suffix.";
         internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
+                RuleSeverity.ToDiagnosticSeverity(), false,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
 
@@ -64,17 +63,11 @@ namespace SonarLint.Rules.CSharp
                     var literal = (LiteralExpressionSyntax)c.Node;
                     var text = literal.Token.Text;
 
-                    if (text.StartsWith("0x", System.StringComparison.OrdinalIgnoreCase))
-                    {
-                        return;
-                    }
-
-                    var reversedTextEnding = new string(text.Reverse().TakeWhile(char.IsLetter).ToArray());
-
-                    if (reversedTextEnding != reversedTextEnding.ToUpperInvariant())
+                    if (text[text.Length - 1] == 'l' &&
+                        c.SemanticModel.GetTypeInfo(literal).Type.Is(KnownType.System_Int64))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, Location.Create(literal.SyntaxTree,
-                            new TextSpan(literal.Span.End - reversedTextEnding.Length, reversedTextEnding.Length))));
+                            new TextSpan(literal.Span.End - 1, 1))));
                     }
                 },
                 SyntaxKind.NumericLiteralExpression);

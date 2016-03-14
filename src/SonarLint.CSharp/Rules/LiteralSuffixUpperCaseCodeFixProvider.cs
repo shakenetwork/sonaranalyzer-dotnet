@@ -26,6 +26,7 @@ using System.Linq;
 using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using SonarLint.Common;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -37,7 +38,7 @@ namespace SonarLint.Rules.CSharp
         {
             get
             {
-                return ImmutableArray.Create(LiteralSuffixUpperCase.DiagnosticId);
+                return ImmutableArray.Create(LiteralSuffixUpperCase.DiagnosticId, WellKnownDiagnosticIds.WRN_LowercaseEllSuffix);
             }
         }
         public sealed override FixAllProvider GetFixAllProvider()
@@ -55,9 +56,10 @@ namespace SonarLint.Rules.CSharp
             {
                 return;
             }
-            var semanticModel = await context.Document.GetSemanticModelAsync(context.CancellationToken).ConfigureAwait(false);
 
-            var newLiteral = GetNewLiteral(literal, semanticModel);
+            var newLiteral = SyntaxFactory.Literal(
+                literal.Token.Text.ToUpperInvariant(),
+                (long)literal.Token.Value);
 
             if (!newLiteral.IsKind(SyntaxKind.None))
             {
@@ -71,54 +73,6 @@ namespace SonarLint.Rules.CSharp
                             return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                         }),
                     context.Diagnostics);
-            }
-        }
-
-        private static SyntaxToken GetNewLiteral(LiteralExpressionSyntax literal, SemanticModel semanticModel)
-        {
-            var type = semanticModel.GetTypeInfo(literal).Type;
-            var text = literal.Token.Text;
-            var reversedText = text.Reverse().ToList();
-            var reversedTextEnding = new string(reversedText.TakeWhile(char.IsLetter).ToArray());
-            var reversedTextBeginning = new string(reversedText.SkipWhile(char.IsLetter).ToArray());
-            var newText = new string((reversedTextEnding.ToUpperInvariant() + reversedTextBeginning).Reverse().ToArray());
-
-            switch (type.SpecialType)
-            {
-                case SpecialType.System_Int32:
-                    return SyntaxFactory.Literal(
-                        newText,
-                        (int)literal.Token.Value);
-                case SpecialType.System_Char:
-                    return SyntaxFactory.Literal(
-                        newText,
-                        (char)literal.Token.Value);
-                case SpecialType.System_UInt32:
-                    return SyntaxFactory.Literal(
-                        newText,
-                        (uint)literal.Token.Value);
-                case SpecialType.System_Int64:
-                    return SyntaxFactory.Literal(
-                        newText,
-                        (long)literal.Token.Value);
-                case SpecialType.System_UInt64:
-                    return SyntaxFactory.Literal(
-                        newText,
-                        (ulong)literal.Token.Value);
-                case SpecialType.System_Decimal:
-                    return SyntaxFactory.Literal(
-                        newText,
-                        (decimal)literal.Token.Value);
-                case SpecialType.System_Single:
-                    return SyntaxFactory.Literal(
-                        newText,
-                        (float)literal.Token.Value);
-                case SpecialType.System_Double:
-                    return SyntaxFactory.Literal(
-                        newText,
-                        (double)literal.Token.Value);
-                default:
-                    return SyntaxFactory.Token(SyntaxKind.None);
             }
         }
     }
