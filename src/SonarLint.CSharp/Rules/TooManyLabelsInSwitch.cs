@@ -42,10 +42,10 @@ namespace SonarLint.Rules.CSharp
         internal const string Description =
             "When \"switch\" statements have a large set of \"case\" clauses, it is usually an attempt to map two sets of data. A real map structure " +
             "would be more readable and maintainable, and should be used instead.";
-        internal const string MessageFormat = "Reduce the number of switch cases from {1} to at most {0}.";
+        internal const string MessageFormat = "Consider reworking this \"switch\" to reduce the number of \"case\"s from {1} to at most {0}.";
         internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = false;
+        internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
@@ -66,6 +66,14 @@ namespace SonarLint.Rules.CSharp
                 c =>
                 {
                     var switchNode = (SwitchStatementSyntax)c.Node;
+                    var type = c.SemanticModel.GetTypeInfo(switchNode.Expression).Type;
+
+                    if (type == null ||
+                        type.TypeKind == TypeKind.Enum)
+                    {
+                        return;
+                    }
+
                     var labels = NumberOfLabels(switchNode);
 
                     if (labels > Maximum)
