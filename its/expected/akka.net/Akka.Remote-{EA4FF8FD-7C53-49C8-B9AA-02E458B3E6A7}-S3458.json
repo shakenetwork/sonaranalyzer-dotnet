@@ -1,0 +1,41 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S3458",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
+"region":  {
+"startLine":  1705,
+"startColumn":  16,
+"endLine":  1705,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Remove this empty \"case\" clause.",
+"fullMessage":  "Empty \"case\" clauses that fall through to the \"default\" are useless. Whether or not such a \"case\" is present, the \"default\" clause will be invoked. Such \"case\"s simply clutter the code, and should be removed.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Hidden",
+"title":  "Empty \"case\" clauses that fall through to the \"default\" should be omitted",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3458",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False",
+"customTags":  "Unnecessary"
+}
+}
+]
+}
