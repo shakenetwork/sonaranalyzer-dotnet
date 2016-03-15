@@ -101,7 +101,7 @@ namespace SonarLint.Rules.CSharp
             var invocation = (InvocationExpressionSyntax)context.Node;
             var methodSymbol = context.SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
             if (methodSymbol == null ||
-                !MethodIsOnIEnumerable(methodSymbol) ||
+                !methodSymbol.IsExtensionOn(KnownType.System_Collections_IEnumerable) ||
                 !CastIEnumerableMethods.Contains(methodSymbol.Name))
             {
                 return;
@@ -177,28 +177,6 @@ namespace SonarLint.Rules.CSharp
             return arrayType != null
                 ? arrayType.ElementType
                 : null;
-        }
-
-        private static bool MethodIsOnIEnumerable(IMethodSymbol methodSymbol)
-        {
-            if (methodSymbol == null)
-            {
-                return false;
-            }
-
-            var receiverType = methodSymbol.ReceiverType as INamedTypeSymbol;
-
-            if (methodSymbol.MethodKind == MethodKind.Ordinary)
-            {
-                if (methodSymbol.Parameters.Count() != 1)
-                {
-                    return false;
-                }
-                receiverType = methodSymbol.Parameters.First().Type as INamedTypeSymbol;
-            }
-
-            return receiverType != null &&
-                receiverType.ConstructedFrom.Is(KnownType.System_Collections_IEnumerable);
         }
     }
 }

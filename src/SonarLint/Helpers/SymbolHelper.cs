@@ -22,7 +22,6 @@ using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 
 namespace SonarLint.Helpers
 {
@@ -167,6 +166,25 @@ namespace SonarLint.Helpers
             }
 
             return eventArgsType.DerivesOrImplements(KnownType.System_EventArgs);
+        }
+
+        public static bool IsExtensionOn(this IMethodSymbol methodSymbol, KnownType type)
+        {
+            if (methodSymbol == null ||
+                !methodSymbol.IsExtensionMethod)
+            {
+                return false;
+            }
+
+            var receiverType = methodSymbol.ReceiverType as INamedTypeSymbol;
+
+            if (methodSymbol.MethodKind == MethodKind.Ordinary)
+            {
+                receiverType = methodSymbol.Parameters.First().Type as INamedTypeSymbol;
+            }
+
+            var constructedFrom = receiverType?.ConstructedFrom;
+            return constructedFrom.Is(type);
         }
     }
 }

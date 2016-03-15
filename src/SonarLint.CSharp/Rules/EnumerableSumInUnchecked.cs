@@ -122,8 +122,8 @@ namespace SonarLint.Rules.CSharp
         private static bool IsSumOnInteger(IMethodSymbol methodSymbol)
         {
             return methodSymbol != null &&
-                CollectionEmptinessChecking.MethodIsOnGenericIEnumerable(methodSymbol) &&
                 methodSymbol.Name == "Sum" &&
+                methodSymbol.IsExtensionOn(KnownType.System_Collections_Generic_IEnumerable_T) &&
                 IsReturnTypeCandidate(methodSymbol);
         }
 

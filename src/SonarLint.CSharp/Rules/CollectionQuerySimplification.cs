@@ -119,7 +119,7 @@ namespace SonarLint.Rules.CSharp
                 methodSymbol?.Name != CountName ||
                 invocation.ArgumentList == null ||
                 invocation.ArgumentList.Arguments.Any() ||
-                !CollectionEmptinessChecking.MethodIsOnGenericIEnumerable(methodSymbol))
+                !methodSymbol.IsExtensionOn(KnownType.System_Collections_Generic_IEnumerable_T))
             {
                 return;
             }
@@ -165,7 +165,7 @@ namespace SonarLint.Rules.CSharp
 
         private static bool MethodExistsOnIEnumerable(IMethodSymbol methodSymbol, SemanticModel semanticModel)
         {
-            if (CollectionEmptinessChecking.MethodIsOnGenericIEnumerable(methodSymbol))
+            if (methodSymbol.IsExtensionOn(KnownType.System_Collections_Generic_IEnumerable_T))
             {
                 return true;
             }
@@ -203,7 +203,7 @@ namespace SonarLint.Rules.CSharp
         private static bool IsToCollectionCall(IMethodSymbol methodSymbol)
         {
             return MethodNamesToCollection.Contains(methodSymbol.Name) &&
-                (CollectionEmptinessChecking.MethodIsOnGenericIEnumerable(methodSymbol) ||
+                (methodSymbol.IsExtensionOn(KnownType.System_Collections_Generic_IEnumerable_T) ||
                 methodSymbol.ContainingType.ConstructedFrom.Is(KnownType.System_Collections_Generic_List_T));
         }
 
@@ -212,7 +212,7 @@ namespace SonarLint.Rules.CSharp
             var outerInvocation = (InvocationExpressionSyntax)context.Node;
             var outerMethodSymbol = context.SemanticModel.GetSymbolInfo(outerInvocation).Symbol as IMethodSymbol;
             if (outerMethodSymbol == null ||
-                !CollectionEmptinessChecking.MethodIsOnGenericIEnumerable(outerMethodSymbol))
+                !outerMethodSymbol.IsExtensionOn(KnownType.System_Collections_Generic_IEnumerable_T))
             {
                 return;
             }
@@ -225,7 +225,7 @@ namespace SonarLint.Rules.CSharp
 
             var innerMethodSymbol = context.SemanticModel.GetSymbolInfo(innerInvocation).Symbol as IMethodSymbol;
             if (innerMethodSymbol == null ||
-                !CollectionEmptinessChecking.MethodIsOnGenericIEnumerable(innerMethodSymbol))
+                !innerMethodSymbol.IsExtensionOn(KnownType.System_Collections_Generic_IEnumerable_T))
             {
                 return;
             }

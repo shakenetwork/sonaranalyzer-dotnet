@@ -142,7 +142,7 @@ namespace SonarLint.Rules.CSharp
 
             var methodSymbol = semanticModel.GetSymbolInfo(memberAccess).Symbol as IMethodSymbol;
             if (!IsMethodCountExtension(methodSymbol) ||
-                !MethodIsOnGenericIEnumerable(methodSymbol))
+                !methodSymbol.IsExtensionOn(KnownType.System_Collections_Generic_IEnumerable_T))
             {
                 return false;
             }
@@ -162,25 +162,6 @@ namespace SonarLint.Rules.CSharp
                 methodSymbol.Name == "Count" &&
                 methodSymbol.IsExtensionMethod &&
                 methodSymbol.ReceiverType != null;
-        }
-
-        internal static bool MethodIsOnGenericIEnumerable(IMethodSymbol methodSymbol)
-        {
-            if (methodSymbol == null)
-            {
-                return false;
-            }
-
-            var receiverType = methodSymbol.ReceiverType as INamedTypeSymbol;
-
-            if (methodSymbol.MethodKind == MethodKind.Ordinary &&
-                methodSymbol.IsExtensionMethod)
-            {
-                receiverType = methodSymbol.Parameters.First().Type as INamedTypeSymbol;
-            }
-
-            var constructedFrom = receiverType?.ConstructedFrom;
-            return constructedFrom.Is(KnownType.System_Collections_Generic_IEnumerable_T);
         }
     }
 }
