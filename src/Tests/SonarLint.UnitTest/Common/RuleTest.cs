@@ -27,6 +27,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarLint.Utilities;
 using SonarLint.Common;
 using Microsoft.CodeAnalysis.CodeFixes;
+using SonarLint.Helpers;
 
 namespace SonarLint.UnitTest.Common
 {
@@ -120,6 +121,22 @@ namespace SonarLint.UnitTest.Common
 
             Verifier.VerifyNoExceptionThrown(@"TestCasesForRuleFailure\InvalidSyntax.cs", analyzers);
             Verifier.VerifyNoExceptionThrown(@"TestCasesForRuleFailure\SpecialCases.cs", analyzers);
+        }
+
+        [TestMethod]
+        public void SonarDiagnosticAnalyzer_IsUsedInAllRules()
+        {
+            var analyzers = RuleFinder.PackagedRuleAssemblies
+                .SelectMany(assembly => assembly.GetTypes())
+                .Where(t => t.IsSubclassOf(typeof(DiagnosticAnalyzer)) && t != typeof(SonarDiagnosticAnalyzer))
+                .ToList();
+
+            foreach (var analyzer in analyzers)
+            {
+                Assert.IsTrue(
+                    analyzer.IsSubclassOf(typeof(SonarDiagnosticAnalyzer)),
+                    string.Format("{0} is not a subclass of SonarDiagnosticAnalyzer", analyzer.Name));
+            }
         }
     }
 }
