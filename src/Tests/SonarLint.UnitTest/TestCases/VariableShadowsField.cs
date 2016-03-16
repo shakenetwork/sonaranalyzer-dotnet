@@ -14,7 +14,7 @@ namespace Tests.Diagnostics
             int myField = 0, other = 5; // Noncompliant
         }
 
-        public void doSomethingElse(int MyField) // Noncompliant
+        public void doSomethingElse(int MyField) // Compliant
         {
             this.MyField = MyField;
         }

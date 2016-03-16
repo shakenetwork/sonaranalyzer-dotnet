@@ -12,126 +12,6 @@
 {
 "analysisTarget":  [
 {
-"uri":  "Nancy\\src\\Nancy.Tests\\Helpers\\CacheHelpersFixture.cs",
-"region":  {
-"startLine":  72,
-"startColumn":  47,
-"endLine":  72,
-"endColumn":  51
-}
-}
-]
-}
-],
-"shortMessage":  "Rename \"etag\" which hides the field with the same name.",
-"fullMessage":  "Shadowing fields with a local variable or with a method parameter is a bad practice that reduces code readability: It makes it confusing to know whether the field or the variable is being used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Local variables should not shadow class fields",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1117",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1117",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Helpers\\CacheHelpersFixture.cs",
-"region":  {
-"startLine":  72,
-"startColumn":  63,
-"endLine":  72,
-"endColumn":  75
-}
-}
-]
-}
-],
-"shortMessage":  "Rename \"lastModified\" which hides the field with the same name.",
-"fullMessage":  "Shadowing fields with a local variable or with a method parameter is a bad practice that reduces code readability: It makes it confusing to know whether the field or the variable is being used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Local variables should not shadow class fields",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1117",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1117",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\DefaultSerializerFactoryFixture.cs",
-"region":  {
-"startLine":  193,
-"startColumn":  48,
-"endLine":  193,
-"endColumn":  58
-}
-}
-]
-}
-],
-"shortMessage":  "Rename \"mediaRange\" which hides the field with the same name.",
-"fullMessage":  "Shadowing fields with a local variable or with a method parameter is a bad practice that reduces code readability: It makes it confusing to know whether the field or the variable is being used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Local variables should not shadow class fields",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1117",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1117",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\DefaultSerializerFactoryFixture.cs",
-"region":  {
-"startLine":  200,
-"startColumn":  53,
-"endLine":  200,
-"endColumn":  63
-}
-}
-]
-}
-],
-"shortMessage":  "Rename \"mediaRange\" which hides the field with the same name.",
-"fullMessage":  "Shadowing fields with a local variable or with a method parameter is a bad practice that reduces code readability: It makes it confusing to know whether the field or the variable is being used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Local variables should not shadow class fields",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1117",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1117",
-"locations":  [
-{
-"analysisTarget":  [
-{
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\JsonFormatterExtensionsFixtures.cs",
 "region":  {
 "startLine":  69,
@@ -144,7 +24,7 @@
 }
 ],
 "shortMessage":  "Rename \"response\" which hides the field with the same name.",
-"fullMessage":  "Shadowing fields with a local variable or with a method parameter is a bad practice that reduces code readability: It makes it confusing to know whether the field or the variable is being used.",
+"fullMessage":  "Shadowing fields with a local variable is a bad practice that reduces code readability: It makes it confusing to know whether the field or the variable is being used.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
@@ -174,37 +54,7 @@
 }
 ],
 "shortMessage":  "Rename \"response\" which hides the field with the same name.",
-"fullMessage":  "Shadowing fields with a local variable or with a method parameter is a bad practice that reduces code readability: It makes it confusing to know whether the field or the variable is being used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Local variables should not shadow class fields",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1117",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1117",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
-"region":  {
-"startLine":  1516,
-"startColumn":  200,
-"endLine":  1516,
-"endColumn":  215
-}
-}
-]
-}
-],
-"shortMessage":  "Rename \"bindingDefaults\" which hides the field with the same name.",
-"fullMessage":  "Shadowing fields with a local variable or with a method parameter is a bad practice that reduces code readability: It makes it confusing to know whether the field or the variable is being used.",
+"fullMessage":  "Shadowing fields with a local variable is a bad practice that reduces code readability: It makes it confusing to know whether the field or the variable is being used.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
@@ -234,7 +84,7 @@
 }
 ],
 "shortMessage":  "Rename \"engine\" which hides the field with the same name.",
-"fullMessage":  "Shadowing fields with a local variable or with a method parameter is a bad practice that reduces code readability: It makes it confusing to know whether the field or the variable is being used.",
+"fullMessage":  "Shadowing fields with a local variable is a bad practice that reduces code readability: It makes it confusing to know whether the field or the variable is being used.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
@@ -264,7 +114,7 @@
 }
 ],
 "shortMessage":  "Rename \"response\" which hides the field with the same name.",
-"fullMessage":  "Shadowing fields with a local variable or with a method parameter is a bad practice that reduces code readability: It makes it confusing to know whether the field or the variable is being used.",
+"fullMessage":  "Shadowing fields with a local variable is a bad practice that reduces code readability: It makes it confusing to know whether the field or the variable is being used.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
@@ -294,7 +144,7 @@
 }
 ],
 "shortMessage":  "Rename \"url\" which hides the field with the same name.",
-"fullMessage":  "Shadowing fields with a local variable or with a method parameter is a bad practice that reduces code readability: It makes it confusing to know whether the field or the variable is being used.",
+"fullMessage":  "Shadowing fields with a local variable is a bad practice that reduces code readability: It makes it confusing to know whether the field or the variable is being used.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
@@ -324,7 +174,7 @@
 }
 ],
 "shortMessage":  "Rename \"conventions\" which hides the field with the same name.",
-"fullMessage":  "Shadowing fields with a local variable or with a method parameter is a bad practice that reduces code readability: It makes it confusing to know whether the field or the variable is being used.",
+"fullMessage":  "Shadowing fields with a local variable is a bad practice that reduces code readability: It makes it confusing to know whether the field or the variable is being used.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
@@ -354,7 +204,7 @@
 }
 ],
 "shortMessage":  "Rename \"viewLocator\" which hides the field with the same name.",
-"fullMessage":  "Shadowing fields with a local variable or with a method parameter is a bad practice that reduces code readability: It makes it confusing to know whether the field or the variable is being used.",
+"fullMessage":  "Shadowing fields with a local variable is a bad practice that reduces code readability: It makes it confusing to know whether the field or the variable is being used.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",

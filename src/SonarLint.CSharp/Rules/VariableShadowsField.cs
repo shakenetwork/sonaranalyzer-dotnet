@@ -41,8 +41,7 @@ namespace SonarLint.Rules.CSharp
         internal const string DiagnosticId = "S1117";
         internal const string Title = "Local variables should not shadow class fields";
         internal const string Description =
-            "Shadowing fields with a local variable or with a method parameter is a bad practice " +
-            "that reduces code readability: It makes it confusing to know whether the field or the " +
+            "Shadowing fields with a local variable is a bad practice that reduces code readability: It makes it confusing to know whether the field or the " +
             "variable is being used.";
         internal const string MessageFormat = "Rename \"{0}\" which hides the {1} with the same name.";
         internal const string Category = SonarLint.Common.Category.Reliability;
@@ -62,32 +61,6 @@ namespace SonarLint.Rules.CSharp
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
-                    var method = (MethodDeclarationSyntax) c.Node;
-
-                    if (method.Modifiers.Select(m => m.Kind()).Contains(SyntaxKind.StaticKeyword))
-                    {
-                        return;
-                    }
-
-                    var methodSymbol = c.SemanticModel.GetDeclaredSymbol(method);
-                    if (methodSymbol == null)
-                    {
-                        return;
-                    }
-
-                    var parameters = method.ParameterList.Parameters.ToList();
-                    var members = GetMembers(methodSymbol.ContainingType);
-
-                    foreach (var parameter in parameters)
-                    {
-                        CheckMatch(members, parameter.Identifier, c);
-                    }
-                },
-                SyntaxKind.MethodDeclaration);
-
-            context.RegisterSyntaxNodeActionInNonGenerated(
-                c =>
-                {
                     var declaration = (LocalDeclarationStatementSyntax) c.Node;
                     var variables = declaration.Declaration.Variables;
 
@@ -104,22 +77,24 @@ namespace SonarLint.Rules.CSharp
                         {
                             members = GetMembers(variableSymbol.ContainingType);
                         }
-                        CheckMatch(members, variable.Identifier, c);
+
+                        ReportOnVariableMatchingField(members, variable.Identifier, c);
                     }
                 },
                 SyntaxKind.LocalDeclarationStatement);
         }
 
-        private static void CheckMatch(IEnumerable<ISymbol> members, SyntaxToken identifier, SyntaxNodeAnalysisContext context)
+        private static void ReportOnVariableMatchingField(IEnumerable<ISymbol> members, SyntaxToken identifier, SyntaxNodeAnalysisContext context)
         {
             var matchingMember = members.FirstOrDefault(m => m.Name == identifier.Text);
-
-            if (matchingMember != null)
+            if (matchingMember == null)
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(),
-                    identifier.Text,
-                    (matchingMember is IFieldSymbol) ? "field" : "property"));
+                return;
             }
+
+            context.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(),
+                identifier.Text,
+                (matchingMember is IFieldSymbol) ? "field" : "property"));
         }
 
         private static List<ISymbol> GetMembers(INamedTypeSymbol classSymbol)
