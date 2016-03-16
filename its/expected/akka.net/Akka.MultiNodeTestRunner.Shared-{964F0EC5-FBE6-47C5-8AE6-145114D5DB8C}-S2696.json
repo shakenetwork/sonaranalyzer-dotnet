@@ -23,7 +23,7 @@
 ]
 }
 ],
-"shortMessage":  "Make the enclosing method \"static\" or remove this set.",
+"shortMessage":  "Make the enclosing instance method \"static\" or remove this set on the \"static\" field.",
 "fullMessage":  "Correctly updating a \"static\" field from a non-static method is tricky to get right and could easily lead to bugs if there are multiple class instances and/or multiple threads in play.",
 "properties":  {
 "severity":  "Warning",

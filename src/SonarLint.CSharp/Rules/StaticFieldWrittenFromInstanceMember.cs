@@ -42,13 +42,14 @@ namespace SonarLint.Rules.CSharp
         internal const string Description =
             "Correctly updating a \"static\" field from a non-static method is tricky to get right and could easily lead to " +
             "bugs if there are multiple class instances and/or multiple threads in play.";
-        internal const string MessageFormat = "Make the enclosing {0} \"static\" or remove this set.";
+        internal const string MessageFormatMultipleOptions = "Make the enclosing instance {0} \"static\" or remove this set on the \"static\" field.";
+        internal const string MessageFormatRemoveSet = "Remove this set, which updates a \"static\" field from an instance {0}.";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, "{0}", Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
@@ -80,6 +81,10 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
+                    var messageFormat = methodOrPropertySymbol.IsChangeable()
+                        ? MessageFormatMultipleOptions
+                        : MessageFormatRemoveSet;
+
                     cbc.RegisterSyntaxNodeAction(
                     c =>
                     {
@@ -92,7 +97,8 @@ namespace SonarLint.Rules.CSharp
                                 new TextSpan(expression.SpanStart,
                                     assignment.OperatorToken.Span.End - expression.SpanStart));
 
-                            c.ReportDiagnostic(Diagnostic.Create(Rule, location, declarationType));
+                            var message = string.Format(messageFormat, declarationType);
+                            c.ReportDiagnostic(Diagnostic.Create(Rule, location, message));
                         }
                     },
                     SyntaxKind.SimpleAssignmentExpression,
@@ -115,7 +121,8 @@ namespace SonarLint.Rules.CSharp
 
                             if (IsStaticFieldModification(expression, c.SemanticModel))
                             {
-                                c.ReportDiagnostic(Diagnostic.Create(Rule, expression.GetLocation(), declarationType));
+                                var message = string.Format(messageFormat, declarationType);
+                                c.ReportDiagnostic(Diagnostic.Create(Rule, expression.GetLocation(), message));
                             }
                         },
                         SyntaxKind.PreDecrementExpression,
@@ -129,7 +136,8 @@ namespace SonarLint.Rules.CSharp
 
                             if (IsStaticFieldModification(expression, c.SemanticModel))
                             {
-                                c.ReportDiagnostic(Diagnostic.Create(Rule, expression.GetLocation(), declarationType));
+                                var message = string.Format(messageFormat, declarationType);
+                                c.ReportDiagnostic(Diagnostic.Create(Rule, expression.GetLocation(), message));
                             }
                         },
                         SyntaxKind.PostDecrementExpression,
@@ -141,7 +149,7 @@ namespace SonarLint.Rules.CSharp
         {
             var fieldSymbol = semanticModel.GetSymbolInfo(expression).Symbol as IFieldSymbol;
             return fieldSymbol != null &&
-                   fieldSymbol.IsStatic;
+                fieldSymbol.IsStatic;
         }
     }
 }
