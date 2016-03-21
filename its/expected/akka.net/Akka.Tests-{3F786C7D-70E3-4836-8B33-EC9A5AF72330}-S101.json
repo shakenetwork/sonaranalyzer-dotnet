@@ -12,27 +12,27 @@
 {
 "analysisTarget":  [
 {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\RootGuardianActorRef_Tests.cs",
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\DeathWatchSpec.cs",
 "region":  {
-"startLine":  18,
-"startColumn":  17,
-"endLine":  18,
-"endColumn":  43
+"startLine":  429,
+"startColumn":  24,
+"endLine":  429,
+"endColumn":  26
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename this class \"RootGuardianActorRef_Tests\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*|[A-Z][a-zA-Z0-9]+Extensions)$",
-"fullMessage":  "Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate. This rule allows to check that all class names match a provided regular expression.",
+"shortMessage":  "Rename struct \"FF\" to match camel case naming rules, consider using \"Ff\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
 "defaultSeverity":  "Warning",
-"title":  "Class names should comply with a naming convention",
+"title":  "Types should be named in camel case",
 "category":  "Naming",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 },
@@ -42,117 +42,27 @@
 {
 "analysisTarget":  [
 {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Scheduler\\TaskBasedScheduler_ActionScheduler_Cancellation_Tests.cs",
-"region":  {
-"startLine":  14,
-"startColumn":  17,
-"endLine":  14,
-"endColumn":  76
-}
-}
-]
-}
-],
-"shortMessage":  "Rename this class \"DedicatedThreadScheduler_ActionScheduler_Cancellation_Tests\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*|[A-Z][a-zA-Z0-9]+Extensions)$",
-"fullMessage":  "Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate. This rule allows to check that all class names match a provided regular expression.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Class names should comply with a naming convention",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S101",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Scheduler\\TaskBasedScheduler_ActionScheduler_Schedule_Tests.cs",
-"region":  {
-"startLine":  18,
-"startColumn":  17,
-"endLine":  18,
-"endColumn":  72
-}
-}
-]
-}
-],
-"shortMessage":  "Rename this class \"DedicatedThreadScheduler_ActionScheduler_Schedule_Tests\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*|[A-Z][a-zA-Z0-9]+Extensions)$",
-"fullMessage":  "Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate. This rule allows to check that all class names match a provided regular expression.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Class names should comply with a naming convention",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S101",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Scheduler\\TaskBasedScheduler_TellScheduler_Cancellation_Tests.cs",
-"region":  {
-"startLine":  14,
-"startColumn":  17,
-"endLine":  14,
-"endColumn":  74
-}
-}
-]
-}
-],
-"shortMessage":  "Rename this class \"DedicatedThreadScheduler_TellScheduler_Cancellation_Tests\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*|[A-Z][a-zA-Z0-9]+Extensions)$",
-"fullMessage":  "Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate. This rule allows to check that all class names match a provided regular expression.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Class names should comply with a naming convention",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S101",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Scheduler\\TaskBasedScheduler_TellScheduler_Schedule_Tests.cs",
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTimingSpec.cs",
 "region":  {
 "startLine":  17,
 "startColumn":  17,
 "endLine":  17,
-"endColumn":  70
+"endColumn":  30
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename this class \"DedicatedThreadScheduler_TellScheduler_Schedule_Tests\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*|[A-Z][a-zA-Z0-9]+Extensions)$",
-"fullMessage":  "Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate. This rule allows to check that all class names match a provided regular expression.",
+"shortMessage":  "Rename class \"FSMTimingSpec\" to match camel case naming rules, consider using \"FsmTimingSpec\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
 "defaultSeverity":  "Warning",
-"title":  "Class names should comply with a naming convention",
+"title":  "Types should be named in camel case",
 "category":  "Naming",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 },
@@ -162,27 +72,117 @@
 {
 "analysisTarget":  [
 {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Scheduler\\TaskBasedScheduler_Verify_TimeProvider.cs",
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTransitionSpec.cs",
 "region":  {
 "startLine":  15,
 "startColumn":  17,
 "endLine":  15,
-"endColumn":  61
+"endColumn":  34
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename this class \"DedicatedThreadScheduler_Verify_TimeProvider\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*|[A-Z][a-zA-Z0-9]+Extensions)$",
-"fullMessage":  "Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate. This rule allows to check that all class names match a provided regular expression.",
+"shortMessage":  "Rename class \"FSMTransitionSpec\" to match camel case naming rules, consider using \"FsmTransitionSpec\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
 "defaultSeverity":  "Warning",
-"title":  "Class names should comply with a naming convention",
+"title":  "Types should be named in camel case",
 "category":  "Naming",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S101",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTransitionSpec.cs",
+"region":  {
+"startLine":  97,
+"startColumn":  21,
+"endLine":  97,
+"endColumn":  26
+}
+}
+]
+}
+],
+"shortMessage":  "Rename class \"MyFSM\" to match camel case naming rules, consider using \"MyFsm\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Types should be named in camel case",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S101",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTransitionSpec.cs",
+"region":  {
+"startLine":  132,
+"startColumn":  21,
+"endLine":  132,
+"endColumn":  29
+}
+}
+]
+}
+],
+"shortMessage":  "Rename class \"OtherFSM\" to match camel case naming rules, consider using \"OtherFsm\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Types should be named in camel case",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S101",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTransitionSpec.cs",
+"region":  {
+"startLine":  158,
+"startColumn":  21,
+"endLine":  158,
+"endColumn":  29
+}
+}
+]
+}
+],
+"shortMessage":  "Rename class \"LeakyFSM\" to match camel case naming rules, consider using \"LeakyFsm\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Types should be named in camel case",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 },
@@ -194,25 +194,25 @@
 {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Event\\EventStreamSpec.cs",
 "region":  {
-"startLine":  26,
-"startColumn":  21,
-"endLine":  26,
-"endColumn":  22
+"startLine":  48,
+"startColumn":  26,
+"endLine":  48,
+"endColumn":  27
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename this class \"M\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*|[A-Z][a-zA-Z0-9]+Extensions)$",
-"fullMessage":  "Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate. This rule allows to check that all class names match a provided regular expression.",
+"shortMessage":  "Rename interface \"T\" to match camel case naming rules, consider using \"IT\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
 "defaultSeverity":  "Warning",
-"title":  "Class names should comply with a naming convention",
+"title":  "Types should be named in camel case",
 "category":  "Naming",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 },
@@ -224,25 +224,25 @@
 {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Event\\EventStreamSpec.cs",
 "region":  {
-"startLine":  31,
-"startColumn":  21,
-"endLine":  31,
-"endColumn":  22
+"startLine":  50,
+"startColumn":  26,
+"endLine":  50,
+"endColumn":  28
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename this class \"A\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*|[A-Z][a-zA-Z0-9]+Extensions)$",
-"fullMessage":  "Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate. This rule allows to check that all class names match a provided regular expression.",
+"shortMessage":  "Rename interface \"AT\" to match camel case naming rules, consider using \"IAt\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
 "defaultSeverity":  "Warning",
-"title":  "Class names should comply with a naming convention",
+"title":  "Types should be named in camel case",
 "category":  "Naming",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 },
@@ -254,25 +254,25 @@
 {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Event\\EventStreamSpec.cs",
 "region":  {
-"startLine":  43,
-"startColumn":  21,
-"endLine":  43,
-"endColumn":  22
+"startLine":  52,
+"startColumn":  26,
+"endLine":  52,
+"endColumn":  29
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename this class \"C\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*|[A-Z][a-zA-Z0-9]+Extensions)$",
-"fullMessage":  "Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate. This rule allows to check that all class names match a provided regular expression.",
+"shortMessage":  "Rename interface \"ATT\" to match camel case naming rules, consider using \"IAtt\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
 "defaultSeverity":  "Warning",
-"title":  "Class names should comply with a naming convention",
+"title":  "Types should be named in camel case",
 "category":  "Naming",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 },
@@ -282,27 +282,27 @@
 {
 "analysisTarget":  [
 {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchExpressionBuilder_BuildLambdaExpression_Tests.cs",
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Event\\EventStreamSpec.cs",
 "region":  {
-"startLine":  16,
-"startColumn":  17,
-"endLine":  16,
-"endColumn":  67
+"startLine":  54,
+"startColumn":  26,
+"endLine":  54,
+"endColumn":  28
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename this class \"MatchExpressionBuilder_BuildLambdaExpression_Tests\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*|[A-Z][a-zA-Z0-9]+Extensions)$",
-"fullMessage":  "Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate. This rule allows to check that all class names match a provided regular expression.",
+"shortMessage":  "Rename interface \"BT\" to match camel case naming rules, consider using \"IBt\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
 "defaultSeverity":  "Warning",
-"title":  "Class names should comply with a naming convention",
+"title":  "Types should be named in camel case",
 "category":  "Naming",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 },
@@ -312,27 +312,87 @@
 {
 "analysisTarget":  [
 {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchExpressionBuilder_CreateArgumentValuesArray_Tests.cs",
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Event\\EventStreamSpec.cs",
 "region":  {
-"startLine":  17,
-"startColumn":  17,
-"endLine":  17,
-"endColumn":  71
+"startLine":  56,
+"startColumn":  26,
+"endLine":  56,
+"endColumn":  29
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename this class \"MatchExpressionBuilder_CreateArgumentValuesArray_Tests\" to match the regular expression: ^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*|[A-Z][a-zA-Z0-9]+Extensions)$",
-"fullMessage":  "Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate. This rule allows to check that all class names match a provided regular expression.",
+"shortMessage":  "Rename interface \"BTT\" to match camel case naming rules, consider using \"IBtt\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
 "defaultSeverity":  "Warning",
-"title":  "Class names should comply with a naming convention",
+"title":  "Types should be named in camel case",
 "category":  "Naming",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S101",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Event\\EventStreamSpec.cs",
+"region":  {
+"startLine":  58,
+"startColumn":  22,
+"endLine":  58,
+"endColumn":  24
+}
+}
+]
+}
+],
+"shortMessage":  "Rename class \"CC\" to match camel case naming rules, consider using \"Cc\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Types should be named in camel case",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S101",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Event\\EventStreamSpec.cs",
+"region":  {
+"startLine":  60,
+"startColumn":  22,
+"endLine":  60,
+"endColumn":  28
+}
+}
+]
+}
+],
+"shortMessage":  "Rename class \"CCATBT\" to match camel case naming rules, consider using \"Ccatbt\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Types should be named in camel case",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 }

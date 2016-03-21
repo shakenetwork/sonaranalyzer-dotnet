@@ -12,18 +12,18 @@
 {
 "analysisTarget":  [
 {
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Configuration\\INancyEnvironmentExtensionsFixture.cs",
+"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
-"startLine":  6,
-"startColumn":  17,
-"endLine":  6,
-"endColumn":  51
+"startLine":  42,
+"startColumn":  21,
+"endLine":  42,
+"endColumn":  37
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename class \"INancyEnvironmentExtensionsFixture\" to match camel case naming rules, consider using \"NancyEnvironmentExtensionsFixture\".",
+"shortMessage":  "Rename class \"HttpQSCollection\" to match camel case naming rules, consider using \"HttpQsCollection\".",
 "fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
 "properties":  {
 "severity":  "Warning",
@@ -42,18 +42,18 @@
 {
 "analysisTarget":  [
 {
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Security\\SSLProxyFixture.cs",
+"uri":  "Nancy\\src\\Nancy\\Security\\SSLProxy.cs",
 "region":  {
-"startLine":  11,
-"startColumn":  17,
-"endLine":  11,
+"startLine":  10,
+"startColumn":  24,
+"endLine":  10,
 "endColumn":  32
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename class \"SSLProxyFixture\" to match camel case naming rules, consider using \"SslProxyFixture\".",
+"shortMessage":  "Rename class \"SSLProxy\" to match camel case naming rules, consider using \"SslProxy\".",
 "fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
 "properties":  {
 "severity":  "Warning",

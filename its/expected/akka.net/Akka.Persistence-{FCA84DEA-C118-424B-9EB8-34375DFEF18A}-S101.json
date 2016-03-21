@@ -12,18 +12,18 @@
 {
 "analysisTarget":  [
 {
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Configuration\\INancyEnvironmentExtensionsFixture.cs",
+"uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSM.cs",
 "region":  {
-"startLine":  6,
-"startColumn":  17,
-"endLine":  6,
-"endColumn":  51
+"startLine":  17,
+"startColumn":  26,
+"endLine":  17,
+"endColumn":  39
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename class \"INancyEnvironmentExtensionsFixture\" to match camel case naming rules, consider using \"NancyEnvironmentExtensionsFixture\".",
+"shortMessage":  "Rename class \"PersistentFSM\" to match camel case naming rules, consider using \"PersistentFsm\".",
 "fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
 "properties":  {
 "severity":  "Warning",
@@ -42,18 +42,18 @@
 {
 "analysisTarget":  [
 {
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Security\\SSLProxyFixture.cs",
+"uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
-"startLine":  11,
-"startColumn":  17,
-"endLine":  11,
-"endColumn":  32
+"startLine":  21,
+"startColumn":  26,
+"endLine":  21,
+"endColumn":  43
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename class \"SSLProxyFixture\" to match camel case naming rules, consider using \"SslProxyFixture\".",
+"shortMessage":  "Rename class \"PersistentFSMBase\" to match camel case naming rules, consider using \"PersistentFsmBase\".",
 "fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
 "properties":  {
 "severity":  "Warning",

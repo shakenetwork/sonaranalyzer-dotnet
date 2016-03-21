@@ -55,7 +55,7 @@ namespace SonarLint.UnitTest
                 @"<Metrics><Lines>16</Lines>",
                 @"<Issue><Id>S1134</Id><Line>3</Line>",
                 @"<Issue><Id>S1135</Id><Line>5</Line>",
-                @"<Id>S101</Id><Line>1</Line><Message>Renamethisclass""TestClass""tomatchtheregularexpression:^(?:[A-HJ-Z][a-zA-Z0-9])$</Message>",
+                @"<Id>S101</Id><Line>1</Line><Message>Renameclass""TTTestClass""tomatchcamelcasenamingrules,considerusing""TtTestClass"".</Message>",
                 @"<Id>S103</Id><Line>10</Line><Message>Splitthis21characterslongline(whichisgreaterthan10authorized).</Message>",
                 @"<Id>S103</Id><Line>13</Line><Message>Splitthis17characterslongline(whichisgreaterthan10authorized).</Message>",
                 @"<Id>S104</Id><Line>1</Line><Message>Thisfilehas16lines,whichisgreaterthan10authorized.Splititintosmallerfiles.</Message>"

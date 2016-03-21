@@ -19,7 +19,6 @@
  */
 
 using System.Collections.Immutable;
-using System.Text.RegularExpressions;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -27,25 +26,29 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Linq;
+using System;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
-    [SqaleConstantRemediation("5min")]
+    [SqaleConstantRemediation("2min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Convention)]
-    public class ClassName : ParameterLoadingDiagnosticAnalyzer
+    public class ClassName : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S101";
-        internal const string Title = "Class names should comply with a naming convention";
+        internal const string Title = "Types should be named in camel case";
         internal const string Description =
-            "Sharing some naming conventions is a key point to make it possible for a team to efficiently collaborate. " +
-            "This rule allows to check that all class names match a provided regular expression.";
-        internal const string MessageFormat = "Rename this class \"{1}\" to match the regular expression: {0}";
+            "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.";
+        internal const string MessageFormat = "Rename {0} \"{1}\" to match camel case naming rules, {2}.";
+        internal const string MessageFormatNonUnderscore = "consider using \"{0}\"";
+        internal const string MessageFormatUnderscore = "trim underscores from the name";
         internal const string Category = SonarLint.Common.Category.Naming;
         internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = false;
+        internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
@@ -55,24 +58,336 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        private const string DefaultValueConvention = "^([A-HJ-Z][a-zA-Z0-9]+|I[a-z0-9][a-zA-Z0-9]*|[A-Z][a-zA-Z0-9]+Extensions)$";
-
-        [RuleParameter("format", PropertyType.String, "Regular expression used to check the class names against.", DefaultValueConvention)]
-        public string Convention { get; set; } = DefaultValueConvention;
-
-        protected override void Initialize(ParameterLoadingAnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
-                    var identifier = ((ClassDeclarationSyntax)c.Node).Identifier;
+                    var typeDeclaration = (BaseTypeDeclarationSyntax)c.Node;
+                    var identifier = typeDeclaration.Identifier;
 
-                    if (!Regex.IsMatch(identifier.Text, Convention))
+                    var symbol = c.SemanticModel.GetDeclaredSymbol(typeDeclaration);
+                    if (symbol == null ||
+                        symbol.GetAttributes().Any(a =>
+                            a.AttributeClass.Is(KnownType.System_Runtime_InteropServices_ComImportAttribute) ||
+                            a.AttributeClass.Is(KnownType.System_Runtime_InteropServices_InterfaceTypeAttribute)))
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(), Convention, identifier.Text));
+                        return;
+                    }
+
+                    if (identifier.ValueText.StartsWith("_", StringComparison.Ordinal) ||
+                        identifier.ValueText.EndsWith("_", StringComparison.Ordinal))
+                    {
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(), TypeKindNameMapping[typeDeclaration.Kind()],
+                            identifier.ValueText, MessageFormatUnderscore));
+                        return;
+                    }
+
+                    string suggestion;
+                    if (TryGetChangedName(identifier.ValueText, typeDeclaration, c.SemanticModel.Compilation.IsTest(), out suggestion))
+                    {
+                        var messageEnding = string.Format(MessageFormatNonUnderscore, suggestion);
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(),
+                            TypeKindNameMapping[typeDeclaration.Kind()], identifier.ValueText, messageEnding));
                     }
                 },
-                SyntaxKind.ClassDeclaration);
+                SyntaxKind.ClassDeclaration,
+                SyntaxKind.InterfaceDeclaration,
+                SyntaxKind.StructDeclaration);
+        }
+
+        private static readonly Dictionary<SyntaxKind, string> TypeKindNameMapping = new Dictionary<SyntaxKind, string>
+        {
+            {SyntaxKind.StructDeclaration, "struct" },
+            {SyntaxKind.ClassDeclaration, "class" },
+            {SyntaxKind.InterfaceDeclaration, "interface" },
+        };
+
+        private static bool TryGetChangedName(string identifierName, BaseTypeDeclarationSyntax typeDeclaration, bool isUnderscoreAccepted,
+            out string suggestion)
+        {
+            var suggestionPrefix = typeDeclaration is InterfaceDeclarationSyntax ? "I" : string.Empty;
+            var namesToCheck = identifierName.Split(new[] { "_" }, StringSplitOptions.None);
+
+            if (LeadingIShouldBeIgnored(namesToCheck[0], typeDeclaration))
+            {
+                namesToCheck[0] = namesToCheck[0].Substring(1);
+            }
+
+            var suggestedNames = namesToCheck.Select(s => CamelCaseConverter.Convert(s));
+
+            if (isUnderscoreAccepted)
+            {
+                suggestion = string.Join("_", suggestedNames);
+            }
+            else
+            {
+                var concatenated = string.Join(string.Empty, suggestedNames);
+
+                // do a second path, to suggest a real camel case string. A_B_C -> ABC -> Abc
+                suggestion = CamelCaseConverter.Convert(concatenated);
+            }
+
+            suggestion = suggestionPrefix + suggestion;
+            return identifierName != suggestion;
+        }
+
+        private static bool LeadingIShouldBeIgnored(string input, BaseTypeDeclarationSyntax typeDeclaration)
+        {
+            if (typeDeclaration is InterfaceDeclarationSyntax)
+            {
+                if (StartsWithUpperCaseI(input))
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                if (IsPossibleInterfaceName(input) &&
+                    !typeDeclaration.Modifiers.Any(m => m.IsKind(SyntaxKind.StaticKeyword)))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private static bool StartsWithUpperCaseI(string input)
+        {
+            return input.Length >= 1 &&
+                input[0] == 'I';
+        }
+
+        private static bool IsPossibleInterfaceName(string input)
+        {
+            return StartsWithUpperCaseI(input) &&
+                input.Length >= 3 &&
+                char.IsUpper(input[1]) &&
+                char.IsLower(input[2]);
+        }
+
+        private class CamelCaseConverter
+        {
+            public static string Convert(string identifierName)
+            {
+                // handle special case of two upper case characters:
+                if (identifierName.Length == 2 &&
+                    char.IsUpper(identifierName[0]) &&
+                    char.IsUpper(identifierName[1]))
+                {
+                    return identifierName[0].ToString() + char.ToLowerInvariant(identifierName[1]);
+                }
+
+                var name = identifierName ?? string.Empty;
+                var suggestion = name;
+                var currentState = CamelCaseState.Start;
+                var currentIndex = 0;
+                while (currentIndex < suggestion.Length)
+                {
+                    switch (currentState)
+                    {
+                        case CamelCaseState.Start:
+                        case CamelCaseState.Number:
+                            if (char.IsLower(suggestion[currentIndex]))
+                            {
+                                suggestion = CreateSuggestionFirstLowerCase(suggestion, currentIndex);
+                                currentState = CamelCaseState.SingleUpper;
+                                currentIndex++;
+                                continue;
+                            }
+
+                            if (char.IsNumber(suggestion[currentIndex]))
+                            {
+                                currentState = CamelCaseState.Number;
+                                currentIndex++;
+                                continue;
+                            }
+
+                            if (char.IsUpper(suggestion[currentIndex]))
+                            {
+                                currentState = CamelCaseState.SingleUpper;
+                                currentIndex++;
+                                continue;
+                            }
+
+                            break;
+                        case CamelCaseState.SingleUpper:
+                            if (char.IsLower(suggestion[currentIndex]))
+                            {
+                                currentState = CamelCaseState.Lower;
+                                currentIndex++;
+                                continue;
+                            }
+
+                            if (char.IsNumber(suggestion[currentIndex]))
+                            {
+                                currentState = CamelCaseState.Number;
+                                currentIndex++;
+                                continue;
+                            }
+
+                            if (char.IsUpper(suggestion[currentIndex]))
+                            {
+                                currentState = CamelCaseState.DoubleUpper;
+                                currentIndex++;
+                                continue;
+                            }
+
+                            break;
+                        case CamelCaseState.DoubleUpper:
+                            if (char.IsLower(suggestion[currentIndex]))
+                            {
+                                currentState = CamelCaseState.Lower;
+                                currentIndex++;
+                                continue;
+                            }
+
+                            if (char.IsNumber(suggestion[currentIndex]))
+                            {
+                                currentState = CamelCaseState.Number;
+                                currentIndex++;
+                                continue;
+                            }
+
+                            if (char.IsUpper(suggestion[currentIndex]))
+                            {
+                                var suggestionResult = CreateSuggestionTooManyUpperCase(suggestion, currentIndex);
+                                currentIndex = suggestionResult.LastProcessedIndex;
+                                suggestion = suggestionResult.Suggestion;
+
+                                currentState = CamelCaseState.Lower;
+                                currentIndex++;
+                                continue;
+                            }
+
+                            break;
+                        case CamelCaseState.Lower:
+                            if (char.IsLower(suggestion[currentIndex]))
+                            {
+                                currentState = CamelCaseState.Lower;
+                                currentIndex++;
+                                continue;
+                            }
+
+                            if (char.IsNumber(suggestion[currentIndex]))
+                            {
+                                currentState = CamelCaseState.Number;
+                                currentIndex++;
+                                continue;
+                            }
+
+                            if (char.IsUpper(suggestion[currentIndex]))
+                            {
+                                currentState = CamelCaseState.SingleUpper;
+                                currentIndex++;
+                                continue;
+                            }
+
+                            break;
+                    }
+                }
+
+                return suggestion;
+            }
+
+            private class TooManyUpperCaseSuggestionResult
+            {
+                public string Suggestion { get; set; }
+                public int LastProcessedIndex { get; set; }
+            }
+
+            private static TooManyUpperCaseSuggestionResult CreateSuggestionTooManyUpperCase(string input, int currentIndex)
+            {
+                var suggestion = input;
+
+                // current index
+                if (suggestion.Length == currentIndex + 1 ||
+                    !char.IsLower(suggestion[currentIndex + 1]))
+                {
+                    suggestion = ChangeToLowerBetween(suggestion, currentIndex, currentIndex);
+                }
+
+                // preceeding characters
+                var toLowerTill = currentIndex - 1;
+                while (toLowerTill >= 0)
+                {
+                    if (char.IsLower(suggestion[toLowerTill]) ||
+                        char.IsNumber(suggestion[toLowerTill]))
+                    {
+                        toLowerTill += 2;
+                        break;
+                    }
+                    toLowerTill--;
+                }
+
+                if (toLowerTill < 0)
+                {
+                    toLowerTill = 1;
+                }
+
+                suggestion = ChangeToLowerBetween(suggestion, toLowerTill, currentIndex - 1);
+
+                // succeeding characters
+                toLowerTill = currentIndex + 1;
+                while (toLowerTill < suggestion.Length)
+                {
+                    if (char.IsNumber(suggestion[toLowerTill]))
+                    {
+                        toLowerTill -= 1;
+                        break;
+                    }
+                    if (char.IsLower(suggestion[toLowerTill]))
+                    {
+                        toLowerTill -= 2;
+                        break;
+                    }
+                    toLowerTill++;
+                }
+
+                if (toLowerTill == suggestion.Length)
+                {
+                    toLowerTill = suggestion.Length - 1;
+                }
+
+                suggestion = ChangeToLowerBetween(suggestion, currentIndex + 1, toLowerTill);
+
+                return new TooManyUpperCaseSuggestionResult
+                {
+                    Suggestion = suggestion,
+                    LastProcessedIndex = toLowerTill
+                };
+            }
+
+            private static string CreateSuggestionFirstLowerCase(string input, int currentIndex)
+            {
+                var beginning = input.Substring(0, currentIndex);
+                var continuation = currentIndex < input.Length - 1 ? input.Substring(currentIndex + 1) : string.Empty;
+                return beginning + char.ToUpperInvariant(input[currentIndex]) + continuation;
+            }
+
+            private static string ChangeToLowerBetween(string input, int lower, int upper)
+            {
+                if (lower > upper)
+                {
+                    return input;
+                }
+
+                var pre = lower > 0 ? input.Substring(0, lower) : string.Empty;
+                var post = upper < input.Length ? input.Substring(upper + 1) : string.Empty;
+                var middle = input.Substring(lower, upper - lower + 1).ToLowerInvariant();
+
+                return pre + middle + post;
+            }
+
+            private enum CamelCaseState
+            {
+                Start,
+                SingleUpper,
+                DoubleUpper,
+                Lower,
+                Number
+            }
         }
     }
 }

@@ -12,78 +12,18 @@
 {
 "analysisTarget":  [
 {
-"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\Fsm\\PersistentFSMSpec.cs",
+"uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.Core\\DIActorContextAdapter.cs",
 "region":  {
-"startLine":  16,
+"startLine":  12,
 "startColumn":  17,
-"endLine":  16,
-"endColumn":  34
-}
-}
-]
-}
-],
-"shortMessage":  "Rename class \"PersistentFSMSpec\" to match camel case naming rules, consider using \"PersistentFsmSpec\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Types should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S101",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\Fsm\\PersistentFSMSpec.cs",
-"region":  {
-"startLine":  323,
-"startColumn":  23,
-"endLine":  323,
-"endColumn":  42
-}
-}
-]
-}
-],
-"shortMessage":  "Rename class \"WebStoreCustomerFSM\" to match camel case naming rules, consider using \"WebStoreCustomerFsm\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Types should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S101",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\Fsm\\PersistentFSMSpec.cs",
-"region":  {
-"startLine":  456,
-"startColumn":  19,
-"endLine":  456,
+"endLine":  12,
 "endColumn":  38
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename class \"SimpleTransitionFSM\" to match camel case naming rules, consider using \"SimpleTransitionFsm\".",
+"shortMessage":  "Rename class \"DIActorContextAdapter\" to match camel case naming rules, consider using \"DiActorContextAdapter\".",
 "fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
 "properties":  {
 "severity":  "Warning",
@@ -102,18 +42,108 @@
 {
 "analysisTarget":  [
 {
-"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
+"uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.Core\\DIActorProducer.cs",
 "region":  {
-"startLine":  810,
-"startColumn":  23,
-"endLine":  810,
-"endColumn":  62
+"startLine":  15,
+"startColumn":  17,
+"endLine":  15,
+"endColumn":  32
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename class \"DeferringMixedCallsPPADDPADPersistActor\" to match camel case naming rules, consider using \"DeferringMixedCallsPpaddpadPersistActor\".",
+"shortMessage":  "Rename class \"DIActorProducer\" to match camel case naming rules, consider using \"DiActorProducer\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Types should be named in camel case",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S101",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.Core\\DIActorSystemAdapter.cs",
+"region":  {
+"startLine":  12,
+"startColumn":  17,
+"endLine":  12,
+"endColumn":  37
+}
+}
+]
+}
+],
+"shortMessage":  "Rename class \"DIActorSystemAdapter\" to match camel case naming rules, consider using \"DiActorSystemAdapter\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Types should be named in camel case",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S101",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.Core\\DIExt.cs",
+"region":  {
+"startLine":  15,
+"startColumn":  17,
+"endLine":  15,
+"endColumn":  22
+}
+}
+]
+}
+],
+"shortMessage":  "Rename class \"DIExt\" to match camel case naming rules, consider using \"DiExt\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Types should be named in camel case",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S101",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\dependencyInjection\\Akka.DI.Core\\DIExtension.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  17,
+"endLine":  14,
+"endColumn":  28
+}
+}
+]
+}
+],
+"shortMessage":  "Rename class \"DIExtension\" to match camel case naming rules, consider using \"DiExtension\".",
 "fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
 "properties":  {
 "severity":  "Warning",
