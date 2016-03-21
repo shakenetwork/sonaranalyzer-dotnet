@@ -12,18 +12,18 @@
 {
 "analysisTarget":  [
 {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTimingSpec.cs",
+"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_ActorOf.cs",
 "region":  {
-"startLine":  23,
-"startColumn":  25,
-"endLine":  23,
-"endColumn":  28
+"startLine":  230,
+"startColumn":  52,
+"endLine":  230,
+"endColumn":  71
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename property \"fsm\" to match camel case naming rules, consider using \"Fsm\".",
+"shortMessage":  "Rename method \"ActorOfAsTestFSMRef\" to match camel case naming rules, consider using \"ActorOfAsTestFsmRef\".",
 "fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
 "properties":  {
 "severity":  "Warning",
@@ -42,18 +42,18 @@
 {
 "analysisTarget":  [
 {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Event\\EventStreamSpec.cs",
+"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_ActorOf.cs",
 "region":  {
-"startLine":  308,
-"startColumn":  21,
-"endLine":  308,
-"endColumn":  32
+"startLine":  246,
+"startColumn":  52,
+"endLine":  246,
+"endColumn":  71
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename method \"verifyLevel\" to match camel case naming rules, consider using \"VerifyLevel\".",
+"shortMessage":  "Rename method \"ActorOfAsTestFSMRef\" to match camel case naming rules, consider using \"ActorOfAsTestFsmRef\".",
 "fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
 "properties":  {
 "severity":  "Warning",
@@ -72,18 +72,18 @@
 {
 "analysisTarget":  [
 {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Util\\Internal\\Collections\\ImmutableAvlTreeTests.cs",
+"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_ActorOf.cs",
 "region":  {
-"startLine":  31,
-"startColumn":  20,
-"endLine":  31,
-"endColumn":  26
+"startLine":  264,
+"startColumn":  52,
+"endLine":  264,
+"endColumn":  71
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename method \"LLCase\" to match camel case naming rules, consider using \"LlCase\".",
+"shortMessage":  "Rename method \"ActorOfAsTestFSMRef\" to match camel case naming rules, consider using \"ActorOfAsTestFsmRef\".",
 "fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
 "properties":  {
 "severity":  "Warning",
@@ -102,18 +102,18 @@
 {
 "analysisTarget":  [
 {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Util\\Internal\\Collections\\ImmutableAvlTreeTests.cs",
+"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_ActorOf.cs",
 "region":  {
-"startLine":  61,
-"startColumn":  20,
-"endLine":  61,
-"endColumn":  26
+"startLine":  280,
+"startColumn":  52,
+"endLine":  280,
+"endColumn":  71
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename method \"LRCase\" to match camel case naming rules, consider using \"LrCase\".",
+"shortMessage":  "Rename method \"ActorOfAsTestFSMRef\" to match camel case naming rules, consider using \"ActorOfAsTestFsmRef\".",
 "fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
 "properties":  {
 "severity":  "Warning",
@@ -132,18 +132,18 @@
 {
 "analysisTarget":  [
 {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Util\\Internal\\Collections\\ImmutableAvlTreeTests.cs",
+"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_ActorOf.cs",
 "region":  {
-"startLine":  74,
-"startColumn":  20,
-"endLine":  74,
-"endColumn":  26
+"startLine":  298,
+"startColumn":  52,
+"endLine":  298,
+"endColumn":  71
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename method \"RRCase\" to match camel case naming rules, consider using \"RrCase\".",
+"shortMessage":  "Rename method \"ActorOfAsTestFSMRef\" to match camel case naming rules, consider using \"ActorOfAsTestFsmRef\".",
 "fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
 "properties":  {
 "severity":  "Warning",
@@ -162,18 +162,18 @@
 {
 "analysisTarget":  [
 {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Util\\Internal\\Collections\\ImmutableAvlTreeTests.cs",
+"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_ActorOf.cs",
 "region":  {
-"startLine":  87,
-"startColumn":  20,
-"endLine":  87,
-"endColumn":  26
+"startLine":  315,
+"startColumn":  52,
+"endLine":  315,
+"endColumn":  71
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename method \"RLCase\" to match camel case naming rules, consider using \"RlCase\".",
+"shortMessage":  "Rename method \"ActorOfAsTestFSMRef\" to match camel case naming rules, consider using \"ActorOfAsTestFsmRef\".",
 "fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
 "properties":  {
 "severity":  "Warning",

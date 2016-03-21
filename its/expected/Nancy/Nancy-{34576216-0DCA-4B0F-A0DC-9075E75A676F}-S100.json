@@ -12,18 +12,18 @@
 {
 "analysisTarget":  [
 {
-"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\ModelBindingTests.cs",
+"uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
-"startLine":  83,
-"startColumn":  22,
-"endLine":  83,
-"endColumn":  26
+"startLine":  118,
+"startColumn":  20,
+"endLine":  118,
+"endColumn":  37
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename property \"key1\" to match camel case naming rules, consider using \"Key1\".",
+"shortMessage":  "Rename property \"ISO8601DateFormat\" to match camel case naming rules, consider using \"Iso8601DateFormat\".",
 "fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
 "properties":  {
 "severity":  "Warning",
@@ -42,18 +42,18 @@
 {
 "analysisTarget":  [
 {
-"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\ModelBindingTests.cs",
+"uri":  "Nancy\\src\\Nancy\\Json\\JsonConfiguration.cs",
 "region":  {
-"startLine":  88,
-"startColumn":  22,
-"endLine":  88,
-"endColumn":  26
+"startLine":  91,
+"startColumn":  20,
+"endLine":  91,
+"endColumn":  40
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename property \"key1\" to match camel case naming rules, consider using \"Key1\".",
+"shortMessage":  "Rename property \"UseISO8601DateFormat\" to match camel case naming rules, consider using \"UseIso8601DateFormat\".",
 "fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
 "properties":  {
 "severity":  "Warning",
@@ -72,18 +72,18 @@
 {
 "analysisTarget":  [
 {
-"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\ModelBindingTests.cs",
+"uri":  "Nancy\\src\\Nancy\\Responses\\DefaultJsonSerializer.cs",
 "region":  {
-"startLine":  89,
-"startColumn":  22,
-"endLine":  89,
-"endColumn":  26
+"startLine":  64,
+"startColumn":  20,
+"endLine":  64,
+"endColumn":  37
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename property \"key2\" to match camel case naming rules, consider using \"Key2\".",
+"shortMessage":  "Rename property \"ISO8601DateFormat\" to match camel case naming rules, consider using \"Iso8601DateFormat\".",
 "fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
 "properties":  {
 "severity":  "Warning",

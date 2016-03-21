@@ -12,18 +12,18 @@
 {
 "analysisTarget":  [
 {
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
+"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
 "region":  {
-"startLine":  1591,
-"startColumn":  23,
-"endLine":  1591,
-"endColumn":  43
+"startLine":  489,
+"startColumn":  27,
+"endLine":  489,
+"endColumn":  37
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename property \"lowercaseintproperty\" to match camel case naming rules, consider using \"Lowercaseintproperty\".",
+"shortMessage":  "Rename method \"CreateEWMA\" to match camel case naming rules, consider using \"CreateEwma\".",
 "fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
 "properties":  {
 "severity":  "Warning",

@@ -67,10 +67,7 @@ namespace SonarLint.Rules.CSharp
                     var identifier = typeDeclaration.Identifier;
 
                     var symbol = c.SemanticModel.GetDeclaredSymbol(typeDeclaration);
-                    if (symbol == null ||
-                        symbol.GetAttributes().Any(a =>
-                            a.AttributeClass.Is(KnownType.System_Runtime_InteropServices_ComImportAttribute) ||
-                            a.AttributeClass.Is(KnownType.System_Runtime_InteropServices_InterfaceTypeAttribute)))
+                    if (IsTypeComRelated(symbol))
                     {
                         return;
                     }
@@ -94,6 +91,14 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.ClassDeclaration,
                 SyntaxKind.InterfaceDeclaration,
                 SyntaxKind.StructDeclaration);
+        }
+
+        internal static bool IsTypeComRelated(INamedTypeSymbol symbol)
+        {
+            return symbol == null ||
+                symbol.GetAttributes().Any(a =>
+                    a.AttributeClass.Is(KnownType.System_Runtime_InteropServices_ComImportAttribute) ||
+                    a.AttributeClass.Is(KnownType.System_Runtime_InteropServices_InterfaceTypeAttribute));
         }
 
         private static readonly Dictionary<SyntaxKind, string> TypeKindNameMapping = new Dictionary<SyntaxKind, string>
@@ -167,7 +172,7 @@ namespace SonarLint.Rules.CSharp
                 char.IsLower(input[2]);
         }
 
-        private class CamelCaseConverter
+        internal class CamelCaseConverter
         {
             public static string Convert(string identifierName)
             {

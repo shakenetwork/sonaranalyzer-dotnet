@@ -12,6 +12,66 @@
 {
 "analysisTarget":  [
 {
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"region":  {
+"startLine":  721,
+"startColumn":  26,
+"endLine":  721,
+"endColumn":  42
+}
+}
+]
+}
+],
+"shortMessage":  "Rename property \"FileIODispatcher\" to match camel case naming rules, consider using \"FileIoDispatcher\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods and properties should be named in camel case",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\core\\Akka\\IO\\TcpConnection.cs",
+"region":  {
+"startLine":  155,
+"startColumn":  24,
+"endLine":  155,
+"endColumn":  35
+}
+}
+]
+}
+],
+"shortMessage":  "Rename method \"PeerSentEOF\" to match camel case naming rules, consider using \"PeerSentEof\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods and properties should be named in camel case",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
 "uri":  "akka.net\\src\\core\\Akka\\Util\\ByteString.cs",
 "region":  {
 "startLine":  173,
@@ -23,16 +83,16 @@
 ]
 }
 ],
-"shortMessage":  "Rename this method \"checkRangeConvert\" to match the regular expression ^[A-Z][a-zA-Z0-9_]*[a-zA-Z0-9]$",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks that all method names match a provided regular expression.",
+"shortMessage":  "Rename method \"checkRangeConvert\" to match camel case naming rules, consider using \"CheckRangeConvert\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
 "defaultSeverity":  "Warning",
-"title":  "Method name should comply with a naming convention",
+"title":  "Methods and properties should be named in camel case",
 "category":  "Naming",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 },
@@ -53,16 +113,16 @@
 ]
 }
 ],
-"shortMessage":  "Rename this method \"newBuilder\" to match the regular expression ^[A-Z][a-zA-Z0-9_]*[a-zA-Z0-9]$",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks that all method names match a provided regular expression.",
+"shortMessage":  "Rename method \"newBuilder\" to match camel case naming rules, consider using \"NewBuilder\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
 "defaultSeverity":  "Warning",
-"title":  "Method name should comply with a naming convention",
+"title":  "Methods and properties should be named in camel case",
 "category":  "Naming",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 }

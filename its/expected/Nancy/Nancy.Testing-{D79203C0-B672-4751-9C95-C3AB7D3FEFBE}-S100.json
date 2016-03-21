@@ -12,18 +12,18 @@
 {
 "analysisTarget":  [
 {
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
+"uri":  "Nancy\\src\\Nancy.Testing\\BrowserContextExtensions.cs",
 "region":  {
-"startLine":  1591,
-"startColumn":  23,
-"endLine":  1591,
-"endColumn":  43
+"startLine":  75,
+"startColumn":  27,
+"endLine":  75,
+"endColumn":  34
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename property \"lowercaseintproperty\" to match camel case naming rules, consider using \"Lowercaseintproperty\".",
+"shortMessage":  "Rename method \"XMLBody\" to match camel case naming rules, consider using \"XmlBody\".",
 "fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
 "properties":  {
 "severity":  "Warning",

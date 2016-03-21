@@ -12,27 +12,27 @@
 {
 "analysisTarget":  [
 {
-"uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\MainForm.cs",
+"uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\YahooFinance\\StockQuoteModels.cs",
 "region":  {
-"startLine":  58,
-"startColumn":  21,
-"endLine":  58,
-"endColumn":  61
+"startLine":  14,
+"startColumn":  22,
+"endLine":  14,
+"endColumn":  28
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename this method \"lstDownloadedStocks_ItemSelectionChanged\" to match the regular expression ^[A-Z][a-zA-Z0-9_]*[a-zA-Z0-9]$",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks that all method names match a provided regular expression.",
+"shortMessage":  "Rename property \"symbol\" to match camel case naming rules, consider using \"Symbol\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
 "defaultSeverity":  "Warning",
-"title":  "Method name should comply with a naming convention",
+"title":  "Methods and properties should be named in camel case",
 "category":  "Naming",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 },
@@ -42,27 +42,447 @@
 {
 "analysisTarget":  [
 {
-"uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\MainForm.cs",
+"uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\YahooFinance\\StockQuoteModels.cs",
 "region":  {
-"startLine":  84,
-"startColumn":  21,
-"endLine":  84,
-"endColumn":  33
+"startLine":  31,
+"startColumn":  22,
+"endLine":  31,
+"endColumn":  44
 }
 }
 ]
 }
 ],
-"shortMessage":  "Rename this method \"btn_Go_Click\" to match the regular expression ^[A-Z][a-zA-Z0-9_]*[a-zA-Z0-9]$",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks that all method names match a provided regular expression.",
+"shortMessage":  "Rename property \"EPSEstimateCurrentYear\" to match camel case naming rules, consider using \"EpsEstimateCurrentYear\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
 "defaultSeverity":  "Warning",
-"title":  "Method name should comply with a naming convention",
+"title":  "Methods and properties should be named in camel case",
 "category":  "Naming",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\YahooFinance\\StockQuoteModels.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  22,
+"endLine":  32,
+"endColumn":  41
+}
+}
+]
+}
+],
+"shortMessage":  "Rename property \"EPSEstimateNextYear\" to match camel case naming rules, consider using \"EpsEstimateNextYear\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods and properties should be named in camel case",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\YahooFinance\\StockQuoteModels.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  22,
+"endLine":  33,
+"endColumn":  44
+}
+}
+]
+}
+],
+"shortMessage":  "Rename property \"EPSEstimateNextQuarter\" to match camel case naming rules, consider using \"EpsEstimateNextQuarter\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods and properties should be named in camel case",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\YahooFinance\\StockQuoteModels.cs",
+"region":  {
+"startLine":  47,
+"startColumn":  22,
+"endLine":  47,
+"endColumn":  28
+}
+}
+]
+}
+],
+"shortMessage":  "Rename property \"EBITDA\" to match camel case naming rules, consider using \"Ebitda\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods and properties should be named in camel case",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\YahooFinance\\StockQuoteModels.cs",
+"region":  {
+"startLine":  75,
+"startColumn":  22,
+"endLine":  75,
+"endColumn":  29
+}
+}
+]
+}
+],
+"shortMessage":  "Rename property \"PERatio\" to match camel case naming rules, consider using \"PeRatio\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods and properties should be named in camel case",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\YahooFinance\\StockQuoteModels.cs",
+"region":  {
+"startLine":  77,
+"startColumn":  22,
+"endLine":  77,
+"endColumn":  37
+}
+}
+]
+}
+],
+"shortMessage":  "Rename property \"PERatioRealtime\" to match camel case naming rules, consider using \"PeRatioRealtime\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods and properties should be named in camel case",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\YahooFinance\\StockQuoteModels.cs",
+"region":  {
+"startLine":  78,
+"startColumn":  22,
+"endLine":  78,
+"endColumn":  30
+}
+}
+]
+}
+],
+"shortMessage":  "Rename property \"PEGRatio\" to match camel case naming rules, consider using \"PegRatio\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods and properties should be named in camel case",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\YahooFinance\\StockQuoteModels.cs",
+"region":  {
+"startLine":  79,
+"startColumn":  22,
+"endLine":  79,
+"endColumn":  49
+}
+}
+]
+}
+],
+"shortMessage":  "Rename property \"PriceEPSEstimateCurrentYear\" to match camel case naming rules, consider using \"PriceEpsEstimateCurrentYear\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods and properties should be named in camel case",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\YahooFinance\\StockQuoteModels.cs",
+"region":  {
+"startLine":  80,
+"startColumn":  22,
+"endLine":  80,
+"endColumn":  46
+}
+}
+]
+}
+],
+"shortMessage":  "Rename property \"PriceEPSEstimateNextYear\" to match camel case naming rules, consider using \"PriceEpsEstimateNextYear\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods and properties should be named in camel case",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\YahooFinance\\StockQuoteModels.cs",
+"region":  {
+"startLine":  100,
+"startColumn":  21,
+"endLine":  100,
+"endColumn":  26
+}
+}
+]
+}
+],
+"shortMessage":  "Rename property \"quote\" to match camel case naming rules, consider using \"Quote\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods and properties should be named in camel case",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\YahooFinance\\StockQuoteModels.cs",
+"region":  {
+"startLine":  105,
+"startColumn":  19,
+"endLine":  105,
+"endColumn":  24
+}
+}
+]
+}
+],
+"shortMessage":  "Rename property \"count\" to match camel case naming rules, consider using \"Count\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods and properties should be named in camel case",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\YahooFinance\\StockQuoteModels.cs",
+"region":  {
+"startLine":  106,
+"startColumn":  22,
+"endLine":  106,
+"endColumn":  29
+}
+}
+]
+}
+],
+"shortMessage":  "Rename property \"created\" to match camel case naming rules, consider using \"Created\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods and properties should be named in camel case",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\YahooFinance\\StockQuoteModels.cs",
+"region":  {
+"startLine":  107,
+"startColumn":  22,
+"endLine":  107,
+"endColumn":  26
+}
+}
+]
+}
+],
+"shortMessage":  "Rename property \"lang\" to match camel case naming rules, consider using \"Lang\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods and properties should be named in camel case",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\YahooFinance\\StockQuoteModels.cs",
+"region":  {
+"startLine":  108,
+"startColumn":  23,
+"endLine":  108,
+"endColumn":  30
+}
+}
+]
+}
+],
+"shortMessage":  "Rename property \"results\" to match camel case naming rules, consider using \"Results\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods and properties should be named in camel case",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S100",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\YahooFinance\\StockQuoteModels.cs",
+"region":  {
+"startLine":  113,
+"startColumn":  21,
+"endLine":  113,
+"endColumn":  26
+}
+}
+]
+}
+],
+"shortMessage":  "Rename property \"query\" to match camel case naming rules, consider using \"Query\".",
+"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods and properties should be named in camel case",
+"category":  "Naming",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 }

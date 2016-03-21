@@ -19,7 +19,6 @@
  */
 
 using System.Collections.Immutable;
-using System.Text.RegularExpressions;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -27,25 +26,31 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Linq;
+using System.Collections.Generic;
+using System;
 
 namespace SonarLint.Rules.CSharp
 {
+    using CamelCaseConverter = ClassName.CamelCaseConverter;
+
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Readability)]
     [SqaleConstantRemediation("5min")]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.Convention)]
-    public class MethodName : ParameterLoadingDiagnosticAnalyzer
+    public class MethodName : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S100";
-        internal const string Title = "Method name should comply with a naming convention";
+        internal const string Title = "Methods and properties should be named in camel case";
         internal const string Description =
-            "Shared naming conventions allow teams to collaborate efficiently. This rule checks that all method names match a provided " +
-            "regular expression.";
-        internal const string MessageFormat = "Rename this method \"{1}\" to match the regular expression {0}";
+            "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.";
+        internal const string MessageFormat = "Rename {0} \"{1}\" to match camel case naming rules, {2}.";
+        internal const string MessageFormatNonUnderscore = "consider using \"{0}\"";
+        internal const string MessageFormatUnderscore = "trim underscores from the name";
         internal const string Category = SonarLint.Common.Category.Naming;
         internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = false;
+        internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
@@ -55,25 +60,68 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        private const string DefaultValueConvention = "^[A-Z][a-zA-Z0-9_]*[a-zA-Z0-9]$";
-
-        [RuleParameter("format", PropertyType.String, "Regular expression used to check the method names against",
-            DefaultValueConvention)]
-        public string Convention { get; set; } = DefaultValueConvention;
-
-        protected override void Initialize(ParameterLoadingAnalysisContext context)
+        protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
-                    var identifierNode = ((MethodDeclarationSyntax)c.Node).Identifier;
-
-                    if (!Regex.IsMatch(identifierNode.Text, Convention))
-                    {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, identifierNode.GetLocation(), Convention, identifierNode.Text));
-                    }
+                    var declaration = (MethodDeclarationSyntax)c.Node;
+                    CheckDeclarationName(declaration, declaration.Identifier, c);
                 },
                 SyntaxKind.MethodDeclaration);
+
+            context.RegisterSyntaxNodeActionInNonGenerated(
+                c =>
+                {
+                    var declaration = (PropertyDeclarationSyntax)c.Node;
+                    CheckDeclarationName(declaration, declaration.Identifier, c);
+                },
+                SyntaxKind.PropertyDeclaration);
         }
+
+        private static void CheckDeclarationName(MemberDeclarationSyntax member, SyntaxToken identifier, SyntaxNodeAnalysisContext context)
+        {
+            var symbol = context.SemanticModel.GetDeclaredSymbol(member);
+            if (ClassName.IsTypeComRelated(symbol?.ContainingType) ||
+                symbol.IsInterfaceImplementationOrMemberOverride() ||
+                symbol.IsExtern)
+            {
+                return;
+            }
+
+            if (identifier.ValueText.StartsWith("_", StringComparison.Ordinal) ||
+                identifier.ValueText.EndsWith("_", StringComparison.Ordinal))
+            {
+                context.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(), MethodKindNameMapping[member.Kind()],
+                    identifier.ValueText, MessageFormatUnderscore));
+                return;
+            }
+
+            string suggestion;
+            if (TryGetChangedName(identifier.ValueText, out suggestion))
+            {
+                var messageEnding = string.Format(MessageFormatNonUnderscore, suggestion);
+                context.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(), MethodKindNameMapping[member.Kind()],
+                    identifier.ValueText, messageEnding));
+            }
+        }
+
+        private static bool TryGetChangedName(string identifierName, out string suggestion)
+        {
+            if (identifierName.Contains('_'))
+            {
+                suggestion = null;
+                return false;
+            }
+
+            suggestion = CamelCaseConverter.Convert(identifierName);
+            return identifierName != suggestion;
+        }
+
+        private static readonly Dictionary<SyntaxKind, string> MethodKindNameMapping = new Dictionary<SyntaxKind, string>
+        {
+            {SyntaxKind.MethodDeclaration, "method" },
+            {SyntaxKind.PropertyDeclaration, "property" }
+        };
     }
 }
