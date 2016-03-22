@@ -86,7 +86,7 @@ namespace SonarLint.Rules.CSharp
 
         private static void ReportOnVariableMatchingField(IEnumerable<ISymbol> members, SyntaxToken identifier, SyntaxNodeAnalysisContext context)
         {
-            var matchingMember = members.FirstOrDefault(m => m.Name == identifier.Text);
+            var matchingMember = members.FirstOrDefault(m => m.Name == identifier.ValueText);
             if (matchingMember == null)
             {
                 return;

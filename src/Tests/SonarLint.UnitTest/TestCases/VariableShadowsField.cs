@@ -7,11 +7,13 @@ namespace Tests.Diagnostics
     public class VariableShadowsField
     {
         public int myField;
+        public int @int;
         public int MyField { get; set; }
 
         public void doSomething()
         {
             int myField = 0, other = 5; // Noncompliant
+            int @int = 42; // Noncompliant
         }
 
         public void doSomethingElse(int MyField) // Compliant
