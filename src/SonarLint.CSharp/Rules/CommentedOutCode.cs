@@ -64,38 +64,36 @@ namespace SonarLint.Rules.CSharp
                 {
                     foreach (var token in c.Tree.GetRoot().DescendantTokens())
                     {
-                        Action<IEnumerable<SyntaxTrivia>> check =
-                            trivias =>
-                            {
-                                var shouldReport = true;
-                                foreach (var trivia in trivias)
-                                {
-                                    if (trivia.IsKind(SyntaxKind.MultiLineCommentTrivia))
-                                    {
-                                        CheckMultilineComment(c, trivia);
-                                        shouldReport = true;
-                                        continue;
-                                    }
-
-                                    if (trivia.IsKind(SyntaxKind.SingleLineCommentTrivia) && shouldReport)
-                                    {
-                                        var triviaContent = GetTriviaContent(trivia);
-                                        if (!IsCode(triviaContent))
-                                        {
-                                            continue;
-                                        }
-
-                                        c.ReportDiagnostic(Diagnostic.Create(Rule, trivia.GetLocation()));
-                                        shouldReport = false;
-                                        continue;
-                                    }
-                                }
-                            };
-
-                        check(token.LeadingTrivia);
-                        check(token.TrailingTrivia);
+                        CheckTrivias(token.LeadingTrivia, c);
+                        CheckTrivias(token.TrailingTrivia, c);
                     }
                 });
+        }
+
+        private static void CheckTrivias(IEnumerable<SyntaxTrivia> trivias, SyntaxTreeAnalysisContext context)
+        {
+            var shouldReport = true;
+            foreach (var trivia in trivias)
+            {
+                if (trivia.IsKind(SyntaxKind.MultiLineCommentTrivia))
+                {
+                    CheckMultilineComment(context, trivia);
+                    shouldReport = true;
+                    continue;
+                }
+
+                if (trivia.IsKind(SyntaxKind.SingleLineCommentTrivia) && shouldReport)
+                {
+                    var triviaContent = GetTriviaContent(trivia);
+                    if (!IsCode(triviaContent))
+                    {
+                        continue;
+                    }
+
+                    context.ReportDiagnostic(Diagnostic.Create(Rule, trivia.GetLocation()));
+                    shouldReport = false;
+                }
+            }
         }
 
         private static void CheckMultilineComment(SyntaxTreeAnalysisContext context, SyntaxTrivia comment)
