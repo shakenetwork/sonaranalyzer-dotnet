@@ -23,8 +23,8 @@
 ]
 }
 ],
-"shortMessage":  "Add a nested comment explaining why this method is empty, throw a NotSupportedException or complete the implementation.",
-"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case an \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
+"shortMessage":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case a \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
@@ -32,7 +32,7 @@
 "title":  "Methods should not be empty",
 "category":  "Reliability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1186",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 },
@@ -53,8 +53,8 @@
 ]
 }
 ],
-"shortMessage":  "Add a nested comment explaining why this method is empty, throw a NotSupportedException or complete the implementation.",
-"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case an \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
+"shortMessage":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case a \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
@@ -62,7 +62,7 @@
 "title":  "Methods should not be empty",
 "category":  "Reliability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1186",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 },
@@ -83,8 +83,8 @@
 ]
 }
 ],
-"shortMessage":  "Add a nested comment explaining why this method is empty, throw a NotSupportedException or complete the implementation.",
-"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case an \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
+"shortMessage":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case a \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
@@ -92,7 +92,7 @@
 "title":  "Methods should not be empty",
 "category":  "Reliability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1186",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 },
@@ -102,19 +102,19 @@
 {
 "analysisTarget":  [
 {
-"uri":  "Nancy\\src\\Nancy\\HeadResponse.cs",
+"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
 "region":  {
-"startLine":  60,
-"startColumn":  33,
-"endLine":  60,
-"endColumn":  38
+"startLine":  113,
+"startColumn":  15,
+"endLine":  113,
+"endColumn":  26
 }
 }
 ]
 }
 ],
-"shortMessage":  "Add a nested comment explaining why this method is empty, throw a NotSupportedException or complete the implementation.",
-"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case an \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
+"shortMessage":  "Add a nested comment explaining why this method is empty or complete the implementation.",
+"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case a \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
@@ -122,7 +122,7 @@
 "title":  "Methods should not be empty",
 "category":  "Reliability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1186",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 },
@@ -132,19 +132,19 @@
 {
 "analysisTarget":  [
 {
-"uri":  "Nancy\\src\\Nancy\\HttpMultipartSubStream.cs",
+"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
-"startLine":  109,
-"startColumn":  29,
-"endLine":  109,
-"endColumn":  34
+"startLine":  73,
+"startColumn":  15,
+"endLine":  73,
+"endColumn":  26
 }
 }
 ]
 }
 ],
-"shortMessage":  "Add a nested comment explaining why this method is empty, throw a NotSupportedException or complete the implementation.",
-"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case an \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
+"shortMessage":  "Add a nested comment explaining why this method is empty or complete the implementation.",
+"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case a \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
@@ -152,7 +152,7 @@
 "title":  "Methods should not be empty",
 "category":  "Reliability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1186",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 },
@@ -173,8 +173,8 @@
 ]
 }
 ],
-"shortMessage":  "Add a nested comment explaining why this method is empty, throw a NotSupportedException or complete the implementation.",
-"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case an \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
+"shortMessage":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case a \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
@@ -182,7 +182,7 @@
 "title":  "Methods should not be empty",
 "category":  "Reliability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1186",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 },
@@ -203,8 +203,8 @@
 ]
 }
 ],
-"shortMessage":  "Add a nested comment explaining why this method is empty, throw a NotSupportedException or complete the implementation.",
-"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case an \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
+"shortMessage":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case a \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
@@ -212,7 +212,7 @@
 "title":  "Methods should not be empty",
 "category":  "Reliability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1186",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 },
@@ -233,8 +233,8 @@
 ]
 }
 ],
-"shortMessage":  "Add a nested comment explaining why this method is empty, throw a NotSupportedException or complete the implementation.",
-"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case an \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
+"shortMessage":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case a \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
@@ -242,7 +242,7 @@
 "title":  "Methods should not be empty",
 "category":  "Reliability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1186",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 },
@@ -263,8 +263,8 @@
 ]
 }
 ],
-"shortMessage":  "Add a nested comment explaining why this method is empty, throw a NotSupportedException or complete the implementation.",
-"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case an \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
+"shortMessage":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case a \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
@@ -272,7 +272,7 @@
 "title":  "Methods should not be empty",
 "category":  "Reliability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1186",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 },
@@ -293,8 +293,8 @@
 ]
 }
 ],
-"shortMessage":  "Add a nested comment explaining why this method is empty, throw a NotSupportedException or complete the implementation.",
-"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case an \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
+"shortMessage":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case a \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
@@ -302,7 +302,7 @@
 "title":  "Methods should not be empty",
 "category":  "Reliability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1186",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 },
@@ -323,8 +323,8 @@
 ]
 }
 ],
-"shortMessage":  "Add a nested comment explaining why this method is empty, throw a NotSupportedException or complete the implementation.",
-"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case an \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
+"shortMessage":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case a \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
@@ -332,7 +332,37 @@
 "title":  "Methods should not be empty",
 "category":  "Reliability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1186",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S1186",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+"region":  {
+"startLine":  3001,
+"startColumn":  15,
+"endLine":  3001,
+"endColumn":  31
+}
+}
+]
+}
+],
+"shortMessage":  "Add a nested comment explaining why this method is empty or complete the implementation.",
+"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case a \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods should not be empty",
+"category":  "Reliability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1186",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 },
@@ -353,8 +383,8 @@
 ]
 }
 ],
-"shortMessage":  "Add a nested comment explaining why this method is empty, throw a NotSupportedException or complete the implementation.",
-"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case an \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
+"shortMessage":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case a \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
@@ -362,7 +392,7 @@
 "title":  "Methods should not be empty",
 "category":  "Reliability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1186",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 }

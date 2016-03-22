@@ -22,7 +22,6 @@ namespace Tests.Diagnostics
         [Conditional("DEBUG")]
         void F4()    // Noncompliant
         {
-            // Method intentionally left empty.
         }
 
         protected virtual void F5()
@@ -34,10 +33,7 @@ namespace Tests.Diagnostics
 
     public abstract class MyClass
     {
-        public void F1()
-        {
-            // Method intentionally left empty.
-        } // Noncompliant
+        public void F1() { } // Noncompliant
 
         public abstract void F2();
     }
@@ -45,10 +41,6 @@ namespace Tests.Diagnostics
     public class MyClass2
     {
         public MyClass2() // Noncompliant
-        {
-        }
-
-        ~MyClass2() // Noncompliant
         {
         }
     }

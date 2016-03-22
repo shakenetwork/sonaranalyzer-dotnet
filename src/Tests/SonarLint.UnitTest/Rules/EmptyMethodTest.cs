@@ -56,5 +56,29 @@ namespace SonarLint.UnitTest.Rules
                 new EmptyMethodCodeFixProvider(),
                 EmptyMethodCodeFixProvider.TitleComment);
         }
+
+        [TestMethod]
+        [TestCategory("CodeFix")]
+        public void EmptyMethod_CodeFix_Constructor()
+        {
+            Verifier.VerifyCodeFix(
+                @"TestCases\EmptyMethod.cs",
+                @"TestCases\EmptyMethod.Constructor.Fixed.cs",
+                new EmptyMethod(),
+                new EmptyMethodCodeFixProvider(),
+                EmptyMethodCodeFixProvider.TitleRemoveConstructor);
+        }
+
+        [TestMethod]
+        [TestCategory("CodeFix")]
+        public void EmptyMethod_CodeFix_Destructor()
+        {
+            Verifier.VerifyCodeFix(
+                @"TestCases\EmptyMethod.cs",
+                @"TestCases\EmptyMethod.Destructor.Fixed.cs",
+                new EmptyMethod(),
+                new EmptyMethodCodeFixProvider(),
+                EmptyMethodCodeFixProvider.TitleRemoveDestructor);
+        }
     }
 }

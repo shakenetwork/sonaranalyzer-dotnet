@@ -41,4 +41,44 @@ namespace Tests.Diagnostics
 
         public abstract void F2();
     }
+
+    public class MyClass2
+    {
+        public MyClass2() // Noncompliant
+        {
+        }
+
+        ~MyClass2() // Noncompliant
+        {
+        }
+    }
+
+    public class MyClass3
+    {
+        static MyClass3() // Noncompliant
+        {
+
+        }
+
+        public MyClass3()
+        {
+        }
+        public MyClass3(int i)
+        {
+        }
+    }
+
+    public class MyClass4 : MyClass3
+    {
+        public MyClass4() : base(10)
+        {
+        }
+    }
+
+    public class MyClass5 : MyClass
+    {
+        public override void F2()
+        {
+        }
+    }
 }
