@@ -4,6 +4,10 @@ function NormalizeAndSplitSarifReport
 {
   param ([string]$sarifReportPath)
 
+  $thrd = [Threading.Thread]::CurrentThread
+  $thrd.CurrentCulture = [Globalization.CultureInfo]::InvariantCulture
+  $thrd.CurrentUICulture = $thrd.CurrentCulture
+
   # Load the JSON, working around CovertFrom-Json max size limitation
   # See http://stackoverflow.com/questions/16854057/convertfrom-json-max-length
   $contents = Get-Content $sarifReportPath -Raw
