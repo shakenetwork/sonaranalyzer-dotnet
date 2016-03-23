@@ -75,14 +75,19 @@ namespace SonarLint.Rules.CSharp
             var shouldReport = true;
             foreach (var trivia in trivias)
             {
-                if (trivia.IsKind(SyntaxKind.MultiLineCommentTrivia))
+                // comment start is checked because of  https://github.com/dotnet/roslyn/issues/10003
+
+                if (!trivia.ToFullString().TrimStart().StartsWith("/**", StringComparison.Ordinal) &&
+                    trivia.IsKind(SyntaxKind.MultiLineCommentTrivia))
                 {
                     CheckMultilineComment(context, trivia);
                     shouldReport = true;
                     continue;
                 }
 
-                if (trivia.IsKind(SyntaxKind.SingleLineCommentTrivia) && shouldReport)
+                if (!trivia.ToFullString().TrimStart().StartsWith("///", StringComparison.Ordinal) &&
+                    trivia.IsKind(SyntaxKind.SingleLineCommentTrivia) &&
+                    shouldReport)
                 {
                     var triviaContent = GetTriviaContent(trivia);
                     if (!IsCode(triviaContent))

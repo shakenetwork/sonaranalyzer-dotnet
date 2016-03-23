@@ -84,8 +84,10 @@ namespace Tests.Diagnostics
     /// </code>
     public class CommentedOutCode
     {
-        public void M() {
-            /* foo */ M();
+        public void M()
+        {
+            /* foo */
+            M();
             M(); /* foo */
 
             // Noncompliant: Console.WriteLine("Hello, world!");
@@ -121,5 +123,17 @@ namespace Tests.Diagnostics
 
         // this should be compliant:
         // does *not* overwrite file if (still) exists
+    }
+
+    /**
+        <summary>
+        ...
+        </summary>
+        <code>
+        Console.WriteLine("Hello, world!");
+        </code>
+    */
+    public class CommentedOutCode2
+    {
     }
 }

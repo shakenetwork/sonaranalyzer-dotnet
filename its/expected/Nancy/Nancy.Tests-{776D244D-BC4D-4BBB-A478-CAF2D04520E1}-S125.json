@@ -12,36 +12,6 @@
 {
 "analysisTarget":  [
 {
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Bootstrapper\\Base\\BootstrapperBaseFixtureBase.cs",
-"region":  {
-"startLine":  16,
-"startColumn":  4,
-"endLine":  16,
-"endColumn":  80
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this commented out code.",
-"fullMessage":  "Programmers should not comment out code as it bloats programs and reduces readability. Unused code should be deleted and can be retrieved from source control history if required.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Sections of code should not be \"commented out\"",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S125",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S125",
-"locations":  [
-{
-"analysisTarget":  [
-{
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\DefaultViewLocatorFixture.cs",
 "region":  {
 "startLine":  284,

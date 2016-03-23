@@ -18,6 +18,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarLint.Rules.CSharp;
 
@@ -31,6 +32,14 @@ namespace SonarLint.UnitTest.Rules
         public void CommentedOutCode()
         {
             Verifier.VerifyAnalyzer(@"TestCases\CommentedOutCode.cs", new CommentedOutCode());
+        }
+
+        [TestMethod]
+        [TestCategory("Rule")]
+        public void CommentedOutCode_NoDocumentation()
+        {
+            Verifier.VerifyAnalyzer(@"TestCases\CommentedOutCode.cs", new CommentedOutCode(),
+                new CSharpParseOptions(documentationMode: Microsoft.CodeAnalysis.DocumentationMode.None));
         }
     }
 }

@@ -40,7 +40,7 @@ using System.Net;
 
 namespace SonarLint.UnitTest
 {
-    public static class Verifier
+    internal static class Verifier
     {
         private static readonly MetadataReference systemAssembly = MetadataReference.CreateFromFile(typeof(object).Assembly.Location);
         private static readonly MetadataReference systemLinqAssembly = MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location);
@@ -52,7 +52,7 @@ namespace SonarLint.UnitTest
 
         #region Verify*
 
-        internal static void VerifyNoExceptionThrown(string path,
+        public static void VerifyNoExceptionThrown(string path,
             IEnumerable<DiagnosticAnalyzer> diagnosticAnalyzers)
         {
             using (var workspace = new AdhocWorkspace())
@@ -64,9 +64,31 @@ namespace SonarLint.UnitTest
             }
         }
 
-        public static void VerifyAnalyzer(string path, DiagnosticAnalyzer diagnosticAnalyzer)
+        public static void VerifyAnalyzer(string path, DiagnosticAnalyzer diagnosticAnalyzer, ParseOptions options = null,
+            params MetadataReference[] additionalReferences)
         {
-            Verify(path, GeneratedAssemblyName, diagnosticAnalyzer);
+            using (var workspace = new AdhocWorkspace())
+            {
+                var document = GetDocument(path, GeneratedAssemblyName, workspace, additionalReferences);
+                var project = document.Project;
+                if (options != null)
+                {
+                    project = project.WithParseOptions(options);
+                }
+
+                var compilation = project.GetCompilationAsync().Result;
+                var diagnostics = GetDiagnostics(compilation, diagnosticAnalyzer);
+                var expected = ExpectedIssues(compilation.SyntaxTrees.First()).ToList();
+
+                foreach (var diagnostic in diagnostics)
+                {
+                    var line = diagnostic.GetLineNumberToReport();
+                    expected.Should().Contain(line);
+                    expected.Remove(line);
+                }
+
+                expected.Should().BeEquivalentTo(Enumerable.Empty<int>());
+            }
         }
 
         public static void VerifyNoIssueReportedInTest(string path, DiagnosticAnalyzer diagnosticAnalyzer)
@@ -85,7 +107,7 @@ namespace SonarLint.UnitTest
             {
                 var document = GetDocument(path, assemblyName, workspace);
                 var compilation = document.Project.GetCompilationAsync().Result;
-                var diagnostics = Verifier.GetDiagnostics(compilation, diagnosticAnalyzer);
+                var diagnostics = GetDiagnostics(compilation, diagnosticAnalyzer);
 
                 diagnostics.Should().HaveCount(0);
             }
@@ -96,16 +118,19 @@ namespace SonarLint.UnitTest
         {
             VerifyCodeFix(path, pathToExpected, pathToExpected, diagnosticAnalyzer, codeFixProvider, null);
         }
+
         public static void VerifyCodeFix(string path, string pathToExpected, string pathToBatchExpected, DiagnosticAnalyzer diagnosticAnalyzer,
             CodeFixProvider codeFixProvider)
         {
             VerifyCodeFix(path, pathToExpected, pathToBatchExpected, diagnosticAnalyzer, codeFixProvider, null);
         }
+
         public static void VerifyCodeFix(string path, string pathToExpected, DiagnosticAnalyzer diagnosticAnalyzer,
             CodeFixProvider codeFixProvider, string codeFixTitle)
         {
             VerifyCodeFix(path, pathToExpected, pathToExpected, diagnosticAnalyzer, codeFixProvider, codeFixTitle);
         }
+
         public static void VerifyCodeFix(string path, string pathToExpected, string pathToBatchExpected, DiagnosticAnalyzer diagnosticAnalyzer,
             CodeFixProvider codeFixProvider, string codeFixTitle)
         {
@@ -259,27 +284,6 @@ namespace SonarLint.UnitTest
                         cancellationToken: tokenSource.Token);
 
                 return compilationWithAnalyzer.GetAllDiagnosticsAsync().Result;
-            }
-        }
-
-        private static void Verify(string path, string assemblyName, DiagnosticAnalyzer diagnosticAnalyzer,
-            params MetadataReference[] additionalReferences)
-        {
-            using (var workspace = new AdhocWorkspace())
-            {
-                var document = GetDocument(path, assemblyName, workspace, additionalReferences);
-                var compilation = document.Project.GetCompilationAsync().Result;
-                var diagnostics = GetDiagnostics(compilation, diagnosticAnalyzer);
-                var expected = ExpectedIssues(compilation.SyntaxTrees.First()).ToList();
-
-                foreach (var diagnostic in diagnostics)
-                {
-                    var line = diagnostic.GetLineNumberToReport();
-                    expected.Should().Contain(line);
-                    expected.Remove(line);
-                }
-
-                expected.Should().BeEquivalentTo(Enumerable.Empty<int>());
             }
         }
 
