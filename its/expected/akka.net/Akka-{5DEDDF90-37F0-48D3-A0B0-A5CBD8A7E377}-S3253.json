@@ -24,12 +24,12 @@
 }
 ],
 "shortMessage":  "Remove this redundant \"base()\" call.",
-"fullMessage":  "Since the compiler will automatically invoke the base type\u0027s no-argument constructor, there\u0027s no need to specify its invocation explicitly. Doing so just clutters the code.",
+"fullMessage":  "Since the compiler will automatically invoke the base type\u0027s no-argument constructor, there\u0027s no need to specify its invocation explicitly. Also, when only a single \"public\" parameterless constructor is defined in a class, then that constructor can be removed because the compiler would generate it automatically. Similarly, empty \"static\" constructors and empty destructors are also wasted keystrokes.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
 "defaultSeverity":  "Hidden",
-"title":  "\"base()\" constructor calls should not be explicitly made",
+"title":  "Constructor and destructor declarations should not be redundant",
 "category":  "Maintainability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3253",
 "isEnabledByDefault":  "True",
@@ -55,12 +55,12 @@
 }
 ],
 "shortMessage":  "Remove this redundant \"base()\" call.",
-"fullMessage":  "Since the compiler will automatically invoke the base type\u0027s no-argument constructor, there\u0027s no need to specify its invocation explicitly. Doing so just clutters the code.",
+"fullMessage":  "Since the compiler will automatically invoke the base type\u0027s no-argument constructor, there\u0027s no need to specify its invocation explicitly. Also, when only a single \"public\" parameterless constructor is defined in a class, then that constructor can be removed because the compiler would generate it automatically. Similarly, empty \"static\" constructors and empty destructors are also wasted keystrokes.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
 "defaultSeverity":  "Hidden",
-"title":  "\"base()\" constructor calls should not be explicitly made",
+"title":  "Constructor and destructor declarations should not be redundant",
 "category":  "Maintainability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3253",
 "isEnabledByDefault":  "True",
@@ -86,12 +86,12 @@
 }
 ],
 "shortMessage":  "Remove this redundant \"base()\" call.",
-"fullMessage":  "Since the compiler will automatically invoke the base type\u0027s no-argument constructor, there\u0027s no need to specify its invocation explicitly. Doing so just clutters the code.",
+"fullMessage":  "Since the compiler will automatically invoke the base type\u0027s no-argument constructor, there\u0027s no need to specify its invocation explicitly. Also, when only a single \"public\" parameterless constructor is defined in a class, then that constructor can be removed because the compiler would generate it automatically. Similarly, empty \"static\" constructors and empty destructors are also wasted keystrokes.",
 "properties":  {
 "severity":  "Warning",
 "warningLevel":  "1",
 "defaultSeverity":  "Hidden",
-"title":  "\"base()\" constructor calls should not be explicitly made",
+"title":  "Constructor and destructor declarations should not be redundant",
 "category":  "Maintainability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3253",
 "isEnabledByDefault":  "True",

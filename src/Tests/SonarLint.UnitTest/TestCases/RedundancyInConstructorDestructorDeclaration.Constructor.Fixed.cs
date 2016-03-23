@@ -57,4 +57,47 @@ namespace Tests.Diagnostics
         {
         }
     }
+
+    public class MyClass1
+    {
+        ~MyClass1() // Noncompliant
+        {
+            //some comment
+        }
+    }
+
+    public class MyClass2
+    {
+        private MyClass2()
+        {
+
+        }
+    }
+    public class MyClass3
+    {
+        public MyClass3(int i)
+        {
+        }
+    }
+
+    public class MyClass4
+    {
+        public MyClass4()
+        {
+        }
+        public MyClass4(int i)
+        {
+        }
+    }
+
+    public class MyClass5 : MyClass4
+    {
+    }
+
+    public class MyClass6 : MyClass4
+    {
+        public MyClass6() : base(10)
+        {
+        }
+    }
 }

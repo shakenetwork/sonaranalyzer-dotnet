@@ -26,36 +26,86 @@ using System.Linq;
 using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using SonarLint.Common;
 
 namespace SonarLint.Rules.CSharp
 {
     [ExportCodeFixProvider(LanguageNames.CSharp)]
-    public class DefaultBaseConstructorCallCodeFixProvider : CodeFixProvider
+    public class RedundancyInConstructorDestructorDeclarationCodeFixProvider : CodeFixProvider
     {
-        internal const string Title = "Remove redundant \"base()\" call";
+        public const string TitleRemoveBaseCall = "Remove \"base()\" call";
+        public const string TitleRemoveConstructor = "Remove constructor";
+        public const string TitleRemoveDestructor = "Remove destructor";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {
             get
             {
-                return ImmutableArray.Create(DefaultBaseConstructorCall.DiagnosticId);
+                return ImmutableArray.Create(RedundancyInConstructorDestructorDeclaration.DiagnosticId);
             }
         }
-        public sealed override FixAllProvider GetFixAllProvider()
-        {
-            return WellKnownFixAllProviders.BatchFixer;
-        }
+        public sealed override FixAllProvider GetFixAllProvider() => DocumentBasedFixAllProvider.Instance;
 
         public override sealed async Task RegisterCodeFixesAsync(CodeFixContext context)
         {
             var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
-            var initializer = root.FindNode(diagnosticSpan) as ConstructorInitializerSyntax;
-            if (initializer == null)
+            var syntaxNode = root.FindNode(diagnosticSpan);
+            var initializer = syntaxNode as ConstructorInitializerSyntax;
+            if (initializer != null)
             {
+                RegisterActionForBaseCall(context, root, initializer);
                 return;
             }
 
+            var method = syntaxNode.FirstAncestorOrSelf<BaseMethodDeclarationSyntax>();
+
+            if (method is ConstructorDeclarationSyntax)
+            {
+                RegisterActionForConstructor(context, root, method);
+                return;
+            }
+
+            if (method is DestructorDeclarationSyntax)
+            {
+                RegisterActionForDestructor(context, root, method);
+            }
+        }
+
+        private static void RegisterActionForDestructor(CodeFixContext context, SyntaxNode root, BaseMethodDeclarationSyntax method)
+        {
+            context.RegisterCodeFix(
+                CodeAction.Create(
+                    TitleRemoveDestructor,
+                    c =>
+                    {
+                        var newRoot = root.RemoveNode(
+                            method,
+                            SyntaxRemoveOptions.KeepNoTrivia);
+                        return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
+                    },
+                    TitleRemoveDestructor),
+                context.Diagnostics);
+        }
+
+        private static void RegisterActionForConstructor(CodeFixContext context, SyntaxNode root, BaseMethodDeclarationSyntax method)
+        {
+            context.RegisterCodeFix(
+                CodeAction.Create(
+                    TitleRemoveConstructor,
+                    c =>
+                    {
+                        var newRoot = root.RemoveNode(
+                            method,
+                            SyntaxRemoveOptions.KeepNoTrivia);
+                        return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
+                    },
+                    TitleRemoveConstructor),
+                context.Diagnostics);
+        }
+
+        private static void RegisterActionForBaseCall(CodeFixContext context, SyntaxNode root, ConstructorInitializerSyntax initializer)
+        {
             var constructor = initializer.Parent as ConstructorDeclarationSyntax;
             if (constructor == null)
             {
@@ -64,12 +114,13 @@ namespace SonarLint.Rules.CSharp
 
             context.RegisterCodeFix(
                 CodeAction.Create(
-                    Title,
+                    TitleRemoveBaseCall,
                     c =>
                     {
                         var newRoot = RemoveInitializer(root, constructor);
                         return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
-                    }),
+                    },
+                    TitleRemoveBaseCall),
                 context.Diagnostics);
         }
 

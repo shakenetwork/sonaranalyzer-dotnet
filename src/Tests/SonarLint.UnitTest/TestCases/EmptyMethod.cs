@@ -5,10 +5,6 @@ namespace Tests.Diagnostics
 {
     public class EmptyMethod
     {
-        private EmptyMethod()
-        {
-        }
-
         void F2()
         {
             // Do nothing because of X and Y.
@@ -36,39 +32,6 @@ namespace Tests.Diagnostics
         public void F1() { } // Noncompliant
 
         public abstract void F2();
-    }
-
-    public class MyClass2
-    {
-        public MyClass2() // Noncompliant
-        {
-        }
-
-        ~MyClass2() // Noncompliant
-        {
-        }
-    }
-
-    public class MyClass3
-    {
-        static MyClass3() // Noncompliant
-        {
-
-        }
-
-        public MyClass3()
-        {
-        }
-        public MyClass3(int i)
-        {
-        }
-    }
-
-    public class MyClass4 : MyClass3
-    {
-        public MyClass4() : base(10)
-        {
-        }
     }
 
     public class MyClass5 : MyClass

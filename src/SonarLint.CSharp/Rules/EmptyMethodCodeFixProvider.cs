@@ -36,8 +36,7 @@ namespace SonarLint.Rules.CSharp
     {
         public const string TitleThrow = "Throw NotSupportedException";
         public const string TitleComment = "Add comment";
-        public const string TitleRemoveConstructor = "Remove constructor";
-        public const string TitleRemoveDestructor = "Remove destructor";
+
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {
             get
@@ -60,7 +59,7 @@ namespace SonarLint.Rules.CSharp
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var syntaxNode = root.FindNode(diagnosticSpan);
-            var method = syntaxNode.FirstAncestorOrSelf<BaseMethodDeclarationSyntax>();
+            var method = syntaxNode.FirstAncestorOrSelf<MethodDeclarationSyntax>();
 
             if (method.Body.CloseBraceToken.IsMissing ||
                 method.Body.OpenBraceToken.IsMissing)
@@ -68,44 +67,10 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            if (method is ConstructorDeclarationSyntax)
-            {
-                context.RegisterCodeFix(
-                    CodeAction.Create(
-                        TitleRemoveConstructor,
-                        c =>
-                        {
-                            var newRoot = root.RemoveNode(
-                                method,
-                                SyntaxRemoveOptions.KeepNoTrivia);
-                            return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
-                        },
-                        TitleRemoveConstructor),
-                    context.Diagnostics);
-                return;
-            }
-
-            if (method is DestructorDeclarationSyntax)
-            {
-                context.RegisterCodeFix(
-                    CodeAction.Create(
-                        TitleRemoveDestructor,
-                        c =>
-                        {
-                            var newRoot = root.RemoveNode(
-                                method,
-                                SyntaxRemoveOptions.KeepNoTrivia);
-                            return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
-                        },
-                        TitleRemoveDestructor),
-                    context.Diagnostics);
-                return;
-            }
-
             await RegisterCodeFixesForMethods(context, root, method).ConfigureAwait(false);
         }
 
-        private static async Task RegisterCodeFixesForMethods(CodeFixContext context, SyntaxNode root, BaseMethodDeclarationSyntax method)
+        private static async Task RegisterCodeFixesForMethods(CodeFixContext context, SyntaxNode root, MethodDeclarationSyntax method)
         {
             context.RegisterCodeFix(
                 CodeAction.Create(

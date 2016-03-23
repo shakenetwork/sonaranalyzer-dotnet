@@ -12,18 +12,18 @@
 {
 "analysisTarget":  [
 {
-"uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteDeploymentDeathWatchSpec.cs",
+"uri":  "akka.net\\src\\examples\\PersistenceExample\\ViewExampleActor.cs",
 "region":  {
-"startLine":  141,
-"startColumn":  54,
-"endLine":  141,
-"endColumn":  62
+"startLine":  16,
+"startColumn":  8,
+"endLine":  18,
+"endColumn":  9
 }
 }
 ]
 }
 ],
-"shortMessage":  "Remove this redundant \"base()\" call.",
+"shortMessage":  "Remove this redundant constructor.",
 "fullMessage":  "Since the compiler will automatically invoke the base type\u0027s no-argument constructor, there\u0027s no need to specify its invocation explicitly. Also, when only a single \"public\" parameterless constructor is defined in a class, then that constructor can be removed because the compiler would generate it automatically. Similarly, empty \"static\" constructors and empty destructors are also wasted keystrokes.",
 "properties":  {
 "severity":  "Warning",
