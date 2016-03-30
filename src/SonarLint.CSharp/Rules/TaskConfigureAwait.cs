@@ -48,7 +48,7 @@ namespace SonarLint.Rules.CSharp
             "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = true;
+        internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
@@ -77,15 +77,8 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
-                    var taskType = c.SemanticModel.Compilation.GetTypeByMetadataName("System.Threading.Tasks.Task");
-                    if (taskType == null)
-                    {
-                        return;
-                    }
-
                     var type = c.SemanticModel.GetTypeInfo(expression).Type;
-                    if (type != null &&
-                        taskType.Equals(type))
+                    if (type.Is(KnownType.System_Threading_Tasks_Task))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, expression.GetLocation()));
                     }

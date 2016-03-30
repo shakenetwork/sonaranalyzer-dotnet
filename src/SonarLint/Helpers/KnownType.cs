@@ -148,6 +148,8 @@ namespace SonarLint.Helpers
         public static readonly KnownType System_Runtime_InteropServices_ComImportAttribute = new KnownType("System.Runtime.InteropServices.ComImportAttribute");
         public static readonly KnownType System_Runtime_InteropServices_InterfaceTypeAttribute = new KnownType("System.Runtime.InteropServices.InterfaceTypeAttribute");
 
+        public static readonly KnownType System_Threading_Tasks_Task = new KnownType("System.Threading.Tasks.Task");
+
         #endregion
 
         public string TypeName { get; }
