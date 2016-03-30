@@ -35,7 +35,7 @@ namespace SonarLint.UnitTest.Helpers
             public SonarDiagnosticAnalyzer Analyzer { get; set; }
         }
 
-        private List<TestSetup> TestCases = new List<TestSetup>(new []
+        private readonly List<TestSetup> TestCases = new List<TestSetup>(new []
         {
             new TestSetup { Path = @"TestCases\AnonymousDelegateEventUnsubscribe.cs", Analyzer = new AnonymousDelegateEventUnsubscribe() },
             new TestSetup { Path = @"TestCases\AsyncAwaitIdentifier.cs", Analyzer = new AsyncAwaitIdentifier() },

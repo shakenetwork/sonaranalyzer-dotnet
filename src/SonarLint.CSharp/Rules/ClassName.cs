@@ -290,6 +290,8 @@ namespace SonarLint.Rules.CSharp
                             }
 
                             break;
+                        default:
+                            throw new NotSupportedException("State machine is in invalid state");
                     }
                 }
 
@@ -314,19 +316,8 @@ namespace SonarLint.Rules.CSharp
                 }
 
                 // preceeding characters
-                var toLowerTill = currentIndex - 1;
-                while (toLowerTill >= 0)
-                {
-                    if (char.IsLower(suggestion[toLowerTill]) ||
-                        char.IsNumber(suggestion[toLowerTill]))
-                    {
-                        toLowerTill += 2;
-                        break;
-                    }
-                    toLowerTill--;
-                }
-
-                if (toLowerTill < 0)
+                var toLowerTill = GetStartingIndexForLowerCasing(suggestion, currentIndex - 1);
+                if (toLowerTill <= 0)
                 {
                     toLowerTill = 1;
                 }
@@ -334,22 +325,7 @@ namespace SonarLint.Rules.CSharp
                 suggestion = ChangeToLowerBetween(suggestion, toLowerTill, currentIndex - 1);
 
                 // succeeding characters
-                toLowerTill = currentIndex + 1;
-                while (toLowerTill < suggestion.Length)
-                {
-                    if (char.IsNumber(suggestion[toLowerTill]))
-                    {
-                        toLowerTill -= 1;
-                        break;
-                    }
-                    if (char.IsLower(suggestion[toLowerTill]))
-                    {
-                        toLowerTill -= 2;
-                        break;
-                    }
-                    toLowerTill++;
-                }
-
+                toLowerTill = GetEndingIndexForLowerCasing(suggestion, currentIndex + 1);
                 if (toLowerTill == suggestion.Length)
                 {
                     toLowerTill = suggestion.Length - 1;
@@ -362,6 +338,41 @@ namespace SonarLint.Rules.CSharp
                     Suggestion = suggestion,
                     LastProcessedIndex = toLowerTill
                 };
+            }
+
+            private static int GetEndingIndexForLowerCasing(string suggestion, int startIndex)
+            {
+                var currentIndex = startIndex;
+                while (currentIndex < suggestion.Length)
+                {
+                    if (char.IsNumber(suggestion[currentIndex]))
+                    {
+                        return currentIndex - 1;
+                    }
+                    if (char.IsLower(suggestion[currentIndex]))
+                    {
+                        return currentIndex - 2;
+                    }
+                    currentIndex++;
+                }
+
+                return suggestion.Length;
+            }
+
+            private static int GetStartingIndexForLowerCasing(string suggestion, int startIndex)
+            {
+                var currentIndex = startIndex;
+                while (currentIndex >= 0)
+                {
+                    if (char.IsLower(suggestion[currentIndex]) ||
+                        char.IsNumber(suggestion[currentIndex]))
+                    {
+                        return currentIndex + 2;
+                    }
+                    currentIndex--;
+                }
+
+                return 0;
             }
 
             private static string CreateSuggestionFirstLowerCase(string input, int currentIndex)

@@ -86,12 +86,8 @@ namespace SonarLint.Rules.Common
             }
 
             SyntaxNode nearestLoop;
-            if (!TryGetNearestLoop(assignment, out nearestLoop))
-            {
-                return;
-            }
-
-            if (IsDefinedInLoop(GetLeft(assignment), nearestLoop, context.SemanticModel))
+            if (!TryGetNearestLoop(assignment, out nearestLoop) ||
+                IsDefinedInLoop(GetLeft(assignment), nearestLoop, context.SemanticModel))
             {
                 return;
             }

@@ -116,7 +116,7 @@ namespace SonarLint.Rules.CSharp
             var invocation = (InvocationExpressionSyntax)context.Node;
             var methodSymbol = context.SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
             if (methodSymbol == null ||
-                methodSymbol?.Name != CountName ||
+                methodSymbol.Name != CountName ||
                 invocation.ArgumentList == null ||
                 invocation.ArgumentList.Arguments.Any() ||
                 !methodSymbol.IsExtensionOn(KnownType.System_Collections_Generic_IEnumerable_T))

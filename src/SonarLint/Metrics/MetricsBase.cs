@@ -101,7 +101,7 @@ namespace SonarLint.Common
                     else
                     {
                         if (HasValidCommentContent(line) &&
-                                !noSonar.Contains(lineNumber))
+                            !noSonar.Contains(lineNumber))
                         {
                             nonBlank.Add(lineNumber);
                         }

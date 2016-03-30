@@ -102,15 +102,11 @@ namespace SonarLint.Rules.CSharp
                 .ToImmutableHashSet();
 
             var statementDescendents = statement.DescendantNodesAndSelf().ToList();
-            var assignmentExpressions = statementDescendents
+            var isAnyCheckedSymbolUpdated = statementDescendents
                 .OfType<AssignmentExpressionSyntax>()
-                .Any(expressionSyntax =>
-                {
-                    var symbol = semanticModel.GetSymbolInfo(expressionSyntax.Left).Symbol;
-                    return symbol != null && checkedSymbols.Contains(symbol);
-                });
+                .Any(assignment => IsCheckedSymbolUpdated(assignment.Left, checkedSymbols, semanticModel));
 
-            if (assignmentExpressions)
+            if (isAnyCheckedSymbolUpdated)
             {
                 return true;
             }
@@ -137,6 +133,12 @@ namespace SonarLint.Rules.CSharp
                 });
 
             return prefixUnaryExpression;
+        }
+
+        private static bool IsCheckedSymbolUpdated(ExpressionSyntax expression, ImmutableHashSet<ISymbol> checkedSymbols, SemanticModel semanticModel)
+        {
+            var symbol = semanticModel.GetSymbolInfo(expression).Symbol;
+            return symbol != null && checkedSymbols.Contains(symbol);
         }
     }
 }

@@ -235,8 +235,8 @@ namespace SonarLint.Rules.CSharp
         {
             var typeLeft = context.SemanticModel.GetTypeInfo(binaryExpression.Left).Type;
             var typeRight = context.SemanticModel.GetTypeInfo(binaryExpression.Right).Type;
-            var shouldntReport = IsOnNullableBoolean(typeLeft, typeRight);
-            if (shouldntReport)
+            var shouldNotReport = IsOnNullableBoolean(typeLeft, typeRight);
+            if (shouldNotReport)
             {
                 return true;
             }
