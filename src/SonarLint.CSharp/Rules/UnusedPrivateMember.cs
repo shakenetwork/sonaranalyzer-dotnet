@@ -64,12 +64,8 @@ namespace SonarLint.Rules.CSharp
                 c =>
                 {
                     var namedType = (INamedTypeSymbol)c.Symbol;
-                    if (!namedType.IsClassOrStruct())
-                    {
-                        return;
-                    }
-
-                    if (namedType.ContainingType != null)
+                    if (!namedType.IsClassOrStruct() ||
+                        namedType.ContainingType != null)
                     {
                         return;
                     }
@@ -180,7 +176,7 @@ namespace SonarLint.Rules.CSharp
             node => node.IsKind(SyntaxKind.ClassDeclaration) ||
                     node.IsKind(SyntaxKind.StructDeclaration);
 
-        private static readonly Func<SyntaxNode, bool> IsNodeContainerTypeDeclaration =
+        internal static readonly Func<SyntaxNode, bool> IsNodeContainerTypeDeclaration =
             node => IsNodeStructOrClassDeclaration(node) ||
                     node.IsKind(SyntaxKind.InterfaceDeclaration);
 
@@ -204,7 +200,7 @@ namespace SonarLint.Rules.CSharp
             declaredPrivateSymbols.UnionWith(methodSymbols);
         }
 
-        private static bool IsMethodSymbolQualifyingPrivate(IMethodSymbol methodSymbol)
+        internal static bool IsMethodSymbolQualifyingPrivate(IMethodSymbol methodSymbol)
         {
             return methodSymbol != null &&
                 IsSymbolRemovable(methodSymbol) &&

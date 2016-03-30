@@ -1,0 +1,100 @@
+{
+"version":  "0.1",
+"toolInfo":  {
+"toolName":  "Microsoft (R) Visual C# Compiler",
+"productVersion":  "1.1.0",
+"fileVersion":  "1.1.0"
+},
+"issues":  [
+{
+"ruleId":  "S3241",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\Singleton\\ClusterSingletonManagerChaosSpec.cs",
+"region":  {
+"startLine":  184,
+"startColumn":  16,
+"endLine":  184,
+"endColumn":  25
+}
+}
+]
+}
+],
+"shortMessage":  "Change return type to \"void\"; not a single caller uses the returned value.",
+"fullMessage":  "Private methods are clearly intended for use only within their own scope. When such methods return values that are never used by any of their callers, then clearly there is no need to actually make the return, and it should be removed in the interests of efficiency and clarity.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods should not return values that are never used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3241",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3241",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\Singleton\\ClusterSingletonManagerLeaveSpec.cs",
+"region":  {
+"startLine":  104,
+"startColumn":  16,
+"endLine":  104,
+"endColumn":  25
+}
+}
+]
+}
+],
+"shortMessage":  "Change return type to \"void\"; not a single caller uses the returned value.",
+"fullMessage":  "Private methods are clearly intended for use only within their own scope. When such methods return values that are never used by any of their callers, then clearly there is no need to actually make the return, and it should be removed in the interests of efficiency and clarity.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods should not return values that are never used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3241",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+},
+{
+"ruleId":  "S3241",
+"locations":  [
+{
+"analysisTarget":  [
+{
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools.Tests\\Singleton\\ClusterSingletonManagerStartupSpec.cs",
+"region":  {
+"startLine":  100,
+"startColumn":  16,
+"endLine":  100,
+"endColumn":  25
+}
+}
+]
+}
+],
+"shortMessage":  "Change return type to \"void\"; not a single caller uses the returned value.",
+"fullMessage":  "Private methods are clearly intended for use only within their own scope. When such methods return values that are never used by any of their callers, then clearly there is no need to actually make the return, and it should be removed in the interests of efficiency and clarity.",
+"properties":  {
+"severity":  "Warning",
+"warningLevel":  "1",
+"defaultSeverity":  "Warning",
+"title":  "Methods should not return values that are never used",
+"category":  "Maintainability",
+"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3241",
+"isEnabledByDefault":  "True",
+"isSuppressedInSource":  "False"
+}
+}
+]
+}
