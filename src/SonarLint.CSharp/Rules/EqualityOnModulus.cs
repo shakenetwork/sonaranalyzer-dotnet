@@ -86,17 +86,10 @@ namespace SonarLint.Rules.CSharp
 
         private static bool ExpressionIsModulus(ExpressionSyntax expression)
         {
-            var currentExpression = expression;
-            var parenthesized = currentExpression as ParenthesizedExpressionSyntax;
-            while (parenthesized != null)
-            {
-                currentExpression = parenthesized.Expression;
-                parenthesized = currentExpression as ParenthesizedExpressionSyntax;
-            }
-
-            var binary = currentExpression as BinaryExpressionSyntax;
+            var binary = expression.RemoveParentheses() as BinaryExpressionSyntax;
             return binary != null && binary.IsKind(SyntaxKind.ModuloExpression);
         }
+
         private static bool ExpressionIsNonNegative(ExpressionSyntax expression, SemanticModel semantic)
         {
             var type = semantic.GetTypeInfo(expression).Type;

@@ -119,13 +119,7 @@ namespace SonarLint.Rules.CSharp
 
         private static BinaryExpressionSyntax TryGetBinaryExpression(ExpressionSyntax expression)
         {
-            var currentExpression = expression;
-            while (currentExpression is ParenthesizedExpressionSyntax)
-            {
-                currentExpression = ((ParenthesizedExpressionSyntax) currentExpression).Expression;
-            }
-
-            return currentExpression as BinaryExpressionSyntax;
+            return expression.RemoveParentheses() as BinaryExpressionSyntax;
         }
 
         private static bool IsIndirectInequality(BinaryExpressionSyntax binaryExpression, BinaryExpressionSyntax right,

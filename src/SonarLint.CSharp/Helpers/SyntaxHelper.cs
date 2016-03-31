@@ -26,9 +26,21 @@ namespace SonarLint.Helpers
     {
         public static bool HasExactlyNArguments(this InvocationExpressionSyntax invocation, int count)
         {
-            return invocation != null && 
+            return invocation != null &&
                 invocation.ArgumentList != null &&
                 invocation.ArgumentList.Arguments.Count == count;
+        }
+
+        public static ExpressionSyntax RemoveParentheses(this ExpressionSyntax expression)
+        {
+            var currentExpression = expression;
+            var parentheses = expression as ParenthesizedExpressionSyntax;
+            while (parentheses != null)
+            {
+                currentExpression = parentheses.Expression;
+                parentheses = currentExpression as ParenthesizedExpressionSyntax;
+            }
+            return currentExpression;
         }
     }
 }

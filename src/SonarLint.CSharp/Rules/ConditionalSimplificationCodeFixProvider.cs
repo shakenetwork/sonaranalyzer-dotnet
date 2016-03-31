@@ -53,9 +53,9 @@ namespace SonarLint.Rules.CSharp
             var conditional = syntax as ConditionalExpressionSyntax;
             if (conditional != null)
             {
-                var condition = TernaryOperatorPointless.RemoveParentheses(conditional.Condition);
-                var whenTrue = TernaryOperatorPointless.RemoveParentheses(conditional.WhenTrue);
-                var whenFalse = TernaryOperatorPointless.RemoveParentheses(conditional.WhenFalse);
+                var condition = conditional.Condition.RemoveParentheses();
+                var whenTrue = conditional.WhenTrue.RemoveParentheses();
+                var whenFalse = conditional.WhenFalse.RemoveParentheses();
 
                 ExpressionSyntax compared;
                 bool comparedIsNullInTrue;
@@ -130,8 +130,8 @@ namespace SonarLint.Rules.CSharp
 
             if (return1 != null && return2 != null)
             {
-                var retExpr1 = TernaryOperatorPointless.RemoveParentheses(return1.Expression);
-                var retExpr2 = TernaryOperatorPointless.RemoveParentheses(return2.Expression);
+                var retExpr1 = return1.Expression.RemoveParentheses();
+                var retExpr2 = return2.Expression.RemoveParentheses();
 
                 var createdExpression = isNullCoalescing
                     ? GetNullCoalescing(retExpr1, retExpr2, compared, semanticModel, annotation)
@@ -147,8 +147,8 @@ namespace SonarLint.Rules.CSharp
             var expressionStatement1 = statement1 as ExpressionStatementSyntax;
             var expressionStatement2 = statement2 as ExpressionStatementSyntax;
 
-            var expression1 = TernaryOperatorPointless.RemoveParentheses(expressionStatement1.Expression);
-            var expression2 = TernaryOperatorPointless.RemoveParentheses(expressionStatement2.Expression);
+            var expression1 = expressionStatement1.Expression.RemoveParentheses();
+            var expression2 = expressionStatement2.Expression.RemoveParentheses();
 
             var assignment = GetSimplifiedAssignment(expression1, expression2, condition, compared, isNullCoalescing, semanticModel, annotation);
             if (assignment != null)

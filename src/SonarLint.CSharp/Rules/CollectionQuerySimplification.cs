@@ -330,7 +330,7 @@ namespace SonarLint.Rules.CSharp
             }
             var expression = arguments.First().Expression;
 
-            var binaryExpression = GetExpressionFromParens(GetExpressionFromLambda(expression)) as BinaryExpressionSyntax;
+            var binaryExpression = GetExpressionFromLambda(expression).RemoveParentheses() as BinaryExpressionSyntax;
             var lambdaParameter = GetLambdaParameter(expression);
 
             while (binaryExpression != null)
@@ -340,37 +340,24 @@ namespace SonarLint.Rules.CSharp
                     return binaryExpression.IsKind(SyntaxKind.NotEqualsExpression) &&
                            IsNullChecking(binaryExpression, lambdaParameter);
                 }
-                binaryExpression = GetExpressionFromParens(binaryExpression.Left) as BinaryExpressionSyntax;
+                binaryExpression = binaryExpression.Left.RemoveParentheses() as BinaryExpressionSyntax;
             }
             return false;
         }
 
         private static bool IsNullChecking(BinaryExpressionSyntax binaryExpression, string lambdaParameter)
         {
-            if (EquivalenceChecker.AreEquivalent(NullExpression, GetExpressionFromParens(binaryExpression.Left)) &&
-                GetExpressionFromParens(binaryExpression.Right).ToString() == lambdaParameter)
+            if (EquivalenceChecker.AreEquivalent(NullExpression, binaryExpression.Left.RemoveParentheses()) &&
+                binaryExpression.Right.RemoveParentheses().ToString() == lambdaParameter)
             {
                 return true;
             }
-            if (EquivalenceChecker.AreEquivalent(NullExpression, GetExpressionFromParens(binaryExpression.Right)) &&
-                GetExpressionFromParens(binaryExpression.Left).ToString() == lambdaParameter)
+            if (EquivalenceChecker.AreEquivalent(NullExpression, binaryExpression.Right.RemoveParentheses()) &&
+                binaryExpression.Left.RemoveParentheses().ToString() == lambdaParameter)
             {
                 return true;
             }
             return false;
-        }
-
-        private static ExpressionSyntax GetExpressionFromParens(ExpressionSyntax expression)
-        {
-            var parens = expression as ParenthesizedExpressionSyntax;
-            var current = expression;
-            while (parens != null)
-            {
-                current = parens.Expression;
-                parens = current as ParenthesizedExpressionSyntax;
-            }
-
-            return current;
         }
 
         private static ExpressionSyntax GetExpressionFromLambda(ExpressionSyntax expression)
@@ -425,7 +412,7 @@ namespace SonarLint.Rules.CSharp
             }
 
             var expression = arguments.First().Expression;
-            var lambdaBody = GetExpressionFromParens(GetExpressionFromLambda(expression)) as BinaryExpressionSyntax;
+            var lambdaBody = GetExpressionFromLambda(expression).RemoveParentheses() as BinaryExpressionSyntax;
             var lambdaParameter = GetLambdaParameter(expression);
             if (lambdaBody == null ||
                 lambdaParameter == null ||
@@ -434,7 +421,7 @@ namespace SonarLint.Rules.CSharp
                 return false;
             }
 
-            var castedExpression = GetExpressionFromParens(lambdaBody.Left);
+            var castedExpression = lambdaBody.Left.RemoveParentheses();
             if (lambdaParameter != castedExpression.ToString())
             {
                 return false;
@@ -453,7 +440,7 @@ namespace SonarLint.Rules.CSharp
             }
 
             var expression = arguments.First().Expression;
-            var castExpression = GetExpressionFromParens(GetExpressionFromLambda(expression)) as CastExpressionSyntax;
+            var castExpression = GetExpressionFromLambda(expression).RemoveParentheses() as CastExpressionSyntax;
             var lambdaParameter = GetLambdaParameter(expression);
             if (castExpression == null ||
                 lambdaParameter == null)
@@ -461,7 +448,7 @@ namespace SonarLint.Rules.CSharp
                 return false;
             }
 
-            var castedExpression = GetExpressionFromParens(castExpression.Expression);
+            var castedExpression = castExpression.Expression.RemoveParentheses();
             if (lambdaParameter != castedExpression.ToString())
             {
                 return false;

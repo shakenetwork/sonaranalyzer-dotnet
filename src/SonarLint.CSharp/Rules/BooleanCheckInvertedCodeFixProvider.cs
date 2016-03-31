@@ -29,6 +29,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Formatting;
 using System;
 using System.Collections.Generic;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -66,14 +67,7 @@ namespace SonarLint.Rules.CSharp
                     Title,
                     c =>
                     {
-                        var expression = syntaxNode.Operand;
-                        var parenthesized = expression as ParenthesizedExpressionSyntax;
-                        while(parenthesized != null)
-                        {
-                            expression = parenthesized.Expression;
-                            parenthesized = expression as ParenthesizedExpressionSyntax;
-                        }
-
+                        var expression = syntaxNode.Operand.RemoveParentheses();
                         var newBinary = ChangeOperator((BinaryExpressionSyntax)expression);
 
                         if (syntaxNode.Parent is ExpressionSyntax &&

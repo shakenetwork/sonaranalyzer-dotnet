@@ -112,9 +112,9 @@ namespace SonarLint.Rules.CSharp
         {
             var conditional = (ConditionalExpressionSyntax)context.Node;
 
-            var condition = TernaryOperatorPointless.RemoveParentheses(conditional.Condition);
-            var whenTrue = TernaryOperatorPointless.RemoveParentheses(conditional.WhenTrue);
-            var whenFalse = TernaryOperatorPointless.RemoveParentheses(conditional.WhenFalse);
+            var condition = conditional.Condition.RemoveParentheses();
+            var whenTrue = conditional.WhenTrue.RemoveParentheses();
+            var whenFalse = conditional.WhenFalse.RemoveParentheses();
 
             if (EquivalenceChecker.AreEquivalent(whenTrue, whenFalse))
             {
@@ -164,8 +164,8 @@ namespace SonarLint.Rules.CSharp
 
             if (return1 != null && return2 != null)
             {
-                var retExpr1 = TernaryOperatorPointless.RemoveParentheses(return1.Expression);
-                var retExpr2 = TernaryOperatorPointless.RemoveParentheses(return2.Expression);
+                var retExpr1 = return1.Expression.RemoveParentheses();
+                var retExpr2 = return2.Expression.RemoveParentheses();
 
                 if (!AreTypesCompatible(return1.Expression, return2.Expression, semanticModel))
                 {
@@ -189,8 +189,8 @@ namespace SonarLint.Rules.CSharp
                 return false;
             }
 
-            var expression1 = TernaryOperatorPointless.RemoveParentheses(expressionStatement1.Expression);
-            var expression2 = TernaryOperatorPointless.RemoveParentheses(expressionStatement2.Expression);
+            var expression1 = expressionStatement1.Expression.RemoveParentheses();
+            var expression2 = expressionStatement2.Expression.RemoveParentheses();
 
             if (AreCandidateAssignments(expression1, expression2, comparedToNull, comparedIsNullInTrue,
                     semanticModel, out isNullCoalescing))

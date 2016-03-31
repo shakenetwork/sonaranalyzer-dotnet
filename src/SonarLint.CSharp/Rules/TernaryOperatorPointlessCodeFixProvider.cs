@@ -26,6 +26,7 @@ using System.Linq;
 using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Formatting;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -65,8 +66,7 @@ namespace SonarLint.Rules.CSharp
                     {
                         var newRoot = root.ReplaceNode(
                             conditional,
-                            TernaryOperatorPointless.RemoveParentheses(conditional.WhenTrue)
-                                .WithAdditionalAnnotations(Formatter.Annotation));
+                            conditional.WhenTrue.RemoveParentheses().WithAdditionalAnnotations(Formatter.Annotation));
                         return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                     }),
                 context.Diagnostics);

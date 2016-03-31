@@ -64,25 +64,13 @@ namespace SonarLint.Rules.CSharp
                     var expression = (ConditionalExpressionSyntax) c.Node;
 
                     if (EquivalenceChecker.AreEquivalent(
-                        RemoveParentheses(expression.WhenTrue),
-                        RemoveParentheses(expression.WhenFalse)))
+                        expression.WhenTrue.RemoveParentheses(),
+                        expression.WhenFalse.RemoveParentheses()))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, expression.GetLocation()));
                     }
                 },
                 SyntaxKind.ConditionalExpression);
-        }
-
-        internal static ExpressionSyntax RemoveParentheses(ExpressionSyntax expression)
-        {
-            var currentExpression = expression;
-            var parentheses = expression as ParenthesizedExpressionSyntax;
-            while(parentheses != null)
-            {
-                currentExpression = parentheses.Expression;
-                parentheses = currentExpression as ParenthesizedExpressionSyntax;
-            }
-            return currentExpression;
         }
     }
 }
