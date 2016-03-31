@@ -12,126 +12,6 @@
 {
 "analysisTarget":  [
 {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorBase.SupervisorStrategy.cs",
-"region":  {
-"startLine":  20,
-"startColumn":  69,
-"endLine":  20,
-"endColumn":  70
-}
-}
-]
-}
-],
-"shortMessage":  "Extract the assignment of \"_supervisorStrategy\" from this expression.",
-"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Assignments should not be made from within sub-expressions",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1121",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1121",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\FSM.cs",
-"region":  {
-"startLine":  702,
-"startColumn":  55,
-"endLine":  702,
-"endColumn":  56
-}
-}
-]
-}
-],
-"shortMessage":  "Extract the assignment of \"_handleEvent\" from this expression.",
-"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Assignments should not be made from within sub-expressions",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1121",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1121",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka\\Configuration\\Hocon\\AkkaConfigurationSection.cs",
-"region":  {
-"startLine":  38,
-"startColumn":  53,
-"endLine":  38,
-"endColumn":  54
-}
-}
-]
-}
-],
-"shortMessage":  "Extract the assignment of \"_akkaConfig\" from this expression.",
-"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Assignments should not be made from within sub-expressions",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1121",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1121",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka\\Routing\\ConsistentHash.cs",
-"region":  {
-"startLine":  46,
-"startColumn":  41,
-"endLine":  46,
-"endColumn":  42
-}
-}
-]
-}
-],
-"shortMessage":  "Extract the assignment of \"_ring\" from this expression.",
-"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Assignments should not be made from within sub-expressions",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1121",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1121",
-"locations":  [
-{
-"analysisTarget":  [
-{
 "uri":  "akka.net\\src\\core\\Akka\\Util\\ByteIterator.cs",
 "region":  {
 "startLine":  54,
@@ -152,7 +32,7 @@
 "title":  "Assignments should not be made from within sub-expressions",
 "category":  "Reliability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1121",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 },
@@ -182,37 +62,7 @@
 "title":  "Assignments should not be made from within sub-expressions",
 "category":  "Reliability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1121",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1121",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka\\Util\\MonoConcurrentQueue.cs",
-"region":  {
-"startLine":  250,
-"startColumn":  28,
-"endLine":  250,
-"endColumn":  29
-}
-}
-]
-}
-],
-"shortMessage":  "Extract the assignment of \"my_head\" from this expression.",
-"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Assignments should not be made from within sub-expressions",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1121",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 }

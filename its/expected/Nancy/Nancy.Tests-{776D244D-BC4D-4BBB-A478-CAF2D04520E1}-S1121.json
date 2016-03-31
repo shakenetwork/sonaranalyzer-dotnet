@@ -12,18 +12,18 @@
 {
 "analysisTarget":  [
 {
-"uri":  "Nancy\\src\\Nancy.Validation.DataAnnotations\\DataAnnotationsValidator.cs",
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Extensions\\RequestStreamExtensionsFixture.cs",
 "region":  {
-"startLine":  34,
+"startLine":  21,
 "startColumn":  61,
-"endLine":  34,
+"endLine":  21,
 "endColumn":  62
 }
 }
 ]
 }
 ],
-"shortMessage":  "Extract the assignment of \"this.descriptor\" from this expression.",
+"shortMessage":  "Extract the assignment of \"requestStream.Position\" from this expression.",
 "fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
 "properties":  {
 "severity":  "Warning",
@@ -32,7 +32,7 @@
 "title":  "Assignments should not be made from within sub-expressions",
 "category":  "Reliability",
 "helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1121",
-"isEnabledByDefault":  "False",
+"isEnabledByDefault":  "True",
 "isSuppressedInSource":  "False"
 }
 }
