@@ -18,14 +18,16 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
+using Microsoft.CodeAnalysis.Text;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Collections.Immutable;
+using System.Linq;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -45,7 +47,7 @@ namespace SonarLint.Rules.CSharp
             "include those lines in the block, but the omission of curly braces means the lines " +
             "will be unconditionally executed once.";
         internal const string MessageFormat =
-            "Only the first line of this n-line block will be executed {0}. The rest will execute {1}.";
+            "This line will not be executed {0}; only the first line of this {2}-line block will be. The rest will execute {1}.";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
@@ -81,8 +83,36 @@ namespace SonarLint.Rules.CSharp
 
         private static void CheckIf(SyntaxNodeAnalysisContext context, IfStatementSyntax ifStatement)
         {
-            CheckStatement(context, ifStatement.Else == null ? ifStatement.Statement : ifStatement.Else.Statement,
-                "conditionally", "unconditionally");
+            if (ifStatement.GetPrecedingIfsInConditionChain().Any())
+            {
+                return;
+            }
+
+            var lastStatementInIfChain = GetLastStatementInIfChain(ifStatement);
+            if (IsStatementCandidateLoop(lastStatementInIfChain))
+            {
+                return;
+            }
+
+            CheckStatement(context, lastStatementInIfChain, "conditionally", "unconditionally");
+        }
+
+        private static StatementSyntax GetLastStatementInIfChain(IfStatementSyntax ifStatement)
+        {
+            var currentIfStatement = ifStatement;
+            var statement = currentIfStatement.Statement;
+            while (currentIfStatement != null)
+            {
+                if (currentIfStatement.Else == null)
+                {
+                    return currentIfStatement.Statement;
+                }
+
+                statement = currentIfStatement.Else.Statement;
+                currentIfStatement = statement as IfStatementSyntax;
+            }
+
+            return statement;
         }
 
         private static void CheckStatement(SyntaxNodeAnalysisContext context, StatementSyntax statement,
@@ -99,13 +129,24 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            var charPositionWithinLine1 = statement.GetLocation().GetLineSpan().StartLinePosition.Character;
-            var charPositionWithinLine2 = nextStatement.GetLocation().GetLineSpan().StartLinePosition.Character;
+            var statementPosition = statement.GetLocation().GetLineSpan().StartLinePosition;
+            var nextStatementPosition = nextStatement.GetLocation().GetLineSpan().StartLinePosition;
 
-            if (charPositionWithinLine1 == charPositionWithinLine2)
+            if (statementPosition.Character == nextStatementPosition.Character)
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, nextStatement.GetLocation(), executed, execute));
+                var lineSpan = context.Node.SyntaxTree.GetText().Lines[nextStatementPosition.Line].Span;
+                var location = Location.Create(context.Node.SyntaxTree, TextSpan.FromBounds(nextStatement.SpanStart, lineSpan.End));
+
+                context.ReportDiagnostic(Diagnostic.Create(Rule, location, executed, execute,
+                    nextStatementPosition.Line - statementPosition.Line + 1));
             }
+        }
+
+        private static bool IsStatementCandidateLoop(StatementSyntax statement)
+        {
+            return statement is ForEachStatementSyntax ||
+                statement is ForStatementSyntax ||
+                statement is WhileStatementSyntax;
         }
     }
 }
