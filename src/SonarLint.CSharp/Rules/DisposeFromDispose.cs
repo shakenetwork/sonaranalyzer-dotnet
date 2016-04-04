@@ -26,6 +26,8 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Linq;
+using System;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -54,6 +56,7 @@ namespace SonarLint.Rules.CSharp
                 description: Description);
 
         private const string DisposeMethodName = "Dispose";
+        private const string DisposeMethodExplicitName = "System.IDisposable.Dispose";
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
@@ -62,35 +65,11 @@ namespace SonarLint.Rules.CSharp
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
-                    var invocation = (InvocationExpressionSyntax) c.Node;
+                    var invocation = (InvocationExpressionSyntax)c.Node;
                     var memberAccess = invocation.Expression as MemberAccessExpressionSyntax;
-                    if (memberAccess == null)
-                    {
-                        return;
-                    }
-
-                    var fieldSymbol = c.SemanticModel.GetSymbolInfo(memberAccess.Expression).Symbol as IFieldSymbol;
-                    if (fieldSymbol == null ||
-                        !DisposableMemberInNonDisposableClass.IsNonStaticNonPublicDisposableField(fieldSymbol) ||
-                        !fieldSymbol.ContainingType.Implements(KnownType.System_IDisposable))
-                    {
-                        return;
-                    }
-
-                    var methodSymbol = c.SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
-                    if (methodSymbol == null)
-                    {
-                        return;
-                    }
-
-                    var disposeMethod = DisposeNotImplementingDispose.GetDisposeMethod(c.SemanticModel.Compilation);
-                    if (disposeMethod == null)
-                    {
-                        return;
-                    }
-
-                    if (!methodSymbol.Equals(
-                            methodSymbol.ContainingType.FindImplementationForInterfaceMember(disposeMethod)))
+                    if (memberAccess == null ||
+                        !IsDisposableField(memberAccess.Expression, c.SemanticModel) ||
+                        !IsDisposeMethodCalled(invocation, c.SemanticModel))
                     {
                         return;
                     }
@@ -103,12 +82,43 @@ namespace SonarLint.Rules.CSharp
 
                     var enclosingMethodSymbol = enclosingSymbol as IMethodSymbol;
                     if (enclosingMethodSymbol == null ||
-                        enclosingMethodSymbol.Name != DisposeMethodName)
+                        !IsMethodMatchingDisposeMethodName(enclosingMethodSymbol))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, memberAccess.Name.GetLocation()));
                     }
                 },
                 SyntaxKind.InvocationExpression);
+        }
+
+        private bool IsDisposeMethodCalled(InvocationExpressionSyntax invocation, SemanticModel semanticModel)
+        {
+            var methodSymbol = semanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
+            if (methodSymbol == null)
+            {
+                return false;
+            }
+
+            var disposeMethod = DisposeNotImplementingDispose.GetDisposeMethod(semanticModel.Compilation);
+            if (disposeMethod == null)
+            {
+                return false;
+            }
+
+            return methodSymbol.Equals(methodSymbol.ContainingType.FindImplementationForInterfaceMember(disposeMethod));
+        }
+
+        private static bool IsDisposableField(ExpressionSyntax expression, SemanticModel semanticModel)
+        {
+            var fieldSymbol = semanticModel.GetSymbolInfo(expression).Symbol as IFieldSymbol;
+            return fieldSymbol != null &&
+                DisposableMemberInNonDisposableClass.IsNonStaticNonPublicDisposableField(fieldSymbol) &&
+                fieldSymbol.ContainingType.Implements(KnownType.System_IDisposable);
+        }
+
+        private static bool IsMethodMatchingDisposeMethodName(IMethodSymbol enclosingMethodSymbol)
+        {
+            return enclosingMethodSymbol.Name == DisposeMethodName ||
+                enclosingMethodSymbol.ExplicitInterfaceImplementations.Any() && enclosingMethodSymbol.Name == DisposeMethodExplicitName;
         }
     }
 }

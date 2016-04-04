@@ -72,4 +72,18 @@ namespace Tests.Diagnostics
             this.fs.Dispose();
         }
     }
+    public class Class : IDisposable
+    {
+        FileStream fs;
+
+        public Class()
+        {
+            fs = new FileStream("", FileMode.Append);
+        }
+
+        void IDisposable.Dispose()
+        {
+            fs.Dispose(); // Compliant, do not report here
+        }
+    }
 }
