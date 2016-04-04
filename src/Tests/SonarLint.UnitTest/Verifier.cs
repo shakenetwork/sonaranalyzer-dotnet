@@ -18,25 +18,25 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using FluentAssertions;
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CodeActions;
+using Microsoft.CodeAnalysis.CodeFixes;
+using Microsoft.CodeAnalysis.Diagnostics;
+using Microsoft.CodeAnalysis.Text;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SonarLint.Helpers;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
-using FluentAssertions;
-using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.Diagnostics;
-using SonarLint.Helpers;
-using Microsoft.CodeAnalysis.CodeFixes;
-using Microsoft.CodeAnalysis.CodeActions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading.Tasks;
 using CS = Microsoft.CodeAnalysis.CSharp;
 using VB = Microsoft.CodeAnalysis.VisualBasic;
-using Microsoft.CodeAnalysis.Text;
-using System.Text.RegularExpressions;
-using System.Net;
 
 namespace SonarLint.UnitTest
 {
@@ -49,6 +49,7 @@ namespace SonarLint.UnitTest
         private const string GeneratedAssemblyName = "foo";
         private const string TestAssemblyName = "fooTest";
         private const string AnalyzerFailedDiagnosticId = "AD0001";
+        private const string CSharpFileExtension = ".cs";
 
         #region Verify*
 
@@ -67,27 +68,34 @@ namespace SonarLint.UnitTest
         public static void VerifyAnalyzer(string path, DiagnosticAnalyzer diagnosticAnalyzer, ParseOptions options = null,
             params MetadataReference[] additionalReferences)
         {
+            var file = new FileInfo(path);
+            var parseOptions = GetParseOptionsAlternatives(options, file);
+
             using (var workspace = new AdhocWorkspace())
             {
-                var document = GetDocument(path, GeneratedAssemblyName, workspace, additionalReferences);
+                var document = GetDocument(file, GeneratedAssemblyName, workspace, additionalReferences);
                 var project = document.Project;
-                if (options != null)
+
+                foreach (var parseOption in parseOptions)
                 {
-                    project = project.WithParseOptions(options);
+                    if (parseOption != null)
+                    {
+                        project = project.WithParseOptions(parseOption);
+                    }
+
+                    var compilation = project.GetCompilationAsync().Result;
+                    var diagnostics = GetDiagnostics(compilation, diagnosticAnalyzer);
+                    var expected = ExpectedIssues(compilation.SyntaxTrees.First()).ToList();
+
+                    foreach (var diagnostic in diagnostics)
+                    {
+                        var line = diagnostic.GetLineNumberToReport();
+                        expected.Should().Contain(line);
+                        expected.Remove(line);
+                    }
+
+                    expected.Should().BeEquivalentTo(Enumerable.Empty<int>());
                 }
-
-                var compilation = project.GetCompilationAsync().Result;
-                var diagnostics = GetDiagnostics(compilation, diagnosticAnalyzer);
-                var expected = ExpectedIssues(compilation.SyntaxTrees.First()).ToList();
-
-                foreach (var diagnostic in diagnostics)
-                {
-                    var line = diagnostic.GetLineNumberToReport();
-                    expected.Should().Contain(line);
-                    expected.Remove(line);
-                }
-
-                expected.Should().BeEquivalentTo(Enumerable.Empty<int>());
             }
         }
 
@@ -136,40 +144,14 @@ namespace SonarLint.UnitTest
         {
             using (var workspace = new AdhocWorkspace())
             {
-                var document = GetDocument(path, GeneratedAssemblyName, workspace);
+                var file = new FileInfo(path);
+                var parseOptions = GetParseOptionsWithDifferentLanguageVersions(null, file);
 
-                List<Diagnostic> diagnostics;
-                string actualCode;
-                CalculateDiagnosticsAndCode(diagnosticAnalyzer, document, out diagnostics, out actualCode);
-
-                Assert.AreNotEqual(0, diagnostics.Count);
-
-                string codeBeforeFix;
-                var codeFixExecutedAtLeastOnce = false;
-
-                do
+                foreach (var parseOption in parseOptions)
                 {
-                    codeBeforeFix = actualCode;
-
-                    var codeFixExecuted = false;
-                    for (int diagnosticIndexToFix = 0; !codeFixExecuted && diagnosticIndexToFix < diagnostics.Count; diagnosticIndexToFix++)
-                    {
-                        var codeActionsForDiagnostic = GetCodeActionsForDiagnostic(codeFixProvider, document, diagnostics[diagnosticIndexToFix]);
-
-                        CodeAction codeActionToExecute;
-                        if (TryGetCodeActionToApply(codeFixTitle, codeActionsForDiagnostic, out codeActionToExecute))
-                        {
-                            document = ApplyCodeFix(document, codeActionToExecute);
-                            CalculateDiagnosticsAndCode(diagnosticAnalyzer, document, out diagnostics, out actualCode);
-
-                            codeFixExecutedAtLeastOnce = true;
-                            codeFixExecuted = true;
-                        }
-                    }
-                } while (codeBeforeFix != actualCode);
-
-                Assert.IsTrue(codeFixExecutedAtLeastOnce);
-                Assert.AreEqual(File.ReadAllText(pathToExpected), actualCode);
+                    var document = GetDocument(file, GeneratedAssemblyName, workspace);
+                    RunCodeFixWhileDocumentChanges(diagnosticAnalyzer, codeFixProvider, codeFixTitle, document, parseOption, pathToExpected);
+                }
             }
 
             VerifyFixAllCodeFix(path, pathToBatchExpected, diagnosticAnalyzer, codeFixProvider, codeFixTitle);
@@ -186,32 +168,14 @@ namespace SonarLint.UnitTest
 
             using (var workspace = new AdhocWorkspace())
             {
-                var document = GetDocument(path, GeneratedAssemblyName, workspace);
+                var file = new FileInfo(path);
+                var parseOptions = GetParseOptionsWithDifferentLanguageVersions(null, file);
 
-                List<Diagnostic> diagnostics;
-                string actualCode;
-                CalculateDiagnosticsAndCode(diagnosticAnalyzer, document, out diagnostics, out actualCode);
-
-                Assert.AreNotEqual(0, diagnostics.Count);
-
-                var fixAllDiagnosticProvider = new FixAllDiagnosticProvider(
-                    codeFixProvider.FixableDiagnosticIds.ToImmutableHashSet(),
-                    (doc, ids, ct) => Task.FromResult(
-                        GetDiagnostics(document.Project.GetCompilationAsync().Result, diagnosticAnalyzer)),
-                    null);
-                var fixAllContext = new FixAllContext(document, codeFixProvider, FixAllScope.Document,
-                    codeFixTitle,
-                    codeFixProvider.FixableDiagnosticIds,
-                    fixAllDiagnosticProvider,
-                    CancellationToken.None);
-                var codeActionToExecute = fixAllProvider.GetFixAsync(fixAllContext).Result;
-
-                Assert.IsNotNull(codeActionToExecute);
-
-                document = ApplyCodeFix(document, codeActionToExecute);
-
-                CalculateDiagnosticsAndCode(diagnosticAnalyzer, document, out diagnostics, out actualCode);
-                Assert.AreEqual(File.ReadAllText(pathToExpected), actualCode);
+                foreach (var parseOption in parseOptions)
+                {
+                    var document = GetDocument(file, GeneratedAssemblyName, workspace);
+                    RunFixAllProvider(diagnosticAnalyzer, codeFixProvider, codeFixTitle, fixAllProvider, document, parseOption, pathToExpected);
+                }
             }
         }
 
@@ -223,22 +187,55 @@ namespace SonarLint.UnitTest
             AdhocWorkspace workspace, params MetadataReference[] additionalReferences)
         {
             var file = new FileInfo(filePath);
-            var language = file.Extension == ".cs"
+            return GetDocument(file, assemblyName, workspace, additionalReferences);
+        }
+
+        private static Document GetDocument(FileInfo file, string assemblyName,
+            AdhocWorkspace workspace, params MetadataReference[] additionalReferences)
+        {
+            var language = file.Extension == CSharpFileExtension
                 ? LanguageNames.CSharp
                 : LanguageNames.VisualBasic;
 
-            return workspace.CurrentSolution.AddProject(assemblyName,
+            var document = workspace.CurrentSolution.AddProject(assemblyName,
                     $"{assemblyName}.dll", language)
                 .AddMetadataReference(systemAssembly)
                 .AddMetadataReference(systemLinqAssembly)
                 .AddMetadataReference(systemNetAssembly)
                 .AddMetadataReferences(additionalReferences)
                 .AddDocument(file.Name, File.ReadAllText(file.FullName, Encoding.UTF8));
+
+            // adding an extra file to the project
+            // this won't trigger any issues, but it keeps a reference to the original ParseOption, so
+            // if an analyzer/codefix changes the language version, Roslyn throws an ArgumentException
+            document = document.Project.AddDocument("ExtraEmptyFile.g" + file.Extension, string.Empty);
+
+            return document.Project.Documents.Single(d => d.Name == file.Name);
         }
 
         #endregion
 
         #region Analyzer helpers
+
+        private static IEnumerable<ParseOptions> GetParseOptionsAlternatives(ParseOptions options, FileInfo file)
+        {
+            return GetParseOptionsWithDifferentLanguageVersions(options, file).Concat(new[] { options });
+        }
+
+        private static IEnumerable<ParseOptions> GetParseOptionsWithDifferentLanguageVersions(ParseOptions options, FileInfo file)
+        {
+            if (file.Extension == CSharpFileExtension)
+            {
+                var csOptions = options as CS.CSharpParseOptions ?? new CS.CSharpParseOptions();
+                yield return csOptions.WithLanguageVersion(CS.LanguageVersion.CSharp6);
+                yield return csOptions.WithLanguageVersion(CS.LanguageVersion.CSharp5);
+                yield break;
+            }
+
+            var vbOptions = options as VB.VisualBasicParseOptions ?? new VB.VisualBasicParseOptions();
+            yield return vbOptions.WithLanguageVersion(VB.LanguageVersion.VisualBasic14);
+            yield return vbOptions.WithLanguageVersion(VB.LanguageVersion.VisualBasic12);
+        }
 
         internal static IEnumerable<Diagnostic> GetDiagnostics(Compilation compilation,
             DiagnosticAnalyzer diagnosticAnalyzer)
@@ -325,11 +322,85 @@ namespace SonarLint.UnitTest
 
         #region Codefix helper
 
-        private static void CalculateDiagnosticsAndCode(DiagnosticAnalyzer diagnosticAnalyzer, Document document,
+        private static void RunCodeFixWhileDocumentChanges(DiagnosticAnalyzer diagnosticAnalyzer, CodeFixProvider codeFixProvider,
+            string codeFixTitle, Document document, ParseOptions parseOption, string pathToExpected)
+        {
+            var currentDocument = document;
+            List<Diagnostic> diagnostics;
+            string actualCode;
+            CalculateDiagnosticsAndCode(diagnosticAnalyzer, currentDocument, parseOption, out diagnostics, out actualCode);
+
+            Assert.AreNotEqual(0, diagnostics.Count);
+
+            string codeBeforeFix;
+            var codeFixExecutedAtLeastOnce = false;
+
+            do
+            {
+                codeBeforeFix = actualCode;
+
+                var codeFixExecuted = false;
+                for (int diagnosticIndexToFix = 0; !codeFixExecuted && diagnosticIndexToFix < diagnostics.Count; diagnosticIndexToFix++)
+                {
+                    var codeActionsForDiagnostic = GetCodeActionsForDiagnostic(codeFixProvider, currentDocument, diagnostics[diagnosticIndexToFix]);
+
+                    CodeAction codeActionToExecute;
+                    if (TryGetCodeActionToApply(codeFixTitle, codeActionsForDiagnostic, out codeActionToExecute))
+                    {
+                        currentDocument = ApplyCodeFix(currentDocument, codeActionToExecute);
+                        CalculateDiagnosticsAndCode(diagnosticAnalyzer, currentDocument, parseOption, out diagnostics, out actualCode);
+
+                        codeFixExecutedAtLeastOnce = true;
+                        codeFixExecuted = true;
+                    }
+                }
+            } while (codeBeforeFix != actualCode);
+
+            Assert.IsTrue(codeFixExecutedAtLeastOnce);
+            Assert.AreEqual(File.ReadAllText(pathToExpected), actualCode);
+        }
+
+        private static void RunFixAllProvider(DiagnosticAnalyzer diagnosticAnalyzer, CodeFixProvider codeFixProvider,
+            string codeFixTitle, FixAllProvider fixAllProvider, Document document, ParseOptions parseOption, string pathToExpected)
+        {
+            var currentDocument = document;
+            List<Diagnostic> diagnostics;
+            string actualCode;
+            CalculateDiagnosticsAndCode(diagnosticAnalyzer, currentDocument, parseOption, out diagnostics, out actualCode);
+
+            Assert.AreNotEqual(0, diagnostics.Count);
+
+            var fixAllDiagnosticProvider = new FixAllDiagnosticProvider(
+                codeFixProvider.FixableDiagnosticIds.ToImmutableHashSet(),
+                (doc, ids, ct) => Task.FromResult(
+                    GetDiagnostics(currentDocument.Project.GetCompilationAsync().Result, diagnosticAnalyzer)),
+                null);
+            var fixAllContext = new FixAllContext(currentDocument, codeFixProvider, FixAllScope.Document,
+                codeFixTitle,
+                codeFixProvider.FixableDiagnosticIds,
+                fixAllDiagnosticProvider,
+                CancellationToken.None);
+            var codeActionToExecute = fixAllProvider.GetFixAsync(fixAllContext).Result;
+
+            Assert.IsNotNull(codeActionToExecute);
+
+            currentDocument = ApplyCodeFix(currentDocument, codeActionToExecute);
+
+            CalculateDiagnosticsAndCode(diagnosticAnalyzer, currentDocument, parseOption, out diagnostics, out actualCode);
+            Assert.AreEqual(File.ReadAllText(pathToExpected), actualCode);
+        }
+
+        private static void CalculateDiagnosticsAndCode(DiagnosticAnalyzer diagnosticAnalyzer, Document document, ParseOptions parseOption,
             out List<Diagnostic> diagnostics,
             out string actualCode)
         {
-            diagnostics = GetDiagnostics(document.Project.GetCompilationAsync().Result, diagnosticAnalyzer).ToList();
+            var project = document.Project;
+            if (parseOption != null)
+            {
+                project = project.WithParseOptions(parseOption);
+            }
+
+            diagnostics = GetDiagnostics(project.GetCompilationAsync().Result, diagnosticAnalyzer).ToList();
             actualCode = document.GetSyntaxRootAsync().Result.GetText().ToString();
         }
 
