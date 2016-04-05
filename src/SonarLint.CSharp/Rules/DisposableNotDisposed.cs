@@ -107,7 +107,8 @@ namespace SonarLint.Rules.CSharp
                         {
                             SyntaxNode = r.GetSyntax(),
                             SemanticModel = c.Compilation.GetSemanticModel(r.SyntaxTree)
-                        });
+                        })
+                        .ToList();
 
                     var trackedNodesAndSymbols = new HashSet<NodeAndSymbol>();
                     foreach (var typeDeclarationAndSemanticModel in typesDeclarationsAndSemanticModels)
@@ -284,13 +285,15 @@ namespace SonarLint.Rules.CSharp
                     throw new NotSupportedException("Syntax node should be either an identifier or a simple member access expression");
                 }
 
-                if (IsStandaloneExpression(expression))
+                if (!IsStandaloneExpression(expression))
                 {
-                    var referencedSymbol = semanticModel.GetSymbolInfo(identifierOrSimpleMemberAccess).Symbol;
-                    if (referencedSymbol != null && IsLocalOrPrivateField(referencedSymbol))
-                    {
-                        excludedSymbols.Add(referencedSymbol);
-                    }
+                    continue;
+                }
+
+                var referencedSymbol = semanticModel.GetSymbolInfo(identifierOrSimpleMemberAccess).Symbol;
+                if (referencedSymbol != null && IsLocalOrPrivateField(referencedSymbol))
+                {
+                    excludedSymbols.Add(referencedSymbol);
                 }
             }
         }

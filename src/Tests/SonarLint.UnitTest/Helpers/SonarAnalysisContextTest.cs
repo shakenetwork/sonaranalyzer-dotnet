@@ -48,7 +48,7 @@ namespace SonarLint.UnitTest.Helpers
         [TestMethod]
         public void SonarAnalysis_NoIssueReported()
         {
-            SonarAnalysisContext.ShouldAnalysisBeDisabled = (tree) => true;
+            SonarAnalysisContext.ShouldAnalysisBeDisabled = tree => true;
 
             foreach (var testCase in TestCases)
             {
@@ -72,7 +72,7 @@ namespace SonarLint.UnitTest.Helpers
         {
             Assert.IsTrue(TestCases.Count > 2);
 
-            SonarAnalysisContext.ShouldAnalysisBeDisabled = (tree) =>
+            SonarAnalysisContext.ShouldAnalysisBeDisabled = tree =>
                 tree.FilePath.EndsWith(new FileInfo(TestCases[0].Path).Name, System.StringComparison.OrdinalIgnoreCase);
             Verifier.VerifyNoIssueReported(TestCases[0].Path, TestCases[0].Analyzer);
             Verifier.VerifyAnalyzer(TestCases[1].Path, TestCases[1].Analyzer);

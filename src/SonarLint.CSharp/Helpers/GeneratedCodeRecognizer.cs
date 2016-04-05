@@ -63,9 +63,7 @@ namespace SonarLint.Helpers.CSharp
         protected override string GetAttributeName(SyntaxNode node)
         {
             var attribute = node as AttributeSyntax;
-            return attribute == null
-                ? string.Empty
-                : attribute.Name.ToString();
+            return attribute?.Name.ToString() ?? string.Empty;
         }
     }
 }

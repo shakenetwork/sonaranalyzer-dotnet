@@ -156,12 +156,8 @@ namespace SonarLint.Rules.Common
                 SemanticModel semanticModel)
         {
             var symbol = semanticModel.GetSymbolInfo(expression).Symbol as ILocalSymbol;
-            if (symbol == null)
-            {
-                return false;
-            }
 
-            var declaration = symbol.DeclaringSyntaxReferences.FirstOrDefault()?.GetSyntax();
+            var declaration = symbol?.DeclaringSyntaxReferences.FirstOrDefault()?.GetSyntax();
             if (declaration == null)
             {
                 return false;

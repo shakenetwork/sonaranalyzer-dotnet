@@ -21,7 +21,6 @@
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Helpers;
 
@@ -62,14 +61,13 @@ namespace SonarLint.Rules.Common
                 c =>
                 {
                     var prop = (TPropertyDeclaration)c.Node;
-                    if (IsWriteOnlyProperty(prop))
+                    if (!IsWriteOnlyProperty(prop))
                     {
-                        var identifier = GetIdentifier(prop);
-
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(),
-                            identifier.ValueText));
+                        return;
                     }
 
+                    var identifier = GetIdentifier(prop);
+                    c.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(), identifier.ValueText));
                 },
                 SyntaxKindsOfInterest.ToArray());
         }

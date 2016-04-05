@@ -74,7 +74,7 @@ namespace SonarLint.Rules.CSharp
                     Title,
                     async c =>
                     {
-                        var enumDeclarationRoot = await currentSolution.GetDocument(documentId).GetSyntaxRootAsync();
+                        var enumDeclarationRoot = await currentSolution.GetDocument(documentId).GetSyntaxRootAsync(c);
 
                         var flagsAttributeName = flagsAttributeType.ToMinimalDisplayString(semanticModel, enumDeclaration.SpanStart);
                         flagsAttributeName = flagsAttributeName.Remove(flagsAttributeName.IndexOf("Attribute", System.StringComparison.Ordinal));

@@ -27,6 +27,7 @@ using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Formatting;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -46,7 +47,7 @@ namespace SonarLint.Rules.CSharp
             return WellKnownFixAllProviders.BatchFixer;
         }
 
-        public override sealed async Task RegisterCodeFixesAsync(CodeFixContext context)
+        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
         {
             var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
             var diagnostic = context.Diagnostics.First();
@@ -62,10 +63,7 @@ namespace SonarLint.Rules.CSharp
                 context.RegisterCodeFix(
                     CodeAction.Create(
                         Title,
-                        c =>
-                        {
-                            return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
-                        }),
+                        c => Task.FromResult(context.Document.WithSyntaxRoot(newRoot))),
                     context.Diagnostics);
             }
         }

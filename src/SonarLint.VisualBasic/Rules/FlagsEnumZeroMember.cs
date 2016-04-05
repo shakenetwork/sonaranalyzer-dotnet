@@ -47,11 +47,7 @@ namespace SonarLint.Rules.VisualBasic
         protected override IEnumerable<EnumMemberDeclarationSyntax> GetMembers(EnumStatementSyntax node)
         {
             var parent = node.Parent as EnumBlockSyntax;
-            if (parent == null)
-            {
-                return new EnumMemberDeclarationSyntax[0];
-            }
-            return parent.ChildNodes().OfType<EnumMemberDeclarationSyntax>();
+            return parent?.ChildNodes().OfType<EnumMemberDeclarationSyntax>() ?? new EnumMemberDeclarationSyntax[0];
         }
 
         protected sealed override GeneratedCodeRecognizer GeneratedCodeRecognizer => Helpers.VisualBasic.GeneratedCodeRecognizer.Instance;

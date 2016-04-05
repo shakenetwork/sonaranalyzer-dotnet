@@ -135,7 +135,7 @@ namespace SonarLint.UnitTest.Common
             {
                 Assert.IsTrue(
                     analyzer.IsSubclassOf(typeof(SonarDiagnosticAnalyzer)),
-                    string.Format("{0} is not a subclass of SonarDiagnosticAnalyzer", analyzer.Name));
+                    $"{analyzer.Name} is not a subclass of SonarDiagnosticAnalyzer");
             }
         }
     }

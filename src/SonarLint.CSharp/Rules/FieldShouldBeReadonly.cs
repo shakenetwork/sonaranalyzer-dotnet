@@ -152,11 +152,7 @@ namespace SonarLint.Rules.CSharp
                     foreach (var field in fields)
                     {
                         var declarationReference = field.DeclaringSyntaxReferences.FirstOrDefault();
-                        if (declarationReference == null)
-                        {
-                            continue;
-                        }
-                        var fieldSyntax = declarationReference.GetSyntax() as VariableDeclaratorSyntax;
+                        var fieldSyntax = declarationReference?.GetSyntax() as VariableDeclaratorSyntax;
                         if (fieldSyntax == null)
                         {
                             continue;

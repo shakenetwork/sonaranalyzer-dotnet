@@ -19,8 +19,6 @@
  */
 
 using Microsoft.CodeAnalysis.Diagnostics;
-using System;
-using System.Diagnostics;
 
 namespace SonarLint.Helpers
 {

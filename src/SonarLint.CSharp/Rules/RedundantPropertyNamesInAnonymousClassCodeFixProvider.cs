@@ -71,15 +71,17 @@ namespace SonarLint.Rules.CSharp
 
         private static SyntaxNodeOrToken GetNewSyntaxListItem(SyntaxNodeOrToken item)
         {
-            if (item.IsNode)
+            if (!item.IsNode)
             {
-                var member = (AnonymousObjectMemberDeclaratorSyntax)item.AsNode();
-                var identifier = member.Expression as IdentifierNameSyntax;
-                if (identifier != null &&
-                    identifier.Identifier.ValueText == member.NameEquals.Name.Identifier.ValueText)
-                {
-                    return SyntaxFactory.AnonymousObjectMemberDeclarator(member.Expression).WithTriviaFrom(member);
-                }
+                return item;
+            }
+
+            var member = (AnonymousObjectMemberDeclaratorSyntax)item.AsNode();
+            var identifier = member.Expression as IdentifierNameSyntax;
+            if (identifier != null &&
+                identifier.Identifier.ValueText == member.NameEquals.Name.Identifier.ValueText)
+            {
+                return SyntaxFactory.AnonymousObjectMemberDeclarator(member.Expression).WithTriviaFrom(member);
             }
 
             return item;

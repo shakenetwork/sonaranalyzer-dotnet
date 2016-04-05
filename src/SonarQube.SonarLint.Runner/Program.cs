@@ -67,7 +67,7 @@ namespace SonarLint.Runner
                 foreach (var file in configuration.Files)
                 {
                     xmlOut.Flush();
-                    Write(currentFileIndex + "/" + configuration.Files.Count() + " files analyzed, starting to analyze: " + file);
+                    Write(currentFileIndex + "/" + configuration.Files.Count + " files analyzed, starting to analyze: " + file);
                     currentFileIndex++;
 
                     try
@@ -137,7 +137,7 @@ namespace SonarLint.Runner
                             xmlOut.WriteElementString("Id", diagnostic.Id);
                             if (diagnostic.Location != Location.None)
                             {
-                                xmlOut.WriteElementString("Line", (diagnostic.GetLineNumberToReport()).ToString(CultureInfo.InvariantCulture));
+                                xmlOut.WriteElementString("Line", diagnostic.GetLineNumberToReport().ToString(CultureInfo.InvariantCulture));
                             }
                             xmlOut.WriteElementString("Message", diagnostic.GetMessage());
                             xmlOut.WriteEndElement();

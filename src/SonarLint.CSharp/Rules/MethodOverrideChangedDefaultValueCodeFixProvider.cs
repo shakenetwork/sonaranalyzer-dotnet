@@ -63,11 +63,7 @@ namespace SonarLint.Rules.CSharp
 
             var semanticModel = await context.Document.GetSemanticModelAsync(context.CancellationToken).ConfigureAwait(false);
             var parameterSymbol = semanticModel.GetDeclaredSymbol(parameter);
-            if (parameterSymbol == null)
-            {
-                return;
-            }
-            var methodSymbol = parameterSymbol.ContainingSymbol as IMethodSymbol;
+            var methodSymbol = parameterSymbol?.ContainingSymbol as IMethodSymbol;
             if (methodSymbol == null)
             {
                 return;

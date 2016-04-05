@@ -64,8 +64,7 @@ namespace SonarLint.Rules.CSharp
                     var methodSyntax = (MethodDeclarationSyntax)c.Node;
                     var methodSymbol = c.SemanticModel.GetDeclaredSymbol(methodSyntax);
 
-                    if (methodSymbol == null ||
-                        methodSymbol.PartialDefinitionPart == null)
+                    if (methodSymbol?.PartialDefinitionPart == null)
                     {
                         return;
                     }

@@ -49,21 +49,25 @@ namespace SonarLint.Rules.CSharp
         public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
         {
             var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
+            var diagnostic = context.Diagnostics.First();
+            var diagnosticSpan = diagnostic.Location.SourceSpan;
+            var prefix = root.FindNode(diagnosticSpan, getInnermostNodeForTie: true) as PrefixUnaryExpressionSyntax;
+
+            if (prefix == null)
+            {
+                return;
+            }
 
             context.RegisterCodeFix(
                 CodeAction.Create(
                     Title,
                     c =>
                     {
-                        var diagnostic = context.Diagnostics.First();
-                        var diagnosticSpan = diagnostic.Location.SourceSpan;
-                        var prefix = root.FindNode(diagnosticSpan, getInnermostNodeForTie: true) as PrefixUnaryExpressionSyntax;
-
                         ExpressionSyntax expression;
                         uint count;
                         GetExpression(prefix, out expression, out count);
 
-                        if (count%2==1)
+                        if (count%2 == 1)
                         {
                             expression = SyntaxFactory.PrefixUnaryExpression(
                                 prefix.Kind(),

@@ -143,7 +143,7 @@ namespace SonarLint.Rules.CSharp
                 .Select((argument, index) =>
                 {
                     var identifier = argument.Expression as IdentifierNameSyntax;
-                    var identifierName = identifier == null ? null : identifier.Identifier.Text;
+                    var identifierName = identifier?.Identifier.Text;
 
                     IdentifierArgument identifierArgument;
                     if (argument.NameColon == null)

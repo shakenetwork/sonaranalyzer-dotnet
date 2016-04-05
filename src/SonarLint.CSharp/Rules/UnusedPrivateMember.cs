@@ -346,13 +346,15 @@ namespace SonarLint.Rules.CSharp
                     }
                 }
 
-                if (ctor.SyntaxNode.Initializer != null)
+                if (ctor.SyntaxNode.Initializer == null)
                 {
-                    var baseCtor = ctor.SemanticModel.GetSymbolInfo(ctor.SyntaxNode.Initializer).Symbol;
-                    if (baseCtor != null)
-                    {
-                        usedSymbols.Add(baseCtor);
-                    }
+                    continue;
+                }
+
+                var baseCtor = ctor.SemanticModel.GetSymbolInfo(ctor.SyntaxNode.Initializer).Symbol;
+                if (baseCtor != null)
+                {
+                    usedSymbols.Add(baseCtor);
                 }
             }
         }

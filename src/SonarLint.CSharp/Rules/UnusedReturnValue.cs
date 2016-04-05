@@ -150,7 +150,7 @@ namespace SonarLint.Rules.CSharp
                         {
                             SyntaxNode = node,
                             SemanticModel = container.SemanticModel,
-                            MethodSymbol = container.SemanticModel.GetDeclaredSymbol(node) as IMethodSymbol
+                            MethodSymbol = container.SemanticModel.GetDeclaredSymbol(node)
                         }))
                     .Where(node =>
                         node.MethodSymbol != null &&

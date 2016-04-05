@@ -70,12 +70,7 @@ namespace SonarLint.Rules.CSharp
         protected override bool IsAssignmentToParameter(ISymbol symbol)
         {
             var parameterSymbol = symbol as IParameterSymbol;
-            if (parameterSymbol == null)
-            {
-                return false;
-            }
-
-            return parameterSymbol.RefKind == RefKind.None;
+            return parameterSymbol?.RefKind == RefKind.None;
         }
 
         protected override SyntaxNode GetAssignedNode(AssignmentExpressionSyntax assignment) => assignment.Left;

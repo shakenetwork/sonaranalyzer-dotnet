@@ -39,7 +39,7 @@ namespace SonarLint.Common.VisualBasic
             }
         }
 
-        protected override Func<string, bool> HasValidCommentContent => line => (line.Any(char.IsLetter) || line.Any(char.IsDigit));
+        protected override Func<string, bool> HasValidCommentContent => line => line.Any(char.IsLetter) || line.Any(char.IsDigit);
         protected override Func<SyntaxToken, bool> IsEndOfFile => token => token.IsKind(SyntaxKind.EndOfFileToken);
         protected override Func<SyntaxToken, bool> IsNoneToken => token => token.IsKind(SyntaxKind.None);
         protected override Func<SyntaxTrivia, bool> IsCommentTrivia => trivia => TriviaKinds.Contains(trivia.Kind());

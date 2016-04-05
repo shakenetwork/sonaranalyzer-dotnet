@@ -99,17 +99,13 @@ namespace SonarLint.Rules.CSharp
             }
 
             var memberAccess = invocation.Expression as MemberAccessExpressionSyntax;
-            if (memberAccess == null)
-            {
-                return;
-            }
 
-            var baseCall = memberAccess.Expression as BaseExpressionSyntax;
+            var baseCall = memberAccess?.Expression as BaseExpressionSyntax;
             if (baseCall == null)
             {
                 return;
             }
-            
+
             if (invokedMethod.IsInType(KnownType.System_Object) &&
                 !IsEqualsCallInGuardCondition(invocation, invokedMethod))
             {

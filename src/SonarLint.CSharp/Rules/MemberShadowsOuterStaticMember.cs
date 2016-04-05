@@ -62,7 +62,7 @@ namespace SonarLint.Rules.CSharp
             context.RegisterSymbolAction(
                 c =>
                 {
-                    var innerClassSymbol = c.Symbol as INamedTypeSymbol;
+                    var innerClassSymbol = (INamedTypeSymbol)c.Symbol;
                     var containerClassSymbol = innerClassSymbol.ContainingType;
                     if (!innerClassSymbol.IsClass() ||
                         !containerClassSymbol.IsClass())
@@ -120,87 +120,74 @@ namespace SonarLint.Rules.CSharp
                 .OfType<INamedTypeSymbol>()
                 .Any(nt => nt.Is(TypeKind.Class) || nt.Is(TypeKind.Delegate));
 
-            if (shadowsClassOrDelegate)
+            if (!shadowsClassOrDelegate)
             {
-                foreach (var reference in namedType.DeclaringSyntaxReferences)
+                return;
+            }
+
+            foreach (var reference in namedType.DeclaringSyntaxReferences)
+            {
+                var syntax = reference.GetSyntax();
+                var delegateSyntax = syntax as DelegateDeclarationSyntax;
+                if (delegateSyntax != null)
                 {
-                    var syntax = reference.GetSyntax();
-                    var delegateSyntax = syntax as DelegateDeclarationSyntax;
-                    if (delegateSyntax != null)
-                    {
-                        context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, delegateSyntax.Identifier.GetLocation(), "delegate"));
-                        continue;
-                    }
-                    var classSyntax = syntax as ClassDeclarationSyntax;
-                    if (classSyntax != null)
-                    {
-                        context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, classSyntax.Identifier.GetLocation(), "class"));
-                        continue;
-                    }
+                    context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, delegateSyntax.Identifier.GetLocation(), "delegate"));
+                    continue;
+                }
+                var classSyntax = syntax as ClassDeclarationSyntax;
+                if (classSyntax != null)
+                {
+                    context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, classSyntax.Identifier.GetLocation(), "class"));
+                    continue;
                 }
             }
         }
 
         private static void CheckMethod(SymbolAnalysisContext context, INamedTypeSymbol containerClassSymbol, IMethodSymbol method)
         {
-            CheckEventOrMethod(method, containerClassSymbol, context, e =>
-            {
-                var reference = e.DeclaringSyntaxReferences.FirstOrDefault();
-                if (reference == null)
+            CheckEventOrMethod(method, containerClassSymbol, context,
+                e =>
                 {
-                    return null;
-                }
-                var syntax = reference.GetSyntax() as MethodDeclarationSyntax;
-                if (syntax == null)
-                {
-                    return null;
-                }
-                return syntax.Identifier.GetLocation();
-            }, "method");
+                    var reference = e.DeclaringSyntaxReferences.FirstOrDefault();
+                    var syntax = reference?.GetSyntax() as MethodDeclarationSyntax;
+                    return syntax?.Identifier.GetLocation();
+                },
+                "method");
         }
 
         private static void CheckEvent(SymbolAnalysisContext c, INamedTypeSymbol containerClassSymbol, IEventSymbol @event)
         {
-            CheckEventOrMethod(@event, containerClassSymbol, c, e =>
-            {
-                var reference = e.DeclaringSyntaxReferences.FirstOrDefault();
-                if (reference == null)
+            CheckEventOrMethod(@event, containerClassSymbol, c,
+                e =>
                 {
-                    return null;
-                }
+                    var reference = e.DeclaringSyntaxReferences.FirstOrDefault();
+                    if (reference == null)
+                    {
+                        return null;
+                    }
 
-                var variableSyntax = reference.GetSyntax() as VariableDeclaratorSyntax;
-                if (variableSyntax != null)
-                {
-                    return variableSyntax.Identifier.GetLocation();
-                }
+                    var variableSyntax = reference.GetSyntax() as VariableDeclaratorSyntax;
+                    if (variableSyntax != null)
+                    {
+                        return variableSyntax.Identifier.GetLocation();
+                    }
 
-                var eventSyntax = reference.GetSyntax() as EventDeclarationSyntax;
-                if (eventSyntax != null)
-                {
-                    return eventSyntax.Identifier.GetLocation();
-                }
-
-                return null;
-            }, "event");
+                    var eventSyntax = reference.GetSyntax() as EventDeclarationSyntax;
+                    return eventSyntax?.Identifier.GetLocation();
+                },
+                "event");
         }
 
         private static void CheckField(SymbolAnalysisContext c, INamedTypeSymbol containerClassSymbol, IFieldSymbol field)
         {
-            CheckFieldOrProperty(field, containerClassSymbol, c, f =>
-            {
-                var reference = f.DeclaringSyntaxReferences.FirstOrDefault();
-                if (reference == null)
+            CheckFieldOrProperty(field, containerClassSymbol, c,
+                f =>
                 {
-                    return null;
-                }
-                var syntax = reference.GetSyntax() as VariableDeclaratorSyntax;
-                if (syntax == null)
-                {
-                    return null;
-                }
-                return syntax.Identifier.GetLocation();
-            }, "field");
+                    var reference = f.DeclaringSyntaxReferences.FirstOrDefault();
+                    var syntax = reference?.GetSyntax() as VariableDeclaratorSyntax;
+                    return syntax?.Identifier.GetLocation();
+                },
+                "field");
         }
 
         private static void CheckProperty(SymbolAnalysisContext c, INamedTypeSymbol containerClassSymbol, IPropertySymbol property)

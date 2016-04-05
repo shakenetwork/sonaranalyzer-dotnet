@@ -26,7 +26,6 @@ using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using System.Linq;
 using System.Collections.Generic;
 
 namespace SonarLint.Rules.CSharp
@@ -65,17 +64,20 @@ namespace SonarLint.Rules.CSharp
                     var invocation = (InvocationExpressionSyntax)c.Node;
                     var methodSymbol = c.SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
 
-                    if (IsSumOnInteger(methodSymbol) &&
-                        IsSumInsideUnchecked(invocation))
+                    if (!IsSumOnInteger(methodSymbol) ||
+                        !IsSumInsideUnchecked(invocation))
                     {
-                        var expression = invocation.Expression;
-                        var memberAccess = expression as MemberAccessExpressionSyntax;
-                        if (memberAccess == null)
-                        {
-                            return;
-                        }
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, memberAccess.Name.GetLocation()));
+                        return;
                     }
+
+                    var expression = invocation.Expression;
+                    var memberAccess = expression as MemberAccessExpressionSyntax;
+                    if (memberAccess == null)
+                    {
+                        return;
+                    }
+
+                    c.ReportDiagnostic(Diagnostic.Create(Rule, memberAccess.Name.GetLocation()));
                 },
                 SyntaxKind.InvocationExpression);
         }
@@ -147,7 +149,7 @@ namespace SonarLint.Rules.CSharp
         {
             KnownType.System_Int64,
             KnownType.System_Int32,
-            KnownType.System_Decimal,
+            KnownType.System_Decimal
         }.ToImmutableHashSet();
     }
 }

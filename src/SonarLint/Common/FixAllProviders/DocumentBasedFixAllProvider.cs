@@ -180,13 +180,11 @@ namespace SonarLint.Common
 
         private static SyntaxNode RemoveAnnotationIfExists(SyntaxNode root, SyntaxAnnotation annotation)
         {
-            var elements = root.GetAnnotatedNodesAndTokens(annotation);
-            if (!elements.Any())
+            var element = root.GetAnnotatedNodesAndTokens(annotation).FirstOrDefault();
+            if (element == default(SyntaxNodeOrToken))
             {
                 return root;
             }
-
-            var element = elements.First();
 
             if (element.IsNode)
             {

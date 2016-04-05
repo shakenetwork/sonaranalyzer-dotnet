@@ -247,7 +247,7 @@ namespace SonarLint.Rules.CSharp
             return firstStatement != secondStatement && firstStatement.Parent == secondStatement.Parent;
         }
 
-        private static bool ReferenceInAssignmentRight(List<IdentifierNameSyntax> references, AssignmentExpressionSyntax currentAssignment)
+        private static bool ReferenceInAssignmentRight(IEnumerable<IdentifierNameSyntax> references, AssignmentExpressionSyntax currentAssignment)
         {
             return references.Any(reference =>
                 reference.SpanStart >= currentAssignment.Right.SpanStart &&

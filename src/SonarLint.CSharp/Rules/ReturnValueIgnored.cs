@@ -18,7 +18,6 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System;
 using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
@@ -155,7 +154,7 @@ namespace SonarLint.Rules.CSharp
             KnownType.System_Collections_Immutable_ImmutableSortedSet,
             KnownType.System_Collections_Immutable_ImmutableSortedSet_T,
             KnownType.System_Collections_Immutable_ImmutableStack,
-            KnownType.System_Collections_Immutable_ImmutableStack_T,
+            KnownType.System_Collections_Immutable_ImmutableStack_T
         });
 
         private static bool IsLinqMethod(IMethodSymbol methodSymbol)

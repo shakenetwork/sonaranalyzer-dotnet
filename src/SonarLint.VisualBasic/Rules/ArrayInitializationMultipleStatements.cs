@@ -74,8 +74,7 @@ namespace SonarLint.Rules.VisualBasic
                     }
 
                     var name = declarator.Names.First();
-                    if (name == null ||
-                        name.ArrayBounds == null ||
+                    if (name?.ArrayBounds == null ||
                         name.ArrayBounds.Arguments.Count != 1)
                     {
                         return;
@@ -120,8 +119,7 @@ namespace SonarLint.Rules.VisualBasic
                 }
 
                 var invocation = assignment.Left as InvocationExpressionSyntax;
-                if (invocation == null ||
-                    invocation.ArgumentList == null ||
+                if (invocation?.ArgumentList == null ||
                     invocation.ArgumentList.Arguments.Count != 1)
                 {
                     yield break;

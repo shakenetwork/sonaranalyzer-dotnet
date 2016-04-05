@@ -140,12 +140,9 @@ namespace SonarLint.Rules.CSharp
             }
 
             var methodSymbol = semanticModel.GetDeclaredSymbol(methodDeclaration);
-            if (methodSymbol == null)
-            {
-                return false;
-            }
 
-            return methodSymbol.IsChangeable();
+            return methodSymbol != null &&
+                methodSymbol.IsChangeable();
         }
 
         private static List<string> GetUsedTypeParameters(IEnumerable<SyntaxNode> declarations,
@@ -162,9 +159,7 @@ namespace SonarLint.Rules.CSharp
                         ? localContext.SemanticModel
                         : compilation.GetSemanticModel(identifier.SyntaxTree);
 
-                    return semanticModelOfThisTree == null
-                        ? null
-                        : semanticModelOfThisTree.GetSymbolInfo(identifier).Symbol;
+                    return semanticModelOfThisTree?.GetSymbolInfo(identifier).Symbol;
                 })
                 .Where(symbol => symbol != null && symbol.Kind == SymbolKind.TypeParameter)
                 .Select(symbol => symbol.Name)

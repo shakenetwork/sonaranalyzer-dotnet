@@ -43,9 +43,7 @@ namespace SonarLint.Rules.CSharp
         public override ImmutableArray<SyntaxKind> SyntaxKindsOfInterest => kindsOfInterest;
 
         protected override IEnumerable<ParameterSyntax> GetParameters(BaseMethodDeclarationSyntax method) =>
-            method.ParameterList == null
-            ? Enumerable.Empty<ParameterSyntax>()
-            : method.ParameterList.Parameters;
+            method.ParameterList?.Parameters ?? Enumerable.Empty<ParameterSyntax>();
 
         protected override bool IsOptional(ParameterSyntax parameter) =>
             parameter.Default != null && parameter.Default.Value != null;

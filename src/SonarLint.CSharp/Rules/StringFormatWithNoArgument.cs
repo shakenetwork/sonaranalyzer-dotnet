@@ -76,44 +76,46 @@ namespace SonarLint.Rules.CSharp
                     }
 
                     var lookup = new MethodParameterLookup(invocation, c.SemanticModel);
-                    if (!InvocationHasFormatArgument(invocation, lookup))
+                    if (InvocationHasFormatArgument(invocation, lookup))
                     {
-                        var formatArgument = invocation.ArgumentList.Arguments
-                            .FirstOrDefault(arg =>
-                            {
-                                IParameterSymbol parameter;
-                                return lookup.TryGetParameterSymbol(arg, out parameter) &&
-                                    parameter.Name == "format";
-                            });
-                        if (formatArgument == null)
-                        {
-                            return;
-                        }
-
-                        var constValue = c.SemanticModel.GetConstantValue(formatArgument.Expression);
-                        if (!constValue.HasValue)
-                        {
-                            // we don't report on non-contant format strings
-                            return;
-                        }
-
-                        var formatString = constValue.Value as string;
-                        if (formatString == null)
-                        {
-                            return;
-                        }
-
-                        if (!StringFormatArgumentNumberMismatch.FormatterAcceptsArgumentCount(formatString, 0))
-                        {
-                            ///A more severe issue is already reported by <see cref="StringFormatArgumentNumberMismatch"/>
-                            return;
-                        }
-
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.Expression.GetLocation(),
-                            ImmutableDictionary<string, string>.Empty.Add(
-                                FormatStringIndexKey,
-                                invocation.ArgumentList.Arguments.IndexOf(formatArgument).ToString(CultureInfo.InvariantCulture))));
+                        return;
                     }
+
+                    var formatArgument = invocation.ArgumentList.Arguments
+                        .FirstOrDefault(arg =>
+                        {
+                            IParameterSymbol parameter;
+                            return lookup.TryGetParameterSymbol(arg, out parameter) &&
+                                   parameter.Name == "format";
+                        });
+                    if (formatArgument == null)
+                    {
+                        return;
+                    }
+
+                    var constValue = c.SemanticModel.GetConstantValue(formatArgument.Expression);
+                    if (!constValue.HasValue)
+                    {
+                        // we don't report on non-contant format strings
+                        return;
+                    }
+
+                    var formatString = constValue.Value as string;
+                    if (formatString == null)
+                    {
+                        return;
+                    }
+
+                    if (!StringFormatArgumentNumberMismatch.FormatterAcceptsArgumentCount(formatString, 0))
+                    {
+                        ///A more severe issue is already reported by <see cref="StringFormatArgumentNumberMismatch"/>
+                        return;
+                    }
+
+                    c.ReportDiagnostic(Diagnostic.Create(Rule, invocation.Expression.GetLocation(),
+                        ImmutableDictionary<string, string>.Empty.Add(
+                            FormatStringIndexKey,
+                            invocation.ArgumentList.Arguments.IndexOf(formatArgument).ToString(CultureInfo.InvariantCulture))));
                 },
                 SyntaxKind.InvocationExpression);
         }

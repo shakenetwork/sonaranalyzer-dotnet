@@ -50,18 +50,9 @@ namespace SonarLint.Rules.CSharp
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var simpleNameSyntax = root.FindNode(diagnosticSpan) as SimpleNameSyntax;
-            if (simpleNameSyntax == null)
-            {
-                return;
-            }
+            var memberAccessExpressionSyntax = simpleNameSyntax?.Parent as MemberAccessExpressionSyntax;
+            var invocationExpressionSyntax = memberAccessExpressionSyntax?.Parent as InvocationExpressionSyntax;
 
-            var memberAccessExpressionSyntax = simpleNameSyntax.Parent as MemberAccessExpressionSyntax;
-            if (memberAccessExpressionSyntax == null)
-            {
-                return;
-            }
-
-            var invocationExpressionSyntax = memberAccessExpressionSyntax.Parent as InvocationExpressionSyntax;
             if (invocationExpressionSyntax == null)
             {
                 return;

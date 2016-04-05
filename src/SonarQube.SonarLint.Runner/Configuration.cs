@@ -33,8 +33,6 @@ namespace SonarLint.Runner
     public class Configuration
     {
         private readonly ImmutableArray<DiagnosticAnalyzer> analyzers;
-        private readonly AnalyzerLanguage language;
-        private readonly XDocument xml;
 
         public string Path { get; private set; }
 
@@ -52,10 +50,9 @@ namespace SonarLint.Runner
             }
 
             Path = path;
-            this.language = language;
             analyzers = ImmutableArray.Create(GetAnalyzers(language).ToArray());
 
-            this.xml = XDocument.Load(path);
+            var xml = XDocument.Load(path);
             var settings = ParseSettings(xml);
             IgnoreHeaderComments = "true".Equals(settings["sonar.cs.ignoreHeaderComments"], StringComparison.OrdinalIgnoreCase);
 

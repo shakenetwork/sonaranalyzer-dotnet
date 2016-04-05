@@ -25,7 +25,6 @@ using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using SonarLint.Common;
 
 namespace SonarLint.Rules.CSharp
 {

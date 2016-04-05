@@ -149,12 +149,7 @@ namespace SonarLint.Rules.CSharp
         private static bool CheckSetAccessorIfAny(PropertyDeclarationSyntax propertySyntax, IPropertySymbol propertySymbol,
             SemanticModel semanticModel)
         {
-            if (propertySyntax.AccessorList == null)
-            {
-                return true;
-            }
-
-            var setAccessor = propertySyntax.AccessorList.Accessors.FirstOrDefault(a => a.IsKind(SyntaxKind.SetAccessorDeclaration));
+            var setAccessor = propertySyntax.AccessorList?.Accessors.FirstOrDefault(a => a.IsKind(SyntaxKind.SetAccessorDeclaration));
             if (setAccessor == null)
             {
                 return true;
@@ -208,12 +203,8 @@ namespace SonarLint.Rules.CSharp
 
             var expressionToCheck = GetExpressionToCheck(methodSyntax.Body, methodSyntax.ExpressionBody, !methodSymbol.ReturnsVoid)
                 as InvocationExpressionSyntax;
-            if (expressionToCheck == null)
-            {
-                return false;
-            }
 
-            var memberAccess = expressionToCheck.Expression as MemberAccessExpressionSyntax;
+            var memberAccess = expressionToCheck?.Expression as MemberAccessExpressionSyntax;
             if (memberAccess == null ||
                 !(memberAccess.Expression is BaseExpressionSyntax))
             {
@@ -241,32 +232,34 @@ namespace SonarLint.Rules.CSharp
         private static bool AreArgumentsMatchParameters(IMethodSymbol methodSymbol, SemanticModel semanticModel,
             InvocationExpressionSyntax expressionToCheck, IMethodSymbol invokedMethod)
         {
-            if (invokedMethod.Parameters.Any())
+            if (!invokedMethod.Parameters.Any())
             {
-                if (expressionToCheck.ArgumentList == null ||
-                    invokedMethod.Parameters.Length != expressionToCheck.ArgumentList.Arguments.Count)
+                return true;
+            }
+
+            if (expressionToCheck.ArgumentList == null ||
+                invokedMethod.Parameters.Length != expressionToCheck.ArgumentList.Arguments.Count)
+            {
+                return false;
+            }
+
+            var argumentExpressions = expressionToCheck.ArgumentList.Arguments
+                .Select(a => a.Expression as IdentifierNameSyntax)
+                .ToList();
+
+            if (argumentExpressions.Any(identifier => identifier == null))
+            {
+                return false;
+            }
+
+            for (int i = 0; i < argumentExpressions.Count; i++)
+            {
+                var parameterSymbol = semanticModel.GetSymbolInfo(argumentExpressions[i]).Symbol as IParameterSymbol;
+                if (parameterSymbol == null ||
+                    !parameterSymbol.Equals(methodSymbol.Parameters[i]) ||
+                    parameterSymbol.Name != methodSymbol.OverriddenMethod.Parameters[i].Name)
                 {
                     return false;
-                }
-
-                var argumentExpressions = expressionToCheck.ArgumentList.Arguments
-                    .Select(a => a.Expression as IdentifierNameSyntax)
-                    .ToList();
-
-                if (argumentExpressions.Any(identifier => identifier == null))
-                {
-                    return false;
-                }
-
-                for (int i = 0; i < argumentExpressions.Count; i++)
-                {
-                    var parameterSymbol = semanticModel.GetSymbolInfo(argumentExpressions[i]).Symbol as IParameterSymbol;
-                    if (parameterSymbol == null ||
-                        !parameterSymbol.Equals(methodSymbol.Parameters[i]) ||
-                        parameterSymbol.Name != methodSymbol.OverriddenMethod.Parameters[i].Name)
-                    {
-                        return false;
-                    }
                 }
             }
 

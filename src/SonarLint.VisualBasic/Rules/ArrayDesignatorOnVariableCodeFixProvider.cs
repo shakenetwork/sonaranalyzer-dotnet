@@ -45,18 +45,14 @@ namespace SonarLint.Rules.VisualBasic
             return WellKnownFixAllProviders.BatchFixer;
         }
 
-        public override sealed async Task RegisterCodeFixesAsync(CodeFixContext context)
+        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
         {
             var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var name = root.FindNode(diagnosticSpan) as ModifiedIdentifierSyntax;
-            if (name == null)
-            {
-                return;
-            }
 
-            var variableDeclarator = name.Parent as VariableDeclaratorSyntax;
+            var variableDeclarator = name?.Parent as VariableDeclaratorSyntax;
             if (variableDeclarator == null ||
                 variableDeclarator.Names.Count != 1)
             {

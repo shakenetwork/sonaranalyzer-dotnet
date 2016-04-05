@@ -26,7 +26,6 @@ using System.Linq;
 using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CSharp;
 using SonarLint.Common;
-using System;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Formatting;
 
@@ -94,23 +93,23 @@ namespace SonarLint.Rules.CSharp
         private static SyntaxNode RemoveRedundantUnsafe(SyntaxNode root, SyntaxToken token)
         {
             var unsafeStatement = token.Parent as UnsafeStatementSyntax;
-            if (unsafeStatement != null)
+            if (unsafeStatement == null)
             {
-                var parentBlock = unsafeStatement.Parent as BlockSyntax;
-                if (parentBlock != null &&
-                    parentBlock.Statements.Count == 1)
-                {
-                    return root.ReplaceNode(
-                        parentBlock,
-                        parentBlock.WithStatements(unsafeStatement.Block.Statements).WithAdditionalAnnotations(Formatter.Annotation));
-                }
-
-                return root.ReplaceNode(
-                    unsafeStatement,
-                    unsafeStatement.Block.WithAdditionalAnnotations(Formatter.Annotation));
+                return RemoveRedundantToken(root, token);
             }
 
-            return RemoveRedundantToken(root, token);
+            var parentBlock = unsafeStatement.Parent as BlockSyntax;
+            if (parentBlock != null &&
+                parentBlock.Statements.Count == 1)
+            {
+                return root.ReplaceNode(
+                    parentBlock,
+                    parentBlock.WithStatements(unsafeStatement.Block.Statements).WithAdditionalAnnotations(Formatter.Annotation));
+            }
+
+            return root.ReplaceNode(
+                unsafeStatement,
+                unsafeStatement.Block.WithAdditionalAnnotations(Formatter.Annotation));
         }
 
         private static SyntaxNode RemoveRedundantToken(SyntaxNode root, SyntaxToken token)

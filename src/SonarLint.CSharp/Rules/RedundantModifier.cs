@@ -18,7 +18,6 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System;
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
@@ -228,12 +227,7 @@ namespace SonarLint.Rules.CSharp
             }
 
             var property = memberDeclaration as PropertyDeclarationSyntax;
-            if (property != null)
-            {
-                return property.Modifiers;
-            }
-
-            return default(SyntaxTokenList);
+            return property?.Modifiers ?? default(SyntaxTokenList);
         }
 
         private static void CheckSealedMemberInSealedClass(SyntaxNodeAnalysisContext context)

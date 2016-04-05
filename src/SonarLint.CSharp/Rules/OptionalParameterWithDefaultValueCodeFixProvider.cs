@@ -48,7 +48,7 @@ namespace SonarLint.Rules.CSharp
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var attribute = root.FindNode(diagnosticSpan) as AttributeSyntax;
 
-            if (attribute.ArgumentList == null ||
+            if (attribute?.ArgumentList == null ||
                 attribute.ArgumentList.Arguments.Count != 1)
             {
                 return;

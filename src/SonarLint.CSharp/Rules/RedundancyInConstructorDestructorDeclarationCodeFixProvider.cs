@@ -45,7 +45,7 @@ namespace SonarLint.Rules.CSharp
         }
         public sealed override FixAllProvider GetFixAllProvider() => DocumentBasedFixAllProvider.Instance;
 
-        public override sealed async Task RegisterCodeFixesAsync(CodeFixContext context)
+        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
         {
             var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
             var diagnostic = context.Diagnostics.First();

@@ -102,7 +102,7 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.FieldDeclaration);
         }
 
-        private static List<IdentifierClassDeclarationMapping> GetIdentifierClassMappings(List<IdentifierFieldMapping> identifierFieldMappings)
+        private static List<IdentifierClassDeclarationMapping> GetIdentifierClassMappings(IEnumerable<IdentifierFieldMapping> identifierFieldMappings)
         {
             return identifierFieldMappings
                 .Select(i => new IdentifierClassDeclarationMapping
@@ -114,7 +114,7 @@ namespace SonarLint.Rules.CSharp
                 .ToList();
         }
 
-        private static List<IdentifierFieldMapping> GetIdentifierFieldMappings(VariableDeclaratorSyntax variable,
+        private static IEnumerable<IdentifierFieldMapping> GetIdentifierFieldMappings(VariableDeclaratorSyntax variable,
             INamedTypeSymbol containingType, SemanticModel semanticModel)
         {
             return variable.Initializer.DescendantNodes()
@@ -134,19 +134,15 @@ namespace SonarLint.Rules.CSharp
                             enclosingSymbol.ContainingType.Equals(field.ContainingType)
                     };
                 })
-                .Where(identifier => identifier.IsRelevant)
-                .ToList();
+                .Where(identifier => identifier.IsRelevant);
         }
 
         private static ClassDeclarationSyntax GetClassDeclaration(IFieldSymbol field)
         {
             var reference = field.DeclaringSyntaxReferences.FirstOrDefault();
-            if (reference == null ||
-                reference.SyntaxTree == null)
-            {
-                return null;
-            }
-            return reference.GetSyntax().FirstAncestorOrSelf<ClassDeclarationSyntax>();
+            return reference?.SyntaxTree == null
+                ? null
+                : reference.GetSyntax().FirstAncestorOrSelf<ClassDeclarationSyntax>();
         }
 
         private class IdentifierFieldMapping

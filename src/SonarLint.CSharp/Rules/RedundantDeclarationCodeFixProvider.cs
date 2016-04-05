@@ -60,7 +60,7 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            CodeAction action = null;
+            CodeAction action;
             if (TryGetAction(syntaxNode, root, diagnosticType, context.Document, out action))
             {
                 context.RegisterCodeFix(action, context.Diagnostics);
@@ -112,11 +112,7 @@ namespace SonarLint.Rules.CSharp
         private static bool TryGetRedundantArrayTypeAction(SyntaxNode syntaxNode, SyntaxNode root,
             Document document, out CodeAction action)
         {
-            var arrayTypeSyntax = syntaxNode as ArrayTypeSyntax;
-            if (arrayTypeSyntax == null)
-            {
-                arrayTypeSyntax = syntaxNode.Parent as ArrayTypeSyntax;
-            }
+            var arrayTypeSyntax = syntaxNode as ArrayTypeSyntax ?? syntaxNode.Parent as ArrayTypeSyntax;
 
             var arrayCreation = arrayTypeSyntax?.Parent as ArrayCreationExpressionSyntax;
             if (arrayCreation == null)

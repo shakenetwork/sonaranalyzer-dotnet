@@ -105,7 +105,7 @@ namespace SonarLint.Rules.CSharp
         {
             {SyntaxKind.StructDeclaration, "struct" },
             {SyntaxKind.ClassDeclaration, "class" },
-            {SyntaxKind.InterfaceDeclaration, "interface" },
+            {SyntaxKind.InterfaceDeclaration, "interface" }
         };
 
         private static bool TryGetChangedName(string identifierName, BaseTypeDeclarationSyntax typeDeclaration, bool isUnderscoreAccepted,
@@ -176,15 +176,16 @@ namespace SonarLint.Rules.CSharp
         {
             public static string Convert(string identifierName)
             {
+                var name = identifierName ?? string.Empty;
+
                 // handle special case of two upper case characters:
-                if (identifierName.Length == 2 &&
-                    char.IsUpper(identifierName[0]) &&
-                    char.IsUpper(identifierName[1]))
+                if (name.Length == 2 &&
+                    char.IsUpper(name[0]) &&
+                    char.IsUpper(name[1]))
                 {
-                    return identifierName[0].ToString() + char.ToLowerInvariant(identifierName[1]);
+                    return name[0].ToString() + char.ToLowerInvariant(name[1]);
                 }
 
-                var name = identifierName ?? string.Empty;
                 var suggestion = name;
                 var currentState = CamelCaseState.Start;
                 var currentIndex = 0;

@@ -78,7 +78,7 @@ namespace SonarLint.Helpers
             System_UInt64,
             System_Char,
             System_Byte,
-            System_SByte,
+            System_SByte
         });
 
         public static readonly KnownType System_Exception = new KnownType("System.Exception");

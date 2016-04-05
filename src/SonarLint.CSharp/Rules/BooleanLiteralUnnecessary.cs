@@ -222,12 +222,9 @@ namespace SonarLint.Rules.CSharp
             }
 
             var namedType = (INamedTypeSymbol)type;
-            if(namedType.TypeArguments.Length != 1)
-            {
-                return false;
-            }
 
-            return namedType.TypeArguments[0].Is(KnownType.System_Boolean);
+            return namedType.TypeArguments.Length == 1 &&
+                namedType.TypeArguments[0].Is(KnownType.System_Boolean);
         }
 
         private static bool CheckForNullabilityAndBooleanConstantsReport(BinaryExpressionSyntax binaryExpression,
@@ -331,7 +328,7 @@ namespace SonarLint.Rules.CSharp
                     break;
             }
 
-            context.ReportDiagnostic(Diagnostic.Create(Rule, location));            
+            context.ReportDiagnostic(Diagnostic.Create(Rule, location));
         }
 
         private static Location CalculateExtendedLocation(BinaryExpressionSyntax binaryExpression, bool leftSide)

@@ -62,8 +62,7 @@ namespace SonarLint.Rules.VisualBasic
                 {
                     var propertyStatement = (PropertyStatementSyntax)c.Node;
                     var symbol = c.SemanticModel.GetDeclaredSymbol(propertyStatement);
-                    if (symbol != null &&
-                        symbol.Type is IArrayTypeSymbol)
+                    if (symbol?.Type is IArrayTypeSymbol)
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, propertyStatement.Identifier.GetLocation(), symbol.Name));
                     }

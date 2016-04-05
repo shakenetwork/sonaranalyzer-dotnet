@@ -102,13 +102,9 @@ namespace SonarLint.Rules.CSharp
             }
 
             var statement = setter.Body.Statements[0] as ExpressionStatementSyntax;
-            if (statement == null)
-            {
-                return false;
-            }
-
-            var assignment = statement.Expression as AssignmentExpressionSyntax;
-            if (assignment == null || !assignment.IsKind(SyntaxKind.SimpleAssignmentExpression))
+            var assignment = statement?.Expression as AssignmentExpressionSyntax;
+            if (assignment == null ||
+                !assignment.IsKind(SyntaxKind.SimpleAssignmentExpression))
             {
                 return false;
             }

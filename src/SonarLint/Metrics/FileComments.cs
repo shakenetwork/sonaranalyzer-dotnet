@@ -24,15 +24,13 @@ namespace SonarLint.Common
 {
     public class FileComments
     {
-        private readonly IImmutableSet<int> noSonar;
-        private readonly IImmutableSet<int> nonBlank;
+        public IImmutableSet<int> NoSonar { get; }
+        public IImmutableSet<int> NonBlank { get; }
 
         public FileComments(IImmutableSet<int> noSonar, IImmutableSet<int> nonBlank)
         {
-            this.noSonar = noSonar;
-            this.nonBlank = nonBlank;
+            this.NoSonar = noSonar;
+            this.NonBlank = nonBlank;
         }
-        public IImmutableSet<int> NoSonar { get { return noSonar; } }
-        public IImmutableSet<int> NonBlank { get { return nonBlank; } }
     }
 }

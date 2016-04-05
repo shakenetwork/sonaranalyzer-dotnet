@@ -156,21 +156,14 @@ namespace SonarLint.Rules.CSharp
                 return false;
             }
 
-            foreach (var constraintType in typeParameterSymbol.ConstraintTypes)
-            {
-                var basedOnPossiblyValueType = MightBeValueType(constraintType);
-                if (!basedOnPossiblyValueType)
-                {
-                    return false;
-                }
-            }
-
-            return true;
+            return typeParameterSymbol.ConstraintTypes
+                .Select(constraintType => MightBeValueType(constraintType))
+                .All(basedOnPossiblyValueType => basedOnPossiblyValueType);
         }
 
         private static bool MightBeValueType(ITypeSymbol type)
         {
-            return type.IsInterface() || 
+            return type.IsInterface() ||
                 GenericParameterMightBeValueType(type as ITypeParameterSymbol);
         }
     }

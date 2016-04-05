@@ -174,9 +174,7 @@ namespace SonarLint.Rules.CSharp
             }
 
             var arrayType = semanticModel.GetTypeInfo(collection).Type as IArrayTypeSymbol;
-            return arrayType != null
-                ? arrayType.ElementType
-                : null;
+            return arrayType?.ElementType;
         }
     }
 }

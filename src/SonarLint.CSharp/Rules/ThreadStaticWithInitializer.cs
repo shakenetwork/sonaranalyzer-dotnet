@@ -65,15 +65,17 @@ namespace SonarLint.Rules.CSharp
                 {
                     var fieldDeclaration = (FieldDeclarationSyntax)c.Node;
 
-                    if (fieldDeclaration.Modifiers.Any(modifier => modifier.IsKind(SyntaxKind.StaticKeyword)) &&
-                        HasThreadStaticAttribute(fieldDeclaration.AttributeLists, c.SemanticModel))
+                    if (!fieldDeclaration.Modifiers.Any(modifier => modifier.IsKind(SyntaxKind.StaticKeyword)) ||
+                        !HasThreadStaticAttribute(fieldDeclaration.AttributeLists, c.SemanticModel))
                     {
-                        foreach (var variableDeclaratorSyntax in fieldDeclaration.Declaration.Variables
-                            .Where(variableDeclaratorSyntax => variableDeclaratorSyntax.Initializer != null))
-                        {
-                            c.ReportDiagnostic(Diagnostic.Create(Rule, variableDeclaratorSyntax.Initializer.GetLocation(),
-                                variableDeclaratorSyntax.Identifier.ValueText));
-                        }
+                        return;
+                    }
+
+                    foreach (var variableDeclaratorSyntax in fieldDeclaration.Declaration.Variables
+                        .Where(variableDeclaratorSyntax => variableDeclaratorSyntax.Initializer != null))
+                    {
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, variableDeclaratorSyntax.Initializer.GetLocation(),
+                            variableDeclaratorSyntax.Identifier.ValueText));
                     }
                 },
                 SyntaxKind.FieldDeclaration);

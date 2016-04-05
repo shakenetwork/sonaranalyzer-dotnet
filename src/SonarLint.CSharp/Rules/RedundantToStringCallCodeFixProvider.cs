@@ -42,11 +42,7 @@ namespace SonarLint.Rules.CSharp
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var invocation = root.FindNode(diagnosticSpan, getInnermostNodeForTie: true) as InvocationExpressionSyntax;
-            if (invocation == null)
-            {
-                return;
-            }
-            var memberAccess = invocation.Expression as MemberAccessExpressionSyntax;
+            var memberAccess = invocation?.Expression as MemberAccessExpressionSyntax;
             if (memberAccess == null)
             {
                 return;

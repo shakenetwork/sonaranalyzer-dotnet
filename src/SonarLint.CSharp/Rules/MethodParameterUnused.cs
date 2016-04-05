@@ -122,15 +122,14 @@ namespace SonarLint.Rules.CSharp
                             var methodDeclararion = (MethodDeclarationSyntax)n;
                             return new SyntaxNode[] { methodDeclararion.Body, methodDeclararion.ExpressionBody };
                         }
-                        else if (n.IsKind(SyntaxKind.ConstructorDeclaration))
+
+                        if (n.IsKind(SyntaxKind.ConstructorDeclaration))
                         {
                             var constructorDeclaration = (ConstructorDeclarationSyntax)n;
                             return new SyntaxNode[] { constructorDeclaration.Body, constructorDeclaration.Initializer };
                         }
-                        else
-                        {
-                            throw new InvalidOperationException();
-                        }
+
+                        throw new InvalidOperationException();
                     });
 
             foreach (var body in bodies.Where(b => b != null))

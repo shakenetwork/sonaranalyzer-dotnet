@@ -20,7 +20,6 @@
 
 using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.CodeAnalysis.Text;
 using SonarLint.Common;
 using SonarLint.Helpers;

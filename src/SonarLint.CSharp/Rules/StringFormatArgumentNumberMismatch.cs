@@ -111,24 +111,26 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
-                    var removableArgumentCount = 0;
-                    if (HasAdditionalArguments(formatString, formatArgCount, out removableArgumentCount))
+                    int removableArgumentCount;
+                    if (!HasAdditionalArguments(formatString, formatArgCount, out removableArgumentCount))
                     {
-                        var argument = invocation.ArgumentList.Arguments
-                            .Skip(invocation.ArgumentList.Arguments.Count - removableArgumentCount)
-                            .FirstOrDefault();
-
-                        if (argument == null)
-                        {
-                            return;
-                        }
-
-                        var spanStart = argument.SpanStart;
-                        var location = Location.Create(invocation.SyntaxTree, new TextSpan(
-                            spanStart,
-                            invocation.ArgumentList.Arguments.Last().Span.End - spanStart));
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, location));
+                        return;
                     }
+
+                    var argument = invocation.ArgumentList.Arguments
+                        .Skip(invocation.ArgumentList.Arguments.Count - removableArgumentCount)
+                        .FirstOrDefault();
+
+                    if (argument == null)
+                    {
+                        return;
+                    }
+
+                    var spanStart = argument.SpanStart;
+                    var location = Location.Create(invocation.SyntaxTree, new TextSpan(
+                        spanStart,
+                        invocation.ArgumentList.Arguments.Last().Span.End - spanStart));
+                    c.ReportDiagnostic(Diagnostic.Create(Rule, location));
                 },
                 SyntaxKind.InvocationExpression);
         }

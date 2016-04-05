@@ -21,7 +21,6 @@
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Helpers;
 
@@ -65,14 +64,16 @@ namespace SonarLint.Rules.Common
                     var method = (TMethodSyntax)c.Node;
                     var methodSymbol = c.SemanticModel.GetDeclaredSymbol(method) as IMethodSymbol;
 
-                    if (methodSymbol != null &&
-                        !methodSymbol.IsInterfaceImplementationOrMemberOverride() &&
-                        methodSymbol.IsPublicApi() &&
-                        MethodHasMultidimensionalArrayParameters(methodSymbol))
+                    if (methodSymbol == null ||
+                        methodSymbol.IsInterfaceImplementationOrMemberOverride() ||
+                        !methodSymbol.IsPublicApi() ||
+                        !MethodHasMultidimensionalArrayParameters(methodSymbol))
                     {
-                        var identifier = GetIdentifier(method);
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation()));
+                        return;
                     }
+
+                    var identifier = GetIdentifier(method);
+                    c.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation()));
                 },
                 SyntaxKindsOfInterest.ToArray());
         }

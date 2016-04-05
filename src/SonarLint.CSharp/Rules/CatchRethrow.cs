@@ -125,7 +125,7 @@ namespace SonarLint.Rules.CSharp
             return false;
         }
 
-        private static List<INamedTypeSymbol> ComputeExceptionTypesIfNeeded(List<CatchClauseSyntax> catches, SemanticModel semanticModel)
+        private static List<INamedTypeSymbol> ComputeExceptionTypesIfNeeded(IEnumerable<CatchClauseSyntax> catches, SemanticModel semanticModel)
         {
             return catches
                 .Select(clause =>

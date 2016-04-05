@@ -65,12 +65,9 @@ namespace SonarLint.Helpers
 
         public static string[] ToCustomTags(this IdeVisibility ideVisibility)
         {
-            if (ideVisibility == IdeVisibility.Hidden)
-            {
-                return new[] { WellKnownDiagnosticTags.Unnecessary };
-            }
-
-            return new string[0];
+            return ideVisibility == IdeVisibility.Hidden
+                ? new[] { WellKnownDiagnosticTags.Unnecessary }
+                : new string[0];
         }
     }
 }

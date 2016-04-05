@@ -78,7 +78,7 @@ namespace SonarLint.Rules.CSharp
             var left = leftSelector(nodeWithTwoSides);
             var right = rightSelector(nodeWithTwoSides);
 
-            ITypeSymbol typeOfRight = null;
+            ITypeSymbol typeOfRight;
             if (IsDynamic(left, context.SemanticModel) &&
                 !MightBeConvertibleToInt(right, context.SemanticModel, out typeOfRight))
             {

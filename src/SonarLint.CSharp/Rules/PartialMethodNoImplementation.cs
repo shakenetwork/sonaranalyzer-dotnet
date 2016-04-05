@@ -107,16 +107,18 @@ namespace SonarLint.Rules.CSharp
                 .OfType<MethodDeclarationSyntax>()
                 .Where(method => method.Body == null && method.Modifiers.Any(m => m.IsKind(SyntaxKind.PartialKeyword)));
 
-            if (methodSymbol.PartialImplementationPart == null &&
-                partialDeclarations.Any())
+            if (methodSymbol.PartialImplementationPart != null ||
+                !partialDeclarations.Any())
             {
-                var statement = invocation.Parent as StatementSyntax;
-                if (statement == null)
-                {
-                    return;
-                }
-                context.ReportDiagnostic(Diagnostic.Create(Rule, statement.GetLocation(), "the", MessageAdditional));
+                return;
             }
+
+            var statement = invocation.Parent as StatementSyntax;
+            if (statement == null)
+            {
+                return;
+            }
+            context.ReportDiagnostic(Diagnostic.Create(Rule, statement.GetLocation(), "the", MessageAdditional));
         }
     }
 }

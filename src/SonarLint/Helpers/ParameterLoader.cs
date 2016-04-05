@@ -75,7 +75,7 @@ namespace SonarLint.Helpers
             return builder.ToImmutable();
         }
 
-        private readonly static ConcurrentDictionary<ParameterLoadingDiagnosticAnalyzer, byte> ProcessedAnalyzers =
+        private static readonly ConcurrentDictionary<ParameterLoadingDiagnosticAnalyzer, byte> ProcessedAnalyzers =
             new ConcurrentDictionary<ParameterLoadingDiagnosticAnalyzer, byte>();
 
         public static void SetParameterValues(ParameterLoadingDiagnosticAnalyzer parameteredAnalyzer,
@@ -108,12 +108,7 @@ namespace SonarLint.Helpers
                 var parameter = parameters
                     .FirstOrDefault(p => p.RuleId == parameteredAnalyzer.SupportedDiagnostics.Single().Id);
 
-                if (parameter == null)
-                {
-                    return;
-                }
-
-                var parameterValue = parameter.ParameterValues
+                var parameterValue = parameter?.ParameterValues
                     .FirstOrDefault(pv => pv.ParameterKey == propertyParameterPair.Descriptor.Key);
 
                 if (parameterValue == null)

@@ -93,8 +93,7 @@ namespace SonarLint.Rules.CSharp
             var invocation = (InvocationExpressionSyntax)context.Node;
 
             var methodSymbol = context.SemanticModel.GetSymbolInfo(invocation.Expression).Symbol;
-            if (methodSymbol == null ||
-                methodSymbol.ContainingType == null)
+            if (methodSymbol?.ContainingType == null)
             {
                 return;
             }

@@ -34,7 +34,6 @@ namespace SonarLint.UnitTest.Helpers
         private ClassDeclarationSyntax baseClassDeclaration;
         private ClassDeclarationSyntax derivedClassDeclaration1;
         private ClassDeclarationSyntax derivedClassDeclaration2;
-        private InterfaceDeclarationSyntax interfaceDeclaration;
         private SemanticModel semanticModel;
         private SyntaxTree tree;
 
@@ -57,8 +56,6 @@ namespace SonarLint.UnitTest.Helpers
                     .First(m => m.Identifier.ValueText == "Derived1");
                 derivedClassDeclaration2 = tree.GetRoot().DescendantNodes().OfType<ClassDeclarationSyntax>()
                     .First(m => m.Identifier.ValueText == "Derived2");
-                interfaceDeclaration = tree.GetRoot().DescendantNodes().OfType<InterfaceDeclarationSyntax>()
-                    .First(m => m.Identifier.ValueText == "IInterface");
             }
         }
 

@@ -122,27 +122,21 @@ namespace SonarLint.Rules.CSharp
                 methodSymbol.IsInType(KnownType.System_DateTime);
         }
 
-        private static readonly ISet<string> CommonCultureSpecificMethodNames = ImmutableHashSet.Create(new[]
-        {
+        private static readonly ISet<string> CommonCultureSpecificMethodNames = ImmutableHashSet.Create(
             "ToLower",
             "ToUpper",
-            "Compare"
-        });
+            "Compare");
 
-        private static readonly ISet<string> IndexLookupMethodNames = ImmutableHashSet.Create(new[]
-        {
+        private static readonly ISet<string> IndexLookupMethodNames = ImmutableHashSet.Create(
             "IndexOf",
-            "LastIndexOf",
-        });
+            "LastIndexOf");
 
         private const string CompareToMethodName = "CompareTo";
         private const string ToStringMethodName = "ToString";
 
-        private static readonly ISet<KnownType> StringCultureSpecifierNames = ImmutableHashSet.Create(new []
-        {
+        private static readonly ISet<KnownType> StringCultureSpecifierNames = ImmutableHashSet.Create(
             KnownType.System_Globalization_CultureInfo,
             KnownType.System_Globalization_CompareOptions,
-            KnownType.System_StringComparison
-        });
+            KnownType.System_StringComparison);
     }
 }

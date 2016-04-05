@@ -165,8 +165,8 @@ namespace SonarLint.Rules.CSharp
             var expressionTypeName = expressionType.ToMinimalDisplayString(context.SemanticModel, issueLocation.SourceSpan.Start);
 
             var messageReasoning = expressionType.IsInterface()
-                ? string.Format("implements both \"{0}\" and \"{1}\"", expressionTypeName, interfaceTypeName)
-                : string.Format("extends \"{0}\" and implements \"{1}\"", expressionTypeName, interfaceTypeName);
+                ? $"implements both \"{expressionTypeName}\" and \"{interfaceTypeName}\""
+                : $"extends \"{expressionTypeName}\" and implements \"{interfaceTypeName}\"";
 
             context.ReportDiagnostic(Diagnostic.Create(Rule, issueLocation, messageReasoning));
         }

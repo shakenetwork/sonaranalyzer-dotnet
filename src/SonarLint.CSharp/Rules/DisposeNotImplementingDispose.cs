@@ -199,12 +199,9 @@ namespace SonarLint.Rules.CSharp
                 }
 
                 var interfaceMethods = @interface.GetMembers().OfType<IMethodSymbol>();
-                foreach (var interfaceMethod in interfaceMethods)
+                if (interfaceMethods.Any(interfaceMethod => declaredMethodSymbol.Equals(containingType.FindImplementationForInterfaceMember(interfaceMethod))))
                 {
-                    if (declaredMethodSymbol.Equals(containingType.FindImplementationForInterfaceMember(interfaceMethod)))
-                    {
-                        return true;
-                    }
+                    return true;
                 }
             }
             return false;

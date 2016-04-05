@@ -205,12 +205,7 @@ namespace SonarLint.Rules.CSharp
                 return true;
             }
 
-            if (AreCandidateInvocationsForTernary(expression1, expression2, semanticModel))
-            {
-                return true;
-            }
-
-            return false;
+            return AreCandidateInvocationsForTernary(expression1, expression2, semanticModel);
         }
 
         private static bool AreCandidateAssignments(ExpressionSyntax expression1, ExpressionSyntax expression2,
@@ -247,16 +242,14 @@ namespace SonarLint.Rules.CSharp
         internal static StatementSyntax ExtractSingleStatement(StatementSyntax statement)
         {
             var block = statement as BlockSyntax;
-            if (block != null)
+            if (block == null)
             {
-                if (block.Statements.Count != 1)
-                {
-                    return null;
-                }
-                return block.Statements.First();
+                return statement;
             }
 
-            return statement;
+            return block.Statements.Count == 1
+                ? block.Statements.First()
+                : null;
         }
 
         private static bool AreCandidateInvocationsForNullCoalescing(ExpressionSyntax expression1, ExpressionSyntax expression2,

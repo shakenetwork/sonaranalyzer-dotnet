@@ -55,15 +55,11 @@ namespace SonarLint.Rules.VisualBasic
         protected override bool IsAssignmentToCatchVariable(ISymbol symbol, SyntaxNode node)
         {
             var localSymbol = symbol as ILocalSymbol;
-            if (localSymbol == null)
-            {
-                return false;
-            }
 
             // this could mimic the C# variant too, but that doesn't work:
             // https://github.com/dotnet/roslyn/issues/6209
             // so:
-            var location = localSymbol.Locations.FirstOrDefault();
+            var location = localSymbol?.Locations.FirstOrDefault();
             if (location == null)
             {
                 return false;
@@ -82,12 +78,8 @@ namespace SonarLint.Rules.VisualBasic
         protected override bool IsAssignmentToParameter(ISymbol symbol)
         {
             var parameterSymbol = symbol as IParameterSymbol;
-            if (parameterSymbol == null)
-            {
-                return false;
-            }
 
-            return parameterSymbol.RefKind == RefKind.None;
+            return parameterSymbol?.RefKind == RefKind.None;
         }
 
         protected override SyntaxNode GetAssignedNode(AssignmentStatementSyntax assignment) => assignment.Left;

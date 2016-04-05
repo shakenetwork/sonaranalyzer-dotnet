@@ -28,7 +28,6 @@ using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
 using System.Collections.Generic;
-using System;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -77,7 +76,7 @@ namespace SonarLint.Rules.CSharp
 
             if (!constructors.Any() ||
                 HasNonPrivateConstructor(constructors) ||
-                HasOnlyStaticMembers(members.Except(constructors)))
+                HasOnlyStaticMembers(members.Except(constructors).ToList()))
             {
                 return;
             }
@@ -144,7 +143,7 @@ namespace SonarLint.Rules.CSharp
                 .Where(method => method.MethodKind == MethodKind.Constructor);
         }
 
-        private static bool HasOnlyStaticMembers(IEnumerable<ISymbol> members)
+        private static bool HasOnlyStaticMembers(ICollection<ISymbol> members)
         {
             return members.Any() &&
                 members.All(member => member.IsStatic);

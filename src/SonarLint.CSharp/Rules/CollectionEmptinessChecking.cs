@@ -129,19 +129,15 @@ namespace SonarLint.Rules.CSharp
             countLocation = null;
             typeArgument = null;
             var invocation = expression as InvocationExpressionSyntax;
-            if (invocation == null)
-            {
-                return false;
-            }
-
-            var memberAccess = invocation.Expression as MemberAccessExpressionSyntax;
+            var memberAccess = invocation?.Expression as MemberAccessExpressionSyntax;
             if (memberAccess == null)
             {
                 return false;
             }
 
             var methodSymbol = semanticModel.GetSymbolInfo(memberAccess).Symbol as IMethodSymbol;
-            if (!IsMethodCountExtension(methodSymbol) ||
+            if (methodSymbol == null ||
+                !IsMethodCountExtension(methodSymbol) ||
                 !methodSymbol.IsExtensionOn(KnownType.System_Collections_Generic_IEnumerable_T))
             {
                 return false;
@@ -158,8 +154,7 @@ namespace SonarLint.Rules.CSharp
 
         private static bool IsMethodCountExtension(IMethodSymbol methodSymbol)
         {
-            return methodSymbol != null &&
-                methodSymbol.Name == "Count" &&
+            return methodSymbol.Name == "Count" &&
                 methodSymbol.IsExtensionMethod &&
                 methodSymbol.ReceiverType != null;
         }

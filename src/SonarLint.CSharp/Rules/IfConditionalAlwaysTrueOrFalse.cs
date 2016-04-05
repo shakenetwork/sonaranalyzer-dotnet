@@ -72,16 +72,18 @@ namespace SonarLint.Rules.CSharp
                     var isTrue = ifNode.Condition.IsKind(SyntaxKind.TrueLiteralExpression);
                     var isFalse = ifNode.Condition.IsKind(SyntaxKind.FalseLiteralExpression);
 
-                    if (isTrue || isFalse)
+                    if (!isTrue && !isFalse)
                     {
-                        if (isTrue)
-                        {
-                            ReportIfTrue(ifNode, c);
-                        }
-                        else
-                        {
-                            ReportIfFalse(ifNode, c);
-                        }
+                        return;
+                    }
+
+                    if (isTrue)
+                    {
+                        ReportIfTrue(ifNode, c);
+                    }
+                    else
+                    {
+                        ReportIfFalse(ifNode, c);
                     }
                 },
                 SyntaxKind.IfStatement);

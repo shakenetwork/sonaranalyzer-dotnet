@@ -127,21 +127,24 @@ namespace SonarLint.Rules.CSharp
 
                     var stringFormatArgument = invocation?.Parent as ArgumentSyntax;
                     var stringFormatInvocation = stringFormatArgument?.Parent?.Parent as InvocationExpressionSyntax;
-                    if (stringFormatInvocation != null)
+                    if (stringFormatInvocation == null)
                     {
-                        var stringFormatSymbol = c.SemanticModel.GetSymbolInfo(stringFormatInvocation).Symbol as IMethodSymbol;
+                        return;
+                    }
 
-                        if (IsStringFormatCall(stringFormatSymbol))
-                        {
-                            var parameterLookup = new MethodParameterLookup(stringFormatInvocation, c.SemanticModel);
-                            IParameterSymbol argParameter;
-                            if (parameterLookup.TryGetParameterSymbol(stringFormatArgument, out argParameter) &&
-                                argParameter.Name.StartsWith("arg", StringComparison.Ordinal))
-                            {
-                                c.ReportDiagnostic(Diagnostic.Create(Rule, location, MessageCompiler));
-                                return;
-                            }
-                        }
+                    var stringFormatSymbol = c.SemanticModel.GetSymbolInfo(stringFormatInvocation).Symbol as IMethodSymbol;
+                    if (!IsStringFormatCall(stringFormatSymbol))
+                    {
+                        return;
+                    }
+
+                    var parameterLookup = new MethodParameterLookup(stringFormatInvocation, c.SemanticModel);
+                    IParameterSymbol argParameter;
+                    if (parameterLookup.TryGetParameterSymbol(stringFormatArgument, out argParameter) &&
+                        argParameter.Name.StartsWith("arg", StringComparison.Ordinal))
+                    {
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, location, MessageCompiler));
+                        return;
                     }
                 },
                 SyntaxKind.InvocationExpression);

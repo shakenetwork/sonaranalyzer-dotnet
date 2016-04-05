@@ -21,7 +21,6 @@
 using System.Linq;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis;
-using System;
 using System.Collections.Generic;
 
 namespace SonarLint.Helpers
@@ -30,20 +29,12 @@ namespace SonarLint.Helpers
     internal class MethodParameterLookup
     {
         private readonly InvocationExpressionSyntax invocation;
-        private readonly IMethodSymbol methodSymbol;
+        public IMethodSymbol MethodSymbol { get; }
 
         public MethodParameterLookup(InvocationExpressionSyntax invocation, SemanticModel semanticModel)
         {
             this.invocation = invocation;
-            methodSymbol = semanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
-        }
-
-        public IMethodSymbol MethodSymbol
-        {
-            get
-            {
-                return methodSymbol;
-            }
+            MethodSymbol = semanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
         }
 
         public static bool TryGetParameterSymbol(ArgumentSyntax argument, ArgumentListSyntax argumentList,
@@ -79,7 +70,7 @@ namespace SonarLint.Helpers
 
         public bool TryGetParameterSymbol(ArgumentSyntax argument, out IParameterSymbol parameter)
         {
-            return TryGetParameterSymbol(argument, invocation.ArgumentList, methodSymbol, out parameter);
+            return TryGetParameterSymbol(argument, invocation.ArgumentList, MethodSymbol, out parameter);
         }
 
         internal IEnumerable<ArgumentParameterMapping> GetAllArgumentParameterMappings()

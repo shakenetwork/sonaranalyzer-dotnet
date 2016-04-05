@@ -27,12 +27,8 @@ namespace SonarLint.Helpers
     {
         public static bool AreEquivalent(SyntaxNode node1, SyntaxNode node2)
         {
-            if (node1.Language != node2.Language)
-            {
-                return false;
-            }
-
-            return SyntaxFactory.AreEquivalent(node1, node2);
+            return node1.Language == node2.Language &&
+                SyntaxFactory.AreEquivalent(node1, node2);
         }
 
         public static bool AreEquivalent(SyntaxList<SyntaxNode> nodeList1, SyntaxList<SyntaxNode> nodeList2)

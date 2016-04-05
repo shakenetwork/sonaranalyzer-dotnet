@@ -20,7 +20,6 @@
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarLint.Common;
-using System;
 
 namespace SonarLint.UnitTest.Common
 {

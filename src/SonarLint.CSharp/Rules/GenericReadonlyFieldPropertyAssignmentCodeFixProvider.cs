@@ -61,7 +61,8 @@ namespace SonarLint.Rules.CSharp
             var genericType = typeParameterSymbol.ContainingType;
 
             var classDeclarationTasks = genericType.DeclaringSyntaxReferences
-                .Select(reference => reference.GetSyntaxAsync(context.CancellationToken));
+                .Select(reference => reference.GetSyntaxAsync(context.CancellationToken))
+                .ToList();
 
             await Task.WhenAll(classDeclarationTasks);
 
@@ -94,11 +95,7 @@ namespace SonarLint.Rules.CSharp
             }
 
             var expression = memberAccess.Parent as ExpressionSyntax;
-            if (expression == null)
-            {
-                return;
-            }
-            var statement = expression.Parent as StatementSyntax;
+            var statement = expression?.Parent as StatementSyntax;
             if (statement == null)
             {
                 return;
@@ -116,7 +113,7 @@ namespace SonarLint.Rules.CSharp
         }
 
         private static MultiValueDictionary<DocumentId, ClassDeclarationSyntax> GetDocumentIdClassDeclarationMapping(
-            List<ClassDeclarationSyntax> classDeclarations, Solution currentSolution)
+            IEnumerable<ClassDeclarationSyntax> classDeclarations, Solution currentSolution)
         {
             var mapping = new MultiValueDictionary<DocumentId, ClassDeclarationSyntax>();
             foreach (var classDeclaration in classDeclarations)

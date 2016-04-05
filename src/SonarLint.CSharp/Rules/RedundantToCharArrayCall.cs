@@ -71,17 +71,19 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
-                    if (invocation.Parent is ElementAccessExpressionSyntax ||
-                        invocation.Parent is ForEachStatementSyntax)
+                    if (!(invocation.Parent is ElementAccessExpressionSyntax) &&
+                        !(invocation.Parent is ForEachStatementSyntax))
                     {
-                        var memberAccess = invocation.Expression as MemberAccessExpressionSyntax;
-                        if (memberAccess == null)
-                        {
-                            return;
-                        }
-
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, memberAccess.Name.GetLocation()));
+                        return;
                     }
+
+                    var memberAccess = invocation.Expression as MemberAccessExpressionSyntax;
+                    if (memberAccess == null)
+                    {
+                        return;
+                    }
+
+                    c.ReportDiagnostic(Diagnostic.Create(Rule, memberAccess.Name.GetLocation()));
                 },
                 SyntaxKind.InvocationExpression);
         }

@@ -27,7 +27,6 @@ using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
 using System.Linq;
-using System;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -90,7 +89,7 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.InvocationExpression);
         }
 
-        private bool IsDisposeMethodCalled(InvocationExpressionSyntax invocation, SemanticModel semanticModel)
+        private static bool IsDisposeMethodCalled(InvocationExpressionSyntax invocation, SemanticModel semanticModel)
         {
             var methodSymbol = semanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
             if (methodSymbol == null)
@@ -99,12 +98,8 @@ namespace SonarLint.Rules.CSharp
             }
 
             var disposeMethod = DisposeNotImplementingDispose.GetDisposeMethod(semanticModel.Compilation);
-            if (disposeMethod == null)
-            {
-                return false;
-            }
-
-            return methodSymbol.Equals(methodSymbol.ContainingType.FindImplementationForInterfaceMember(disposeMethod));
+            return disposeMethod != null &&
+                methodSymbol.Equals(methodSymbol.ContainingType.FindImplementationForInterfaceMember(disposeMethod));
         }
 
         private static bool IsDisposableField(ExpressionSyntax expression, SemanticModel semanticModel)

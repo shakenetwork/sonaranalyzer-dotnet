@@ -20,7 +20,7 @@ class MyTest
 {
   public void Test()
   {
-    var fruitBasket = new List<Fruit>();
+    var fruitBasket = new List&lt;Fruit&gt;();
     fruitBasket.Add(new Orange());
     fruitBasket.Add(new Orange());
     // fruitBasket.Add(new Apple());  // uncommenting this line will make both foreach below throw an InvalidCastException
@@ -41,7 +41,7 @@ class MyTest
 
 <h2>Compliant Solution</h2>
 <pre>
-var fruitBasket = new List<Orange>();
+var fruitBasket = new List&lt;Orange&gt;();
 fruitBasket.Add(new Orange());
 fruitBasket.Add(new Orange());
 // fruitBasket.Add(new Apple());  // uncommenting this line won't compile
@@ -53,12 +53,12 @@ foreach (Orange orange in fruitBasket)
 </pre>
 or
 <pre>
-var fruitBasket = new List<Fruit>();
+var fruitBasket = new List&lt;Fruit&gt;();
 fruitBasket.Add(new Orange());
 fruitBasket.Add(new Orange());
 fruitBasket.Add(new Apple());
 
-foreach (Orange orange in fruitBasket.OfType<Orange>())
+foreach (Orange orange in fruitBasket.OfType&lt;Orange&gt;())
 {
   ...
 }

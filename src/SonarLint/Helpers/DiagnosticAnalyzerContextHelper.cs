@@ -37,7 +37,7 @@ namespace SonarLint.Helpers
             Action<SyntaxNodeAnalysisContext> action,
             params TLanguageKindEnum[] syntaxKinds) where TLanguageKindEnum : struct
         {
-            context.RegisterSyntaxNodeAction<TLanguageKindEnum>(
+            context.RegisterSyntaxNodeAction(
                 c =>
                 {
                     if (!c.Node.SyntaxTree.IsGenerated(generatedCodeRecognizer, c.SemanticModel.Compilation))

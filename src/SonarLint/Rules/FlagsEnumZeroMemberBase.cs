@@ -22,7 +22,6 @@ using System;
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Helpers;
 using System.Collections.Generic;
@@ -102,20 +101,22 @@ namespace SonarLint.Rules.Common
                 }
                 var constValue = symbol.ConstantValue;
 
-                if (constValue != null)
+                if (constValue == null)
                 {
-                    try
+                    continue;
+                }
+
+                try
+                {
+                    var v = Convert.ToInt32(constValue);
+                    if (v == 0)
                     {
-                        var v = Convert.ToInt32(constValue);
-                        if (v == 0)
-                        {
-                            return item;
-                        }
+                        return item;
                     }
-                    catch (OverflowException)
-                    {
-                        return null;
-                    }
+                }
+                catch (OverflowException)
+                {
+                    return null;
                 }
             }
             return null;

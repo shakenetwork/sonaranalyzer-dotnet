@@ -258,13 +258,11 @@ namespace SonarLint.Rules.CSharp
                 {
                     return argument.Expression as InvocationExpressionSyntax;
                 }
-                else
+
+                var memberAccess = outerInvocation.Expression as MemberAccessExpressionSyntax;
+                if (memberAccess != null)
                 {
-                    var memberAccess = outerInvocation.Expression as MemberAccessExpressionSyntax;
-                    if (memberAccess != null)
-                    {
-                        return memberAccess.Expression as InvocationExpressionSyntax;
-                    }
+                    return memberAccess.Expression as InvocationExpressionSyntax;
                 }
             }
 
@@ -352,11 +350,13 @@ namespace SonarLint.Rules.CSharp
             {
                 return true;
             }
+
             if (EquivalenceChecker.AreEquivalent(NullExpression, binaryExpression.Right.RemoveParentheses()) &&
                 binaryExpression.Left.RemoveParentheses().ToString() == lambdaParameter)
             {
                 return true;
             }
+
             return false;
         }
 

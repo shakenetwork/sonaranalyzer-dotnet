@@ -207,7 +207,7 @@ namespace SonarLint.Rules.CSharp
                             ))));
         }
 
-        private static async Task<Document> RemoveArgumentsAsync(Document document, List<ArgumentSyntax> arguments,
+        private static async Task<Document> RemoveArgumentsAsync(Document document, IEnumerable<ArgumentSyntax> arguments,
             CancellationToken cancellationToken)
         {
             var root = await document.GetSyntaxRootAsync(cancellationToken);
@@ -218,12 +218,8 @@ namespace SonarLint.Rules.CSharp
         private static InvocationExpressionSyntax GetInvocation(SyntaxNode root, TextSpan diagnosticSpan)
         {
             var argumentSyntax = root.FindNode(diagnosticSpan) as ArgumentSyntax;
-            if (argumentSyntax == null)
-            {
-                return null;
-            }
 
-            return argumentSyntax.FirstAncestorOrSelf<InvocationExpressionSyntax>();
+            return argumentSyntax?.FirstAncestorOrSelf<InvocationExpressionSyntax>();
         }
     }
 }

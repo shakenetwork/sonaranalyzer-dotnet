@@ -52,7 +52,7 @@ namespace SonarLint.Rules.CSharp
         private const string LiteralNotSupportedException = "NotSupportedException";
         private const string LiteralSystem = "System";
 
-        public override sealed async Task RegisterCodeFixesAsync(CodeFixContext context)
+        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
         {
             var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
 

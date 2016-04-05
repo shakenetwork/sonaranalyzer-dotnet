@@ -27,7 +27,6 @@ using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
 using System;
-using System.Collections.Generic;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -79,7 +78,7 @@ namespace SonarLint.Rules.CSharp
 
         private void CheckFunctionNestingDepth(SyntaxNodeAnalysisContext context)
         {
-            var walker = new NestingDepthWalker(Maximum, (token) => context.ReportDiagnostic(Diagnostic.Create(Rule, token.GetLocation(), Maximum)));
+            var walker = new NestingDepthWalker(Maximum, token => context.ReportDiagnostic(Diagnostic.Create(Rule, token.GetLocation(), Maximum)));
             walker.Visit(context.Node);
         }
 

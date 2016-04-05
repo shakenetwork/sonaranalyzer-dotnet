@@ -135,14 +135,18 @@ namespace SonarLint.Rules.CSharp
                 {
                     return false;
                 }
+
                 allParameterMatches.Add(parameter);
-                if (parameter.IsParams)
+
+                if (!parameter.IsParams)
                 {
-                    var argType = semanticModel.GetTypeInfo(argument.Expression).Type;
-                    if (!(argType is IArrayTypeSymbol))
-                    {
-                        return false;
-                    }
+                    continue;
+                }
+
+                var argType = semanticModel.GetTypeInfo(argument.Expression).Type;
+                if (!(argType is IArrayTypeSymbol))
+                {
+                    return false;
                 }
             }
 

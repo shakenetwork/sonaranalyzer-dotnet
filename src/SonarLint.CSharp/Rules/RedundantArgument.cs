@@ -71,14 +71,11 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
-                    foreach (var argumentMapping in argumentMappings)
+                    foreach (var argumentMapping in argumentMappings.Where(argumentMapping => ArgumentHasDefaultValue(argumentMapping, c.SemanticModel)))
                     {
-                        if (ArgumentHasDefaultValue(argumentMapping, c.SemanticModel))
-                        {
-                            var argument = argumentMapping.Argument;
-                            var parameter = argumentMapping.Parameter;
-                            c.ReportDiagnostic(Diagnostic.Create(Rule, argument.GetLocation(), parameter.Name));
-                        }
+                        var argument = argumentMapping.Argument;
+                        var parameter = argumentMapping.Parameter;
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, argument.GetLocation(), parameter.Name));
                     }
                 },
                 SyntaxKind.InvocationExpression);

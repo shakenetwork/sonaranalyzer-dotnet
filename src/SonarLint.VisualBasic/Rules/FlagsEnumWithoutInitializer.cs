@@ -44,11 +44,10 @@ namespace SonarLint.Rules.VisualBasic
         protected override bool AllMembersAreInitialized(EnumStatementSyntax declaration)
         {
             var parent = declaration.Parent as EnumBlockSyntax;
-            if (parent == null)
-            {
-                return true;
-            }
-            return parent.ChildNodes().OfType<EnumMemberDeclarationSyntax>().All(member => member.Initializer != null);
+            return parent == null ||
+                parent.ChildNodes()
+                    .OfType<EnumMemberDeclarationSyntax>()
+                    .All(member => member.Initializer != null);
         }
 
         protected override SyntaxToken GetIdentifier(EnumStatementSyntax declaration) => declaration.Identifier;

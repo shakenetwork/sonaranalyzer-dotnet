@@ -121,6 +121,11 @@ namespace SonarLint.Rules.CSharp
             newLambda = ChangeSyntaxElement(lambda, newLambda, c.SemanticModel, out newSemanticModel);
             var newSymbol = newSemanticModel.GetSymbolInfo(newLambda).Symbol as IMethodSymbol;
 
+            if (newSymbol == null)
+            {
+                return;
+            }
+
             for (int i = 0; i < symbol.Parameters.Length; i++)
             {
                 if (symbol.Parameters[i].Type.ToDisplayString() != newSymbol.Parameters[i].Type.ToDisplayString())
@@ -182,12 +187,8 @@ namespace SonarLint.Rules.CSharp
             Func<InvocationExpressionSyntax, bool> additionalFilter = null)
         {
             var argument = objectCreation.Parent as ArgumentSyntax;
-            if (argument == null)
-            {
-                return false;
-            }
 
-            var invocation = argument.Parent?.Parent as InvocationExpressionSyntax;
+            var invocation = argument?.Parent?.Parent as InvocationExpressionSyntax;
             if (invocation == null)
             {
                 return false;
@@ -237,22 +238,23 @@ namespace SonarLint.Rules.CSharp
 
         private static void ReportRedundantArraySizeSpecifier(SyntaxNodeAnalysisContext c, ArrayCreationExpressionSyntax array)
         {
-            if (array.Initializer != null &&
-                array.Type != null)
+            if (array.Initializer == null ||
+                array.Type == null)
             {
-                var rankSpecifier = array.Type.RankSpecifiers.FirstOrDefault();
-                if (rankSpecifier == null ||
-                    rankSpecifier.Sizes.Any(s => s.IsKind(SyntaxKind.OmittedArraySizeExpression)))
-                {
-                    return;
-                }
+                return;
+            }
+            var rankSpecifier = array.Type.RankSpecifiers.FirstOrDefault();
+            if (rankSpecifier == null ||
+                rankSpecifier.Sizes.Any(s => s.IsKind(SyntaxKind.OmittedArraySizeExpression)))
+            {
+                return;
+            }
 
-                foreach (var size in rankSpecifier.Sizes)
-                {
-                    c.ReportDiagnostic(Diagnostic.Create(Rule, size.GetLocation(),
+            foreach (var size in rankSpecifier.Sizes)
+            {
+                c.ReportDiagnostic(Diagnostic.Create(Rule, size.GetLocation(),
                     ImmutableDictionary<string, string>.Empty.Add(DiagnosticTypeKey, RedundancyType.ArraySize.ToString()),
                     "array size specification"));
-                }
             }
         }
 
@@ -321,7 +323,7 @@ namespace SonarLint.Rules.CSharp
             if (IsInNotVarDeclaration(objectCreation) ||
                 IsInAssignmentOrReturnValue(objectCreation) ||
                 IsInArgumentAndCanBeChanged(objectCreation, c.SemanticModel,
-                    (invocation) => invocation.ArgumentList.Arguments.Any(a => IsDynamic(a, c.SemanticModel))))
+                    invocation => invocation.ArgumentList.Arguments.Any(a => IsDynamic(a, c.SemanticModel))))
             {
                 ReportIssueOnRedundantObjectCreation(c, objectCreation, "explicit delegate creation", RedundancyType.ExplicitDelegate);
                 return;
@@ -384,8 +386,7 @@ namespace SonarLint.Rules.CSharp
         {
             var variableDeclaration = objectCreation.Parent?.Parent?.Parent as VariableDeclarationSyntax;
 
-            return variableDeclaration != null &&
-                variableDeclaration.Type != null &&
+            return variableDeclaration?.Type != null &&
                 !variableDeclaration.Type.IsVar;
         }
 

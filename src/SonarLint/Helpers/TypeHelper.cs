@@ -79,7 +79,8 @@ namespace SonarLint.Helpers
 
         public static bool IsInType(this ISymbol symbol, ITypeSymbol type)
         {
-            return symbol != null && symbol.ContainingType != null && symbol.ContainingType.Equals(type);
+            return symbol?.ContainingType != null && 
+                symbol.ContainingType.Equals(type);
         }
 
         public static bool IsInType(this ISymbol symbol, ISet<KnownType> types)

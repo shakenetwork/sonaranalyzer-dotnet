@@ -85,7 +85,7 @@ namespace SonarLint.Rules.CSharp
                     }
 
                     if (address.AddressFamily == AddressFamily.InterNetwork &&
-                        text.Split('.').Count() != 4)
+                        text.Split('.').Length != 4)
                     {
                         return;
                     }

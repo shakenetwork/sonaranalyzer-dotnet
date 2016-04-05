@@ -157,11 +157,9 @@ namespace SonarLint.Rules.CSharp
             }
 
             var expression = GetSimplificationFromInvocations(expression1, expression2, condition, compared, isNullCoalescing, semanticModel, annotation);
-            if (expression != null)
-            {
-                return SyntaxFactory.ExpressionStatement(expression);
-            }
-            return null;
+            return expression != null
+                ? SyntaxFactory.ExpressionStatement(expression)
+                : null;
         }
 
         private static ExpressionSyntax GetSimplifiedAssignment(ExpressionSyntax expression1, ExpressionSyntax expression2,

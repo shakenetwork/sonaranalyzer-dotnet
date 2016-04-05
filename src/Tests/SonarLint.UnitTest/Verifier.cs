@@ -373,7 +373,7 @@ namespace SonarLint.UnitTest
             var fixAllDiagnosticProvider = new FixAllDiagnosticProvider(
                 codeFixProvider.FixableDiagnosticIds.ToImmutableHashSet(),
                 (doc, ids, ct) => Task.FromResult(
-                    GetDiagnostics(currentDocument.Project.GetCompilationAsync().Result, diagnosticAnalyzer)),
+                    GetDiagnostics(currentDocument.Project.GetCompilationAsync(ct).Result, diagnosticAnalyzer)),
                 null);
             var fixAllContext = new FixAllContext(currentDocument, codeFixProvider, FixAllScope.Document,
                 codeFixTitle,

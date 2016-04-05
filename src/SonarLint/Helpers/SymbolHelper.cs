@@ -160,12 +160,9 @@ namespace SonarLint.Helpers
 
             var eventArgs = methodSymbol.Parameters[1];
             var eventArgsType = eventArgs.Type as INamedTypeSymbol;
-            if (eventArgsType == null)
-            {
-                return true;
-            }
 
-            return eventArgsType.DerivesOrImplements(KnownType.System_EventArgs);
+            return eventArgsType == null ||
+                eventArgsType.DerivesOrImplements(KnownType.System_EventArgs);
         }
 
         public static bool IsExtensionOn(this IMethodSymbol methodSymbol, KnownType type)

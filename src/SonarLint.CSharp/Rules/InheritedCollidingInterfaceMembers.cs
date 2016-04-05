@@ -18,7 +18,6 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
@@ -97,7 +96,7 @@ namespace SonarLint.Rules.CSharp
                 },
                 SyntaxKind.InterfaceDeclaration);
         }
-        
+
         private static IEnumerable<IMethodSymbol> GetCollidingMembers(INamedTypeSymbol interfaceSymbol)
         {
             var interfacesToCheck = interfaceSymbol.Interfaces;
@@ -150,15 +149,14 @@ namespace SonarLint.Rules.CSharp
             {
                 return names[0];
             }
-            else if (collidingMembers.Count == 2)
+
+            if (collidingMembers.Count == 2)
             {
                 return $"{names[0]} and {names[1]}";
             }
-            else
-            {
-                names.Add("...");
-                return string.Join(", ", names);
-            }
+
+            names.Add("...");
+            return string.Join(", ", names);
         }
 
         private static readonly IImmutableSet<SymbolDisplayPartKind> PartKindsToStartWith = new []
@@ -191,12 +189,12 @@ namespace SonarLint.Rules.CSharp
             {
                 return false;
             }
-            
+
             for (int i = 0; i < methodSymbol1.Parameters.Length; i++)
             {
                 var param1 = methodSymbol1.Parameters[i];
                 var param2 = methodSymbol2.Parameters[i];
-                
+
                 if (param1.RefKind != param2.RefKind ||
                     !object.Equals(param1.Type, param2.Type))
                 {
