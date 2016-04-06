@@ -37,11 +37,6 @@ namespace SonarLint.Helpers
             Symbol = symbol;
         }
 
-        public bool IsAttributeWithName(string name)
-        {
-            return name != null && Symbol?.ContainingType?.ToDisplayString() == name;
-        }
-
         public static IEnumerable<AttributeSyntaxSymbolMapping> GetAttributesForParameter(ParameterSyntax parameter,
             SemanticModel semanticModel)
         {
