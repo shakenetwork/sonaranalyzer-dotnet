@@ -67,7 +67,7 @@ namespace SonarLint.Rules.CSharp
                 },
                 SyntaxKind.CastExpression);
 
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     var castExpression = (BinaryExpressionSyntax)c.Node;

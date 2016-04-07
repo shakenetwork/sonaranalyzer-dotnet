@@ -59,11 +59,11 @@ namespace SonarLint.Rules.CSharp
 
         protected override void Initialize(SonarAnalysisContext context)
         {
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckInterfaceVariance((InterfaceDeclarationSyntax)c.Node, c),
                 SyntaxKind.InterfaceDeclaration);
 
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckDelegateVariance((DelegateDeclarationSyntax)c.Node, c),
                 SyntaxKind.DelegateDeclaration);
         }

@@ -39,7 +39,7 @@ namespace SonarLint.Helpers
             this.context = context;
         }
 
-        public void RegisterCodeBlockAction(Action<CodeBlockAnalysisContext> action)
+        internal void RegisterCodeBlockAction(Action<CodeBlockAnalysisContext> action)
         {
             context.RegisterCodeBlockAction(action);
         }
@@ -55,7 +55,7 @@ namespace SonarLint.Helpers
             compilationStartActions.Add(action);
         }
 
-        public void RegisterSemanticModelAction(Action<SemanticModelAnalysisContext> action)
+        internal void RegisterSemanticModelAction(Action<SemanticModelAnalysisContext> action)
         {
             context.RegisterSemanticModelAction(action);
         }
@@ -65,17 +65,17 @@ namespace SonarLint.Helpers
             context.RegisterSymbolAction(action, symbolKinds);
         }
 
-        public void RegisterSyntaxNodeAction<TLanguageKindEnum>(Action<SyntaxNodeAnalysisContext> action, ImmutableArray<TLanguageKindEnum> syntaxKinds) where TLanguageKindEnum : struct
+        internal void RegisterSyntaxNodeAction<TLanguageKindEnum>(Action<SyntaxNodeAnalysisContext> action, ImmutableArray<TLanguageKindEnum> syntaxKinds) where TLanguageKindEnum : struct
         {
             context.RegisterSyntaxNodeAction(action, syntaxKinds);
         }
 
-        public void RegisterCodeBlockStartAction<TLanguageKindEnum>(Action<CodeBlockStartAnalysisContext<TLanguageKindEnum>> action) where TLanguageKindEnum : struct
+        internal void RegisterCodeBlockStartAction<TLanguageKindEnum>(Action<CodeBlockStartAnalysisContext<TLanguageKindEnum>> action) where TLanguageKindEnum : struct
         {
             context.RegisterCodeBlockStartAction(action);
         }
 
-        public void RegisterSyntaxTreeAction(Action<SyntaxTreeAnalysisContext> action)
+        internal void RegisterSyntaxTreeAction(Action<SyntaxTreeAnalysisContext> action)
         {
             context.RegisterSyntaxTreeAction(action);
         }

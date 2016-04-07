@@ -69,19 +69,19 @@ namespace SonarLint.Rules.CSharp
                 c => CheckLogicalAnd(c),
                 SyntaxKind.LogicalAndExpression);
 
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckNotEquals(c),
                 SyntaxKind.NotEqualsExpression);
 
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckLogicalOr(c),
                 SyntaxKind.LogicalOrExpression);
 
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckLogicalNot(c),
                 SyntaxKind.LogicalNotExpression);
 
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckConditional(c),
                 SyntaxKind.ConditionalExpression);
         }

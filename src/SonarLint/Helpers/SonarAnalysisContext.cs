@@ -38,7 +38,7 @@ namespace SonarLint.Helpers
             this.context = context;
         }
 
-        public void RegisterCodeBlockAction(Action<CodeBlockAnalysisContext> action)
+        internal void RegisterCodeBlockAction(Action<CodeBlockAnalysisContext> action)
         {
             context.RegisterCodeBlockAction(
                 c =>
@@ -52,7 +52,7 @@ namespace SonarLint.Helpers
                 });
         }
 
-        public void RegisterCodeBlockStartAction<TLanguageKindEnum>(Action<CodeBlockStartAnalysisContext<TLanguageKindEnum>> action)
+        internal void RegisterCodeBlockStartAction<TLanguageKindEnum>(Action<CodeBlockStartAnalysisContext<TLanguageKindEnum>> action)
              where TLanguageKindEnum : struct
         {
             context.RegisterCodeBlockStartAction<TLanguageKindEnum>(
@@ -95,7 +95,7 @@ namespace SonarLint.Helpers
                 });
         }
 
-        public void RegisterSemanticModelAction(Action<SemanticModelAnalysisContext> action)
+        internal void RegisterSemanticModelAction(Action<SemanticModelAnalysisContext> action)
         {
             context.RegisterSemanticModelAction(
                 c =>
@@ -109,14 +109,14 @@ namespace SonarLint.Helpers
                 });
         }
 
-        public void RegisterSyntaxNodeAction<TLanguageKindEnum>(Action<SyntaxNodeAnalysisContext> action,
+        internal void RegisterSyntaxNodeAction<TLanguageKindEnum>(Action<SyntaxNodeAnalysisContext> action,
             ImmutableArray<TLanguageKindEnum> syntaxKinds)
             where TLanguageKindEnum : struct
         {
             RegisterSyntaxNodeAction(action, syntaxKinds.ToArray());
         }
 
-        public void RegisterSyntaxNodeAction<TLanguageKindEnum>(Action<SyntaxNodeAnalysisContext> action,
+        internal void RegisterSyntaxNodeAction<TLanguageKindEnum>(Action<SyntaxNodeAnalysisContext> action,
             params TLanguageKindEnum[] syntaxKinds)
             where TLanguageKindEnum : struct
         {
@@ -133,7 +133,7 @@ namespace SonarLint.Helpers
                 syntaxKinds);
         }
 
-        public void RegisterSyntaxTreeAction(Action<SyntaxTreeAnalysisContext> action)
+        internal void RegisterSyntaxTreeAction(Action<SyntaxTreeAnalysisContext> action)
         {
             context.RegisterSyntaxTreeAction(
                 c =>

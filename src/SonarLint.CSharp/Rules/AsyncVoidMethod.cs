@@ -59,7 +59,7 @@ namespace SonarLint.Rules.CSharp
 
         protected override void Initialize(SonarAnalysisContext context)
         {
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     var methodDeclaration = (MethodDeclarationSyntax)c.Node;

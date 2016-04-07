@@ -70,7 +70,7 @@ namespace SonarLint.Rules.CSharp
                 },
                 SyntaxKind.SubtractAssignmentExpression);
 
-            context.RegisterSyntaxNodeAction(
+            context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
                     var binary = (BinaryExpressionSyntax)c.Node;
