@@ -73,7 +73,18 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
-                    var fieldsOfClass = c.SemanticModel.LookupBaseMembers(methodSyntax.SpanStart)
+                    ImmutableArray<ISymbol> baseMembers;
+                    try
+                    {
+                        baseMembers = c.SemanticModel.LookupBaseMembers(methodSyntax.SpanStart);
+                    }
+                    catch (System.ArgumentException)
+                    {
+                        // this is expected on invalid code
+                        return;
+                    }
+
+                    var fieldsOfClass = baseMembers
                         .Concat(methodSymbol.ContainingType.GetMembers())
                         .Select(symbol => symbol as IFieldSymbol)
                         .Where(symbol => symbol != null)

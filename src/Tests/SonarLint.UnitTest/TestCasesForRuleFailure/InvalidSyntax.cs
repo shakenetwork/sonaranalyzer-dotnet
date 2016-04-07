@@ -22,4 +22,13 @@ namespace SonarLint.UnitTest.TestCasesForRuleFailure
             public C()
         }
     }
+
+    class
+    {
+        int i;
+        public override int GetHashCode()
+        {
+            return i; // we don't report on this
+        }
+    }
 }
