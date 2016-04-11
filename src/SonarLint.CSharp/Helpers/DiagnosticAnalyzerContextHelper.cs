@@ -108,5 +108,15 @@ namespace SonarLint.Helpers
         }
 
         #endregion
+
+        #region SyntaxTree.IsGenerated
+
+        internal static bool IsGenerated(this SyntaxTree tree,
+            Compilation compilation)
+        {
+            return tree.IsGenerated(CSharp.GeneratedCodeRecognizer.Instance, compilation);
+        }
+
+        #endregion
     }
 }

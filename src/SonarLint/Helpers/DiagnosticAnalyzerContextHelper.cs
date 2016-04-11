@@ -193,7 +193,7 @@ namespace SonarLint.Helpers
         private static readonly ConditionalWeakTable<Compilation, ConcurrentDictionary<SyntaxTree, bool>> Cache
             = new ConditionalWeakTable<Compilation, ConcurrentDictionary<SyntaxTree, bool>>();
 
-        private static bool IsGenerated(this SyntaxTree tree,
+        public static bool IsGenerated(this SyntaxTree tree,
             GeneratedCodeRecognizer generatedCodeRecognizer,
             Compilation compilation)
         {

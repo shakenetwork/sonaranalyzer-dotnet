@@ -25,6 +25,9 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.CodeAnalysis;
 using VB = SonarLint.Rules.VisualBasic;
 using CS = SonarLint.Rules.CSharp;
+using CACS = Microsoft.CodeAnalysis.CSharp;
+using SonarLint.Helpers;
+using System.Threading.Tasks;
 
 namespace SonarLint.UnitTest.Helpers
 {
@@ -45,6 +48,22 @@ namespace SonarLint.UnitTest.Helpers
                 var diagnostics = Verifier.GetDiagnostics(compilation, diagnosticAnalyzer);
 
                 diagnostics.Should().HaveCount(0);
+            }
+        }
+
+        internal static async Task<bool> IsGenerated(string content, GeneratedCodeRecognizer generatedCodeRecognizer)
+        {
+            using (var workspace = new AdhocWorkspace())
+            {
+                var document = workspace.CurrentSolution.AddProject("foo", "foo.dll", LanguageNames.CSharp)
+                    .AddMetadataReference(MetadataReference.CreateFromFile(typeof(object).Assembly.Location))
+                    .AddMetadataReference(MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location))
+                    .AddDocument("Foo.cs", content);
+
+                var compilation = document.Project.GetCompilationAsync().Result;
+                var tree = await document.GetSyntaxTreeAsync();
+                
+                return tree.IsGenerated(generatedCodeRecognizer, compilation);
             }
         }
 
@@ -183,6 +202,40 @@ End Module";
 }";
             VerifyEmpty("test.cs", format.Replace("{0}", "Windows Form Designer generated code"), new CS.EmptyStatement());
             VerifyEmpty("test.cs", format.Replace("{0}", "Windows Form Designer GeNeRaTeD code"), new CS.EmptyStatement());
+        }
+
+        [TestMethod]
+        public async Task IsGenerated_On_GeneratedTree()
+        {
+            const string source =
+@"namespace Generated
+{
+    class MyClass
+    {
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        void M()
+        {
+            ;;;;
+        }
+    }
+}";
+
+            Assert.IsTrue(await IsGenerated(source, SonarLint.Helpers.CSharp.GeneratedCodeRecognizer.Instance));
+            
+        }
+
+        [TestMethod]
+        public async Task IsGenerated_On_NonGeneratedTree()
+        {
+            const string source =
+@"namespace NonGenerated
+{
+    class MyClass
+    {
+    }
+}";
+
+            Assert.IsFalse(await IsGenerated(source, SonarLint.Helpers.CSharp.GeneratedCodeRecognizer.Instance));
         }
     }
 }
