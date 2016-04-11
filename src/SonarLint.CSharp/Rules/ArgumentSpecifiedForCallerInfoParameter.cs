@@ -27,6 +27,7 @@ using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -100,14 +101,13 @@ namespace SonarLint.Rules.CSharp
         private static AttributeData GetCallerInfoAttribute(IParameterSymbol parameter)
         {
             return parameter.GetAttributes()
-                .FirstOrDefault(attr => CallerInfoAttributeNames.Contains(attr.AttributeClass.ToDisplayString()));
+                .FirstOrDefault(attr => attr.AttributeClass.IsAny(CallerInfoAttributeTypes));
         }
 
-        private static readonly string[] CallerInfoAttributeNames =
-            {
-                "System.Runtime.CompilerServices.CallerMemberNameAttribute",
-                "System.Runtime.CompilerServices.CallerFilePathAttribute",
-                "System.Runtime.CompilerServices.CallerLineNumberAttribute"
-            };
+        private static readonly ISet<KnownType> CallerInfoAttributeTypes = ImmutableHashSet.Create(
+            KnownType.System_Runtime_CompilerServices_CallerFilePathAttribute,
+            KnownType.System_Runtime_CompilerServices_CallerLineNumberAttribute,
+            KnownType.System_Runtime_CompilerServices_CallerMemberNameAttribute
+        );
     }
 }
