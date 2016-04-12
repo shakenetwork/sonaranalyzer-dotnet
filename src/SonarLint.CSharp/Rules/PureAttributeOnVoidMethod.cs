@@ -19,7 +19,6 @@
  */
 
 using System.Collections.Immutable;
-using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -27,34 +26,34 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Linq;
 
 namespace SonarLint.Rules.CSharp
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("5min")]
-    [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
+    [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Bug, Tag.Unused)]
-    public class ThreadStaticNonStaticField : SonarDiagnosticAnalyzer
+    [Tags(Tag.Bug)]
+    public class PureAttributeOnVoidMethod : SonarDiagnosticAnalyzer
     {
-        internal const string DiagnosticId = "S3005";
-        internal const string Title = "\"ThreadStatic\" should not be used on non-static fields";
+        internal const string DiagnosticId = "S3603";
+        internal const string Title = "Methods with \"Pure\" attribute should return a value";
         internal const string Description =
-            "When a non-static class field is annotated with \"ThreadStatic\", the code seems to show that the " +
-            "field can have different values for different calling threads, but that's not the case, since the " +
-            "\"ThreadStatic\" attribute is simply ignored on non-static fields.";
-        internal const string MessageFormat = "Remove the \"ThreadStatic\" attribute from this definition.";
-        internal const string Category = SonarLint.Common.Category.Maintainability;
+            "Marking a method with the \"[Pure]\" attribute specifies that the method doesn't " +
+            "make any visible changes; thus, the method should return a result, otherwise the " +
+            "call to the method should be equal to no-operation. So \"[Pure]\" on a \"void\" method " +
+            "is either a mistake, or the method doesn't do any meaningful task.";
+        internal const string MessageFormat = "Remove the \"Pure\" attribute or change the method to return a value.";
+        internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
-        private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(ideVisibility), IsActivatedByDefault,
+                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description,
-                customTags: ideVisibility.ToCustomTags());
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
@@ -63,15 +62,23 @@ namespace SonarLint.Rules.CSharp
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
-                    var fieldDeclaration = (FieldDeclarationSyntax) c.Node;
-                    AttributeSyntax threadStaticAttribute;
-                    if (!fieldDeclaration.Modifiers.Any(modifier => modifier.IsKind(SyntaxKind.StaticKeyword)) &&
-                        fieldDeclaration.AttributeLists.TryGetAttribute(KnownType.System_ThreadStaticAttribute, c.SemanticModel, out threadStaticAttribute))
+                    var methodDeclaration = (MethodDeclarationSyntax) c.Node;
+                    var methodSymbol = c.SemanticModel.GetDeclaredSymbol(methodDeclaration);
+                    if (methodSymbol == null ||
+                        !methodSymbol.ReturnsVoid||
+                        methodSymbol.Parameters.Any(p => p.RefKind != RefKind.None))
                     {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, threadStaticAttribute.Name.GetLocation()));
+                        return;
+                    }
+
+                    AttributeSyntax pureAttribute;
+                    if (methodDeclaration.AttributeLists.TryGetAttribute(KnownType.System_Diagnostics_Contracts_PureAttribute,
+                            c.SemanticModel, out pureAttribute))
+                    {
+                        c.ReportDiagnostic(Diagnostic.Create(Rule, pureAttribute.GetLocation()));
                     }
                 },
-                SyntaxKind.FieldDeclaration);
+                SyntaxKind.MethodDeclaration);
         }
     }
 }

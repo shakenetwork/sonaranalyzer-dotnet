@@ -18,6 +18,8 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System.Linq;
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace SonarLint.Helpers
@@ -53,6 +55,30 @@ namespace SonarLint.Helpers
                 parent = current.Parent as ParenthesizedExpressionSyntax;
             }
             return current;
+        }
+
+        public static bool TryGetAttribute(this SyntaxList<AttributeListSyntax> attributeLists, KnownType attributeKnownType,
+            SemanticModel semanticModel, out AttributeSyntax searchedAttribute)
+        {
+            searchedAttribute = null;
+
+            if (!attributeLists.Any())
+            {
+                return false;
+            }
+
+            foreach (var attribute in attributeLists.SelectMany(attributeList => attributeList.Attributes))
+            {
+                var attributeType = semanticModel.GetTypeInfo(attribute).Type;
+
+                if (attributeType.Is(attributeKnownType))
+                {
+                    searchedAttribute = attribute;
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }
