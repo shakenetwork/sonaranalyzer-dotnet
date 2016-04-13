@@ -1,129 +1,55 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2955",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(T)\" instead or add a constraint to \"T\" so that it can\u0027t be a value type.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\AtomicReference.cs",
 "region":  {
-"startLine":  65,
-"startColumn":  25,
-"endLine":  65,
-"endColumn":  29
+"startLine":  66,
+"startColumn":  26,
+"endLine":  66,
+"endColumn":  30
 }
-}
-]
-}
-],
-"shortMessage":  "Use a comparison to \"default(T)\" instead or add a constraint to \"T\" so that it can\u0027t be a value type.",
-"fullMessage":  "When constraints have not been applied to restrict a generic type parameter to be a reference type, then a value type, such as a \"struct\", could also be passed. In such cases, comparing the type parameter to \"null\" would always be false, because a \"struct\" can be empty, but never \"null\". If a value type is truly what\u0027s expected, then the comparison should use \"default()\". If it\u0027s not, then constraints should be added so that no value type can be passed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Generic parameters not constrained to reference types should not be compared to \"null\"",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2955",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2955",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(T)\" instead or add a constraint to \"T\" so that it can\u0027t be a value type.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\AtomicReference.cs",
 "region":  {
-"startLine":  67,
+"startLine":  68,
+"startColumn":  33,
+"endLine":  68,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(T)\" instead or add a constraint to \"T\" so that it can\u0027t be a value type.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\StringBuilderExtensions.cs",
+"region":  {
+"startLine":  38,
 "startColumn":  32,
-"endLine":  67,
+"endLine":  38,
 "endColumn":  36
 }
 }
-]
-}
-],
-"shortMessage":  "Use a comparison to \"default(T)\" instead or add a constraint to \"T\" so that it can\u0027t be a value type.",
-"fullMessage":  "When constraints have not been applied to restrict a generic type parameter to be a reference type, then a value type, such as a \"struct\", could also be passed. In such cases, comparing the type parameter to \"null\" would always be false, because a \"struct\" can be empty, but never \"null\". If a value type is truly what\u0027s expected, then the comparison should use \"default()\". If it\u0027s not, then constraints should be added so that no value type can be passed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Generic parameters not constrained to reference types should not be compared to \"null\"",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2955",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
 },
 {
-"ruleId":  "S2955",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2955",
+"message":  "Use a comparison to \"default(T)\" instead or add a constraint to \"T\" so that it can\u0027t be a value type.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\StringBuilderExtensions.cs",
 "region":  {
-"startLine":  37,
-"startColumn":  31,
-"endLine":  37,
-"endColumn":  35
+"startLine":  49,
+"startColumn":  47,
+"endLine":  49,
+"endColumn":  51
 }
-}
-]
-}
-],
-"shortMessage":  "Use a comparison to \"default(T)\" instead or add a constraint to \"T\" so that it can\u0027t be a value type.",
-"fullMessage":  "When constraints have not been applied to restrict a generic type parameter to be a reference type, then a value type, such as a \"struct\", could also be passed. In such cases, comparing the type parameter to \"null\" would always be false, because a \"struct\" can be empty, but never \"null\". If a value type is truly what\u0027s expected, then the comparison should use \"default()\". If it\u0027s not, then constraints should be added so that no value type can be passed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Generic parameters not constrained to reference types should not be compared to \"null\"",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2955",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2955",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\StringBuilderExtensions.cs",
-"region":  {
-"startLine":  48,
-"startColumn":  46,
-"endLine":  48,
-"endColumn":  50
-}
-}
-]
-}
-],
-"shortMessage":  "Use a comparison to \"default(T)\" instead or add a constraint to \"T\" so that it can\u0027t be a value type.",
-"fullMessage":  "When constraints have not been applied to restrict a generic type parameter to be a reference type, then a value type, such as a \"struct\", could also be passed. In such cases, comparing the type parameter to \"null\" would always be false, because a \"struct\" can be empty, but never \"null\". If a value type is truly what\u0027s expected, then the comparison should use \"default()\". If it\u0027s not, then constraints should be added so that no value type can be passed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Generic parameters not constrained to reference types should not be compared to \"null\"",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2955",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

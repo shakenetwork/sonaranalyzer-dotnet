@@ -1,470 +1,184 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Json\\TestPrimitiveConverter.cs",
 "region":  {
-"startLine":  30,
-"startColumn":  3,
-"endLine":  30,
-"endColumn":  5
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  31,
+"startColumn":  4,
+"endLine":  31,
+"endColumn":  6
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRouteResolverFixture.cs",
 "region":  {
-"startLine":  44,
-"startColumn":  12,
-"endLine":  44,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  45,
+"startColumn":  13,
+"endLine":  45,
+"endColumn":  15
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRouteResolverFixture.cs",
 "region":  {
-"startLine":  66,
-"startColumn":  12,
-"endLine":  66,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  67,
+"startColumn":  13,
+"endLine":  67,
+"endColumn":  15
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRouteResolverFixture.cs",
 "region":  {
-"startLine":  88,
-"startColumn":  12,
-"endLine":  88,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  89,
+"startColumn":  13,
+"endLine":  89,
+"endColumn":  15
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRouteResolverFixture.cs",
 "region":  {
-"startLine":  110,
-"startColumn":  12,
-"endLine":  110,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  111,
+"startColumn":  13,
+"endLine":  111,
+"endColumn":  15
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRouteResolverFixture.cs",
 "region":  {
-"startLine":  132,
-"startColumn":  12,
-"endLine":  132,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  133,
+"startColumn":  13,
+"endLine":  133,
+"endColumn":  15
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRouteResolverFixture.cs",
 "region":  {
-"startLine":  154,
-"startColumn":  12,
-"endLine":  154,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  155,
+"startColumn":  13,
+"endLine":  155,
+"endColumn":  15
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRouteResolverFixture.cs",
 "region":  {
-"startLine":  176,
-"startColumn":  12,
-"endLine":  176,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  177,
+"startColumn":  13,
+"endLine":  177,
+"endColumn":  15
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRouteResolverFixture.cs",
 "region":  {
-"startLine":  198,
-"startColumn":  12,
-"endLine":  198,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  199,
+"startColumn":  13,
+"endLine":  199,
+"endColumn":  15
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRouteResolverFixture.cs",
 "region":  {
-"startLine":  220,
-"startColumn":  12,
-"endLine":  220,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  221,
+"startColumn":  13,
+"endLine":  221,
+"endColumn":  15
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRouteResolverFixture.cs",
 "region":  {
-"startLine":  242,
-"startColumn":  12,
-"endLine":  242,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  243,
+"startColumn":  13,
+"endLine":  243,
+"endColumn":  15
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRouteResolverFixture.cs",
 "region":  {
-"startLine":  264,
-"startColumn":  12,
-"endLine":  264,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  265,
+"startColumn":  13,
+"endLine":  265,
+"endColumn":  15
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRouteResolverFixture.cs",
 "region":  {
-"startLine":  286,
-"startColumn":  12,
-"endLine":  286,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  287,
+"startColumn":  13,
+"endLine":  287,
+"endColumn":  15
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRouteResolverFixture.cs",
 "region":  {
-"startLine":  308,
-"startColumn":  12,
-"endLine":  308,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  309,
+"startColumn":  13,
+"endLine":  309,
+"endColumn":  15
 }
 }
 }

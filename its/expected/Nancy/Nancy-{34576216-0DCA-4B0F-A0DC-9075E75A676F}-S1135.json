@@ -1,309 +1,133 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1135",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1135",
+"message":  "Complete the task associated to this \"TODO\" comment.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Bootstrapper\\NancyBootstrapperBase.cs",
 "region":  {
-"startLine":  251,
-"startColumn":  15,
-"endLine":  251,
-"endColumn":  19
+"startLine":  252,
+"startColumn":  16,
+"endLine":  252,
+"endColumn":  20
 }
-}
-]
-}
-],
-"shortMessage":  "Complete the task associated to this \"TODO\" comment.",
-"fullMessage":  "\"TODO\" tags are commonly used to mark places where some more code is required, but which the developer wants to implement later. Sometimes the developer will not have the time or will simply forget to get back to that tag. This rule is meant to track those tags, and ensure that they do not go unnoticed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Info",
-"title":  "\"TODO\" tags should be handled",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1135",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1135",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1135",
+"message":  "Complete the task associated to this \"TODO\" comment.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Diagnostics\\DefaultRequestTracing.cs",
 "region":  {
-"startLine":  53,
-"startColumn":  11,
-"endLine":  53,
-"endColumn":  15
+"startLine":  54,
+"startColumn":  12,
+"endLine":  54,
+"endColumn":  16
 }
-}
-]
-}
-],
-"shortMessage":  "Complete the task associated to this \"TODO\" comment.",
-"fullMessage":  "\"TODO\" tags are commonly used to mark places where some more code is required, but which the developer wants to implement later. Sometimes the developer will not have the time or will simply forget to get back to that tag. This rule is meant to track those tags, and ensure that they do not go unnoticed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Info",
-"title":  "\"TODO\" tags should be handled",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1135",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1135",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1135",
+"message":  "Complete the task associated to this \"TODO\" comment.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\ModelBinding\\DefaultBinder.cs",
 "region":  {
-"startLine":  404,
-"startColumn":  15,
-"endLine":  404,
-"endColumn":  19
+"startLine":  405,
+"startColumn":  16,
+"endLine":  405,
+"endColumn":  20
 }
-}
-]
-}
-],
-"shortMessage":  "Complete the task associated to this \"TODO\" comment.",
-"fullMessage":  "\"TODO\" tags are commonly used to mark places where some more code is required, but which the developer wants to implement later. Sometimes the developer will not have the time or will simply forget to get back to that tag. This rule is meant to track those tags, and ensure that they do not go unnoticed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Info",
-"title":  "\"TODO\" tags should be handled",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1135",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1135",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1135",
+"message":  "Complete the task associated to this \"TODO\" comment.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\NancyContext.cs",
 "region":  {
-"startLine":  33,
-"startColumn":  15,
-"endLine":  33,
-"endColumn":  19
+"startLine":  34,
+"startColumn":  16,
+"endLine":  34,
+"endColumn":  20
 }
-}
-]
-}
-],
-"shortMessage":  "Complete the task associated to this \"TODO\" comment.",
-"fullMessage":  "\"TODO\" tags are commonly used to mark places where some more code is required, but which the developer wants to implement later. Sometimes the developer will not have the time or will simply forget to get back to that tag. This rule is meant to track those tags, and ensure that they do not go unnoticed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Info",
-"title":  "\"TODO\" tags should be handled",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1135",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1135",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1135",
+"message":  "Complete the task associated to this \"TODO\" comment.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Responses\\GenericFileResponse.cs",
 "region":  {
-"startLine":  134,
-"startColumn":  15,
-"endLine":  134,
-"endColumn":  19
+"startLine":  135,
+"startColumn":  16,
+"endLine":  135,
+"endColumn":  20
 }
-}
-]
-}
-],
-"shortMessage":  "Complete the task associated to this \"TODO\" comment.",
-"fullMessage":  "\"TODO\" tags are commonly used to mark places where some more code is required, but which the developer wants to implement later. Sometimes the developer will not have the time or will simply forget to get back to that tag. This rule is meant to track those tags, and ensure that they do not go unnoticed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Info",
-"title":  "\"TODO\" tags should be handled",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1135",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1135",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1135",
+"message":  "Complete the task associated to this \"TODO\" comment.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Responses\\Negotiation\\Negotiator.cs",
 "region":  {
-"startLine":  6,
-"startColumn":  11,
-"endLine":  6,
-"endColumn":  15
+"startLine":  7,
+"startColumn":  12,
+"endLine":  7,
+"endColumn":  16
 }
-}
-]
-}
-],
-"shortMessage":  "Complete the task associated to this \"TODO\" comment.",
-"fullMessage":  "\"TODO\" tags are commonly used to mark places where some more code is required, but which the developer wants to implement later. Sometimes the developer will not have the time or will simply forget to get back to that tag. This rule is meant to track those tags, and ensure that they do not go unnoticed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Info",
-"title":  "\"TODO\" tags should be handled",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1135",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1135",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1135",
+"message":  "Complete the task associated to this \"TODO\" comment.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Routing\\DefaultRequestDispatcher.cs",
 "region":  {
-"startLine":  47,
-"startColumn":  15,
-"endLine":  47,
-"endColumn":  19
+"startLine":  48,
+"startColumn":  16,
+"endLine":  48,
+"endColumn":  20
 }
-}
-]
-}
-],
-"shortMessage":  "Complete the task associated to this \"TODO\" comment.",
-"fullMessage":  "\"TODO\" tags are commonly used to mark places where some more code is required, but which the developer wants to implement later. Sometimes the developer will not have the time or will simply forget to get back to that tag. This rule is meant to track those tags, and ensure that they do not go unnoticed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Info",
-"title":  "\"TODO\" tags should be handled",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1135",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1135",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1135",
+"message":  "Complete the task associated to this \"TODO\" comment.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Routing\\Trie\\RouteResolverTrie.cs",
 "region":  {
-"startLine":  69,
-"startColumn":  15,
-"endLine":  69,
-"endColumn":  19
+"startLine":  70,
+"startColumn":  16,
+"endLine":  70,
+"endColumn":  20
 }
-}
-]
-}
-],
-"shortMessage":  "Complete the task associated to this \"TODO\" comment.",
-"fullMessage":  "\"TODO\" tags are commonly used to mark places where some more code is required, but which the developer wants to implement later. Sometimes the developer will not have the time or will simply forget to get back to that tag. This rule is meant to track those tags, and ensure that they do not go unnoticed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Info",
-"title":  "\"TODO\" tags should be handled",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1135",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1135",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1135",
+"message":  "Complete the task associated to this \"TODO\" comment.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
-"startLine":  3146,
-"startColumn":  15,
-"endLine":  3146,
-"endColumn":  19
+"startLine":  3147,
+"startColumn":  16,
+"endLine":  3147,
+"endColumn":  20
 }
-}
-]
-}
-],
-"shortMessage":  "Complete the task associated to this \"TODO\" comment.",
-"fullMessage":  "\"TODO\" tags are commonly used to mark places where some more code is required, but which the developer wants to implement later. Sometimes the developer will not have the time or will simply forget to get back to that tag. This rule is meant to track those tags, and ensure that they do not go unnoticed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Info",
-"title":  "\"TODO\" tags should be handled",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1135",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1135",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1135",
+"message":  "Complete the task associated to this \"TODO\" comment.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
-"startLine":  3169,
-"startColumn":  15,
-"endLine":  3169,
-"endColumn":  19
+"startLine":  3170,
+"startColumn":  16,
+"endLine":  3170,
+"endColumn":  20
 }
-}
-]
-}
-],
-"shortMessage":  "Complete the task associated to this \"TODO\" comment.",
-"fullMessage":  "\"TODO\" tags are commonly used to mark places where some more code is required, but which the developer wants to implement later. Sometimes the developer will not have the time or will simply forget to get back to that tag. This rule is meant to track those tags, and ensure that they do not go unnoticed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Info",
-"title":  "\"TODO\" tags should be handled",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1135",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

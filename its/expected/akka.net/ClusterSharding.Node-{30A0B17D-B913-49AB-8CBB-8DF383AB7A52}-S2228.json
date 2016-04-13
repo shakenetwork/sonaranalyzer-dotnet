@@ -1,69 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2228",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2228",
+"message":  "Remove this logging statement.",
+"location":  {
 "uri":  "akka.net\\src\\examples\\Cluster\\ClusterSharding\\ClusterSharding.Node\\Printer.cs",
 "region":  {
-"startLine":  54,
-"startColumn":  39,
-"endLine":  54,
-"endColumn":  56
+"startLine":  55,
+"startColumn":  40,
+"endLine":  55,
+"endColumn":  57
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this logging statement.",
-"fullMessage":  "Debug statements are always useful during development. But include them in production code - particularly in code that runs client-side - and you run the risk of inadvertently exposing sensitive information.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Console logging should not be used",
-"category":  "Portability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2228",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2228",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2228",
+"message":  "Remove this logging statement.",
+"location":  {
 "uri":  "akka.net\\src\\examples\\Cluster\\ClusterSharding\\ClusterSharding.Node\\Program.cs",
 "region":  {
-"startLine":  46,
-"startColumn":  12,
-"endLine":  46,
-"endColumn":  25
+"startLine":  47,
+"startColumn":  13,
+"endLine":  47,
+"endColumn":  26
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this logging statement.",
-"fullMessage":  "Debug statements are always useful during development. But include them in production code - particularly in code that runs client-side - and you run the risk of inadvertently exposing sensitive information.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Console logging should not be used",
-"category":  "Portability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2228",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

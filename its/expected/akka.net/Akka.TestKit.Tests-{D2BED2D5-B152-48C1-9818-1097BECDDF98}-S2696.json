@@ -1,249 +1,107 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2696",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2696",
+"message":  "Remove this set, which updates a \"static\" field from an instance method.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\TestActorRefTests\\BossActor.cs",
 "region":  {
-"startLine":  40,
-"startColumn":  16,
-"endLine":  40,
-"endColumn":  40
+"startLine":  41,
+"startColumn":  17,
+"endLine":  41,
+"endColumn":  41
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this set, which updates a \"static\" field from an instance method.",
-"fullMessage":  "Correctly updating a \"static\" field from a non-static method is tricky to get right and could easily lead to bugs if there are multiple class instances and/or multiple threads in play.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Instance members should not write to \"static\" fields",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2696",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2696",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2696",
+"message":  "Remove this set, which updates a \"static\" field from an instance method.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\TestActorRefTests\\BossActor.cs",
 "region":  {
-"startLine":  45,
-"startColumn":  16,
-"endLine":  45,
-"endColumn":  40
+"startLine":  46,
+"startColumn":  17,
+"endLine":  46,
+"endColumn":  41
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this set, which updates a \"static\" field from an instance method.",
-"fullMessage":  "Correctly updating a \"static\" field from a non-static method is tricky to get right and could easily lead to bugs if there are multiple class instances and/or multiple threads in play.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Instance members should not write to \"static\" fields",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2696",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2696",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2696",
+"message":  "Remove this set, which updates a \"static\" field from an instance method.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\TestActorRefTests\\SenderActor.cs",
 "region":  {
-"startLine":  35,
-"startColumn":  20,
-"endLine":  35,
-"endColumn":  44
+"startLine":  36,
+"startColumn":  21,
+"endLine":  36,
+"endColumn":  45
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this set, which updates a \"static\" field from an instance method.",
-"fullMessage":  "Correctly updating a \"static\" field from a non-static method is tricky to get right and could easily lead to bugs if there are multiple class instances and/or multiple threads in play.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Instance members should not write to \"static\" fields",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2696",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2696",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2696",
+"message":  "Remove this set, which updates a \"static\" field from an instance method.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\TestActorRefTests\\SenderActor.cs",
 "region":  {
-"startLine":  38,
-"startColumn":  20,
-"endLine":  38,
-"endColumn":  44
+"startLine":  39,
+"startColumn":  21,
+"endLine":  39,
+"endColumn":  45
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this set, which updates a \"static\" field from an instance method.",
-"fullMessage":  "Correctly updating a \"static\" field from a non-static method is tricky to get right and could easily lead to bugs if there are multiple class instances and/or multiple threads in play.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Instance members should not write to \"static\" fields",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2696",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2696",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2696",
+"message":  "Remove this set, which updates a \"static\" field from an instance method.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\TestActorRefTests\\TActorBase.cs",
 "region":  {
-"startLine":  19,
-"startColumn":  16,
-"endLine":  19,
-"endColumn":  46
+"startLine":  20,
+"startColumn":  17,
+"endLine":  20,
+"endColumn":  47
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this set, which updates a \"static\" field from an instance method.",
-"fullMessage":  "Correctly updating a \"static\" field from a non-static method is tricky to get right and could easily lead to bugs if there are multiple class instances and/or multiple threads in play.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Instance members should not write to \"static\" fields",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2696",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2696",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2696",
+"message":  "Make the enclosing instance method \"static\" or remove this set on the \"static\" field.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\TestActorRefTests\\TestActorRefSpec.cs",
 "region":  {
-"startLine":  84,
-"startColumn":  12,
-"endLine":  84,
-"endColumn":  21
+"startLine":  85,
+"startColumn":  13,
+"endLine":  85,
+"endColumn":  22
 }
-}
-]
-}
-],
-"shortMessage":  "Make the enclosing instance method \"static\" or remove this set on the \"static\" field.",
-"fullMessage":  "Correctly updating a \"static\" field from a non-static method is tricky to get right and could easily lead to bugs if there are multiple class instances and/or multiple threads in play.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Instance members should not write to \"static\" fields",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2696",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2696",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2696",
+"message":  "Make the enclosing instance method \"static\" or remove this set on the \"static\" field.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\TestActorRefTests\\TestActorRefSpec.cs",
 "region":  {
-"startLine":  91,
-"startColumn":  12,
-"endLine":  91,
-"endColumn":  21
+"startLine":  92,
+"startColumn":  13,
+"endLine":  92,
+"endColumn":  22
 }
-}
-]
-}
-],
-"shortMessage":  "Make the enclosing instance method \"static\" or remove this set on the \"static\" field.",
-"fullMessage":  "Correctly updating a \"static\" field from a non-static method is tricky to get right and could easily lead to bugs if there are multiple class instances and/or multiple threads in play.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Instance members should not write to \"static\" fields",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2696",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2696",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2696",
+"message":  "Make the enclosing instance method \"static\" or remove this set on the \"static\" field.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\TestActorRefTests\\TestActorRefSpec.cs",
 "region":  {
-"startLine":  118,
-"startColumn":  12,
-"endLine":  118,
-"endColumn":  21
+"startLine":  119,
+"startColumn":  13,
+"endLine":  119,
+"endColumn":  22
 }
-}
-]
-}
-],
-"shortMessage":  "Make the enclosing instance method \"static\" or remove this set on the \"static\" field.",
-"fullMessage":  "Correctly updating a \"static\" field from a non-static method is tricky to get right and could easily lead to bugs if there are multiple class instances and/or multiple threads in play.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Instance members should not write to \"static\" fields",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2696",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

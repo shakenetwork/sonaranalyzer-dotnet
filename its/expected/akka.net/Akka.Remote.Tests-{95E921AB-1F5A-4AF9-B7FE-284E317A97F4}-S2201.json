@@ -1,39 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2201",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2201",
+"message":  "Use the return value of method \"Zip\", which has no side effect.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\Serialization\\DaemonMsgCreateSerializerSpec.cs",
 "region":  {
-"startLine":  99,
-"startColumn":  12,
-"endLine":  109,
-"endColumn":  14
+"startLine":  100,
+"startColumn":  13,
+"endLine":  110,
+"endColumn":  15
 }
-}
-]
-}
-],
-"shortMessage":  "Use the return value of method \"Zip\", which has no side effect.",
-"fullMessage":  "When the call to a function doesn\u0027t have any side effects, what is the point of making the call if the results are ignored? In such case, either the function call is useless and should be dropped or the source code doesn\u0027t behave as expected.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"=+\" should not be used instead of \"+=\"",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2201",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

@@ -1,129 +1,55 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1694",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor",
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding.Tests\\ClusterShardingFailureSpec.cs",
 "region":  {
-"startLine":  57,
-"startColumn":  26,
-"endLine":  57,
+"startLine":  58,
+"startColumn":  27,
+"endLine":  58,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor",
+"location":  {
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding.Tests\\ClusterShardingGracefulShutdownSpec.cs",
+"region":  {
+"startLine":  48,
+"startColumn":  27,
+"endLine":  48,
+"endColumn":  62
+}
+}
+},
+{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor",
+"location":  {
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding.Tests\\ClusterShardingLeavingSpec.cs",
+"region":  {
+"startLine":  55,
+"startColumn":  27,
+"endLine":  55,
 "endColumn":  52
 }
 }
-]
-}
-],
-"shortMessage":  "Convert this \"abstract\" class to a concrete class with a private constructor",
-"fullMessage":  "The purpose of an abstract class is to provide some heritable behaviors while also defining methods which must be implemented by sub-classes. A class with no abstract methods that was made abstract purely to prevent instantiation should be converted to a concrete class (i.e. remove the \"abstract\" keyword) with a private constructor. A class with only abstract methods and no inheritable behavior should be converted to an interface.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "An abstract class should have both abstract and concrete methods",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1694",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
 },
 {
-"ruleId":  "S1694",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding.Tests\\ClusterShardingGracefulShutdownSpec.cs",
-"region":  {
-"startLine":  47,
-"startColumn":  26,
-"endLine":  47,
-"endColumn":  61
-}
-}
-]
-}
-],
-"shortMessage":  "Convert this \"abstract\" class to a concrete class with a private constructor",
-"fullMessage":  "The purpose of an abstract class is to provide some heritable behaviors while also defining methods which must be implemented by sub-classes. A class with no abstract methods that was made abstract purely to prevent instantiation should be converted to a concrete class (i.e. remove the \"abstract\" keyword) with a private constructor. A class with only abstract methods and no inheritable behavior should be converted to an interface.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "An abstract class should have both abstract and concrete methods",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1694",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1694",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding.Tests\\ClusterShardingLeavingSpec.cs",
-"region":  {
-"startLine":  54,
-"startColumn":  26,
-"endLine":  54,
-"endColumn":  51
-}
-}
-]
-}
-],
-"shortMessage":  "Convert this \"abstract\" class to a concrete class with a private constructor",
-"fullMessage":  "The purpose of an abstract class is to provide some heritable behaviors while also defining methods which must be implemented by sub-classes. A class with no abstract methods that was made abstract purely to prevent instantiation should be converted to a concrete class (i.e. remove the \"abstract\" keyword) with a private constructor. A class with only abstract methods and no inheritable behavior should be converted to an interface.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "An abstract class should have both abstract and concrete methods",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1694",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1694",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1694",
+"message":  "Convert this \"abstract\" class to a concrete class with a private constructor",
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding.Tests\\ClusterShardingSpec.cs",
 "region":  {
-"startLine":  205,
-"startColumn":  26,
-"endLine":  205,
-"endColumn":  45
+"startLine":  206,
+"startColumn":  27,
+"endLine":  206,
+"endColumn":  46
 }
-}
-]
-}
-],
-"shortMessage":  "Convert this \"abstract\" class to a concrete class with a private constructor",
-"fullMessage":  "The purpose of an abstract class is to provide some heritable behaviors while also defining methods which must be implemented by sub-classes. A class with no abstract methods that was made abstract purely to prevent instantiation should be converted to a concrete class (i.e. remove the \"abstract\" keyword) with a private constructor. A class with only abstract methods and no inheritable behavior should be converted to an interface.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "An abstract class should have both abstract and concrete methods",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1694",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

@@ -1,69 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 341 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\MessageSink.cs",
 "region":  {
-"startLine":  104,
-"startColumn":  0,
-"endLine":  104,
-"endColumn":  341
+"startLine":  105,
+"startColumn":  1,
+"endLine":  105,
+"endColumn":  342
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 341 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 307 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\MessageSink.cs",
 "region":  {
-"startLine":  107,
-"startColumn":  0,
-"endLine":  107,
-"endColumn":  307
+"startLine":  108,
+"startColumn":  1,
+"endLine":  108,
+"endColumn":  308
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 307 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

@@ -1,129 +1,55 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1313",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1313",
+"message":  "Make this IP \"127.0.0.1\" address configurable.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Testing.Tests\\BrowserFixture.cs",
 "region":  {
-"startLine":  57,
-"startColumn":  43,
-"endLine":  57,
-"endColumn":  54
+"startLine":  58,
+"startColumn":  44,
+"endLine":  58,
+"endColumn":  55
 }
-}
-]
-}
-],
-"shortMessage":  "Make this IP \"127.0.0.1\" address configurable.",
-"fullMessage":  "Hardcoding an IP address into source code is a bad idea for several reasons: a recompile is required if the address changes; it forces the same address to be used in every environment (dev, sys, qa, prod); it places the responsibility of setting the value to use in production on the shoulders of the developer; it allows attackers to decompile the code and thereby discover a potentially sensitive address",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "IP addresses should not be hardcoded",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1313",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1313",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1313",
+"message":  "Make this IP \"127.0.0.1\" address configurable.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Testing.Tests\\BrowserFixture.cs",
 "region":  {
-"startLine":  74,
-"startColumn":  43,
-"endLine":  74,
-"endColumn":  54
+"startLine":  75,
+"startColumn":  44,
+"endLine":  75,
+"endColumn":  55
 }
-}
-]
-}
-],
-"shortMessage":  "Make this IP \"127.0.0.1\" address configurable.",
-"fullMessage":  "Hardcoding an IP address into source code is a bad idea for several reasons: a recompile is required if the address changes; it forces the same address to be used in every environment (dev, sys, qa, prod); it places the responsibility of setting the value to use in production on the shoulders of the developer; it allows attackers to decompile the code and thereby discover a potentially sensitive address",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "IP addresses should not be hardcoded",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1313",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1313",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1313",
+"message":  "Make this IP \"::1\" address configurable.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Testing.Tests\\BrowserFixture.cs",
 "region":  {
-"startLine":  92,
-"startColumn":  43,
-"endLine":  92,
-"endColumn":  48
+"startLine":  93,
+"startColumn":  44,
+"endLine":  93,
+"endColumn":  49
 }
-}
-]
-}
-],
-"shortMessage":  "Make this IP \"::1\" address configurable.",
-"fullMessage":  "Hardcoding an IP address into source code is a bad idea for several reasons: a recompile is required if the address changes; it forces the same address to be used in every environment (dev, sys, qa, prod); it places the responsibility of setting the value to use in production on the shoulders of the developer; it allows attackers to decompile the code and thereby discover a potentially sensitive address",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "IP addresses should not be hardcoded",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1313",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1313",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1313",
+"message":  "Make this IP \"84.12.65.72\" address configurable.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Testing.Tests\\BrowserFixture.cs",
 "region":  {
-"startLine":  110,
-"startColumn":  43,
-"endLine":  110,
-"endColumn":  56
+"startLine":  111,
+"startColumn":  44,
+"endLine":  111,
+"endColumn":  57
 }
-}
-]
-}
-],
-"shortMessage":  "Make this IP \"84.12.65.72\" address configurable.",
-"fullMessage":  "Hardcoding an IP address into source code is a bad idea for several reasons: a recompile is required if the address changes; it forces the same address to be used in every environment (dev, sys, qa, prod); it places the responsibility of setting the value to use in production on the shoulders of the developer; it allows attackers to decompile the code and thereby discover a potentially sensitive address",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "IP addresses should not be hardcoded",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1313",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

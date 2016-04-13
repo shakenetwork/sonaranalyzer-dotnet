@@ -1,102 +1,42 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S3253",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3253",
+"message":  "Remove this redundant \"base()\" call.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Exceptions.cs",
 "region":  {
-"startLine":  121,
-"startColumn":  12,
-"endLine":  121,
-"endColumn":  20
+"startLine":  122,
+"startColumn":  13,
+"endLine":  122,
+"endColumn":  21
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this redundant \"base()\" call.",
-"fullMessage":  "Since the compiler will automatically invoke the base type\u0027s no-argument constructor, there\u0027s no need to specify its invocation explicitly. Also, when only a single \"public\" parameterless constructor is defined in a class, then that constructor can be removed because the compiler would generate it automatically. Similarly, empty \"static\" constructors and empty destructors are also wasted keystrokes.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Constructor and destructor declarations should not be redundant",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3253",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3253",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3253",
+"message":  "Remove this redundant \"base()\" call.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Exceptions.cs",
 "region":  {
-"startLine":  193,
-"startColumn":  12,
-"endLine":  193,
-"endColumn":  20
+"startLine":  194,
+"startColumn":  13,
+"endLine":  194,
+"endColumn":  21
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this redundant \"base()\" call.",
-"fullMessage":  "Since the compiler will automatically invoke the base type\u0027s no-argument constructor, there\u0027s no need to specify its invocation explicitly. Also, when only a single \"public\" parameterless constructor is defined in a class, then that constructor can be removed because the compiler would generate it automatically. Similarly, empty \"static\" constructors and empty destructors are also wasted keystrokes.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Constructor and destructor declarations should not be redundant",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3253",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3253",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3253",
+"message":  "Remove this redundant \"base()\" call.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Exceptions.cs",
 "region":  {
-"startLine":  427,
-"startColumn":  12,
-"endLine":  427,
-"endColumn":  20
+"startLine":  428,
+"startColumn":  13,
+"endLine":  428,
+"endColumn":  21
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this redundant \"base()\" call.",
-"fullMessage":  "Since the compiler will automatically invoke the base type\u0027s no-argument constructor, there\u0027s no need to specify its invocation explicitly. Also, when only a single \"public\" parameterless constructor is defined in a class, then that constructor can be removed because the compiler would generate it automatically. Similarly, empty \"static\" constructors and empty destructors are also wasted keystrokes.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Constructor and destructor declarations should not be redundant",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3253",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 }
 ]

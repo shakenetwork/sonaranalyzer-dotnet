@@ -1,69 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S101",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S101",
+"message":  "Rename class \"PersistentFSM\" to match camel case naming rules, consider using \"PersistentFsm\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSM.cs",
 "region":  {
-"startLine":  17,
-"startColumn":  26,
-"endLine":  17,
-"endColumn":  39
+"startLine":  18,
+"startColumn":  27,
+"endLine":  18,
+"endColumn":  40
 }
-}
-]
-}
-],
-"shortMessage":  "Rename class \"PersistentFSM\" to match camel case naming rules, consider using \"PersistentFsm\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Types should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S101",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S101",
+"message":  "Rename class \"PersistentFSMBase\" to match camel case naming rules, consider using \"PersistentFsmBase\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
-"startLine":  21,
-"startColumn":  26,
-"endLine":  21,
-"endColumn":  43
+"startLine":  22,
+"startColumn":  27,
+"endLine":  22,
+"endColumn":  44
 }
-}
-]
-}
-],
-"shortMessage":  "Rename class \"PersistentFSMBase\" to match camel case naming rules, consider using \"PersistentFsmBase\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Types should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

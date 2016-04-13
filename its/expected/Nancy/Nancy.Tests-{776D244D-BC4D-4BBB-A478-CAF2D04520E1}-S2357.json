@@ -1,1127 +1,477 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Fakes\\FakeRoute.cs",
-"region":  {
-"startLine":  12,
-"startColumn":  20,
-"endLine":  12,
-"endColumn":  36
-}
-}
-]
-}
-],
-"shortMessage":  "Make \"ActionWasInvoked\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2357",
+"message":  "Make \"ActionWasInvoked\" private.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Fakes\\FakeRoute.cs",
 "region":  {
 "startLine":  13,
-"startColumn":  33,
+"startColumn":  21,
 "endLine":  13,
-"endColumn":  61
+"endColumn":  37
 }
-}
-]
-}
-],
-"shortMessage":  "Make \"ParametersUsedToInvokeAction\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2357",
-"locations":  [
+"id":  "S2357",
+"message":  "Make \"ParametersUsedToInvokeAction\" private.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Fakes\\FakeRoute.cs",
+"region":  {
+"startLine":  14,
+"startColumn":  34,
+"endLine":  14,
+"endColumn":  62
+}
+}
+},
 {
-"analysisTarget":  [
-{
+"id":  "S2357",
+"message":  "Make \"Age\" private.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Fakes\\PersonWithAgeField.cs",
 "region":  {
-"startLine":  4,
-"startColumn":  19,
-"endLine":  4,
-"endColumn":  22
+"startLine":  5,
+"startColumn":  20,
+"endLine":  5,
+"endColumn":  23
 }
-}
-]
-}
-],
-"shortMessage":  "Make \"Age\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2357",
+"message":  "Make \"Data\" private.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Json\\TestConverterType.cs",
 "region":  {
-"startLine":  6,
-"startColumn":  13,
-"endLine":  6,
-"endColumn":  17
+"startLine":  7,
+"startColumn":  14,
+"endLine":  7,
+"endColumn":  18
 }
-}
-]
-}
-],
-"shortMessage":  "Make \"Data\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Json\\TestData.cs",
-"region":  {
-"startLine":  6,
-"startColumn":  27,
-"endLine":  6,
-"endColumn":  40
-}
-}
-]
-}
-],
-"shortMessage":  "Make \"ConverterData\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2357",
+"message":  "Make \"ConverterData\" private.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Json\\TestData.cs",
 "region":  {
 "startLine":  7,
-"startColumn":  36,
+"startColumn":  28,
 "endLine":  7,
-"endColumn":  58
+"endColumn":  41
 }
-}
-]
-}
-],
-"shortMessage":  "Make \"PrimitiveConverterData\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Json\\TestPrimitiveConverterType.cs",
+"id":  "S2357",
+"message":  "Make \"PrimitiveConverterData\" private.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Json\\TestData.cs",
 "region":  {
-"startLine":  6,
-"startColumn":  13,
-"endLine":  6,
-"endColumn":  17
-}
-}
-]
-}
-],
-"shortMessage":  "Make \"Data\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
-"region":  {
-"startLine":  188,
-"startColumn":  23,
-"endLine":  188,
-"endColumn":  31
-}
-}
-]
-}
-],
-"shortMessage":  "Make \"IntField\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
-"region":  {
-"startLine":  189,
-"startColumn":  26,
-"endLine":  189,
-"endColumn":  37
-}
-}
-]
-}
-],
-"shortMessage":  "Make \"StringField\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
-"region":  {
-"startLine":  197,
-"startColumn":  23,
-"endLine":  197,
-"endColumn":  39
-}
-}
-]
-}
-],
-"shortMessage":  "Make \"BindableIntField\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
-"region":  {
-"startLine":  199,
-"startColumn":  26,
-"endLine":  199,
-"endColumn":  45
-}
-}
-]
-}
-],
-"shortMessage":  "Make \"BindableStringField\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
-"region":  {
-"startLine":  201,
-"startColumn":  29,
-"endLine":  201,
-"endColumn":  51
-}
-}
-]
-}
-],
-"shortMessage":  "Make \"BindableTestModelField\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
-"region":  {
-"startLine":  203,
-"startColumn":  35,
-"endLine":  203,
-"endColumn":  63
-}
-}
-]
-}
-],
-"shortMessage":  "Make \"BindableBiggerTestModelField\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
-"region":  {
-"startLine":  206,
-"startColumn":  36,
-"endLine":  206,
+"startLine":  8,
+"startColumn":  37,
+"endLine":  8,
 "endColumn":  59
 }
 }
-]
+},
+{
+"id":  "S2357",
+"message":  "Make \"Data\" private.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Json\\TestPrimitiveConverterType.cs",
+"region":  {
+"startLine":  7,
+"startColumn":  14,
+"endLine":  7,
+"endColumn":  18
 }
-],
-"shortMessage":  "Make \"BindableEnumerableField\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2357",
+"message":  "Make \"IntField\" private.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
 "region":  {
-"startLine":  209,
-"startColumn":  32,
-"endLine":  209,
-"endColumn":  49
+"startLine":  189,
+"startColumn":  24,
+"endLine":  189,
+"endColumn":  32
 }
-}
-]
-}
-],
-"shortMessage":  "Make \"BindableListField\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2357",
+"message":  "Make \"StringField\" private.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
 "region":  {
-"startLine":  211,
-"startColumn":  28,
-"endLine":  211,
-"endColumn":  46
-}
-}
-]
-}
-],
-"shortMessage":  "Make \"BindableArrayField\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
-"region":  {
-"startLine":  213,
-"startColumn":  31,
-"endLine":  213,
-"endColumn":  58
-}
-}
-]
-}
-],
-"shortMessage":  "Make \"BindableArrayOfObjectsField\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
-"region":  {
-"startLine":  228,
-"startColumn":  32,
-"endLine":  228,
-"endColumn":  55
-}
-}
-]
-}
-],
-"shortMessage":  "Make \"UnbindableReadOnlyField\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
-"region":  {
-"startLine":  1579,
-"startColumn":  26,
-"endLine":  1579,
-"endColumn":  37
-}
-}
-]
-}
-],
-"shortMessage":  "Make \"StringField\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
-"region":  {
-"startLine":  1581,
-"startColumn":  26,
-"endLine":  1581,
-"endColumn":  44
-}
-}
-]
-}
-],
-"shortMessage":  "Make \"AnotherStringField\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
-"region":  {
-"startLine":  1587,
-"startColumn":  23,
-"endLine":  1587,
-"endColumn":  31
-}
-}
-]
-}
-],
-"shortMessage":  "Make \"IntField\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
-"region":  {
-"startLine":  1589,
-"startColumn":  23,
-"endLine":  1589,
+"startLine":  190,
+"startColumn":  27,
+"endLine":  190,
 "endColumn":  38
 }
 }
-]
-}
-],
-"shortMessage":  "Make \"AnotherIntField\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
 },
 {
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
+"id":  "S2357",
+"message":  "Make \"BindableIntField\" private.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
 "region":  {
-"startLine":  1593,
-"startColumn":  23,
-"endLine":  1593,
+"startLine":  198,
+"startColumn":  24,
+"endLine":  198,
 "endColumn":  40
 }
 }
-]
+},
+{
+"id":  "S2357",
+"message":  "Make \"BindableStringField\" private.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
+"region":  {
+"startLine":  200,
+"startColumn":  27,
+"endLine":  200,
+"endColumn":  46
 }
-],
-"shortMessage":  "Make \"lowercaseintfield\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
+"id":  "S2357",
+"message":  "Make \"BindableTestModelField\" private.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
 "region":  {
-"startLine":  1597,
-"startColumn":  28,
-"endLine":  1597,
-"endColumn":  37
+"startLine":  202,
+"startColumn":  30,
+"endLine":  202,
+"endColumn":  52
 }
-}
-]
-}
-],
-"shortMessage":  "Make \"DateField\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
+"id":  "S2357",
+"message":  "Make \"BindableBiggerTestModelField\" private.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
 "region":  {
-"startLine":  1601,
-"startColumn":  26,
-"endLine":  1601,
-"endColumn":  53
-}
-}
-]
-}
-],
-"shortMessage":  "Make \"StringFieldWithDefaultValue\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
-"region":  {
-"startLine":  1605,
-"startColumn":  26,
-"endLine":  1605,
-"endColumn":  37
-}
-}
-]
-}
-],
-"shortMessage":  "Make \"DoubleField\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
-"region":  {
-"startLine":  1611,
+"startLine":  204,
 "startColumn":  36,
-"endLine":  1611,
+"endLine":  204,
+"endColumn":  64
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"BindableEnumerableField\" private.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
+"region":  {
+"startLine":  207,
+"startColumn":  37,
+"endLine":  207,
+"endColumn":  60
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"BindableListField\" private.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
+"region":  {
+"startLine":  210,
+"startColumn":  33,
+"endLine":  210,
 "endColumn":  50
 }
 }
-]
+},
+{
+"id":  "S2357",
+"message":  "Make \"BindableArrayField\" private.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
+"region":  {
+"startLine":  212,
+"startColumn":  29,
+"endLine":  212,
+"endColumn":  47
 }
-],
-"shortMessage":  "Make \"IntValuesField\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2357",
-"locations":  [
+"id":  "S2357",
+"message":  "Make \"BindableArrayOfObjectsField\" private.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
+"region":  {
+"startLine":  214,
+"startColumn":  32,
+"endLine":  214,
+"endColumn":  59
+}
+}
+},
 {
-"analysisTarget":  [
+"id":  "S2357",
+"message":  "Make \"UnbindableReadOnlyField\" private.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
+"region":  {
+"startLine":  229,
+"startColumn":  33,
+"endLine":  229,
+"endColumn":  56
+}
+}
+},
 {
+"id":  "S2357",
+"message":  "Make \"StringField\" private.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
 "region":  {
-"startLine":  1615,
-"startColumn":  28,
-"endLine":  1615,
-"endColumn":  44
+"startLine":  1580,
+"startColumn":  27,
+"endLine":  1580,
+"endColumn":  38
 }
-}
-]
-}
-],
-"shortMessage":  "Make \"SomeStringsField\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2357",
+"message":  "Make \"AnotherStringField\" private.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
 "region":  {
-"startLine":  1625,
-"startColumn":  42,
-"endLine":  1625,
-"endColumn":  53
+"startLine":  1582,
+"startColumn":  27,
+"endLine":  1582,
+"endColumn":  45
 }
-}
-]
-}
-],
-"shortMessage":  "Make \"ModelsField\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2357",
+"message":  "Make \"IntField\" private.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
 "region":  {
-"startLine":  1639,
-"startColumn":  26,
-"endLine":  1639,
-"endColumn":  43
+"startLine":  1588,
+"startColumn":  24,
+"endLine":  1588,
+"endColumn":  32
 }
-}
-]
-}
-],
-"shortMessage":  "Make \"NestedStringField\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2357",
-"locations":  [
+"id":  "S2357",
+"message":  "Make \"AnotherIntField\" private.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
+"region":  {
+"startLine":  1590,
+"startColumn":  24,
+"endLine":  1590,
+"endColumn":  39
+}
+}
+},
 {
-"analysisTarget":  [
+"id":  "S2357",
+"message":  "Make \"lowercaseintfield\" private.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
+"region":  {
+"startLine":  1594,
+"startColumn":  24,
+"endLine":  1594,
+"endColumn":  41
+}
+}
+},
 {
+"id":  "S2357",
+"message":  "Make \"DateField\" private.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
+"region":  {
+"startLine":  1598,
+"startColumn":  29,
+"endLine":  1598,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"StringFieldWithDefaultValue\" private.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
+"region":  {
+"startLine":  1602,
+"startColumn":  27,
+"endLine":  1602,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"DoubleField\" private.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
+"region":  {
+"startLine":  1606,
+"startColumn":  27,
+"endLine":  1606,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"IntValuesField\" private.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
+"region":  {
+"startLine":  1612,
+"startColumn":  37,
+"endLine":  1612,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"SomeStringsField\" private.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
+"region":  {
+"startLine":  1616,
+"startColumn":  29,
+"endLine":  1616,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"ModelsField\" private.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
+"region":  {
+"startLine":  1626,
+"startColumn":  43,
+"endLine":  1626,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"NestedStringField\" private.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
 "region":  {
 "startLine":  1640,
-"startColumn":  23,
+"startColumn":  27,
 "endLine":  1640,
-"endColumn":  37
+"endColumn":  44
 }
-}
-]
-}
-],
-"shortMessage":  "Make \"NestedIntField\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2357",
+"message":  "Make \"NestedIntField\" private.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
 "region":  {
 "startLine":  1641,
-"startColumn":  26,
+"startColumn":  24,
 "endLine":  1641,
-"endColumn":  43
+"endColumn":  38
 }
-}
-]
-}
-],
-"shortMessage":  "Make \"NestedDoubleField\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2357",
-"locations":  [
+"id":  "S2357",
+"message":  "Make \"NestedDoubleField\" private.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
+"region":  {
+"startLine":  1642,
+"startColumn":  27,
+"endLine":  1642,
+"endColumn":  44
+}
+}
+},
 {
-"analysisTarget":  [
-{
+"id":  "S2357",
+"message":  "Make \"ListOfPrimitivesField\" private.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\JsonBodyDeserializerFixture.cs",
 "region":  {
-"startLine":  357,
-"startColumn":  29,
-"endLine":  357,
-"endColumn":  50
+"startLine":  358,
+"startColumn":  30,
+"endLine":  358,
+"endColumn":  51
 }
-}
-]
-}
-],
-"shortMessage":  "Make \"ListOfPrimitivesField\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2357",
+"message":  "Make \"Value2\" private.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\JsonBodyDeserializerFixture.cs",
 "region":  {
-"startLine":  435,
-"startColumn":  22,
-"endLine":  435,
-"endColumn":  28
+"startLine":  436,
+"startColumn":  23,
+"endLine":  436,
+"endColumn":  29
 }
-}
-]
-}
-],
-"shortMessage":  "Make \"Value2\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2357",
+"message":  "Make \"Longitude\" private.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\JsonBodyDeserializerFixture.cs",
 "region":  {
-"startLine":  442,
-"startColumn":  22,
-"endLine":  442,
-"endColumn":  31
+"startLine":  443,
+"startColumn":  23,
+"endLine":  443,
+"endColumn":  32
 }
-}
-]
-}
-],
-"shortMessage":  "Make \"Longitude\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\JsonBodyDeserializerFixture.cs",
-"region":  {
-"startLine":  451,
-"startColumn":  20,
-"endLine":  451,
-"endColumn":  22
-}
-}
-]
-}
-],
-"shortMessage":  "Make \"F1\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2357",
+"message":  "Make \"F1\" private.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\JsonBodyDeserializerFixture.cs",
 "region":  {
 "startLine":  452,
-"startColumn":  20,
+"startColumn":  21,
 "endLine":  452,
-"endColumn":  22
+"endColumn":  23
 }
-}
-]
-}
-],
-"shortMessage":  "Make \"F2\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2357",
+"message":  "Make \"F2\" private.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\JsonBodyDeserializerFixture.cs",
 "region":  {
 "startLine":  453,
@@ -1130,80 +480,44 @@
 "endColumn":  23
 }
 }
-]
-}
-],
-"shortMessage":  "Make \"F3\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
 },
 {
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Responses\\DefaultJsonSerializerFixture.cs",
+"id":  "S2357",
+"message":  "Make \"F3\" private.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\JsonBodyDeserializerFixture.cs",
 "region":  {
-"startLine":  103,
-"startColumn":  26,
-"endLine":  103,
-"endColumn":  35
+"startLine":  454,
+"startColumn":  22,
+"endLine":  454,
+"endColumn":  24
 }
-}
-]
-}
-],
-"shortMessage":  "Make \"FirstName\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2357",
+"message":  "Make \"FirstName\" private.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Responses\\DefaultJsonSerializerFixture.cs",
 "region":  {
 "startLine":  104,
-"startColumn":  26,
+"startColumn":  27,
 "endLine":  104,
-"endColumn":  34
+"endColumn":  36
 }
 }
-]
+},
+{
+"id":  "S2357",
+"message":  "Make \"LastName\" private.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Responses\\DefaultJsonSerializerFixture.cs",
+"region":  {
+"startLine":  105,
+"startColumn":  27,
+"endLine":  105,
+"endColumn":  35
 }
-],
-"shortMessage":  "Make \"LastName\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

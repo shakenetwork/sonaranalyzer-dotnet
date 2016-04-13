@@ -1,226 +1,94 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1172",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"serializer\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Diagnostics\\DiagnosticsHook.cs",
 "region":  {
-"startLine":  258,
-"startColumn":  128,
-"endLine":  258,
-"endColumn":  162
+"startLine":  259,
+"startColumn":  129,
+"endLine":  259,
+"endColumn":  163
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this unused method parameter \"serializer\".",
-"fullMessage":  "Unused parameters are misleading. Whatever the value passed to such parameters is, the behavior will be the same.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused method parameters should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1172",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S1172",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"diagnosticsProvider\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Diagnostics\\InteractiveDiagnostics.cs",
 "region":  {
-"startLine":  175,
-"startColumn":  58,
-"endLine":  175,
-"endColumn":  98
+"startLine":  176,
+"startColumn":  59,
+"endLine":  176,
+"endColumn":  99
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this unused method parameter \"diagnosticsProvider\".",
-"fullMessage":  "Unused parameters are misleading. Whatever the value passed to such parameters is, the behavior will be the same.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused method parameters should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1172",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S1172",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"model\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
 "region":  {
-"startLine":  376,
-"startColumn":  75,
-"endLine":  376,
-"endColumn":  87
+"startLine":  377,
+"startColumn":  76,
+"endLine":  377,
+"endColumn":  88
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this unused method parameter \"model\".",
-"fullMessage":  "Unused parameters are misleading. Whatever the value passed to such parameters is, the behavior will be the same.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused method parameters should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1172",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S1172",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"model\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
 "region":  {
-"startLine":  438,
-"startColumn":  75,
-"endLine":  438,
-"endColumn":  87
+"startLine":  439,
+"startColumn":  76,
+"endLine":  439,
+"endColumn":  88
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this unused method parameter \"model\".",
-"fullMessage":  "Unused parameters are misleading. Whatever the value passed to such parameters is, the behavior will be the same.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused method parameters should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1172",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S1172",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"model\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
 "region":  {
-"startLine":  596,
-"startColumn":  72,
-"endLine":  596,
-"endColumn":  84
+"startLine":  597,
+"startColumn":  73,
+"endLine":  597,
+"endColumn":  85
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this unused method parameter \"model\".",
-"fullMessage":  "Unused parameters are misleading. Whatever the value passed to such parameters is, the behavior will be the same.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused method parameters should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1172",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S1172",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"model\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
 "region":  {
-"startLine":  632,
-"startColumn":  84,
-"endLine":  632,
-"endColumn":  96
+"startLine":  633,
+"startColumn":  85,
+"endLine":  633,
+"endColumn":  97
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this unused method parameter \"model\".",
-"fullMessage":  "Unused parameters are misleading. Whatever the value passed to such parameters is, the behavior will be the same.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused method parameters should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1172",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S1172",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1172",
+"message":  "Remove this unused method parameter \"viewEngine\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\ViewEngineApplicationStartup.cs",
 "region":  {
-"startLine":  41,
-"startColumn":  72,
-"endLine":  41,
-"endColumn":  94
+"startLine":  42,
+"startColumn":  73,
+"endLine":  42,
+"endColumn":  95
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this unused method parameter \"viewEngine\".",
-"fullMessage":  "Unused parameters are misleading. Whatever the value passed to such parameters is, the behavior will be the same.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused method parameters should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1172",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 }
 ]

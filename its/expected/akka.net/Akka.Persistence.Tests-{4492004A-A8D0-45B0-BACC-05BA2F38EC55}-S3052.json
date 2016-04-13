@@ -1,226 +1,94 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_count\", the compiler will do that for you.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\AtLeastOnceDeliverySpec.cs",
 "region":  {
-"startLine":  148,
-"startColumn":  31,
-"endLine":  148,
-"endColumn":  34
+"startLine":  149,
+"startColumn":  32,
+"endLine":  149,
+"endColumn":  35
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_count\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_stashed\", the compiler will do that for you.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
 "region":  {
-"startLine":  391,
+"startLine":  392,
+"startColumn":  35,
+"endLine":  392,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_counter\", the compiler will do that for you.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
+"region":  {
+"startLine":  477,
 "startColumn":  34,
-"endLine":  391,
-"endColumn":  41
+"endLine":  477,
+"endColumn":  37
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_stashed\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_counter\", the compiler will do that for you.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
 "region":  {
-"startLine":  476,
-"startColumn":  33,
-"endLine":  476,
-"endColumn":  36
+"startLine":  506,
+"startColumn":  34,
+"endLine":  506,
+"endColumn":  37
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_counter\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_counter\", the compiler will do that for you.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
 "region":  {
-"startLine":  505,
-"startColumn":  33,
-"endLine":  505,
-"endColumn":  36
+"startLine":  572,
+"startColumn":  34,
+"endLine":  572,
+"endColumn":  37
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_counter\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_counter\", the compiler will do that for you.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
 "region":  {
-"startLine":  571,
-"startColumn":  33,
-"endLine":  571,
-"endColumn":  36
+"startLine":  601,
+"startColumn":  34,
+"endLine":  601,
+"endColumn":  37
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_counter\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_counter\", the compiler will do that for you.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
 "region":  {
-"startLine":  600,
-"startColumn":  33,
-"endLine":  600,
-"endColumn":  36
+"startLine":  630,
+"startColumn":  34,
+"endLine":  630,
+"endColumn":  37
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_counter\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
-}
-},
-{
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
-"region":  {
-"startLine":  629,
-"startColumn":  33,
-"endLine":  629,
-"endColumn":  36
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_counter\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 }
 ]

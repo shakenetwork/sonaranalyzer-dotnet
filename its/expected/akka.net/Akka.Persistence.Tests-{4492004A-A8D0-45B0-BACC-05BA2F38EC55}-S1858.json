@@ -1,164 +1,68 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1858",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
 "region":  {
-"startLine":  490,
-"startColumn":  53,
-"endLine":  490,
-"endColumn":  64
+"startLine":  491,
+"startColumn":  54,
+"endLine":  491,
+"endColumn":  65
 }
-}
-]
-}
-],
-"shortMessage":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
-"fullMessage":  "Invoking a method designed to return a string representation of an object which is already a string is a waste of keystrokes. Similarly, explicitly invoking \"ToString()\" when the compiler would do it implicitly is also needless code-bloat.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "\"ToString()\" calls should not be redundant",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1858",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S1858",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
 "region":  {
-"startLine":  521,
-"startColumn":  57,
-"endLine":  521,
-"endColumn":  68
+"startLine":  522,
+"startColumn":  58,
+"endLine":  522,
+"endColumn":  69
 }
-}
-]
-}
-],
-"shortMessage":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
-"fullMessage":  "Invoking a method designed to return a string representation of an object which is already a string is a waste of keystrokes. Similarly, explicitly invoking \"ToString()\" when the compiler would do it implicitly is also needless code-bloat.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "\"ToString()\" calls should not be redundant",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1858",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S1858",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
 "region":  {
-"startLine":  556,
-"startColumn":  48,
-"endLine":  556,
-"endColumn":  59
+"startLine":  557,
+"startColumn":  49,
+"endLine":  557,
+"endColumn":  60
 }
-}
-]
-}
-],
-"shortMessage":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
-"fullMessage":  "Invoking a method designed to return a string representation of an object which is already a string is a waste of keystrokes. Similarly, explicitly invoking \"ToString()\" when the compiler would do it implicitly is also needless code-bloat.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "\"ToString()\" calls should not be redundant",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1858",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S1858",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentActorSpec.Actors.cs",
 "region":  {
-"startLine":  559,
-"startColumn":  72,
-"endLine":  559,
-"endColumn":  83
+"startLine":  560,
+"startColumn":  73,
+"endLine":  560,
+"endColumn":  84
 }
-}
-]
-}
-],
-"shortMessage":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
-"fullMessage":  "Invoking a method designed to return a string representation of an object which is already a string is a waste of keystrokes. Similarly, explicitly invoking \"ToString()\" when the compiler would do it implicitly is also needless code-bloat.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "\"ToString()\" calls should not be redundant",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1858",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S1858",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1858",
+"message":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\PersistentViewSpec.Actors.cs",
 "region":  {
-"startLine":  34,
-"startColumn":  51,
-"endLine":  34,
-"endColumn":  62
+"startLine":  35,
+"startColumn":  52,
+"endLine":  35,
+"endColumn":  63
 }
-}
-]
-}
-],
-"shortMessage":  "There\u0027s no need to call \"ToString()\", the compiler will do it for you.",
-"fullMessage":  "Invoking a method designed to return a string representation of an object which is already a string is a waste of keystrokes. Similarly, explicitly invoking \"ToString()\" when the compiler would do it implicitly is also needless code-bloat.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "\"ToString()\" calls should not be redundant",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1858",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 }
 ]

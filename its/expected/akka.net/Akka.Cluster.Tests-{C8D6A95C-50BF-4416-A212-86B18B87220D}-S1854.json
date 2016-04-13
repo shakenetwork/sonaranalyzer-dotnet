@@ -1,99 +1,42 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1854",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"merged34\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\MetricsCollectorSpec.cs",
 "region":  {
-"startLine":  62,
-"startColumn":  29,
-"endLine":  62,
-"endColumn":  30
+"startLine":  63,
+"startColumn":  30,
+"endLine":  63,
+"endColumn":  31
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this useless assignment to local variable \"merged34\".",
-"fullMessage":  "A dead store happens when a local variable is assigned a value that is not read by any subsequent instruction. Calculating or retrieving a value only to then overwrite it or throw it away, could indicate a serious error in the code.Even if it\u0027s not an error, it is at best a waste of resources. Therefore all calculated values should be used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Dead stores should be removed",
-"category":  "Performance",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1854",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1854",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"beforeMergeNodes\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\MetricsGossipSpec.cs",
 "region":  {
-"startLine":  57,
-"startColumn":  33,
-"endLine":  57,
-"endColumn":  34
+"startLine":  58,
+"startColumn":  34,
+"endLine":  58,
+"endColumn":  35
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this useless assignment to local variable \"beforeMergeNodes\".",
-"fullMessage":  "A dead store happens when a local variable is assigned a value that is not read by any subsequent instruction. Calculating or retrieving a value only to then overwrite it or throw it away, could indicate a serious error in the code.Even if it\u0027s not an error, it is at best a waste of resources. Therefore all calculated values should be used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Dead stores should be removed",
-"category":  "Performance",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1854",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1854",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"echo\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\Routing\\ClusterRouterAsk1343BugFixSpec.cs",
 "region":  {
-"startLine":  84,
-"startColumn":  21,
-"endLine":  84,
-"endColumn":  22
+"startLine":  85,
+"startColumn":  22,
+"endLine":  85,
+"endColumn":  23
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this useless assignment to local variable \"echo\".",
-"fullMessage":  "A dead store happens when a local variable is assigned a value that is not read by any subsequent instruction. Calculating or retrieving a value only to then overwrite it or throw it away, could indicate a serious error in the code.Even if it\u0027s not an error, it is at best a waste of resources. Therefore all calculated values should be used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Dead stores should be removed",
-"category":  "Performance",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1854",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

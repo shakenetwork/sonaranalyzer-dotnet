@@ -1,195 +1,81 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S3235",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3235",
+"message":  "Remove these redundant parentheses.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorBase.cs",
 "region":  {
-"startLine":  62,
-"startColumn":  13,
-"endLine":  62,
-"endColumn":  15
+"startLine":  63,
+"startColumn":  14,
+"endLine":  63,
+"endColumn":  16
 }
-}
-]
-}
-],
-"shortMessage":  "Remove these redundant parentheses.",
-"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Redundant parentheses should not be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3235",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3235",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3235",
+"message":  "Remove these redundant parentheses.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorRefProvider.cs",
 "region":  {
-"startLine":  404,
-"startColumn":  48,
-"endLine":  404,
-"endColumn":  50
+"startLine":  405,
+"startColumn":  49,
+"endLine":  405,
+"endColumn":  51
 }
-}
-]
-}
-],
-"shortMessage":  "Remove these redundant parentheses.",
-"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Redundant parentheses should not be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3235",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3235",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3235",
+"message":  "Remove these redundant parentheses.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Address.cs",
 "region":  {
-"startLine":  194,
-"startColumn":  39,
-"endLine":  194,
-"endColumn":  41
+"startLine":  195,
+"startColumn":  40,
+"endLine":  195,
+"endColumn":  42
 }
-}
-]
-}
-],
-"shortMessage":  "Remove these redundant parentheses.",
-"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Redundant parentheses should not be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3235",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3235",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3235",
+"message":  "Remove these redundant parentheses.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Props.cs",
 "region":  {
-"startLine":  50,
-"startColumn":  37,
-"endLine":  50,
-"endColumn":  39
+"startLine":  51,
+"startColumn":  38,
+"endLine":  51,
+"endColumn":  40
 }
-}
-]
-}
-],
-"shortMessage":  "Remove these redundant parentheses.",
-"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Redundant parentheses should not be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3235",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3235",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3235",
+"message":  "Remove these redundant parentheses.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Stash\\Internal\\AbstractStash.cs",
 "region":  {
-"startLine":  73,
-"startColumn":  46,
-"endLine":  73,
-"endColumn":  48
+"startLine":  74,
+"startColumn":  47,
+"endLine":  74,
+"endColumn":  49
 }
-}
-]
-}
-],
-"shortMessage":  "Remove these redundant parentheses.",
-"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Redundant parentheses should not be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3235",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3235",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3235",
+"message":  "Remove these redundant parentheses.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Serialization\\Serialization.cs",
 "region":  {
-"startLine":  28,
-"startColumn":  58,
-"endLine":  28,
-"endColumn":  60
+"startLine":  29,
+"startColumn":  59,
+"endLine":  29,
+"endColumn":  61
 }
-}
-]
-}
-],
-"shortMessage":  "Remove these redundant parentheses.",
-"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Redundant parentheses should not be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3235",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 }
 ]

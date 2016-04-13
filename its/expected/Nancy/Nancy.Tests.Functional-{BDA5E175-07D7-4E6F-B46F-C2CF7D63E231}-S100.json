@@ -1,99 +1,42 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S100",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S100",
+"message":  "Rename property \"key1\" to match camel case naming rules, consider using \"Key1\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\ModelBindingTests.cs",
 "region":  {
-"startLine":  83,
-"startColumn":  22,
-"endLine":  83,
-"endColumn":  26
+"startLine":  84,
+"startColumn":  23,
+"endLine":  84,
+"endColumn":  27
 }
-}
-]
-}
-],
-"shortMessage":  "Rename property \"key1\" to match camel case naming rules, consider using \"Key1\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods and properties should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S100",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\ModelBindingTests.cs",
-"region":  {
-"startLine":  88,
-"startColumn":  22,
-"endLine":  88,
-"endColumn":  26
-}
-}
-]
-}
-],
-"shortMessage":  "Rename property \"key1\" to match camel case naming rules, consider using \"Key1\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods and properties should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S100",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S100",
+"message":  "Rename property \"key1\" to match camel case naming rules, consider using \"Key1\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\ModelBindingTests.cs",
 "region":  {
 "startLine":  89,
-"startColumn":  22,
+"startColumn":  23,
 "endLine":  89,
-"endColumn":  26
+"endColumn":  27
 }
 }
-]
+},
+{
+"id":  "S100",
+"message":  "Rename property \"key2\" to match camel case naming rules, consider using \"Key2\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests.Functional\\Tests\\ModelBindingTests.cs",
+"region":  {
+"startLine":  90,
+"startColumn":  23,
+"endLine":  90,
+"endColumn":  27
 }
-],
-"shortMessage":  "Rename property \"key2\" to match camel case naming rules, consider using \"Key2\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods and properties should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

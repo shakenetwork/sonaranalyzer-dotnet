@@ -1,279 +1,120 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2372",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\HeadResponse.cs",
 "region":  {
-"startLine":  127,
-"startColumn":  22,
-"endLine":  127,
-"endColumn":  56
+"startLine":  128,
+"startColumn":  23,
+"endLine":  128,
+"endColumn":  57
 }
-}
-]
-}
-],
-"shortMessage":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"fullMessage":  "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Exceptions should not be thrown from property getters",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2372",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2372",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\NancyModule.cs",
 "region":  {
-"startLine":  88,
-"startColumn":  20,
-"endLine":  88,
-"endColumn":  147
+"startLine":  89,
+"startColumn":  21,
+"endLine":  89,
+"endColumn":  148
 }
-}
-]
-}
-],
-"shortMessage":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"fullMessage":  "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Exceptions should not be thrown from property getters",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2372",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2372",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Session\\NullSessionProvider.cs",
 "region":  {
-"startLine":  40,
-"startColumn":  16,
-"endLine":  40,
-"endColumn":  87
-}
-}
-]
-}
-],
-"shortMessage":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"fullMessage":  "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Exceptions should not be thrown from property getters",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2372",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2372",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
-"region":  {
-"startLine":  2448,
-"startColumn":  20,
-"endLine":  2448,
+"startLine":  41,
+"startColumn":  17,
+"endLine":  41,
 "endColumn":  88
 }
 }
-]
+},
+{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+"region":  {
+"startLine":  2449,
+"startColumn":  21,
+"endLine":  2449,
+"endColumn":  89
 }
-],
-"shortMessage":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"fullMessage":  "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Exceptions should not be thrown from property getters",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2372",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2372",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
-"startLine":  2456,
-"startColumn":  20,
-"endLine":  2456,
-"endColumn":  93
+"startLine":  2457,
+"startColumn":  21,
+"endLine":  2457,
+"endColumn":  94
 }
-}
-]
-}
-],
-"shortMessage":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"fullMessage":  "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Exceptions should not be thrown from property getters",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2372",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2372",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
-"startLine":  2464,
-"startColumn":  20,
-"endLine":  2464,
-"endColumn":  95
+"startLine":  2465,
+"startColumn":  21,
+"endLine":  2465,
+"endColumn":  96
 }
-}
-]
-}
-],
-"shortMessage":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"fullMessage":  "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Exceptions should not be thrown from property getters",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2372",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2372",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
-"startLine":  2472,
-"startColumn":  20,
-"endLine":  2472,
-"endColumn":  93
+"startLine":  2473,
+"startColumn":  21,
+"endLine":  2473,
+"endColumn":  94
 }
-}
-]
-}
-],
-"shortMessage":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"fullMessage":  "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Exceptions should not be thrown from property getters",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2372",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2372",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
-"startLine":  2656,
-"startColumn":  24,
-"endLine":  2656,
-"endColumn":  83
+"startLine":  2657,
+"startColumn":  25,
+"endLine":  2657,
+"endColumn":  84
 }
-}
-]
-}
-],
-"shortMessage":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"fullMessage":  "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Exceptions should not be thrown from property getters",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2372",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2372",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
-"startLine":  2801,
-"startColumn":  24,
-"endLine":  2801,
-"endColumn":  83
+"startLine":  2802,
+"startColumn":  25,
+"endLine":  2802,
+"endColumn":  84
 }
-}
-]
-}
-],
-"shortMessage":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"fullMessage":  "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Exceptions should not be thrown from property getters",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2372",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

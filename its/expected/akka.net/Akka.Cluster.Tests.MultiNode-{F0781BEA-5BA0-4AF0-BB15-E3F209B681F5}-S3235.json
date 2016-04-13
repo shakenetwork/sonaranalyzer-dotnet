@@ -1,71 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S3235",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3235",
+"message":  "Remove these redundant parentheses.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\Routing\\ClusterConsistentHashingRouterSpec.cs",
 "region":  {
-"startLine":  160,
-"startColumn":  56,
-"endLine":  160,
-"endColumn":  58
+"startLine":  161,
+"startColumn":  57,
+"endLine":  161,
+"endColumn":  59
 }
-}
-]
-}
-],
-"shortMessage":  "Remove these redundant parentheses.",
-"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Redundant parentheses should not be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3235",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3235",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3235",
+"message":  "Remove these redundant parentheses.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\Routing\\ClusterConsistentHashingRouterSpec.cs",
 "region":  {
-"startLine":  285,
-"startColumn":  56,
-"endLine":  285,
-"endColumn":  58
+"startLine":  286,
+"startColumn":  57,
+"endLine":  286,
+"endColumn":  59
 }
-}
-]
-}
-],
-"shortMessage":  "Remove these redundant parentheses.",
-"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Redundant parentheses should not be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3235",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 }
 ]

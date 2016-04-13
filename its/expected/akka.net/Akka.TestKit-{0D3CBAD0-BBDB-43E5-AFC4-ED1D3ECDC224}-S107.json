@@ -1,69 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S107",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S107",
+"message":  "Method has 8 parameters, which is greater than the 7 authorized.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\TestScheduler.cs",
 "region":  {
-"startLine":  64,
-"startColumn":  37,
-"endLine":  65,
-"endColumn":  76
+"startLine":  65,
+"startColumn":  38,
+"endLine":  66,
+"endColumn":  77
 }
-}
-]
-}
-],
-"shortMessage":  "Method has 8 parameters, which is greater than the 7 authorized.",
-"fullMessage":  "A long parameter list can indicate that a new structure should be created to wrap the numerous parameters or that the function is doing too many things.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not have too many parameters",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S107",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S107",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S107",
+"message":  "Constructor has 9 parameters, which is greater than the 7 authorized.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\TestScheduler.cs",
 "region":  {
-"startLine":  155,
-"startColumn":  32,
-"endLine":  156,
-"endColumn":  57
+"startLine":  156,
+"startColumn":  33,
+"endLine":  157,
+"endColumn":  58
 }
-}
-]
-}
-],
-"shortMessage":  "Constructor has 9 parameters, which is greater than the 7 authorized.",
-"fullMessage":  "A long parameter list can indicate that a new structure should be created to wrap the numerous parameters or that the function is doing too many things.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not have too many parameters",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S107",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

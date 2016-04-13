@@ -1,459 +1,198 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S122",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S122",
+"message":  "Reformat the code to have only one statement per line.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\ConvergenceSpec.cs",
 "region":  {
-"startLine":  190,
-"startColumn":  12,
-"endLine":  190,
-"endColumn":  44
+"startLine":  191,
+"startColumn":  13,
+"endLine":  191,
+"endColumn":  45
 }
-}
-]
-}
-],
-"shortMessage":  "Reformat the code to have only one statement per line.",
-"fullMessage":  "For better readability, do not put more than one statement on a single line.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Statements should be on separate lines",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S122",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S122",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S122",
+"message":  "Reformat the code to have only one statement per line.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\MultiNodeClusterSpec.cs",
 "region":  {
-"startLine":  170,
-"startColumn":  12,
-"endLine":  170,
-"endColumn":  39
+"startLine":  171,
+"startColumn":  13,
+"endLine":  171,
+"endColumn":  40
 }
-}
-]
-}
-],
-"shortMessage":  "Reformat the code to have only one statement per line.",
-"fullMessage":  "For better readability, do not put more than one statement on a single line.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Statements should be on separate lines",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S122",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S122",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S122",
+"message":  "Reformat the code to have only one statement per line.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\MultiNodeClusterSpec.cs",
 "region":  {
-"startLine":  258,
-"startColumn":  12,
-"endLine":  258,
-"endColumn":  88
+"startLine":  259,
+"startColumn":  13,
+"endLine":  259,
+"endColumn":  89
 }
-}
-]
-}
-],
-"shortMessage":  "Reformat the code to have only one statement per line.",
-"fullMessage":  "For better readability, do not put more than one statement on a single line.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Statements should be on separate lines",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S122",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S122",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\MultiNodeClusterSpec.cs",
-"region":  {
-"startLine":  269,
-"startColumn":  12,
-"endLine":  269,
-"endColumn":  54
-}
-}
-]
-}
-],
-"shortMessage":  "Reformat the code to have only one statement per line.",
-"fullMessage":  "For better readability, do not put more than one statement on a single line.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Statements should be on separate lines",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S122",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S122",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S122",
+"message":  "Reformat the code to have only one statement per line.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\MultiNodeClusterSpec.cs",
 "region":  {
 "startLine":  270,
-"startColumn":  12,
+"startColumn":  13,
 "endLine":  270,
+"endColumn":  55
+}
+}
+},
+{
+"id":  "S122",
+"message":  "Reformat the code to have only one statement per line.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\MultiNodeClusterSpec.cs",
+"region":  {
+"startLine":  271,
+"startColumn":  13,
+"endLine":  271,
+"endColumn":  70
+}
+}
+},
+{
+"id":  "S122",
+"message":  "Reformat the code to have only one statement per line.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\MultiNodeClusterSpec.cs",
+"region":  {
+"startLine":  317,
+"startColumn":  13,
+"endLine":  317,
+"endColumn":  99
+}
+}
+},
+{
+"id":  "S122",
+"message":  "Reformat the code to have only one statement per line.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\MultiNodeClusterSpec.cs",
+"region":  {
+"startLine":  333,
+"startColumn":  13,
+"endLine":  333,
+"endColumn":  58
+}
+}
+},
+{
+"id":  "S122",
+"message":  "Reformat the code to have only one statement per line.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\MultiNodeClusterSpec.cs",
+"region":  {
+"startLine":  352,
+"startColumn":  13,
+"endLine":  352,
 "endColumn":  69
 }
 }
-]
+},
+{
+"id":  "S122",
+"message":  "Reformat the code to have only one statement per line.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\MultiNodeClusterSpec.cs",
+"region":  {
+"startLine":  390,
+"startColumn":  13,
+"endLine":  390,
+"endColumn":  64
 }
-],
-"shortMessage":  "Reformat the code to have only one statement per line.",
-"fullMessage":  "For better readability, do not put more than one statement on a single line.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Statements should be on separate lines",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S122",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S122",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S122",
+"message":  "Reformat the code to have only one statement per line.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\MultiNodeClusterSpec.cs",
 "region":  {
-"startLine":  316,
-"startColumn":  12,
-"endLine":  316,
-"endColumn":  98
+"startLine":  425,
+"startColumn":  13,
+"endLine":  425,
+"endColumn":  62
 }
-}
-]
-}
-],
-"shortMessage":  "Reformat the code to have only one statement per line.",
-"fullMessage":  "For better readability, do not put more than one statement on a single line.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Statements should be on separate lines",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S122",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S122",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S122",
+"message":  "Reformat the code to have only one statement per line.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\MultiNodeClusterSpec.cs",
 "region":  {
-"startLine":  332,
-"startColumn":  12,
-"endLine":  332,
-"endColumn":  57
-}
-}
-]
-}
-],
-"shortMessage":  "Reformat the code to have only one statement per line.",
-"fullMessage":  "For better readability, do not put more than one statement on a single line.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Statements should be on separate lines",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S122",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S122",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\MultiNodeClusterSpec.cs",
-"region":  {
-"startLine":  351,
-"startColumn":  12,
-"endLine":  351,
+"startLine":  441,
+"startColumn":  17,
+"endLine":  441,
 "endColumn":  68
 }
 }
-]
-}
-],
-"shortMessage":  "Reformat the code to have only one statement per line.",
-"fullMessage":  "For better readability, do not put more than one statement on a single line.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Statements should be on separate lines",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S122",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
 },
 {
-"ruleId":  "S122",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\MultiNodeClusterSpec.cs",
-"region":  {
-"startLine":  389,
-"startColumn":  12,
-"endLine":  389,
-"endColumn":  63
-}
-}
-]
-}
-],
-"shortMessage":  "Reformat the code to have only one statement per line.",
-"fullMessage":  "For better readability, do not put more than one statement on a single line.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Statements should be on separate lines",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S122",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S122",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\MultiNodeClusterSpec.cs",
-"region":  {
-"startLine":  424,
-"startColumn":  12,
-"endLine":  424,
-"endColumn":  61
-}
-}
-]
-}
-],
-"shortMessage":  "Reformat the code to have only one statement per line.",
-"fullMessage":  "For better readability, do not put more than one statement on a single line.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Statements should be on separate lines",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S122",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S122",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\MultiNodeClusterSpec.cs",
-"region":  {
-"startLine":  440,
-"startColumn":  16,
-"endLine":  440,
-"endColumn":  67
-}
-}
-]
-}
-],
-"shortMessage":  "Reformat the code to have only one statement per line.",
-"fullMessage":  "For better readability, do not put more than one statement on a single line.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Statements should be on separate lines",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S122",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S122",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S122",
+"message":  "Reformat the code to have only one statement per line.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\Routing\\ClusterConsistentHashingGroupSpec.cs",
 "region":  {
-"startLine":  38,
-"startColumn":  16,
-"endLine":  38,
-"endColumn":  82
+"startLine":  39,
+"startColumn":  17,
+"endLine":  39,
+"endColumn":  83
 }
-}
-]
-}
-],
-"shortMessage":  "Reformat the code to have only one statement per line.",
-"fullMessage":  "For better readability, do not put more than one statement on a single line.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Statements should be on separate lines",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S122",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S122",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S122",
+"message":  "Reformat the code to have only one statement per line.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\Routing\\ClusterConsistentHashingGroupSpec.cs",
 "region":  {
-"startLine":  118,
-"startColumn":  16,
-"endLine":  118,
-"endColumn":  46
+"startLine":  119,
+"startColumn":  17,
+"endLine":  119,
+"endColumn":  47
 }
-}
-]
-}
-],
-"shortMessage":  "Reformat the code to have only one statement per line.",
-"fullMessage":  "For better readability, do not put more than one statement on a single line.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Statements should be on separate lines",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S122",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S122",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S122",
+"message":  "Reformat the code to have only one statement per line.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\Routing\\ClusterConsistentHashingRouterSpec.cs",
 "region":  {
-"startLine":  230,
-"startColumn":  20,
-"endLine":  230,
-"endColumn":  50
+"startLine":  231,
+"startColumn":  21,
+"endLine":  231,
+"endColumn":  51
 }
-}
-]
-}
-],
-"shortMessage":  "Reformat the code to have only one statement per line.",
-"fullMessage":  "For better readability, do not put more than one statement on a single line.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Statements should be on separate lines",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S122",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S122",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S122",
+"message":  "Reformat the code to have only one statement per line.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests.MultiNode\\Routing\\ClusterConsistentHashingRouterSpec.cs",
 "region":  {
-"startLine":  250,
-"startColumn":  20,
-"endLine":  250,
-"endColumn":  50
+"startLine":  251,
+"startColumn":  21,
+"endLine":  251,
+"endColumn":  51
 }
-}
-]
-}
-],
-"shortMessage":  "Reformat the code to have only one statement per line.",
-"fullMessage":  "For better readability, do not put more than one statement on a single line.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Statements should be on separate lines",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S122",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

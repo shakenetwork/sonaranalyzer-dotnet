@@ -1,219 +1,94 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S3215",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3215",
+"message":  "Remove this cast and edit the interface to add the missing functionality.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteSystemDaemon.cs",
 "region":  {
-"startLine":  142,
-"startColumn":  28,
-"endLine":  142,
-"endColumn":  76
+"startLine":  143,
+"startColumn":  29,
+"endLine":  143,
+"endColumn":  77
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
-"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"interface\" instances should not be cast to concrete types",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3215",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S3215",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3215",
+"message":  "Remove this cast and edit the interface to add the missing functionality.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteWatcher.cs",
 "region":  {
-"startLine":  274,
-"startColumn":  33,
-"endLine":  274,
-"endColumn":  118
+"startLine":  275,
+"startColumn":  34,
+"endLine":  275,
+"endColumn":  119
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
-"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"interface\" instances should not be cast to concrete types",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3215",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S3215",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3215",
+"message":  "Remove this cast and edit the interface to add the missing functionality.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
-"startLine":  546,
-"startColumn":  37,
-"endLine":  546,
-"endColumn":  105
+"startLine":  547,
+"startColumn":  38,
+"endLine":  547,
+"endColumn":  106
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
-"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"interface\" instances should not be cast to concrete types",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3215",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S3215",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3215",
+"message":  "Remove this cast and edit the interface to add the missing functionality.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
 "region":  {
-"startLine":  237,
-"startColumn":  27,
-"endLine":  237,
-"endColumn":  39
+"startLine":  238,
+"startColumn":  28,
+"endLine":  238,
+"endColumn":  40
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
-"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"interface\" instances should not be cast to concrete types",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3215",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S3215",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3215",
+"message":  "Remove this cast and edit the interface to add the missing functionality.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
 "region":  {
-"startLine":  255,
-"startColumn":  27,
-"endLine":  255,
-"endColumn":  39
+"startLine":  256,
+"startColumn":  28,
+"endLine":  256,
+"endColumn":  40
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
-"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"interface\" instances should not be cast to concrete types",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3215",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S3215",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3215",
+"message":  "Remove this cast and edit the interface to add the missing functionality.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Helios\\HeliosTcpTransport.cs",
 "region":  {
-"startLine":  246,
-"startColumn":  20,
-"endLine":  246,
-"endColumn":  44
+"startLine":  247,
+"startColumn":  21,
+"endLine":  247,
+"endColumn":  45
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
-"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"interface\" instances should not be cast to concrete types",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3215",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S3215",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3215",
+"message":  "Remove this cast and edit the interface to add the missing functionality.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TransportAdapters.cs",
 "region":  {
-"startLine":  51,
-"startColumn":  24,
-"endLine":  51,
-"endColumn":  63
+"startLine":  52,
+"startColumn":  25,
+"endLine":  52,
+"endColumn":  64
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this cast and edit the interface to add the missing functionality.",
-"fullMessage":  "Needing to cast from an interface to a concrete type indicates that something is wrong with the abstractions in use, likely that something is missing from the interface. Instead of casting to a discrete type, the missing functionality should be added to the interface. Otherwise there is the risk of runtime exceptions.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"interface\" instances should not be cast to concrete types",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3215",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

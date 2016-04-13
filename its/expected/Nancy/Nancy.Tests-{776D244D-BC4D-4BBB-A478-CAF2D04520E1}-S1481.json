@@ -1,729 +1,315 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1481",
+"message":  "Remove this unused \"culture\" local variable.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Culture\\BuiltInCultureConventionFixture.cs",
 "region":  {
-"startLine":  98,
-"startColumn":  16,
-"endLine":  98,
-"endColumn":  23
+"startLine":  99,
+"startColumn":  17,
+"endLine":  99,
+"endColumn":  24
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"culture\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1481",
+"message":  "Remove this unused \"value\" local variable.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Diagnostics\\DefaultRequestTraceFactoryFixture.cs",
 "region":  {
-"startLine":  66,
-"startColumn":  24,
-"endLine":  66,
-"endColumn":  29
+"startLine":  67,
+"startColumn":  25,
+"endLine":  67,
+"endColumn":  30
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"value\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1481",
+"message":  "Remove this unused \"value\" local variable.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Diagnostics\\DefaultRequestTraceFactoryFixture.cs",
 "region":  {
-"startLine":  85,
-"startColumn":  24,
-"endLine":  85,
-"endColumn":  29
+"startLine":  86,
+"startColumn":  25,
+"endLine":  86,
+"endColumn":  30
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"value\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1481",
+"message":  "Remove this unused \"e\" local variable.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\DynamicDictionaryValueFixture.cs",
 "region":  {
-"startLine":  1060,
-"startColumn":  26,
-"endLine":  1060,
+"startLine":  1061,
+"startColumn":  27,
+"endLine":  1061,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"request\" local variable.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\IO\\RequestStreamFixture.cs",
+"region":  {
+"startLine":  284,
+"startColumn":  17,
+"endLine":  284,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"result\" local variable.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Localization\\ResourceBasedTextResourceFixture.cs",
+"region":  {
+"startLine":  62,
+"startColumn":  21,
+"endLine":  62,
 "endColumn":  27
 }
 }
-]
-}
-],
-"shortMessage":  "Remove this unused \"e\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
 },
 {
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\IO\\RequestStreamFixture.cs",
-"region":  {
-"startLine":  283,
-"startColumn":  16,
-"endLine":  283,
-"endColumn":  23
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"request\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Localization\\ResourceBasedTextResourceFixture.cs",
-"region":  {
-"startLine":  61,
-"startColumn":  20,
-"endLine":  61,
-"endColumn":  26
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"result\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1481",
+"message":  "Remove this unused \"dataThatDoesntResetStreamPosition\" local variable.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBodyDeserializers\\XmlBodyDeserializerfixture.cs",
 "region":  {
-"startLine":  91,
-"startColumn":  16,
-"endLine":  91,
-"endColumn":  49
+"startLine":  92,
+"startColumn":  17,
+"endLine":  92,
+"endColumn":  50
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"dataThatDoesntResetStreamPosition\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1481",
+"message":  "Remove this unused \"result\" local variable.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DynamicModelBinderAdapterFixture.cs",
 "region":  {
-"startLine":  55,
-"startColumn":  18,
-"endLine":  55,
-"endColumn":  24
+"startLine":  56,
+"startColumn":  19,
+"endLine":  56,
+"endColumn":  25
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"result\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1481",
+"message":  "Remove this unused \"result\" local variable.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DynamicModelBinderAdapterFixture.cs",
 "region":  {
-"startLine":  76,
-"startColumn":  18,
-"endLine":  76,
-"endColumn":  24
+"startLine":  77,
+"startColumn":  19,
+"endLine":  77,
+"endColumn":  25
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"result\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1481",
+"message":  "Remove this unused \"result\" local variable.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DynamicModelBinderAdapterFixture.cs",
 "region":  {
-"startLine":  95,
-"startColumn":  16,
-"endLine":  95,
-"endColumn":  22
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"result\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DynamicModelBinderAdapterFixture.cs",
-"region":  {
-"startLine":  151,
-"startColumn":  18,
-"endLine":  151,
-"endColumn":  24
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"result\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DynamicModelBinderAdapterFixture.cs",
-"region":  {
-"startLine":  172,
-"startColumn":  18,
-"endLine":  172,
-"endColumn":  24
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"result\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DynamicModelBinderAdapterFixture.cs",
-"region":  {
-"startLine":  194,
-"startColumn":  18,
-"endLine":  194,
-"endColumn":  24
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"result\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DynamicModelBinderAdapterFixture.cs",
-"region":  {
-"startLine":  218,
-"startColumn":  18,
-"endLine":  218,
-"endColumn":  24
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"result\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DynamicModelBinderAdapterFixture.cs",
-"region":  {
-"startLine":  241,
-"startColumn":  18,
-"endLine":  241,
-"endColumn":  24
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"result\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\RequestFixture.cs",
-"region":  {
-"startLine":  672,
-"startColumn":  16,
-"endLine":  672,
+"startLine":  96,
+"startColumn":  17,
+"endLine":  96,
 "endColumn":  23
 }
 }
-]
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"result\" local variable.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DynamicModelBinderAdapterFixture.cs",
+"region":  {
+"startLine":  152,
+"startColumn":  19,
+"endLine":  152,
+"endColumn":  25
 }
-],
-"shortMessage":  "Remove this unused \"request\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1481",
-"locations":  [
+"id":  "S1481",
+"message":  "Remove this unused \"result\" local variable.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DynamicModelBinderAdapterFixture.cs",
+"region":  {
+"startLine":  173,
+"startColumn":  19,
+"endLine":  173,
+"endColumn":  25
+}
+}
+},
 {
-"analysisTarget":  [
+"id":  "S1481",
+"message":  "Remove this unused \"result\" local variable.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DynamicModelBinderAdapterFixture.cs",
+"region":  {
+"startLine":  195,
+"startColumn":  19,
+"endLine":  195,
+"endColumn":  25
+}
+}
+},
 {
+"id":  "S1481",
+"message":  "Remove this unused \"result\" local variable.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DynamicModelBinderAdapterFixture.cs",
+"region":  {
+"startLine":  219,
+"startColumn":  19,
+"endLine":  219,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"result\" local variable.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DynamicModelBinderAdapterFixture.cs",
+"region":  {
+"startLine":  242,
+"startColumn":  19,
+"endLine":  242,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"request\" local variable.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\RequestFixture.cs",
 "region":  {
-"startLine":  695,
-"startColumn":  16,
-"endLine":  695,
+"startLine":  673,
+"startColumn":  17,
+"endLine":  673,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"request\" local variable.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\RequestFixture.cs",
+"region":  {
+"startLine":  696,
+"startColumn":  17,
+"endLine":  696,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"result\" local variable.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ResponseExtensionsFixture.cs",
+"region":  {
+"startLine":  166,
+"startColumn":  17,
+"endLine":  166,
 "endColumn":  23
 }
 }
-]
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"result\" local variable.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ResponseExtensionsFixture.cs",
+"region":  {
+"startLine":  176,
+"startColumn":  17,
+"endLine":  176,
+"endColumn":  23
 }
-],
-"shortMessage":  "Remove this unused \"request\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ResponseExtensionsFixture.cs",
+"id":  "S1481",
+"message":  "Remove this unused \"result\" local variable.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRouteInvokerFixture.cs",
 "region":  {
-"startLine":  165,
-"startColumn":  16,
-"endLine":  165,
+"startLine":  85,
+"startColumn":  17,
+"endLine":  85,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"result\" local variable.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRouteInvokerFixture.cs",
+"region":  {
+"startLine":  104,
+"startColumn":  17,
+"endLine":  104,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"result\" local variable.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRouteInvokerFixture.cs",
+"region":  {
+"startLine":  123,
+"startColumn":  17,
+"endLine":  123,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"cache\" local variable.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\RouteCacheFixture.cs",
+"region":  {
+"startLine":  145,
+"startColumn":  17,
+"endLine":  145,
 "endColumn":  22
 }
 }
-]
-}
-],
-"shortMessage":  "Remove this unused \"result\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
 },
 {
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ResponseExtensionsFixture.cs",
+"id":  "S1481",
+"message":  "Remove this unused \"cache\" local variable.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\RouteCacheFixture.cs",
 "region":  {
 "startLine":  175,
-"startColumn":  16,
+"startColumn":  17,
 "endLine":  175,
 "endColumn":  22
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"result\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRouteInvokerFixture.cs",
-"region":  {
-"startLine":  84,
-"startColumn":  16,
-"endLine":  84,
-"endColumn":  22
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"result\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRouteInvokerFixture.cs",
-"region":  {
-"startLine":  103,
-"startColumn":  16,
-"endLine":  103,
-"endColumn":  22
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"result\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\DefaultRouteInvokerFixture.cs",
-"region":  {
-"startLine":  122,
-"startColumn":  16,
-"endLine":  122,
-"endColumn":  22
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"result\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\RouteCacheFixture.cs",
-"region":  {
-"startLine":  144,
-"startColumn":  16,
-"endLine":  144,
-"endColumn":  21
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"cache\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Routing\\RouteCacheFixture.cs",
-"region":  {
-"startLine":  174,
-"startColumn":  16,
-"endLine":  174,
-"endColumn":  21
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"cache\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

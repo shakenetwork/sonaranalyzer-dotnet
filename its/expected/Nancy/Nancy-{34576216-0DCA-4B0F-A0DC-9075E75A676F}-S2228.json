@@ -1,309 +1,133 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2228",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2228",
+"message":  "Remove this logging statement.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
 "region":  {
-"startLine":  377,
-"startColumn":  4,
-"endLine":  377,
-"endColumn":  21
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this logging statement.",
-"fullMessage":  "Debug statements are always useful during development. But include them in production code - particularly in code that runs client-side - and you run the risk of inadvertently exposing sensitive information.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Console logging should not be used",
-"category":  "Portability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2228",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2228",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
-"region":  {
-"startLine":  379,
+"startLine":  378,
 "startColumn":  5,
-"endLine":  379,
+"endLine":  378,
 "endColumn":  22
 }
 }
-]
-}
-],
-"shortMessage":  "Remove this logging statement.",
-"fullMessage":  "Debug statements are always useful during development. But include them in production code - particularly in code that runs client-side - and you run the risk of inadvertently exposing sensitive information.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Console logging should not be used",
-"category":  "Portability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2228",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
 },
 {
-"ruleId":  "S2228",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2228",
+"message":  "Remove this logging statement.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
 "region":  {
-"startLine":  382,
-"startColumn":  4,
-"endLine":  382,
-"endColumn":  21
+"startLine":  380,
+"startColumn":  6,
+"endLine":  380,
+"endColumn":  23
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this logging statement.",
-"fullMessage":  "Debug statements are always useful during development. But include them in production code - particularly in code that runs client-side - and you run the risk of inadvertently exposing sensitive information.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Console logging should not be used",
-"category":  "Portability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2228",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2228",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2228",
+"message":  "Remove this logging statement.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
 "region":  {
-"startLine":  384,
-"startColumn":  4,
-"endLine":  384,
-"endColumn":  21
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this logging statement.",
-"fullMessage":  "Debug statements are always useful during development. But include them in production code - particularly in code that runs client-side - and you run the risk of inadvertently exposing sensitive information.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Console logging should not be used",
-"category":  "Portability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2228",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2228",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
-"region":  {
-"startLine":  387,
-"startColumn":  4,
-"endLine":  387,
-"endColumn":  21
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this logging statement.",
-"fullMessage":  "Debug statements are always useful during development. But include them in production code - particularly in code that runs client-side - and you run the risk of inadvertently exposing sensitive information.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Console logging should not be used",
-"category":  "Portability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2228",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2228",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
-"region":  {
-"startLine":  389,
-"startColumn":  4,
-"endLine":  389,
-"endColumn":  21
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this logging statement.",
-"fullMessage":  "Debug statements are always useful during development. But include them in production code - particularly in code that runs client-side - and you run the risk of inadvertently exposing sensitive information.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Console logging should not be used",
-"category":  "Portability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2228",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2228",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
-"region":  {
-"startLine":  391,
-"startColumn":  4,
-"endLine":  391,
-"endColumn":  21
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this logging statement.",
-"fullMessage":  "Debug statements are always useful during development. But include them in production code - particularly in code that runs client-side - and you run the risk of inadvertently exposing sensitive information.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Console logging should not be used",
-"category":  "Portability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2228",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2228",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
-"region":  {
-"startLine":  326,
+"startLine":  383,
 "startColumn":  5,
-"endLine":  326,
+"endLine":  383,
 "endColumn":  22
 }
 }
-]
+},
+{
+"id":  "S2228",
+"message":  "Remove this logging statement.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
+"region":  {
+"startLine":  385,
+"startColumn":  5,
+"endLine":  385,
+"endColumn":  22
 }
-],
-"shortMessage":  "Remove this logging statement.",
-"fullMessage":  "Debug statements are always useful during development. But include them in production code - particularly in code that runs client-side - and you run the risk of inadvertently exposing sensitive information.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Console logging should not be used",
-"category":  "Portability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2228",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2228",
-"locations":  [
+"id":  "S2228",
+"message":  "Remove this logging statement.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
+"region":  {
+"startLine":  388,
+"startColumn":  5,
+"endLine":  388,
+"endColumn":  22
+}
+}
+},
 {
-"analysisTarget":  [
+"id":  "S2228",
+"message":  "Remove this logging statement.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
+"region":  {
+"startLine":  390,
+"startColumn":  5,
+"endLine":  390,
+"endColumn":  22
+}
+}
+},
 {
+"id":  "S2228",
+"message":  "Remove this logging statement.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
+"region":  {
+"startLine":  392,
+"startColumn":  5,
+"endLine":  392,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S2228",
+"message":  "Remove this logging statement.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
 "region":  {
 "startLine":  327,
-"startColumn":  5,
+"startColumn":  6,
 "endLine":  327,
-"endColumn":  22
+"endColumn":  23
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this logging statement.",
-"fullMessage":  "Debug statements are always useful during development. But include them in production code - particularly in code that runs client-side - and you run the risk of inadvertently exposing sensitive information.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Console logging should not be used",
-"category":  "Portability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2228",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2228",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2228",
+"message":  "Remove this logging statement.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
 "region":  {
 "startLine":  328,
-"startColumn":  5,
+"startColumn":  6,
 "endLine":  328,
-"endColumn":  22
+"endColumn":  23
 }
 }
-]
+},
+{
+"id":  "S2228",
+"message":  "Remove this logging statement.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
+"region":  {
+"startLine":  329,
+"startColumn":  6,
+"endLine":  329,
+"endColumn":  23
 }
-],
-"shortMessage":  "Remove this logging statement.",
-"fullMessage":  "Debug statements are always useful during development. But include them in production code - particularly in code that runs client-side - and you run the risk of inadvertently exposing sensitive information.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Console logging should not be used",
-"category":  "Portability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2228",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

@@ -1,249 +1,107 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1227",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Culture\\DefaultCultureService.cs",
 "region":  {
-"startLine":  36,
-"startColumn":  20,
-"endLine":  36,
-"endColumn":  26
+"startLine":  37,
+"startColumn":  21,
+"endLine":  37,
+"endColumn":  27
 }
-}
-]
-}
-],
-"shortMessage":  "Refactor the code in order to remove this break statement.",
-"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "break statements should not be used except for switch cases",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1227",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1227",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Extensions\\StringExtensions.cs",
 "region":  {
-"startLine":  75,
-"startColumn":  20,
-"endLine":  75,
-"endColumn":  26
+"startLine":  76,
+"startColumn":  21,
+"endLine":  76,
+"endColumn":  27
 }
-}
-]
-}
-],
-"shortMessage":  "Refactor the code in order to remove this break statement.",
-"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "break statements should not be used except for switch cases",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1227",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1227",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
 "region":  {
-"startLine":  274,
-"startColumn":  20,
-"endLine":  274,
-"endColumn":  26
+"startLine":  275,
+"startColumn":  21,
+"endLine":  275,
+"endColumn":  27
 }
-}
-]
-}
-],
-"shortMessage":  "Refactor the code in order to remove this break statement.",
-"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "break statements should not be used except for switch cases",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1227",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1227",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
 "region":  {
-"startLine":  354,
-"startColumn":  20,
-"endLine":  354,
-"endColumn":  26
+"startLine":  355,
+"startColumn":  21,
+"endLine":  355,
+"endColumn":  27
 }
-}
-]
-}
-],
-"shortMessage":  "Refactor the code in order to remove this break statement.",
-"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "break statements should not be used except for switch cases",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1227",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1227",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
-"startLine":  407,
-"startColumn":  20,
-"endLine":  407,
-"endColumn":  26
+"startLine":  408,
+"startColumn":  21,
+"endLine":  408,
+"endColumn":  27
 }
-}
-]
-}
-],
-"shortMessage":  "Refactor the code in order to remove this break statement.",
-"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "break statements should not be used except for switch cases",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1227",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1227",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\HttpMultipartBoundary.cs",
 "region":  {
-"startLine":  60,
-"startColumn":  20,
-"endLine":  60,
-"endColumn":  26
+"startLine":  61,
+"startColumn":  21,
+"endLine":  61,
+"endColumn":  27
 }
-}
-]
-}
-],
-"shortMessage":  "Refactor the code in order to remove this break statement.",
-"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "break statements should not be used except for switch cases",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1227",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1227",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\HttpMultipartBoundary.cs",
 "region":  {
-"startLine":  93,
-"startColumn":  20,
-"endLine":  93,
-"endColumn":  26
+"startLine":  94,
+"startColumn":  21,
+"endLine":  94,
+"endColumn":  27
 }
-}
-]
-}
-],
-"shortMessage":  "Refactor the code in order to remove this break statement.",
-"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "break statements should not be used except for switch cases",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1227",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1227",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
 "region":  {
-"startLine":  344,
-"startColumn":  5,
-"endLine":  344,
-"endColumn":  11
+"startLine":  345,
+"startColumn":  6,
+"endLine":  345,
+"endColumn":  12
 }
-}
-]
-}
-],
-"shortMessage":  "Refactor the code in order to remove this break statement.",
-"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "break statements should not be used except for switch cases",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1227",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

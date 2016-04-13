@@ -1,609 +1,263 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2360",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2360",
+"message":  "Use the overloading mechanism instead of the optional parameters.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
-"startLine":  143,
+"startLine":  144,
+"startColumn":  82,
+"endLine":  144,
+"endColumn":  88
+}
+}
+},
+{
+"id":  "S2360",
+"message":  "Use the overloading mechanism instead of the optional parameters.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
+"region":  {
+"startLine":  159,
+"startColumn":  84,
+"endLine":  159,
+"endColumn":  90
+}
+}
+},
+{
+"id":  "S2360",
+"message":  "Use the overloading mechanism instead of the optional parameters.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
+"region":  {
+"startLine":  227,
+"startColumn":  85,
+"endLine":  227,
+"endColumn":  92
+}
+}
+},
+{
+"id":  "S2360",
+"message":  "Use the overloading mechanism instead of the optional parameters.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
+"region":  {
+"startLine":  718,
+"startColumn":  72,
+"endLine":  718,
+"endColumn":  78
+}
+}
+},
+{
+"id":  "S2360",
+"message":  "Use the overloading mechanism instead of the optional parameters.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
+"region":  {
+"startLine":  718,
+"startColumn":  106,
+"endLine":  718,
+"endColumn":  112
+}
+}
+},
+{
+"id":  "S2360",
+"message":  "Use the overloading mechanism instead of the optional parameters.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
+"region":  {
+"startLine":  719,
+"startColumn":  38,
+"endLine":  719,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2360",
+"message":  "Use the overloading mechanism instead of the optional parameters.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
+"region":  {
+"startLine":  719,
+"startColumn":  74,
+"endLine":  719,
+"endColumn":  80
+}
+}
+},
+{
+"id":  "S2360",
+"message":  "Use the overloading mechanism instead of the optional parameters.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
+"region":  {
+"startLine":  719,
+"startColumn":  111,
+"endLine":  719,
+"endColumn":  117
+}
+}
+},
+{
+"id":  "S2360",
+"message":  "Use the overloading mechanism instead of the optional parameters.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
+"region":  {
+"startLine":  774,
+"startColumn":  88,
+"endLine":  774,
+"endColumn":  94
+}
+}
+},
+{
+"id":  "S2360",
+"message":  "Use the overloading mechanism instead of the optional parameters.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
+"region":  {
+"startLine":  775,
+"startColumn":  38,
+"endLine":  775,
+"endColumn":  44
+}
+}
+},
+{
+"id":  "S2360",
+"message":  "Use the overloading mechanism instead of the optional parameters.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
+"region":  {
+"startLine":  775,
+"startColumn":  74,
+"endLine":  775,
+"endColumn":  80
+}
+}
+},
+{
+"id":  "S2360",
+"message":  "Use the overloading mechanism instead of the optional parameters.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
+"region":  {
+"startLine":  775,
+"startColumn":  111,
+"endLine":  775,
+"endColumn":  117
+}
+}
+},
+{
+"id":  "S2360",
+"message":  "Use the overloading mechanism instead of the optional parameters.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
+"region":  {
+"startLine":  551,
+"startColumn":  59,
+"endLine":  551,
+"endColumn":  66
+}
+}
+},
+{
+"id":  "S2360",
+"message":  "Use the overloading mechanism instead of the optional parameters.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistent.cs",
+"region":  {
+"startLine":  120,
+"startColumn":  59,
+"endLine":  120,
+"endColumn":  63
+}
+}
+},
+{
+"id":  "S2360",
+"message":  "Use the overloading mechanism instead of the optional parameters.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistent.cs",
+"region":  {
+"startLine":  120,
 "startColumn":  81,
-"endLine":  143,
+"endLine":  120,
 "endColumn":  87
 }
 }
-]
-}
-],
-"shortMessage":  "Use the overloading mechanism instead of the optional parameters.",
-"fullMessage":  "The overloading mechanism should be used in place of optional parameters for several reasons. Optional parameter values are baked into the method call site code, thus, if a default value has been changed, all referencing assemblies need to be rebuilt, otherwise the original values will be used. The Common Language Specification (CLS) allows compilers to ignore default parameter values, and thus require the caller to explicitly specify the values. The concept of optional argument exists only in VB.Net and C#. In all other languages like C++ or Java, the overloading mechanism is the only way to get the same behavior. Optional parameters prevent muddying the definition of the function contract. Here is a simple example: if there are two optional parameters, when one is defined, is the second one still optional or mandatory?",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Optional parameters should not be used",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2360",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
 },
 {
-"ruleId":  "S2360",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
+"id":  "S2360",
+"message":  "Use the overloading mechanism instead of the optional parameters.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistent.cs",
 "region":  {
-"startLine":  158,
-"startColumn":  83,
-"endLine":  158,
-"endColumn":  89
-}
-}
-]
-}
-],
-"shortMessage":  "Use the overloading mechanism instead of the optional parameters.",
-"fullMessage":  "The overloading mechanism should be used in place of optional parameters for several reasons. Optional parameter values are baked into the method call site code, thus, if a default value has been changed, all referencing assemblies need to be rebuilt, otherwise the original values will be used. The Common Language Specification (CLS) allows compilers to ignore default parameter values, and thus require the caller to explicitly specify the values. The concept of optional argument exists only in VB.Net and C#. In all other languages like C++ or Java, the overloading mechanism is the only way to get the same behavior. Optional parameters prevent muddying the definition of the function contract. Here is a simple example: if there are two optional parameters, when one is defined, is the second one still optional or mandatory?",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Optional parameters should not be used",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2360",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2360",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
-"region":  {
-"startLine":  226,
-"startColumn":  84,
-"endLine":  226,
-"endColumn":  91
-}
-}
-]
-}
-],
-"shortMessage":  "Use the overloading mechanism instead of the optional parameters.",
-"fullMessage":  "The overloading mechanism should be used in place of optional parameters for several reasons. Optional parameter values are baked into the method call site code, thus, if a default value has been changed, all referencing assemblies need to be rebuilt, otherwise the original values will be used. The Common Language Specification (CLS) allows compilers to ignore default parameter values, and thus require the caller to explicitly specify the values. The concept of optional argument exists only in VB.Net and C#. In all other languages like C++ or Java, the overloading mechanism is the only way to get the same behavior. Optional parameters prevent muddying the definition of the function contract. Here is a simple example: if there are two optional parameters, when one is defined, is the second one still optional or mandatory?",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Optional parameters should not be used",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2360",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2360",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
-"region":  {
-"startLine":  717,
-"startColumn":  71,
-"endLine":  717,
-"endColumn":  77
-}
-}
-]
-}
-],
-"shortMessage":  "Use the overloading mechanism instead of the optional parameters.",
-"fullMessage":  "The overloading mechanism should be used in place of optional parameters for several reasons. Optional parameter values are baked into the method call site code, thus, if a default value has been changed, all referencing assemblies need to be rebuilt, otherwise the original values will be used. The Common Language Specification (CLS) allows compilers to ignore default parameter values, and thus require the caller to explicitly specify the values. The concept of optional argument exists only in VB.Net and C#. In all other languages like C++ or Java, the overloading mechanism is the only way to get the same behavior. Optional parameters prevent muddying the definition of the function contract. Here is a simple example: if there are two optional parameters, when one is defined, is the second one still optional or mandatory?",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Optional parameters should not be used",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2360",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2360",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
-"region":  {
-"startLine":  717,
-"startColumn":  105,
-"endLine":  717,
-"endColumn":  111
-}
-}
-]
-}
-],
-"shortMessage":  "Use the overloading mechanism instead of the optional parameters.",
-"fullMessage":  "The overloading mechanism should be used in place of optional parameters for several reasons. Optional parameter values are baked into the method call site code, thus, if a default value has been changed, all referencing assemblies need to be rebuilt, otherwise the original values will be used. The Common Language Specification (CLS) allows compilers to ignore default parameter values, and thus require the caller to explicitly specify the values. The concept of optional argument exists only in VB.Net and C#. In all other languages like C++ or Java, the overloading mechanism is the only way to get the same behavior. Optional parameters prevent muddying the definition of the function contract. Here is a simple example: if there are two optional parameters, when one is defined, is the second one still optional or mandatory?",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Optional parameters should not be used",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2360",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2360",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
-"region":  {
-"startLine":  718,
-"startColumn":  37,
-"endLine":  718,
-"endColumn":  43
-}
-}
-]
-}
-],
-"shortMessage":  "Use the overloading mechanism instead of the optional parameters.",
-"fullMessage":  "The overloading mechanism should be used in place of optional parameters for several reasons. Optional parameter values are baked into the method call site code, thus, if a default value has been changed, all referencing assemblies need to be rebuilt, otherwise the original values will be used. The Common Language Specification (CLS) allows compilers to ignore default parameter values, and thus require the caller to explicitly specify the values. The concept of optional argument exists only in VB.Net and C#. In all other languages like C++ or Java, the overloading mechanism is the only way to get the same behavior. Optional parameters prevent muddying the definition of the function contract. Here is a simple example: if there are two optional parameters, when one is defined, is the second one still optional or mandatory?",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Optional parameters should not be used",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2360",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2360",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
-"region":  {
-"startLine":  718,
-"startColumn":  73,
-"endLine":  718,
-"endColumn":  79
-}
-}
-]
-}
-],
-"shortMessage":  "Use the overloading mechanism instead of the optional parameters.",
-"fullMessage":  "The overloading mechanism should be used in place of optional parameters for several reasons. Optional parameter values are baked into the method call site code, thus, if a default value has been changed, all referencing assemblies need to be rebuilt, otherwise the original values will be used. The Common Language Specification (CLS) allows compilers to ignore default parameter values, and thus require the caller to explicitly specify the values. The concept of optional argument exists only in VB.Net and C#. In all other languages like C++ or Java, the overloading mechanism is the only way to get the same behavior. Optional parameters prevent muddying the definition of the function contract. Here is a simple example: if there are two optional parameters, when one is defined, is the second one still optional or mandatory?",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Optional parameters should not be used",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2360",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2360",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
-"region":  {
-"startLine":  718,
+"startLine":  120,
 "startColumn":  110,
-"endLine":  718,
+"endLine":  120,
 "endColumn":  116
 }
 }
-]
-}
-],
-"shortMessage":  "Use the overloading mechanism instead of the optional parameters.",
-"fullMessage":  "The overloading mechanism should be used in place of optional parameters for several reasons. Optional parameter values are baked into the method call site code, thus, if a default value has been changed, all referencing assemblies need to be rebuilt, otherwise the original values will be used. The Common Language Specification (CLS) allows compilers to ignore default parameter values, and thus require the caller to explicitly specify the values. The concept of optional argument exists only in VB.Net and C#. In all other languages like C++ or Java, the overloading mechanism is the only way to get the same behavior. Optional parameters prevent muddying the definition of the function contract. Here is a simple example: if there are two optional parameters, when one is defined, is the second one still optional or mandatory?",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Optional parameters should not be used",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2360",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
 },
 {
-"ruleId":  "S2360",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
-"region":  {
-"startLine":  773,
-"startColumn":  87,
-"endLine":  773,
-"endColumn":  93
-}
-}
-]
-}
-],
-"shortMessage":  "Use the overloading mechanism instead of the optional parameters.",
-"fullMessage":  "The overloading mechanism should be used in place of optional parameters for several reasons. Optional parameter values are baked into the method call site code, thus, if a default value has been changed, all referencing assemblies need to be rebuilt, otherwise the original values will be used. The Common Language Specification (CLS) allows compilers to ignore default parameter values, and thus require the caller to explicitly specify the values. The concept of optional argument exists only in VB.Net and C#. In all other languages like C++ or Java, the overloading mechanism is the only way to get the same behavior. Optional parameters prevent muddying the definition of the function contract. Here is a simple example: if there are two optional parameters, when one is defined, is the second one still optional or mandatory?",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Optional parameters should not be used",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2360",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2360",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
-"region":  {
-"startLine":  774,
-"startColumn":  37,
-"endLine":  774,
-"endColumn":  43
-}
-}
-]
-}
-],
-"shortMessage":  "Use the overloading mechanism instead of the optional parameters.",
-"fullMessage":  "The overloading mechanism should be used in place of optional parameters for several reasons. Optional parameter values are baked into the method call site code, thus, if a default value has been changed, all referencing assemblies need to be rebuilt, otherwise the original values will be used. The Common Language Specification (CLS) allows compilers to ignore default parameter values, and thus require the caller to explicitly specify the values. The concept of optional argument exists only in VB.Net and C#. In all other languages like C++ or Java, the overloading mechanism is the only way to get the same behavior. Optional parameters prevent muddying the definition of the function contract. Here is a simple example: if there are two optional parameters, when one is defined, is the second one still optional or mandatory?",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Optional parameters should not be used",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2360",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2360",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
-"region":  {
-"startLine":  774,
-"startColumn":  73,
-"endLine":  774,
-"endColumn":  79
-}
-}
-]
-}
-],
-"shortMessage":  "Use the overloading mechanism instead of the optional parameters.",
-"fullMessage":  "The overloading mechanism should be used in place of optional parameters for several reasons. Optional parameter values are baked into the method call site code, thus, if a default value has been changed, all referencing assemblies need to be rebuilt, otherwise the original values will be used. The Common Language Specification (CLS) allows compilers to ignore default parameter values, and thus require the caller to explicitly specify the values. The concept of optional argument exists only in VB.Net and C#. In all other languages like C++ or Java, the overloading mechanism is the only way to get the same behavior. Optional parameters prevent muddying the definition of the function contract. Here is a simple example: if there are two optional parameters, when one is defined, is the second one still optional or mandatory?",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Optional parameters should not be used",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2360",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2360",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
-"region":  {
-"startLine":  774,
-"startColumn":  110,
-"endLine":  774,
-"endColumn":  116
-}
-}
-]
-}
-],
-"shortMessage":  "Use the overloading mechanism instead of the optional parameters.",
-"fullMessage":  "The overloading mechanism should be used in place of optional parameters for several reasons. Optional parameter values are baked into the method call site code, thus, if a default value has been changed, all referencing assemblies need to be rebuilt, otherwise the original values will be used. The Common Language Specification (CLS) allows compilers to ignore default parameter values, and thus require the caller to explicitly specify the values. The concept of optional argument exists only in VB.Net and C#. In all other languages like C++ or Java, the overloading mechanism is the only way to get the same behavior. Optional parameters prevent muddying the definition of the function contract. Here is a simple example: if there are two optional parameters, when one is defined, is the second one still optional or mandatory?",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Optional parameters should not be used",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2360",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2360",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
-"region":  {
-"startLine":  550,
-"startColumn":  58,
-"endLine":  550,
-"endColumn":  65
-}
-}
-]
-}
-],
-"shortMessage":  "Use the overloading mechanism instead of the optional parameters.",
-"fullMessage":  "The overloading mechanism should be used in place of optional parameters for several reasons. Optional parameter values are baked into the method call site code, thus, if a default value has been changed, all referencing assemblies need to be rebuilt, otherwise the original values will be used. The Common Language Specification (CLS) allows compilers to ignore default parameter values, and thus require the caller to explicitly specify the values. The concept of optional argument exists only in VB.Net and C#. In all other languages like C++ or Java, the overloading mechanism is the only way to get the same behavior. Optional parameters prevent muddying the definition of the function contract. Here is a simple example: if there are two optional parameters, when one is defined, is the second one still optional or mandatory?",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Optional parameters should not be used",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2360",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2360",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2360",
+"message":  "Use the overloading mechanism instead of the optional parameters.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistent.cs",
 "region":  {
-"startLine":  119,
-"startColumn":  58,
-"endLine":  119,
-"endColumn":  62
+"startLine":  120,
+"startColumn":  133,
+"endLine":  120,
+"endColumn":  140
 }
-}
-]
-}
-],
-"shortMessage":  "Use the overloading mechanism instead of the optional parameters.",
-"fullMessage":  "The overloading mechanism should be used in place of optional parameters for several reasons. Optional parameter values are baked into the method call site code, thus, if a default value has been changed, all referencing assemblies need to be rebuilt, otherwise the original values will be used. The Common Language Specification (CLS) allows compilers to ignore default parameter values, and thus require the caller to explicitly specify the values. The concept of optional argument exists only in VB.Net and C#. In all other languages like C++ or Java, the overloading mechanism is the only way to get the same behavior. Optional parameters prevent muddying the definition of the function contract. Here is a simple example: if there are two optional parameters, when one is defined, is the second one still optional or mandatory?",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Optional parameters should not be used",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2360",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2360",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2360",
+"message":  "Use the overloading mechanism instead of the optional parameters.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistent.cs",
 "region":  {
-"startLine":  119,
-"startColumn":  80,
-"endLine":  119,
-"endColumn":  86
+"startLine":  120,
+"startColumn":  159,
+"endLine":  120,
+"endColumn":  165
 }
-}
-]
-}
-],
-"shortMessage":  "Use the overloading mechanism instead of the optional parameters.",
-"fullMessage":  "The overloading mechanism should be used in place of optional parameters for several reasons. Optional parameter values are baked into the method call site code, thus, if a default value has been changed, all referencing assemblies need to be rebuilt, otherwise the original values will be used. The Common Language Specification (CLS) allows compilers to ignore default parameter values, and thus require the caller to explicitly specify the values. The concept of optional argument exists only in VB.Net and C#. In all other languages like C++ or Java, the overloading mechanism is the only way to get the same behavior. Optional parameters prevent muddying the definition of the function contract. Here is a simple example: if there are two optional parameters, when one is defined, is the second one still optional or mandatory?",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Optional parameters should not be used",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2360",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2360",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistent.cs",
-"region":  {
-"startLine":  119,
-"startColumn":  109,
-"endLine":  119,
-"endColumn":  115
-}
-}
-]
-}
-],
-"shortMessage":  "Use the overloading mechanism instead of the optional parameters.",
-"fullMessage":  "The overloading mechanism should be used in place of optional parameters for several reasons. Optional parameter values are baked into the method call site code, thus, if a default value has been changed, all referencing assemblies need to be rebuilt, otherwise the original values will be used. The Common Language Specification (CLS) allows compilers to ignore default parameter values, and thus require the caller to explicitly specify the values. The concept of optional argument exists only in VB.Net and C#. In all other languages like C++ or Java, the overloading mechanism is the only way to get the same behavior. Optional parameters prevent muddying the definition of the function contract. Here is a simple example: if there are two optional parameters, when one is defined, is the second one still optional or mandatory?",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Optional parameters should not be used",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2360",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2360",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistent.cs",
-"region":  {
-"startLine":  119,
-"startColumn":  132,
-"endLine":  119,
-"endColumn":  139
-}
-}
-]
-}
-],
-"shortMessage":  "Use the overloading mechanism instead of the optional parameters.",
-"fullMessage":  "The overloading mechanism should be used in place of optional parameters for several reasons. Optional parameter values are baked into the method call site code, thus, if a default value has been changed, all referencing assemblies need to be rebuilt, otherwise the original values will be used. The Common Language Specification (CLS) allows compilers to ignore default parameter values, and thus require the caller to explicitly specify the values. The concept of optional argument exists only in VB.Net and C#. In all other languages like C++ or Java, the overloading mechanism is the only way to get the same behavior. Optional parameters prevent muddying the definition of the function contract. Here is a simple example: if there are two optional parameters, when one is defined, is the second one still optional or mandatory?",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Optional parameters should not be used",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2360",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2360",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistent.cs",
-"region":  {
-"startLine":  119,
-"startColumn":  158,
-"endLine":  119,
-"endColumn":  164
-}
-}
-]
-}
-],
-"shortMessage":  "Use the overloading mechanism instead of the optional parameters.",
-"fullMessage":  "The overloading mechanism should be used in place of optional parameters for several reasons. Optional parameter values are baked into the method call site code, thus, if a default value has been changed, all referencing assemblies need to be rebuilt, otherwise the original values will be used. The Common Language Specification (CLS) allows compilers to ignore default parameter values, and thus require the caller to explicitly specify the values. The concept of optional argument exists only in VB.Net and C#. In all other languages like C++ or Java, the overloading mechanism is the only way to get the same behavior. Optional parameters prevent muddying the definition of the function contract. Here is a simple example: if there are two optional parameters, when one is defined, is the second one still optional or mandatory?",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Optional parameters should not be used",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2360",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2360",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2360",
+"message":  "Use the overloading mechanism instead of the optional parameters.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\PersistentActor.cs",
 "region":  {
-"startLine":  94,
-"startColumn":  81,
-"endLine":  94,
-"endColumn":  96
+"startLine":  95,
+"startColumn":  82,
+"endLine":  95,
+"endColumn":  97
 }
-}
-]
-}
-],
-"shortMessage":  "Use the overloading mechanism instead of the optional parameters.",
-"fullMessage":  "The overloading mechanism should be used in place of optional parameters for several reasons. Optional parameter values are baked into the method call site code, thus, if a default value has been changed, all referencing assemblies need to be rebuilt, otherwise the original values will be used. The Common Language Specification (CLS) allows compilers to ignore default parameter values, and thus require the caller to explicitly specify the values. The concept of optional argument exists only in VB.Net and C#. In all other languages like C++ or Java, the overloading mechanism is the only way to get the same behavior. Optional parameters prevent muddying the definition of the function contract. Here is a simple example: if there are two optional parameters, when one is defined, is the second one still optional or mandatory?",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Optional parameters should not be used",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2360",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2360",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2360",
+"message":  "Use the overloading mechanism instead of the optional parameters.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\PersistentActor.cs",
 "region":  {
-"startLine":  94,
-"startColumn":  113,
-"endLine":  94,
-"endColumn":  128
+"startLine":  95,
+"startColumn":  114,
+"endLine":  95,
+"endColumn":  129
 }
-}
-]
-}
-],
-"shortMessage":  "Use the overloading mechanism instead of the optional parameters.",
-"fullMessage":  "The overloading mechanism should be used in place of optional parameters for several reasons. Optional parameter values are baked into the method call site code, thus, if a default value has been changed, all referencing assemblies need to be rebuilt, otherwise the original values will be used. The Common Language Specification (CLS) allows compilers to ignore default parameter values, and thus require the caller to explicitly specify the values. The concept of optional argument exists only in VB.Net and C#. In all other languages like C++ or Java, the overloading mechanism is the only way to get the same behavior. Optional parameters prevent muddying the definition of the function contract. Here is a simple example: if there are two optional parameters, when one is defined, is the second one still optional or mandatory?",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Optional parameters should not be used",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2360",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

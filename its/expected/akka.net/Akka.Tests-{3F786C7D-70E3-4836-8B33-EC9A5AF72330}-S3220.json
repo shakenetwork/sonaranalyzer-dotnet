@@ -1,69 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S3220",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3220",
+"message":  "Review this call, which partially matches an overload without \"params\". The partial match is \"RoundRobinGroup.RoundRobinGroup(Config config)\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Serialization\\SerializationSpec.cs",
 "region":  {
-"startLine":  299,
-"startColumn":  26,
-"endLine":  299,
-"endColumn":  52
+"startLine":  300,
+"startColumn":  27,
+"endLine":  300,
+"endColumn":  53
 }
-}
-]
-}
-],
-"shortMessage":  "Review this call, which partially matches an overload without \"params\". The partial match is \"RoundRobinGroup.RoundRobinGroup(Config config)\".",
-"fullMessage":  "The rules for method resolution are complex and perhaps not properly understood by all coders. The \"params\" keyword can make method declarations overlap in non-obvious ways, so that slight changes in the argument types of an invocation can resolve to different methods. This rule raises an issue when an invocation resolves to a method declaration with \"params\", but could also resolve to another non-\"params\" method too.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method calls should not resolve ambiguously to overloads with \"params\"",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3220",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S3220",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3220",
+"message":  "Review this call, which partially matches an overload without \"params\". The partial match is \"RandomGroup.RandomGroup(Config config)\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Serialization\\SerializationSpec.cs",
 "region":  {
-"startLine":  320,
-"startColumn":  26,
-"endLine":  320,
-"endColumn":  48
+"startLine":  321,
+"startColumn":  27,
+"endLine":  321,
+"endColumn":  49
 }
-}
-]
-}
-],
-"shortMessage":  "Review this call, which partially matches an overload without \"params\". The partial match is \"RandomGroup.RandomGroup(Config config)\".",
-"fullMessage":  "The rules for method resolution are complex and perhaps not properly understood by all coders. The \"params\" keyword can make method declarations overlap in non-obvious ways, so that slight changes in the argument types of an invocation can resolve to different methods. This rule raises an issue when an invocation resolves to a method declaration with \"params\", but could also resolve to another non-\"params\" method too.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method calls should not resolve ambiguously to overloads with \"params\"",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3220",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

@@ -1,249 +1,107 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1066",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorSystem.cs",
 "region":  {
-"startLine":  230,
-"startColumn":  20,
-"endLine":  230,
-"endColumn":  22
+"startLine":  231,
+"startColumn":  21,
+"endLine":  231,
+"endColumn":  23
 }
-}
-]
-}
-],
-"shortMessage":  "Merge this if statement with the enclosing one.",
-"fullMessage":  "Merging collapsible \"if\" statements increases the code\u0027s readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Collapsible \"if\" statements should be merged",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1066",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1066",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Cancellation\\Cancelable.cs",
 "region":  {
-"startLine":  219,
-"startColumn":  20,
-"endLine":  219,
-"endColumn":  22
+"startLine":  220,
+"startColumn":  21,
+"endLine":  220,
+"endColumn":  23
 }
-}
-]
-}
-],
-"shortMessage":  "Merge this if statement with the enclosing one.",
-"fullMessage":  "Merging collapsible \"if\" statements increases the code\u0027s readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Collapsible \"if\" statements should be merged",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1066",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1066",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Cancellation\\Cancelable.cs",
 "region":  {
-"startLine":  222,
-"startColumn":  24,
-"endLine":  222,
-"endColumn":  26
+"startLine":  223,
+"startColumn":  25,
+"endLine":  223,
+"endColumn":  27
 }
-}
-]
-}
-],
-"shortMessage":  "Merge this if statement with the enclosing one.",
-"fullMessage":  "Merging collapsible \"if\" statements increases the code\u0027s readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Collapsible \"if\" statements should be merged",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1066",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1066",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Configuration\\Hocon\\HoconValue.cs",
 "region":  {
-"startLine":  42,
-"startColumn":  20,
-"endLine":  42,
-"endColumn":  22
+"startLine":  43,
+"startColumn":  21,
+"endLine":  43,
+"endColumn":  23
 }
-}
-]
-}
-],
-"shortMessage":  "Merge this if statement with the enclosing one.",
-"fullMessage":  "Merging collapsible \"if\" statements increases the code\u0027s readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Collapsible \"if\" statements should be merged",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1066",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1066",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Helios.Concurrency.DedicatedThreadPool.cs",
 "region":  {
-"startLine":  359,
-"startColumn":  16,
-"endLine":  359,
-"endColumn":  18
+"startLine":  360,
+"startColumn":  17,
+"endLine":  360,
+"endColumn":  19
 }
-}
-]
-}
-],
-"shortMessage":  "Merge this if statement with the enclosing one.",
-"fullMessage":  "Merging collapsible \"if\" statements increases the code\u0027s readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Collapsible \"if\" statements should be merged",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1066",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1066",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\TcpConnection.cs",
 "region":  {
-"startLine":  410,
-"startColumn":  24,
-"endLine":  410,
-"endColumn":  26
+"startLine":  411,
+"startColumn":  25,
+"endLine":  411,
+"endColumn":  27
 }
-}
-]
-}
-],
-"shortMessage":  "Merge this if statement with the enclosing one.",
-"fullMessage":  "Merging collapsible \"if\" statements increases the code\u0027s readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Collapsible \"if\" statements should be merged",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1066",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1066",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\TcpConnection.cs",
 "region":  {
-"startLine":  415,
-"startColumn":  24,
-"endLine":  415,
-"endColumn":  26
+"startLine":  416,
+"startColumn":  25,
+"endLine":  416,
+"endColumn":  27
 }
-}
-]
-}
-],
-"shortMessage":  "Merge this if statement with the enclosing one.",
-"fullMessage":  "Merging collapsible \"if\" statements increases the code\u0027s readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Collapsible \"if\" statements should be merged",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1066",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1066",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Routing\\RoutedActorRef.cs",
 "region":  {
-"startLine":  49,
-"startColumn":  16,
-"endLine":  49,
-"endColumn":  18
+"startLine":  50,
+"startColumn":  17,
+"endLine":  50,
+"endColumn":  19
 }
-}
-]
-}
-],
-"shortMessage":  "Merge this if statement with the enclosing one.",
-"fullMessage":  "Merging collapsible \"if\" statements increases the code\u0027s readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Collapsible \"if\" statements should be merged",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1066",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

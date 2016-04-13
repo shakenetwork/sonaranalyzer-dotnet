@@ -1,69 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1227",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\DefaultFailureDetectorRegistry.cs",
 "region":  {
-"startLine":  96,
-"startColumn":  16,
-"endLine":  96,
-"endColumn":  22
+"startLine":  97,
+"startColumn":  17,
+"endLine":  97,
+"endColumn":  23
 }
-}
-]
-}
-],
-"shortMessage":  "Refactor the code in order to remove this break statement.",
-"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "break statements should not be used except for switch cases",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1227",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1227",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1227",
+"message":  "Refactor the code in order to remove this break statement.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\DefaultFailureDetectorRegistry.cs",
 "region":  {
-"startLine":  107,
-"startColumn":  16,
-"endLine":  107,
-"endColumn":  22
+"startLine":  108,
+"startColumn":  17,
+"endLine":  108,
+"endColumn":  23
 }
-}
-]
-}
-],
-"shortMessage":  "Refactor the code in order to remove this break statement.",
-"fullMessage":  "\"break;\" is an unstructured control flow statement which makes code harder to read. Ideally, every loop should have a single termination condition.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "break statements should not be used except for switch cases",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1227",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

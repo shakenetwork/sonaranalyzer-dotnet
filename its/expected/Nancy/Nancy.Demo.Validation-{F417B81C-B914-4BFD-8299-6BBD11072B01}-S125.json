@@ -1,39 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S125",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S125",
+"message":  "Remove this commented out code.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Demo.Validation\\ValidationBootstrapper.cs",
 "region":  {
-"startLine":  13,
-"startColumn":  12,
-"endLine":  13,
-"endColumn":  60
+"startLine":  14,
+"startColumn":  13,
+"endLine":  14,
+"endColumn":  61
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this commented out code.",
-"fullMessage":  "Programmers should not comment out code as it bloats programs and reduces readability. Unused code should be deleted and can be retrieved from source control history if required.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Sections of code should not be \"commented out\"",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S125",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

@@ -1,99 +1,42 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2931",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"provider\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Cryptography\\PassphraseKeyGenerator.cs",
 "region":  {
-"startLine":  11,
-"startColumn":  17,
-"endLine":  11,
-"endColumn":  39
+"startLine":  12,
+"startColumn":  18,
+"endLine":  12,
+"endColumn":  40
 }
-}
-]
-}
-],
-"shortMessage":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"provider\".",
-"fullMessage":  "Classes with \"IDisposable\" members are responsible for cleaning up those members by calling their \"Dispose\" methods.The best practice here is for the owning class to itself implement \"IDisposable\" and call its members\u0027 \"Dispose\" methods from its own \"Dispose\" method.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Classes with \"IDisposable\" members should implement \"IDisposable\"",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2931",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2931",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"provider\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Cryptography\\RandomKeyGenerator.cs",
 "region":  {
-"startLine":  7,
-"startColumn":  17,
-"endLine":  7,
-"endColumn":  35
+"startLine":  8,
+"startColumn":  18,
+"endLine":  8,
+"endColumn":  36
 }
-}
-]
-}
-],
-"shortMessage":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"provider\".",
-"fullMessage":  "Classes with \"IDisposable\" members are responsible for cleaning up those members by calling their \"Dispose\" methods.The best practice here is for the owning class to itself implement \"IDisposable\" and call its members\u0027 \"Dispose\" methods from its own \"Dispose\" method.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Classes with \"IDisposable\" members should implement \"IDisposable\"",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2931",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2931",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"padlock\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\DefaultViewLocator.cs",
 "region":  {
-"startLine":  11,
-"startColumn":  17,
-"endLine":  11,
-"endColumn":  35
+"startLine":  12,
+"startColumn":  18,
+"endLine":  12,
+"endColumn":  36
 }
-}
-]
-}
-],
-"shortMessage":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"padlock\".",
-"fullMessage":  "Classes with \"IDisposable\" members are responsible for cleaning up those members by calling their \"Dispose\" methods.The best practice here is for the owning class to itself implement \"IDisposable\" and call its members\u0027 \"Dispose\" methods from its own \"Dispose\" method.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Classes with \"IDisposable\" members should implement \"IDisposable\"",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2931",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

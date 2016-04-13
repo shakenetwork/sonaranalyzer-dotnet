@@ -1,669 +1,289 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 234 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTimingSpec.cs",
 "region":  {
-"startLine":  183,
-"startColumn":  0,
-"endLine":  183,
-"endColumn":  234
+"startLine":  184,
+"startColumn":  1,
+"endLine":  184,
+"endColumn":  235
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 234 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 220 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\RootGuardianActorRef_Tests.cs",
 "region":  {
-"startLine":  34,
-"startColumn":  0,
-"endLine":  34,
-"endColumn":  220
+"startLine":  35,
+"startColumn":  1,
+"endLine":  35,
+"endColumn":  221
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 220 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 220 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\RootGuardianActorRef_Tests.cs",
 "region":  {
-"startLine":  42,
-"startColumn":  0,
-"endLine":  42,
-"endColumn":  220
+"startLine":  43,
+"startColumn":  1,
+"endLine":  43,
+"endColumn":  221
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 220 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 220 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\RootGuardianActorRef_Tests.cs",
 "region":  {
-"startLine":  52,
-"startColumn":  0,
-"endLine":  52,
-"endColumn":  220
+"startLine":  53,
+"startColumn":  1,
+"endLine":  53,
+"endColumn":  221
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 220 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 220 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\RootGuardianActorRef_Tests.cs",
 "region":  {
-"startLine":  63,
-"startColumn":  0,
-"endLine":  63,
-"endColumn":  220
+"startLine":  64,
+"startColumn":  1,
+"endLine":  64,
+"endColumn":  221
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 220 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 214 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\RootGuardianActorRef_Tests.cs",
 "region":  {
-"startLine":  75,
-"startColumn":  0,
-"endLine":  75,
+"startLine":  76,
+"startColumn":  1,
+"endLine":  76,
+"endColumn":  215
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 220 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\RootGuardianActorRef_Tests.cs",
+"region":  {
+"startLine":  85,
+"startColumn":  1,
+"endLine":  85,
+"endColumn":  221
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 263 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Scheduler\\TaskBasedScheduler_ActionScheduler_Schedule_Tests.cs",
+"region":  {
+"startLine":  57,
+"startColumn":  1,
+"endLine":  57,
+"endColumn":  264
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 213 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Scheduler\\TaskBasedScheduler_TellScheduler_Schedule_Tests.cs",
+"region":  {
+"startLine":  20,
+"startColumn":  1,
+"endLine":  20,
 "endColumn":  214
 }
 }
-]
-}
-],
-"shortMessage":  "Split this 214 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\RootGuardianActorRef_Tests.cs",
-"region":  {
-"startLine":  84,
-"startColumn":  0,
-"endLine":  84,
-"endColumn":  220
-}
-}
-]
-}
-],
-"shortMessage":  "Split this 220 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Scheduler\\TaskBasedScheduler_ActionScheduler_Schedule_Tests.cs",
+"id":  "S103",
+"message":  "Split this 263 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Scheduler\\TaskBasedScheduler_TellScheduler_Schedule_Tests.cs",
 "region":  {
 "startLine":  56,
-"startColumn":  0,
+"startColumn":  1,
 "endLine":  56,
-"endColumn":  263
+"endColumn":  264
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 263 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Scheduler\\TaskBasedScheduler_TellScheduler_Schedule_Tests.cs",
-"region":  {
-"startLine":  19,
-"startColumn":  0,
-"endLine":  19,
-"endColumn":  213
-}
-}
-]
-}
-],
-"shortMessage":  "Split this 213 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\Scheduler\\TaskBasedScheduler_TellScheduler_Schedule_Tests.cs",
-"region":  {
-"startLine":  55,
-"startColumn":  0,
-"endLine":  55,
-"endColumn":  263
-}
-}
-]
-}
-],
-"shortMessage":  "Split this 263 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 205 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\SupervisorHierarchySpec.cs",
 "region":  {
-"startLine":  260,
-"startColumn":  0,
-"endLine":  260,
-"endColumn":  205
+"startLine":  261,
+"startColumn":  1,
+"endLine":  261,
+"endColumn":  206
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 205 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 211 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\TcpConnectionSpec.cs",
 "region":  {
-"startLine":  814,
-"startColumn":  0,
-"endLine":  814,
-"endColumn":  211
+"startLine":  815,
+"startColumn":  1,
+"endLine":  815,
+"endColumn":  212
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 211 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 303 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchExpressionBuilder_BuildLambdaExpression_Tests.cs",
 "region":  {
-"startLine":  353,
-"startColumn":  0,
-"endLine":  353,
-"endColumn":  303
+"startLine":  354,
+"startColumn":  1,
+"endLine":  354,
+"endColumn":  304
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 303 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 261 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchExpressionBuilder_BuildLambdaExpression_Tests.cs",
 "region":  {
-"startLine":  356,
-"startColumn":  0,
-"endLine":  356,
+"startLine":  357,
+"startColumn":  1,
+"endLine":  357,
+"endColumn":  262
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 253 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchExpressionBuilder_BuildLambdaExpression_Tests.cs",
+"region":  {
+"startLine":  359,
+"startColumn":  1,
+"endLine":  359,
+"endColumn":  254
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 300 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchExpressionBuilder_BuildLambdaExpression_Tests.cs",
+"region":  {
+"startLine":  406,
+"startColumn":  1,
+"endLine":  406,
+"endColumn":  301
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 268 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchExpressionBuilder_BuildLambdaExpression_Tests.cs",
+"region":  {
+"startLine":  409,
+"startColumn":  1,
+"endLine":  409,
+"endColumn":  269
+}
+}
+},
+{
+"id":  "S103",
+"message":  "Split this 260 characters long line (which is greater than 200 authorized).",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchExpressionBuilder_BuildLambdaExpression_Tests.cs",
+"region":  {
+"startLine":  411,
+"startColumn":  1,
+"endLine":  411,
 "endColumn":  261
 }
 }
-]
-}
-],
-"shortMessage":  "Split this 261 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 258 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchExpressionBuilder_BuildLambdaExpression_Tests.cs",
 "region":  {
-"startLine":  358,
-"startColumn":  0,
-"endLine":  358,
-"endColumn":  253
+"startLine":  413,
+"startColumn":  1,
+"endLine":  413,
+"endColumn":  259
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 253 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchExpressionBuilder_BuildLambdaExpression_Tests.cs",
-"region":  {
-"startLine":  405,
-"startColumn":  0,
-"endLine":  405,
-"endColumn":  300
-}
-}
-]
-}
-],
-"shortMessage":  "Split this 300 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchExpressionBuilder_BuildLambdaExpression_Tests.cs",
-"region":  {
-"startLine":  408,
-"startColumn":  0,
-"endLine":  408,
-"endColumn":  268
-}
-}
-]
-}
-],
-"shortMessage":  "Split this 268 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchExpressionBuilder_BuildLambdaExpression_Tests.cs",
-"region":  {
-"startLine":  410,
-"startColumn":  0,
-"endLine":  410,
-"endColumn":  260
-}
-}
-]
-}
-],
-"shortMessage":  "Split this 260 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchExpressionBuilder_BuildLambdaExpression_Tests.cs",
-"region":  {
-"startLine":  412,
-"startColumn":  0,
-"endLine":  412,
-"endColumn":  258
-}
-}
-]
-}
-],
-"shortMessage":  "Split this 258 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 283 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchHandlerBuilderTests.cs",
 "region":  {
-"startLine":  248,
-"startColumn":  0,
-"endLine":  248,
-"endColumn":  283
+"startLine":  249,
+"startColumn":  1,
+"endLine":  249,
+"endColumn":  284
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 283 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 203 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\PartialActionBuilderTests.cs",
 "region":  {
-"startLine":  375,
-"startColumn":  0,
-"endLine":  375,
-"endColumn":  203
+"startLine":  376,
+"startColumn":  1,
+"endLine":  376,
+"endColumn":  204
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 203 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 214 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\PartialActionBuilderTests.cs",
 "region":  {
-"startLine":  409,
-"startColumn":  0,
-"endLine":  409,
-"endColumn":  214
+"startLine":  410,
+"startColumn":  1,
+"endLine":  410,
+"endColumn":  215
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 214 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

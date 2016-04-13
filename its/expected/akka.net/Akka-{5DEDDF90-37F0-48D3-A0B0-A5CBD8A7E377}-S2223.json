@@ -1,369 +1,159 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2223",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2223",
+"message":  "Change the visibility of \"ValidSymbols\" or make it \"const\" or \"readonly\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorPath.cs",
 "region":  {
-"startLine":  101,
-"startColumn":  31,
-"endLine":  101,
-"endColumn":  43
+"startLine":  102,
+"startColumn":  32,
+"endLine":  102,
+"endColumn":  44
 }
-}
-]
-}
-],
-"shortMessage":  "Change the visibility of \"ValidSymbols\" or make it \"const\" or \"readonly\".",
-"fullMessage":  "A \"static\" field that is neither constant nor read-only is not thread-safe. Correctly accessing these fields from different threads needs synchronization with \"lock\"s. Improper synchronization may lead to unexpected results, thus publicly visible static fields are best suited for storing non-changing data shared by many consumers. To enforce this intent, these fields should be marked \"readonly\" or converted to a constant.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Non-constant static fields should not be visible",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2223",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2223",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2223",
+"message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorRef.cs",
 "region":  {
-"startLine":  340,
-"startColumn":  29,
-"endLine":  340,
-"endColumn":  37
+"startLine":  341,
+"startColumn":  30,
+"endLine":  341,
+"endColumn":  38
 }
-}
-]
-}
-],
-"shortMessage":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
-"fullMessage":  "A \"static\" field that is neither constant nor read-only is not thread-safe. Correctly accessing these fields from different threads needs synchronization with \"lock\"s. Improper synchronization may lead to unexpected results, thus publicly visible static fields are best suited for storing non-changing data shared by many consumers. To enforce this intent, these fields should be marked \"readonly\" or converted to a constant.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Non-constant static fields should not be visible",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2223",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2223",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2223",
+"message":  "Change the visibility of \"DefaultDecider\" or make it \"const\" or \"readonly\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\SupervisorStrategy.cs",
 "region":  {
-"startLine":  81,
-"startColumn":  31,
-"endLine":  81,
-"endColumn":  45
+"startLine":  82,
+"startColumn":  32,
+"endLine":  82,
+"endColumn":  46
 }
-}
-]
-}
-],
-"shortMessage":  "Change the visibility of \"DefaultDecider\" or make it \"const\" or \"readonly\".",
-"fullMessage":  "A \"static\" field that is neither constant nor read-only is not thread-safe. Correctly accessing these fields from different threads needs synchronization with \"lock\"s. Improper synchronization may lead to unexpected results, thus publicly visible static fields are best suited for storing non-changing data shared by many consumers. To enforce this intent, these fields should be marked \"readonly\" or converted to a constant.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Non-constant static fields should not be visible",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2223",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2223",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2223",
+"message":  "Change the visibility of \"CurrentWorker\" or make it \"const\" or \"readonly\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Helios.Concurrency.DedicatedThreadPool.cs",
 "region":  {
-"startLine":  291,
-"startColumn":  35,
-"endLine":  291,
-"endColumn":  48
-}
-}
-]
-}
-],
-"shortMessage":  "Change the visibility of \"CurrentWorker\" or make it \"const\" or \"readonly\".",
-"fullMessage":  "A \"static\" field that is neither constant nor read-only is not thread-safe. Correctly accessing these fields from different threads needs synchronization with \"lock\"s. Improper synchronization may lead to unexpected results, thus publicly visible static fields are best suited for storing non-changing data shared by many consumers. To enforce this intent, these fields should be marked \"readonly\" or converted to a constant.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Non-constant static fields should not be visible",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2223",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2223",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
-"region":  {
-"startLine":  438,
-"startColumn":  41,
-"endLine":  438,
+"startLine":  292,
+"startColumn":  36,
+"endLine":  292,
 "endColumn":  49
 }
 }
-]
-}
-],
-"shortMessage":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
-"fullMessage":  "A \"static\" field that is neither constant nor read-only is not thread-safe. Correctly accessing these fields from different threads needs synchronization with \"lock\"s. Improper synchronization may lead to unexpected results, thus publicly visible static fields are best suited for storing non-changing data shared by many consumers. To enforce this intent, these fields should be marked \"readonly\" or converted to a constant.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Non-constant static fields should not be visible",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2223",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
 },
 {
-"ruleId":  "S2223",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2223",
+"message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
 "region":  {
-"startLine":  451,
-"startColumn":  40,
-"endLine":  451,
-"endColumn":  48
-}
-}
-]
-}
-],
-"shortMessage":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
-"fullMessage":  "A \"static\" field that is neither constant nor read-only is not thread-safe. Correctly accessing these fields from different threads needs synchronization with \"lock\"s. Improper synchronization may lead to unexpected results, thus publicly visible static fields are best suited for storing non-changing data shared by many consumers. To enforce this intent, these fields should be marked \"readonly\" or converted to a constant.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Non-constant static fields should not be visible",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2223",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2223",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
-"region":  {
-"startLine":  537,
-"startColumn":  41,
-"endLine":  537,
-"endColumn":  49
-}
-}
-]
-}
-],
-"shortMessage":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
-"fullMessage":  "A \"static\" field that is neither constant nor read-only is not thread-safe. Correctly accessing these fields from different threads needs synchronization with \"lock\"s. Improper synchronization may lead to unexpected results, thus publicly visible static fields are best suited for storing non-changing data shared by many consumers. To enforce this intent, these fields should be marked \"readonly\" or converted to a constant.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Non-constant static fields should not be visible",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2223",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2223",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
-"region":  {
-"startLine":  561,
-"startColumn":  34,
-"endLine":  561,
-"endColumn":  42
-}
-}
-]
-}
-],
-"shortMessage":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
-"fullMessage":  "A \"static\" field that is neither constant nor read-only is not thread-safe. Correctly accessing these fields from different threads needs synchronization with \"lock\"s. Improper synchronization may lead to unexpected results, thus publicly visible static fields are best suited for storing non-changing data shared by many consumers. To enforce this intent, these fields should be marked \"readonly\" or converted to a constant.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Non-constant static fields should not be visible",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2223",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2223",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
-"region":  {
-"startLine":  613,
-"startColumn":  34,
-"endLine":  613,
-"endColumn":  42
-}
-}
-]
-}
-],
-"shortMessage":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
-"fullMessage":  "A \"static\" field that is neither constant nor read-only is not thread-safe. Correctly accessing these fields from different threads needs synchronization with \"lock\"s. Improper synchronization may lead to unexpected results, thus publicly visible static fields are best suited for storing non-changing data shared by many consumers. To enforce this intent, these fields should be marked \"readonly\" or converted to a constant.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Non-constant static fields should not be visible",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2223",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2223",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
-"region":  {
-"startLine":  631,
+"startLine":  439,
 "startColumn":  42,
-"endLine":  631,
+"endLine":  439,
 "endColumn":  50
 }
 }
-]
-}
-],
-"shortMessage":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
-"fullMessage":  "A \"static\" field that is neither constant nor read-only is not thread-safe. Correctly accessing these fields from different threads needs synchronization with \"lock\"s. Improper synchronization may lead to unexpected results, thus publicly visible static fields are best suited for storing non-changing data shared by many consumers. To enforce this intent, these fields should be marked \"readonly\" or converted to a constant.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Non-constant static fields should not be visible",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2223",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
 },
 {
-"ruleId":  "S2223",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2223",
+"message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
 "region":  {
-"startLine":  648,
-"startColumn":  37,
-"endLine":  648,
-"endColumn":  45
+"startLine":  452,
+"startColumn":  41,
+"endLine":  452,
+"endColumn":  49
 }
-}
-]
-}
-],
-"shortMessage":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
-"fullMessage":  "A \"static\" field that is neither constant nor read-only is not thread-safe. Correctly accessing these fields from different threads needs synchronization with \"lock\"s. Improper synchronization may lead to unexpected results, thus publicly visible static fields are best suited for storing non-changing data shared by many consumers. To enforce this intent, these fields should be marked \"readonly\" or converted to a constant.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Non-constant static fields should not be visible",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2223",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2223",
-"locations":  [
+"id":  "S2223",
+"message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"region":  {
+"startLine":  538,
+"startColumn":  42,
+"endLine":  538,
+"endColumn":  50
+}
+}
+},
 {
-"analysisTarget":  [
+"id":  "S2223",
+"message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"region":  {
+"startLine":  562,
+"startColumn":  35,
+"endLine":  562,
+"endColumn":  43
+}
+}
+},
 {
+"id":  "S2223",
+"message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"region":  {
+"startLine":  614,
+"startColumn":  35,
+"endLine":  614,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"region":  {
+"startLine":  632,
+"startColumn":  43,
+"endLine":  632,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\IO\\Tcp.cs",
+"region":  {
+"startLine":  649,
+"startColumn":  38,
+"endLine":  649,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2223",
+"message":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\TcpConnection.cs",
 "region":  {
-"startLine":  786,
-"startColumn":  39,
-"endLine":  786,
-"endColumn":  47
+"startLine":  787,
+"startColumn":  40,
+"endLine":  787,
+"endColumn":  48
 }
-}
-]
-}
-],
-"shortMessage":  "Change the visibility of \"Instance\" or make it \"const\" or \"readonly\".",
-"fullMessage":  "A \"static\" field that is neither constant nor read-only is not thread-safe. Correctly accessing these fields from different threads needs synchronization with \"lock\"s. Improper synchronization may lead to unexpected results, thus publicly visible static fields are best suited for storing non-changing data shared by many consumers. To enforce this intent, these fields should be marked \"readonly\" or converted to a constant.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Non-constant static fields should not be visible",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2223",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

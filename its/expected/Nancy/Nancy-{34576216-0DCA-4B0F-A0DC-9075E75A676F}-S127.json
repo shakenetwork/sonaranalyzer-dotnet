@@ -1,159 +1,68 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S127",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S127",
+"message":  "Do not update the loop counter \"i\" within the loop body.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
-"startLine":  162,
-"startColumn":  28,
-"endLine":  162,
-"endColumn":  29
+"startLine":  163,
+"startColumn":  29,
+"endLine":  163,
+"endColumn":  30
 }
-}
-]
-}
-],
-"shortMessage":  "Do not update the loop counter \"i\" within the loop body.",
-"fullMessage":  "\"for\" loop stop conditions must be invariant (i.e. true at both the beginning and ending of every loop iteration). Ideally, this means that the stop condition is set to a local variable just before the loop begins. Stop conditions that are not invariant are difficult to understand and maintain, and will likely lead to the introduction of errors in the future.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"for\" loop stop conditions should be invariant",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S127",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S127",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S127",
+"message":  "Do not update the loop counter \"i\" within the loop body.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
-"startLine":  170,
-"startColumn":  24,
-"endLine":  170,
-"endColumn":  25
+"startLine":  171,
+"startColumn":  25,
+"endLine":  171,
+"endColumn":  26
 }
-}
-]
-}
-],
-"shortMessage":  "Do not update the loop counter \"i\" within the loop body.",
-"fullMessage":  "\"for\" loop stop conditions must be invariant (i.e. true at both the beginning and ending of every loop iteration). Ideally, this means that the stop condition is set to a local variable just before the loop begins. Stop conditions that are not invariant are difficult to understand and maintain, and will likely lead to the introduction of errors in the future.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"for\" loop stop conditions should be invariant",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S127",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S127",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S127",
+"message":  "Do not update the loop counter \"i\" within the loop body.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
-"startLine":  284,
-"startColumn":  28,
-"endLine":  284,
-"endColumn":  29
+"startLine":  285,
+"startColumn":  29,
+"endLine":  285,
+"endColumn":  30
 }
-}
-]
-}
-],
-"shortMessage":  "Do not update the loop counter \"i\" within the loop body.",
-"fullMessage":  "\"for\" loop stop conditions must be invariant (i.e. true at both the beginning and ending of every loop iteration). Ideally, this means that the stop condition is set to a local variable just before the loop begins. Stop conditions that are not invariant are difficult to understand and maintain, and will likely lead to the introduction of errors in the future.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"for\" loop stop conditions should be invariant",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S127",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S127",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S127",
+"message":  "Do not update the loop counter \"i\" within the loop body.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
-"startLine":  291,
-"startColumn":  24,
-"endLine":  291,
-"endColumn":  25
+"startLine":  292,
+"startColumn":  25,
+"endLine":  292,
+"endColumn":  26
 }
-}
-]
-}
-],
-"shortMessage":  "Do not update the loop counter \"i\" within the loop body.",
-"fullMessage":  "\"for\" loop stop conditions must be invariant (i.e. true at both the beginning and ending of every loop iteration). Ideally, this means that the stop condition is set to a local variable just before the loop begins. Stop conditions that are not invariant are difficult to understand and maintain, and will likely lead to the introduction of errors in the future.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"for\" loop stop conditions should be invariant",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S127",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S127",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S127",
+"message":  "Do not update the loop counter \"i\" within the loop body.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
-"startLine":  374,
-"startColumn":  24,
-"endLine":  374,
-"endColumn":  25
+"startLine":  375,
+"startColumn":  25,
+"endLine":  375,
+"endColumn":  26
 }
-}
-]
-}
-],
-"shortMessage":  "Do not update the loop counter \"i\" within the loop body.",
-"fullMessage":  "\"for\" loop stop conditions must be invariant (i.e. true at both the beginning and ending of every loop iteration). Ideally, this means that the stop condition is set to a local variable just before the loop begins. Stop conditions that are not invariant are difficult to understand and maintain, and will likely lead to the introduction of errors in the future.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"for\" loop stop conditions should be invariant",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S127",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

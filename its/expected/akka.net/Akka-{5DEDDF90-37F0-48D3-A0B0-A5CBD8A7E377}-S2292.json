@@ -1,159 +1,68 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2292",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\Stash\\UntypedActorWithBoundedStash.cs",
-"region":  {
-"startLine":  24,
-"startColumn":  22,
-"endLine":  24,
-"endColumn":  34
-}
-}
-]
-}
-],
-"shortMessage":  "Make this an auto-implemented property and remove its backing field.",
-"fullMessage":  "Trivial properties, which include no logic but setting and getting a backing field should be converted to auto-implemented properties, yielding cleaner and more readable code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Trivial properties should be auto-implemented",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2292",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2292",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2292",
+"message":  "Make this an auto-implemented property and remove its backing field.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Stash\\UntypedActorWithBoundedStash.cs",
 "region":  {
 "startLine":  25,
-"startColumn":  27,
+"startColumn":  23,
 "endLine":  25,
-"endColumn":  32
+"endColumn":  35
 }
-}
-]
-}
-],
-"shortMessage":  "Make this an auto-implemented property and remove its backing field.",
-"fullMessage":  "Trivial properties, which include no logic but setting and getting a backing field should be converted to auto-implemented properties, yielding cleaner and more readable code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Trivial properties should be auto-implemented",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2292",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2292",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\Stash\\UntypedActorWithUnboundedStash.cs",
+"id":  "S2292",
+"message":  "Make this an auto-implemented property and remove its backing field.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\Stash\\UntypedActorWithBoundedStash.cs",
 "region":  {
-"startLine":  23,
-"startColumn":  22,
-"endLine":  23,
-"endColumn":  34
+"startLine":  26,
+"startColumn":  28,
+"endLine":  26,
+"endColumn":  33
 }
-}
-]
-}
-],
-"shortMessage":  "Make this an auto-implemented property and remove its backing field.",
-"fullMessage":  "Trivial properties, which include no logic but setting and getting a backing field should be converted to auto-implemented properties, yielding cleaner and more readable code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Trivial properties should be auto-implemented",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2292",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2292",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2292",
+"message":  "Make this an auto-implemented property and remove its backing field.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Stash\\UntypedActorWithUnboundedStash.cs",
 "region":  {
 "startLine":  24,
-"startColumn":  27,
+"startColumn":  23,
 "endLine":  24,
-"endColumn":  32
+"endColumn":  35
 }
-}
-]
-}
-],
-"shortMessage":  "Make this an auto-implemented property and remove its backing field.",
-"fullMessage":  "Trivial properties, which include no logic but setting and getting a backing field should be converted to auto-implemented properties, yielding cleaner and more readable code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Trivial properties should be auto-implemented",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2292",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2292",
-"locations":  [
+"id":  "S2292",
+"message":  "Make this an auto-implemented property and remove its backing field.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\Stash\\UntypedActorWithUnboundedStash.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  28,
+"endLine":  25,
+"endColumn":  33
+}
+}
+},
 {
-"analysisTarget":  [
-{
+"id":  "S2292",
+"message":  "Make this an auto-implemented property and remove its backing field.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Dispatch\\MessageQueues\\BlockingMessageQueue.cs",
 "region":  {
-"startLine":  22,
-"startColumn":  24,
-"endLine":  22,
-"endColumn":  36
+"startLine":  23,
+"startColumn":  25,
+"endLine":  23,
+"endColumn":  37
 }
-}
-]
-}
-],
-"shortMessage":  "Make this an auto-implemented property and remove its backing field.",
-"fullMessage":  "Trivial properties, which include no logic but setting and getting a backing field should be converted to auto-implemented properties, yielding cleaner and more readable code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Trivial properties should be auto-implemented",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2292",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

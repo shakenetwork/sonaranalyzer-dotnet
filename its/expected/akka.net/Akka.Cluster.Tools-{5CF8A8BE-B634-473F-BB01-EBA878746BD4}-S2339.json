@@ -1,189 +1,81 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2339",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2339",
+"message":  "Change this constant to a \"static\" read-only property.",
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Serialization\\DistributedPubSubMessageSerializer.cs",
 "region":  {
-"startLine":  29,
-"startColumn":  25,
-"endLine":  29,
-"endColumn":  35
+"startLine":  30,
+"startColumn":  26,
+"endLine":  30,
+"endColumn":  36
 }
-}
-]
-}
-],
-"shortMessage":  "Change this constant to a \"static\" read-only property.",
-"fullMessage":  "Constant members are copied at compile time to the call sites, instead of being fetched at runtime. This means that you should use constants to hold values that by definition will never change, such as \"Zero\". In practice, those cases are uncommon, and therefore it is generally better to avoid constant members.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Public constant members should not be used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2339",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2339",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Serialization\\DistributedPubSubMessageSerializer.cs",
-"region":  {
-"startLine":  31,
-"startColumn":  28,
-"endLine":  31,
-"endColumn":  42
-}
-}
-]
-}
-],
-"shortMessage":  "Change this constant to a \"static\" read-only property.",
-"fullMessage":  "Constant members are copied at compile time to the call sites, instead of being fetched at runtime. This means that you should use constants to hold values that by definition will never change, such as \"Zero\". In practice, those cases are uncommon, and therefore it is generally better to avoid constant members.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Public constant members should not be used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2339",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2339",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2339",
+"message":  "Change this constant to a \"static\" read-only property.",
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Serialization\\DistributedPubSubMessageSerializer.cs",
 "region":  {
 "startLine":  32,
-"startColumn":  28,
+"startColumn":  29,
 "endLine":  32,
-"endColumn":  41
-}
-}
-]
-}
-],
-"shortMessage":  "Change this constant to a \"static\" read-only property.",
-"fullMessage":  "Constant members are copied at compile time to the call sites, instead of being fetched at runtime. This means that you should use constants to hold values that by definition will never change, such as \"Zero\". In practice, those cases are uncommon, and therefore it is generally better to avoid constant members.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Public constant members should not be used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2339",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2339",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Serialization\\DistributedPubSubMessageSerializer.cs",
-"region":  {
-"startLine":  33,
-"startColumn":  28,
-"endLine":  33,
-"endColumn":  40
-}
-}
-]
-}
-],
-"shortMessage":  "Change this constant to a \"static\" read-only property.",
-"fullMessage":  "Constant members are copied at compile time to the call sites, instead of being fetched at runtime. This means that you should use constants to hold values that by definition will never change, such as \"Zero\". In practice, those cases are uncommon, and therefore it is generally better to avoid constant members.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Public constant members should not be used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2339",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2339",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Serialization\\DistributedPubSubMessageSerializer.cs",
-"region":  {
-"startLine":  34,
-"startColumn":  28,
-"endLine":  34,
-"endColumn":  45
-}
-}
-]
-}
-],
-"shortMessage":  "Change this constant to a \"static\" read-only property.",
-"fullMessage":  "Constant members are copied at compile time to the call sites, instead of being fetched at runtime. This means that you should use constants to hold values that by definition will never change, such as \"Zero\". In practice, those cases are uncommon, and therefore it is generally better to avoid constant members.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Public constant members should not be used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2339",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2339",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Serialization\\DistributedPubSubMessageSerializer.cs",
-"region":  {
-"startLine":  35,
-"startColumn":  28,
-"endLine":  35,
 "endColumn":  43
 }
 }
-]
+},
+{
+"id":  "S2339",
+"message":  "Change this constant to a \"static\" read-only property.",
+"location":  {
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Serialization\\DistributedPubSubMessageSerializer.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  29,
+"endLine":  33,
+"endColumn":  42
 }
-],
-"shortMessage":  "Change this constant to a \"static\" read-only property.",
-"fullMessage":  "Constant members are copied at compile time to the call sites, instead of being fetched at runtime. This means that you should use constants to hold values that by definition will never change, such as \"Zero\". In practice, those cases are uncommon, and therefore it is generally better to avoid constant members.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Public constant members should not be used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2339",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
+}
+},
+{
+"id":  "S2339",
+"message":  "Change this constant to a \"static\" read-only property.",
+"location":  {
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Serialization\\DistributedPubSubMessageSerializer.cs",
+"region":  {
+"startLine":  34,
+"startColumn":  29,
+"endLine":  34,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S2339",
+"message":  "Change this constant to a \"static\" read-only property.",
+"location":  {
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Serialization\\DistributedPubSubMessageSerializer.cs",
+"region":  {
+"startLine":  35,
+"startColumn":  29,
+"endLine":  35,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S2339",
+"message":  "Change this constant to a \"static\" read-only property.",
+"location":  {
+"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\Serialization\\DistributedPubSubMessageSerializer.cs",
+"region":  {
+"startLine":  36,
+"startColumn":  29,
+"endLine":  36,
+"endColumn":  44
+}
 }
 }
 ]

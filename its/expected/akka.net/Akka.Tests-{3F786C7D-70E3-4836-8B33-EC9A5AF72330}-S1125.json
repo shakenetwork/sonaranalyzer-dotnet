@@ -1,71 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1125",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1125",
+"message":  "Remove the unnecessary Boolean literal(s).",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchHandlerBuilderTests.cs",
 "region":  {
-"startLine":  104,
-"startColumn":  54,
-"endLine":  104,
-"endColumn":  61
+"startLine":  105,
+"startColumn":  55,
+"endLine":  105,
+"endColumn":  62
 }
-}
-]
-}
-],
-"shortMessage":  "Remove the unnecessary Boolean literal(s).",
-"fullMessage":  "Redundant Boolean literals should be removed from expressions to improve readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Boolean literals should not be redundant",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1125",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S1125",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1125",
+"message":  "Remove the unnecessary Boolean literal(s).",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchHandlerBuilderTests.cs",
 "region":  {
-"startLine":  125,
-"startColumn":  54,
-"endLine":  125,
-"endColumn":  61
+"startLine":  126,
+"startColumn":  55,
+"endLine":  126,
+"endColumn":  62
 }
-}
-]
-}
-],
-"shortMessage":  "Remove the unnecessary Boolean literal(s).",
-"fullMessage":  "Redundant Boolean literals should be removed from expressions to improve readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Boolean literals should not be redundant",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1125",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 }
 ]

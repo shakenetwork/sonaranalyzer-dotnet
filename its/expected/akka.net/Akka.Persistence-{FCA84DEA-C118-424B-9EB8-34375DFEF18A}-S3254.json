@@ -1,567 +1,237 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S3254",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"message\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Eventsourced.Recovery.cs",
 "region":  {
-"startLine":  146,
-"startColumn":  51,
-"endLine":  146,
-"endColumn":  64
+"startLine":  147,
+"startColumn":  52,
+"endLine":  147,
+"endColumn":  65
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this default value assigned to parameter \"message\".",
-"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Default parameter values should not be passed as arguments",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3254",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3254",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"stopReason\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
-"startLine":  739,
-"startColumn":  38,
-"endLine":  739,
-"endColumn":  42
+"startLine":  740,
+"startColumn":  39,
+"endLine":  740,
+"endColumn":  43
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this default value assigned to parameter \"stopReason\".",
-"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Default parameter values should not be passed as arguments",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3254",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3254",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"replies\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
-"startLine":  739,
-"startColumn":  44,
-"endLine":  739,
-"endColumn":  48
+"startLine":  740,
+"startColumn":  45,
+"endLine":  740,
+"endColumn":  49
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this default value assigned to parameter \"replies\".",
-"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Default parameter values should not be passed as arguments",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3254",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3254",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"stopReason\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
-"startLine":  741,
-"startColumn":  34,
-"endLine":  741,
-"endColumn":  38
+"startLine":  742,
+"startColumn":  35,
+"endLine":  742,
+"endColumn":  39
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this default value assigned to parameter \"stopReason\".",
-"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Default parameter values should not be passed as arguments",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3254",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3254",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"replies\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
-"startLine":  741,
-"startColumn":  40,
-"endLine":  741,
-"endColumn":  44
+"startLine":  742,
+"startColumn":  41,
+"endLine":  742,
+"endColumn":  45
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this default value assigned to parameter \"replies\".",
-"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Default parameter values should not be passed as arguments",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3254",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3254",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"stopReason\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
-"startLine":  754,
-"startColumn":  38,
-"endLine":  754,
-"endColumn":  42
+"startLine":  755,
+"startColumn":  39,
+"endLine":  755,
+"endColumn":  43
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this default value assigned to parameter \"stopReason\".",
-"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Default parameter values should not be passed as arguments",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3254",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3254",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"replies\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
-"startLine":  754,
-"startColumn":  44,
-"endLine":  754,
-"endColumn":  48
+"startLine":  755,
+"startColumn":  45,
+"endLine":  755,
+"endColumn":  49
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this default value assigned to parameter \"replies\".",
-"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Default parameter values should not be passed as arguments",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3254",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3254",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"stopReason\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
-"startLine":  759,
-"startColumn":  34,
-"endLine":  759,
-"endColumn":  38
+"startLine":  760,
+"startColumn":  35,
+"endLine":  760,
+"endColumn":  39
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this default value assigned to parameter \"stopReason\".",
-"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Default parameter values should not be passed as arguments",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3254",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3254",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"replies\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
-"startLine":  759,
-"startColumn":  40,
-"endLine":  759,
-"endColumn":  44
+"startLine":  760,
+"startColumn":  41,
+"endLine":  760,
+"endColumn":  45
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this default value assigned to parameter \"replies\".",
-"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Default parameter values should not be passed as arguments",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3254",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3254",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"stopReason\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
-"startLine":  770,
-"startColumn":  34,
-"endLine":  770,
-"endColumn":  38
+"startLine":  771,
+"startColumn":  35,
+"endLine":  771,
+"endColumn":  39
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this default value assigned to parameter \"stopReason\".",
-"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Default parameter values should not be passed as arguments",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3254",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3254",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"replies\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
-"startLine":  770,
-"startColumn":  40,
-"endLine":  770,
-"endColumn":  44
+"startLine":  771,
+"startColumn":  41,
+"endLine":  771,
+"endColumn":  45
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this default value assigned to parameter \"replies\".",
-"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Default parameter values should not be passed as arguments",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3254",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3254",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"domainEvents\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
-"startLine":  770,
-"startColumn":  46,
-"endLine":  770,
-"endColumn":  50
+"startLine":  771,
+"startColumn":  47,
+"endLine":  771,
+"endColumn":  51
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this default value assigned to parameter \"domainEvents\".",
-"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Default parameter values should not be passed as arguments",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3254",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3254",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"redeliverInterval\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistence.cs",
 "region":  {
-"startLine":  288,
-"startColumn":  28,
-"endLine":  288,
-"endColumn":  32
+"startLine":  289,
+"startColumn":  29,
+"endLine":  289,
+"endColumn":  33
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this default value assigned to parameter \"redeliverInterval\".",
-"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Default parameter values should not be passed as arguments",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3254",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3254",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"redeliveryBurstLimit\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistence.cs",
 "region":  {
-"startLine":  288,
-"startColumn":  34,
-"endLine":  288,
-"endColumn":  38
+"startLine":  289,
+"startColumn":  35,
+"endLine":  289,
+"endColumn":  39
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this default value assigned to parameter \"redeliveryBurstLimit\".",
-"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Default parameter values should not be passed as arguments",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3254",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3254",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"unconfirmedAttemptsToWarn\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistence.cs",
 "region":  {
-"startLine":  288,
-"startColumn":  40,
-"endLine":  288,
-"endColumn":  44
+"startLine":  289,
+"startColumn":  41,
+"endLine":  289,
+"endColumn":  45
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this default value assigned to parameter \"unconfirmedAttemptsToWarn\".",
-"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Default parameter values should not be passed as arguments",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3254",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3254",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"redeliverInterval\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistence.cs",
 "region":  {
-"startLine":  293,
-"startColumn":  28,
-"endLine":  293,
-"endColumn":  32
+"startLine":  294,
+"startColumn":  29,
+"endLine":  294,
+"endColumn":  33
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this default value assigned to parameter \"redeliverInterval\".",
-"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Default parameter values should not be passed as arguments",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3254",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3254",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"redeliverInterval\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistence.cs",
 "region":  {
-"startLine":  298,
-"startColumn":  28,
-"endLine":  298,
-"endColumn":  32
+"startLine":  299,
+"startColumn":  29,
+"endLine":  299,
+"endColumn":  33
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this default value assigned to parameter \"redeliverInterval\".",
-"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Default parameter values should not be passed as arguments",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3254",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3254",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"redeliveryBurstLimit\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistence.cs",
 "region":  {
-"startLine":  298,
-"startColumn":  34,
-"endLine":  298,
-"endColumn":  38
+"startLine":  299,
+"startColumn":  35,
+"endLine":  299,
+"endColumn":  39
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this default value assigned to parameter \"redeliveryBurstLimit\".",
-"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Default parameter values should not be passed as arguments",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3254",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 }
 ]

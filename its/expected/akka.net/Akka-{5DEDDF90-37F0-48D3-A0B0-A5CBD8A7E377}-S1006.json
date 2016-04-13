@@ -1,99 +1,42 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1006",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1006",
+"message":  "Add the default parameter value defined in the overridden method.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorCell.cs",
 "region":  {
-"startLine":  202,
-"startColumn":  70,
-"endLine":  202,
-"endColumn":  80
+"startLine":  203,
+"startColumn":  71,
+"endLine":  203,
+"endColumn":  81
 }
-}
-]
-}
-],
-"shortMessage":  "Add the default parameter value defined in the overridden method.",
-"fullMessage":  "Default arguments are determined by the static type of the object. If a default argument is different for a parameter in an overriding method, the value used in the call will be different when calls are made via the base or derived object, which may be contrary to developer expectations.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method overrides should use the same default parameter values as the base methods",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1006",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1006",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1006",
+"message":  "Remove the default parameter value to match the signature of overridden method.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorCell.ReceiveTimeout.cs",
 "region":  {
-"startLine":  16,
-"startColumn":  49,
-"endLine":  16,
-"endColumn":  54
+"startLine":  17,
+"startColumn":  50,
+"endLine":  17,
+"endColumn":  55
 }
-}
-]
-}
-],
-"shortMessage":  "Remove the default parameter value to match the signature of overridden method.",
-"fullMessage":  "Default arguments are determined by the static type of the object. If a default argument is different for a parameter in an overriding method, the value used in the call will be different when calls are made via the base or derived object, which may be contrary to developer expectations.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method overrides should use the same default parameter values as the base methods",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1006",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1006",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1006",
+"message":  "Remove the default parameter value to match the signature of overridden method.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorSelection.cs",
 "region":  {
-"startLine":  93,
-"startColumn":  58,
-"endLine":  93,
-"endColumn":  64
+"startLine":  94,
+"startColumn":  59,
+"endLine":  94,
+"endColumn":  65
 }
-}
-]
-}
-],
-"shortMessage":  "Remove the default parameter value to match the signature of overridden method.",
-"fullMessage":  "Default arguments are determined by the static type of the object. If a default argument is different for a parameter in an overriding method, the value used in the call will be different when calls are made via the base or derived object, which may be contrary to developer expectations.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method overrides should use the same default parameter values as the base methods",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1006",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

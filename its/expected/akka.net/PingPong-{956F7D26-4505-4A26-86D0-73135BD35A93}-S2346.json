@@ -1,39 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2346",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2346",
+"message":  "Rename \"No\" to \"None\".",
+"location":  {
 "uri":  "akka.net\\src\\benchmark\\PingPong\\Program.cs",
 "region":  {
-"startLine":  269,
-"startColumn":  12,
-"endLine":  269,
-"endColumn":  18
+"startLine":  270,
+"startColumn":  13,
+"endLine":  270,
+"endColumn":  19
 }
-}
-]
-}
-],
-"shortMessage":  "Rename \"No\" to \"None\".",
-"fullMessage":  "Consisitent use of \"None\" in flags enumerations indicates that all flag values are cleared. The value 0 should not be used to indicate any other state, since there is no way to check that the bit 0 is set.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Flags enumerations zero-value members should be named \"None\"",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2346",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

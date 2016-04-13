@@ -1,133 +1,55 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1116",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1116",
+"message":  "Remove this empty statement.",
+"location":  {
 "uri":  "akka.net\\src\\benchmark\\PersistenceBenchmark\\PerformanceActors.cs",
 "region":  {
-"startLine":  28,
-"startColumn":  44,
-"endLine":  28,
-"endColumn":  45
+"startLine":  29,
+"startColumn":  45,
+"endLine":  29,
+"endColumn":  46
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this empty statement.",
-"fullMessage":  "Empty statements, i.e. \";\", are usually introduced by mistake, for example because: It was meant to be replaced by an actual statement, but this was forgotten. There was a typo which lead the semicolon to be doubled, i.e. \";;\".",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Empty statements should be removed",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1116",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S1116",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1116",
+"message":  "Remove this empty statement.",
+"location":  {
 "uri":  "akka.net\\src\\benchmark\\PersistenceBenchmark\\PerformanceActors.cs",
 "region":  {
-"startLine":  55,
-"startColumn":  52,
-"endLine":  55,
-"endColumn":  53
+"startLine":  56,
+"startColumn":  53,
+"endLine":  56,
+"endColumn":  54
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this empty statement.",
-"fullMessage":  "Empty statements, i.e. \";\", are usually introduced by mistake, for example because: It was meant to be replaced by an actual statement, but this was forgotten. There was a typo which lead the semicolon to be doubled, i.e. \";;\".",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Empty statements should be removed",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1116",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S1116",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1116",
+"message":  "Remove this empty statement.",
+"location":  {
 "uri":  "akka.net\\src\\benchmark\\PersistenceBenchmark\\PerformanceActors.cs",
 "region":  {
-"startLine":  75,
-"startColumn":  52,
-"endLine":  75,
-"endColumn":  53
+"startLine":  76,
+"startColumn":  53,
+"endLine":  76,
+"endColumn":  54
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this empty statement.",
-"fullMessage":  "Empty statements, i.e. \";\", are usually introduced by mistake, for example because: It was meant to be replaced by an actual statement, but this was forgotten. There was a typo which lead the semicolon to be doubled, i.e. \";;\".",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Empty statements should be removed",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1116",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S1116",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1116",
+"message":  "Remove this empty statement.",
+"location":  {
 "uri":  "akka.net\\src\\benchmark\\PersistenceBenchmark\\PerformanceActors.cs",
 "region":  {
-"startLine":  92,
-"startColumn":  44,
-"endLine":  92,
-"endColumn":  45
+"startLine":  93,
+"startColumn":  45,
+"endLine":  93,
+"endColumn":  46
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this empty statement.",
-"fullMessage":  "Empty statements, i.e. \";\", are usually introduced by mistake, for example because: It was meant to be replaced by an actual statement, but this was forgotten. There was a typo which lead the semicolon to be doubled, i.e. \";;\".",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Empty statements should be removed",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1116",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 }
 ]

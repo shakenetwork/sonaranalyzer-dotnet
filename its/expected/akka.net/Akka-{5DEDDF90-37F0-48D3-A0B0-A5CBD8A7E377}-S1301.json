@@ -1,69 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1301",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Dispatch\\ActorTaskScheduler.cs",
 "region":  {
-"startLine":  119,
-"startColumn":  12,
-"endLine":  119,
-"endColumn":  18
+"startLine":  120,
+"startColumn":  13,
+"endLine":  120,
+"endColumn":  19
 }
-}
-]
-}
-],
-"shortMessage":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
-"fullMessage":  "\"switch\" statements are useful when there are many different cases depending on the value of the same expression. For just one or two cases however, the code will be more readable with \"if\" statements.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"switch\" statements should have at least 3 \"case\" clauses",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1301",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1301",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1301",
+"message":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\Internal\\Collections\\ImmutableAvlTreeBase.cs",
 "region":  {
-"startLine":  114,
-"startColumn":  4,
-"endLine":  114,
-"endColumn":  10
+"startLine":  115,
+"startColumn":  5,
+"endLine":  115,
+"endColumn":  11
 }
-}
-]
-}
-],
-"shortMessage":  "Replace this \"switch\" statement with \"if\" statements to increase readability.",
-"fullMessage":  "\"switch\" statements are useful when there are many different cases depending on the value of the same expression. For just one or two cases however, the code will be more readable with \"if\" statements.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"switch\" statements should have at least 3 \"case\" clauses",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1301",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

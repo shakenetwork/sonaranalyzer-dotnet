@@ -1,69 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2486",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2486",
+"message":  "Handle the exception or explain in a comment why it can be ignored.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\SelectionHandler.cs",
 "region":  {
-"startLine":  180,
-"startColumn":  20,
-"endLine":  180,
-"endColumn":  43
+"startLine":  181,
+"startColumn":  21,
+"endLine":  181,
+"endColumn":  44
 }
-}
-]
-}
-],
-"shortMessage":  "Handle the exception or explain in a comment why it can be ignored.",
-"fullMessage":  "When exceptions occur, it is usually a bad idea to simply ignore them. Instead, it is better to handle them properly, or at least to log them.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Generic exceptions should not be ignored",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2486",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2486",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2486",
+"message":  "Handle the exception or explain in a comment why it can be ignored.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\SelectionHandler.cs",
 "region":  {
-"startLine":  362,
-"startColumn":  16,
-"endLine":  362,
-"endColumn":  38
+"startLine":  363,
+"startColumn":  17,
+"endLine":  363,
+"endColumn":  39
 }
-}
-]
-}
-],
-"shortMessage":  "Handle the exception or explain in a comment why it can be ignored.",
-"fullMessage":  "When exceptions occur, it is usually a bad idea to simply ignore them. Instead, it is better to handle them properly, or at least to log them.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Generic exceptions should not be ignored",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2486",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

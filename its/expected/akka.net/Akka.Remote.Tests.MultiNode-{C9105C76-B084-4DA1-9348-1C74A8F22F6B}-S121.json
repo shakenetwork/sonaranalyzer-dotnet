@@ -1,369 +1,159 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S121",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\NewRemoteActorSpec.cs",
 "region":  {
-"startLine":  24,
-"startColumn":  16,
-"endLine":  24,
-"endColumn":  18
-}
-}
-]
-}
-],
-"shortMessage":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"fullMessage":  "While not technically incorrect, the omission of curly braces can be misleading, and may lead to the introduction of errors during maintenance.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control structures should use curly braces",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S121",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S121",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\NewRemoteActorSpec.cs",
-"region":  {
-"startLine":  41,
-"startColumn":  16,
-"endLine":  41,
-"endColumn":  18
-}
-}
-]
-}
-],
-"shortMessage":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"fullMessage":  "While not technically incorrect, the omission of curly braces can be misleading, and may lead to the introduction of errors during maintenance.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control structures should use curly braces",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S121",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S121",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\PiercingShouldKeepQuarantineSpec.cs",
-"region":  {
-"startLine":  68,
-"startColumn":  16,
-"endLine":  68,
-"endColumn":  18
-}
-}
-]
-}
-],
-"shortMessage":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"fullMessage":  "While not technically incorrect, the omission of curly braces can be misleading, and may lead to the introduction of errors during maintenance.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control structures should use curly braces",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S121",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S121",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRandomSpec.cs",
-"region":  {
-"startLine":  116,
-"startColumn":  16,
-"endLine":  116,
+"startLine":  25,
+"startColumn":  17,
+"endLine":  25,
 "endColumn":  19
 }
 }
-]
+},
+{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\NewRemoteActorSpec.cs",
+"region":  {
+"startLine":  42,
+"startColumn":  17,
+"endLine":  42,
+"endColumn":  19
 }
-],
-"shortMessage":  "Add curly braces around the nested statement(s) in this \"for\" block.",
-"fullMessage":  "While not technically incorrect, the omission of curly braces can be misleading, and may lead to the introduction of errors during maintenance.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control structures should use curly braces",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S121",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S121",
-"locations":  [
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\PiercingShouldKeepQuarantineSpec.cs",
+"region":  {
+"startLine":  69,
+"startColumn":  17,
+"endLine":  69,
+"endColumn":  19
+}
+}
+},
 {
-"analysisTarget":  [
-{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"for\" block.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRandomSpec.cs",
 "region":  {
 "startLine":  117,
-"startColumn":  20,
+"startColumn":  17,
 "endLine":  117,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"for\" block.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRandomSpec.cs",
+"region":  {
+"startLine":  118,
+"startColumn":  21,
+"endLine":  118,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRandomSpec.cs",
+"region":  {
+"startLine":  123,
+"startColumn":  21,
+"endLine":  123,
 "endColumn":  23
 }
 }
-]
-}
-],
-"shortMessage":  "Add curly braces around the nested statement(s) in this \"for\" block.",
-"fullMessage":  "While not technically incorrect, the omission of curly braces can be misleading, and may lead to the introduction of errors during maintenance.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control structures should use curly braces",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S121",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
 },
 {
-"ruleId":  "S121",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRandomSpec.cs",
-"region":  {
-"startLine":  122,
-"startColumn":  20,
-"endLine":  122,
-"endColumn":  22
-}
-}
-]
-}
-],
-"shortMessage":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"fullMessage":  "While not technically incorrect, the omission of curly braces can be misleading, and may lead to the introduction of errors during maintenance.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control structures should use curly braces",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S121",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S121",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRoundRobinSpec.cs",
-"region":  {
-"startLine":  146,
-"startColumn":  16,
-"endLine":  146,
-"endColumn":  19
-}
-}
-]
-}
-],
-"shortMessage":  "Add curly braces around the nested statement(s) in this \"for\" block.",
-"fullMessage":  "While not technically incorrect, the omission of curly braces can be misleading, and may lead to the introduction of errors during maintenance.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control structures should use curly braces",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S121",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S121",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"for\" block.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRoundRobinSpec.cs",
 "region":  {
 "startLine":  147,
-"startColumn":  20,
+"startColumn":  17,
 "endLine":  147,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"for\" block.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRoundRobinSpec.cs",
+"region":  {
+"startLine":  148,
+"startColumn":  21,
+"endLine":  148,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRoundRobinSpec.cs",
+"region":  {
+"startLine":  153,
+"startColumn":  21,
+"endLine":  153,
 "endColumn":  23
 }
 }
-]
-}
-],
-"shortMessage":  "Add curly braces around the nested statement(s) in this \"for\" block.",
-"fullMessage":  "While not technically incorrect, the omission of curly braces can be misleading, and may lead to the introduction of errors during maintenance.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control structures should use curly braces",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S121",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
 },
 {
-"ruleId":  "S121",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRoundRobinSpec.cs",
-"region":  {
-"startLine":  152,
-"startColumn":  20,
-"endLine":  152,
-"endColumn":  22
-}
-}
-]
-}
-],
-"shortMessage":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"fullMessage":  "While not technically incorrect, the omission of curly braces can be misleading, and may lead to the introduction of errors during maintenance.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control structures should use curly braces",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S121",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S121",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRoundRobinSpec.cs",
-"region":  {
-"startLine":  253,
-"startColumn":  16,
-"endLine":  253,
-"endColumn":  19
-}
-}
-]
-}
-],
-"shortMessage":  "Add curly braces around the nested statement(s) in this \"for\" block.",
-"fullMessage":  "While not technically incorrect, the omission of curly braces can be misleading, and may lead to the introduction of errors during maintenance.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control structures should use curly braces",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S121",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S121",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"for\" block.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRoundRobinSpec.cs",
 "region":  {
 "startLine":  254,
-"startColumn":  20,
+"startColumn":  17,
 "endLine":  254,
-"endColumn":  23
+"endColumn":  20
 }
-}
-]
-}
-],
-"shortMessage":  "Add curly braces around the nested statement(s) in this \"for\" block.",
-"fullMessage":  "While not technically incorrect, the omission of curly braces can be misleading, and may lead to the introduction of errors during maintenance.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control structures should use curly braces",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S121",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S121",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"for\" block.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRoundRobinSpec.cs",
 "region":  {
-"startLine":  259,
-"startColumn":  20,
-"endLine":  259,
-"endColumn":  22
+"startLine":  255,
+"startColumn":  21,
+"endLine":  255,
+"endColumn":  24
 }
 }
-]
+},
+{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Remote.Tests.MultiNode\\RemoteRoundRobinSpec.cs",
+"region":  {
+"startLine":  260,
+"startColumn":  21,
+"endLine":  260,
+"endColumn":  23
 }
-],
-"shortMessage":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"fullMessage":  "While not technically incorrect, the omission of curly braces can be misleading, and may lead to the introduction of errors during maintenance.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control structures should use curly braces",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S121",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

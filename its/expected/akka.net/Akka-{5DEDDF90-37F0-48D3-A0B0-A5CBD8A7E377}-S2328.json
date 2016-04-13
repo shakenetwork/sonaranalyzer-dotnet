@@ -1,69 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2328",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2328",
+"message":  "Remove this use of \"inputType\" from the \"GetHashCode\" declaration, or make it \"readonly\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Props.cs",
 "region":  {
-"startLine":  117,
-"startColumn":  45,
-"endLine":  117,
-"endColumn":  54
+"startLine":  118,
+"startColumn":  46,
+"endLine":  118,
+"endColumn":  55
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this use of \"inputType\" from the \"GetHashCode\" declaration, or make it \"readonly\".",
-"fullMessage":  "\"GetHashCode\" is used to file an object in a \"Dictionary\" or \"Hashtable\". If \"GetHashCode\" uses non-\"readonly\" fields and those fields change after the object is stored, the object immediately becomes mis-filed in the \"Hashtable\". Any subsequent test to see if the object is in the \"Hashtable\" will return a false negative.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"GetHashCode\" should not reference mutable fields",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2328",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2328",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2328",
+"message":  "Remove this use of \"inputType\" from the \"GetHashCode\" declaration, or make it \"readonly\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Props.cs",
 "region":  {
-"startLine":  117,
-"startColumn":  65,
-"endLine":  117,
-"endColumn":  74
+"startLine":  118,
+"startColumn":  66,
+"endLine":  118,
+"endColumn":  75
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this use of \"inputType\" from the \"GetHashCode\" declaration, or make it \"readonly\".",
-"fullMessage":  "\"GetHashCode\" is used to file an object in a \"Dictionary\" or \"Hashtable\". If \"GetHashCode\" uses non-\"readonly\" fields and those fields change after the object is stored, the object immediately becomes mis-filed in the \"Hashtable\". Any subsequent test to see if the object is in the \"Hashtable\" will return a false negative.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"GetHashCode\" should not reference mutable fields",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2328",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

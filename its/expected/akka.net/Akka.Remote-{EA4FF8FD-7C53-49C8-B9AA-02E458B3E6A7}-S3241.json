@@ -1,69 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S3241",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3241",
+"message":  "Change return type to \"void\"; not a single caller uses the returned value.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
-"startLine":  962,
-"startColumn":  16,
-"endLine":  962,
-"endColumn":  20
+"startLine":  963,
+"startColumn":  17,
+"endLine":  963,
+"endColumn":  21
 }
-}
-]
-}
-],
-"shortMessage":  "Change return type to \"void\"; not a single caller uses the returned value.",
-"fullMessage":  "Private methods are clearly intended for use only within their own scope. When such methods return values that are never used by any of their callers, then clearly there is no need to actually make the return, and it should be removed in the interests of efficiency and clarity.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not return values that are never used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3241",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S3241",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3241",
+"message":  "Change return type to \"void\"; not a single caller uses the returned value.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
 "region":  {
-"startLine":  385,
-"startColumn":  16,
-"endLine":  385,
-"endColumn":  36
+"startLine":  386,
+"startColumn":  17,
+"endLine":  386,
+"endColumn":  37
 }
-}
-]
-}
-],
-"shortMessage":  "Change return type to \"void\"; not a single caller uses the returned value.",
-"fullMessage":  "Private methods are clearly intended for use only within their own scope. When such methods return values that are never used by any of their callers, then clearly there is no need to actually make the return, and it should be removed in the interests of efficiency and clarity.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not return values that are never used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3241",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

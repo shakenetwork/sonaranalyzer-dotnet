@@ -1,40 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2326",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2326",
+"message":  "\"TModel\" is not used in the method.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Nustache\\NustacheViewEngine.cs",
 "region":  {
-"startLine":  48,
-"startColumn":  51,
-"endLine":  48,
-"endColumn":  57
+"startLine":  49,
+"startColumn":  52,
+"endLine":  49,
+"endColumn":  58
 }
-}
-]
-}
-],
-"shortMessage":  "\"TModel\" is not used in the method.",
-"fullMessage":  "Type parameters that aren\u0027t used are dead code, which can only distract and possibly confuse developers during maintenance. Therefore, unused type parameters should be removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused type parameters should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2326",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 }
 ]

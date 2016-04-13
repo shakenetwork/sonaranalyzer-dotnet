@@ -1,40 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S3235",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3235",
+"message":  "Remove these redundant parentheses.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Persistence\\JsonPersistentTestRunStore.cs",
 "region":  {
-"startLine":  52,
-"startColumn":  55,
-"endLine":  52,
-"endColumn":  57
+"startLine":  53,
+"startColumn":  56,
+"endLine":  53,
+"endColumn":  58
 }
-}
-]
-}
-],
-"shortMessage":  "Remove these redundant parentheses.",
-"fullMessage":  "Redundant parentheses are simply wasted keystrokes, and should be removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Redundant parentheses should not be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3235",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 }
 ]

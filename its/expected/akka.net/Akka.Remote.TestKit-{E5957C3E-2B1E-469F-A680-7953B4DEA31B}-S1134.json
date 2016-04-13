@@ -1,129 +1,55 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1134",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1134",
+"message":  "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Controller.cs",
 "region":  {
-"startLine":  339,
-"startColumn":  47,
-"endLine":  339,
-"endColumn":  52
+"startLine":  340,
+"startColumn":  48,
+"endLine":  340,
+"endColumn":  53
 }
-}
-]
-}
-],
-"shortMessage":  "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
-"fullMessage":  "\"FIXME\" tags are commonly used to mark places where a bug is suspected, but which the developer wants to deal with later. Sometimes the developer will not have the time or will simply forget to get back to that tag. This rule is meant to track those tags, and ensure that they do not go unnoticed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"FIXME\" tags should be handled",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1134",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1134",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
-"region":  {
-"startLine":  460,
-"startColumn":  41,
-"endLine":  460,
-"endColumn":  46
-}
-}
-]
-}
-],
-"shortMessage":  "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
-"fullMessage":  "\"FIXME\" tags are commonly used to mark places where a bug is suspected, but which the developer wants to deal with later. Sometimes the developer will not have the time or will simply forget to get back to that tag. This rule is meant to track those tags, and ensure that they do not go unnoticed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"FIXME\" tags should be handled",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1134",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1134",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1134",
+"message":  "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
 "region":  {
 "startLine":  461,
-"startColumn":  23,
+"startColumn":  42,
 "endLine":  461,
-"endColumn":  28
+"endColumn":  47
 }
-}
-]
-}
-],
-"shortMessage":  "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
-"fullMessage":  "\"FIXME\" tags are commonly used to mark places where a bug is suspected, but which the developer wants to deal with later. Sometimes the developer will not have the time or will simply forget to get back to that tag. This rule is meant to track those tags, and ensure that they do not go unnoticed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"FIXME\" tags should be handled",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1134",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1134",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1134",
+"message":  "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
 "region":  {
-"startLine":  483,
-"startColumn":  66,
-"endLine":  483,
-"endColumn":  71
+"startLine":  462,
+"startColumn":  24,
+"endLine":  462,
+"endColumn":  29
 }
 }
-]
+},
+{
+"id":  "S1134",
+"message":  "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
+"region":  {
+"startLine":  484,
+"startColumn":  67,
+"endLine":  484,
+"endColumn":  72
 }
-],
-"shortMessage":  "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
-"fullMessage":  "\"FIXME\" tags are commonly used to mark places where a bug is suspected, but which the developer wants to deal with later. Sometimes the developer will not have the time or will simply forget to get back to that tag. This rule is meant to track those tags, and ensure that they do not go unnoticed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"FIXME\" tags should be handled",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1134",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

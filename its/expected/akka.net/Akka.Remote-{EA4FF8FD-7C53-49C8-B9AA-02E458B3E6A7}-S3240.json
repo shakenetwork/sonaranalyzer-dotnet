@@ -1,602 +1,236 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\AckedDelivery.cs",
 "region":  {
-"startLine":  146,
-"startColumn":  16,
-"endLine":  146,
-"endColumn":  18
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  147,
+"startColumn":  17,
+"endLine":  147,
+"endColumn":  19
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Deadline.cs",
 "region":  {
-"startLine":  85,
-"startColumn":  12,
-"endLine":  85,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  86,
+"startColumn":  13,
+"endLine":  86,
+"endColumn":  15
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
-"startLine":  805,
-"startColumn":  12,
-"endLine":  805,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  806,
+"startColumn":  13,
+"endLine":  806,
+"endColumn":  15
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
-"startLine":  308,
-"startColumn":  16,
-"endLine":  308,
-"endColumn":  18
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  309,
+"startColumn":  17,
+"endLine":  309,
+"endColumn":  19
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
-"startLine":  821,
-"startColumn":  12,
-"endLine":  821,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  822,
+"startColumn":  13,
+"endLine":  822,
+"endColumn":  15
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\PhiAccrualFailureDetector.cs",
 "region":  {
-"startLine":  159,
-"startColumn":  16,
-"endLine":  159,
-"endColumn":  18
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  160,
+"startColumn":  17,
+"endLine":  160,
+"endColumn":  19
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\PhiAccrualFailureDetector.cs",
 "region":  {
-"startLine":  210,
-"startColumn":  12,
-"endLine":  210,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  211,
+"startColumn":  13,
+"endLine":  211,
+"endColumn":  15
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\PhiAccrualFailureDetector.cs",
 "region":  {
-"startLine":  280,
-"startColumn":  12,
-"endLine":  280,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  281,
+"startColumn":  13,
+"endLine":  281,
+"endColumn":  15
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteSettings.cs",
 "region":  {
-"startLine":  24,
-"startColumn":  12,
-"endLine":  24,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  25,
+"startColumn":  13,
+"endLine":  25,
+"endColumn":  15
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteWatcher.cs",
 "region":  {
-"startLine":  345,
-"startColumn":  12,
-"endLine":  345,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  346,
+"startColumn":  13,
+"endLine":  346,
+"endColumn":  15
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Serialization\\DaemonMsgCreateSerializer.cs",
 "region":  {
-"startLine":  176,
-"startColumn":  12,
-"endLine":  176,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  177,
+"startColumn":  13,
+"endLine":  177,
+"endColumn":  15
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Serialization\\DaemonMsgCreateSerializer.cs",
 "region":  {
-"startLine":  182,
-"startColumn":  12,
-"endLine":  182,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  183,
+"startColumn":  13,
+"endLine":  183,
+"endColumn":  15
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Serialization\\DaemonMsgCreateSerializer.cs",
 "region":  {
-"startLine":  188,
-"startColumn":  12,
-"endLine":  188,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  189,
+"startColumn":  13,
+"endLine":  189,
+"endColumn":  15
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Serialization\\DaemonMsgCreateSerializer.cs",
 "region":  {
-"startLine":  194,
-"startColumn":  12,
-"endLine":  194,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  195,
+"startColumn":  13,
+"endLine":  195,
+"endColumn":  15
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
-"startLine":  781,
-"startColumn":  20,
-"endLine":  781,
-"endColumn":  22
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  782,
+"startColumn":  21,
+"endLine":  782,
+"endColumn":  23
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
-"startLine":  796,
-"startColumn":  20,
-"endLine":  796,
-"endColumn":  22
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  797,
+"startColumn":  21,
+"endLine":  797,
+"endColumn":  23
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
 "region":  {
-"startLine":  401,
-"startColumn":  12,
-"endLine":  401,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  402,
+"startColumn":  13,
+"endLine":  402,
+"endColumn":  15
 }
 }
 },
 {
-"ruleId":  "S3240",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3240",
+"message":  "Use the \"?:\" operator here.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
 "region":  {
-"startLine":  410,
-"startColumn":  12,
-"endLine":  410,
-"endColumn":  14
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"?:\" operator here.",
-"fullMessage":  "In the interests of keeping code clean, the simplest possible conditional syntax should be used. That means using the \"??\" operator for an assign-if-not-null operator, and using the ternary operator \"?:\" for assignment to a single variable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The simplest possible condition syntax should be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3240",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"isNullCoalescing":  "False"
+"startLine":  411,
+"startColumn":  13,
+"endLine":  411,
+"endColumn":  15
 }
 }
 }

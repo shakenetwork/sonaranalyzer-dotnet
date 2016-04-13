@@ -1,219 +1,94 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2339",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2339",
+"message":  "Change this constant to a \"static\" read-only property.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorCell.cs",
 "region":  {
-"startLine":  21,
-"startColumn":  25,
-"endLine":  21,
-"endColumn":  37
+"startLine":  22,
+"startColumn":  26,
+"endLine":  22,
+"endColumn":  38
 }
-}
-]
-}
-],
-"shortMessage":  "Change this constant to a \"static\" read-only property.",
-"fullMessage":  "Constant members are copied at compile time to the call sites, instead of being fetched at runtime. This means that you should use constants to hold values that by definition will never change, such as \"Zero\". In practice, those cases are uncommon, and therefore it is generally better to avoid constant members.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Public constant members should not be used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2339",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2339",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2339",
+"message":  "Change this constant to a \"static\" read-only property.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Dispatch\\AbstractDispatcher.cs",
 "region":  {
-"startLine":  177,
-"startColumn":  25,
-"endLine":  177,
-"endColumn":  42
+"startLine":  178,
+"startColumn":  26,
+"endLine":  178,
+"endColumn":  43
 }
-}
-]
-}
-],
-"shortMessage":  "Change this constant to a \"static\" read-only property.",
-"fullMessage":  "Constant members are copied at compile time to the call sites, instead of being fetched at runtime. This means that you should use constants to hold values that by definition will never change, such as \"Zero\". In practice, those cases are uncommon, and therefore it is generally better to avoid constant members.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Public constant members should not be used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2339",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2339",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2339",
+"message":  "Change this constant to a \"static\" read-only property.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Serialization\\Serializer.cs",
 "region":  {
-"startLine":  117,
-"startColumn":  28,
-"endLine":  117,
-"endColumn":  52
+"startLine":  118,
+"startColumn":  29,
+"endLine":  118,
+"endColumn":  53
 }
-}
-]
-}
-],
-"shortMessage":  "Change this constant to a \"static\" read-only property.",
-"fullMessage":  "Constant members are copied at compile time to the call sites, instead of being fetched at runtime. This means that you should use constants to hold values that by definition will never change, such as \"Zero\". In practice, those cases are uncommon, and therefore it is generally better to avoid constant members.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Public constant members should not be used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2339",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2339",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2339",
+"message":  "Change this constant to a \"static\" read-only property.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\Base64Encoding.cs",
 "region":  {
-"startLine":  13,
-"startColumn":  28,
-"endLine":  13,
-"endColumn":  39
+"startLine":  14,
+"startColumn":  29,
+"endLine":  14,
+"endColumn":  40
 }
-}
-]
-}
-],
-"shortMessage":  "Change this constant to a \"static\" read-only property.",
-"fullMessage":  "Constant members are copied at compile time to the call sites, instead of being fetched at runtime. This means that you should use constants to hold values that by definition will never change, such as \"Zero\". In practice, those cases are uncommon, and therefore it is generally better to avoid constant members.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Public constant members should not be used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2339",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2339",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2339",
+"message":  "Change this constant to a \"static\" read-only property.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\MatchHandler\\PartialActionBuilder.cs",
 "region":  {
-"startLine":  17,
-"startColumn":  25,
-"endLine":  17,
-"endColumn":  45
+"startLine":  18,
+"startColumn":  26,
+"endLine":  18,
+"endColumn":  46
 }
-}
-]
-}
-],
-"shortMessage":  "Change this constant to a \"static\" read-only property.",
-"fullMessage":  "Constant members are copied at compile time to the call sites, instead of being fetched at runtime. This means that you should use constants to hold values that by definition will never change, such as \"Zero\". In practice, those cases are uncommon, and therefore it is generally better to avoid constant members.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Public constant members should not be used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2339",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2339",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2339",
+"message":  "Change this constant to a \"static\" read-only property.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\MurmurHash.cs",
 "region":  {
-"startLine":  44,
-"startColumn":  26,
-"endLine":  44,
-"endColumn":  37
+"startLine":  45,
+"startColumn":  27,
+"endLine":  45,
+"endColumn":  38
 }
-}
-]
-}
-],
-"shortMessage":  "Change this constant to a \"static\" read-only property.",
-"fullMessage":  "Constant members are copied at compile time to the call sites, instead of being fetched at runtime. This means that you should use constants to hold values that by definition will never change, such as \"Zero\". In practice, those cases are uncommon, and therefore it is generally better to avoid constant members.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Public constant members should not be used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2339",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2339",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2339",
+"message":  "Change this constant to a \"static\" read-only property.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\MurmurHash.cs",
 "region":  {
-"startLine":  49,
-"startColumn":  26,
-"endLine":  49,
-"endColumn":  37
+"startLine":  50,
+"startColumn":  27,
+"endLine":  50,
+"endColumn":  38
 }
-}
-]
-}
-],
-"shortMessage":  "Change this constant to a \"static\" read-only property.",
-"fullMessage":  "Constant members are copied at compile time to the call sites, instead of being fetched at runtime. This means that you should use constants to hold values that by definition will never change, such as \"Zero\". In practice, those cases are uncommon, and therefore it is generally better to avoid constant members.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Public constant members should not be used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2339",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

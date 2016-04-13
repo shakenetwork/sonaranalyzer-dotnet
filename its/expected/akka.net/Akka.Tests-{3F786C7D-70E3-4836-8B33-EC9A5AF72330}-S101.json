@@ -1,399 +1,172 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S101",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S101",
+"message":  "Rename struct \"FF\" to match camel case naming rules, consider using \"Ff\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\DeathWatchSpec.cs",
 "region":  {
-"startLine":  429,
-"startColumn":  24,
-"endLine":  429,
-"endColumn":  26
-}
-}
-]
-}
-],
-"shortMessage":  "Rename struct \"FF\" to match camel case naming rules, consider using \"Ff\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Types should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S101",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTimingSpec.cs",
-"region":  {
-"startLine":  17,
-"startColumn":  17,
-"endLine":  17,
-"endColumn":  30
-}
-}
-]
-}
-],
-"shortMessage":  "Rename class \"FSMTimingSpec\" to match camel case naming rules, consider using \"FsmTimingSpec\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Types should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S101",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTransitionSpec.cs",
-"region":  {
-"startLine":  15,
-"startColumn":  17,
-"endLine":  15,
-"endColumn":  34
-}
-}
-]
-}
-],
-"shortMessage":  "Rename class \"FSMTransitionSpec\" to match camel case naming rules, consider using \"FsmTransitionSpec\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Types should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S101",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTransitionSpec.cs",
-"region":  {
-"startLine":  97,
-"startColumn":  21,
-"endLine":  97,
-"endColumn":  26
-}
-}
-]
-}
-],
-"shortMessage":  "Rename class \"MyFSM\" to match camel case naming rules, consider using \"MyFsm\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Types should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S101",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTransitionSpec.cs",
-"region":  {
-"startLine":  132,
-"startColumn":  21,
-"endLine":  132,
-"endColumn":  29
-}
-}
-]
-}
-],
-"shortMessage":  "Rename class \"OtherFSM\" to match camel case naming rules, consider using \"OtherFsm\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Types should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S101",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTransitionSpec.cs",
-"region":  {
-"startLine":  158,
-"startColumn":  21,
-"endLine":  158,
-"endColumn":  29
-}
-}
-]
-}
-],
-"shortMessage":  "Rename class \"LeakyFSM\" to match camel case naming rules, consider using \"LeakyFsm\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Types should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S101",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Event\\EventStreamSpec.cs",
-"region":  {
-"startLine":  48,
-"startColumn":  26,
-"endLine":  48,
+"startLine":  430,
+"startColumn":  25,
+"endLine":  430,
 "endColumn":  27
 }
 }
-]
+},
+{
+"id":  "S101",
+"message":  "Rename class \"FSMTimingSpec\" to match camel case naming rules, consider using \"FsmTimingSpec\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTimingSpec.cs",
+"region":  {
+"startLine":  18,
+"startColumn":  18,
+"endLine":  18,
+"endColumn":  31
 }
-],
-"shortMessage":  "Rename interface \"T\" to match camel case naming rules, consider using \"IT\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Types should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S101",
-"locations":  [
+"id":  "S101",
+"message":  "Rename class \"FSMTransitionSpec\" to match camel case naming rules, consider using \"FsmTransitionSpec\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTransitionSpec.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  18,
+"endLine":  16,
+"endColumn":  35
+}
+}
+},
 {
-"analysisTarget":  [
+"id":  "S101",
+"message":  "Rename class \"MyFSM\" to match camel case naming rules, consider using \"MyFsm\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTransitionSpec.cs",
+"region":  {
+"startLine":  98,
+"startColumn":  22,
+"endLine":  98,
+"endColumn":  27
+}
+}
+},
 {
+"id":  "S101",
+"message":  "Rename class \"OtherFSM\" to match camel case naming rules, consider using \"OtherFsm\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTransitionSpec.cs",
+"region":  {
+"startLine":  133,
+"startColumn":  22,
+"endLine":  133,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename class \"LeakyFSM\" to match camel case naming rules, consider using \"LeakyFsm\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTransitionSpec.cs",
+"region":  {
+"startLine":  159,
+"startColumn":  22,
+"endLine":  159,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S101",
+"message":  "Rename interface \"T\" to match camel case naming rules, consider using \"IT\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Event\\EventStreamSpec.cs",
 "region":  {
-"startLine":  50,
-"startColumn":  26,
-"endLine":  50,
+"startLine":  49,
+"startColumn":  27,
+"endLine":  49,
 "endColumn":  28
 }
 }
-]
-}
-],
-"shortMessage":  "Rename interface \"AT\" to match camel case naming rules, consider using \"IAt\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Types should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
 },
 {
-"ruleId":  "S101",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S101",
+"message":  "Rename interface \"AT\" to match camel case naming rules, consider using \"IAt\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Event\\EventStreamSpec.cs",
 "region":  {
-"startLine":  52,
-"startColumn":  26,
-"endLine":  52,
+"startLine":  51,
+"startColumn":  27,
+"endLine":  51,
 "endColumn":  29
 }
 }
-]
+},
+{
+"id":  "S101",
+"message":  "Rename interface \"ATT\" to match camel case naming rules, consider using \"IAtt\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Event\\EventStreamSpec.cs",
+"region":  {
+"startLine":  53,
+"startColumn":  27,
+"endLine":  53,
+"endColumn":  30
 }
-],
-"shortMessage":  "Rename interface \"ATT\" to match camel case naming rules, consider using \"IAtt\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Types should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S101",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S101",
+"message":  "Rename interface \"BT\" to match camel case naming rules, consider using \"IBt\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Event\\EventStreamSpec.cs",
 "region":  {
-"startLine":  54,
-"startColumn":  26,
-"endLine":  54,
-"endColumn":  28
-}
-}
-]
-}
-],
-"shortMessage":  "Rename interface \"BT\" to match camel case naming rules, consider using \"IBt\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Types should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S101",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Event\\EventStreamSpec.cs",
-"region":  {
-"startLine":  56,
-"startColumn":  26,
-"endLine":  56,
+"startLine":  55,
+"startColumn":  27,
+"endLine":  55,
 "endColumn":  29
 }
 }
-]
+},
+{
+"id":  "S101",
+"message":  "Rename interface \"BTT\" to match camel case naming rules, consider using \"IBtt\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Event\\EventStreamSpec.cs",
+"region":  {
+"startLine":  57,
+"startColumn":  27,
+"endLine":  57,
+"endColumn":  30
 }
-],
-"shortMessage":  "Rename interface \"BTT\" to match camel case naming rules, consider using \"IBtt\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Types should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S101",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S101",
+"message":  "Rename class \"CC\" to match camel case naming rules, consider using \"Cc\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Event\\EventStreamSpec.cs",
 "region":  {
-"startLine":  58,
-"startColumn":  22,
-"endLine":  58,
-"endColumn":  24
+"startLine":  59,
+"startColumn":  23,
+"endLine":  59,
+"endColumn":  25
 }
-}
-]
-}
-],
-"shortMessage":  "Rename class \"CC\" to match camel case naming rules, consider using \"Cc\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Types should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S101",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S101",
+"message":  "Rename class \"CCATBT\" to match camel case naming rules, consider using \"Ccatbt\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Event\\EventStreamSpec.cs",
 "region":  {
-"startLine":  60,
-"startColumn":  22,
-"endLine":  60,
-"endColumn":  28
+"startLine":  61,
+"startColumn":  23,
+"endLine":  61,
+"endColumn":  29
 }
-}
-]
-}
-],
-"shortMessage":  "Rename class \"CCATBT\" to match camel case naming rules, consider using \"Ccatbt\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Types should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

@@ -1,219 +1,94 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S108",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S108",
+"message":  "Either remove or fill this block of code.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Bootstrapper\\AppDomainAssemblyTypeScanner.cs",
 "region":  {
-"startLine":  255,
-"startColumn":  24,
-"endLine":  256,
-"endColumn":  25
+"startLine":  256,
+"startColumn":  25,
+"endLine":  257,
+"endColumn":  26
 }
-}
-]
-}
-],
-"shortMessage":  "Either remove or fill this block of code.",
-"fullMessage":  "Most of the time a block of code is empty when a piece of code is really missing. So such empty block must be either filled or removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Nested blocks of code should not be left empty",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S108",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S108",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S108",
+"message":  "Either remove or fill this block of code.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Bootstrapper\\FavIconApplicationStartup.cs",
 "region":  {
-"startLine":  109,
-"startColumn":  12,
-"endLine":  110,
-"endColumn":  13
+"startLine":  110,
+"startColumn":  13,
+"endLine":  111,
+"endColumn":  14
 }
-}
-]
-}
-],
-"shortMessage":  "Either remove or fill this block of code.",
-"fullMessage":  "Most of the time a block of code is empty when a piece of code is really missing. So such empty block must be either filled or removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Nested blocks of code should not be left empty",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S108",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S108",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S108",
+"message":  "Either remove or fill this block of code.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Bootstrapper\\NancyBootstrapperBase.cs",
 "region":  {
-"startLine":  422,
-"startColumn":  16,
-"endLine":  423,
-"endColumn":  17
+"startLine":  423,
+"startColumn":  17,
+"endLine":  424,
+"endColumn":  18
 }
-}
-]
-}
-],
-"shortMessage":  "Either remove or fill this block of code.",
-"fullMessage":  "Most of the time a block of code is empty when a piece of code is really missing. So such empty block must be either filled or removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Nested blocks of code should not be left empty",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S108",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S108",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S108",
+"message":  "Either remove or fill this block of code.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Conventions\\StaticContentConventionBuilder.cs",
 "region":  {
-"startLine":  109,
-"startColumn":  12,
-"endLine":  110,
-"endColumn":  13
+"startLine":  110,
+"startColumn":  13,
+"endLine":  111,
+"endColumn":  14
 }
-}
-]
-}
-],
-"shortMessage":  "Either remove or fill this block of code.",
-"fullMessage":  "Most of the time a block of code is empty when a piece of code is really missing. So such empty block must be either filled or removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Nested blocks of code should not be left empty",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S108",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S108",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S108",
+"message":  "Either remove or fill this block of code.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\IO\\RequestStream.cs",
 "region":  {
-"startLine":  389,
-"startColumn":  12,
-"endLine":  390,
-"endColumn":  13
+"startLine":  390,
+"startColumn":  13,
+"endLine":  391,
+"endColumn":  14
 }
-}
-]
-}
-],
-"shortMessage":  "Either remove or fill this block of code.",
-"fullMessage":  "Most of the time a block of code is empty when a piece of code is really missing. So such empty block must be either filled or removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Nested blocks of code should not be left empty",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S108",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S108",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S108",
+"message":  "Either remove or fill this block of code.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\IO\\RequestStream.cs",
 "region":  {
-"startLine":  408,
-"startColumn":  12,
-"endLine":  409,
-"endColumn":  13
+"startLine":  409,
+"startColumn":  13,
+"endLine":  410,
+"endColumn":  14
 }
-}
-]
-}
-],
-"shortMessage":  "Either remove or fill this block of code.",
-"fullMessage":  "Most of the time a block of code is empty when a piece of code is really missing. So such empty block must be either filled or removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Nested blocks of code should not be left empty",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S108",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S108",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S108",
+"message":  "Either remove or fill this block of code.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\DefaultViewFactory.cs",
 "region":  {
-"startLine":  116,
-"startColumn":  16,
-"endLine":  117,
-"endColumn":  17
+"startLine":  117,
+"startColumn":  17,
+"endLine":  118,
+"endColumn":  18
 }
-}
-]
-}
-],
-"shortMessage":  "Either remove or fill this block of code.",
-"fullMessage":  "Most of the time a block of code is empty when a piece of code is really missing. So such empty block must be either filled or removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Nested blocks of code should not be left empty",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S108",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

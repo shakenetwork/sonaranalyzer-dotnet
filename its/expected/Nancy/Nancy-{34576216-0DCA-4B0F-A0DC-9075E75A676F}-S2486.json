@@ -1,159 +1,68 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2486",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2486",
+"message":  "Handle the exception or explain in a comment why it can be ignored.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Bootstrapper\\AppDomainAssemblyTypeScanner.cs",
 "region":  {
-"startLine":  254,
-"startColumn":  24,
-"endLine":  256,
-"endColumn":  25
+"startLine":  255,
+"startColumn":  25,
+"endLine":  257,
+"endColumn":  26
 }
-}
-]
-}
-],
-"shortMessage":  "Handle the exception or explain in a comment why it can be ignored.",
-"fullMessage":  "When exceptions occur, it is usually a bad idea to simply ignore them. Instead, it is better to handle them properly, or at least to log them.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Generic exceptions should not be ignored",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2486",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2486",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2486",
+"message":  "Handle the exception or explain in a comment why it can be ignored.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Bootstrapper\\FavIconApplicationStartup.cs",
 "region":  {
-"startLine":  108,
-"startColumn":  12,
-"endLine":  110,
-"endColumn":  13
+"startLine":  109,
+"startColumn":  13,
+"endLine":  111,
+"endColumn":  14
 }
-}
-]
-}
-],
-"shortMessage":  "Handle the exception or explain in a comment why it can be ignored.",
-"fullMessage":  "When exceptions occur, it is usually a bad idea to simply ignore them. Instead, it is better to handle them properly, or at least to log them.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Generic exceptions should not be ignored",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2486",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2486",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2486",
+"message":  "Handle the exception or explain in a comment why it can be ignored.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Conventions\\StaticContentConventionBuilder.cs",
 "region":  {
-"startLine":  108,
-"startColumn":  12,
-"endLine":  110,
-"endColumn":  13
+"startLine":  109,
+"startColumn":  13,
+"endLine":  111,
+"endColumn":  14
 }
-}
-]
-}
-],
-"shortMessage":  "Handle the exception or explain in a comment why it can be ignored.",
-"fullMessage":  "When exceptions occur, it is usually a bad idea to simply ignore them. Instead, it is better to handle them properly, or at least to log them.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Generic exceptions should not be ignored",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2486",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2486",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2486",
+"message":  "Handle the exception or explain in a comment why it can be ignored.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\IO\\RequestStream.cs",
 "region":  {
-"startLine":  388,
-"startColumn":  12,
-"endLine":  390,
-"endColumn":  13
+"startLine":  389,
+"startColumn":  13,
+"endLine":  391,
+"endColumn":  14
 }
-}
-]
-}
-],
-"shortMessage":  "Handle the exception or explain in a comment why it can be ignored.",
-"fullMessage":  "When exceptions occur, it is usually a bad idea to simply ignore them. Instead, it is better to handle them properly, or at least to log them.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Generic exceptions should not be ignored",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2486",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2486",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2486",
+"message":  "Handle the exception or explain in a comment why it can be ignored.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\DefaultViewFactory.cs",
 "region":  {
-"startLine":  115,
-"startColumn":  16,
-"endLine":  117,
-"endColumn":  17
+"startLine":  116,
+"startColumn":  17,
+"endLine":  118,
+"endColumn":  18
 }
-}
-]
-}
-],
-"shortMessage":  "Handle the exception or explain in a comment why it can be ignored.",
-"fullMessage":  "When exceptions occur, it is usually a bad idea to simply ignore them. Instead, it is better to handle them properly, or at least to log them.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Generic exceptions should not be ignored",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2486",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

@@ -1,219 +1,94 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S134",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
-"startLine":  1596,
-"startColumn":  24,
-"endLine":  1596,
-"endColumn":  26
+"startLine":  1597,
+"startColumn":  25,
+"endLine":  1597,
+"endColumn":  27
 }
-}
-]
-}
-],
-"shortMessage":  "Refactor this code to not nest more than 3 control flow statements",
-"fullMessage":  "Nested \"if\", \"switch\", \"for\", \"foreach\", \"while\", \"do\", and \"try\" statements are key ingredients for making what\u0027s known as \"Spaghetti code\". Such code is hard to read, refactor and therefore maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control flow statements \"if\", \"for\", \"foreach\", \"do\", \"while\", \"switch\" and \"try\" should not be nested too deeply",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S134",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S134",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
-"startLine":  644,
-"startColumn":  24,
-"endLine":  644,
-"endColumn":  26
+"startLine":  645,
+"startColumn":  25,
+"endLine":  645,
+"endColumn":  27
 }
-}
-]
-}
-],
-"shortMessage":  "Refactor this code to not nest more than 3 control flow statements",
-"fullMessage":  "Nested \"if\", \"switch\", \"for\", \"foreach\", \"while\", \"do\", and \"try\" statements are key ingredients for making what\u0027s known as \"Spaghetti code\". Such code is hard to read, refactor and therefore maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control flow statements \"if\", \"for\", \"foreach\", \"do\", \"while\", \"switch\" and \"try\" should not be nested too deeply",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S134",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S134",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
-"startLine":  712,
-"startColumn":  28,
-"endLine":  712,
-"endColumn":  30
+"startLine":  713,
+"startColumn":  29,
+"endLine":  713,
+"endColumn":  31
 }
-}
-]
-}
-],
-"shortMessage":  "Refactor this code to not nest more than 3 control flow statements",
-"fullMessage":  "Nested \"if\", \"switch\", \"for\", \"foreach\", \"while\", \"do\", and \"try\" statements are key ingredients for making what\u0027s known as \"Spaghetti code\". Such code is hard to read, refactor and therefore maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control flow statements \"if\", \"for\", \"foreach\", \"do\", \"while\", \"switch\" and \"try\" should not be nested too deeply",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S134",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S134",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
-"startLine":  715,
-"startColumn":  28,
-"endLine":  715,
-"endColumn":  30
+"startLine":  716,
+"startColumn":  29,
+"endLine":  716,
+"endColumn":  31
 }
-}
-]
-}
-],
-"shortMessage":  "Refactor this code to not nest more than 3 control flow statements",
-"fullMessage":  "Nested \"if\", \"switch\", \"for\", \"foreach\", \"while\", \"do\", and \"try\" statements are key ingredients for making what\u0027s known as \"Spaghetti code\". Such code is hard to read, refactor and therefore maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control flow statements \"if\", \"for\", \"foreach\", \"do\", \"while\", \"switch\" and \"try\" should not be nested too deeply",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S134",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S134",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
-"startLine":  719,
-"startColumn":  28,
-"endLine":  719,
-"endColumn":  30
+"startLine":  720,
+"startColumn":  29,
+"endLine":  720,
+"endColumn":  31
 }
-}
-]
-}
-],
-"shortMessage":  "Refactor this code to not nest more than 3 control flow statements",
-"fullMessage":  "Nested \"if\", \"switch\", \"for\", \"foreach\", \"while\", \"do\", and \"try\" statements are key ingredients for making what\u0027s known as \"Spaghetti code\". Such code is hard to read, refactor and therefore maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control flow statements \"if\", \"for\", \"foreach\", \"do\", \"while\", \"switch\" and \"try\" should not be nested too deeply",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S134",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S134",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteSystemDaemon.cs",
 "region":  {
-"startLine":  157,
-"startColumn":  28,
-"endLine":  157,
-"endColumn":  30
+"startLine":  158,
+"startColumn":  29,
+"endLine":  158,
+"endColumn":  31
 }
-}
-]
-}
-],
-"shortMessage":  "Refactor this code to not nest more than 3 control flow statements",
-"fullMessage":  "Nested \"if\", \"switch\", \"for\", \"foreach\", \"while\", \"do\", and \"try\" statements are key ingredients for making what\u0027s known as \"Spaghetti code\". Such code is hard to read, refactor and therefore maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control flow statements \"if\", \"for\", \"foreach\", \"do\", \"while\", \"switch\" and \"try\" should not be nested too deeply",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S134",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S134",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteSystemDaemon.cs",
 "region":  {
-"startLine":  187,
-"startColumn":  28,
-"endLine":  187,
-"endColumn":  30
+"startLine":  188,
+"startColumn":  29,
+"endLine":  188,
+"endColumn":  31
 }
-}
-]
-}
-],
-"shortMessage":  "Refactor this code to not nest more than 3 control flow statements",
-"fullMessage":  "Nested \"if\", \"switch\", \"for\", \"foreach\", \"while\", \"do\", and \"try\" statements are key ingredients for making what\u0027s known as \"Spaghetti code\". Such code is hard to read, refactor and therefore maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control flow statements \"if\", \"for\", \"foreach\", \"do\", \"while\", \"switch\" and \"try\" should not be nested too deeply",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S134",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

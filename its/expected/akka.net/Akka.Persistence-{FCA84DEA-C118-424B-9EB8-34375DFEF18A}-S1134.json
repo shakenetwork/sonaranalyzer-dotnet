@@ -1,69 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1134",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1134",
+"message":  "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Eventsourced.Recovery.cs",
 "region":  {
-"startLine":  147,
-"startColumn":  23,
-"endLine":  147,
-"endColumn":  28
+"startLine":  148,
+"startColumn":  24,
+"endLine":  148,
+"endColumn":  29
 }
-}
-]
-}
-],
-"shortMessage":  "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
-"fullMessage":  "\"FIXME\" tags are commonly used to mark places where a bug is suspected, but which the developer wants to deal with later. Sometimes the developer will not have the time or will simply forget to get back to that tag. This rule is meant to track those tags, and ensure that they do not go unnoticed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"FIXME\" tags should be handled",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1134",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1134",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1134",
+"message":  "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\PersistentView.Recovery.cs",
 "region":  {
-"startLine":  136,
-"startColumn":  23,
-"endLine":  136,
-"endColumn":  28
+"startLine":  137,
+"startColumn":  24,
+"endLine":  137,
+"endColumn":  29
 }
-}
-]
-}
-],
-"shortMessage":  "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
-"fullMessage":  "\"FIXME\" tags are commonly used to mark places where a bug is suspected, but which the developer wants to deal with later. Sometimes the developer will not have the time or will simply forget to get back to that tag. This rule is meant to track those tags, and ensure that they do not go unnoticed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"FIXME\" tags should be handled",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1134",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

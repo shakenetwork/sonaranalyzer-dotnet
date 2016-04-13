@@ -1,381 +1,159 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_heartbeatTimestamp\", the compiler will do that for you.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\DeadlineFailureDetector.cs",
 "region":  {
-"startLine":  52,
-"startColumn":  41,
-"endLine":  52,
-"endColumn":  45
+"startLine":  53,
+"startColumn":  42,
+"endLine":  53,
+"endColumn":  46
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_heartbeatTimestamp\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_active\", the compiler will do that for you.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\DeadlineFailureDetector.cs",
 "region":  {
-"startLine":  54,
-"startColumn":  38,
-"endLine":  54,
-"endColumn":  45
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_active\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
-}
-},
-{
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
-"region":  {
-"startLine":  829,
-"startColumn":  29,
-"endLine":  829,
-"endColumn":  35
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_lastAck\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
-}
-},
-{
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
-"region":  {
-"startLine":  1122,
-"startColumn":  32,
-"endLine":  1122,
-"endColumn":  35
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_writeCount\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
-}
-},
-{
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
-"region":  {
-"startLine":  1125,
-"startColumn":  34,
-"endLine":  1125,
-"endColumn":  41
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_fullBackoff\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
-}
-},
-{
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
-"region":  {
-"startLine":  1129,
+"startLine":  55,
 "startColumn":  39,
-"endLine":  1129,
-"endColumn":  42
+"endLine":  55,
+"endColumn":  46
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_smallBackoffCount\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_lastAck\", the compiler will do that for you.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
-"startLine":  1130,
-"startColumn":  36,
-"endLine":  1130,
-"endColumn":  39
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_noBackoffCount\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
-}
-},
-{
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
-"region":  {
-"startLine":  288,
-"startColumn":  37,
-"endLine":  288,
-"endColumn":  44
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_normalShutdown\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
-}
-},
-{
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
-"region":  {
-"startLine":  136,
-"startColumn":  69,
-"endLine":  136,
-"endColumn":  75
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_upstreamListener\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
-}
-},
-{
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
-"region":  {
-"startLine":  140,
-"startColumn":  38,
-"endLine":  140,
-"endColumn":  41
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"MaximumOverhead\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
-}
-},
-{
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
-"region":  {
-"startLine":  299,
-"startColumn":  64,
-"endLine":  299,
-"endColumn":  70
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_upstreamListener\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
-}
-},
-{
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TransportAdapters.cs",
-"region":  {
-"startLine":  349,
-"startColumn":  32,
-"endLine":  349,
+"startLine":  830,
+"startColumn":  30,
+"endLine":  830,
 "endColumn":  36
 }
 }
-]
+},
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_writeCount\", the compiler will do that for you.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
+"region":  {
+"startLine":  1123,
+"startColumn":  33,
+"endLine":  1123,
+"endColumn":  36
 }
-],
-"shortMessage":  "Remove this initialization to \"UniqueId\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
+}
+},
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_fullBackoff\", the compiler will do that for you.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
+"region":  {
+"startLine":  1126,
+"startColumn":  35,
+"endLine":  1126,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_smallBackoffCount\", the compiler will do that for you.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
+"region":  {
+"startLine":  1130,
+"startColumn":  40,
+"endLine":  1130,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_noBackoffCount\", the compiler will do that for you.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
+"region":  {
+"startLine":  1131,
+"startColumn":  37,
+"endLine":  1131,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_normalShutdown\", the compiler will do that for you.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
+"region":  {
+"startLine":  289,
+"startColumn":  38,
+"endLine":  289,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_upstreamListener\", the compiler will do that for you.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
+"region":  {
+"startLine":  137,
+"startColumn":  70,
+"endLine":  137,
+"endColumn":  76
+}
+}
+},
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"MaximumOverhead\", the compiler will do that for you.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
+"region":  {
+"startLine":  141,
+"startColumn":  39,
+"endLine":  141,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_upstreamListener\", the compiler will do that for you.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\FailureInjectorTransportAdapter.cs",
+"region":  {
+"startLine":  300,
+"startColumn":  65,
+"endLine":  300,
+"endColumn":  71
+}
+}
+},
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"UniqueId\", the compiler will do that for you.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\TransportAdapters.cs",
+"region":  {
+"startLine":  350,
+"startColumn":  33,
+"endLine":  350,
+"endColumn":  37
+}
 }
 }
 ]

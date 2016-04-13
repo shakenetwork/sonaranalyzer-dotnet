@@ -1,189 +1,81 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1135",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1135",
+"message":  "Complete the task associated to this \"TODO\" comment.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit.Tests\\BarrierSpec.cs",
 "region":  {
-"startLine":  207,
-"startColumn":  14,
-"endLine":  207,
-"endColumn":  18
+"startLine":  208,
+"startColumn":  15,
+"endLine":  208,
+"endColumn":  19
 }
-}
-]
-}
-],
-"shortMessage":  "Complete the task associated to this \"TODO\" comment.",
-"fullMessage":  "\"TODO\" tags are commonly used to mark places where some more code is required, but which the developer wants to implement later. Sometimes the developer will not have the time or will simply forget to get back to that tag. This rule is meant to track those tags, and ensure that they do not go unnoticed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Info",
-"title":  "\"TODO\" tags should be handled",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1135",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1135",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1135",
+"message":  "Complete the task associated to this \"TODO\" comment.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit.Tests\\BarrierSpec.cs",
 "region":  {
-"startLine":  233,
-"startColumn":  14,
-"endLine":  233,
-"endColumn":  18
+"startLine":  234,
+"startColumn":  15,
+"endLine":  234,
+"endColumn":  19
 }
-}
-]
-}
-],
-"shortMessage":  "Complete the task associated to this \"TODO\" comment.",
-"fullMessage":  "\"TODO\" tags are commonly used to mark places where some more code is required, but which the developer wants to implement later. Sometimes the developer will not have the time or will simply forget to get back to that tag. This rule is meant to track those tags, and ensure that they do not go unnoticed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Info",
-"title":  "\"TODO\" tags should be handled",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1135",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1135",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1135",
+"message":  "Complete the task associated to this \"TODO\" comment.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit.Tests\\BarrierSpec.cs",
 "region":  {
-"startLine":  257,
-"startColumn":  14,
-"endLine":  257,
-"endColumn":  18
+"startLine":  258,
+"startColumn":  15,
+"endLine":  258,
+"endColumn":  19
 }
-}
-]
-}
-],
-"shortMessage":  "Complete the task associated to this \"TODO\" comment.",
-"fullMessage":  "\"TODO\" tags are commonly used to mark places where some more code is required, but which the developer wants to implement later. Sometimes the developer will not have the time or will simply forget to get back to that tag. This rule is meant to track those tags, and ensure that they do not go unnoticed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Info",
-"title":  "\"TODO\" tags should be handled",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1135",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1135",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1135",
+"message":  "Complete the task associated to this \"TODO\" comment.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit.Tests\\BarrierSpec.cs",
 "region":  {
-"startLine":  276,
-"startColumn":  14,
-"endLine":  276,
-"endColumn":  18
+"startLine":  277,
+"startColumn":  15,
+"endLine":  277,
+"endColumn":  19
 }
-}
-]
-}
-],
-"shortMessage":  "Complete the task associated to this \"TODO\" comment.",
-"fullMessage":  "\"TODO\" tags are commonly used to mark places where some more code is required, but which the developer wants to implement later. Sometimes the developer will not have the time or will simply forget to get back to that tag. This rule is meant to track those tags, and ensure that they do not go unnoticed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Info",
-"title":  "\"TODO\" tags should be handled",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1135",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1135",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1135",
+"message":  "Complete the task associated to this \"TODO\" comment.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit.Tests\\BarrierSpec.cs",
 "region":  {
-"startLine":  324,
-"startColumn":  14,
-"endLine":  324,
-"endColumn":  18
+"startLine":  325,
+"startColumn":  15,
+"endLine":  325,
+"endColumn":  19
 }
-}
-]
-}
-],
-"shortMessage":  "Complete the task associated to this \"TODO\" comment.",
-"fullMessage":  "\"TODO\" tags are commonly used to mark places where some more code is required, but which the developer wants to implement later. Sometimes the developer will not have the time or will simply forget to get back to that tag. This rule is meant to track those tags, and ensure that they do not go unnoticed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Info",
-"title":  "\"TODO\" tags should be handled",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1135",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1135",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1135",
+"message":  "Complete the task associated to this \"TODO\" comment.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit.Tests\\BarrierSpec.cs",
 "region":  {
-"startLine":  336,
-"startColumn":  10,
-"endLine":  336,
-"endColumn":  14
+"startLine":  337,
+"startColumn":  11,
+"endLine":  337,
+"endColumn":  15
 }
-}
-]
-}
-],
-"shortMessage":  "Complete the task associated to this \"TODO\" comment.",
-"fullMessage":  "\"TODO\" tags are commonly used to mark places where some more code is required, but which the developer wants to implement later. Sometimes the developer will not have the time or will simply forget to get back to that tag. This rule is meant to track those tags, and ensure that they do not go unnoticed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Info",
-"title":  "\"TODO\" tags should be handled",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1135",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

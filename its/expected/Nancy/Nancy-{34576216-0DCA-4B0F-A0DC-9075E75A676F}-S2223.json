@@ -1,189 +1,81 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2223",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2223",
+"message":  "Change the visibility of \"DefaultAssembliesToScan\" or make it \"const\" or \"readonly\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Bootstrapper\\AppDomainAssemblyTypeScanner.cs",
 "region":  {
-"startLine":  46,
-"startColumn":  45,
-"endLine":  46,
-"endColumn":  68
+"startLine":  47,
+"startColumn":  46,
+"endLine":  47,
+"endColumn":  69
 }
-}
-]
-}
-],
-"shortMessage":  "Change the visibility of \"DefaultAssembliesToScan\" or make it \"const\" or \"readonly\".",
-"fullMessage":  "A \"static\" field that is neither constant nor read-only is not thread-safe. Correctly accessing these fields from different threads needs synchronization with \"lock\"s. Improper synchronization may lead to unexpected results, thus publicly visible static fields are best suited for storing non-changing data shared by many consumers. To enforce this intent, these fields should be marked \"readonly\" or converted to a constant.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Non-constant static fields should not be visible",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2223",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2223",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2223",
+"message":  "Change the visibility of \"DefaultAutoRegisterIgnoredAssemblies\" or make it \"const\" or \"readonly\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\DefaultNancyBootstrapper.cs",
 "region":  {
-"startLine":  20,
-"startColumn":  56,
-"endLine":  20,
-"endColumn":  92
+"startLine":  21,
+"startColumn":  57,
+"endLine":  21,
+"endColumn":  93
 }
-}
-]
-}
-],
-"shortMessage":  "Change the visibility of \"DefaultAutoRegisterIgnoredAssemblies\" or make it \"const\" or \"readonly\".",
-"fullMessage":  "A \"static\" field that is neither constant nor read-only is not thread-safe. Correctly accessing these fields from different threads needs synchronization with \"lock\"s. Improper synchronization may lead to unexpected results, thus publicly visible static fields are best suited for storing non-changing data shared by many consumers. To enforce this intent, these fields should be marked \"readonly\" or converted to a constant.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Non-constant static fields should not be visible",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2223",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2223",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2223",
+"message":  "Change the visibility of \"DEFAULT_SWITCHOVER_THRESHOLD\" or make it \"const\" or \"readonly\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\IO\\RequestStream.cs",
 "region":  {
-"startLine":  13,
-"startColumn":  27,
-"endLine":  13,
-"endColumn":  55
+"startLine":  14,
+"startColumn":  28,
+"endLine":  14,
+"endColumn":  56
 }
-}
-]
-}
-],
-"shortMessage":  "Change the visibility of \"DEFAULT_SWITCHOVER_THRESHOLD\" or make it \"const\" or \"readonly\".",
-"fullMessage":  "A \"static\" field that is neither constant nor read-only is not thread-safe. Correctly accessing these fields from different threads needs synchronization with \"lock\"s. Improper synchronization may lead to unexpected results, thus publicly visible static fields are best suited for storing non-changing data shared by many consumers. To enforce this intent, these fields should be marked \"readonly\" or converted to a constant.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Non-constant static fields should not be visible",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2223",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2223",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2223",
+"message":  "Change the visibility of \"NoBody\" or make it \"const\" or \"readonly\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Response.cs",
 "region":  {
-"startLine":  22,
-"startColumn":  37,
-"endLine":  22,
-"endColumn":  43
+"startLine":  23,
+"startColumn":  38,
+"endLine":  23,
+"endColumn":  44
 }
-}
-]
-}
-],
-"shortMessage":  "Change the visibility of \"NoBody\" or make it \"const\" or \"readonly\".",
-"fullMessage":  "A \"static\" field that is neither constant nor read-only is not thread-safe. Correctly accessing these fields from different threads needs synchronization with \"lock\"s. Improper synchronization may lead to unexpected results, thus publicly visible static fields are best suited for storing non-changing data shared by many consumers. To enforce this intent, these fields should be marked \"readonly\" or converted to a constant.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Non-constant static fields should not be visible",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2223",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2223",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2223",
+"message":  "Change the visibility of \"BufferSize\" or make it \"const\" or \"readonly\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Responses\\GenericFileResponse.cs",
 "region":  {
-"startLine":  25,
-"startColumn":  26,
-"endLine":  25,
-"endColumn":  36
+"startLine":  26,
+"startColumn":  27,
+"endLine":  26,
+"endColumn":  37
 }
-}
-]
-}
-],
-"shortMessage":  "Change the visibility of \"BufferSize\" or make it \"const\" or \"readonly\".",
-"fullMessage":  "A \"static\" field that is neither constant nor read-only is not thread-safe. Correctly accessing these fields from different threads needs synchronization with \"lock\"s. Improper synchronization may lead to unexpected results, thus publicly visible static fields are best suited for storing non-changing data shared by many consumers. To enforce this intent, these fields should be marked \"readonly\" or converted to a constant.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Non-constant static fields should not be visible",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2223",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2223",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2223",
+"message":  "Change the visibility of \"None\" or make it \"const\" or \"readonly\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Responses\\Negotiation\\ProcessorMatch.cs",
 "region":  {
-"startLine":  10,
-"startColumn":  37,
-"endLine":  10,
-"endColumn":  41
+"startLine":  11,
+"startColumn":  38,
+"endLine":  11,
+"endColumn":  42
 }
-}
-]
-}
-],
-"shortMessage":  "Change the visibility of \"None\" or make it \"const\" or \"readonly\".",
-"fullMessage":  "A \"static\" field that is neither constant nor read-only is not thread-safe. Correctly accessing these fields from different threads needs synchronization with \"lock\"s. Improper synchronization may lead to unexpected results, thus publicly visible static fields are best suited for storing non-changing data shared by many consumers. To enforce this intent, these fields should be marked \"readonly\" or converted to a constant.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Non-constant static fields should not be visible",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2223",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

@@ -1,257 +1,107 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_leader\", the compiler will do that for you.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\AutoDown.cs",
 "region":  {
-"startLine":  90,
-"startColumn":  31,
-"endLine":  90,
-"endColumn":  38
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_leader\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
-}
-},
-{
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
-"region":  {
-"startLine":  653,
-"startColumn":  36,
-"endLine":  653,
+"startLine":  91,
+"startColumn":  32,
+"endLine":  91,
 "endColumn":  39
 }
 }
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_seedNodeProcessCounter\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
-}
 },
 {
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_seedNodeProcessCounter\", the compiler will do that for you.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
 "region":  {
-"startLine":  657,
-"startColumn":  41,
-"endLine":  657,
-"endColumn":  44
+"startLine":  654,
+"startColumn":  37,
+"endLine":  654,
+"endColumn":  40
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_leaderActionCounter\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Cluster\\Proto\\ClusterMessageSerializer.cs",
+"id":  "S3052",
+"message":  "Remove this initialization to \"_leaderActionCounter\", the compiler will do that for you.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterDaemon.cs",
 "region":  {
-"startLine":  136,
-"startColumn":  47,
-"endLine":  136,
-"endColumn":  53
+"startLine":  658,
+"startColumn":  42,
+"endLine":  658,
+"endColumn":  45
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_protocolCache\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_protocolCache\", the compiler will do that for you.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Proto\\ClusterMessageSerializer.cs",
 "region":  {
 "startLine":  137,
-"startColumn":  45,
+"startColumn":  48,
 "endLine":  137,
-"endColumn":  51
+"endColumn":  54
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_systemCache\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_systemCache\", the compiler will do that for you.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Proto\\ClusterMessageSerializer.cs",
 "region":  {
-"startLine":  227,
-"startColumn":  87,
-"endLine":  227,
-"endColumn":  93
+"startLine":  138,
+"startColumn":  46,
+"endLine":  138,
+"endColumn":  52
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_memberStatusFromProtoCache\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_memberStatusFromProtoCache\", the compiler will do that for you.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Proto\\ClusterMessageSerializer.cs",
 "region":  {
-"startLine":  248,
-"startColumn":  118,
-"endLine":  248,
-"endColumn":  124
+"startLine":  228,
+"startColumn":  88,
+"endLine":  228,
+"endColumn":  94
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_reachabilityStatusFromProtoCache\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S3052",
-"locations":  [
+"id":  "S3052",
+"message":  "Remove this initialization to \"_reachabilityStatusFromProtoCache\", the compiler will do that for you.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Cluster\\Proto\\ClusterMessageSerializer.cs",
+"region":  {
+"startLine":  249,
+"startColumn":  119,
+"endLine":  249,
+"endColumn":  125
+}
+}
+},
 {
-"analysisTarget":  [
-{
+"id":  "S3052",
+"message":  "Remove this initialization to \"Zero\", the compiler will do that for you.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\VectorClock.cs",
 "region":  {
-"startLine":  101,
-"startColumn":  45,
-"endLine":  101,
-"endColumn":  49
+"startLine":  102,
+"startColumn":  46,
+"endLine":  102,
+"endColumn":  50
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"Zero\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 }
 ]

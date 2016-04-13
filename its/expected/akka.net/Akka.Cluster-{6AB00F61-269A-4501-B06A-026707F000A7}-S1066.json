@@ -1,69 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1066",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Reachability.cs",
 "region":  {
-"startLine":  248,
-"startColumn":  20,
-"endLine":  248,
-"endColumn":  22
+"startLine":  249,
+"startColumn":  21,
+"endLine":  249,
+"endColumn":  23
 }
-}
-]
-}
-],
-"shortMessage":  "Merge this if statement with the enclosing one.",
-"fullMessage":  "Merging collapsible \"if\" statements increases the code\u0027s readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Collapsible \"if\" statements should be merged",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1066",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1066",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\Reachability.cs",
 "region":  {
-"startLine":  254,
-"startColumn":  20,
-"endLine":  254,
-"endColumn":  22
+"startLine":  255,
+"startColumn":  21,
+"endLine":  255,
+"endColumn":  23
 }
-}
-]
-}
-],
-"shortMessage":  "Merge this if statement with the enclosing one.",
-"fullMessage":  "Merging collapsible \"if\" statements increases the code\u0027s readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Collapsible \"if\" statements should be merged",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1066",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

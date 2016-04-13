@@ -1,69 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1940",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
-"region":  {
-"startLine":  644,
-"startColumn":  20,
-"endLine":  644,
-"endColumn":  32
-}
-}
-]
-}
-],
-"shortMessage":  "Use the opposite operator (\"\u003c=\") instead.",
-"fullMessage":  "It is needlessly complex to invert the result of a boolean comparison. The opposite comparison should be made instead.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Boolean checks should not be inverted",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1940",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1940",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1940",
+"message":  "Use the opposite operator (\"\u003c=\") instead.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
 "region":  {
 "startLine":  645,
-"startColumn":  36,
+"startColumn":  21,
 "endLine":  645,
-"endColumn":  52
+"endColumn":  33
 }
 }
-]
+},
+{
+"id":  "S1940",
+"message":  "Use the opposite operator (\"\u003c=\") instead.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
+"region":  {
+"startLine":  646,
+"startColumn":  37,
+"endLine":  646,
+"endColumn":  53
 }
-],
-"shortMessage":  "Use the opposite operator (\"\u003c=\") instead.",
-"fullMessage":  "It is needlessly complex to invert the result of a boolean comparison. The opposite comparison should be made instead.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Boolean checks should not be inverted",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1940",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

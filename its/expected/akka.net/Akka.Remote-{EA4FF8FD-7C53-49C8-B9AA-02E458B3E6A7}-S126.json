@@ -1,309 +1,133 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S126",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\AckedDelivery.cs",
 "region":  {
-"startLine":  145,
-"startColumn":  16,
-"endLine":  145,
-"endColumn":  23
+"startLine":  146,
+"startColumn":  17,
+"endLine":  146,
+"endColumn":  24
 }
-}
-]
-}
-],
-"shortMessage":  "Add the missing \"else\" clause.",
-"fullMessage":  "The requirement for a final \"else\"statement is defensive programming. The \"else\" statement should either take appropriate action or contain a suitable comment as to why no action is taken. This is consistent with the requirement to have a final \"default\" clause in a \"switch\" statement.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"if ... else if\" constructs should end with \"else\" clause",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S126",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S126",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\AckedDelivery.cs",
 "region":  {
-"startLine":  417,
-"startColumn":  20,
-"endLine":  417,
-"endColumn":  27
+"startLine":  418,
+"startColumn":  21,
+"endLine":  418,
+"endColumn":  28
 }
-}
-]
-}
-],
-"shortMessage":  "Add the missing \"else\" clause.",
-"fullMessage":  "The requirement for a final \"else\"statement is defensive programming. The \"else\" statement should either take appropriate action or contain a suitable comment as to why no action is taken. This is consistent with the requirement to have a final \"default\" clause in a \"switch\" statement.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"if ... else if\" constructs should end with \"else\" clause",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S126",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S126",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
-"startLine":  1144,
-"startColumn":  12,
-"endLine":  1144,
-"endColumn":  19
+"startLine":  1145,
+"startColumn":  13,
+"endLine":  1145,
+"endColumn":  20
 }
-}
-]
-}
-],
-"shortMessage":  "Add the missing \"else\" clause.",
-"fullMessage":  "The requirement for a final \"else\"statement is defensive programming. The \"else\" statement should either take appropriate action or contain a suitable comment as to why no action is taken. This is consistent with the requirement to have a final \"default\" clause in a \"switch\" statement.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"if ... else if\" constructs should end with \"else\" clause",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S126",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S126",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
-"startLine":  1305,
-"startColumn":  16,
-"endLine":  1305,
-"endColumn":  23
+"startLine":  1306,
+"startColumn":  17,
+"endLine":  1306,
+"endColumn":  24
 }
-}
-]
-}
-],
-"shortMessage":  "Add the missing \"else\" clause.",
-"fullMessage":  "The requirement for a final \"else\"statement is defensive programming. The \"else\" statement should either take appropriate action or contain a suitable comment as to why no action is taken. This is consistent with the requirement to have a final \"default\" clause in a \"switch\" statement.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"if ... else if\" constructs should end with \"else\" clause",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S126",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S126",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointRegistry.cs",
 "region":  {
-"startLine":  75,
-"startColumn":  12,
-"endLine":  75,
-"endColumn":  19
+"startLine":  76,
+"startColumn":  13,
+"endLine":  76,
+"endColumn":  20
 }
-}
-]
-}
-],
-"shortMessage":  "Add the missing \"else\" clause.",
-"fullMessage":  "The requirement for a final \"else\"statement is defensive programming. The \"else\" statement should either take appropriate action or contain a suitable comment as to why no action is taken. This is consistent with the requirement to have a final \"default\" clause in a \"switch\" statement.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"if ... else if\" constructs should end with \"else\" clause",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S126",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S126",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointRegistry.cs",
 "region":  {
-"startLine":  142,
-"startColumn":  12,
-"endLine":  142,
-"endColumn":  19
+"startLine":  143,
+"startColumn":  13,
+"endLine":  143,
+"endColumn":  20
 }
-}
-]
-}
-],
-"shortMessage":  "Add the missing \"else\" clause.",
-"fullMessage":  "The requirement for a final \"else\"statement is defensive programming. The \"else\" statement should either take appropriate action or contain a suitable comment as to why no action is taken. This is consistent with the requirement to have a final \"default\" clause in a \"switch\" statement.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"if ... else if\" constructs should end with \"else\" clause",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S126",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S126",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteActorRefProvider.cs",
 "region":  {
-"startLine":  175,
-"startColumn":  16,
-"endLine":  175,
-"endColumn":  23
+"startLine":  176,
+"startColumn":  17,
+"endLine":  176,
+"endColumn":  24
 }
-}
-]
-}
-],
-"shortMessage":  "Add the missing \"else\" clause.",
-"fullMessage":  "The requirement for a final \"else\"statement is defensive programming. The \"else\" statement should either take appropriate action or contain a suitable comment as to why no action is taken. This is consistent with the requirement to have a final \"default\" clause in a \"switch\" statement.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"if ... else if\" constructs should end with \"else\" clause",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S126",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S126",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteSystemDaemon.cs",
 "region":  {
-"startLine":  139,
-"startColumn":  12,
-"endLine":  139,
-"endColumn":  19
+"startLine":  140,
+"startColumn":  13,
+"endLine":  140,
+"endColumn":  20
 }
-}
-]
-}
-],
-"shortMessage":  "Add the missing \"else\" clause.",
-"fullMessage":  "The requirement for a final \"else\"statement is defensive programming. The \"else\" statement should either take appropriate action or contain a suitable comment as to why no action is taken. This is consistent with the requirement to have a final \"default\" clause in a \"switch\" statement.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"if ... else if\" constructs should end with \"else\" clause",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S126",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S126",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteWatcher.cs",
 "region":  {
-"startLine":  333,
-"startColumn":  12,
-"endLine":  333,
-"endColumn":  19
+"startLine":  334,
+"startColumn":  13,
+"endLine":  334,
+"endColumn":  20
 }
-}
-]
-}
-],
-"shortMessage":  "Add the missing \"else\" clause.",
-"fullMessage":  "The requirement for a final \"else\"statement is defensive programming. The \"else\" statement should either take appropriate action or contain a suitable comment as to why no action is taken. This is consistent with the requirement to have a final \"default\" clause in a \"switch\" statement.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"if ... else if\" constructs should end with \"else\" clause",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S126",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S126",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
 "region":  {
-"startLine":  343,
-"startColumn":  12,
-"endLine":  343,
-"endColumn":  19
+"startLine":  344,
+"startColumn":  13,
+"endLine":  344,
+"endColumn":  20
 }
-}
-]
-}
-],
-"shortMessage":  "Add the missing \"else\" clause.",
-"fullMessage":  "The requirement for a final \"else\"statement is defensive programming. The \"else\" statement should either take appropriate action or contain a suitable comment as to why no action is taken. This is consistent with the requirement to have a final \"default\" clause in a \"switch\" statement.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"if ... else if\" constructs should end with \"else\" clause",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S126",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

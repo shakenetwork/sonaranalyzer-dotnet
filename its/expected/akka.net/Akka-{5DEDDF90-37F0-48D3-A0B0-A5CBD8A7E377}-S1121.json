@@ -1,69 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1121",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1121",
+"message":  "Extract the assignment of \"_until\" from this expression.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\ByteIterator.cs",
 "region":  {
-"startLine":  54,
-"startColumn":  31,
-"endLine":  54,
-"endColumn":  32
+"startLine":  55,
+"startColumn":  32,
+"endLine":  55,
+"endColumn":  33
 }
-}
-]
-}
-],
-"shortMessage":  "Extract the assignment of \"_until\" from this expression.",
-"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Assignments should not be made from within sub-expressions",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1121",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1121",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1121",
+"message":  "Extract the assignment of \"_head\" from this expression.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\MonoConcurrentQueue.cs",
 "region":  {
-"startLine":  244,
-"startColumn":  26,
-"endLine":  244,
-"endColumn":  27
+"startLine":  245,
+"startColumn":  27,
+"endLine":  245,
+"endColumn":  28
 }
-}
-]
-}
-],
-"shortMessage":  "Extract the assignment of \"_head\" from this expression.",
-"fullMessage":  "Assignments within sub-expressions are hard to spot and therefore make the code less readable. It is also a common mistake to write \"=\" when \"==\" was meant. Ideally, expressions should nothave side-effects. Assignments inside lambda and delegate expressions are allowed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Assignments should not be made from within sub-expressions",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1121",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

@@ -1,159 +1,68 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S121",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
+"location":  {
 "uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\Actors\\TickerActors.cs",
 "region":  {
-"startLine":  36,
-"startColumn":  12,
-"endLine":  36,
-"endColumn":  14
+"startLine":  37,
+"startColumn":  13,
+"endLine":  37,
+"endColumn":  15
 }
-}
-]
-}
-],
-"shortMessage":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"fullMessage":  "While not technically incorrect, the omission of curly braces can be misleading, and may lead to the introduction of errors during maintenance.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control structures should use curly braces",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S121",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S121",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
+"location":  {
 "uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\Actors\\TickerActors.cs",
 "region":  {
-"startLine":  46,
-"startColumn":  12,
-"endLine":  46,
-"endColumn":  14
+"startLine":  47,
+"startColumn":  13,
+"endLine":  47,
+"endColumn":  15
 }
-}
-]
-}
-],
-"shortMessage":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"fullMessage":  "While not technically incorrect, the omission of curly braces can be misleading, and may lead to the introduction of errors during maintenance.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control structures should use curly braces",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S121",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S121",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"else\" block.",
+"location":  {
 "uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\Actors\\TickerActors.cs",
 "region":  {
-"startLine":  82,
-"startColumn":  12,
-"endLine":  82,
-"endColumn":  16
+"startLine":  83,
+"startColumn":  13,
+"endLine":  83,
+"endColumn":  17
 }
-}
-]
-}
-],
-"shortMessage":  "Add curly braces around the nested statement(s) in this \"else\" block.",
-"fullMessage":  "While not technically incorrect, the omission of curly braces can be misleading, and may lead to the introduction of errors during maintenance.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control structures should use curly braces",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S121",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S121",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"else\" block.",
+"location":  {
 "uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\Actors\\TickerActors.cs",
 "region":  {
-"startLine":  124,
-"startColumn":  12,
-"endLine":  124,
-"endColumn":  16
+"startLine":  125,
+"startColumn":  13,
+"endLine":  125,
+"endColumn":  17
 }
-}
-]
-}
-],
-"shortMessage":  "Add curly braces around the nested statement(s) in this \"else\" block.",
-"fullMessage":  "While not technically incorrect, the omission of curly braces can be misleading, and may lead to the introduction of errors during maintenance.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control structures should use curly braces",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S121",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S121",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
+"location":  {
 "uri":  "akka.net\\src\\examples\\Stocks\\SymbolLookup\\MainForm.cs",
 "region":  {
-"startLine":  87,
-"startColumn":  12,
-"endLine":  87,
-"endColumn":  14
+"startLine":  88,
+"startColumn":  13,
+"endLine":  88,
+"endColumn":  15
 }
-}
-]
-}
-],
-"shortMessage":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"fullMessage":  "While not technically incorrect, the omission of curly braces can be misleading, and may lead to the introduction of errors during maintenance.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control structures should use curly braces",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S121",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

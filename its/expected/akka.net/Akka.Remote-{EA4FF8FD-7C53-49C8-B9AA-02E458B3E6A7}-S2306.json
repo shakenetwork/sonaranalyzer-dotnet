@@ -1,69 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2306",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2306",
+"message":  "Rename \"async\" to not use a contextual keyword as an identifier.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteActorRefProvider.cs",
 "region":  {
-"startLine":  141,
-"startColumn":  183,
-"endLine":  141,
-"endColumn":  188
+"startLine":  142,
+"startColumn":  184,
+"endLine":  142,
+"endColumn":  189
 }
-}
-]
-}
-],
-"shortMessage":  "Rename \"async\" to not use a contextual keyword as an identifier.",
-"fullMessage":  "Since C# 5.0, \"async\" and \"await\" are contextual keywords. Contextual keywords do have a particular meaning in some contexts, but can still be used as variable names for example. Keywords, on the other hand, are always reserved, and therefore are not valid variable names. To avoid any confusion though, it is best to not use \"async\" and \"await\" as identifiers.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"async\" and \"await\" should not be used as identifiers",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2306",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2306",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2306",
+"message":  "Rename \"async\" to not use a contextual keyword as an identifier.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteActorRefProvider.cs",
 "region":  {
-"startLine":  270,
-"startColumn":  87,
-"endLine":  270,
-"endColumn":  92
+"startLine":  271,
+"startColumn":  88,
+"endLine":  271,
+"endColumn":  93
 }
-}
-]
-}
-],
-"shortMessage":  "Rename \"async\" to not use a contextual keyword as an identifier.",
-"fullMessage":  "Since C# 5.0, \"async\" and \"await\" are contextual keywords. Contextual keywords do have a particular meaning in some contexts, but can still be used as variable names for example. Keywords, on the other hand, are always reserved, and therefore are not valid variable names. To avoid any confusion though, it is best to not use \"async\" and \"await\" as identifiers.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"async\" and \"await\" should not be used as identifiers",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2306",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

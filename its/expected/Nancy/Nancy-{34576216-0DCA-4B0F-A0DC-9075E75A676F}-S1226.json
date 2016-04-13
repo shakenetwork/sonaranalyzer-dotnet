@@ -1,1239 +1,536 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"requestedPath\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Conventions\\StaticContentConventionBuilder.cs",
 "region":  {
-"startLine":  37,
-"startColumn":  16,
-"endLine":  37,
-"endColumn":  29
+"startLine":  38,
+"startColumn":  17,
+"endLine":  38,
+"endColumn":  30
 }
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"requestedPath\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"contentPath\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Conventions\\StaticContentConventionBuilder.cs",
 "region":  {
-"startLine":  61,
-"startColumn":  16,
-"endLine":  61,
-"endColumn":  27
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"contentPath\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Conventions\\StaticContentConventionBuilder.cs",
-"region":  {
-"startLine":  117,
-"startColumn":  12,
-"endLine":  117,
-"endColumn":  23
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"contentPath\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Conventions\\StaticContentConventionBuilder.cs",
-"region":  {
-"startLine":  122,
-"startColumn":  16,
-"endLine":  122,
-"endColumn":  27
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"contentPath\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\DynamicDictionary.cs",
-"region":  {
-"startLine":  110,
-"startColumn":  16,
-"endLine":  110,
-"endColumn":  20
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"name\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\DynamicDictionary.cs",
-"region":  {
-"startLine":  122,
-"startColumn":  16,
-"endLine":  122,
-"endColumn":  20
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"name\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\DynamicDictionary.cs",
-"region":  {
-"startLine":  208,
-"startColumn":  12,
-"endLine":  208,
-"endColumn":  15
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"key\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\DynamicDictionary.cs",
-"region":  {
-"startLine":  229,
-"startColumn":  12,
-"endLine":  229,
-"endColumn":  15
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"key\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\DynamicDictionary.cs",
-"region":  {
-"startLine":  290,
-"startColumn":  12,
-"endLine":  290,
-"endColumn":  15
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"key\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
-"region":  {
-"startLine":  143,
-"startColumn":  16,
-"endLine":  143,
-"endColumn":  17
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"e\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
-"region":  {
-"startLine":  711,
-"startColumn":  16,
-"endLine":  711,
-"endColumn":  21
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"query\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\HttpMultipartSubStream.cs",
-"region":  {
-"startLine":  124,
-"startColumn":  16,
-"endLine":  124,
-"endColumn":  21
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"count\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
-"region":  {
-"startLine":  148,
-"startColumn":  16,
-"endLine":  148,
-"endColumn":  19
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"obj\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
-"region":  {
-"startLine":  156,
-"startColumn":  20,
-"endLine":  156,
-"endColumn":  23
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"obj\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
-"region":  {
-"startLine":  234,
-"startColumn":  16,
-"endLine":  234,
-"endColumn":  21
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"value\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
-"region":  {
-"startLine":  236,
-"startColumn":  16,
-"endLine":  236,
-"endColumn":  21
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"value\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
-"region":  {
-"startLine":  323,
-"startColumn":  20,
-"endLine":  323,
-"endColumn":  24
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"type\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
-"region":  {
-"startLine":  340,
-"startColumn":  24,
-"endLine":  340,
+"startLine":  62,
+"startColumn":  17,
+"endLine":  62,
 "endColumn":  28
 }
 }
-]
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"contentPath\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Conventions\\StaticContentConventionBuilder.cs",
+"region":  {
+"startLine":  118,
+"startColumn":  13,
+"endLine":  118,
+"endColumn":  24
 }
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"type\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1226",
-"locations":  [
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"contentPath\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Conventions\\StaticContentConventionBuilder.cs",
+"region":  {
+"startLine":  123,
+"startColumn":  17,
+"endLine":  123,
+"endColumn":  28
+}
+}
+},
 {
-"analysisTarget":  [
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"name\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\DynamicDictionary.cs",
+"region":  {
+"startLine":  111,
+"startColumn":  17,
+"endLine":  111,
+"endColumn":  21
+}
+}
+},
 {
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"name\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\DynamicDictionary.cs",
+"region":  {
+"startLine":  123,
+"startColumn":  17,
+"endLine":  123,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"key\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\DynamicDictionary.cs",
+"region":  {
+"startLine":  209,
+"startColumn":  13,
+"endLine":  209,
+"endColumn":  16
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"key\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\DynamicDictionary.cs",
+"region":  {
+"startLine":  230,
+"startColumn":  13,
+"endLine":  230,
+"endColumn":  16
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"key\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\DynamicDictionary.cs",
+"region":  {
+"startLine":  291,
+"startColumn":  13,
+"endLine":  291,
+"endColumn":  16
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"e\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
+"region":  {
+"startLine":  144,
+"startColumn":  17,
+"endLine":  144,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"query\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
+"region":  {
+"startLine":  712,
+"startColumn":  17,
+"endLine":  712,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"count\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\HttpMultipartSubStream.cs",
+"region":  {
+"startLine":  125,
+"startColumn":  17,
+"endLine":  125,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"obj\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
-"startLine":  355,
-"startColumn":  16,
-"endLine":  355,
+"startLine":  149,
+"startColumn":  17,
+"endLine":  149,
 "endColumn":  20
 }
 }
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"type\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
 },
 {
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"obj\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
-"startLine":  116,
-"startColumn":  4,
-"endLine":  116,
-"endColumn":  7
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"obj\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
-"region":  {
-"startLine":  147,
-"startColumn":  4,
-"endLine":  147,
-"endColumn":  7
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"obj\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
-"region":  {
-"startLine":  431,
-"startColumn":  3,
-"endLine":  431,
-"endColumn":  6
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"key\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
-"region":  {
-"startLine":  506,
-"startColumn":  14,
-"endLine":  506,
-"endColumn":  19
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"value\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Owin\\NancyMiddleware.cs",
-"region":  {
-"startLine":  52,
-"startColumn":  12,
-"endLine":  52,
-"endColumn":  19
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"options\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Owin\\NancyMiddleware.cs",
-"region":  {
-"startLine":  226,
-"startColumn":  16,
-"endLine":  226,
-"endColumn":  31
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"owinRequestHost\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Responses\\Negotiation\\MediaRange.cs",
-"region":  {
-"startLine":  23,
-"startColumn":  16,
-"endLine":  23,
-"endColumn":  27
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"contentType\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Responses\\TextResponse.cs",
-"region":  {
-"startLine":  24,
-"startColumn":  16,
-"endLine":  24,
+"startLine":  157,
+"startColumn":  21,
+"endLine":  157,
 "endColumn":  24
 }
 }
-]
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"value\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
+"region":  {
+"startLine":  235,
+"startColumn":  17,
+"endLine":  235,
+"endColumn":  22
 }
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"encoding\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Responses\\TextResponse.cs",
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"value\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
-"startLine":  29,
-"startColumn":  16,
-"endLine":  29,
-"endColumn":  27
+"startLine":  237,
+"startColumn":  17,
+"endLine":  237,
+"endColumn":  22
 }
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"contentType\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Responses\\TextResponse.cs",
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"type\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
-"startLine":  57,
-"startColumn":  16,
-"endLine":  57,
-"endColumn":  24
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"encoding\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Routing\\DefaultRoutePatternMatcher.cs",
-"region":  {
-"startLine":  32,
-"startColumn":  12,
-"endLine":  32,
+"startLine":  324,
+"startColumn":  21,
+"endLine":  324,
 "endColumn":  25
 }
 }
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"requestedPath\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
 },
 {
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Routing\\DefaultRoutePatternMatcher.cs",
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"type\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
-"startLine":  52,
-"startColumn":  16,
-"endLine":  52,
+"startLine":  341,
+"startColumn":  25,
+"endLine":  341,
 "endColumn":  29
 }
 }
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"requestedPath\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
 },
 {
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Routing\\DefaultRoutePatternMatcher.cs",
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"type\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
-"startLine":  130,
-"startColumn":  12,
-"endLine":  130,
-"endColumn":  19
+"startLine":  356,
+"startColumn":  17,
+"endLine":  356,
+"endColumn":  21
 }
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"segment\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1226",
-"locations":  [
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"obj\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
+"region":  {
+"startLine":  117,
+"startColumn":  5,
+"endLine":  117,
+"endColumn":  8
+}
+}
+},
 {
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Routing\\DefaultRoutePatternMatcher.cs",
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"obj\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
 "region":  {
 "startLine":  148,
-"startColumn":  16,
+"startColumn":  5,
 "endLine":  148,
-"endColumn":  23
+"endColumn":  8
 }
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"segment\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Routing\\DefaultRoutePatternMatcher.cs",
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"key\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
 "region":  {
-"startLine":  153,
-"startColumn":  12,
-"endLine":  153,
-"endColumn":  19
+"startLine":  432,
+"startColumn":  4,
+"endLine":  432,
+"endColumn":  7
 }
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"segment\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Routing\\DefaultRoutePatternMatcher.cs",
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"value\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
 "region":  {
-"startLine":  157,
-"startColumn":  16,
-"endLine":  157,
-"endColumn":  23
+"startLine":  507,
+"startColumn":  15,
+"endLine":  507,
+"endColumn":  20
 }
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"segment\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1226",
-"locations":  [
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"options\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Owin\\NancyMiddleware.cs",
+"region":  {
+"startLine":  53,
+"startColumn":  13,
+"endLine":  53,
+"endColumn":  20
+}
+}
+},
 {
-"analysisTarget":  [
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"owinRequestHost\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Owin\\NancyMiddleware.cs",
+"region":  {
+"startLine":  227,
+"startColumn":  17,
+"endLine":  227,
+"endColumn":  32
+}
+}
+},
 {
-"uri":  "Nancy\\src\\Nancy\\Security\\Csrf.cs",
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"contentType\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Responses\\Negotiation\\MediaRange.cs",
 "region":  {
 "startLine":  24,
-"startColumn":  12,
+"startColumn":  17,
 "endLine":  24,
-"endColumn":  37
+"endColumn":  28
 }
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"cryptographyConfiguration\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1226",
-"locations":  [
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"encoding\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Responses\\TextResponse.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  17,
+"endLine":  25,
+"endColumn":  25
+}
+}
+},
 {
-"analysisTarget":  [
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"contentType\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Responses\\TextResponse.cs",
+"region":  {
+"startLine":  30,
+"startColumn":  17,
+"endLine":  30,
+"endColumn":  28
+}
+}
+},
 {
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"encoding\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Responses\\TextResponse.cs",
+"region":  {
+"startLine":  58,
+"startColumn":  17,
+"endLine":  58,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"requestedPath\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Routing\\DefaultRoutePatternMatcher.cs",
+"region":  {
+"startLine":  33,
+"startColumn":  13,
+"endLine":  33,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"requestedPath\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Routing\\DefaultRoutePatternMatcher.cs",
+"region":  {
+"startLine":  53,
+"startColumn":  17,
+"endLine":  53,
+"endColumn":  30
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"segment\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Routing\\DefaultRoutePatternMatcher.cs",
+"region":  {
+"startLine":  131,
+"startColumn":  13,
+"endLine":  131,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"segment\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Routing\\DefaultRoutePatternMatcher.cs",
+"region":  {
+"startLine":  149,
+"startColumn":  17,
+"endLine":  149,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"segment\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Routing\\DefaultRoutePatternMatcher.cs",
+"region":  {
+"startLine":  154,
+"startColumn":  13,
+"endLine":  154,
+"endColumn":  20
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"segment\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Routing\\DefaultRoutePatternMatcher.cs",
+"region":  {
+"startLine":  158,
+"startColumn":  17,
+"endLine":  158,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"cryptographyConfiguration\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Security\\Csrf.cs",
 "region":  {
-"startLine":  92,
-"startColumn":  12,
-"endLine":  92,
-"endColumn":  37
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"cryptographyConfiguration\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
-"region":  {
-"startLine":  3653,
-"startColumn":  16,
-"endLine":  3653,
-"endColumn":  27
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"constructor\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
-"region":  {
-"startLine":  337,
-"startColumn":  20,
-"endLine":  337,
+"startLine":  25,
+"startColumn":  13,
+"endLine":  25,
 "endColumn":  38
 }
 }
-]
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"cryptographyConfiguration\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Security\\Csrf.cs",
+"region":  {
+"startLine":  93,
+"startColumn":  13,
+"endLine":  93,
+"endColumn":  38
 }
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"substitutionObject\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"constructor\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
-"startLine":  481,
-"startColumn":  24,
-"endLine":  481,
-"endColumn":  29
+"startLine":  3654,
+"startColumn":  17,
+"endLine":  3654,
+"endColumn":  28
 }
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"model\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"substitutionObject\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
 "region":  {
-"startLine":  573,
-"startColumn":  24,
-"endLine":  573,
-"endColumn":  29
+"startLine":  338,
+"startColumn":  21,
+"endLine":  338,
+"endColumn":  39
 }
 }
-]
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"model\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
+"region":  {
+"startLine":  482,
+"startColumn":  25,
+"endLine":  482,
+"endColumn":  30
 }
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"model\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"model\".",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
+"region":  {
+"startLine":  574,
+"startColumn":  25,
+"endLine":  574,
+"endColumn":  30
+}
 }
 }
 ]

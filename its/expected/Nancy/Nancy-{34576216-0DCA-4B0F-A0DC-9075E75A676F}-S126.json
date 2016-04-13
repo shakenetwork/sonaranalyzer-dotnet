@@ -1,279 +1,120 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S126",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
 "region":  {
-"startLine":  492,
-"startColumn":  16,
-"endLine":  492,
-"endColumn":  23
+"startLine":  493,
+"startColumn":  17,
+"endLine":  493,
+"endColumn":  24
 }
-}
-]
-}
-],
-"shortMessage":  "Add the missing \"else\" clause.",
-"fullMessage":  "The requirement for a final \"else\"statement is defensive programming. The \"else\" statement should either take appropriate action or contain a suitable comment as to why no action is taken. This is consistent with the requirement to have a final \"default\" clause in a \"switch\" statement.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"if ... else if\" constructs should end with \"else\" clause",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S126",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S126",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
 "region":  {
-"startLine":  558,
-"startColumn":  12,
-"endLine":  558,
-"endColumn":  19
+"startLine":  559,
+"startColumn":  13,
+"endLine":  559,
+"endColumn":  20
 }
-}
-]
-}
-],
-"shortMessage":  "Add the missing \"else\" clause.",
-"fullMessage":  "The requirement for a final \"else\"statement is defensive programming. The \"else\" statement should either take appropriate action or contain a suitable comment as to why no action is taken. This is consistent with the requirement to have a final \"default\" clause in a \"switch\" statement.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"if ... else if\" constructs should end with \"else\" clause",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S126",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S126",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
-"startLine":  288,
-"startColumn":  20,
-"endLine":  288,
-"endColumn":  27
+"startLine":  289,
+"startColumn":  21,
+"endLine":  289,
+"endColumn":  28
 }
-}
-]
-}
-],
-"shortMessage":  "Add the missing \"else\" clause.",
-"fullMessage":  "The requirement for a final \"else\"statement is defensive programming. The \"else\" statement should either take appropriate action or contain a suitable comment as to why no action is taken. This is consistent with the requirement to have a final \"default\" clause in a \"switch\" statement.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"if ... else if\" constructs should end with \"else\" clause",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S126",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S126",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
-"startLine":  368,
-"startColumn":  16,
-"endLine":  368,
-"endColumn":  23
+"startLine":  369,
+"startColumn":  17,
+"endLine":  369,
+"endColumn":  24
 }
-}
-]
-}
-],
-"shortMessage":  "Add the missing \"else\" clause.",
-"fullMessage":  "The requirement for a final \"else\"statement is defensive programming. The \"else\" statement should either take appropriate action or contain a suitable comment as to why no action is taken. This is consistent with the requirement to have a final \"default\" clause in a \"switch\" statement.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"if ... else if\" constructs should end with \"else\" clause",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S126",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S126",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
-"startLine":  235,
-"startColumn":  12,
-"endLine":  235,
-"endColumn":  19
+"startLine":  236,
+"startColumn":  13,
+"endLine":  236,
+"endColumn":  20
 }
-}
-]
-}
-],
-"shortMessage":  "Add the missing \"else\" clause.",
-"fullMessage":  "The requirement for a final \"else\"statement is defensive programming. The \"else\" statement should either take appropriate action or contain a suitable comment as to why no action is taken. This is consistent with the requirement to have a final \"default\" clause in a \"switch\" statement.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"if ... else if\" constructs should end with \"else\" clause",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S126",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S126",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
-"startLine":  354,
-"startColumn":  12,
-"endLine":  354,
-"endColumn":  19
+"startLine":  355,
+"startColumn":  13,
+"endLine":  355,
+"endColumn":  20
 }
-}
-]
-}
-],
-"shortMessage":  "Add the missing \"else\" clause.",
-"fullMessage":  "The requirement for a final \"else\"statement is defensive programming. The \"else\" statement should either take appropriate action or contain a suitable comment as to why no action is taken. This is consistent with the requirement to have a final \"default\" clause in a \"switch\" statement.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"if ... else if\" constructs should end with \"else\" clause",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S126",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S126",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
 "region":  {
-"startLine":  619,
-"startColumn":  5,
-"endLine":  619,
-"endColumn":  12
+"startLine":  620,
+"startColumn":  6,
+"endLine":  620,
+"endColumn":  13
 }
-}
-]
-}
-],
-"shortMessage":  "Add the missing \"else\" clause.",
-"fullMessage":  "The requirement for a final \"else\"statement is defensive programming. The \"else\" statement should either take appropriate action or contain a suitable comment as to why no action is taken. This is consistent with the requirement to have a final \"default\" clause in a \"switch\" statement.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"if ... else if\" constructs should end with \"else\" clause",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S126",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S126",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\ModelBinding\\DefaultBinder.cs",
 "region":  {
-"startLine":  396,
-"startColumn":  12,
-"endLine":  396,
-"endColumn":  19
+"startLine":  397,
+"startColumn":  13,
+"endLine":  397,
+"endColumn":  20
 }
-}
-]
-}
-],
-"shortMessage":  "Add the missing \"else\" clause.",
-"fullMessage":  "The requirement for a final \"else\"statement is defensive programming. The \"else\" statement should either take appropriate action or contain a suitable comment as to why no action is taken. This is consistent with the requirement to have a final \"default\" clause in a \"switch\" statement.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"if ... else if\" constructs should end with \"else\" clause",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S126",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S126",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
-"startLine":  3820,
-"startColumn":  16,
-"endLine":  3820,
-"endColumn":  23
+"startLine":  3821,
+"startColumn":  17,
+"endLine":  3821,
+"endColumn":  24
 }
-}
-]
-}
-],
-"shortMessage":  "Add the missing \"else\" clause.",
-"fullMessage":  "The requirement for a final \"else\"statement is defensive programming. The \"else\" statement should either take appropriate action or contain a suitable comment as to why no action is taken. This is consistent with the requirement to have a final \"default\" clause in a \"switch\" statement.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"if ... else if\" constructs should end with \"else\" clause",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S126",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

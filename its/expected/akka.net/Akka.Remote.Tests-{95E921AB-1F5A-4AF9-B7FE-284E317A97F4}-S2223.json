@@ -1,39 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2223",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2223",
+"message":  "Change the visibility of \"TurnOff\" or make it \"const\" or \"readonly\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests\\RemoteWatcherSpec.cs",
 "region":  {
-"startLine":  39,
-"startColumn":  31,
-"endLine":  39,
-"endColumn":  38
+"startLine":  40,
+"startColumn":  32,
+"endLine":  40,
+"endColumn":  39
 }
-}
-]
-}
-],
-"shortMessage":  "Change the visibility of \"TurnOff\" or make it \"const\" or \"readonly\".",
-"fullMessage":  "A \"static\" field that is neither constant nor read-only is not thread-safe. Correctly accessing these fields from different threads needs synchronization with \"lock\"s. Improper synchronization may lead to unexpected results, thus publicly visible static fields are best suited for storing non-changing data shared by many consumers. To enforce this intent, these fields should be marked \"readonly\" or converted to a constant.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Non-constant static fields should not be visible",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2223",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

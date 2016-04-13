@@ -1,1449 +1,627 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Bootstrapper\\AppDomainAssemblyTypeScanner.cs",
 "region":  {
-"startLine":  283,
-"startColumn":  40,
-"endLine":  283,
-"endColumn":  47
+"startLine":  284,
+"startColumn":  41,
+"endLine":  284,
+"endColumn":  48
 }
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Bootstrapper\\NancyBootstrapperBase.cs",
 "region":  {
-"startLine":  222,
-"startColumn":  20,
-"endLine":  222,
-"endColumn":  30
+"startLine":  223,
+"startColumn":  21,
+"endLine":  223,
+"endColumn":  31
 }
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 25 which is greater than 10 authorized.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Conventions\\DefaultViewLocationConventions.cs",
 "region":  {
-"startLine":  38,
-"startColumn":  28,
-"endLine":  38,
-"endColumn":  60
+"startLine":  39,
+"startColumn":  29,
+"endLine":  39,
+"endColumn":  61
 }
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 25 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Diagnostics\\DiagnosticsHook.cs",
 "region":  {
-"startLine":  209,
-"startColumn":  42,
-"endLine":  209,
-"endColumn":  52
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Diagnostics\\Modules\\InteractiveModule.cs",
-"region":  {
-"startLine":  13,
-"startColumn":  15,
-"endLine":  13,
-"endColumn":  32
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\DynamicDictionaryValue.cs",
-"region":  {
-"startLine":  75,
-"startColumn":  17,
-"endLine":  75,
-"endColumn":  25
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\DynamicDictionaryValue.cs",
-"region":  {
-"startLine":  228,
-"startColumn":  29,
-"endLine":  228,
-"endColumn":  39
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 28 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\ErrorHandling\\DefaultStatusCodeHandler.cs",
-"region":  {
-"startLine":  61,
-"startColumn":  20,
-"endLine":  61,
-"endColumn":  26
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Extensions\\TypeExtensions.cs",
-"region":  {
-"startLine":  86,
-"startColumn":  27,
-"endLine":  86,
-"endColumn":  36
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 21 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\CacheHelpers.cs",
-"region":  {
-"startLine":  18,
-"startColumn":  27,
-"endLine":  18,
-"endColumn":  44
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
-"region":  {
-"startLine":  255,
-"startColumn":  31,
-"endLine":  255,
-"endColumn":  41
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 23 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
-"region":  {
-"startLine":  331,
-"startColumn":  31,
-"endLine":  331,
-"endColumn":  50
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
-"region":  {
-"startLine":  388,
-"startColumn":  31,
-"endLine":  388,
-"endColumn":  41
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 31 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
-"region":  {
-"startLine":  574,
-"startColumn":  29,
-"endLine":  574,
-"endColumn":  42
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
-"region":  {
-"startLine":  134,
-"startColumn":  29,
-"endLine":  134,
-"endColumn":  38
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
-"region":  {
-"startLine":  248,
-"startColumn":  29,
-"endLine":  248,
-"endColumn":  38
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 22 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
-"region":  {
-"startLine":  345,
-"startColumn":  29,
-"endLine":  345,
-"endColumn":  45
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
-"region":  {
-"startLine":  388,
-"startColumn":  29,
-"endLine":  388,
-"endColumn":  38
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\ReflectionUtils.cs",
-"region":  {
-"startLine":  70,
-"startColumn":  27,
-"endLine":  70,
-"endColumn":  37
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
-"region":  {
-"startLine":  143,
-"startColumn":  24,
-"endLine":  143,
-"endColumn":  37
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 32 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
-"region":  {
-"startLine":  274,
-"startColumn":  15,
-"endLine":  274,
-"endColumn":  28
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
-"region":  {
-"startLine":  316,
-"startColumn":  15,
-"endLine":  316,
-"endColumn":  30
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 26 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
-"region":  {
-"startLine":  422,
-"startColumn":  13,
-"endLine":  422,
-"endColumn":  42
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
-"region":  {
-"startLine":  483,
-"startColumn":  7,
-"endLine":  483,
-"endColumn":  18
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 24 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
-"region":  {
-"startLine":  576,
-"startColumn":  7,
-"endLine":  576,
-"endColumn":  23
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 73 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
-"region":  {
-"startLine":  103,
-"startColumn":  7,
-"endLine":  103,
-"endColumn":  25
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 60 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
-"region":  {
-"startLine":  283,
-"startColumn":  7,
-"endLine":  283,
-"endColumn":  25
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
-"region":  {
-"startLine":  438,
-"startColumn":  7,
-"endLine":  438,
-"endColumn":  21
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 18 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
-"region":  {
-"startLine":  564,
-"startColumn":  7,
-"endLine":  564,
-"endColumn":  17
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\ModelBinding\\DefaultBinder.cs",
-"region":  {
-"startLine":  67,
-"startColumn":  22,
-"endLine":  67,
-"endColumn":  26
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 22 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\ModelBinding\\DefaultBinder.cs",
-"region":  {
-"startLine":  238,
-"startColumn":  28,
-"endLine":  238,
-"endColumn":  60
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\ModelBinding\\DefaultBinder.cs",
-"region":  {
-"startLine":  416,
-"startColumn":  30,
-"endLine":  416,
-"endColumn":  41
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\ModelBinding\\ExpressionExtensions.cs",
-"region":  {
-"startLine":  15,
-"startColumn":  33,
-"endLine":  15,
-"endColumn":  52
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Routing\\Constraints\\LengthRouteSegmentConstraint.cs",
-"region":  {
-"startLine":  12,
-"startColumn":  32,
-"endLine":  12,
-"endColumn":  40
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Routing\\Trie\\MatchResult.cs",
-"region":  {
-"startLine":  58,
-"startColumn":  19,
-"endLine":  58,
-"endColumn":  28
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Routing\\Trie\\TrieNodeFactory.cs",
-"region":  {
-"startLine":  26,
-"startColumn":  32,
-"endLine":  26,
-"endColumn":  49
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Security\\DefaultCsrfTokenValidator.cs",
-"region":  {
-"startLine":  31,
-"startColumn":  41,
-"endLine":  31,
-"endColumn":  49
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Session\\CookieBasedSessionsConfiguration.cs",
-"region":  {
-"startLine":  57,
-"startColumn":  12,
-"endLine":  57,
-"endColumn":  15
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
-"region":  {
-"startLine":  449,
-"startColumn":  33,
-"endLine":  449,
-"endColumn":  39
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
-"region":  {
-"startLine":  3084,
-"startColumn":  21,
-"endLine":  3084,
-"endColumn":  41
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
-"region":  {
-"startLine":  3246,
-"startColumn":  21,
-"endLine":  3246,
-"endColumn":  39
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 27 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
-"region":  {
-"startLine":  3316,
-"startColumn":  21,
-"endLine":  3316,
-"endColumn":  50
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
-"region":  {
-"startLine":  3360,
-"startColumn":  23,
-"endLine":  3360,
-"endColumn":  38
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 24 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
-"region":  {
-"startLine":  3468,
-"startColumn":  23,
-"endLine":  3468,
+"startLine":  210,
+"startColumn":  43,
+"endLine":  210,
 "endColumn":  53
 }
 }
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
 },
 {
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Diagnostics\\Modules\\InteractiveModule.cs",
 "region":  {
-"startLine":  3559,
-"startColumn":  21,
-"endLine":  3559,
+"startLine":  14,
+"startColumn":  16,
+"endLine":  14,
 "endColumn":  33
 }
 }
-]
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\DynamicDictionaryValue.cs",
+"region":  {
+"startLine":  76,
+"startColumn":  18,
+"endLine":  76,
+"endColumn":  26
 }
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1541",
-"locations":  [
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 28 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\DynamicDictionaryValue.cs",
+"region":  {
+"startLine":  229,
+"startColumn":  30,
+"endLine":  229,
+"endColumn":  40
+}
+}
+},
 {
-"analysisTarget":  [
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\ErrorHandling\\DefaultStatusCodeHandler.cs",
+"region":  {
+"startLine":  62,
+"startColumn":  21,
+"endLine":  62,
+"endColumn":  27
+}
+}
+},
 {
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 21 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Extensions\\TypeExtensions.cs",
+"region":  {
+"startLine":  87,
+"startColumn":  28,
+"endLine":  87,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Helpers\\CacheHelpers.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  28,
+"endLine":  19,
+"endColumn":  45
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 23 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
+"region":  {
+"startLine":  256,
+"startColumn":  32,
+"endLine":  256,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
+"region":  {
+"startLine":  332,
+"startColumn":  32,
+"endLine":  332,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 31 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
+"region":  {
+"startLine":  389,
+"startColumn":  32,
+"endLine":  389,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
+"region":  {
+"startLine":  575,
+"startColumn":  30,
+"endLine":  575,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
+"region":  {
+"startLine":  135,
+"startColumn":  30,
+"endLine":  135,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 22 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
+"region":  {
+"startLine":  249,
+"startColumn":  30,
+"endLine":  249,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
+"region":  {
+"startLine":  346,
+"startColumn":  30,
+"endLine":  346,
+"endColumn":  46
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
+"region":  {
+"startLine":  389,
+"startColumn":  30,
+"endLine":  389,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Helpers\\ReflectionUtils.cs",
+"region":  {
+"startLine":  71,
+"startColumn":  28,
+"endLine":  71,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 32 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
+"region":  {
+"startLine":  144,
+"startColumn":  25,
+"endLine":  144,
+"endColumn":  38
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
+"region":  {
+"startLine":  275,
+"startColumn":  16,
+"endLine":  275,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 26 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
+"region":  {
+"startLine":  317,
+"startColumn":  16,
+"endLine":  317,
+"endColumn":  31
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
+"region":  {
+"startLine":  423,
+"startColumn":  14,
+"endLine":  423,
+"endColumn":  43
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 24 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
+"region":  {
+"startLine":  484,
+"startColumn":  8,
+"endLine":  484,
+"endColumn":  19
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 73 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Json\\JsonDeserializer.cs",
+"region":  {
+"startLine":  577,
+"startColumn":  8,
+"endLine":  577,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 60 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
+"region":  {
+"startLine":  104,
+"startColumn":  8,
+"endLine":  104,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
+"region":  {
+"startLine":  284,
+"startColumn":  8,
+"endLine":  284,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 18 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
+"region":  {
+"startLine":  439,
+"startColumn":  8,
+"endLine":  439,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Json\\JsonSerializer.cs",
+"region":  {
+"startLine":  565,
+"startColumn":  8,
+"endLine":  565,
+"endColumn":  18
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 22 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\ModelBinding\\DefaultBinder.cs",
+"region":  {
+"startLine":  68,
+"startColumn":  23,
+"endLine":  68,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\ModelBinding\\DefaultBinder.cs",
+"region":  {
+"startLine":  239,
+"startColumn":  29,
+"endLine":  239,
+"endColumn":  61
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\ModelBinding\\DefaultBinder.cs",
+"region":  {
+"startLine":  417,
+"startColumn":  31,
+"endLine":  417,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\ModelBinding\\ExpressionExtensions.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  34,
+"endLine":  16,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Routing\\Constraints\\LengthRouteSegmentConstraint.cs",
+"region":  {
+"startLine":  13,
+"startColumn":  33,
+"endLine":  13,
+"endColumn":  41
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Routing\\Trie\\MatchResult.cs",
+"region":  {
+"startLine":  59,
+"startColumn":  20,
+"endLine":  59,
+"endColumn":  29
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Routing\\Trie\\TrieNodeFactory.cs",
+"region":  {
+"startLine":  27,
+"startColumn":  33,
+"endLine":  27,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Security\\DefaultCsrfTokenValidator.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  42,
+"endLine":  32,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Session\\CookieBasedSessionsConfiguration.cs",
+"region":  {
+"startLine":  58,
+"startColumn":  13,
+"endLine":  58,
+"endColumn":  16
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 17 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+"region":  {
+"startLine":  450,
+"startColumn":  34,
+"endLine":  450,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 14 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+"region":  {
+"startLine":  3085,
+"startColumn":  22,
+"endLine":  3085,
+"endColumn":  42
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 27 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+"region":  {
+"startLine":  3247,
+"startColumn":  22,
+"endLine":  3247,
+"endColumn":  40
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+"region":  {
+"startLine":  3317,
+"startColumn":  22,
+"endLine":  3317,
+"endColumn":  51
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 24 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+"region":  {
+"startLine":  3361,
+"startColumn":  24,
+"endLine":  3361,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+"region":  {
+"startLine":  3469,
+"startColumn":  24,
+"endLine":  3469,
+"endColumn":  54
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
+"region":  {
+"startLine":  3560,
+"startColumn":  22,
+"endLine":  3560,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\DefaultViewLocator.cs",
 "region":  {
-"startLine":  40,
-"startColumn":  34,
-"endLine":  40,
-"endColumn":  44
+"startLine":  41,
+"startColumn":  35,
+"endLine":  41,
+"endColumn":  45
 }
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
 "region":  {
-"startLine":  164,
-"startColumn":  43,
-"endLine":  164,
-"endColumn":  59
+"startLine":  165,
+"startColumn":  44,
+"endLine":  165,
+"endColumn":  60
 }
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\SuperSimpleViewEngine\\SuperSimpleViewEngine.cs",
 "region":  {
-"startLine":  469,
-"startColumn":  23,
-"endLine":  469,
-"endColumn":  47
+"startLine":  470,
+"startColumn":  24,
+"endLine":  470,
+"endColumn":  48
 }
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

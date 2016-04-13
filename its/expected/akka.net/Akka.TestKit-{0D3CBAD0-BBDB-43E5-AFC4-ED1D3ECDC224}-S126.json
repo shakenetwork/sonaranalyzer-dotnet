@@ -1,39 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S126",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S126",
+"message":  "Add the missing \"else\" clause.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase.cs",
 "region":  {
-"startLine":  133,
-"startColumn":  12,
-"endLine":  133,
-"endColumn":  19
+"startLine":  134,
+"startColumn":  13,
+"endLine":  134,
+"endColumn":  20
 }
-}
-]
-}
-],
-"shortMessage":  "Add the missing \"else\" clause.",
-"fullMessage":  "The requirement for a final \"else\"statement is defensive programming. The \"else\" statement should either take appropriate action or contain a suitable comment as to why no action is taken. This is consistent with the requirement to have a final \"default\" clause in a \"switch\" statement.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"if ... else if\" constructs should end with \"else\" clause",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S126",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

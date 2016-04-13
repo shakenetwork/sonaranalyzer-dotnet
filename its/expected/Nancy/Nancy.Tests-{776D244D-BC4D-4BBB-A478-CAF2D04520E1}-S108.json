@@ -1,189 +1,81 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S108",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S108",
+"message":  "Either remove or fill this block of code.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Json\\JavaScriptSerializerFixture.cs",
 "region":  {
-"startLine":  125,
-"startColumn":  18,
-"endLine":  125,
-"endColumn":  21
+"startLine":  126,
+"startColumn":  19,
+"endLine":  126,
+"endColumn":  22
 }
-}
-]
-}
-],
-"shortMessage":  "Either remove or fill this block of code.",
-"fullMessage":  "Most of the time a block of code is empty when a piece of code is really missing. So such empty block must be either filled or removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Nested blocks of code should not be left empty",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S108",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S108",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S108",
+"message":  "Either remove or fill this block of code.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
 "region":  {
-"startLine":  219,
-"startColumn":  20,
-"endLine":  219,
-"endColumn":  23
+"startLine":  220,
+"startColumn":  21,
+"endLine":  220,
+"endColumn":  24
 }
-}
-]
-}
-],
-"shortMessage":  "Either remove or fill this block of code.",
-"fullMessage":  "Most of the time a block of code is empty when a piece of code is really missing. So such empty block must be either filled or removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Nested blocks of code should not be left empty",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S108",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S108",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S108",
+"message":  "Either remove or fill this block of code.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
 "region":  {
-"startLine":  225,
-"startColumn":  20,
-"endLine":  225,
-"endColumn":  23
+"startLine":  226,
+"startColumn":  21,
+"endLine":  226,
+"endColumn":  24
 }
-}
-]
-}
-],
-"shortMessage":  "Either remove or fill this block of code.",
-"fullMessage":  "Most of the time a block of code is empty when a piece of code is really missing. So such empty block must be either filled or removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Nested blocks of code should not be left empty",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S108",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S108",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S108",
+"message":  "Either remove or fill this block of code.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
 "region":  {
-"startLine":  237,
-"startColumn":  20,
-"endLine":  237,
-"endColumn":  23
+"startLine":  238,
+"startColumn":  21,
+"endLine":  238,
+"endColumn":  24
 }
-}
-]
-}
-],
-"shortMessage":  "Either remove or fill this block of code.",
-"fullMessage":  "Most of the time a block of code is empty when a piece of code is really missing. So such empty block must be either filled or removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Nested blocks of code should not be left empty",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S108",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S108",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S108",
+"message":  "Either remove or fill this block of code.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\BindingMemberInfoFixture.cs",
 "region":  {
-"startLine":  250,
-"startColumn":  20,
-"endLine":  250,
-"endColumn":  23
+"startLine":  251,
+"startColumn":  21,
+"endLine":  251,
+"endColumn":  24
 }
-}
-]
-}
-],
-"shortMessage":  "Either remove or fill this block of code.",
-"fullMessage":  "Most of the time a block of code is empty when a piece of code is really missing. So such empty block must be either filled or removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Nested blocks of code should not be left empty",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S108",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S108",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S108",
+"message":  "Either remove or fill this block of code.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
 "region":  {
-"startLine":  1620,
-"startColumn":  20,
-"endLine":  1620,
-"endColumn":  23
+"startLine":  1621,
+"startColumn":  21,
+"endLine":  1621,
+"endColumn":  24
 }
-}
-]
-}
-],
-"shortMessage":  "Either remove or fill this block of code.",
-"fullMessage":  "Most of the time a block of code is empty when a piece of code is really missing. So such empty block must be either filled or removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Nested blocks of code should not be left empty",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S108",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

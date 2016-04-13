@@ -1,159 +1,68 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1854",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"defaultDispatcher\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorRefProvider.cs",
 "region":  {
-"startLine":  275,
-"startColumn":  34,
-"endLine":  275,
-"endColumn":  35
+"startLine":  276,
+"startColumn":  35,
+"endLine":  276,
+"endColumn":  36
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this useless assignment to local variable \"defaultDispatcher\".",
-"fullMessage":  "A dead store happens when a local variable is assigned a value that is not read by any subsequent instruction. Calculating or retrieving a value only to then overwrite it or throw it away, could indicate a serious error in the code.Even if it\u0027s not an error, it is at best a waste of resources. Therefore all calculated values should be used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Dead stores should be removed",
-"category":  "Performance",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1854",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1854",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"original\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Props.cs",
 "region":  {
-"startLine":  461,
-"startColumn":  25,
-"endLine":  461,
-"endColumn":  26
+"startLine":  462,
+"startColumn":  26,
+"endLine":  462,
+"endColumn":  27
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this useless assignment to local variable \"original\".",
-"fullMessage":  "A dead store happens when a local variable is assigned a value that is not read by any subsequent instruction. Calculating or retrieving a value only to then overwrite it or throw it away, could indicate a serious error in the code.Even if it\u0027s not an error, it is at best a waste of resources. Therefore all calculated values should be used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Dead stores should be removed",
-"category":  "Performance",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1854",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1854",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"newWorker\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Helios.Concurrency.DedicatedThreadPool.cs",
 "region":  {
-"startLine":  249,
-"startColumn":  42,
-"endLine":  249,
-"endColumn":  43
+"startLine":  250,
+"startColumn":  43,
+"endLine":  250,
+"endColumn":  44
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this useless assignment to local variable \"newWorker\".",
-"fullMessage":  "A dead store happens when a local variable is assigned a value that is not read by any subsequent instruction. Calculating or retrieving a value only to then overwrite it or throw it away, could indicate a serious error in the code.Even if it\u0027s not an error, it is at best a waste of resources. Therefore all calculated values should be used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Dead stores should be removed",
-"category":  "Performance",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1854",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1854",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"localAddress\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\TcpListener.cs",
 "region":  {
-"startLine":  70,
-"startColumn":  29,
-"endLine":  70,
-"endColumn":  30
+"startLine":  71,
+"startColumn":  30,
+"endLine":  71,
+"endColumn":  31
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this useless assignment to local variable \"localAddress\".",
-"fullMessage":  "A dead store happens when a local variable is assigned a value that is not read by any subsequent instruction. Calculating or retrieving a value only to then overwrite it or throw it away, could indicate a serious error in the code.Even if it\u0027s not an error, it is at best a waste of resources. Therefore all calculated values should be used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Dead stores should be removed",
-"category":  "Performance",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1854",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1854",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"localAddress\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\UdpListener.cs",
 "region":  {
-"startLine":  46,
-"startColumn":  29,
-"endLine":  46,
-"endColumn":  30
+"startLine":  47,
+"startColumn":  30,
+"endLine":  47,
+"endColumn":  31
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this useless assignment to local variable \"localAddress\".",
-"fullMessage":  "A dead store happens when a local variable is assigned a value that is not read by any subsequent instruction. Calculating or retrieving a value only to then overwrite it or throw it away, could indicate a serious error in the code.Even if it\u0027s not an error, it is at best a waste of resources. Therefore all calculated values should be used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Dead stores should be removed",
-"category":  "Performance",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1854",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

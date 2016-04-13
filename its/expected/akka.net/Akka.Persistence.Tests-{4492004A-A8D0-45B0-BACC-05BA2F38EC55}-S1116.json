@@ -1,71 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1116",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1116",
+"message":  "Remove this empty statement.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\EndToEndEventAdapterSpec.cs",
 "region":  {
-"startLine":  243,
-"startColumn":  50,
-"endLine":  243,
-"endColumn":  51
+"startLine":  244,
+"startColumn":  51,
+"endLine":  244,
+"endColumn":  52
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this empty statement.",
-"fullMessage":  "Empty statements, i.e. \";\", are usually introduced by mistake, for example because: It was meant to be replaced by an actual statement, but this was forgotten. There was a typo which lead the semicolon to be doubled, i.e. \";;\".",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Empty statements should be removed",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1116",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S1116",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1116",
+"message":  "Remove this empty statement.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\MemoryEventAdapterSpec.cs",
 "region":  {
-"startLine":  211,
-"startColumn":  50,
-"endLine":  211,
-"endColumn":  51
+"startLine":  212,
+"startColumn":  51,
+"endLine":  212,
+"endColumn":  52
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this empty statement.",
-"fullMessage":  "Empty statements, i.e. \";\", are usually introduced by mistake, for example because: It was meant to be replaced by an actual statement, but this was forgotten. There was a typo which lead the semicolon to be doubled, i.e. \";;\".",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Empty statements should be removed",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1116",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 }
 ]

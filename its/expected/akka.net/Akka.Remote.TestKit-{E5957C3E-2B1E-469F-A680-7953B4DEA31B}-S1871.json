@@ -1,39 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1871",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1871",
+"message":  "Either merge this branch with the identical one on line \"438\" or change one of the implementations.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\BarrierCoordinator.cs",
 "region":  {
-"startLine":  443,
-"startColumn":  28,
-"endLine":  444,
-"endColumn":  117
+"startLine":  444,
+"startColumn":  29,
+"endLine":  445,
+"endColumn":  118
 }
-}
-]
-}
-],
-"shortMessage":  "Either merge this branch with the identical one on line \"438\" or change one of the implementations.",
-"fullMessage":  "Having two \"cases\" in the same \"switch\" statement or branches in the same \"if\" structure with the same implementation is at best duplicate code, and at worst a coding error.If the same logic is truly needed for both instances, then in an \"if\" structure they should be combined, or for a \"switch\", one should fall through to the other.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Two branches in the same conditional structure should not have exactly the same implementation",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1871",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

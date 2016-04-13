@@ -1,39 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2228",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2228",
+"message":  "Remove this logging statement.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\JsonSerializerFixture.cs",
 "region":  {
-"startLine":  50,
-"startColumn":  12,
-"endLine":  50,
-"endColumn":  29
+"startLine":  51,
+"startColumn":  13,
+"endLine":  51,
+"endColumn":  30
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this logging statement.",
-"fullMessage":  "Debug statements are always useful during development. But include them in production code - particularly in code that runs client-side - and you run the risk of inadvertently exposing sensitive information.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Console logging should not be used",
-"category":  "Portability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2228",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

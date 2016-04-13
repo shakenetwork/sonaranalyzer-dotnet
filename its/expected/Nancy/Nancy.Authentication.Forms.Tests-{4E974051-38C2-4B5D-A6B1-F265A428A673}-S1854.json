@@ -1,189 +1,81 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1854",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"result\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
 "region":  {
-"startLine":  410,
-"startColumn":  23,
-"endLine":  410,
-"endColumn":  24
+"startLine":  411,
+"startColumn":  24,
+"endLine":  411,
+"endColumn":  25
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this useless assignment to local variable \"result\".",
-"fullMessage":  "A dead store happens when a local variable is assigned a value that is not read by any subsequent instruction. Calculating or retrieving a value only to then overwrite it or throw it away, could indicate a serious error in the code.Even if it\u0027s not an error, it is at best a waste of resources. Therefore all calculated values should be used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Dead stores should be removed",
-"category":  "Performance",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1854",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1854",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"result\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
 "region":  {
-"startLine":  426,
-"startColumn":  23,
-"endLine":  426,
-"endColumn":  24
+"startLine":  427,
+"startColumn":  24,
+"endLine":  427,
+"endColumn":  25
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this useless assignment to local variable \"result\".",
-"fullMessage":  "A dead store happens when a local variable is assigned a value that is not read by any subsequent instruction. Calculating or retrieving a value only to then overwrite it or throw it away, could indicate a serious error in the code.Even if it\u0027s not an error, it is at best a waste of resources. Therefore all calculated values should be used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Dead stores should be removed",
-"category":  "Performance",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1854",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1854",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"result\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
 "region":  {
-"startLine":  442,
-"startColumn":  23,
-"endLine":  442,
-"endColumn":  24
+"startLine":  443,
+"startColumn":  24,
+"endLine":  443,
+"endColumn":  25
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this useless assignment to local variable \"result\".",
-"fullMessage":  "A dead store happens when a local variable is assigned a value that is not read by any subsequent instruction. Calculating or retrieving a value only to then overwrite it or throw it away, could indicate a serious error in the code.Even if it\u0027s not an error, it is at best a waste of resources. Therefore all calculated values should be used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Dead stores should be removed",
-"category":  "Performance",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1854",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1854",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"result\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
 "region":  {
-"startLine":  458,
-"startColumn":  23,
-"endLine":  458,
-"endColumn":  24
+"startLine":  459,
+"startColumn":  24,
+"endLine":  459,
+"endColumn":  25
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this useless assignment to local variable \"result\".",
-"fullMessage":  "A dead store happens when a local variable is assigned a value that is not read by any subsequent instruction. Calculating or retrieving a value only to then overwrite it or throw it away, could indicate a serious error in the code.Even if it\u0027s not an error, it is at best a waste of resources. Therefore all calculated values should be used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Dead stores should be removed",
-"category":  "Performance",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1854",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1854",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"result\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
 "region":  {
-"startLine":  474,
-"startColumn":  23,
-"endLine":  474,
-"endColumn":  24
+"startLine":  475,
+"startColumn":  24,
+"endLine":  475,
+"endColumn":  25
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this useless assignment to local variable \"result\".",
-"fullMessage":  "A dead store happens when a local variable is assigned a value that is not read by any subsequent instruction. Calculating or retrieving a value only to then overwrite it or throw it away, could indicate a serious error in the code.Even if it\u0027s not an error, it is at best a waste of resources. Therefore all calculated values should be used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Dead stores should be removed",
-"category":  "Performance",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1854",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1854",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"result\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\FormsAuthenticationFixture.cs",
 "region":  {
-"startLine":  490,
-"startColumn":  23,
-"endLine":  490,
-"endColumn":  24
+"startLine":  491,
+"startColumn":  24,
+"endLine":  491,
+"endColumn":  25
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this useless assignment to local variable \"result\".",
-"fullMessage":  "A dead store happens when a local variable is assigned a value that is not read by any subsequent instruction. Calculating or retrieving a value only to then overwrite it or throw it away, could indicate a serious error in the code.Even if it\u0027s not an error, it is at best a waste of resources. Therefore all calculated values should be used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Dead stores should be removed",
-"category":  "Performance",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1854",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

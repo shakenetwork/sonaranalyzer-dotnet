@@ -1,69 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2743",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\contrib\\testkits\\Akka.TestKit.Xunit\\Internals\\AkkaAssertEqualityComparer.cs",
-"region":  {
-"startLine":  23,
-"startColumn":  42,
-"endLine":  23,
-"endColumn":  62
-}
-}
-]
-}
-],
-"shortMessage":  "A static field in a generic type is not shared among instances of different close constructed types.",
-"fullMessage":  "A static field in a generic type is not shared among instances of different closed constructed types, If you need to have a static field shared among instances with different generic arguments, define a non-generic base class to store your static members, then set your generic type to inherit from the base class.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Static fields should not be used in generic types",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2743",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2743",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2743",
+"message":  "A static field in a generic type is not shared among instances of different close constructed types.",
+"location":  {
 "uri":  "akka.net\\src\\contrib\\testkits\\Akka.TestKit.Xunit\\Internals\\AkkaAssertEqualityComparer.cs",
 "region":  {
 "startLine":  24,
-"startColumn":  33,
+"startColumn":  43,
 "endLine":  24,
-"endColumn":  49
+"endColumn":  63
 }
 }
-]
+},
+{
+"id":  "S2743",
+"message":  "A static field in a generic type is not shared among instances of different close constructed types.",
+"location":  {
+"uri":  "akka.net\\src\\contrib\\testkits\\Akka.TestKit.Xunit\\Internals\\AkkaAssertEqualityComparer.cs",
+"region":  {
+"startLine":  25,
+"startColumn":  34,
+"endLine":  25,
+"endColumn":  50
 }
-],
-"shortMessage":  "A static field in a generic type is not shared among instances of different close constructed types.",
-"fullMessage":  "A static field in a generic type is not shared among instances of different closed constructed types, If you need to have a static field shared among instances with different generic arguments, define a non-generic base class to store your static members, then set your generic type to inherit from the base class.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Static fields should not be used in generic types",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2743",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

@@ -1,189 +1,81 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1117",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Authentication.Basic.Tests\\BasicAuthenticationFixture.cs",
-"region":  {
-"startLine":  144,
-"startColumn":  16,
-"endLine":  144,
-"endColumn":  22
-}
-}
-]
-}
-],
-"shortMessage":  "Rename \"config\" which hides the field with the same name.",
-"fullMessage":  "Shadowing fields with a local variable is a bad practice that reduces code readability: It makes it confusing to know whether the field or the variable is being used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Local variables should not shadow class fields",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1117",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1117",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1117",
+"message":  "Rename \"config\" which hides the field with the same name.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Authentication.Basic.Tests\\BasicAuthenticationFixture.cs",
 "region":  {
 "startLine":  145,
-"startColumn":  16,
+"startColumn":  17,
 "endLine":  145,
-"endColumn":  21
+"endColumn":  23
 }
-}
-]
-}
-],
-"shortMessage":  "Rename \"hooks\" which hides the field with the same name.",
-"fullMessage":  "Shadowing fields with a local variable is a bad practice that reduces code readability: It makes it confusing to know whether the field or the variable is being used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Local variables should not shadow class fields",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1117",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1117",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1117",
+"message":  "Rename \"hooks\" which hides the field with the same name.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Authentication.Basic.Tests\\BasicAuthenticationFixture.cs",
 "region":  {
-"startLine":  166,
-"startColumn":  16,
-"endLine":  166,
+"startLine":  146,
+"startColumn":  17,
+"endLine":  146,
 "endColumn":  22
 }
 }
-]
-}
-],
-"shortMessage":  "Rename \"config\" which hides the field with the same name.",
-"fullMessage":  "Shadowing fields with a local variable is a bad practice that reduces code readability: It makes it confusing to know whether the field or the variable is being used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Local variables should not shadow class fields",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1117",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
 },
 {
-"ruleId":  "S1117",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1117",
+"message":  "Rename \"config\" which hides the field with the same name.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Authentication.Basic.Tests\\BasicAuthenticationFixture.cs",
 "region":  {
 "startLine":  167,
-"startColumn":  16,
+"startColumn":  17,
 "endLine":  167,
-"endColumn":  21
+"endColumn":  23
 }
-}
-]
-}
-],
-"shortMessage":  "Rename \"hooks\" which hides the field with the same name.",
-"fullMessage":  "Shadowing fields with a local variable is a bad practice that reduces code readability: It makes it confusing to know whether the field or the variable is being used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Local variables should not shadow class fields",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1117",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1117",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1117",
+"message":  "Rename \"hooks\" which hides the field with the same name.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Authentication.Basic.Tests\\BasicAuthenticationFixture.cs",
 "region":  {
-"startLine":  190,
-"startColumn":  16,
-"endLine":  190,
+"startLine":  168,
+"startColumn":  17,
+"endLine":  168,
 "endColumn":  22
 }
 }
-]
-}
-],
-"shortMessage":  "Rename \"config\" which hides the field with the same name.",
-"fullMessage":  "Shadowing fields with a local variable is a bad practice that reduces code readability: It makes it confusing to know whether the field or the variable is being used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Local variables should not shadow class fields",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1117",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
 },
 {
-"ruleId":  "S1117",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1117",
+"message":  "Rename \"config\" which hides the field with the same name.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Authentication.Basic.Tests\\BasicAuthenticationFixture.cs",
 "region":  {
 "startLine":  191,
-"startColumn":  16,
+"startColumn":  17,
 "endLine":  191,
-"endColumn":  21
+"endColumn":  23
 }
 }
-]
+},
+{
+"id":  "S1117",
+"message":  "Rename \"hooks\" which hides the field with the same name.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Authentication.Basic.Tests\\BasicAuthenticationFixture.cs",
+"region":  {
+"startLine":  192,
+"startColumn":  17,
+"endLine":  192,
+"endColumn":  22
 }
-],
-"shortMessage":  "Rename \"hooks\" which hides the field with the same name.",
-"fullMessage":  "Shadowing fields with a local variable is a bad practice that reduces code readability: It makes it confusing to know whether the field or the variable is being used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Local variables should not shadow class fields",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1117",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

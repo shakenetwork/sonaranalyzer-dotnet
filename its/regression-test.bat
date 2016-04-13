@@ -44,7 +44,7 @@ if not %ERRORLEVEL%==0 goto build_error
 
 REM Normalize SARIF reports
 echo Normalizing the SARIF reports
-powershell.exe -executionpolicy bypass ./NormalizeSarifReports.ps1
+powershell.exe -executionpolicy bypass ./CreateIssueReports.ps1
 if not %ERRORLEVEL%==0 goto ps_error
 
 REM Compute analyzer performances

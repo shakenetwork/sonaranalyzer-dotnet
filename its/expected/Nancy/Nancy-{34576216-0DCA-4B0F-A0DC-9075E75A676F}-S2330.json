@@ -1,69 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2330",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2330",
+"message":  "Refactor the code to not rely on potentially unsafe array conversions.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\ReflectionUtils.cs",
 "region":  {
-"startLine":  284,
-"startColumn":  35,
-"endLine":  284,
-"endColumn":  62
+"startLine":  285,
+"startColumn":  36,
+"endLine":  285,
+"endColumn":  63
 }
-}
-]
-}
-],
-"shortMessage":  "Refactor the code to not rely on potentially unsafe array conversions.",
-"fullMessage":  "Array covariance is the principle that if an implicit or explicit reference conversion exits from type \"A\" to \"B\", then the same conversion exists from the array type \"A[]\" to \"B[]\". While this array conversion can be useful in readonly situations to pass instances of \"A[]\" wherever \"B[]\" is expected, it must be used with care, since assigning an instance of \"B\" into an array of \"A\" will cause an \"ArrayTypeMismatchException\" to be thrown at runtime.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Array covariance should not be used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2330",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2330",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2330",
+"message":  "Refactor the code to not rely on potentially unsafe array conversions.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\ReflectionUtils.cs",
 "region":  {
-"startLine":  287,
-"startColumn":  22,
-"endLine":  287,
-"endColumn":  53
+"startLine":  288,
+"startColumn":  23,
+"endLine":  288,
+"endColumn":  54
 }
-}
-]
-}
-],
-"shortMessage":  "Refactor the code to not rely on potentially unsafe array conversions.",
-"fullMessage":  "Array covariance is the principle that if an implicit or explicit reference conversion exits from type \"A\" to \"B\", then the same conversion exists from the array type \"A[]\" to \"B[]\". While this array conversion can be useful in readonly situations to pass instances of \"A[]\" wherever \"B[]\" is expected, it must be used with care, since assigning an instance of \"B\" into an array of \"A\" will cause an \"ArrayTypeMismatchException\" to be thrown at runtime.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Array covariance should not be used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2330",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

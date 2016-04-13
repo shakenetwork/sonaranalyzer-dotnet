@@ -1,99 +1,42 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2696",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2696",
+"message":  "Make the enclosing instance method \"static\" or remove this set on the \"static\" field.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Helios.Concurrency.DedicatedThreadPool.cs",
 "region":  {
-"startLine":  187,
-"startColumn":  16,
-"endLine":  187,
-"endColumn":  46
+"startLine":  188,
+"startColumn":  17,
+"endLine":  188,
+"endColumn":  47
 }
-}
-]
-}
-],
-"shortMessage":  "Make the enclosing instance method \"static\" or remove this set on the \"static\" field.",
-"fullMessage":  "Correctly updating a \"static\" field from a non-static method is tricky to get right and could easily lead to bugs if there are multiple class instances and/or multiple threads in play.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Instance members should not write to \"static\" fields",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2696",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2696",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2696",
+"message":  "Make the enclosing instance method \"static\" or remove this set on the \"static\" field.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Helios.Concurrency.DedicatedThreadPool.cs",
 "region":  {
-"startLine":  213,
-"startColumn":  26,
-"endLine":  213,
-"endColumn":  56
+"startLine":  214,
+"startColumn":  27,
+"endLine":  214,
+"endColumn":  57
 }
-}
-]
-}
-],
-"shortMessage":  "Make the enclosing instance method \"static\" or remove this set on the \"static\" field.",
-"fullMessage":  "Correctly updating a \"static\" field from a non-static method is tricky to get right and could easily lead to bugs if there are multiple class instances and/or multiple threads in play.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Instance members should not write to \"static\" fields",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2696",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2696",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2696",
+"message":  "Make the enclosing instance method \"static\" or remove this set on the \"static\" field.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Helios.Concurrency.DedicatedThreadPool.cs",
 "region":  {
-"startLine":  444,
-"startColumn":  16,
-"endLine":  444,
-"endColumn":  31
+"startLine":  445,
+"startColumn":  17,
+"endLine":  445,
+"endColumn":  32
 }
-}
-]
-}
-],
-"shortMessage":  "Make the enclosing instance method \"static\" or remove this set on the \"static\" field.",
-"fullMessage":  "Correctly updating a \"static\" field from a non-static method is tricky to get right and could easily lead to bugs if there are multiple class instances and/or multiple threads in play.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Instance members should not write to \"static\" fields",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2696",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

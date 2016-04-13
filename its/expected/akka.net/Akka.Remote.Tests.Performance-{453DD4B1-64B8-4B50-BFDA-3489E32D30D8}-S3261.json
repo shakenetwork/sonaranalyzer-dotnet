@@ -1,40 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S3261",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3261",
+"message":  "Remove this empty namespace.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.Tests.Performance\\Transports\\HeliosRemoteMessagingThroughputSpec.cs",
 "region":  {
-"startLine":  0,
-"startColumn":  0,
-"endLine":  58,
-"endColumn":  1
+"startLine":  1,
+"startColumn":  1,
+"endLine":  59,
+"endColumn":  2
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this empty namespace.",
-"fullMessage":  "Namespaces with no lines of code clutter a project and should be removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Info",
-"title":  "Namespaces should not be empty",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3261",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 }
 ]

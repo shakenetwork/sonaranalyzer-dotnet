@@ -1,309 +1,133 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2357",
+"message":  "Make \"Payload\" private.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\EndToEndEventAdapterSpec.cs",
 "region":  {
-"startLine":  93,
-"startColumn":  35,
-"endLine":  93,
-"endColumn":  42
+"startLine":  94,
+"startColumn":  36,
+"endLine":  94,
+"endColumn":  43
 }
-}
-]
-}
-],
-"shortMessage":  "Make \"Payload\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\MemoryEventAdapterSpec.cs",
-"region":  {
-"startLine":  79,
-"startColumn":  41,
-"endLine":  79,
-"endColumn":  45
-}
-}
-]
-}
-],
-"shortMessage":  "Make \"Tags\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2357",
+"message":  "Make \"Tags\" private.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\MemoryEventAdapterSpec.cs",
 "region":  {
 "startLine":  80,
-"startColumn":  32,
+"startColumn":  42,
 "endLine":  80,
-"endColumn":  37
-}
-}
-]
-}
-],
-"shortMessage":  "Make \"Value\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\MemoryEventAdapterSpec.cs",
-"region":  {
-"startLine":  102,
-"startColumn":  35,
-"endLine":  102,
 "endColumn":  46
 }
 }
-]
+},
+{
+"id":  "S2357",
+"message":  "Make \"Value\" private.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\MemoryEventAdapterSpec.cs",
+"region":  {
+"startLine":  81,
+"startColumn":  33,
+"endLine":  81,
+"endColumn":  38
 }
-],
-"shortMessage":  "Make \"CountryCode\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2357",
+"message":  "Make \"CountryCode\" private.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\MemoryEventAdapterSpec.cs",
 "region":  {
 "startLine":  103,
-"startColumn":  32,
+"startColumn":  36,
 "endLine":  103,
-"endColumn":  35
-}
-}
-]
-}
-],
-"shortMessage":  "Make \"Age\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\MemoryEventAdapterSpec.cs",
-"region":  {
-"startLine":  124,
-"startColumn":  41,
-"endLine":  124,
-"endColumn":  46
-}
-}
-]
-}
-],
-"shortMessage":  "Make \"Adult\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\MemoryEventAdapterSpec.cs",
-"region":  {
-"startLine":  125,
-"startColumn":  41,
-"endLine":  125,
-"endColumn":  46
-}
-}
-]
-}
-],
-"shortMessage":  "Make \"Minor\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\MemoryEventAdapterSpec.cs",
-"region":  {
-"startLine":  157,
-"startColumn":  44,
-"endLine":  157,
 "endColumn":  47
 }
 }
-]
-}
-],
-"shortMessage":  "Make \"Log\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
 },
 {
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2357",
+"message":  "Make \"Age\" private.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\MemoryEventAdapterSpec.cs",
 "region":  {
-"startLine":  183,
-"startColumn":  47,
-"endLine":  183,
-"endColumn":  52
+"startLine":  104,
+"startColumn":  33,
+"endLine":  104,
+"endColumn":  36
 }
-}
-]
-}
-],
-"shortMessage":  "Make \"State\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2357",
-"locations":  [
+"id":  "S2357",
+"message":  "Make \"Adult\" private.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\MemoryEventAdapterSpec.cs",
+"region":  {
+"startLine":  125,
+"startColumn":  42,
+"endLine":  125,
+"endColumn":  47
+}
+}
+},
 {
-"analysisTarget":  [
+"id":  "S2357",
+"message":  "Make \"Minor\" private.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\MemoryEventAdapterSpec.cs",
+"region":  {
+"startLine":  126,
+"startColumn":  42,
+"endLine":  126,
+"endColumn":  47
+}
+}
+},
 {
+"id":  "S2357",
+"message":  "Make \"Log\" private.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\MemoryEventAdapterSpec.cs",
+"region":  {
+"startLine":  158,
+"startColumn":  45,
+"endLine":  158,
+"endColumn":  48
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"State\" private.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\MemoryEventAdapterSpec.cs",
+"region":  {
+"startLine":  184,
+"startColumn":  48,
+"endLine":  184,
+"endColumn":  53
+}
+}
+},
+{
+"id":  "S2357",
+"message":  "Make \"State\" private.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence.Tests\\ReceivePersistentActorTests.cs",
 "region":  {
-"startLine":  156,
-"startColumn":  47,
-"endLine":  156,
-"endColumn":  52
+"startLine":  157,
+"startColumn":  48,
+"endLine":  157,
+"endColumn":  53
 }
-}
-]
-}
-],
-"shortMessage":  "Make \"State\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

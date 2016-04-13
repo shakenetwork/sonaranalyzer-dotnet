@@ -1,40 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S3234",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3234",
+"message":  "Remove this useless call to \"GC.SuppressFinalize\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
-"startLine":  3841,
-"startColumn":  16,
-"endLine":  3841,
-"endColumn":  41
+"startLine":  3842,
+"startColumn":  17,
+"endLine":  3842,
+"endColumn":  42
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this useless call to \"GC.SuppressFinalize\".",
-"fullMessage":  "\"GC.SuppressFinalize\" asks the Common Language Runtime not to call the finalizer of an object. This is useful when implementing the dispose pattern where object finalization is already handled in \"IDisposable.Dispose\". However, it has no effect if there is no finalizer defined in the object\u0027s type, so using it in such cases is just confusing.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "\"GC.SuppressFinalize\" should not be invoked for types without destructors",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3234",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 }
 ]

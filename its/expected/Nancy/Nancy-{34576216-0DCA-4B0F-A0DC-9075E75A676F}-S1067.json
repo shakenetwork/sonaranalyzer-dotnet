@@ -1,279 +1,120 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1067",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Conventions\\DefaultViewLocationConventions.cs",
 "region":  {
-"startLine":  40,
-"startColumn":  12,
-"endLine":  141,
-"endColumn":  13
+"startLine":  41,
+"startColumn":  13,
+"endLine":  142,
+"endColumn":  14
 }
-}
-]
-}
-],
-"shortMessage":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
-"fullMessage":  "The complexity of an expression is defined by the number of \"\u0026\u0026\", \"||\" and \"condition ? ifTrue : ifFalse\" operators it contains. A single expression\u0027s complexity should not become too high to keep the code readable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Expressions should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1067",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1067",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
 "region":  {
-"startLine":  267,
+"startLine":  268,
+"startColumn":  21,
+"endLine":  268,
+"endColumn":  76
+}
+}
+},
+{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (7) used in the expression (maximum allowed 3).",
+"location":  {
+"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
+"region":  {
+"startLine":  568,
 "startColumn":  20,
-"endLine":  267,
-"endColumn":  75
+"endLine":  572,
+"endColumn":  2
 }
-}
-]
-}
-],
-"shortMessage":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
-"fullMessage":  "The complexity of an expression is defined by the number of \"\u0026\u0026\", \"||\" and \"condition ? ifTrue : ifFalse\" operators it contains. A single expression\u0027s complexity should not become too high to keep the code readable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Expressions should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1067",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1067",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
 "region":  {
-"startLine":  567,
-"startColumn":  19,
-"endLine":  571,
-"endColumn":  1
+"startLine":  608,
+"startColumn":  17,
+"endLine":  611,
+"endColumn":  26
 }
-}
-]
-}
-],
-"shortMessage":  "Reduce the number of conditional operators (7) used in the expression (maximum allowed 3).",
-"fullMessage":  "The complexity of an expression is defined by the number of \"\u0026\u0026\", \"||\" and \"condition ? ifTrue : ifFalse\" operators it contains. A single expression\u0027s complexity should not become too high to keep the code readable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Expressions should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1067",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1067",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy\\Helpers\\HttpEncoder.cs",
-"region":  {
-"startLine":  607,
-"startColumn":  16,
-"endLine":  610,
-"endColumn":  25
-}
-}
-]
-}
-],
-"shortMessage":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
-"fullMessage":  "The complexity of an expression is defined by the number of \"\u0026\u0026\", \"||\" and \"condition ? ifTrue : ifFalse\" operators it contains. A single expression\u0027s complexity should not become too high to keep the code readable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Expressions should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1067",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1067",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Helpers\\HttpUtility.cs",
 "region":  {
-"startLine":  401,
-"startColumn":  20,
-"endLine":  401,
-"endColumn":  90
+"startLine":  402,
+"startColumn":  21,
+"endLine":  402,
+"endColumn":  91
 }
-}
-]
-}
-],
-"shortMessage":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
-"fullMessage":  "The complexity of an expression is defined by the number of \"\u0026\u0026\", \"||\" and \"condition ? ifTrue : ifFalse\" operators it contains. A single expression\u0027s complexity should not become too high to keep the code readable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Expressions should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1067",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1067",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Json\\JavaScriptSerializer.cs",
 "region":  {
-"startLine":  334,
-"startColumn":  24,
-"endLine":  334,
-"endColumn":  168
+"startLine":  335,
+"startColumn":  25,
+"endLine":  335,
+"endColumn":  169
 }
-}
-]
-}
-],
-"shortMessage":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
-"fullMessage":  "The complexity of an expression is defined by the number of \"\u0026\u0026\", \"||\" and \"condition ? ifTrue : ifFalse\" operators it contains. A single expression\u0027s complexity should not become too high to keep the code readable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Expressions should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1067",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1067",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Responses\\DefaultJsonSerializer.cs",
 "region":  {
-"startLine":  126,
-"startColumn":  19,
-"endLine":  130,
-"endColumn":  82
+"startLine":  127,
+"startColumn":  20,
+"endLine":  131,
+"endColumn":  83
 }
-}
-]
-}
-],
-"shortMessage":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
-"fullMessage":  "The complexity of an expression is defined by the number of \"\u0026\u0026\", \"||\" and \"condition ? ifTrue : ifFalse\" operators it contains. A single expression\u0027s complexity should not become too high to keep the code readable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Expressions should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1067",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1067",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
-"startLine":  3090,
-"startColumn":  36,
-"endLine":  3092,
-"endColumn":  47
+"startLine":  3091,
+"startColumn":  37,
+"endLine":  3093,
+"endColumn":  48
 }
-}
-]
-}
-],
-"shortMessage":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
-"fullMessage":  "The complexity of an expression is defined by the number of \"\u0026\u0026\", \"||\" and \"condition ? ifTrue : ifFalse\" operators it contains. A single expression\u0027s complexity should not become too high to keep the code readable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Expressions should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1067",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1067",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (6) used in the expression (maximum allowed 3).",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\ViewEngines\\Extensions.cs",
 "region":  {
-"startLine":  28,
-"startColumn":  19,
-"endLine":  32,
-"endColumn":  90
+"startLine":  29,
+"startColumn":  20,
+"endLine":  33,
+"endColumn":  91
 }
-}
-]
-}
-],
-"shortMessage":  "Reduce the number of conditional operators (6) used in the expression (maximum allowed 3).",
-"fullMessage":  "The complexity of an expression is defined by the number of \"\u0026\u0026\", \"||\" and \"condition ? ifTrue : ifFalse\" operators it contains. A single expression\u0027s complexity should not become too high to keep the code readable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Expressions should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1067",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

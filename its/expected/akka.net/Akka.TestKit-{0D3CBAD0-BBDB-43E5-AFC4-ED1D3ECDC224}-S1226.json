@@ -1,399 +1,172 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"matchedEventHandler\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\EventFilter\\Internal\\EventFilterApplier.cs",
 "region":  {
-"startLine":  107,
-"startColumn":  12,
-"endLine":  107,
-"endColumn":  31
+"startLine":  108,
+"startColumn":  13,
+"endLine":  108,
+"endColumn":  32
 }
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"matchedEventHandler\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"sender\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\Internal\\InternalTestActorRef.cs",
 "region":  {
-"startLine":  73,
-"startColumn":  12,
-"endLine":  73,
-"endColumn":  18
+"startLine":  74,
+"startColumn":  13,
+"endLine":  74,
+"endColumn":  19
 }
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"sender\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"name\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\Internal\\InternalTestActorRef.cs",
 "region":  {
-"startLine":  131,
-"startColumn":  16,
-"endLine":  131,
-"endColumn":  20
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"name\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\Internal\\InternalTestActorRef.cs",
-"region":  {
-"startLine":  136,
-"startColumn":  16,
-"endLine":  136,
-"endColumn":  26
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"supervisor\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\Internal\\InternalTestActorRef.cs",
-"region":  {
-"startLine":  142,
-"startColumn":  16,
-"endLine":  142,
+"startLine":  132,
+"startColumn":  17,
+"endLine":  132,
 "endColumn":  21
 }
 }
-]
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"supervisor\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.TestKit\\Internal\\InternalTestActorRef.cs",
+"region":  {
+"startLine":  137,
+"startColumn":  17,
+"endLine":  137,
+"endColumn":  27
 }
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"props\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase.cs",
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"props\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.TestKit\\Internal\\InternalTestActorRef.cs",
 "region":  {
-"startLine":  101,
-"startColumn":  16,
-"endLine":  101,
+"startLine":  143,
+"startColumn":  17,
+"endLine":  143,
 "endColumn":  22
 }
 }
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"system\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
 },
 {
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"system\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase.cs",
 "region":  {
-"startLine":  119,
-"startColumn":  16,
-"endLine":  119,
-"endColumn":  29
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"testActorName\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase.cs",
-"region":  {
-"startLine":  342,
-"startColumn":  32,
-"endLine":  342,
-"endColumn":  38
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"system\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_Expect.cs",
-"region":  {
-"startLine":  171,
-"startColumn":  12,
-"endLine":  171,
-"endColumn":  21
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"msgAssert\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_Expect.cs",
-"region":  {
-"startLine":  172,
-"startColumn":  12,
-"endLine":  172,
-"endColumn":  24
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"senderAssert\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_Expect.cs",
-"region":  {
-"startLine":  327,
-"startColumn":  12,
-"endLine":  327,
-"endColumn":  20
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"areEqual\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_Within.cs",
-"region":  {
-"startLine":  64,
-"startColumn":  12,
-"endLine":  64,
-"endColumn":  15
-}
-}
-]
-}
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"max\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1226",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestLatch.cs",
-"region":  {
-"startLine":  140,
-"startColumn":  16,
-"endLine":  140,
+"startLine":  102,
+"startColumn":  17,
+"endLine":  102,
 "endColumn":  23
 }
 }
-]
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"testActorName\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase.cs",
+"region":  {
+"startLine":  120,
+"startColumn":  17,
+"endLine":  120,
+"endColumn":  30
 }
-],
-"shortMessage":  "Introduce a new variable instead of reusing the parameter \"timeout\".",
-"fullMessage":  "While it is technically correct to assign to parameters from within method bodies, it is better to use temporary variables to store intermediate results. This rule will typically detect cases where a constructor parameter is assigned to itself instead of a field of the same name, i.e. when \"this\"/\"Me\" was forgotten. Allowing parameters to be assigned to also reduces the code readability as developers will not be able to know whether the original parameter or some temporary variable is being accessed without going through the whole method. Moreover, some developers might also expect assignments of method parameters to be visible from callers, which is not the case and can confuse them. All parameters should be treated as read-only.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Method parameters and caught exceptions should not be reassigned",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1226",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"system\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase.cs",
+"region":  {
+"startLine":  343,
+"startColumn":  33,
+"endLine":  343,
+"endColumn":  39
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"msgAssert\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_Expect.cs",
+"region":  {
+"startLine":  172,
+"startColumn":  13,
+"endLine":  172,
+"endColumn":  22
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"senderAssert\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_Expect.cs",
+"region":  {
+"startLine":  173,
+"startColumn":  13,
+"endLine":  173,
+"endColumn":  25
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"areEqual\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_Expect.cs",
+"region":  {
+"startLine":  328,
+"startColumn":  13,
+"endLine":  328,
+"endColumn":  21
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"max\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestKitBase_Within.cs",
+"region":  {
+"startLine":  65,
+"startColumn":  13,
+"endLine":  65,
+"endColumn":  16
+}
+}
+},
+{
+"id":  "S1226",
+"message":  "Introduce a new variable instead of reusing the parameter \"timeout\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.TestKit\\TestLatch.cs",
+"region":  {
+"startLine":  141,
+"startColumn":  17,
+"endLine":  141,
+"endColumn":  24
+}
 }
 }
 ]

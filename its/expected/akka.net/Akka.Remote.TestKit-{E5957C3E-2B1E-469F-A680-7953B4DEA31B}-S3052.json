@@ -1,133 +1,55 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_failed\", the compiler will do that for you.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\BarrierCoordinator.cs",
 "region":  {
-"startLine":  384,
+"startLine":  385,
+"startColumn":  30,
+"endLine":  385,
+"endColumn":  37
+}
+}
+},
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_commonConf\", the compiler will do that for you.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\MultiNodeSpec.cs",
+"region":  {
+"startLine":  31,
+"startColumn":  28,
+"endLine":  31,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_testTransport\", the compiler will do that for you.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\MultiNodeSpec.cs",
+"region":  {
+"startLine":  36,
 "startColumn":  29,
-"endLine":  384,
+"endLine":  36,
 "endColumn":  36
 }
 }
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_failed\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
-}
 },
 {
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\MultiNodeSpec.cs",
-"region":  {
-"startLine":  30,
-"startColumn":  27,
-"endLine":  30,
-"endColumn":  33
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_commonConf\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
-}
-},
-{
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\MultiNodeSpec.cs",
-"region":  {
-"startLine":  35,
-"startColumn":  28,
-"endLine":  35,
-"endColumn":  35
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_testTransport\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
-}
-},
-{
-"ruleId":  "S3052",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3052",
+"message":  "Remove this initialization to \"_loggedDisconnect\", the compiler will do that for you.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
 "region":  {
-"startLine":  525,
-"startColumn":  39,
-"endLine":  525,
-"endColumn":  46
+"startLine":  526,
+"startColumn":  40,
+"endLine":  526,
+"endColumn":  47
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this initialization to \"_loggedDisconnect\", the compiler will do that for you.",
-"fullMessage":  "The compiler automatically initializes class fields to their default values before setting them with any initialization values, so there is no need to explicitly set a field to its default value, but doing. Further, under the logic that cleaner code is better code, it\u0027s considered poor style to do so.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Fields should not be initialized to default values",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3052",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 }
 ]

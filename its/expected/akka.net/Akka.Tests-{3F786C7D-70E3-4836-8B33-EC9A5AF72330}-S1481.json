@@ -1,429 +1,185 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1481",
+"message":  "Remove this unused \"b\" local variable.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorDslSpec.cs",
 "region":  {
-"startLine":  98,
-"startColumn":  20,
-"endLine":  98,
-"endColumn":  21
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"b\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorRefSpec.cs",
-"region":  {
-"startLine":  104,
-"startColumn":  20,
-"endLine":  104,
-"endColumn":  24
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"bref\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorSystemSpec.cs",
-"region":  {
-"startLine":  58,
-"startColumn":  16,
-"endLine":  58,
-"endColumn":  33
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"asyncShutdownTask\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\DeathWatchSpec.cs",
-"region":  {
-"startLine":  134,
-"startColumn":  20,
-"endLine":  134,
-"endColumn":  27
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"monitor\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTimingSpec.cs",
-"region":  {
-"startLine":  365,
-"startColumn":  32,
-"endLine":  365,
-"endColumn":  48
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"numberOfMessages\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\LocalActorRefProviderSpec.cs",
-"region":  {
-"startLine":  100,
-"startColumn":  24,
-"endLine":  100,
-"endColumn":  25
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"a\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\LocalActorRefProviderSpec.cs",
-"region":  {
-"startLine":  101,
-"startColumn":  24,
-"endLine":  101,
-"endColumn":  25
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"b\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\PatternSpec.cs",
-"region":  {
-"startLine":  62,
-"startColumn":  20,
-"endLine":  62,
-"endColumn":  26
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"result\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\PropsSpec.cs",
-"region":  {
-"startLine":  39,
-"startColumn":  22,
-"endLine":  39,
-"endColumn":  27
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"actor\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\SupervisorHierarchySpec.cs",
-"region":  {
-"startLine":  110,
-"startColumn":  16,
-"endLine":  110,
-"endColumn":  23
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"worker2\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\SupervisorHierarchySpec.cs",
-"region":  {
-"startLine":  111,
-"startColumn":  16,
-"endLine":  111,
-"endColumn":  23
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"worker3\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\UdpIntegrationSpec.cs",
-"region":  {
-"startLine":  55,
-"startColumn":  16,
-"endLine":  55,
+"startLine":  99,
+"startColumn":  21,
+"endLine":  99,
 "endColumn":  22
 }
 }
-]
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"bref\" local variable.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorRefSpec.cs",
+"region":  {
+"startLine":  105,
+"startColumn":  21,
+"endLine":  105,
+"endColumn":  25
 }
-],
-"shortMessage":  "Remove this unused \"server\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchHandlerBuilderTests.cs",
+"id":  "S1481",
+"message":  "Remove this unused \"asyncShutdownTask\" local variable.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorSystemSpec.cs",
 "region":  {
-"startLine":  104,
-"startColumn":  48,
-"endLine":  104,
-"endColumn":  49
+"startLine":  59,
+"startColumn":  17,
+"endLine":  59,
+"endColumn":  34
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"x\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchHandlerBuilderTests.cs",
+"id":  "S1481",
+"message":  "Remove this unused \"monitor\" local variable.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\DeathWatchSpec.cs",
 "region":  {
-"startLine":  125,
-"startColumn":  48,
-"endLine":  125,
+"startLine":  135,
+"startColumn":  21,
+"endLine":  135,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"numberOfMessages\" local variable.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTimingSpec.cs",
+"region":  {
+"startLine":  366,
+"startColumn":  33,
+"endLine":  366,
 "endColumn":  49
 }
 }
-]
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"a\" local variable.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\LocalActorRefProviderSpec.cs",
+"region":  {
+"startLine":  101,
+"startColumn":  25,
+"endLine":  101,
+"endColumn":  26
 }
-],
-"shortMessage":  "Remove this unused \"x\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"b\" local variable.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\LocalActorRefProviderSpec.cs",
+"region":  {
+"startLine":  102,
+"startColumn":  25,
+"endLine":  102,
+"endColumn":  26
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"result\" local variable.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\PatternSpec.cs",
+"region":  {
+"startLine":  63,
+"startColumn":  21,
+"endLine":  63,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"actor\" local variable.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\PropsSpec.cs",
+"region":  {
+"startLine":  40,
+"startColumn":  23,
+"endLine":  40,
+"endColumn":  28
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"worker2\" local variable.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\SupervisorHierarchySpec.cs",
+"region":  {
+"startLine":  111,
+"startColumn":  17,
+"endLine":  111,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"worker3\" local variable.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\SupervisorHierarchySpec.cs",
+"region":  {
+"startLine":  112,
+"startColumn":  17,
+"endLine":  112,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"server\" local variable.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\UdpIntegrationSpec.cs",
+"region":  {
+"startLine":  56,
+"startColumn":  17,
+"endLine":  56,
+"endColumn":  23
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"x\" local variable.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchHandlerBuilderTests.cs",
+"region":  {
+"startLine":  105,
+"startColumn":  49,
+"endLine":  105,
+"endColumn":  50
+}
+}
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"x\" local variable.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchHandlerBuilderTests.cs",
+"region":  {
+"startLine":  126,
+"startColumn":  49,
+"endLine":  126,
+"endColumn":  50
+}
 }
 }
 ]

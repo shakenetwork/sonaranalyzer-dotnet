@@ -1,99 +1,42 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1186",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorCell.Children.cs",
 "region":  {
-"startLine":  98,
-"startColumn":  21,
-"endLine":  98,
-"endColumn":  37
+"startLine":  99,
+"startColumn":  22,
+"endLine":  99,
+"endColumn":  38
 }
-}
-]
-}
-],
-"shortMessage":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
-"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case a \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be empty",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1186",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1186",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Event\\DeadLetterListener.cs",
 "region":  {
-"startLine":  21,
-"startColumn":  32,
-"endLine":  21,
-"endColumn":  43
+"startLine":  22,
+"startColumn":  33,
+"endLine":  22,
+"endColumn":  44
 }
-}
-]
-}
-],
-"shortMessage":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
-"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case a \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be empty",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1186",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1186",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1186",
+"message":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\ByteIterator.cs",
 "region":  {
-"startLine":  533,
-"startColumn":  24,
-"endLine":  533,
-"endColumn":  31
+"startLine":  534,
+"startColumn":  25,
+"endLine":  534,
+"endColumn":  32
 }
-}
-]
-}
-],
-"shortMessage":  "Add a nested comment explaining why this method is empty, throw a \"NotSupportedException\" or complete the implementation.",
-"fullMessage":  "There are several reasons for a method not to have a method body: It is an unintentional omission, and should be fixed. It is not yet, or never will be, supported. In this case a \"NotSupportedException\" should be thrown. The method is an intentionally-blank override. In this case a nested comment should explain the reason for the blank override.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be empty",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1186",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

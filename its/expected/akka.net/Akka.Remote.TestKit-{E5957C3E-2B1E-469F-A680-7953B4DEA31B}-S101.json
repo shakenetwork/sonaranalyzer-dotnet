@@ -1,129 +1,55 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S101",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S101",
+"message":  "Rename class \"ServerFSM\" to match camel case naming rules, consider using \"ServerFsm\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Conductor.cs",
 "region":  {
-"startLine":  320,
-"startColumn":  10,
-"endLine":  320,
-"endColumn":  19
+"startLine":  321,
+"startColumn":  11,
+"endLine":  321,
+"endColumn":  20
 }
-}
-]
-}
-],
-"shortMessage":  "Rename class \"ServerFSM\" to match camel case naming rules, consider using \"ServerFsm\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Types should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S101",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S101",
+"message":  "Rename class \"CreateServerFSM\" to match camel case naming rules, consider using \"CreateServerFsm\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Controller.cs",
 "region":  {
-"startLine":  192,
-"startColumn":  28,
-"endLine":  192,
-"endColumn":  43
+"startLine":  193,
+"startColumn":  29,
+"endLine":  193,
+"endColumn":  44
 }
-}
-]
-}
-],
-"shortMessage":  "Rename class \"CreateServerFSM\" to match camel case naming rules, consider using \"CreateServerFsm\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Types should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S101",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S101",
+"message":  "Rename class \"WaitForClientFSMToConnect\" to match camel case naming rules, consider using \"WaitForClientFsmToConnect\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
 "region":  {
-"startLine":  63,
-"startColumn":  22,
-"endLine":  63,
-"endColumn":  47
+"startLine":  64,
+"startColumn":  23,
+"endLine":  64,
+"endColumn":  48
 }
-}
-]
-}
-],
-"shortMessage":  "Rename class \"WaitForClientFSMToConnect\" to match camel case naming rules, consider using \"WaitForClientFsmToConnect\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Types should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S101",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S101",
+"message":  "Rename class \"ClientFSM\" to match camel case naming rules, consider using \"ClientFsm\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
 "region":  {
-"startLine":  166,
-"startColumn":  10,
-"endLine":  166,
-"endColumn":  19
+"startLine":  167,
+"startColumn":  11,
+"endLine":  167,
+"endColumn":  20
 }
-}
-]
-}
-],
-"shortMessage":  "Rename class \"ClientFSM\" to match camel case naming rules, consider using \"ClientFsm\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Types should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S101",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

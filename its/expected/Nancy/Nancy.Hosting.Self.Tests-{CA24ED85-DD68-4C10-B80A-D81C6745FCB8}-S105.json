@@ -1,39 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S105",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S105",
+"message":  "Replace all tab characters in this file by sequences of white-spaces.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Hosting.Self.Tests\\TestModule.cs",
 "region":  {
-"startLine":  9,
-"startColumn":  8,
-"endLine":  9,
-"endColumn":  8
+"startLine":  10,
+"startColumn":  9,
+"endLine":  10,
+"endColumn":  9
 }
-}
-]
-}
-],
-"shortMessage":  "Replace all tab characters in this file by sequences of white-spaces.",
-"fullMessage":  "Developers should not need to configure the tab width of their text editors in order to be able to read source code. So the use of tabulation character must be banned.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Tabulation characters should not be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S105",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

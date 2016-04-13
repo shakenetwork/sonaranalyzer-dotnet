@@ -1,69 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1659",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1659",
+"message":  "Declare \"b\" in a separate statement.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\MurmurHash.cs",
 "region":  {
-"startLine":  214,
-"startColumn":  28,
-"endLine":  214,
-"endColumn":  29
+"startLine":  215,
+"startColumn":  29,
+"endLine":  215,
+"endColumn":  30
 }
-}
-]
-}
-],
-"shortMessage":  "Declare \"b\" in a separate statement.",
-"fullMessage":  "Declaring multiple variable on one line is difficult to read.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Multiple variables should not be declared on the same line",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1659",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1659",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1659",
+"message":  "Declare \"n\" in a separate statement.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Util\\MurmurHash.cs",
 "region":  {
-"startLine":  214,
-"startColumn":  35,
-"endLine":  214,
-"endColumn":  36
+"startLine":  215,
+"startColumn":  36,
+"endLine":  215,
+"endColumn":  37
 }
-}
-]
-}
-],
-"shortMessage":  "Declare \"n\" in a separate statement.",
-"fullMessage":  "Declaring multiple variable on one line is difficult to read.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Multiple variables should not be declared on the same line",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1659",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

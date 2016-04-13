@@ -1,39 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1244",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1244",
+"message":  "Do not check equality with exact values, use a range instead.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
 "region":  {
-"startLine":  571,
-"startColumn":  25,
-"endLine":  571,
-"endColumn":  27
+"startLine":  572,
+"startColumn":  26,
+"endLine":  572,
+"endColumn":  28
 }
-}
-]
-}
-],
-"shortMessage":  "Do not check equality with exact values, use a range instead.",
-"fullMessage":  "Floating point math is imprecise because of the challenges of storing such values in a binary representation.Even worse, floating point math is not associative; push a \"float\" or a \"double\" through a series of simple mathematical operations and the answer will be different based on the order of those operation because of the rounding that takes place at each step.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Floating point numbers should not be tested for equality",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1244",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

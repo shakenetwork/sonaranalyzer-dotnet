@@ -1,42 +1,15 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S3457",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3457",
+"message":  "Remove this formatting call and simply use the input string.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\BarrierCoordinator.cs",
 "region":  {
-"startLine":  246,
-"startColumn":  23,
-"endLine":  246,
-"endColumn":  36
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this formatting call and simply use the input string.",
-"fullMessage":  "There\u0027s no need to incur the overhead of a formatting call when the string to be formatted contains no formatting symbols. Instead, simply use the original input string.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "\"string.Format()\" should not be called without placeholders",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3457",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary",
-"customProperties":  {
-"formatStringIndex":  "0"
+"startLine":  247,
+"startColumn":  24,
+"endLine":  247,
+"endColumn":  37
 }
 }
 }

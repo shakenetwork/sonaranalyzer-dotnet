@@ -1,69 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1067",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Reporting\\TestRunTree.cs",
 "region":  {
-"startLine":  246,
-"startColumn":  19,
-"endLine":  251,
-"endColumn":  46
+"startLine":  247,
+"startColumn":  20,
+"endLine":  252,
+"endColumn":  47
 }
-}
-]
-}
-],
-"shortMessage":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
-"fullMessage":  "The complexity of an expression is defined by the number of \"\u0026\u0026\", \"||\" and \"condition ? ifTrue : ifFalse\" operators it contains. A single expression\u0027s complexity should not become too high to keep the code readable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Expressions should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1067",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1067",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Reporting\\TestRunTree.cs",
 "region":  {
-"startLine":  382,
-"startColumn":  19,
-"endLine":  386,
-"endColumn":  46
+"startLine":  383,
+"startColumn":  20,
+"endLine":  387,
+"endColumn":  47
 }
-}
-]
-}
-],
-"shortMessage":  "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
-"fullMessage":  "The complexity of an expression is defined by the number of \"\u0026\u0026\", \"||\" and \"condition ? ifTrue : ifFalse\" operators it contains. A single expression\u0027s complexity should not become too high to keep the code readable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Expressions should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1067",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

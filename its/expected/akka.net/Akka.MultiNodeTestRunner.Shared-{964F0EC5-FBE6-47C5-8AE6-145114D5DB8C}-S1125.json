@@ -1,71 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1125",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1125",
+"message":  "Remove the unnecessary Boolean literal(s).",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\ConsoleMessageSinkActor.cs",
 "region":  {
-"startLine":  53,
-"startColumn":  56,
-"endLine":  53,
-"endColumn":  61
+"startLine":  54,
+"startColumn":  57,
+"endLine":  54,
+"endColumn":  62
 }
-}
-]
-}
-],
-"shortMessage":  "Remove the unnecessary Boolean literal(s).",
-"fullMessage":  "Redundant Boolean literals should be removed from expressions to improve readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Boolean literals should not be redundant",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1125",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 },
 {
-"ruleId":  "S1125",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1125",
+"message":  "Remove the unnecessary Boolean literal(s).",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.MultiNodeTestRunner.Shared\\Sinks\\ConsoleMessageSinkActor.cs",
 "region":  {
-"startLine":  58,
-"startColumn":  70,
-"endLine":  58,
-"endColumn":  75
+"startLine":  59,
+"startColumn":  71,
+"endLine":  59,
+"endColumn":  76
 }
-}
-]
-}
-],
-"shortMessage":  "Remove the unnecessary Boolean literal(s).",
-"fullMessage":  "Redundant Boolean literals should be removed from expressions to improve readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Boolean literals should not be redundant",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1125",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 }
 ]

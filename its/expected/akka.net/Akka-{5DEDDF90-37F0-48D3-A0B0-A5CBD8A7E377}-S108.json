@@ -1,159 +1,68 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S108",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S108",
+"message":  "Either remove or fill this block of code.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Futures.cs",
 "region":  {
-"startLine":  382,
-"startColumn":  17,
-"endLine":  382,
-"endColumn":  20
+"startLine":  383,
+"startColumn":  18,
+"endLine":  383,
+"endColumn":  21
 }
-}
-]
-}
-],
-"shortMessage":  "Either remove or fill this block of code.",
-"fullMessage":  "Most of the time a block of code is empty when a piece of code is really missing. So such empty block must be either filled or removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Nested blocks of code should not be left empty",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S108",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S108",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S108",
+"message":  "Either remove or fill this block of code.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Scheduler\\DedicatedThreadScheduler.cs",
 "region":  {
-"startLine":  116,
-"startColumn":  51,
-"endLine":  116,
-"endColumn":  54
+"startLine":  117,
+"startColumn":  52,
+"endLine":  117,
+"endColumn":  55
 }
-}
-]
-}
-],
-"shortMessage":  "Either remove or fill this block of code.",
-"fullMessage":  "Most of the time a block of code is empty when a piece of code is really missing. So such empty block must be either filled or removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Nested blocks of code should not be left empty",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S108",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S108",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S108",
+"message":  "Either remove or fill this block of code.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Scheduler\\DedicatedThreadScheduler.cs",
 "region":  {
-"startLine":  143,
-"startColumn":  51,
-"endLine":  143,
-"endColumn":  54
+"startLine":  144,
+"startColumn":  52,
+"endLine":  144,
+"endColumn":  55
 }
-}
-]
-}
-],
-"shortMessage":  "Either remove or fill this block of code.",
-"fullMessage":  "Most of the time a block of code is empty when a piece of code is really missing. So such empty block must be either filled or removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Nested blocks of code should not be left empty",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S108",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S108",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S108",
+"message":  "Either remove or fill this block of code.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\SelectionHandler.cs",
 "region":  {
-"startLine":  180,
-"startColumn":  40,
-"endLine":  180,
-"endColumn":  43
+"startLine":  181,
+"startColumn":  41,
+"endLine":  181,
+"endColumn":  44
 }
-}
-]
-}
-],
-"shortMessage":  "Either remove or fill this block of code.",
-"fullMessage":  "Most of the time a block of code is empty when a piece of code is really missing. So such empty block must be either filled or removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Nested blocks of code should not be left empty",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S108",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S108",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S108",
+"message":  "Either remove or fill this block of code.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\SelectionHandler.cs",
 "region":  {
-"startLine":  362,
-"startColumn":  35,
-"endLine":  362,
-"endColumn":  38
+"startLine":  363,
+"startColumn":  36,
+"endLine":  363,
+"endColumn":  39
 }
-}
-]
-}
-],
-"shortMessage":  "Either remove or fill this block of code.",
-"fullMessage":  "Most of the time a block of code is empty when a piece of code is really missing. So such empty block must be either filled or removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Nested blocks of code should not be left empty",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S108",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

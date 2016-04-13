@@ -1,39 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1449",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Demo.Authentication.Forms.TestingDemo\\..\\Nancy.Tests\\ShouldExtensions.cs",
+"id":  "S1449",
+"message":  "Define the locale to be used in this string operation.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\ShouldExtensions.cs",
 "region":  {
-"startLine":  70,
-"startColumn":  39,
-"endLine":  70,
-"endColumn":  46
+"startLine":  71,
+"startColumn":  40,
+"endLine":  71,
+"endColumn":  47
 }
-}
-]
-}
-],
-"shortMessage":  "Define the locale to be used in this string operation.",
-"fullMessage":  "\"string.ToLower()\", \"ToUpper\", \"IndexOf\", \"LastIndexOf\", and \"Compare\" are all culture-dependent, as are some (floating point number and \"DateTime\"-related) calls to \"ToString\". Fortunately, all have variants which accept an argument specifying the culture or formatter to use. Leave that argument off and the call will use the system default culture, possibly creating problems with international characters. \"string.CompareTo()\" is also culture specific, but has no overload that takes a culture information, so instead it\u0027s better to use \"CompareOrdinal\", or \"Compare\" with culture. Calls without a culture may work fine in the system\u0027s \"home\" environment, but break in ways that are extremely difficult to diagnose for customers who use different encodings. Such bugs can be nearly, if not completely, impossible to reproduce when it\u0027s time to fix them.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Culture should be specified for \"string\" operations",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1449",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

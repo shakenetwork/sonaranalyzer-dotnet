@@ -1,39 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S121",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S121",
+"message":  "Add curly braces around the nested statement(s) in this \"if\" block.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.Spark\\Descriptors\\DefaultDescriptorBuilder.cs",
 "region":  {
-"startLine":  234,
-"startColumn":  32,
-"endLine":  234,
-"endColumn":  34
+"startLine":  235,
+"startColumn":  33,
+"endLine":  235,
+"endColumn":  35
 }
-}
-]
-}
-],
-"shortMessage":  "Add curly braces around the nested statement(s) in this \"if\" block.",
-"fullMessage":  "While not technically incorrect, the omission of curly braces can be misleading, and may lead to the introduction of errors during maintenance.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control structures should use curly braces",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S121",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

@@ -1,39 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2486",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2486",
+"message":  "Handle the exception or explain in a comment why it can be ignored.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Demo.Hosting.Self\\Program.cs",
 "region":  {
-"startLine":  20,
-"startColumn":  16,
-"endLine":  22,
-"endColumn":  17
+"startLine":  21,
+"startColumn":  17,
+"endLine":  23,
+"endColumn":  18
 }
-}
-]
-}
-],
-"shortMessage":  "Handle the exception or explain in a comment why it can be ignored.",
-"fullMessage":  "When exceptions occur, it is usually a bad idea to simply ignore them. Instead, it is better to handle them properly, or at least to log them.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Generic exceptions should not be ignored",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2486",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

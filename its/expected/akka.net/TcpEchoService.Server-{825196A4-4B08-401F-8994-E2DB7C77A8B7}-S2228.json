@@ -1,189 +1,81 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2228",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2228",
+"message":  "Remove this logging statement.",
+"location":  {
 "uri":  "akka.net\\src\\examples\\TcpEchoService.Server\\Actors.cs",
-"region":  {
-"startLine":  26,
-"startColumn":  16,
-"endLine":  26,
-"endColumn":  33
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this logging statement.",
-"fullMessage":  "Debug statements are always useful during development. But include them in production code - particularly in code that runs client-side - and you run the risk of inadvertently exposing sensitive information.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Console logging should not be used",
-"category":  "Portability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2228",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2228",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\examples\\TcpEchoService.Server\\Actors.cs",
-"region":  {
-"startLine":  42,
-"startColumn":  16,
-"endLine":  42,
-"endColumn":  33
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this logging statement.",
-"fullMessage":  "Debug statements are always useful during development. But include them in production code - particularly in code that runs client-side - and you run the risk of inadvertently exposing sensitive information.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Console logging should not be used",
-"category":  "Portability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2228",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2228",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\examples\\TcpEchoService.Server\\Actors.cs",
-"region":  {
-"startLine":  50,
-"startColumn":  16,
-"endLine":  50,
-"endColumn":  33
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this logging statement.",
-"fullMessage":  "Debug statements are always useful during development. But include them in production code - particularly in code that runs client-side - and you run the risk of inadvertently exposing sensitive information.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Console logging should not be used",
-"category":  "Portability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2228",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2228",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\examples\\TcpEchoService.Server\\Actors.cs",
-"region":  {
-"startLine":  55,
-"startColumn":  16,
-"endLine":  55,
-"endColumn":  33
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this logging statement.",
-"fullMessage":  "Debug statements are always useful during development. But include them in production code - particularly in code that runs client-side - and you run the risk of inadvertently exposing sensitive information.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Console logging should not be used",
-"category":  "Portability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2228",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2228",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\examples\\TcpEchoService.Server\\Program.cs",
 "region":  {
 "startLine":  27,
-"startColumn":  16,
+"startColumn":  17,
 "endLine":  27,
-"endColumn":  33
+"endColumn":  34
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this logging statement.",
-"fullMessage":  "Debug statements are always useful during development. But include them in production code - particularly in code that runs client-side - and you run the risk of inadvertently exposing sensitive information.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Console logging should not be used",
-"category":  "Portability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2228",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2228",
-"locations":  [
+"id":  "S2228",
+"message":  "Remove this logging statement.",
+"location":  {
+"uri":  "akka.net\\src\\examples\\TcpEchoService.Server\\Actors.cs",
+"region":  {
+"startLine":  43,
+"startColumn":  17,
+"endLine":  43,
+"endColumn":  34
+}
+}
+},
 {
-"analysisTarget":  [
+"id":  "S2228",
+"message":  "Remove this logging statement.",
+"location":  {
+"uri":  "akka.net\\src\\examples\\TcpEchoService.Server\\Actors.cs",
+"region":  {
+"startLine":  51,
+"startColumn":  17,
+"endLine":  51,
+"endColumn":  34
+}
+}
+},
 {
+"id":  "S2228",
+"message":  "Remove this logging statement.",
+"location":  {
+"uri":  "akka.net\\src\\examples\\TcpEchoService.Server\\Actors.cs",
+"region":  {
+"startLine":  56,
+"startColumn":  17,
+"endLine":  56,
+"endColumn":  34
+}
+}
+},
+{
+"id":  "S2228",
+"message":  "Remove this logging statement.",
+"location":  {
 "uri":  "akka.net\\src\\examples\\TcpEchoService.Server\\Program.cs",
 "region":  {
 "startLine":  28,
-"startColumn":  16,
+"startColumn":  17,
 "endLine":  28,
-"endColumn":  33
+"endColumn":  34
 }
 }
-]
+},
+{
+"id":  "S2228",
+"message":  "Remove this logging statement.",
+"location":  {
+"uri":  "akka.net\\src\\examples\\TcpEchoService.Server\\Program.cs",
+"region":  {
+"startLine":  29,
+"startColumn":  17,
+"endLine":  29,
+"endColumn":  34
 }
-],
-"shortMessage":  "Remove this logging statement.",
-"fullMessage":  "Debug statements are always useful during development. But include them in production code - particularly in code that runs client-side - and you run the risk of inadvertently exposing sensitive information.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Console logging should not be used",
-"category":  "Portability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2228",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

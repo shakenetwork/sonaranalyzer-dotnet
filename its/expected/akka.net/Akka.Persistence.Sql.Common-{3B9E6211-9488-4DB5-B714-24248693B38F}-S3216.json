@@ -1,309 +1,133 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S3216",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3216",
+"message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
+"location":  {
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Journal\\JournalDbEngine.cs",
 "region":  {
-"startLine":  131,
-"startColumn":  22,
-"endLine":  131,
-"endColumn":  44
+"startLine":  132,
+"startColumn":  23,
+"endLine":  132,
+"endColumn":  45
 }
-}
-]
-}
-],
-"shortMessage":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
-"fullMessage":  "After an \"await\"ed \"Task\" has executed, you can continue execution in the original, calling thread or any arbitrary thread. Unless the rest of the code needs the context from which the \"Task\" was spawned, \"Task.ConfigureAwait(false)\" should be used to keep execution in the \"Task\" thread to avoid the need of context switching and the possibility of deadlocks. This rule raises an issue when code in a class library \"await\"s a \"Task\" and continues execution in the main thread.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"ConfigureAwait(false)\" should be used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3216",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S3216",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3216",
+"message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
+"location":  {
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Journal\\JournalDbEngine.cs",
 "region":  {
-"startLine":  167,
-"startColumn":  22,
-"endLine":  167,
-"endColumn":  44
+"startLine":  168,
+"startColumn":  23,
+"endLine":  168,
+"endColumn":  45
 }
-}
-]
-}
-],
-"shortMessage":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
-"fullMessage":  "After an \"await\"ed \"Task\" has executed, you can continue execution in the original, calling thread or any arbitrary thread. Unless the rest of the code needs the context from which the \"Task\" was spawned, \"Task.ConfigureAwait(false)\" should be used to keep execution in the \"Task\" thread to avoid the need of context switching and the possibility of deadlocks. This rule raises an issue when code in a class library \"await\"s a \"Task\" and continues execution in the main thread.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"ConfigureAwait(false)\" should be used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3216",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S3216",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3216",
+"message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
+"location":  {
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Journal\\JournalDbEngine.cs",
 "region":  {
-"startLine":  197,
-"startColumn":  22,
-"endLine":  197,
-"endColumn":  44
+"startLine":  198,
+"startColumn":  23,
+"endLine":  198,
+"endColumn":  45
 }
-}
-]
-}
-],
-"shortMessage":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
-"fullMessage":  "After an \"await\"ed \"Task\" has executed, you can continue execution in the original, calling thread or any arbitrary thread. Unless the rest of the code needs the context from which the \"Task\" was spawned, \"Task.ConfigureAwait(false)\" should be used to keep execution in the \"Task\" thread to avoid the need of context switching and the possibility of deadlocks. This rule raises an issue when code in a class library \"await\"s a \"Task\" and continues execution in the main thread.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"ConfigureAwait(false)\" should be used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3216",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S3216",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3216",
+"message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
+"location":  {
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Journal\\JournalDbEngine.cs",
 "region":  {
-"startLine":  217,
-"startColumn":  22,
-"endLine":  217,
-"endColumn":  44
+"startLine":  218,
+"startColumn":  23,
+"endLine":  218,
+"endColumn":  45
 }
-}
-]
-}
-],
-"shortMessage":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
-"fullMessage":  "After an \"await\"ed \"Task\" has executed, you can continue execution in the original, calling thread or any arbitrary thread. Unless the rest of the code needs the context from which the \"Task\" was spawned, \"Task.ConfigureAwait(false)\" should be used to keep execution in the \"Task\" thread to avoid the need of context switching and the possibility of deadlocks. This rule raises an issue when code in a class library \"await\"s a \"Task\" and continues execution in the main thread.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"ConfigureAwait(false)\" should be used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3216",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S3216",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3216",
+"message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
+"location":  {
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Journal\\JournalDbEngine.cs",
 "region":  {
-"startLine":  224,
-"startColumn":  22,
-"endLine":  224,
-"endColumn":  74
+"startLine":  225,
+"startColumn":  23,
+"endLine":  225,
+"endColumn":  75
 }
-}
-]
-}
-],
-"shortMessage":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
-"fullMessage":  "After an \"await\"ed \"Task\" has executed, you can continue execution in the original, calling thread or any arbitrary thread. Unless the rest of the code needs the context from which the \"Task\" was spawned, \"Task.ConfigureAwait(false)\" should be used to keep execution in the \"Task\" thread to avoid the need of context switching and the possibility of deadlocks. This rule raises an issue when code in a class library \"await\"s a \"Task\" and continues execution in the main thread.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"ConfigureAwait(false)\" should be used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3216",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S3216",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3216",
+"message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
+"location":  {
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Journal\\JournalDbEngine.cs",
 "region":  {
-"startLine":  237,
-"startColumn":  22,
-"endLine":  237,
-"endColumn":  44
+"startLine":  238,
+"startColumn":  23,
+"endLine":  238,
+"endColumn":  45
 }
-}
-]
-}
-],
-"shortMessage":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
-"fullMessage":  "After an \"await\"ed \"Task\" has executed, you can continue execution in the original, calling thread or any arbitrary thread. Unless the rest of the code needs the context from which the \"Task\" was spawned, \"Task.ConfigureAwait(false)\" should be used to keep execution in the \"Task\" thread to avoid the need of context switching and the possibility of deadlocks. This rule raises an issue when code in a class library \"await\"s a \"Task\" and continues execution in the main thread.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"ConfigureAwait(false)\" should be used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3216",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S3216",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3216",
+"message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
+"location":  {
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Snapshot\\SqlSnapshotStore.cs",
 "region":  {
-"startLine":  83,
-"startColumn":  22,
-"endLine":  83,
-"endColumn":  44
+"startLine":  84,
+"startColumn":  23,
+"endLine":  84,
+"endColumn":  45
 }
-}
-]
-}
-],
-"shortMessage":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
-"fullMessage":  "After an \"await\"ed \"Task\" has executed, you can continue execution in the original, calling thread or any arbitrary thread. Unless the rest of the code needs the context from which the \"Task\" was spawned, \"Task.ConfigureAwait(false)\" should be used to keep execution in the \"Task\" thread to avoid the need of context switching and the possibility of deadlocks. This rule raises an issue when code in a class library \"await\"s a \"Task\" and continues execution in the main thread.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"ConfigureAwait(false)\" should be used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3216",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S3216",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3216",
+"message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
+"location":  {
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Snapshot\\SqlSnapshotStore.cs",
 "region":  {
-"startLine":  107,
-"startColumn":  22,
-"endLine":  107,
-"endColumn":  44
+"startLine":  108,
+"startColumn":  23,
+"endLine":  108,
+"endColumn":  45
 }
-}
-]
-}
-],
-"shortMessage":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
-"fullMessage":  "After an \"await\"ed \"Task\" has executed, you can continue execution in the original, calling thread or any arbitrary thread. Unless the rest of the code needs the context from which the \"Task\" was spawned, \"Task.ConfigureAwait(false)\" should be used to keep execution in the \"Task\" thread to avoid the need of context switching and the possibility of deadlocks. This rule raises an issue when code in a class library \"await\"s a \"Task\" and continues execution in the main thread.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"ConfigureAwait(false)\" should be used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3216",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S3216",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3216",
+"message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
+"location":  {
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Snapshot\\SqlSnapshotStore.cs",
 "region":  {
-"startLine":  123,
-"startColumn":  22,
-"endLine":  123,
-"endColumn":  44
+"startLine":  124,
+"startColumn":  23,
+"endLine":  124,
+"endColumn":  45
 }
-}
-]
-}
-],
-"shortMessage":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
-"fullMessage":  "After an \"await\"ed \"Task\" has executed, you can continue execution in the original, calling thread or any arbitrary thread. Unless the rest of the code needs the context from which the \"Task\" was spawned, \"Task.ConfigureAwait(false)\" should be used to keep execution in the \"Task\" thread to avoid the need of context switching and the possibility of deadlocks. This rule raises an issue when code in a class library \"await\"s a \"Task\" and continues execution in the main thread.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"ConfigureAwait(false)\" should be used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3216",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S3216",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3216",
+"message":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
+"location":  {
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Snapshot\\SqlSnapshotStore.cs",
 "region":  {
-"startLine":  135,
-"startColumn":  22,
-"endLine":  135,
-"endColumn":  44
+"startLine":  136,
+"startColumn":  23,
+"endLine":  136,
+"endColumn":  45
 }
-}
-]
-}
-],
-"shortMessage":  "Add \".ConfigureAwait(false)\" to this call to allow execution to continue in any thread.",
-"fullMessage":  "After an \"await\"ed \"Task\" has executed, you can continue execution in the original, calling thread or any arbitrary thread. Unless the rest of the code needs the context from which the \"Task\" was spawned, \"Task.ConfigureAwait(false)\" should be used to keep execution in the \"Task\" thread to avoid the need of context switching and the possibility of deadlocks. This rule raises an issue when code in a class library \"await\"s a \"Task\" and continues execution in the main thread.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "\"ConfigureAwait(false)\" should be used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3216",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

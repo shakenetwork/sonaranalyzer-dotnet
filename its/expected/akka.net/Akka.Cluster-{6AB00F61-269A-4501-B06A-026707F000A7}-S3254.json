@@ -1,40 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S3254",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3254",
+"message":  "Remove this default value assigned to parameter \"decayFactor\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster\\ClusterMetricsCollector.cs",
 "region":  {
-"startLine":  786,
-"startColumn":  89,
-"endLine":  786,
-"endColumn":  93
+"startLine":  787,
+"startColumn":  90,
+"endLine":  787,
+"endColumn":  94
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this default value assigned to parameter \"decayFactor\".",
-"fullMessage":  "Specifying the default parameter values in a method call is redundant. Such values should be omitted in the interests of readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Default parameter values should not be passed as arguments",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3254",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 }
 ]

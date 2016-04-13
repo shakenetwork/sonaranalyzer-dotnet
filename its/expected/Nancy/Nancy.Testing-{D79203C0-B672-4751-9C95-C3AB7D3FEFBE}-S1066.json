@@ -1,129 +1,55 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1066",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Testing\\Asserts.cs",
 "region":  {
-"startLine":  22,
-"startColumn":  16,
-"endLine":  22,
-"endColumn":  18
+"startLine":  23,
+"startColumn":  17,
+"endLine":  23,
+"endColumn":  19
 }
-}
-]
-}
-],
-"shortMessage":  "Merge this if statement with the enclosing one.",
-"fullMessage":  "Merging collapsible \"if\" statements increases the code\u0027s readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Collapsible \"if\" statements should be merged",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1066",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1066",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Testing\\Asserts.cs",
 "region":  {
-"startLine":  35,
-"startColumn":  16,
-"endLine":  35,
-"endColumn":  18
+"startLine":  36,
+"startColumn":  17,
+"endLine":  36,
+"endColumn":  19
 }
-}
-]
-}
-],
-"shortMessage":  "Merge this if statement with the enclosing one.",
-"fullMessage":  "Merging collapsible \"if\" statements increases the code\u0027s readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Collapsible \"if\" statements should be merged",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1066",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1066",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Testing\\BrowserContextExtensions.cs",
 "region":  {
-"startLine":  185,
-"startColumn":  16,
-"endLine":  185,
-"endColumn":  18
+"startLine":  186,
+"startColumn":  17,
+"endLine":  186,
+"endColumn":  19
 }
-}
-]
-}
-],
-"shortMessage":  "Merge this if statement with the enclosing one.",
-"fullMessage":  "Merging collapsible \"if\" statements increases the code\u0027s readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Collapsible \"if\" statements should be merged",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1066",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1066",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Testing\\BrowserContextExtensions.cs",
 "region":  {
-"startLine":  187,
-"startColumn":  20,
-"endLine":  187,
-"endColumn":  22
+"startLine":  188,
+"startColumn":  21,
+"endLine":  188,
+"endColumn":  23
 }
-}
-]
-}
-],
-"shortMessage":  "Merge this if statement with the enclosing one.",
-"fullMessage":  "Merging collapsible \"if\" statements increases the code\u0027s readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Collapsible \"if\" statements should be merged",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1066",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

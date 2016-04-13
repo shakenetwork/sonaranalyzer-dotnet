@@ -1,99 +1,42 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2933",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2933",
+"message":  "Make \"_pendingInvocations\" \"readonly\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Eventsourced.cs",
 "region":  {
-"startLine":  73,
-"startColumn":  54,
-"endLine":  73,
-"endColumn":  73
+"startLine":  74,
+"startColumn":  55,
+"endLine":  74,
+"endColumn":  74
 }
-}
-]
-}
-],
-"shortMessage":  "Make \"_pendingInvocations\" \"readonly\".",
-"fullMessage":  "\"readonly\" fields can only be assigned in a class constructor. If a class has a field that\u0027s not marked \"readonly\" but is only set in the constructor, it could cause confusion about the field\u0027s intended use. To avoid confusion, such fields should be marked \"readonly\" to make their intended use explicit, and to prevent future maintainers from inadvertently changing their use.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields that are only assigned in the constructor should be \"readonly\"",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2933",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2933",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2933",
+"message":  "Make \"_shouldUnhandle\" \"readonly\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\PersistentActor.cs",
 "region":  {
-"startLine":  191,
-"startColumn":  21,
-"endLine":  191,
-"endColumn":  36
-}
-}
-]
-}
-],
-"shortMessage":  "Make \"_shouldUnhandle\" \"readonly\".",
-"fullMessage":  "\"readonly\" fields can only be assigned in a class constructor. If a class has a field that\u0027s not marked \"readonly\" but is only set in the constructor, it could cause confusion about the field\u0027s intended use. To avoid confusion, such fields should be marked \"readonly\" to make their intended use explicit, and to prevent future maintainers from inadvertently changing their use.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields that are only assigned in the constructor should be \"readonly\"",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2933",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2933",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Persistence\\PersistentView.cs",
-"region":  {
-"startLine":  95,
-"startColumn":  23,
-"endLine":  95,
+"startLine":  192,
+"startColumn":  22,
+"endLine":  192,
 "endColumn":  37
 }
 }
-]
+},
+{
+"id":  "S2933",
+"message":  "Make \"_internalStash\" \"readonly\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Persistence\\PersistentView.cs",
+"region":  {
+"startLine":  96,
+"startColumn":  24,
+"endLine":  96,
+"endColumn":  38
 }
-],
-"shortMessage":  "Make \"_internalStash\" \"readonly\".",
-"fullMessage":  "\"readonly\" fields can only be assigned in a class constructor. If a class has a field that\u0027s not marked \"readonly\" but is only set in the constructor, it could cause confusion about the field\u0027s intended use. To avoid confusion, such fields should be marked \"readonly\" to make their intended use explicit, and to prevent future maintainers from inadvertently changing their use.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields that are only assigned in the constructor should be \"readonly\"",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2933",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

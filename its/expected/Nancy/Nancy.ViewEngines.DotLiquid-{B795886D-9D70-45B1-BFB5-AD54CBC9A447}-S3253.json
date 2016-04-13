@@ -1,40 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S3253",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3253",
+"message":  "Remove this redundant constructor.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.DotLiquid\\DefaultFileSystemFactory.cs",
 "region":  {
-"startLine":  15,
-"startColumn":  8,
-"endLine":  17,
-"endColumn":  9
+"startLine":  16,
+"startColumn":  9,
+"endLine":  18,
+"endColumn":  10
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this redundant constructor.",
-"fullMessage":  "Since the compiler will automatically invoke the base type\u0027s no-argument constructor, there\u0027s no need to specify its invocation explicitly. Also, when only a single \"public\" parameterless constructor is defined in a class, then that constructor can be removed because the compiler would generate it automatically. Similarly, empty \"static\" constructors and empty destructors are also wasted keystrokes.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Constructor and destructor declarations should not be redundant",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3253",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 }
 ]

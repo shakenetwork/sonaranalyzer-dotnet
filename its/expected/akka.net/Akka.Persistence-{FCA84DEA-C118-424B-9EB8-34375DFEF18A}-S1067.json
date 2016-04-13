@@ -1,99 +1,42 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1067",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\JournalProtocol.cs",
 "region":  {
-"startLine":  595,
-"startColumn":  19,
-"endLine":  600,
-"endColumn":  64
+"startLine":  596,
+"startColumn":  20,
+"endLine":  601,
+"endColumn":  65
 }
-}
-]
-}
-],
-"shortMessage":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
-"fullMessage":  "The complexity of an expression is defined by the number of \"\u0026\u0026\", \"||\" and \"condition ? ifTrue : ifFalse\" operators it contains. A single expression\u0027s complexity should not become too high to keep the code readable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Expressions should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1067",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1067",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistent.cs",
 "region":  {
-"startLine":  168,
-"startColumn":  19,
-"endLine":  173,
-"endColumn":  52
+"startLine":  169,
+"startColumn":  20,
+"endLine":  174,
+"endColumn":  53
 }
-}
-]
-}
-],
-"shortMessage":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
-"fullMessage":  "The complexity of an expression is defined by the number of \"\u0026\u0026\", \"||\" and \"condition ? ifTrue : ifFalse\" operators it contains. A single expression\u0027s complexity should not become too high to keep the code readable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Expressions should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1067",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1067",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1067",
+"message":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Persistent.cs",
 "region":  {
-"startLine":  183,
-"startColumn":  19,
-"endLine":  183,
-"endColumn":  243
+"startLine":  184,
+"startColumn":  20,
+"endLine":  184,
+"endColumn":  244
 }
-}
-]
-}
-],
-"shortMessage":  "Reduce the number of conditional operators (5) used in the expression (maximum allowed 3).",
-"fullMessage":  "The complexity of an expression is defined by the number of \"\u0026\u0026\", \"||\" and \"condition ? ifTrue : ifFalse\" operators it contains. A single expression\u0027s complexity should not become too high to keep the code readable.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Expressions should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1067",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

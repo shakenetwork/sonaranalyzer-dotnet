@@ -1,129 +1,55 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S134",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements",
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\PersistentShardCoordinator.cs",
 "region":  {
-"startLine":  421,
-"startColumn":  24,
-"endLine":  421,
-"endColumn":  26
+"startLine":  422,
+"startColumn":  25,
+"endLine":  422,
+"endColumn":  27
 }
-}
-]
-}
-],
-"shortMessage":  "Refactor this code to not nest more than 3 control flow statements",
-"fullMessage":  "Nested \"if\", \"switch\", \"for\", \"foreach\", \"while\", \"do\", and \"try\" statements are key ingredients for making what\u0027s known as \"Spaghetti code\". Such code is hard to read, refactor and therefore maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control flow statements \"if\", \"for\", \"foreach\", \"do\", \"while\", \"switch\" and \"try\" should not be nested too deeply",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S134",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S134",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements",
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
-"startLine":  463,
-"startColumn":  24,
-"endLine":  463,
-"endColumn":  26
+"startLine":  464,
+"startColumn":  25,
+"endLine":  464,
+"endColumn":  27
 }
-}
-]
-}
-],
-"shortMessage":  "Refactor this code to not nest more than 3 control flow statements",
-"fullMessage":  "Nested \"if\", \"switch\", \"for\", \"foreach\", \"while\", \"do\", and \"try\" statements are key ingredients for making what\u0027s known as \"Spaghetti code\". Such code is hard to read, refactor and therefore maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control flow statements \"if\", \"for\", \"foreach\", \"do\", \"while\", \"switch\" and \"try\" should not be nested too deeply",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S134",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S134",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements",
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
-"startLine":  480,
-"startColumn":  24,
-"endLine":  480,
-"endColumn":  26
+"startLine":  481,
+"startColumn":  25,
+"endLine":  481,
+"endColumn":  27
 }
-}
-]
-}
-],
-"shortMessage":  "Refactor this code to not nest more than 3 control flow statements",
-"fullMessage":  "Nested \"if\", \"switch\", \"for\", \"foreach\", \"while\", \"do\", and \"try\" statements are key ingredients for making what\u0027s known as \"Spaghetti code\". Such code is hard to read, refactor and therefore maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control flow statements \"if\", \"for\", \"foreach\", \"do\", \"while\", \"switch\" and \"try\" should not be nested too deeply",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S134",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S134",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S134",
+"message":  "Refactor this code to not nest more than 3 control flow statements",
+"location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",
 "region":  {
-"startLine":  510,
-"startColumn":  24,
-"endLine":  510,
-"endColumn":  26
+"startLine":  511,
+"startColumn":  25,
+"endLine":  511,
+"endColumn":  27
 }
-}
-]
-}
-],
-"shortMessage":  "Refactor this code to not nest more than 3 control flow statements",
-"fullMessage":  "Nested \"if\", \"switch\", \"for\", \"foreach\", \"while\", \"do\", and \"try\" statements are key ingredients for making what\u0027s known as \"Spaghetti code\". Such code is hard to read, refactor and therefore maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Control flow statements \"if\", \"for\", \"foreach\", \"do\", \"while\", \"switch\" and \"try\" should not be nested too deeply",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S134",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

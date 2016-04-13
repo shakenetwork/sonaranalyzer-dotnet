@@ -1,39 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1699",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1699",
+"message":  "Remove this call from a constructor to the overridable \"SendRawLogEventMessage\" method.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\Xunit2\\TestEventListenerTests\\EventFilterTestBase.cs",
 "region":  {
-"startLine":  25,
-"startColumn":  12,
-"endLine":  25,
-"endColumn":  34
+"startLine":  26,
+"startColumn":  13,
+"endLine":  26,
+"endColumn":  35
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this call from a constructor to the overridable \"SendRawLogEventMessage\" method.",
-"fullMessage":  "Calling an overridable method from a constructor could result in failures or strange behaviors when instantiating a subclass which overrides the method.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Constructors should only call non-overridable methods",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1699",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

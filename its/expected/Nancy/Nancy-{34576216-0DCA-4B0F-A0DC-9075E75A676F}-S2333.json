@@ -1,40 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2333",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2333",
+"message":  "\"partial\" is gratuitous in this context.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
-"startLine":  784,
-"startColumn":  18,
-"endLine":  784,
-"endColumn":  25
+"startLine":  785,
+"startColumn":  19,
+"endLine":  785,
+"endColumn":  26
 }
-}
-]
-}
-],
-"shortMessage":  "\"partial\" is gratuitous in this context.",
-"fullMessage":  "Unnecessary keywords simply clutter the code and should be removed.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Redundant modifiers should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2333",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 }
 ]

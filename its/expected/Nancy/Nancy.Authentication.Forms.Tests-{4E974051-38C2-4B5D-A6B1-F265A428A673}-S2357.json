@@ -1,69 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\..\\Nancy.Tests\\Fakes\\FakeRoute.cs",
+"id":  "S2357",
+"message":  "Make \"ActionWasInvoked\" private.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Fakes\\FakeRoute.cs",
 "region":  {
-"startLine":  12,
-"startColumn":  20,
-"endLine":  12,
-"endColumn":  36
+"startLine":  13,
+"startColumn":  21,
+"endLine":  13,
+"endColumn":  37
 }
-}
-]
-}
-],
-"shortMessage":  "Make \"ActionWasInvoked\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2357",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "Nancy\\src\\Nancy.Authentication.Forms.Tests\\..\\Nancy.Tests\\Fakes\\FakeRoute.cs",
+"id":  "S2357",
+"message":  "Make \"ParametersUsedToInvokeAction\" private.",
+"location":  {
+"uri":  "Nancy\\src\\Nancy.Tests\\Fakes\\FakeRoute.cs",
 "region":  {
-"startLine":  13,
-"startColumn":  33,
-"endLine":  13,
-"endColumn":  61
+"startLine":  14,
+"startColumn":  34,
+"endLine":  14,
+"endColumn":  62
 }
-}
-]
-}
-],
-"shortMessage":  "Make \"ParametersUsedToInvokeAction\" private.",
-"fullMessage":  "Fields should not be part of an API, and therefore should always be private. Indeed, they cannot be added to an interface for instance, and validation cannot be added later on without breaking backward compatiblity. Instead, developers should encapsulate their fields into properties. Explicit property getters and setters can be introduced for validation purposes or to smooth the transition to a newer system.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Fields should be private",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2357",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

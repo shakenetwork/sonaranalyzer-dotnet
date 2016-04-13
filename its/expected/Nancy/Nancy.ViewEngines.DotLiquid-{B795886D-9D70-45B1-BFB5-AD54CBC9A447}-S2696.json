@@ -1,39 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2696",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2696",
+"message":  "Remove this set, which updates a \"static\" field from an instance method.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.ViewEngines.DotLiquid\\DotLiquidViewEngine.cs",
 "region":  {
-"startLine":  59,
-"startColumn":  12,
-"endLine":  59,
-"endColumn":  39
+"startLine":  60,
+"startColumn":  13,
+"endLine":  60,
+"endColumn":  40
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this set, which updates a \"static\" field from an instance method.",
-"fullMessage":  "Correctly updating a \"static\" field from a non-static method is tricky to get right and could easily lead to bugs if there are multiple class instances and/or multiple threads in play.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Instance members should not write to \"static\" fields",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2696",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

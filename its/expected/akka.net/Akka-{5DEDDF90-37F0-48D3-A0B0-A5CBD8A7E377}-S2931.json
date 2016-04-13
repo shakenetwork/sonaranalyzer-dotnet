@@ -1,159 +1,68 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2931",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_dedicatedThreadPool\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Dispatch\\ForkJoinDispatcher.cs",
 "region":  {
-"startLine":  60,
-"startColumn":  17,
-"endLine":  60,
-"endColumn":  35
-}
-}
-]
-}
-],
-"shortMessage":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_dedicatedThreadPool\".",
-"fullMessage":  "Classes with \"IDisposable\" members are responsible for cleaning up those members by calling their \"Dispose\" methods.The best practice here is for the owning class to itself implement \"IDisposable\" and call its members\u0027 \"Dispose\" methods from its own \"Dispose\" method.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Classes with \"IDisposable\" members should implement \"IDisposable\"",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2931",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2931",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka\\Dispatch\\Mailboxes.cs",
-"region":  {
-"startLine":  18,
-"startColumn":  17,
-"endLine":  18,
-"endColumn":  26
-}
-}
-]
-}
-],
-"shortMessage":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_deadLetterMailbox\".",
-"fullMessage":  "Classes with \"IDisposable\" members are responsible for cleaning up those members by calling their \"Dispose\" methods.The best practice here is for the owning class to itself implement \"IDisposable\" and call its members\u0027 \"Dispose\" methods from its own \"Dispose\" method.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Classes with \"IDisposable\" members should implement \"IDisposable\"",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2931",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S2931",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka\\Dispatch\\MessageQueues\\BoundedMessageQueue.cs",
-"region":  {
-"startLine":  15,
-"startColumn":  17,
-"endLine":  15,
+"startLine":  61,
+"startColumn":  18,
+"endLine":  61,
 "endColumn":  36
 }
 }
-]
+},
+{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_deadLetterMailbox\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\Dispatch\\Mailboxes.cs",
+"region":  {
+"startLine":  19,
+"startColumn":  18,
+"endLine":  19,
+"endColumn":  27
 }
-],
-"shortMessage":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_queue\".",
-"fullMessage":  "Classes with \"IDisposable\" members are responsible for cleaning up those members by calling their \"Dispose\" methods.The best practice here is for the owning class to itself implement \"IDisposable\" and call its members\u0027 \"Dispose\" methods from its own \"Dispose\" method.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Classes with \"IDisposable\" members should implement \"IDisposable\"",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2931",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2931",
-"locations":  [
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_queue\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\Dispatch\\MessageQueues\\BoundedMessageQueue.cs",
+"region":  {
+"startLine":  16,
+"startColumn":  18,
+"endLine":  16,
+"endColumn":  37
+}
+}
+},
 {
-"analysisTarget":  [
-{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_dedicatedThreadPool\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Dispatch\\SingleThreadDispatcher.cs",
 "region":  {
-"startLine":  83,
-"startColumn":  17,
-"endLine":  83,
-"endColumn":  39
+"startLine":  84,
+"startColumn":  18,
+"endLine":  84,
+"endColumn":  40
 }
-}
-]
-}
-],
-"shortMessage":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_dedicatedThreadPool\".",
-"fullMessage":  "Classes with \"IDisposable\" members are responsible for cleaning up those members by calling their \"Dispose\" methods.The best practice here is for the owning class to itself implement \"IDisposable\" and call its members\u0027 \"Dispose\" methods from its own \"Dispose\" method.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Classes with \"IDisposable\" members should implement \"IDisposable\"",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2931",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2931",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_queue\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\SelectionHandler.cs",
 "region":  {
-"startLine":  401,
-"startColumn":  10,
-"endLine":  401,
-"endColumn":  38
+"startLine":  402,
+"startColumn":  11,
+"endLine":  402,
+"endColumn":  39
 }
-}
-]
-}
-],
-"shortMessage":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_queue\".",
-"fullMessage":  "Classes with \"IDisposable\" members are responsible for cleaning up those members by calling their \"Dispose\" methods.The best practice here is for the owning class to itself implement \"IDisposable\" and call its members\u0027 \"Dispose\" methods from its own \"Dispose\" method.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Classes with \"IDisposable\" members should implement \"IDisposable\"",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2931",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

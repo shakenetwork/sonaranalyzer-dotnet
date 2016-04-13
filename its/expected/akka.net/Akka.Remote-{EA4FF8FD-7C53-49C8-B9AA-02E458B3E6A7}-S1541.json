@@ -1,399 +1,172 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 19 which is greater than 10 authorized.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
 "region":  {
-"startLine":  55,
-"startColumn":  20,
-"endLine":  55,
-"endColumn":  28
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 19 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
-"region":  {
-"startLine":  1026,
-"startColumn":  32,
-"endLine":  1026,
-"endColumn":  41
-}
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
-"region":  {
-"startLine":  1292,
+"startLine":  56,
 "startColumn":  21,
-"endLine":  1292,
-"endColumn":  41
+"endLine":  56,
+"endColumn":  29
 }
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 26 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1541",
-"locations":  [
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
+"region":  {
+"startLine":  1027,
+"startColumn":  33,
+"endLine":  1027,
+"endColumn":  42
+}
+}
+},
 {
-"analysisTarget":  [
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 26 which is greater than 10 authorized.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Remote\\Endpoint.cs",
+"region":  {
+"startLine":  1293,
+"startColumn":  22,
+"endLine":  1293,
+"endColumn":  42
+}
+}
+},
 {
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 19 which is greater than 10 authorized.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
 "region":  {
-"startLine":  478,
-"startColumn":  23,
-"endLine":  478,
-"endColumn":  32
+"startLine":  479,
+"startColumn":  24,
+"endLine":  479,
+"endColumn":  33
 }
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 19 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteActorRefProvider.cs",
 "region":  {
-"startLine":  141,
-"startColumn":  33,
-"endLine":  141,
-"endColumn":  40
+"startLine":  142,
+"startColumn":  34,
+"endLine":  142,
+"endColumn":  41
 }
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteActorRefProvider.cs",
 "region":  {
-"startLine":  309,
-"startColumn":  25,
-"endLine":  309,
-"endColumn":  40
+"startLine":  310,
+"startColumn":  26,
+"endLine":  310,
+"endColumn":  41
 }
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteActorRefProvider.cs",
 "region":  {
-"startLine":  451,
-"startColumn":  25,
-"endLine":  451,
-"endColumn":  32
+"startLine":  452,
+"startColumn":  26,
+"endLine":  452,
+"endColumn":  33
 }
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteSystemDaemon.cs",
 "region":  {
-"startLine":  106,
-"startColumn":  23,
-"endLine":  106,
-"endColumn":  32
+"startLine":  107,
+"startColumn":  24,
+"endLine":  107,
+"endColumn":  33
 }
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 15 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\RemoteWatcher.cs",
 "region":  {
-"startLine":  304,
-"startColumn":  32,
-"endLine":  304,
-"endColumn":  41
+"startLine":  305,
+"startColumn":  33,
+"endLine":  305,
+"endColumn":  42
 }
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 11 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaPduCodec.cs",
 "region":  {
-"startLine":  274,
-"startColumn":  25,
-"endLine":  274,
-"endColumn":  41
+"startLine":  275,
+"startColumn":  26,
+"endLine":  275,
+"endColumn":  42
 }
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 13 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\AkkaProtocolTransport.cs",
 "region":  {
-"startLine":  509,
-"startColumn":  21,
-"endLine":  509,
-"endColumn":  34
+"startLine":  510,
+"startColumn":  22,
+"endLine":  510,
+"endColumn":  35
 }
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 12 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
 "region":  {
-"startLine":  224,
-"startColumn":  32,
-"endLine":  224,
-"endColumn":  37
+"startLine":  225,
+"startColumn":  33,
+"endLine":  225,
+"endColumn":  38
 }
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 16 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1541",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1541",
+"message":  "The Cyclomatic Complexity of this method is 49 which is greater than 10 authorized.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\ThrottleTransportAdapter.cs",
 "region":  {
-"startLine":  822,
-"startColumn":  21,
-"endLine":  822,
-"endColumn":  34
+"startLine":  823,
+"startColumn":  22,
+"endLine":  823,
+"endColumn":  35
 }
-}
-]
-}
-],
-"shortMessage":  "The Cyclomatic Complexity of this method is 49 which is greater than 10 authorized.",
-"fullMessage":  "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case be difficult to understand and therefore to maintain.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods should not be too complex",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1541",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

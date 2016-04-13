@@ -1,69 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1481",
+"message":  "Remove this unused \"testProbe\" local variable.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\NoImplicitSenderSpec.cs",
 "region":  {
-"startLine":  46,
-"startColumn":  16,
-"endLine":  46,
-"endColumn":  25
-}
-}
-]
-}
-],
-"shortMessage":  "Remove this unused \"testProbe\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1481",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\NoImplicitSenderSpec.cs",
-"region":  {
-"startLine":  55,
-"startColumn":  16,
-"endLine":  55,
+"startLine":  47,
+"startColumn":  17,
+"endLine":  47,
 "endColumn":  26
 }
 }
-]
+},
+{
+"id":  "S1481",
+"message":  "Remove this unused \"testActor2\" local variable.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\NoImplicitSenderSpec.cs",
+"region":  {
+"startLine":  56,
+"startColumn":  17,
+"endLine":  56,
+"endColumn":  27
 }
-],
-"shortMessage":  "Remove this unused \"testActor2\" local variable.",
-"fullMessage":  "If a local variable is declared but not used, it is dead code and should be removed. Doing so will improve maintainability because developers will not wonder what the variable is used for.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Unused local variables should be removed",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1481",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

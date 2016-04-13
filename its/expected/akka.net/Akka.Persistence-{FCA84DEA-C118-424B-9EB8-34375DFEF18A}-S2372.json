@@ -1,39 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2372",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2372",
+"message":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Persistence\\Fsm\\PersistentFSMBase.cs",
 "region":  {
-"startLine":  102,
-"startColumn":  20,
-"endLine":  102,
-"endColumn":  111
+"startLine":  103,
+"startColumn":  21,
+"endLine":  103,
+"endColumn":  112
 }
-}
-]
-}
-],
-"shortMessage":  "Remove the exception throwing from this property getter, or refactor the property into a method.",
-"fullMessage":  "Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it is best to convert the property to a method.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Exceptions should not be thrown from property getters",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2372",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

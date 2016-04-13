@@ -1,279 +1,120 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1313",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1313",
+"message":  "Make this IP \"192.168.107.1\" address configurable.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorPathSpec.cs",
 "region":  {
-"startLine":  130,
-"startColumn":  53,
-"endLine":  130,
-"endColumn":  68
-}
-}
-]
-}
-],
-"shortMessage":  "Make this IP \"192.168.107.1\" address configurable.",
-"fullMessage":  "Hardcoding an IP address into source code is a bad idea for several reasons: a recompile is required if the address changes; it forces the same address to be used in every environment (dev, sys, qa, prod); it places the responsibility of setting the value to use in production on the shoulders of the developer; it allows attackers to decompile the code and thereby discover a potentially sensitive address",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "IP addresses should not be hardcoded",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1313",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1313",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Configuration\\HoconTests.cs",
-"region":  {
-"startLine":  260,
-"startColumn":  25,
-"endLine":  260,
-"endColumn":  36
-}
-}
-]
-}
-],
-"shortMessage":  "Make this IP \"127.0.0.1\" address configurable.",
-"fullMessage":  "Hardcoding an IP address into source code is a bad idea for several reasons: a recompile is required if the address changes; it forces the same address to be used in every environment (dev, sys, qa, prod); it places the responsibility of setting the value to use in production on the shoulders of the developer; it allows attackers to decompile the code and thereby discover a potentially sensitive address",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "IP addresses should not be hardcoded",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1313",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1313",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\SimpleDnsCacheSpec.cs",
-"region":  {
-"startLine":  36,
-"startColumn":  91,
-"endLine":  36,
-"endColumn":  102
-}
-}
-]
-}
-],
-"shortMessage":  "Make this IP \"127.0.0.1\" address configurable.",
-"fullMessage":  "Hardcoding an IP address into source code is a bad idea for several reasons: a recompile is required if the address changes; it forces the same address to be used in every environment (dev, sys, qa, prod); it places the responsibility of setting the value to use in production on the shoulders of the developer; it allows attackers to decompile the code and thereby discover a potentially sensitive address",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "IP addresses should not be hardcoded",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1313",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1313",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\SimpleDnsCacheSpec.cs",
-"region":  {
-"startLine":  52,
-"startColumn":  91,
-"endLine":  52,
-"endColumn":  102
-}
-}
-]
-}
-],
-"shortMessage":  "Make this IP \"127.0.0.1\" address configurable.",
-"fullMessage":  "Hardcoding an IP address into source code is a bad idea for several reasons: a recompile is required if the address changes; it forces the same address to be used in every environment (dev, sys, qa, prod); it places the responsibility of setting the value to use in production on the shoulders of the developer; it allows attackers to decompile the code and thereby discover a potentially sensitive address",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "IP addresses should not be hardcoded",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1313",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1313",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\SimpleDnsCacheSpec.cs",
-"region":  {
-"startLine":  73,
-"startColumn":  94,
-"endLine":  73,
-"endColumn":  105
-}
-}
-]
-}
-],
-"shortMessage":  "Make this IP \"127.0.0.1\" address configurable.",
-"fullMessage":  "Hardcoding an IP address into source code is a bad idea for several reasons: a recompile is required if the address changes; it forces the same address to be used in every environment (dev, sys, qa, prod); it places the responsibility of setting the value to use in production on the shoulders of the developer; it allows attackers to decompile the code and thereby discover a potentially sensitive address",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "IP addresses should not be hardcoded",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1313",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1313",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\SimpleDnsCacheSpec.cs",
-"region":  {
-"startLine":  74,
-"startColumn":  94,
-"endLine":  74,
-"endColumn":  105
-}
-}
-]
-}
-],
-"shortMessage":  "Make this IP \"127.0.0.1\" address configurable.",
-"fullMessage":  "Hardcoding an IP address into source code is a bad idea for several reasons: a recompile is required if the address changes; it forces the same address to be used in every environment (dev, sys, qa, prod); it places the responsibility of setting the value to use in production on the shoulders of the developer; it allows attackers to decompile the code and thereby discover a potentially sensitive address",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "IP addresses should not be hardcoded",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1313",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1313",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\TcpConnectionSpec.cs",
-"region":  {
-"startLine":  1019,
-"startColumn":  74,
-"endLine":  1019,
-"endColumn":  85
-}
-}
-]
-}
-],
-"shortMessage":  "Make this IP \"127.0.0.1\" address configurable.",
-"fullMessage":  "Hardcoding an IP address into source code is a bad idea for several reasons: a recompile is required if the address changes; it forces the same address to be used in every environment (dev, sys, qa, prod); it places the responsibility of setting the value to use in production on the shoulders of the developer; it allows attackers to decompile the code and thereby discover a potentially sensitive address",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "IP addresses should not be hardcoded",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1313",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1313",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\TcpConnectionSpec.cs",
-"region":  {
-"startLine":  1030,
-"startColumn":  112,
-"endLine":  1030,
-"endColumn":  123
-}
-}
-]
-}
-],
-"shortMessage":  "Make this IP \"127.0.0.1\" address configurable.",
-"fullMessage":  "Hardcoding an IP address into source code is a bad idea for several reasons: a recompile is required if the address changes; it forces the same address to be used in every environment (dev, sys, qa, prod); it places the responsibility of setting the value to use in production on the shoulders of the developer; it allows attackers to decompile the code and thereby discover a potentially sensitive address",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "IP addresses should not be hardcoded",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1313",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S1313",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\TcpIntegrationSpec.cs",
-"region":  {
-"startLine":  196,
-"startColumn":  58,
-"endLine":  196,
+"startLine":  131,
+"startColumn":  54,
+"endLine":  131,
 "endColumn":  69
 }
 }
-]
+},
+{
+"id":  "S1313",
+"message":  "Make this IP \"127.0.0.1\" address configurable.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Configuration\\HoconTests.cs",
+"region":  {
+"startLine":  261,
+"startColumn":  26,
+"endLine":  261,
+"endColumn":  37
 }
-],
-"shortMessage":  "Make this IP \"192.0.2.1\" address configurable.",
-"fullMessage":  "Hardcoding an IP address into source code is a bad idea for several reasons: a recompile is required if the address changes; it forces the same address to be used in every environment (dev, sys, qa, prod); it places the responsibility of setting the value to use in production on the shoulders of the developer; it allows attackers to decompile the code and thereby discover a potentially sensitive address",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "IP addresses should not be hardcoded",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1313",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
+}
+},
+{
+"id":  "S1313",
+"message":  "Make this IP \"127.0.0.1\" address configurable.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\SimpleDnsCacheSpec.cs",
+"region":  {
+"startLine":  37,
+"startColumn":  92,
+"endLine":  37,
+"endColumn":  103
+}
+}
+},
+{
+"id":  "S1313",
+"message":  "Make this IP \"127.0.0.1\" address configurable.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\SimpleDnsCacheSpec.cs",
+"region":  {
+"startLine":  53,
+"startColumn":  92,
+"endLine":  53,
+"endColumn":  103
+}
+}
+},
+{
+"id":  "S1313",
+"message":  "Make this IP \"127.0.0.1\" address configurable.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\SimpleDnsCacheSpec.cs",
+"region":  {
+"startLine":  74,
+"startColumn":  95,
+"endLine":  74,
+"endColumn":  106
+}
+}
+},
+{
+"id":  "S1313",
+"message":  "Make this IP \"127.0.0.1\" address configurable.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\SimpleDnsCacheSpec.cs",
+"region":  {
+"startLine":  75,
+"startColumn":  95,
+"endLine":  75,
+"endColumn":  106
+}
+}
+},
+{
+"id":  "S1313",
+"message":  "Make this IP \"127.0.0.1\" address configurable.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\TcpConnectionSpec.cs",
+"region":  {
+"startLine":  1020,
+"startColumn":  75,
+"endLine":  1020,
+"endColumn":  86
+}
+}
+},
+{
+"id":  "S1313",
+"message":  "Make this IP \"127.0.0.1\" address configurable.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\TcpConnectionSpec.cs",
+"region":  {
+"startLine":  1031,
+"startColumn":  113,
+"endLine":  1031,
+"endColumn":  124
+}
+}
+},
+{
+"id":  "S1313",
+"message":  "Make this IP \"192.0.2.1\" address configurable.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\TcpIntegrationSpec.cs",
+"region":  {
+"startLine":  197,
+"startColumn":  59,
+"endLine":  197,
+"endColumn":  70
+}
 }
 }
 ]

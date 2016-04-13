@@ -1,189 +1,81 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S100",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S100",
+"message":  "Rename property \"fsm\" to match camel case naming rules, consider using \"Fsm\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTimingSpec.cs",
 "region":  {
-"startLine":  23,
-"startColumn":  25,
-"endLine":  23,
-"endColumn":  28
+"startLine":  24,
+"startColumn":  26,
+"endLine":  24,
+"endColumn":  29
 }
-}
-]
-}
-],
-"shortMessage":  "Rename property \"fsm\" to match camel case naming rules, consider using \"Fsm\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods and properties should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S100",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S100",
+"message":  "Rename method \"verifyLevel\" to match camel case naming rules, consider using \"VerifyLevel\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Event\\EventStreamSpec.cs",
 "region":  {
-"startLine":  308,
+"startLine":  309,
+"startColumn":  22,
+"endLine":  309,
+"endColumn":  33
+}
+}
+},
+{
+"id":  "S100",
+"message":  "Rename method \"LLCase\" to match camel case naming rules, consider using \"LlCase\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka.Tests\\Util\\Internal\\Collections\\ImmutableAvlTreeTests.cs",
+"region":  {
+"startLine":  32,
 "startColumn":  21,
-"endLine":  308,
-"endColumn":  32
+"endLine":  32,
+"endColumn":  27
 }
-}
-]
-}
-],
-"shortMessage":  "Rename method \"verifyLevel\" to match camel case naming rules, consider using \"VerifyLevel\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods and properties should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S100",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S100",
+"message":  "Rename method \"LRCase\" to match camel case naming rules, consider using \"LrCase\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Util\\Internal\\Collections\\ImmutableAvlTreeTests.cs",
 "region":  {
-"startLine":  31,
-"startColumn":  20,
-"endLine":  31,
-"endColumn":  26
+"startLine":  62,
+"startColumn":  21,
+"endLine":  62,
+"endColumn":  27
 }
-}
-]
-}
-],
-"shortMessage":  "Rename method \"LLCase\" to match camel case naming rules, consider using \"LlCase\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods and properties should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S100",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S100",
+"message":  "Rename method \"RRCase\" to match camel case naming rules, consider using \"RrCase\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Util\\Internal\\Collections\\ImmutableAvlTreeTests.cs",
 "region":  {
-"startLine":  61,
-"startColumn":  20,
-"endLine":  61,
-"endColumn":  26
+"startLine":  75,
+"startColumn":  21,
+"endLine":  75,
+"endColumn":  27
 }
-}
-]
-}
-],
-"shortMessage":  "Rename method \"LRCase\" to match camel case naming rules, consider using \"LrCase\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods and properties should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S100",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S100",
+"message":  "Rename method \"RLCase\" to match camel case naming rules, consider using \"RlCase\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Util\\Internal\\Collections\\ImmutableAvlTreeTests.cs",
 "region":  {
-"startLine":  74,
-"startColumn":  20,
-"endLine":  74,
-"endColumn":  26
+"startLine":  88,
+"startColumn":  21,
+"endLine":  88,
+"endColumn":  27
 }
-}
-]
-}
-],
-"shortMessage":  "Rename method \"RRCase\" to match camel case naming rules, consider using \"RrCase\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods and properties should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
-}
-},
-{
-"ruleId":  "S100",
-"locations":  [
-{
-"analysisTarget":  [
-{
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Util\\Internal\\Collections\\ImmutableAvlTreeTests.cs",
-"region":  {
-"startLine":  87,
-"startColumn":  20,
-"endLine":  87,
-"endColumn":  26
-}
-}
-]
-}
-],
-"shortMessage":  "Rename method \"RLCase\" to match camel case naming rules, consider using \"RlCase\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods and properties should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

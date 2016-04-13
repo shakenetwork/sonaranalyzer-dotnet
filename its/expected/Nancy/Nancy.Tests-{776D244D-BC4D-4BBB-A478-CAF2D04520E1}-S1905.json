@@ -1,40 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1905",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"int\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Extensions\\TypeExtensionsFixture.cs",
 "region":  {
-"startLine":  102,
-"startColumn":  26,
-"endLine":  102,
-"endColumn":  29
+"startLine":  103,
+"startColumn":  27,
+"endLine":  103,
+"endColumn":  30
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this unnecessary cast to \"int\".",
-"fullMessage":  "Unnecessary casting expressions make the code harder to read and understand.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Redundant casts should not be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1905",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 }
 ]

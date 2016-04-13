@@ -1,39 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1066",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1066",
+"message":  "Merge this if statement with the enclosing one.",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Routing\\TailChoppingSpec.cs",
 "region":  {
-"startLine":  63,
-"startColumn":  20,
-"endLine":  63,
-"endColumn":  22
+"startLine":  64,
+"startColumn":  21,
+"endLine":  64,
+"endColumn":  23
 }
-}
-]
-}
-],
-"shortMessage":  "Merge this if statement with the enclosing one.",
-"fullMessage":  "Merging collapsible \"if\" statements increases the code\u0027s readability.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Collapsible \"if\" statements should be merged",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1066",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

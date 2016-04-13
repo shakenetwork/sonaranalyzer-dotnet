@@ -1,107 +1,42 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2219",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2219",
+"message":  "Use the \"is\" operator instead.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Diagnostics\\Modules\\InfoModule.cs",
 "region":  {
-"startLine":  42,
-"startColumn":  62,
-"endLine":  42,
-"endColumn":  115
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"is\" operator instead.",
-"fullMessage":  "To check the type of an object there are several options: \"is\", \"IsInstanceOfType\" or \"IsAssignableFrom\". Depending on whether the type is returned by a \"GetType()\" or \"typeof()\" call, the \"IsAssignableFrom()\" and \"IsInstanceOfType()\" might be simplified. Simplifying the calls make \"null\" checking unnecessary because both \"is\" and \"IsInstanceOfType\" performs it already.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Runtime type checking should be simplified",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2219",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"ShouldRemoveGetType":  "True",
-"UseIsOperator":  "True"
+"startLine":  43,
+"startColumn":  63,
+"endLine":  43,
+"endColumn":  116
 }
 }
 },
 {
-"ruleId":  "S2219",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2219",
+"message":  "Use the \"IsInstanceOfType()\" method instead.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\DynamicDictionaryValue.cs",
 "region":  {
-"startLine":  296,
-"startColumn":  24,
-"endLine":  296,
-"endColumn":  68
-}
-}
-]
-}
-],
-"shortMessage":  "Use the \"IsInstanceOfType()\" method instead.",
-"fullMessage":  "To check the type of an object there are several options: \"is\", \"IsInstanceOfType\" or \"IsAssignableFrom\". Depending on whether the type is returned by a \"GetType()\" or \"typeof()\" call, the \"IsAssignableFrom()\" and \"IsInstanceOfType()\" might be simplified. Simplifying the calls make \"null\" checking unnecessary because both \"is\" and \"IsInstanceOfType\" performs it already.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Runtime type checking should be simplified",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2219",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customProperties":  {
-"ShouldRemoveGetType":  "True",
-"UseIsOperator":  "False"
+"startLine":  297,
+"startColumn":  25,
+"endLine":  297,
+"endColumn":  69
 }
 }
 },
 {
-"ruleId":  "S2219",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2219",
+"message":  "Use the \"is\" operator instead.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\Security\\CsrfToken.cs",
 "region":  {
-"startLine":  52,
-"startColumn":  16,
-"endLine":  52,
-"endColumn":  50
+"startLine":  53,
+"startColumn":  17,
+"endLine":  53,
+"endColumn":  51
 }
-}
-]
-}
-],
-"shortMessage":  "Use the \"is\" operator instead.",
-"fullMessage":  "To check the type of an object there are several options: \"is\", \"IsInstanceOfType\" or \"IsAssignableFrom\". Depending on whether the type is returned by a \"GetType()\" or \"typeof()\" call, the \"IsAssignableFrom()\" and \"IsInstanceOfType()\" might be simplified. Simplifying the calls make \"null\" checking unnecessary because both \"is\" and \"IsInstanceOfType\" performs it already.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Runtime type checking should be simplified",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2219",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

@@ -1,39 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S3218",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S3218",
+"message":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy\\TinyIoc\\TinyIoC.cs",
 "region":  {
-"startLine":  2829,
-"startColumn":  27,
-"endLine":  2829,
-"endColumn":  35
+"startLine":  2830,
+"startColumn":  28,
+"endLine":  2830,
+"endColumn":  36
 }
-}
-]
-}
-],
-"shortMessage":  "Rename this field to not shadow the outer class\u0027 member with the same name.",
-"fullMessage":  "It\u0027s possible to name the members of an inner class the same as the \"static\" members of its enclosing class - possible, but a bad idea. That\u0027s because maintainers may be confused about which members are being used where. Instead the inner class\u0027 members should be renamed and all the references updated.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Inner class members should not shadow outer class \"static\" or type members",
-"category":  "Design",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S3218",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

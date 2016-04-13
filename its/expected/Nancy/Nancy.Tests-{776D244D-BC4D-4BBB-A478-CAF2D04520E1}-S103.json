@@ -1,489 +1,211 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 221 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Fakes\\FakeModuleCatalog.cs",
 "region":  {
-"startLine":  15,
-"startColumn":  0,
-"endLine":  15,
-"endColumn":  221
+"startLine":  16,
+"startColumn":  1,
+"endLine":  16,
+"endColumn":  222
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 221 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 253 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Bootstrapper\\NancyBootstrapperBaseFixture.cs",
 "region":  {
-"startLine":  52,
-"startColumn":  0,
-"endLine":  52,
-"endColumn":  253
+"startLine":  53,
+"startColumn":  1,
+"endLine":  53,
+"endColumn":  254
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 253 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 398 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Helpers\\HttpUtilityFixture.cs",
 "region":  {
-"startLine":  141,
-"startColumn":  0,
-"endLine":  141,
-"endColumn":  398
+"startLine":  142,
+"startColumn":  1,
+"endLine":  142,
+"endColumn":  399
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 398 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 321 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\HttpMultipartFixture.cs",
 "region":  {
-"startLine":  170,
-"startColumn":  0,
-"endLine":  170,
-"endColumn":  321
+"startLine":  171,
+"startColumn":  1,
+"endLine":  171,
+"endColumn":  322
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 321 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 223 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ModelBinding\\DefaultBinderFixture.cs",
 "region":  {
-"startLine":  1516,
-"startColumn":  0,
-"endLine":  1516,
-"endColumn":  223
+"startLine":  1517,
+"startColumn":  1,
+"endLine":  1517,
+"endColumn":  224
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 223 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 209 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\NancyEngineFixture.cs",
 "region":  {
-"startLine":  76,
-"startColumn":  0,
-"endLine":  76,
-"endColumn":  209
+"startLine":  77,
+"startColumn":  1,
+"endLine":  77,
+"endColumn":  210
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 209 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 201 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\NancyEngineFixture.cs",
 "region":  {
-"startLine":  87,
-"startColumn":  0,
-"endLine":  87,
-"endColumn":  201
+"startLine":  88,
+"startColumn":  1,
+"endLine":  88,
+"endColumn":  202
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 201 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 572 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\RequestFixture.cs",
 "region":  {
-"startLine":  542,
-"startColumn":  0,
-"endLine":  542,
-"endColumn":  572
+"startLine":  543,
+"startColumn":  1,
+"endLine":  543,
+"endColumn":  573
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 572 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 213 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Responses\\DefaultJsonSerializerFixture.cs",
 "region":  {
-"startLine":  125,
-"startColumn":  0,
-"endLine":  125,
-"endColumn":  213
+"startLine":  126,
+"startColumn":  1,
+"endLine":  126,
+"endColumn":  214
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 213 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 556 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\Sessions\\CookieBasedSessionsFixture.cs",
 "region":  {
-"startLine":  20,
-"startColumn":  0,
-"endLine":  20,
-"endColumn":  556
+"startLine":  21,
+"startColumn":  1,
+"endLine":  21,
+"endColumn":  557
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 556 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 203 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\DefaultViewFactoryFixture.cs",
 "region":  {
-"startLine":  357,
-"startColumn":  0,
-"endLine":  357,
-"endColumn":  203
+"startLine":  358,
+"startColumn":  1,
+"endLine":  358,
+"endColumn":  204
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 203 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 225 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
 "region":  {
-"startLine":  240,
-"startColumn":  0,
-"endLine":  240,
-"endColumn":  225
+"startLine":  241,
+"startColumn":  1,
+"endLine":  241,
+"endColumn":  226
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 225 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 234 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
 "region":  {
-"startLine":  255,
-"startColumn":  0,
-"endLine":  255,
-"endColumn":  234
+"startLine":  256,
+"startColumn":  1,
+"endLine":  256,
+"endColumn":  235
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 234 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 201 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
 "region":  {
-"startLine":  513,
-"startColumn":  0,
-"endLine":  513,
-"endColumn":  201
+"startLine":  514,
+"startColumn":  1,
+"endLine":  514,
+"endColumn":  202
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 201 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 201 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
 "region":  {
-"startLine":  524,
-"startColumn":  0,
-"endLine":  524,
-"endColumn":  201
+"startLine":  525,
+"startColumn":  1,
+"endLine":  525,
+"endColumn":  202
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 201 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S103",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S103",
+"message":  "Split this 221 characters long line (which is greater than 200 authorized).",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\ViewEngines\\SuperSimpleViewEngineTests.cs",
 "region":  {
-"startLine":  535,
-"startColumn":  0,
-"endLine":  535,
-"endColumn":  221
+"startLine":  536,
+"startColumn":  1,
+"endLine":  536,
+"endColumn":  222
 }
-}
-]
-}
-],
-"shortMessage":  "Split this 221 characters long line (which is greater than 200 authorized).",
-"fullMessage":  "Having to scroll horizontally makes it harder to get a quick overview and understanding of any piece of code.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Lines should not be too long",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S103",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

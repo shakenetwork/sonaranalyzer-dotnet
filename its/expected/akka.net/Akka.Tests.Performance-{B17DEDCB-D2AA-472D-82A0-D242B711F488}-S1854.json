@@ -1,69 +1,29 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1854",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"newPath\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests.Performance\\Actor\\ActorPathSpec.cs",
 "region":  {
-"startLine":  105,
-"startColumn":  24,
-"endLine":  105,
-"endColumn":  25
+"startLine":  106,
+"startColumn":  25,
+"endLine":  106,
+"endColumn":  26
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this useless assignment to local variable \"newPath\".",
-"fullMessage":  "A dead store happens when a local variable is assigned a value that is not read by any subsequent instruction. Calculating or retrieving a value only to then overwrite it or throw it away, could indicate a serious error in the code.Even if it\u0027s not an error, it is at best a waste of resources. Therefore all calculated values should be used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Dead stores should be removed",
-"category":  "Performance",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1854",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S1854",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"newPath\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests.Performance\\Actor\\ActorPathSpec.cs",
 "region":  {
-"startLine":  119,
-"startColumn":  24,
-"endLine":  119,
-"endColumn":  25
+"startLine":  120,
+"startColumn":  25,
+"endLine":  120,
+"endColumn":  26
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this useless assignment to local variable \"newPath\".",
-"fullMessage":  "A dead store happens when a local variable is assigned a value that is not read by any subsequent instruction. Calculating or retrieving a value only to then overwrite it or throw it away, could indicate a serious error in the code.Even if it\u0027s not an error, it is at best a waste of resources. Therefore all calculated values should be used.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Dead stores should be removed",
-"category":  "Performance",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1854",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

@@ -1,40 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1905",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1905",
+"message":  "Remove this unnecessary cast to \"System.Collections.Generic.IEnumerable\u003cNancy.Demo.Hosting.Aspnet.Metadata.MyUberRouteMetadata\u003e\".",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Demo.Hosting.Aspnet\\MainModule.cs",
 "region":  {
-"startLine":  37,
-"startColumn":  100,
-"endLine":  37,
-"endColumn":  130
+"startLine":  38,
+"startColumn":  101,
+"endLine":  38,
+"endColumn":  131
 }
-}
-]
-}
-],
-"shortMessage":  "Remove this unnecessary cast to \"System.Collections.Generic.IEnumerable\u003cNancy.Demo.Hosting.Aspnet.Metadata.MyUberRouteMetadata\u003e\".",
-"fullMessage":  "Unnecessary casting expressions make the code harder to read and understand.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Hidden",
-"title":  "Redundant casts should not be used",
-"category":  "Maintainability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1905",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False",
-"customTags":  "Unnecessary"
 }
 }
 ]

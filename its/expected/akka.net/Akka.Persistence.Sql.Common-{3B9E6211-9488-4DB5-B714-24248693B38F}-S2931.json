@@ -1,39 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2931",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2931",
+"message":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_pendingRequestsCancellation\".",
+"location":  {
 "uri":  "akka.net\\src\\contrib\\persistence\\Akka.Persistence.Sql.Common\\Snapshot\\SqlSnapshotStore.cs",
 "region":  {
-"startLine":  19,
-"startColumn":  26,
-"endLine":  19,
-"endColumn":  42
+"startLine":  20,
+"startColumn":  27,
+"endLine":  20,
+"endColumn":  43
 }
-}
-]
-}
-],
-"shortMessage":  "Implement \"IDisposable\" in this class and use the \"Dispose\" method to call \"Dispose\" on \"_pendingRequestsCancellation\".",
-"fullMessage":  "Classes with \"IDisposable\" members are responsible for cleaning up those members by calling their \"Dispose\" methods.The best practice here is for the owning class to itself implement \"IDisposable\" and call its members\u0027 \"Dispose\" methods from its own \"Dispose\" method.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Classes with \"IDisposable\" members should implement \"IDisposable\"",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2931",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

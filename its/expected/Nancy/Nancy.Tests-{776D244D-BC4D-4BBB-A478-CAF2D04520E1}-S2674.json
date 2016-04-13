@@ -1,189 +1,81 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S2674",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2674",
+"message":  "Check the return value of the \"Read\" call to see how many bytes were read.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\HttpMultipartFixture.cs",
 "region":  {
-"startLine":  67,
-"startColumn":  12,
-"endLine":  67,
-"endColumn":  65
+"startLine":  68,
+"startColumn":  13,
+"endLine":  68,
+"endColumn":  66
 }
-}
-]
-}
-],
-"shortMessage":  "Check the return value of the \"Read\" call to see how many bytes were read.",
-"fullMessage":  "You cannot assume that any given stream reading call will fill the \"byte[]\" passed in to the method with the number of bytes requested. Instead, you must check the value returned by the read method to see how many bytes were read. Fail to do so, and you introduce a bug that is both harmful and difficult to reproduce.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The length returned from a stream read should be checked",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2674",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2674",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2674",
+"message":  "Check the return value of the \"Read\" call to see how many bytes were read.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\HttpMultipartFixture.cs",
 "region":  {
-"startLine":  98,
-"startColumn":  12,
-"endLine":  98,
-"endColumn":  65
+"startLine":  99,
+"startColumn":  13,
+"endLine":  99,
+"endColumn":  66
 }
-}
-]
-}
-],
-"shortMessage":  "Check the return value of the \"Read\" call to see how many bytes were read.",
-"fullMessage":  "You cannot assume that any given stream reading call will fill the \"byte[]\" passed in to the method with the number of bytes requested. Instead, you must check the value returned by the read method to see how many bytes were read. Fail to do so, and you introduce a bug that is both harmful and difficult to reproduce.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The length returned from a stream read should be checked",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2674",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2674",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2674",
+"message":  "Check the return value of the \"Read\" call to see how many bytes were read.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\HttpMultipartFixture.cs",
 "region":  {
-"startLine":  128,
-"startColumn":  12,
-"endLine":  128,
-"endColumn":  65
+"startLine":  129,
+"startColumn":  13,
+"endLine":  129,
+"endColumn":  66
 }
-}
-]
-}
-],
-"shortMessage":  "Check the return value of the \"Read\" call to see how many bytes were read.",
-"fullMessage":  "You cannot assume that any given stream reading call will fill the \"byte[]\" passed in to the method with the number of bytes requested. Instead, you must check the value returned by the read method to see how many bytes were read. Fail to do so, and you introduce a bug that is both harmful and difficult to reproduce.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The length returned from a stream read should be checked",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2674",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2674",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2674",
+"message":  "Check the return value of the \"Read\" call to see how many bytes were read.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\HttpMultipartFixture.cs",
 "region":  {
-"startLine":  159,
-"startColumn":  12,
-"endLine":  159,
-"endColumn":  65
+"startLine":  160,
+"startColumn":  13,
+"endLine":  160,
+"endColumn":  66
 }
-}
-]
-}
-],
-"shortMessage":  "Check the return value of the \"Read\" call to see how many bytes were read.",
-"fullMessage":  "You cannot assume that any given stream reading call will fill the \"byte[]\" passed in to the method with the number of bytes requested. Instead, you must check the value returned by the read method to see how many bytes were read. Fail to do so, and you introduce a bug that is both harmful and difficult to reproduce.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The length returned from a stream read should be checked",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2674",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2674",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2674",
+"message":  "Check the return value of the \"Read\" call to see how many bytes were read.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\HttpMultipartFixture.cs",
 "region":  {
-"startLine":  186,
-"startColumn":  12,
-"endLine":  186,
-"endColumn":  65
+"startLine":  187,
+"startColumn":  13,
+"endLine":  187,
+"endColumn":  66
 }
-}
-]
-}
-],
-"shortMessage":  "Check the return value of the \"Read\" call to see how many bytes were read.",
-"fullMessage":  "You cannot assume that any given stream reading call will fill the \"byte[]\" passed in to the method with the number of bytes requested. Instead, you must check the value returned by the read method to see how many bytes were read. Fail to do so, and you introduce a bug that is both harmful and difficult to reproduce.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The length returned from a stream read should be checked",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2674",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S2674",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S2674",
+"message":  "Check the return value of the \"Read\" call to see how many bytes were read.",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Tests\\Unit\\IO\\RequestStreamFixture.cs",
 "region":  {
-"startLine":  356,
-"startColumn":  12,
-"endLine":  356,
-"endColumn":  50
+"startLine":  357,
+"startColumn":  13,
+"endLine":  357,
+"endColumn":  51
 }
-}
-]
-}
-],
-"shortMessage":  "Check the return value of the \"Read\" call to see how many bytes were read.",
-"fullMessage":  "You cannot assume that any given stream reading call will fill the \"byte[]\" passed in to the method with the number of bytes requested. Instead, you must check the value returned by the read method to see how many bytes were read. Fail to do so, and you introduce a bug that is both harmful and difficult to reproduce.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "The length returned from a stream read should be checked",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S2674",
-"isEnabledByDefault":  "False",
-"isSuppressedInSource":  "False"
 }
 }
 ]

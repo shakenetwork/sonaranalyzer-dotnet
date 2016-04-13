@@ -1,39 +1,16 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S1848",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S1848",
+"message":  "Either remove this useless object instantiation of class \"Browser\" or use it",
+"location":  {
 "uri":  "Nancy\\src\\Nancy.Testing.Tests\\ConfigurableBootstrapperDependenciesTests.cs",
 "region":  {
-"startLine":  113,
-"startColumn":  12,
-"endLine":  115,
-"endColumn":  13
+"startLine":  114,
+"startColumn":  13,
+"endLine":  116,
+"endColumn":  14
 }
-}
-]
-}
-],
-"shortMessage":  "Either remove this useless object instantiation of class \"Browser\" or use it",
-"fullMessage":  "There is no good reason to create a new object to not do anything with it. Most of the time, this is due to a missing piece of code and so could lead to an unexpected behavior in production.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Objects should not be created to be dropped immediately without being used",
-"category":  "Reliability",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S1848",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]

@@ -1,129 +1,55 @@
 {
-"version":  "0.1",
-"toolInfo":  {
-"toolName":  "Microsoft (R) Visual C# Compiler",
-"productVersion":  "1.1.0",
-"fileVersion":  "1.1.0"
-},
 "issues":  [
 {
-"ruleId":  "S100",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S100",
+"message":  "Rename method \"InitFSM\" to match camel case naming rules, consider using \"InitFsm\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\BarrierCoordinator.cs",
 "region":  {
-"startLine":  393,
-"startColumn":  23,
-"endLine":  393,
-"endColumn":  30
+"startLine":  394,
+"startColumn":  24,
+"endLine":  394,
+"endColumn":  31
 }
-}
-]
-}
-],
-"shortMessage":  "Rename method \"InitFSM\" to match camel case naming rules, consider using \"InitFsm\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods and properties should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S100",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S100",
+"message":  "Rename method \"InitFSM\" to match camel case naming rules, consider using \"InitFsm\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Conductor.cs",
 "region":  {
-"startLine":  341,
-"startColumn":  23,
-"endLine":  341,
-"endColumn":  30
+"startLine":  342,
+"startColumn":  24,
+"endLine":  342,
+"endColumn":  31
 }
-}
-]
-}
-],
-"shortMessage":  "Rename method \"InitFSM\" to match camel case naming rules, consider using \"InitFsm\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods and properties should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S100",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S100",
+"message":  "Rename property \"FSM\" to match camel case naming rules, consider using \"Fsm\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Controller.cs",
 "region":  {
-"startLine":  153,
-"startColumn":  29,
-"endLine":  153,
-"endColumn":  32
+"startLine":  154,
+"startColumn":  30,
+"endLine":  154,
+"endColumn":  33
 }
-}
-]
-}
-],
-"shortMessage":  "Rename property \"FSM\" to match camel case naming rules, consider using \"Fsm\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods and properties should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 },
 {
-"ruleId":  "S100",
-"locations":  [
-{
-"analysisTarget":  [
-{
+"id":  "S100",
+"message":  "Rename method \"InitFSM\" to match camel case naming rules, consider using \"InitFsm\".",
+"location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote.TestKit\\Player.cs",
 "region":  {
-"startLine":  304,
-"startColumn":  20,
-"endLine":  304,
-"endColumn":  27
+"startLine":  305,
+"startColumn":  21,
+"endLine":  305,
+"endColumn":  28
 }
-}
-]
-}
-],
-"shortMessage":  "Rename method \"InitFSM\" to match camel case naming rules, consider using \"InitFsm\".",
-"fullMessage":  "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not method and property names are camel cased.",
-"properties":  {
-"severity":  "Warning",
-"warningLevel":  "1",
-"defaultSeverity":  "Warning",
-"title":  "Methods and properties should be named in camel case",
-"category":  "Naming",
-"helpLink":  "http://vs.sonarlint.org/rules/index.html#version=1.11.0\u0026ruleId=S100",
-"isEnabledByDefault":  "True",
-"isSuppressedInSource":  "False"
 }
 }
 ]
