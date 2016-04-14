@@ -46,7 +46,7 @@ namespace SonarLint.Rules.CSharp
             "push a \"float\" or a \"double\" through a series of simple mathematical " +
             "operations and the answer will be different based on the order of those operation " +
             "because of the rounding that takes place at each step.";
-        internal const string MessageFormat = "Do not check {0} with exact values, use a range instead.";
+        internal const string MessageFormat = "Do not check floating point {0} with exact values, use a range instead.";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
@@ -94,11 +94,20 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            if (IsIndirectEquality(binaryExpression, right, left, context) ||
+            var isEquality = IsIndirectEquality(binaryExpression, right, left, context);
+
+            if (isEquality ||
                 IsIndirectInequality(binaryExpression, right, left, context))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, binaryExpression.GetLocation(), "inequality"));
+                var messageEqualityPart = GetMessageEqualityPart(isEquality);
+
+                context.ReportDiagnostic(Diagnostic.Create(Rule, binaryExpression.GetLocation(), messageEqualityPart));
             }
+        }
+
+        private static string GetMessageEqualityPart(bool isEquality)
+        {
+            return isEquality ? "equality" : "inequality";
         }
 
         private static void CheckEquality(SyntaxNodeAnalysisContext context)
@@ -111,7 +120,9 @@ namespace SonarLint.Rules.CSharp
                 equalitySymbol.ContainingType.IsAny(KnownType.FloatingPointNumbers) &&
                 EqualityOperators.Contains(equalitySymbol.Name))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, equals.OperatorToken.GetLocation(), "equality"));
+                var messageEqualityPart = GetMessageEqualityPart(equals.IsKind(SyntaxKind.EqualsExpression));
+
+                context.ReportDiagnostic(Diagnostic.Create(Rule, equals.OperatorToken.GetLocation(), messageEqualityPart));
             }
         }
 

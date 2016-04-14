@@ -2,7 +2,7 @@
 "issues":  [
 {
 "id":  "S1244",
-"message":  "Do not check equality with exact values, use a range instead.",
+"message":  "Do not check floating point inequality with exact values, use a range instead.",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\EWMASpec.cs",
 "region":  {
