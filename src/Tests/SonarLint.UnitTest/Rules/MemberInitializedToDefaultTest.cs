@@ -24,13 +24,13 @@ using SonarLint.Rules.CSharp;
 namespace SonarLint.UnitTest.Rules
 {
     [TestClass]
-    public class FieldInitializedToDefaultTest
+    public class MemberInitializedToDefaultTest
     {
         [TestMethod]
         [TestCategory("Rule")]
-        public void FieldInitializedToDefault()
+        public void MemberInitializedToDefault()
         {
-            Verifier.VerifyAnalyzer(@"TestCases\FieldInitializedToDefault.cs", new FieldInitializedToDefault());
+            Verifier.VerifyAnalyzer(@"TestCases\MemberInitializedToDefault.cs", new MemberInitializedToDefault());
         }
     }
 }

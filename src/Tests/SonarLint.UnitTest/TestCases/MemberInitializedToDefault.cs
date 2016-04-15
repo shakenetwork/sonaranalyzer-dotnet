@@ -6,7 +6,7 @@ namespace Tests.Diagnostics
     struct Dummy
     { }
 
-    class FieldInitializedToDefault<T>
+    class MemberInitializedToDefault<T>
     {
         public const int myConst = 0; //Compliant
         public double fieldD1 = 0; // Noncompliant
@@ -22,5 +22,12 @@ namespace Tests.Diagnostics
         public ushort us = -0; // Noncompliant
         public uint ui = +-+-+0U; // Noncompliant
         public ulong ul = 0UL; // Noncompliant
+
+        public static object o = default(object); // Noncompliant
+        public object MyProperty { get; set; } = null; // Noncompliant
+        public object MyProperty2 { get { return null; } set { } } = null;
+
+        public event EventHandler MyEvent = null;  // Noncompliant
+        public event EventHandler MyEvent2 = (s, e) => { };
     }
 }
