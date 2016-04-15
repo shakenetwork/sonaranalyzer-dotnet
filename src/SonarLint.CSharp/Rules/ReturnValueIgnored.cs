@@ -39,7 +39,7 @@ namespace SonarLint.Rules.CSharp
     public class ReturnValueIgnored : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2201";
-        internal const string Title = "\"=+\" should not be used instead of \"+=\"";
+        internal const string Title = "Return values should not be ignored when function calls don't have any side effects";
         internal const string Description =
             "When the call to a function doesn't have any side effects, what is the point of making the call if the results " +
             "are ignored? In such case, either the function call is useless and should be dropped or the source code doesn't " +
