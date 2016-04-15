@@ -64,7 +64,7 @@ namespace SonarLint.Rules.CSharp
                 {
                     var assignment = (AssignmentExpressionSyntax)c.Node;
 
-                    var topParenthesizedExpression = GetTopParenthesizedExpression(assignment);
+                    var topParenthesizedExpression = assignment.GetSelfOrTopParenthesizedExpression();
 
                     if (IsNonCompliantSubExpression(assignment, topParenthesizedExpression) ||
                         IsDirectlyInStatementCondition(assignment, topParenthesizedExpression))
@@ -155,18 +155,6 @@ namespace SonarLint.Rules.CSharp
             return coalesceExpression != null && coalesceExpression.IsKind(SyntaxKind.CoalesceExpression);
         }
 
-        private static ExpressionSyntax GetTopParenthesizedExpression(ExpressionSyntax expression)
-        {
-            var current = expression;
-            var parent = current.Parent as ParenthesizedExpressionSyntax;
-            while (parent != null)
-            {
-                current = parent;
-                parent = current.Parent as ParenthesizedExpressionSyntax;
-            }
-            return current;
-        }
-
         private static bool IsDirectlyInStatementCondition(ExpressionSyntax expression, ExpressionSyntax topParenthesizedExpression)
         {
             return IsDirectlyInStatementCondition<IfStatementSyntax>(topParenthesizedExpression, expression, s => s.Condition) ||
@@ -177,7 +165,7 @@ namespace SonarLint.Rules.CSharp
 
         private static bool IsInStatementCondition(ExpressionSyntax expression)
         {
-            var expressionOrParenthesizedParent = GetTopParenthesizedExpression(expression);
+            var expressionOrParenthesizedParent = (ExpressionSyntax)expression.GetSelfOrTopParenthesizedExpression();
 
             return IsInStatementCondition<IfStatementSyntax>(expressionOrParenthesizedParent, expression, s => s.Condition) ||
                 IsInStatementCondition<ForStatementSyntax>(expressionOrParenthesizedParent, expression, s => s.Condition) ||

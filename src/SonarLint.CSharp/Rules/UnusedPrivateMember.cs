@@ -31,6 +31,9 @@ using System.Linq;
 
 namespace SonarLint.Rules.CSharp
 {
+    using ClassWithSemanticModel = SyntaxNodeSemanticModelTuple<ClassDeclarationSyntax>;
+    using SyntaxNodeSymbolSemanticModelTuple = SyntaxNodeSymbolSemanticModelTuple<SyntaxNode, ISymbol>;
+
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("5min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]

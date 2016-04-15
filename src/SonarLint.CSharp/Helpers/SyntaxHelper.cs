@@ -42,5 +42,17 @@ namespace SonarLint.Helpers
             }
             return currentExpression;
         }
+
+        public static ExpressionSyntax GetSelfOrTopParenthesizedExpression(this ExpressionSyntax node)
+        {
+            var current = (node);
+            var parent = current.Parent as ParenthesizedExpressionSyntax;
+            while (parent != null)
+            {
+                current = parent;
+                parent = current.Parent as ParenthesizedExpressionSyntax;
+            }
+            return current;
+        }
     }
 }
