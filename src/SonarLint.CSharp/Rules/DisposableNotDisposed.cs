@@ -103,7 +103,7 @@ namespace SonarLint.Rules.CSharp
 
                     var typesDeclarationsAndSemanticModels =
                         namedType.DeclaringSyntaxReferences
-                        .Select(r => new SyntaxNodeWithSemanticModel<SyntaxNode>
+                        .Select(r => new SyntaxNodeSemanticModelTuple<SyntaxNode>
                         {
                             SyntaxNode = r.GetSyntax(),
                             SemanticModel = c.Compilation.GetSemanticModel(r.SyntaxTree)

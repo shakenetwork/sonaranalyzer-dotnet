@@ -91,6 +91,7 @@ namespace SonarLint.Helpers
         public static readonly KnownType System_Collections_IList = new KnownType("System.Collections.IList");
         public static readonly KnownType System_Collections_Generic_List_T = new KnownType("System.Collections.Generic.List<T>");
         public static readonly KnownType System_EventArgs = new KnownType("System.EventArgs");
+        public static readonly KnownType System_Delegate = new KnownType("System.Delegate");
 
         public static readonly KnownType System_IO_FileStream = new KnownType("System.IO.FileStream");
         public static readonly KnownType System_IO_StreamReader = new KnownType("System.IO.StreamReader");

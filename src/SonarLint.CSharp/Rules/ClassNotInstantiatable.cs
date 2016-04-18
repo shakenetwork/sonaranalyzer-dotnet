@@ -81,25 +81,24 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            var classDeclarations = UnusedPrivateMember.GetClassDeclarations(namedType, context);
+            var classDeclarations = new RemovableDeclarationCollector(namedType, context.Compilation).ClassDeclarations;
 
-            if (IsAnyConstructorCalled(namedType, classDeclarations))
+            if (!IsAnyConstructorCalled(namedType, classDeclarations))
             {
-                return;
-            }
+                var message = constructors.Count > 1
+                    ? "at least one of its constructors"
+                    : "its constructor";
 
-            var message = constructors.Count > 1
-                ? "at least one of its constructors"
-                : "its constructor";
-
-            foreach (var classDeclaration in classDeclarations)
-            {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, classDeclaration.SyntaxNode.Identifier.GetLocation(),
-                    message));
+                foreach (var classDeclaration in classDeclarations)
+                {
+                    context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, classDeclaration.SyntaxNode.Identifier.GetLocation(),
+                        message));
+                }
             }
         }
 
-        private static bool IsAnyConstructorCalled(INamedTypeSymbol namedType, IEnumerable<SyntaxNodeWithSemanticModel<ClassDeclarationSyntax>> classDeclarations)
+        private static bool IsAnyConstructorCalled(INamedTypeSymbol namedType,
+            IEnumerable<SyntaxNodeSemanticModelTuple<ClassDeclarationSyntax>> classDeclarations)
         {
             return classDeclarations
                 .Select(classDeclaration => new

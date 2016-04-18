@@ -18,13 +18,19 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using Microsoft.CodeAnalysis;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SonarLint.Rules.CSharp;
 
-namespace SonarLint.Helpers
+namespace SonarLint.UnitTest.Rules
 {
-    internal class SyntaxNodeWithSemanticModel<T> where T : SyntaxNode
+    [TestClass]
+    public class UninvokedEventDeclarationTest
     {
-        public T SyntaxNode { get; set; }
-        public SemanticModel SemanticModel { get; set; }
+        [TestMethod]
+        [TestCategory("Rule")]
+        public void UninvokedEventDeclaration()
+        {
+            Verifier.VerifyAnalyzer(@"TestCases\UninvokedEventDeclaration.cs", new UninvokedEventDeclaration());
+        }
     }
 }

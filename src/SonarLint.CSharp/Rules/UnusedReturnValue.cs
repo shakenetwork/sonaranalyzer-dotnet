@@ -68,20 +68,20 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
-                    var classDeclarations = UnusedPrivateMember.GetClassDeclarations(namedType, c);
+                    var removableDeclarationCollector = new RemovableDeclarationCollector(namedType, c.Compilation);
 
-                    var declaredPrivateMethodsWithReturn = CollectRemovableMethods(classDeclarations).ToList();
+                    var declaredPrivateMethodsWithReturn = CollectRemovableMethods(removableDeclarationCollector).ToList();
                     if (!declaredPrivateMethodsWithReturn.Any())
                     {
                         return;
                     }
 
-                    var invocations = CollectInvocations(classDeclarations).ToList();
+                    var invocations = CollectInvocations(removableDeclarationCollector.ClassDeclarations).ToList();
 
                     foreach (var declaredPrivateMethodWithReturn in declaredPrivateMethodsWithReturn)
                     {
                         var matchingInvocations = invocations
-                            .Where(inv => object.Equals(inv.MethodSymbol.OriginalDefinition, declaredPrivateMethodWithReturn.MethodSymbol))
+                            .Where(inv => object.Equals(inv.Symbol.OriginalDefinition, declaredPrivateMethodWithReturn.Symbol))
                             .ToList();
 
                         if (!matchingInvocations.Any())
@@ -99,7 +99,7 @@ namespace SonarLint.Rules.CSharp
                 SymbolKind.NamedType);
         }
 
-        private static bool IsReturnValueUsed(IEnumerable<SyntaxWithSymbol<InvocationExpressionSyntax>> matchingInvocations)
+        private static bool IsReturnValueUsed(IEnumerable<SyntaxNodeSymbolSemanticModelTuple<InvocationExpressionSyntax, IMethodSymbol>> matchingInvocations)
         {
             return matchingInvocations.Any(invocation =>
                 !IsExpressionStatement(invocation.SyntaxNode.Parent) &&
@@ -123,44 +123,39 @@ namespace SonarLint.Rules.CSharp
             return node is ExpressionStatementSyntax;
         }
 
-        private static IEnumerable<SyntaxWithSymbol<InvocationExpressionSyntax>> CollectInvocations(
-            IEnumerable<SyntaxNodeWithSemanticModel<ClassDeclarationSyntax>> containers)
+        private static IEnumerable<SyntaxNodeSymbolSemanticModelTuple<InvocationExpressionSyntax, IMethodSymbol>> CollectInvocations(
+            IEnumerable<SyntaxNodeSemanticModelTuple<ClassDeclarationSyntax>> containers)
         {
             return containers
                 .SelectMany(container => container.SyntaxNode.DescendantNodes()
                     .OfType<InvocationExpressionSyntax>()
                     .Select(node =>
-                        new SyntaxWithSymbol<InvocationExpressionSyntax>
+                        new SyntaxNodeSymbolSemanticModelTuple<InvocationExpressionSyntax, IMethodSymbol>
                         {
                             SyntaxNode = node,
                             SemanticModel = container.SemanticModel,
-                            MethodSymbol = container.SemanticModel.GetSymbolInfo(node).Symbol as IMethodSymbol
+                            Symbol = container.SemanticModel.GetSymbolInfo(node).Symbol as IMethodSymbol
                         }))
-                    .Where(invocation => invocation.MethodSymbol != null);
+                    .Where(invocation => invocation.Symbol != null);
         }
 
-        private static IEnumerable<SyntaxWithSymbol<MethodDeclarationSyntax>> CollectRemovableMethods(
-            IEnumerable<SyntaxNodeWithSemanticModel<ClassDeclarationSyntax>> containers)
+        private static IEnumerable<SyntaxNodeSymbolSemanticModelTuple<MethodDeclarationSyntax, IMethodSymbol>> CollectRemovableMethods(
+            RemovableDeclarationCollector removableDeclarationCollector)
         {
-            return containers
-                .SelectMany(container => container.SyntaxNode.DescendantNodes(UnusedPrivateMember.IsNodeContainerTypeDeclaration)
+            return removableDeclarationCollector.ClassDeclarations
+                .SelectMany(container => container.SyntaxNode.DescendantNodes(RemovableDeclarationCollector.IsNodeContainerTypeDeclaration)
                     .OfType<MethodDeclarationSyntax>()
                     .Select(node =>
-                        new SyntaxWithSymbol<MethodDeclarationSyntax>
+                        new SyntaxNodeSymbolSemanticModelTuple<MethodDeclarationSyntax, IMethodSymbol>
                         {
                             SyntaxNode = node,
                             SemanticModel = container.SemanticModel,
-                            MethodSymbol = container.SemanticModel.GetDeclaredSymbol(node)
+                            Symbol = container.SemanticModel.GetDeclaredSymbol(node)
                         }))
                     .Where(node =>
-                        node.MethodSymbol != null &&
-                        !node.MethodSymbol.ReturnsVoid &&
-                        UnusedPrivateMember.IsMethodSymbolQualifyingPrivate(node.MethodSymbol));
-        }
-
-        private class SyntaxWithSymbol<T> : SyntaxNodeWithSemanticModel<T> where T : SyntaxNode
-        {
-            public IMethodSymbol MethodSymbol { get; set; }
+                        node.Symbol != null &&
+                        !node.Symbol.ReturnsVoid &&
+                        RemovableDeclarationCollector.IsRemovable(node.Symbol, Accessibility.Private));
         }
     }
 }

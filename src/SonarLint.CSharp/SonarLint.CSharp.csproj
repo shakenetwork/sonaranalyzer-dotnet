@@ -92,9 +92,11 @@
     <Compile Include="Helpers\ExpressionNumericConverter.cs" />
     <Compile Include="Helpers\GeneratedCodeRecognizer.cs" />
     <Compile Include="Helpers\MethodParameterLookup.cs" />
+    <Compile Include="Helpers\RemovableDeclarationCollector.cs" />
     <Compile Include="Helpers\SyntaxHelper.cs" />
     <Compile Include="Helpers\AttributeSyntaxSymbolMapping.cs" />
-    <Compile Include="Helpers\SyntaxNodeWithSemanticModel.cs" />
+    <Compile Include="Helpers\SyntaxNodeSymbolSemanticModelTuple.cs" />
+    <Compile Include="Helpers\SyntaxNodeSemanticModelTuple.cs" />
     <Compile Include="Helpers\NavigationHelper.cs" />
     <Compile Include="Metrics\Metrics.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

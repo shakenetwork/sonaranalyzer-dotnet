@@ -18,7 +18,6 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -27,8 +26,8 @@ using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
-using System;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -58,6 +57,8 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
+        private static readonly Accessibility maxAccessibility = Accessibility.Private;
+
         protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSymbolAction(
@@ -70,16 +71,15 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
-                    var classDeclarations = GetClassDeclarations(namedType, c);
+                    var declarationCollector = new RemovableDeclarationCollector(namedType, c.Compilation);
 
                     var declaredPrivateSymbols = new HashSet<ISymbol>();
                     var fieldLikeSymbols = new BidirectionalDictionary<ISymbol, SyntaxNode>();
 
-                    CollectRemovableNamedTypes(classDeclarations, declaredPrivateSymbols);
-                    CollectRemovableFieldDeclarations(classDeclarations, declaredPrivateSymbols, fieldLikeSymbols);
-                    CollectRemovableEventFieldDeclarations(classDeclarations, declaredPrivateSymbols, fieldLikeSymbols);
-                    CollectRemovableEventsAndProperties(classDeclarations, declaredPrivateSymbols);
-                    CollectRemovableMethods(classDeclarations, declaredPrivateSymbols);
+                    CollectRemovableNamedTypes(declarationCollector, declaredPrivateSymbols);
+                    CollectRemovableFieldLikeDeclarations(declarationCollector, declaredPrivateSymbols, fieldLikeSymbols);
+                    CollectRemovableEventsAndProperties(declarationCollector, declaredPrivateSymbols);
+                    CollectRemovableMethods(declarationCollector, declaredPrivateSymbols);
 
                     if (!declaredPrivateSymbols.Any())
                     {
@@ -89,16 +89,8 @@ namespace SonarLint.Rules.CSharp
                     var usedSymbols = new HashSet<ISymbol>();
                     var emptyConstructors = new HashSet<ISymbol>();
 
-                    var removableSymbolNames = declaredPrivateSymbols.Select(s => s.Name).ToImmutableHashSet();
-                    var anyRemovableIndexers = declaredPrivateSymbols
-                        .OfType<IPropertySymbol>()
-                        .Any(p => p.IsIndexer);
-                    var anyRemovableCtors = declaredPrivateSymbols
-                        .OfType<IMethodSymbol>()
-                        .Any(m => m.MethodKind == MethodKind.Constructor);
-
-                    CollectUsedSymbols(classDeclarations, usedSymbols, removableSymbolNames, anyRemovableIndexers, anyRemovableCtors);
-                    CollectUsedSymbolsFromCtorInitializerAndCollectEmptyCtors(classDeclarations,
+                    CollectUsedSymbols(declarationCollector, usedSymbols, declaredPrivateSymbols);
+                    CollectUsedSymbolsFromCtorInitializerAndCollectEmptyCtors(declarationCollector,
                         usedSymbols, emptyConstructors);
 
                     ReportIssues(c, usedSymbols, declaredPrivateSymbols, emptyConstructors, fieldLikeSymbols);
@@ -106,20 +98,6 @@ namespace SonarLint.Rules.CSharp
                 SymbolKind.NamedType);
         }
 
-        internal static List<SyntaxNodeWithSemanticModel<ClassDeclarationSyntax>> GetClassDeclarations(INamedTypeSymbol namedType, SymbolAnalysisContext context)
-        {
-            return namedType.DeclaringSyntaxReferences
-                .Select(reference => reference.GetSyntax())
-                .OfType<ClassDeclarationSyntax>()
-                .Select(node =>
-                    new SyntaxNodeWithSemanticModel<ClassDeclarationSyntax>
-                    {
-                        SyntaxNode = node,
-                        SemanticModel = context.Compilation.GetSemanticModel(node.SyntaxTree)
-                    })
-                .Where(n => n.SemanticModel != null)
-                .ToList();
-        }
 
         private static void ReportIssues(SymbolAnalysisContext context, HashSet<ISymbol> usedSymbols,
             HashSet<ISymbol> declaredPrivateSymbols, HashSet<ISymbol> emptyConstructors,
@@ -131,203 +109,121 @@ namespace SonarLint.Rules.CSharp
 
             var alreadyReportedFieldLikeSymbols = new HashSet<ISymbol>();
 
-            foreach (var unusedSymbol in unusedSymbols)
+            var unusedSymbolSyntaxPairs = unusedSymbols
+                .SelectMany(unusedSymbol => unusedSymbol.DeclaringSyntaxReferences
+                    .Select(r =>
+                        new
+                        {
+                            Syntax = r.GetSyntax(),
+                            Symbol = unusedSymbol
+                        }));
+
+            foreach (var unused in unusedSymbolSyntaxPairs)
             {
-                foreach (var syntaxReference in unusedSymbol.DeclaringSyntaxReferences)
+                var location = unused.Syntax.GetLocation();
+
+                var canBeFieldLike = unused.Symbol is IFieldSymbol || unused.Symbol is IEventSymbol;
+                if (canBeFieldLike)
                 {
-                    var syntax = syntaxReference.GetSyntax();
-                    var location = syntax.GetLocation();
-
-                    var canBeFieldLike = unusedSymbol is IFieldSymbol || unusedSymbol is IEventSymbol;
-                    if (canBeFieldLike)
+                    if (alreadyReportedFieldLikeSymbols.Contains(unused.Symbol))
                     {
-                        if (alreadyReportedFieldLikeSymbols.Contains(unusedSymbol))
-                        {
-                            continue;
-                        }
-
-                        var variableDeclaration = GetVariableDeclaration(syntax);
-                        if (variableDeclaration == null)
-                        {
-                            continue;
-                        }
-
-                        var declarations = variableDeclaration.Variables
-                            .Select(v => fieldLikeSymbols.GetByB(v))
-                            .ToList();
-
-                        if (declarations.All(d => unusedSymbols.Contains(d)))
-                        {
-                            location = syntax.Parent.Parent.GetLocation();
-
-                            foreach (var declaration in declarations)
-                            {
-                                alreadyReportedFieldLikeSymbols.Add(declaration);
-                            }
-                        }
+                        continue;
                     }
 
-                    context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, location), context.Compilation);
+                    var variableDeclaration = GetVariableDeclaration(unused.Syntax);
+                    if (variableDeclaration == null)
+                    {
+                        continue;
+                    }
+
+                    var declarations = variableDeclaration.Variables
+                        .Select(v => fieldLikeSymbols.GetByB(v))
+                        .ToList();
+
+                    if (declarations.All(d => unusedSymbols.Contains(d)))
+                    {
+                        location = unused.Syntax.Parent.Parent.GetLocation();
+                        alreadyReportedFieldLikeSymbols.UnionWith(declarations);
+                    }
                 }
+
+                context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, location), context.Compilation);
             }
         }
 
-        private static readonly Func<SyntaxNode, bool> IsNodeStructOrClassDeclaration =
-            node => node.IsKind(SyntaxKind.ClassDeclaration) ||
-                    node.IsKind(SyntaxKind.StructDeclaration);
-
-        internal static readonly Func<SyntaxNode, bool> IsNodeContainerTypeDeclaration =
-            node => IsNodeStructOrClassDeclaration(node) ||
-                    node.IsKind(SyntaxKind.InterfaceDeclaration);
-
-        private static void CollectRemovableMethods(IEnumerable<SyntaxNodeWithSemanticModel<ClassDeclarationSyntax>> containers,
+        private static void CollectRemovableMethods(RemovableDeclarationCollector declarationCollector,
             HashSet<ISymbol> declaredPrivateSymbols)
         {
-            var methodSymbols = containers
-                .SelectMany(container => container.SyntaxNode.DescendantNodes(IsNodeContainerTypeDeclaration)
+            var methodSymbols = declarationCollector.ClassDeclarations
+                .SelectMany(container => container.SyntaxNode.DescendantNodes(RemovableDeclarationCollector.IsNodeContainerTypeDeclaration)
                     .Where(node =>
                         node.IsKind(SyntaxKind.MethodDeclaration) ||
                         node.IsKind(SyntaxKind.ConstructorDeclaration))
                     .Select(node =>
-                        new SyntaxNodeWithSemanticModel<SyntaxNode>
+                        new SyntaxNodeSemanticModelTuple<SyntaxNode>
                         {
                             SyntaxNode = node,
                             SemanticModel = container.SemanticModel
                         }))
                     .Select(node => node.SemanticModel.GetDeclaredSymbol(node.SyntaxNode) as IMethodSymbol)
-                    .Where(IsMethodSymbolQualifyingPrivate);
+                    .Where(method => RemovableDeclarationCollector.IsRemovable(method, maxAccessibility));
 
             declaredPrivateSymbols.UnionWith(methodSymbols);
         }
 
-        internal static bool IsMethodSymbolQualifyingPrivate(IMethodSymbol methodSymbol)
-        {
-            return methodSymbol != null &&
-                IsSymbolRemovable(methodSymbol) &&
-                new[] { MethodKind.Ordinary, MethodKind.Constructor }.Contains(methodSymbol.MethodKind) &&
-                !methodSymbol.ContainingType.IsInterface() &&
-                !methodSymbol.IsInterfaceImplementationOrMemberOverride() &&
-                !IsMainMethod(methodSymbol);
-        }
 
-        private static void CollectRemovableEventsAndProperties(IEnumerable<SyntaxNodeWithSemanticModel<ClassDeclarationSyntax>> containers,
+        private static void CollectRemovableEventsAndProperties(RemovableDeclarationCollector helper,
             HashSet<ISymbol> declaredPrivateSymbols)
         {
-            var symbols = containers
-                .SelectMany(container => container.SyntaxNode.DescendantNodes(IsNodeContainerTypeDeclaration)
-                    .Where(node =>
-                        node.IsKind(SyntaxKind.EventDeclaration) ||
-                        node.IsKind(SyntaxKind.PropertyDeclaration) ||
-                        node.IsKind(SyntaxKind.IndexerDeclaration))
-                    .Select(node =>
-                        new SyntaxNodeWithSemanticModel<SyntaxNode>
-                        {
-                            SyntaxNode = node,
-                            SemanticModel = container.SemanticModel
-                        }))
-                    .Select(node => node.SemanticModel.GetDeclaredSymbol(node.SyntaxNode))
-                    .Where(symbol => symbol != null && IsCandidateSymbolNotInInterfaceAndChangeable(symbol));
-
-            declaredPrivateSymbols.UnionWith(symbols);
+            var declarationKinds = ImmutableHashSet.Create(SyntaxKind.EventDeclaration, SyntaxKind.PropertyDeclaration, SyntaxKind.IndexerDeclaration);
+            var declarations = helper.GetRemovableDeclarations(declarationKinds, maxAccessibility);
+            declaredPrivateSymbols.UnionWith(declarations.Select(d => d.Symbol));
         }
 
-        private static void CollectRemovableEventFieldDeclarations(IEnumerable<SyntaxNodeWithSemanticModel<ClassDeclarationSyntax>> containers,
+        private static void CollectRemovableFieldLikeDeclarations(RemovableDeclarationCollector declarationCollector,
             HashSet<ISymbol> declaredPrivateSymbols, BidirectionalDictionary<ISymbol, SyntaxNode> fieldLikeSymbols)
         {
-            var fields = containers
-                .SelectMany(container => container.SyntaxNode.DescendantNodes(IsNodeContainerTypeDeclaration)
-                    .Where(node => node.IsKind(SyntaxKind.EventFieldDeclaration))
-                    .Select(node =>
-                        new SyntaxNodeWithSemanticModel<EventFieldDeclarationSyntax>
-                        {
-                            SyntaxNode = (EventFieldDeclarationSyntax)node,
-                            SemanticModel = container.SemanticModel
-                        }));
+            var declarationKinds = ImmutableHashSet.Create(SyntaxKind.FieldDeclaration, SyntaxKind.EventFieldDeclaration);
+            var removableFieldsDefinitions = declarationCollector.GetRemovableFieldLikeDeclarations(declarationKinds, maxAccessibility);
 
-            foreach (var field in fields)
+            foreach (var fieldsDefinitions in removableFieldsDefinitions)
             {
-                var removableFieldsDefinitions = field.SyntaxNode.Declaration.Variables
-                        .Select(variable =>
-                            new
-                            {
-                                Variable = variable,
-                                EventSymbol = field.SemanticModel.GetDeclaredSymbol(variable) as IEventSymbol
-                            })
-                        .Where(p => p.EventSymbol != null)
-                        .Where(p => IsCandidateSymbolNotInInterfaceAndChangeable(p.EventSymbol));
-
-                foreach (var fieldsDefinitions in removableFieldsDefinitions)
-                {
-                    declaredPrivateSymbols.Add(fieldsDefinitions.EventSymbol);
-                    fieldLikeSymbols.Add(fieldsDefinitions.EventSymbol, fieldsDefinitions.Variable);
-                }
+                declaredPrivateSymbols.Add(fieldsDefinitions.Symbol);
+                fieldLikeSymbols.Add(fieldsDefinitions.Symbol, fieldsDefinitions.SyntaxNode);
             }
         }
 
-        private static void CollectRemovableFieldDeclarations(IEnumerable<SyntaxNodeWithSemanticModel<ClassDeclarationSyntax>> containers,
-            HashSet<ISymbol> declaredPrivateSymbols, BidirectionalDictionary<ISymbol, SyntaxNode> fieldLikeSymbols)
-        {
-            var fields = containers
-                .SelectMany(container => container.SyntaxNode.DescendantNodes(IsNodeStructOrClassDeclaration)
-                    .Where(node => node.IsKind(SyntaxKind.FieldDeclaration))
-                    .Select(node =>
-                        new SyntaxNodeWithSemanticModel<FieldDeclarationSyntax>
-                        {
-                            SyntaxNode = (FieldDeclarationSyntax)node,
-                            SemanticModel = container.SemanticModel
-                        }));
-
-            foreach (var field in fields)
-            {
-                var removableFieldsDefinitions = field.SyntaxNode.Declaration.Variables
-                    .Select(variable =>
-                        new
-                        {
-                            Variable = variable,
-                            FieldSymbol = field.SemanticModel.GetDeclaredSymbol(variable) as IFieldSymbol
-                        })
-                    .Where(p => p.FieldSymbol != null)
-                    .Where(p => IsSymbolRemovable(p.FieldSymbol));
-
-                foreach (var fieldsDefinitions in removableFieldsDefinitions)
-                {
-                    declaredPrivateSymbols.Add(fieldsDefinitions.FieldSymbol);
-                    fieldLikeSymbols.Add(fieldsDefinitions.FieldSymbol, fieldsDefinitions.Variable);
-                }
-            }
-        }
-
-        private static void CollectRemovableNamedTypes(IEnumerable<SyntaxNodeWithSemanticModel<ClassDeclarationSyntax>> containers,
+        private static void CollectRemovableNamedTypes(RemovableDeclarationCollector declarationCollector,
             HashSet<ISymbol> declaredPrivateSymbols)
         {
-            var symbols = containers
-                .SelectMany(container => container.SyntaxNode.DescendantNodes(IsNodeContainerTypeDeclaration)
+            var symbols = declarationCollector.ClassDeclarations
+                .SelectMany(container => container.SyntaxNode.DescendantNodes(RemovableDeclarationCollector.IsNodeContainerTypeDeclaration)
                     .Where(node =>
                         node.IsKind(SyntaxKind.ClassDeclaration) ||
                         node.IsKind(SyntaxKind.InterfaceDeclaration) ||
                         node.IsKind(SyntaxKind.StructDeclaration) ||
                         node.IsKind(SyntaxKind.DelegateDeclaration))
                     .Select(node =>
-                        new SyntaxNodeWithSemanticModel<SyntaxNode>
+                        new SyntaxNodeSemanticModelTuple<SyntaxNode>
                         {
                             SyntaxNode = node,
                             SemanticModel = container.SemanticModel
                         }))
                     .Select(node => node.SemanticModel.GetDeclaredSymbol(node.SyntaxNode))
-                    .Where(symbol => symbol != null && IsSymbolRemovable(symbol));
+                    .Where(symbol => RemovableDeclarationCollector.IsRemovable(symbol, maxAccessibility));
 
             declaredPrivateSymbols.UnionWith(symbols);
         }
 
         private static void CollectUsedSymbolsFromCtorInitializerAndCollectEmptyCtors(
-            IEnumerable<SyntaxNodeWithSemanticModel<ClassDeclarationSyntax>> containers,
+            RemovableDeclarationCollector declarationCollector,
             HashSet<ISymbol> usedSymbols, HashSet<ISymbol> emptyConstructors)
         {
-            var ctors = containers
-                .SelectMany(container => container.SyntaxNode.DescendantNodes(IsNodeStructOrClassDeclaration)
+            var ctors = declarationCollector.ClassDeclarations
+                .SelectMany(container => container.SyntaxNode.DescendantNodes(RemovableDeclarationCollector.IsNodeStructOrClassDeclaration)
                     .Where(node => node.IsKind(SyntaxKind.ConstructorDeclaration))
                     .Select(node =>
-                        new SyntaxNodeWithSemanticModel<ConstructorDeclarationSyntax>
+                        new SyntaxNodeSemanticModelTuple<ConstructorDeclarationSyntax>
                         {
                             SyntaxNode = (ConstructorDeclarationSyntax)node,
                             SemanticModel = container.SemanticModel
@@ -359,31 +255,38 @@ namespace SonarLint.Rules.CSharp
             }
         }
 
-        private static void CollectUsedSymbols(IList<SyntaxNodeWithSemanticModel<ClassDeclarationSyntax>> containers,
-            HashSet<ISymbol> usedSymbols, ImmutableHashSet<string> symbolNames,
-            bool anyRemovableIndexers, bool anyRemovableCtors)
+        private static void CollectUsedSymbols(RemovableDeclarationCollector declarationCollector,
+            HashSet<ISymbol> usedSymbols, HashSet<ISymbol> declaredPrivateSymbols)
         {
-            var identifiers = containers
+            var symbolNames = declaredPrivateSymbols.Select(s => s.Name).ToImmutableHashSet();
+            var anyRemovableIndexers = declaredPrivateSymbols
+                .OfType<IPropertySymbol>()
+                .Any(p => p.IsIndexer);
+            var anyRemovableCtors = declaredPrivateSymbols
+                .OfType<IMethodSymbol>()
+                .Any(m => m.MethodKind == MethodKind.Constructor);
+
+            var identifiers = declarationCollector.ClassDeclarations
                 .SelectMany(container => container.SyntaxNode.DescendantNodes()
                     .Where(node =>
                         node.IsKind(SyntaxKind.IdentifierName))
                     .Cast<IdentifierNameSyntax>()
                     .Where(node => symbolNames.Contains(node.Identifier.ValueText))
                     .Select(node =>
-                        new SyntaxNodeWithSemanticModel<SyntaxNode>
+                        new SyntaxNodeSemanticModelTuple<SyntaxNode>
                         {
                             SyntaxNode = node,
                             SemanticModel = container.SemanticModel
                         }));
 
-            var generic = containers
+            var generic = declarationCollector.ClassDeclarations
                 .SelectMany(container => container.SyntaxNode.DescendantNodes()
                     .Where(node =>
                         node.IsKind(SyntaxKind.GenericName))
                     .Cast<GenericNameSyntax>()
                     .Where(node => symbolNames.Contains(node.Identifier.ValueText))
                     .Select(node =>
-                        new SyntaxNodeWithSemanticModel<SyntaxNode>
+                        new SyntaxNodeSemanticModelTuple<SyntaxNode>
                         {
                             SyntaxNode = node,
                             SemanticModel = container.SemanticModel
@@ -393,11 +296,11 @@ namespace SonarLint.Rules.CSharp
 
             if (anyRemovableIndexers)
             {
-                var nodes = containers
+                var nodes = declarationCollector.ClassDeclarations
                     .SelectMany(container => container.SyntaxNode.DescendantNodes()
                         .Where(node => node.IsKind(SyntaxKind.ElementAccessExpression))
                         .Select(node =>
-                            new SyntaxNodeWithSemanticModel<SyntaxNode>
+                            new SyntaxNodeSemanticModelTuple<SyntaxNode>
                             {
                                 SyntaxNode = node,
                                 SemanticModel = container.SemanticModel
@@ -408,11 +311,11 @@ namespace SonarLint.Rules.CSharp
 
             if (anyRemovableCtors)
             {
-                var nodes = containers
+                var nodes = declarationCollector.ClassDeclarations
                     .SelectMany(container => container.SyntaxNode.DescendantNodes()
                         .Where(node => node.IsKind(SyntaxKind.ObjectCreationExpression))
                         .Select(node =>
-                            new SyntaxNodeWithSemanticModel<SyntaxNode>
+                            new SyntaxNodeSemanticModelTuple<SyntaxNode>
                             {
                                 SyntaxNode = node,
                                 SemanticModel = container.SemanticModel
@@ -449,47 +352,6 @@ namespace SonarLint.Rules.CSharp
 
             var eventFieldDeclaration = syntax.Parent.Parent as EventFieldDeclarationSyntax;
             return eventFieldDeclaration?.Declaration;
-        }
-
-        private static bool IsCandidateSymbolNotInInterfaceAndChangeable(ISymbol symbol)
-        {
-            return IsSymbolRemovable(symbol) &&
-                !symbol.ContainingType.IsInterface() &&
-                !symbol.IsInterfaceImplementationOrMemberOverride();
-        }
-
-        private static bool IsSymbolRemovable(ISymbol symbol)
-        {
-            return EffectiveAccessibility(symbol) == Accessibility.Private &&
-                !symbol.IsImplicitlyDeclared &&
-                !symbol.IsAbstract &&
-                !symbol.IsVirtual &&
-                !symbol.GetAttributes().Any();
-        }
-
-        private static bool IsMainMethod(IMethodSymbol methodSymbol)
-        {
-            return methodSymbol.IsStatic && methodSymbol.Name == "Main";
-        }
-
-        private static Accessibility EffectiveAccessibility(ISymbol symbol)
-        {
-            var result = symbol.DeclaredAccessibility;
-            var currentSymbol = symbol;
-
-            while (currentSymbol != null)
-            {
-                if (currentSymbol.DeclaredAccessibility == Accessibility.Private)
-                {
-                    return Accessibility.Private;
-                }
-                if (currentSymbol.DeclaredAccessibility == Accessibility.Internal)
-                {
-                    result = currentSymbol.DeclaredAccessibility;
-                }
-                currentSymbol = currentSymbol.ContainingType;
-            }
-            return result;
         }
     }
 }
