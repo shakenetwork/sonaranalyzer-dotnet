@@ -101,18 +101,26 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            if (IsLinqMethod(invokedMethodSymbol) ||
-                HasOnlySideEffectFreeMethods(invokedMethodSymbol.ContainingType) ||
-                IsPureMethod(invokedMethodSymbol))
+            var constructedFrom = invokedMethodSymbol.ContainingType.ConstructedFrom;
+
+            if (invokedMethodSymbol.Parameters.All(p => p.RefKind == RefKind.None) &&
+                IsSideEffectFreeOrPure(invokedMethodSymbol, constructedFrom))
             {
                 c.ReportDiagnostic(Diagnostic.Create(Rule, expression.GetLocation(), invokedMethodSymbol.Name));
             }
         }
 
+        private static bool IsSideEffectFreeOrPure(IMethodSymbol invokedMethodSymbol, INamedTypeSymbol constructedFrom)
+        {
+            return IsLinqMethod(invokedMethodSymbol) ||
+                HasOnlySideEffectFreeMethods(invokedMethodSymbol.ContainingType) ||
+                HasOnlySideEffectFreeMethods(constructedFrom) ||
+                IsPureMethod(invokedMethodSymbol);
+        }
+
         private static bool IsPureMethod(IMethodSymbol invokedMethodSymbol)
         {
             return !invokedMethodSymbol.ReturnsVoid &&
-                invokedMethodSymbol.Parameters.All(p => p.RefKind == RefKind.None) &&
                 invokedMethodSymbol.GetAttributes().Any(a => a.AttributeClass.Is(KnownType.System_Diagnostics_Contracts_PureAttribute));
         }
 
