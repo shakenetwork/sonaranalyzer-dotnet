@@ -44,7 +44,9 @@ namespace SonarLint.Rules.CSharp
             "\"enum\"s are usually used to identify distinct elements in a set of values. However \"enum\"s can be treated as bit fields and bitwise " +
             "operations can be used on them to combine the values. This is a good way of specifying multiple elements of set with a single value. When " +
             "\"enum\"s are used this way, it is a best practice to mark the \"enum\" with the \"FlagsAttribute\".";
-        internal const string MessageFormat = "Mark enum \"{0}\" with \"FlagsAttribute\" or remove this bitwise operation.";
+        internal const string MessageFormat = "{0}";
+        internal const string MessageRemove = "Remove this bitwise operation; the enum \"{0}\" is not marked with \"FlagsAttribute\".";
+        internal const string MessageChangeOrRemove = "Mark enum \"{0}\" with \"FlagsAttribute\" or remove this bitwise operation.";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
@@ -84,12 +86,23 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            if (!operation.ReturnType.GetAttributes().Any(attr => attr.AttributeClass?.ToDisplayString() == "System.FlagsAttribute"))
+            if (!HasFlagsAttribute(operation.ReturnType))
             {
                 var friendlyTypeName = operation.ReturnType.ToMinimalDisplayString(context.SemanticModel, context.Node.SpanStart);
+                var messageFormat = operation.ReturnType.DeclaringSyntaxReferences.Any()
+                    ? MessageChangeOrRemove
+                    : MessageRemove;
+
+                var message = string.Format(messageFormat, friendlyTypeName);
+
                 var op = operatorSelector((T)context.Node);
-                context.ReportDiagnostic(Diagnostic.Create(Rule, op.GetLocation(), friendlyTypeName));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, op.GetLocation(), message));
             }
+        }
+
+        private static bool HasFlagsAttribute(ISymbol symbol)
+        {
+            return symbol.GetAttributes().Any(a => a.AttributeClass.Is(KnownType.System_FlagsAttribute));
         }
     }
 }

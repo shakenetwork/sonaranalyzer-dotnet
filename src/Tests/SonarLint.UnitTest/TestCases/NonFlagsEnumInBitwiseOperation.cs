@@ -31,13 +31,13 @@ namespace Tests.Diagnostics
 
             x = ~Permissions.Read;  // Compliant
 
-            var y = Permissions2.Read | Permissions2.Write; 
+            var y = Permissions2.Read | Permissions2.Write;
             var z = Permissions3.Read | Permissions3.Write;
 
             var w = 1 | 3;
 
             var v = System.ComponentModel.DesignerSerializationVisibility.Content
-                | System.ComponentModel.DesignerSerializationVisibility.Hidden; //Noncompliant
+                | System.ComponentModel.DesignerSerializationVisibility.Hidden; // Noncompliant
         }
     }
 }

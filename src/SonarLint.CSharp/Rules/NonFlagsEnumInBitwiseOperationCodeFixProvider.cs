@@ -26,6 +26,7 @@ using System.Linq;
 using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.CSharp;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -55,7 +56,7 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            var flagsAttributeType = semanticModel.Compilation.GetTypeByMetadataName("System.FlagsAttribute");
+            var flagsAttributeType = semanticModel.Compilation.GetTypeByMetadataName(KnownType.System_FlagsAttribute.TypeName);
             if (flagsAttributeType == null)
             {
                 return;
