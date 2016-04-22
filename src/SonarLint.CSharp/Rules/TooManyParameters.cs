@@ -71,6 +71,7 @@ namespace SonarLint.Rules.CSharp
 
                     if (parameters > Maximum &&
                         parameterListNode.Parent != null &&
+                        CanBeChanged(parameterListNode.Parent, c.SemanticModel) &&
                         Mapping.TryGetValue(parameterListNode.Parent.Kind(), out declarationName))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, parameterListNode.GetLocation(),
@@ -78,6 +79,26 @@ namespace SonarLint.Rules.CSharp
                     }
                 },
                 SyntaxKind.ParameterList);
+        }
+
+        private static bool CanBeChanged(SyntaxNode node, SemanticModel semanticModel)
+        {
+            var declaredSymbol = semanticModel.GetDeclaredSymbol(node);
+            var symbol = semanticModel.GetSymbolInfo(node).Symbol;
+
+            if (declaredSymbol == null && symbol == null)
+            {
+                // No information
+                return false;
+            }
+
+            if (symbol != null)
+            {
+                // Not a declaration, such as Action
+                return true;
+            }
+
+            return !declaredSymbol.IsInterfaceImplementationOrMemberOverride();
         }
 
         private static readonly Dictionary<SyntaxKind, string> Mapping = new Dictionary<SyntaxKind, string>

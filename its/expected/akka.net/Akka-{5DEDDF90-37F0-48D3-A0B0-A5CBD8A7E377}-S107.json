@@ -15,19 +15,6 @@
 },
 {
 "id":  "S107",
-"message":  "Method has 8 parameters, which is greater than the 7 authorized.",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorRefProvider.cs",
-"region":  {
-"startLine":  351,
-"startColumn":  41,
-"endLine":  351,
-"endColumn":  190
-}
-}
-},
-{
-"id":  "S107",
 "message":  "Constructor has 8 parameters, which is greater than the 7 authorized.",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\RootGuardianActorRef.cs",
