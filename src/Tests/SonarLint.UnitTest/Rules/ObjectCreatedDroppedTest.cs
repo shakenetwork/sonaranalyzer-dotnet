@@ -32,5 +32,12 @@ namespace SonarLint.UnitTest.Rules
         {
             Verifier.VerifyAnalyzer(@"TestCases\ObjectCreatedDropped.cs", new ObjectCreatedDropped());
         }
+
+        [TestMethod]
+        [TestCategory("Rule")]
+        public void ObjectCreatedDropped_InTest()
+        {
+            Verifier.VerifyNoIssueReportedInTest(@"TestCases\ObjectCreatedDropped.cs", new ObjectCreatedDropped());
+        }
     }
 }

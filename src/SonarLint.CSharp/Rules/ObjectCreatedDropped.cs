@@ -59,6 +59,11 @@ namespace SonarLint.Rules.CSharp
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
+                    if (c.SemanticModel.Compilation.IsTest())
+                    {
+                        return;
+                    }
+
                     var objectCreation = (ObjectCreationExpressionSyntax)c.Node;
                     var parent = objectCreation.Parent as ExpressionStatementSyntax;
                     if (parent != null)
