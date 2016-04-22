@@ -5,6 +5,17 @@ using System.Diagnostics.Contracts;
 
 namespace Tests.Diagnostics
 {
+    [Pure]
+    public class PureType
+    {
+        public static int GetValue() => 42;
+    }
+
+    public class NonPureType
+    {
+        public static int GetValue() => 42;
+    }
+
     class ReturnValueIgnored
     {
         [Pure]
@@ -37,6 +48,9 @@ namespace Tests.Diagnostics
 
             Action<int> a = (input) => "this string".Equals("other string"); // Noncompliant
             Func<int, bool> a = (input) => "this string".Equals("other string");
+
+            PureType.GetValue(); // Noncompliant
+            NonPureType.GetValue();
         }
         void M(object o) { }
     }
