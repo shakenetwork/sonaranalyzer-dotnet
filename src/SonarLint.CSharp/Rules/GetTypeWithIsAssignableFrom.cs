@@ -111,7 +111,9 @@ namespace SonarLint.Rules.CSharp
             }
 
             var typeSymbol = context.SemanticModel.GetTypeInfo(typeSyntax).Type;
-            if (typeSymbol == null || !typeSymbol.IsSealed)
+            if (typeSymbol == null ||
+                !typeSymbol.IsSealed ||
+                typeSymbol.OriginalDefinition.Is(KnownType.System_Nullable_T))
             {
                 return;
             }

@@ -51,6 +51,8 @@ namespace Tests.Diagnostics
             b = apple is Apple; // Noncompliant
             var appleType = typeof(Apple);
             b = appleType.IsInstanceOfType(apple); // Noncompliant
+
+            b = apple.GetType() == typeof(int?); // Compliant
         }
     }
 }
