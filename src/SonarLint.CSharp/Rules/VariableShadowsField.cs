@@ -28,6 +28,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -61,27 +62,64 @@ namespace SonarLint.Rules.CSharp
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
-                    var declaration = (LocalDeclarationStatementSyntax) c.Node;
-                    var variables = declaration.Declaration.Variables;
+                    var declaration = (ForEachStatementSyntax)c.Node;
 
-                    List<ISymbol> members = null;
-                    foreach (var variable in variables)
+                    var variableSymbol = c.SemanticModel.GetDeclaredSymbol(declaration);
+                    if (variableSymbol == null)
                     {
-                        var variableSymbol = c.SemanticModel.GetDeclaredSymbol(variable);
-                        if (variableSymbol == null)
-                        {
-                            return;
-                        }
-
-                        if (members == null)
-                        {
-                            members = GetMembers(variableSymbol.ContainingType);
-                        }
-
-                        ReportOnVariableMatchingField(members, variable.Identifier, c);
+                        return;
                     }
+
+                    var members = GetMembers(variableSymbol.ContainingType);
+
+                    ReportOnVariableMatchingField(members, declaration.Identifier, c);
                 },
+                SyntaxKind.ForEachStatement);
+
+            context.RegisterSyntaxNodeActionInNonGenerated(
+                c => ProcessStatementWithVariableDeclaration((LocalDeclarationStatementSyntax)c.Node, s => s.Declaration, c),
                 SyntaxKind.LocalDeclarationStatement);
+
+            context.RegisterSyntaxNodeActionInNonGenerated(
+                c => ProcessStatementWithVariableDeclaration((ForStatementSyntax)c.Node, s => s.Declaration, c),
+                SyntaxKind.ForStatement);
+
+            context.RegisterSyntaxNodeActionInNonGenerated(
+                c => ProcessStatementWithVariableDeclaration((UsingStatementSyntax)c.Node, s => s.Declaration, c),
+                SyntaxKind.UsingStatement);
+
+            context.RegisterSyntaxNodeActionInNonGenerated(
+                c => ProcessStatementWithVariableDeclaration((FixedStatementSyntax)c.Node, s => s.Declaration, c),
+                SyntaxKind.FixedStatement);
+        }
+
+        private static void ProcessStatementWithVariableDeclaration<T>(T declaration, Func<T, VariableDeclarationSyntax> variableSelector,
+            SyntaxNodeAnalysisContext context)
+        {
+            var variableDeclaration = variableSelector(declaration);
+            if (variableDeclaration == null)
+            {
+                return;
+            }
+
+            var variables = variableDeclaration.Variables;
+
+            List<ISymbol> members = null;
+            foreach (var variable in variables)
+            {
+                var variableSymbol = context.SemanticModel.GetDeclaredSymbol(variable);
+                if (variableSymbol == null)
+                {
+                    return;
+                }
+
+                if (members == null)
+                {
+                    members = GetMembers(variableSymbol.ContainingType);
+                }
+
+                ReportOnVariableMatchingField(members, variable.Identifier, context);
+            }
         }
 
         private static void ReportOnVariableMatchingField(IEnumerable<ISymbol> members, SyntaxToken identifier, SyntaxNodeAnalysisContext context)
