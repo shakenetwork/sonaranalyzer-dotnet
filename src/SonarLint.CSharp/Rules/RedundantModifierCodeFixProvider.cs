@@ -28,13 +28,18 @@ using Microsoft.CodeAnalysis.CSharp;
 using SonarLint.Common;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Formatting;
+using System.Collections.Generic;
+using System;
 
 namespace SonarLint.Rules.CSharp
 {
     [ExportCodeFixProvider(LanguageNames.CSharp)]
     public class RedundantModifierCodeFixProvider : CodeFixProvider
     {
-        internal const string Title = "Remove redundant modifier";
+        public const string TitleUnsafe = "Remove redundant \"unsafe\" modifier";
+        public const string TitleChecked = "Remove redundant \"checked\" and \"unchecked\"modifier";
+        public const string TitlePartial = "Remove redundant \"partial\" modifier";
+        public const string TitleSealed = "Remove redundant \"sealed\" modifier";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {
             get
@@ -48,11 +53,9 @@ namespace SonarLint.Rules.CSharp
             return DocumentBasedFixAllProvider.Instance;
         }
 
-        private static readonly SyntaxKind[] SimpleTokenKinds =
-        {
+        private static readonly ISet<SyntaxKind> SimpleTokenKinds = ImmutableHashSet.Create(
             SyntaxKind.PartialKeyword,
-            SyntaxKind.SealedKeyword
-        };
+            SyntaxKind.SealedKeyword);
 
         public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
         {
@@ -66,7 +69,7 @@ namespace SonarLint.Rules.CSharp
             {
                 context.RegisterCodeFix(
                     CodeAction.Create(
-                        Title,
+                        TitleUnsafe,
                         c =>
                         {
                             var newRoot = RemoveRedundantUnsafe(root, token);
@@ -78,12 +81,49 @@ namespace SonarLint.Rules.CSharp
 
             if (SimpleTokenKinds.Contains(token.Kind()))
             {
+                var title = token.IsKind(SyntaxKind.PartialKeyword) ? TitlePartial : TitleSealed;
+
                 context.RegisterCodeFix(
                     CodeAction.Create(
-                        Title,
+                        title,
                         c =>
                         {
                             var newRoot = RemoveRedundantToken(root, token);
+                            return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
+                        }),
+                    context.Diagnostics);
+                return;
+            }
+
+            RegisterCodeFixForChecked(token.Parent, root, context);
+        }
+
+        private static void RegisterCodeFixForChecked(SyntaxNode node, SyntaxNode root, CodeFixContext context)
+        {
+            var checkedStatement = node as CheckedStatementSyntax;
+            if (checkedStatement != null)
+            {
+                context.RegisterCodeFix(
+                    CodeAction.Create(
+                        TitleChecked,
+                        c =>
+                        {
+                            var newRoot = RemoveRedundantCheckedStatement(root, checkedStatement);
+                            return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
+                        }),
+                    context.Diagnostics);
+                return;
+            }
+
+            var checkedExpression = node as CheckedExpressionSyntax;
+            if (checkedExpression != null)
+            {
+                context.RegisterCodeFix(
+                    CodeAction.Create(
+                        TitleChecked,
+                        c =>
+                        {
+                            var newRoot = RemoveRedundantCheckedExpression(root, checkedExpression);
                             return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
                         }),
                     context.Diagnostics);
@@ -122,6 +162,22 @@ namespace SonarLint.Rules.CSharp
             return root.ReplaceNode(
                 oldParent,
                 newParent.WithLeadingTrivia(oldParent.GetLeadingTrivia()));
+        }
+
+        private static SyntaxNode RemoveRedundantCheckedStatement(SyntaxNode root, CheckedStatementSyntax checkedStatement)
+        {
+            var newBlock = SyntaxFactory.Block(checkedStatement.Block.Statements);
+
+            return root.ReplaceNode(
+                checkedStatement,
+                newBlock.WithTriviaFrom(checkedStatement));
+        }
+
+        private static SyntaxNode RemoveRedundantCheckedExpression(SyntaxNode root, CheckedExpressionSyntax checkedExpression)
+        {
+            return root.ReplaceNode(
+                checkedExpression,
+                checkedExpression.Expression.WithTriviaFrom(checkedExpression));
         }
     }
 }

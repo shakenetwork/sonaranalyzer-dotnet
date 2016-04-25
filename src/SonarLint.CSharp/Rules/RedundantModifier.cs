@@ -18,8 +18,6 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
-using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -27,7 +25,10 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Linq;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -74,6 +75,19 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.ClassDeclaration,
                 SyntaxKind.StructDeclaration,
                 SyntaxKind.InterfaceDeclaration);
+
+            context.RegisterSyntaxNodeActionInNonGenerated(
+                c =>
+                {
+                    if (CheckedWalker.IsTopLevel(c.Node))
+                    {
+                        new CheckedWalker(c).Visit(c.Node);
+                    }
+                },
+                SyntaxKind.CheckedStatement,
+                SyntaxKind.UncheckedStatement,
+                SyntaxKind.CheckedExpression,
+                SyntaxKind.UncheckedExpression);
         }
 
         private static void CheckForUnnecessaryUnsafeBlocks(SyntaxNodeAnalysisContext context)
@@ -250,6 +264,142 @@ namespace SonarLint.Rules.CSharp
             {
                 var keyword = modifiers.First(m => m.IsKind(SyntaxKind.SealedKeyword));
                 context.ReportDiagnostic(Diagnostic.Create(Rule, keyword.GetLocation(), "sealed", "redundant"));
+            }
+        }
+
+
+        private class CheckedWalker : CSharpSyntaxWalker
+        {
+            private readonly SyntaxNodeAnalysisContext context;
+
+            private bool isCurrentContextChecked;
+            private bool currentContextHasIntegralOperation = false;
+
+            public CheckedWalker(SyntaxNodeAnalysisContext context)
+            {
+                this.context = context;
+
+                var statement = context.Node as CheckedStatementSyntax;
+                if (statement != null)
+                {
+                    isCurrentContextChecked = statement.IsKind(SyntaxKind.CheckedStatement);
+                    return;
+                }
+
+                var expression = context.Node as CheckedExpressionSyntax;
+                if (expression != null)
+                {
+                    isCurrentContextChecked = expression.IsKind(SyntaxKind.CheckedExpression);
+                    return;
+                }
+
+                throw new NotSupportedException("Only checked expressions and statements are supported");
+            }
+
+            public override void VisitCheckedExpression(CheckedExpressionSyntax node)
+            {
+                VisitChecked(node, SyntaxKind.CheckedExpression, node.Keyword, base.VisitCheckedExpression);
+            }
+
+            public override void VisitCheckedStatement(CheckedStatementSyntax node)
+            {
+                VisitChecked(node, SyntaxKind.CheckedStatement, node.Keyword, base.VisitCheckedStatement);
+            }
+
+            public override void VisitBinaryExpression(BinaryExpressionSyntax node)
+            {
+                base.VisitBinaryExpression(node);
+
+                if (BinaryOperationsForChecked.Contains(node.Kind()))
+                {
+                    SetHasIntegralOperation(node);
+                }
+            }
+
+            public override void VisitPrefixUnaryExpression(PrefixUnaryExpressionSyntax node)
+            {
+                base.VisitPrefixUnaryExpression(node);
+
+                if (UnaryOperationsForChecked.Contains(node.Kind()))
+                {
+                    SetHasIntegralOperation(node);
+                }
+            }
+
+            public override void VisitCastExpression(CastExpressionSyntax node)
+            {
+                base.VisitCastExpression(node);
+
+                SetHasIntegralOperation(node);
+            }
+
+            private void VisitChecked<T>(T node, SyntaxKind checkedKind, SyntaxToken tokenToReport, Action<T> baseCall)
+                where T: SyntaxNode
+            {
+                var isThisNodeChecked = node.IsKind(checkedKind);
+
+                var originalIsCurrentContextChecked = isCurrentContextChecked;
+                var originalContextHasIntegralOperation = currentContextHasIntegralOperation;
+
+                isCurrentContextChecked = isThisNodeChecked;
+                currentContextHasIntegralOperation = false;
+
+                baseCall(node);
+
+                var isSimplyRendundant = IsCurrentNodeEmbeddedInsideSameChecked(node, isThisNodeChecked, originalIsCurrentContextChecked);
+
+                if (isSimplyRendundant || !currentContextHasIntegralOperation)
+                {
+                    var keywordToReport = isThisNodeChecked ? "checked" : "unchecked";
+                    context.ReportDiagnostic(Diagnostic.Create(Rule, tokenToReport.GetLocation(), keywordToReport, "redundant"));
+                }
+
+                isCurrentContextChecked = originalIsCurrentContextChecked;
+                currentContextHasIntegralOperation = originalContextHasIntegralOperation ||
+                    currentContextHasIntegralOperation && isSimplyRendundant;
+            }
+
+            private bool IsCurrentNodeEmbeddedInsideSameChecked(SyntaxNode node, bool isThisNodeChecked, bool isCurrentContextChecked)
+            {
+                return node != context.Node &&
+                    isThisNodeChecked == isCurrentContextChecked;
+            }
+
+            private void SetHasIntegralOperation(CastExpressionSyntax node)
+            {
+                var expressionType = context.SemanticModel.GetTypeInfo(node.Expression).Type;
+                var castedToType = context.SemanticModel.GetTypeInfo(node.Type).Type;
+                currentContextHasIntegralOperation |= castedToType != null && expressionType != null && castedToType.IsAny(KnownType.IntegralNumbers);
+            }
+
+            private void SetHasIntegralOperation(ExpressionSyntax node)
+            {
+                var methodSymbol = context.SemanticModel.GetSymbolInfo(node).Symbol as IMethodSymbol;
+                currentContextHasIntegralOperation |= methodSymbol != null && methodSymbol.ReceiverType.IsAny(KnownType.IntegralNumbers);
+            }
+
+            private static readonly ISet<SyntaxKind> BinaryOperationsForChecked = ImmutableHashSet.Create(
+                SyntaxKind.AddExpression,
+                SyntaxKind.SubtractExpression,
+                SyntaxKind.MultiplyExpression,
+                SyntaxKind.DivideExpression,
+                SyntaxKind.AddAssignmentExpression,
+                SyntaxKind.SubtractAssignmentExpression,
+                SyntaxKind.MultiplyAssignmentExpression,
+                SyntaxKind.DivideAssignmentExpression);
+
+            private static readonly ISet<SyntaxKind> UnaryOperationsForChecked = ImmutableHashSet.Create(
+                SyntaxKind.UnaryMinusExpression,
+                SyntaxKind.PostDecrementExpression,
+                SyntaxKind.PostIncrementExpression,
+                SyntaxKind.PreDecrementExpression,
+                SyntaxKind.PreIncrementExpression);
+
+            public static bool IsTopLevel(SyntaxNode node)
+            {
+                return !node.Ancestors().Any(a =>
+                    a is CheckedStatementSyntax ||
+                    a is CheckedExpressionSyntax);
             }
         }
     }

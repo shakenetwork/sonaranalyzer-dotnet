@@ -139,4 +139,58 @@ partial interface PartialInterface //Noncompliant
             }
         }
     }
+
+    public class Checked
+    {
+        public static void M()
+        {
+            checked
+            {
+                checked // Noncompliant
+                {
+                    var z = 1 + 4;
+                    var y = unchecked(1 +
+                        unchecked(4)); // Noncompliant
+                }
+            }
+
+            checked // Noncompliant
+            {
+                var f = 5.5;
+                var y = unchecked(5 + 4);
+            }
+
+            checked
+            {
+                var f = 5.5;
+                var x = 5 + 4;
+                var y = unchecked(5 + 4);
+            }
+
+            checked
+            {
+                var f = 5.5;
+                var x = 5 + 4;
+                var y = unchecked(5.5 + 4); // Noncompliant
+            }
+
+            unchecked
+            {
+                var f = 5.5;
+                var y = unchecked(5 + 4); // Noncompliant
+            }
+
+            checked
+            {
+                var x = (uint)10;
+                var y = (int)x;
+            }
+
+            checked // Noncompliant
+            {
+                var x = 10;
+                var y = (double)x;
+            }
+        }
+    }
 }
