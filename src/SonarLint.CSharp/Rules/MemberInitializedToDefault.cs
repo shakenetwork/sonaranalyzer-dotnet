@@ -81,8 +81,7 @@ namespace SonarLint.Rules.CSharp
             var propertyDeclaration = (PropertyDeclarationSyntax)context.Node;
 
             if (propertyDeclaration.Initializer == null ||
-                propertyDeclaration.AccessorList == null ||
-                propertyDeclaration.AccessorList.Accessors.Any(Accessibility => Accessibility.Body != null))
+                !IsAutoProperty(propertyDeclaration))
             {
                 return;
             }
@@ -95,6 +94,12 @@ namespace SonarLint.Rules.CSharp
                 context.ReportDiagnostic(Diagnostic.Create(Rule, propertyDeclaration.Initializer.GetLocation(), propertySymbol.Name));
                 return;
             }
+        }
+
+        private static bool IsAutoProperty(PropertyDeclarationSyntax propertyDeclaration)
+        {
+            return propertyDeclaration.AccessorList != null &&
+                propertyDeclaration.AccessorList.Accessors.All(Accessibility => Accessibility.Body == null);
         }
 
         private static void CheckEvent(SyntaxNodeAnalysisContext context)
