@@ -17,11 +17,20 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-namespace SonarLint.Common
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SonarLint.Rules.CSharp;
+
+namespace SonarLint.UnitTest.Rules
 {
-    public static class WellKnownDiagnosticIds
+    [TestClass]
+    public class PrivateFieldUsedAsLocalVariableTest
     {
-        public const string WRN_LowercaseEllSuffix = "CS0078";
-        public const string ERR_UseDefViolation = "CS0165";
+        [TestMethod]
+        [TestCategory("Rule")]
+        public void PrivateFieldUsedAsLocalVariable()
+        {
+            Verifier.VerifyAnalyzer(@"TestCases\PrivateFieldUsedAsLocalVariable.cs", new PrivateFieldUsedAsLocalVariable());
+        }
     }
 }
