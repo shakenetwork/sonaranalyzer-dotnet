@@ -56,16 +56,22 @@ namespace SonarLint.Rules.CSharp
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
 
-        internal static readonly SyntaxKind[] SyntaxElementsToCheck =
+        private static readonly SyntaxKind[] SyntaxKindsToCheckBinary =
         {
             SyntaxKind.SubtractExpression,
             SyntaxKind.DivideExpression, SyntaxKind.ModuloExpression,
             SyntaxKind.LogicalOrExpression, SyntaxKind.LogicalAndExpression,
             SyntaxKind.BitwiseOrExpression, SyntaxKind.BitwiseAndExpression, SyntaxKind.ExclusiveOrExpression,
             SyntaxKind.EqualsExpression, SyntaxKind.NotEqualsExpression,
-            SyntaxKind.LessThanExpression, SyntaxKind.LessThanOrEqualExpression, SyntaxKind.GreaterThanExpression,
-            SyntaxKind.GreaterThanOrEqualExpression,
-            SyntaxKind.LeftShiftExpression, SyntaxKind.RightShiftExpression
+            SyntaxKind.LessThanExpression, SyntaxKind.LessThanOrEqualExpression,
+            SyntaxKind.GreaterThanExpression, SyntaxKind.GreaterThanOrEqualExpression
+        };
+
+        private static readonly SyntaxKind[] SyntaxKindsToCheckAssignment =
+        {
+            SyntaxKind.SubtractAssignmentExpression,
+            SyntaxKind.DivideAssignmentExpression, SyntaxKind.ModuloAssignmentExpression,
+            SyntaxKind.OrAssignmentExpression, SyntaxKind.AndAssignmentExpression, SyntaxKind.ExclusiveOrAssignmentExpression
         };
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
@@ -75,21 +81,27 @@ namespace SonarLint.Rules.CSharp
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
-                    var expression = (BinaryExpressionSyntax) c.Node;
-                    int value;
-                    if (expression.IsKind(SyntaxKind.LeftShiftExpression) &&
-                        ExpressionNumericConverter.TryGetConstantIntValue(expression.Right, out value) &&
-                        value == 1)
-                    {
-                        return;
-                    }
-
-                    if (EquivalenceChecker.AreEquivalent(expression.Left, expression.Right))
-                    {
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, c.Node.GetLocation(), expression.OperatorToken));
-                    }
+                    var expression = (BinaryExpressionSyntax)c.Node;
+                    ReportIfExpressionsMatch(c, expression.Left, expression.Right, expression.OperatorToken);
                 },
-                SyntaxElementsToCheck);
+                SyntaxKindsToCheckBinary);
+
+            context.RegisterSyntaxNodeActionInNonGenerated(
+                c =>
+                {
+                    var expression = (AssignmentExpressionSyntax)c.Node;
+                    ReportIfExpressionsMatch(c, expression.Left, expression.Right, expression.OperatorToken);
+                },
+                SyntaxKindsToCheckAssignment);
+        }
+
+        private static void ReportIfExpressionsMatch(SyntaxNodeAnalysisContext context, ExpressionSyntax left, ExpressionSyntax right,
+            SyntaxToken operatorToken)
+        {
+            if (EquivalenceChecker.AreEquivalent(left.RemoveParentheses(), right.RemoveParentheses()))
+            {
+                context.ReportDiagnostic(Diagnostic.Create(Rule, context.Node.GetLocation(), operatorToken));
+            }
         }
     }
 }

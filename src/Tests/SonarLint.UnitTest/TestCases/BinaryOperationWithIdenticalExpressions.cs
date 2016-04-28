@@ -17,7 +17,7 @@ namespace Tests.TestCases
                 doZ();
             }
 
-            if (a == b || a == /*comment*/ b) //Noncompliant
+            if (a == b || (a == /*comment*/ b)) //Noncompliant
             {
                 doW();
             }
@@ -26,9 +26,12 @@ namespace Tests.TestCases
             int k = 5 - 5; //Noncompliant
             int l = 5 * 5;
 
+            l = 5 | 5; // Noncompliant
+            l |= (l); // Noncompliant
+
             int i = 1 << 1;
             i = 1 << 0x1;
-            i = 2 << 2; //Noncompliant
+            i = 2 << 2; // Compliant
         }
     }
 }
