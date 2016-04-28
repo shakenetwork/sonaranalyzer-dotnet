@@ -46,7 +46,7 @@ namespace SonarLint.Rules.CSharp
             "respectively.";
         internal const string MessageFormat = "Add the \"{0}\" keyword to parameter \"{1}\" to make it \"{2}\".";
         internal const string Category = SonarLint.Common.Category.Design;
-        internal const Severity RuleSeverity = Severity.Major;
+        internal const Severity RuleSeverity = Severity.Info;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
