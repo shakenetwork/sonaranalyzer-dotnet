@@ -6,7 +6,7 @@ namespace Tests.Diagnostics
 {
     public class DelegateSubtraction
     {
-        public delegate void MyDelegate(string s);
+        public delegate void MyDelegate();
 
         private static void Test()
         {
@@ -27,12 +27,12 @@ namespace Tests.Diagnostics
 
             chain23(); // will print "1234"!
 
-            chain23 = chain1234 - first - fourth; // Compliant - "1" is first removed, followed by "4"
+            chain23 = chain1234 - first - (fourth); // Compliant - "1" is first removed, followed by "4"
 
             chain23(); // will print "23"
 
             chain23 -= first + fourth; // Noncompliant
-            chain23 -= first; // Compliant
+            chain23 -= (first); // Compliant
 
             unsafe
             {

@@ -120,7 +120,10 @@ namespace SonarLint.Rules.CSharp
 
         private static bool ExpressionIsSimple(ExpressionSyntax expression)
         {
-            return expression is IdentifierNameSyntax || expression is MemberAccessExpressionSyntax;
+            var expressionWithoutparentheses = expression.RemoveParentheses();
+
+            return expressionWithoutparentheses is IdentifierNameSyntax ||
+                expressionWithoutparentheses is MemberAccessExpressionSyntax;
         }
     }
 }
