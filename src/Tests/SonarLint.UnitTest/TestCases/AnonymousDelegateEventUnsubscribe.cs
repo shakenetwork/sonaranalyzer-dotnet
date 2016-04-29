@@ -16,8 +16,8 @@ namespace Tests.Diagnostics
             Changed -= (obj, args) => { }; //Noncompliant
 
             Changed -= (obj, args) => Console.WriteLine(); // Noncompliant - single statement
-            Changed -= (obj, args) => delegate () { }; // Noncompliant
-            Changed2 -= obj => delegate () { }; // Noncompliant
+            Changed -= delegate (object sender, EventArgs e) { }; // Noncompliant
+            Changed2 -= delegate { }; // Noncompliant
 
             ChangedEventHandler x = (obj, args) => { };
             Changed -= x;
