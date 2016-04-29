@@ -165,7 +165,7 @@ namespace SonarLint.Rules.CSharp
 
         private static bool IsInStatementCondition(ExpressionSyntax expression)
         {
-            var expressionOrParenthesizedParent = (ExpressionSyntax)expression.GetSelfOrTopParenthesizedExpression();
+            var expressionOrParenthesizedParent = expression.GetSelfOrTopParenthesizedExpression();
 
             return IsInStatementCondition<IfStatementSyntax>(expressionOrParenthesizedParent, expression, s => s.Condition) ||
                 IsInStatementCondition<ForStatementSyntax>(expressionOrParenthesizedParent, expression, s => s.Condition) ||

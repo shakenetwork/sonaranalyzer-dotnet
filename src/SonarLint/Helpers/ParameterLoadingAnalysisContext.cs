@@ -32,9 +32,9 @@ namespace SonarLint.Helpers
         private readonly ICollection<Action<CompilationStartAnalysisContext>> compilationStartActions =
             new List<Action<CompilationStartAnalysisContext>>();
 
-        public IEnumerable<Action<CompilationStartAnalysisContext>> CompilationStartActions => compilationStartActions;
+        internal IEnumerable<Action<CompilationStartAnalysisContext>> CompilationStartActions => compilationStartActions;
 
-        public ParameterLoadingAnalysisContext(SonarAnalysisContext context)
+        internal ParameterLoadingAnalysisContext(SonarAnalysisContext context)
         {
             this.context = context;
         }
@@ -44,12 +44,12 @@ namespace SonarLint.Helpers
             context.RegisterCodeBlockAction(action);
         }
 
-        public void RegisterCompilationAction(Action<CompilationAnalysisContext> action)
+        internal void RegisterCompilationAction(Action<CompilationAnalysisContext> action)
         {
             context.RegisterCompilationAction(action);
         }
 
-        public void RegisterCompilationStartAction(Action<CompilationStartAnalysisContext> action)
+        internal void RegisterCompilationStartAction(Action<CompilationStartAnalysisContext> action)
         {
             // only collect compilation start actions and call them later
             compilationStartActions.Add(action);
@@ -60,7 +60,7 @@ namespace SonarLint.Helpers
             context.RegisterSemanticModelAction(action);
         }
 
-        public void RegisterSymbolAction(Action<SymbolAnalysisContext> action, ImmutableArray<SymbolKind> symbolKinds)
+        internal void RegisterSymbolAction(Action<SymbolAnalysisContext> action, ImmutableArray<SymbolKind> symbolKinds)
         {
             context.RegisterSymbolAction(action, symbolKinds);
         }

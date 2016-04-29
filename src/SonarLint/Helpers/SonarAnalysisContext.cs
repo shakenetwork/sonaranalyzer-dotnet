@@ -33,7 +33,7 @@ namespace SonarLint.Helpers
         public static Func<SyntaxTree, bool> ShouldAnalysisBeDisabled { get; set; }
 
 
-        public SonarAnalysisContext(AnalysisContext context)
+        internal SonarAnalysisContext(AnalysisContext context)
         {
             this.context = context;
         }
@@ -67,7 +67,7 @@ namespace SonarLint.Helpers
                 });
         }
 
-        public void RegisterCompilationAction(Action<CompilationAnalysisContext> action)
+        internal void RegisterCompilationAction(Action<CompilationAnalysisContext> action)
         {
             context.RegisterCompilationAction(
                 c =>
@@ -147,7 +147,7 @@ namespace SonarLint.Helpers
                 });
         }
 
-        public void RegisterSymbolAction(Action<SymbolAnalysisContext> action, ImmutableArray<SymbolKind> symbolKinds)
+        internal void RegisterSymbolAction(Action<SymbolAnalysisContext> action, ImmutableArray<SymbolKind> symbolKinds)
         {
             RegisterSymbolAction(action, symbolKinds.ToArray());
         }
@@ -167,7 +167,7 @@ namespace SonarLint.Helpers
                 symbolKinds);
         }
 
-        protected virtual bool IsAnalysisDisabled(SyntaxTree tree)
+        private static bool IsAnalysisDisabled(SyntaxTree tree)
         {
             if (ShouldAnalysisBeDisabled == null)
             {
