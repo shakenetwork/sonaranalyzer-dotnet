@@ -29,6 +29,7 @@ using SonarLint.Helpers;
 using Microsoft.CodeAnalysis.Text;
 using System.Linq;
 using System;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -94,21 +95,21 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.ParenthesizedLambdaExpression);
         }
 
+        #region Type specification in lambda
+
+        private static readonly ISet<SyntaxKind> RefOutKeywords = ImmutableHashSet.Create(
+            SyntaxKind.RefKeyword, SyntaxKind.OutKeyword);
+
         private static void ReportRedundantTypeSpecificationInLambda(SyntaxNodeAnalysisContext c)
         {
             var lambda = (ParenthesizedLambdaExpressionSyntax)c.Node;
-            if (lambda.ParameterList == null ||
-                lambda.ParameterList.Parameters.Any(
-                    p => p.Type == null ||
-                    p.Modifiers.Any(m =>
-                        m.IsKind(SyntaxKind.RefKeyword) ||
-                        m.IsKind(SyntaxKind.OutKeyword))))
+            if (!IsParameterListModifiable(lambda))
             {
                 return;
             }
 
             var symbol = c.SemanticModel.GetSymbolInfo(lambda).Symbol as IMethodSymbol;
-            if(symbol == null)
+            if (symbol == null)
             {
                 return;
             }
@@ -121,17 +122,10 @@ namespace SonarLint.Rules.CSharp
             newLambda = ChangeSyntaxElement(lambda, newLambda, c.SemanticModel, out newSemanticModel);
             var newSymbol = newSemanticModel.GetSymbolInfo(newLambda).Symbol as IMethodSymbol;
 
-            if (newSymbol == null)
+            if (newSymbol == null ||
+                ParameterTypesDoNotMatch(symbol, newSymbol))
             {
                 return;
-            }
-
-            for (int i = 0; i < symbol.Parameters.Length; i++)
-            {
-                if (symbol.Parameters[i].Type.ToDisplayString() != newSymbol.Parameters[i].Type.ToDisplayString())
-                {
-                    return;
-                }
             }
 
             foreach (var parameter in lambda.ParameterList.Parameters)
@@ -142,29 +136,29 @@ namespace SonarLint.Rules.CSharp
             }
         }
 
-        private static T ChangeSyntaxElement<T>(T originalNode, T newNode, SemanticModel originalSemanticModel,
-            out SemanticModel newSemanticModel)
-            where T : SyntaxNode
+        private static bool IsParameterListModifiable(ParenthesizedLambdaExpressionSyntax lambda)
         {
-            var annotation = new SyntaxAnnotation();
-            var annotatedNode = newNode.WithAdditionalAnnotations(annotation);
-
-            var newSyntaxRoot = originalNode.SyntaxTree.GetRoot().ReplaceNode(
-                originalNode,
-                annotatedNode);
-
-            var newTree = newSyntaxRoot.SyntaxTree.WithRootAndOptions(
-                newSyntaxRoot,
-                originalNode.SyntaxTree.Options);
-
-            var newCompilation = originalSemanticModel.Compilation.ReplaceSyntaxTree(
-                originalNode.SyntaxTree,
-                newTree);
-
-            newSemanticModel = newCompilation.GetSemanticModel(newTree);
-
-            return (T)newTree.GetRoot().GetAnnotatedNodes(annotation).First();
+            return lambda.ParameterList != null &&
+                lambda.ParameterList.Parameters.All(
+                    p => p.Type != null &&
+                    p.Modifiers.All(m => !RefOutKeywords.Contains(m.Kind())));
         }
+
+        private static bool ParameterTypesDoNotMatch(IMethodSymbol method1, IMethodSymbol method2)
+        {
+            for (int i = 0; i < method1.Parameters.Length; i++)
+            {
+                if (method1.Parameters[i].Type.ToDisplayString() != method2.Parameters[i].Type.ToDisplayString())
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        #endregion
+
+        #region Nullable constructor call
 
         private static void ReportRedundantNullableConstructorCall(SyntaxNodeAnalysisContext c)
         {
@@ -183,51 +177,40 @@ namespace SonarLint.Rules.CSharp
             }
         }
 
-        private static bool IsInArgumentAndCanBeChanged(ObjectCreationExpressionSyntax objectCreation, SemanticModel semanticModel,
-            Func<InvocationExpressionSyntax, bool> additionalFilter = null)
+        private static bool IsNullableCreation(ObjectCreationExpressionSyntax objectCreation, SemanticModel semanticModel)
         {
-            var argument = objectCreation.Parent as ArgumentSyntax;
-
-            var invocation = argument?.Parent?.Parent as InvocationExpressionSyntax;
-            if (invocation == null)
+            if (objectCreation.ArgumentList == null ||
+                objectCreation.ArgumentList.Arguments.Count != 1)
             {
                 return false;
             }
 
-            if (additionalFilter != null && additionalFilter(invocation))
-            {
-                return false;
-            }
-
-            var methodSymbol = semanticModel.GetSymbolInfo(invocation).Symbol;
-            if (methodSymbol == null)
-            {
-                return false;
-            }
-
-            var newArgumentList = SyntaxFactory.ArgumentList(
-                SyntaxFactory.SeparatedList(invocation.ArgumentList.Arguments
-                    .Select(a => a == argument
-                        ? SyntaxFactory.Argument(objectCreation.ArgumentList.Arguments.First().Expression)
-                        : a)));
-            var newInvocation = invocation.WithArgumentList(newArgumentList);
-            SemanticModel newSemanticModel;
-            newInvocation = ChangeSyntaxElement(invocation, newInvocation, semanticModel, out newSemanticModel);
-            var newMethodSymbol = newSemanticModel.GetSymbolInfo(newInvocation).Symbol as IMethodSymbol;
-
-            return newMethodSymbol != null &&
-                methodSymbol.ToDisplayString() == newMethodSymbol.ToDisplayString();
+            var type = semanticModel.GetSymbolInfo(objectCreation).Symbol?.ContainingType;
+            return type != null &&
+                type.OriginalDefinition.Is(KnownType.System_Nullable_T);
         }
 
-        private static void ReportIssueOnRedundantObjectCreation(SyntaxNodeAnalysisContext c,
-            ObjectCreationExpressionSyntax objectCreation, string message, RedundancyType redundancyType)
+
+        private static bool IsInAssignmentOrReturnValue(ObjectCreationExpressionSyntax objectCreation)
         {
-            var location = Location.Create(objectCreation.SyntaxTree,
-                TextSpan.FromBounds(objectCreation.SpanStart, objectCreation.Type.Span.End));
-            c.ReportDiagnostic(Diagnostic.Create(Rule, location,
-                    ImmutableDictionary<string, string>.Empty.Add(DiagnosticTypeKey, redundancyType.ToString()),
-                    message));
+            var parent = objectCreation.GetSelfOrTopParenthesizedExpression().Parent;
+            return parent is AssignmentExpressionSyntax ||
+                parent is ReturnStatementSyntax ||
+                parent is LambdaExpressionSyntax;
         }
+
+        private static bool IsInNotVarDeclaration(ObjectCreationExpressionSyntax objectCreation)
+        {
+            var variableDeclaration = objectCreation.GetSelfOrTopParenthesizedExpression()
+                .Parent?.Parent?.Parent as VariableDeclarationSyntax;
+
+            return variableDeclaration?.Type != null &&
+                !variableDeclaration.Type.IsVar;
+        }
+
+        #endregion
+
+        #region Array (creation, size, type)
 
         private static void ReportRedundancyInArrayCreation(SyntaxNodeAnalysisContext c)
         {
@@ -295,6 +278,10 @@ namespace SonarLint.Rules.CSharp
             }
         }
 
+        #endregion
+
+        #region Object initializer
+
         private static void ReportOnRedundantObjectInitializer(SyntaxNodeAnalysisContext c)
         {
             var objectCreation = (ObjectCreationExpressionSyntax)c.Node;
@@ -312,6 +299,10 @@ namespace SonarLint.Rules.CSharp
             }
         }
 
+        #endregion
+
+        #region Explicit delegate creation
+
         private static void ReportOnExplicitDelegateCreation(SyntaxNodeAnalysisContext c)
         {
             var objectCreation = (ObjectCreationExpressionSyntax)c.Node;
@@ -320,8 +311,15 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            if (IsInNotVarDeclaration(objectCreation) ||
-                IsInAssignmentOrReturnValue(objectCreation) ||
+            var argumentExpression = objectCreation.ArgumentList?.Arguments.FirstOrDefault()?.Expression;
+            if (argumentExpression == null)
+            {
+                return;
+            }
+
+            if (IsInDeclarationNotVarNotDelegate(objectCreation, c.SemanticModel) ||
+                IsAssignmentNotDelegate(objectCreation, c.SemanticModel) ||
+                IsReturnValueNotDelegate(objectCreation, c.SemanticModel) ||
                 IsInArgumentAndCanBeChanged(objectCreation, c.SemanticModel,
                     invocation => invocation.ArgumentList.Arguments.Any(a => IsDynamic(a, c.SemanticModel))))
             {
@@ -329,6 +327,79 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
         }
+
+        private static bool IsDynamic(ArgumentSyntax argument, SemanticModel semanticModel)
+        {
+            return semanticModel.GetTypeInfo(argument.Expression).Type is IDynamicTypeSymbol;
+        }
+
+        private static bool IsInDeclarationNotVarNotDelegate(ObjectCreationExpressionSyntax objectCreation, SemanticModel semanticModel)
+        {
+            var variableDeclaration = objectCreation.GetSelfOrTopParenthesizedExpression()
+                .Parent?.Parent?.Parent as VariableDeclarationSyntax;
+
+            var type = variableDeclaration?.Type;
+
+            if (type == null ||
+                type.IsVar)
+            {
+                return false;
+            }
+
+            var typeInformation = semanticModel.GetTypeInfo(type).Type;
+
+            return typeInformation != null &&
+                !typeInformation.Is(KnownType.System_Delegate);
+        }
+
+        private static bool IsDelegateCreation(ObjectCreationExpressionSyntax objectCreation, SemanticModel semanticModel)
+        {
+            var type = semanticModel.GetSymbolInfo(objectCreation.Type).Symbol as INamedTypeSymbol;
+
+            return type != null &&
+                type.TypeKind == TypeKind.Delegate;
+        }
+
+        private static bool IsReturnValueNotDelegate(ObjectCreationExpressionSyntax objectCreation,
+            SemanticModel semanticModel)
+        {
+            var parent = objectCreation.GetSelfOrTopParenthesizedExpression().Parent;
+
+            if (!(parent is ReturnStatementSyntax) &&
+                !(parent is LambdaExpressionSyntax))
+            {
+                return false;
+            }
+
+            var enclosing = semanticModel.GetEnclosingSymbol(objectCreation.SpanStart) as IMethodSymbol;
+            if (enclosing == null)
+            {
+                return false;
+            }
+
+            return enclosing.ReturnType != null &&
+                !enclosing.ReturnType.Is(KnownType.System_Delegate);
+        }
+
+        private static bool IsAssignmentNotDelegate(ObjectCreationExpressionSyntax objectCreation,
+            SemanticModel semanticModel)
+        {
+            var parent = objectCreation.GetSelfOrTopParenthesizedExpression().Parent;
+            var assignment = parent as AssignmentExpressionSyntax;
+            if (assignment == null)
+            {
+                return false;
+            }
+
+            var typeInformation = semanticModel.GetTypeInfo(assignment.Left).Type;
+
+            return typeInformation != null &&
+                !typeInformation.Is(KnownType.System_Delegate);
+        }
+
+        #endregion
+
+        #region Parameter list
 
         private static void ReportOnRedundantParameterList(SyntaxNodeAnalysisContext c)
         {
@@ -361,45 +432,77 @@ namespace SonarLint.Rules.CSharp
             }
         }
 
-        private static bool IsNullableCreation(ObjectCreationExpressionSyntax objectCreation, SemanticModel semanticModel)
+        #endregion
+
+        private static bool IsInArgumentAndCanBeChanged(ObjectCreationExpressionSyntax objectCreation, SemanticModel semanticModel,
+            Func<InvocationExpressionSyntax, bool> additionalFilter = null)
         {
-            if (objectCreation.ArgumentList == null ||
-                objectCreation.ArgumentList.Arguments.Count != 1)
+            var parent = objectCreation.GetSelfOrTopParenthesizedExpression().Parent;
+            var argument = parent as ArgumentSyntax;
+
+            var invocation = argument?.Parent?.Parent as InvocationExpressionSyntax;
+            if (invocation == null)
             {
                 return false;
             }
 
-            var type = semanticModel.GetSymbolInfo(objectCreation).Symbol?.ContainingType;
-            return type != null &&
-                type.OriginalDefinition.SpecialType == SpecialType.System_Nullable_T;
+            if (additionalFilter != null && additionalFilter(invocation))
+            {
+                return false;
+            }
+
+            var methodSymbol = semanticModel.GetSymbolInfo(invocation).Symbol;
+            if (methodSymbol == null)
+            {
+                return false;
+            }
+
+            var newArgumentList = SyntaxFactory.ArgumentList(
+                SyntaxFactory.SeparatedList(invocation.ArgumentList.Arguments
+                    .Select(a => a == argument
+                        ? SyntaxFactory.Argument(objectCreation.ArgumentList.Arguments.First().Expression)
+                        : a)));
+            var newInvocation = invocation.WithArgumentList(newArgumentList);
+            SemanticModel newSemanticModel;
+            newInvocation = ChangeSyntaxElement(invocation, newInvocation, semanticModel, out newSemanticModel);
+            var newMethodSymbol = newSemanticModel.GetSymbolInfo(newInvocation).Symbol as IMethodSymbol;
+
+            return newMethodSymbol != null &&
+                methodSymbol.ToDisplayString() == newMethodSymbol.ToDisplayString();
         }
 
-        private static bool IsDelegateCreation(ObjectCreationExpressionSyntax objectCreation, SemanticModel semanticModel)
+        private static void ReportIssueOnRedundantObjectCreation(SyntaxNodeAnalysisContext c,
+            ObjectCreationExpressionSyntax objectCreation, string message, RedundancyType redundancyType)
         {
-            var type = semanticModel.GetSymbolInfo(objectCreation.Type).Symbol as INamedTypeSymbol;
-
-            return type != null &&
-                type.TypeKind == TypeKind.Delegate;
+            var location = Location.Create(objectCreation.SyntaxTree,
+                TextSpan.FromBounds(objectCreation.SpanStart, objectCreation.Type.Span.End));
+            c.ReportDiagnostic(Diagnostic.Create(Rule, location,
+                    ImmutableDictionary<string, string>.Empty.Add(DiagnosticTypeKey, redundancyType.ToString()),
+                    message));
         }
 
-        private static bool IsInNotVarDeclaration(ObjectCreationExpressionSyntax objectCreation)
+        private static T ChangeSyntaxElement<T>(T originalNode, T newNode, SemanticModel originalSemanticModel,
+            out SemanticModel newSemanticModel)
+            where T : SyntaxNode
         {
-            var variableDeclaration = objectCreation.Parent?.Parent?.Parent as VariableDeclarationSyntax;
+            var annotation = new SyntaxAnnotation();
+            var annotatedNode = newNode.WithAdditionalAnnotations(annotation);
 
-            return variableDeclaration?.Type != null &&
-                !variableDeclaration.Type.IsVar;
-        }
+            var newSyntaxRoot = originalNode.SyntaxTree.GetRoot().ReplaceNode(
+                originalNode,
+                annotatedNode);
 
-        private static bool IsInAssignmentOrReturnValue(ObjectCreationExpressionSyntax objectCreation)
-        {
-            return objectCreation.Parent is AssignmentExpressionSyntax ||
-                objectCreation.Parent is ReturnStatementSyntax ||
-                objectCreation.Parent is LambdaExpressionSyntax;
-        }
+            var newTree = newSyntaxRoot.SyntaxTree.WithRootAndOptions(
+                newSyntaxRoot,
+                originalNode.SyntaxTree.Options);
 
-        private static bool IsDynamic(ArgumentSyntax a, SemanticModel semanticModel)
-        {
-            return semanticModel.GetTypeInfo(a.Expression).Type is IDynamicTypeSymbol;
+            var newCompilation = originalSemanticModel.Compilation.ReplaceSyntaxTree(
+                originalNode.SyntaxTree,
+                newTree);
+
+            newSemanticModel = newCompilation.GetSemanticModel(newTree);
+
+            return (T)newTree.GetRoot().GetAnnotatedNodes(annotation).First();
         }
     }
 }

@@ -35,7 +35,7 @@ namespace Tests.Diagnostics
             var zzz = new int[][] { new[] { 1, 2, 3 }, new int[0], new int[0] }; // Noncompliant
             var www = new int[][][] { new[] { new[] { 0 } } }; // Noncompliant
 
-            int? xx = new int?(5); // Noncompliant
+            int? xx = ((new int?(5))); // Noncompliant
             xx = new Nullable<int>(5); // Noncompliant
             var rr = new int?(5);
 
@@ -49,6 +49,10 @@ namespace Tests.Diagnostics
             {
                 return new int?(i); // Noncompliant
             };
+
+            Delegate d = new Action(() => { });
+            Delegate d = new Func<double>(() => { return 1; });
+
             NullableTest2(f(5));
 
             var f2 = new Func<int, int?>(i => i);
@@ -65,9 +69,11 @@ namespace Tests.Diagnostics
         {
             dynamic d = new object();
             Test(d, new BoolDelegate(() => true)); // Special case, d is dynamic
+            Test2(null, new BoolDelegate(() => true)); // Compliant
         }
 
         public abstract void Test(object o, BoolDelegate f);
+        public abstract void Test2(object o, Delegate f);
         public delegate bool BoolDelegate();
 
         private event EventHandler MyEvent;
