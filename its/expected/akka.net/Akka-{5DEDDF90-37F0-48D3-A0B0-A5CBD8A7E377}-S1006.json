@@ -2,14 +2,14 @@
 "issues":  [
 {
 "id":  "S1006",
-"message":  "Add the default parameter value defined in the overridden method.",
+"message":  "Remove the default parameter value from this explicit interface implementation.",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorCell.cs",
 "region":  {
-"startLine":  203,
-"startColumn":  71,
-"endLine":  203,
-"endColumn":  81
+"startLine":  173,
+"startColumn":  68,
+"endLine":  173,
+"endColumn":  74
 }
 }
 },

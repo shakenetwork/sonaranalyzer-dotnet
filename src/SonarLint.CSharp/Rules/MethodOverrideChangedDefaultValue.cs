@@ -26,6 +26,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Linq;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -33,19 +34,22 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("2min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Misra, Tag.Pitfall)]
+    [Tags(Tag.Cert, Tag.Misra, Tag.Pitfall)]
     public class MethodOverrideChangedDefaultValue : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S1006";
-        internal const string Title = "Method overrides should use the same default parameter values as the base methods";
+        internal const string Title = "Method overrides should not change parameter defaults";
         internal const string Description =
             "Default arguments are determined by the static type of the object. If a default argument is different for a parameter in " +
             "an overriding method, the value used in the call will be different when calls are made via the base or derived object, " +
-            "which may be contrary to developer expectations.";
-        internal const string MessageFormat = "{0}";
-        internal const string MessageAdd = "Add the default parameter value defined in the overridden method.";
-        internal const string MessageRemove = "Remove the default parameter value to match the signature of overridden method.";
-        internal const string MessageUseSame = "Use the default parameter value defined in the overridden method. ";
+            "which may be contrary to developer expectations. Default parameter values are useless in explicit interface implementations, " +
+            "because the static type of the object will always be the implemented interface. Thus, specifying the default values is " +
+            "useless and confusing.";
+        internal const string MessageFormat = "{0} the default parameter value {1}.";
+        internal const string MessageAdd = "defined in the overridden method";
+        internal const string MessageRemove = "to match the signature of overridden method";
+        internal const string MessageUseSame = "defined in the overridden method";
+        internal const string MessageRemoveExplicit = "from this explicit interface implementation";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
@@ -75,33 +79,53 @@ namespace SonarLint.Rules.CSharp
 
                     for (int i = 0; i < methodSymbol.Parameters.Length; i++)
                     {
-                        var derivedParameter = methodSymbol.Parameters[i];
+                        var overridingParameter = methodSymbol.Parameters[i];
                         var overriddenParameter = overriddenMember.Parameters[i];
 
                         var parameterSyntax = method.ParameterList.Parameters[i];
 
-                        if (derivedParameter.HasExplicitDefaultValue && !overriddenParameter.HasExplicitDefaultValue)
-                        {
-                            c.ReportDiagnostic(Diagnostic.Create(Rule, parameterSyntax.Default.GetLocation(), MessageRemove));
-                            continue;
-                        }
-
-                        if (!derivedParameter.HasExplicitDefaultValue && overriddenParameter.HasExplicitDefaultValue)
-                        {
-                            c.ReportDiagnostic(Diagnostic.Create(Rule, parameterSyntax.Identifier.GetLocation(), MessageAdd));
-                            continue;
-                        }
-
-                        if (derivedParameter.HasExplicitDefaultValue &&
-                            overriddenParameter.HasExplicitDefaultValue &&
-                            !object.Equals(derivedParameter.ExplicitDefaultValue, overriddenParameter.ExplicitDefaultValue))
-                        {
-                            c.ReportDiagnostic(Diagnostic.Create(Rule, parameterSyntax.Default.Value.GetLocation(), MessageUseSame));
-                            continue;
-                        }
+                        ReportParameterIfNeeded(overridingParameter, overriddenParameter, parameterSyntax,
+                            isExplicitImplementation: methodSymbol.ExplicitInterfaceImplementations.Any(),
+                            context: c);
                     }
                 },
                 SyntaxKind.MethodDeclaration);
+        }
+
+        private static void ReportParameterIfNeeded(IParameterSymbol overridingParameter, IParameterSymbol overriddenParameter,
+            ParameterSyntax parameterSyntax, bool isExplicitImplementation, SyntaxNodeAnalysisContext context)
+        {
+            if (isExplicitImplementation)
+            {
+                if (overridingParameter.HasExplicitDefaultValue)
+                {
+                    context.ReportDiagnostic(Diagnostic.Create(Rule, parameterSyntax.Default.GetLocation(), "Remove", MessageRemoveExplicit));
+                }
+
+                return;
+            }
+
+            if (overridingParameter.HasExplicitDefaultValue &&
+                !overriddenParameter.HasExplicitDefaultValue)
+            {
+                context.ReportDiagnostic(Diagnostic.Create(Rule, parameterSyntax.Default.GetLocation(), "Remove", MessageRemove));
+                return;
+            }
+
+            if (!overridingParameter.HasExplicitDefaultValue &&
+                overriddenParameter.HasExplicitDefaultValue)
+            {
+                context.ReportDiagnostic(Diagnostic.Create(Rule, parameterSyntax.Identifier.GetLocation(), "Add", MessageAdd));
+                return;
+            }
+
+            if (overridingParameter.HasExplicitDefaultValue &&
+                overriddenParameter.HasExplicitDefaultValue &&
+                !object.Equals(overridingParameter.ExplicitDefaultValue, overriddenParameter.ExplicitDefaultValue))
+            {
+                context.ReportDiagnostic(Diagnostic.Create(Rule, parameterSyntax.Default.Value.GetLocation(), "Use", MessageUseSame));
+                return;
+            }
         }
     }
 }

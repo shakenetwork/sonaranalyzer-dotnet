@@ -14,10 +14,6 @@ namespace Tests.Diagnostics
         {
             Console.WriteLine(i);
         }
-
-        public virtual void Write2()
-        {
-        }
     }
 
     public class Derived1 : Base
@@ -27,11 +23,8 @@ namespace Tests.Diagnostics
         {
             Console.WriteLine(i);
         }
-
-        public override void Write2(int i)
-        {
-        }
     }
+
     public class Derived2 : Base
     {
         public override void Write(int i,
@@ -40,12 +33,21 @@ namespace Tests.Diagnostics
             Console.WriteLine(i);
         }
     }
+
     public class Derived3 : Base
     {
         public override void Write(int i,  // Noncompliant
             int j = 5)
         {
             Console.WriteLine(i);
+        }
+    }
+
+    public class ExplicitImpl1 : IMyInterface
+    {
+        void IMyInterface.Write(int i,
+            int j) // Noncompliant
+        {
         }
     }
 }

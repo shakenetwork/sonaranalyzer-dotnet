@@ -35,7 +35,8 @@ namespace SonarLint.Rules.CSharp
     [ExportCodeFixProvider(LanguageNames.CSharp)]
     public class MethodOverrideChangedDefaultValueCodeFixProvider : CodeFixProvider
     {
-        public const string Title = "Synchronize default parameter value";
+        private const string TitleGeneral = "Synchronize default parameter value";
+        private const string TitleExplicitInterface = "Remove default parameter value from explicit interface implementation";
 
         public sealed override ImmutableArray<string> FixableDiagnosticIds =>
             ImmutableArray.Create(MethodOverrideChangedDefaultValue.DiagnosticId);
@@ -48,14 +49,7 @@ namespace SonarLint.Rules.CSharp
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var syntaxNode = root.FindNode(diagnosticSpan);
-
-            var parameter = syntaxNode as ParameterSyntax;
-            while(parameter == null && syntaxNode.Parent != null)
-            {
-                parameter = syntaxNode.Parent as ParameterSyntax;
-                syntaxNode = syntaxNode.Parent;
-            }
-
+            var parameter = syntaxNode?.FirstAncestorOrSelf<ParameterSyntax>();
             if (parameter == null)
             {
                 return;
@@ -69,25 +63,42 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            var index = methodSymbol.Parameters.IndexOf(parameterSymbol);
-            IMethodSymbol overriddenMember;
-            if (index == -1 ||
-                !methodSymbol.TryGetOverriddenOrInterfaceMember(out overriddenMember))
-            {
-                return;
-            }
-
-            var overriddenParameter = overriddenMember.Parameters[index];
-
             ParameterSyntax newParameter;
-            if (!TryGetNewParameterSyntax(parameter, overriddenParameter, out newParameter))
+            string title;
+
+            if (methodSymbol.ExplicitInterfaceImplementations.Any())
             {
-                return;
+                newParameter = parameter.WithDefault(null);
+                title = TitleExplicitInterface;
+            }
+            else
+            {
+                var index = methodSymbol.Parameters.IndexOf(parameterSymbol);
+                IMethodSymbol overriddenMember;
+                if (index == -1 ||
+                    !methodSymbol.TryGetOverriddenOrInterfaceMember(out overriddenMember))
+                {
+                    return;
+                }
+
+                var overriddenParameter = overriddenMember.Parameters[index];
+
+                if (!TryGetNewParameterSyntax(parameter, overriddenParameter, out newParameter))
+                {
+                    return;
+                }
+                title = TitleGeneral;
             }
 
+            RegisterCodeFix(context, root, parameter, newParameter, title);
+        }
+
+        private static void RegisterCodeFix(CodeFixContext context, SyntaxNode root, ParameterSyntax parameter,
+            ParameterSyntax newParameter, string codeFixTitle)
+        {
             context.RegisterCodeFix(
                 CodeAction.Create(
-                    Title,
+                    codeFixTitle,
                     c =>
                     {
                         var newRoot = root.ReplaceNode(
