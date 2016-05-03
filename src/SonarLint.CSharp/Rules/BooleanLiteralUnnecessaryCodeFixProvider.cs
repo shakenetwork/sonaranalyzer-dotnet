@@ -28,6 +28,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using SonarLint.Helpers;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Formatting;
+using System;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -53,7 +54,14 @@ namespace SonarLint.Rules.CSharp
 
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
-            var syntaxNode = root.FindNode(diagnosticSpan, getInnermostNodeForTie: true);
+            var syntaxNode = root.FindNode(diagnosticSpan, getInnermostNodeForTie: true) as ExpressionSyntax;
+            if (syntaxNode == null)
+            {
+                return;
+            }
+
+            var parent = syntaxNode.Parent;
+            syntaxNode = syntaxNode.RemoveParentheses();
 
             var binary = syntaxNode as BinaryExpressionSyntax;
             if (binary != null)
@@ -75,30 +83,53 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            if (literal.Parent is PrefixUnaryExpressionSyntax)
+            if (parent is PrefixUnaryExpressionSyntax)
             {
                 RegisterBooleanInversion(context, root, literal);
                 return;
             }
 
-            var conditionalParent = literal.Parent as ConditionalExpressionSyntax;
+            var conditionalParent = parent as ConditionalExpressionSyntax;
             if (conditionalParent != null)
             {
                 RegisterConditionalExpressionRewrite(context, root, literal, conditionalParent);
                 return;
             }
 
-            var binaryParent = literal.Parent as BinaryExpressionSyntax;
+            var binaryParent = parent as BinaryExpressionSyntax;
             if (binaryParent != null)
             {
                 RegisterBinaryExpressionRemoval(context, root, literal, binaryParent);
                 return;
             }
+
+            var forStatement = parent as ForStatementSyntax;
+            if (forStatement != null)
+            {
+                RegisterForStatementConditionRemoval(context, root, forStatement);
+                return;
+            }
+        }
+
+        private void RegisterForStatementConditionRemoval(CodeFixContext context, SyntaxNode root, ForStatementSyntax forStatement)
+        {
+            context.RegisterCodeFix(
+                CodeAction.Create(
+                    Title,
+                    c =>
+                    {
+                        var newRoot = root.ReplaceNode(
+                            forStatement,
+                            forStatement.WithCondition(null).WithAdditionalAnnotations(Formatter.Annotation));
+
+                        return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
+                    }),
+                context.Diagnostics);
         }
 
         private static void RegisterBinaryExpressionRemoval(CodeFixContext context, SyntaxNode root, LiteralExpressionSyntax literal, BinaryExpressionSyntax binaryParent)
         {
-            var otherNode = binaryParent.Left.Equals(literal)
+            var otherNode = binaryParent.Left.RemoveParentheses().Equals(literal)
                 ? binaryParent.Right
                 : binaryParent.Left;
 
@@ -119,10 +150,10 @@ namespace SonarLint.Rules.CSharp
         private static void RegisterConditionalExpressionRewrite(CodeFixContext context, SyntaxNode root, LiteralExpressionSyntax literal, ConditionalExpressionSyntax conditionalParent)
         {
             context.RegisterCodeFix(
-                                CodeAction.Create(
-                                    Title,
-                                    c => Task.FromResult(RewriteConditional(context.Document, root, literal, conditionalParent))),
-                                context.Diagnostics);
+                CodeAction.Create(
+                    Title,
+                    c => Task.FromResult(RewriteConditional(context.Document, root, literal, conditionalParent))),
+                context.Diagnostics);
         }
 
         private static void RegisterBooleanInversion(CodeFixContext context, SyntaxNode root, LiteralExpressionSyntax literal)
@@ -274,7 +305,8 @@ namespace SonarLint.Rules.CSharp
         private static Document RewriteConditional(Document document, SyntaxNode root, SyntaxNode syntaxNode,
             ConditionalExpressionSyntax conditional)
         {
-            if (conditional.WhenTrue.Equals(syntaxNode) &&
+            var whenTrue = conditional.WhenTrue.RemoveParentheses();
+            if (whenTrue.Equals(syntaxNode) &&
                 EquivalenceChecker.AreEquivalent(syntaxNode, SyntaxHelper.TrueLiteralExpression))
             {
                 var newRoot = ReplaceExpressionWithBinary(conditional, root,
@@ -285,7 +317,7 @@ namespace SonarLint.Rules.CSharp
                 return document.WithSyntaxRoot(newRoot);
             }
 
-            if (conditional.WhenTrue.Equals(syntaxNode) &&
+            if (whenTrue.Equals(syntaxNode) &&
                 EquivalenceChecker.AreEquivalent(syntaxNode, SyntaxHelper.FalseLiteralExpression))
             {
                 var newRoot = ReplaceExpressionWithBinary(conditional, root,
@@ -296,7 +328,9 @@ namespace SonarLint.Rules.CSharp
                 return document.WithSyntaxRoot(newRoot);
             }
 
-            if (conditional.WhenFalse.Equals(syntaxNode) &&
+            var whenFalse = conditional.WhenFalse.RemoveParentheses();
+
+            if (whenFalse.Equals(syntaxNode) &&
                 EquivalenceChecker.AreEquivalent(syntaxNode, SyntaxHelper.TrueLiteralExpression))
             {
                 var newRoot = ReplaceExpressionWithBinary(conditional, root,
@@ -307,7 +341,7 @@ namespace SonarLint.Rules.CSharp
                 return document.WithSyntaxRoot(newRoot);
             }
 
-            if (conditional.WhenFalse.Equals(syntaxNode) &&
+            if (whenFalse.Equals(syntaxNode) &&
                 EquivalenceChecker.AreEquivalent(syntaxNode, SyntaxHelper.FalseLiteralExpression))
             {
                 var newRoot = ReplaceExpressionWithBinary(conditional, root,

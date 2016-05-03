@@ -37,7 +37,7 @@
             x = true;              // Noncompliant
             x = a == b;             // Noncompliant
 
-            x = a == Foo(true);             // Compliant
+            x = a == Foo(((true)));             // Compliant
             x = !a;                         // Compliant
             x = Foo() && Bar();             // Compliant
 
@@ -54,7 +54,7 @@
 
             booleanVariable = condition ? exp : exp2;
 
-            var b = !(x || booleanVariable); // Noncompliant
+            b = !(x || booleanVariable); // Noncompliant
 
             SomeFunc(true); // Noncompliant
 
@@ -81,6 +81,24 @@
         private bool Bar()
         {
             return false;
+        }
+
+        private void M()
+        {
+            for (int i = 0; ; i++) // Noncompliant
+            {
+            }
+            for (int i = 0; false; i++)
+            {
+            }
+            for (int i = 0; ; i++)
+            {
+            }
+
+            var b = true;
+            for (int i = 0; b; i++)
+            {
+            }
         }
     }
 }

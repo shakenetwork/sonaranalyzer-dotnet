@@ -4,7 +4,7 @@
     {
         public BooleanLiteralUnnecessary(bool a, bool b, bool? c)
         {
-            var z = true || true;   // Noncompliant
+            var z = true || ((true));   // Noncompliant
             z = false || false;     // Noncompliant
             z = true || false;      // Noncompliant
             z = false || true;      // Noncompliant
@@ -37,7 +37,7 @@
             x = Foo() || true;              // Noncompliant
             x = a == true == b;             // Noncompliant
 
-            x = a == Foo(true);             // Compliant
+            x = a == Foo(((true)));             // Compliant
             x = !a;                         // Compliant
             x = Foo() && Bar();             // Compliant
 
@@ -45,7 +45,7 @@
             var exp = true;
             var exp2 = true;
 
-            var booleanVariable = condition ? true : exp; // Noncompliant
+            var booleanVariable = condition ? ((true)) : exp; // Noncompliant
             booleanVariable = condition ? false : exp; // Noncompliant
             booleanVariable = condition ? exp : true; // Noncompliant
             booleanVariable = condition ? exp : false; // Noncompliant
@@ -54,7 +54,7 @@
 
             booleanVariable = condition ? exp : exp2;
 
-            var b = x || booleanVariable ? false : true; // Noncompliant
+            b = x || booleanVariable ? false : true; // Noncompliant
 
             SomeFunc(true || true); // Noncompliant
 
@@ -81,6 +81,24 @@
         private bool Bar()
         {
             return false;
+        }
+
+        private void M()
+        {
+            for (int i = 0; true; i++) // Noncompliant
+            {
+            }
+            for (int i = 0; false; i++)
+            {
+            }
+            for (int i = 0; ; i++)
+            {
+            }
+
+            var b = true;
+            for (int i = 0; b; i++)
+            {
+            }
         }
     }
 }

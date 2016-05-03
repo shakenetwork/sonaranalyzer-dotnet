@@ -27,6 +27,7 @@ using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
 using Microsoft.CodeAnalysis.Text;
+using System;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -44,7 +45,7 @@ namespace SonarLint.Rules.CSharp
         internal const string MessageFormat = "Remove the unnecessary Boolean literal(s).";
         internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
-        internal const bool IsActivatedByDefault = false;
+        internal const bool IsActivatedByDefault = true;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
 
         internal static readonly DiagnosticDescriptor Rule =
@@ -81,6 +82,21 @@ namespace SonarLint.Rules.CSharp
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckConditional(c),
                 SyntaxKind.ConditionalExpression);
+
+            context.RegisterSyntaxNodeActionInNonGenerated(
+                c => CheckForLoopCondition(c),
+                SyntaxKind.ForStatement);
+        }
+
+        private void CheckForLoopCondition(SyntaxNodeAnalysisContext context)
+        {
+            var forLoop = (ForStatementSyntax)context.Node;
+
+            if (forLoop.Condition != null &&
+                EquivalenceChecker.AreEquivalent(forLoop.Condition.RemoveParentheses(), SyntaxHelper.TrueLiteralExpression))
+            {
+                context.ReportDiagnostic(Diagnostic.Create(Rule, forLoop.Condition.GetLocation()));
+            }
         }
 
         private static void CheckConditional(SyntaxNodeAnalysisContext context)
@@ -91,10 +107,13 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            var whenTrueIsTrue = EquivalenceChecker.AreEquivalent(conditional.WhenTrue, SyntaxHelper.TrueLiteralExpression);
-            var whenTrueIsFalse = EquivalenceChecker.AreEquivalent(conditional.WhenTrue, SyntaxHelper.FalseLiteralExpression);
-            var whenFalseIsTrue = EquivalenceChecker.AreEquivalent(conditional.WhenFalse, SyntaxHelper.TrueLiteralExpression);
-            var whenFalseIsFalse = EquivalenceChecker.AreEquivalent(conditional.WhenFalse, SyntaxHelper.FalseLiteralExpression);
+            var whenTrue = conditional.WhenTrue.RemoveParentheses();
+            var whenFalse = conditional.WhenFalse.RemoveParentheses();
+
+            var whenTrueIsTrue = EquivalenceChecker.AreEquivalent(whenTrue, SyntaxHelper.TrueLiteralExpression);
+            var whenTrueIsFalse = EquivalenceChecker.AreEquivalent(whenTrue, SyntaxHelper.FalseLiteralExpression);
+            var whenFalseIsTrue = EquivalenceChecker.AreEquivalent(whenFalse, SyntaxHelper.TrueLiteralExpression);
+            var whenFalseIsFalse = EquivalenceChecker.AreEquivalent(whenFalse, SyntaxHelper.FalseLiteralExpression);
 
             var whenTrueIsBooleanConstant = whenTrueIsTrue || whenTrueIsFalse;
             var whenFalseIsBooleanConstant = whenFalseIsTrue || whenFalseIsFalse;
@@ -127,8 +146,10 @@ namespace SonarLint.Rules.CSharp
         {
             var logicalNot = (PrefixUnaryExpressionSyntax)context.Node;
 
-            if (EquivalenceChecker.AreEquivalent(logicalNot.Operand, SyntaxHelper.TrueLiteralExpression) ||
-                EquivalenceChecker.AreEquivalent(logicalNot.Operand, SyntaxHelper.FalseLiteralExpression))
+            var logicalNotOperand = logicalNot.Operand.RemoveParentheses();
+
+            if (EquivalenceChecker.AreEquivalent(logicalNotOperand, SyntaxHelper.TrueLiteralExpression) ||
+                EquivalenceChecker.AreEquivalent(logicalNotOperand, SyntaxHelper.FalseLiteralExpression))
             {
                 context.ReportDiagnostic(Diagnostic.Create(Rule, logicalNot.Operand.GetLocation()));
             }
@@ -235,10 +256,13 @@ namespace SonarLint.Rules.CSharp
                 return true;
             }
 
-            var leftIsTrue = EquivalenceChecker.AreEquivalent(binaryExpression.Left, SyntaxHelper.TrueLiteralExpression);
-            var leftIsFalse = EquivalenceChecker.AreEquivalent(binaryExpression.Left, SyntaxHelper.FalseLiteralExpression);
-            var rightIsTrue = EquivalenceChecker.AreEquivalent(binaryExpression.Right, SyntaxHelper.TrueLiteralExpression);
-            var rightIsFalse = EquivalenceChecker.AreEquivalent(binaryExpression.Right, SyntaxHelper.FalseLiteralExpression);
+            var binaryExpressionLeft = binaryExpression.Left.RemoveParentheses();
+            var binaryExpressionRight = binaryExpression.Right.RemoveParentheses();
+
+            var leftIsTrue = EquivalenceChecker.AreEquivalent(binaryExpressionLeft, SyntaxHelper.TrueLiteralExpression);
+            var leftIsFalse = EquivalenceChecker.AreEquivalent(binaryExpressionLeft, SyntaxHelper.FalseLiteralExpression);
+            var rightIsTrue = EquivalenceChecker.AreEquivalent(binaryExpressionRight, SyntaxHelper.TrueLiteralExpression);
+            var rightIsFalse = EquivalenceChecker.AreEquivalent(binaryExpressionRight, SyntaxHelper.FalseLiteralExpression);
 
             var leftIsBoolean = leftIsTrue || leftIsFalse;
             var rightIsBoolean = rightIsTrue || rightIsFalse;
@@ -303,7 +327,7 @@ namespace SonarLint.Rules.CSharp
                 ? binaryExpression.Left
                 : binaryExpression.Right;
 
-            if (!EquivalenceChecker.AreEquivalent(expression, booleanContantExpression))
+            if (!EquivalenceChecker.AreEquivalent(expression.RemoveParentheses(), booleanContantExpression))
             {
                 return;
             }
