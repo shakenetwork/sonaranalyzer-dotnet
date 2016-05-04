@@ -51,7 +51,16 @@ namespace Tests.Diagnostics
 
             PureType.GetValue(); // Noncompliant
             NonPureType.GetValue();
+
+            "".DoSomething(null); // Compliant
+            new int[] { 1 }.DoSomething(null); // Compliant
         }
         void M(object o) { }
+    }
+
+    public static class Ext
+    {
+        public static int DoSomething<T>(this IEnumerable<T> self, Action action) { return 42; }
+        public static int DoSomething(this string self, Action action) { return 42; }
     }
 }

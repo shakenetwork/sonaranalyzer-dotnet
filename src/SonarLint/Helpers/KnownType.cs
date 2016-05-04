@@ -158,6 +158,9 @@ namespace SonarLint.Helpers
         public static readonly KnownType System_ServiceModel_ServiceContractAttribute = new KnownType("System.ServiceModel.ServiceContractAttribute");
         public static readonly KnownType System_ServiceModel_OperationContractAttribute = new KnownType("System.ServiceModel.OperationContractAttribute");
 
+        public static readonly KnownType System_Linq_Enumerable = new KnownType("System.Linq.Enumerable");
+        public static readonly KnownType System_Linq_ImmutableArrayExtensions = new KnownType("System.Linq.ImmutableArrayExtensions");
+
         #endregion
 
         public string TypeName { get; }

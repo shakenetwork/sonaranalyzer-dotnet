@@ -170,8 +170,8 @@ namespace SonarLint.Rules.CSharp
 
         private static bool IsLinqMethod(IMethodSymbol methodSymbol)
         {
-            return methodSymbol.IsExtensionOn(KnownType.System_Collections_Generic_IEnumerable_T) ||
-                methodSymbol.IsExtensionOn(KnownType.System_Collections_IEnumerable);
+            return methodSymbol.ContainingType.Is(KnownType.System_Linq_Enumerable) ||
+                methodSymbol.ContainingType.Is(KnownType.System_Linq_ImmutableArrayExtensions);
         }
     }
 }
