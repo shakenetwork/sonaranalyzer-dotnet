@@ -93,6 +93,9 @@
     <Compile Include="Common\WellKnownDiagnosticIds.cs" />
     <Compile Include="Common\Tag.cs" />
     <Compile Include="Common\IdeVisibility.cs" />
+    <Compile Include="Helpers\ParameterLoader\RuleParameterValues.cs" />
+    <Compile Include="Helpers\ParameterLoader\RuleParameterValue.cs" />
+    <Compile Include="Helpers\ParameterLoader\ParameterLoader.cs" />
     <Compile Include="Helpers\SonarAnalysisContext.cs" />
     <Compile Include="Helpers\DiagnosticReportHelper.cs" />
     <Compile Include="Helpers\KnownType.cs" />
@@ -102,7 +105,6 @@
     <Compile Include="Helpers\ParameterLoadingAnalysisContext.cs" />
     <Compile Include="Helpers\ParameterLoadingDiagnosticAnalyzer.cs" />
     <Compile Include="Helpers\IMultiLanguageDiagnosticAnalyzer.cs" />
-    <Compile Include="Helpers\ParameterLoader.cs" />
     <Compile Include="Helpers\GeneratedCodeRecognizer.cs" />
     <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="Helpers\DiagnosticAnalyzerContextHelper.cs" />

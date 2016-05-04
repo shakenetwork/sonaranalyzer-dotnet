@@ -166,7 +166,7 @@ namespace SonarLint.Rules.CSharp
                 .ToList();
         }
 
-        public static readonly SyntaxKind[] MethodModifiersToSkip =
+        private static readonly SyntaxKind[] MethodModifiersToSkip =
         {
             SyntaxKind.AbstractKeyword,
             SyntaxKind.VirtualKeyword,

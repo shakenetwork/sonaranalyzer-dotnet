@@ -35,18 +35,7 @@ namespace SonarLint.Helpers
     public static class ParameterLoader
     {
         public static readonly string ParameterConfigurationFileName = "SonarLint.xml";
-
-        public class RuleParameterValue
-        {
-            public string ParameterKey { get; set; }
-            public string ParameterValue { get; set; }
-        }
-        public class RuleParameterValues
-        {
-            public string RuleId { get; set; }
-            public List<RuleParameterValue> ParameterValues { get; set; } = new List<RuleParameterValue>();
-        }
-
+        
         private static ImmutableList<RuleParameterValues> ParseParameters(XContainer xml)
         {
             var builder = ImmutableList.CreateBuilder<RuleParameterValues>();
