@@ -64,6 +64,11 @@ namespace SonarLint.Rules.CSharp
         {
             context.RegisterCompilationStartAction(analysisContext =>
             {
+                if (analysisContext.Compilation.IsTest())
+                {
+                    return;
+                }
+
                 var fieldsByNamedType = MultiValueDictionary<INamedTypeSymbol, IFieldSymbol>.Create<HashSet<IFieldSymbol>>();
                 var fieldsAssigned = ImmutableHashSet<IFieldSymbol>.Empty;
 

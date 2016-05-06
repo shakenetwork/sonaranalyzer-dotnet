@@ -32,5 +32,13 @@ namespace SonarLint.UnitTest.Rules
         {
             Verifier.VerifyAnalyzer(@"TestCases\DisposableMemberInNonDisposableClass.cs", new DisposableMemberInNonDisposableClass());
         }
+
+        [TestMethod]
+        [TestCategory("Rule")]
+        public void DisposableMemberInNonDisposableClass_InTest()
+        {
+            Verifier.VerifyNoIssueReportedInTest(@"TestCases\DisposableMemberInNonDisposableClass.cs",
+                new DisposableMemberInNonDisposableClass());
+        }
     }
 }
