@@ -43,9 +43,10 @@ namespace SonarLint.Rules.CSharp
             "To check the type of an object there are several options: \"is\", \"IsInstanceOfType\" or \"IsAssignableFrom\". Depending on whether " +
             "the type is returned by a \"GetType()\" or \"typeof()\" call, the \"IsAssignableFrom()\" and \"IsInstanceOfType()\" might be simplified. " +
             "Simplifying the calls make \"null\" checking unnecessary because both \"is\" and \"IsInstanceOfType\" performs it already.";
-        internal const string MessageFormat = "Use the {0} instead.";
-        internal const string IsOperator = "\"is\" operator";
-        internal const string IsInstanceOfType = "\"IsInstanceOfType()\" method";
+        internal const string MessageFormat = "Use {0} instead.";
+        internal const string MessageIsOperator = "the \"is\" operator";
+        internal const string MessageIsInstanceOfType = "the \"IsInstanceOfType()\" method";
+        internal const string MessageNullCheck = "a \"null\" check";
         internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
@@ -100,6 +101,30 @@ namespace SonarLint.Rules.CSharp
                 },
                 SyntaxKind.EqualsExpression,
                 SyntaxKind.NotEqualsExpression);
+
+            context.RegisterSyntaxNodeActionInNonGenerated(
+                c => CheckIfIsExpressionCanBeReplacedByNullCheck(c),
+                SyntaxKind.IsExpression);
+        }
+
+        private static void CheckIfIsExpressionCanBeReplacedByNullCheck(SyntaxNodeAnalysisContext context)
+        {
+            var binary = (BinaryExpressionSyntax)context.Node;
+            var typeExpression = context.SemanticModel.GetTypeInfo(binary.Left).Type;
+            var typeCastTo = context.SemanticModel.GetTypeInfo(binary.Right).Type;
+
+            if (typeExpression == null ||
+                typeCastTo == null ||
+                !typeExpression.IsClass() ||
+                !typeCastTo.IsClass())
+            {
+                return;
+            }
+
+            if (typeExpression.DerivesOrImplements(typeCastTo))
+            {
+                context.ReportDiagnostic(Diagnostic.Create(Rule, binary.GetLocation(), MessageNullCheck));
+            }
         }
 
         private void CheckAsOperatorComparedToNull(ExpressionSyntax sideA, ExpressionSyntax sideB, Location location, 
@@ -115,7 +140,7 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            context.ReportDiagnostic(Diagnostic.Create(Rule, location, IsOperator));
+            context.ReportDiagnostic(Diagnostic.Create(Rule, location, MessageIsOperator));
         }
 
         private static void CheckGetTypeAndTypeOfEquality(ExpressionSyntax sideA, ExpressionSyntax sideB, Location location,
@@ -140,7 +165,7 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            context.ReportDiagnostic(Diagnostic.Create(Rule, location, IsOperator));
+            context.ReportDiagnostic(Diagnostic.Create(Rule, location, MessageIsOperator));
         }
 
         private static void CheckForIsInstanceOfType(SyntaxNodeAnalysisContext context, InvocationExpressionSyntax invocation,
@@ -157,7 +182,7 @@ namespace SonarLint.Rules.CSharp
                     ImmutableDictionary<string, string>.Empty
                         .Add(UseIsOperatorKey, true.ToString())
                         .Add(ShouldRemoveGetType, false.ToString()),
-                    IsOperator));
+                    MessageIsOperator));
             }
         }
 
@@ -177,7 +202,7 @@ namespace SonarLint.Rules.CSharp
                     ImmutableDictionary<string, string>.Empty
                         .Add(UseIsOperatorKey, true.ToString())
                         .Add(ShouldRemoveGetType, true.ToString()),
-                    IsOperator));
+                    MessageIsOperator));
             }
             else
             {
@@ -185,7 +210,7 @@ namespace SonarLint.Rules.CSharp
                     ImmutableDictionary<string, string>.Empty
                         .Add(UseIsOperatorKey, false.ToString())
                         .Add(ShouldRemoveGetType, true.ToString()),
-                    IsInstanceOfType));
+                    MessageIsInstanceOfType));
             }
         }
     }

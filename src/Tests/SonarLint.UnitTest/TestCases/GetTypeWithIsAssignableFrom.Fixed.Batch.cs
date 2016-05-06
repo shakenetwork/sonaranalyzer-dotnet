@@ -15,9 +15,9 @@ namespace Tests.Diagnostics
             if (expr1.GetType().IsInstanceOfType(expr2)) //Compliant
             { }
 
-            if (!(expr1 != null)) //Noncompliant
+            if (!(expr1 is GetTypeWithIsAssignableFrom)) //Noncompliant
             { }
-            var x = expr1 != null; //Noncompliant
+            var x = expr1 is GetTypeWithIsAssignableFrom; //Noncompliant
             if (expr1 != null) // Noncompliant, should be a null check
             { }
 
@@ -45,10 +45,10 @@ namespace Tests.Diagnostics
         static void Main()
         {
             var apple = new Apple();
-            var b = apple != null; // Noncompliant
-            b = apple != null; // Noncompliant
-            b = apple != null; // Noncompliant
-            b = apple != null; // Noncompliant
+            var b = apple is Apple; // Noncompliant
+            b = apple is Apple; // Noncompliant
+            b = apple is Apple; // Noncompliant
+            b = apple is Apple; // Noncompliant
             var appleType = typeof(Apple);
             b = appleType.IsInstanceOfType(apple); // Noncompliant
 

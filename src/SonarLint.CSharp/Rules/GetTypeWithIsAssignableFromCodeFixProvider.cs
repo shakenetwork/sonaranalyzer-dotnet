@@ -27,7 +27,6 @@ using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Formatting;
-using System;
 using SonarLint.Helpers;
 
 namespace SonarLint.Rules.CSharp
@@ -55,10 +54,29 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            SyntaxNode newRoot = null;
+            SyntaxNode newRoot;
+            if (!TryGetNewRoot(root, diagnostic, invocation, binary, out newRoot))
+            {
+                return;
+            }
+
+            context.RegisterCodeFix(
+                CodeAction.Create(
+                    Title,
+                    c => Task.FromResult(context.Document.WithSyntaxRoot(newRoot))),
+                context.Diagnostics);
+        }
+
+        private static bool TryGetNewRoot(SyntaxNode root, Diagnostic diagnostic, InvocationExpressionSyntax invocation, BinaryExpressionSyntax binary, out SyntaxNode newRoot)
+        {
+            newRoot = null;
             if (invocation != null)
             {
                 newRoot = ChangeInvocation(root, diagnostic, invocation);
+            }
+            else if (binary.IsKind(SyntaxKind.IsExpression))
+            {
+                newRoot = ChangeIsExpressionToNullCheck(root, binary);
             }
             else
             {
@@ -69,19 +87,21 @@ namespace SonarLint.Rules.CSharp
                 }
             }
 
-            if (newRoot == null)
-            {
-                return;
-            }
+            return newRoot != null;
+        }
 
-            context.RegisterCodeFix(
-                CodeAction.Create(
-                    Title,
-                    c =>
-                    {
-                        return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
-                    }),
-                context.Diagnostics);
+        private static SyntaxNode ChangeIsExpressionToNullCheck(SyntaxNode root, BinaryExpressionSyntax binary)
+        {
+            var newNode = GetExpressionWithParensIfNeeded(GetNullCheck(binary), binary.Parent);
+            var newRoot = root.ReplaceNode(binary, newNode.WithAdditionalAnnotations(Formatter.Annotation));
+            return newRoot;
+        }
+
+        private static ExpressionSyntax GetNullCheck(BinaryExpressionSyntax binary)
+        {
+            return SyntaxFactory.BinaryExpression(SyntaxKind.NotEqualsExpression,
+                binary.Left.RemoveParentheses(),
+                SyntaxFactory.LiteralExpression(SyntaxKind.NullLiteralExpression));
         }
 
         private static SyntaxNode ChangeInvocation(SyntaxNode root, Diagnostic diagnostic, InvocationExpressionSyntax invocation)

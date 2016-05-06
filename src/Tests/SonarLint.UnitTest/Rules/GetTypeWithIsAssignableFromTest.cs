@@ -40,6 +40,7 @@ namespace SonarLint.UnitTest.Rules
             Verifier.VerifyCodeFix(
                 @"TestCases\GetTypeWithIsAssignableFrom.cs",
                 @"TestCases\GetTypeWithIsAssignableFrom.Fixed.cs",
+                @"TestCases\GetTypeWithIsAssignableFrom.Fixed.Batch.cs",
                 new GetTypeWithIsAssignableFrom(),
                 new GetTypeWithIsAssignableFromCodeFixProvider());
         }

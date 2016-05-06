@@ -18,7 +18,7 @@ namespace Tests.Diagnostics
             if (!typeof(GetTypeWithIsAssignableFrom).IsAssignableFrom(expr1.GetType())) //Noncompliant
             { }
             var x = typeof(GetTypeWithIsAssignableFrom).IsAssignableFrom(expr1.GetType()); //Noncompliant
-            if (expr1 is GetTypeWithIsAssignableFrom) //Compliant
+            if (expr1 is GetTypeWithIsAssignableFrom) // Noncompliant, should be a null check
             { }
 
             if (typeof(GetTypeWithIsAssignableFrom).IsAssignableFrom(typeof(GetTypeWithIsAssignableFrom))) //Compliant
@@ -58,6 +58,14 @@ namespace Tests.Diagnostics
             b = true && (((f as Apple)) != null); // Noncompliant
             b = f as Apple == null; // Noncompliant
             b = f as Apple == new Apple();
+
+            b = true && ((apple)) is Apple; // Noncompliant
+            b = !(apple is Apple); // Noncompliant
+            b = f is Apple;
+
+            var num = 5;
+            b = num is int?;
+            b = num is float;
         }
     }
 }
