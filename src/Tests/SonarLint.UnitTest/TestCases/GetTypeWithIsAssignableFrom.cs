@@ -53,6 +53,11 @@ namespace Tests.Diagnostics
             b = appleType.IsAssignableFrom(apple.GetType()); // Noncompliant
 
             b = apple.GetType() == typeof(int?); // Compliant
+
+            Fruit f = apple;
+            b = true && (((f as Apple)) != null); // Noncompliant
+            b = f as Apple == null; // Noncompliant
+            b = f as Apple == new Apple();
         }
     }
 }

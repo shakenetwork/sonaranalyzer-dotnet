@@ -19,6 +19,13 @@
     to an <code>is</code> call. Simplifying the calls also make <code>null</code> checking unnecessary because both <code>is</code> and
     <code>IsInstanceOfType</code> performs it already.
 </p>
+<p>
+    Finally, utilizing the most concise language constructs for type checking makes the code more readable, so
+    <ul>
+        <li><code>expr as T != null</code> checks should be simplified to <code>expr is T</code>, and</li>
+        <li><code>expr is T</code> should be converted to <code>expr != null</code>, when <code>expr</code> is of type <code>T</code>.</li>
+    </ul>
+</p>
 
 <h2>Noncompliant Code Example</h2>
 <pre>
@@ -41,6 +48,14 @@ class Program
     {
       b = appleType.IsAssignableFrom(apple.GetType()); // Noncompliant
     }
+
+    Fruit f = apple;
+    if (f as Apple != null) // Noncompliant
+    {
+    }
+    if (apple is Apple) // Noncompliant
+    {
+    }
   }
 }
 </pre>
@@ -60,6 +75,14 @@ class Program
     b = apple is Apple;
     var appleType = typeof(Apple);
     b = appleType.IsInstanceOfType(apple);
+
+    Fruit f = apple;
+    if (f is Apple)
+    {
+    }
+    if (apple != null)
+    {
+    }
   }
 }
 </pre>
@@ -75,3 +98,8 @@ int? i = 42;
 bool condition = i.GetType() == typeof(int?); // false;
 condition = i is int?; // true
 </pre>
+
+<p>
+    No issue is reported on <code>expr is T</code> expressions if either operand of the <code>is</code> operator is a value type. 
+    In that case CS0183 or CS0184 reports.
+</p>

@@ -18,6 +18,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
 using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
@@ -48,6 +49,8 @@ namespace SonarLint.Rules.CSharp
         internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
+
+        private static readonly ExpressionSyntax NullExpression = SyntaxFactory.LiteralExpression(SyntaxKind.NullLiteralExpression);
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
@@ -91,9 +94,28 @@ namespace SonarLint.Rules.CSharp
                     var binary = (BinaryExpressionSyntax)c.Node;
                     CheckGetTypeAndTypeOfEquality(binary.Left, binary.Right, binary.GetLocation(), c);
                     CheckGetTypeAndTypeOfEquality(binary.Right, binary.Left, binary.GetLocation(), c);
+
+                    CheckAsOperatorComparedToNull(binary.Left, binary.Right, binary.GetLocation(), c);
+                    CheckAsOperatorComparedToNull(binary.Right, binary.Left, binary.GetLocation(), c);
                 },
                 SyntaxKind.EqualsExpression,
                 SyntaxKind.NotEqualsExpression);
+        }
+
+        private void CheckAsOperatorComparedToNull(ExpressionSyntax sideA, ExpressionSyntax sideB, Location location, 
+            SyntaxNodeAnalysisContext context)
+        {
+            if (!EquivalenceChecker.AreEquivalent(sideA.RemoveParentheses(), NullExpression))
+            {
+                return;
+            }
+
+            if (!sideB.RemoveParentheses().IsKind(SyntaxKind.AsExpression))
+            {
+                return;
+            }
+
+            context.ReportDiagnostic(Diagnostic.Create(Rule, location, IsOperator));
         }
 
         private static void CheckGetTypeAndTypeOfEquality(ExpressionSyntax sideA, ExpressionSyntax sideB, Location location,
