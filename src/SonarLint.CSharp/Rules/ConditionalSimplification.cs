@@ -56,8 +56,6 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        private static readonly ExpressionSyntax NullExpression = SyntaxFactory.LiteralExpression(SyntaxKind.NullLiteralExpression);
-
         internal const string IsNullCoalescingKey = "isNullCoalescing";
 
         protected override void Initialize(SonarAnalysisContext context)
@@ -369,13 +367,13 @@ namespace SonarLint.Rules.CSharp
 
             comparedIsNullInTrue = binary.IsKind(SyntaxKind.EqualsExpression);
 
-            if (EquivalenceChecker.AreEquivalent(binary.Left, NullExpression))
+            if (EquivalenceChecker.AreEquivalent(binary.Left, SyntaxHelper.NullLiteralExpression))
             {
                 compared = binary.Right;
                 return true;
             }
 
-            if (EquivalenceChecker.AreEquivalent(binary.Right, NullExpression))
+            if (EquivalenceChecker.AreEquivalent(binary.Right, SyntaxHelper.NullLiteralExpression))
             {
                 compared = binary.Left;
                 return true;

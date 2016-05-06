@@ -58,8 +58,7 @@ namespace SonarLint.Rules.CSharp
 
         internal const string EqualsName = "Equals";
         private static readonly string[] MethodNames = { "GetHashCode", EqualsName };
-        internal static readonly SyntaxNode TrueLiteral = SyntaxFactory.LiteralExpression(SyntaxKind.TrueLiteralExpression);
-
+        
         protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterCodeBlockStartActionInNonGenerated<SyntaxKind>(
@@ -152,7 +151,7 @@ namespace SonarLint.Rules.CSharp
             }
 
             return returnStatement.Expression != null &&
-                EquivalenceChecker.AreEquivalent(returnStatement.Expression, TrueLiteral);
+                EquivalenceChecker.AreEquivalent(returnStatement.Expression, SyntaxHelper.TrueLiteralExpression);
         }
 
         internal static bool MethodIsRelevant(IMethodSymbol methodSymbol, string[] methodNames)

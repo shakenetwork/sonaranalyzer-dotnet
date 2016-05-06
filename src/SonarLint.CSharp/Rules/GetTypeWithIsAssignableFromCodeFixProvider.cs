@@ -101,7 +101,7 @@ namespace SonarLint.Rules.CSharp
         {
             return SyntaxFactory.BinaryExpression(SyntaxKind.NotEqualsExpression,
                 binary.Left.RemoveParentheses(),
-                SyntaxFactory.LiteralExpression(SyntaxKind.NullLiteralExpression));
+                SyntaxHelper.NullLiteralExpression);
         }
 
         private static SyntaxNode ChangeInvocation(SyntaxNode root, Diagnostic diagnostic, InvocationExpressionSyntax invocation)

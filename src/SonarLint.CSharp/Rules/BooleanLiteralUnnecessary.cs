@@ -56,9 +56,6 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        internal static readonly ExpressionSyntax TrueExpression = SyntaxFactory.LiteralExpression(SyntaxKind.TrueLiteralExpression);
-        internal static readonly ExpressionSyntax FalseExpression = SyntaxFactory.LiteralExpression(SyntaxKind.FalseLiteralExpression);
-
         protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
@@ -94,10 +91,10 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            var whenTrueIsTrue = EquivalenceChecker.AreEquivalent(conditional.WhenTrue, TrueExpression);
-            var whenTrueIsFalse = EquivalenceChecker.AreEquivalent(conditional.WhenTrue, FalseExpression);
-            var whenFalseIsTrue = EquivalenceChecker.AreEquivalent(conditional.WhenFalse, TrueExpression);
-            var whenFalseIsFalse = EquivalenceChecker.AreEquivalent(conditional.WhenFalse, FalseExpression);
+            var whenTrueIsTrue = EquivalenceChecker.AreEquivalent(conditional.WhenTrue, SyntaxHelper.TrueLiteralExpression);
+            var whenTrueIsFalse = EquivalenceChecker.AreEquivalent(conditional.WhenTrue, SyntaxHelper.FalseLiteralExpression);
+            var whenFalseIsTrue = EquivalenceChecker.AreEquivalent(conditional.WhenFalse, SyntaxHelper.TrueLiteralExpression);
+            var whenFalseIsFalse = EquivalenceChecker.AreEquivalent(conditional.WhenFalse, SyntaxHelper.FalseLiteralExpression);
 
             var whenTrueIsBooleanConstant = whenTrueIsTrue || whenTrueIsFalse;
             var whenFalseIsBooleanConstant = whenFalseIsTrue || whenFalseIsFalse;
@@ -130,8 +127,8 @@ namespace SonarLint.Rules.CSharp
         {
             var logicalNot = (PrefixUnaryExpressionSyntax)context.Node;
 
-            if (EquivalenceChecker.AreEquivalent(logicalNot.Operand, TrueExpression) ||
-                EquivalenceChecker.AreEquivalent(logicalNot.Operand, FalseExpression))
+            if (EquivalenceChecker.AreEquivalent(logicalNot.Operand, SyntaxHelper.TrueLiteralExpression) ||
+                EquivalenceChecker.AreEquivalent(logicalNot.Operand, SyntaxHelper.FalseLiteralExpression))
             {
                 context.ReportDiagnostic(Diagnostic.Create(Rule, logicalNot.Operand.GetLocation()));
             }
@@ -145,11 +142,11 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            CheckForBooleanConstantOnLeftReportOnExtendedLocation(binaryExpression, FalseExpression, context);
-            CheckForBooleanConstantOnLeftReportOnInvertedLocation(binaryExpression, TrueExpression, context);
+            CheckForBooleanConstantOnLeftReportOnExtendedLocation(binaryExpression, SyntaxHelper.FalseLiteralExpression, context);
+            CheckForBooleanConstantOnLeftReportOnInvertedLocation(binaryExpression, SyntaxHelper.TrueLiteralExpression, context);
 
-            CheckForBooleanConstantOnRightReportOnExtendedLocation(binaryExpression, FalseExpression, context);
-            CheckForBooleanConstantOnRightReportOnInvertedLocation(binaryExpression, TrueExpression, context);
+            CheckForBooleanConstantOnRightReportOnExtendedLocation(binaryExpression, SyntaxHelper.FalseLiteralExpression, context);
+            CheckForBooleanConstantOnRightReportOnInvertedLocation(binaryExpression, SyntaxHelper.TrueLiteralExpression, context);
         }
 
         private static void CheckNotEquals(SyntaxNodeAnalysisContext context)
@@ -160,11 +157,11 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            CheckForBooleanConstantOnLeftReportOnExtendedLocation(binaryExpression, FalseExpression, context);
-            CheckForBooleanConstantOnLeftReportOnNormalLocation(binaryExpression, TrueExpression, context);
+            CheckForBooleanConstantOnLeftReportOnExtendedLocation(binaryExpression, SyntaxHelper.FalseLiteralExpression, context);
+            CheckForBooleanConstantOnLeftReportOnNormalLocation(binaryExpression, SyntaxHelper.TrueLiteralExpression, context);
 
-            CheckForBooleanConstantOnRightReportOnExtendedLocation(binaryExpression, FalseExpression, context);
-            CheckForBooleanConstantOnRightReportOnNormalLocation(binaryExpression, TrueExpression, context);
+            CheckForBooleanConstantOnRightReportOnExtendedLocation(binaryExpression, SyntaxHelper.FalseLiteralExpression, context);
+            CheckForBooleanConstantOnRightReportOnNormalLocation(binaryExpression, SyntaxHelper.TrueLiteralExpression, context);
         }
 
         private static void CheckLogicalAnd(SyntaxNodeAnalysisContext context)
@@ -175,11 +172,11 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            CheckForBooleanConstantOnLeftReportOnExtendedLocation(binaryExpression, TrueExpression, context);
-            CheckForBooleanConstantOnLeftReportOnInvertedLocation(binaryExpression, FalseExpression, context);
+            CheckForBooleanConstantOnLeftReportOnExtendedLocation(binaryExpression, SyntaxHelper.TrueLiteralExpression, context);
+            CheckForBooleanConstantOnLeftReportOnInvertedLocation(binaryExpression, SyntaxHelper.FalseLiteralExpression, context);
 
-            CheckForBooleanConstantOnRightReportOnExtendedLocation(binaryExpression, TrueExpression, context);
-            CheckForBooleanConstantOnRightReportOnInvertedLocation(binaryExpression, FalseExpression, context);
+            CheckForBooleanConstantOnRightReportOnExtendedLocation(binaryExpression, SyntaxHelper.TrueLiteralExpression, context);
+            CheckForBooleanConstantOnRightReportOnInvertedLocation(binaryExpression, SyntaxHelper.FalseLiteralExpression, context);
         }
 
         private static void CheckEquals(SyntaxNodeAnalysisContext context)
@@ -190,11 +187,11 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            CheckForBooleanConstantOnLeftReportOnExtendedLocation(binaryExpression, TrueExpression, context);
-            CheckForBooleanConstantOnLeftReportOnNormalLocation(binaryExpression, FalseExpression, context);
+            CheckForBooleanConstantOnLeftReportOnExtendedLocation(binaryExpression, SyntaxHelper.TrueLiteralExpression, context);
+            CheckForBooleanConstantOnLeftReportOnNormalLocation(binaryExpression, SyntaxHelper.FalseLiteralExpression, context);
 
-            CheckForBooleanConstantOnRightReportOnExtendedLocation(binaryExpression, TrueExpression, context);
-            CheckForBooleanConstantOnRightReportOnNormalLocation(binaryExpression, FalseExpression, context);
+            CheckForBooleanConstantOnRightReportOnExtendedLocation(binaryExpression, SyntaxHelper.TrueLiteralExpression, context);
+            CheckForBooleanConstantOnRightReportOnNormalLocation(binaryExpression, SyntaxHelper.FalseLiteralExpression, context);
         }
 
         private static bool IsOnNullableBoolean(ConditionalExpressionSyntax conditionalExpression, SemanticModel semanticModel)
@@ -238,10 +235,10 @@ namespace SonarLint.Rules.CSharp
                 return true;
             }
 
-            var leftIsTrue = EquivalenceChecker.AreEquivalent(binaryExpression.Left, TrueExpression);
-            var leftIsFalse = EquivalenceChecker.AreEquivalent(binaryExpression.Left, FalseExpression);
-            var rightIsTrue = EquivalenceChecker.AreEquivalent(binaryExpression.Right, TrueExpression);
-            var rightIsFalse = EquivalenceChecker.AreEquivalent(binaryExpression.Right, FalseExpression);
+            var leftIsTrue = EquivalenceChecker.AreEquivalent(binaryExpression.Left, SyntaxHelper.TrueLiteralExpression);
+            var leftIsFalse = EquivalenceChecker.AreEquivalent(binaryExpression.Left, SyntaxHelper.FalseLiteralExpression);
+            var rightIsTrue = EquivalenceChecker.AreEquivalent(binaryExpression.Right, SyntaxHelper.TrueLiteralExpression);
+            var rightIsFalse = EquivalenceChecker.AreEquivalent(binaryExpression.Right, SyntaxHelper.FalseLiteralExpression);
 
             var leftIsBoolean = leftIsTrue || leftIsFalse;
             var rightIsBoolean = rightIsTrue || rightIsFalse;

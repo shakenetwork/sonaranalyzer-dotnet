@@ -58,9 +58,6 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        private static readonly ExpressionSyntax NullExpression = SyntaxFactory.LiteralExpression(SyntaxKind.NullLiteralExpression);
-        private static readonly ExpressionSyntax FalseExpression = SyntaxFactory.LiteralExpression(SyntaxKind.FalseLiteralExpression);
-
         protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
@@ -155,7 +152,7 @@ namespace SonarLint.Rules.CSharp
         private static bool CheckReferenceTypeNullInitializer(EqualsValueClauseSyntax initializer, ITypeSymbol type)
         {
             return type.IsReferenceType &&
-                EquivalenceChecker.AreEquivalent(NullExpression, initializer.Value);
+                EquivalenceChecker.AreEquivalent(SyntaxHelper.NullLiteralExpression, initializer.Value);
         }
 
         private static bool CheckValueTypeDefaultValueInitializer(EqualsValueClauseSyntax initializer, ITypeSymbol type)
@@ -168,7 +165,7 @@ namespace SonarLint.Rules.CSharp
             switch (type.SpecialType)
             {
                 case SpecialType.System_Boolean:
-                    return EquivalenceChecker.AreEquivalent(initializer.Value, FalseExpression);
+                    return EquivalenceChecker.AreEquivalent(initializer.Value, SyntaxHelper.FalseLiteralExpression);
                 case SpecialType.System_Decimal:
                 case SpecialType.System_Double:
                 case SpecialType.System_Single:

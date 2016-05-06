@@ -163,16 +163,16 @@ namespace SonarLint.Rules.CSharp
             #region logical and false, logical or true
 
             if (binary.IsKind(SyntaxKind.LogicalAndExpression) &&
-                (EquivalenceChecker.AreEquivalent(binary.Left, BooleanLiteralUnnecessary.FalseExpression) ||
-                 EquivalenceChecker.AreEquivalent(binary.Right, BooleanLiteralUnnecessary.FalseExpression)))
+                (EquivalenceChecker.AreEquivalent(binary.Left, SyntaxHelper.FalseLiteralExpression) ||
+                 EquivalenceChecker.AreEquivalent(binary.Right, SyntaxHelper.FalseLiteralExpression)))
             {
-                return BooleanLiteralUnnecessary.FalseExpression;
+                return SyntaxHelper.FalseLiteralExpression;
             }
             if (binary.IsKind(SyntaxKind.LogicalOrExpression) &&
-                (EquivalenceChecker.AreEquivalent(binary.Left, BooleanLiteralUnnecessary.TrueExpression) ||
-                 EquivalenceChecker.AreEquivalent(binary.Right, BooleanLiteralUnnecessary.TrueExpression)))
+                (EquivalenceChecker.AreEquivalent(binary.Left, SyntaxHelper.TrueLiteralExpression) ||
+                 EquivalenceChecker.AreEquivalent(binary.Right, SyntaxHelper.TrueLiteralExpression)))
             {
-                return BooleanLiteralUnnecessary.TrueExpression;
+                return SyntaxHelper.TrueLiteralExpression;
             }
 
             #endregion
@@ -182,28 +182,28 @@ namespace SonarLint.Rules.CSharp
             if (binary.IsKind(SyntaxKind.EqualsExpression) &&
                 TwoSidesAreDifferentBooleans(binary))
             {
-                return BooleanLiteralUnnecessary.FalseExpression;
+                return SyntaxHelper.FalseLiteralExpression;
             }
             if (binary.IsKind(SyntaxKind.EqualsExpression) &&
                 TwoSidesAreSameBooleans(binary))
             {
-                return BooleanLiteralUnnecessary.TrueExpression;
+                return SyntaxHelper.TrueLiteralExpression;
             }
             if (binary.IsKind(SyntaxKind.NotEqualsExpression) &&
                 TwoSidesAreSameBooleans(binary))
             {
-                return BooleanLiteralUnnecessary.FalseExpression;
+                return SyntaxHelper.FalseLiteralExpression;
             }
             if (binary.IsKind(SyntaxKind.NotEqualsExpression) &&
                 TwoSidesAreDifferentBooleans(binary))
             {
-                return BooleanLiteralUnnecessary.TrueExpression;
+                return SyntaxHelper.TrueLiteralExpression;
             }
 
             #endregion
 
-            if (EquivalenceChecker.AreEquivalent(binary.Left, BooleanLiteralUnnecessary.TrueExpression) ||
-                EquivalenceChecker.AreEquivalent(binary.Left, BooleanLiteralUnnecessary.FalseExpression))
+            if (EquivalenceChecker.AreEquivalent(binary.Left, SyntaxHelper.TrueLiteralExpression) ||
+                EquivalenceChecker.AreEquivalent(binary.Left, SyntaxHelper.FalseLiteralExpression))
             {
                 return binary.Right;
             }
@@ -213,33 +213,33 @@ namespace SonarLint.Rules.CSharp
         private static bool TwoSidesAreDifferentBooleans(BinaryExpressionSyntax binary)
         {
             return (
-                EquivalenceChecker.AreEquivalent(binary.Left, BooleanLiteralUnnecessary.TrueExpression) &&
-                EquivalenceChecker.AreEquivalent(binary.Right, BooleanLiteralUnnecessary.FalseExpression)) ||
+                EquivalenceChecker.AreEquivalent(binary.Left, SyntaxHelper.TrueLiteralExpression) &&
+                EquivalenceChecker.AreEquivalent(binary.Right, SyntaxHelper.FalseLiteralExpression)) ||
                 (
-                EquivalenceChecker.AreEquivalent(binary.Left, BooleanLiteralUnnecessary.FalseExpression) &&
-                EquivalenceChecker.AreEquivalent(binary.Right, BooleanLiteralUnnecessary.TrueExpression));
+                EquivalenceChecker.AreEquivalent(binary.Left, SyntaxHelper.FalseLiteralExpression) &&
+                EquivalenceChecker.AreEquivalent(binary.Right, SyntaxHelper.TrueLiteralExpression));
         }
         private static bool TwoSidesAreSameBooleans(BinaryExpressionSyntax binary)
         {
             return (
-                EquivalenceChecker.AreEquivalent(binary.Left, BooleanLiteralUnnecessary.TrueExpression) &&
-                EquivalenceChecker.AreEquivalent(binary.Right, BooleanLiteralUnnecessary.TrueExpression)) ||
+                EquivalenceChecker.AreEquivalent(binary.Left, SyntaxHelper.TrueLiteralExpression) &&
+                EquivalenceChecker.AreEquivalent(binary.Right, SyntaxHelper.TrueLiteralExpression)) ||
                 (
-                EquivalenceChecker.AreEquivalent(binary.Left, BooleanLiteralUnnecessary.FalseExpression) &&
-                EquivalenceChecker.AreEquivalent(binary.Right, BooleanLiteralUnnecessary.FalseExpression));
+                EquivalenceChecker.AreEquivalent(binary.Left, SyntaxHelper.FalseLiteralExpression) &&
+                EquivalenceChecker.AreEquivalent(binary.Right, SyntaxHelper.FalseLiteralExpression));
         }
 
         private static Document RemovePrefixUnary(Document document, SyntaxNode root,
             SyntaxNode literal)
         {
-            if (EquivalenceChecker.AreEquivalent(literal, BooleanLiteralUnnecessary.TrueExpression))
+            if (EquivalenceChecker.AreEquivalent(literal, SyntaxHelper.TrueLiteralExpression))
             {
-                var newRoot = root.ReplaceNode(literal.Parent, BooleanLiteralUnnecessary.FalseExpression);
+                var newRoot = root.ReplaceNode(literal.Parent, SyntaxHelper.FalseLiteralExpression);
                 return document.WithSyntaxRoot(newRoot);
             }
             else
             {
-                var newRoot = root.ReplaceNode(literal.Parent, BooleanLiteralUnnecessary.TrueExpression);
+                var newRoot = root.ReplaceNode(literal.Parent, SyntaxHelper.TrueLiteralExpression);
                 return document.WithSyntaxRoot(newRoot);
             }
         }
@@ -247,7 +247,7 @@ namespace SonarLint.Rules.CSharp
         private static Document RemoveConditional(Document document, SyntaxNode root,
             ConditionalExpressionSyntax conditional)
         {
-            if (EquivalenceChecker.AreEquivalent(conditional.WhenTrue, BooleanLiteralUnnecessary.TrueExpression))
+            if (EquivalenceChecker.AreEquivalent(conditional.WhenTrue, SyntaxHelper.TrueLiteralExpression))
             {
                 var newRoot = root.ReplaceNode(conditional,
                     conditional.Condition.WithAdditionalAnnotations(Formatter.Annotation));
@@ -275,7 +275,7 @@ namespace SonarLint.Rules.CSharp
             ConditionalExpressionSyntax conditional)
         {
             if (conditional.WhenTrue.Equals(syntaxNode) &&
-                EquivalenceChecker.AreEquivalent(syntaxNode, BooleanLiteralUnnecessary.TrueExpression))
+                EquivalenceChecker.AreEquivalent(syntaxNode, SyntaxHelper.TrueLiteralExpression))
             {
                 var newRoot = ReplaceExpressionWithBinary(conditional, root,
                     SyntaxKind.LogicalOrExpression,
@@ -286,7 +286,7 @@ namespace SonarLint.Rules.CSharp
             }
 
             if (conditional.WhenTrue.Equals(syntaxNode) &&
-                EquivalenceChecker.AreEquivalent(syntaxNode, BooleanLiteralUnnecessary.FalseExpression))
+                EquivalenceChecker.AreEquivalent(syntaxNode, SyntaxHelper.FalseLiteralExpression))
             {
                 var newRoot = ReplaceExpressionWithBinary(conditional, root,
                     SyntaxKind.LogicalAndExpression,
@@ -297,7 +297,7 @@ namespace SonarLint.Rules.CSharp
             }
 
             if (conditional.WhenFalse.Equals(syntaxNode) &&
-                EquivalenceChecker.AreEquivalent(syntaxNode, BooleanLiteralUnnecessary.TrueExpression))
+                EquivalenceChecker.AreEquivalent(syntaxNode, SyntaxHelper.TrueLiteralExpression))
             {
                 var newRoot = ReplaceExpressionWithBinary(conditional, root,
                     SyntaxKind.LogicalOrExpression,
@@ -308,7 +308,7 @@ namespace SonarLint.Rules.CSharp
             }
 
             if (conditional.WhenFalse.Equals(syntaxNode) &&
-                EquivalenceChecker.AreEquivalent(syntaxNode, BooleanLiteralUnnecessary.FalseExpression))
+                EquivalenceChecker.AreEquivalent(syntaxNode, SyntaxHelper.FalseLiteralExpression))
             {
                 var newRoot = ReplaceExpressionWithBinary(conditional, root,
                     SyntaxKind.LogicalAndExpression,

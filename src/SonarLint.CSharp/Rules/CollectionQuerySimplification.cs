@@ -59,9 +59,7 @@ namespace SonarLint.Rules.CSharp
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
-
-        private static readonly ExpressionSyntax NullExpression = SyntaxFactory.LiteralExpression(SyntaxKind.NullLiteralExpression);
-
+        
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         private static readonly string[] MethodNamesWithPredicate =
@@ -345,13 +343,13 @@ namespace SonarLint.Rules.CSharp
 
         private static bool IsNullChecking(BinaryExpressionSyntax binaryExpression, string lambdaParameter)
         {
-            if (EquivalenceChecker.AreEquivalent(NullExpression, binaryExpression.Left.RemoveParentheses()) &&
+            if (EquivalenceChecker.AreEquivalent(SyntaxHelper.NullLiteralExpression, binaryExpression.Left.RemoveParentheses()) &&
                 binaryExpression.Right.RemoveParentheses().ToString() == lambdaParameter)
             {
                 return true;
             }
 
-            if (EquivalenceChecker.AreEquivalent(NullExpression, binaryExpression.Right.RemoveParentheses()) &&
+            if (EquivalenceChecker.AreEquivalent(SyntaxHelper.NullLiteralExpression, binaryExpression.Right.RemoveParentheses()) &&
                 binaryExpression.Left.RemoveParentheses().ToString() == lambdaParameter)
             {
                 return true;

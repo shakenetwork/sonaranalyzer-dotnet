@@ -52,8 +52,6 @@ namespace SonarLint.Rules.CSharp
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = false;
 
-        private static readonly ExpressionSyntax NullExpression = SyntaxFactory.LiteralExpression(SyntaxKind.NullLiteralExpression);
-
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
@@ -69,8 +67,8 @@ namespace SonarLint.Rules.CSharp
                 {
                     var equalsExpression = (BinaryExpressionSyntax) c.Node;
 
-                    var leftIsNull = EquivalenceChecker.AreEquivalent(equalsExpression.Left, NullExpression);
-                    var rightIsNull = EquivalenceChecker.AreEquivalent(equalsExpression.Right, NullExpression);
+                    var leftIsNull = EquivalenceChecker.AreEquivalent(equalsExpression.Left, SyntaxHelper.NullLiteralExpression);
+                    var rightIsNull = EquivalenceChecker.AreEquivalent(equalsExpression.Right, SyntaxHelper.NullLiteralExpression);
 
                     if (!(leftIsNull ^ rightIsNull))
                     {
