@@ -76,6 +76,22 @@ namespace SonarLint.Rules.CSharp
                         }),
                     context.Diagnostics);
             }
+
+            var asExpression = syntaxNode as BinaryExpressionSyntax;
+            if (asExpression != null)
+            {
+                context.RegisterCodeFix(
+                    CodeAction.Create(
+                        Title,
+                        c =>
+                        {
+                            var newRoot = root.ReplaceNode(
+                                asExpression,
+                                asExpression.Left.WithTriviaFrom(asExpression));
+                            return Task.FromResult(context.Document.WithSyntaxRoot(newRoot));
+                        }),
+                    context.Diagnostics);
+            }
         }
 
         private static SyntaxNode RemoveCall(SyntaxNode root,

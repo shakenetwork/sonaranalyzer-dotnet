@@ -27,5 +27,12 @@ namespace Tests.Diagnostics
         }
         void method(IEnumerable<int> enumerable)
         { }
+
+        void M()
+        {
+            var o = new object();
+            var oo = o; // Noncompliant
+            var i = o as RedundantCast; // Compliant
+        }
     }
 }

@@ -28,6 +28,7 @@ using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
 using Microsoft.CodeAnalysis.Text;
+using System;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -65,25 +66,38 @@ namespace SonarLint.Rules.CSharp
     protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
-                c => CheckCastExpression(c),
+                c =>
+                {
+                    var castExpression = (CastExpressionSyntax)c.Node;
+                    CheckCastExpression(c, castExpression.Expression, castExpression.Type, castExpression.Type.GetLocation());
+                },
                 SyntaxKind.CastExpression);
+
+            context.RegisterSyntaxNodeActionInNonGenerated(
+                c =>
+                {
+                    var castExpression = (BinaryExpressionSyntax)c.Node;
+                    CheckCastExpression(c, castExpression.Left, castExpression.Right,
+                        Location.Create(c.Node.SyntaxTree,
+                            TextSpan.FromBounds(castExpression.OperatorToken.SpanStart, castExpression.Right.Span.End)));
+                },
+                SyntaxKind.AsExpression);
 
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckExtensionMethodInvocation(c),
                 SyntaxKind.InvocationExpression);
         }
 
-        private static void CheckCastExpression(SyntaxNodeAnalysisContext context)
+        private static void CheckCastExpression(SyntaxNodeAnalysisContext context, ExpressionSyntax expression,
+            ExpressionSyntax type, Location location)
         {
-            var castExpression = (CastExpressionSyntax)context.Node;
-
-            var expressionType = context.SemanticModel.GetTypeInfo(castExpression.Expression).Type;
+            var expressionType = context.SemanticModel.GetTypeInfo(expression).Type;
             if (expressionType == null)
             {
                 return;
             }
 
-            var castType = context.SemanticModel.GetTypeInfo(castExpression.Type).Type;
+            var castType = context.SemanticModel.GetTypeInfo(type).Type;
             if (castType == null)
             {
                 return;
@@ -91,7 +105,7 @@ namespace SonarLint.Rules.CSharp
 
             if (expressionType.Equals(castType))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, castExpression.Type.GetLocation(),
+                context.ReportDiagnostic(Diagnostic.Create(Rule, location,
                     castType.ToDisplayString()));
             }
         }
