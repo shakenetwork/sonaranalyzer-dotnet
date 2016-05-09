@@ -47,7 +47,7 @@ namespace SonarLint.Rules.CSharp
             "Redundant declarations should be removed because they needlessly clutter the code and can be confusing.";
         internal const string MessageEnum = "\"int\" should not be explicitly used as the underlying type.";
         internal const string MessageObjectBase = "\"Object\" should not be explicitly extended.";
-        internal const string MessageAlreadyImplements = "\"{0}\" is a \"{1}\" so \"{1}\" can be removed from the inheritance list.";
+        internal const string MessageAlreadyImplements = "\"{0}\" implements \"{1}\" so \"{1}\" can be removed from the inheritance list.";
         internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
@@ -83,7 +83,7 @@ namespace SonarLint.Rules.CSharp
         {
             var classDeclaration = (ClassDeclarationSyntax)context.Node;
             if (classDeclaration.BaseList == null ||
-                classDeclaration.BaseList.Types.Count == 0)
+                !classDeclaration.BaseList.Types.Any())
             {
                 return;
             }
@@ -103,26 +103,26 @@ namespace SonarLint.Rules.CSharp
                     MessageObjectBase));
             }
 
-            CheckIfInterfaceIsRedundantForClass(context, classDeclaration);
+            ReportRedundantInterfaces(context, classDeclaration);
         }
 
         private static void CheckInterface(SyntaxNodeAnalysisContext context)
         {
             var interfaceDeclaration = (InterfaceDeclarationSyntax)context.Node;
             if (interfaceDeclaration.BaseList == null ||
-                interfaceDeclaration.BaseList.Types.Count == 0)
+                !interfaceDeclaration.BaseList.Types.Any())
             {
                 return;
             }
 
-            CheckIfInterfaceIsRedundantForInterface(context, interfaceDeclaration);
+            ReportRedundantInterfaces(context, interfaceDeclaration);
         }
 
         private static void CheckEnum(SyntaxNodeAnalysisContext context)
         {
             var enumDeclaration = (EnumDeclarationSyntax)context.Node;
             if (enumDeclaration.BaseList == null ||
-                enumDeclaration.BaseList.Types.Count == 0)
+                !enumDeclaration.BaseList.Types.Any())
             {
                 return;
             }
@@ -139,50 +139,41 @@ namespace SonarLint.Rules.CSharp
                 MessageEnum));
         }
 
-        private static void CheckIfInterfaceIsRedundantForInterface(SyntaxNodeAnalysisContext context, InterfaceDeclarationSyntax interfaceDeclaration)
+        private static void ReportRedundantInterfaces(SyntaxNodeAnalysisContext context, BaseTypeDeclarationSyntax typeDeclaration)
         {
-            CheckIfInterfaceIsRedundant(context, interfaceDeclaration.BaseList, interfaceType => false);
-        }
-
-        private static void CheckIfInterfaceIsRedundantForClass(SyntaxNodeAnalysisContext context, ClassDeclarationSyntax classDeclaration)
-        {
-            var classSymbol = context.SemanticModel.GetDeclaredSymbol(classDeclaration);
-            if (classSymbol == null)
+            var declaredType = context.SemanticModel.GetDeclaredSymbol(typeDeclaration);
+            if (declaredType == null)
             {
                 return;
             }
 
-            CheckIfInterfaceIsRedundant(context, classDeclaration.BaseList,
-                interfaceType => HasInterfaceMember(classSymbol, interfaceType));
-        }
-
-        private static void CheckIfInterfaceIsRedundant(SyntaxNodeAnalysisContext context, BaseListSyntax baseList,
-            Predicate<INamedTypeSymbol> additionalCheck)
-        {
-            var interfaceTypesWithAllInterfaces =
-                GetImplementedInterfaceMappings(baseList, context.SemanticModel);
+            var baseList = typeDeclaration.BaseList;
+            var interfaceTypesWithAllInterfaces = GetImplementedInterfaceMappings(baseList, context.SemanticModel);
 
             for (int i = 0; i < baseList.Types.Count; i++)
             {
                 var baseType = baseList.Types[i];
                 var interfaceType = context.SemanticModel.GetSymbolInfo(baseType.Type).Symbol as INamedTypeSymbol;
-                if (!interfaceType.IsInterface())
+                if (interfaceType == null ||
+                    !interfaceType.IsInterface())
                 {
                     continue;
                 }
 
-                foreach (var interfaceTypeWithAllInterfaces in interfaceTypesWithAllInterfaces)
+                INamedTypeSymbol collidingDeclaration;
+                if (!TryGetCollidingDeclaration(declaredType, interfaceType, interfaceTypesWithAllInterfaces, out collidingDeclaration))
                 {
-                    if (interfaceTypeWithAllInterfaces.Value.Contains(interfaceType) &&
-                        !additionalCheck(interfaceType))
-                    {
-                        var location = GetLocationWithToken(baseType.Type, baseList.Types);
-                        context.ReportDiagnostic(Diagnostic.Create(Rule, location,
-                            ImmutableDictionary<string, string>.Empty.Add(RedundantIndexKey, i.ToString(CultureInfo.InvariantCulture)),
-                            string.Format(MessageAlreadyImplements, interfaceTypeWithAllInterfaces.Key.Name, interfaceType.Name)));
-                        break;
-                    }
+                    continue;
                 }
+
+                var location = GetLocationWithToken(baseType.Type, baseList.Types);
+                var message = string.Format(MessageAlreadyImplements,
+                    collidingDeclaration.ToMinimalDisplayString(context.SemanticModel, baseType.Type.SpanStart),
+                    interfaceType.ToMinimalDisplayString(context.SemanticModel, baseType.Type.SpanStart));
+
+                context.ReportDiagnostic(Diagnostic.Create(Rule, location,
+                    ImmutableDictionary<string, string>.Empty.Add(RedundantIndexKey, i.ToString(CultureInfo.InvariantCulture)),
+                    message));
             }
         }
 
@@ -196,14 +187,52 @@ namespace SonarLint.Rules.CSharp
                 .ToMultiValueDictionary(kv => kv.Item1, kv => kv.Item2);
         }
 
-        private static bool HasInterfaceMember(INamedTypeSymbol classSymbol, INamedTypeSymbol interfaceType)
+        private static bool TryGetCollidingDeclaration(INamedTypeSymbol declaredType, INamedTypeSymbol interfaceType,
+            MultiValueDictionary<INamedTypeSymbol, INamedTypeSymbol> interfaceMappings, out INamedTypeSymbol collidingDeclaration)
         {
-            return interfaceType.GetMembers().Any(interfaceMember =>
+            var collisionMapping = interfaceMappings
+                .Where(i => i.Key.IsInterface())
+                .FirstOrDefault(v => v.Value.Contains(interfaceType));
+
+            if (collisionMapping.Key != null)
             {
-                var classMember = classSymbol.FindImplementationForInterfaceMember(interfaceMember);
-                return classMember != null &&
-                    classMember.ContainingType.Equals(classSymbol);
-            });
+                collidingDeclaration = collisionMapping.Key;
+                return true;
+            }
+
+            var baseClassMapping = interfaceMappings.FirstOrDefault(i => i.Key.IsClass());
+            if (baseClassMapping.Key == null)
+            {
+                collidingDeclaration = null;
+                return false;
+            }
+
+            collidingDeclaration = baseClassMapping.Key;
+            return CanInterfacebeRemovedbasedOnMembers(declaredType, interfaceType);
+        }
+
+        private static bool CanInterfacebeRemovedbasedOnMembers(INamedTypeSymbol declaredType, INamedTypeSymbol interfaceType)
+        {
+            var allMembersOfInterface = interfaceType.AllInterfaces.Concat(new[] { interfaceType })
+                .SelectMany(i => i.GetMembers())
+                .ToList();
+
+            if (!allMembersOfInterface.Any())
+            {
+                return false;
+            }
+
+            foreach (var interfaceMember in allMembersOfInterface)
+            {
+                var classMember = declaredType.FindImplementationForInterfaceMember(interfaceMember);
+                if (classMember != null &&
+                    (classMember.ContainingType.Equals(declaredType) ||
+                    !classMember.ContainingType.Interfaces.SelectMany(i => i.AllInterfaces.Concat(new[] { i })).Contains(interfaceType)))
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
         private static Location GetLocationWithToken(TypeSyntax type, SeparatedSyntaxList<BaseTypeSyntax> baseTypes)

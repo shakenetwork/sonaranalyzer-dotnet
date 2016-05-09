@@ -51,4 +51,99 @@ namespace Tests.Diagnostics
     {
         void IPrint1.Print() { }
     }
+
+    interface IB1
+    {
+        void Method();
+    }
+
+    interface IB2 : IB1
+    {
+    }
+
+    class C1 : IB2
+    {
+        public void Method() { }
+    }
+
+    public interface IM
+    {
+        void Print();
+    }
+
+    public interface IM2 : IM // not redundant
+    {
+    }
+
+    public class Base2 : IM
+    {
+        public void Print()
+        {
+            Console.WriteLine("base");
+        }
+    }
+
+    public class Derived1 : Base2, IM // not redundant
+    {
+        public void Print()
+        {
+            Console.WriteLine("derived");
+        }
+    }
+
+    public class Derived2 : IM2
+    {
+        public void Print()
+        {
+            Console.WriteLine("derived");
+        }
+    }
+
+    public class Derived2B : IM2
+    {
+        public void Print()
+        {
+            Console.WriteLine("derived");
+        }
+    }
+
+    public class Derived3 : IM2
+    {
+        void IM.Print()
+        {
+            Console.WriteLine("derived");
+        }
+    }
+
+    public class Derived4 : Base2, IM
+    {
+        void IM.Print()
+        {
+            Console.WriteLine("derived");
+        }
+    }
+    interface IMyInt
+    {
+        void M();
+    }
+
+    class X1 : IMyInt
+    {
+        public void M()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    class X2 : X1
+    {
+        public new void M()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    class X3 : X2, IMyInt // Compliant
+    {
+    }
 }

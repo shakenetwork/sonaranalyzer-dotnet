@@ -67,7 +67,7 @@ namespace SonarLint.Common
         }
     }
 
-    #region Extensionss
+    #region Extensions
 
     public static class MultiValueDictionaryExtensions
     {
