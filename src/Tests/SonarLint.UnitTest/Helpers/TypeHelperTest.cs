@@ -30,12 +30,10 @@ namespace SonarLint.UnitTest.Helpers
     [TestClass]
     public class TypeHelperTest
     {
-        private Compilation compilation;
         private ClassDeclarationSyntax baseClassDeclaration;
         private ClassDeclarationSyntax derivedClassDeclaration1;
         private ClassDeclarationSyntax derivedClassDeclaration2;
         private SemanticModel semanticModel;
-        private SyntaxTree tree;
 
         [TestInitialize]
         public void Compile()
@@ -46,8 +44,8 @@ namespace SonarLint.UnitTest.Helpers
                     .AddMetadataReference(MetadataReference.CreateFromFile(typeof(object).Assembly.Location))
                     .AddMetadataReference(MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location))
                     .AddDocument("test", SymbolHelperTest.TestInput);
-                compilation = document.Project.GetCompilationAsync().Result;
-                tree = compilation.SyntaxTrees.First();
+                var compilation = document.Project.GetCompilationAsync().Result;
+                var tree = compilation.SyntaxTrees.First();
                 semanticModel = compilation.GetSemanticModel(tree);
 
                 baseClassDeclaration = tree.GetRoot().DescendantNodes().OfType<ClassDeclarationSyntax>()

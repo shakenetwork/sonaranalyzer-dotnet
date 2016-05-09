@@ -86,7 +86,7 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            var propertySymbol = context.SemanticModel.GetDeclaredSymbol(propertyDeclaration) as IPropertySymbol;
+            var propertySymbol = context.SemanticModel.GetDeclaredSymbol(propertyDeclaration);
 
             if (propertySymbol != null &&
                 IsDefaultValueInitializer(propertyDeclaration.Initializer, propertySymbol.Type))

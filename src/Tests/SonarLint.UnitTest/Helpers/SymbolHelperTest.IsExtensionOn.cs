@@ -55,9 +55,8 @@ namespace NS
   }
 }
 ";
-        private Compilation compilation;
+
         private SemanticModel semanticModel;
-        private SyntaxTree tree;
         private List<StatementSyntax> statements;
 
         [TestInitialize]
@@ -69,8 +68,8 @@ namespace NS
                     .AddMetadataReference(MetadataReference.CreateFromFile(typeof(object).Assembly.Location))
                     .AddMetadataReference(MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location))
                     .AddDocument("test", TestInput);
-                compilation = document.Project.GetCompilationAsync().Result;
-                tree = compilation.SyntaxTrees.First();
+                var compilation = document.Project.GetCompilationAsync().Result;
+                var tree = compilation.SyntaxTrees.First();
                 semanticModel = compilation.GetSemanticModel(tree);
                 statements = tree.GetRoot().DescendantNodes()
                     .OfType<MethodDeclarationSyntax>()

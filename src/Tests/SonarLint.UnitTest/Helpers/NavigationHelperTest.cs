@@ -65,14 +65,14 @@ namespace Test
         }
     }
 }";
-        private SyntaxTree syntaxTree;
+
         private MethodDeclarationSyntax ifMethod;
         private MethodDeclarationSyntax switchMethod;
 
         [TestInitialize]
         public void TestSetup()
         {
-            syntaxTree = CSharpSyntaxTree.ParseText(Source);
+            var syntaxTree = CSharpSyntaxTree.ParseText(Source);
 
             ifMethod = syntaxTree.GetRoot().DescendantNodes().OfType<MethodDeclarationSyntax>().First(m => m.Identifier.ValueText == "IfMethod");
             switchMethod = syntaxTree.GetRoot().DescendantNodes().OfType<MethodDeclarationSyntax>().First(m => m.Identifier.ValueText == "SwitchMethod");

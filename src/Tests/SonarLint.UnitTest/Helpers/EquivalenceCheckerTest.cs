@@ -58,13 +58,12 @@ namespace Test
     }
 }";
 
-        private SyntaxTree syntaxTree;
         private List<MethodDeclarationSyntax> methods;
 
         [TestInitialize]
         public void TestSetup()
         {
-            syntaxTree = CSharpSyntaxTree.ParseText(Source);
+            var syntaxTree = CSharpSyntaxTree.ParseText(Source);
 
             methods = syntaxTree.GetRoot().DescendantNodes().OfType<MethodDeclarationSyntax>().ToList();
         }

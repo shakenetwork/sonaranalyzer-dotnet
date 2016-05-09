@@ -66,7 +66,7 @@ namespace NS
   }
 }
 ";
-        private Compilation compilation;
+
         private ClassDeclarationSyntax baseClassDeclaration;
         private ClassDeclarationSyntax derivedClassDeclaration1;
         private ClassDeclarationSyntax derivedClassDeclaration2;
@@ -83,7 +83,7 @@ namespace NS
                     .AddMetadataReference(MetadataReference.CreateFromFile(typeof(object).Assembly.Location))
                     .AddMetadataReference(MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location))
                     .AddDocument("test", TestInput);
-                compilation = document.Project.GetCompilationAsync().Result;
+                var compilation = document.Project.GetCompilationAsync().Result;
                 tree = compilation.SyntaxTrees.First();
                 semanticModel = compilation.GetSemanticModel(tree);
 
