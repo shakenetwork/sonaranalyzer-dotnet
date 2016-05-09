@@ -247,36 +247,33 @@ namespace SonarLint.Rules.CSharp
                 var arg1 = methodCall1.ArgumentList.Arguments[i];
                 var arg2 = methodCall2.ArgumentList.Arguments[i];
 
-                if (!EquivalenceChecker.AreEquivalent(arg1.Expression, arg2.Expression))
+                var expr1 = arg1.Expression.RemoveParentheses();
+                var expr2 = arg2.Expression.RemoveParentheses();
+
+                if (!EquivalenceChecker.AreEquivalent(expr1, expr2))
                 {
                     ExpressionSyntax createdExpression;
                     if (isNullCoalescing)
                     {
-                        var arg1IsCompared = EquivalenceChecker.AreEquivalent(arg1.Expression, compared);
-                        var expression = arg1IsCompared ? arg2.Expression : arg1.Expression;
+                        var arg1IsCompared = EquivalenceChecker.AreEquivalent(expr1, compared);
+                        var expression = arg1IsCompared ? expr2 : expr1;
 
-                        createdExpression = SyntaxFactory.BinaryExpression(
-                                    SyntaxKind.CoalesceExpression,
-                                    compared,
-                                    expression);
+                        createdExpression = SyntaxFactory.BinaryExpression(SyntaxKind.CoalesceExpression, compared, expression);
                     }
                     else
                     {
-                        createdExpression = SyntaxFactory.ConditionalExpression(
-                                    condition,
-                                    arg1.Expression,
-                                    arg2.Expression);
+                        createdExpression = SyntaxFactory.ConditionalExpression(condition, expr1, expr2);
                     }
 
                     newArgumentList = newArgumentList.AddArguments(
-                            SyntaxFactory.Argument(
-                                arg1.NameColon,
-                                arg1.RefOrOutKeyword,
-                                createdExpression.WithAdditionalAnnotations(annotation)));
+                        SyntaxFactory.Argument(
+                            arg1.NameColon,
+                            arg1.RefOrOutKeyword,
+                            createdExpression.WithAdditionalAnnotations(annotation)));
                 }
                 else
                 {
-                    newArgumentList = newArgumentList.AddArguments(arg1);
+                    newArgumentList = newArgumentList.AddArguments(arg1.WithExpression(arg1.Expression.RemoveParentheses()));
                 }
             }
 

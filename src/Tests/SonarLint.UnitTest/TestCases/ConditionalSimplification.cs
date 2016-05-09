@@ -174,4 +174,32 @@ namespace Tests.TestCases
     class Base { }
     class A : Base { }
     class B : Base { }
+
+    class T
+    {
+        public static void XXX()
+        {
+            string name = "foobar";
+
+            if (name == "")
+            {
+                Bar(name, null);
+            }
+            else
+            {
+                Bar(name, true);
+            }
+
+            if (name == "") // Noncompliant
+            {
+                Bar(((name)), ((false)));
+            }
+            else
+            {
+                Bar(name, true);
+            }
+        }
+
+        private static void Bar(string name, bool? value) { }
+    }
 }

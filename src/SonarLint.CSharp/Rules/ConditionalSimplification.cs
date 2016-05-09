@@ -145,12 +145,23 @@ namespace SonarLint.Rules.CSharp
                 return false;
             }
 
-            if (type1 == null || type2 == null)
+            if (CheckNullAndValueType(type1, type2) ||
+                CheckNullAndValueType(type2, type1))
+            {
+                return false;
+            }
+
+            if (type2 == null || type1 == null)
             {
                 return true;
             }
 
             return type1.Equals(type2);
+        }
+
+        private static bool CheckNullAndValueType(ITypeSymbol typeNull, ITypeSymbol typeValue)
+        {
+            return typeNull == null && typeValue != null && typeValue.IsValueType;
         }
 
         private static bool CanBeSimplified(StatementSyntax statement1, StatementSyntax statement2,
@@ -296,17 +307,17 @@ namespace SonarLint.Rules.CSharp
             var numberOfComparisonsToCondition = 0;
             for (int i = 0; i < methodCall1.ArgumentList.Arguments.Count; i++)
             {
-                var arg1 = methodCall1.ArgumentList.Arguments[i];
-                var arg2 = methodCall2.ArgumentList.Arguments[i];
+                var arg1 = methodCall1.ArgumentList.Arguments[i]?.Expression.RemoveParentheses();
+                var arg2 = methodCall2.ArgumentList.Arguments[i]?.Expression.RemoveParentheses();
 
-                if (!EquivalenceChecker.AreEquivalent(arg1.Expression, arg2.Expression))
+                if (!EquivalenceChecker.AreEquivalent(arg1, arg2))
                 {
                     numberOfDifferences++;
 
                     if (comparedToNull != null)
                     {
-                        var arg1IsComparedToNull = EquivalenceChecker.AreEquivalent(arg1.Expression, comparedToNull);
-                        var arg2IsComparedToNull = EquivalenceChecker.AreEquivalent(arg2.Expression, comparedToNull);
+                        var arg1IsComparedToNull = EquivalenceChecker.AreEquivalent(arg1, comparedToNull);
+                        var arg2IsComparedToNull = EquivalenceChecker.AreEquivalent(arg2, comparedToNull);
 
                         if (arg1IsComparedToNull && !comparedIsNullInTrue)
                         {
@@ -317,16 +328,16 @@ namespace SonarLint.Rules.CSharp
                         {
                             numberOfComparisonsToCondition++;
                         }
+                    }
 
-                        if (!AreTypesCompatible(arg1.Expression, arg2.Expression, semanticModel))
-                        {
-                            return false;
-                        }
+                    if (!AreTypesCompatible(arg1, arg2, semanticModel))
+                    {
+                        return false;
                     }
                 }
                 else
                 {
-                    if (comparedToNull != null && EquivalenceChecker.AreEquivalent(arg1.Expression, comparedToNull))
+                    if (comparedToNull != null && EquivalenceChecker.AreEquivalent(arg1, comparedToNull))
                     {
                         return false;
                     }
