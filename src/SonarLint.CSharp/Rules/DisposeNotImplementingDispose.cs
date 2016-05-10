@@ -61,119 +61,140 @@ namespace SonarLint.Rules.CSharp
 
         protected override void Initialize(SonarAnalysisContext context)
         {
-            context.RegisterCompilationStartAction(
-                analysisContext =>
+            context.RegisterSymbolAction(
+                c =>
                 {
-                    var disposeMethod = GetDisposeMethod(analysisContext.Compilation);
+                    var declaredSymbol = (INamedTypeSymbol)c.Symbol;
+
+                    if (declaredSymbol.DeclaringSyntaxReferences.Count() > 1)
+                    {
+                        // Partial classes are not processed.
+                        // See https://github.com/dotnet/roslyn/issues/3748
+                        return;
+                    }
+
+                    var disposeMethod = GetDisposeMethod(c.Compilation);
                     if (disposeMethod == null)
                     {
                         return;
                     }
 
-                    var disposeMethodsCalledFromDispose = MultiValueDictionary<INamedTypeSymbol, IMethodSymbol>.Create<HashSet<IMethodSymbol>>();
-                    var implementingDisposeMethods = ImmutableHashSet<IMethodSymbol>.Empty;
-                    var allDisposeMethods = ImmutableHashSet<IMethodSymbol>.Empty;
+                    var mightImplementDispose = new HashSet<IMethodSymbol>();
+                    var namedDispose = new HashSet<IMethodSymbol>();
 
-                    analysisContext.RegisterSymbolAction(c =>
-                        CollectDisposeMethods(c, disposeMethod, ref allDisposeMethods, ref implementingDisposeMethods),
-                        SymbolKind.Method);
+                    var methods = declaredSymbol.GetMembers(DisposeMethodName).OfType<IMethodSymbol>();
+                    foreach (var method in methods)
+                    {
+                        CollectMethodsNamedAndImplementingDispose(method, disposeMethod, namedDispose, mightImplementDispose);
+                    }
 
-                    analysisContext.RegisterCodeBlockStartAction<SyntaxKind>(
-                        cbc =>
-                        {
-                            var methodDeclaration = cbc.CodeBlock as MethodDeclarationSyntax;
-                            if (methodDeclaration == null ||
-                                methodDeclaration.Identifier.ValueText != DisposeMethodName)
-                            {
-                                return;
-                            }
+                    var disposeMethodsCalledFromDispose = new HashSet<IMethodSymbol>();
+                    CollectInvocationsFromDisposeImplementation(disposeMethod, c.Compilation, mightImplementDispose, disposeMethodsCalledFromDispose);
 
-                            var declaredMethodSymbol = cbc.SemanticModel.GetDeclaredSymbol(methodDeclaration);
-                            if (declaredMethodSymbol == null ||
-                                !MethodIsDisposeImplementation(declaredMethodSymbol, disposeMethod))
-                            {
-                                return;
-                            }
-
-                            var disposableType = declaredMethodSymbol.ContainingType;
-                            cbc.RegisterSyntaxNodeAction(
-                                c => CollectDisposeMethodsCalledFromDispose((InvocationExpressionSyntax) c.Node,
-                                    c.SemanticModel, disposableType, disposeMethodsCalledFromDispose),
-                                SyntaxKind.InvocationExpression);
-                        });
-
-                    analysisContext.RegisterCompilationEndAction(
-                        c =>
-                            ReportDisposeMethods(allDisposeMethods, implementingDisposeMethods,
-                                disposeMethodsCalledFromDispose, c));
-                });
+                    ReportDisposeMethods(
+                        namedDispose.Except(mightImplementDispose).Where(m => !disposeMethodsCalledFromDispose.Contains(m)),
+                        c);
+                },
+                SymbolKind.NamedType);
         }
 
-        private static void CollectDisposeMethodsCalledFromDispose(InvocationExpressionSyntax invocationExpression,
-            SemanticModel semanticModel, INamedTypeSymbol disposableType,
-            MultiValueDictionary<INamedTypeSymbol, IMethodSymbol> disposeMethodsCalledFromDispose)
+        private static void CollectInvocationsFromDisposeImplementation(IMethodSymbol disposeMethod, Compilation compilation,
+            HashSet<IMethodSymbol> mightImplementDispose,
+            HashSet<IMethodSymbol> disposeMethodsCalledFromDispose)
         {
-            var invokedMethod = semanticModel.GetSymbolInfo(invocationExpression).Symbol as IMethodSymbol;
-            if (invokedMethod == null ||
-                invokedMethod.Name != DisposeMethodName ||
-                !disposableType.Equals(invokedMethod.ContainingType))
+            foreach (var method in mightImplementDispose
+                .Where(method => MethodIsDisposeImplementation(method, disposeMethod)))
             {
-                return;
-            }
+                var methodDeclarations = method.DeclaringSyntaxReferences
+                    .Select(r => new SyntaxNodeSemanticModelTuple<MethodDeclarationSyntax>
+                    {
+                        SyntaxNode = r.GetSyntax() as MethodDeclarationSyntax,
+                        SemanticModel = compilation.GetSemanticModel(r.SyntaxTree)
+                    })
+                    .Where(m => m.SyntaxNode != null);
 
-            disposeMethodsCalledFromDispose.AddWithKey(disposableType, invokedMethod);
-        }
+                var methodDeclaration = methodDeclarations
+                    .FirstOrDefault(m =>
+                        m.SyntaxNode.Body != null ||
+                        m.SyntaxNode.ExpressionBody != null);
 
-        private static void ReportDisposeMethods(ImmutableHashSet<IMethodSymbol> allDisposeMethods, ImmutableHashSet<IMethodSymbol> implementingDisposeMethods,
-            MultiValueDictionary<INamedTypeSymbol, IMethodSymbol> disposeMethodsCalledFromDispose, CompilationAnalysisContext context)
-        {
-            foreach (var dispose in allDisposeMethods.Except(implementingDisposeMethods))
-            {
-                if (MethodCalledFromDispose(disposeMethodsCalledFromDispose, dispose))
+                if (methodDeclaration == null)
                 {
                     continue;
                 }
 
-                foreach (var declaringSyntaxReference in dispose.DeclaringSyntaxReferences)
+                var invocations = methodDeclaration.SyntaxNode.DescendantNodes()
+                    .OfType<InvocationExpressionSyntax>();
+
+                foreach (var invocation in invocations)
                 {
-                    var methodDeclaration =
-                        declaringSyntaxReference.GetSyntax() as MethodDeclarationSyntax;
-                    if (methodDeclaration != null)
-                    {
-                        context.ReportDiagnosticIfNonGenerated(
-                            Diagnostic.Create(Rule, methodDeclaration.Identifier.GetLocation()),
-                            context.Compilation);
-                    }
+                    CollectDisposeMethodsCalledFromDispose(invocation, methodDeclaration.SemanticModel,
+                        disposeMethodsCalledFromDispose);
                 }
             }
         }
 
-        private static void CollectDisposeMethods(SymbolAnalysisContext context, IMethodSymbol disposeMethod,
-            ref ImmutableHashSet<IMethodSymbol> allDisposeMethods,
-            ref ImmutableHashSet<IMethodSymbol> implementingDisposeMethods)
+        private static void CollectDisposeMethodsCalledFromDispose(InvocationExpressionSyntax invocationExpression,
+            SemanticModel semanticModel,
+            HashSet<IMethodSymbol> disposeMethodsCalledFromDispose)
         {
-
-            var methodSymbol = context.Symbol as IMethodSymbol;
-            if (methodSymbol == null ||
-                methodSymbol.Name != DisposeMethodName)
+            if (!IsCallOnThis(invocationExpression))
             {
                 return;
             }
 
-            allDisposeMethods = allDisposeMethods.Add(methodSymbol);
+            var invokedMethod = semanticModel.GetSymbolInfo(invocationExpression).Symbol as IMethodSymbol;
+            if (invokedMethod == null ||
+                invokedMethod.Name != DisposeMethodName)
+            {
+                return;
+            }
+
+            disposeMethodsCalledFromDispose.Add(invokedMethod);
+        }
+
+        private static bool IsCallOnThis(InvocationExpressionSyntax invocation)
+        {
+            if (invocation.Expression is NameSyntax)
+            {
+                return true;
+            }
+
+            var memberAccess = invocation.Expression as MemberAccessExpressionSyntax;
+            if (memberAccess != null && memberAccess.Expression.IsKind(SyntaxKind.ThisExpression))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private static void ReportDisposeMethods(IEnumerable<IMethodSymbol> disposeMethods,
+            SymbolAnalysisContext context)
+        {
+            foreach (var location in disposeMethods.SelectMany(m => m.Locations))
+            {
+                context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(
+                    Rule, location));
+            }
+        }
+
+        private static void CollectMethodsNamedAndImplementingDispose(IMethodSymbol methodSymbol, IMethodSymbol disposeMethod,
+            HashSet<IMethodSymbol> namedDispose, HashSet<IMethodSymbol> mightImplementDispose)
+        {
+            if (methodSymbol.Name != DisposeMethodName)
+            {
+                return;
+            }
+
+            namedDispose.Add(methodSymbol);
 
             if (methodSymbol.IsOverride ||
                 MethodIsDisposeImplementation(methodSymbol, disposeMethod) ||
                 MethodMightImplementDispose(methodSymbol))
             {
-                implementingDisposeMethods = implementingDisposeMethods.Add(methodSymbol);
+                mightImplementDispose.Add(methodSymbol);
             }
-        }
-
-        private static bool MethodCalledFromDispose(MultiValueDictionary<INamedTypeSymbol, IMethodSymbol> disposeMethodsCalledFromDispose, IMethodSymbol dispose)
-        {
-            return disposeMethodsCalledFromDispose.ContainsKey(dispose.ContainingType) &&
-                   disposeMethodsCalledFromDispose[dispose.ContainingType].Contains(dispose);
         }
 
         private static bool MethodIsDisposeImplementation(IMethodSymbol methodSymbol, IMethodSymbol disposeMethod)

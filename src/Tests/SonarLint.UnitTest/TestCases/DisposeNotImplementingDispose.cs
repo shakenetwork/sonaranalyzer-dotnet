@@ -85,4 +85,20 @@ namespace Tests.Diagnostics
 
         }
     }
+
+    public partial class MyPartial : IDisposable
+    {
+        public void Dispose()
+        {
+            // Dispose(10)
+        }
+    }
+
+    public partial class MyPartial
+    {
+        public void Dispose(int i) // Non-compliant, but not reported now because of the partial
+        {
+
+        }
+    }
 }
