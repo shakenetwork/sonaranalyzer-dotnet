@@ -27,11 +27,12 @@ using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using SonarLint.Common;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules.CSharp
 {
     [ExportCodeFixProvider(LanguageNames.CSharp)]
-    public class ExceptionRethrowCodeFixProvider : CodeFixProvider
+    public class ExceptionRethrowCodeFixProvider : SonarCodeFixProvider
     {
         internal const string Title = "Change to \"throw;\"";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
@@ -46,10 +47,8 @@ namespace SonarLint.Rules.CSharp
             return DocumentBasedFixAllProvider.Instance;
         }
 
-        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
+        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
-            var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
-
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var throwStatement = root.FindNode(diagnosticSpan) as ThrowStatementSyntax;

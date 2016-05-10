@@ -27,20 +27,20 @@ using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using SonarLint.Common;
 using Microsoft.CodeAnalysis.CSharp;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules.CSharp
 {
     [ExportCodeFixProvider(LanguageNames.CSharp)]
-    public class RedundantPropertyNamesInAnonymousClassCodeFixProvider : CodeFixProvider
+    public class RedundantPropertyNamesInAnonymousClassCodeFixProvider : SonarCodeFixProvider
     {
         internal const string Title = "Remove redundant explicit property names";
         public sealed override ImmutableArray<string> FixableDiagnosticIds => ImmutableArray.Create(RedundantPropertyNamesInAnonymousClass.DiagnosticId);
 
         public sealed override FixAllProvider GetFixAllProvider() => DocumentBasedFixAllProvider.Instance;
 
-        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
+        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
-            var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var nameEquals = root.FindNode(diagnosticSpan) as NameEqualsSyntax;

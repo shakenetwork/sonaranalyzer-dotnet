@@ -34,7 +34,7 @@ using SonarLint.Helpers;
 namespace SonarLint.Rules.CSharp
 {
     [ExportCodeFixProvider(LanguageNames.CSharp)]
-    public class RedundantArgumentCodeFixProvider : CodeFixProvider
+    public class RedundantArgumentCodeFixProvider : SonarCodeFixProvider
     {
         public const string TitleRemove = "Remove redundant arguments";
         public const string TitleRemoveWithNameAdditions = "Remove redundant arguments with adding named arguments";
@@ -50,10 +50,8 @@ namespace SonarLint.Rules.CSharp
             return WellKnownFixAllProviders.BatchFixer;
         }
 
-        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
+        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
-            var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
-
             var diagnostic = context.Diagnostics.First();
             var invocation = GetInvocation(root, diagnostic.Location.SourceSpan);
             if (invocation == null)

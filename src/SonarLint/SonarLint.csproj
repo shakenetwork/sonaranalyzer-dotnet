@@ -94,6 +94,7 @@
     <Compile Include="Common\Tag.cs" />
     <Compile Include="Common\IdeVisibility.cs" />
     <Compile Include="Helpers\ParameterLoader.cs" />
+    <Compile Include="Helpers\SonarCodeFixProvider.cs" />
     <Compile Include="Helpers\SonarAnalysisContext.cs" />
     <Compile Include="Helpers\DiagnosticReportHelper.cs" />
     <Compile Include="Helpers\KnownType.cs" />

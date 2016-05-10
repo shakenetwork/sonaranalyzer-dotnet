@@ -27,11 +27,12 @@ using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using SonarLint.Common;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules.CSharp
 {
     [ExportCodeFixProvider(LanguageNames.CSharp)]
-    public class RedundancyInConstructorDestructorDeclarationCodeFixProvider : CodeFixProvider
+    public class RedundancyInConstructorDestructorDeclarationCodeFixProvider : SonarCodeFixProvider
     {
         public const string TitleRemoveBaseCall = "Remove \"base()\" call";
         public const string TitleRemoveConstructor = "Remove constructor";
@@ -45,9 +46,8 @@ namespace SonarLint.Rules.CSharp
         }
         public sealed override FixAllProvider GetFixAllProvider() => DocumentBasedFixAllProvider.Instance;
 
-        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
+        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
-            var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var syntaxNode = root.FindNode(diagnosticSpan);

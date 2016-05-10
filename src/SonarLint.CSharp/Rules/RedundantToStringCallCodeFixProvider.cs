@@ -25,20 +25,19 @@ using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules.CSharp
 {
     [ExportCodeFixProvider(LanguageNames.CSharp)]
-    public class RedundantToStringCallCodeFixProvider : CodeFixProvider
+    public class RedundantToStringCallCodeFixProvider : SonarCodeFixProvider
     {
         internal const string Title = "Remove redundant \"ToString\" call";
         public sealed override ImmutableArray<string> FixableDiagnosticIds =>
             ImmutableArray.Create(RedundantToStringCall.DiagnosticId);
 
-        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
+        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
-            var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
-
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var invocation = root.FindNode(diagnosticSpan, getInnermostNodeForTie: true) as InvocationExpressionSyntax;

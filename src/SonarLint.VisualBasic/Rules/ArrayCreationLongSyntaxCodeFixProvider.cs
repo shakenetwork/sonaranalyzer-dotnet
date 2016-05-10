@@ -25,11 +25,12 @@ using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.VisualBasic.Syntax;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules.VisualBasic
 {
     [ExportCodeFixProvider(LanguageNames.VisualBasic)]
-    public class ArrayCreationLongSyntaxCodeFixProvider : CodeFixProvider
+    public class ArrayCreationLongSyntaxCodeFixProvider : SonarCodeFixProvider
     {
         internal const string Title = "Use an array literal";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
@@ -44,10 +45,8 @@ namespace SonarLint.Rules.VisualBasic
             return WellKnownFixAllProviders.BatchFixer;
         }
 
-        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
+        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
-            var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
-
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var arrayCreation = (ArrayCreationExpressionSyntax)root.FindNode(diagnosticSpan);

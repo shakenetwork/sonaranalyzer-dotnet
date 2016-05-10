@@ -31,7 +31,7 @@ using SonarLint.Helpers;
 namespace SonarLint.Rules.CSharp
 {
     [ExportCodeFixProvider(LanguageNames.CSharp)]
-    public class TernaryOperatorPointlessCodeFixProvider : CodeFixProvider
+    public class TernaryOperatorPointlessCodeFixProvider : SonarCodeFixProvider
     {
         internal const string Title = "Remove the ternary operator";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
@@ -47,10 +47,8 @@ namespace SonarLint.Rules.CSharp
             return WellKnownFixAllProviders.BatchFixer;
         }
 
-        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
+        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
-            var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
-
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var conditional = root.FindNode(diagnosticSpan, getInnermostNodeForTie: true) as ConditionalExpressionSyntax;

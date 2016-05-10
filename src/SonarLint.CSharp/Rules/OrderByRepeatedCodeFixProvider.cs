@@ -26,11 +26,12 @@ using System.Linq;
 using Microsoft.CodeAnalysis.CodeActions;
 using System.Threading;
 using Microsoft.CodeAnalysis.CSharp;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules.CSharp
 {
     [ExportCodeFixProvider(LanguageNames.CSharp)]
-    public class OrderByRepeatedCodeFixProvider : CodeFixProvider
+    public class OrderByRepeatedCodeFixProvider : SonarCodeFixProvider
     {
         internal const string Title = "Change \"OrderBy\" to \"ThenBy\"";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
@@ -45,10 +46,8 @@ namespace SonarLint.Rules.CSharp
             return WellKnownFixAllProviders.BatchFixer;
         }
 
-        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
+        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
-            var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
-
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var syntaxNode = root.FindNode(diagnosticSpan);

@@ -28,11 +28,12 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Formatting;
 using System;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules.CSharp
 {
     [ExportCodeFixProvider(LanguageNames.CSharp)]
-    public class EmptyMethodCodeFixProvider : CodeFixProvider
+    public class EmptyMethodCodeFixProvider : SonarCodeFixProvider
     {
         public const string TitleThrow = "Throw NotSupportedException";
         public const string TitleComment = "Add comment";
@@ -52,10 +53,8 @@ namespace SonarLint.Rules.CSharp
         private const string LiteralNotSupportedException = "NotSupportedException";
         private const string LiteralSystem = "System";
 
-        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
+        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
-            var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
-
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var syntaxNode = root.FindNode(diagnosticSpan);

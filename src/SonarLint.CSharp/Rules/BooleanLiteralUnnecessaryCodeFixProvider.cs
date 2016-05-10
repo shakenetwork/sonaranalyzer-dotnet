@@ -33,7 +33,7 @@ using System;
 namespace SonarLint.Rules.CSharp
 {
     [ExportCodeFixProvider(LanguageNames.CSharp)]
-    public class BooleanLiteralUnnecessaryCodeFixProvider : CodeFixProvider
+    public class BooleanLiteralUnnecessaryCodeFixProvider : SonarCodeFixProvider
     {
         internal const string Title = "Remove the unnecessary Boolean literal(s)";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
@@ -48,10 +48,8 @@ namespace SonarLint.Rules.CSharp
             return WellKnownFixAllProviders.BatchFixer;
         }
 
-        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
+        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
-            var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
-
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var syntaxNode = root.FindNode(diagnosticSpan, getInnermostNodeForTie: true) as ExpressionSyntax;

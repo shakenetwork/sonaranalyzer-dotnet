@@ -29,11 +29,12 @@ using SonarLint.Common;
 using System;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Formatting;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules.CSharp
 {
     [ExportCodeFixProvider(LanguageNames.CSharp)]
-    public class RedundantConditionalAroundAssignmentCodeFixProvider : CodeFixProvider
+    public class RedundantConditionalAroundAssignmentCodeFixProvider : SonarCodeFixProvider
     {
         private const string Title = "Remove redundant conditional";
 
@@ -41,10 +42,8 @@ namespace SonarLint.Rules.CSharp
 
         public sealed override FixAllProvider GetFixAllProvider() => DocumentBasedFixAllProvider.Instance;
 
-        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
+        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
-            var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
-
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var condition = root.FindNode(diagnosticSpan) as ExpressionSyntax;

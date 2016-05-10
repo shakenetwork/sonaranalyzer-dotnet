@@ -26,11 +26,12 @@ using System.Linq;
 using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.VisualBasic;
 using Microsoft.CodeAnalysis.VisualBasic.Syntax;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules.VisualBasic
 {
     [ExportCodeFixProvider(LanguageNames.VisualBasic)]
-    public class ArrayDesignatorOnVariableCodeFixProvider : CodeFixProvider
+    public class ArrayDesignatorOnVariableCodeFixProvider : SonarCodeFixProvider
     {
         internal const string Title = "Move the array designator to the type";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
@@ -45,9 +46,8 @@ namespace SonarLint.Rules.VisualBasic
             return WellKnownFixAllProviders.BatchFixer;
         }
 
-        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
+        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
-            var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var name = root.FindNode(diagnosticSpan) as ModifiedIdentifierSyntax;

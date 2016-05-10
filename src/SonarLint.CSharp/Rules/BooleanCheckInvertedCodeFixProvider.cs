@@ -34,7 +34,7 @@ using SonarLint.Helpers;
 namespace SonarLint.Rules.CSharp
 {
     [ExportCodeFixProvider(LanguageNames.CSharp)]
-    public class BooleanCheckInvertedCodeFixProvider : CodeFixProvider
+    public class BooleanCheckInvertedCodeFixProvider : SonarCodeFixProvider
     {
         internal const string Title = "Invert \"Boolean\" check";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
@@ -49,10 +49,8 @@ namespace SonarLint.Rules.CSharp
             return WellKnownFixAllProviders.BatchFixer;
         }
 
-        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
+        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
-            var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
-
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var syntaxNode = root.FindNode(diagnosticSpan, getInnermostNodeForTie: true) as PrefixUnaryExpressionSyntax;

@@ -34,14 +34,12 @@ namespace SonarLint.UnitTest.Common
     [TestClass]
     public class RuleTest
     {
-
         private static IEnumerable<Type> GetCodeFixProviderTypes(IEnumerable<Assembly> assemblies)
         {
             return assemblies
                 .SelectMany(assembly => assembly.GetTypes())
-                .Where(t => t.IsSubclassOf(typeof(CodeFixProvider)));
+                .Where(t => t.IsSubclassOf(typeof(SonarCodeFixProvider)));
         }
-
 
         [TestMethod]
         public void DiagnosticAnalyzerHasRuleAttribute()

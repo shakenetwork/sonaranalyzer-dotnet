@@ -27,11 +27,12 @@ using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 using SonarLint.Common;
 using Microsoft.CodeAnalysis.VisualBasic;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules.VisualBasic
 {
     [ExportCodeFixProvider(LanguageNames.VisualBasic)]
-    public class StringConcatenationWithPlusCodeFixProvider : CodeFixProvider
+    public class StringConcatenationWithPlusCodeFixProvider : SonarCodeFixProvider
     {
         internal const string Title = "Change to \"&\"";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
@@ -47,10 +48,8 @@ namespace SonarLint.Rules.VisualBasic
             return DocumentBasedFixAllProvider.Instance;
         }
 
-        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
+        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
-            var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
-
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var binary = root.FindNode(diagnosticSpan, getInnermostNodeForTie: true) as BinaryExpressionSyntax;

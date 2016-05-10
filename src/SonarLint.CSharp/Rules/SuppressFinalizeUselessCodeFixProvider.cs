@@ -26,11 +26,12 @@ using System.Linq;
 using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using SonarLint.Common;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules.CSharp
 {
     [ExportCodeFixProvider(LanguageNames.CSharp)]
-    public class SuppressFinalizeUselessCodeFixProvider : CodeFixProvider
+    public class SuppressFinalizeUselessCodeFixProvider : SonarCodeFixProvider
     {
         internal const string Title = "Remove useless \"SuppressFinalize\" call";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
@@ -46,9 +47,8 @@ namespace SonarLint.Rules.CSharp
             return DocumentBasedFixAllProvider.Instance;
         }
 
-        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
+        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
-            var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var syntaxNode = root.FindNode(diagnosticSpan);

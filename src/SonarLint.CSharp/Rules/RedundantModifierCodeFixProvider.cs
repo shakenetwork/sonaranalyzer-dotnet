@@ -30,11 +30,12 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Formatting;
 using System.Collections.Generic;
 using System;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules.CSharp
 {
     [ExportCodeFixProvider(LanguageNames.CSharp)]
-    public class RedundantModifierCodeFixProvider : CodeFixProvider
+    public class RedundantModifierCodeFixProvider : SonarCodeFixProvider
     {
         public const string TitleUnsafe = "Remove redundant \"unsafe\" modifier";
         public const string TitleChecked = "Remove redundant \"checked\" and \"unchecked\"modifier";
@@ -57,10 +58,8 @@ namespace SonarLint.Rules.CSharp
             SyntaxKind.PartialKeyword,
             SyntaxKind.SealedKeyword);
 
-        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
+        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
-            var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
-
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var token = root.FindToken(diagnosticSpan.Start);

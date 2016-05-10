@@ -32,7 +32,7 @@ using SonarLint.Helpers;
 namespace SonarLint.Rules.CSharp
 {
     [ExportCodeFixProvider(LanguageNames.CSharp)]
-    public class OptionalParameterWithDefaultValueCodeFixProvider : CodeFixProvider
+    public class OptionalParameterWithDefaultValueCodeFixProvider : SonarCodeFixProvider
     {
         internal const string Title = "Change to \"[DefaultParameterValue]\"";
         public sealed override ImmutableArray<string> FixableDiagnosticIds =>
@@ -40,10 +40,8 @@ namespace SonarLint.Rules.CSharp
 
         public sealed override FixAllProvider GetFixAllProvider() => DocumentBasedFixAllProvider.Instance;
 
-        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
+        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
-            var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
-
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var attribute = root.FindNode(diagnosticSpan) as AttributeSyntax;

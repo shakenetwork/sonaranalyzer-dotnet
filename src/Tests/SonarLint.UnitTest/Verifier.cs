@@ -65,7 +65,7 @@ namespace SonarLint.UnitTest
             }
         }
 
-        public static void VerifyAnalyzer(string path, DiagnosticAnalyzer diagnosticAnalyzer, ParseOptions options = null,
+        public static void VerifyAnalyzer(string path, SonarDiagnosticAnalyzer diagnosticAnalyzer, ParseOptions options = null,
             params MetadataReference[] additionalReferences)
         {
             var file = new FileInfo(path);
@@ -99,48 +99,36 @@ namespace SonarLint.UnitTest
             }
         }
 
-        public static void VerifyNoIssueReportedInTest(string path, DiagnosticAnalyzer diagnosticAnalyzer)
+        public static void VerifyNoIssueReportedInTest(string path, SonarDiagnosticAnalyzer diagnosticAnalyzer)
         {
             VerifyNoIssueReported(path, TestAssemblyName, diagnosticAnalyzer);
         }
 
-        public static void VerifyNoIssueReported(string path, DiagnosticAnalyzer diagnosticAnalyzer)
+        public static void VerifyNoIssueReported(string path, SonarDiagnosticAnalyzer diagnosticAnalyzer)
         {
             VerifyNoIssueReported(path, GeneratedAssemblyName, diagnosticAnalyzer);
         }
 
-        private static void VerifyNoIssueReported(string path, string assemblyName, DiagnosticAnalyzer diagnosticAnalyzer)
-        {
-            using (var workspace = new AdhocWorkspace())
-            {
-                var document = GetDocument(path, assemblyName, workspace);
-                var compilation = document.Project.GetCompilationAsync().Result;
-                var diagnostics = GetDiagnostics(compilation, diagnosticAnalyzer);
-
-                diagnostics.Should().HaveCount(0);
-            }
-        }
-
-        public static void VerifyCodeFix(string path, string pathToExpected, DiagnosticAnalyzer diagnosticAnalyzer,
-            CodeFixProvider codeFixProvider)
+        public static void VerifyCodeFix(string path, string pathToExpected, SonarDiagnosticAnalyzer diagnosticAnalyzer,
+            SonarCodeFixProvider codeFixProvider)
         {
             VerifyCodeFix(path, pathToExpected, pathToExpected, diagnosticAnalyzer, codeFixProvider, null);
         }
 
-        public static void VerifyCodeFix(string path, string pathToExpected, string pathToBatchExpected, DiagnosticAnalyzer diagnosticAnalyzer,
-            CodeFixProvider codeFixProvider)
+        public static void VerifyCodeFix(string path, string pathToExpected, string pathToBatchExpected, SonarDiagnosticAnalyzer diagnosticAnalyzer,
+            SonarCodeFixProvider codeFixProvider)
         {
             VerifyCodeFix(path, pathToExpected, pathToBatchExpected, diagnosticAnalyzer, codeFixProvider, null);
         }
 
-        public static void VerifyCodeFix(string path, string pathToExpected, DiagnosticAnalyzer diagnosticAnalyzer,
-            CodeFixProvider codeFixProvider, string codeFixTitle)
+        public static void VerifyCodeFix(string path, string pathToExpected, SonarDiagnosticAnalyzer diagnosticAnalyzer,
+            SonarCodeFixProvider codeFixProvider, string codeFixTitle)
         {
             VerifyCodeFix(path, pathToExpected, pathToExpected, diagnosticAnalyzer, codeFixProvider, codeFixTitle);
         }
 
-        public static void VerifyCodeFix(string path, string pathToExpected, string pathToBatchExpected, DiagnosticAnalyzer diagnosticAnalyzer,
-            CodeFixProvider codeFixProvider, string codeFixTitle)
+        public static void VerifyCodeFix(string path, string pathToExpected, string pathToBatchExpected, SonarDiagnosticAnalyzer diagnosticAnalyzer,
+            SonarCodeFixProvider codeFixProvider, string codeFixTitle)
         {
             using (var workspace = new AdhocWorkspace())
             {
@@ -155,6 +143,23 @@ namespace SonarLint.UnitTest
             }
 
             VerifyFixAllCodeFix(path, pathToBatchExpected, diagnosticAnalyzer, codeFixProvider, codeFixTitle);
+        }
+
+
+        #endregion
+
+        #region Generic helper
+
+        private static void VerifyNoIssueReported(string path, string assemblyName, DiagnosticAnalyzer diagnosticAnalyzer)
+        {
+            using (var workspace = new AdhocWorkspace())
+            {
+                var document = GetDocument(path, assemblyName, workspace);
+                var compilation = document.Project.GetCompilationAsync().Result;
+                var diagnostics = GetDiagnostics(compilation, diagnosticAnalyzer);
+
+                diagnostics.Should().HaveCount(0);
+            }
         }
 
         private static void VerifyFixAllCodeFix(string path, string pathToExpected, DiagnosticAnalyzer diagnosticAnalyzer,
@@ -178,10 +183,6 @@ namespace SonarLint.UnitTest
                 }
             }
         }
-
-        #endregion
-
-        #region Generic helper
 
         private static Document GetDocument(string filePath, string assemblyName,
             AdhocWorkspace workspace, params MetadataReference[] additionalReferences)

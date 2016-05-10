@@ -166,14 +166,14 @@ namespace SonarLint.Helpers
                 symbolKinds);
         }
 
-        private static bool IsAnalysisDisabled(SyntaxTree tree)
+        internal static bool IsAnalysisDisabled(SyntaxTree tree)
         {
             if (ShouldAnalysisBeDisabled == null)
             {
                 return false;
             }
 
-            return ShouldAnalysisBeDisabled(tree);
+            return tree != null && ShouldAnalysisBeDisabled(tree);
         }
     }
 }

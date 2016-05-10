@@ -27,11 +27,12 @@ using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using SonarLint.Common;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules.CSharp
 {
     [ExportCodeFixProvider(LanguageNames.CSharp)]
-    public class LiteralSuffixUpperCaseCodeFixProvider : CodeFixProvider
+    public class LiteralSuffixUpperCaseCodeFixProvider : SonarCodeFixProvider
     {
         public const string Title = "Make literal suffix upper case";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
@@ -46,9 +47,8 @@ namespace SonarLint.Rules.CSharp
             return WellKnownFixAllProviders.BatchFixer;
         }
 
-        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
+        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
-            var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var literal = root.FindNode(diagnosticSpan, getInnermostNodeForTie: true) as LiteralExpressionSyntax;

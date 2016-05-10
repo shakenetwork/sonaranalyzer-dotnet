@@ -25,10 +25,11 @@ using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.CodeAnalysis.CodeActions;
 using SonarLint.Common;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules.Common
 {
-    public abstract class MultipleVariableDeclarationCodeFixProviderBase : CodeFixProvider
+    public abstract class MultipleVariableDeclarationCodeFixProviderBase : SonarCodeFixProvider
     {
         public const string Title = "Separate declarations";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
@@ -44,9 +45,8 @@ namespace SonarLint.Rules.Common
             return DocumentBasedFixAllProvider.Instance;
         }
 
-        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
+        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
-            var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var node = root.FindNode(diagnosticSpan, getInnermostNodeForTie: true);

@@ -25,11 +25,12 @@ using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules.CSharp
 {
     [ExportCodeFixProvider(LanguageNames.CSharp)]
-    public class ThreadStaticNonStaticFieldCodeFixProvider : CodeFixProvider
+    public class ThreadStaticNonStaticFieldCodeFixProvider : SonarCodeFixProvider
     {
         internal const string Title = "Remove \"ThreadStatic\" attribute";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
@@ -44,10 +45,8 @@ namespace SonarLint.Rules.CSharp
             return WellKnownFixAllProviders.BatchFixer;
         }
 
-        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
+        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
-            var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
-
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var nodeToRemove = root.FindNode(diagnosticSpan);

@@ -26,19 +26,19 @@ using System.Linq;
 using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using SonarLint.Common;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules.CSharp
 {
     [ExportCodeFixProvider(LanguageNames.CSharp)]
-    public class StringFormatWithNoArgumentCodeFixProvider : CodeFixProvider
+    public class StringFormatWithNoArgumentCodeFixProvider : SonarCodeFixProvider
     {
         internal const string Title = "Remove useless \"string.Format\" call";
         public sealed override ImmutableArray<string> FixableDiagnosticIds => ImmutableArray.Create(StringFormatWithNoArgument.DiagnosticId);
         public sealed override FixAllProvider GetFixAllProvider()  => DocumentBasedFixAllProvider.Instance;
 
-        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
+        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
-            var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var invocation = root.FindNode(diagnosticSpan).Parent as InvocationExpressionSyntax;

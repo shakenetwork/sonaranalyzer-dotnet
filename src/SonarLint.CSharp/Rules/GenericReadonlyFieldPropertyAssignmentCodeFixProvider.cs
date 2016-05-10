@@ -29,11 +29,12 @@ using Microsoft.CodeAnalysis.Formatting;
 using Microsoft.CodeAnalysis.CSharp;
 using System.Collections.Generic;
 using SonarLint.Common;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules.CSharp
 {
     [ExportCodeFixProvider(LanguageNames.CSharp)]
-    public class GenericReadonlyFieldPropertyAssignmentCodeFixProvider : CodeFixProvider
+    public class GenericReadonlyFieldPropertyAssignmentCodeFixProvider : SonarCodeFixProvider
     {
         public const string TitleRemove = "Remove assignment";
         public const string TitleAddClassConstraint = "Add reference type constraint";
@@ -47,10 +48,8 @@ namespace SonarLint.Rules.CSharp
 
         private static readonly SyntaxAnnotation annotation = new SyntaxAnnotation(nameof(GenericReadonlyFieldPropertyAssignmentCodeFixProvider));
 
-        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
+        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
-            var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
-
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var memberAccess = (MemberAccessExpressionSyntax)root.FindNode(diagnosticSpan);

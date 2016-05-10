@@ -31,7 +31,7 @@ using SonarLint.Helpers;
 namespace SonarLint.Rules.CSharp
 {
     [ExportCodeFixProvider(LanguageNames.CSharp)]
-    public class NonFlagsEnumInBitwiseOperationCodeFixProvider : CodeFixProvider
+    public class NonFlagsEnumInBitwiseOperationCodeFixProvider : SonarCodeFixProvider
     {
         private const string Title = "Add [Flags] to enum declaration";
 
@@ -39,9 +39,8 @@ namespace SonarLint.Rules.CSharp
 
         public sealed override FixAllProvider GetFixAllProvider() => WellKnownFixAllProviders.BatchFixer;
 
-        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
+        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
-            var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var node = root.FindNode(diagnosticSpan, getInnermostNodeForTie: true);

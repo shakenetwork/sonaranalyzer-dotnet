@@ -28,11 +28,12 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Formatting;
 using Microsoft.CodeAnalysis.CSharp;
 using SonarLint.Common;
+using SonarLint.Helpers;
 
 namespace SonarLint.Rules.CSharp
 {
     [ExportCodeFixProvider(LanguageNames.CSharp)]
-    public class IfConditionalAlwaysTrueOrFalseCodeFixProvider : CodeFixProvider
+    public class IfConditionalAlwaysTrueOrFalseCodeFixProvider : SonarCodeFixProvider
     {
         internal const string Title = "Remove useless \"if\" statement";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
@@ -48,9 +49,8 @@ namespace SonarLint.Rules.CSharp
             return DocumentBasedFixAllProvider.Instance;
         }
 
-        public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
+        protected sealed override async Task RegisterCodeFixesAsync(SyntaxNode root, CodeFixContext context)
         {
-            var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var ifStatement = root.FindNode(diagnosticSpan).FirstAncestorOrSelf<IfStatementSyntax>();
