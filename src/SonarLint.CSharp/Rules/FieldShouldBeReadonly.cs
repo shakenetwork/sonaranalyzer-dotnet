@@ -27,9 +27,12 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules.CSharp
 {
+    using FieldTuple = SyntaxNodeSymbolSemanticModelTuple<VariableDeclaratorSyntax, IFieldSymbol>;
+
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("2min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
@@ -58,116 +61,187 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
+        private static ISet<SyntaxKind> assignmentKinds = ImmutableHashSet.Create(
+            SyntaxKind.SimpleAssignmentExpression,
+            SyntaxKind.AddAssignmentExpression,
+            SyntaxKind.SubtractAssignmentExpression,
+            SyntaxKind.MultiplyAssignmentExpression,
+            SyntaxKind.DivideAssignmentExpression,
+            SyntaxKind.ModuloAssignmentExpression,
+            SyntaxKind.AndAssignmentExpression,
+            SyntaxKind.ExclusiveOrAssignmentExpression,
+            SyntaxKind.OrAssignmentExpression,
+            SyntaxKind.LeftShiftAssignmentExpression,
+            SyntaxKind.RightShiftAssignmentExpression);
+
+        private static ISet<SyntaxKind> prefixUnaryKinds = ImmutableHashSet.Create(
+            SyntaxKind.PreDecrementExpression,
+            SyntaxKind.PreIncrementExpression);
+
+        private static ISet<SyntaxKind> postfixUnaryKinds = ImmutableHashSet.Create(
+            SyntaxKind.PostDecrementExpression,
+            SyntaxKind.PostIncrementExpression);
+
         protected override void Initialize(SonarAnalysisContext context)
         {
-            context.RegisterCompilationStartAction(analysisContext =>
-            {
-                var candidateFields = ImmutableHashSet<IFieldSymbol>.Empty;
-                var assignedAsReadonly = ImmutableHashSet<IFieldSymbol>.Empty;
-                var nonCandidateFields = ImmutableHashSet<IFieldSymbol>.Empty;
-
-                analysisContext.RegisterSyntaxNodeAction(c =>
+            context.RegisterSymbolAction(
+                c =>
                 {
-                    var fieldDeclaration = (FieldDeclarationSyntax) c.Node;
-
-                    foreach (var field in fieldDeclaration.Declaration.Variables
-                        .Select(variableDeclaratorSyntax => new
-                        {
-                            Syntax = variableDeclaratorSyntax,
-                            Symbol = c.SemanticModel.GetDeclaredSymbol(variableDeclaratorSyntax) as IFieldSymbol
-                        })
-                        .Where(f => f.Symbol != null)
-                        .Where(f => FieldIsRelevant(f.Symbol)))
-                    {
-                        candidateFields = candidateFields.Add(field.Symbol);
-
-                        if (field.Syntax.Initializer != null)
-                        {
-                            assignedAsReadonly = assignedAsReadonly.Add(field.Symbol);
-                        }
-                    }
-                }, SyntaxKind.FieldDeclaration);
-
-                analysisContext.RegisterSyntaxNodeAction(
-                    c =>
-                    {
-                        var assignment = (AssignmentExpressionSyntax) c.Node;
-                        var expression = assignment.Left;
-
-                        ProcessExpressionChange(expression, c.SemanticModel, ref nonCandidateFields, ref assignedAsReadonly);
-                    },
-                    SyntaxKind.SimpleAssignmentExpression,
-                    SyntaxKind.AddAssignmentExpression,
-                    SyntaxKind.SubtractAssignmentExpression,
-                    SyntaxKind.MultiplyAssignmentExpression,
-                    SyntaxKind.DivideAssignmentExpression,
-                    SyntaxKind.ModuloAssignmentExpression,
-                    SyntaxKind.AndAssignmentExpression,
-                    SyntaxKind.ExclusiveOrAssignmentExpression,
-                    SyntaxKind.OrAssignmentExpression,
-                    SyntaxKind.LeftShiftAssignmentExpression,
-                    SyntaxKind.RightShiftAssignmentExpression);
-
-                analysisContext.RegisterSyntaxNodeAction(
-                    c =>
-                    {
-                        var unary = (PrefixUnaryExpressionSyntax)c.Node;
-                        var expression = unary.Operand;
-
-                        ProcessExpressionChange(expression, c.SemanticModel, ref nonCandidateFields, ref assignedAsReadonly);
-                    },
-                    SyntaxKind.PreDecrementExpression,
-                    SyntaxKind.PreIncrementExpression);
-
-                analysisContext.RegisterSyntaxNodeAction(
-                    c =>
-                    {
-                        var unary = (PostfixUnaryExpressionSyntax)c.Node;
-                        var expression = unary.Operand;
-
-                        ProcessExpressionChange(expression, c.SemanticModel, ref nonCandidateFields, ref assignedAsReadonly);
-                    },
-                    SyntaxKind.PostDecrementExpression,
-                    SyntaxKind.PostIncrementExpression);
-
-                analysisContext.RegisterSyntaxNodeAction(c =>
-                {
-                    var argument = (ArgumentSyntax) c.Node;
-                    if (argument.RefOrOutKeyword.IsKind(SyntaxKind.None))
+                    var declaredSymbol = (INamedTypeSymbol)c.Symbol;
+                    if (!declaredSymbol.IsClassOrStruct())
                     {
                         return;
                     }
 
-                    var fieldSymbol = c.SemanticModel.GetSymbolInfo(argument.Expression).Symbol as IFieldSymbol;
-                    if (FieldIsRelevant(fieldSymbol))
+                    if (declaredSymbol.DeclaringSyntaxReferences.Count() > 1)
                     {
-                        nonCandidateFields = nonCandidateFields.Add(fieldSymbol);
+                        // Partial classes are not processed.
+                        // See https://github.com/dotnet/roslyn/issues/3748
+                        return;
                     }
-                }, SyntaxKind.Argument);
 
-                analysisContext.RegisterCompilationEndAction(c =>
-                {
-                    var fields = candidateFields.Except(nonCandidateFields);
-                    fields = fields.Intersect(assignedAsReadonly);
+                    var assignedAsReadonly = new HashSet<IFieldSymbol>();
+                    var nonCandidateFields = new HashSet<IFieldSymbol>();
+
+                    var partialDeclarations = declaredSymbol.DeclaringSyntaxReferences
+                        .Select(reference => reference.GetSyntax())
+                        .OfType<TypeDeclarationSyntax>()
+                        .Select(node =>
+                            new SyntaxNodeSemanticModelTuple<TypeDeclarationSyntax>
+                            {
+                                SyntaxNode = node,
+                                SemanticModel = c.Compilation.GetSemanticModel(node.SyntaxTree)
+                            })
+                        .Where(n => n.SemanticModel != null)
+                        .ToList();
+
+                    var fieldDeclarations = partialDeclarations
+                        .Select(td =>
+                            new
+                            {
+                                SemanticModel = td.SemanticModel,
+                                Fields = td.SyntaxNode.DescendantNodes().OfType<FieldDeclarationSyntax>()
+                            })
+                        .SelectMany(t => t.Fields.SelectMany(f => GetCandidateFields(f, t.SemanticModel, assignedAsReadonly)))
+                        .ToDictionary(f => f.Symbol, f => f.SyntaxNode);
+
+                    var candidateFields = new HashSet<IFieldSymbol>(fieldDeclarations.Keys);
+
+                    foreach (var partialDeclaration in partialDeclarations)
+                    {
+                        CollectFieldsFromDeclaration(partialDeclaration, assignedAsReadonly, nonCandidateFields);
+                    }
+
+                    var fields = assignedAsReadonly.Intersect(candidateFields).Except(nonCandidateFields);
+
                     foreach (var field in fields)
                     {
-                        var declarationReference = field.DeclaringSyntaxReferences.FirstOrDefault();
-                        var fieldSyntax = declarationReference?.GetSyntax() as VariableDeclaratorSyntax;
-                        if (fieldSyntax == null)
-                        {
-                            continue;
-                        }
+                        var identifier = fieldDeclarations[field].Identifier;
 
-                        c.ReportDiagnosticIfNonGenerated(
-                            Diagnostic.Create(Rule, fieldSyntax.Identifier.GetLocation(), fieldSyntax.Identifier.ValueText),
-                            c.Compilation);
+                        c.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, identifier.GetLocation(), identifier.ValueText));
                     }
-                });
-            });
+                },
+                SymbolKind.NamedType);
         }
 
-        private static void ProcessExpressionChange(ExpressionSyntax expression, SemanticModel semanticModel,
-            ref ImmutableHashSet<IFieldSymbol> nonCandidateFields, ref ImmutableHashSet<IFieldSymbol> assignedAsReadonly)
+        private static void CollectFieldsFromDeclaration(SyntaxNodeSemanticModelTuple<TypeDeclarationSyntax> partialDeclaration,
+            HashSet<IFieldSymbol> assignedAsReadonly, HashSet<IFieldSymbol> nonCandidateFields)
+        {
+            CollectFieldsFromAssignments(partialDeclaration, assignedAsReadonly, nonCandidateFields);
+            CollectFieldsFromPrefixUnaryExpressions(partialDeclaration, assignedAsReadonly, nonCandidateFields);
+            CollectFieldsFromPostfixUnaryExpressions(partialDeclaration, assignedAsReadonly, nonCandidateFields);
+            CollectFieldsFromArguments(partialDeclaration, nonCandidateFields);
+        }
+
+        private static void CollectFieldsFromArguments(SyntaxNodeSemanticModelTuple<TypeDeclarationSyntax> partialDeclaration,
+            HashSet<IFieldSymbol> nonCandidateFields)
+        {
+            var arguments = partialDeclaration.SyntaxNode.DescendantNodes()
+                .OfType<ArgumentSyntax>();
+
+            foreach (var argument in arguments)
+            {
+                ProcessArgument(argument, partialDeclaration.SemanticModel, nonCandidateFields);
+            }
+        }
+
+        private static void CollectFieldsFromPostfixUnaryExpressions(SyntaxNodeSemanticModelTuple<TypeDeclarationSyntax> partialDeclaration,
+            HashSet<IFieldSymbol> assignedAsReadonly, HashSet<IFieldSymbol> nonCandidateFields)
+        {
+            var postfixUnaries = partialDeclaration.SyntaxNode.DescendantNodes()
+                .OfType<PostfixUnaryExpressionSyntax>()
+                .Where(a => postfixUnaryKinds.Contains(a.Kind()));
+
+            foreach (var postfixUnary in postfixUnaries)
+            {
+                ProcessExpression(postfixUnary.Operand, partialDeclaration.SemanticModel, nonCandidateFields, assignedAsReadonly);
+            }
+        }
+
+        private static void CollectFieldsFromPrefixUnaryExpressions(SyntaxNodeSemanticModelTuple<TypeDeclarationSyntax> partialDeclaration,
+            HashSet<IFieldSymbol> assignedAsReadonly, HashSet<IFieldSymbol> nonCandidateFields)
+        {
+            var prefixUnaries = partialDeclaration.SyntaxNode.DescendantNodes()
+                .OfType<PrefixUnaryExpressionSyntax>()
+                .Where(a => prefixUnaryKinds.Contains(a.Kind()));
+
+            foreach (var prefixUnary in prefixUnaries)
+            {
+                ProcessExpression(prefixUnary.Operand, partialDeclaration.SemanticModel, nonCandidateFields, assignedAsReadonly);
+            }
+        }
+
+        private static void CollectFieldsFromAssignments(SyntaxNodeSemanticModelTuple<TypeDeclarationSyntax> partialDeclaration,
+            HashSet<IFieldSymbol> assignedAsReadonly, HashSet<IFieldSymbol> nonCandidateFields)
+        {
+            var assignments = partialDeclaration.SyntaxNode.DescendantNodes()
+                .OfType<AssignmentExpressionSyntax>()
+                .Where(a => assignmentKinds.Contains(a.Kind()));
+
+            foreach (var assignment in assignments)
+            {
+                ProcessExpression(assignment.Left, partialDeclaration.SemanticModel, nonCandidateFields, assignedAsReadonly);
+            }
+        }
+
+        private static void ProcessArgument(ArgumentSyntax argument, SemanticModel semanticModel, HashSet<IFieldSymbol> nonCandidateFields)
+        {
+            if (argument.RefOrOutKeyword.IsKind(SyntaxKind.None))
+            {
+                return;
+            }
+
+            var fieldSymbol = semanticModel.GetSymbolInfo(argument.Expression).Symbol as IFieldSymbol;
+            if (FieldIsRelevant(fieldSymbol))
+            {
+                nonCandidateFields.Add(fieldSymbol);
+            }
+        }
+
+        private static List<FieldTuple> GetCandidateFields(FieldDeclarationSyntax fieldDeclaration, SemanticModel semanticModel,
+            HashSet<IFieldSymbol> assignedAsReadonly)
+        {
+            var candidateFields = fieldDeclaration.Declaration.Variables
+                .Select(variableDeclaratorSyntax => new FieldTuple
+                {
+                    SyntaxNode = variableDeclaratorSyntax,
+                    Symbol = semanticModel.GetDeclaredSymbol(variableDeclaratorSyntax) as IFieldSymbol,
+                    SemanticModel = semanticModel
+                })
+                .Where(f => f.Symbol != null)
+                .Where(f => FieldIsRelevant(f.Symbol))
+                .ToList();
+
+            foreach (var field in candidateFields.Where(field => field.SyntaxNode.Initializer != null))
+            {
+                assignedAsReadonly.Add(field.Symbol);
+            }
+
+            return candidateFields;
+        }
+
+        private static void ProcessExpression(ExpressionSyntax expression, SemanticModel semanticModel,
+            HashSet<IFieldSymbol> nonCandidateFields, HashSet<IFieldSymbol> assignedAsReadonly)
         {
             var fieldSymbol = semanticModel.GetSymbolInfo(expression).Symbol as IFieldSymbol;
             if (fieldSymbol== null || !FieldIsRelevant(fieldSymbol))
@@ -178,18 +252,18 @@ namespace SonarLint.Rules.CSharp
             var constructorSymbol = semanticModel.GetEnclosingSymbol(expression.SpanStart) as IMethodSymbol;
             if (constructorSymbol == null)
             {
-                nonCandidateFields = nonCandidateFields.Add(fieldSymbol);
+                nonCandidateFields.Add(fieldSymbol);
                 return;
             }
 
             if (constructorSymbol.MethodKind == MethodKind.Constructor &&
                 constructorSymbol.ContainingType.Equals(fieldSymbol.ContainingType))
             {
-                assignedAsReadonly = assignedAsReadonly.Add(fieldSymbol);
+                assignedAsReadonly.Add(fieldSymbol);
             }
             else
             {
-                nonCandidateFields = nonCandidateFields.Add(fieldSymbol);
+                nonCandidateFields.Add(fieldSymbol);
             }
         }
 

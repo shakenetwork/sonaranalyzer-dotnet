@@ -15,7 +15,6 @@ namespace Tests.Diagnostics
         }
     }
 
-
     class Person
     {
         private int _birthYear;  // Noncompliant
@@ -37,7 +36,7 @@ namespace Tests.Diagnostics
             System.Threading.Thread t1 = new System.Threading.Thread
                 (delegate()
                 {
-                    _birthDay2 = i;
+                    _birthDay2 = 42;
                 });
             t1.Start();
 
@@ -55,6 +54,18 @@ namespace Tests.Diagnostics
                 return _legSize;
             }
             set { _legSize = value; }
+        }
+    }
+
+    partial class Partial
+    {
+        private int i; // Non-compliant, but not reported now because of the partial
+    }
+    partial class Partial
+    {
+        public Partial()
+        {
+            i = 42;
         }
     }
 }
