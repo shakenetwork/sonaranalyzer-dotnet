@@ -150,18 +150,18 @@ namespace SonarLint.Rules.CSharp
             CollectFieldsFromAssignments(partialDeclaration, assignedAsReadonly, nonCandidateFields);
             CollectFieldsFromPrefixUnaryExpressions(partialDeclaration, assignedAsReadonly, nonCandidateFields);
             CollectFieldsFromPostfixUnaryExpressions(partialDeclaration, assignedAsReadonly, nonCandidateFields);
-            CollectFieldsFromArguments(partialDeclaration, nonCandidateFields);
+            CollectFieldsFromArguments(partialDeclaration, assignedAsReadonly, nonCandidateFields);
         }
 
         private static void CollectFieldsFromArguments(SyntaxNodeSemanticModelTuple<TypeDeclarationSyntax> partialDeclaration,
-            HashSet<IFieldSymbol> nonCandidateFields)
+            HashSet<IFieldSymbol> assignedAsReadonly, HashSet<IFieldSymbol> nonCandidateFields)
         {
             var arguments = partialDeclaration.SyntaxNode.DescendantNodes()
                 .OfType<ArgumentSyntax>();
 
             foreach (var argument in arguments)
             {
-                ProcessArgument(argument, partialDeclaration.SemanticModel, nonCandidateFields);
+                ProcessArgument(argument, partialDeclaration.SemanticModel, assignedAsReadonly, nonCandidateFields);
             }
         }
 
@@ -174,7 +174,7 @@ namespace SonarLint.Rules.CSharp
 
             foreach (var postfixUnary in postfixUnaries)
             {
-                ProcessExpression(postfixUnary.Operand, partialDeclaration.SemanticModel, nonCandidateFields, assignedAsReadonly);
+                ProcessExpression(postfixUnary.Operand, partialDeclaration.SemanticModel, assignedAsReadonly, nonCandidateFields);
             }
         }
 
@@ -187,7 +187,7 @@ namespace SonarLint.Rules.CSharp
 
             foreach (var prefixUnary in prefixUnaries)
             {
-                ProcessExpression(prefixUnary.Operand, partialDeclaration.SemanticModel, nonCandidateFields, assignedAsReadonly);
+                ProcessExpression(prefixUnary.Operand, partialDeclaration.SemanticModel, assignedAsReadonly, nonCandidateFields);
             }
         }
 
@@ -200,21 +200,7 @@ namespace SonarLint.Rules.CSharp
 
             foreach (var assignment in assignments)
             {
-                ProcessExpression(assignment.Left, partialDeclaration.SemanticModel, nonCandidateFields, assignedAsReadonly);
-            }
-        }
-
-        private static void ProcessArgument(ArgumentSyntax argument, SemanticModel semanticModel, HashSet<IFieldSymbol> nonCandidateFields)
-        {
-            if (argument.RefOrOutKeyword.IsKind(SyntaxKind.None))
-            {
-                return;
-            }
-
-            var fieldSymbol = semanticModel.GetSymbolInfo(argument.Expression).Symbol as IFieldSymbol;
-            if (FieldIsRelevant(fieldSymbol))
-            {
-                nonCandidateFields.Add(fieldSymbol);
+                ProcessExpression(assignment.Left, partialDeclaration.SemanticModel, assignedAsReadonly, nonCandidateFields);
             }
         }
 
@@ -240,12 +226,31 @@ namespace SonarLint.Rules.CSharp
             return candidateFields;
         }
 
+        private static void ProcessArgument(ArgumentSyntax argument, SemanticModel semanticModel,
+            HashSet<IFieldSymbol> assignedAsReadonly, HashSet<IFieldSymbol> nonCandidateFields)
+        {
+            if (argument.RefOrOutKeyword.IsKind(SyntaxKind.None))
+            {
+                return;
+            }
+
+            // ref/out should be handled the same way as all other field assignments:
+            ProcessExpression(argument.Expression, semanticModel, assignedAsReadonly, nonCandidateFields);
+        }
+
         private static void ProcessExpression(ExpressionSyntax expression, SemanticModel semanticModel,
-            HashSet<IFieldSymbol> nonCandidateFields, HashSet<IFieldSymbol> assignedAsReadonly)
+            HashSet<IFieldSymbol> assignedAsReadonly, HashSet<IFieldSymbol> nonCandidateFields)
         {
             var fieldSymbol = semanticModel.GetSymbolInfo(expression).Symbol as IFieldSymbol;
-            if (fieldSymbol== null || !FieldIsRelevant(fieldSymbol))
+            if (fieldSymbol == null ||
+                !FieldIsRelevant(fieldSymbol))
             {
+                return;
+            }
+
+            if (!IsFieldOnThis(expression))
+            {
+                nonCandidateFields.Add(fieldSymbol);
                 return;
             }
 
@@ -265,6 +270,30 @@ namespace SonarLint.Rules.CSharp
             {
                 nonCandidateFields.Add(fieldSymbol);
             }
+        }
+
+        private static bool IsFieldOnThis(ExpressionSyntax expression)
+        {
+            if (expression.IsKind(SyntaxKind.IdentifierName))
+            {
+                return true;
+            }
+
+            var memberAccess = expression as MemberAccessExpressionSyntax;
+            if (memberAccess != null &&
+                memberAccess.Expression.IsKind(SyntaxKind.ThisExpression))
+            {
+                return true;
+            }
+
+            var conditionalAccess = expression as ConditionalAccessExpressionSyntax;
+            if (conditionalAccess != null &&
+                conditionalAccess.Expression.IsKind(SyntaxKind.ThisExpression))
+            {
+                return true;
+            }
+
+            return false;
         }
 
         private static bool FieldIsRelevant(IFieldSymbol fieldSymbol)
