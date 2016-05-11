@@ -52,7 +52,7 @@ namespace SonarLint.Rules.Common
         {
             var symbol = semanticModel.GetDeclaredSymbol(node);
 
-            return symbol != null && 
+            return symbol != null &&
                 symbol.GetAttributes().Any(attribute => attribute.AttributeClass.Is(KnownType.System_FlagsAttribute));
         }
 

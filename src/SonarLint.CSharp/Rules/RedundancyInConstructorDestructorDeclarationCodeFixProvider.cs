@@ -130,25 +130,23 @@ namespace SonarLint.Rules.CSharp
             var ctor = constructor;
             var newRoot = root;
             newRoot = newRoot.ReplaceNode(ctor, ctor.WithAdditionalAnnotations(annotation));
-            ctor = (ConstructorDeclarationSyntax)newRoot.GetAnnotatedNodes(annotation).First();
+            ctor = GetConstructor(newRoot, annotation);
             var initializer = ctor.Initializer;
 
             if (RedundantInheritanceListCodeFixProvider.HasLineEnding(constructor.ParameterList))
             {
                 newRoot = newRoot.RemoveNode(initializer, SyntaxRemoveOptions.KeepNoTrivia);
-                ctor = (ConstructorDeclarationSyntax)newRoot.GetAnnotatedNodes(annotation).First();
+                ctor = GetConstructor(newRoot, annotation);
 
                 if (ctor.Body != null &&
                     ctor.Body.HasLeadingTrivia)
                 {
                     var lastTrivia = ctor.Body.GetLeadingTrivia().Last();
-                    newRoot = lastTrivia.IsKind(SyntaxKind.EndOfLineTrivia)
-                        ? newRoot.ReplaceNode(
-                            ctor.Body,
-                            ctor.Body.WithoutLeadingTrivia())
-                        : newRoot.ReplaceNode(
-                            ctor.Body,
-                            ctor.Body.WithLeadingTrivia(lastTrivia));
+                    var newBody = lastTrivia.IsKind(SyntaxKind.EndOfLineTrivia)
+                        ? ctor.Body.WithoutLeadingTrivia()
+                        : ctor.Body.WithLeadingTrivia(lastTrivia);
+
+                    newRoot = newRoot.ReplaceNode(ctor.Body, newBody);
                 }
             }
             else
@@ -159,7 +157,7 @@ namespace SonarLint.Rules.CSharp
                     trailingTrivia = initializer.GetTrailingTrivia();
                 }
                 newRoot = newRoot.RemoveNode(initializer, SyntaxRemoveOptions.KeepNoTrivia);
-                ctor = (ConstructorDeclarationSyntax)newRoot.GetAnnotatedNodes(annotation).First();
+                ctor = GetConstructor(newRoot, annotation);
 
                 if (ctor.Body != null &&
                     ctor.Body.HasLeadingTrivia)
@@ -178,8 +176,13 @@ namespace SonarLint.Rules.CSharp
                 }
             }
 
-            ctor = (ConstructorDeclarationSyntax)newRoot.GetAnnotatedNodes(annotation).First();
+            ctor = GetConstructor(newRoot, annotation);
             return newRoot.ReplaceNode(ctor, ctor.WithoutAnnotations(annotation));
+        }
+
+        private static ConstructorDeclarationSyntax GetConstructor(SyntaxNode newRoot, SyntaxAnnotation annotation)
+        {
+            return (ConstructorDeclarationSyntax)newRoot.GetAnnotatedNodes(annotation).First();
         }
     }
 }

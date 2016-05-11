@@ -126,7 +126,7 @@ namespace SonarLint.Rules.CSharp
         }
 
         private static void CheckFollowingExpressions(SyntaxNodeAnalysisContext context, int currentExpressionIndex,
-            List<ExpressionSyntax> expressionsInChain,
+            IList<ExpressionSyntax> expressionsInChain,
             ExpressionSyntax expressionComparedToNull, BinaryExpressionSyntax comparisonToNull)
         {
             for (var j = currentExpressionIndex + 1; j < expressionsInChain.Count; j++)

@@ -32,7 +32,6 @@ namespace SonarLint.Helpers
         private readonly AnalysisContext context;
         public static Func<SyntaxTree, bool> ShouldAnalysisBeDisabled { get; set; }
 
-
         internal SonarAnalysisContext(AnalysisContext context)
         {
             this.context = context;

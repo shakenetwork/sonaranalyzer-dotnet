@@ -76,7 +76,7 @@ namespace SonarLint.Common
             foreach (var trivia in trivias)
             {
                 if (!IsCommentTrivia(trivia) ||
-                    ignoreHeaderComments && IsNoneToken(trivia.Token.GetPreviousToken()))
+                    (ignoreHeaderComments && IsNoneToken(trivia.Token.GetPreviousToken())))
                 {
                     continue;
                 }

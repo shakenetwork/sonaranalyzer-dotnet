@@ -81,7 +81,7 @@ namespace SonarLint.Rules.CSharp
                 var isNullCoalescing = bool.Parse(diagnostic.Properties[ConditionalSimplification.IsNullCoalescingKey]);
 
                 var annotation = new SyntaxAnnotation();
-                var simplified = GetSimplified(whenTrue, whenFalse, ifStatement.Condition, compared, isNullCoalescing, semanticModel, annotation);
+                var simplified = GetSimplified(whenTrue, whenFalse, ifStatement.Condition, compared, semanticModel, annotation, isNullCoalescing);
 
                 context.RegisterCodeFix(
                     GetActionToExecute(context, root, ifStatement, simplified, annotation),
@@ -122,8 +122,8 @@ namespace SonarLint.Rules.CSharp
         }
 
         private static StatementSyntax GetSimplified(StatementSyntax statement1, StatementSyntax statement2,
-            ExpressionSyntax condition, ExpressionSyntax compared, bool isNullCoalescing, SemanticModel semanticModel,
-            SyntaxAnnotation annotation)
+            ExpressionSyntax condition, ExpressionSyntax compared, SemanticModel semanticModel, SyntaxAnnotation annotation,
+            bool isNullCoalescing)
         {
             var return1 = statement1 as ReturnStatementSyntax;
             var return2 = statement2 as ReturnStatementSyntax;
@@ -135,11 +135,7 @@ namespace SonarLint.Rules.CSharp
 
                 var createdExpression = isNullCoalescing
                     ? GetNullCoalescing(retExpr1, retExpr2, compared, semanticModel, annotation)
-                    : SyntaxFactory.ConditionalExpression(
-                            condition,
-                            return1.Expression,
-                            return2.Expression)
-                            .WithAdditionalAnnotations(annotation);
+                    : GetConditionalExpression(condition, return1.Expression, return2.Expression, annotation);
 
                 return SyntaxFactory.ReturnStatement(createdExpression);
             }
@@ -150,21 +146,31 @@ namespace SonarLint.Rules.CSharp
             var expression1 = expressionStatement1.Expression.RemoveParentheses();
             var expression2 = expressionStatement2.Expression.RemoveParentheses();
 
-            var assignment = GetSimplifiedAssignment(expression1, expression2, condition, compared, isNullCoalescing, semanticModel, annotation);
+            var assignment = GetSimplifiedAssignment(expression1, expression2, condition, compared, semanticModel, annotation, isNullCoalescing);
             if (assignment != null)
             {
                 return SyntaxFactory.ExpressionStatement(assignment);
             }
 
-            var expression = GetSimplificationFromInvocations(expression1, expression2, condition, compared, isNullCoalescing, semanticModel, annotation);
+            var expression = GetSimplificationFromInvocations(expression1, expression2, condition, compared, semanticModel, annotation, isNullCoalescing);
             return expression != null
                 ? SyntaxFactory.ExpressionStatement(expression)
                 : null;
         }
 
+        private static ConditionalExpressionSyntax GetConditionalExpression(ExpressionSyntax condition, ExpressionSyntax expressionTrue,
+            ExpressionSyntax expressionFalse, SyntaxAnnotation annotation)
+        {
+            return SyntaxFactory.ConditionalExpression(
+                condition,
+                expressionTrue,
+                expressionFalse)
+                .WithAdditionalAnnotations(annotation);
+        }
+
         private static ExpressionSyntax GetSimplifiedAssignment(ExpressionSyntax expression1, ExpressionSyntax expression2,
-            ExpressionSyntax condition, ExpressionSyntax compared, bool isNullCoalescing, SemanticModel semanticModel,
-            SyntaxAnnotation annotation)
+            ExpressionSyntax condition, ExpressionSyntax compared, SemanticModel semanticModel, SyntaxAnnotation annotation,
+            bool isNullCoalescing)
         {
             var assignment1 = expression1 as AssignmentExpressionSyntax;
             var assignment2 = expression2 as AssignmentExpressionSyntax;
@@ -181,11 +187,7 @@ namespace SonarLint.Rules.CSharp
 
             var createdExpression = isNullCoalescing
                 ? GetNullCoalescing(assignment1.Right, assignment2.Right, compared, semanticModel, annotation)
-                : SyntaxFactory.ConditionalExpression(
-                    condition,
-                    assignment1.Right,
-                    assignment2.Right)
-                    .WithAdditionalAnnotations(annotation);
+                : GetConditionalExpression(condition, assignment1.Right, assignment2.Right, annotation);
 
             return SyntaxFactory.AssignmentExpression(
                 assignment1.Kind(),
@@ -216,12 +218,13 @@ namespace SonarLint.Rules.CSharp
                 return createdExpression;
             }
 
-            return GetSimplificationFromInvocations(whenTrue, whenFalse, null, compared, true, semanticModel, annotation);
+            return GetSimplificationFromInvocations(whenTrue, whenFalse, null, compared, semanticModel, annotation,
+                isNullCoalescing: true);
         }
 
         private static ExpressionSyntax GetSimplificationFromInvocations(ExpressionSyntax expression1, ExpressionSyntax expression2,
-            ExpressionSyntax condition, ExpressionSyntax compared, bool isNullCoalescing, SemanticModel semanticModel,
-            SyntaxAnnotation annotation)
+            ExpressionSyntax condition, ExpressionSyntax compared, SemanticModel semanticModel, SyntaxAnnotation annotation,
+            bool isNullCoalescing)
         {
             var methodCall1 = expression1 as InvocationExpressionSyntax;
             var methodCall2 = expression2 as InvocationExpressionSyntax;

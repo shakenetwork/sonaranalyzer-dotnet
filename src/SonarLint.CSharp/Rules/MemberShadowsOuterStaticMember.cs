@@ -155,9 +155,9 @@ namespace SonarLint.Rules.CSharp
                 "method");
         }
 
-        private static void CheckEvent(SymbolAnalysisContext c, INamedTypeSymbol containerClassSymbol, IEventSymbol @event)
+        private static void CheckEvent(SymbolAnalysisContext context, INamedTypeSymbol containerClassSymbol, IEventSymbol @event)
         {
-            CheckEventOrMethod(@event, containerClassSymbol, c,
+            CheckEventOrMethod(@event, containerClassSymbol, context,
                 e =>
                 {
                     var reference = e.DeclaringSyntaxReferences.FirstOrDefault();
@@ -178,9 +178,9 @@ namespace SonarLint.Rules.CSharp
                 "event");
         }
 
-        private static void CheckField(SymbolAnalysisContext c, INamedTypeSymbol containerClassSymbol, IFieldSymbol field)
+        private static void CheckField(SymbolAnalysisContext context, INamedTypeSymbol containerClassSymbol, IFieldSymbol field)
         {
-            CheckFieldOrProperty(field, containerClassSymbol, c,
+            CheckFieldOrProperty(field, containerClassSymbol, context,
                 f =>
                 {
                     var reference = f.DeclaringSyntaxReferences.FirstOrDefault();
@@ -190,9 +190,9 @@ namespace SonarLint.Rules.CSharp
                 "field");
         }
 
-        private static void CheckProperty(SymbolAnalysisContext c, INamedTypeSymbol containerClassSymbol, IPropertySymbol property)
+        private static void CheckProperty(SymbolAnalysisContext context, INamedTypeSymbol containerClassSymbol, IPropertySymbol property)
         {
-            CheckFieldOrProperty(property, containerClassSymbol, c, p =>
+            CheckFieldOrProperty(property, containerClassSymbol, context, p =>
             {
                 var reference = p.DeclaringSyntaxReferences.FirstOrDefault();
                 if (reference == null)

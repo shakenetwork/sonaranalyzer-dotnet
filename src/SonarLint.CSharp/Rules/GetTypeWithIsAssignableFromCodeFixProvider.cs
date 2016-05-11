@@ -93,8 +93,7 @@ namespace SonarLint.Rules.CSharp
         private static SyntaxNode ChangeIsExpressionToNullCheck(SyntaxNode root, BinaryExpressionSyntax binary)
         {
             var newNode = GetExpressionWithParensIfNeeded(GetNullCheck(binary), binary.Parent);
-            var newRoot = root.ReplaceNode(binary, newNode.WithAdditionalAnnotations(Formatter.Annotation));
-            return newRoot;
+            return root.ReplaceNode(binary, newNode.WithAdditionalAnnotations(Formatter.Annotation));
         }
 
         private static ExpressionSyntax GetNullCheck(BinaryExpressionSyntax binary)
@@ -110,8 +109,7 @@ namespace SonarLint.Rules.CSharp
             var shouldRemoveGetType = bool.Parse(diagnostic.Properties[GetTypeWithIsAssignableFrom.ShouldRemoveGetType]);
 
             var newNode = GetRefactoredExpression(invocation, useIsOperator, shouldRemoveGetType);
-            var newRoot = root.ReplaceNode(invocation, newNode.WithAdditionalAnnotations(Formatter.Annotation));
-            return newRoot;
+            return root.ReplaceNode(invocation, newNode.WithAdditionalAnnotations(Formatter.Annotation));
         }
 
         private static bool TryGetRefactoredExpression(BinaryExpressionSyntax binary, out ExpressionSyntax expression)
@@ -125,7 +123,7 @@ namespace SonarLint.Rules.CSharp
 
             if (TryGetTypeOfComparison(binary, out typeofExpression, out getTypeSide))
             {
-                newExpression = GetIsExpression(typeofExpression, getTypeSide, true);
+                newExpression = GetIsExpression(typeofExpression, getTypeSide, shouldRemoveGetType: true);
             }
             else if (TryGetAsOperatorComparisonToNull(binary, out asExpression))
             {
@@ -137,7 +135,7 @@ namespace SonarLint.Rules.CSharp
                 expression = null;
                 return false;
             }
-            
+
             expression = noNegationRequired
                 ? GetExpressionWithParensIfNeeded(newExpression, binary.Parent)
                 : SyntaxFactory.PrefixUnaryExpression(
@@ -159,14 +157,9 @@ namespace SonarLint.Rules.CSharp
         {
             var left = binary.Left.RemoveParentheses();
 
-            if (left.IsKind(SyntaxKind.AsExpression))
-            {
-                asExpression = left as BinaryExpressionSyntax;
-            }
-            else
-            {
-                asExpression = binary.Right.RemoveParentheses() as BinaryExpressionSyntax;
-            }
+            asExpression = left.IsKind(SyntaxKind.AsExpression)
+                ? left as BinaryExpressionSyntax
+                : binary.Right.RemoveParentheses() as BinaryExpressionSyntax;
 
             return asExpression != null;
         }

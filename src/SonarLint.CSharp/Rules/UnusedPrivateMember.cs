@@ -332,8 +332,7 @@ namespace SonarLint.Rules.CSharp
                 var symbol = node.SemanticModel.GetSymbolInfo(node.SyntaxNode).Symbol;
                 var methodSymbol = symbol as IMethodSymbol;
 
-                if (methodSymbol != null &&
-                    methodSymbol.MethodKind == MethodKind.ReducedExtension)
+                if (methodSymbol?.MethodKind == MethodKind.ReducedExtension)
                 {
                     symbol = methodSymbol.ReducedFrom;
                 }

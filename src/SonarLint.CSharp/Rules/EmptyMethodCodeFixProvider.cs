@@ -67,10 +67,10 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            await RegisterCodeFixesForMethods(context, root, method).ConfigureAwait(false);
+            await RegisterCodeFixesForMethodsAsync(context, root, method).ConfigureAwait(false);
         }
 
-        private static async Task RegisterCodeFixesForMethods(CodeFixContext context, SyntaxNode root, MethodDeclarationSyntax method)
+        private static async Task RegisterCodeFixesForMethodsAsync(CodeFixContext context, SyntaxNode root, MethodDeclarationSyntax method)
         {
             context.RegisterCodeFix(
                 CodeAction.Create(

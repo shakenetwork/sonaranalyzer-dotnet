@@ -96,7 +96,7 @@ namespace SonarLint.Rules.CSharp
         private static bool IsAutoProperty(PropertyDeclarationSyntax propertyDeclaration)
         {
             return propertyDeclaration.AccessorList != null &&
-                propertyDeclaration.AccessorList.Accessors.All(Accessibility => Accessibility.Body == null);
+                propertyDeclaration.AccessorList.Accessors.All(accessor => accessor.Body == null);
         }
 
         private static void CheckEvent(SyntaxNodeAnalysisContext context)

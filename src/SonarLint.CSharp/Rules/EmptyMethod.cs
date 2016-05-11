@@ -65,15 +65,15 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.MethodDeclaration);
         }
 
-        private static void CheckMethodDeclaration(SyntaxNodeAnalysisContext c)
+        private static void CheckMethodDeclaration(SyntaxNodeAnalysisContext context)
         {
-            var methodNode = (MethodDeclarationSyntax)c.Node;
+            var methodNode = (MethodDeclarationSyntax)context.Node;
 
             if (methodNode.Body != null &&
                 IsEmpty(methodNode.Body) &&
-                !ShouldMethodBeExcluded(methodNode, c.SemanticModel))
+                !ShouldMethodBeExcluded(methodNode, context.SemanticModel))
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, methodNode.Identifier.GetLocation()));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, methodNode.Identifier.GetLocation()));
             }
         }
 

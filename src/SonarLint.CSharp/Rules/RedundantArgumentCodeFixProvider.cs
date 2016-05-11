@@ -141,7 +141,7 @@ namespace SonarLint.Rules.CSharp
                     continue;
                 }
 
-                newArgumentList = AddArgument(alreadyRemovedOne, newArgumentList, argumentMapping.Parameter.Name, argument);
+                newArgumentList = AddArgument(newArgumentList, argumentMapping.Parameter.Name, argument, alreadyRemovedOne);
             }
 
             var paramsArguments = argumentMappings
@@ -157,21 +157,20 @@ namespace SonarLint.Rules.CSharp
             return document.WithSyntaxRoot(newRoot);
         }
 
-        private static ArgumentListSyntax AddArgument(bool alreadyRemovedOne, ArgumentListSyntax argumentList,
-            string parameterName, ArgumentSyntax argument)
+        private static ArgumentListSyntax AddArgument(ArgumentListSyntax argumentList, string parameterName,
+            ArgumentSyntax argument, bool alreadyRemovedOne)
         {
             return alreadyRemovedOne
                 ? argumentList.AddArguments(
                     SyntaxFactory.Argument(
-                        SyntaxFactory.NameColon(
-                            SyntaxFactory.IdentifierName(parameterName)),
+                        SyntaxFactory.NameColon(SyntaxFactory.IdentifierName(parameterName)),
                         argument.RefOrOutKeyword,
                         argument.Expression))
                 : argumentList.AddArguments(argument);
         }
 
         private static ArgumentListSyntax AddParamsArguments(SemanticModel semanticModel,
-            List<MethodParameterLookup.ArgumentParameterMapping> paramsArguments, ArgumentListSyntax argumentList)
+            ICollection<MethodParameterLookup.ArgumentParameterMapping> paramsArguments, ArgumentListSyntax argumentList)
         {
             var firstParamsMapping = paramsArguments.First();
             var firstParamsArgument = firstParamsMapping.Argument;

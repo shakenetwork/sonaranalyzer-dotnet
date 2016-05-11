@@ -48,13 +48,13 @@ namespace SonarLint.Rules.CSharp
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
-        
+
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, "{0}", Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
-        
+
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         private const string SystemTypeName = "System.Type";
@@ -78,8 +78,8 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.InvocationExpression);
         }
 
-        private static void CheckIsInstanceOfTypeCallWithTypeArgument(InvocationExpressionSyntax invocation, IMethodSymbol methodSymbol, 
-            SyntaxNodeAnalysisContext c)
+        private static void CheckIsInstanceOfTypeCallWithTypeArgument(InvocationExpressionSyntax invocation, IMethodSymbol methodSymbol,
+            SyntaxNodeAnalysisContext context)
         {
             if (methodSymbol.Name != "IsInstanceOfType" ||
                 methodSymbol.ContainingType?.ToDisplayString() != SystemTypeName ||
@@ -90,22 +90,22 @@ namespace SonarLint.Rules.CSharp
 
             var argument = invocation.ArgumentList.Arguments.First().Expression;
 
-            var typeInfo = c.SemanticModel.GetTypeInfo(argument).Type;
+            var typeInfo = context.SemanticModel.GetTypeInfo(argument).Type;
             if (typeInfo?.ToDisplayString() != SystemTypeName)
             {
                 return;
             }
 
             var invocationInArgument = argument as InvocationExpressionSyntax;
-            var message = IsGetTypeCall(invocationInArgument, c.SemanticModel)
+            var message = IsGetTypeCall(invocationInArgument, context.SemanticModel)
                 ? MessageIsInstanceOfTypeWithGetType
                 : MessageIsInstanceOfType;
 
-            c.ReportDiagnostic(Diagnostic.Create(Rule, argument.GetLocation(), message));
+            context.ReportDiagnostic(Diagnostic.Create(Rule, argument.GetLocation(), message));
         }
 
         private static void CheckGetTypeCallOnType(InvocationExpressionSyntax invocation, IMethodSymbol invokedMethod,
-            SyntaxNodeAnalysisContext c)
+            SyntaxNodeAnalysisContext context)
         {
             var memberCall = invocation.Expression as MemberAccessExpressionSyntax;
 
@@ -115,14 +115,14 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            var expressionType = c.SemanticModel.GetTypeInfo(memberCall.Expression).Type;
+            var expressionType = context.SemanticModel.GetTypeInfo(memberCall.Expression).Type;
             if (expressionType?.ToDisplayString() != SystemTypeName)
             {
                 return;
             }
-            
+
             var location = Location.Create(memberCall.SyntaxTree, TextSpan.FromBounds(memberCall.OperatorToken.SpanStart, invocation.Span.End));
-            c.ReportDiagnostic(Diagnostic.Create(Rule, location, MessageGetType));
+            context.ReportDiagnostic(Diagnostic.Create(Rule, location, MessageGetType));
         }
 
         private static bool IsGetTypeCall(IMethodSymbol invokedMethod)

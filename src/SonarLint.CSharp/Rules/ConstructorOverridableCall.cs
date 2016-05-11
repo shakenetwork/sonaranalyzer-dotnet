@@ -61,9 +61,9 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.InvocationExpression);
         }
 
-        private static void CheckOverridableCallInConstructor(SyntaxNodeAnalysisContext c)
+        private static void CheckOverridableCallInConstructor(SyntaxNodeAnalysisContext context)
         {
-            var invocationExpression = (InvocationExpressionSyntax)c.Node;
+            var invocationExpression = (InvocationExpressionSyntax)context.Node;
 
             var calledOn = (invocationExpression.Expression as MemberAccessExpressionSyntax)?.Expression;
             var isCalledOnThis = calledOn == null || calledOn is ThisExpressionSyntax;
@@ -72,19 +72,19 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            var enclosingSymbol = c.SemanticModel.GetEnclosingSymbol(invocationExpression.SpanStart) as IMethodSymbol;
+            var enclosingSymbol = context.SemanticModel.GetEnclosingSymbol(invocationExpression.SpanStart) as IMethodSymbol;
             if (!IsMethodConstructor(enclosingSymbol))
             {
                 return;
             }
 
-            var methodSymbol = c.SemanticModel.GetSymbolInfo(invocationExpression.Expression).Symbol as IMethodSymbol;
+            var methodSymbol = context.SemanticModel.GetSymbolInfo(invocationExpression.Expression).Symbol as IMethodSymbol;
 
             if (methodSymbol != null &&
                 IsMethodOverridable(methodSymbol) &&
                 enclosingSymbol.IsInType(methodSymbol.ContainingType))
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, invocationExpression.Expression.GetLocation(),
+                context.ReportDiagnostic(Diagnostic.Create(Rule, invocationExpression.Expression.GetLocation(),
                     methodSymbol.Name));
             }
         }

@@ -52,7 +52,7 @@ namespace SonarLint.Helpers
 
         public static ExpressionSyntax GetSelfOrTopParenthesizedExpression(this ExpressionSyntax node)
         {
-            var current = (node);
+            var current = node;
             var parent = current.Parent as ParenthesizedExpressionSyntax;
             while (parent != null)
             {

@@ -125,7 +125,7 @@ namespace SonarLint.Rules.CSharp
             }
         }
 
-        private void CheckAsOperatorComparedToNull(ExpressionSyntax sideA, ExpressionSyntax sideB, Location location,
+        private static void CheckAsOperatorComparedToNull(ExpressionSyntax sideA, ExpressionSyntax sideB, Location location,
             SyntaxNodeAnalysisContext context)
         {
             if (!EquivalenceChecker.AreEquivalent(sideA.RemoveParentheses(), SyntaxHelper.NullLiteralExpression))

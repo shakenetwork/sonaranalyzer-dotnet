@@ -63,8 +63,7 @@ namespace SonarLint.Rules.CSharp
                     var expression = (BinaryExpressionSyntax) c.Node;
                     var enclosingSymbol = c.SemanticModel.GetEnclosingSymbol(expression.SpanStart) as IMethodSymbol;
 
-                    if (enclosingSymbol != null &&
-                        enclosingSymbol.MethodKind == MethodKind.UserDefinedOperator)
+                    if (enclosingSymbol?.MethodKind == MethodKind.UserDefinedOperator)
                     {
                         return;
                     }

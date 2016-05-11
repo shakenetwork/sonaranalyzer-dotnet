@@ -86,7 +86,7 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.SimpleLambdaExpression);
         }
 
-        private static void CheckExpressionForPureMethod(SyntaxNodeAnalysisContext c, ExpressionSyntax expression)
+        private static void CheckExpressionForPureMethod(SyntaxNodeAnalysisContext context, ExpressionSyntax expression)
         {
             var invocation = expression as InvocationExpressionSyntax;
             if (invocation == null)
@@ -94,7 +94,7 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            var invokedMethodSymbol = c.SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
+            var invokedMethodSymbol = context.SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
             if (invokedMethodSymbol == null ||
                 invokedMethodSymbol.ReturnsVoid)
             {
@@ -104,7 +104,7 @@ namespace SonarLint.Rules.CSharp
             if (invokedMethodSymbol.Parameters.All(p => p.RefKind == RefKind.None) &&
                 IsSideEffectFreeOrPure(invokedMethodSymbol))
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, expression.GetLocation(), invokedMethodSymbol.Name));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, expression.GetLocation(), invokedMethodSymbol.Name));
             }
         }
 

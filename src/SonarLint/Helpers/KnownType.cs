@@ -164,31 +164,31 @@ namespace SonarLint.Helpers
         #endregion
 
         public string TypeName { get; }
-        private SpecialType SpecialType { get; }
-        private bool IsSpecialType { get; }
+        private SpecialType specialType;
+        private bool isSpecialType;
 
         private KnownType(string typeName)
         {
             TypeName = typeName;
-            SpecialType = SpecialType.None;
-            IsSpecialType = false;
+            specialType = SpecialType.None;
+            isSpecialType = false;
         }
 
         private KnownType(SpecialType specialType, string typeName)
         {
             TypeName = typeName;
-            SpecialType = specialType;
-            IsSpecialType = true;
+            this.specialType = specialType;
+            isSpecialType = true;
         }
 
         internal bool Matches(string type)
         {
-            return !IsSpecialType && TypeName == type;
+            return !isSpecialType && TypeName == type;
         }
 
         internal bool Matches(SpecialType type)
         {
-            return IsSpecialType && SpecialType == type;
+            return isSpecialType && specialType == type;
         }
     }
 }

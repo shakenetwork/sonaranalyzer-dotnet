@@ -34,7 +34,7 @@ namespace SonarLint.UnitTest.Helpers
     [TestClass]
     public class DiagnosticAnalyzerContextHelperTest
     {
-        internal static void VerifyEmpty(string name, string content, DiagnosticAnalyzer diagnosticAnalyzer)
+        private static void VerifyEmpty(string name, string content, DiagnosticAnalyzer diagnosticAnalyzer)
         {
             using (var workspace = new AdhocWorkspace())
             {
@@ -51,7 +51,7 @@ namespace SonarLint.UnitTest.Helpers
             }
         }
 
-        internal static async Task<bool> IsGenerated(string content, GeneratedCodeRecognizer generatedCodeRecognizer)
+        private static async Task<bool> IsGeneratedAsync(string content, GeneratedCodeRecognizer generatedCodeRecognizer)
         {
             using (var workspace = new AdhocWorkspace())
             {
@@ -62,11 +62,10 @@ namespace SonarLint.UnitTest.Helpers
 
                 var compilation = document.Project.GetCompilationAsync().Result;
                 var tree = await document.GetSyntaxTreeAsync();
-                
+
                 return tree.IsGenerated(generatedCodeRecognizer, compilation);
             }
         }
-
 
         [TestMethod]
         public void No_Issue_On_Generated_File_With_Generated_Name()
@@ -220,8 +219,7 @@ End Module";
     }
 }";
 
-            Assert.IsTrue(await IsGenerated(source, SonarLint.Helpers.CSharp.GeneratedCodeRecognizer.Instance));
-            
+            Assert.IsTrue(await IsGeneratedAsync(source, SonarLint.Helpers.CSharp.GeneratedCodeRecognizer.Instance));
         }
 
         [TestMethod]
@@ -235,7 +233,7 @@ End Module";
     }
 }";
 
-            Assert.IsFalse(await IsGenerated(source, SonarLint.Helpers.CSharp.GeneratedCodeRecognizer.Instance));
+            Assert.IsFalse(await IsGeneratedAsync(source, SonarLint.Helpers.CSharp.GeneratedCodeRecognizer.Instance));
         }
     }
 }

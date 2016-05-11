@@ -55,7 +55,7 @@ namespace SonarLint.Rules.CSharp
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description,
                 customTags: ideVisibility.ToCustomTags());
-        
+
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         protected override void Initialize(SonarAnalysisContext context)
@@ -87,7 +87,7 @@ namespace SonarLint.Rules.CSharp
                 return false;
             }
 
-            return attributeLists.Any(attributeList => 
+            return attributeLists.Any(attributeList =>
                 attributeList.Attributes.Any(attribute => semanticModel.GetTypeInfo(attribute).Type.Is(KnownType.System_ThreadStaticAttribute)));
         }
     }

@@ -108,8 +108,8 @@ namespace SonarLint.Rules.Common
 
                 try
                 {
-                    var v = Convert.ToInt32(constValue);
-                    if (v == 0)
+                    var value = Convert.ToInt32(constValue);
+                    if (value == 0)
                     {
                         return item;
                     }

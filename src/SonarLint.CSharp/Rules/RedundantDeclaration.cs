@@ -100,15 +100,15 @@ namespace SonarLint.Rules.CSharp
         private static readonly ISet<SyntaxKind> RefOutKeywords = ImmutableHashSet.Create(
             SyntaxKind.RefKeyword, SyntaxKind.OutKeyword);
 
-        private static void ReportRedundantTypeSpecificationInLambda(SyntaxNodeAnalysisContext c)
+        private static void ReportRedundantTypeSpecificationInLambda(SyntaxNodeAnalysisContext context)
         {
-            var lambda = (ParenthesizedLambdaExpressionSyntax)c.Node;
+            var lambda = (ParenthesizedLambdaExpressionSyntax)context.Node;
             if (!IsParameterListModifiable(lambda))
             {
                 return;
             }
 
-            var symbol = c.SemanticModel.GetSymbolInfo(lambda).Symbol as IMethodSymbol;
+            var symbol = context.SemanticModel.GetSymbolInfo(lambda).Symbol as IMethodSymbol;
             if (symbol == null)
             {
                 return;
@@ -119,7 +119,7 @@ namespace SonarLint.Rules.CSharp
             var newLambda = lambda.WithParameterList(newParameterList);
 
             SemanticModel newSemanticModel;
-            newLambda = ChangeSyntaxElement(lambda, newLambda, c.SemanticModel, out newSemanticModel);
+            newLambda = ChangeSyntaxElement(lambda, newLambda, context.SemanticModel, out newSemanticModel);
             var newSymbol = newSemanticModel.GetSymbolInfo(newLambda).Symbol as IMethodSymbol;
 
             if (newSymbol == null ||
@@ -130,7 +130,7 @@ namespace SonarLint.Rules.CSharp
 
             foreach (var parameter in lambda.ParameterList.Parameters)
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, parameter.Type.GetLocation(),
+                context.ReportDiagnostic(Diagnostic.Create(Rule, parameter.Type.GetLocation(),
                     ImmutableDictionary<string, string>.Empty.Add(DiagnosticTypeKey, RedundancyType.LambdaParameterType.ToString()),
                     "type specification"));
             }
@@ -160,19 +160,19 @@ namespace SonarLint.Rules.CSharp
 
         #region Nullable constructor call
 
-        private static void ReportRedundantNullableConstructorCall(SyntaxNodeAnalysisContext c)
+        private static void ReportRedundantNullableConstructorCall(SyntaxNodeAnalysisContext context)
         {
-            var objectCreation = (ObjectCreationExpressionSyntax)c.Node;
-            if (!IsNullableCreation(objectCreation, c.SemanticModel))
+            var objectCreation = (ObjectCreationExpressionSyntax)context.Node;
+            if (!IsNullableCreation(objectCreation, context.SemanticModel))
             {
                 return;
             }
 
             if (IsInNotVarDeclaration(objectCreation) ||
                 IsInAssignmentOrReturnValue(objectCreation) ||
-                IsInArgumentAndCanBeChanged(objectCreation, c.SemanticModel))
+                IsInArgumentAndCanBeChanged(objectCreation, context.SemanticModel))
             {
-                ReportIssueOnRedundantObjectCreation(c, objectCreation, "explicit nullable type creation", RedundancyType.ExplicitNullable);
+                ReportIssueOnRedundantObjectCreation(context, objectCreation, "explicit nullable type creation", RedundancyType.ExplicitNullable);
                 return;
             }
         }
@@ -212,14 +212,14 @@ namespace SonarLint.Rules.CSharp
 
         #region Array (creation, size, type)
 
-        private static void ReportRedundancyInArrayCreation(SyntaxNodeAnalysisContext c)
+        private static void ReportRedundancyInArrayCreation(SyntaxNodeAnalysisContext context)
         {
-            var array = (ArrayCreationExpressionSyntax)c.Node;
-            ReportRedundantArraySizeSpecifier(c, array);
-            ReportRedundantArrayTypeSpecifier(c, array);
+            var array = (ArrayCreationExpressionSyntax)context.Node;
+            ReportRedundantArraySizeSpecifier(context, array);
+            ReportRedundantArrayTypeSpecifier(context, array);
         }
 
-        private static void ReportRedundantArraySizeSpecifier(SyntaxNodeAnalysisContext c, ArrayCreationExpressionSyntax array)
+        private static void ReportRedundantArraySizeSpecifier(SyntaxNodeAnalysisContext context, ArrayCreationExpressionSyntax array)
         {
             if (array.Initializer == null ||
                 array.Type == null)
@@ -235,13 +235,13 @@ namespace SonarLint.Rules.CSharp
 
             foreach (var size in rankSpecifier.Sizes)
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, size.GetLocation(),
+                context.ReportDiagnostic(Diagnostic.Create(Rule, size.GetLocation(),
                     ImmutableDictionary<string, string>.Empty.Add(DiagnosticTypeKey, RedundancyType.ArraySize.ToString()),
                     "array size specification"));
             }
         }
 
-        private static void ReportRedundantArrayTypeSpecifier(SyntaxNodeAnalysisContext c, ArrayCreationExpressionSyntax array)
+        private static void ReportRedundantArrayTypeSpecifier(SyntaxNodeAnalysisContext context, ArrayCreationExpressionSyntax array)
         {
             if (array.Initializer == null ||
                 !array.Initializer.Expressions.Any() ||
@@ -257,14 +257,14 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            var arrayType = c.SemanticModel.GetTypeInfo(array.Type).Type as IArrayTypeSymbol;
+            var arrayType = context.SemanticModel.GetTypeInfo(array.Type).Type as IArrayTypeSymbol;
             if (arrayType == null)
             {
                 return;
             }
 
             var canBeSimplified = array.Initializer.Expressions
-                .Select(exp => c.SemanticModel.GetTypeInfo(exp).Type)
+                .Select(exp => context.SemanticModel.GetTypeInfo(exp).Type)
                 .All(type => object.Equals(type, arrayType.ElementType));
 
             if (canBeSimplified)
@@ -272,7 +272,7 @@ namespace SonarLint.Rules.CSharp
                 var location = Location.Create(array.SyntaxTree, TextSpan.FromBounds(
                     array.Type.ElementType.SpanStart, array.Type.RankSpecifiers.Last().SpanStart));
 
-                c.ReportDiagnostic(Diagnostic.Create(Rule, location,
+                context.ReportDiagnostic(Diagnostic.Create(Rule, location,
                     ImmutableDictionary<string, string>.Empty.Add(DiagnosticTypeKey, RedundancyType.ArrayType.ToString()),
                     "array type"));
             }
@@ -282,9 +282,9 @@ namespace SonarLint.Rules.CSharp
 
         #region Object initializer
 
-        private static void ReportOnRedundantObjectInitializer(SyntaxNodeAnalysisContext c)
+        private static void ReportOnRedundantObjectInitializer(SyntaxNodeAnalysisContext context)
         {
-            var objectCreation = (ObjectCreationExpressionSyntax)c.Node;
+            var objectCreation = (ObjectCreationExpressionSyntax)context.Node;
             if (objectCreation.ArgumentList == null)
             {
                 return;
@@ -293,7 +293,7 @@ namespace SonarLint.Rules.CSharp
             if (objectCreation.Initializer != null &&
                 !objectCreation.Initializer.Expressions.Any())
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, objectCreation.Initializer.GetLocation(),
+                context.ReportDiagnostic(Diagnostic.Create(Rule, objectCreation.Initializer.GetLocation(),
                     ImmutableDictionary<string, string>.Empty.Add(DiagnosticTypeKey, RedundancyType.ObjectInitializer.ToString()),
                     "initializer"));
             }
@@ -303,10 +303,10 @@ namespace SonarLint.Rules.CSharp
 
         #region Explicit delegate creation
 
-        private static void ReportOnExplicitDelegateCreation(SyntaxNodeAnalysisContext c)
+        private static void ReportOnExplicitDelegateCreation(SyntaxNodeAnalysisContext context)
         {
-            var objectCreation = (ObjectCreationExpressionSyntax)c.Node;
-            if (!IsDelegateCreation(objectCreation, c.SemanticModel))
+            var objectCreation = (ObjectCreationExpressionSyntax)context.Node;
+            if (!IsDelegateCreation(objectCreation, context.SemanticModel))
             {
                 return;
             }
@@ -317,13 +317,13 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            if (IsInDeclarationNotVarNotDelegate(objectCreation, c.SemanticModel) ||
-                IsAssignmentNotDelegate(objectCreation, c.SemanticModel) ||
-                IsReturnValueNotDelegate(objectCreation, c.SemanticModel) ||
-                IsInArgumentAndCanBeChanged(objectCreation, c.SemanticModel,
-                    invocation => invocation.ArgumentList.Arguments.Any(a => IsDynamic(a, c.SemanticModel))))
+            if (IsInDeclarationNotVarNotDelegate(objectCreation, context.SemanticModel) ||
+                IsAssignmentNotDelegate(objectCreation, context.SemanticModel) ||
+                IsReturnValueNotDelegate(objectCreation, context.SemanticModel) ||
+                IsInArgumentAndCanBeChanged(objectCreation, context.SemanticModel,
+                    invocation => invocation.ArgumentList.Arguments.Any(a => IsDynamic(a, context.SemanticModel))))
             {
-                ReportIssueOnRedundantObjectCreation(c, objectCreation, "explicit delegate creation", RedundancyType.ExplicitDelegate);
+                ReportIssueOnRedundantObjectCreation(context, objectCreation, "explicit delegate creation", RedundancyType.ExplicitDelegate);
                 return;
             }
         }
@@ -401,15 +401,15 @@ namespace SonarLint.Rules.CSharp
 
         #region Parameter list
 
-        private static void ReportOnRedundantParameterList(SyntaxNodeAnalysisContext c)
+        private static void ReportOnRedundantParameterList(SyntaxNodeAnalysisContext context)
         {
-            var anonymousMethod = (AnonymousMethodExpressionSyntax)c.Node;
+            var anonymousMethod = (AnonymousMethodExpressionSyntax)context.Node;
             if (anonymousMethod.ParameterList == null)
             {
                 return;
             }
 
-            var methodSymbol = c.SemanticModel.GetSymbolInfo(anonymousMethod).Symbol as IMethodSymbol;
+            var methodSymbol = context.SemanticModel.GetSymbolInfo(anonymousMethod).Symbol as IMethodSymbol;
             if (methodSymbol == null)
             {
                 return;
@@ -420,13 +420,13 @@ namespace SonarLint.Rules.CSharp
             var usedParameters = anonymousMethod.Body.DescendantNodes()
                 .OfType<IdentifierNameSyntax>()
                 .Where(id => parameterNames.Contains(id.Identifier.ValueText))
-                .Select(id => c.SemanticModel.GetSymbolInfo(id).Symbol as IParameterSymbol)
+                .Select(id => context.SemanticModel.GetSymbolInfo(id).Symbol as IParameterSymbol)
                 .Where(p => p != null)
                 .ToImmutableHashSet();
 
             if (!usedParameters.Intersect(methodSymbol.Parameters).Any())
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, anonymousMethod.ParameterList.GetLocation(),
+                context.ReportDiagnostic(Diagnostic.Create(Rule, anonymousMethod.ParameterList.GetLocation(),
                     ImmutableDictionary<string, string>.Empty.Add(DiagnosticTypeKey, RedundancyType.DelegateParameterList.ToString()),
                     "parameter list"));
             }
@@ -471,12 +471,12 @@ namespace SonarLint.Rules.CSharp
                 methodSymbol.ToDisplayString() == newMethodSymbol.ToDisplayString();
         }
 
-        private static void ReportIssueOnRedundantObjectCreation(SyntaxNodeAnalysisContext c,
+        private static void ReportIssueOnRedundantObjectCreation(SyntaxNodeAnalysisContext context,
             ObjectCreationExpressionSyntax objectCreation, string message, RedundancyType redundancyType)
         {
             var location = Location.Create(objectCreation.SyntaxTree,
                 TextSpan.FromBounds(objectCreation.SpanStart, objectCreation.Type.Span.End));
-            c.ReportDiagnostic(Diagnostic.Create(Rule, location,
+            context.ReportDiagnostic(Diagnostic.Create(Rule, location,
                     ImmutableDictionary<string, string>.Empty.Add(DiagnosticTypeKey, redundancyType.ToString()),
                     message));
         }

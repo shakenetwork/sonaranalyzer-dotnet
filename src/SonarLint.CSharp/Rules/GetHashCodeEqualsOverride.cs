@@ -58,7 +58,7 @@ namespace SonarLint.Rules.CSharp
 
         internal const string EqualsName = "Equals";
         private static readonly string[] MethodNames = { "GetHashCode", EqualsName };
-        
+
         protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterCodeBlockStartActionInNonGenerated<SyntaxKind>(

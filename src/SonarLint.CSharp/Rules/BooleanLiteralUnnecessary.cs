@@ -137,7 +137,7 @@ namespace SonarLint.Rules.CSharp
         private static void CheckLogicalOr(SyntaxNodeAnalysisContext context)
         {
             var binaryExpression = (BinaryExpressionSyntax)context.Node;
-            if (CheckForNullabilityAndBooleanConstantsReport(binaryExpression, false, context))
+            if (CheckForNullabilityAndBooleanConstantsReport(binaryExpression, context, reportOnTrue: false))
             {
                 return;
             }
@@ -152,7 +152,7 @@ namespace SonarLint.Rules.CSharp
         private static void CheckNotEquals(SyntaxNodeAnalysisContext context)
         {
             var binaryExpression = (BinaryExpressionSyntax)context.Node;
-            if (CheckForNullabilityAndBooleanConstantsReport(binaryExpression, false, context))
+            if (CheckForNullabilityAndBooleanConstantsReport(binaryExpression, context, reportOnTrue: false))
             {
                 return;
             }
@@ -167,7 +167,7 @@ namespace SonarLint.Rules.CSharp
         private static void CheckLogicalAnd(SyntaxNodeAnalysisContext context)
         {
             var binaryExpression = (BinaryExpressionSyntax)context.Node;
-            if (CheckForNullabilityAndBooleanConstantsReport(binaryExpression, true, context))
+            if (CheckForNullabilityAndBooleanConstantsReport(binaryExpression, context, reportOnTrue: true))
             {
                 return;
             }
@@ -182,7 +182,7 @@ namespace SonarLint.Rules.CSharp
         private static void CheckEquals(SyntaxNodeAnalysisContext context)
         {
             var binaryExpression = (BinaryExpressionSyntax)context.Node;
-            if (CheckForNullabilityAndBooleanConstantsReport(binaryExpression, true, context))
+            if (CheckForNullabilityAndBooleanConstantsReport(binaryExpression, context, reportOnTrue: true))
             {
                 return;
             }
@@ -225,7 +225,7 @@ namespace SonarLint.Rules.CSharp
         }
 
         private static bool CheckForNullabilityAndBooleanConstantsReport(BinaryExpressionSyntax binaryExpression,
-            bool reportOnTrue, SyntaxNodeAnalysisContext context)
+            SyntaxNodeAnalysisContext context, bool reportOnTrue)
         {
             var typeLeft = context.SemanticModel.GetTypeInfo(binaryExpression.Left).Type;
             var typeRight = context.SemanticModel.GetTypeInfo(binaryExpression.Right).Type;
@@ -259,34 +259,34 @@ namespace SonarLint.Rules.CSharp
         private static void CheckForBooleanConstantOnLeftReportOnInvertedLocation(BinaryExpressionSyntax binaryExpression,
             ExpressionSyntax booleanContantExpression, SyntaxNodeAnalysisContext context)
         {
-            CheckForBooleanConstant(binaryExpression, true, booleanContantExpression, ErrorLocation.Inverted, context);
+            CheckForBooleanConstant(binaryExpression, booleanContantExpression, ErrorLocation.Inverted, context, leftSide: true);
         }
 
         private static void CheckForBooleanConstantOnRightReportOnInvertedLocation(BinaryExpressionSyntax binaryExpression,
             ExpressionSyntax booleanContantExpression, SyntaxNodeAnalysisContext context)
         {
-            CheckForBooleanConstant(binaryExpression, false, booleanContantExpression, ErrorLocation.Inverted, context);
+            CheckForBooleanConstant(binaryExpression, booleanContantExpression, ErrorLocation.Inverted, context, leftSide: false);
         }
 
         private static void CheckForBooleanConstantOnLeftReportOnExtendedLocation(BinaryExpressionSyntax binaryExpression,
             ExpressionSyntax booleanContantExpression, SyntaxNodeAnalysisContext context)
         {
-            CheckForBooleanConstant(binaryExpression, true, booleanContantExpression, ErrorLocation.Extended, context);
+            CheckForBooleanConstant(binaryExpression, booleanContantExpression, ErrorLocation.Extended, context, leftSide: true);
         }
         private static void CheckForBooleanConstantOnRightReportOnExtendedLocation(BinaryExpressionSyntax binaryExpression,
             ExpressionSyntax booleanContantExpression, SyntaxNodeAnalysisContext context)
         {
-            CheckForBooleanConstant(binaryExpression, false, booleanContantExpression, ErrorLocation.Extended, context);
+            CheckForBooleanConstant(binaryExpression, booleanContantExpression, ErrorLocation.Extended, context, leftSide: false);
         }
         private static void CheckForBooleanConstantOnLeftReportOnNormalLocation(BinaryExpressionSyntax binaryExpression,
             ExpressionSyntax booleanContantExpression, SyntaxNodeAnalysisContext context)
         {
-            CheckForBooleanConstant(binaryExpression, true, booleanContantExpression, ErrorLocation.Normal, context);
+            CheckForBooleanConstant(binaryExpression, booleanContantExpression, ErrorLocation.Normal, context, leftSide: true);
         }
         private static void CheckForBooleanConstantOnRightReportOnNormalLocation(BinaryExpressionSyntax binaryExpression,
             ExpressionSyntax booleanContantExpression, SyntaxNodeAnalysisContext context)
         {
-            CheckForBooleanConstant(binaryExpression, false, booleanContantExpression, ErrorLocation.Normal, context);
+            CheckForBooleanConstant(binaryExpression, booleanContantExpression, ErrorLocation.Normal, context, leftSide: false);
         }
 
         private enum ErrorLocation
@@ -296,8 +296,8 @@ namespace SonarLint.Rules.CSharp
             Inverted
         }
 
-        private static void CheckForBooleanConstant(BinaryExpressionSyntax binaryExpression, bool leftSide,
-            ExpressionSyntax booleanContantExpression, ErrorLocation errorLocation, SyntaxNodeAnalysisContext context)
+        private static void CheckForBooleanConstant(BinaryExpressionSyntax binaryExpression, ExpressionSyntax booleanContantExpression,
+            ErrorLocation errorLocation, SyntaxNodeAnalysisContext context, bool leftSide)
         {
             var expression = leftSide
                 ? binaryExpression.Left

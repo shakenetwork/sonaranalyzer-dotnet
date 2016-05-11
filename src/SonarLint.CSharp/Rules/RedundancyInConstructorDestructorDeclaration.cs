@@ -69,23 +69,23 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.DestructorDeclaration);
         }
 
-        private static void CheckDestructorDeclaration(SyntaxNodeAnalysisContext c)
+        private static void CheckDestructorDeclaration(SyntaxNodeAnalysisContext context)
         {
-            var destructorDeclaration = (DestructorDeclarationSyntax)c.Node;
+            var destructorDeclaration = (DestructorDeclarationSyntax)context.Node;
 
             if (IsBodyEmpty(destructorDeclaration.Body))
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, destructorDeclaration.GetLocation(), "destructor"));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, destructorDeclaration.GetLocation(), "destructor"));
             }
         }
 
-        private static void CheckConstructorDeclaration(SyntaxNodeAnalysisContext c)
+        private static void CheckConstructorDeclaration(SyntaxNodeAnalysisContext context)
         {
-            var constructorDeclaration = (ConstructorDeclarationSyntax)c.Node;
+            var constructorDeclaration = (ConstructorDeclarationSyntax)context.Node;
 
-            if (IsConstructorRedundant(constructorDeclaration, c.SemanticModel))
+            if (IsConstructorRedundant(constructorDeclaration, context.SemanticModel))
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, constructorDeclaration.GetLocation(), "constructor"));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, constructorDeclaration.GetLocation(), "constructor"));
                 return;
             }
 
@@ -93,7 +93,7 @@ namespace SonarLint.Rules.CSharp
             if (initializer != null &&
                 IsInitializerRedundant(initializer))
             {
-                c.ReportDiagnostic(Diagnostic.Create(Rule, initializer.GetLocation(), "\"base()\" call"));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, initializer.GetLocation(), "\"base()\" call"));
             }
         }
 

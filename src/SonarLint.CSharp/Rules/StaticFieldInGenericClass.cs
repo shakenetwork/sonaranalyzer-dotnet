@@ -111,7 +111,7 @@ namespace SonarLint.Rules.CSharp
             context.ReportDiagnostic(Diagnostic.Create(Rule, location));
         }
 
-        private static bool HasGenericType(SyntaxNode root, IEnumerable<string> typeParameterNames, 
+        private static bool HasGenericType(SyntaxNode root, IEnumerable<string> typeParameterNames,
             SyntaxNodeAnalysisContext context)
         {
             var typeParameters = root.DescendantNodes()

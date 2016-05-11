@@ -97,8 +97,8 @@ namespace SonarLint.Rules.CSharp
 
             bool isNullCoalescing;
             if (CanBeSimplified(whenTrue, whenFalse,
-                    possiblyNullCoalescing ? comparedToNull : null, comparedIsNullInTrue,
-                    context.SemanticModel, out isNullCoalescing))
+                possiblyNullCoalescing ? comparedToNull : null, context.SemanticModel,
+                comparedIsNullInTrue, out isNullCoalescing))
             {
                 context.ReportDiagnostic(Diagnostic.Create(Rule, ifStatement.IfKeyword.GetLocation(),
                     ImmutableDictionary<string, string>.Empty.Add(IsNullCoalescingKey, isNullCoalescing.ToString()),
@@ -129,7 +129,7 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            if (CanExpressionBeNullCoalescing(whenTrue, whenFalse, comparedToNull, comparedIsNullInTrue, context.SemanticModel))
+            if (CanExpressionBeNullCoalescing(whenTrue, whenFalse, comparedToNull, context.SemanticModel, comparedIsNullInTrue))
             {
                 context.ReportDiagnostic(Diagnostic.Create(Rule, conditional.GetLocation(), "??"));
             }
@@ -165,7 +165,7 @@ namespace SonarLint.Rules.CSharp
         }
 
         private static bool CanBeSimplified(StatementSyntax statement1, StatementSyntax statement2,
-            ExpressionSyntax comparedToNull, bool comparedIsNullInTrue, SemanticModel semanticModel, out bool isNullCoalescing)
+            ExpressionSyntax comparedToNull, SemanticModel semanticModel, bool comparedIsNullInTrue, out bool isNullCoalescing)
         {
             isNullCoalescing = false;
             var return1 = statement1 as ReturnStatementSyntax;
@@ -182,7 +182,7 @@ namespace SonarLint.Rules.CSharp
                 }
 
                 if (comparedToNull != null &&
-                    CanExpressionBeNullCoalescing(retExpr1, retExpr2, comparedToNull, comparedIsNullInTrue, semanticModel))
+                    CanExpressionBeNullCoalescing(retExpr1, retExpr2, comparedToNull, semanticModel, comparedIsNullInTrue))
                 {
                     isNullCoalescing = true;
                 }
@@ -201,14 +201,14 @@ namespace SonarLint.Rules.CSharp
             var expression1 = expressionStatement1.Expression.RemoveParentheses();
             var expression2 = expressionStatement2.Expression.RemoveParentheses();
 
-            if (AreCandidateAssignments(expression1, expression2, comparedToNull, comparedIsNullInTrue,
-                    semanticModel, out isNullCoalescing))
+            if (AreCandidateAssignments(expression1, expression2, comparedToNull, semanticModel,
+                comparedIsNullInTrue, out isNullCoalescing))
             {
                 return true;
             }
 
             if (comparedToNull != null &&
-                CanExpressionBeNullCoalescing(expression1, expression2, comparedToNull, comparedIsNullInTrue, semanticModel))
+                CanExpressionBeNullCoalescing(expression1, expression2, comparedToNull, semanticModel, comparedIsNullInTrue))
             {
                 isNullCoalescing = true;
                 return true;
@@ -218,7 +218,7 @@ namespace SonarLint.Rules.CSharp
         }
 
         private static bool AreCandidateAssignments(ExpressionSyntax expression1, ExpressionSyntax expression2,
-            ExpressionSyntax compared, bool comparedIsNullInTrue, SemanticModel semanticModel, out bool isNullCoalescing)
+            ExpressionSyntax compared, SemanticModel semanticModel, bool comparedIsNullInTrue, out bool isNullCoalescing)
         {
             isNullCoalescing = false;
             var assignment1 = expression1 as AssignmentExpressionSyntax;
@@ -240,7 +240,7 @@ namespace SonarLint.Rules.CSharp
             }
 
             if (compared != null &&
-                CanExpressionBeNullCoalescing(assignment1.Right, assignment2.Right, compared, comparedIsNullInTrue, semanticModel))
+                CanExpressionBeNullCoalescing(assignment1.Right, assignment2.Right, compared, semanticModel, comparedIsNullInTrue))
             {
                 isNullCoalescing = true;
             }
@@ -262,21 +262,21 @@ namespace SonarLint.Rules.CSharp
         }
 
         private static bool AreCandidateInvocationsForNullCoalescing(ExpressionSyntax expression1, ExpressionSyntax expression2,
-            ExpressionSyntax comparedToNull, bool comparedIsNullInTrue,
-            SemanticModel semanticModel)
+            ExpressionSyntax comparedToNull, SemanticModel semanticModel,
+            bool comparedIsNullInTrue)
         {
-            return AreCandidateInvocations(expression1, expression2, comparedToNull, comparedIsNullInTrue, semanticModel);
+            return AreCandidateInvocations(expression1, expression2, comparedToNull, semanticModel, comparedIsNullInTrue);
         }
 
         private static bool AreCandidateInvocationsForTernary(ExpressionSyntax expression1, ExpressionSyntax expression2,
             SemanticModel semanticModel)
         {
-            return AreCandidateInvocations(expression1, expression2, null, false, semanticModel);
+            return AreCandidateInvocations(expression1, expression2, null, semanticModel, comparedIsNullInTrue: false);
         }
 
         private static bool AreCandidateInvocations(ExpressionSyntax expression1, ExpressionSyntax expression2,
-            ExpressionSyntax comparedToNull, bool comparedIsNullInTrue,
-            SemanticModel semanticModel)
+            ExpressionSyntax comparedToNull, SemanticModel semanticModel,
+            bool comparedIsNullInTrue)
         {
             var methodCall1 = expression1 as InvocationExpressionSyntax;
             var methodCall2 = expression2 as InvocationExpressionSyntax;
@@ -348,7 +348,7 @@ namespace SonarLint.Rules.CSharp
         }
 
         private static bool CanExpressionBeNullCoalescing(ExpressionSyntax whenTrue, ExpressionSyntax whenFalse,
-            ExpressionSyntax comparedToNull, bool comparedIsNullInTrue, SemanticModel semanticModel)
+            ExpressionSyntax comparedToNull, SemanticModel semanticModel, bool comparedIsNullInTrue)
         {
             if (EquivalenceChecker.AreEquivalent(whenTrue, comparedToNull))
             {
@@ -361,7 +361,7 @@ namespace SonarLint.Rules.CSharp
             }
 
             return AreCandidateInvocationsForNullCoalescing(whenTrue, whenFalse, comparedToNull,
-                comparedIsNullInTrue, semanticModel);
+                semanticModel, comparedIsNullInTrue);
         }
 
         internal static bool TryGetExpressionComparedToNull(ExpressionSyntax expression,

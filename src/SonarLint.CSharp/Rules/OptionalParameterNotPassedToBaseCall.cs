@@ -85,12 +85,12 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.InvocationExpression);
         }
 
-        private static bool IsCallInsideOverride(InvocationExpressionSyntax invocation, IMethodSymbol calledMethod, 
+        private static bool IsCallInsideOverride(InvocationExpressionSyntax invocation, IMethodSymbol calledMethod,
             SemanticModel semanticModel)
         {
             var enclosingSymbol = semanticModel.GetEnclosingSymbol(invocation.SpanStart) as IMethodSymbol;
 
-            return enclosingSymbol != null && 
+            return enclosingSymbol != null &&
                 enclosingSymbol.IsOverride &&
                 object.Equals(enclosingSymbol.OverriddenMethod, calledMethod);
         }
