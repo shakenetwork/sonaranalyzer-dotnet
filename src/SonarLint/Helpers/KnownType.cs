@@ -164,8 +164,8 @@ namespace SonarLint.Helpers
         #endregion
 
         public string TypeName { get; }
-        private SpecialType specialType;
-        private bool isSpecialType;
+        private readonly SpecialType specialType;
+        private readonly bool isSpecialType;
 
         private KnownType(string typeName)
         {
