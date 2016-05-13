@@ -111,7 +111,7 @@ namespace SonarLint.Rules.CSharp
             }
         }
 
-        private void RegisterForStatementConditionRemoval(CodeFixContext context, SyntaxNode root, ForStatementSyntax forStatement)
+        private static void RegisterForStatementConditionRemoval(CodeFixContext context, SyntaxNode root, ForStatementSyntax forStatement)
         {
             context.RegisterCodeFix(
                 CodeAction.Create(

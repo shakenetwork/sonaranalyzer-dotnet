@@ -61,7 +61,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        private static ISet<SyntaxKind> assignmentKinds = ImmutableHashSet.Create(
+        private static readonly ISet<SyntaxKind> assignmentKinds = ImmutableHashSet.Create(
             SyntaxKind.SimpleAssignmentExpression,
             SyntaxKind.AddAssignmentExpression,
             SyntaxKind.SubtractAssignmentExpression,
@@ -74,11 +74,11 @@ namespace SonarLint.Rules.CSharp
             SyntaxKind.LeftShiftAssignmentExpression,
             SyntaxKind.RightShiftAssignmentExpression);
 
-        private static ISet<SyntaxKind> prefixUnaryKinds = ImmutableHashSet.Create(
+        private static readonly ISet<SyntaxKind> prefixUnaryKinds = ImmutableHashSet.Create(
             SyntaxKind.PreDecrementExpression,
             SyntaxKind.PreIncrementExpression);
 
-        private static ISet<SyntaxKind> postfixUnaryKinds = ImmutableHashSet.Create(
+        private static readonly ISet<SyntaxKind> postfixUnaryKinds = ImmutableHashSet.Create(
             SyntaxKind.PostDecrementExpression,
             SyntaxKind.PostIncrementExpression);
 

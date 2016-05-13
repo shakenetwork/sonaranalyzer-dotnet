@@ -88,7 +88,7 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.ForStatement);
         }
 
-        private void CheckForLoopCondition(SyntaxNodeAnalysisContext context)
+        private static void CheckForLoopCondition(SyntaxNodeAnalysisContext context)
         {
             var forLoop = (ForStatementSyntax)context.Node;
 
