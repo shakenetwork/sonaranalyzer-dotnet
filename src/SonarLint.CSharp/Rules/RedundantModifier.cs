@@ -306,6 +306,16 @@ namespace SonarLint.Rules.CSharp
                 VisitChecked(node, SyntaxKind.CheckedStatement, node.Keyword, base.VisitCheckedStatement);
             }
 
+            public override void VisitAssignmentExpression(AssignmentExpressionSyntax node)
+            {
+                base.VisitAssignmentExpression(node);
+
+                if (AssignmentsForChecked.Contains(node.Kind()))
+                {
+                    SetHasIntegralOperation(node);
+                }
+            }
+
             public override void VisitBinaryExpression(BinaryExpressionSyntax node)
             {
                 base.VisitBinaryExpression(node);
@@ -382,7 +392,9 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.AddExpression,
                 SyntaxKind.SubtractExpression,
                 SyntaxKind.MultiplyExpression,
-                SyntaxKind.DivideExpression,
+                SyntaxKind.DivideExpression);
+
+            private static readonly ISet<SyntaxKind> AssignmentsForChecked = ImmutableHashSet.Create(
                 SyntaxKind.AddAssignmentExpression,
                 SyntaxKind.SubtractAssignmentExpression,
                 SyntaxKind.MultiplyAssignmentExpression,

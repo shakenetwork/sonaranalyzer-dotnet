@@ -182,6 +182,12 @@ interface PartialInterface //Noncompliant
                 var x = 10;
                 var y = (double)x;
             }
+
+            checked
+            {
+                var x = 10;
+                x += int.MaxValue;
+            }
         }
     }
 }
