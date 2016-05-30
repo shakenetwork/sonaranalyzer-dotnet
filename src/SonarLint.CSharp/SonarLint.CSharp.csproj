@@ -87,6 +87,17 @@
     <Compile Include="..\AssemblyInfo.Shared.cs">
       <Link>Properties\AssemblyInfo.Shared.cs</Link>
     </Compile>
+    <Compile Include="Helpers\ControlFlowGraph\Common\SyntaxNodeBased\Blocks\BranchBlock.cs" />
+    <Compile Include="Helpers\ControlFlowGraph\Common\SyntaxNodeBased\Blocks\TemporaryBlock.cs" />
+    <Compile Include="Helpers\ControlFlowGraph\Common\SyntaxNodeBased\Blocks\JumpBlock.cs" />
+    <Compile Include="Helpers\ControlFlowGraph\Common\SyntaxNodeBased\Blocks\ExitBlock.cs" />
+    <Compile Include="Helpers\ControlFlowGraph\Common\Block.cs" />
+    <Compile Include="Helpers\ControlFlowGraph\Common\SyntaxNodeBased\Blocks\BinaryBranchBlock.cs" />
+    <Compile Include="Helpers\ControlFlowGraph\Common\SyntaxNodeBased\Blocks\SimpleBlock.cs" />
+    <Compile Include="Helpers\ControlFlowGraph\CSharp\ControlFlowGraph.cs" />
+    <Compile Include="Helpers\ControlFlowGraph\CSharp\ControlFlowGraphBuilder.cs" />
+    <Compile Include="Helpers\ControlFlowGraph\Common\IControlFlowGraph.cs" />
+    <Compile Include="Helpers\ControlFlowGraph\Common\SyntaxNodeBased\ControlFlowGraphBuilder.cs" />
     <Compile Include="Helpers\DiagnosticAnalyzerContextHelper.cs" />
     <Compile Include="Helpers\EquivalenceChecker.cs" />
     <Compile Include="Helpers\ExpressionNumericConverter.cs" />
