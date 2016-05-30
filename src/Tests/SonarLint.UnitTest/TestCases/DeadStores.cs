@@ -23,11 +23,11 @@ namespace Tests.Diagnostics
     {
         void calculateRate(int a, int b)
         {
-            int ll = doSomething(); // Noncompliant; variable not used later
+            b = doSomething(); // Noncompliant; parameter not used later
 
             int i, j;
-            i = a + b;
-            i += i + 2; // Noncompliant; variable is overwritten in the following statement
+            i = a + 12;
+            i += i + 2; // Noncompliant
             i = 5;
             j = i;
             i = doSomething();  // Noncompliant; retrieved value overwritten in for loop
@@ -37,9 +37,9 @@ namespace Tests.Diagnostics
             }
 
             if ((i = doSomething()) == 5 ||
-                (i = doSomethingElse()) == 5)   //special case, where i is overwritten in the same statement (if) many times. All of them is ignored
+                (i = doSomethingElse()) == 5)
             {
-                i += 5; // Noncompliant, last use of i, and we are not in a loop
+                i += 5; // Noncompliant
             }
 
             var resource = new Resource(); // Noncompliant; retrieved value not used
@@ -48,7 +48,19 @@ namespace Tests.Diagnostics
                 resource.DoSomething();
             }
 
-            var x = 0; // Noncompliant;
+            var x = 10; // Noncompliant
+            var y =
+                x = 11; // Noncompliant
+            Console.WriteLine(y);
+
+            int k = 12; // Noncompliant
+            X(out k);   // Compliant, not reporting on out parameters
+        }
+        void X(out int i) { i = 10; }
+
+        void calculateRate(int a, int b) // We don't report on methods with try-catch
+        {
+            var x = 0;
             x = 1;
             try
             {
@@ -59,12 +71,12 @@ namespace Tests.Diagnostics
             }
             catch (Exception)
             {
-                x = 21; // Noncompliant
+                x = 21;
                 x = 22;
                 Console.Write(x);
-                x = 23; // Non-compliant, but not recognized
+                x = 23;
             }
-            x = 31; // Noncompliant
+            x = 31;
         }
 
         void calculateRate2(int a, int b)
@@ -100,14 +112,85 @@ namespace Tests.Diagnostics
             switch (b)
             {
                 case 6:
-                    b = 5; //compliant, we ignore consecutive statements that are not in the same context (have different parents)
+                    b = 5; // Noncompliant
+                    break;
                 case 7:
-                    b = 56;
+                    b = 56; // Noncompliant
+                    break;
             }
 
             b = 7;
-            b += 7; //Noncompliant
+            Console.Write(b);
+            b += 7; // Noncompliant
         }
+
+        public int Switch1(int x)
+        {
+            var b = 0; // Noncompliant
+            switch (x)
+            {
+                case 6:
+                    b = 5;
+                    break;
+                case 7:
+                    b = 56;
+                    break;
+                default:
+                    b = 0;
+                    break;
+            }
+
+            return b;
+        }
+
+        public int Switch2(int x)
+        {
+            var b = 0; // Compliant
+            switch (x)
+            {
+                case 6:
+                    b = 5;
+                    break;
+                case 7:
+                    b = 56;
+                    break;
+            }
+
+            return b;
+        }
+
+        private int MyProp
+        {
+            get
+            {
+                var i = 10;
+                Console.WriteLine(i);
+                i++; // Noncompliant
+                i = 12;
+                ++i; // Noncompliant
+                i = 12;
+                var a = ++i;
+                return a;
+            }
+        }
+
+        private int MyProp2
+        {
+            get
+            {
+                var i = 10; // Noncompliant
+                if (nameof(((i))) == "i")
+                {
+                    i = 11;
+                }
+                else
+                {
+                    i = 12;
+                }
+                Console.WriteLine(i);
+            }
+        }
+
         public List<int> Method(int i)
         {
             var l = new List<int>();
@@ -117,18 +200,19 @@ namespace Tests.Diagnostics
                 return (l = new List<int>(new [] {i}));
             };
 
-            var x = l; //Noncompliant
+            var x = l; // Noncompliant
 
             return func();
         }
 
         public List<int> Method2(int i)
         {
-            var l = new List<int>();
+            var l = new List<int>(); // Compliant, not reporting on captured variables
 
             return (() =>
             {
-                return (l = new List<int>(new[] { i }));
+                var k = 10; // Noncompliant
+                return (l = new List<int>(new[] { i })); // l captured here
             })();
         }
 
@@ -137,10 +221,7 @@ namespace Tests.Diagnostics
             bool f = false;
             if (true || (f = false))
             {
-                if (f)
-                {
-
-                }
+                if (f) { }
             }
         }
 
@@ -150,11 +231,38 @@ namespace Tests.Diagnostics
             f = true;
             if (true || (f = false))
             {
-                if (f)
-                {
-
-                }
+                if (f) { }
             }
+        }
+
+        public List<int> Method5(out int i, ref int j)
+        {
+            i = 10; // Compliant, out parameter
+
+            j = 11;
+            if (j == 11)
+            {
+                j = 12; // Compliant, ref parameter
+            }
+        }
+        public void Method5Call1(out int i)
+        {
+            int x = 10;
+            Method5(out i, x);
+        }
+
+        public void Method5Call2()
+        {
+            int x;
+            Method5Call1(out x); // Compliant, reporting on this can be considered false positive, although it's not.
+        }
+
+        public List<int> Method6()
+        {
+            var i = 10;
+            Action a = () => { Console.WriteLine(i); };
+            i = 11; // Noncompliant, false positive (JIRA: SLVS-872)
+            a();
         }
     }
 }

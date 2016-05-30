@@ -28,6 +28,45 @@
 },
 {
 "id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"actor\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\Props.cs",
+"region":  {
+"startLine":  556,
+"startColumn":  23,
+"endLine":  556,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"actor\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\Props.cs",
+"region":  {
+"startLine":  584,
+"startColumn":  23,
+"endLine":  584,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"actor\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\Props.cs",
+"region":  {
+"startLine":  610,
+"startColumn":  23,
+"endLine":  610,
+"endColumn":  24
+}
+}
+},
+{
+"id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"newWorker\".",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Helios.Concurrency.DedicatedThreadPool.cs",
@@ -62,6 +101,32 @@
 "startColumn":  30,
 "endLine":  47,
 "endColumn":  31
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"oldNext\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\Util\\MonoConcurrentQueue.cs",
+"region":  {
+"startLine":  148,
+"startColumn":  26,
+"endLine":  148,
+"endColumn":  27
+}
+}
+},
+{
+"id":  "S1854",
+"message":  "Remove this useless assignment to local variable \"actor\".",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\Util\\Resolver.cs",
+"region":  {
+"startLine":  32,
+"startColumn":  19,
+"endLine":  32,
+"endColumn":  20
 }
 }
 }

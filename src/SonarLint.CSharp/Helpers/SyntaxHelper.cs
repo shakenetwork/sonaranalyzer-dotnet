@@ -109,5 +109,14 @@ namespace SonarLint.Helpers
 
             return false;
         }
+
+        public static bool IsInNameofCall(this ExpressionSyntax expression)
+        {
+            var argumentList = (expression.Parent as ArgumentSyntax)?.Parent as ArgumentListSyntax;
+            var nameofCall = argumentList?.Parent as InvocationExpressionSyntax;
+            var nameofIdentifier = (nameofCall?.Expression as IdentifierNameSyntax)?.Identifier;
+            return nameofIdentifier.HasValue &&
+                (nameofIdentifier.Value.IsKind(SyntaxKind.NameOfKeyword) || (nameofIdentifier.Value.ToString() == SyntaxFacts.GetText(SyntaxKind.NameOfKeyword)));
+        }
     }
 }

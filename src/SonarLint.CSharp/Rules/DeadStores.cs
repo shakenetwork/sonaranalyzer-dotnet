@@ -28,9 +28,13 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using SonarLint.Helpers.Cfg.CSharp;
+using SonarLint.Helpers.Cfg.Common;
 
 namespace SonarLint.Rules.CSharp
 {
+    using LiveVariableAnalysis = Helpers.Cfg.CSharp.LiveVariableAnalysis;
+
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("15min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
@@ -57,201 +61,297 @@ namespace SonarLint.Rules.CSharp
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
 
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics
-        {
-            get { return ImmutableArray.Create(Rule); }
-        }
-
-        private static readonly SyntaxKind[] ReadWriteAssignment =
-        {
-            SyntaxKind.AddAssignmentExpression,
-            SyntaxKind.SubtractAssignmentExpression,
-            SyntaxKind.MultiplyAssignmentExpression,
-            SyntaxKind.DivideAssignmentExpression,
-            SyntaxKind.ModuloAssignmentExpression,
-            SyntaxKind.AndAssignmentExpression,
-            SyntaxKind.ExclusiveOrAssignmentExpression,
-            SyntaxKind.OrAssignmentExpression,
-            SyntaxKind.LeftShiftAssignmentExpression,
-            SyntaxKind.RightShiftAssignmentExpression
-        };
-
-        private static readonly SyntaxKind[] LoopKinds =
-        {
-            SyntaxKind.ForEachStatement,
-            SyntaxKind.ForStatement,
-            SyntaxKind.WhileStatement,
-            SyntaxKind.DoStatement
-        };
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
 
         protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
-                    var variableDeclaration = (VariableDeclarationSyntax)c.Node;
-                    var localDeclarationStatementSyntax = variableDeclaration.Parent;
-
-                    var declaringBlock = localDeclarationStatementSyntax.Parent as BlockSyntax;
-                    if (declaringBlock == null)
+                    var declaration = (BaseMethodDeclarationSyntax)c.Node;
+                    var symbol = c.SemanticModel.GetDeclaredSymbol(declaration);
+                    if (symbol == null)
                     {
                         return;
                     }
 
-                    foreach (var variableDeclarator in variableDeclaration.Variables)
-                    {
-                        var variableSymbol = c.SemanticModel.GetDeclaredSymbol(variableDeclarator);
-                        if (variableSymbol == null)
-                        {
-                            continue;
-                        }
-
-                        var references = declaringBlock.DescendantNodes()
-                            .OfType<IdentifierNameSyntax>()
-                            .Where(syntax => syntax.SpanStart > variableDeclarator.FullSpan.End)
-                            .Where(syntax =>
-                                variableSymbol.Equals(c.SemanticModel.GetSymbolInfo(syntax).Symbol))
-                            .ToList();
-
-                        if (references.Count == 0)
-                        {
-                            if (variableDeclarator.Initializer != null)
-                            {
-                                ReportIfNotInTry(variableDeclarator.Initializer.EqualsToken, variableDeclarator.Identifier.Text,
-                                    c);
-                            }
-                            continue;
-                        }
-
-                        var assignments = declaringBlock.DescendantNodes()
-                            .OfType<AssignmentExpressionSyntax>()
-                            .Where(assignment =>
-                                variableSymbol.Equals(c.SemanticModel.GetSymbolInfo(assignment.Left).Symbol))
-                            .ToList();
-
-                        if (assignments.Count == 0)
-                        {
-                            continue;
-                        }
-
-                        var firstAssignment = assignments.First();
-                        if (variableDeclarator.Initializer != null &&
-                            InAnonymous(firstAssignment, declaringBlock))
-                        {
-                            return;
-                        }
-
-                        if (variableDeclarator.Initializer != null &&
-                            !MightHaveReferenceBetween(variableDeclarator.Initializer, firstAssignment, references) &&
-                            !InConditional(firstAssignment, declaringBlock))
-                        {
-                            ReportIfNotInTry(variableDeclarator.Initializer.EqualsToken, variableDeclarator.Identifier.Text,
-                                c);
-                        }
-
-                        for (var i = 1; i < assignments.Count; i++)
-                        {
-                            var first = assignments[i - 1];
-                            var second = assignments[i];
-
-                            if (InConditional(second, declaringBlock))
-                            {
-                                continue;
-                            }
-
-                            if (InAnonymous(second, declaringBlock))
-                            {
-                                return;
-                            }
-
-                            if (MightHaveReferenceBetween(first, second, references))
-                            {
-                                continue;
-                            }
-
-                            ReportIfNotInTry(first.OperatorToken, variableDeclarator.Identifier.Text, c);
-                        }
-
-                        var lastAssignment = assignments.Last();
-
-                        if (InAnonymous(lastAssignment, declaringBlock))
-                        {
-                            return;
-                        }
-
-                        if (!references.Any(reference => reference.SpanStart > lastAssignment.Span.End) &&
-                            !InLoop(lastAssignment, declaringBlock))
-                        {
-                            ReportIfNotInTry(lastAssignment.OperatorToken, variableDeclarator.Identifier.Text, c);
-                        }
-                    }
+                    CheckForDeadStores(declaration.Body, symbol, c);
                 },
-                SyntaxKind.VariableDeclaration);
+                SyntaxKind.MethodDeclaration,
+                SyntaxKind.ConstructorDeclaration,
+                SyntaxKind.DestructorDeclaration,
+                SyntaxKind.ConversionOperatorDeclaration,
+                SyntaxKind.OperatorDeclaration);
+
+            context.RegisterSyntaxNodeActionInNonGenerated(
+                c =>
+                {
+                    var declaration = (AccessorDeclarationSyntax)c.Node;
+                    var symbol = c.SemanticModel.GetDeclaredSymbol(declaration);
+                    if (symbol == null)
+                    {
+                        return;
+                    }
+
+                    CheckForDeadStores(declaration.Body, symbol, c);
+                },
+                SyntaxKind.GetAccessorDeclaration,
+                SyntaxKind.SetAccessorDeclaration,
+                SyntaxKind.AddAccessorDeclaration,
+                SyntaxKind.RemoveAccessorDeclaration);
+
+            context.RegisterSyntaxNodeActionInNonGenerated(
+                c =>
+                {
+                    var declaration = (AnonymousFunctionExpressionSyntax)c.Node;
+                    var symbol = c.SemanticModel.GetSymbolInfo(declaration).Symbol;
+                    if (symbol == null)
+                    {
+                        return;
+                    }
+
+                    CheckForDeadStores(declaration.Body, symbol, c);
+                },
+                SyntaxKind.AnonymousMethodExpression,
+                SyntaxKind.SimpleLambdaExpression,
+                SyntaxKind.ParenthesizedLambdaExpression);
         }
 
-        private static void ReportIfNotInTry(SyntaxToken tokenToReportOn, string name,
+        private static void CheckForDeadStores(CSharpSyntaxNode node, ISymbol declaration, SyntaxNodeAnalysisContext context)
+        {
+            IControlFlowGraph cfg;
+            if (!ControlFlowGraph.TryGet(node, context.SemanticModel, out cfg))
+            {
+                return;
+            }
+
+            var lva = LiveVariableAnalysis.Analyze(cfg, declaration, context.SemanticModel);
+
+            foreach (var block in cfg.Blocks)
+            {
+                CheckCfgBlockForDeadStores(block, lva.GetLiveOut(block), declaration, context);
+            }
+        }
+
+        private static void CheckCfgBlockForDeadStores(Block block, IEnumerable<ISymbol> blockOutState, ISymbol declaration,
             SyntaxNodeAnalysisContext context)
         {
-            var currentNode = tokenToReportOn.Parent;
-            while (currentNode.Parent != null)
+            var lva = new InBlockLivenessAnalysis(block, blockOutState, declaration, context);
+            lva.Analyze();
+        }
+
+        private class InBlockLivenessAnalysis
+        {
+            private readonly Block block;
+            private readonly IEnumerable<ISymbol> blockOutState;
+            private readonly SyntaxNodeAnalysisContext context;
+            private readonly ISymbol declaration;
+
+            public InBlockLivenessAnalysis(Block block, IEnumerable<ISymbol> blockOutState, ISymbol declaration,
+                SyntaxNodeAnalysisContext context)
             {
-                var tryStatement = currentNode.Parent as TryStatementSyntax;
-                if (tryStatement != null && tryStatement.Block == currentNode)
+                this.block = block;
+                this.blockOutState = blockOutState;
+                this.declaration = declaration;
+                this.context = context;
+            }
+
+            public void Analyze()
+            {
+                var assignmentLhs = new HashSet<SyntaxNode>();
+                var liveOut = new HashSet<ISymbol>(blockOutState);
+
+                foreach (var instruction in block.Instructions.Reverse())
+                {
+                    switch (instruction.Kind())
+                    {
+                        case SyntaxKind.IdentifierName:
+                            ProcessIdentifier(instruction, assignmentLhs, liveOut);
+                            break;
+
+                        case SyntaxKind.AddAssignmentExpression:
+                        case SyntaxKind.SubtractAssignmentExpression:
+                        case SyntaxKind.MultiplyAssignmentExpression:
+                        case SyntaxKind.DivideAssignmentExpression:
+                        case SyntaxKind.ModuloAssignmentExpression:
+                        case SyntaxKind.AndAssignmentExpression:
+                        case SyntaxKind.ExclusiveOrAssignmentExpression:
+                        case SyntaxKind.OrAssignmentExpression:
+                        case SyntaxKind.LeftShiftAssignmentExpression:
+                        case SyntaxKind.RightShiftAssignmentExpression:
+                            ProcessOpAssignment(instruction, assignmentLhs, liveOut);
+                            break;
+
+                        case SyntaxKind.SimpleAssignmentExpression:
+                            ProcessSimpleAssignment(instruction, assignmentLhs, liveOut);
+                            break;
+
+                        case SyntaxKind.VariableDeclarator:
+                            ProcessVariableDeclarator(instruction, liveOut);
+                            break;
+
+                        case SyntaxKind.PreIncrementExpression:
+                        case SyntaxKind.PreDecrementExpression:
+                            ProcessPrefixExpression(instruction, liveOut);
+                            break;
+
+                        case SyntaxKind.PostIncrementExpression:
+                        case SyntaxKind.PostDecrementExpression:
+                            ProcessPostfixExpression(instruction, liveOut);
+                            break;
+
+                        case SyntaxKind.AnonymousMethodExpression:
+                        case SyntaxKind.ParenthesizedLambdaExpression:
+                        case SyntaxKind.SimpleLambdaExpression:
+                        case SyntaxKind.QueryExpression:
+                            CollectAllCapturedLocalSymbols(instruction, liveOut);
+                            break;
+
+                        default:
+                            break;
+                    }
+                }
+            }
+
+            private void ProcessIdentifier(SyntaxNode instruction, HashSet<SyntaxNode> assignmentLhs, HashSet<ISymbol> liveOut)
+            {
+                var identifier = (IdentifierNameSyntax)instruction;
+                var symbol = context.SemanticModel.GetSymbolInfo(identifier).Symbol;
+                if (symbol == null)
                 {
                     return;
                 }
 
-                currentNode = currentNode.Parent;
+                if (!identifier.GetSelfOrTopParenthesizedExpression().IsInNameofCall() &&
+                    LiveVariableAnalysis.IsLocalScoped(symbol, declaration))
+                {
+                    if (LiveVariableAnalysis.IsOutArgument(identifier))
+                    {
+                        liveOut.Remove(symbol);
+                    }
+                    else
+                    {
+                        if (!assignmentLhs.Contains(identifier))
+                        {
+                            liveOut.Add(symbol);
+                        }
+                    }
+                }
             }
 
-            context.ReportDiagnostic(Diagnostic.Create(Rule, tokenToReportOn.GetLocation(), name));
-        }
+            private void ProcessOpAssignment(SyntaxNode instruction, HashSet<SyntaxNode> assignmentLhs, HashSet<ISymbol> liveOut)
+            {
+                var assignment = (AssignmentExpressionSyntax)instruction;
+                var left = assignment.Left.RemoveParentheses();
+                if (left.IsKind(SyntaxKind.IdentifierName))
+                {
+                    var symbol = context.SemanticModel.GetSymbolInfo(left).Symbol;
+                    if (symbol == null)
+                    {
+                        return;
+                    }
 
-        private static bool MightHaveReferenceBetween(SyntaxNode first, AssignmentExpressionSyntax second, List<IdentifierNameSyntax> references)
-        {
-            return !DifferentStatementsWithSameParent(first, second) ||
-                   references.Any(reference =>
-                       reference.SpanStart < second.SpanStart && reference.SpanStart >= first.Span.End) ||
-                   ReferenceInAssignmentRight(references, second) ||
-                   ReadWriteAssignment.Contains(second.Kind());
-        }
+                    ReportOnAssignment(assignment, left, symbol, declaration, assignmentLhs, liveOut, context);
+                }
+            }
 
-        private static bool InAnonymous(AssignmentExpressionSyntax currentAssignment, BlockSyntax declaringBlock)
-        {
-            return currentAssignment.Ancestors()
-                .TakeWhile(ancestor => ancestor != declaringBlock)
-                .Any(ancestor => ancestor is AnonymousFunctionExpressionSyntax);
-        }
+            private void ProcessSimpleAssignment(SyntaxNode instruction, HashSet<SyntaxNode> assignmentLhs, HashSet<ISymbol> liveOut)
+            {
+                var assignment = (AssignmentExpressionSyntax)instruction;
+                var left = assignment.Left.RemoveParentheses();
+                if (left.IsKind(SyntaxKind.IdentifierName))
+                {
+                    var symbol = context.SemanticModel.GetSymbolInfo(left).Symbol;
+                    if (symbol == null)
+                    {
+                        return;
+                    }
 
-        private static bool InConditional(AssignmentExpressionSyntax currentAssignment, BlockSyntax declaringBlock)
-        {
-            return currentAssignment.Ancestors()
-                .TakeWhile(ancestor => ancestor != declaringBlock)
-                .OfType<BinaryExpressionSyntax>()
-                .Any(binary => binary.IsKind(SyntaxKind.LogicalAndExpression) ||
-                                 binary.IsKind(SyntaxKind.LogicalOrExpression));
-        }
+                    ReportOnAssignment(assignment, left, symbol, declaration, assignmentLhs, liveOut, context);
+                    liveOut.Remove(symbol);
+                }
+            }
 
-        private static bool InLoop(AssignmentExpressionSyntax currentAssignment, BlockSyntax declaringBlock)
-        {
-            return currentAssignment.Ancestors()
-                .TakeWhile(ancestor => ancestor != declaringBlock)
-                .Any(ancestor => LoopKinds.Contains(ancestor.Kind()));
-        }
+            private void ProcessVariableDeclarator(SyntaxNode instruction, HashSet<ISymbol> liveOut)
+            {
+                var declarator = (VariableDeclaratorSyntax)instruction;
+                var symbol = context.SemanticModel.GetDeclaredSymbol(declarator);
+                if (symbol == null)
+                {
+                    return;
+                }
 
-        private static bool DifferentStatementsWithSameParent(SyntaxNode first, SyntaxNode second)
-        {
-            var firstStatement = first.FirstAncestorOrSelf<StatementSyntax>();
-            var secondStatement = second.FirstAncestorOrSelf<StatementSyntax>();
+                if (declarator.Initializer != null &&
+                    !liveOut.Contains(symbol))
+                {
+                    context.ReportDiagnostic(Diagnostic.Create(Rule, declarator.Initializer.EqualsToken.GetLocation(), symbol.Name));
+                }
+                liveOut.Remove(symbol);
+            }
 
-            return firstStatement != secondStatement && firstStatement.Parent == secondStatement.Parent;
-        }
+            private void ProcessPrefixExpression(SyntaxNode instruction, HashSet<ISymbol> liveOut)
+            {
+                var prefixExpression = (PrefixUnaryExpressionSyntax)instruction;
+                var parent = prefixExpression.GetSelfOrTopParenthesizedExpression();
+                var operand = prefixExpression.Operand.RemoveParentheses();
+                if (parent.Parent is ExpressionStatementSyntax &&
+                    operand.IsKind(SyntaxKind.IdentifierName))
+                {
+                    var symbol = context.SemanticModel.GetSymbolInfo(operand).Symbol;
+                    if (symbol == null)
+                    {
+                        return;
+                    }
 
-        private static bool ReferenceInAssignmentRight(IEnumerable<IdentifierNameSyntax> references, AssignmentExpressionSyntax currentAssignment)
-        {
-            return references.Any(reference =>
-                reference.SpanStart >= currentAssignment.Right.SpanStart &&
-                reference.SpanStart < currentAssignment.Right.Span.End);
+                    if (LiveVariableAnalysis.IsLocalScoped(symbol, declaration) &&
+                        !liveOut.Contains(symbol))
+                    {
+                        context.ReportDiagnostic(Diagnostic.Create(Rule, prefixExpression.GetLocation(), symbol.Name));
+                    }
+                }
+            }
+
+            private void ProcessPostfixExpression(SyntaxNode instruction, HashSet<ISymbol> liveOut)
+            {
+                var postfixExpression = (PostfixUnaryExpressionSyntax)instruction;
+                var operand = postfixExpression.Operand.RemoveParentheses();
+                if (operand.IsKind(SyntaxKind.IdentifierName))
+                {
+                    var symbol = context.SemanticModel.GetSymbolInfo(operand).Symbol;
+                    if (symbol == null)
+                    {
+                        return;
+                    }
+
+                    if (LiveVariableAnalysis.IsLocalScoped(symbol, declaration) &&
+                        !liveOut.Contains(symbol))
+                    {
+                        context.ReportDiagnostic(Diagnostic.Create(Rule, postfixExpression.GetLocation(), symbol.Name));
+                    }
+                }
+            }
+
+            private void CollectAllCapturedLocalSymbols(SyntaxNode instruction, HashSet<ISymbol> liveOut)
+            {
+                var allCapturedSymbols = instruction.DescendantNodes()
+                    .OfType<IdentifierNameSyntax>()
+                    .Select(i => context.SemanticModel.GetSymbolInfo(i).Symbol)
+                    .Where(s => s != null && LiveVariableAnalysis.IsLocalScoped(s, declaration));
+
+                liveOut.UnionWith(allCapturedSymbols);
+            }
+
+            private static void ReportOnAssignment(AssignmentExpressionSyntax assignment, ExpressionSyntax left, ISymbol symbol,
+                ISymbol declaration, HashSet<SyntaxNode> assignmentLhs, HashSet<ISymbol> outState, SyntaxNodeAnalysisContext context)
+            {
+                if (LiveVariableAnalysis.IsLocalScoped(symbol, declaration) &&
+                    !outState.Contains(symbol))
+                {
+                    context.ReportDiagnostic(Diagnostic.Create(Rule, assignment.OperatorToken.GetLocation(), symbol.Name));
+                }
+
+                assignmentLhs.Add(left);
+            }
         }
     }
 }
