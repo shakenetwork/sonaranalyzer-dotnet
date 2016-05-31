@@ -594,6 +594,11 @@ namespace SonarLint.Helpers.Cfg.CSharp
             var gotosToFix = SwitchGotoJumpBlocks.Pop();
             FixJumps(gotosToFix, caseBlocksByValue);
 
+            if (!caseBlocksByValue.ContainsKey(GotoDefaultEntry))
+            {
+                caseBlocks.Add(successorBlock);
+            }
+
             currentBlock = CreateBranchBlock(switchStatement, caseBlocks);
 
             BuildExpression(switchStatement.Expression);

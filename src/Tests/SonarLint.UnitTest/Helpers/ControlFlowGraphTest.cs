@@ -1180,7 +1180,7 @@ namespace NS
 
             cw0.Should().BeSameAs(cfg.EntryBlock);
 
-            cw0.SuccessorBlocks.Should().OnlyContainInOrder(case1, cw1);
+            cw0.SuccessorBlocks.Should().OnlyContainInOrder(case1, cw1, cw3);
             case1.SuccessorBlocks.Should().OnlyContain(cw1);
             cw1.SuccessorBlocks.Should().OnlyContain(cw3);
             cw3.SuccessorBlocks.Should().OnlyContain(exitBlock);
@@ -1390,6 +1390,40 @@ namespace NS
             case1.SuccessorBlocks.Should().OnlyContain(cw1);
             case3.SuccessorBlocks.Should().OnlyContain(defaultCase);
             defaultCase.SuccessorBlocks.Should().OnlyContain(cw2);
+
+            cw1.SuccessorBlocks.Should().OnlyContain(cw3);
+            cw2.SuccessorBlocks.Should().OnlyContain(cw3);
+            cw3.SuccessorBlocks.Should().OnlyContain(exitBlock);
+        }
+
+        [TestMethod]
+        [TestCategory("CFG")]
+        public void Cfg_Switch_NoDefault()
+        {
+            var cfg = Build("cw0(); switch(a) { case 1: case 2: cw1(); break; case 3: case 4: cw2(); break; } cw3();");
+            VerifyCfg(cfg, 7);
+
+            var blocks = cfg.Blocks.ToList();
+
+            var cw0 = blocks
+                .First(block => block.Instructions.Any(n => n.ToString() == "cw0")) as BranchBlock;
+            var cw1 = blocks
+                .First(block => block.Instructions.Any(n => n.ToString() == "cw1")) as JumpBlock;
+            var cw2 = blocks
+                .First(block => block.Instructions.Any(n => n.ToString() == "cw2")) as JumpBlock;
+            var cw3 = blocks
+                .First(block => block.Instructions.Any(n => n.ToString() == "cw3"));
+
+            var case3 = blocks[1] as JumpBlock;
+            var case1 = blocks[3] as JumpBlock;
+
+            var exitBlock = cfg.ExitBlock;
+
+            cw0.Should().BeSameAs(cfg.EntryBlock);
+
+            cw0.SuccessorBlocks.Should().OnlyContainInOrder(case1, cw1, case3, cw2, cw3);
+            case1.SuccessorBlocks.Should().OnlyContain(cw1);
+            case3.SuccessorBlocks.Should().OnlyContain(cw2);
 
             cw1.SuccessorBlocks.Should().OnlyContain(cw3);
             cw2.SuccessorBlocks.Should().OnlyContain(cw3);
