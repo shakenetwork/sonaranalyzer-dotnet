@@ -85,5 +85,29 @@ namespace SonarLint.Helpers
 
             return false;
         }
+
+        public static bool IsExpressionOnThis(this ExpressionSyntax expression)
+        {
+            if (expression.IsKind(SyntaxKind.IdentifierName))
+            {
+                return true;
+            }
+
+            var memberAccess = expression as MemberAccessExpressionSyntax;
+            if (memberAccess != null &&
+                memberAccess.Expression.IsKind(SyntaxKind.ThisExpression))
+            {
+                return true;
+            }
+
+            var conditionalAccess = expression as ConditionalAccessExpressionSyntax;
+            if (conditionalAccess != null &&
+                conditionalAccess.Expression.IsKind(SyntaxKind.ThisExpression))
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }

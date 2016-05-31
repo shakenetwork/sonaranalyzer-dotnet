@@ -248,7 +248,7 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            if (!IsFieldOnThis(expression))
+            if (!expression.IsExpressionOnThis())
             {
                 nonCandidateFields.Add(fieldSymbol);
                 return;
@@ -270,30 +270,6 @@ namespace SonarLint.Rules.CSharp
             {
                 nonCandidateFields.Add(fieldSymbol);
             }
-        }
-
-        private static bool IsFieldOnThis(ExpressionSyntax expression)
-        {
-            if (expression.IsKind(SyntaxKind.IdentifierName))
-            {
-                return true;
-            }
-
-            var memberAccess = expression as MemberAccessExpressionSyntax;
-            if (memberAccess != null &&
-                memberAccess.Expression.IsKind(SyntaxKind.ThisExpression))
-            {
-                return true;
-            }
-
-            var conditionalAccess = expression as ConditionalAccessExpressionSyntax;
-            if (conditionalAccess != null &&
-                conditionalAccess.Expression.IsKind(SyntaxKind.ThisExpression))
-            {
-                return true;
-            }
-
-            return false;
         }
 
         private static bool FieldIsRelevant(IFieldSymbol fieldSymbol)

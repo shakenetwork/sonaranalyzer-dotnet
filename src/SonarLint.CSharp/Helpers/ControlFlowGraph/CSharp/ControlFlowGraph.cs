@@ -21,6 +21,8 @@
 using Microsoft.CodeAnalysis;
 using SonarLint.Helpers.Cfg.Common;
 using Microsoft.CodeAnalysis.CSharp;
+using System;
+using System.Diagnostics;
 
 namespace SonarLint.Helpers.Cfg.CSharp
 {
@@ -29,6 +31,34 @@ namespace SonarLint.Helpers.Cfg.CSharp
         public static IControlFlowGraph Create(CSharpSyntaxNode node, SemanticModel semanticModel)
         {
             return new ControlFlowGraphBuilder(node, semanticModel).Build();
+        }
+
+        public static bool TryGet(CSharpSyntaxNode node, SemanticModel semanticModel, out IControlFlowGraph cfg)
+        {
+            cfg = null;
+            try
+            {
+                if (node != null)
+                {
+                    cfg = Create(node, semanticModel);
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception exc) when (exc is InvalidOperationException ||
+                                        exc is ArgumentException ||
+                                        exc is NotSupportedException)
+            {
+                // These are expected
+            }
+            catch (Exception exc) when (exc is NotImplementedException)
+            {
+                Debug.Fail(exc.ToString());
+            }
+
+            return cfg != null;
         }
     }
 }

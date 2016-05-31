@@ -19,6 +19,7 @@
  */
 
 using Microsoft.CodeAnalysis;
+using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
@@ -50,5 +51,30 @@ namespace SonarLint.Helpers.Cfg.Common
         }
 
         internal virtual void ReplaceSuccessors(Dictionary<Block, Block> replacementMapping) { }
+
+        public ISet<Block> AllSuccessorBlocks => GetAll(this, b => b.SuccessorBlocks);
+
+        public ISet<Block> AllPredecessorBlocks => GetAll(this, b => b.PredecessorBlocks);
+
+        private static ISet<Block> GetAll(Block initial, Func<Block, IEnumerable<Block>> getNexts)
+        {
+            var toProcess = new Queue<Block>();
+            var alreadyProcesses = new HashSet<Block>();
+            getNexts(initial).ToList().ForEach(b => toProcess.Enqueue(b));
+            while (toProcess.Count != 0)
+            {
+                var current = toProcess.Dequeue();
+                if (alreadyProcesses.Contains(current))
+                {
+                    continue;
+                }
+
+                alreadyProcesses.Add(current);
+
+                getNexts(current).ToList().ForEach(b => toProcess.Enqueue(b));
+            }
+
+            return alreadyProcesses.ToImmutableHashSet();
+        }
     }
 }
