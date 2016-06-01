@@ -248,7 +248,7 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            if (!expression.IsExpressionOnThis())
+            if (!expression.IsOnThis())
             {
                 nonCandidateFields.Add(fieldSymbol);
                 return;

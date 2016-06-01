@@ -31,6 +31,7 @@ using System.Collections.Generic;
 using SonarLint.Helpers.Cfg.CSharp;
 using SonarLint.Helpers.Cfg.Common;
 using System;
+using SonarLint.Helpers.Cfg;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -256,7 +257,7 @@ namespace SonarLint.Rules.CSharp
                 }
 
                 var propertyAccess = expr.GetSelfOrTopParenthesizedExpression();
-                if (IsInNameofCall(propertyAccess))
+                if (propertyAccess.IsInNameofCall())
                 {
                     return false;
                 }
@@ -265,29 +266,17 @@ namespace SonarLint.Rules.CSharp
                 var isNodeASet = assignment != null && assignment.Left == propertyAccess;
                 return isNodeASet == isSet;
             }
-
-            private static bool IsInNameofCall(ExpressionSyntax propertyAccess)
-            {
-                var argumentList = (propertyAccess.Parent as ArgumentSyntax)?.Parent as ArgumentListSyntax;
-                var nameofCall = argumentList?.Parent as InvocationExpressionSyntax;
-                var nameofIdentifier = (nameofCall?.Expression as IdentifierNameSyntax)?.Identifier;
-                return nameofIdentifier.HasValue &&
-                    (nameofIdentifier.Value.IsKind(SyntaxKind.NameOfKeyword) || (nameofIdentifier.Value.ToString() == SyntaxFacts.GetText(SyntaxKind.NameOfKeyword)));
-            }
         }
 
-        private abstract class CfgRecursionSearcher
+        private abstract class CfgRecursionSearcher : CfgAllPathValidator
         {
-            protected readonly IControlFlowGraph cfg;
             protected readonly ISymbol declaringSymbol;
             protected readonly SemanticModel semanticModel;
             protected readonly Action reportIssue;
 
-            protected readonly HashSet<Block> AlreadyVisitedBlocks = new HashSet<Block>();
-
             protected CfgRecursionSearcher(IControlFlowGraph cfg, ISymbol declaringSymbol, SemanticModel semanticModel, Action reportIssue)
+                : base(cfg)
             {
-                this.cfg = cfg;
                 this.declaringSymbol = declaringSymbol;
                 this.semanticModel = semanticModel;
                 this.reportIssue = reportIssue;
@@ -295,31 +284,15 @@ namespace SonarLint.Rules.CSharp
 
             public void CheckPaths()
             {
-                if (HasReferenceToDeclaringSymbol(cfg.EntryBlock))
+                if (CheckAllPaths())
                 {
                     reportIssue();
                 }
             }
 
-            private bool HasReferenceToDeclaringSymbol(Block block)
+            protected override bool IsBlockValid(Block block)
             {
-                return BlockHasReferenceToDeclaringSymbol(block) ||
-                    AllPathsFromBlockHasReferenceToDeclaringSymbol(block);
-            }
-
-            private bool AllPathsFromBlockHasReferenceToDeclaringSymbol(Block block)
-            {
-                AlreadyVisitedBlocks.Add(block);
-
-                if (block.SuccessorBlocks.Contains(cfg.ExitBlock) ||
-                    !block.SuccessorBlocks.Except(AlreadyVisitedBlocks).Any())
-                {
-                    return false;
-                }
-
-                return block.SuccessorBlocks
-                    .Except(AlreadyVisitedBlocks)
-                    .All(b => HasReferenceToDeclaringSymbol(b));
+                return BlockHasReferenceToDeclaringSymbol(block);
             }
 
             protected abstract bool BlockHasReferenceToDeclaringSymbol(Block block);

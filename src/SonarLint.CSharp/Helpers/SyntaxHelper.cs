@@ -86,7 +86,7 @@ namespace SonarLint.Helpers
             return false;
         }
 
-        public static bool IsExpressionOnThis(this ExpressionSyntax expression)
+        public static bool IsOnThis(this ExpressionSyntax expression)
         {
             if (expression is NameSyntax)
             {

@@ -97,6 +97,7 @@
     <Compile Include="Helpers\ControlFlowGraph\Common\SyntaxNodeBased\Blocks\SimpleBlock.cs" />
     <Compile Include="Helpers\ControlFlowGraph\CSharp\LiveVariableAnalysis.cs" />
     <Compile Include="Helpers\ControlFlowGraph\CSharp\ControlFlowGraph.cs" />
+    <Compile Include="Helpers\ControlFlowGraph\CfgAllPathValidator.cs" />
     <Compile Include="Helpers\ControlFlowGraph\CSharp\ControlFlowGraphBuilder.cs" />
     <Compile Include="Helpers\ControlFlowGraph\Common\IControlFlowGraph.cs" />
     <Compile Include="Helpers\ControlFlowGraph\Common\SyntaxNodeBased\ControlFlowGraphBuilder.cs" />

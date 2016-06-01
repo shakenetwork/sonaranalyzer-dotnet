@@ -38,7 +38,7 @@ namespace SonarLint.Rules.CSharp
         private const string Title = "Remove redundant initializer";
 
         public sealed override ImmutableArray<string> FixableDiagnosticIds =>
-            ImmutableArray.Create(MemberInitializedToDefault.DiagnosticId);
+            ImmutableArray.Create(MemberInitializedToDefault.DiagnosticId, MemberInitializerRedundant.DiagnosticId);
 
         public sealed override FixAllProvider GetFixAllProvider() => DocumentBasedFixAllProvider.Instance;
 

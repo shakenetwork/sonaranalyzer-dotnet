@@ -38,7 +38,7 @@ namespace SonarLint.UnitTest.PackagingTests
         public void CheckNumberOfCrossReferences()
         {
             var crossReferenceCount = GetNumberOfCrossReferences(AnalyzerLanguage.CSharp);
-            Assert.AreEqual(2, crossReferenceCount);
+            Assert.AreEqual(3, crossReferenceCount);
             crossReferenceCount = GetNumberOfCrossReferences(AnalyzerLanguage.VisualBasic);
             Assert.AreEqual(0, crossReferenceCount);
         }

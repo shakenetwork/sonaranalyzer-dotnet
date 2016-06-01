@@ -93,7 +93,7 @@ namespace SonarLint.Rules.CSharp
             }
         }
 
-        private static bool IsAutoProperty(PropertyDeclarationSyntax propertyDeclaration)
+        internal static bool IsAutoProperty(PropertyDeclarationSyntax propertyDeclaration)
         {
             return propertyDeclaration.AccessorList != null &&
                 propertyDeclaration.AccessorList.Accessors.All(accessor => accessor.Body == null);
@@ -136,7 +136,7 @@ namespace SonarLint.Rules.CSharp
             }
         }
 
-        private static bool IsDefaultValueInitializer(EqualsValueClauseSyntax initializer, ITypeSymbol type)
+        internal static bool IsDefaultValueInitializer(EqualsValueClauseSyntax initializer, ITypeSymbol type)
         {
             return CheckDefaultExpressionInitializer(initializer) ||
                 CheckReferenceTypeNullInitializer(initializer, type) ||
