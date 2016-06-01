@@ -326,14 +326,36 @@ namespace SonarLint.Rules.CSharp
 
             protected bool IsInstructionOnThisAndMatchesDeclaringSymbol(SyntaxNode node)
             {
-                var expr = node as ExpressionSyntax;
-                if (expr == null)
+                var expression = node as ExpressionSyntax;
+                if (expression == null)
                 {
                     return false;
                 }
 
-                return expr.IsExpressionOnThis() &&
-                    declaringSymbol.Equals(semanticModel.GetSymbolInfo(node).Symbol);
+                NameSyntax name = expression as NameSyntax;
+
+                var memberAccess = expression as MemberAccessExpressionSyntax;
+                if (memberAccess != null &&
+                    memberAccess.Expression.IsKind(SyntaxKind.ThisExpression))
+                {
+                    name = memberAccess.Name as IdentifierNameSyntax;
+                }
+
+                var conditionalAccess = expression as ConditionalAccessExpressionSyntax;
+                if (conditionalAccess != null &&
+                    conditionalAccess.Expression.IsKind(SyntaxKind.ThisExpression))
+                {
+                    name = (conditionalAccess.WhenNotNull as MemberBindingExpressionSyntax)?.Name as IdentifierNameSyntax;
+                }
+
+                if (name == null)
+                {
+                    return false;
+                }
+
+                var assignedSymbol = semanticModel.GetSymbolInfo(name).Symbol;
+
+                return declaringSymbol.Equals(assignedSymbol);
             }
         }
 

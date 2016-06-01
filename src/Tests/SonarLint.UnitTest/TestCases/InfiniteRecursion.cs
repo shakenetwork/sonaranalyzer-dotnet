@@ -130,5 +130,15 @@ namespace Tests.Diagnostics
             }
             return num;
         }
+
+        void Generic<T>() // Noncompliant
+        {
+            Generic<T>();
+        }
+
+        void Generic2<T>() // Compliant
+        {
+            Generic2<int>();
+        }
     }
 }
