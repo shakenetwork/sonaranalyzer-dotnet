@@ -479,7 +479,7 @@ namespace SonarLint.Helpers.Cfg.CSharp
                 throw new InvalidOperationException("goto default; outside a switch");
             }
 
-            var jumpBlock = CreateJumpBlock(statement, CreateTemporaryBlock());
+            var jumpBlock = CreateJumpBlock(statement, CreateTemporaryBlock(), currentBlock);
             currentBlock = jumpBlock;
 
             var currentJumpBlocks = SwitchGotoJumpBlocks.Peek();
@@ -498,7 +498,7 @@ namespace SonarLint.Helpers.Cfg.CSharp
                 throw new InvalidOperationException("goto case; outside a switch");
             }
 
-            var jumpBlock = CreateJumpBlock(statement, CreateTemporaryBlock());
+            var jumpBlock = CreateJumpBlock(statement, CreateTemporaryBlock(), currentBlock);
             currentBlock = jumpBlock;
 
             var constValue = semanticModel.GetConstantValue(statement.Expression);
@@ -518,7 +518,7 @@ namespace SonarLint.Helpers.Cfg.CSharp
 
         private void BuildGotoStatement(GotoStatementSyntax statement)
         {
-            var jumpBlock = CreateJumpBlock(statement, CreateTemporaryBlock());
+            var jumpBlock = CreateJumpBlock(statement, CreateTemporaryBlock(), currentBlock);
             currentBlock = jumpBlock;
 
             var identifier = statement.Expression as IdentifierNameSyntax;
@@ -616,7 +616,7 @@ namespace SonarLint.Helpers.Cfg.CSharp
             }
 
             var target = BreakTarget.Peek();
-            currentBlock = CreateJumpBlock(breakStatement, target);
+            currentBlock = CreateJumpBlock(breakStatement, target, currentBlock);
         }
 
         private void BuildContinueStatement(ContinueStatementSyntax continueStatement)
@@ -627,7 +627,7 @@ namespace SonarLint.Helpers.Cfg.CSharp
             }
 
             var target = ContinueTargets.Peek();
-            currentBlock = CreateJumpBlock(continueStatement, target);
+            currentBlock = CreateJumpBlock(continueStatement, target, currentBlock);
         }
 
         private void BuildReturnStatement(ReturnStatementSyntax returnStatement)
@@ -648,7 +648,7 @@ namespace SonarLint.Helpers.Cfg.CSharp
         private void BuildJumpToExitStatement(StatementSyntax statement, ExpressionSyntax expression = null)
         {
             // todo change the ExitBlock to the real jump location (handle try-catch-finally)
-            currentBlock = CreateJumpBlock(statement, ExitBlock);
+            currentBlock = CreateJumpBlock(statement, ExitBlock, currentBlock);
 
             BuildExpression(expression);
         }

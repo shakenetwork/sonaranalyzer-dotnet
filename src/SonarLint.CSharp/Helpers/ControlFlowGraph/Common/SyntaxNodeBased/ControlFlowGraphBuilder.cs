@@ -151,8 +151,8 @@ namespace SonarLint.Helpers.Cfg.Common
         internal SimpleBlock CreateBlock(Block successor) =>
             AddBlock(new SimpleBlock(successor));
 
-        internal JumpBlock CreateJumpBlock(SyntaxNode jumpStatement, Block successor) =>
-            AddBlock(new JumpBlock(jumpStatement, successor));
+        internal JumpBlock CreateJumpBlock(SyntaxNode jumpStatement, Block successor, Block wouldBeSuccessor = null) =>
+            AddBlock(new JumpBlock(jumpStatement, successor, wouldBeSuccessor));
 
         internal BranchBlock CreateBranchBlock(SyntaxNode branchingNode, IEnumerable<Block> successors) =>
             AddBlock(new BranchBlock(branchingNode, successors.ToArray()));
