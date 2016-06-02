@@ -31,7 +31,7 @@ namespace SonarLint.Rules.Common
 {
     public abstract class MultipleVariableDeclarationCodeFixProviderBase : SonarCodeFixProvider
     {
-        public const string Title = "Separate declarations";
+        internal const string Title = "Separate declarations";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {
             get

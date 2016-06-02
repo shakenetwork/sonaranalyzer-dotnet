@@ -24,7 +24,7 @@ using System.Linq;
 
 namespace SonarLint.Helpers
 {
-    public static class TypeHelper
+    internal static class TypeHelper
     {
         #region TypeKind
 

@@ -83,6 +83,9 @@
     <Compile Include="..\AssemblyInfo.Shared.cs">
       <Link>Properties\AssemblyInfo.Shared.cs</Link>
     </Compile>
+    <Compile Include="..\Signing.cs">
+      <Link>Properties\Signing.cs</Link>
+    </Compile>
     <Compile Include="Common\AnalyzerLanguage.cs" />
     <Compile Include="Common\AnalyzerAdditionalFile.cs" />
     <Compile Include="Common\MultiValueDictionary.cs" />
@@ -93,12 +96,28 @@
     <Compile Include="Common\WellKnownDiagnosticIds.cs" />
     <Compile Include="Common\Tag.cs" />
     <Compile Include="Common\IdeVisibility.cs" />
+    <Compile Include="Helpers\ControlFlowGraph\Block.cs" />
+    <Compile Include="Helpers\ControlFlowGraph\IControlFlowGraph.cs" />
+    <Compile Include="Helpers\ControlFlowGraph\SyntaxNodeBased\Blocks\BinaryBranchBlock.cs" />
+    <Compile Include="Helpers\ControlFlowGraph\SyntaxNodeBased\Blocks\BranchBlock.cs" />
+    <Compile Include="Helpers\ControlFlowGraph\SyntaxNodeBased\Blocks\ExitBlock.cs" />
+    <Compile Include="Helpers\ControlFlowGraph\SyntaxNodeBased\Blocks\JumpBlock.cs" />
+    <Compile Include="Helpers\ControlFlowGraph\SyntaxNodeBased\Blocks\SimpleBlock.cs" />
+    <Compile Include="Helpers\ControlFlowGraph\SyntaxNodeBased\Blocks\TemporaryBlock.cs" />
+    <Compile Include="Helpers\ControlFlowGraph\SyntaxNodeBased\ControlFlowGraphBuilder.cs" />
+    <Compile Include="Helpers\LiveVariableAnalysis\LiveVariableAnalysis.cs" />
     <Compile Include="Helpers\ParameterLoader.cs" />
     <Compile Include="Helpers\SonarCodeFixProvider.cs" />
     <Compile Include="Helpers\SonarAnalysisContext.cs" />
     <Compile Include="Helpers\DiagnosticReportHelper.cs" />
     <Compile Include="Helpers\KnownType.cs" />
     <Compile Include="Helpers\SonarDiagnosticAnalyzer.cs" />
+    <Compile Include="Helpers\SymbolicExecution\ConditionEvaluatedEventArgs.cs" />
+    <Compile Include="Helpers\SymbolicExecution\InstructionProcessedEventArgs.cs" />
+    <Compile Include="Helpers\SymbolicExecution\ProgramPoint.cs" />
+    <Compile Include="Helpers\SymbolicExecution\ProgramState.cs" />
+    <Compile Include="Helpers\SymbolicExecution\SymbolicValue.cs" />
+    <Compile Include="Helpers\SymbolicExecution\VisitCountExceedLimitEventArgs.cs" />
     <Compile Include="Helpers\TypeHelper.cs" />
     <Compile Include="Helpers\SymbolHelper.cs" />
     <Compile Include="Helpers\ParameterLoadingAnalysisContext.cs" />
@@ -145,6 +164,7 @@
     <Analyzer Include="..\..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
     <Analyzer Include="..\..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

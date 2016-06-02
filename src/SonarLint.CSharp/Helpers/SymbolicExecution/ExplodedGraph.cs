@@ -30,9 +30,9 @@ using SonarLint.Rules.CSharp;
 
 namespace SonarLint.Helpers.FlowAnalysis.CSharp
 {
-    public class ExplodedGraph
+    internal class ExplodedGraph
     {
-        public const int MaxStepCount = 1000;
+        internal const int MaxStepCount = 1000;
         private const int MaxProgramPointExecutionCount = 2;
 
         private readonly List<Node> nodes = new List<Node>();

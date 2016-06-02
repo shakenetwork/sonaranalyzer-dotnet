@@ -31,8 +31,8 @@ namespace SonarLint.DocGenerator
 {
     public class RuleImplementationMeta
     {
-        public const string CrosslinkPattern = "(Rule )(S[0-9]+)";
-        public const string HelpLinkPattern = "#version={0}&ruleId={1}";
+        internal const string CrosslinkPattern = "(Rule )(S[0-9]+)";
+        internal const string HelpLinkPattern = "#version={0}&ruleId={1}";
 
         [JsonProperty("key")]
         public string Id { get; set; }

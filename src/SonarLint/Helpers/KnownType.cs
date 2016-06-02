@@ -23,7 +23,7 @@ using System.Collections.Generic;
 
 namespace SonarLint.Helpers
 {
-    public sealed class KnownType
+    internal sealed class KnownType
     {
         #region Known types
 

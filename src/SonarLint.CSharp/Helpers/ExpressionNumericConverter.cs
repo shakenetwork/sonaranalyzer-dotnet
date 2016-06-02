@@ -22,11 +22,13 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
+using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 
 namespace SonarLint.Helpers
 {
-    public static class ExpressionNumericConverter
+    internal static class ExpressionNumericConverter
     {
         private static bool TryConvertWith<T>(object o, Func<object, T> converter, out T value)
             where T : struct
@@ -99,11 +101,10 @@ namespace SonarLint.Helpers
             return multiplier;
         }
 
-        private static readonly SyntaxKind[] SupportedOperatorTokens =
-        {
+        private static readonly ISet<SyntaxKind> SupportedOperatorTokens = ImmutableHashSet.Create(
             SyntaxKind.MinusToken,
             SyntaxKind.PlusToken
-        };
+        );
 
         public static bool TryGetConstantIntValue(ExpressionSyntax expression, out int value)
         {

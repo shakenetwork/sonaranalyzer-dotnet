@@ -19,7 +19,7 @@
  */
 namespace SonarLint.Common
 {
-    public static class WellKnownDiagnosticIds
+    internal static class WellKnownDiagnosticIds
     {
         public const string WRN_LowercaseEllSuffix = "CS0078";
         public const string ERR_UseDefViolation = "CS0165";

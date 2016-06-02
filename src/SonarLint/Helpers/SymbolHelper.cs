@@ -25,7 +25,7 @@ using System.Linq;
 
 namespace SonarLint.Helpers
 {
-    public static class SymbolHelper
+    internal static class SymbolHelper
     {
         public static IEnumerable<INamedTypeSymbol> GetAllNamedTypes(this INamespaceSymbol @namespace)
         {

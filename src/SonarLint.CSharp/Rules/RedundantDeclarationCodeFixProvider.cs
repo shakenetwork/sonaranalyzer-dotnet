@@ -36,13 +36,13 @@ namespace SonarLint.Rules.CSharp
     [ExportCodeFixProvider(LanguageNames.CSharp)]
     public class RedundantDeclarationCodeFixProvider : SonarCodeFixProvider
     {
-        public const string TitleRedundantArraySize = "Remove redundant array size";
-        public const string TitleRedundantArrayType = "Remove redundant array type";
-        public const string TitleRedundantLambdaParameterType = "Remove redundant type declaration";
-        public const string TitleRedundantExplicitDelegate = "Remove redundant explicit delegate creation";
-        public const string TitleRedundantExplicitNullable = "Remove redundant explicit nullable creation";
-        public const string TitleRedundantObjectInitializer = "Remove redundant object initializer";
-        public const string TitleRedundantDelegateParameterList = "Remove redundant parameter list";
+        internal const string TitleRedundantArraySize = "Remove redundant array size";
+        internal const string TitleRedundantArrayType = "Remove redundant array type";
+        internal const string TitleRedundantLambdaParameterType = "Remove redundant type declaration";
+        internal const string TitleRedundantExplicitDelegate = "Remove redundant explicit delegate creation";
+        internal const string TitleRedundantExplicitNullable = "Remove redundant explicit nullable creation";
+        internal const string TitleRedundantObjectInitializer = "Remove redundant object initializer";
+        internal const string TitleRedundantDelegateParameterList = "Remove redundant parameter list";
 
         public sealed override ImmutableArray<string> FixableDiagnosticIds => ImmutableArray.Create(RedundantDeclaration.DiagnosticId);
 

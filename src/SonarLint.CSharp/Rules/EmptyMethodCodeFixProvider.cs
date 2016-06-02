@@ -35,8 +35,8 @@ namespace SonarLint.Rules.CSharp
     [ExportCodeFixProvider(LanguageNames.CSharp)]
     public class EmptyMethodCodeFixProvider : SonarCodeFixProvider
     {
-        public const string TitleThrow = "Throw NotSupportedException";
-        public const string TitleComment = "Add comment";
+        internal const string TitleThrow = "Throw NotSupportedException";
+        internal const string TitleComment = "Add comment";
 
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {

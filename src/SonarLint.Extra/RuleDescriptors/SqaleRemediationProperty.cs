@@ -22,9 +22,9 @@ namespace SonarLint.RuleDescriptors
 {
     public class SqaleRemediationProperty
     {
-        public const string RemediationFunctionKey = "remediationFunction";
-        public const string ConstantRemediationFunctionValue = "CONSTANT_ISSUE";
-        public const string OffsetKey = "offset";
+        internal const string RemediationFunctionKey = "remediationFunction";
+        internal const string ConstantRemediationFunctionValue = "CONSTANT_ISSUE";
+        internal const string OffsetKey = "offset";
 
         public string Key { get; set; }
         public string Text { get; set; }

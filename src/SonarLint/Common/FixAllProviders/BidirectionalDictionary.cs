@@ -23,8 +23,7 @@ using System.Collections.Generic;
 
 namespace SonarLint.Common
 {
-    //todo mark it internal, when the internalsvisibleto attribute is added
-    public class BidirectionalDictionary<TA, TB>
+    internal class BidirectionalDictionary<TA, TB>
     {
         private readonly IDictionary<TA, TB> aToB = new Dictionary<TA, TB>();
         private readonly IDictionary<TB, TA> bToA = new Dictionary<TB, TA>();

@@ -27,7 +27,7 @@ using System.Linq;
 
 namespace SonarLint.Helpers.CSharp
 {
-    public class GeneratedCodeRecognizer : Helpers.GeneratedCodeRecognizer
+    internal class GeneratedCodeRecognizer : Helpers.GeneratedCodeRecognizer
     {
         #region Singleton implementation
 

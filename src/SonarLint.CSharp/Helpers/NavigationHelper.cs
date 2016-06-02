@@ -24,7 +24,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace SonarLint.Helpers
 {
-    public static class NavigationHelper
+    internal static class NavigationHelper
     {
         #region If
 

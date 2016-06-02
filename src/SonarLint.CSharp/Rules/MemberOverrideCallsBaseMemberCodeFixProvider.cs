@@ -33,7 +33,7 @@ namespace SonarLint.Rules.CSharp
     [ExportCodeFixProvider(LanguageNames.CSharp)]
     public class MemberOverrideCallsBaseMemberCodeFixProvider : SonarCodeFixProvider
     {
-        public const string Title = "Remove redundant override";
+        internal const string Title = "Remove redundant override";
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {
             get

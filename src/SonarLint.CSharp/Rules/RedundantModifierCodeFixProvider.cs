@@ -29,7 +29,6 @@ using SonarLint.Common;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Formatting;
 using System.Collections.Generic;
-using System;
 using SonarLint.Helpers;
 
 namespace SonarLint.Rules.CSharp
@@ -37,10 +36,11 @@ namespace SonarLint.Rules.CSharp
     [ExportCodeFixProvider(LanguageNames.CSharp)]
     public class RedundantModifierCodeFixProvider : SonarCodeFixProvider
     {
-        public const string TitleUnsafe = "Remove redundant \"unsafe\" modifier";
-        public const string TitleChecked = "Remove redundant \"checked\" and \"unchecked\"modifier";
-        public const string TitlePartial = "Remove redundant \"partial\" modifier";
-        public const string TitleSealed = "Remove redundant \"sealed\" modifier";
+        internal const string TitleUnsafe = "Remove redundant \"unsafe\" modifier";
+        internal const string TitleChecked = "Remove redundant \"checked\" and \"unchecked\"modifier";
+        internal const string TitlePartial = "Remove redundant \"partial\" modifier";
+        internal const string TitleSealed = "Remove redundant \"sealed\" modifier";
+
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {
             get

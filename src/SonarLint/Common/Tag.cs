@@ -19,7 +19,7 @@
  */
 namespace SonarLint.Common
 {
-    public static class Tag
+    internal static class Tag
     {
         public const string ApiDesign = "api-design";
         public const string BadPractice = "bad-practice";

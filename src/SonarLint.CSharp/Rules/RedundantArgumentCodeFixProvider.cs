@@ -36,8 +36,9 @@ namespace SonarLint.Rules.CSharp
     [ExportCodeFixProvider(LanguageNames.CSharp)]
     public class RedundantArgumentCodeFixProvider : SonarCodeFixProvider
     {
-        public const string TitleRemove = "Remove redundant arguments";
-        public const string TitleRemoveWithNameAdditions = "Remove redundant arguments with adding named arguments";
+        internal const string TitleRemove = "Remove redundant arguments";
+        internal const string TitleRemoveWithNameAdditions = "Remove redundant arguments with adding named arguments";
+
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {
             get

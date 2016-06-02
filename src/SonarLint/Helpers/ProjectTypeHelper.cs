@@ -23,7 +23,7 @@ using System.Linq;
 
 namespace SonarLint.Helpers
 {
-    public static class ProjectTypeHelper
+    internal static class ProjectTypeHelper
     {
         public static bool IsTest(this Compilation compilation)
         {

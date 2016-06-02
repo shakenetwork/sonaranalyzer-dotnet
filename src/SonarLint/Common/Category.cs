@@ -20,7 +20,7 @@
 
 namespace SonarLint.Common
 {
-    public static class Category
+    internal static class Category
     {
         public const string Design = nameof(Design);
         public const string Maintainability = nameof(Maintainability);

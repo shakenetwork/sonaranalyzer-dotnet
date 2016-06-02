@@ -30,7 +30,7 @@ namespace SonarLint.Rules.Common
 {
     public abstract class MultipleVariableDeclarationBase : SonarDiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
     {
-        public const string DiagnosticId = "S1659";
+        internal const string DiagnosticId = "S1659";
         protected const string Title = "Multiple variables should not be declared on the same line";
         protected const string Description =
             "Declaring multiple variable on one line is difficult to read.";

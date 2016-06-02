@@ -18,18 +18,25 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Reflection;
-using System.Runtime.InteropServices;
+using Microsoft.CodeAnalysis;
+using SonarLint.Helpers.FlowAnalysis.Common;
 
-[assembly: AssemblyVersion("1.15.0.0")]
-[assembly: AssemblyFileVersion("1.15.0.0")]
-[assembly: AssemblyInformationalVersion("1.15.0")]
+namespace SonarLint.Helpers.FlowAnalysis.CSharp
+{
+    internal class ExplodedGraphCheck
+    {
+        protected readonly ExplodedGraph explodedGraph;
+        protected readonly SemanticModel semanticModel;
 
-[assembly: AssemblyConfiguration("")]
+        protected ExplodedGraphCheck(ExplodedGraph explodedGraph)
+        {
+            this.explodedGraph = explodedGraph;
+            this.semanticModel = explodedGraph.SemanticModel;
+        }
 
-[assembly: AssemblyCompany("SonarSource")]
-[assembly: AssemblyCopyright("Copyright © 2015-2016 SonarSource SA")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-
-[assembly: ComVisible(false)]
+        public virtual ProgramState ProcessInstruction(ProgramPoint programPoint, ProgramState programState)
+        {
+            return programState;
+        }
+    }
+}

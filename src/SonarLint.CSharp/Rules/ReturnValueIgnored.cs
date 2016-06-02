@@ -132,7 +132,7 @@ namespace SonarLint.Rules.CSharp
             return containingType.IsAny(ImmutableKnownTypes);
         }
 
-        public static readonly ISet<KnownType> ImmutableKnownTypes = new HashSet<KnownType>(new[]
+        private static readonly ISet<KnownType> ImmutableKnownTypes = new HashSet<KnownType>(new[]
         {
             KnownType.System_Object,
             KnownType.System_Int16,

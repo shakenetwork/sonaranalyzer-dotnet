@@ -24,7 +24,7 @@ using System;
 
 namespace SonarLint.Helpers
 {
-    public static class DiagnosticAnalyzerContextHelper
+    internal static class DiagnosticAnalyzerContextHelper
     {
         #region Register*ActionInNonGenerated
 

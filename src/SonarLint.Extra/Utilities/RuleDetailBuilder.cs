@@ -35,7 +35,7 @@ namespace SonarLint.Utilities
     public static class RuleDetailBuilder
     {
         private const string RuleDescriptionPathPattern = "SonarLint.Rules.Description.{0}.html";
-        public const string CodeFixProviderSuffix = "CodeFixProvider";
+        internal const string CodeFixProviderSuffix = "CodeFixProvider";
 
         private static readonly Assembly SonarLintExtraAssembly = typeof(RuleDetailBuilder).Assembly;
 
