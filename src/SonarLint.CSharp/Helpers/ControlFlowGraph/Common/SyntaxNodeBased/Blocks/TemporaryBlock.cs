@@ -39,7 +39,7 @@ namespace SonarLint.Helpers.Cfg.Common
         {
             if (SuccessorBlock == null)
             {
-                throw new NullReferenceException($"{nameof(SuccessorBlock)} is null");
+                throw new InvalidOperationException($"{nameof(SuccessorBlock)} is null");
             }
 
             return SuccessorBlock.GetPossibleNonEmptySuccessorBlock();
