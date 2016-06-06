@@ -172,7 +172,7 @@ namespace SonarLint.Rules.CSharp
                     {
                         Initializer = p.Initializer,
                         SemanticModel = semanticModel,
-                        Symbol = semanticModel.GetDeclaredSymbol(p) as IPropertySymbol
+                        Symbol = semanticModel.GetDeclaredSymbol(p)
                     })
                 .Where(t =>
                     t.Symbol != null &&
