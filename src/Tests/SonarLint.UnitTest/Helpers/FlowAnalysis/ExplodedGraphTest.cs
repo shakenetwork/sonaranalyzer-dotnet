@@ -161,13 +161,16 @@ namespace NS
             var explodedGraph = new ExplodedGraph(cfg, methodSymbol, semanticModel, lva);
             var explorationEnded = false;
             explodedGraph.ExplorationEnded += (sender, args) => { explorationEnded = true; };
+            var maxStepCountReached = false;
+            explodedGraph.MaxStepCountReached += (sender, args) => { maxStepCountReached = true; };
 
             var numberOfExitBlockReached = 0;
             explodedGraph.ExitBlockReached += (sender, args) => { numberOfExitBlockReached++; };
 
             explodedGraph.Walk();
 
-            Assert.IsTrue(explorationEnded);
+            Assert.IsFalse(explorationEnded);
+            Assert.IsTrue(maxStepCountReached);
             Assert.AreEqual(0, numberOfExitBlockReached);
         }
 
@@ -395,6 +398,40 @@ namespace NS
             Assert.IsTrue(explorationEnded);
             Assert.AreEqual(1, numberOfExitBlockReached);
             Assert.AreEqual(1, numberOfLastInstructionVisits);
+        }
+
+        [TestMethod]
+        [TestCategory("Symbolic execution")]
+        public void ExplodedGraph_BothBranchesVisited_NonCondition()
+        {
+            string testInput = "var str = this?.ToString();";
+            SemanticModel semanticModel;
+            var method = ControlFlowGraphTest.Compile(string.Format(TestInput, testInput), "Bar", out semanticModel);
+            var methodSymbol = semanticModel.GetDeclaredSymbol(method);
+
+            var cfg = ControlFlowGraph.Create(method.Body, semanticModel);
+            var lva = LiveVariableAnalysis.Analyze(cfg, methodSymbol, semanticModel);
+
+            var explodedGraph = new ExplodedGraph(cfg, methodSymbol, semanticModel, lva);
+            var explorationEnded = false;
+            explodedGraph.ExplorationEnded += (sender, args) => { explorationEnded = true; };
+
+            var countConditionEvaluated = 0;
+            explodedGraph.ConditionEvaluated += (sender, args) => { countConditionEvaluated++; };
+
+            var visitedBlocks = new HashSet<Block>();
+
+            explodedGraph.InstructionProcessed +=
+                (sender, args) =>
+                {
+                    visitedBlocks.Add(args.ProgramPoint.Block);
+                };
+
+            explodedGraph.Walk();
+
+            Assert.IsTrue(explorationEnded);
+            Assert.AreEqual(cfg.Blocks.Count() - 1 /* Exit block */, visitedBlocks.Count);
+            Assert.AreEqual(0, countConditionEvaluated);
         }
     }
 }

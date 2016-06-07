@@ -25,6 +25,7 @@ using System;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using SonarLint.Helpers.FlowAnalysis.Common;
+using System.Collections.Immutable;
 
 namespace SonarLint.Helpers.FlowAnalysis.CSharp
 {
@@ -43,8 +44,10 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
         private readonly Common.LiveVariableAnalysis lva;
 
         public event EventHandler ExplorationEnded;
+        public event EventHandler MaxStepCountReached;
         public event EventHandler<InstructionProcessedEventArgs> InstructionProcessed;
         public event EventHandler ExitBlockReached;
+        public event EventHandler<ConditionEvaluatedEventArgs> ConditionEvaluated;
 
         private readonly Queue<Node> workList = new Queue<Node>();
         private readonly HashSet<Node> nodesAlreadyInGraph = new HashSet<Node>();
@@ -77,9 +80,14 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
             EnqueueStartNode();
 
-            while(steps < MaxStepCount &&
-                workList.Any())
+            while(workList.Any())
             {
+                if (steps >= MaxStepCount)
+                {
+                    OnMaxStepCountReached();
+                    return;
+                }
+
                 steps++;
                 var node = workList.Dequeue();
                 nodes.Add(node);
@@ -114,8 +122,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
                 if (programPoint.Block is BranchBlock)
                 {
-                    // switch
-                    continue;
+                    throw new NotImplementedException();
                 }
             }
 
@@ -135,9 +142,33 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
         #region OnEvent*
 
+        private void OnConditionEvaluated(SyntaxNode branchingNode, bool evaluationValue)
+        {
+            ConditionEvaluated?.Invoke(this, new ConditionEvaluatedEventArgs
+            {
+                BranchingNode = branchingNode,
+                EvaluationValue = evaluationValue
+            });
+        }
+
+        private void OnConditionEvaluated(SyntaxNode condition, SyntaxNode branchingNode, bool evaluationValue)
+        {
+            ConditionEvaluated?.Invoke(this, new ConditionEvaluatedEventArgs
+            {
+                Condition = condition,
+                BranchingNode = branchingNode,
+                EvaluationValue = evaluationValue
+            });
+        }
+
         private void OnExplorationEnded()
         {
             ExplorationEnded?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void OnMaxStepCountReached()
+        {
+            MaxStepCountReached?.Invoke(this, EventArgs.Empty);
         }
 
         private void OnExitBlockReached()
@@ -170,8 +201,16 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             var instruction = binaryBranchBlock.Instructions.LastOrDefault();
             var newProgramState = GetCleanedProgramState(node);
 
+            if (BinaryBranchingKindsWithNoBoolCondition.Contains(binaryBranchBlock.BranchingNode.Kind()))
+            {
+                EnqueueSuccessors(binaryBranchBlock, newProgramState);
+                return;
+            }
+
             if (instruction == null)
             {
+                OnConditionEvaluated(binaryBranchBlock.BranchingNode, true);
+                OnConditionEvaluated(binaryBranchBlock.BranchingNode, false);
                 EnqueueSuccessors(binaryBranchBlock, newProgramState);
                 return;
             }
@@ -183,7 +222,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                         var identifier = (IdentifierNameSyntax)instruction;
                         var symbol = semanticModel.GetSymbolInfo(identifier).Symbol;
 
-                        if (symbol != null && IsLocalScoped(symbol))
+                        if (IsLocalScoped(symbol))
                         {
                             if (node.ProgramState.GetSymbolValue(symbol) == null)
                             {
@@ -192,31 +231,44 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
                             if (node.ProgramState.TrySetSymbolicValue(symbol, SymbolicValue.True, out newProgramState))
                             {
+                                OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, true);
                                 EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
                             }
 
                             if (node.ProgramState.TrySetSymbolicValue(symbol, SymbolicValue.False, out newProgramState))
                             {
+                                OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, false);
                                 EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
                             }
                         }
                         else
                         {
+                            OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, true);
+                            OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, false);
                             EnqueueSuccessors(binaryBranchBlock, newProgramState);
                         }
                     }
                     break;
                 case SyntaxKind.TrueLiteralExpression:
+                    OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, true);
                     EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), newProgramState);
                     break;
                 case SyntaxKind.FalseLiteralExpression:
+                    OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, false);
                     EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), newProgramState);
                     break;
                 default:
+                    OnConditionEvaluated(instruction, true);
+                    OnConditionEvaluated(instruction, false);
                     EnqueueSuccessors(binaryBranchBlock, newProgramState);
                     break;
             }
         }
+
+        private static readonly ISet<SyntaxKind> BinaryBranchingKindsWithNoBoolCondition = ImmutableHashSet.Create(
+            SyntaxKind.ForEachStatement,
+            SyntaxKind.CoalesceExpression,
+            SyntaxKind.ConditionalAccessExpression);
 
         private void EnqueueSuccessors(BinaryBranchBlock binaryBranchBlock, ProgramState newProgramState)
         {
@@ -258,16 +310,32 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                         var assignment = (AssignmentExpressionSyntax)instruction;
                         var leftSymbol = semanticModel.GetSymbolInfo(assignment.Left).Symbol;
 
-                        if (leftSymbol == null ||
-                            !IsLocalScoped(leftSymbol))
+                        if (IsLocalScoped(leftSymbol))
+                        {
+                            var rightSymbol = semanticModel.GetSymbolInfo(assignment.Right).Symbol;
+                            var constValue = semanticModel.GetConstantValue(assignment.Right);
+
+                            currentState = GetNewProgramStateForAssignment(node.ProgramState, leftSymbol, rightSymbol, constValue);
+                        }
+                    }
+                    break;
+                case SyntaxKind.IdentifierName:
+                    {
+                        var identifier = (IdentifierNameSyntax)instruction;
+                        var parenthesized = identifier.GetSelfOrTopParenthesizedExpression();
+                        var argument = parenthesized.Parent as ArgumentSyntax;
+                        if (argument == null ||
+                            argument.RefOrOutKeyword.IsKind(SyntaxKind.None))
                         {
                             break;
                         }
 
-                        var rightSymbol = semanticModel.GetSymbolInfo(assignment.Right).Symbol;
-                        var constValue = semanticModel.GetConstantValue(assignment.Right);
+                        var symbol = semanticModel.GetSymbolInfo(identifier).Symbol;
 
-                        currentState = GetNewProgramStateForAssignment(node.ProgramState, leftSymbol, rightSymbol, constValue);
+                        if (IsLocalScoped(symbol))
+                        {
+                            currentState = GetNewProgramStateForAssignment(node.ProgramState, symbol);
+                        }
                     }
                     break;
                 default:
@@ -292,6 +360,11 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
         private bool IsLocalScoped(ISymbol symbol)
         {
+            if (symbol == null)
+            {
+                return false;
+            }
+
             var local = symbol as ILocalSymbol;
             if (local == null)
             {
@@ -304,6 +377,11 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
             return symbol.ContainingSymbol != null &&
                 symbol.ContainingSymbol.Equals(declaration);
+        }
+
+        private static ProgramState GetNewProgramStateForAssignment(ProgramState programState, ISymbol symbol)
+        {
+            return GetNewProgramStateForAssignment(programState, symbol, null, new Optional<object>());
         }
 
         private static ProgramState GetNewProgramStateForAssignment(ProgramState programState, ISymbol leftSymbol, ISymbol rightSymbol,

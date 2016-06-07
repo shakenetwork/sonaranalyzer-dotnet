@@ -1049,7 +1049,9 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
         private void BuildVariableDeclarator(VariableDeclaratorSyntax variableDeclarator)
         {
+            // There are variable declarations which implicitly get a value, such as foreach (var x in xs)
             currentBlock.ReversedInstructions.Add(variableDeclarator);
+
             var initializer = variableDeclarator.Initializer?.Value;
             if (initializer != null)
             {
