@@ -28,10 +28,10 @@ using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
 using System.Collections.Generic;
-using SonarLint.Helpers.Cfg.CSharp;
-using SonarLint.Helpers.Cfg.Common;
+using SonarLint.Helpers.FlowAnalysis.CSharp;
+using SonarLint.Helpers.FlowAnalysis.Common;
 using System;
-using SonarLint.Helpers.Cfg;
+using SonarLint.Helpers.FlowAnalysis;
 
 namespace SonarLint.Rules.CSharp
 {

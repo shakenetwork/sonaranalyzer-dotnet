@@ -19,13 +19,13 @@
  */
 
 using Microsoft.CodeAnalysis;
-using SonarLint.Helpers.Cfg.Common;
+using SonarLint.Helpers.FlowAnalysis.Common;
 using Microsoft.CodeAnalysis.CSharp;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-namespace SonarLint.Helpers.Cfg.CSharp
+namespace SonarLint.Helpers.FlowAnalysis.CSharp
 {
     public sealed class LiveVariableAnalysis : Common.LiveVariableAnalysis
     {

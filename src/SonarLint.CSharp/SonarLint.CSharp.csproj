@@ -87,7 +87,7 @@
     <Compile Include="..\AssemblyInfo.Shared.cs">
       <Link>Properties\AssemblyInfo.Shared.cs</Link>
     </Compile>
-    <Compile Include="Helpers\ControlFlowGraph\Common\LiveVariableAnalysis.cs" />
+    <Compile Include="Helpers\LiveVariableAnalysis\Common\LiveVariableAnalysis.cs" />
     <Compile Include="Helpers\ControlFlowGraph\Common\SyntaxNodeBased\Blocks\BranchBlock.cs" />
     <Compile Include="Helpers\ControlFlowGraph\Common\SyntaxNodeBased\Blocks\TemporaryBlock.cs" />
     <Compile Include="Helpers\ControlFlowGraph\Common\SyntaxNodeBased\Blocks\JumpBlock.cs" />
@@ -95,7 +95,7 @@
     <Compile Include="Helpers\ControlFlowGraph\Common\Block.cs" />
     <Compile Include="Helpers\ControlFlowGraph\Common\SyntaxNodeBased\Blocks\BinaryBranchBlock.cs" />
     <Compile Include="Helpers\ControlFlowGraph\Common\SyntaxNodeBased\Blocks\SimpleBlock.cs" />
-    <Compile Include="Helpers\ControlFlowGraph\CSharp\LiveVariableAnalysis.cs" />
+    <Compile Include="Helpers\LiveVariableAnalysis\CSharp\LiveVariableAnalysis.cs" />
     <Compile Include="Helpers\ControlFlowGraph\CSharp\ControlFlowGraph.cs" />
     <Compile Include="Helpers\ControlFlowGraph\CfgAllPathValidator.cs" />
     <Compile Include="Helpers\ControlFlowGraph\CSharp\ControlFlowGraphBuilder.cs" />
@@ -107,6 +107,13 @@
     <Compile Include="Helpers\GeneratedCodeRecognizer.cs" />
     <Compile Include="Helpers\MethodParameterLookup.cs" />
     <Compile Include="Helpers\RemovableDeclarationCollector.cs" />
+    <Compile Include="Helpers\SymbolicExecution\CSharp\ExplodedGraph.cs" />
+    <Compile Include="Helpers\SymbolicExecution\Common\InstructionProcessedEventArgs.cs" />
+    <Compile Include="Helpers\SymbolicExecution\Common\ProgramState.cs" />
+    <Compile Include="Helpers\SymbolicExecution\Common\ProgramPoint.cs" />
+    <Compile Include="Helpers\SymbolicExecution\Common\Constraints\BooleanLiteralConstraint.cs" />
+    <Compile Include="Helpers\SymbolicExecution\Common\SymbolicValueConstraint.cs" />
+    <Compile Include="Helpers\SymbolicExecution\Common\SymbolicValue.cs" />
     <Compile Include="Helpers\SyntaxHelper.cs" />
     <Compile Include="Helpers\AttributeSyntaxSymbolMapping.cs" />
     <Compile Include="Helpers\SyntaxNodeSymbolSemanticModelTuple.cs" />

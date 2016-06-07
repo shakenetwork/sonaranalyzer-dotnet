@@ -22,7 +22,7 @@ using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 
-namespace SonarLint.Helpers.Cfg.Common
+namespace SonarLint.Helpers.FlowAnalysis.Common
 {
     public sealed class JumpBlock : SimpleBlock
     {

@@ -18,14 +18,41 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using Microsoft.CodeAnalysis;
-
 namespace SonarLint.Helpers.FlowAnalysis.Common
 {
-    public sealed class ExitBlock : Block
+    public class SymbolicValue
     {
-        internal ExitBlock()
+        public static readonly SymbolicValue True = new BoolLiteralSymbolicValue(true);
+        public static readonly SymbolicValue False = new BoolLiteralSymbolicValue(false);
+
+        private class BoolLiteralSymbolicValue : SymbolicValue
         {
+            internal BoolLiteralSymbolicValue(bool value)
+                : base(value ? BooleanLiteralConstraint.True : BooleanLiteralConstraint.False)
+            {
+            }
+        }
+
+        private readonly object identifier;
+
+        internal SymbolicValue()
+            : this(null)
+        {
+        }
+
+        private SymbolicValue(object identifier)
+        {
+            this.identifier = identifier;
+        }
+
+        public override string ToString()
+        {
+            if (identifier != null)
+            {
+                return "SymbolicValue " + identifier;
+            }
+
+            return base.ToString();
         }
     }
 }

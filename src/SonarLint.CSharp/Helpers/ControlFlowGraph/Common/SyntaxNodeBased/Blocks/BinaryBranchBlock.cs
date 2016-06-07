@@ -21,7 +21,7 @@
 using Microsoft.CodeAnalysis;
 using System;
 
-namespace SonarLint.Helpers.Cfg.Common
+namespace SonarLint.Helpers.FlowAnalysis.Common
 {
     public sealed class BinaryBranchBlock : BranchBlock
     {

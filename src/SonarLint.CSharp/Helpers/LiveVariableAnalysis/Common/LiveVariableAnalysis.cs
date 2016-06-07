@@ -24,7 +24,7 @@ using System.Linq;
 using System;
 using System.Collections.Immutable;
 
-namespace SonarLint.Helpers.Cfg.Common
+namespace SonarLint.Helpers.FlowAnalysis.Common
 {
     public abstract class LiveVariableAnalysis
     {

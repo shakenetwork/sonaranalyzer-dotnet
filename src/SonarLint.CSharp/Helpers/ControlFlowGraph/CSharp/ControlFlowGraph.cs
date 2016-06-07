@@ -19,12 +19,12 @@
  */
 
 using Microsoft.CodeAnalysis;
-using SonarLint.Helpers.Cfg.Common;
+using SonarLint.Helpers.FlowAnalysis.Common;
 using Microsoft.CodeAnalysis.CSharp;
 using System;
 using System.Diagnostics;
 
-namespace SonarLint.Helpers.Cfg.CSharp
+namespace SonarLint.Helpers.FlowAnalysis.CSharp
 {
     public static class ControlFlowGraph
     {

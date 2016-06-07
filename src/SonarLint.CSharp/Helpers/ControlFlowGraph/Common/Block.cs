@@ -24,7 +24,7 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 
-namespace SonarLint.Helpers.Cfg.Common
+namespace SonarLint.Helpers.FlowAnalysis.Common
 {
     /// <summary>
     /// Basic building blocks of a Control Flow Graph (<see cref="IControlFlowGraph"/>).

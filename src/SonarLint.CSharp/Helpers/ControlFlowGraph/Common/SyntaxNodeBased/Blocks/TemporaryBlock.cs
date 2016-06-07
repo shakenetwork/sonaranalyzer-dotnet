@@ -23,7 +23,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 
-namespace SonarLint.Helpers.Cfg.Common
+namespace SonarLint.Helpers.FlowAnalysis.Common
 {
     internal sealed class TemporaryBlock : Block
     {

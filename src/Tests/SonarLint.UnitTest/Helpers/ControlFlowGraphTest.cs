@@ -24,7 +24,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
 using FluentAssertions;
 using Microsoft.CodeAnalysis.CSharp;
-using SonarLint.Helpers.Cfg.Common;
+using SonarLint.Helpers.FlowAnalysis.Common;
 
 namespace SonarLint.UnitTest.Helpers
 {
@@ -57,7 +57,7 @@ namespace NS
             SemanticModel semanticModel;
             var method = Compile(input, "Bar", out semanticModel);
             var expression = method.ExpressionBody.Expression;
-            var cfg = SonarLint.Helpers.Cfg.CSharp.ControlFlowGraph.Create(expression, semanticModel);
+            var cfg = SonarLint.Helpers.FlowAnalysis.CSharp.ControlFlowGraph.Create(expression, semanticModel);
             VerifyMinimalCfg(cfg);
         }
 
@@ -1662,7 +1662,7 @@ v = checked(1+1); v = unchecked(1+1);");
 
         #region Helpers to build the CFG for the tests
 
-        internal const string TestInput = @"
+        private const string TestInput = @"
 namespace NS
 {{
   public class Foo
@@ -1674,7 +1674,7 @@ namespace NS
   }}
 }}";
 
-        public static MethodDeclarationSyntax Compile(string input, string methodName, out SemanticModel semanticModel)
+        internal static MethodDeclarationSyntax Compile(string input, string methodName, out SemanticModel semanticModel)
         {
             using (var workspace = new AdhocWorkspace())
             {
@@ -1696,7 +1696,7 @@ namespace NS
         {
             SemanticModel semanticModel;
             var method = Compile(string.Format(TestInput, methodBody), "Bar", out semanticModel);
-            return SonarLint.Helpers.Cfg.CSharp.ControlFlowGraph.Create(method.Body, semanticModel);
+            return SonarLint.Helpers.FlowAnalysis.CSharp.ControlFlowGraph.Create(method.Body, semanticModel);
         }
 
         #endregion

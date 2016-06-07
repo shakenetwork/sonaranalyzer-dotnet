@@ -26,8 +26,8 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
-using SonarLint.Helpers.Cfg.Common;
-using SonarLint.Helpers.Cfg.CSharp;
+using SonarLint.Helpers.FlowAnalysis.Common;
+using SonarLint.Helpers.FlowAnalysis.CSharp;
 using System.Linq;
 
 namespace SonarLint.Rules.CSharp

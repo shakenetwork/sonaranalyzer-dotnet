@@ -20,7 +20,7 @@
 
 using System.Collections.Generic;
 
-namespace SonarLint.Helpers.Cfg.Common
+namespace SonarLint.Helpers.FlowAnalysis.Common
 {
     /// <summary>
     /// Represents a Control Flow Graph of a method or property.

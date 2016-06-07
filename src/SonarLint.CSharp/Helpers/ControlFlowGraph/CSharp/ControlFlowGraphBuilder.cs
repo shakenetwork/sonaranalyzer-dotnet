@@ -24,9 +24,9 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
 using System.Collections.Generic;
 using Microsoft.CodeAnalysis;
-using SonarLint.Helpers.Cfg.Common;
+using SonarLint.Helpers.FlowAnalysis.Common;
 
-namespace SonarLint.Helpers.Cfg.CSharp
+namespace SonarLint.Helpers.FlowAnalysis.CSharp
 {
     internal sealed class ControlFlowGraphBuilder : Common.ControlFlowGraphBuilder
     {

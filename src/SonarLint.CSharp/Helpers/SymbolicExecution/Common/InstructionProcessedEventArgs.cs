@@ -18,14 +18,16 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+
 using Microsoft.CodeAnalysis;
+using System;
 
 namespace SonarLint.Helpers.FlowAnalysis.Common
 {
-    public sealed class ExitBlock : Block
+    public class InstructionProcessedEventArgs : EventArgs
     {
-        internal ExitBlock()
-        {
-        }
+        public SyntaxNode Instruction { get; set; }
+        public ProgramPoint ProgramPoint { get; set; }
+        public ProgramState ProgramState { get; set; }
     }
 }

@@ -28,12 +28,12 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
-using SonarLint.Helpers.Cfg.CSharp;
-using SonarLint.Helpers.Cfg.Common;
+using SonarLint.Helpers.FlowAnalysis.CSharp;
+using SonarLint.Helpers.FlowAnalysis.Common;
 
 namespace SonarLint.Rules.CSharp
 {
-    using LiveVariableAnalysis = Helpers.Cfg.CSharp.LiveVariableAnalysis;
+    using LiveVariableAnalysis = Helpers.FlowAnalysis.CSharp.LiveVariableAnalysis;
 
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("15min")]

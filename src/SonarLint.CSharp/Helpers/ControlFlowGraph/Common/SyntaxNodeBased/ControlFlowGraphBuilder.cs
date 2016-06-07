@@ -24,7 +24,7 @@ using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
 using System;
 
-namespace SonarLint.Helpers.Cfg.Common
+namespace SonarLint.Helpers.FlowAnalysis.Common
 {
     internal abstract class ControlFlowGraphBuilder
     {
