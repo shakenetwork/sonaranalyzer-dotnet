@@ -19,37 +19,53 @@
  */
 
 using Microsoft.CodeAnalysis;
+using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 
 namespace SonarLint.Helpers.FlowAnalysis.Common
 {
-    public class ProgramState
+    public class ProgramState : IEquatable<ProgramState>
     {
         private readonly Dictionary<ISymbol, SymbolicValue> symbolValueAssociations;
-        private readonly Dictionary<SymbolicValue, SymbolicValueConstraint> constraints;
 
-        internal ProgramState()
-            : this(new Dictionary<ISymbol, SymbolicValue>(),
-                  new Dictionary<SymbolicValue, SymbolicValueConstraint>())
+        public /* for testing */ ProgramState()
+            : this(new Dictionary<ISymbol, SymbolicValue>())
         {
         }
 
-        private ProgramState(Dictionary<ISymbol, SymbolicValue> symbolValueAssociation,
-            Dictionary<SymbolicValue, SymbolicValueConstraint> constraints)
+        private ProgramState(Dictionary<ISymbol, SymbolicValue> symbolValueAssociation)
         {
             this.symbolValueAssociations = symbolValueAssociation;
-            this.constraints = constraints;
         }
 
-        internal ProgramState AddSymbolValue(ISymbol symbol, SymbolicValue value)
+        public /* for testing */ ProgramState SetSymbolicValue(ISymbol symbol, SymbolicValue newSymbolicValue)
         {
-            var ret = new ProgramState(
-                new Dictionary<ISymbol, SymbolicValue>(symbolValueAssociations),
-                new Dictionary<SymbolicValue, SymbolicValueConstraint>(constraints));
-            ret.symbolValueAssociations[symbol] = value;
+            var ret = new ProgramState(new Dictionary<ISymbol, SymbolicValue>(symbolValueAssociations));
+            ret.symbolValueAssociations[symbol] = newSymbolicValue;
             return ret;
+        }
+
+        public bool TrySetSymbolicValue(ISymbol symbol, SymbolicValue newSymbolicValue, out ProgramState newProgramState)
+        {
+            newProgramState = new ProgramState(new Dictionary<ISymbol, SymbolicValue>(symbolValueAssociations));
+            newProgramState.symbolValueAssociations[symbol] = newSymbolicValue;
+
+            SymbolicValue oldSymbolicValue;
+            if (!symbolValueAssociations.TryGetValue(symbol, out oldSymbolicValue))
+            {
+                return true;
+            }
+
+            if ((oldSymbolicValue == SymbolicValue.True && newSymbolicValue == SymbolicValue.False) ||
+                (newSymbolicValue == SymbolicValue.True && oldSymbolicValue == SymbolicValue.False))
+            {
+                // Contradicting SymbolicValues
+                return false;
+            }
+
+            return true;
         }
 
         public SymbolicValue GetSymbolValue(ISymbol symbol)
@@ -62,39 +78,9 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             return null;
         }
 
-        internal ProgramState AddSymbolicValueConstraint(SymbolicValue symbolicValue, SymbolicValueConstraint constraint)
-        {
-            var newProgramState = new ProgramState(
-                new Dictionary<ISymbol, SymbolicValue>(symbolValueAssociations),
-                new Dictionary<SymbolicValue, SymbolicValueConstraint>(constraints));
-            newProgramState.constraints[symbolicValue] = constraint;
-            return newProgramState;
-        }
-
-        public bool TryGetBoolValue(ISymbol symbol, out bool value)
-        {
-            value = false;
-            if (!symbolValueAssociations.ContainsKey(symbol))
-            {
-                return false;
-            }
-
-            var symbolicValue = symbolValueAssociations[symbol];
-            if (!constraints.ContainsKey(symbolicValue))
-            {
-                return false;
-            }
-
-            var constraint = constraints[symbolicValue];
-            value = constraint == BooleanLiteralConstraint.True;
-            return true;
-        }
-
         internal ProgramState CleanAndKeepOnly(IEnumerable<ISymbol> liveSymbolsToKeep)
         {
-            var ret = new ProgramState(
-                new Dictionary<ISymbol, SymbolicValue>(symbolValueAssociations),
-                new Dictionary<SymbolicValue, SymbolicValueConstraint>(constraints));
+            var ret = new ProgramState(new Dictionary<ISymbol, SymbolicValue>(symbolValueAssociations));
 
             var deadSymbols = ret.symbolValueAssociations
                 .Where(sv => !liveSymbolsToKeep.Contains(sv.Key))
@@ -105,17 +91,69 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 ret.symbolValueAssociations.Remove(deadSymbol.Key);
             }
 
-            var symbolicValuesLeft = new HashSet<SymbolicValue>(ret.symbolValueAssociations.Values);
+            return ret;
+        }
 
-            foreach (var value in ret.constraints.Keys.ToList())
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
             {
-                if (!symbolicValuesLeft.Contains(value))
-                {
-                    ret.constraints.Remove(value);
-                }
+                return false;
             }
 
-            return ret;
+            ProgramState p = obj as ProgramState;
+            return Equals(p);
+        }
+
+        public bool Equals(ProgramState p)
+        {
+            if (p == null)
+            {
+                return false;
+            }
+
+            return DictionaryEquals(symbolValueAssociations, p.symbolValueAssociations);
+        }
+
+        private static bool DictionaryEquals<TKey, TValue>(Dictionary<TKey, TValue> dict1, Dictionary<TKey, TValue> dict2)
+        {
+            if (dict1 == dict2)
+            {
+                return true;
+            }
+
+            if (dict1 == null ||
+                dict2 == null ||
+                dict1.Count != dict2.Count)
+            {
+                return false;
+            }
+
+            var valueComparer = EqualityComparer<TValue>.Default;
+
+            foreach (var kvp in dict1)
+            {
+                TValue value2;
+                if (!dict2.TryGetValue(kvp.Key, out value2) ||
+                    !valueComparer.Equals(kvp.Value, value2))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public override int GetHashCode()
+        {
+            var hash = 19;
+
+            foreach (var symbolValueAssociation in symbolValueAssociations)
+            {
+                hash = hash * 31 + symbolValueAssociation.Key.GetHashCode();
+                hash = hash * 31 + symbolValueAssociation.Value.GetHashCode();
+            }
+
+            return hash;
         }
     }
 }

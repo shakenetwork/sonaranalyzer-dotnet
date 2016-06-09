@@ -28,14 +28,14 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         private class BoolLiteralSymbolicValue : SymbolicValue
         {
             internal BoolLiteralSymbolicValue(bool value)
-                : base(value ? BooleanLiteralConstraint.True : BooleanLiteralConstraint.False)
+                : base(value)
             {
             }
         }
 
         private readonly object identifier;
 
-        internal SymbolicValue()
+        public /* for testing */ SymbolicValue()
             : this(null)
         {
         }

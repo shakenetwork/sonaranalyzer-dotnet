@@ -18,17 +18,52 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
+
 namespace SonarLint.Helpers.FlowAnalysis.Common
 {
-    public class ProgramPoint
+    public class ProgramPoint : IEquatable<ProgramPoint>
     {
         public Block Block { get; }
         public int Offset { get; }
 
-        internal ProgramPoint(Block block, int offset)
+        public /* for testing */ ProgramPoint(Block block, int offset)
         {
             Block = block;
             Offset = offset;
+        }
+
+        internal ProgramPoint(Block block)
+            : this(block, 0)
+        { }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+
+            ProgramPoint p = obj as ProgramPoint;
+            return Equals(p);
+        }
+
+        public bool Equals(ProgramPoint p)
+        {
+            if (p == null)
+            {
+                return false;
+            }
+
+            return Block == p.Block && Offset == p.Offset;
+        }
+
+        public override int GetHashCode()
+        {
+            var hash = 19;
+            hash = hash * 31 + Block.GetHashCode();
+            hash = hash * 31 + Offset.GetHashCode();
+            return hash;
         }
     }
 }

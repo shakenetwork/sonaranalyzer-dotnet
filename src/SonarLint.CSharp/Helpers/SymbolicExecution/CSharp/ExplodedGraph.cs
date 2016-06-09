@@ -38,14 +38,16 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
         private readonly IControlFlowGraph cfg;
         private readonly SemanticModel semanticModel;
         private readonly ISymbol declaration;
-        private readonly IEnumerable<ISymbol> declarationParameters = new List<ISymbol>();
+        private readonly IEnumerable<IParameterSymbol> declarationParameters = new List<IParameterSymbol>();
+        private readonly IEnumerable<IParameterSymbol> nonInDeclarationParameters;
         private readonly Common.LiveVariableAnalysis lva;
 
         public event EventHandler ExplorationEnded;
         public event EventHandler<InstructionProcessedEventArgs> InstructionProcessed;
         public event EventHandler ExitBlockReached;
 
-        private readonly HashSet<Node> workList = new HashSet<Node>(); // todo: a queue would be better, but we don't want to insert the same node twice
+        private readonly Queue<Node> workList = new Queue<Node>();
+        private readonly HashSet<Node> nodesAlreadyInGraph = new HashSet<Node>();
 
         public ExplodedGraph(IControlFlowGraph cfg, ISymbol declaration, SemanticModel semanticModel, Common.LiveVariableAnalysis lva)
         {
@@ -58,15 +60,15 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             if (methodSymbol != null)
             {
                 declarationParameters = methodSymbol.Parameters;
-                return;
             }
 
             var propertySymbol = declaration as IPropertySymbol;
             if (propertySymbol != null)
             {
                 declarationParameters = propertySymbol.Parameters;
-                return;
             }
+
+            nonInDeclarationParameters = declarationParameters.Where(p => p.RefKind != RefKind.None);
         }
 
         public void Walk()
@@ -79,8 +81,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 workList.Any())
             {
                 steps++;
-                var node = workList.First();
-                workList.Remove(node);
+                var node = workList.Dequeue();
                 nodes.Add(node);
 
                 var programPoint = node.ProgramPoint;
@@ -100,16 +101,14 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 var simpleBlock = programPoint.Block as SimpleBlock;
                 if (simpleBlock != null)
                 {
-                    var liveVariables = lva.GetLiveOut(simpleBlock)
-                        .Union(declarationParameters); // LVA excludes out and ref parameters
-                    var newProgramState = node.ProgramState.CleanAndKeepOnly(liveVariables);
-                    EnqueueNewNode(new ProgramPoint(simpleBlock.SuccessorBlock, 0), newProgramState);
+                    VisitSimpleJump(simpleBlock, node);
                     continue;
                 }
 
-                if (programPoint.Block is BinaryBranchBlock)
+                var binaryBranchBlock = programPoint.Block as BinaryBranchBlock;
+                if (binaryBranchBlock != null)
                 {
-                    // binary branch
+                    VisitBinaryBranch(binaryBranchBlock, node);
                     continue;
                 }
 
@@ -128,7 +127,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             var initialProgramState = new ProgramState();
             foreach (var parameter in declarationParameters)
             {
-                initialProgramState = initialProgramState.AddSymbolValue(parameter, new SymbolicValue());
+                initialProgramState = initialProgramState.SetSymbolicValue(parameter, new SymbolicValue());
             }
 
             EnqueueNewNode(new ProgramPoint(cfg.EntryBlock, 0), initialProgramState);
@@ -158,13 +157,78 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
         #endregion
 
-        #region Instruction
+        #region Visit*
+
+        private void VisitSimpleJump(SimpleBlock simpleBlock, Node node)
+        {
+            var newProgramState = GetCleanedProgramState(node);
+            EnqueueNewNode(new ProgramPoint(simpleBlock.SuccessorBlock, 0), newProgramState);
+        }
+
+        private void VisitBinaryBranch(BinaryBranchBlock binaryBranchBlock, Node node)
+        {
+            var instruction = binaryBranchBlock.Instructions.LastOrDefault();
+            var newProgramState = GetCleanedProgramState(node);
+
+            if (instruction == null)
+            {
+                EnqueueSuccessors(binaryBranchBlock, newProgramState);
+                return;
+            }
+
+            switch (instruction.Kind())
+            {
+                case SyntaxKind.IdentifierName:
+                    {
+                        var identifier = (IdentifierNameSyntax)instruction;
+                        var symbol = semanticModel.GetSymbolInfo(identifier).Symbol;
+
+                        if (symbol != null && IsLocalScoped(symbol))
+                        {
+                            if (node.ProgramState.GetSymbolValue(symbol) == null)
+                            {
+                                throw new InvalidOperationException("Symbol without symbolic value");
+                            }
+
+                            if (node.ProgramState.TrySetSymbolicValue(symbol, SymbolicValue.True, out newProgramState))
+                            {
+                                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
+                            }
+
+                            if (node.ProgramState.TrySetSymbolicValue(symbol, SymbolicValue.False, out newProgramState))
+                            {
+                                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
+                            }
+                        }
+                        else
+                        {
+                            EnqueueSuccessors(binaryBranchBlock, newProgramState);
+                        }
+                    }
+                    break;
+                case SyntaxKind.TrueLiteralExpression:
+                    EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), newProgramState);
+                    break;
+                case SyntaxKind.FalseLiteralExpression:
+                    EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), newProgramState);
+                    break;
+                default:
+                    EnqueueSuccessors(binaryBranchBlock, newProgramState);
+                    break;
+            }
+        }
+
+        private void EnqueueSuccessors(BinaryBranchBlock binaryBranchBlock, ProgramState newProgramState)
+        {
+            EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), newProgramState);
+            EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), newProgramState);
+        }
 
         private void VisitInstruction(Node node)
         {
             var instruction = node.ProgramPoint.Block.Instructions[node.ProgramPoint.Offset];
             var newProgramPoint = new ProgramPoint(node.ProgramPoint.Block, node.ProgramPoint.Offset + 1);
-            var newProgramState = node.ProgramState;
+            var currentState = node.ProgramState;
 
             switch (instruction.Kind())
             {
@@ -175,7 +239,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
                         if (leftSymbol == null)
                         {
-                            return;
+                            break;
                         }
 
                         ISymbol rightSymbol = null;
@@ -186,7 +250,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                             constValue = semanticModel.GetConstantValue(declarator.Initializer.Value);
                         }
 
-                        newProgramState = GetNewProgramStateForAssignment(node.ProgramState, leftSymbol, rightSymbol, constValue);
+                        currentState = GetNewProgramStateForAssignment(node.ProgramState, leftSymbol, rightSymbol, constValue);
                     }
                     break;
                 case SyntaxKind.SimpleAssignmentExpression:
@@ -197,21 +261,33 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                         if (leftSymbol == null ||
                             !IsLocalScoped(leftSymbol))
                         {
-                            return;
+                            break;
                         }
 
                         var rightSymbol = semanticModel.GetSymbolInfo(assignment.Right).Symbol;
                         var constValue = semanticModel.GetConstantValue(assignment.Right);
 
-                        newProgramState = GetNewProgramStateForAssignment(node.ProgramState, leftSymbol, rightSymbol, constValue);
+                        currentState = GetNewProgramStateForAssignment(node.ProgramState, leftSymbol, rightSymbol, constValue);
                     }
                     break;
                 default:
                     break;
             }
 
-            EnqueueNewNode(newProgramPoint, newProgramState);
-            OnInstructionProcessed(instruction, node.ProgramPoint, newProgramState);
+            EnqueueNewNode(newProgramPoint, currentState);
+            OnInstructionProcessed(instruction, node.ProgramPoint, currentState);
+        }
+
+        private ProgramState GetCleanedProgramState(Node node)
+        {
+            return GetCleanedProgramState(node.ProgramState, node.ProgramPoint.Block);
+        }
+
+        private ProgramState GetCleanedProgramState(ProgramState programState, Block block)
+        {
+            var liveVariables = lva.GetLiveOut(block)
+                .Union(nonInDeclarationParameters); // LVA excludes out and ref parameters
+            return programState.CleanAndKeepOnly(liveVariables);
         }
 
         private bool IsLocalScoped(ISymbol symbol)
@@ -239,16 +315,16 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 symbolicValue = new SymbolicValue();
             }
 
-            var newProgramState = programState.AddSymbolValue(leftSymbol, symbolicValue);
+            var newProgramState = programState.SetSymbolicValue(leftSymbol, symbolicValue);
             if (constantValue.HasValue)
             {
                 var boolConstant = constantValue.Value as bool?;
                 if (boolConstant.HasValue)
                 {
-                    newProgramState = newProgramState.AddSymbolicValueConstraint(symbolicValue,
+                    newProgramState = newProgramState.SetSymbolicValue(leftSymbol,
                         boolConstant.Value
-                        ? BooleanLiteralConstraint.True
-                        : BooleanLiteralConstraint.False);
+                        ? SymbolicValue.True
+                        : SymbolicValue.False);
                 }
             }
 
@@ -268,10 +344,15 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             {
                 programPoints[pos] = pos;
             }
-            workList.Add(new Node(pos, programState));
+
+            var newNode = new Node(pos, programState);
+            if (nodesAlreadyInGraph.Add(newNode))
+            {
+                workList.Enqueue(newNode);
+            }
         }
 
-        private class Node
+        private class Node : IEquatable<Node>
         {
             public ProgramState ProgramState { get; }
             public ProgramPoint ProgramPoint { get; }
@@ -280,6 +361,35 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             {
                 ProgramState = programState;
                 ProgramPoint = programPoint;
+            }
+
+            public override bool Equals(object obj)
+            {
+                if (obj == null)
+                {
+                    return false;
+                }
+
+                Node n = obj as Node;
+                return Equals(n);
+            }
+
+            public bool Equals(Node n)
+            {
+                if (n == null)
+                {
+                    return false;
+                }
+
+                return ProgramState.Equals(n.ProgramState) && ProgramPoint.Equals(n.ProgramPoint);
+            }
+
+            public override int GetHashCode()
+            {
+                var hash = 19;
+                hash = hash * 31 + ProgramState.GetHashCode();
+                hash = hash * 31 + ProgramPoint.GetHashCode();
+                return hash;
             }
         }
     }

@@ -111,8 +111,6 @@
     <Compile Include="Helpers\SymbolicExecution\Common\InstructionProcessedEventArgs.cs" />
     <Compile Include="Helpers\SymbolicExecution\Common\ProgramState.cs" />
     <Compile Include="Helpers\SymbolicExecution\Common\ProgramPoint.cs" />
-    <Compile Include="Helpers\SymbolicExecution\Common\Constraints\BooleanLiteralConstraint.cs" />
-    <Compile Include="Helpers\SymbolicExecution\Common\SymbolicValueConstraint.cs" />
     <Compile Include="Helpers\SymbolicExecution\Common\SymbolicValue.cs" />
     <Compile Include="Helpers\SyntaxHelper.cs" />
     <Compile Include="Helpers\AttributeSyntaxSymbolMapping.cs" />

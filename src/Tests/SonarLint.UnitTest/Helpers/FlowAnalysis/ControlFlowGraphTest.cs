@@ -1662,7 +1662,7 @@ v = checked(1+1); v = unchecked(1+1);");
 
         #region Helpers to build the CFG for the tests
 
-        private const string TestInput = @"
+        internal const string TestInput = @"
 namespace NS
 {{
   public class Foo
