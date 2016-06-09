@@ -106,13 +106,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                     continue;
                 }
 
-                var simpleBlock = programPoint.Block as SimpleBlock;
-                if (simpleBlock != null)
-                {
-                    VisitSimpleJump(simpleBlock, node);
-                    continue;
-                }
-
                 var binaryBranchBlock = programPoint.Block as BinaryBranchBlock;
                 if (binaryBranchBlock != null)
                 {
@@ -120,9 +113,11 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                     continue;
                 }
 
-                if (programPoint.Block is BranchBlock)
+                if (programPoint.Block is BranchBlock ||
+                    programPoint.Block is SimpleBlock)
                 {
-                    throw new NotImplementedException();
+                    var newProgramState = GetCleanedProgramState(node);
+                    EnqueueAllSuccessors(programPoint.Block, newProgramState);
                 }
             }
 
@@ -144,11 +139,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
         private void OnConditionEvaluated(SyntaxNode branchingNode, bool evaluationValue)
         {
-            ConditionEvaluated?.Invoke(this, new ConditionEvaluatedEventArgs
-            {
-                BranchingNode = branchingNode,
-                EvaluationValue = evaluationValue
-            });
+            OnConditionEvaluated(null, branchingNode, evaluationValue);
         }
 
         private void OnConditionEvaluated(SyntaxNode condition, SyntaxNode branchingNode, bool evaluationValue)
@@ -190,10 +181,12 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
         #region Visit*
 
-        private void VisitSimpleJump(SimpleBlock simpleBlock, Node node)
+        private void EnqueueAllSuccessors(Block block, ProgramState newProgramState)
         {
-            var newProgramState = GetCleanedProgramState(node);
-            EnqueueNewNode(new ProgramPoint(simpleBlock.SuccessorBlock, 0), newProgramState);
+            foreach (var successorBlock in block.SuccessorBlocks)
+            {
+                EnqueueNewNode(new ProgramPoint(successorBlock), newProgramState);
+            }
         }
 
         private void VisitBinaryBranch(BinaryBranchBlock binaryBranchBlock, Node node)
@@ -203,7 +196,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
             if (BinaryBranchingKindsWithNoBoolCondition.Contains(binaryBranchBlock.BranchingNode.Kind()))
             {
-                EnqueueSuccessors(binaryBranchBlock, newProgramState);
+                EnqueueAllSuccessors(binaryBranchBlock, newProgramState);
                 return;
             }
 
@@ -211,7 +204,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             {
                 OnConditionEvaluated(binaryBranchBlock.BranchingNode, true);
                 OnConditionEvaluated(binaryBranchBlock.BranchingNode, false);
-                EnqueueSuccessors(binaryBranchBlock, newProgramState);
+                EnqueueAllSuccessors(binaryBranchBlock, newProgramState);
                 return;
             }
 
@@ -245,7 +238,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                         {
                             OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, true);
                             OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, false);
-                            EnqueueSuccessors(binaryBranchBlock, newProgramState);
+                            EnqueueAllSuccessors(binaryBranchBlock, newProgramState);
                         }
                     }
                     break;
@@ -260,7 +253,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 default:
                     OnConditionEvaluated(instruction, true);
                     OnConditionEvaluated(instruction, false);
-                    EnqueueSuccessors(binaryBranchBlock, newProgramState);
+                    EnqueueAllSuccessors(binaryBranchBlock, newProgramState);
                     break;
             }
         }
@@ -269,12 +262,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             SyntaxKind.ForEachStatement,
             SyntaxKind.CoalesceExpression,
             SyntaxKind.ConditionalAccessExpression);
-
-        private void EnqueueSuccessors(BinaryBranchBlock binaryBranchBlock, ProgramState newProgramState)
-        {
-            EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), newProgramState);
-            EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), newProgramState);
-        }
 
         private void VisitInstruction(Node node)
         {

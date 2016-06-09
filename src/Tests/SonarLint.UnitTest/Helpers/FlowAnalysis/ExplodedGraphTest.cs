@@ -433,5 +433,50 @@ namespace NS
             Assert.AreEqual(cfg.Blocks.Count() - 1 /* Exit block */, visitedBlocks.Count);
             Assert.AreEqual(0, countConditionEvaluated);
         }
+
+        [TestMethod]
+        [TestCategory("Symbolic execution")]
+        public void ExplodedGraph_AllBranchesVisited()
+        {
+            string testInput = "int i = 1; switch (i) { case 1: default: cw1(); break; case 2: cw2(); break; }";
+            SemanticModel semanticModel;
+            var method = ControlFlowGraphTest.Compile(string.Format(TestInput, testInput), "Bar", out semanticModel);
+            var methodSymbol = semanticModel.GetDeclaredSymbol(method);
+
+            var cfg = ControlFlowGraph.Create(method.Body, semanticModel);
+            var lva = LiveVariableAnalysis.Analyze(cfg, methodSymbol, semanticModel);
+
+            var explodedGraph = new ExplodedGraph(cfg, methodSymbol, semanticModel, lva);
+            var explorationEnded = false;
+            explodedGraph.ExplorationEnded += (sender, args) => { explorationEnded = true; };
+
+            var numberOfExitBlockReached = 0;
+            explodedGraph.ExitBlockReached += (sender, args) => { numberOfExitBlockReached++; };
+
+            var numberOfCw1InstructionVisits = 0;
+            var numberOfCw2InstructionVisits = 0;
+            var numberOfProcessedInstructions = 0;
+
+            explodedGraph.InstructionProcessed +=
+                (sender, args) =>
+                {
+                    numberOfProcessedInstructions++;
+                    if (args.Instruction.ToString() == "cw1()")
+                    {
+                        numberOfCw1InstructionVisits++;
+                    }
+                    if (args.Instruction.ToString() == "cw2()")
+                    {
+                        numberOfCw2InstructionVisits++;
+                    }
+                };
+
+            explodedGraph.Walk();
+
+            Assert.IsTrue(explorationEnded);
+            Assert.AreEqual(1, numberOfExitBlockReached);
+            Assert.AreEqual(1, numberOfCw1InstructionVisits);
+            Assert.AreEqual(1, numberOfCw2InstructionVisits);
+        }
     }
 }

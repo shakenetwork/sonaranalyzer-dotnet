@@ -112,6 +112,65 @@ namespace Tests.Diagnostics
             }
         }
 
+        public void Method_Switch()
+        {
+            int i = 10;
+            bool b = true;
+            switch (i)
+            {
+                case 1:
+                default:
+                case 2:
+                    b = false;
+                    break;
+                case 3:
+                    b = false;
+                    break;
+            }
+
+            if (b) // Noncompliant b is always false
+            {
+
+            }
+            else
+            { }
+        }
+
+        public void Method_Switch_NoDefault()
+        {
+            int i = 10;
+            bool b = true;
+            switch (i)
+            {
+                case 1:
+                case 2:
+                    b = false;
+                    break;
+            }
+
+            if (b)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        public void Method_Switch_Learn(bool cond)
+        {
+            switch (cond)
+            {
+                case true:
+                    if (cond) // Non-compliant, we don't care it's very rare
+                    {
+                        Console.WriteLine();
+                    }
+                    break;
+            }
+        }
+
         public bool Property1
         {
             get

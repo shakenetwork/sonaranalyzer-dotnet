@@ -31,7 +31,6 @@ using System;
 using SonarLint.Helpers.FlowAnalysis.Common;
 using SonarLint.Helpers.FlowAnalysis.CSharp;
 using System.Collections.Generic;
-using System.Diagnostics;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -144,13 +143,11 @@ namespace SonarLint.Rules.CSharp
             try
             {
                 explodedGraph.Walk();
-
+            }
+            finally
+            {
                 explodedGraph.ExplorationEnded -= explorationEnded;
                 explodedGraph.ConditionEvaluated -= collectConditions;
-            }
-            catch (NotImplementedException exc)
-            {
-                //Debug.Fail(exc.ToString());
             }
         }
 
