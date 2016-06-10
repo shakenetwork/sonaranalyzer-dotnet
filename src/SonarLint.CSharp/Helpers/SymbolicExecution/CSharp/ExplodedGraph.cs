@@ -428,25 +428,25 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 ProgramPoint = programPoint;
             }
 
-            public override bool Equals(object obj)
+            public override bool Equals(object other)
             {
-                if (obj == null)
+                if (other == null)
                 {
                     return false;
                 }
 
-                Node n = obj as Node;
+                Node n = other as Node;
                 return Equals(n);
             }
 
-            public bool Equals(Node n)
+            public bool Equals(Node other)
             {
-                if (n == null)
+                if (other == null)
                 {
                     return false;
                 }
 
-                return ProgramState.Equals(n.ProgramState) && ProgramPoint.Equals(n.ProgramPoint);
+                return ProgramState.Equals(other.ProgramState) && ProgramPoint.Equals(other.ProgramPoint);
             }
 
             public override int GetHashCode()

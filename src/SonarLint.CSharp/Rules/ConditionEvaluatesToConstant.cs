@@ -151,7 +151,7 @@ namespace SonarLint.Rules.CSharp
             }
         }
 
-        private void ProcessVisitedBlocks(HashSet<SyntaxNode> conditionTrue, HashSet<SyntaxNode> conditionFalse, SyntaxNodeAnalysisContext context)
+        private static void ProcessVisitedBlocks(HashSet<SyntaxNode> conditionTrue, HashSet<SyntaxNode> conditionFalse, SyntaxNodeAnalysisContext context)
         {
             foreach (var alwaysTrue in conditionTrue.Except(conditionFalse))
             {

@@ -37,25 +37,25 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             : this(block, 0)
         { }
 
-        public override bool Equals(object obj)
+        public override bool Equals(object other)
         {
-            if (obj == null)
+            if (other == null)
             {
                 return false;
             }
 
-            ProgramPoint p = obj as ProgramPoint;
+            ProgramPoint p = other as ProgramPoint;
             return Equals(p);
         }
 
-        public bool Equals(ProgramPoint p)
+        public bool Equals(ProgramPoint other)
         {
-            if (p == null)
+            if (other == null)
             {
                 return false;
             }
 
-            return Block == p.Block && Offset == p.Offset;
+            return Block == other.Block && Offset == other.Offset;
         }
 
         public override int GetHashCode()

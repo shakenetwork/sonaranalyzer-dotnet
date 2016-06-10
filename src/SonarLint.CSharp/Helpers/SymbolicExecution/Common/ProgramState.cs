@@ -94,25 +94,25 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             return ret;
         }
 
-        public override bool Equals(object obj)
+        public override bool Equals(object other)
         {
-            if (obj == null)
+            if (other == null)
             {
                 return false;
             }
 
-            ProgramState p = obj as ProgramState;
+            ProgramState p = other as ProgramState;
             return Equals(p);
         }
 
-        public bool Equals(ProgramState p)
+        public bool Equals(ProgramState other)
         {
-            if (p == null)
+            if (other == null)
             {
                 return false;
             }
 
-            return DictionaryEquals(symbolValueAssociations, p.symbolValueAssociations);
+            return DictionaryEquals(symbolValueAssociations, other.symbolValueAssociations);
         }
 
         private static bool DictionaryEquals<TKey, TValue>(Dictionary<TKey, TValue> dict1, Dictionary<TKey, TValue> dict2)
