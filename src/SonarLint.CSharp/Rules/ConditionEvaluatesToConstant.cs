@@ -117,7 +117,7 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.ParenthesizedLambdaExpression);
         }
 
-        private void CheckForRedundantConditions(CSharpSyntaxNode body, ISymbol declaration, SyntaxNodeAnalysisContext context)
+        private static void CheckForRedundantConditions(CSharpSyntaxNode body, ISymbol declaration, SyntaxNodeAnalysisContext context)
         {
             IControlFlowGraph cfg;
             if (!ControlFlowGraph.TryGet(body, context.SemanticModel, out cfg))

@@ -37,14 +37,14 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             : this(block, 0)
         { }
 
-        public override bool Equals(object other)
+        public override bool Equals(object obj)
         {
-            if (other == null)
+            if (obj == null)
             {
                 return false;
             }
 
-            ProgramPoint p = other as ProgramPoint;
+            ProgramPoint p = obj as ProgramPoint;
             return Equals(p);
         }
 

@@ -94,14 +94,14 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             return ret;
         }
 
-        public override bool Equals(object other)
+        public override bool Equals(object obj)
         {
-            if (other == null)
+            if (obj == null)
             {
                 return false;
             }
 
-            ProgramState p = other as ProgramState;
+            ProgramState p = obj as ProgramState;
             return Equals(p);
         }
 

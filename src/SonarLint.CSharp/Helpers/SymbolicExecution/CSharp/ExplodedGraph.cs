@@ -428,14 +428,14 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 ProgramPoint = programPoint;
             }
 
-            public override bool Equals(object other)
+            public override bool Equals(object obj)
             {
-                if (other == null)
+                if (obj == null)
                 {
                     return false;
                 }
 
-                Node n = other as Node;
+                Node n = obj as Node;
                 return Equals(n);
             }
 
