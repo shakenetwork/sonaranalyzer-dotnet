@@ -47,6 +47,11 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             return ret;
         }
 
+        internal ProgramState SetNewSymbolicValue(ISymbol symbol)
+        {
+            return SetSymbolicValue(symbol, new SymbolicValue());
+        }
+
         public bool TrySetSymbolicValue(ISymbol symbol, SymbolicValue newSymbolicValue, out ProgramState newProgramState)
         {
             newProgramState = new ProgramState(new Dictionary<ISymbol, SymbolicValue>(symbolValueAssociations));

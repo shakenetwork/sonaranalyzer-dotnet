@@ -478,5 +478,63 @@ namespace NS
             Assert.AreEqual(1, numberOfCw1InstructionVisits);
             Assert.AreEqual(1, numberOfCw2InstructionVisits);
         }
+
+        [TestMethod]
+        [TestCategory("Symbolic execution")]
+        public void ExplodedGraph_NonDecisionMakingAssignments()
+        {
+            string testInput = "var a = true; a |= false; var b = 42; b++;";
+            SemanticModel semanticModel;
+            var method = ControlFlowGraphTest.Compile(string.Format(TestInput, testInput), "Bar", out semanticModel);
+            var methodSymbol = semanticModel.GetDeclaredSymbol(method);
+            var varDeclarators = method.DescendantNodes().OfType<VariableDeclaratorSyntax>();
+            var aSymbol = semanticModel.GetDeclaredSymbol(varDeclarators.First(d => d.Identifier.ToString() == "a"));
+            var bSymbol = semanticModel.GetDeclaredSymbol(varDeclarators.First(d => d.Identifier.ToString() == "b"));
+
+            var cfg = ControlFlowGraph.Create(method.Body, semanticModel);
+            var lva = LiveVariableAnalysis.Analyze(cfg, methodSymbol, semanticModel);
+
+            var explodedGraph = new ExplodedGraph(cfg, methodSymbol, semanticModel, lva);
+
+            SymbolicValue sv = null;
+            var numberOfProcessedInstructions = 0;
+            var branchesVisited = 0;
+
+            explodedGraph.InstructionProcessed +=
+                (sender, args) =>
+                {
+                    numberOfProcessedInstructions++;
+                    if (args.Instruction.ToString() == "a = true")
+                    {
+                        branchesVisited++;
+                        Assert.IsTrue(args.ProgramState.GetSymbolValue(aSymbol) == SymbolicValue.True);
+                    }
+                    if (args.Instruction.ToString() == "a |= false")
+                    {
+                        branchesVisited++;
+                        Assert.IsNotNull(args.ProgramState.GetSymbolValue(aSymbol));
+                        Assert.IsFalse(args.ProgramState.GetSymbolValue(aSymbol) == SymbolicValue.False);
+                        Assert.IsFalse(args.ProgramState.GetSymbolValue(aSymbol) == SymbolicValue.True);
+                    }
+                    if (args.Instruction.ToString() == "b = 42")
+                    {
+                        branchesVisited++;
+                        sv = args.ProgramState.GetSymbolValue(bSymbol);
+                        Assert.IsNotNull(sv);
+                    }
+                    if (args.Instruction.ToString() == "b++")
+                    {
+                        branchesVisited++;
+                        var svNew = args.ProgramState.GetSymbolValue(bSymbol);
+                        Assert.IsNotNull(svNew);
+                        Assert.AreNotEqual(sv, svNew);
+                    }
+                };
+
+            explodedGraph.Walk();
+
+            Assert.AreEqual(9, numberOfProcessedInstructions);
+            Assert.AreEqual(4, branchesVisited);
+        }
     }
 }

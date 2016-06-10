@@ -129,7 +129,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             var initialProgramState = new ProgramState();
             foreach (var parameter in declarationParameters)
             {
-                initialProgramState = initialProgramState.SetSymbolicValue(parameter, new SymbolicValue());
+                initialProgramState = initialProgramState.SetNewSymbolicValue(parameter);
             }
 
             EnqueueNewNode(new ProgramPoint(cfg.EntryBlock, 0), initialProgramState);
@@ -191,17 +191,21 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
         private void VisitBinaryBranch(BinaryBranchBlock binaryBranchBlock, Node node)
         {
-            var instruction = binaryBranchBlock.Instructions.LastOrDefault();
             var newProgramState = GetCleanedProgramState(node);
 
             if (BinaryBranchingKindsWithNoBoolCondition.Contains(binaryBranchBlock.BranchingNode.Kind()))
             {
+                // Non-bool branching: foreach, ?., ??
+
                 EnqueueAllSuccessors(binaryBranchBlock, newProgramState);
                 return;
             }
 
+            var instruction = binaryBranchBlock.Instructions.LastOrDefault();
             if (instruction == null)
             {
+                // Branching bool conditions, like &&
+
                 OnConditionEvaluated(binaryBranchBlock.BranchingNode, true);
                 OnConditionEvaluated(binaryBranchBlock.BranchingNode, false);
                 EnqueueAllSuccessors(binaryBranchBlock, newProgramState);
@@ -306,6 +310,55 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                         }
                     }
                     break;
+                case SyntaxKind.OrAssignmentExpression:
+                case SyntaxKind.AndAssignmentExpression:
+                case SyntaxKind.ExclusiveOrAssignmentExpression:
+
+                case SyntaxKind.SubtractAssignmentExpression:
+                case SyntaxKind.AddAssignmentExpression:
+                case SyntaxKind.DivideAssignmentExpression:
+                case SyntaxKind.MultiplyAssignmentExpression:
+                case SyntaxKind.ModuloAssignmentExpression:
+
+                case SyntaxKind.LeftShiftAssignmentExpression:
+                case SyntaxKind.RightShiftAssignmentExpression:
+                    {
+                        var assignment = (AssignmentExpressionSyntax)instruction;
+                        var leftSymbol = semanticModel.GetSymbolInfo(assignment.Left).Symbol;
+
+                        if (IsLocalScoped(leftSymbol))
+                        {
+                            currentState = node.ProgramState.SetNewSymbolicValue(leftSymbol);
+                        }
+                    }
+                    break;
+
+                case SyntaxKind.PreIncrementExpression:
+                case SyntaxKind.PreDecrementExpression:
+                    {
+                        var unary = (PrefixUnaryExpressionSyntax)instruction;
+                        var leftSymbol = semanticModel.GetSymbolInfo(unary.Operand).Symbol;
+
+                        if (IsLocalScoped(leftSymbol))
+                        {
+                            currentState = node.ProgramState.SetNewSymbolicValue(leftSymbol);
+                        }
+                    }
+                    break;
+
+                case SyntaxKind.PostIncrementExpression:
+                case SyntaxKind.PostDecrementExpression:
+                    {
+                        var unary = (PostfixUnaryExpressionSyntax)instruction;
+                        var leftSymbol = semanticModel.GetSymbolInfo(unary.Operand).Symbol;
+
+                        if (IsLocalScoped(leftSymbol))
+                        {
+                            currentState = node.ProgramState.SetNewSymbolicValue(leftSymbol);
+                        }
+                    }
+                    break;
+
                 case SyntaxKind.IdentifierName:
                     {
                         var identifier = (IdentifierNameSyntax)instruction;
