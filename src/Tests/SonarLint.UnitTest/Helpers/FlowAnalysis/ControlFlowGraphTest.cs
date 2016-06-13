@@ -950,7 +950,7 @@ namespace NS
         [TestCategory("CFG")]
         public void Cfg_ConditionalAccess()
         {
-            var cfg = Build("var a = o?.method();");
+            var cfg = Build("var a = o?.method(1);");
             VerifyCfg(cfg, 4);
 
             var branchBlock = cfg.EntryBlock as BinaryBranchBlock;
@@ -964,6 +964,16 @@ namespace NS
             condAccess.SuccessorBlocks.Should().OnlyContain(exitBlock);
 
             branchBlock.BranchingNode.Kind().Should().Be(SyntaxKind.ConditionalAccessExpression);
+
+            branchBlock.Instructions.Should().HaveCount(1);
+            branchBlock.Instructions.Where(i => i.ToString() == "o").Should().NotBeEmpty();
+            oNotNull.Instructions.Should().HaveCount(4);
+            oNotNull.Instructions[0].ToString().Should().BeEquivalentTo("method");
+            oNotNull.Instructions[1].ToString().Should().BeEquivalentTo(".method"); // this is equivalent to o.method
+            oNotNull.Instructions[2].ToString().Should().BeEquivalentTo("1");
+            oNotNull.Instructions[3].ToString().Should().BeEquivalentTo(".method(1)");
+            condAccess.Instructions.Should().HaveCount(1);
+            condAccess.Instructions.Where(i => i.ToString() == "a = o?.method(1)").Should().NotBeEmpty();
         }
 
         [TestMethod]
@@ -971,21 +981,19 @@ namespace NS
         public void Cfg_ConditionalAccessNested()
         {
             var cfg = Build("var a = o?.method()?[10];");
-            VerifyCfg(cfg, 6);
+            VerifyCfg(cfg, 5);
 
             var branchBlock = cfg.EntryBlock as BinaryBranchBlock;
             var blocks = cfg.Blocks.ToList();
             var oNotNull = blocks[1] as BinaryBranchBlock;
             var methodNotNull = blocks[2];
-            var indexing = blocks[3];
-            var whole = blocks[4];
+            var assignment = blocks[3];
             var exitBlock = cfg.ExitBlock;
 
-            branchBlock.SuccessorBlocks.Should().OnlyContainInOrder(whole, oNotNull);
-            oNotNull.SuccessorBlocks.Should().OnlyContainInOrder(indexing, methodNotNull);
-            methodNotNull.SuccessorBlocks.Should().OnlyContain(indexing);
-            indexing.SuccessorBlocks.Should().OnlyContain(whole);
-            whole.SuccessorBlocks.Should().OnlyContain(exitBlock);
+            branchBlock.SuccessorBlocks.Should().OnlyContainInOrder(assignment, oNotNull);
+            oNotNull.SuccessorBlocks.Should().OnlyContainInOrder(assignment, methodNotNull);
+            methodNotNull.SuccessorBlocks.Should().OnlyContain(assignment);
+            assignment.SuccessorBlocks.Should().OnlyContain(exitBlock);
         }
 
         #endregion

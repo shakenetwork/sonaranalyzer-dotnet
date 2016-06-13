@@ -431,7 +431,10 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                     BuildConditionalAccessExpression((ConditionalAccessExpressionSyntax)expression);
                     break;
                 case SyntaxKind.MemberBindingExpression:
-                    BuildExpression(((MemberBindingExpressionSyntax)expression).Name);
+                    {
+                        var parent = (MemberBindingExpressionSyntax)expression;
+                        BuildSimpleNestedExpression(parent, parent.Name);
+                    }
                     break;
                 case SyntaxKind.ElementBindingExpression:
                     {
@@ -854,9 +857,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
         private void BuildConditionalAccessExpression(ConditionalAccessExpressionSyntax conditionalAccess)
         {
-            // is this required here?
-            currentBlock.ReversedInstructions.Add(conditionalAccess);
-
             var successorBlock = currentBlock;
 
             currentBlock = CreateBlock(currentBlock);
