@@ -264,5 +264,19 @@ namespace Tests.Diagnostics
             i = 11; // Noncompliant, false positive (JIRA: SLVS-872)
             a();
         }
+
+        public List<int> Method7_Foreach()
+        {
+            foreach (var item in new int[0])
+            {
+                Console.WriteLine(item);
+            }
+
+            foreach (var
+                item // A new value is assigned here, which is not used. But we are not reporting on it.
+                in new int[0])
+            {
+            }
+        }
     }
 }

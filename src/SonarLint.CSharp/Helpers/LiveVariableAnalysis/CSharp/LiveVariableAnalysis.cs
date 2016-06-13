@@ -81,6 +81,32 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                         break;
                 }
             }
+
+            if (block.Instructions.Any())
+            {
+                return;
+            }
+
+            // Variable declaration in a foreach statement is not a VariableDeclarator, so handling it separately:
+            var foreachBlock = block as BinaryBranchBlock;
+            if (foreachBlock != null &&
+                foreachBlock.BranchingNode.IsKind(SyntaxKind.ForEachStatement))
+            {
+                var foreachNode = (ForEachStatementSyntax)foreachBlock.BranchingNode;
+                ProcessVariableInForeach(foreachNode, assignedInBlock, usedBeforeAssigned);
+            }
+        }
+
+        private void ProcessVariableInForeach(ForEachStatementSyntax foreachNode, HashSet<ISymbol> assignedInBlock, HashSet<ISymbol> usedBeforeAssigned)
+        {
+            var symbol = semanticModel.GetDeclaredSymbol(foreachNode);
+            if (symbol == null)
+            {
+                return;
+            }
+
+            assignedInBlock.Add(symbol);
+            usedBeforeAssigned.Remove(symbol);
         }
 
         private void ProcessVariableDeclarator(SyntaxNode instruction, HashSet<ISymbol> assignedInBlock,

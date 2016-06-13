@@ -783,15 +783,28 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
         private void BuildForEachStatement(ForEachStatementSyntax foreachStatement)
         {
-            BuildLoopWithCheckOnTop(foreachStatement, foreachStatement.Statement, foreachStatement.Expression);
+            var afterBlock = currentBlock;
+            var variableTemporary = CreateTemporaryBlock();
+
+            BreakTarget.Push(afterBlock);
+            ContinueTargets.Push(variableTemporary);
+
+            currentBlock = CreateBlock(variableTemporary);
+            BuildStatement(foreachStatement.Statement);
+
+            BreakTarget.Pop();
+            ContinueTargets.Pop();
+
+            currentBlock = CreateBinaryBranchBlock(foreachStatement, currentBlock, afterBlock);
+            // Variable declaration in a foreach statement is not a VariableDeclarator, otherwise it would be added here.
+
+            variableTemporary.SuccessorBlock = currentBlock;
+
+            currentBlock = CreateBlock(variableTemporary);
+            BuildExpression(foreachStatement.Expression);
         }
 
         private void BuildWhileStatement(WhileStatementSyntax whileStatement)
-        {
-            BuildLoopWithCheckOnTop(whileStatement, whileStatement.Statement, whileStatement.Condition);
-        }
-
-        private void BuildLoopWithCheckOnTop(StatementSyntax loopStatement, StatementSyntax loopBody, ExpressionSyntax loopCondition)
         {
             var afterBlock = currentBlock;
             var loopTempBlock = CreateTemporaryBlock();
@@ -801,13 +814,13 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
             var bodyBlock = CreateBlock(loopTempBlock);
             currentBlock = bodyBlock;
-            BuildStatement(loopBody);
+            BuildStatement(whileStatement.Statement);
 
             BreakTarget.Pop();
             ContinueTargets.Pop();
 
-            currentBlock = CreateBinaryBranchBlock(loopStatement, currentBlock, afterBlock);
-            BuildExpression(loopCondition);
+            currentBlock = CreateBinaryBranchBlock(whileStatement, currentBlock, afterBlock);
+            BuildExpression(whileStatement.Condition);
             loopTempBlock.SuccessorBlock = currentBlock;
 
             currentBlock = CreateBlock(currentBlock);

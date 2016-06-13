@@ -311,18 +311,21 @@ namespace NS
         public void Cfg_Foreach()
         {
             var cfg = Build("foreach (var item in collection) { var x = 10; }");
-            VerifyCfg(cfg, 3);
-            var branchBlock = cfg.EntryBlock as BinaryBranchBlock;
-            var loopBodyBlock = cfg.Blocks
+            VerifyCfg(cfg, 4);
+            var collectionBlock = cfg.EntryBlock;
+            var blocks = cfg.Blocks.ToList();
+            var foreachBlock = blocks[1] as BinaryBranchBlock;
+            var loopBodyBlock = blocks
                 .First(b => b.Instructions.Any(n => n.ToString() == "x = 10"));
             var exitBlock = cfg.ExitBlock;
 
-            branchBlock.SuccessorBlocks.Should().OnlyContainInOrder(loopBodyBlock, exitBlock);
-            branchBlock.BranchingNode.Kind().Should().Be(SyntaxKind.ForEachStatement);
+            collectionBlock.SuccessorBlocks.Should().Contain(foreachBlock);
 
-            loopBodyBlock.SuccessorBlocks.Should().OnlyContain(branchBlock);
-            branchBlock.PredecessorBlocks.Should().OnlyContain(loopBodyBlock);
-            exitBlock.PredecessorBlocks.Should().OnlyContain(branchBlock);
+            foreachBlock.SuccessorBlocks.Should().OnlyContainInOrder(loopBodyBlock, exitBlock);
+            foreachBlock.BranchingNode.Kind().Should().Be(SyntaxKind.ForEachStatement);
+
+            loopBodyBlock.SuccessorBlocks.Should().OnlyContain(foreachBlock);
+            exitBlock.PredecessorBlocks.Should().OnlyContain(foreachBlock);
         }
 
         [TestMethod]
@@ -330,26 +333,36 @@ namespace NS
         public void Cfg_NestedForeach()
         {
             var cfg = Build("foreach (var item1 in collection1) { foreach (var item2 in collection2) { var x = 10; } }");
-            VerifyCfg(cfg, 4);
-            var firstBranchBlock = cfg.EntryBlock as BinaryBranchBlock;
-            firstBranchBlock.Instructions.FirstOrDefault(n => n.ToString() == "collection1").Should().NotBeNull();
+            VerifyCfg(cfg, 6);
+
             var blocks = cfg.Blocks.ToList();
+
+            var collection1Block = cfg.EntryBlock;
+            var foreach1Block = blocks[1] as BinaryBranchBlock;
+
+            var collection2Block = blocks[2];
+            var foreach2Block = blocks[3] as BinaryBranchBlock;
+
             var loopBodyBlock = blocks
                 .First(b => b.Instructions.Any(n => n.ToString() == "x = 10"));
-            var secondBranchBlock = blocks[1] as BinaryBranchBlock;
-            secondBranchBlock.Instructions.FirstOrDefault(n => n.ToString() == "collection2").Should().NotBeNull();
+
             var exitBlock = cfg.ExitBlock;
 
-            firstBranchBlock.SuccessorBlocks.Should().OnlyContainInOrder(secondBranchBlock, exitBlock);
-            firstBranchBlock.BranchingNode.Kind().Should().Be(SyntaxKind.ForEachStatement);
+            collection1Block.Instructions.FirstOrDefault(n => n.ToString() == "collection1").Should().NotBeNull();
+            collection2Block.Instructions.FirstOrDefault(n => n.ToString() == "collection2").Should().NotBeNull();
 
-            secondBranchBlock.SuccessorBlocks.Should().OnlyContainInOrder(loopBodyBlock, firstBranchBlock);
-            secondBranchBlock.BranchingNode.Kind().Should().Be(SyntaxKind.ForEachStatement);
+            collection1Block.SuccessorBlocks.Should().Contain(foreach1Block);
 
-            loopBodyBlock.SuccessorBlocks.Should().OnlyContain(secondBranchBlock);
-            firstBranchBlock.PredecessorBlocks.Should().OnlyContain(secondBranchBlock);
-            secondBranchBlock.PredecessorBlocks.Should().OnlyContain(firstBranchBlock, loopBodyBlock);
-            exitBlock.PredecessorBlocks.Should().OnlyContain(firstBranchBlock);
+            foreach1Block.SuccessorBlocks.Should().OnlyContainInOrder(collection2Block, exitBlock);
+            foreach1Block.BranchingNode.Kind().Should().Be(SyntaxKind.ForEachStatement);
+
+            collection2Block.SuccessorBlocks.Should().Contain(foreach2Block);
+
+            foreach2Block.SuccessorBlocks.Should().OnlyContainInOrder(loopBodyBlock, foreach1Block);
+            foreach2Block.BranchingNode.Kind().Should().Be(SyntaxKind.ForEachStatement);
+
+            loopBodyBlock.SuccessorBlocks.Should().OnlyContain(foreach2Block);
+            exitBlock.PredecessorBlocks.Should().OnlyContain(foreach1Block);
         }
 
         #endregion
@@ -1143,8 +1156,7 @@ namespace NS
             var cw3 = blocks
                 .First(block => block.Instructions.Any(n => n.ToString() == "cw3"));
 
-            var xs = blocks
-                .First(block => block.Instructions.Any(n => n.ToString() == "xs")) as BinaryBranchBlock;
+            var xs = blocks.OfType<BinaryBranchBlock>().First(n => n.BranchingNode.IsKind(SyntaxKind.ForEachStatement));
 
             var e = blocks
                 .First(block => block.Instructions.Any(n => n.ToString() == "e")) as BinaryBranchBlock;
@@ -1344,8 +1356,7 @@ namespace NS
             var cw3 = blocks
                 .First(block => block.Instructions.Any(n => n.ToString() == "cw3"));
 
-            var xs = blocks
-                .First(block => block.Instructions.Any(n => n.ToString() == "xs")) as BinaryBranchBlock;
+            var foreachBlock = blocks.OfType<BinaryBranchBlock>().First(n => n.BranchingNode.IsKind(SyntaxKind.ForEachStatement));
 
             var e = blocks
                 .First(block => block.Instructions.Any(n => n.ToString() == "e")) as BinaryBranchBlock;
@@ -1354,12 +1365,14 @@ namespace NS
 
             cw0.Should().BeSameAs(cfg.EntryBlock);
 
-            cw0.SuccessorBlocks.Should().OnlyContain(xs);
-            xs.SuccessorBlocks.Should().OnlyContainInOrder(e, cw3);
+            cw0.SuccessorBlocks.Should().OnlyContain(foreachBlock);
+            foreachBlock.SuccessorBlocks.Should().OnlyContainInOrder(e, cw3);
             e.SuccessorBlocks.Should().OnlyContainInOrder(cw1, cw2);
-            cw1.SuccessorBlocks.Should().OnlyContain(xs);
+            cw1.SuccessorBlocks.Should().OnlyContain(foreachBlock);
             cw3.SuccessorBlocks.Should().OnlyContain(exitBlock);
-            cw2.SuccessorBlocks.Should().OnlyContain(xs);
+            cw2.SuccessorBlocks.Should().OnlyContain(foreachBlock);
+
+            foreachBlock.Instructions.Should().BeEmpty();
         }
 
         [TestMethod]
