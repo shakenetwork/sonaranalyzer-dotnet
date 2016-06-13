@@ -40,6 +40,7 @@ namespace NS
 {{
   public class Foo
   {{
+    private bool field = false;
     public void Bar(bool inParameter, out bool outParameter)
     {{
       {0}
@@ -483,7 +484,7 @@ namespace NS
         [TestCategory("Symbolic execution")]
         public void ExplodedGraph_NonDecisionMakingAssignments()
         {
-            string testInput = "var a = true; a |= false; var b = 42; b++;";
+            string testInput = "var a = true; a |= false; var b = 42; b++; ++b;";
             SemanticModel semanticModel;
             var method = ControlFlowGraphTest.Compile(string.Format(TestInput, testInput), "Bar", out semanticModel);
             var methodSymbol = semanticModel.GetDeclaredSymbol(method);
@@ -529,12 +530,60 @@ namespace NS
                         Assert.IsNotNull(svNew);
                         Assert.AreNotEqual(sv, svNew);
                     }
+                    if (args.Instruction.ToString() == "++b")
+                    {
+                        branchesVisited++;
+                        var svNew = args.ProgramState.GetSymbolValue(bSymbol);
+                        Assert.IsNotNull(svNew);
+                        Assert.AreNotEqual(sv, svNew);
+                    }
                 };
 
             explodedGraph.Walk();
 
-            Assert.AreEqual(9, numberOfProcessedInstructions);
-            Assert.AreEqual(4, branchesVisited);
+            Assert.AreEqual(11, numberOfProcessedInstructions);
+            Assert.AreEqual(5, branchesVisited);
+        }
+
+        [TestMethod]
+        [TestCategory("Symbolic execution")]
+        public void ExplodedGraph_NonLocalSymbolBranching()
+        {
+            string testInput = "if (field) { cw(); }";
+            SemanticModel semanticModel;
+            var method = ControlFlowGraphTest.Compile(string.Format(TestInput, testInput), "Bar", out semanticModel);
+            var methodSymbol = semanticModel.GetDeclaredSymbol(method);
+            var fieldSymbol = semanticModel.GetSymbolInfo(
+                method.DescendantNodes().OfType<IdentifierNameSyntax>().First(d => d.Identifier.ToString() == "field")).Symbol;
+
+            Assert.IsNotNull(fieldSymbol);
+
+            var cfg = ControlFlowGraph.Create(method.Body, semanticModel);
+            var lva = LiveVariableAnalysis.Analyze(cfg, methodSymbol, semanticModel);
+
+            var explodedGraph = new ExplodedGraph(cfg, methodSymbol, semanticModel, lva);
+            var explorationEnded = false;
+            explodedGraph.ExplorationEnded += (sender, args) => { explorationEnded = true; };
+
+            var numberOfExitBlockReached = 0;
+            explodedGraph.ExitBlockReached += (sender, args) => { numberOfExitBlockReached++; };
+
+            var numberOfProcessedInstructions = 0;
+
+            explodedGraph.InstructionProcessed +=
+                (sender, args) =>
+                {
+                    numberOfProcessedInstructions++;
+                    if (args.Instruction.ToString() == "field")
+                    {
+                        Assert.IsNull(args.ProgramState.GetSymbolValue(fieldSymbol));
+                    }
+                };
+
+            explodedGraph.Walk();
+
+            Assert.IsTrue(explorationEnded);
+            Assert.AreEqual(1, numberOfExitBlockReached);
         }
     }
 }
