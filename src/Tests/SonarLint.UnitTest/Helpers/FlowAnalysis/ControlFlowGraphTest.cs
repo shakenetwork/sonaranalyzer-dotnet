@@ -882,6 +882,13 @@ namespace NS
             afterOp.SuccessorBlocks.Should().OnlyContain(exitBlock);
 
             branchBlock.BranchingNode.Kind().Should().Be(SyntaxKind.CoalesceExpression);
+
+            branchBlock.Instructions.Should().HaveCount(1);
+            branchBlock.Instructions.Where(i => i.ToString() == "b").Should().NotBeEmpty();
+            bNullBlock.Instructions.Should().HaveCount(1);
+            bNullBlock.Instructions.Where(i => i.ToString() == "c").Should().NotBeEmpty();
+            afterOp.Instructions.Should().HaveCount(1);
+            afterOp.Instructions.Where(i => i.ToString() == "a = b ?? c").Should().NotBeEmpty();
         }
 
         [TestMethod]
@@ -889,21 +896,22 @@ namespace NS
         public void Cfg_Coalesce_Multiple()
         {
             var cfg = Build("var a = b ?? c ?? d;");
-            VerifyCfg(cfg, 6);
+            VerifyCfg(cfg, 5);
 
-            var branchBlock = cfg.EntryBlock as BinaryBranchBlock;
+            var bBlock = cfg.EntryBlock as BinaryBranchBlock;
             var blocks = cfg.Blocks.ToList();
-            var bNullBlock = blocks[1] as BinaryBranchBlock;
-            var cNullBlock = blocks[2]; // d
-            var cdBlock = blocks[3];    // c ?? d
-            var bcdBlock = blocks[4];   // b ?? c ?? d
+            var cBlock = blocks[1] as BinaryBranchBlock;
+            var dBlock = blocks[2];
+            var bcdBlock = blocks[3];   // b ?? c ?? d
             var exitBlock = cfg.ExitBlock;
 
-            branchBlock.SuccessorBlocks.Should().OnlyContainInOrder(bNullBlock, bcdBlock);
-            bNullBlock.SuccessorBlocks.Should().OnlyContainInOrder(cNullBlock, cdBlock);
-            cNullBlock.SuccessorBlocks.Should().OnlyContain(cdBlock);
-            cdBlock.SuccessorBlocks.Should().OnlyContain(bcdBlock);
+            bBlock.SuccessorBlocks.Should().OnlyContainInOrder(cBlock, bcdBlock);
+            cBlock.SuccessorBlocks.Should().OnlyContainInOrder(dBlock, bcdBlock);
+            dBlock.SuccessorBlocks.Should().OnlyContain(bcdBlock);
             bcdBlock.SuccessorBlocks.Should().OnlyContain(exitBlock);
+
+            bcdBlock.Instructions.Should().HaveCount(1);
+            bcdBlock.Instructions.Where(i => i.ToString() == "a = b ?? c ?? d").Should().NotBeEmpty();
         }
 
         #endregion

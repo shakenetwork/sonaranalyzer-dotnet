@@ -886,8 +886,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
         private void BuildCoalesceExpression(BinaryExpressionSyntax expression)
         {
-            currentBlock.ReversedInstructions.Add(expression);
-
             var successor = currentBlock;
             currentBlock = CreateBlock(currentBlock);
             BuildExpression(expression.Right);
