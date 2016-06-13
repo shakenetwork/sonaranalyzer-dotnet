@@ -868,8 +868,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
         private void BuildConditionalExpression(ConditionalExpressionSyntax conditional)
         {
-            currentBlock.ReversedInstructions.Add(conditional);
-
             var successor = currentBlock;
 
             currentBlock = CreateBlock(successor);

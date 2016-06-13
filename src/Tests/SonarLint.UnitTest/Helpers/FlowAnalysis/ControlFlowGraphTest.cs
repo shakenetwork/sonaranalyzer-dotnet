@@ -938,6 +938,15 @@ namespace NS
             after.SuccessorBlocks.Should().OnlyContain(exitBlock);
 
             branchBlock.BranchingNode.Kind().Should().Be(SyntaxKind.ConditionalExpression);
+
+            branchBlock.Instructions.Should().HaveCount(1);
+            branchBlock.Instructions.Where(i => i.ToString() == "cond").Should().NotBeEmpty();
+            condTrue.Instructions.Should().HaveCount(1);
+            condTrue.Instructions.Where(i => i.ToString() == "b").Should().NotBeEmpty();
+            condFalse.Instructions.Should().HaveCount(1);
+            condFalse.Instructions.Where(i => i.ToString() == "c").Should().NotBeEmpty();
+            after.Instructions.Should().HaveCount(1);
+            after.Instructions.Where(i => i.ToString() == "a = cond ? b : c").Should().NotBeEmpty();
         }
 
         [TestMethod]
@@ -945,15 +954,14 @@ namespace NS
         public void Cfg_ConditionalMultiple()
         {
             var cfg = Build("var a = cond1 ? (cond2?x:y) : (cond3?p:q);");
-            VerifyCfg(cfg, 11);
+            VerifyCfg(cfg, 9);
 
             var branchBlock = cfg.EntryBlock as BinaryBranchBlock;
             var blocks = cfg.Blocks.ToList();
             var cond2Block = blocks[1];
             cond2Block.Instructions.First().ToString().Should().BeEquivalentTo("cond2");
-            var cond3Block = blocks[5];
+            var cond3Block = blocks[4];
             cond3Block.Instructions.First().ToString().Should().BeEquivalentTo("cond3");
-
 
             branchBlock.SuccessorBlocks.Should().OnlyContainInOrder(cond2Block, cond3Block);
             cond2Block.SuccessorBlocks.Should().HaveCount(2);
@@ -962,8 +970,11 @@ namespace NS
             cond2Block
                 .SuccessorBlocks.First()
                 .SuccessorBlocks.First()
-                .SuccessorBlocks.First()
                 .SuccessorBlocks.First().ShouldBeEquivalentTo(cfg.ExitBlock);
+
+            var assignmentBlock = cfg.ExitBlock.PredecessorBlocks.First();
+            assignmentBlock.Instructions.Should().HaveCount(1);
+            assignmentBlock.Instructions.Where(i => i.ToString() == "a = cond1 ? (cond2?x:y) : (cond3?p:q)").Should().NotBeEmpty();
         }
 
         #endregion
