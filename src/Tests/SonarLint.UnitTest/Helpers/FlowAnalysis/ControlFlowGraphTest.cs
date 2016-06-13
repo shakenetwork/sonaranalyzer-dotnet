@@ -748,6 +748,13 @@ namespace NS
             afterOp.SuccessorBlocks.Should().OnlyContain(exitBlock);
 
             branchBlock.BranchingNode.Kind().Should().Be(SyntaxKind.LogicalAndExpression);
+
+            branchBlock.Instructions.Should().HaveCount(1);
+            branchBlock.Instructions.Where(i => i.ToString() == "a").Should().NotBeEmpty();
+            trueABlock.Instructions.Should().HaveCount(1);
+            trueABlock.Instructions.Where(i => i.ToString() == "c").Should().NotBeEmpty();
+            afterOp.Instructions.Should().HaveCount(1);
+            afterOp.Instructions.Where(i => i.ToString() == "b = a && c").Should().NotBeEmpty();
         }
 
         [TestMethod]
@@ -768,6 +775,13 @@ namespace NS
             afterOp.SuccessorBlocks.Should().OnlyContain(exitBlock);
 
             branchBlock.BranchingNode.Kind().Should().Be(SyntaxKind.LogicalOrExpression);
+
+            branchBlock.Instructions.Should().HaveCount(1);
+            branchBlock.Instructions.Where(i => i.ToString() == "a").Should().NotBeEmpty();
+            falseABlock.Instructions.Should().HaveCount(1);
+            falseABlock.Instructions.Where(i => i.ToString() == "c").Should().NotBeEmpty();
+            afterOp.Instructions.Should().HaveCount(1);
+            afterOp.Instructions.Where(i => i.ToString() == "b = a || c").Should().NotBeEmpty();
         }
 
         [TestMethod]
@@ -803,8 +817,7 @@ namespace NS
             var blocks = cfg.Blocks.ToList();
             var cBlock = blocks
                 .First(b => b.Instructions.Any(n => n.ToString() == "c"));
-            var acBlock = blocks
-                .First(b => b.Instructions.Any(n => n.ToString() == "a && c")) as BinaryBranchBlock;
+            var acBlock = blocks[2] as BinaryBranchBlock;
             var bodyBlock = blocks
                 .First(b => b.Instructions.Any(n => n.ToString() == "x = 10"));
             var exitBlock = cfg.ExitBlock;
@@ -813,6 +826,8 @@ namespace NS
             cBlock.SuccessorBlocks.Should().OnlyContain(acBlock);
             acBlock.SuccessorBlocks.Should().OnlyContainInOrder(bodyBlock, exitBlock);
             bodyBlock.SuccessorBlocks.Should().OnlyContain(aBlock);
+
+            acBlock.Instructions.Should().BeEmpty();
         }
 
         [TestMethod]
@@ -828,8 +843,7 @@ namespace NS
                 .First(b => b.Instructions.Any(n => n.ToString() == "a")) as BinaryBranchBlock;
             var cBlock = blocks
                 .First(b => b.Instructions.Any(n => n.ToString() == "c"));
-            var acBlock = blocks
-                .First(b => b.Instructions.Any(n => n.ToString() == "a && c")) as BinaryBranchBlock;
+            var acBlock = blocks[3] as BinaryBranchBlock;
             var bodyBlock = blocks
                 .First(b => b.Instructions.Any(n => n.ToString() == "z = 11"));
             var incrementBlock = blocks
@@ -842,6 +856,8 @@ namespace NS
             acBlock.SuccessorBlocks.Should().OnlyContainInOrder(bodyBlock, exitBlock);
             bodyBlock.SuccessorBlocks.Should().OnlyContain(incrementBlock);
             incrementBlock.SuccessorBlocks.Should().OnlyContain(aBlock);
+
+            acBlock.Instructions.Should().BeEmpty();
         }
 
         #endregion
@@ -1022,8 +1038,7 @@ namespace NS
                 .First(block => block.Instructions.Any(n => n.ToString() == "b")) as BinaryBranchBlock;
             var c = blocks
                 .First(block => block.Instructions.Any(n => n.ToString() == "c"));
-            var bc = blocks
-                .First(block => block.Instructions.Any(n => n.ToString() == "b && c")) as BinaryBranchBlock;
+            var bc = blocks[3] as BinaryBranchBlock;
 
             var d = blocks
                 .First(block => block.Instructions.Any(n => n.ToString() == "d"));
@@ -1044,6 +1059,8 @@ namespace NS
             cw3.SuccessorBlocks.Should().OnlyContain(exitBlock);
             cw2.SuccessorBlocks.Should().OnlyContain(d);
             d.SuccessorBlocks.Should().OnlyContain(b);
+
+            bc.Instructions.Should().BeEmpty();
         }
 
         [TestMethod]
@@ -1068,8 +1085,7 @@ namespace NS
                 .First(block => block.Instructions.Any(n => n.ToString() == "b")) as BinaryBranchBlock;
             var c = blocks
                 .First(block => block.Instructions.Any(n => n.ToString() == "c"));
-            var bc = blocks
-                .First(block => block.Instructions.Any(n => n.ToString() == "b && c")) as BinaryBranchBlock;
+            var bc = blocks[3] as BinaryBranchBlock;
 
             var e = blocks
                 .First(block => block.Instructions.Any(n => n.ToString() == "e")) as BinaryBranchBlock;
@@ -1086,6 +1102,8 @@ namespace NS
             cw1.SuccessorBlocks.Should().OnlyContain(cw3);
             cw3.SuccessorBlocks.Should().OnlyContain(exitBlock);
             cw2.SuccessorBlocks.Should().OnlyContain(b);
+
+            bc.Instructions.Should().BeEmpty();
         }
 
         [TestMethod]
@@ -1146,8 +1164,7 @@ namespace NS
                 .First(block => block.Instructions.Any(n => n.ToString() == "b")) as BinaryBranchBlock;
             var c = blocks
                 .First(block => block.Instructions.Any(n => n.ToString() == "c"));
-            var bc = blocks
-                .First(block => block.Instructions.Any(n => n.ToString() == "b && c")) as BinaryBranchBlock;
+            var bc = blocks[6] as BinaryBranchBlock;
 
             var e = blocks
                 .First(block => block.Instructions.Any(n => n.ToString() == "e")) as BinaryBranchBlock;
@@ -1164,6 +1181,8 @@ namespace NS
             cw1.SuccessorBlocks.Should().OnlyContain(cw3);
             cw3.SuccessorBlocks.Should().OnlyContain(exitBlock);
             cw2.SuccessorBlocks.Should().OnlyContain(b);
+
+            bc.Instructions.Should().BeEmpty();
         }
 
         [TestMethod]
@@ -1220,8 +1239,7 @@ namespace NS
                 .First(block => block.Instructions.Any(n => n.ToString() == "b")) as BinaryBranchBlock;
             var c = blocks
                 .First(block => block.Instructions.Any(n => n.ToString() == "c"));
-            var bc = blocks
-                .First(block => block.Instructions.Any(n => n.ToString() == "b && c")) as BinaryBranchBlock;
+            var bc = blocks[3] as BinaryBranchBlock;
 
             var d = blocks
                 .First(block => block.Instructions.Any(n => n.ToString() == "d"));
@@ -1242,6 +1260,8 @@ namespace NS
             cw3.SuccessorBlocks.Should().OnlyContain(exitBlock);
             cw2.SuccessorBlocks.Should().OnlyContain(d);
             d.SuccessorBlocks.Should().OnlyContain(b);
+
+            bc.Instructions.Should().BeEmpty();
         }
 
         [TestMethod]
@@ -1266,8 +1286,7 @@ namespace NS
                 .First(block => block.Instructions.Any(n => n.ToString() == "b")) as BinaryBranchBlock;
             var c = blocks
                 .First(block => block.Instructions.Any(n => n.ToString() == "c"));
-            var bc = blocks
-                .First(block => block.Instructions.Any(n => n.ToString() == "b && c")) as BinaryBranchBlock;
+            var bc = blocks[3] as BinaryBranchBlock;
 
             var e = blocks
                 .First(block => block.Instructions.Any(n => n.ToString() == "e")) as BinaryBranchBlock;
@@ -1284,6 +1303,8 @@ namespace NS
             cw1.SuccessorBlocks.Should().OnlyContain(b);
             cw3.SuccessorBlocks.Should().OnlyContain(exitBlock);
             cw2.SuccessorBlocks.Should().OnlyContain(b);
+
+            bc.Instructions.Should().BeEmpty();
         }
 
         [TestMethod]
@@ -1344,8 +1365,7 @@ namespace NS
                 .First(block => block.Instructions.Any(n => n.ToString() == "b")) as BinaryBranchBlock;
             var c = blocks
                 .First(block => block.Instructions.Any(n => n.ToString() == "c"));
-            var bc = blocks
-                .First(block => block.Instructions.Any(n => n.ToString() == "b && c")) as BinaryBranchBlock;
+            var bc = blocks[6] as BinaryBranchBlock;
 
             var e = blocks
                 .First(block => block.Instructions.Any(n => n.ToString() == "e")) as BinaryBranchBlock;
@@ -1362,6 +1382,8 @@ namespace NS
             cw1.SuccessorBlocks.Should().OnlyContain(b);
             cw3.SuccessorBlocks.Should().OnlyContain(exitBlock);
             cw2.SuccessorBlocks.Should().OnlyContain(b);
+
+            bc.Instructions.Should().BeEmpty();
         }
 
         #endregion

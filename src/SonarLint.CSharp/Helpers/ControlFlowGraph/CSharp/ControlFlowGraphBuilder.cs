@@ -898,8 +898,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
         private void BuildLogicalAndExpression(BinaryExpressionSyntax expression)
         {
-            currentBlock.ReversedInstructions.Add(expression);
-
             var successor = currentBlock;
             currentBlock = CreateBlock(currentBlock);
             BuildExpression(expression.Right);
@@ -910,8 +908,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
         private void BuildLogicalOrExpression(BinaryExpressionSyntax expression)
         {
-            currentBlock.ReversedInstructions.Add(expression);
-
             var successor = currentBlock;
             currentBlock = CreateBlock(currentBlock);
             BuildExpression(expression.Right);
