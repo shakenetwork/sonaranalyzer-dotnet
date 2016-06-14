@@ -75,7 +75,7 @@ namespace Tests.Diagnostics
             }
 
             var b = true;
-            while (b) // Non-compliant, the above while changes ProgramState every time we are inside the body, so we exceed the max visited nodes
+            while (b) // Noncompliant
             {
                 Console.WriteLine();
             }
@@ -201,6 +201,63 @@ namespace Tests.Diagnostics
                     Console.WriteLine();
                 }
             }
+        }
+
+        public void Method_Complex()
+        {
+            bool guard1 = true;
+            bool guard2 = true;
+            bool guard3 = true;
+
+            while (GetCondition())
+            {
+                if (guard1)
+                {
+                    guard1 = false;
+                }
+                else
+                {
+                    if (guard2) // Noncompliant, false-positive
+                    {
+                        guard2 = false;
+                    }
+                    else
+                    {
+                        guard3 = false;
+                    }
+                }
+            }
+
+            if (guard3) // Noncompliant, false-positive, kept only to show that problems with loops can cause issues outside the loop
+            {
+                Console.WriteLine();
+            }
+        }
+
+        public void Method_Complex_2()
+        {
+            var x = false;
+            var y = false;
+
+            while (GetCondition())
+            {
+                while (GetCondition())
+                {
+                    if (x)
+                    {
+                        if (y) // Noncompliant, false-positive
+                        {
+                        }
+                    }
+                    y = true;
+                }
+                x = true;
+            }
+        }
+
+        private static bool GetCondition()
+        {
+            return true;
         }
     }
 }

@@ -108,6 +108,7 @@
     <Compile Include="Helpers\MethodParameterLookup.cs" />
     <Compile Include="Helpers\RemovableDeclarationCollector.cs" />
     <Compile Include="Helpers\SymbolicExecution\Common\ConditionEvaluatedEventArgs.cs" />
+    <Compile Include="Helpers\SymbolicExecution\Common\VisitCountExceedLimitEventArgs.cs" />
     <Compile Include="Helpers\SymbolicExecution\CSharp\ExplodedGraph.cs" />
     <Compile Include="Helpers\SymbolicExecution\Common\InstructionProcessedEventArgs.cs" />
     <Compile Include="Helpers\SymbolicExecution\Common\ProgramState.cs" />

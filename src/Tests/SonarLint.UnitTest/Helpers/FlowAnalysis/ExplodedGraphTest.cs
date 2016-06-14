@@ -30,6 +30,7 @@ using System.Collections.Generic;
 
 namespace SonarLint.UnitTest.Helpers
 {
+    using FluentAssertions;
     using LiveVariableAnalysis = SonarLint.Helpers.FlowAnalysis.CSharp.LiveVariableAnalysis;
 
     [TestClass]
@@ -584,6 +585,35 @@ namespace NS
 
             Assert.IsTrue(explorationEnded);
             Assert.AreEqual(1, numberOfExitBlockReached);
+        }
+
+        [TestMethod]
+        [TestCategory("Symbolic execution")]
+        public void ExplodedGraph_LoopExploration()
+        {
+            string testInput = "var i = 0; while (i < 1) { i = i + 1; }";
+            SemanticModel semanticModel;
+            var method = ControlFlowGraphTest.Compile(string.Format(TestInput, testInput), "Bar", out semanticModel);
+            var methodSymbol = semanticModel.GetDeclaredSymbol(method);
+
+            var cfg = ControlFlowGraph.Create(method.Body, semanticModel);
+            var lva = LiveVariableAnalysis.Analyze(cfg, methodSymbol, semanticModel);
+
+            var explodedGraph = new ExplodedGraph(cfg, methodSymbol, semanticModel, lva);
+            var explorationEnded = false;
+            explodedGraph.ExplorationEnded += (sender, args) => { explorationEnded = true; };
+
+            var exceeded = 0;
+            explodedGraph.ProgramPointVisitCountExceedLimit += (sender, args) =>
+            {
+                exceeded++;
+                args.ProgramPoint.Block.Instructions.Where(i => i.ToString() == "i < 1").Should().NotBeEmpty();
+            };
+
+            explodedGraph.Walk();
+
+            Assert.IsTrue(explorationEnded);
+            Assert.AreEqual(1, exceeded);
         }
     }
 }

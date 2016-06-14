@@ -32,6 +32,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
     public class ExplodedGraph
     {
         public const int MaxStepCount = 1000;
+        private const int MaxProgramPointExecutionCount = 2;
 
         private readonly List<Node> nodes = new List<Node>();
         private readonly Dictionary<ProgramPoint, ProgramPoint> programPoints = new Dictionary<ProgramPoint, ProgramPoint>();
@@ -46,6 +47,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
         public event EventHandler ExplorationEnded;
         public event EventHandler MaxStepCountReached;
         public event EventHandler<InstructionProcessedEventArgs> InstructionProcessed;
+        public event EventHandler<VisitCountExceedLimitEventArgs> ProgramPointVisitCountExceedLimit;
         public event EventHandler ExitBlockReached;
         public event EventHandler<ConditionEvaluatedEventArgs> ConditionEvaluated;
 
@@ -124,17 +126,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             OnExplorationEnded();
         }
 
-        private void EnqueueStartNode()
-        {
-            var initialProgramState = new ProgramState();
-            foreach (var parameter in declarationParameters)
-            {
-                initialProgramState = initialProgramState.SetNewSymbolicValue(parameter);
-            }
-
-            EnqueueNewNode(new ProgramPoint(cfg.EntryBlock, 0), initialProgramState);
-        }
-
         #region OnEvent*
 
         private void OnConditionEvaluated(SyntaxNode branchingNode, bool evaluationValue)
@@ -177,17 +168,19 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             });
         }
 
+        private void OnProgramPointVisitCountExceedLimit(ProgramPoint programPoint, ProgramState programState)
+        {
+            ProgramPointVisitCountExceedLimit?.Invoke(this, new VisitCountExceedLimitEventArgs
+            {
+                Limit = MaxProgramPointExecutionCount,
+                ProgramPoint = programPoint,
+                ProgramState = programState
+            });
+        }
+
         #endregion
 
         #region Visit*
-
-        private void EnqueueAllSuccessors(Block block, ProgramState newProgramState)
-        {
-            foreach (var successorBlock in block.SuccessorBlocks)
-            {
-                EnqueueNewNode(new ProgramPoint(successorBlock), newProgramState);
-            }
-        }
 
         private void VisitBinaryBranch(BinaryBranchBlock binaryBranchBlock, Node node)
         {
@@ -451,6 +444,27 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
         #endregion
 
+        #region Enqueue exploded graph node
+
+        private void EnqueueStartNode()
+        {
+            var initialProgramState = new ProgramState();
+            foreach (var parameter in declarationParameters)
+            {
+                initialProgramState = initialProgramState.SetNewSymbolicValue(parameter);
+            }
+
+            EnqueueNewNode(new ProgramPoint(cfg.EntryBlock), initialProgramState);
+        }
+
+        private void EnqueueAllSuccessors(Block block, ProgramState newProgramState)
+        {
+            foreach (var successorBlock in block.SuccessorBlocks)
+            {
+                EnqueueNewNode(new ProgramPoint(successorBlock), newProgramState);
+            }
+        }
+
         private void EnqueueNewNode(ProgramPoint programPoint, ProgramState programState)
         {
             var pos = programPoint;
@@ -463,12 +477,20 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 programPoints[pos] = pos;
             }
 
-            var newNode = new Node(pos, programState);
+            if (programState.GetVisitedCount(pos) >= MaxProgramPointExecutionCount)
+            {
+                OnProgramPointVisitCountExceedLimit(pos, programState);
+                return;
+            }
+
+            var newNode = new Node(pos, programState.AddVisit(pos));
             if (nodesAlreadyInGraph.Add(newNode))
             {
                 workList.Enqueue(newNode);
             }
         }
+
+        #endregion
 
         private class Node : IEquatable<Node>
         {

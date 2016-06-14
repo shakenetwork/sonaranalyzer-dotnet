@@ -28,23 +28,26 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 {
     public class ProgramState : IEquatable<ProgramState>
     {
-        private readonly Dictionary<ISymbol, SymbolicValue> symbolValueAssociations;
+        private readonly ImmutableDictionary<ISymbol, SymbolicValue> symbolValueAssociations;
+        private readonly ImmutableDictionary<ProgramPoint, int> programPointVisitCounts;
 
         public /* for testing */ ProgramState()
-            : this(new Dictionary<ISymbol, SymbolicValue>())
+            : this(ImmutableDictionary<ISymbol, SymbolicValue>.Empty, ImmutableDictionary<ProgramPoint, int>.Empty)
         {
         }
 
-        private ProgramState(Dictionary<ISymbol, SymbolicValue> symbolValueAssociation)
+        private ProgramState(ImmutableDictionary<ISymbol, SymbolicValue> symbolValueAssociations,
+            ImmutableDictionary<ProgramPoint, int> programPointVisitCounts)
         {
-            this.symbolValueAssociations = symbolValueAssociation;
+            this.symbolValueAssociations = symbolValueAssociations;
+            this.programPointVisitCounts = programPointVisitCounts;
         }
 
         public /* for testing */ ProgramState SetSymbolicValue(ISymbol symbol, SymbolicValue newSymbolicValue)
         {
-            var ret = new ProgramState(new Dictionary<ISymbol, SymbolicValue>(symbolValueAssociations));
-            ret.symbolValueAssociations[symbol] = newSymbolicValue;
-            return ret;
+            return new ProgramState(
+                symbolValueAssociations.SetItem(symbol, newSymbolicValue),
+                programPointVisitCounts);
         }
 
         internal ProgramState SetNewSymbolicValue(ISymbol symbol)
@@ -52,10 +55,26 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             return SetSymbolicValue(symbol, new SymbolicValue());
         }
 
+        internal ProgramState AddVisit(ProgramPoint visitedProgramPoint)
+        {
+            var visitCount = GetVisitedCount(visitedProgramPoint);
+            return new ProgramState(symbolValueAssociations, programPointVisitCounts.SetItem(visitedProgramPoint, visitCount + 1));
+        }
+
+        internal int GetVisitedCount(ProgramPoint programPoint)
+        {
+            int value;
+            if (!programPointVisitCounts.TryGetValue(programPoint, out value))
+            {
+                value = 0;
+            }
+
+            return value;
+        }
+
         public bool TrySetSymbolicValue(ISymbol symbol, SymbolicValue newSymbolicValue, out ProgramState newProgramState)
         {
-            newProgramState = new ProgramState(new Dictionary<ISymbol, SymbolicValue>(symbolValueAssociations));
-            newProgramState.symbolValueAssociations[symbol] = newSymbolicValue;
+            newProgramState = SetSymbolicValue(symbol, newSymbolicValue);
 
             SymbolicValue oldSymbolicValue;
             if (!symbolValueAssociations.TryGetValue(symbol, out oldSymbolicValue))
@@ -85,18 +104,12 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 
         internal ProgramState CleanAndKeepOnly(IEnumerable<ISymbol> liveSymbolsToKeep)
         {
-            var ret = new ProgramState(new Dictionary<ISymbol, SymbolicValue>(symbolValueAssociations));
-
-            var deadSymbols = ret.symbolValueAssociations
+            var deadSymbols = symbolValueAssociations
                 .Where(sv => !liveSymbolsToKeep.Contains(sv.Key))
+                .Select(sv => sv.Key)
                 .ToList();
 
-            foreach (var deadSymbol in deadSymbols)
-            {
-                ret.symbolValueAssociations.Remove(deadSymbol.Key);
-            }
-
-            return ret;
+            return new ProgramState(symbolValueAssociations.RemoveRange(deadSymbols), programPointVisitCounts);
         }
 
         public override bool Equals(object obj)
@@ -120,7 +133,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             return DictionaryEquals(symbolValueAssociations, other.symbolValueAssociations);
         }
 
-        private static bool DictionaryEquals<TKey, TValue>(Dictionary<TKey, TValue> dict1, Dictionary<TKey, TValue> dict2)
+        private static bool DictionaryEquals<TKey, TValue>(IDictionary<TKey, TValue> dict1, IDictionary<TKey, TValue> dict2)
         {
             if (dict1 == dict2)
             {
