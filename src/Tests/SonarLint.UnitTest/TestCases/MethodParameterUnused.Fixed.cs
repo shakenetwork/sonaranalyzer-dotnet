@@ -139,21 +139,21 @@ namespace Tests.TestCases
 
     class MethodAssignedToActionFromInitializer
     {
-        private static void MyMethod1(int arg) { } // Compliant
+        private static void MyMethod1(int arg) { } // Compliant, because of the below assignment
 
         public System.Action<int> MyReference = MyMethod1;
     }
 
     class MethodAssignedToActionFromInitializerQualified
     {
-        private static void MyMethod2(int arg) { } // Compliant
+        private static void MyMethod2(int arg) { } // Compliant, because of the below assignment
 
         public System.Action<int> MyReference = MethodAssignedToActionFromInitializerQualified.MyMethod2;
     }
 
     class MethodAssignedToFromVariable
     {
-        private static void MyMethod3(int arg) { } // Compliant
+        private static void MyMethod3(int arg) { } // Compliant, because of the below assignment
 
         public void Foo()
         {
@@ -164,18 +164,18 @@ namespace Tests.TestCases
 
     class MethodAssignedToFromVariableQualified
     {
-        private static void MyMethod4(int arg) { } // Compliant
+        private static void MyMethod4(int arg) { } // Compliant, because of the below assignment
 
         public void Foo()
         {
             System.Action<int> MyReference;
-            MyReference = MethodAssignedToFromVariableQualified.MyMethod4;
+            MyReference = new System.Action<int>(MethodAssignedToFromVariableQualified.MyMethod4);
         }
     }
 
     partial class MethodAssignedToActionFromPartialClass
     {
-        private static void MyMethod5(int arg) { } // Compliant
+        private static void MyMethod5(int arg) { } // Compliant, because of the below assignment
 
         private static void MyNoncompliantMethod() { } // Noncompliant
     }
@@ -183,5 +183,72 @@ namespace Tests.TestCases
     partial class MethodAssignedToActionFromPartialClass
     {
         public System.Action<int> MyReference = MethodAssignedToActionFromPartialClass.MyMethod5;
+    }
+
+    public class Dead
+    {
+        private int Method1(int p) => (new Action(() => { p = 10; return p; }))(); // Not reporting on this
+
+        private void Method2(int p)
+        {
+            var x = true;
+            if (x)
+            {
+                p = 10;
+                Console.WriteLine(p);
+            }
+
+            Console.WriteLine(p);
+        }
+
+        public void Method3_Public(int p) // Compliant
+        {
+            var x = true;
+            if (x)
+            {
+                p = 10;
+                Console.WriteLine(p);
+            }
+        }
+
+        private void Method3(int p) // Noncompliant
+        {
+            var x = true;
+            if (x)
+            {
+                p = 10;
+                Console.WriteLine(p);
+            }
+
+            Action<int> a = new Action<int>(Method4);
+        }
+
+        private void Method4(int p) // Noncompliant, although it is used above in the Action assignment
+        {
+            var x = true;
+            if (x)
+            {
+                p = 10;
+                Console.WriteLine(p);
+            }
+            else
+            {
+                p = 11;
+            }
+        }
+
+        private void Method5_Out(out int p)
+        {
+            var x = true;
+            if (x)
+            {
+                p = 10;
+                Console.WriteLine(p);
+            }
+            else
+            {
+                p = 11;
+            }
+        }
     }
 }

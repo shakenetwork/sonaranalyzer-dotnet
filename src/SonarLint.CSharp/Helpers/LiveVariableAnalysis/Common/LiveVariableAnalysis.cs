@@ -48,6 +48,11 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             return liveOutStates[block].ToImmutableArray();
         }
 
+        public IReadOnlyList<ISymbol> GetLiveIn(Block block)
+        {
+            return liveInStates[block].ToImmutableArray();
+        }
+
         protected void PerformAnalysis()
         {
             foreach (var block in reversedBlocks)

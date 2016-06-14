@@ -45,6 +45,11 @@ namespace SonarLint.Rules.CSharp
             var diagnosticSpan = diagnostic.Location.SourceSpan;
             var parameter = root.FindNode(diagnosticSpan, getInnermostNodeForTie: true) as ParameterSyntax;
 
+            if (!bool.Parse(diagnostic.Properties[MethodParameterUnused.IsRemovableKey]))
+            {
+                return;
+            }
+
             context.RegisterCodeFix(
                 CodeAction.Create(
                     Title,

@@ -8,12 +8,24 @@ void DoSomething(int a, int b) // "b" is unused
 {
   Compute(a);
 }
+
+void DoSomething2(int a) // value of "a" is unused
+{
+  a = 10;
+  Compute(a);
+}
 </pre>
 
 <h2>Compliant Solution</h2>
 <pre>
 void DoSomething(int a)
 {
+  Compute(a);
+}
+
+void DoSomething2()
+{
+  var a = 10;
   Compute(a);
 }
 </pre>

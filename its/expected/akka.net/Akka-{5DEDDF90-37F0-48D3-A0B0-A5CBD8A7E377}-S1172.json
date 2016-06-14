@@ -2,6 +2,19 @@
 "issues":  [
 {
 "id":  "S1172",
+"message":  "Remove this parameter \"other\", whose value is ignored in the method.",
+"location":  {
+"uri":  "akka.net\\src\\core\\Akka\\Actor\\Props.cs",
+"region":  {
+"startLine":  76,
+"startColumn":  48,
+"endLine":  76,
+"endColumn":  59
+}
+}
+},
+{
+"id":  "S1172",
 "message":  "Remove this unused method parameter \"address\".",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka\\IO\\UdpConnection.cs",
