@@ -24,12 +24,25 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
     {
         public static readonly SymbolicValue True = new BoolLiteralSymbolicValue(true);
         public static readonly SymbolicValue False = new BoolLiteralSymbolicValue(false);
+        public static readonly SymbolicValue Null = new NullSymbolicValue();
 
         private class BoolLiteralSymbolicValue : SymbolicValue
         {
             internal BoolLiteralSymbolicValue(bool value)
                 : base(value)
             {
+            }
+        }
+
+        private class NullSymbolicValue : SymbolicValue
+        {
+            internal NullSymbolicValue()
+                : base(new object())
+            {
+            }
+            public override string ToString()
+            {
+                return "SymbolicValue NULL";
             }
         }
 

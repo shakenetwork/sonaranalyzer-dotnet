@@ -1706,6 +1706,8 @@ v = checked(1+1); v = unchecked(1+1);");
 
             cfg = Build("var x = await this.Method(__arglist(10,11,12));");
             VerifyMinimalCfg(cfg);
+            cfg.EntryBlock.Instructions.Where(i => i.ToString() == "this.Method(__arglist(10,11,12))").Should().NotBeEmpty();
+            cfg.EntryBlock.Instructions.Where(i => i.ToString() == "await this.Method(__arglist(10,11,12))").Should().NotBeEmpty();
 
             cfg = Build("var x = 1; var y = __refvalue(__makeref(x), int); var t = __reftype(__makeref(x));");
             VerifyMinimalCfg(cfg);

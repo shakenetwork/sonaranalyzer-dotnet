@@ -36,6 +36,8 @@ namespace SonarLint.Common
         public const string Finding = "finding";
         public const string Misra = "misra";
         public const string MultiThreading = "multi-threading";
+        public const string OwaspA1 = "owasp-a1";
+        public const string OwaspA2 = "owasp-a2";
         public const string OwaspA6 = "owasp-a6";
         public const string Performance = "performance";
         public const string Pitfall = "pitfall";

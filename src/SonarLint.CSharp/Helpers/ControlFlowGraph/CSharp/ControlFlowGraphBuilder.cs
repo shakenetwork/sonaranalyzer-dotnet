@@ -299,7 +299,10 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                     break;
 
                 case SyntaxKind.AwaitExpression:
-                    BuildExpression(((AwaitExpressionSyntax)expression).Expression);
+                    {
+                        var parent = (AwaitExpressionSyntax)expression;
+                        BuildSimpleNestedExpression(parent, parent.Expression);
+                    }
                     break;
 
                 case SyntaxKind.CheckedExpression:

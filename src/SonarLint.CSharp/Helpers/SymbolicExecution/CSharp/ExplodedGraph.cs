@@ -26,6 +26,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using SonarLint.Helpers.FlowAnalysis.Common;
 using System.Collections.Immutable;
+using SonarLint.Rules.CSharp;
 
 namespace SonarLint.Helpers.FlowAnalysis.CSharp
 {
@@ -38,11 +39,18 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
         private readonly Dictionary<ProgramPoint, ProgramPoint> programPoints = new Dictionary<ProgramPoint, ProgramPoint>();
 
         private readonly IControlFlowGraph cfg;
-        private readonly SemanticModel semanticModel;
         private readonly ISymbol declaration;
         private readonly IEnumerable<IParameterSymbol> declarationParameters = new List<IParameterSymbol>();
         private readonly IEnumerable<IParameterSymbol> nonInDeclarationParameters;
         private readonly Common.LiveVariableAnalysis lva;
+        private readonly ICollection<ExplodedGraphCheck> explodedGraphChecks;
+
+        private static readonly ISet<SyntaxKind> BinaryBranchingKindsWithNoBoolCondition = ImmutableHashSet.Create(
+            SyntaxKind.ForEachStatement,
+            SyntaxKind.CoalesceExpression,
+            SyntaxKind.ConditionalAccessExpression);        
+
+        internal SemanticModel SemanticModel { get; }
 
         public event EventHandler ExplorationEnded;
         public event EventHandler MaxStepCountReached;
@@ -57,7 +65,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
         public ExplodedGraph(IControlFlowGraph cfg, ISymbol declaration, SemanticModel semanticModel, Common.LiveVariableAnalysis lva)
         {
             this.cfg = cfg;
-            this.semanticModel = semanticModel;
+            this.SemanticModel = semanticModel;
             this.declaration = declaration;
             this.lva = lva;
 
@@ -74,6 +82,12 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             }
 
             nonInDeclarationParameters = declarationParameters.Where(p => p.RefKind != RefKind.None);
+
+            explodedGraphChecks = new List<ExplodedGraphCheck>
+            {
+                // Add mandatory checks
+                new NullPointerDereference.NullPointerCheck(this)
+            };
         }
 
         public void Walk()
@@ -124,6 +138,21 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             }
 
             OnExplorationEnded();
+        }
+        
+        internal void AddExplodedGraphCheck<T>(T check)
+            where T : ExplodedGraphCheck
+        {
+            var matchingCheck = explodedGraphChecks.OfType<T>().SingleOrDefault();
+            if (matchingCheck == null)
+            {
+                explodedGraphChecks.Add(check);
+            }
+            else
+            {
+                explodedGraphChecks.Remove(matchingCheck);
+                explodedGraphChecks.Add(check);
+            }
         }
 
         #region OnEvent*
@@ -177,7 +206,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 ProgramState = programState
             });
         }
-
+        
         #endregion
 
         #region Visit*
@@ -210,7 +239,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 case SyntaxKind.IdentifierName:
                     {
                         var identifier = (IdentifierNameSyntax)instruction;
-                        var symbol = semanticModel.GetSymbolInfo(identifier).Symbol;
+                        var symbol = SemanticModel.GetSymbolInfo(identifier).Symbol;
 
                         if (IsLocalScoped(symbol))
                         {
@@ -255,23 +284,27 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             }
         }
 
-        private static readonly ISet<SyntaxKind> BinaryBranchingKindsWithNoBoolCondition = ImmutableHashSet.Create(
-            SyntaxKind.ForEachStatement,
-            SyntaxKind.CoalesceExpression,
-            SyntaxKind.ConditionalAccessExpression);
-
         private void VisitInstruction(Node node)
         {
             var instruction = node.ProgramPoint.Block.Instructions[node.ProgramPoint.Offset];
             var newProgramPoint = new ProgramPoint(node.ProgramPoint.Block, node.ProgramPoint.Offset + 1);
-            var currentState = node.ProgramState;
+            var newProgramState = node.ProgramState;
+
+            foreach (var explodedGraphCheck in explodedGraphChecks)
+            {
+                newProgramState = explodedGraphCheck.ProcessInstruction(node.ProgramPoint, newProgramState);
+                if (newProgramState == null)
+                {
+                    return;
+                }
+            }
 
             switch (instruction.Kind())
             {
                 case SyntaxKind.VariableDeclarator:
                     {
                         var declarator = (VariableDeclaratorSyntax)instruction;
-                        var leftSymbol = semanticModel.GetDeclaredSymbol(declarator);
+                        var leftSymbol = SemanticModel.GetDeclaredSymbol(declarator);
 
                         if (leftSymbol == null)
                         {
@@ -279,27 +312,27 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                         }
 
                         ISymbol rightSymbol = null;
-                        Optional<object> constValue = null;
+                        Optional<object> constValue = new object();
                         if (declarator.Initializer?.Value != null)
                         {
-                            rightSymbol = semanticModel.GetSymbolInfo(declarator.Initializer.Value).Symbol;
-                            constValue = semanticModel.GetConstantValue(declarator.Initializer.Value);
+                            rightSymbol = SemanticModel.GetSymbolInfo(declarator.Initializer.Value).Symbol;
+                            constValue = SemanticModel.GetConstantValue(declarator.Initializer.Value);
                         }
 
-                        currentState = GetNewProgramStateForAssignment(node.ProgramState, leftSymbol, rightSymbol, constValue);
+                        newProgramState = GetNewProgramStateForAssignment(node.ProgramState, leftSymbol, rightSymbol, constValue);
                     }
                     break;
                 case SyntaxKind.SimpleAssignmentExpression:
                     {
                         var assignment = (AssignmentExpressionSyntax)instruction;
-                        var leftSymbol = semanticModel.GetSymbolInfo(assignment.Left).Symbol;
+                        var leftSymbol = SemanticModel.GetSymbolInfo(assignment.Left).Symbol;
 
                         if (IsLocalScoped(leftSymbol))
                         {
-                            var rightSymbol = semanticModel.GetSymbolInfo(assignment.Right).Symbol;
-                            var constValue = semanticModel.GetConstantValue(assignment.Right);
+                            var rightSymbol = SemanticModel.GetSymbolInfo(assignment.Right).Symbol;
+                            var constValue = SemanticModel.GetConstantValue(assignment.Right);
 
-                            currentState = GetNewProgramStateForAssignment(node.ProgramState, leftSymbol, rightSymbol, constValue);
+                            newProgramState = GetNewProgramStateForAssignment(node.ProgramState, leftSymbol, rightSymbol, constValue);
                         }
                     }
                     break;
@@ -317,12 +350,8 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 case SyntaxKind.RightShiftAssignmentExpression:
                     {
                         var assignment = (AssignmentExpressionSyntax)instruction;
-                        var leftSymbol = semanticModel.GetSymbolInfo(assignment.Left).Symbol;
-
-                        if (IsLocalScoped(leftSymbol))
-                        {
-                            currentState = node.ProgramState.SetNewSymbolicValue(leftSymbol);
-                        }
+                        var leftSymbol = SemanticModel.GetSymbolInfo(assignment.Left).Symbol;
+                        newProgramState = SetNewSymbolicValueIfLocal(newProgramState, leftSymbol);
                     }
                     break;
 
@@ -330,12 +359,8 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 case SyntaxKind.PreDecrementExpression:
                     {
                         var unary = (PrefixUnaryExpressionSyntax)instruction;
-                        var leftSymbol = semanticModel.GetSymbolInfo(unary.Operand).Symbol;
-
-                        if (IsLocalScoped(leftSymbol))
-                        {
-                            currentState = node.ProgramState.SetNewSymbolicValue(leftSymbol);
-                        }
+                        var leftSymbol = SemanticModel.GetSymbolInfo(unary.Operand).Symbol;
+                        newProgramState = SetNewSymbolicValueIfLocal(newProgramState, leftSymbol);
                     }
                     break;
 
@@ -343,12 +368,8 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 case SyntaxKind.PostDecrementExpression:
                     {
                         var unary = (PostfixUnaryExpressionSyntax)instruction;
-                        var leftSymbol = semanticModel.GetSymbolInfo(unary.Operand).Symbol;
-
-                        if (IsLocalScoped(leftSymbol))
-                        {
-                            currentState = node.ProgramState.SetNewSymbolicValue(leftSymbol);
-                        }
+                        var leftSymbol = SemanticModel.GetSymbolInfo(unary.Operand).Symbol;
+                        newProgramState = SetNewSymbolicValueIfLocal(newProgramState, leftSymbol);
                     }
                     break;
 
@@ -363,20 +384,28 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                             break;
                         }
 
-                        var symbol = semanticModel.GetSymbolInfo(identifier).Symbol;
-
-                        if (IsLocalScoped(symbol))
-                        {
-                            currentState = GetNewProgramStateForAssignment(node.ProgramState, symbol);
-                        }
+                        var symbol = SemanticModel.GetSymbolInfo(identifier).Symbol;
+                        newProgramState = SetNewSymbolicValueIfLocal(newProgramState, symbol);
                     }
                     break;
+
                 default:
                     break;
             }
 
-            EnqueueNewNode(newProgramPoint, currentState);
-            OnInstructionProcessed(instruction, node.ProgramPoint, currentState);
+            EnqueueNewNode(newProgramPoint, newProgramState);
+            OnInstructionProcessed(instruction, node.ProgramPoint, newProgramState);
+        }
+
+        private ProgramState SetNewSymbolicValueIfLocal(ProgramState programState, ISymbol leftSymbol)
+        {
+            var newProgramState = programState;
+            if (IsLocalScoped(leftSymbol))
+            {
+                newProgramState = programState.SetNewSymbolicValue(leftSymbol);
+            }
+
+            return newProgramState;
         }
 
         private ProgramState GetCleanedProgramState(Node node)
@@ -391,7 +420,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             return programState.CleanAndKeepOnly(liveVariables);
         }
 
-        private bool IsLocalScoped(ISymbol symbol)
+        internal bool IsLocalScoped(ISymbol symbol)
         {
             if (symbol == null)
             {
@@ -410,11 +439,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
             return symbol.ContainingSymbol != null &&
                 symbol.ContainingSymbol.Equals(declaration);
-        }
-
-        private static ProgramState GetNewProgramStateForAssignment(ProgramState programState, ISymbol symbol)
-        {
-            return GetNewProgramStateForAssignment(programState, symbol, null, new Optional<object>());
         }
 
         private static ProgramState GetNewProgramStateForAssignment(ProgramState programState, ISymbol leftSymbol, ISymbol rightSymbol,
@@ -436,6 +460,27 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                         boolConstant.Value
                         ? SymbolicValue.True
                         : SymbolicValue.False);
+                }
+                else if (constantValue.Value == null)
+                {
+                    ITypeSymbol type = null;
+                    var local = leftSymbol as ILocalSymbol;
+                    if (local != null)
+                    {
+                        type = local.Type;
+                    }
+
+                    var parameter = leftSymbol as IParameterSymbol;
+                    if (parameter != null)
+                    {
+                        type = parameter.Type;
+                    }
+
+                    if (type == null ||
+                        type.TypeKind != TypeKind.Struct)
+                    {
+                        newProgramState = newProgramState.SetSymbolicValue(leftSymbol, SymbolicValue.Null);
+                    }
                 }
             }
 
@@ -467,6 +512,11 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
         private void EnqueueNewNode(ProgramPoint programPoint, ProgramState programState)
         {
+            if (programState == null)
+            {
+                return;
+            }
+
             var pos = programPoint;
             if (programPoints.ContainsKey(programPoint))
             {

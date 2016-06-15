@@ -21,7 +21,6 @@
 using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
@@ -34,8 +33,6 @@ using System.Collections.Generic;
 
 namespace SonarLint.Rules.CSharp
 {
-    using LiveVariableAnalysis = Helpers.FlowAnalysis.CSharp.LiveVariableAnalysis;
-
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("15min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
@@ -65,69 +62,11 @@ namespace SonarLint.Rules.CSharp
 
         protected override void Initialize(SonarAnalysisContext context)
         {
-            context.RegisterSyntaxNodeActionInNonGenerated(
-                c =>
-                {
-                    var declaration = (BaseMethodDeclarationSyntax)c.Node;
-                    var symbol = c.SemanticModel.GetDeclaredSymbol(declaration);
-                    if (symbol == null)
-                    {
-                        return;
-                    }
-
-                    CheckForRedundantConditions(declaration.Body, symbol, c);
-                },
-                SyntaxKind.MethodDeclaration,
-                SyntaxKind.ConstructorDeclaration,
-                SyntaxKind.DestructorDeclaration,
-                SyntaxKind.ConversionOperatorDeclaration,
-                SyntaxKind.OperatorDeclaration);
-
-            context.RegisterSyntaxNodeActionInNonGenerated(
-                c =>
-                {
-                    var declaration = (AccessorDeclarationSyntax)c.Node;
-                    var symbol = c.SemanticModel.GetDeclaredSymbol(declaration);
-                    if (symbol == null)
-                    {
-                        return;
-                    }
-
-                    CheckForRedundantConditions(declaration.Body, symbol, c);
-                },
-                SyntaxKind.GetAccessorDeclaration,
-                SyntaxKind.SetAccessorDeclaration,
-                SyntaxKind.AddAccessorDeclaration,
-                SyntaxKind.RemoveAccessorDeclaration);
-
-            context.RegisterSyntaxNodeActionInNonGenerated(
-                c =>
-                {
-                    var declaration = (AnonymousFunctionExpressionSyntax)c.Node;
-                    var symbol = c.SemanticModel.GetSymbolInfo(declaration).Symbol;
-                    if (symbol == null)
-                    {
-                        return;
-                    }
-
-                    CheckForRedundantConditions(declaration.Body, symbol, c);
-                },
-                SyntaxKind.AnonymousMethodExpression,
-                SyntaxKind.SimpleLambdaExpression,
-                SyntaxKind.ParenthesizedLambdaExpression);
+            context.RegisterExplodedGraphBasedAnalysis((e, c) => CheckForRedundantConditions(e, c));
         }
 
-        private static void CheckForRedundantConditions(CSharpSyntaxNode body, ISymbol declaration, SyntaxNodeAnalysisContext context)
+        private static void CheckForRedundantConditions(ExplodedGraph explodedGraph, SyntaxNodeAnalysisContext context)
         {
-            IControlFlowGraph cfg;
-            if (!ControlFlowGraph.TryGet(body, context.SemanticModel, out cfg))
-            {
-                return;
-            }
-
-            var lva = LiveVariableAnalysis.Analyze(cfg, declaration, context.SemanticModel);
-
-            var explodedGraph = new ExplodedGraph(cfg, declaration, context.SemanticModel, lva);
             var conditionTrue = new HashSet<SyntaxNode>();
             var conditionFalse = new HashSet<SyntaxNode>();
 
