@@ -89,10 +89,11 @@ namespace SonarLint.Rules.CSharp
 
             foreach (var nullIdentifier in nullIdentifiers)
             {
-                var messageEnd = "";
+                var messageEnd = string.Empty;
                 if (nonNullIdentifiers.Contains(nullIdentifier))
                 {
-                    messageEnd = " on at least one execution path";
+                    // Only report on cases where we are (almost) sure
+                    continue;
                 }
 
                 context.ReportDiagnostic(Diagnostic.Create(Rule, nullIdentifier.GetLocation(), nullIdentifier.Identifier.ValueText, messageEnd));

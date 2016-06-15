@@ -30,7 +30,7 @@ namespace Tests.Diagnostics
             {
                 o = new object();
             }
-            M2(o.ToString()); // Noncompliant, can be null
+            M2(o.ToString()); // Non-compliant, can be null, but we are not reporting on it.
         }
 
         void Test_ExtensionMethodWithNull()
@@ -104,6 +104,56 @@ namespace Tests.Diagnostics
                 object o1 = null;
                 Console.WriteLine(o1.ToString()); // Noncompliant
                 return 42;
+            }
+        }
+
+        object myObject = null;
+
+        void Test_ConditionEqualsNull(bool condition)
+        {
+            object o = myObject; // can be null
+            if (o == null)
+            {
+                M1(o.ToString()); // Noncompliant, always null
+            }
+            else
+            {
+                o = new object();
+            }
+            M2(o.ToString()); // Compliant
+        }
+
+        void Test_ConditionNotEqualsNull(bool condition)
+        {
+            object o = myObject; // can be null
+            if (null != o)
+            {
+                M1(o.ToString()); // Compliant
+            }
+            else
+            {
+                o = new object();
+            }
+            M2(o.ToString()); // Compliant
+        }
+
+        void Test_Foreach_Item(bool condition)
+        {
+            foreach (var item in new object[0])
+            {
+                if (item == null)
+                {
+                    Console.WriteLine(item.ToString()); // Noncompliant
+                }
+            }
+        }
+
+        void Test_Complex(bool condition)
+        {
+            var item = new object();
+            if (item != null && item.ToString() == "")
+            {
+                Console.WriteLine(item.ToString());
             }
         }
     }

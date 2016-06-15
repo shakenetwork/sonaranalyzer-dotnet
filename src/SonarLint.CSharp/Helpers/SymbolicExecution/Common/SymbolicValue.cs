@@ -29,7 +29,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         private class BoolLiteralSymbolicValue : SymbolicValue
         {
             internal BoolLiteralSymbolicValue(bool value)
-                : base(value)
+                : base(true, value)
             {
             }
         }
@@ -37,7 +37,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         private class NullSymbolicValue : SymbolicValue
         {
             internal NullSymbolicValue()
-                : base(new object())
+                : base(false, new object())
             {
             }
             public override string ToString()
@@ -47,15 +47,22 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         }
 
         private readonly object identifier;
+        internal bool IsDefinitlyNotNull { get; }
 
         public /* for testing */ SymbolicValue()
-            : this(null)
+            : this(false, new object())
         {
         }
 
-        private SymbolicValue(object identifier)
+        internal SymbolicValue(bool isDefinitlyNotNull)
+            : this(isDefinitlyNotNull, new object())
+        {
+        }
+
+        private SymbolicValue(bool isDefinitlyNotNull, object identifier)
         {
             this.identifier = identifier;
+            IsDefinitlyNotNull = isDefinitlyNotNull;
         }
 
         public override string ToString()

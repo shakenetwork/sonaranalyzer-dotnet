@@ -255,6 +255,23 @@ namespace Tests.Diagnostics
             }
         }
 
+        public void M()
+        {
+            var o1 = new object();
+            var o2 = null;
+            if (o1 != null)
+            {
+                if (o1.ToString() != null)
+                {
+                    o2 = new object();
+                }
+            }
+            if (o2 == null)
+            {
+
+            }
+        }
+
         private static bool GetCondition()
         {
             return true;

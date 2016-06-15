@@ -48,12 +48,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             return new ProgramState(
                 symbolValueAssociations.SetItem(symbol, newSymbolicValue),
                 programPointVisitCounts);
-        }
-
-        internal ProgramState SetNewSymbolicValue(ISymbol symbol)
-        {
-            return SetSymbolicValue(symbol, new SymbolicValue());
-        }
+        }        
 
         internal ProgramState AddVisit(ProgramPoint visitedProgramPoint)
         {
@@ -84,6 +79,13 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 
             if ((oldSymbolicValue == SymbolicValue.True && newSymbolicValue == SymbolicValue.False) ||
                 (newSymbolicValue == SymbolicValue.True && oldSymbolicValue == SymbolicValue.False))
+            {
+                // Contradicting SymbolicValues
+                return false;
+            }
+
+            if ((oldSymbolicValue.IsDefinitlyNotNull && newSymbolicValue == SymbolicValue.Null) ||
+                (newSymbolicValue.IsDefinitlyNotNull && oldSymbolicValue == SymbolicValue.Null))
             {
                 // Contradicting SymbolicValues
                 return false;
