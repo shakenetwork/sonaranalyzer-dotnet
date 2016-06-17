@@ -123,7 +123,7 @@ namespace SonarLint.Rules.CSharp
             public NullPointerCheck(ExplodedGraph explodedGraph)
                 : base(explodedGraph)
             {
-                
+
             }
 
             private void OnMemberAccessed(IdentifierNameSyntax identifier, bool isNull)
@@ -152,7 +152,7 @@ namespace SonarLint.Rules.CSharp
 
                     default:
                         return programState;
-                }                
+                }
             }
 
             private ProgramState ProcessAwait(ProgramState programState, SyntaxNode instruction)
@@ -201,7 +201,8 @@ namespace SonarLint.Rules.CSharp
                 }
 
                 var sv = programState.GetSymbolValue(symbol);
-                if (sv == SymbolicValue.Null)
+                if (sv == SymbolicValue.Null &&
+                    !IsNullableValueType(symbol))
                 {
                     OnMemberAccessed(identifier, isNull: true);
 
@@ -227,7 +228,7 @@ namespace SonarLint.Rules.CSharp
                 {
                         return programState;
                 }
-                
+
                 var symbol = semanticModel.GetSymbolInfo(identifier).Symbol;
                 if (!explodedGraph.IsLocalScoped(symbol))
                 {
@@ -246,6 +247,13 @@ namespace SonarLint.Rules.CSharp
                     OnMemberAccessed(identifier, isNull: false);
                     return programState;
                 }
+            }
+
+            private static bool IsNullableValueType(ISymbol symbol)
+            {
+                var type = ExplodedGraph.GetTypeOfSymbol(symbol);
+                return ExplodedGraph.IsValueType(type) &&
+                    type.OriginalDefinition.Is(KnownType.System_Nullable_T);
             }
 
             private static bool IsExceptionThrow(IdentifierNameSyntax identifier)

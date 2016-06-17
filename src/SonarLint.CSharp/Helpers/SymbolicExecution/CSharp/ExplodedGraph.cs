@@ -479,7 +479,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             var newProgramState = programState;
             if (IsLocalScoped(symbol))
             {
-                newProgramState = programState.SetSymbolicValue(symbol, new SymbolicValue(IsValueType(symbol)));
+                newProgramState = programState.SetSymbolicValue(symbol, new SymbolicValue(IsNonNullableValueType(symbol)));
             }
 
             return newProgramState;
@@ -524,7 +524,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             var symbolicValue = programState.GetSymbolValue(rightSymbol);
             if (symbolicValue == null)
             {
-                symbolicValue = new SymbolicValue(false);
+                symbolicValue = new SymbolicValue(IsNonNullableValueType(leftSymbol));
             }
 
             var newProgramState = programState.SetSymbolicValue(leftSymbol, symbolicValue);
@@ -542,14 +542,27 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 {
                     newProgramState = newProgramState.SetSymbolicValue(
                         leftSymbol,
-                        IsValueType(leftSymbol) ? new SymbolicValue(true) : SymbolicValue.Null);
+                        IsNonNullableValueType(leftSymbol) ? new SymbolicValue(true) : SymbolicValue.Null);
                 }
             }
 
             return newProgramState;
         }
 
-        private static bool IsValueType(ISymbol symbol)
+        internal static bool IsValueType(ITypeSymbol type)
+        {
+            return type != null &&
+                type.TypeKind == TypeKind.Struct;
+        }
+
+        internal static bool IsNonNullableValueType(ISymbol symbol)
+        {
+            var type = GetTypeOfSymbol(symbol);
+            return IsValueType(type) &&
+                !type.OriginalDefinition.Is(KnownType.System_Nullable_T);
+        }
+
+        internal static ITypeSymbol GetTypeOfSymbol(ISymbol symbol)
         {
             ITypeSymbol type = null;
             var local = symbol as ILocalSymbol;
@@ -564,7 +577,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 type = parameter.Type;
             }
 
-            return type != null && type.TypeKind == TypeKind.Struct;
+            return type;
         }
 
         #endregion

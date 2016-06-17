@@ -272,6 +272,26 @@ namespace Tests.Diagnostics
             }
         }
 
+        public void NullableStructs()
+        {
+            int? i = null;
+
+            if (i == null) // Noncompliant, always true
+            {
+                Console.WriteLine(i);
+            }
+
+            i = new Nullable<int>();
+            if (i == null) // Compliant, always true, but we don't know that yet
+            { }
+
+            int ii = 4;
+            if (ii == null) // Noncompliant, always false
+            {
+                Console.WriteLine(ii);
+            }
+        }
+
         private static bool GetCondition()
         {
             return true;
