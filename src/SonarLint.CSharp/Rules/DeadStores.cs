@@ -33,6 +33,7 @@ using SonarLint.Helpers.FlowAnalysis.Common;
 
 namespace SonarLint.Rules.CSharp
 {
+    using System;
     using LiveVariableAnalysis = Helpers.FlowAnalysis.CSharp.LiveVariableAnalysis;
 
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
@@ -129,14 +130,14 @@ namespace SonarLint.Rules.CSharp
 
             foreach (var block in cfg.Blocks)
             {
-                CheckCfgBlockForDeadStores(block, lva.GetLiveOut(block), declaration, context);
+                CheckCfgBlockForDeadStores(block, lva.GetLiveOut(block), lva.CapturedVariables, declaration, context);
             }
         }
 
-        private static void CheckCfgBlockForDeadStores(Block block, IEnumerable<ISymbol> blockOutState, ISymbol declaration,
-            SyntaxNodeAnalysisContext context)
+        private static void CheckCfgBlockForDeadStores(Block block, IEnumerable<ISymbol> blockOutState, IEnumerable<ISymbol> excludedLocals,
+            ISymbol declaration, SyntaxNodeAnalysisContext context)
         {
-            var lva = new InBlockLivenessAnalysis(block, blockOutState, declaration, context);
+            var lva = new InBlockLivenessAnalysis(block, blockOutState, excludedLocals, declaration, context);
             lva.Analyze();
         }
 
@@ -146,14 +147,16 @@ namespace SonarLint.Rules.CSharp
             private readonly IEnumerable<ISymbol> blockOutState;
             private readonly SyntaxNodeAnalysisContext context;
             private readonly ISymbol declaration;
+            private readonly IEnumerable<ISymbol> excludedLocals;
 
-            public InBlockLivenessAnalysis(Block block, IEnumerable<ISymbol> blockOutState, ISymbol declaration,
-                SyntaxNodeAnalysisContext context)
+            public InBlockLivenessAnalysis(Block block, IEnumerable<ISymbol> blockOutState, IEnumerable<ISymbol> excludedLocals,
+                ISymbol declaration, SyntaxNodeAnalysisContext context)
             {
                 this.block = block;
                 this.blockOutState = blockOutState;
                 this.declaration = declaration;
                 this.context = context;
+                this.excludedLocals = excludedLocals;
             }
 
             public void Analyze()
@@ -200,13 +203,6 @@ namespace SonarLint.Rules.CSharp
                             ProcessPostfixExpression(instruction, liveOut);
                             break;
 
-                        case SyntaxKind.AnonymousMethodExpression:
-                        case SyntaxKind.ParenthesizedLambdaExpression:
-                        case SyntaxKind.SimpleLambdaExpression:
-                        case SyntaxKind.QueryExpression:
-                            CollectAllCapturedLocalSymbols(instruction, liveOut);
-                            break;
-
                         default:
                             break;
                     }
@@ -217,7 +213,7 @@ namespace SonarLint.Rules.CSharp
             {
                 var identifier = (IdentifierNameSyntax)instruction;
                 var symbol = context.SemanticModel.GetSymbolInfo(identifier).Symbol;
-                if (symbol == null)
+                if (!IsSymbolRelevant(symbol))
                 {
                     return;
                 }
@@ -246,7 +242,7 @@ namespace SonarLint.Rules.CSharp
                 if (left.IsKind(SyntaxKind.IdentifierName))
                 {
                     var symbol = context.SemanticModel.GetSymbolInfo(left).Symbol;
-                    if (symbol == null)
+                    if (!IsSymbolRelevant(symbol))
                     {
                         return;
                     }
@@ -262,7 +258,7 @@ namespace SonarLint.Rules.CSharp
                 if (left.IsKind(SyntaxKind.IdentifierName))
                 {
                     var symbol = context.SemanticModel.GetSymbolInfo(left).Symbol;
-                    if (symbol == null)
+                    if (!IsSymbolRelevant(symbol))
                     {
                         return;
                     }
@@ -276,7 +272,7 @@ namespace SonarLint.Rules.CSharp
             {
                 var declarator = (VariableDeclaratorSyntax)instruction;
                 var symbol = context.SemanticModel.GetDeclaredSymbol(declarator);
-                if (symbol == null)
+                if (!IsSymbolRelevant(symbol))
                 {
                     return;
                 }
@@ -298,7 +294,7 @@ namespace SonarLint.Rules.CSharp
                     operand.IsKind(SyntaxKind.IdentifierName))
                 {
                     var symbol = context.SemanticModel.GetSymbolInfo(operand).Symbol;
-                    if (symbol == null)
+                    if (!IsSymbolRelevant(symbol))
                     {
                         return;
                     }
@@ -318,7 +314,7 @@ namespace SonarLint.Rules.CSharp
                 if (operand.IsKind(SyntaxKind.IdentifierName))
                 {
                     var symbol = context.SemanticModel.GetSymbolInfo(operand).Symbol;
-                    if (symbol == null)
+                    if (!IsSymbolRelevant(symbol))
                     {
                         return;
                     }
@@ -331,16 +327,6 @@ namespace SonarLint.Rules.CSharp
                 }
             }
 
-            private void CollectAllCapturedLocalSymbols(SyntaxNode instruction, HashSet<ISymbol> liveOut)
-            {
-                var allCapturedSymbols = instruction.DescendantNodes()
-                    .OfType<IdentifierNameSyntax>()
-                    .Select(i => context.SemanticModel.GetSymbolInfo(i).Symbol)
-                    .Where(s => s != null && LiveVariableAnalysis.IsLocalScoped(s, declaration));
-
-                liveOut.UnionWith(allCapturedSymbols);
-            }
-
             private static void ReportOnAssignment(AssignmentExpressionSyntax assignment, ExpressionSyntax left, ISymbol symbol,
                 ISymbol declaration, HashSet<SyntaxNode> assignmentLhs, HashSet<ISymbol> outState, SyntaxNodeAnalysisContext context)
             {
@@ -351,6 +337,12 @@ namespace SonarLint.Rules.CSharp
                 }
 
                 assignmentLhs.Add(left);
+            }
+
+            private bool IsSymbolRelevant(ISymbol symbol)
+            {
+                return symbol != null &&
+                    !excludedLocals.Contains(symbol);
             }
         }
     }

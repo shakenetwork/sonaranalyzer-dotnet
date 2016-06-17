@@ -74,7 +74,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                     case SyntaxKind.ParenthesizedLambdaExpression:
                     case SyntaxKind.SimpleLambdaExpression:
                     case SyntaxKind.QueryExpression:
-                        CollectAllCapturedLocal(instruction, usedBeforeAssigned);
+                        CollectAllCapturedLocal(instruction);
                         break;
 
                     default:
@@ -171,14 +171,16 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             }
         }
 
-        private void CollectAllCapturedLocal(SyntaxNode instruction, HashSet<ISymbol> usedBeforeAssigned)
+        private void CollectAllCapturedLocal(SyntaxNode instruction)
         {
             var allCapturedSymbols = instruction.DescendantNodes()
                 .OfType<IdentifierNameSyntax>()
                 .Select(i => semanticModel.GetSymbolInfo(i).Symbol)
                 .Where(s => s != null && IsLocalScoped(s));
 
-            usedBeforeAssigned.UnionWith(allCapturedSymbols);
+            // Collect captured locals
+            // Read and write both affects liveness
+            capturedVariables.UnionWith(allCapturedSymbols);
         }
 
         internal static bool IsOutArgument(IdentifierNameSyntax identifier)

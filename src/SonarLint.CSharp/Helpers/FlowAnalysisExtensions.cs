@@ -29,7 +29,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 {
     internal static class FlowAnalysisExtensions
     {
-        public static void RegisterExplodedGraphBasedAnalysis(this SonarAnalysisContext context, 
+        public static void RegisterExplodedGraphBasedAnalysis(this SonarAnalysisContext context,
             Action<ExplodedGraph, SyntaxNodeAnalysisContext> analyze)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
@@ -112,7 +112,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 SyntaxKind.ParenthesizedLambdaExpression);
         }
 
-        private static void Analyze(CSharpSyntaxNode declarationBody, ISymbol symbol, 
+        private static void Analyze(CSharpSyntaxNode declarationBody, ISymbol symbol,
             Action<ExplodedGraph, SyntaxNodeAnalysisContext> analyze, SyntaxNodeAnalysisContext context)
         {
             IControlFlowGraph cfg;

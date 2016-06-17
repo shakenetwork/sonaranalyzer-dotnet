@@ -37,6 +37,8 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         private readonly Dictionary<Block, HashSet<ISymbol>> assigned = new Dictionary<Block, HashSet<ISymbol>>();
         private readonly Dictionary<Block, HashSet<ISymbol>> used = new Dictionary<Block, HashSet<ISymbol>>();
 
+        protected readonly ISet<ISymbol> capturedVariables = new HashSet<ISymbol>();
+
         internal LiveVariableAnalysis(IControlFlowGraph controlFlowGraph)
         {
             this.controlFlowGraph = controlFlowGraph;
@@ -45,13 +47,15 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 
         public IReadOnlyList<ISymbol> GetLiveOut(Block block)
         {
-            return liveOutStates[block].ToImmutableArray();
+            return liveOutStates[block].Except(capturedVariables).ToImmutableArray();
         }
 
         public IReadOnlyList<ISymbol> GetLiveIn(Block block)
         {
-            return liveInStates[block].ToImmutableArray();
+            return liveInStates[block].Except(capturedVariables).ToImmutableArray();
         }
+
+        public IReadOnlyList<ISymbol> CapturedVariables => capturedVariables.ToImmutableArray();
 
         protected void PerformAnalysis()
         {

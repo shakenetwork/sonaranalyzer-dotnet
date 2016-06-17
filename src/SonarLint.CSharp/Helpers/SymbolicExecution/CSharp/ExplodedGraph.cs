@@ -499,7 +499,8 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
         internal bool IsLocalScoped(ISymbol symbol)
         {
-            if (symbol == null)
+            if (symbol == null ||
+                lva.CapturedVariables.Contains(symbol)) // Captured variables are not locally scoped, they are compiled to class fields
             {
                 return false;
             }

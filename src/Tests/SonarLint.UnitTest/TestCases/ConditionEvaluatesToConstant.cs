@@ -296,5 +296,15 @@ namespace Tests.Diagnostics
         {
             return true;
         }
+
+        public void Lambda()
+        {
+            var fail = false;
+            Action a = new Action(() => { fail = true; });
+            a();
+            if (fail) // This is compliant, we don't know anything about 'fail'
+            {
+            }
+        }
     }
 }

@@ -134,10 +134,11 @@ namespace SonarLint.Rules.CSharp
             var lva = LiveVariableAnalysis.Analyze(cfg, methodSymbol, context.SemanticModel);
             var liveParameters = lva.GetLiveIn(cfg.EntryBlock).OfType<IParameterSymbol>();
 
-            ReportOnUnusedParameters(declaration, candidateParameters.Except(liveParameters), MessageDead, context, isRemovable: false);
+            ReportOnUnusedParameters(declaration, candidateParameters.Except(liveParameters).Except(lva.CapturedVariables), MessageDead,
+                context, isRemovable: false);
         }
 
-        private static void ReportOnUnusedParameters(BaseMethodDeclarationSyntax declaration, IEnumerable<IParameterSymbol> parametersToReportOn,
+        private static void ReportOnUnusedParameters(BaseMethodDeclarationSyntax declaration, IEnumerable<ISymbol> parametersToReportOn,
             string messagePattern, SyntaxNodeAnalysisContext context, bool isRemovable = true)
         {
             if (declaration.ParameterList == null)

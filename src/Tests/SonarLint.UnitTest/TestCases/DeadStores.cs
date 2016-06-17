@@ -261,7 +261,7 @@ namespace Tests.Diagnostics
         {
             var i = 10;
             Action a = () => { Console.WriteLine(i); };
-            i = 11; // Noncompliant, false positive (JIRA: SLVS-872)
+            i = 11; // Not reporting on captured local variables
             a();
         }
 
