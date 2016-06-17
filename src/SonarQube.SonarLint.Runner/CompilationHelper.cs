@@ -45,13 +45,14 @@ namespace SonarLint.Runner
             }
         }
 
-        public static Solution GetSolutionWithEmptyFile()
+        public static Solution GetSolutionWithEmptyFile(AnalyzerLanguage language)
         {
             using (var workspace = new AdhocWorkspace())
             {
-                return workspace.CurrentSolution.AddProject("foo", "foo.dll", LanguageNames.CSharp)
+                var lang = language == AnalyzerLanguage.CSharp ? LanguageNames.CSharp : LanguageNames.VisualBasic;
+                return workspace.CurrentSolution.AddProject("foo", "foo.dll", lang)
                     .AddMetadataReference(SystemMetadataReference)
-                    .AddDocument("foo.cs", string.Empty)
+                    .AddDocument($"foo.{language.GetFileExtension()}", string.Empty)
                     .Project
                     .Solution;
             }

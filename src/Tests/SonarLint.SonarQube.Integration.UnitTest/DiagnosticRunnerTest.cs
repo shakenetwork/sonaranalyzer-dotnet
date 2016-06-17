@@ -33,14 +33,31 @@ namespace SonarLint.UnitTest
         public TestContext TestContext { get; set; }
 
         [TestMethod]
-        public void DiagnosticRunnerTest_NoAnalyzer()
+        public void DiagnosticRunnerTest_NoAnalyzer_CSharp()
         {
             var tempInputFilePath = Path.Combine(TestContext.DeploymentDirectory, ParameterLoader.ParameterConfigurationFileName);
-            File.Copy("TestResources\\ConfigurationTest.Empty.xml", tempInputFilePath, true);
+            File.Copy("TestResources\\ConfigurationTest.Empty.Cs.xml", tempInputFilePath, true);
 
             var runner = new DiagnosticsRunner(new Configuration(tempInputFilePath, Common.AnalyzerLanguage.CSharp));
 
-            var solution = CompilationHelper.GetSolutionWithEmptyFile();
+            var solution = CompilationHelper.GetSolutionWithEmptyFile(Common.AnalyzerLanguage.CSharp);
+
+            var compilation = solution.Projects.First().GetCompilationAsync().Result;
+
+            var diagnosticsResult = runner.GetDiagnostics(compilation);
+
+            diagnosticsResult.Should().HaveCount(0);
+        }
+
+        [TestMethod]
+        public void DiagnosticRunnerTest_NoAnalyzer_VbNet()
+        {
+            var tempInputFilePath = Path.Combine(TestContext.DeploymentDirectory, ParameterLoader.ParameterConfigurationFileName);
+            File.Copy("TestResources\\ConfigurationTest.Empty.VbNet.xml", tempInputFilePath, true);
+
+            var runner = new DiagnosticsRunner(new Configuration(tempInputFilePath, Common.AnalyzerLanguage.VisualBasic));
+
+            var solution = CompilationHelper.GetSolutionWithEmptyFile(Common.AnalyzerLanguage.VisualBasic);
 
             var compilation = solution.Projects.First().GetCompilationAsync().Result;
 

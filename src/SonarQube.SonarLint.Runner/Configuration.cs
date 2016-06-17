@@ -54,7 +54,7 @@ namespace SonarLint.Runner
 
             var xml = XDocument.Load(path);
             var settings = ParseSettings(xml);
-            IgnoreHeaderComments = "true".Equals(settings["sonar.cs.ignoreHeaderComments"], StringComparison.OrdinalIgnoreCase);
+            IgnoreHeaderComments = "true".Equals(settings[$"sonar.{language}.ignoreHeaderComments"], StringComparison.OrdinalIgnoreCase);
 
             Files = xml.Descendants("File").Select(e => e.Value).ToImmutableList();
 

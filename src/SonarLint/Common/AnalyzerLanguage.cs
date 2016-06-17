@@ -132,5 +132,20 @@ namespace SonarLint.Common
 
             throw new NotSupportedException($"Can't get friendly name for '{ToString()}'.");
         }
+
+        public string GetFileExtension()
+        {
+            if (this == CSharp)
+            {
+                return "cs";
+            }
+
+            if (this == VisualBasic)
+            {
+                return "vb";
+            }
+
+            throw new NotSupportedException($"Can't get file extension for '{ToString()}'.");
+        }
     }
 }
