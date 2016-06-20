@@ -30,10 +30,10 @@ using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
 using SonarLint.Helpers.FlowAnalysis.CSharp;
 using SonarLint.Helpers.FlowAnalysis.Common;
+using Microsoft.CodeAnalysis.Text;
 
 namespace SonarLint.Rules.CSharp
 {
-    using System;
     using LiveVariableAnalysis = Helpers.FlowAnalysis.CSharp.LiveVariableAnalysis;
 
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
@@ -284,7 +284,8 @@ namespace SonarLint.Rules.CSharp
                     !liveOut.Contains(symbol) &&
                     !IsUnusedLocal(symbol))
                 {
-                    context.ReportDiagnostic(Diagnostic.Create(Rule, declarator.Initializer.EqualsToken.GetLocation(), symbol.Name));
+                    var location = GetFirstLineLocationFromToken(declarator.Initializer.EqualsToken, declarator.Initializer);
+                    context.ReportDiagnostic(Diagnostic.Create(Rule, location, symbol.Name));
                 }
                 liveOut.Remove(symbol);
             }
@@ -345,16 +346,34 @@ namespace SonarLint.Rules.CSharp
                 if (LiveVariableAnalysis.IsLocalScoped(symbol, declaration) &&
                     !outState.Contains(symbol))
                 {
-                    context.ReportDiagnostic(Diagnostic.Create(Rule, assignment.OperatorToken.GetLocation(), symbol.Name));
+                    var location = GetFirstLineLocationFromToken(assignment.OperatorToken, assignment.Right);
+                    context.ReportDiagnostic(Diagnostic.Create(Rule, location, symbol.Name));
                 }
 
                 assignmentLhs.Add(left);
+            }
+
+            private static Location GetFirstLineLocationFromToken(SyntaxToken issueStartToken, SyntaxNode wholeIssue)
+            {
+                var line = GetLineOfToken(issueStartToken, wholeIssue.SyntaxTree);
+                var rightSingleLine = line.Span.Intersection(
+                    TextSpan.FromBounds(issueStartToken.SpanStart, wholeIssue.Span.End));
+
+                return Location.Create(wholeIssue.SyntaxTree,
+                    TextSpan.FromBounds(
+                        issueStartToken.SpanStart,
+                        rightSingleLine.HasValue ? rightSingleLine.Value.End : issueStartToken.Span.End));
             }
 
             private bool IsSymbolRelevant(ISymbol symbol)
             {
                 return symbol != null &&
                     !excludedLocals.Contains(symbol);
+            }
+
+            private static TextLine GetLineOfToken(SyntaxToken token, SyntaxTree tree)
+            {
+                return tree.GetText().Lines[token.GetLocation().GetLineSpan().StartLinePosition.Line];
             }
         }
     }

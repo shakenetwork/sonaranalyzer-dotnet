@@ -30,7 +30,8 @@ namespace Tests.Diagnostics
             i += i + 2; // Noncompliant
             i = 5;
             j = i;
-            i = doSomething();  // Noncompliant; retrieved value overwritten in for loop
+            i
+                = doSomething(); // Noncompliant; retrieved value overwritten in for loop
             for (i = 0; i < j + 10; i++)
             {
                 //  ...
@@ -48,7 +49,8 @@ namespace Tests.Diagnostics
                 resource.DoSomething();
             }
 
-            var x = 10; // Noncompliant
+            var x
+                = 10; // Noncompliant
             var y =
                 x = 11; // Noncompliant
             Console.WriteLine(y);
