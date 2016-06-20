@@ -165,24 +165,7 @@ namespace SonarLint.Rules.CSharp
                     return programState;
                 }
 
-                var symbol = semanticModel.GetSymbolInfo(identifier).Symbol;
-                if (!explodedGraph.IsLocalScoped(symbol))
-                {
-                    return programState;
-                }
-
-                var sv = programState.GetSymbolValue(symbol);
-                if (sv == SymbolicValue.Null)
-                {
-                    OnMemberAccessed(identifier, isNull: true);
-
-                    return null;
-                }
-                else
-                {
-                    OnMemberAccessed(identifier, isNull: false);
-                    return programState;
-                }
+                return GetNewProgramStateFromIdentifier(programState, identifier);
             }
 
             private ProgramState ProcessMemberAccess(ProgramState programState, SyntaxNode instruction)
@@ -207,11 +190,9 @@ namespace SonarLint.Rules.CSharp
                     OnMemberAccessed(identifier, isNull: true);
 
                     // Extension methods don't fail on null:
-                    if (!IsExtensionMethod(memberAccess, semanticModel))
-                    {
-                        return null;
-                    }
-                    return programState;
+                    return IsExtensionMethod(memberAccess, semanticModel)
+                        ? programState
+                        : null;
                 }
                 else
                 {
@@ -226,9 +207,14 @@ namespace SonarLint.Rules.CSharp
                     programPoint.Block.SuccessorBlocks.Count != 1 ||
                     (!IsSuccessorForeachBranch(programPoint) && !IsExceptionThrow(identifier)))
                 {
-                        return programState;
+                    return programState;
                 }
 
+                return GetNewProgramStateFromIdentifier(programState, identifier);
+            }
+
+            private ProgramState GetNewProgramStateFromIdentifier(ProgramState programState, IdentifierNameSyntax identifier)
+            {
                 var symbol = semanticModel.GetSymbolInfo(identifier).Symbol;
                 if (!explodedGraph.IsLocalScoped(symbol))
                 {
@@ -239,7 +225,6 @@ namespace SonarLint.Rules.CSharp
                 if (sv == SymbolicValue.Null)
                 {
                     OnMemberAccessed(identifier, isNull: true);
-
                     return null;
                 }
                 else
