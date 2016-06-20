@@ -18,6 +18,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
@@ -74,12 +75,10 @@ namespace SonarLint.Rules.CSharp
 
                 cbc.RegisterSyntaxNodeAction(c =>
                 {
-                    var symbolInfo = c.SemanticModel.GetSymbolInfo(c.Node);
-                    unusedLocals.Remove(symbolInfo.Symbol);
-
-                    foreach (var candidateSymbol in symbolInfo.CandidateSymbols)
+                    var symbolsToNotReportOn = GetUsedSymbols(c.Node, c.SemanticModel);
+                    foreach (var symbol in symbolsToNotReportOn)
                     {
-                        unusedLocals.Remove(candidateSymbol);
+                        unusedLocals.Remove(symbol);
                     }
                 },
                 SyntaxKind.IdentifierName);
@@ -92,6 +91,20 @@ namespace SonarLint.Rules.CSharp
                     }
                 });
             });
+        }
+
+        internal static IEnumerable<ISymbol> GetUsedSymbols(SyntaxNode node, SemanticModel semanticModel)
+        {
+            var symbolInfo = semanticModel.GetSymbolInfo(node);
+            if (symbolInfo.Symbol != null)
+            {
+                yield return symbolInfo.Symbol;
+            }
+
+            foreach (var candidate in symbolInfo.CandidateSymbols.Where(cs => cs != null))
+            {
+                yield return candidate;
+            }
         }
     }
 }

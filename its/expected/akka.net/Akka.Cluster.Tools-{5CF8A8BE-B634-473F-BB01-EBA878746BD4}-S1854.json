@@ -2,19 +2,6 @@
 "issues":  [
 {
 "id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"value\".",
-"location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedPubSubMediator.cs",
-"region":  {
-"startLine":  399,
-"startColumn":  31,
-"endLine":  399,
-"endColumn":  32
-}
-}
-},
-{
-"id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"routingLogic\".",
 "location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Tools\\PublishSubscribe\\DistributedPubSubSettings.cs",

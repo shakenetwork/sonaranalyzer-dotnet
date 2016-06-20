@@ -2,32 +2,6 @@
 "issues":  [
 {
 "id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"shardCoordinatorSingleton\".",
-"location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingGuardian.cs",
-"region":  {
-"startLine":  102,
-"startColumn":  51,
-"endLine":  102,
-"endColumn":  52
-}
-}
-},
-{
-"id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"coordinatorSingletonManagerName\".",
-"location":  {
-"uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ClusterShardingGuardian.cs",
-"region":  {
-"startLine":  121,
-"startColumn":  53,
-"endLine":  121,
-"endColumn":  54
-}
-}
-},
-{
-"id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"region\".",
 "location":  {
 "uri":  "akka.net\\src\\contrib\\cluster\\Akka.Cluster.Sharding\\ShardRegion.cs",

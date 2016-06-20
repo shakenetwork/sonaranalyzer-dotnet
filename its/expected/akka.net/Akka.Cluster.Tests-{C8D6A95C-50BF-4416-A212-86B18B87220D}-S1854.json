@@ -15,19 +15,6 @@
 },
 {
 "id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"merged34\".",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\MetricsCollectorSpec.cs",
-"region":  {
-"startLine":  63,
-"startColumn":  30,
-"endLine":  63,
-"endColumn":  31
-}
-}
-},
-{
-"id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"peer\".",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\MetricsCollectorSpec.cs",
@@ -36,32 +23,6 @@
 "startColumn":  33,
 "endLine":  66,
 "endColumn":  34
-}
-}
-},
-{
-"id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"beforeMergeNodes\".",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\MetricsGossipSpec.cs",
-"region":  {
-"startLine":  58,
-"startColumn":  34,
-"endLine":  58,
-"endColumn":  35
-}
-}
-},
-{
-"id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"echo\".",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Cluster.Tests\\Routing\\ClusterRouterAsk1343BugFixSpec.cs",
-"region":  {
-"startLine":  85,
-"startColumn":  22,
-"endLine":  85,
-"endColumn":  23
 }
 }
 }

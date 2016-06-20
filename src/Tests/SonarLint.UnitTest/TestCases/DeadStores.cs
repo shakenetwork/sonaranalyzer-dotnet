@@ -201,6 +201,7 @@ namespace Tests.Diagnostics
             };
 
             var x = l; // Noncompliant
+            x = null;  // Noncompliant
 
             return func();
         }
@@ -212,6 +213,7 @@ namespace Tests.Diagnostics
             return (() =>
             {
                 var k = 10; // Noncompliant
+                k = 12; // Noncompliant
                 return (l = new List<int>(new[] { i })); // l captured here
             })();
         }
@@ -277,6 +279,14 @@ namespace Tests.Diagnostics
                 in new int[0])
             {
             }
+        }
+
+        public void Unused()
+        {
+            var x = 5; // Compliant, S1481 already reports on it.
+
+            var y = 5; // Noncompliant
+            y = 6; // Noncompliant
         }
     }
 }

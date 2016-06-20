@@ -2,19 +2,6 @@
 "issues":  [
 {
 "id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"state\".",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\EndpointManager.cs",
-"region":  {
-"startLine":  670,
-"startColumn":  35,
-"endLine":  670,
-"endColumn":  36
-}
-}
-},
-{
-"id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"newHistory\".",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka.Remote\\PhiAccrualFailureDetector.cs",
@@ -36,19 +23,6 @@
 "startColumn":  60,
 "endLine":  796,
 "endColumn":  61
-}
-}
-},
-{
-"id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"socketAddress\".",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Remote\\Transport\\Helios\\HeliosTcpTransport.cs",
-"region":  {
-"startLine":  244,
-"startColumn":  31,
-"endLine":  244,
-"endColumn":  32
 }
 }
 }

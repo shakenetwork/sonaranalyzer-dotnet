@@ -39,7 +39,12 @@ void CalculateRate(int a, int b)
 
 <h2>Exceptions</h2>
 <p>
-    No issue is reported on statements inside <code>try</code> blocks.
+    No issue is reported when
+    <ul>
+        <li>the analyzed method body contains <code>try</code> blocks,</li>
+        <li>a lambda expression captures the local variables, or</li>
+        <li>the variable is unused (case covered by Rule S1481).</li>
+    </ul>
 </p>
 
 <h2>See</h2>

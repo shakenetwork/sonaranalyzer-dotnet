@@ -2,19 +2,6 @@
 "issues":  [
 {
 "id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"b\".",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorDslSpec.cs",
-"region":  {
-"startLine":  99,
-"startColumn":  23,
-"endLine":  99,
-"endColumn":  24
-}
-}
-},
-{
-"id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"path1\".",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorPathSpec.cs",
@@ -67,110 +54,6 @@
 },
 {
 "id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"bref\".",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorRefSpec.cs",
-"region":  {
-"startLine":  105,
-"startColumn":  26,
-"endLine":  105,
-"endColumn":  27
-}
-}
-},
-{
-"id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"asyncShutdownTask\".",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\ActorSystemSpec.cs",
-"region":  {
-"startLine":  59,
-"startColumn":  35,
-"endLine":  59,
-"endColumn":  36
-}
-}
-},
-{
-"id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"monitor\".",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\DeathWatchSpec.cs",
-"region":  {
-"startLine":  135,
-"startColumn":  29,
-"endLine":  135,
-"endColumn":  30
-}
-}
-},
-{
-"id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"numberOfMessages\".",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\FSMTimingSpec.cs",
-"region":  {
-"startLine":  366,
-"startColumn":  50,
-"endLine":  366,
-"endColumn":  51
-}
-}
-},
-{
-"id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"a\".",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\LocalActorRefProviderSpec.cs",
-"region":  {
-"startLine":  101,
-"startColumn":  27,
-"endLine":  101,
-"endColumn":  28
-}
-}
-},
-{
-"id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"b\".",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\LocalActorRefProviderSpec.cs",
-"region":  {
-"startLine":  102,
-"startColumn":  27,
-"endLine":  102,
-"endColumn":  28
-}
-}
-},
-{
-"id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"result\".",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\PatternSpec.cs",
-"region":  {
-"startLine":  63,
-"startColumn":  28,
-"endLine":  63,
-"endColumn":  29
-}
-}
-},
-{
-"id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"actor\".",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\PropsSpec.cs",
-"region":  {
-"startLine":  40,
-"startColumn":  29,
-"endLine":  40,
-"endColumn":  30
-}
-}
-},
-{
-"id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"actor\".",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\PropsSpec.cs",
@@ -179,71 +62,6 @@
 "startColumn":  23,
 "endLine":  104,
 "endColumn":  24
-}
-}
-},
-{
-"id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"worker2\".",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\SupervisorHierarchySpec.cs",
-"region":  {
-"startLine":  111,
-"startColumn":  25,
-"endLine":  111,
-"endColumn":  26
-}
-}
-},
-{
-"id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"worker3\".",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\Actor\\SupervisorHierarchySpec.cs",
-"region":  {
-"startLine":  112,
-"startColumn":  25,
-"endLine":  112,
-"endColumn":  26
-}
-}
-},
-{
-"id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"server\".",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\IO\\UdpIntegrationSpec.cs",
-"region":  {
-"startLine":  56,
-"startColumn":  24,
-"endLine":  56,
-"endColumn":  25
-}
-}
-},
-{
-"id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"x\".",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchHandlerBuilderTests.cs",
-"region":  {
-"startLine":  105,
-"startColumn":  51,
-"endLine":  105,
-"endColumn":  52
-}
-}
-},
-{
-"id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"x\".",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.Tests\\MatchHandler\\MatchHandlerBuilderTests.cs",
-"region":  {
-"startLine":  126,
-"startColumn":  51,
-"endLine":  126,
-"endColumn":  52
 }
 }
 }

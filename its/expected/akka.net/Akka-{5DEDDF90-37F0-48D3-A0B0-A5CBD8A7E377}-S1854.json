@@ -2,32 +2,6 @@
 "issues":  [
 {
 "id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"defaultDispatcher\".",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\ActorRefProvider.cs",
-"region":  {
-"startLine":  276,
-"startColumn":  35,
-"endLine":  276,
-"endColumn":  36
-}
-}
-},
-{
-"id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"original\".",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Actor\\Props.cs",
-"region":  {
-"startLine":  462,
-"startColumn":  26,
-"endLine":  462,
-"endColumn":  27
-}
-}
-},
-{
-"id":  "S1854",
 "message":  "Remove this useless assignment to local variable \"actor\".",
 "location":  {
 "uri":  "akka.net\\src\\core\\Akka\\Actor\\Props.cs",
@@ -62,45 +36,6 @@
 "startColumn":  23,
 "endLine":  610,
 "endColumn":  24
-}
-}
-},
-{
-"id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"newWorker\".",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka\\Helios.Concurrency.DedicatedThreadPool.cs",
-"region":  {
-"startLine":  250,
-"startColumn":  43,
-"endLine":  250,
-"endColumn":  44
-}
-}
-},
-{
-"id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"localAddress\".",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka\\IO\\TcpListener.cs",
-"region":  {
-"startLine":  71,
-"startColumn":  30,
-"endLine":  71,
-"endColumn":  31
-}
-}
-},
-{
-"id":  "S1854",
-"message":  "Remove this useless assignment to local variable \"localAddress\".",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka\\IO\\UdpListener.cs",
-"region":  {
-"startLine":  47,
-"startColumn":  30,
-"endLine":  47,
-"endColumn":  31
 }
 }
 },
