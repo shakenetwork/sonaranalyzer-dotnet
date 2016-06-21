@@ -83,6 +83,8 @@ namespace NS
         {
             var cfg = Build("var x = 10, y = 11; var z = 12;");
             VerifyMinimalCfg(cfg);
+
+            VerifyAllInstructions(cfg.EntryBlock, "10", "x = 10", "11", "y = 11", "12", "z = 12");
         }
 
         #endregion
@@ -105,6 +107,9 @@ namespace NS
 
             trueBlock.SuccessorBlocks.Should().OnlyContain(exitBlock);
             exitBlock.PredecessorBlocks.Should().OnlyContain(branchBlock, trueBlock);
+
+            VerifyAllInstructions(branchBlock, "true");
+            VerifyAllInstructions(trueBlock, "10", "x = 10");
         }
 
         [TestMethod]
@@ -223,6 +228,9 @@ namespace NS
             loopBodyBlock.SuccessorBlocks.Should().OnlyContain(branchBlock);
             branchBlock.PredecessorBlocks.Should().OnlyContain(loopBodyBlock);
             exitBlock.PredecessorBlocks.Should().OnlyContain(branchBlock);
+
+            VerifyAllInstructions(branchBlock, "true");
+            VerifyAllInstructions(loopBodyBlock, "10", "x = 10");
         }
 
         [TestMethod]
@@ -273,6 +281,9 @@ namespace NS
 
             branchBlock.PredecessorBlocks.Should().OnlyContain(loopBodyBlock);
             exitBlock.PredecessorBlocks.Should().OnlyContain(new[] { branchBlock });
+
+            VerifyAllInstructions(loopBodyBlock, "10", "x = 10");
+            VerifyAllInstructions(branchBlock, "true");
         }
 
         [TestMethod]
@@ -326,6 +337,9 @@ namespace NS
 
             loopBodyBlock.SuccessorBlocks.Should().OnlyContain(foreachBlock);
             exitBlock.PredecessorBlocks.Should().OnlyContain(foreachBlock);
+
+            VerifyAllInstructions(collectionBlock, "collection");
+            VerifyNoInstruction(foreachBlock);
         }
 
         [TestMethod]
@@ -375,6 +389,12 @@ namespace NS
         {
             var cfg = Build("for (var i = 0; true; i++) { var x = 10; }");
             VerifyForStatement(cfg);
+            VerifyAllInstructions(cfg.EntryBlock, "0", "i = 0");
+            var condition = cfg.EntryBlock.SuccessorBlocks.First();
+            VerifyAllInstructions(condition, "true");
+            var body = condition.SuccessorBlocks.First();
+            VerifyAllInstructions(condition.SuccessorBlocks.First(), "10", "x = 10");
+            VerifyAllInstructions(body.SuccessorBlocks.First(), "i", "i++");
 
             cfg = Build("var y = 11; for (var i = 0; true; i++) { var x = 10; }");
             VerifyForStatement(cfg);
@@ -642,6 +662,8 @@ namespace NS
         {
             var cfg = Build("lock(this) { var x = 10; }");
             VerifySimpleJumpBlock(cfg, SyntaxKind.LockStatement);
+
+            VerifyAllInstructions(cfg.EntryBlock, "this");
         }
 
         [TestMethod]
@@ -677,6 +699,8 @@ namespace NS
         {
             var cfg = Build("using(var stream = new MemoryStream()) { var x = 10; }");
             VerifySimpleJumpBlock(cfg, SyntaxKind.UsingStatement);
+
+            VerifyAllInstructions(cfg.EntryBlock, "new MemoryStream()", "stream = new MemoryStream()");
         }
 
         [TestMethod]
@@ -685,6 +709,8 @@ namespace NS
         {
             var cfg = Build("using(new MemoryStream()) { var x = 10; }");
             VerifySimpleJumpBlock(cfg, SyntaxKind.UsingStatement);
+
+            VerifyAllInstructions(cfg.EntryBlock, "new MemoryStream()");
         }
 
         #endregion
@@ -697,6 +723,8 @@ namespace NS
         {
             var cfg = Build("fixed (int* p = &pt.x) { *p = 1; }");
             VerifySimpleJumpBlock(cfg, SyntaxKind.FixedStatement);
+
+            VerifyAllInstructions(cfg.EntryBlock, "pt", "pt.x", "&pt.x", "p = &pt.x");
         }
 
         private static void VerifySimpleJumpBlock(IControlFlowGraph cfg, SyntaxKind kind)
@@ -723,8 +751,14 @@ namespace NS
             var cfg = Build("checked { var i = int.MaxValue + 1; }");
             VerifySimpleJumpBlock(cfg, SyntaxKind.CheckedStatement);
 
+            VerifyNoInstruction(cfg.EntryBlock);
+            VerifyInstructions(cfg.EntryBlock.SuccessorBlocks.First(), 0, "int.MaxValue");
+
             cfg = Build("unchecked { var i = int.MaxValue + 1; }");
             VerifySimpleJumpBlock(cfg, SyntaxKind.UncheckedStatement);
+
+            VerifyNoInstruction(cfg.EntryBlock);
+            VerifyInstructions(cfg.EntryBlock.SuccessorBlocks.First(), 0, "int.MaxValue");
         }
 
         #endregion
@@ -737,6 +771,9 @@ namespace NS
         {
             var cfg = Build("unsafe { int* p = &i; *p *= *p; }");
             VerifySimpleJumpBlock(cfg, SyntaxKind.UnsafeStatement);
+
+            VerifyNoInstruction(cfg.EntryBlock);
+            VerifyInstructions(cfg.EntryBlock.SuccessorBlocks.First(), 0, "i");
         }
 
         #endregion
@@ -762,12 +799,9 @@ namespace NS
 
             branchBlock.BranchingNode.Kind().Should().Be(SyntaxKind.LogicalAndExpression);
 
-            branchBlock.Instructions.Should().HaveCount(1);
-            branchBlock.Instructions.Where(i => i.ToString() == "a").Should().NotBeEmpty();
-            trueABlock.Instructions.Should().HaveCount(1);
-            trueABlock.Instructions.Where(i => i.ToString() == "c").Should().NotBeEmpty();
-            afterOp.Instructions.Should().HaveCount(1);
-            afterOp.Instructions.Where(i => i.ToString() == "b = a && c").Should().NotBeEmpty();
+            VerifyAllInstructions(branchBlock, "a");
+            VerifyAllInstructions(trueABlock, "c");
+            VerifyAllInstructions(afterOp, "b = a && c");
         }
 
         [TestMethod]
@@ -789,12 +823,9 @@ namespace NS
 
             branchBlock.BranchingNode.Kind().Should().Be(SyntaxKind.LogicalOrExpression);
 
-            branchBlock.Instructions.Should().HaveCount(1);
-            branchBlock.Instructions.Where(i => i.ToString() == "a").Should().NotBeEmpty();
-            falseABlock.Instructions.Should().HaveCount(1);
-            falseABlock.Instructions.Where(i => i.ToString() == "c").Should().NotBeEmpty();
-            afterOp.Instructions.Should().HaveCount(1);
-            afterOp.Instructions.Where(i => i.ToString() == "b = a || c").Should().NotBeEmpty();
+            VerifyAllInstructions(branchBlock, "a");
+            VerifyAllInstructions(falseABlock, "c");
+            VerifyAllInstructions(afterOp, "b = a || c");
         }
 
         [TestMethod]
@@ -896,12 +927,9 @@ namespace NS
 
             branchBlock.BranchingNode.Kind().Should().Be(SyntaxKind.CoalesceExpression);
 
-            branchBlock.Instructions.Should().HaveCount(1);
-            branchBlock.Instructions.Where(i => i.ToString() == "b").Should().NotBeEmpty();
-            bNullBlock.Instructions.Should().HaveCount(1);
-            bNullBlock.Instructions.Where(i => i.ToString() == "c").Should().NotBeEmpty();
-            afterOp.Instructions.Should().HaveCount(1);
-            afterOp.Instructions.Where(i => i.ToString() == "a = b ?? c").Should().NotBeEmpty();
+            VerifyAllInstructions(branchBlock, "b");
+            VerifyAllInstructions(bNullBlock, "c");
+            VerifyAllInstructions(afterOp, "a = b ?? c");
         }
 
         [TestMethod]
@@ -952,14 +980,10 @@ namespace NS
 
             branchBlock.BranchingNode.Kind().Should().Be(SyntaxKind.ConditionalExpression);
 
-            branchBlock.Instructions.Should().HaveCount(1);
-            branchBlock.Instructions.Where(i => i.ToString() == "cond").Should().NotBeEmpty();
-            condTrue.Instructions.Should().HaveCount(1);
-            condTrue.Instructions.Where(i => i.ToString() == "b").Should().NotBeEmpty();
-            condFalse.Instructions.Should().HaveCount(1);
-            condFalse.Instructions.Where(i => i.ToString() == "c").Should().NotBeEmpty();
-            after.Instructions.Should().HaveCount(1);
-            after.Instructions.Where(i => i.ToString() == "a = cond ? b : c").Should().NotBeEmpty();
+            VerifyAllInstructions(branchBlock, "cond");
+            VerifyAllInstructions(condTrue, "b");
+            VerifyAllInstructions(condFalse, "c");
+            VerifyAllInstructions(after, "a = cond ? b : c");
         }
 
         [TestMethod]
@@ -972,9 +996,9 @@ namespace NS
             var branchBlock = cfg.EntryBlock as BinaryBranchBlock;
             var blocks = cfg.Blocks.ToList();
             var cond2Block = blocks[1];
-            cond2Block.Instructions.First().ToString().Should().BeEquivalentTo("cond2");
+            VerifyAllInstructions(cond2Block, "cond2");
             var cond3Block = blocks[4];
-            cond3Block.Instructions.First().ToString().Should().BeEquivalentTo("cond3");
+            VerifyAllInstructions(cond3Block, "cond3");
 
             branchBlock.SuccessorBlocks.Should().OnlyContainInOrder(cond2Block, cond3Block);
             cond2Block.SuccessorBlocks.Should().HaveCount(2);
@@ -1015,13 +1039,10 @@ namespace NS
 
             branchBlock.Instructions.Should().HaveCount(1);
             branchBlock.Instructions.Where(i => i.ToString() == "o").Should().NotBeEmpty();
-            oNotNull.Instructions.Should().HaveCount(4);
-            oNotNull.Instructions[0].ToString().Should().BeEquivalentTo("method");
-            oNotNull.Instructions[1].ToString().Should().BeEquivalentTo(".method"); // this is equivalent to o.method
-            oNotNull.Instructions[2].ToString().Should().BeEquivalentTo("1");
-            oNotNull.Instructions[3].ToString().Should().BeEquivalentTo(".method(1)");
-            condAccess.Instructions.Should().HaveCount(1);
-            condAccess.Instructions.Where(i => i.ToString() == "a = o?.method(1)").Should().NotBeEmpty();
+
+            VerifyAllInstructions(branchBlock, "o");
+            VerifyAllInstructions(oNotNull, "method", ".method" /* This is equivalent to o.method */, "1", ".method(1)");
+            VerifyAllInstructions(condAccess, "a = o?.method(1)");
         }
 
         [TestMethod]
@@ -1456,6 +1477,9 @@ namespace NS
             cw1.SuccessorBlocks.Should().OnlyContain(cw3);
             cw2.SuccessorBlocks.Should().OnlyContain(cw3);
             cw3.SuccessorBlocks.Should().OnlyContain(exitBlock);
+
+            VerifyAllInstructions(cfg.EntryBlock, "cw0", "cw0()", "a");
+            VerifyAllInstructions(cw1, "cw1", "cw1()");
         }
 
         [TestMethod]
@@ -1644,6 +1668,9 @@ namespace NS
         {
             var cfg = Build(@"yield return 5;");
             VerifyMinimalCfg(cfg);
+
+            cfg.EntryBlock.Should().BeOfType<SimpleBlock>();
+            VerifyAllInstructions(cfg.EntryBlock, "5");
         }
 
         #endregion
@@ -1655,71 +1682,160 @@ namespace NS
         public void Cfg_NonBranchingExpressions()
         {
             var cfg = Build(@"
-var x = a < 2; x = a <= 2; x = a > 2; x = a >= 2; x = a == 2; x = a != 2;
-var b = x | 2; b = x & 2; b = x ^ 2; b |= 2; b &= false; b ^= 2;
-var c = ""c"" + 'c'; c = a - b; c = a * b; c = a / b; c = a % b; c += b; c -= b; c *= b; c /= b; c %= b;
-var s = c << 4; s = c >> 4; s <<= 4; s >>= 4;
-var p = c++; p = c--; p = ++c; p = --c; p = +c; p = -c; p = !true; p = ~1; p = &c; p = *c;
-object o = null; b = (b);");
-            VerifyMinimalCfg(cfg);
+x = a < 2;  x = a <= 2;  x = a > 2;  x = a >= 2;       x = a == 2;  x = a != 2;  s = c << 4;  s = c >> 4;
+b = x | 2;  b = x & 2;   b = x ^ 2;  c = ""c"" + 'c';  c = a - b;   c = a * b;   c = a / b;   c = a % b;");
 
-            cfg = Build(@"
-var t = typeof(int); var s = sizeof(int); var v = default(int);
-v = checked(1+1); v = unchecked(1+1);");
             VerifyMinimalCfg(cfg);
+            VerifyInstructions(cfg.EntryBlock, 0, "x", "a", "2", "a < 2", "x = a < 2");
+            VerifyInstructions(cfg.EntryBlock, 15 * 5, "c", "a", "b", "a % b", "c = a % b");
 
-            cfg = Build("v = (int)1; var o = 1 as object; b = 1 is int;");
+            cfg = Build("b |= 2;  b &= false;  b ^= 2;  c += b;  c -= b;  c *= b;  c /= b;  c %= b; s <<= 4;  s >>= 4;");
+
             VerifyMinimalCfg(cfg);
+            VerifyInstructions(cfg.EntryBlock, 0, "b", "2", "b |= 2");
+            VerifyInstructions(cfg.EntryBlock, 9 * 3, "s", "4", "s >>= 4");
+
+            cfg = Build("p = c++;  p = c--;  p = ++c;  p = --c;  p = +c;  p = -c;  p = !true;  p = ~1;  p = &c;  p = *c;");
+
+            VerifyMinimalCfg(cfg);
+            VerifyInstructions(cfg.EntryBlock, 0, "p", "c", "c++", "p = c++");
+            VerifyInstructions(cfg.EntryBlock, 9 * 4, "p", "c", "*c", "p = *c");
+
+            cfg = Build("o = null;");
+            VerifyMinimalCfg(cfg);
+            VerifyAllInstructions(cfg.EntryBlock, "o", "null", "o = null");
+
+            cfg = Build("b = (b);");
+            VerifyMinimalCfg(cfg);
+            VerifyAllInstructions(cfg.EntryBlock, "b", "b", "b = (b)");
+
+            cfg = Build(@"var t = typeof(int); var s = sizeof(int); var v = default(int);");
+            VerifyMinimalCfg(cfg);
+            VerifyAllInstructions(cfg.EntryBlock, "typeof(int)", "t = typeof(int)", "sizeof(int)", "s = sizeof(int)", "default(int)", "v = default(int)");
+
+            cfg = Build(@"v = checked(1+1); v = unchecked(1+1);");
+            VerifyMinimalCfg(cfg);
+            VerifyInstructions(cfg.EntryBlock, 3, "1+1", "checked(1+1)", "v = checked(1+1)");
+            VerifyInstructions(cfg.EntryBlock, 9, "1+1", "unchecked(1+1)", "v = unchecked(1+1)");
+
+            cfg = Build("v = (int)1; v = 1 as object; v = 1 is int;");
+            VerifyMinimalCfg(cfg);
+            VerifyAllInstructions(cfg.EntryBlock,
+                "v", "1", "(int)1", "v = (int)1",
+                "v", "1", "1 as object", "v = 1 as object",
+                "v", "1", "1 is int", "v = 1 is int");
 
             cfg = Build(@"var s = $""Some {text}"";");
             VerifyMinimalCfg(cfg);
+            VerifyAllInstructions(cfg.EntryBlock,
+                @"text",
+                @"$""Some {text}""",
+                @"s = $""Some {text}""");
 
-            cfg = Build("Method(call, with, arguments);");
+            cfg = Build("this.Method(call, with, arguments);");
             VerifyMinimalCfg(cfg);
+            VerifyAllInstructions(cfg.EntryBlock,
+                "this",
+                "this.Method",
+                "call", "with", "arguments",
+                "this.Method(call, with, arguments)");
 
-            cfg = Build("var x = array[1,2,3]; x = array2[1][2];");
+            cfg = Build("x = array[1,2,3]; x = array2[1][2];");
             VerifyMinimalCfg(cfg);
+            VerifyAllInstructions(cfg.EntryBlock,
+                "x",
+                "array",
+                "1", "2", "3",
+                "array[1,2,3]",
+                "x = array[1,2,3]",
+                "x",
+                "array2",
+                "1",
+                "array2[1]",
+                "2",
+                "array2[1][2]",
+                "x = array2[1][2]");
 
-            cfg = Build(@"var dict=new Dictionary<string,int>{ [""one""] = 1 };");
+            cfg = Build(@"var dict = new Dictionary<string,int>{ [""one""] = 1 };");
             VerifyMinimalCfg(cfg);
+            VerifyAllInstructions(cfg.EntryBlock,
+                @"new Dictionary<string,int>{ [""one""] = 1 }",
+                @"""one""",
+                @"[""one""]",
+                @"1",
+                @"[""one""] = 1",
+                @"{ [""one""] = 1 }",
+                @"dict = new Dictionary<string,int>{ [""one""] = 1 }");
 
             cfg = Build("var x = new { Prop1 = 10, Prop2 = 20 };");
             VerifyMinimalCfg(cfg);
+            VerifyAllInstructions(cfg.EntryBlock, "10", "20", "new { Prop1 = 10, Prop2 = 20 }", "x = new { Prop1 = 10, Prop2 = 20 }");
 
             cfg = Build("var x = new { Prop1 };");
             VerifyMinimalCfg(cfg);
+            VerifyAllInstructions(cfg.EntryBlock, "Prop1", "new { Prop1 }", "x = new { Prop1 }");
 
             cfg = Build("var x = new MyClass(5) { Prop1 = 10 };");
             VerifyMinimalCfg(cfg);
+            VerifyInstructions(cfg.EntryBlock, 0,
+                "5",
+                "new MyClass(5) { Prop1 = 10 }",
+                "Prop1",
+                "10",
+                "Prop1 = 10",
+                "{ Prop1 = 10 }");
 
             cfg = Build("var x = new List<int>{ 10, 20 };");
             VerifyMinimalCfg(cfg);
+            VerifyInstructions(cfg.EntryBlock, 0,
+                "new List<int>{ 10, 20 }",
+                "10",
+                "20",
+                "{ 10, 20 }");
 
             cfg = Build("var x = new[,] { { 10, 20 }, { 10, 20 } };");
             VerifyMinimalCfg(cfg);
+            VerifyInstructions(cfg.EntryBlock, 0,
+                "new[,] { { 10, 20 }, { 10, 20 } }",
+                "10",
+                "20",
+                "{ 10, 20 }");
+            VerifyInstructions(cfg.EntryBlock, 7, "{ { 10, 20 }, { 10, 20 } }");
 
             cfg = Build("var x = new int [1,2][3]{ 10, 20 };");
             VerifyMinimalCfg(cfg);
+            VerifyInstructions(cfg.EntryBlock, 0,
+                "1", "2", "3",
+                "new int [1,2][3]{ 10, 20 }",
+                "10",
+                "20",
+                "{ 10, 20 }");
 
-            cfg = Build("var x = this.Method(10); var z = x->prop;");
+            cfg = Build("var z = x->prop;");
             VerifyMinimalCfg(cfg);
+            VerifyInstructions(cfg.EntryBlock, 0, "x", "x->prop");
 
-            cfg = Build("var x = await this.Method(__arglist(10,11,12));");
+            cfg = Build("var x = await this.Method(__arglist(10,11));");
             VerifyMinimalCfg(cfg);
-            cfg.EntryBlock.Instructions.Where(i => i.ToString() == "this.Method(__arglist(10,11,12))").Should().NotBeEmpty();
-            cfg.EntryBlock.Instructions.Where(i => i.ToString() == "await this.Method(__arglist(10,11,12))").Should().NotBeEmpty();
+            VerifyInstructions(cfg.EntryBlock, 2, "10", "11", "__arglist(10,11)" ,
+                "this.Method(__arglist(10,11))", "await this.Method(__arglist(10,11))");
 
             cfg = Build("var x = 1; var y = __refvalue(__makeref(x), int); var t = __reftype(__makeref(x));");
             VerifyMinimalCfg(cfg);
+            VerifyInstructions(cfg.EntryBlock, 2, "x", "__makeref(x)", "__refvalue(__makeref(x), int)");
+            VerifyInstructions(cfg.EntryBlock, 6, "x", "__makeref(x)", "__reftype(__makeref(x))");
 
             cfg = Build("var x = stackalloc int[10];");
             VerifyMinimalCfg(cfg);
+            VerifyInstructions(cfg.EntryBlock, 0, "10", "stackalloc int[10]");
 
             cfg = Build("var x = new Action(()=>{}); var y = new Action(i=>{}); var z = new Action(delegate(){});");
             VerifyMinimalCfg(cfg);
+            VerifyInstructions(cfg.EntryBlock, 0, "()=>{}", "new Action(()=>{})");
 
             cfg = Build("var x = from t in ts where t > 42;");
             VerifyMinimalCfg(cfg);
+            VerifyInstructions(cfg.EntryBlock, 0, "from t in ts where t > 42", "x = from t in ts where t > 42");
         }
 
         #endregion
@@ -1766,6 +1882,25 @@ namespace NS
         #endregion
 
         #region Verify helpers
+
+        private void VerifyInstructions(Block block, int fromIndex, params string[] instructions)
+        {
+            block.Instructions.Count.Should().BeGreaterOrEqualTo(fromIndex + instructions.Length);
+            for (int i = 0; i < instructions.Length; i++)
+            {
+                block.Instructions[fromIndex + i].ToString().Should().BeEquivalentTo(instructions[i]);
+            }
+        }
+        private void VerifyAllInstructions(Block block, params string[] instructions)
+        {
+            block.Instructions.Count.ShouldBeEquivalentTo(instructions.Count());
+            VerifyInstructions(block, 0, instructions);
+        }
+
+        private void VerifyNoInstruction(Block block)
+        {
+            VerifyAllInstructions(block, new string[0]);
+        }
 
         private static void VerifyCfg(IControlFlowGraph cfg, int numberOfBlocks)
         {

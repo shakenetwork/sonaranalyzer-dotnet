@@ -206,8 +206,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             switch (expression.Kind())
             {
                 case SyntaxKind.SimpleAssignmentExpression:
-                    BuildAssignmentExpression((AssignmentExpressionSyntax)expression);
-                    break;
 
                 case SyntaxKind.OrAssignmentExpression:
                 case SyntaxKind.AndAssignmentExpression:
@@ -221,7 +219,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
                 case SyntaxKind.LeftShiftAssignmentExpression:
                 case SyntaxKind.RightShiftAssignmentExpression:
-                    BuildOpAssignmentExpression((AssignmentExpressionSyntax)expression);
+                    BuildAssignmentExpression((AssignmentExpressionSyntax)expression);
                     break;
 
                 case SyntaxKind.LessThanExpression:
@@ -371,7 +369,8 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 case SyntaxKind.ImplicitArrayCreationExpression:
                     {
                         var parent = (ImplicitArrayCreationExpressionSyntax)expression;
-                        BuildSimpleNestedExpression(parent, parent.Initializer);
+                        BuildExpression(parent.Initializer);
+                        currentBlock.ReversedInstructions.Add(parent);
                     }
                     break;
                 case SyntaxKind.StackAllocArrayCreationExpression:
@@ -930,9 +929,9 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
         private void BuildArrayCreationExpression(ArrayCreationExpressionSyntax expression)
         {
-            currentBlock.ReversedInstructions.Add(expression);
-
             BuildExpression(expression.Initializer);
+
+            currentBlock.ReversedInstructions.Add(expression);
 
             BuildExpression(expression.Type);
         }
@@ -958,9 +957,9 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
         private void BuildObjectCreationExpression(ObjectCreationExpressionSyntax expression)
         {
-            currentBlock.ReversedInstructions.Add(expression);
-
             BuildExpression(expression.Initializer);
+
+            currentBlock.ReversedInstructions.Add(expression);
 
             var arguments = expression.ArgumentList == null
                 ? Enumerable.Empty<ExpressionSyntax>()
@@ -1015,13 +1014,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
         }
 
         private void BuildAssignmentExpression(AssignmentExpressionSyntax expression)
-        {
-            currentBlock.ReversedInstructions.Add(expression);
-            BuildExpression(expression.Left);
-            BuildExpression(expression.Right);
-        }
-
-        private void BuildOpAssignmentExpression(AssignmentExpressionSyntax expression)
         {
             currentBlock.ReversedInstructions.Add(expression);
             BuildExpression(expression.Right);
