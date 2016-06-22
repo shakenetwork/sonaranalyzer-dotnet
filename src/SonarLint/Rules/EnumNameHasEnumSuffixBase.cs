@@ -23,6 +23,7 @@ using Microsoft.CodeAnalysis;
 using SonarLint.Common;
 using SonarLint.Helpers;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules
 {
@@ -43,7 +44,7 @@ namespace SonarLint.Rules
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
 
-        protected static readonly string[] NameEndings = { "enum", "flags" };
+        protected static readonly IEnumerable<string> NameEndings = ImmutableArray.Create("enum", "flags");
 
         protected abstract GeneratedCodeRecognizer GeneratedCodeRecognizer { get; }
         GeneratedCodeRecognizer IMultiLanguageDiagnosticAnalyzer.GeneratedCodeRecognizer => GeneratedCodeRecognizer;
