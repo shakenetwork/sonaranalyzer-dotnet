@@ -125,15 +125,17 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
-                    var stringFormatArgument = invocation?.Parent as ArgumentSyntax;
-                    var stringFormatInvocation = stringFormatArgument?.Parent?.Parent as InvocationExpressionSyntax;
-                    if (stringFormatInvocation == null)
+                    ITypeSymbol subExpressionType;
+                    if (!TryGetExpressionTypeOfOwner(invocation, c.SemanticModel, out subExpressionType) ||
+                        subExpressionType.IsValueType)
                     {
                         return;
                     }
 
-                    var stringFormatSymbol = c.SemanticModel.GetSymbolInfo(stringFormatInvocation).Symbol as IMethodSymbol;
-                    if (!IsStringFormatCall(stringFormatSymbol))
+                    var stringFormatArgument = invocation?.Parent as ArgumentSyntax;
+                    var stringFormatInvocation = stringFormatArgument?.Parent?.Parent as InvocationExpressionSyntax;
+                    if (stringFormatInvocation == null ||
+                        !IsStringFormatCall(c.SemanticModel.GetSymbolInfo(stringFormatInvocation).Symbol as IMethodSymbol))
                     {
                         return;
                     }
@@ -144,7 +146,6 @@ namespace SonarLint.Rules.CSharp
                         argParameter.Name.StartsWith("arg", StringComparison.Ordinal))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, location, MessageCompiler));
-                        return;
                     }
                 },
                 SyntaxKind.InvocationExpression);
@@ -183,14 +184,9 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            var subExpression = (((InvocationExpressionSyntax)expressionWithToStringCall).Expression as MemberAccessExpressionSyntax)?.Expression;
-            if (subExpression == null)
-            {
-                return;
-            }
-
-            var subExpressionType = context.SemanticModel.GetTypeInfo(subExpression).Type;
-            if (subExpressionType == null)
+            ITypeSymbol subExpressionType;
+            if (!TryGetExpressionTypeOfOwner((InvocationExpressionSyntax)expressionWithToStringCall, context.SemanticModel, out subExpressionType) ||
+                subExpressionType.IsValueType)
             {
                 return;
             }
@@ -200,6 +196,21 @@ namespace SonarLint.Rules.CSharp
             {
                 context.ReportDiagnostic(Diagnostic.Create(Rule, location, MessageCompiler));
             }
+        }
+
+        private static bool TryGetExpressionTypeOfOwner(InvocationExpressionSyntax invocation, SemanticModel semanticModel,
+            out ITypeSymbol subExpressionType)
+        {
+            subExpressionType = null;
+
+            var subExpression = (invocation.Expression as MemberAccessExpressionSyntax)?.Expression;
+            if (subExpression == null)
+            {
+                return false;
+            }
+
+            subExpressionType = semanticModel.GetTypeInfo(subExpression).Type;
+            return subExpressionType != null;
         }
 
         private static bool DoesCollidingAdditionExist(ITypeSymbol subExpressionType, int stringParameterIndex)
