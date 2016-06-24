@@ -28,6 +28,7 @@ using SonarLint.Helpers;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
+using System;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -137,8 +138,7 @@ namespace SonarLint.Rules.CSharp
 
             var identifiers = removableDeclarationCollector.ClassDeclarations
                 .SelectMany(container => container.SyntaxNode.DescendantNodes()
-                    .Where(node =>
-                        node.IsKind(SyntaxKind.IdentifierName))
+                    .Where(node => node.IsKind(SyntaxKind.IdentifierName))
                     .Cast<IdentifierNameSyntax>()
                     .Where(node => symbolNames.Contains(node.Identifier.ValueText))
                     .Select(node =>
@@ -151,8 +151,7 @@ namespace SonarLint.Rules.CSharp
 
             var generic = removableDeclarationCollector.ClassDeclarations
                 .SelectMany(container => container.SyntaxNode.DescendantNodes()
-                    .Where(node =>
-                        node.IsKind(SyntaxKind.GenericName))
+                    .Where(node => node.IsKind(SyntaxKind.GenericName))
                     .Cast<GenericNameSyntax>()
                     .Where(node => symbolNames.Contains(node.Identifier.ValueText))
                     .Select(node =>
@@ -177,7 +176,7 @@ namespace SonarLint.Rules.CSharp
                 ExpressionSyntax node = memberUsage.SyntaxNode;
                 var memberSymbol = memberUsage.Symbol;
 
-                // handle "this.FieldName"
+                // Handle "expr.FieldName"
                 var simpleMemberAccess = node.Parent as MemberAccessExpressionSyntax;
                 if (simpleMemberAccess != null &&
                     simpleMemberAccess.Name == node)
@@ -185,8 +184,21 @@ namespace SonarLint.Rules.CSharp
                     node = simpleMemberAccess;
                 }
 
-                // handle "((this.FieldName))"
+                // Handle "((expr.FieldName))"
                 node = node.GetSelfOrTopParenthesizedExpression();
+
+                if (IsValueType(memberSymbol))
+                {
+                    // Handle (((exp.FieldName)).Member1).Member2
+                    var parentMemberAccess = node.Parent as MemberAccessExpressionSyntax;
+                    while (IsParentMemberAccess(parentMemberAccess, node))
+                    {
+                        node = parentMemberAccess.GetSelfOrTopParenthesizedExpression();
+                        parentMemberAccess = node.Parent as MemberAccessExpressionSyntax;
+                    }
+
+                    node = node.GetSelfOrTopParenthesizedExpression();
+                }
 
                 var parentNode = node.Parent;
 
@@ -208,18 +220,37 @@ namespace SonarLint.Rules.CSharp
                 }
 
                 var argument = parentNode as ArgumentSyntax;
-                if (argument != null)
+                if (argument != null &&
+                    !argument.RefOrOutKeyword.IsKind(SyntaxKind.None))
                 {
-                    if (!argument.RefOrOutKeyword.IsKind(SyntaxKind.None))
-                    {
-                        assignedMembers.Add(memberSymbol);
-                    }
-
-                    continue;
+                    assignedMembers.Add(memberSymbol);
                 }
             }
 
             return assignedMembers;
+        }
+
+        private static bool IsParentMemberAccess(MemberAccessExpressionSyntax parent, ExpressionSyntax node)
+        {
+            return parent != null &&
+                parent.Expression == node;
+        }
+
+        private static bool IsValueType(ISymbol symbol)
+        {
+            var field = symbol as IFieldSymbol;
+            if (field != null)
+            {
+                return field.Type.IsValueType;
+            }
+
+            var property = symbol as IPropertySymbol;
+            if (property != null)
+            {
+                return property.Type.IsValueType;
+            }
+
+            return false;
         }
 
         private static readonly ISet<SyntaxKind> PreOrPostfixOpSyntaxKinds = ImmutableHashSet.Create(

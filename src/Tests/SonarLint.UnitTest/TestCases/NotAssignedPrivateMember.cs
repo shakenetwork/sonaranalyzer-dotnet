@@ -3,6 +3,21 @@ using System.Collections.Generic;
 
 namespace Tests.Diagnostics
 {
+    struct ValueType1
+    {
+        public int field;
+    }
+
+    class RefType
+    {
+        public int field2;
+    }
+
+    struct ValueType2
+    {
+        public RefType field1;
+    }
+
     class MyClass
     {
         class Nested
@@ -24,9 +39,24 @@ namespace Tests.Diagnostics
             private int Property5 { get; set; } = 42;
             private int Property6 { get { return 42; } set { } }
 
+            private ValueType1 v1; // Compliant, a member is assigned
+            private ValueType1 v2; // Compliant, a member is assigned
+            private ValueType1 v3; // Noncompliant
+
+            private ValueType2 v4; // Compliant, a member is assigned
+            private ValueType2 v5; // Compliant, a member is assigned
+            private ValueType2 v6; // Noncompliant
+
             public Nested()
             {
                 Property2 = 42;
+                v1.field++;
+                ((((v2).field))) = 42;
+                Console.WriteLine(v3.field);
+
+                this.v4.field1.field2++;
+                ((((this.v5).field1)).field2) = 42;
+                Console.WriteLine(v6.field1?.field2);
             }
 
             public void Print()
