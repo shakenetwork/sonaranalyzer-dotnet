@@ -84,10 +84,63 @@ namespace Tests.Diagnostics
             var xx = new X();
             Modif(ref xx.y);
 
-            Modif(ref z);
+            Modif(ref (z));
             this.w = 42;
         }
 
         private void Modif(ref int i) { }
+    }
+
+    struct X1Struct
+    {
+        public Y1 y;
+    }
+    class X1Class
+    {
+        public Y1 y;
+    }
+    struct Y1
+    {
+        public string z;
+    }
+
+    class MyClass
+    {
+        private X1Struct x; // Compliant
+        private readonly X1Struct y; // Fixed
+
+        private readonly X1Class z; // Fixed
+
+        private bool field = false;
+
+        public MyClass()
+        {
+            x = new X1Struct();
+            y = new X1Struct();
+            z = new X1Class();
+            (this.y.y).z = "a";
+            (this.z.y).z = "a";
+            if (this.field)
+            { }
+        }
+
+        public void M()
+        {
+            (this.x.y).z = "a";
+            (this.z.y).z = "a";
+        }
+
+        private class Nested
+        {
+            private readonly MyClass inst;
+            public Nested()
+            {
+                inst = new MyClass();
+            }
+            private void Method()
+            {
+                this.inst.field = false;
+            }
+        }
     }
 }
