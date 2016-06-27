@@ -86,7 +86,8 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             explodedGraphChecks = new List<ExplodedGraphCheck>
             {
                 // Add mandatory checks
-                new NullPointerDereference.NullPointerCheck(this)
+                new NullPointerDereference.NullPointerCheck(this),
+                new EmptyNullableValueAccess.NullValueAccessedCheck(this)
             };
         }
 
@@ -244,8 +245,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             {
                 case SyntaxKind.IdentifierName:
                     {
-                        // Condition always true/false specific part:
-
                         var identifier = (IdentifierNameSyntax)instruction;
                         var symbol = SemanticModel.GetSymbolInfo(identifier).Symbol;
 
@@ -267,23 +266,19 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                                 OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, false);
                                 EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
                             }
-                        }
-                        else
-                        {
-                            OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, true);
-                            OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, false);
-                            EnqueueAllSuccessors(binaryBranchBlock, newProgramState);
+
+                            return;
                         }
                     }
                     break;
                 case SyntaxKind.TrueLiteralExpression:
                     OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, true);
                     EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), newProgramState);
-                    break;
+                    return;
                 case SyntaxKind.FalseLiteralExpression:
                     OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, false);
                     EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), newProgramState);
-                    break;
+                    return;
                 case SyntaxKind.EqualsExpression:
                 case SyntaxKind.NotEqualsExpression:
                     {
@@ -296,9 +291,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
                         if (!isRightNull && !isLeftNull)
                         {
-                            OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, true);
-                            OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, false);
-                            EnqueueAllSuccessors(binaryBranchBlock, newProgramState);
                             break;
                         }
 
@@ -310,9 +302,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
                         if (identifier == null)
                         {
-                            OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, true);
-                            OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, false);
-                            EnqueueAllSuccessors(binaryBranchBlock, newProgramState);
                             break;
                         }
 
@@ -344,21 +333,65 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                                 OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, false);
                                 EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
                             }
-                        }
-                        else
-                        {
-                            OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, true);
-                            OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, false);
-                            EnqueueAllSuccessors(binaryBranchBlock, newProgramState);
+
+                            return;
                         }
                     }
                     break;
+
+                case SyntaxKind.SimpleMemberAccessExpression:
+                    {
+                        // Special case for nullable HasValue
+
+                        var memberAccess = (MemberAccessExpressionSyntax)instruction;
+                        var identifier = memberAccess.Expression.RemoveParentheses() as IdentifierNameSyntax;
+
+                        if (identifier == null ||
+                            memberAccess.Name.Identifier.ValueText != "HasValue")
+                        {
+                            break;
+                        }
+
+                        var symbol = SemanticModel.GetSymbolInfo(identifier).Symbol;
+
+                        var type = GetTypeOfSymbol(symbol);
+                        if (type == null ||
+                            !type.OriginalDefinition.Is(KnownType.System_Nullable_T))
+                        {
+                            break;
+                        }
+
+                        if (IsLocalScoped(symbol))
+                        {
+                            if (node.ProgramState.GetSymbolValue(symbol) == null)
+                            {
+                                throw new InvalidOperationException("Symbol without symbolic value");
+                            }
+
+                            if (node.ProgramState.TrySetSymbolicValue(symbol, new SymbolicValue(true), out newProgramState))
+                            {
+                                OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, true);
+                                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
+                            }
+
+                            if (node.ProgramState.TrySetSymbolicValue(symbol, SymbolicValue.Null, out newProgramState))
+                            {
+                                OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, false);
+                                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
+                            }
+
+                            return;
+                        }
+                    }
+                    break;
+
                 default:
-                    OnConditionEvaluated(instruction, true);
-                    OnConditionEvaluated(instruction, false);
-                    EnqueueAllSuccessors(binaryBranchBlock, newProgramState);
                     break;
             }
+
+            OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, true);
+            OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, false);
+            EnqueueAllSuccessors(binaryBranchBlock, newProgramState);
         }
 
         private void VisitInstruction(Node node)
@@ -544,6 +577,18 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                     newProgramState = newProgramState.SetSymbolicValue(
                         leftSymbol,
                         IsNonNullableValueType(leftSymbol) ? new SymbolicValue(true) : SymbolicValue.Null);
+                }
+            }
+            else
+            {
+                var nullableConstructorCall = rightSymbol as IMethodSymbol;
+                if (nullableConstructorCall != null &&
+                    nullableConstructorCall.MethodKind == MethodKind.Constructor &&
+                    nullableConstructorCall.ReceiverType.OriginalDefinition.Is(KnownType.System_Nullable_T))
+                {
+                    newProgramState = newProgramState.SetSymbolicValue(
+                        leftSymbol,
+                        nullableConstructorCall.Parameters.Any() ? new SymbolicValue(true) : SymbolicValue.Null);
                 }
             }
 

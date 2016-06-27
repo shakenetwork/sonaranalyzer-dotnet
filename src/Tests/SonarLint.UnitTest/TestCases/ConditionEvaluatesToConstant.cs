@@ -282,7 +282,7 @@ namespace Tests.Diagnostics
             }
 
             i = new Nullable<int>();
-            if (i == null) // Compliant, always true, but we don't know that yet
+            if (i == null) // Noncompliant
             { }
 
             int ii = 4;
