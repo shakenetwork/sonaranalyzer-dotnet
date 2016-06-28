@@ -6,7 +6,12 @@ function GetIssue
 
   $issue = New-Object –Type System.Object
   $issue | Add-Member –Type NoteProperty –Name id –Value $entry.ruleId
-  $issue | Add-Member –Type NoteProperty –Name message –Value $entry.shortMessage
+  If ($entry.shortMessage) {
+    $issue | Add-Member –Type NoteProperty –Name message –Value $entry.shortMessage
+  }
+  ElseIf ($entry.fullMessage) {
+    $issue | Add-Member –Type NoteProperty –Name message –Value $entry.fullMessage
+  }
   $issue | Add-Member –Type NoteProperty –Name location –Value $entry.locations.analysisTarget
 
   $issue
