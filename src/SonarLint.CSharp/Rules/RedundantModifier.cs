@@ -108,7 +108,7 @@ namespace SonarLint.Rules.CSharp
             if (TryGetUnsafeKeyword(typeDeclaration, out unsafeKeyword))
             {
                 MarkAllUnsafeBlockInside(typeDeclaration, context);
-                if (!HasUnsafeConstructInside(typeDeclaration))
+                if (!HasUnsafeConstructInside(typeDeclaration, context.SemanticModel))
                 {
                     ReportOnUnsafeBlock(context, unsafeKeyword.GetLocation());
                 }
@@ -120,7 +120,7 @@ namespace SonarLint.Rules.CSharp
                 if (TryGetUnsafeKeyword(member, out unsafeKeyword))
                 {
                     MarkAllUnsafeBlockInside(member, context);
-                    if (!HasUnsafeConstructInside(member))
+                    if (!HasUnsafeConstructInside(member, context.SemanticModel))
                     {
                         ReportOnUnsafeBlock(context, unsafeKeyword.GetLocation());
                     }
@@ -138,7 +138,7 @@ namespace SonarLint.Rules.CSharp
                 foreach (var topLevelUnsafeBlock in topLevelUnsafeBlocks)
                 {
                     MarkAllUnsafeBlockInside(topLevelUnsafeBlock, context);
-                    if (!HasUnsafeConstructInside(member))
+                    if (!HasUnsafeConstructInside(member, context.SemanticModel))
                     {
                         ReportOnUnsafeBlock(context, topLevelUnsafeBlock.UnsafeKeyword.GetLocation());
                     }
@@ -146,9 +146,65 @@ namespace SonarLint.Rules.CSharp
             }
         }
 
-        private static bool HasUnsafeConstructInside(SyntaxNode container)
+        private static bool HasUnsafeConstructInside(SyntaxNode container, SemanticModel semanticModel)
+        {
+            return ContainsUnsafeConstruct(container) ||
+                ContainsFixedDeclaration(container) ||
+                ContainsUnsafeTypedIdentifier(container, semanticModel) ||
+                ContainsUnsafeInvocationReturnValue(container, semanticModel) ||
+                ContainsUnsafeParameter(container, semanticModel);
+        }
+
+        private static bool ContainsUnsafeParameter(SyntaxNode container, SemanticModel semanticModel)
+        {
+            return container.DescendantNodes()
+                .OfType<ParameterSyntax>()
+                .Select(p => semanticModel.GetDeclaredSymbol(p))
+                .Any(p => IsUnsafe(p?.Type));
+        }
+
+        private static bool ContainsUnsafeInvocationReturnValue(SyntaxNode container, SemanticModel semanticModel)
+        {
+            return container.DescendantNodes()
+                .OfType<InvocationExpressionSyntax>()
+                .Select(i => semanticModel.GetSymbolInfo(i).Symbol as IMethodSymbol)
+                .Any(m => IsUnsafe(m?.ReturnType));
+        }
+
+        private static bool ContainsUnsafeTypedIdentifier(SyntaxNode container, SemanticModel semanticModel)
+        {
+            return container.DescendantNodes()
+                .OfType<IdentifierNameSyntax>()
+                .Select(i => semanticModel.GetTypeInfo(i).Type)
+                .Any(t => IsUnsafe(t));
+        }
+
+        private static bool ContainsFixedDeclaration(SyntaxNode container)
+        {
+            return container.DescendantNodes()
+                .OfType<FieldDeclarationSyntax>()
+                .Any(fd => fd.Modifiers.Any(m => m.IsKind(SyntaxKind.FixedKeyword)));
+        }
+
+        private static bool ContainsUnsafeConstruct(SyntaxNode container)
         {
             return container.DescendantNodes().Any(node => UnsafeConstructKinds.Contains(node.Kind()));
+        }
+
+        private static bool IsUnsafe(ITypeSymbol type)
+        {
+            if (type == null)
+            {
+                return false;
+            }
+
+            if (type.TypeKind == TypeKind.Pointer)
+            {
+                return true;
+            }
+
+            return type.TypeKind == TypeKind.Array &&
+                IsUnsafe(((IArrayTypeSymbol)type).ElementType);
         }
 
         private static readonly ISet<SyntaxKind> UnsafeConstructKinds = new HashSet<SyntaxKind>(new[]
@@ -157,7 +213,8 @@ namespace SonarLint.Rules.CSharp
             SyntaxKind.PointerIndirectionExpression,
             SyntaxKind.SizeOfExpression,
             SyntaxKind.PointerType,
-            SyntaxKind.FixedStatement
+            SyntaxKind.FixedStatement,
+            SyntaxKind.StackAllocArrayCreationExpression
         });
 
         private static void MarkAllUnsafeBlockInside(SyntaxNode container, SyntaxNodeAnalysisContext context)

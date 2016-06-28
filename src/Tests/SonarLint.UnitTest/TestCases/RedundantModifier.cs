@@ -199,4 +199,43 @@ partial interface PartialInterface //Noncompliant
             }
         }
     }
+
+    public unsafe struct FixedArraySample
+    {
+        private fixed int a[10];
+    }
+
+    public class StackAlloc
+    {
+        private unsafe void M()
+        {
+            var x = stackalloc int[100];
+        }
+    }
+
+    public class UnsafeHidden
+    {
+        private unsafe int* Method() { return null; }
+        private unsafe void Method2(int* p) { }
+        public unsafe void M1()
+        {
+            Method();
+        }
+
+        private unsafe int* Prop { get; set; }
+        public unsafe void M2()
+        {
+            Method2(Prop);
+        }
+    }
+
+    public class UnsafeParameter
+    {
+        public unsafe delegate void Unsafe(int* x);
+
+        public unsafe void Method()
+        {
+            Unsafe u = (a) => { };
+        }
+    }
 }
