@@ -13,6 +13,19 @@ function GetIssue
   return
 }
 
+function GetIssueV3
+{
+  param ($entry)
+
+  $issue = New-Object –Type System.Object
+  $issue | Add-Member –Type NoteProperty –Name id –Value $entry.ruleId
+  $issue | Add-Member –Type NoteProperty –Name message –Value $entry.message
+  $issue | Add-Member –Type NoteProperty –Name location –Value $entry.locations.resultFile
+
+  $issue
+  return
+}
+
 function CreateIssueReports
 {
   param ([string]$sarifReportPath)
@@ -51,6 +64,18 @@ function CreateIssueReports
           $_.endColumn = $_.endColumn + 1
         }
       }
+
+    # Remove the common absolute path prefix
+    $allIssues.locations.analysisTarget |
+      Foreach-Object {
+        If ($_.uri) {
+          $_.uri = ([System.IO.FileInfo]$_.uri).FullName
+          $_.uri = $_.uri.replace($pathPrefix, '')
+          $_.uri = $_.uri.replace('/', '\')
+        }
+      }
+    
+    $allIssues = $allIssues | %{ GetIssue($_) }
   }
   ElseIf ($json.runLogs) {
     $allIssues = $json.runLogs | %{$_.results}
@@ -62,19 +87,42 @@ function CreateIssueReports
           $_.uri = $_.uri.replace('file:///', '')
         }
       }
-  }
 
-  # Remove the common absolute path prefix
-  $allIssues.locations.analysisTarget |
-    Foreach-Object {
-      If ($_.uri) {
-        $_.uri = ([System.IO.FileInfo]$_.uri).FullName
-        $_.uri = $_.uri.replace($pathPrefix, '')
-        $_.uri = $_.uri.replace('/', '\')
+    # Remove the common absolute path prefix
+    $allIssues.locations.analysisTarget |
+      Foreach-Object {
+        If ($_.uri) {
+          $_.uri = ([System.IO.FileInfo]$_.uri).FullName
+          $_.uri = $_.uri.replace($pathPrefix, '')
+          $_.uri = $_.uri.replace('/', '\')
+        }
       }
-    }
+    
+    $allIssues = $allIssues | %{ GetIssue($_) }
+  }
+  ElseIf ($json.runs) {
+    $allIssues = $json.runs | %{$_.results}
 
-  $allIssues = $allIssues | %{ GetIssue($_) }
+    # Remove the URI prefix
+    $allIssues.locations.resultFile |
+      Foreach-Object {
+        If ($_.uri) {
+          $_.uri = $_.uri.replace('file:///', '')
+        }
+      }
+
+    # Remove the common absolute path prefix
+    $allIssues.locations.resultFile |
+      Foreach-Object {
+        If ($_.uri) {
+          $_.uri = ([System.IO.FileInfo]$_.uri).FullName
+          $_.uri = $_.uri.replace($pathPrefix, '')
+          $_.uri = $_.uri.replace('/', '\')
+        }
+      }
+    
+    $allIssues = $allIssues | %{ GetIssueV3($_) }
+  }
 
   # Filter, Sort & Group issues to get a stable SARIF report
   # AD0001's stack traces in the message are unstable
