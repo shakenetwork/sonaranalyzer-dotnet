@@ -49,8 +49,8 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         private readonly object identifier;
         internal bool IsDefinitlyNotNull { get; }
 
-        public /* for testing */ SymbolicValue()
-            : this(false, new object())
+        internal SymbolicValue()
+            : this(false)
         {
         }
 

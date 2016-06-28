@@ -149,14 +149,7 @@ namespace SonarLint.Rules.CSharp
                 }
 
                 var symbol = semanticModel.GetSymbolInfo(identifier).Symbol;
-                if (!explodedGraph.IsLocalScoped(symbol))
-                {
-                    return programState;
-                }
-
-                var type = ExplodedGraph.GetTypeOfSymbol(symbol);
-                if (type == null ||
-                    !type.OriginalDefinition.Is(KnownType.System_Nullable_T))
+                if (!explodedGraph.IsNullableLocalScoped(symbol))
                 {
                     return programState;
                 }

@@ -31,7 +31,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         private readonly ImmutableDictionary<ISymbol, SymbolicValue> symbolValueAssociations;
         private readonly ImmutableDictionary<ProgramPoint, int> programPointVisitCounts;
 
-        public /* for testing */ ProgramState()
+        internal ProgramState()
             : this(ImmutableDictionary<ISymbol, SymbolicValue>.Empty, ImmutableDictionary<ProgramPoint, int>.Empty)
         {
         }
@@ -43,12 +43,12 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             this.programPointVisitCounts = programPointVisitCounts;
         }
 
-        public /* for testing */ ProgramState SetSymbolicValue(ISymbol symbol, SymbolicValue newSymbolicValue)
+        internal ProgramState SetSymbolicValue(ISymbol symbol, SymbolicValue newSymbolicValue)
         {
             return new ProgramState(
                 symbolValueAssociations.SetItem(symbol, newSymbolicValue),
                 programPointVisitCounts);
-        }        
+        }
 
         internal ProgramState AddVisit(ProgramPoint visitedProgramPoint)
         {

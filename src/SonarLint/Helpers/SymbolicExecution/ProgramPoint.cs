@@ -27,7 +27,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         public Block Block { get; }
         public int Offset { get; }
 
-        public /* for testing */ ProgramPoint(Block block, int offset)
+        internal ProgramPoint(Block block, int offset)
         {
             Block = block;
             Offset = offset;

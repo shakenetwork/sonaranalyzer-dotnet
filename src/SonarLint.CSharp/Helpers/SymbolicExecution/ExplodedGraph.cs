@@ -244,144 +244,31 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             switch (instruction.Kind())
             {
                 case SyntaxKind.IdentifierName:
+                    if (TryEnqueueBranchesBasedOn((IdentifierNameSyntax)instruction, binaryBranchBlock, node))
                     {
-                        var identifier = (IdentifierNameSyntax)instruction;
-                        var symbol = SemanticModel.GetSymbolInfo(identifier).Symbol;
-
-                        if (IsLocalScoped(symbol))
-                        {
-                            if (node.ProgramState.GetSymbolValue(symbol) == null)
-                            {
-                                throw new InvalidOperationException("Symbol without symbolic value");
-                            }
-
-                            if (node.ProgramState.TrySetSymbolicValue(symbol, SymbolicValue.True, out newProgramState))
-                            {
-                                OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, true);
-                                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
-                            }
-
-                            if (node.ProgramState.TrySetSymbolicValue(symbol, SymbolicValue.False, out newProgramState))
-                            {
-                                OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, false);
-                                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
-                            }
-
-                            return;
-                        }
+                        return;
                     }
                     break;
                 case SyntaxKind.TrueLiteralExpression:
-                    OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, true);
+                    OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: true);
                     EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), newProgramState);
                     return;
                 case SyntaxKind.FalseLiteralExpression:
-                    OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, false);
+                    OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: false);
                     EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), newProgramState);
                     return;
                 case SyntaxKind.EqualsExpression:
                 case SyntaxKind.NotEqualsExpression:
+                    if (TryEnqueueBranchesBasedOn((BinaryExpressionSyntax)instruction, binaryBranchBlock, node))
                     {
-                        // Null-check specific case, which will be removed when we have proper SV relationship handling
-
-                        var binary = (BinaryExpressionSyntax)instruction;
-
-                        var isLeftNull = binary.Left.RemoveParentheses().IsKind(SyntaxKind.NullLiteralExpression);
-                        var isRightNull = binary.Right.RemoveParentheses().IsKind(SyntaxKind.NullLiteralExpression);
-
-                        if (!isRightNull && !isLeftNull)
-                        {
-                            break;
-                        }
-
-                        var identifier = binary.Right.RemoveParentheses() as IdentifierNameSyntax;
-                        if (isRightNull)
-                        {
-                            identifier = binary.Left.RemoveParentheses() as IdentifierNameSyntax;
-                        }
-
-                        if (identifier == null)
-                        {
-                            break;
-                        }
-
-                        var symbol = SemanticModel.GetSymbolInfo(identifier).Symbol;
-                        if (IsLocalScoped(symbol))
-                        {
-                            if (node.ProgramState.GetSymbolValue(symbol) == null)
-                            {
-                                throw new InvalidOperationException("Symbol without symbolic value");
-                            }
-
-                            var trueBranchSymbolicValue = SymbolicValue.Null;
-                            var falseBranchSymbolicValue = new SymbolicValue(true);
-
-                            if (instruction.IsKind(SyntaxKind.NotEqualsExpression))
-                            {
-                                falseBranchSymbolicValue = SymbolicValue.Null;
-                                trueBranchSymbolicValue = new SymbolicValue(true);
-                            }
-
-                            if (node.ProgramState.TrySetSymbolicValue(symbol, trueBranchSymbolicValue, out newProgramState))
-                            {
-                                OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, true);
-                                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
-                            }
-
-                            if (node.ProgramState.TrySetSymbolicValue(symbol, falseBranchSymbolicValue, out newProgramState))
-                            {
-                                OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, false);
-                                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
-                            }
-
-                            return;
-                        }
+                        return;
                     }
                     break;
 
                 case SyntaxKind.SimpleMemberAccessExpression:
+                    if (TryEnqueueBranchesBasedOn((MemberAccessExpressionSyntax)instruction, binaryBranchBlock, node))
                     {
-                        // Special case for nullable HasValue
-
-                        var memberAccess = (MemberAccessExpressionSyntax)instruction;
-                        var identifier = memberAccess.Expression.RemoveParentheses() as IdentifierNameSyntax;
-
-                        if (identifier == null ||
-                            memberAccess.Name.Identifier.ValueText != "HasValue")
-                        {
-                            break;
-                        }
-
-                        var symbol = SemanticModel.GetSymbolInfo(identifier).Symbol;
-
-                        var type = GetTypeOfSymbol(symbol);
-                        if (type == null ||
-                            !type.OriginalDefinition.Is(KnownType.System_Nullable_T))
-                        {
-                            break;
-                        }
-
-                        if (IsLocalScoped(symbol))
-                        {
-                            if (node.ProgramState.GetSymbolValue(symbol) == null)
-                            {
-                                throw new InvalidOperationException("Symbol without symbolic value");
-                            }
-
-                            if (node.ProgramState.TrySetSymbolicValue(symbol, new SymbolicValue(true), out newProgramState))
-                            {
-                                OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, true);
-                                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
-                            }
-
-                            if (node.ProgramState.TrySetSymbolicValue(symbol, SymbolicValue.Null, out newProgramState))
-                            {
-                                OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, false);
-                                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
-                            }
-
-                            return;
-                        }
+                        return;
                     }
                     break;
 
@@ -389,10 +276,146 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                     break;
             }
 
-            OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, true);
-            OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, false);
+            OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: true);
+            OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: false);
             EnqueueAllSuccessors(binaryBranchBlock, newProgramState);
         }
+
+        #region Handle VisitBinaryBranch cases
+
+        private bool TryEnqueueBranchesBasedOn(IdentifierNameSyntax instruction, BinaryBranchBlock binaryBranchBlock, Node node)
+        {
+            var symbol = SemanticModel.GetSymbolInfo(instruction).Symbol;
+
+            if (!IsLocalScoped(symbol))
+            {
+                return false;
+            }
+
+            if (node.ProgramState.GetSymbolValue(symbol) == null)
+            {
+                throw new InvalidOperationException("Symbol without symbolic value");
+            }
+
+            ProgramState newProgramState;
+            if (node.ProgramState.TrySetSymbolicValue(symbol, SymbolicValue.True, out newProgramState))
+            {
+                OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: true);
+                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
+            }
+
+            if (node.ProgramState.TrySetSymbolicValue(symbol, SymbolicValue.False, out newProgramState))
+            {
+                OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: false);
+                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
+            }
+
+            return true;
+        }
+
+        private bool TryEnqueueBranchesBasedOn(BinaryExpressionSyntax instruction, BinaryBranchBlock binaryBranchBlock, Node node)
+        {
+            var identifier = GetNullComparedIdentifier(instruction);
+            if (identifier == null)
+            {
+                return false;
+            }
+
+            var symbol = SemanticModel.GetSymbolInfo(identifier).Symbol;
+            if (!IsLocalScoped(symbol))
+            {
+                return false;
+            }
+
+            if (node.ProgramState.GetSymbolValue(symbol) == null)
+            {
+                throw new InvalidOperationException("Symbol without symbolic value");
+            }
+
+            var trueBranchSymbolicValue = SymbolicValue.Null;
+            var falseBranchSymbolicValue = new SymbolicValue(isDefinitlyNotNull: true);
+
+            if (instruction.IsKind(SyntaxKind.NotEqualsExpression))
+            {
+                falseBranchSymbolicValue = SymbolicValue.Null;
+                trueBranchSymbolicValue = new SymbolicValue(isDefinitlyNotNull: true);
+            }
+
+            ProgramState newProgramState;
+            if (node.ProgramState.TrySetSymbolicValue(symbol, trueBranchSymbolicValue, out newProgramState))
+            {
+                OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: true);
+                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
+            }
+
+            if (node.ProgramState.TrySetSymbolicValue(symbol, falseBranchSymbolicValue, out newProgramState))
+            {
+                OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: false);
+                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
+            }
+
+            return true;
+        }
+
+        private static IdentifierNameSyntax GetNullComparedIdentifier(BinaryExpressionSyntax instruction)
+        {
+            var left = instruction.Left.RemoveParentheses();
+            var right = instruction.Right.RemoveParentheses();
+            var isLeftNull = left.IsKind(SyntaxKind.NullLiteralExpression);
+            var isRightNull = right.IsKind(SyntaxKind.NullLiteralExpression);
+
+            if (!isRightNull && !isLeftNull)
+            {
+                return null;
+            }
+
+            var identifier = right as IdentifierNameSyntax;
+            if (isRightNull)
+            {
+                identifier = left as IdentifierNameSyntax;
+            }
+
+            return identifier;
+        }
+
+        private bool TryEnqueueBranchesBasedOn(MemberAccessExpressionSyntax instruction, BinaryBranchBlock binaryBranchBlock, Node node)
+        {
+            var identifier = instruction.Expression.RemoveParentheses() as IdentifierNameSyntax;
+
+            if (identifier == null ||
+                instruction.Name.Identifier.ValueText != "HasValue")
+            {
+                return false;
+            }
+
+            var symbol = SemanticModel.GetSymbolInfo(identifier).Symbol;
+            if (!IsNullableLocalScoped(symbol))
+            {
+                return false;
+            }
+
+            if (node.ProgramState.GetSymbolValue(symbol) == null)
+            {
+                throw new InvalidOperationException("Symbol without symbolic value");
+            }
+
+            ProgramState newProgramState;
+            if (node.ProgramState.TrySetSymbolicValue(symbol, new SymbolicValue(isDefinitlyNotNull: true), out newProgramState))
+            {
+                OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: true);
+                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
+            }
+
+            if (node.ProgramState.TrySetSymbolicValue(symbol, SymbolicValue.Null, out newProgramState))
+            {
+                OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: false);
+                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
+            }
+
+            return true;
+        }
+
+        #endregion
 
         private void VisitInstruction(Node node)
         {
@@ -512,7 +535,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             var newProgramState = programState;
             if (IsLocalScoped(symbol))
             {
-                newProgramState = programState.SetSymbolicValue(symbol, new SymbolicValue(IsNonNullableValueType(symbol)));
+                newProgramState = programState.SetSymbolicValue(symbol, new SymbolicValue(isDefinitlyNotNull: IsNonNullableValueType(symbol)));
             }
 
             return newProgramState;
@@ -558,7 +581,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             var symbolicValue = programState.GetSymbolValue(rightSymbol);
             if (symbolicValue == null)
             {
-                symbolicValue = new SymbolicValue(IsNonNullableValueType(leftSymbol));
+                symbolicValue = new SymbolicValue(isDefinitlyNotNull: IsNonNullableValueType(leftSymbol));
             }
 
             var newProgramState = programState.SetSymbolicValue(leftSymbol, symbolicValue);
@@ -576,7 +599,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 {
                     newProgramState = newProgramState.SetSymbolicValue(
                         leftSymbol,
-                        IsNonNullableValueType(leftSymbol) ? new SymbolicValue(true) : SymbolicValue.Null);
+                        IsNonNullableValueType(leftSymbol) ? new SymbolicValue(isDefinitlyNotNull: true) : SymbolicValue.Null);
                 }
             }
             else
@@ -588,11 +611,19 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 {
                     newProgramState = newProgramState.SetSymbolicValue(
                         leftSymbol,
-                        nullableConstructorCall.Parameters.Any() ? new SymbolicValue(true) : SymbolicValue.Null);
+                        nullableConstructorCall.Parameters.Any() ? new SymbolicValue(isDefinitlyNotNull: true) : SymbolicValue.Null);
                 }
             }
 
             return newProgramState;
+        }
+
+        internal bool IsNullableLocalScoped(ISymbol symbol)
+        {
+            var type = GetTypeOfSymbol(symbol);
+            return type != null &&
+                type.OriginalDefinition.Is(KnownType.System_Nullable_T) &&
+                IsLocalScoped(symbol);
         }
 
         internal static bool IsValueType(ITypeSymbol type)
@@ -635,7 +666,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             var initialProgramState = new ProgramState();
             foreach (var parameter in declarationParameters)
             {
-                initialProgramState = initialProgramState.SetSymbolicValue(parameter, new SymbolicValue(false));
+                initialProgramState = initialProgramState.SetSymbolicValue(parameter, new SymbolicValue(isDefinitlyNotNull: false));
             }
 
             EnqueueNewNode(new ProgramPoint(cfg.EntryBlock), initialProgramState);
