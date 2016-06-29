@@ -50,6 +50,7 @@ namespace SonarLint.UnitTest
         private const string EXPECTED_ISSUE_LOCATION_PATTERN = @"^//\s*(\^+)\s*$";
         private const string NONCOMPLIANT_START = "Noncompliant";
         private const string NONCOMPLIANT_LINE_PATTERN = NONCOMPLIANT_START + @"@([\+|-]?)([0-9]+)";
+        private const string NONCOMPLIANT_MESSAGE_PATTERN = NONCOMPLIANT_START + @".*({{.*}}).*";
 
         private const string GeneratedAssemblyName = "foo";
         private const string TestAssemblyName = "fooTest";
@@ -90,13 +91,22 @@ namespace SonarLint.UnitTest
 
                     var compilation = project.GetCompilationAsync().Result;
                     var diagnostics = GetDiagnostics(compilation, diagnosticAnalyzer);
-                    var expected = ExpectedIssues(compilation.SyntaxTrees.First()).ToList();
+                    var expectedIssues = ExpectedIssues(compilation.SyntaxTrees.First());
                     var expectedLocations = ExpectedIssueLocations(compilation.SyntaxTrees.First());
 
                     foreach (var diagnostic in diagnostics)
                     {
                         var line = diagnostic.GetLineNumberToReport();
-                        expected.Should().Contain(line);
+                        if (!expectedIssues.ContainsKey(line))
+                        {
+                            Assert.Fail($"Issue not expected on line {line}");
+                        }
+
+                        var expectedMessage = expectedIssues[line];
+                        if (expectedMessage != null)
+                        {
+                            diagnostic.GetMessage().ShouldBeEquivalentTo(expectedMessage);
+                        }
 
                         if (expectedLocations.ContainsKey(line))
                         {
@@ -114,11 +124,11 @@ namespace SonarLint.UnitTest
                             expectedLocations.Remove(line);
                         }
 
-                        expected.Remove(line);
+                        expectedIssues.Remove(line);
                     }
 
                     expectedLocations.Should().BeEmpty();
-                    expected.Should().BeEmpty();
+                    expectedIssues.Should().BeEmpty();
                 }
             }
         }
@@ -344,14 +354,36 @@ namespace SonarLint.UnitTest
             return exactLocations;
         }
 
-        private static IEnumerable<int> ExpectedIssues(SyntaxTree syntaxTree)
+        private static Dictionary<int, string> ExpectedIssues(SyntaxTree syntaxTree)
         {
-            return syntaxTree.GetText().Lines
-                .Where(l => l.ToString().Contains(NONCOMPLIANT_START))
-                .Select(l => GetNoncompliantLineNumber(l));
+            var expectedIssueMessage = new Dictionary<int, string>();
+
+            foreach (var line in syntaxTree.GetText().Lines)
+            {
+                var lineText = line.ToString();
+                if (!lineText.Contains(NONCOMPLIANT_START))
+                {
+                    continue;
+                }
+
+                var lineNumber = GetNonCompliantLineNumber(line);
+
+                expectedIssueMessage.Add(lineNumber, null);
+
+                var match = Regex.Match(lineText, NONCOMPLIANT_MESSAGE_PATTERN);
+                if (!match.Success)
+                {
+                    continue;
+                }
+
+                var message = match.Groups[1].ToString();
+                expectedIssueMessage[lineNumber] = message.Substring(2, message.Length - 4);
+            }
+
+            return expectedIssueMessage;
         }
 
-        private static int GetNoncompliantLineNumber(TextLine line)
+        private static int GetNonCompliantLineNumber(TextLine line)
         {
             var text = line.ToString();
             var match = Regex.Match(text, NONCOMPLIANT_LINE_PATTERN);

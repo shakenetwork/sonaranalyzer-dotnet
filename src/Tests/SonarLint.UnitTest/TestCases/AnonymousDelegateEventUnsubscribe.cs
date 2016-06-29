@@ -13,7 +13,7 @@ namespace Tests.Diagnostics
         void Test()
         {
             Changed += (obj, args) => { };
-            Changed -= (obj, args) => { }; //Noncompliant
+            Changed -= (obj, args) => { }; //Noncompliant {{Unsubscribe with the same delegate that was used for the subscription.}}
 //                  ^^^^^^^^^^^^^^^^^^^^^
 
             Changed -= (obj, args) => Console.WriteLine(); // Noncompliant - single statement
