@@ -41,6 +41,12 @@ namespace SonarLint.Rules.CSharp
     {
         internal const string DiagnosticId = "S2930";
         internal const string Title = "\"IDisposables\" should be disposed";
+        internal const string Description =
+            "You can't rely on garbage collection to clean up everything. Specifically, you can't count on it to release " +
+            "non-memory resources such as \"File\"s. For that, there's the \"IDisposable\" interface, and the contract that " +
+            "\"Dispose\" will always be called on such objects. When an \"IDisposable\" is a class member, then it's up to " +
+            "that class to call \"Dispose\" on it, ideally in its own \"Dispose\" method. If it's a local variable, then it " +
+            "should be instantiated with a \"using\" clause to prompt automatic cleanup when it goes out of scope.";
         internal const string MessageFormat = "\"Dispose\" of \"{0}\".";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
@@ -49,7 +55,8 @@ namespace SonarLint.Rules.CSharp
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink());
+                helpLinkUri: DiagnosticId.GetHelpLink(),
+                description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
