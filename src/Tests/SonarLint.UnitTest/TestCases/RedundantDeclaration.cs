@@ -8,6 +8,7 @@ namespace Tests.Diagnostics
         public RedundantDeclaration()
         {
             MyEvent += new EventHandler((a, b) => { }); // Noncompliant, needlessly verbose
+//                     ^^^^^^^^^^^^^^^^
             MyEvent += (a, b) => { };
 
             (new EventHandler((a, b) => { }))(1, null);
@@ -15,18 +16,23 @@ namespace Tests.Diagnostics
             MyEvent2 = new MyMethod((i, j) => { }); // Noncompliant
             MyEvent2 = new MyMethod(            // Noncompliant
                 delegate (int i, int j) { });   // Noncompliant
+//                       ^^^^^^^^^^^^^^
 
             MyEvent2 = delegate (int i, int j) { Console.WriteLine(); }; //Noncompliant
             MyEvent = delegate { Console.WriteLine("fdsfs"); };
 
             var l = new List<int>() { }; // Noncompliant
+//                                  ^^^
             l = new List<int>();
             var o = new object() { }; // Noncompliant
+//                               ^^^
             o = new object { };
 
             var ints = new int[] { 1, 2, 3 }; // Noncompliant
+//                         ^^^
             ints = new[] { 1, 2, 3 };
             ints = new int[3] { 1, 2, 3 }; // Noncompliant
+//                         ^
 
             var ddd = new double[] { 1, 2, 3.0 }; // Compliant the element types are not the same as the specified one
 
@@ -38,6 +44,7 @@ namespace Tests.Diagnostics
             var www = new int[][][] { new[] { new[] { 0 } } }; // Noncompliant
 
             int? xx = ((new int?(5))); // Noncompliant
+//                      ^^^^^^^^
             xx = new Nullable<int>(5); // Noncompliant
             var rr = new int?(5);
 
@@ -60,6 +67,7 @@ namespace Tests.Diagnostics
             var f2 = new Func<int, int?>(i => i);
 
             Func<int, int> f1 = (int i) => 1; //Noncompliant
+//                               ^^^
             Func<int, int> f3 = (i) => 1;
             var transformer = Funcify((string x) => new { Original = x, Normalized = x.ToLower() });
             var transformer2 = Funcify2((string x) => new { Original = x, Normalized = x.ToLower() }); // Noncompliant

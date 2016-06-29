@@ -5,6 +5,7 @@
         public SwitchCasesMinimumThree(int n)
         {
             switch (n) // Noncompliant
+//          ^^^^^^
             {
                 case 0:
                     break;

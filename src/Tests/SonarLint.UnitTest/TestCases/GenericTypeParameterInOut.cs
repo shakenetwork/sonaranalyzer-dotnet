@@ -5,6 +5,7 @@ namespace Tests.Diagnostics
 {
     delegate int Deleg<T>(List<T> obj, T obj2);
     delegate int Deleg2<T>(IEnumerable<T> obj, T obj2); //Noncompliant
+//                      ^
     delegate int Deleg2Ok<in T>(IEnumerable<T> obj, T obj2);
     delegate IEnumerable<T> Deleg3<T>(); //Noncompliant
     delegate T Deleg4<out T>();

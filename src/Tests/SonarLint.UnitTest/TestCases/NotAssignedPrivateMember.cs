@@ -23,6 +23,7 @@ namespace Tests.Diagnostics
         class Nested
         {
             private int field; // Noncompliant, shouldn't it be initialized? This way the value is always default(int), 0.
+//                      ^^^^^
             private int field2;
             private static int field3; // Noncompliant
             private static int field4;

@@ -17,6 +17,7 @@ namespace Tests.Diagnostics
         {
             dynamic d = 5;
             var x = d >> 5.4; // Noncompliant
+//                       ^^^
             x = d >> null; // Noncompliant
             x <<= new object(); // Noncompliant
 
@@ -25,5 +26,5 @@ namespace Tests.Diagnostics
 
             x = d >> new MyUnknownClass(); // okay
         }
-    }    
+    }
 }

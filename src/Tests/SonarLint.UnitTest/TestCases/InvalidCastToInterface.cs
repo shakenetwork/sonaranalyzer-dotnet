@@ -38,7 +38,9 @@ namespace Tests.Diagnostics
         {
             var myclass1 = new MyClass1();
             var x = (IMyInterface)myclass1; // Noncompliant
+//                   ^^^^^^^^^^^^
             x = myclass1 as IMyInterface; // Noncompliant
+//                          ^^^^^^^^^^^^
             bool b = myclass1 is IMyInterface; // Noncompliant
 
             var arr = new MyClass1[10];

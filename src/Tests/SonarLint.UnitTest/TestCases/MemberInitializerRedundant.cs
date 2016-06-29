@@ -7,7 +7,9 @@ namespace Tests.Diagnostics
     {
         static int maxAge = 42;
         int age = 42 /*init*/; // Noncompliant
+//              ^^^^
         int Age { get; } = 42; // Noncompliant
+//                       ^^^^
         int Age2 { get; } = 0; // we already report on this with S3052
         event EventHandler myEvent = (a, b) => { }; // Noncompliant
         public Person(int age)

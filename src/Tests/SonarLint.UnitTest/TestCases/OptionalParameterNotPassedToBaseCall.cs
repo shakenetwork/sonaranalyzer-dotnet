@@ -15,6 +15,7 @@ namespace Tests.Diagnostics
         {
             ; ; ;
             base.MyMethod(1); // Noncompliant; caller's value is ignored
+//          ^^^^^^^^^^^^^^^^
             base.MyMethod(j); // Noncompliant; caller's value is ignored
             base.MyMethod2();
             this.MyMethod(1);

@@ -10,6 +10,7 @@ namespace Tests.Diagnostics
             var x = "";
 
             if (x != null) // Noncompliant
+//              ^^^^^^^^^
             {
                 x = null;
             }

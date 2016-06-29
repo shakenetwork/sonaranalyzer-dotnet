@@ -19,6 +19,7 @@ namespace Tests.Diagnostics
         public void CleanUp()
         {
             this.fs.Dispose(); // Noncompliant; Dispose not called in class' Dispose method
+//                  ^^^^^^^
         }
 
         public void Dispose()

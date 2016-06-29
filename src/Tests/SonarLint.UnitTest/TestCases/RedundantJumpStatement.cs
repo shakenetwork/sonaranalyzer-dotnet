@@ -11,6 +11,7 @@ namespace Tests.Diagnostics
             var a = new Action(() =>
             {
                 return; // Noncompliant
+//              ^^^^^^^
             });
 
             goto A; // Noncompliant

@@ -13,6 +13,7 @@ namespace Tests.Diagnostics
             var packageB = DoSomething("Qux", "1.0");
 
             var localRepository = new Cl { packageA, packageB }; // Noncompliant
+//              ^^^^^^^^^^^^^^^
 
             using (var x = new StreamReader("")) // Compliant
             {

@@ -6,6 +6,7 @@ namespace Tests.Diagnostics
     public class OptionalRefOutParameter : Base
     {
         public void DoStuff([Optional] ref int i) // Noncompliant
+//                           ^^^^^^^^
         {
             Console.WriteLine(i);
         }

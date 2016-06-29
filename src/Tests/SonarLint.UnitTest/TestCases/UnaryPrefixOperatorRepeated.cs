@@ -11,6 +11,7 @@ namespace Tests.Diagnostics
             int i = 1;
 
             int k = ~~i; // Noncompliant; same as i
+//                  ^^
             int m = + +i;  // Compliant
 
             bool b = false;

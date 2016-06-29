@@ -28,6 +28,7 @@ namespace Tests.Diagnostics
             int i = 0;
 
             foo(i = 42); // Noncompliant
+//                ^
             foo(i += 42); // Noncompliant
             foo(i -= 42); // Noncompliant
             foo(i *= 42); // Noncompliant
@@ -38,6 +39,7 @@ namespace Tests.Diagnostics
             foo(i |= 1); // Noncompliant
             foo(i <<= 1); // Noncompliant
             foo(i >>= 1); // Noncompliant
+//                ^^^
 
             i = 42;
             foo(i == 42);
@@ -53,6 +55,7 @@ namespace Tests.Diagnostics
             var b = true;
 
             if (b = false) { } // Noncompliant
+//                ^
             if ((b = false)) { } // Noncompliant
             for (int j = 0; b &= false; j++) { } // Noncompliant
             for (int j = 0; b == false; j++) { }

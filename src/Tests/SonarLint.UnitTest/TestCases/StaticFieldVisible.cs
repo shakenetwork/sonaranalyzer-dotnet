@@ -9,6 +9,7 @@ namespace Tests.TestCases
     public class StaticFieldVisible
     {
         public static double Pi = 3.14;  // Noncompliant
+//                           ^^
         public const double Pi2 = 3.14;
         public double Pi3 = 3.14;
     }

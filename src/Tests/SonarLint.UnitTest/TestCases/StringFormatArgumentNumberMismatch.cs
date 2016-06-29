@@ -11,8 +11,10 @@ namespace Tests.Diagnostics
             var s = "";
             s = string.Format("{0} {1} {2}", 1, 2, 3,
                 4, 5); // Noncompliant; too few arguments
+//              ^^^^
             s = string.Format("{0}", 10,
                 11); // Noncompliant; too many arguments
+//              ^^
             s = string.Format("{0} {1} {2}", new[] { 1, 2 }); // Compliant, not recognized
             s = string.Format("{0} {1} {2}", new object[] { 1, 2 }); // Compliant, not recognized
             var pattern = "{0} {1} {2}";
@@ -20,6 +22,7 @@ namespace Tests.Diagnostics
 
             const string pattern2 = "{0} {1} {2}";
             s = string.Format(pattern2, // Noncompliant
+//                            ^^^^^^^^
                 1, 2);
             s = string.Format(null, pattern2, 1, 2); // Noncompliant
             s = string.Format(null, pattern2, 1, 2, 3); // Compliant

@@ -18,6 +18,7 @@ namespace Tests.Diagnostics
         {
             var s = "foo";
             var t = "fee fie foe " + s.ToString();  // Noncompliant
+//                                    ^^^^^^^^^^^
             t = "fee fie foe " + s.ToString(System.Globalization.CultureInfo.InvariantCulture);
             var u = "" + 1.ToString(); // Compliant, value type
             u = new object().ToString() + ""; // Noncompliant

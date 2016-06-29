@@ -10,11 +10,13 @@ namespace Tests.Diagnostics
     class Program
     {
         public static object[] os = new int[0]; // Noncompliant
+//                                  ^^^^^^^^^^
         public static object[] os2 = new object[0];
 
         static void Main(string[] args)
         {
             Fruit[] fruits = new Apple[1]; // Noncompliant - array covariance is used
+//                           ^^^^^^^^^^^^
             fruits = new Apple[1]; // Noncompliant
             FillWithOranges(fruits);
             var fruits2 = new Apple[1];

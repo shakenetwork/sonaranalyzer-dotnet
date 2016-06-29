@@ -25,6 +25,7 @@ namespace Tests.Diagnostics
         }
 
         partial void DoSomething2(int someParam, int y) //Noncompliant
+//                                    ^^^^^^^^^
         {
 
         }

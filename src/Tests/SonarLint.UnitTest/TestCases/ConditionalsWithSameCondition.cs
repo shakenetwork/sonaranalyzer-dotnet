@@ -22,6 +22,7 @@ namespace Tests.TestCases
                 doTheThing(b);
             }
             if (a == b) // Noncompliant
+//              ^^^^^^
             {
                 doTheThing(b);
             }

@@ -10,6 +10,7 @@ namespace Tests.Diagnostics
             var @goto = 5;
 
             goto Label; //Noncompliant
+//          ^^^^
 
             Label:
             ;
@@ -21,6 +22,7 @@ namespace Tests.Diagnostics
                     break;
                 case 2:
                     goto default; //Noncompliant
+//                  ^^^^
                 case 3:
                     goto case 1; //Noncompliant
                 default:

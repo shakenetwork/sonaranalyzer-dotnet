@@ -6,6 +6,7 @@ namespace Tests.Diagnostics
     {
         public TooManyParameters(int p1, int p2, int p3) { }
         public TooManyParameters(int p1, int p2, int p3, int p4) { } // Noncompliant
+//                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
         public void F1(int p1, int p2, int p3) { }
 

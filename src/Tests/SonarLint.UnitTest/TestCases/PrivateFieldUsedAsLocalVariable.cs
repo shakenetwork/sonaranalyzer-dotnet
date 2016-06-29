@@ -7,6 +7,7 @@ namespace Tests.Diagnostics
         private int F0 = 0; // Compliant - unused
 
         private int F1 = 0; // Noncompliant
+//                  ^^^^^^
         public int F2 = 0; // Compliant - Public
 
         private int F3 = 1; // Compliant - Referenced from another field initializer

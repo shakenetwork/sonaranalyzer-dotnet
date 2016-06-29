@@ -19,6 +19,7 @@ namespace Tests.TestCases
         private BasicTests(
             int a,
             int b) // Noncompliant
+//          ^^^^^
         {
             Console.WriteLine(a);
 

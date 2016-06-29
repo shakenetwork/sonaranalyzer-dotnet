@@ -13,6 +13,7 @@ namespace Tests.Diagnostics
                 var sLoop = "";
 
                 s = s + "a";  // Noncompliant
+//              ^^^^^^^^^^^
                 s += "a";     // Noncompliant
                 sLoop += "a"; // Compliant
 

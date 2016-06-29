@@ -21,6 +21,7 @@ namespace Tests.Diagnostics
             int i = 0, j = 5, rest = 6, l = 7;
             var k = new[] { i, l };
             method(i, k : rest, rest : k); //Noncompliant
+//          ^^^^^^
         }
     }
 

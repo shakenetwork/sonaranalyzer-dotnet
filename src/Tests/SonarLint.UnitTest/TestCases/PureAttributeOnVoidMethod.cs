@@ -16,6 +16,7 @@ namespace Tests.TestCases
     {
         private int age;
         [Pure] // Noncompliant
+//       ^^^^
         void ConfigureAge(int age)
         {
             this.age = age;

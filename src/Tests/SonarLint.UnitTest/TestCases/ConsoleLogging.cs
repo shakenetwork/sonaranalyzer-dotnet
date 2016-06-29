@@ -9,6 +9,7 @@ namespace Tests.Diagnostics
         {
             GenerateKey2(key);
             Console.WriteLine("debug key = {0}", BitConverter.ToString(key)); //Noncompliant
+//          ^^^^^^^^^^^^^^^^^
             Console.Write("debug key = {0}", BitConverter.ToString(key)); //Noncompliant
             Console.ReadKey();
             System.Diagnostics.Debug.WriteLine("debug key = {0}", BitConverter.ToString(key));

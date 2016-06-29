@@ -13,6 +13,7 @@
             for (int a2 = 0; a2 < 42; a2++)
             {
                 a2 = 0; // Noncompliant
+//              ^^
             }
 
             int a;

@@ -3,6 +3,7 @@
     public class PropertyWriteOnly
     {
         public int Foo  //Noncompliant
+//                 ^^^
         {
             set
             {

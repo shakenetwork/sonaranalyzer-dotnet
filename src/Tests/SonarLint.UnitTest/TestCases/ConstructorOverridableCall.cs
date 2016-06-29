@@ -8,6 +8,7 @@ namespace Tests.Diagnostics
         protected ParentAbstract(ParentAbstract other)
         {
             DoSomething();  // Noncompliant
+//          ^^^^^^^^^^^
             this.DoSomething();  // Noncompliant
             other.DoSomething(); // Compliant
 

@@ -8,6 +8,7 @@ namespace Tests.Diagnostics
     }
     enum MyEnum2
         : int //Noncompliant
+//      ^^^^^
     {
     }
     enum MyEnum3
@@ -25,6 +26,7 @@ namespace Tests.Diagnostics
     { }
     class B :
         Object, //Noncompliant
+//      ^^^^^^^
         IBase
     { }
 

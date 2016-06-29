@@ -11,6 +11,7 @@ namespace Tests.TestCases
         public object Method1()
         {
             new object(); // Noncompliant
+//          ^^^^^^^^^^^^
 
             new ObjectCreatedDropped(); // Noncompliant
 

@@ -9,6 +9,7 @@ namespace Tests.Diagnostics
         private static bool HasContent1(IEnumerable<string> l)
         {
             return l.Count() > 0; // Noncompliant
+//                   ^^^^^
         }
         private static bool HasContent1b(IEnumerable<string> l)
         {
@@ -17,6 +18,7 @@ namespace Tests.Diagnostics
         private static bool HasContent2(List<string> l)
         {
             return Enumerable.Count(l) >= 0x1; // Noncompliant
+//                            ^^^^^
         }
         private static bool HasContent2b(List<string> l)
         {

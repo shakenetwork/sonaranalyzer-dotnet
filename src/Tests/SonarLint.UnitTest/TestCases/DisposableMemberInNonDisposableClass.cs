@@ -5,6 +5,7 @@ using System.IO;
 namespace Tests.Diagnostics
 {
     public class ResourceHolder   // Noncompliant; doesn't implement IDisposable
+//               ^^^^^^^^^^^^^^
     {
         private FileStream fs;  // This member is never Dispose'd
         public void OpenResource(string path)

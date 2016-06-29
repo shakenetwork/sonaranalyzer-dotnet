@@ -9,6 +9,7 @@ namespace Tests.Diagnostics
         public UseCurlyBraces()
         {
             if (false) ; // Noncompliant
+//          ^^
             for (int i = 0; i < 10; i++) ; // Noncompliant
             foreach (int i in new List<int>()) ; // Noncompliant
             while (false) ; // Noncompliant

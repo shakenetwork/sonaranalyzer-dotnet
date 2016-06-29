@@ -3,6 +3,7 @@ namespace Tests.Diagnostics
 {
     [System.Flags]
     enum FruitType    // Noncompliant
+//       ^^^^^^^^^
     {
         Banana,
         Orange = 5,

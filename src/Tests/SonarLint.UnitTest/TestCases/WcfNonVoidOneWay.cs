@@ -17,6 +17,7 @@ namespace Tests.Diagnostics
 
         [OperationContract(IsOneWay = true)]
         int MyServiceMethod2(); // Noncompliant
+//      ^^^
 
         [OperationContract(IsOneWay = false)]
         int MyServiceMethod3();

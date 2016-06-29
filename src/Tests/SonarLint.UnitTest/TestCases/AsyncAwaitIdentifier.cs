@@ -9,6 +9,7 @@ namespace Tests.Diagnostics
         public AsyncAwaitIdentifier()
         {
             int async = 42; // Noncompliant
+//              ^^^^^
             int await = 42; // Noncompliant
 
             await = 42*2;
@@ -17,6 +18,7 @@ namespace Tests.Diagnostics
         public void Foo(int async) // Noncompliant
         {
             var x = from await in new List<int>() {5,6,7 } // Noncompliant
+//                       ^^^^^
             select await;
         }
 

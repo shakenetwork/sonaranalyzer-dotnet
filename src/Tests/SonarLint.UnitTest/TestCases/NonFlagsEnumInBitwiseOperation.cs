@@ -25,6 +25,7 @@ namespace Tests.Diagnostics
         void Test()
         {
             var x = Permissions.Read | Permissions.Write;  // Noncompliant
+//                                   ^
             x = Permissions.Read & Permissions.Write;  // Noncompliant
             x = Permissions.Read ^ Permissions.Write;  // Noncompliant
             x &= Permissions.Read;  // Noncompliant

@@ -24,6 +24,7 @@ namespace Tests.Diagnostics
             bool someOtherCondition = a== b;
 
             if ( someOtherCondition && null == l && l.Count()>5)  // Noncompliant
+//                                     ^^^^^^^^^
             {
                 Console.WriteLine("Message");
             }

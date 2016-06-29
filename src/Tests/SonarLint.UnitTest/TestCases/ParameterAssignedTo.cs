@@ -7,6 +7,7 @@ namespace Tests.Diagnostics
         static void f7(this int a)
         {
             a = 42; // Noncompliant
+//          ^
 
             try
             {

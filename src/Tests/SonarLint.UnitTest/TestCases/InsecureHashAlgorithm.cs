@@ -12,6 +12,7 @@ namespace Tests.Diagnostics
         public void Hash(byte[] temp)
         {
             using (var sha1 = new SHA1Managed()) //Noncompliant
+//                                ^^^^^^^^^^^
             {
                 var hash = sha1.ComputeHash(temp);
             }
@@ -30,6 +31,7 @@ namespace Tests.Diagnostics
             }
 
             using (var md5 = (HashAlgorithm)CryptoConfig.CreateFromName("MD5")) //Noncompliant
+//                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             {
                 var hash = md5.ComputeHash(temp);
             }

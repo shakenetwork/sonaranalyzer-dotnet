@@ -37,6 +37,7 @@ namespace Tests.Diagnostics
 
 
             : base() // Noncompliant
+//          ^^^^^^^^
 
 
 

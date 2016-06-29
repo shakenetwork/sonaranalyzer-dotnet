@@ -34,6 +34,7 @@ namespace Tests.Diagnostics
             foreach (var i in enumerable)
             { }
             foreach (B i in enumerable) // Noncompliant
+//                   ^
             { }
         }
         public void M3(A[] array)

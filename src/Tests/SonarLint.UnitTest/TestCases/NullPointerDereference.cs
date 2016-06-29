@@ -11,6 +11,7 @@ namespace Tests.Diagnostics
             if (condition)
             {
                 M1(o.ToString()); // Noncompliant, always null
+//                 ^
             }
             else
             {

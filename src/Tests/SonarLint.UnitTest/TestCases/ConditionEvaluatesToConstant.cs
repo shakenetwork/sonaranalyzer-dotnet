@@ -9,6 +9,7 @@ namespace Tests.Diagnostics
         {
             var b = true;
             if (b) // Noncompliant
+//              ^
             {
                 Console.WriteLine();
             }
@@ -193,6 +194,7 @@ namespace Tests.Diagnostics
             {
                 value = true;
                 if (value) // Noncompliant
+//                  ^^^^^
                 {
                     Console.WriteLine();
                 }

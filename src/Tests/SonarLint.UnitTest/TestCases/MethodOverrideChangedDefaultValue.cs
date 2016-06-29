@@ -11,6 +11,7 @@ namespace Tests.Diagnostics
     public class Base : IMyInterface
     {
         public virtual void Write(int i, int j = 0) // Noncompliant
+//                                               ^
         {
             Console.WriteLine(i);
         }

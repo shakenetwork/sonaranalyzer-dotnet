@@ -6,6 +6,7 @@ namespace Tests.Diagnostics
     public interface IMine
     {
         void Dispose(); //Noncompliant
+//           ^^^^^^^
     }
 
     public interface IMine2 : IDisposable

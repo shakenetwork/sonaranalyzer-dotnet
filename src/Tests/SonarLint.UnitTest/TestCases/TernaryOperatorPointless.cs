@@ -9,6 +9,7 @@ namespace Tests.Diagnostics
         public TernaryOperatorPointless(bool b  )
         {
             var x = 1> 18 ? true : true; // Noncompliant; is this what was intended?
+//                  ^^^^^^^^^^^^^^^^^^^
             var y = 1> 18 ? true : false;
             y = 1 > 18 ? (true) : true; //Noncompliant
             new TernaryOperatorPointless(1 > 18 ? (true) : true);//Noncompliant

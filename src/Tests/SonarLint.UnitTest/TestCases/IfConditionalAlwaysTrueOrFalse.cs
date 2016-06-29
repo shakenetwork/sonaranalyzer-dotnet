@@ -25,6 +25,7 @@ namespace Tests.Diagnostics
             }
 
             if (true) // Noncompliant
+//          ^^^^^^^^^
             {
                 DoSomething2();
             }

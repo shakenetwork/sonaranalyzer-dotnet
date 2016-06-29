@@ -48,16 +48,18 @@ namespace Tests.Diagnostics
             throw new NotImplementedException();
         }
 
-        private// Noncompliant
-            int field, field2;
+        private int field, field2; // Noncompliant
+//      ^^^^^^^^^^^^^^^^^^^^^^^^^^
         private
             int field3, field4; // Noncompliant;
+//                      ^^^^^^
         private int Property // Noncompliant
         {
             get; set;
         }
         private void Method() { } // Noncompliant
         private class Class { }// Noncompliant
+//      ^^^^^^^^^^^^^^^^^^^^^^^
         private delegate void Delegate();
         private delegate void Delegate2(); // Noncompliant
         private event Delegate Event; //Noncompliant

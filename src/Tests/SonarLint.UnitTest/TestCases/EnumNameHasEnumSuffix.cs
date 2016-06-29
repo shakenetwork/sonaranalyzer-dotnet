@@ -1,6 +1,7 @@
 ﻿namespace Tests.Diagnostics
 {
     public enum MyEnum //Noncompliant
+//              ^^^^^^
     {
         Value
     }

@@ -14,6 +14,7 @@ namespace Tests.Diagnostics
             }
 
             if (f == 3.14F) //Noncompliant
+//                ^^
             {
             }
 

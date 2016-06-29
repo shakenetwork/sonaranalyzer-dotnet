@@ -18,6 +18,7 @@ namespace Tests.Diagnostics
         static void Main(string[] args)
         {
             Test(42, null); // Noncompliant
+//          ^^^^^^^^^^^^^^
         }
 
         public InvocationResolvesToOverrideWithParams(string a, params object[] b)

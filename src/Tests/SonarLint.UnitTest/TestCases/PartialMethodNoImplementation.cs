@@ -7,6 +7,7 @@ namespace Tests.Diagnostics
     public abstract partial class PartialMethodNoImplementation
     {
         partial void Method(); //Noncompliant
+//      ^^^^^^^
 
         void OtherM()
         {

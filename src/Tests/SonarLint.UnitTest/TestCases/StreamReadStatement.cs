@@ -11,6 +11,7 @@ namespace Tests.Diagnostics
             {
                 var result = new byte[stream.Length];
                 stream.Read(result, 0, (int)stream.Length); // Noncompliant
+//              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
                 var l = stream.Read(result, 0, (int)stream.Length);
                 stream.ReadAsync(result, 0, (int)stream.Length); // Noncompliant
                 await stream.ReadAsync(result, 0, (int)stream.Length); // Noncompliant

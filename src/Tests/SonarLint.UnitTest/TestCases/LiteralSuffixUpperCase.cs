@@ -11,6 +11,7 @@ namespace Tests.TestCases
         public void Test(long ui)
         {
             const long b = 0l;      // Noncompliant
+//                          ^
             const ulong c = 0Ul;
             const ulong d = 0uL;
             const decimal e = 1.2m;

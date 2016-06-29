@@ -19,6 +19,7 @@ namespace Tests.TestCases
         private static Dictionary<string, T[]> Dict2;
 
         public static string sProp1 { get; set; } //Noncompliant
+//                           ^^^^^^
         public /*comment */static string sProp2 { get; set; } //Noncompliant
         public string sProp3 { get; set; }
 

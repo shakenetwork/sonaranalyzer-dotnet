@@ -35,6 +35,7 @@ namespace Tests.Diagnostics
         private class Nested : MyBase<T>, IMyInterface<T>
         {
             private event EventHandler<T> Event5, // Noncompliant
+//                                        ^^^^^^
                 Event6; // Compliant, S1144 reports on it
 
             public override event EventHandler<T> Event7;

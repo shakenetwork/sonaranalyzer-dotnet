@@ -9,6 +9,7 @@ namespace Tests.Diagnostics
         {
             [ThreadStatic]
             public static object PerThreadObject = new object(); // Noncompliant. Will be null in all the threads except the first one.
+//                                               ^^^^^^^^^^^^^^
 
             [ThreadStatic]
             public static object _perThreadObject;

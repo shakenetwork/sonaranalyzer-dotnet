@@ -25,6 +25,7 @@ fixMe - Noncompliant
 // !FIXME! Noncompliant
 
 /*FIXME*/ // Noncompliant
+//^^^^^
 
 /**
 */

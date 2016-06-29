@@ -5,6 +5,7 @@ namespace Tests.Diagnostics
     public interface IInterface
     {
         void Method(int i = 42); //Noncompliant
+//                        ^^^^
     }
 
     public class Base

@@ -8,6 +8,7 @@
             {
                 var x = 5;
                 throw new System.NotSupportedException(); //Noncompliant
+//              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             }
             set { }
         }

@@ -15,9 +15,12 @@ namespace Tests.Diagnostics
         {
             var x = "".ToString();
             M(1, 5); //Noncompliant, y has the default value
+//               ^
             M(1, z: 7); //Noncompliant, z has the default value
             M(1, 5, // Noncompliant
+//               ^
                 7); // Noncompliant, y, z has the default value
+//              ^
             M(1);
             M(1, 2, 4);
             M2(1, 1, 1);

@@ -1,6 +1,7 @@
 ﻿namespace Tests.Diagnostics
 {
     class FSM // Noncompliant
+//        ^^^
     {
     }
     static class IEnumerableExtensions // Compliant

@@ -13,6 +13,7 @@ namespace Tests.Diagnostics
         public void CreateNew2(int propertyValue)
         {
             var c = "some string".ToCharArray()[10]; // Noncompliant, the indexer already returns a char
+//                                ^^^^^^^^^^^
             c = "some string".ToCharArray(5, 4)[1];
             foreach (var v in "some string".ToCharArray()) // Noncompliant
             {

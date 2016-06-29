@@ -10,6 +10,7 @@ namespace Tests.TestCases
     {
         public static Action<int> A = (i) => { var x = i + StaticFieldInitializerOrder.Y; }; // Okay??? Might or might not. For no we don't report on it
         public static int X = Y; // Noncompliant; Y at this time is still assigned default(int), i.e. 0
+//                          ^^^
         public static int X2 = M(StaticFieldInitializerOrder.Y); // Noncompliant; Y at this time is still assigned default(int), i.e. 0
         public static int Y = 42;
         public static int Z = Y; // Okay

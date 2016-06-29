@@ -24,6 +24,7 @@ namespace Tests.Diagnostics
             {
             }
             else if (a) // Noncompliant
+//          ^^^^^^^
             {
             }
 

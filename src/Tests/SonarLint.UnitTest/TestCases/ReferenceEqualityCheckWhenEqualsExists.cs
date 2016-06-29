@@ -57,6 +57,7 @@ namespace Tests.Diagnostics
         static void Main(IMyInterface x, IMyInterface y)
         {
             var b = x == y; // Noncompliant
+//                    ^^
             b = x != y; // Noncompliant
             b = x != null;
             b = x == new object(); // Noncompliant

@@ -25,6 +25,7 @@ namespace Tests.Diagnostics
         {
             int hash = Zero;
             hash += foo.GetHashCode(); // Noncompliant, can't make readonly in this case
+//                  ^^^
             hash += age.GetHashCode(); // Noncompliant
             hash += this.name.GetHashCode(); // Noncompliant
             hash += this.birthday.GetHashCode();

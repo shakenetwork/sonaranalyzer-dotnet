@@ -10,6 +10,7 @@ namespace Tests.Diagnostics
     }
 
     public class Class1 // Noncompliant
+//               ^^^^^^
     {
         private Class1() { }
     }

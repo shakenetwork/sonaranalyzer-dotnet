@@ -9,6 +9,7 @@ namespace Tests.Diagnostics
         class MyClass
         {
             public void DoStuff([Optional][DefaultValue(4)]int i, int j = 5) // Noncompliant
+//                                         ^^^^^^^^^^^^^^^
             {
                 Console.WriteLine(i);
             }

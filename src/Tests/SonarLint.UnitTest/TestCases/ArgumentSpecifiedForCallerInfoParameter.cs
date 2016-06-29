@@ -24,6 +24,7 @@ namespace Tests.Diagnostics
           [CallerMemberName] string memberName = "")
         {
             TraceMessage(message, filePath: memberName); // Noncompliant
+//                                ^^^^^^^^^^^^^^^^^^^^
         }
 
         void MyMethod()

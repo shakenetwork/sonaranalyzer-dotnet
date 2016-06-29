@@ -8,6 +8,7 @@ namespace Tests.Diagnostics
         public void MyLockingMethod()
         {
             lock (this) // Noncompliant
+//                ^^^^
             {
                 // ...
             }
@@ -18,6 +19,7 @@ namespace Tests.Diagnostics
             }
 
             lock (typeof(LockOnThisOrType)) // Noncompliant
+//                ^^^^^^^^^^^^^^^^^^^^^^^^
             {
                 // ...
             }

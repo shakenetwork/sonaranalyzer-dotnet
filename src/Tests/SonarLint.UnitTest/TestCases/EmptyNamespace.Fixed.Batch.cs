@@ -15,3 +15,4 @@ namespace Tests.Diagnostics
     /*3*/
     using M = Math;
 }
+

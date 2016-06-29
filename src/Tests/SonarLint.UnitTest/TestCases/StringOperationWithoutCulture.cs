@@ -11,6 +11,7 @@ namespace Tests.Diagnostics
         {
             var s = "";
             s = s.ToLower(); // Noncompliant
+//                ^^^^^^^
             s = s.ToUpper(); // Noncompliant
 
             s = s.ToUpperInvariant();
@@ -38,7 +39,7 @@ namespace Tests.Diagnostics
             i = "".CompareTo(o); // Noncompliant
 
             i = "".IndexOf(""); // Noncompliant
-            i = "".IndexOf(''); 
+            i = "".IndexOf('');
             i = "".LastIndexOf(""); // Noncompliant
             i = "".LastIndexOf("", StringComparison.CurrentCulture);
         }

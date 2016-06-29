@@ -10,16 +10,16 @@ namespace Tests.Diagnostics
         {
             int a = list.Sum();  // Compliant
 
-            int d = unchecked(list
-                .Sum());  // Noncompliant
+            int d = unchecked(list.Sum());  // Noncompliant
+//                                 ^^^
 
             unchecked
             {
-                int e = list
-                    .Sum();  // Noncompliant
+                int e = list.Sum();  // Noncompliant
+//                           ^^^
 
-                e = Enumerable
-                    .Sum(list); // Noncompliant
+                e = Enumerable.Sum(list); // Noncompliant
+//                             ^^^
             }
 
             checked

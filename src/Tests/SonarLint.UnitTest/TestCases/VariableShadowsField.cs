@@ -15,6 +15,7 @@ namespace Tests.Diagnostics
         public void doSomething()
         {
             int myField = 0, // Noncompliant
+//              ^^^^^^^
                 other = 5;
             int @int = 42; // Noncompliant
 

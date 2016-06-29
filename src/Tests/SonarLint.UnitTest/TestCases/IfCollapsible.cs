@@ -21,6 +21,7 @@ namespace Tests.TestCases
             if (cond1)
             {
                 if (cond2 || cond3) // Noncompliant
+//              ^^
                 {
                 }
             }

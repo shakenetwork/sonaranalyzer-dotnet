@@ -18,6 +18,7 @@ namespace Tests.Diagnostics
     }
 
     public class StringUtils // Noncompliant
+//               ^^^^^^^^^^^
     {
         public static string Concatenate(string s1, string s2)
         {

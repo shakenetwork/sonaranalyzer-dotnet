@@ -12,7 +12,9 @@ namespace Tests.Diagnostics
             int bitMask = 0x010F;
 
             result = -1 & bitMask; // Noncompliant
+//                   ^^^^
             result = bitMask | 0;  // Noncompliant
+//                           ^^^
             result = bitMask ^ 0;  // Noncompliant
             result = bitMask ^ 0;  // Noncompliant
             result &= -1; // Noncompliant

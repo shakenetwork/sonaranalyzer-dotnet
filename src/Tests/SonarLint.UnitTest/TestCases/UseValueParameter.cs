@@ -10,6 +10,7 @@ namespace Tests.Diagnostics
         {
             get { return count; }
             set { count = 3; } //Noncompliant
+//          ^^^
         }
         public int Count2
         {

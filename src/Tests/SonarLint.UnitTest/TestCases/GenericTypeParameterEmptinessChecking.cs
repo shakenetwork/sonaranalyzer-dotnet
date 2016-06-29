@@ -23,6 +23,7 @@ namespace Tests.Diagnostics
         public void M<T>(List<T> t)
         {
             if (t[0] == null) // Noncompliant
+//                      ^^^^
             {
             }
         }

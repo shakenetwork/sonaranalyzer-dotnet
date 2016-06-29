@@ -12,6 +12,7 @@ namespace Tests.Diagnostics
         public void DoSomething()
         {
             count++;  // Noncompliant
+//          ^^^^^
             var action = new Action(() =>
             {
                 count++; // Noncompliant

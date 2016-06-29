@@ -36,6 +36,7 @@ namespace Tests.Diagnostics
         public void M()
         {
             GC.SuppressFinalize(this); //Noncompliant
+//          ^^^^^^^^^^^^^^^^^^^^^^^^^
         }
     }
     class C2

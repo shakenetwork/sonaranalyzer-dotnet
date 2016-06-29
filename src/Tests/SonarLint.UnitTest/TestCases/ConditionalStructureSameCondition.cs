@@ -19,6 +19,7 @@ namespace Tests.TestCases
 
             }
             else if (b && condition) // Noncompliant
+//                   ^^^^^^^^^^^^^^
             {
 
             }

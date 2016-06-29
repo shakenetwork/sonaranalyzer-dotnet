@@ -9,6 +9,7 @@ namespace Tests.Diagnostics
         void foo(long l)
         {
             var x = new int[] {1, 2, 3}.Cast<int>(); // Noncompliant
+//                                     ^^^^^^^^^^^^
             x = Enumerable // Noncompliant
                 .Cast<int>(new int[] {1, 2, 3});
             x = x
@@ -20,6 +21,7 @@ namespace Tests.Diagnostics
             var zz = (int) l;
             int i = 0;
             var z = (int) i; // Noncompliant
+//                   ^^^
             z = (Int32) i; // Noncompliant
 
             var w = (object) i;

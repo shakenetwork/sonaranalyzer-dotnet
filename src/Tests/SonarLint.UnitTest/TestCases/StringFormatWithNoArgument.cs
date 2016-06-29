@@ -10,6 +10,7 @@ namespace Tests.Diagnostics
         void Test()
         {
             var s = string.Format("some text"); //Noncompliant
+//                  ^^^^^^^^^^^^^
             s = string.Format(
                 string.Format("some text"));    //Noncompliant
             s =    string.Format(

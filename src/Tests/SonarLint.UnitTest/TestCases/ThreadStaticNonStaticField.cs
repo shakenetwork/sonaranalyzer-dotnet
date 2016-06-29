@@ -7,6 +7,7 @@ namespace Tests.Diagnostics
     public class ThreadStaticNonStaticField
     {
         [ThreadStatic]  // Noncompliant
+//       ^^^^^^^^^^^^
         private int count1 = 0, count11 = 0;
 
         [ThreadStatic, X]  // Noncompliant

@@ -5,6 +5,7 @@ namespace Tests.Diagnostics
     public class FunctionComplexity
     {
         public FunctionComplexity() // Noncompliant
+//             ^^^^^^^^^^^^^^^^^^
         {
             if (false) { }
             if (false) { }

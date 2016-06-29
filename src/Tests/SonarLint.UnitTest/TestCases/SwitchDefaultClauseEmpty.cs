@@ -18,8 +18,8 @@
                     Console.WriteLine("apple");
                     break;
                 //Noncompliant@+1
-                default:
-                    break;
+                default: break;
+//              ^^^^^^^^^^^^^^^
             }
 
             switch (fruit)

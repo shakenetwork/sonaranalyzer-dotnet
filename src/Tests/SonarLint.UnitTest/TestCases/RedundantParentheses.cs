@@ -8,6 +8,7 @@ namespace Tests.Diagnostics
     }
 
     [MyAttribute()] //Noncompliant
+//              ^^
     [MyAttribute] //Compliant
     [MyAttribute(MyProperty =5)] //Compliant
     class MyClass
@@ -24,6 +25,7 @@ namespace Tests.Diagnostics
         public static MyClass CreateNew(int propertyValue)
         {
             return new MyClass() //Noncompliant
+//                            ^^
             {
                 MyProperty = propertyValue
             };

@@ -24,6 +24,7 @@ namespace Tests.Diagnostics
         void calculateRate(int a, int b)
         {
             b = doSomething(); // Noncompliant; parameter not used later
+//            ^^^^^^^^^^^^^^^
 
             int i, j;
             i = a + 12;

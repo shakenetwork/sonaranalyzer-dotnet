@@ -21,6 +21,7 @@
             }
 
             switch (n) // Noncompliant
+//          ^^^^^^
             {
                 case 0:
                 case 1:

@@ -14,6 +14,7 @@ namespace Tests.TestCases
             if (a == 1)
                 a++;
                 return a; // Noncompliant
+//              ^^^^^^^^^^^^^^^^^^^^^^^^^
 
             if (true)
             { }

@@ -10,6 +10,7 @@ namespace Tests.Diagnostics
     {
         public const int myConst = 0; //Compliant
         public double fieldD1 = 0; // Noncompliant
+//                            ^^^
         public double fieldD2 = +0.0; // Noncompliant
         public double fieldD2b = -+-+-0.0; // Noncompliant
         public double fieldD3 = .0; // Noncompliant

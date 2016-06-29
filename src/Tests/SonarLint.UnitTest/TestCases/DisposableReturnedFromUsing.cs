@@ -9,6 +9,7 @@ namespace Tests.Diagnostics
         public FileStream WriteToFile(string path, string text)
         {
             using (var fs = File.Create(path)) // Noncompliant
+//          ^^^^^
             {
                 var bytes = Encoding.UTF8.GetBytes(text);
                 fs.Write(bytes, 0, bytes.Length);

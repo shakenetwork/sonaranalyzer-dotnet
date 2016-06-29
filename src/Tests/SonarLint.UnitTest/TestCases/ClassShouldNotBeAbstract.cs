@@ -13,6 +13,7 @@ namespace Tests.Diagnostics
     }
 
     public abstract class Empty //Noncompliant
+//                        ^^^^^
     {
 
     }

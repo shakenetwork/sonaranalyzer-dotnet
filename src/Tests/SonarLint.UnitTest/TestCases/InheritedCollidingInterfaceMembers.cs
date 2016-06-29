@@ -13,6 +13,7 @@ namespace Tests.Diagnostics
         unsafe int Method(int[,] parameter, int* pointer);
     }
     public interface IMyInterfaceCommon1 : IMyInterface1, IMyInterface2 // Noncompliant
+//                   ^^^^^^^^^^^^^^^^^^^
     {
         int Method(int i, string s);
     }

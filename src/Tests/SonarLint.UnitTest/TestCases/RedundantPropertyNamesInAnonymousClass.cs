@@ -14,6 +14,7 @@ namespace Tests.Diagnostics
             var anon = new
             {
                 X = X, //Noncompliant
+//              ^^^
                 Y = Y  //Noncompliant
             };
 

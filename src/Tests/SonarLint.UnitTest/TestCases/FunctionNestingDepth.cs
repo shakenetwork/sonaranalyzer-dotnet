@@ -13,6 +13,7 @@ namespace Tests.Diagnostics
                     while (true)
                     {
                         if (true) { } // Noncompliant
+//                      ^^
                     }
                 }
                 catch { }

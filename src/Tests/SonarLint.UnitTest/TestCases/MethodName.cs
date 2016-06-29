@@ -3,6 +3,7 @@
     public interface MyInterface
     {
         void foo(); // Noncompliant
+//           ^^^
         void Foo();
     }
 

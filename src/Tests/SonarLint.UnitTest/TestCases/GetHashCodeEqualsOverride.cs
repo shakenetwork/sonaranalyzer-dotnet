@@ -30,6 +30,7 @@ namespace Tests.Diagnostics
         public override int GetHashCode()
         {
             return x.GetHashCode() ^ base.GetHashCode(); //Noncompliant
+//                                   ^^^^^^^^^^^^^^^^^^
         }
         public override bool Equals(object obj)
         {

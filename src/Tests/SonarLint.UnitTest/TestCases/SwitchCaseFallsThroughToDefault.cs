@@ -14,6 +14,7 @@ namespace Tests.Diagnostics
                     handleB();
                     break;
                 case 'c':  // Noncompliant
+//              ^^^^^^^^^
                 default:
                     handleTheRest();
                     break;

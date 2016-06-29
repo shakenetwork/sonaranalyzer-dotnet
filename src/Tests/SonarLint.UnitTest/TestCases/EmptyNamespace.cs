@@ -25,3 +25,7 @@ namespace Tests.Diagnostics
         /*4*/
     }
 }
+
+  namespace X { } // Noncompliant
+//^^^^^^^^^^^^^^^
+

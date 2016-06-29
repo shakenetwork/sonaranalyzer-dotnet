@@ -22,10 +22,8 @@ namespace Tests.TestCases
             {
                 doSomething();
             }
-            catch (ArgumentException) //Noncompliant
-            {
-                throw;
-            }
+            catch (ArgumentException) { throw; } //Noncompliant
+//          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
             try
             {

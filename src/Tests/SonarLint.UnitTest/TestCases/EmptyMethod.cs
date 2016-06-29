@@ -30,6 +30,7 @@ namespace Tests.Diagnostics
     public abstract class MyClass
     {
         public void F1() { } // Noncompliant
+//                  ^^
 
         public abstract void F2();
     }

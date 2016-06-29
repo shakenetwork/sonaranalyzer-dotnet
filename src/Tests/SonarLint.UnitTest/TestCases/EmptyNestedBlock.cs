@@ -15,6 +15,7 @@ namespace Tests.Diagnostics
         void F1(bool b)
         {
             for (int i = 0; i < 42; i++) { }  // Noncompliant
+//                                       ^^^
             var a = b;
             switch (a) { /* This commit doesn't count */ } // Noncompliant
 

@@ -11,6 +11,7 @@ namespace Tests.Diagnostics
                 if (n == 10)
                 {
                     break; // Noncompliant
+//                  ^^^^^^
                 }
 
                 n++;

@@ -14,6 +14,7 @@ namespace Tests.Diagnostics
         public void f1()
         {
             doSomething();} // Noncompliant
+//                        ^
 
         public void f2()
         {

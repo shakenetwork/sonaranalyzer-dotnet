@@ -5,6 +5,7 @@ namespace Tests.Diagnostics
     class InfiniteRecursion
     {
         int Pow(int num, int exponent)   // Noncompliant; no condition under which pow isn't re-called
+//          ^^^
         {
             num = num * Pow(num, exponent - 1);
             return num;  // this is never reached

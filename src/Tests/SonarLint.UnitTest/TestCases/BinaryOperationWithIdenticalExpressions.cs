@@ -13,11 +13,13 @@ namespace Tests.TestCases
         public void Test(bool a, bool b)
         {
             if (a == a) //Noncompliant
+//              ^^^^^^
             {
                 doZ();
             }
 
             if (a == b || (a == /*comment*/ b)) //Noncompliant
+//              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             {
                 doW();
             }

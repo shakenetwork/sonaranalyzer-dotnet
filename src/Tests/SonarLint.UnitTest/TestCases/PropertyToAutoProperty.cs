@@ -33,6 +33,7 @@ namespace Tests.Diagnostics
 
         private string _make;
         public string Make // Noncompliant
+//                    ^^^^
         {
             get { return _make; }
             set { this._make = value; }

@@ -3,6 +3,7 @@
     public interface IFace
     {
         void Method5(int[,] a); //Noncompliant
+//           ^^^^^^^
     }
 
     public class Base

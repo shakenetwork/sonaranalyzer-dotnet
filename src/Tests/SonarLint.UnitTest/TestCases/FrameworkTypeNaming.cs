@@ -6,6 +6,7 @@ namespace Tests.Diagnostics
 
     }
     class AttributeOne : Attribute // Noncompliant
+//        ^^^^^^^^^^^^
     {
 
     }

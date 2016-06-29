@@ -8,6 +8,7 @@ namespace Tests.Diagnostics
     public class AsyncVoidMethod
     {
         async void MyMethod() { } //Noncompliant
+//            ^^^^
         async void MyMethod(object o, EventArgs args) { } //Compliant
     }
 }

@@ -26,6 +26,7 @@ namespace Tests.Diagnostics
         void Test()
         {
             new int[] { 1 }.Where(i => true); // Noncompliant
+//          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
             var k = 0;
             new int[] { 1 }.Where(i => { k++; return true; }); // Noncompliant, although it has side effect
@@ -40,6 +41,7 @@ namespace Tests.Diagnostics
 
             "this string".Equals(new object()); // Noncompliant
             Method(); // Noncompliant
+//          ^^^^^^^^
 
             1.ToString(); // Noncompliant
 

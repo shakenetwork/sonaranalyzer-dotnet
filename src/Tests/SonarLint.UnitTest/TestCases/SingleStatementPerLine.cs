@@ -6,6 +6,7 @@ namespace Tests.Diagnostics
         public SingleStatementPerLine()
         {
             if (someCondition) doSomething(); //Noncompliant
+//          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             if (someCondition) { doSomething(); } //Noncompliant
             else
             {

@@ -7,6 +7,7 @@ namespace Tests.Diagnostics
     {
         void Print2(string[] messages);
         void Print2(string[] messages, string delimiter = "\n");// Noncompliant;
+//                                     ^^^^^^^^^^^^^^^^^^^^^^^
     }
 
     public class MyBase

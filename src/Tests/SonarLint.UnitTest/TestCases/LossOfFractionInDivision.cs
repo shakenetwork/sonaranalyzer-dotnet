@@ -11,6 +11,7 @@ namespace Tests.TestCases
         static void Main()
         {
             decimal dec = 3 / 2; // Noncompliant
+//                        ^^^^^
             dec = 3L / 2; // Noncompliant
             Method(3 / 2); // Noncompliant
             dec = (decimal)3 / 2;

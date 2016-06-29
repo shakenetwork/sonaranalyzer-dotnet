@@ -21,6 +21,7 @@ namespace Tests.TestCases
             object x;
 
             if (a != null) // Noncompliant; needlessly verbose
+//          ^^
             {
                 /*some comment*/
                 x = a;
@@ -31,12 +32,14 @@ namespace Tests.TestCases
             }
 
             x = a != null ? (a) : b;  // Noncompliant; better but could still be simplified
+//              ^^^^^^^^^^^^^^^^^^^
             x = a != null ? a : a;  // Compliant, triggers S2758
 
             int i = 5;
             var z = i == null ? 4 : i; //can't be converted
 
             x = (y == null) ? Identity(new object()) : Identity(y);  // Noncompliant
+//              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
             x = a ?? b;
             x = a ?? b;

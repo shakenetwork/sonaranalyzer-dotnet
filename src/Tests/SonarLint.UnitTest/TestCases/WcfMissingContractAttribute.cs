@@ -13,6 +13,7 @@ namespace Tests.Diagnostics
 
     [System.ServiceModel.ServiceContract]
     interface IMyService2 // Noncompliant
+//            ^^^^^^^^^^^
     {
         int MyServiceMethod();
     }

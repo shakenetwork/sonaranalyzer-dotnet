@@ -8,6 +8,7 @@ namespace Tests.Diagnostics
         public void isOdd(int x)
         {
             var y = x%2 == 1; // Noncompliant; if x is negative, x % 2 == -1
+//                  ^^^^^^^^
             y = x%2 != -1; // Noncompliant
             y = 1 == x%2; // Noncompliant
             y = x%2 != 0;

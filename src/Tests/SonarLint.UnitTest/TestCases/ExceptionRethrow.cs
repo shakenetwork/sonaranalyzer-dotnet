@@ -10,6 +10,7 @@
             {
                 Console.WriteLine(exc);
                 throw exc; // Noncompliant; stacktrace is reset
+//              ^^^^^^^^^^
                 throw;
             }
             catch (ExceptionType2 exc)

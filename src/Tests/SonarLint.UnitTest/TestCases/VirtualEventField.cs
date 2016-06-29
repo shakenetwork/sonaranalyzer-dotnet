@@ -6,6 +6,7 @@ namespace Tests.Diagnostics
     public class VirtualEventField
     {
         public virtual event EventHandler OnRefueled; // Noncompliant
+//             ^^^^^^^
 
         public virtual event EventHandler Foo
         {

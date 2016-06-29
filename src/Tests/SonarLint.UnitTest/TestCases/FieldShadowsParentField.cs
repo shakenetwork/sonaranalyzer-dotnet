@@ -14,6 +14,7 @@ namespace Tests.TestCases
     public class Raspberry : Fruit
     {
         private bool ripe;  // Noncompliant
+//                   ^^^^
         private static int FLESH; // Noncompliant
         private static int FLESH_COLOR;
     }

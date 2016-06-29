@@ -18,6 +18,7 @@ namespace Tests.Diagnostics
     abstract class Derived : Base
     {
         public override void Method(int[] numbers) // Noncompliant, the params is missing.
+//                                  ^^^^^^^^^^^^^
         {
         }
         public override void Method(string s,

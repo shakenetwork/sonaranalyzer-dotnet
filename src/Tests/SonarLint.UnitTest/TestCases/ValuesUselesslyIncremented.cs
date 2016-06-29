@@ -14,6 +14,7 @@ namespace Tests.Diagnostics
             i = i++; // Noncompliant; i is still zero
 
             return j++; // Noncompliant; 0 returned
+//                 ^^^
         }
 
         public int pickNumber2()

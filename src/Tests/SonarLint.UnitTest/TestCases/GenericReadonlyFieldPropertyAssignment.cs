@@ -24,6 +24,7 @@ namespace Tests.TestCases
         public void MovePointVertically(int newX)
         {
             point.X = newX; //Noncompliant; if point is a struct, then nothing happened
+//          ^^^^^^^
             point.X++; //Noncompliant; if point is a struct, then nothing happened
             Console.WriteLine(point.X);
             var i = point.X = newX; //Noncompliant;

@@ -5,6 +5,7 @@
         public virtual void MyNotOverridenMethod() { }
     }
     internal partial class Partial1Part //Noncompliant
+//           ^^^^^^^
     {
         void Method() { }
     }
@@ -31,6 +32,7 @@ partial interface PartialInterface //Noncompliant
     sealed class SealedClass : Partial2Part
     {
         public override sealed void MyOverridenMethod() { } //Noncompliant
+//                      ^^^^^^
         public override sealed int Prop { get; set; } //Noncompliant
     }
 
@@ -56,12 +58,14 @@ partial interface PartialInterface //Noncompliant
     }
 
     unsafe class UnsafeClass2 // Noncompliant
+//  ^^^^^^
     {
         int num;
     }
     unsafe class UnsafeClass3 // Noncompliant
     {
         unsafe void M() // Noncompliant
+//      ^^^^^^
         {
 
         }
@@ -147,10 +151,12 @@ partial interface PartialInterface //Noncompliant
             checked
             {
                 checked // Noncompliant
+//              ^^^^^^^
                 {
                     var z = 1 + 4;
                     var y = unchecked(1 +
                         unchecked(4)); // Noncompliant
+//                      ^^^^^^^^^
                 }
             }
 

@@ -4,6 +4,7 @@
     enum X
     {
         Zero = 0, // Noncompliant
+//      ^^^^^^^^
         One = 1
     }
     [System.Flags]

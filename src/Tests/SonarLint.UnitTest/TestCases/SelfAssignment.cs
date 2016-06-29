@@ -21,6 +21,7 @@ namespace Tests.TestCases
         {
             var Prop1 = 5;
             Prop1 = Prop1; //Noncompliant
+//          ^^^^^^^^^^^^^
 
             Prop1 = 2*Prop1;
 

@@ -14,6 +14,7 @@ namespace Tests.Diagnostics
             }
 
             Console.WriteLine(i1.Value); // Noncompliant
+//                            ^^^^^^^^
         }
 
         public void TestNonNull()

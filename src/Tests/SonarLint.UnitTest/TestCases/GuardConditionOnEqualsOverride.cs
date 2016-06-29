@@ -19,6 +19,7 @@ namespace Tests.Diagnostics
         public override bool Equals(object other)
         {
             if (base.Equals(other))  // Noncompliant
+//              ^^^^^^^^^^^^^^^^^^
             {
                 return true;
             }

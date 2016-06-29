@@ -17,6 +17,7 @@ namespace Tests.Diagnostics
             string[] stringArray = strings.ToArray();
 
             if (stringIList.IndexOf(color) > 0) // Noncompliant
+//                                         ^^^
             {
                 // ...
             }

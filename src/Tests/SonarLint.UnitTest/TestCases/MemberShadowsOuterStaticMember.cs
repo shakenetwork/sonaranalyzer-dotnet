@@ -18,8 +18,10 @@ namespace Tests.TestCases
         class Inner
         {
             class SomeName // Noncompliant
+//                ^^^^^^^^
             {
                 private int F; // Noncompliant
+//                          ^
             }
 
             public static int MyProperty { get; set; } //Noncompliant

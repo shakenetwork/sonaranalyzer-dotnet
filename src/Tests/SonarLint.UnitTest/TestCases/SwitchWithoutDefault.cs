@@ -5,6 +5,7 @@
         public SwitchWithoutDefault(int n)
         {
             switch (n) // Noncompliant
+//          ^^^^^^
             {
             }
 

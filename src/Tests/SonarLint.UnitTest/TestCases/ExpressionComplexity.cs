@@ -8,6 +8,7 @@ namespace Tests.Diagnostics
         {
             var a1 = false;
             var b1 = false ? (true ? (false ? (true ? 1 : 0) : 0) : 0) : 1; // Noncompliant
+//                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
             var c1 = true || false || true || false || false; // Noncompliant
 

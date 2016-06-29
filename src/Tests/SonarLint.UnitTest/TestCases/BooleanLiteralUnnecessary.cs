@@ -5,6 +5,7 @@
         public BooleanLiteralUnnecessary(bool a, bool b, bool? c)
         {
             var z = true || ((true));   // Noncompliant
+//                       ^^^^^^^^^^^
             z = false || false;     // Noncompliant
             z = true || false;      // Noncompliant
             z = false || true;      // Noncompliant
@@ -22,6 +23,7 @@
             z = true != false;      // Noncompliant
 
             var x = !true;                  // Noncompliant
+//                   ^^^^
             x = true || false;              // Noncompliant
             x = !false;                     // Noncompliant
             x = (a == false)                // Noncompliant
@@ -46,6 +48,7 @@
             var exp2 = true;
 
             var booleanVariable = condition ? ((true)) : exp; // Noncompliant
+//                                            ^^^^^^^^
             booleanVariable = condition ? false : exp; // Noncompliant
             booleanVariable = condition ? exp : true; // Noncompliant
             booleanVariable = condition ? exp : false; // Noncompliant

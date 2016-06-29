@@ -18,6 +18,7 @@ namespace Tests.Diagnostics
     class Person
     {
         private int _birthYear;  // Noncompliant
+//                  ^^^^^^^^^^
         int _birthMonth = 3;  // Noncompliant
         int _birthDay = 31;  // Compliant, the setter action references it
         int _birthDay2 = 31;  // Compliant, it is used in a delegate

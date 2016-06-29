@@ -11,6 +11,7 @@ namespace Tests.Diagnostics
         public InsecureEncryptionAlgorithm()
         {
             using (var tripleDES = new MyTripleDESCryptoServiceProvider()) //Noncompliant
+//                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             {
                 //...
             }
@@ -21,6 +22,7 @@ namespace Tests.Diagnostics
             }
 
             using (TripleDES TripleDESalg = TripleDES.Create()) //Noncompliant
+//                                          ^^^^^^^^^^^^^^^^^^
             {
             }
             using (var des = DES.Create("fgdsgsdfgsd")) //Noncompliant

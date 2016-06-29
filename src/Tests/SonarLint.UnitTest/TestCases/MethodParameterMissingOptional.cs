@@ -10,6 +10,7 @@ namespace Tests.TestCases
     public class MethodParameterMissingOptional
     {
         public void MyMethod([DefaultParameterValue(5)] int j) //Noncompliant
+//                            ^^^^^^^^^^^^^^^^^^^^^^^^
         {
             Console.WriteLine(j);
         }
