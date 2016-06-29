@@ -76,7 +76,7 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
-                    var invocations = CollectInvocations(removableDeclarationCollector.ClassDeclarations).ToList();
+                    var invocations = CollectInvocations(removableDeclarationCollector.TypeDeclarations).ToList();
 
                     foreach (var declaredPrivateMethodWithReturn in declaredPrivateMethodsWithReturn)
                     {
@@ -124,7 +124,7 @@ namespace SonarLint.Rules.CSharp
         }
 
         private static IEnumerable<SyntaxNodeSymbolSemanticModelTuple<InvocationExpressionSyntax, IMethodSymbol>> CollectInvocations(
-            IEnumerable<SyntaxNodeSemanticModelTuple<ClassDeclarationSyntax>> containers)
+            IEnumerable<SyntaxNodeSemanticModelTuple<BaseTypeDeclarationSyntax>> containers)
         {
             return containers
                 .SelectMany(container => container.SyntaxNode.DescendantNodes()
@@ -142,7 +142,7 @@ namespace SonarLint.Rules.CSharp
         private static IEnumerable<SyntaxNodeSymbolSemanticModelTuple<MethodDeclarationSyntax, IMethodSymbol>> CollectRemovableMethods(
             RemovableDeclarationCollector removableDeclarationCollector)
         {
-            return removableDeclarationCollector.ClassDeclarations
+            return removableDeclarationCollector.TypeDeclarations
                 .SelectMany(container => container.SyntaxNode.DescendantNodes(RemovableDeclarationCollector.IsNodeContainerTypeDeclaration)
                     .OfType<MethodDeclarationSyntax>()
                     .Select(node =>

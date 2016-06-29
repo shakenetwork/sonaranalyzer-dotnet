@@ -31,9 +31,6 @@ using System.Linq;
 
 namespace SonarLint.Rules.CSharp
 {
-    using ClassWithSemanticModel = SyntaxNodeSemanticModelTuple<ClassDeclarationSyntax>;
-    using SyntaxNodeSymbolSemanticModelTuple = SyntaxNodeSymbolSemanticModelTuple<SyntaxNode, ISymbol>;
-
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleConstantRemediation("5min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.Understandability)]
@@ -157,7 +154,7 @@ namespace SonarLint.Rules.CSharp
         private static void CollectRemovableMethods(RemovableDeclarationCollector declarationCollector,
             HashSet<ISymbol> declaredPrivateSymbols)
         {
-            var methodSymbols = declarationCollector.ClassDeclarations
+            var methodSymbols = declarationCollector.TypeDeclarations
                 .SelectMany(container => container.SyntaxNode.DescendantNodes(RemovableDeclarationCollector.IsNodeContainerTypeDeclaration)
                     .Where(node =>
                         node.IsKind(SyntaxKind.MethodDeclaration) ||
@@ -199,7 +196,7 @@ namespace SonarLint.Rules.CSharp
         private static void CollectRemovableNamedTypes(RemovableDeclarationCollector declarationCollector,
             HashSet<ISymbol> declaredPrivateSymbols)
         {
-            var symbols = declarationCollector.ClassDeclarations
+            var symbols = declarationCollector.TypeDeclarations
                 .SelectMany(container => container.SyntaxNode.DescendantNodes(RemovableDeclarationCollector.IsNodeContainerTypeDeclaration)
                     .Where(node =>
                         node.IsKind(SyntaxKind.ClassDeclaration) ||
@@ -222,7 +219,7 @@ namespace SonarLint.Rules.CSharp
             RemovableDeclarationCollector declarationCollector,
             HashSet<ISymbol> usedSymbols, HashSet<ISymbol> emptyConstructors)
         {
-            var ctors = declarationCollector.ClassDeclarations
+            var ctors = declarationCollector.TypeDeclarations
                 .SelectMany(container => container.SyntaxNode.DescendantNodes(RemovableDeclarationCollector.IsNodeStructOrClassDeclaration)
                     .Where(node => node.IsKind(SyntaxKind.ConstructorDeclaration))
                     .Select(node =>
@@ -269,7 +266,7 @@ namespace SonarLint.Rules.CSharp
                 .OfType<IMethodSymbol>()
                 .Any(m => m.MethodKind == MethodKind.Constructor);
 
-            var identifiers = declarationCollector.ClassDeclarations
+            var identifiers = declarationCollector.TypeDeclarations
                 .SelectMany(container => container.SyntaxNode.DescendantNodes()
                     .Where(node =>
                         node.IsKind(SyntaxKind.IdentifierName))
@@ -282,7 +279,7 @@ namespace SonarLint.Rules.CSharp
                             SemanticModel = container.SemanticModel
                         }));
 
-            var generic = declarationCollector.ClassDeclarations
+            var generic = declarationCollector.TypeDeclarations
                 .SelectMany(container => container.SyntaxNode.DescendantNodes()
                     .Where(node =>
                         node.IsKind(SyntaxKind.GenericName))
@@ -299,7 +296,7 @@ namespace SonarLint.Rules.CSharp
 
             if (anyRemovableIndexers)
             {
-                var nodes = declarationCollector.ClassDeclarations
+                var nodes = declarationCollector.TypeDeclarations
                     .SelectMany(container => container.SyntaxNode.DescendantNodes()
                         .Where(node => node.IsKind(SyntaxKind.ElementAccessExpression))
                         .Select(node =>
@@ -314,7 +311,7 @@ namespace SonarLint.Rules.CSharp
 
             if (anyRemovableCtors)
             {
-                var nodes = declarationCollector.ClassDeclarations
+                var nodes = declarationCollector.TypeDeclarations
                     .SelectMany(container => container.SyntaxNode.DescendantNodes()
                         .Where(node => node.IsKind(SyntaxKind.ObjectCreationExpression))
                         .Select(node =>

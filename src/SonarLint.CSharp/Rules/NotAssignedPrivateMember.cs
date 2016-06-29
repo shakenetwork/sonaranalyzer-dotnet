@@ -136,7 +136,7 @@ namespace SonarLint.Rules.CSharp
         {
             var symbolNames = declaredPrivateSymbols.Select(s => s.Name).ToImmutableHashSet();
 
-            var identifiers = removableDeclarationCollector.ClassDeclarations
+            var identifiers = removableDeclarationCollector.TypeDeclarations
                 .SelectMany(container => container.SyntaxNode.DescendantNodes()
                     .Where(node => node.IsKind(SyntaxKind.IdentifierName))
                     .Cast<IdentifierNameSyntax>()
@@ -149,7 +149,7 @@ namespace SonarLint.Rules.CSharp
                             Symbol = container.SemanticModel.GetSymbolInfo(node).Symbol
                         }));
 
-            var generic = removableDeclarationCollector.ClassDeclarations
+            var generic = removableDeclarationCollector.TypeDeclarations
                 .SelectMany(container => container.SyntaxNode.DescendantNodes()
                     .Where(node => node.IsKind(SyntaxKind.GenericName))
                     .Cast<GenericNameSyntax>()

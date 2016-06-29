@@ -60,6 +60,8 @@ namespace Tests.Diagnostics
         private void Method() { } // Noncompliant
         private class Class { }// Noncompliant
 //      ^^^^^^^^^^^^^^^^^^^^^^^
+        private struct Struct { }// Noncompliant
+//      ^^^^^^^^^^^^^^^^^^^^^^^^^
         private delegate void Delegate();
         private delegate void Delegate2(); // Noncompliant
         private event Delegate Event; //Noncompliant

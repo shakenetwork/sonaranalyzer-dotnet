@@ -116,7 +116,7 @@ namespace SonarLint.Rules.CSharp
         {
             var usedSymbols = new HashSet<ISymbol>();
 
-            var identifiers = removableDeclarationCollector.ClassDeclarations
+            var identifiers = removableDeclarationCollector.TypeDeclarations
                 .SelectMany(container => container.SyntaxNode.DescendantNodes()
                     .Where(node =>
                         node.IsKind(SyntaxKind.IdentifierName))
@@ -129,7 +129,7 @@ namespace SonarLint.Rules.CSharp
                             SemanticModel = container.SemanticModel
                         }));
 
-            var generic = removableDeclarationCollector.ClassDeclarations
+            var generic = removableDeclarationCollector.TypeDeclarations
                 .SelectMany(container => container.SyntaxNode.DescendantNodes()
                     .Where(node =>
                         node.IsKind(SyntaxKind.GenericName))
@@ -159,7 +159,7 @@ namespace SonarLint.Rules.CSharp
 
         private static ISet<ISymbol> GetInvokedEventSymbols(RemovableDeclarationCollector removableDeclarationCollector)
         {
-            var delegateInvocations = removableDeclarationCollector.ClassDeclarations
+            var delegateInvocations = removableDeclarationCollector.TypeDeclarations
                 .SelectMany(container => container.SyntaxNode.DescendantNodes()
                     .Where(node => node.IsKind(SyntaxKind.InvocationExpression))
                     .Cast<InvocationExpressionSyntax>()
@@ -197,7 +197,7 @@ namespace SonarLint.Rules.CSharp
         {
             var usedSymbols = new HashSet<ISymbol>();
 
-            var arguments = removableDeclarationCollector.ClassDeclarations
+            var arguments = removableDeclarationCollector.TypeDeclarations
                 .SelectMany(container => container.SyntaxNode.DescendantNodes()
                     .Where(node =>
                         node.IsKind(SyntaxKind.Argument))
@@ -209,7 +209,7 @@ namespace SonarLint.Rules.CSharp
                             SemanticModel = container.SemanticModel
                         }));
 
-            var equalsValue = removableDeclarationCollector.ClassDeclarations
+            var equalsValue = removableDeclarationCollector.TypeDeclarations
                 .SelectMany(container => container.SyntaxNode.DescendantNodes()
                     .OfType<EqualsValueClauseSyntax>()
                     .Select(node =>
@@ -219,7 +219,7 @@ namespace SonarLint.Rules.CSharp
                             SemanticModel = container.SemanticModel
                         }));
 
-            var assignment = removableDeclarationCollector.ClassDeclarations
+            var assignment = removableDeclarationCollector.TypeDeclarations
                 .SelectMany(container => container.SyntaxNode.DescendantNodes()
                     .Where(node =>
                         node.IsKind(SyntaxKind.SimpleAssignmentExpression))

@@ -40,4 +40,13 @@ namespace Tests.Diagnostics
         private T SomeGenericMethod<T>() where T : class { return null; } // Noncompliant
         private T SomeGenericMethod2<T>() where T : class { return null; }
     }
+
+    public struct UnusedReturnValueInStruct
+    {
+        private int MyMethod() { return 42; } // Noncompliant
+        public void Test()
+        {
+            MyMethod();
+        }
+    }
 }

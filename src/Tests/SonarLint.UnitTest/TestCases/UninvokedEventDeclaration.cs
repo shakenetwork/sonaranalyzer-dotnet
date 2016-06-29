@@ -92,4 +92,19 @@ namespace Tests.Diagnostics
             }
         }
     }
+
+    struct StructTest
+    {
+        public event Action<object, EventArgs> Event1; //Noncompliant
+
+        public void RegisterEventHandler()
+        {
+            Event1 += StructTest_Event1;
+        }
+
+        private void StructTest_Event1(object arg1, EventArgs arg2)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

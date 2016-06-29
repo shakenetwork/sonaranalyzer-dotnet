@@ -27,7 +27,7 @@ using System.Linq;
 
 namespace SonarLint.Helpers
 {
-    using ClassWithSemanticModel = SyntaxNodeSemanticModelTuple<ClassDeclarationSyntax>;
+    using TypeWithSemanticModel = SyntaxNodeSemanticModelTuple<BaseTypeDeclarationSyntax>;
     using SyntaxNodeSymbolSemanticModelTuple = SyntaxNodeSymbolSemanticModelTuple<SyntaxNode, ISymbol>;
 
     internal class RemovableDeclarationCollector
@@ -35,7 +35,7 @@ namespace SonarLint.Helpers
         private readonly Compilation compilation;
         private readonly INamedTypeSymbol namedType;
 
-        private IEnumerable<ClassWithSemanticModel> classDeclarations;
+        private IEnumerable<TypeWithSemanticModel> typeDeclarations;
 
         public static readonly Func<SyntaxNode, bool> IsNodeStructOrClassDeclaration =
             node => node.IsKind(SyntaxKind.ClassDeclaration) ||
@@ -51,31 +51,31 @@ namespace SonarLint.Helpers
             this.compilation = compilation;
         }
 
-        public IEnumerable<ClassWithSemanticModel> ClassDeclarations
+        public IEnumerable<TypeWithSemanticModel> TypeDeclarations
         {
             get
             {
-                if (classDeclarations == null)
+                if (typeDeclarations == null)
                 {
-                    classDeclarations = namedType.DeclaringSyntaxReferences
+                    typeDeclarations = namedType.DeclaringSyntaxReferences
                         .Select(reference => reference.GetSyntax())
-                        .OfType<ClassDeclarationSyntax>()
+                        .OfType<BaseTypeDeclarationSyntax>()
                         .Select(node =>
-                            new ClassWithSemanticModel
+                            new TypeWithSemanticModel
                             {
                                 SyntaxNode = node,
                                 SemanticModel = compilation.GetSemanticModel(node.SyntaxTree)
                             })
                         .Where(n => n.SemanticModel != null);
                 }
-                return classDeclarations;
+                return typeDeclarations;
             }
         }
 
         public IEnumerable<SyntaxNodeSymbolSemanticModelTuple> GetRemovableDeclarations(
             ISet<SyntaxKind> kinds, Accessibility maxAcessibility)
         {
-            var containers = ClassDeclarations;
+            var containers = TypeDeclarations;
 
             return containers
                 .SelectMany(container => SelectMatchingDeclarations(container, kinds)
@@ -86,7 +86,7 @@ namespace SonarLint.Helpers
         public IEnumerable<SyntaxNodeSymbolSemanticModelTuple> GetRemovableFieldLikeDeclarations(
             ISet<SyntaxKind> kinds, Accessibility maxAcessibility)
         {
-            var containers = ClassDeclarations;
+            var containers = TypeDeclarations;
 
             var fieldLikeNodes = containers
                 .SelectMany(container => SelectMatchingDeclarations(container, kinds)
@@ -132,7 +132,7 @@ namespace SonarLint.Helpers
             };
         }
 
-        private static IEnumerable<SyntaxNode> SelectMatchingDeclarations(ClassWithSemanticModel container, ISet<SyntaxKind> kinds)
+        private static IEnumerable<SyntaxNode> SelectMatchingDeclarations(TypeWithSemanticModel container, ISet<SyntaxKind> kinds)
         {
             return container.SyntaxNode.DescendantNodes(IsNodeContainerTypeDeclaration)
                 .Where(node => kinds.Contains(node.Kind()));

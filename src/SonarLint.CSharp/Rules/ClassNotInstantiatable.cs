@@ -79,15 +79,15 @@ namespace SonarLint.Rules.CSharp
                 return;
             }
 
-            var classDeclarations = new RemovableDeclarationCollector(namedType, context.Compilation).ClassDeclarations;
+            var typeDeclarations = new RemovableDeclarationCollector(namedType, context.Compilation).TypeDeclarations;
 
-            if (!IsAnyConstructorCalled(namedType, classDeclarations))
+            if (!IsAnyConstructorCalled(namedType, typeDeclarations))
             {
                 var message = constructors.Count > 1
                     ? "at least one of its constructors"
                     : "its constructor";
 
-                foreach (var classDeclaration in classDeclarations)
+                foreach (var classDeclaration in typeDeclarations)
                 {
                     context.ReportDiagnosticIfNonGenerated(Diagnostic.Create(Rule, classDeclaration.SyntaxNode.Identifier.GetLocation(),
                         message));
@@ -110,9 +110,9 @@ namespace SonarLint.Rules.CSharp
         }
 
         private static bool IsAnyConstructorCalled(INamedTypeSymbol namedType,
-            IEnumerable<SyntaxNodeSemanticModelTuple<ClassDeclarationSyntax>> classDeclarations)
+            IEnumerable<SyntaxNodeSemanticModelTuple<BaseTypeDeclarationSyntax>> typeDeclarations)
         {
-            return classDeclarations
+            return typeDeclarations
                 .Select(classDeclaration => new
                 {
                     SemanticModel = classDeclaration.SemanticModel,
