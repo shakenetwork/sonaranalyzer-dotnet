@@ -81,7 +81,7 @@ namespace SonarLint.Rules.CSharp
 
                     var candidateFields = removableDeclarationCollector.GetRemovableFieldLikeDeclarations(
                         ImmutableHashSet.Create(SyntaxKind.FieldDeclaration), maxAccessibility)
-                        .Where(tuple => ((VariableDeclaratorSyntax)tuple.SyntaxNode).Initializer == null);
+                        .Where(tuple => !IsInitializedOrFixed(((VariableDeclaratorSyntax)tuple.SyntaxNode)));
 
                     var candidateProperties = removableDeclarationCollector.GetRemovableDeclarations(
                         ImmutableHashSet.Create(SyntaxKind.PropertyDeclaration), maxAccessibility)
@@ -122,6 +122,18 @@ namespace SonarLint.Rules.CSharp
                     }
                 },
                 SymbolKind.NamedType);
+        }
+
+        private static bool IsInitializedOrFixed(VariableDeclaratorSyntax declarator)
+        {
+            var fieldDeclaration = declarator.Parent.Parent as BaseFieldDeclarationSyntax;
+            if (fieldDeclaration != null &&
+                fieldDeclaration.Modifiers.Any(m => m.IsKind(SyntaxKind.FixedKeyword)))
+            {
+                return true;
+            }
+
+            return declarator.Initializer != null;
         }
 
         private static bool IsAutoPropertyWithNoInitializer(PropertyDeclarationSyntax declaration)

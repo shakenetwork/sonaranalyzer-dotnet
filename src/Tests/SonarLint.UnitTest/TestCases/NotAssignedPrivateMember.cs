@@ -80,4 +80,17 @@ namespace Tests.Diagnostics
 
         public void M(ref int f) { }
     }
+
+    unsafe struct FixedArray
+    {
+        private fixed int a[42]; // Compliant, because of the fixed modifier
+
+        private int[] b; // Noncompliant
+
+        void M()
+        {
+            a[0] = 42;
+            b[0] = 42;
+        }
+    }
 }
