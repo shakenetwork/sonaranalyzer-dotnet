@@ -75,4 +75,22 @@ namespace Tests.Diagnostics
             return new MyClassGeneric2<int>();
         }
     }
+
+    public class MyAttribute : System.Attribute { }
+
+    [My]
+    public class WithAttribute1
+    {
+        private WithAttribute1()
+        {
+        }
+    }
+
+    public class WithAttribute2
+    {
+        [My]
+        private WithAttribute2()
+        {
+        }
+    }
 }

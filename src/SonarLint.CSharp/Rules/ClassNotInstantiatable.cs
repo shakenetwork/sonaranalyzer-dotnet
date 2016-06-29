@@ -65,8 +65,7 @@ namespace SonarLint.Rules.CSharp
         private static void CheckClassWithOnlyUnusedPrivateConstructors(SymbolAnalysisContext context)
         {
             var namedType = context.Symbol as INamedTypeSymbol;
-            if (!namedType.IsClass() ||
-                namedType.IsStatic)
+            if (!IsNonStaticClassWithNoAttributes(namedType))
             {
                 return;
             }
@@ -74,8 +73,7 @@ namespace SonarLint.Rules.CSharp
             var members = namedType.GetMembers();
             var constructors = GetConstructors(members).ToList();
 
-            if (!constructors.Any() ||
-                HasNonPrivateConstructor(constructors) ||
+            if (!HasOnlyCandidateConstructors(constructors) ||
                 HasOnlyStaticMembers(members.Except(constructors).ToList()))
             {
                 return;
@@ -95,6 +93,20 @@ namespace SonarLint.Rules.CSharp
                         message));
                 }
             }
+        }
+
+        private static bool HasOnlyCandidateConstructors(ICollection<IMethodSymbol> constructors)
+        {
+            return constructors.Any() &&
+                !HasNonPrivateConstructor(constructors) &&
+                constructors.All(c => !c.GetAttributes().Any());
+        }
+
+        private static bool IsNonStaticClassWithNoAttributes(INamedTypeSymbol namedType)
+        {
+            return namedType.IsClass() &&
+                !namedType.IsStatic &&
+                !namedType.GetAttributes().Any();
         }
 
         private static bool IsAnyConstructorCalled(INamedTypeSymbol namedType,
