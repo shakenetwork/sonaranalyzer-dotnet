@@ -37,6 +37,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using CS = Microsoft.CodeAnalysis.CSharp;
 using VB = Microsoft.CodeAnalysis.VisualBasic;
+using System;
 
 namespace SonarLint.UnitTest
 {
@@ -45,6 +46,10 @@ namespace SonarLint.UnitTest
         private static readonly MetadataReference systemAssembly = MetadataReference.CreateFromFile(typeof(object).Assembly.Location);
         private static readonly MetadataReference systemLinqAssembly = MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location);
         private static readonly MetadataReference systemNetAssembly = MetadataReference.CreateFromFile(typeof(WebClient).Assembly.Location);
+
+        private const string EXPECTED_ISSUE_LOCATION_PATTERN = @"^//\s*(\^+)\s*$";
+        private const string NONCOMPLIANT_START = "Noncompliant";
+        private const string NONCOMPLIANT_LINE_PATTERN = NONCOMPLIANT_START + @"@([\+|-]?)([0-9]+)";
 
         private const string GeneratedAssemblyName = "foo";
         private const string TestAssemblyName = "fooTest";
@@ -69,11 +74,11 @@ namespace SonarLint.UnitTest
             params MetadataReference[] additionalReferences)
         {
             var file = new FileInfo(path);
-            var parseOptions = GetParseOptionsAlternatives(options, file);
+            var parseOptions = GetParseOptionsAlternatives(options, file.Extension);
 
             using (var workspace = new AdhocWorkspace())
             {
-                var document = GetDocument(file, GeneratedAssemblyName, workspace, additionalReferences);
+                var document = GetDocument(file, GeneratedAssemblyName, workspace, additionalReferences: additionalReferences);
                 var project = document.Project;
 
                 foreach (var parseOption in parseOptions)
@@ -86,15 +91,34 @@ namespace SonarLint.UnitTest
                     var compilation = project.GetCompilationAsync().Result;
                     var diagnostics = GetDiagnostics(compilation, diagnosticAnalyzer);
                     var expected = ExpectedIssues(compilation.SyntaxTrees.First()).ToList();
+                    var expectedLocations = ExpectedIssueLocations(compilation.SyntaxTrees.First());
 
                     foreach (var diagnostic in diagnostics)
                     {
                         var line = diagnostic.GetLineNumberToReport();
                         expected.Should().Contain(line);
+
+                        if (expectedLocations.ContainsKey(line))
+                        {
+                            var expectedLocation = expectedLocations[line];
+
+                            var diagnosticStart = diagnostic.Location.GetLineSpan().StartLinePosition.Character;
+                            Assert.AreEqual(expectedLocation.StartPosition, diagnosticStart,
+                                $"The start position of the diagnostic ({diagnosticStart}) doesn't match " +
+                                $"the expected value ({expectedLocation.StartPosition}) in line {line}.");
+
+                            Assert.AreEqual(expectedLocation.Length, diagnostic.Location.SourceSpan.Length,
+                                $"The length of the diagnostic ({diagnostic.Location.SourceSpan.Length}) doesn't match " +
+                                $"the expected value ({expectedLocation.Length}) in line {line}.");
+
+                            expectedLocations.Remove(line);
+                        }
+
                         expected.Remove(line);
                     }
 
-                    expected.Should().BeEquivalentTo(Enumerable.Empty<int>());
+                    expectedLocations.Should().BeEmpty();
+                    expected.Should().BeEmpty();
                 }
             }
         }
@@ -133,11 +157,11 @@ namespace SonarLint.UnitTest
             using (var workspace = new AdhocWorkspace())
             {
                 var file = new FileInfo(path);
-                var parseOptions = GetParseOptionsWithDifferentLanguageVersions(null, file);
+                var parseOptions = GetParseOptionsWithDifferentLanguageVersions(null, file.Extension);
 
                 foreach (var parseOption in parseOptions)
                 {
-                    var document = GetDocument(file, GeneratedAssemblyName, workspace);
+                    var document = GetDocument(file, GeneratedAssemblyName, workspace, removeExpectedLocations: true);
                     RunCodeFixWhileDocumentChanges(diagnosticAnalyzer, codeFixProvider, codeFixTitle, document, parseOption, pathToExpected);
                 }
             }
@@ -174,29 +198,39 @@ namespace SonarLint.UnitTest
             using (var workspace = new AdhocWorkspace())
             {
                 var file = new FileInfo(path);
-                var parseOptions = GetParseOptionsWithDifferentLanguageVersions(null, file);
+                var parseOptions = GetParseOptionsWithDifferentLanguageVersions(null, file.Extension);
 
                 foreach (var parseOption in parseOptions)
                 {
-                    var document = GetDocument(file, GeneratedAssemblyName, workspace);
+                    var document = GetDocument(file, GeneratedAssemblyName, workspace, removeExpectedLocations: true);
                     RunFixAllProvider(diagnosticAnalyzer, codeFixProvider, codeFixTitle, fixAllProvider, document, parseOption, pathToExpected);
                 }
             }
         }
 
         private static Document GetDocument(string filePath, string assemblyName,
-            AdhocWorkspace workspace, params MetadataReference[] additionalReferences)
+            AdhocWorkspace workspace, bool removeExpectedLocations = false, params MetadataReference[] additionalReferences)
         {
             var file = new FileInfo(filePath);
-            return GetDocument(file, assemblyName, workspace, additionalReferences);
+            return GetDocument(file, assemblyName, workspace, removeExpectedLocations, additionalReferences);
         }
 
         private static Document GetDocument(FileInfo file, string assemblyName,
-            AdhocWorkspace workspace, params MetadataReference[] additionalReferences)
+            AdhocWorkspace workspace, bool removeExpectedLocations = false, params MetadataReference[] additionalReferences)
         {
             var language = file.Extension == CSharpFileExtension
                 ? LanguageNames.CSharp
                 : LanguageNames.VisualBasic;
+
+            var lines = File.ReadAllText(file.FullName, Encoding.UTF8)
+                .Split(new[] { Environment.NewLine}, StringSplitOptions.None);
+
+            if (removeExpectedLocations)
+            {
+                lines = lines.Where(l => !Regex.IsMatch(l, EXPECTED_ISSUE_LOCATION_PATTERN)).ToArray();
+            }
+
+            var text = string.Join(Environment.NewLine, lines);
 
             var document = workspace.CurrentSolution.AddProject(assemblyName,
                     $"{assemblyName}.dll", language)
@@ -204,7 +238,7 @@ namespace SonarLint.UnitTest
                 .AddMetadataReference(systemLinqAssembly)
                 .AddMetadataReference(systemNetAssembly)
                 .AddMetadataReferences(additionalReferences)
-                .AddDocument(file.Name, File.ReadAllText(file.FullName, Encoding.UTF8));
+                .AddDocument(file.Name, text);
 
             // adding an extra file to the project
             // this won't trigger any issues, but it keeps a reference to the original ParseOption, so
@@ -218,14 +252,14 @@ namespace SonarLint.UnitTest
 
         #region Analyzer helpers
 
-        private static IEnumerable<ParseOptions> GetParseOptionsAlternatives(ParseOptions options, FileInfo file)
+        private static IEnumerable<ParseOptions> GetParseOptionsAlternatives(ParseOptions options, string fileExtension)
         {
-            return GetParseOptionsWithDifferentLanguageVersions(options, file).Concat(new[] { options });
+            return GetParseOptionsWithDifferentLanguageVersions(options, fileExtension).Concat(new[] { options });
         }
 
-        private static IEnumerable<ParseOptions> GetParseOptionsWithDifferentLanguageVersions(ParseOptions options, FileInfo file)
+        private static IEnumerable<ParseOptions> GetParseOptionsWithDifferentLanguageVersions(ParseOptions options, string fileExtension)
         {
-            if (file.Extension == CSharpFileExtension)
+            if (fileExtension == CSharpFileExtension)
             {
                 var csOptions = options as CS.CSharpParseOptions ?? new CS.CSharpParseOptions();
                 yield return csOptions.WithLanguageVersion(CS.LanguageVersion.CSharp6);
@@ -285,15 +319,37 @@ namespace SonarLint.UnitTest
             }
         }
 
+        private static Dictionary<int, ExactIssueLocation> ExpectedIssueLocations(SyntaxTree syntaxTree)
+        {
+            var exactLocations = new Dictionary<int, ExactIssueLocation>();
+
+            foreach (var line in syntaxTree.GetText().Lines)
+            {
+                var lineText = line.ToString();
+                var match = Regex.Match(lineText, EXPECTED_ISSUE_LOCATION_PATTERN);
+                if (!match.Success)
+                {
+                    continue;
+                }
+
+                var position = match.Groups[1];
+                exactLocations.Add(line.LineNumber, new ExactIssueLocation
+                {
+                    Line = line.LineNumber,
+                    StartPosition = position.Index,
+                    Length = position.Length,
+                });
+            }
+
+            return exactLocations;
+        }
+
         private static IEnumerable<int> ExpectedIssues(SyntaxTree syntaxTree)
         {
             return syntaxTree.GetText().Lines
                 .Where(l => l.ToString().Contains(NONCOMPLIANT_START))
                 .Select(l => GetNoncompliantLineNumber(l));
         }
-
-        private const string NONCOMPLIANT_START = "Noncompliant";
-        private const string NONCOMPLIANT_LINE_PATTERN = NONCOMPLIANT_START + @"@([\+|-]?)([0-9]+)";
 
         private static int GetNoncompliantLineNumber(TextLine line)
         {
@@ -433,5 +489,12 @@ namespace SonarLint.UnitTest
         }
 
         #endregion
+
+        private class ExactIssueLocation
+        {
+            public int Line { get; set; }
+            public int StartPosition { get; set; }
+            public int Length { get; set; }
+        }
     }
 }
