@@ -8,10 +8,10 @@ namespace Tests.Diagnostics
     {
         public TernaryOperatorPointless(bool b  )
         {
-            var x = true; // Noncompliant; is this what was intended?
+            var x = true; // Fixed
             var y = 1> 18 ? true : false;
-            y = true; //Noncompliant
-            new TernaryOperatorPointless(true);//Noncompliant
+            y = true; //Fixed
+            new TernaryOperatorPointless(true);//Fixed
         }
     }
 }

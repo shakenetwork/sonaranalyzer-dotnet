@@ -11,11 +11,11 @@ namespace Tests.Diagnostics
             int result;
             int bitMask = 0x010F;
 
-            result = bitMask; // Noncompliant
-            result = bitMask;  // Noncompliant
-            result = bitMask;  // Noncompliant
-            result = bitMask;  // Noncompliant
-            var result2 = result;  // Noncompliant
+            result = bitMask; // Fixed
+            result = bitMask;  // Fixed
+            result = bitMask;  // Fixed
+            result = bitMask;  // Fixed
+            var result2 = result;  // Fixed
 
             result = bitMask & 1; // Compliant
             result = bitMask | 1; // compliant
@@ -26,17 +26,17 @@ namespace Tests.Diagnostics
 
             long bitMaskLong = 0x010F;
             long resultLong;
-            resultLong = bitMaskLong; // Noncompliant
+            resultLong = bitMaskLong; // Fixed
             resultLong = bitMaskLong & 0L; // Compliant
-            resultLong = bitMaskLong; // Noncompliant
-            resultLong = bitMaskLong; // Noncompliant
+            resultLong = bitMaskLong; // Fixed
+            resultLong = bitMaskLong; // Fixed
             resultLong = bitMaskLong & returnLong(); // Compliant
             resultLong = bitMaskLong & 0x0F; // Compliant
 
-            var resultULong = 1UL; // Noncompliant
+            var resultULong = 1UL; // Fixed
             resultULong = 1UL | 18446744073709551615UL; // Compliant
 
-            m(1UL); // Noncompliant
+            m(1UL); // Fixed
         }
         private static long returnLong()
         {

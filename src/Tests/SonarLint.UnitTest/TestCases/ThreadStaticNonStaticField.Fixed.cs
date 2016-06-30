@@ -8,7 +8,7 @@ namespace Tests.Diagnostics
     {
         private int count1 = 0, count11 = 0;
 
-        [X]  // Noncompliant
+        [X]  // Fixed
         private int count2 = 0;
 
         [System.ThreadStatic]

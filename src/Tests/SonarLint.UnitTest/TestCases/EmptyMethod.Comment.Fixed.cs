@@ -16,7 +16,7 @@ namespace Tests.Diagnostics
         }
 
         [Conditional("DEBUG")]
-        void F4()    // Noncompliant
+        void F4()    // Fixed
         {
             // Method intentionally left empty.
         }
@@ -33,7 +33,7 @@ namespace Tests.Diagnostics
         public void F1()
         {
             // Method intentionally left empty.
-        } // Noncompliant
+        } // Fixed
 
         public abstract void F2();
     }

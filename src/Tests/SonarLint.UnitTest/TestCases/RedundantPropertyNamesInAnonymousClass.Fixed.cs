@@ -13,13 +13,13 @@ namespace Tests.Diagnostics
 
             var anon = new
             {
-                X, //Noncompliant
-                Y  //Noncompliant
+                X, //Fixed
+                Y  //Fixed
             };
 
             var anon2 = new
             {
-                X, //Noncompliant
+                X, //Fixed
                 Y = "some string"
             };
         }

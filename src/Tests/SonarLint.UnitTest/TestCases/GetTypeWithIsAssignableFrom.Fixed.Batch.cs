@@ -10,15 +10,15 @@ namespace Tests.Diagnostics
             var expr1 = new GetTypeWithIsAssignableFrom();
             var expr2 = new GetTypeWithIsAssignableFrom();
 
-            if (expr1.GetType()/*abcd*/.IsInstanceOfType(expr2 /*efgh*/)) //Noncompliant
+            if (expr1.GetType()/*abcd*/.IsInstanceOfType(expr2 /*efgh*/)) //Fixed
             { }
             if (expr1.GetType().IsInstanceOfType(expr2)) //Compliant
             { }
 
-            if (!(expr1 is GetTypeWithIsAssignableFrom)) //Noncompliant
+            if (!(expr1 is GetTypeWithIsAssignableFrom)) //Fixed
             { }
-            var x = expr1 is GetTypeWithIsAssignableFrom; //Noncompliant
-            if (expr1 != null) // Noncompliant, should be a null check
+            var x = expr1 is GetTypeWithIsAssignableFrom; //Fixed
+            if (expr1 != null) // Fixed
             { }
 
             if (typeof(GetTypeWithIsAssignableFrom).IsAssignableFrom(typeof(GetTypeWithIsAssignableFrom))) //Compliant
@@ -28,13 +28,13 @@ namespace Tests.Diagnostics
             var t2 = expr2.GetType();
             if (t1.IsAssignableFrom(t2)) //Compliant
             { }
-            if (t1.IsInstanceOfType(expr2)) //Noncompliant
+            if (t1.IsInstanceOfType(expr2)) //Fixed
             { }
 
             if (t1.IsAssignableFrom(typeof(GetTypeWithIsAssignableFrom))) //Compliant
             { }
 
-            Test(t1.IsInstanceOfType(expr2)); //Noncompliant
+            Test(t1.IsInstanceOfType(expr2)); //Fixed
         }
     }
     class Fruit { }
@@ -45,22 +45,22 @@ namespace Tests.Diagnostics
         static void Main()
         {
             var apple = new Apple();
-            var b = apple is Apple; // Noncompliant
-            b = apple is Apple; // Noncompliant
-            b = apple is Apple; // Noncompliant
-            b = apple is Apple; // Noncompliant
+            var b = apple is Apple; // Fixed
+            b = apple is Apple; // Fixed
+            b = apple is Apple; // Fixed
+            b = apple is Apple; // Fixed
             var appleType = typeof(Apple);
-            b = appleType.IsInstanceOfType(apple); // Noncompliant
+            b = appleType.IsInstanceOfType(apple); // Fixed
 
             b = apple.GetType() == typeof(int?); // Compliant
 
             Fruit f = apple;
-            b = true && (f is Apple); // Noncompliant
-            b = !(f is Apple); // Noncompliant
+            b = true && (f is Apple); // Fixed
+            b = !(f is Apple); // Fixed
             b = f as Apple == new Apple();
 
-            b = true && (apple != null); // Noncompliant
-            b = !(apple != null); // Noncompliant
+            b = true && (apple != null); // Fixed
+            b = !(apple != null); // Fixed
             b = f is Apple;
 
             var num = 5;

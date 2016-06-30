@@ -18,7 +18,7 @@ namespace Tests.TestCases
 
         private BasicTests(
             int a
-            ) // Noncompliant
+            ) // Fixed
         {
             Console.WriteLine(a);
 
@@ -26,9 +26,9 @@ namespace Tests.TestCases
             Action<string> y = WriteLine<int>;
         }
 
-        private void BasicTest1() { } // Noncompliant
-        void BasicTest2() { } // Noncompliant
-        private void BasicTest3() { } // Noncompliant
+        private void BasicTest1() { } // Fixed
+        void BasicTest2() { } // Fixed
+        private void BasicTest3() { } // Fixed
         public void Caller()
         {
             BasicTest3(42); // Doesn't make it compliant
@@ -49,7 +49,7 @@ namespace Tests.TestCases
     public static class Extensions
     {
         private static void MyMethod(this string s
-            ) // Noncompliant
+            ) // Fixed
         {
 
         }
@@ -79,15 +79,15 @@ namespace Tests.TestCases
 
     class MethodParameterUnused : Base, IMy
     {
-        private void M1() //Noncompliant
+        private void M1() //Fixed
         {
         }
 
         void M1Bis(
             int a
-            , // Noncompliant
+            , // Fixed
             int c
-            ) // Noncompliant
+            ) // Fixed
         {
             var result = a + c;
         }
@@ -177,7 +177,7 @@ namespace Tests.TestCases
     {
         private static void MyMethod5(int arg) { } // Compliant, because of the below assignment
 
-        private static void MyNoncompliantMethod() { } // Noncompliant
+        private static void MyNonCompliantMethod() { } // Fixed
     }
 
     partial class MethodAssignedToActionFromPartialClass
@@ -211,7 +211,7 @@ namespace Tests.TestCases
             }
         }
 
-        private void Method3(int p) // Noncompliant
+        private void Method3(int p) // Fixed
         {
             var x = true;
             if (x)
@@ -223,7 +223,7 @@ namespace Tests.TestCases
             Action<int> a = new Action<int>(Method4);
         }
 
-        private void Method4(int p) // Noncompliant, although it is used above in the Action assignment
+        private void Method4(int p) // Fixed
         {
             var x = true;
             if (x)

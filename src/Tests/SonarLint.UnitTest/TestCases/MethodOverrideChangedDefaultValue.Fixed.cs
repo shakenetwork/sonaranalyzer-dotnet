@@ -10,7 +10,7 @@ namespace Tests.Diagnostics
 
     public class Base : IMyInterface
     {
-        public virtual void Write(int i, int j = 5) // Noncompliant
+        public virtual void Write(int i, int j = 5) // Fixed
         {
             Console.WriteLine(i);
         }
@@ -19,7 +19,7 @@ namespace Tests.Diagnostics
     public class Derived1 : Base
     {
         public override void Write(int i,
-            int j = 5) // Noncompliant
+            int j = 5) // Fixed
         {
             Console.WriteLine(i);
         }
@@ -28,7 +28,7 @@ namespace Tests.Diagnostics
     public class Derived2 : Base
     {
         public override void Write(int i,
-            int j = 5) // Noncompliant
+            int j = 5) // Fixed
         {
             Console.WriteLine(i);
         }
@@ -36,7 +36,7 @@ namespace Tests.Diagnostics
 
     public class Derived3 : Base
     {
-        public override void Write(int i,  // Noncompliant
+        public override void Write(int i,  // Fixed
             int j = 5)
         {
             Console.WriteLine(i);
@@ -46,7 +46,7 @@ namespace Tests.Diagnostics
     public class ExplicitImpl1 : IMyInterface
     {
         void IMyInterface.Write(int i,
-            int j) // Noncompliant
+            int j) // Fixed
         {
         }
     }

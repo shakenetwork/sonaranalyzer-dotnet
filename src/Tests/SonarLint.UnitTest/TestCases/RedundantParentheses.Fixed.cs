@@ -7,7 +7,7 @@ namespace Tests.Diagnostics
         public int MyProperty { get; set; }
     }
 
-    [MyAttribute] //Noncompliant
+    [MyAttribute] //Fixed
     [MyAttribute] //Compliant
     [MyAttribute(MyProperty =5)] //Compliant
     class MyClass
@@ -23,7 +23,7 @@ namespace Tests.Diagnostics
         public int MyProperty { get; set; }
         public static MyClass CreateNew(int propertyValue)
         {
-            return new MyClass //Noncompliant
+            return new MyClass //Fixed
             {
                 MyProperty = propertyValue
             };

@@ -9,7 +9,7 @@ namespace Tests.TestCases
 {
     public class MethodParameterMissingOptional
     {
-        public void MyMethod([DefaultParameterValue(5), Optional] int j) //Noncompliant
+        public void MyMethod([DefaultParameterValue(5), Optional] int j) //Fixed
         {
             Console.WriteLine(j);
         }
@@ -21,7 +21,7 @@ namespace Tests.TestCases
         {
             Console.WriteLine(j);
         }
-        public int this[[DefaultParameterValue(5), Optional]int index] //Noncompliant
+        public int this[[DefaultParameterValue(5), Optional]int index] //Fixed
         {
             get { return 42; }
         }

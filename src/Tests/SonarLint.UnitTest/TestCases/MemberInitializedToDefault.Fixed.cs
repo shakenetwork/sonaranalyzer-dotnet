@@ -9,25 +9,25 @@ namespace Tests.Diagnostics
     class MemberInitializedToDefault<T>
     {
         public const int myConst = 0; //Compliant
-        public double fieldD1; // Noncompliant
-        public double fieldD2; // Noncompliant
-        public double fieldD2b; // Noncompliant
-        public double fieldD3; // Noncompliant
-        public decimal fieldD4; // Noncompliant
+        public double fieldD1; // Fixed
+        public double fieldD2; // Fixed
+        public double fieldD2b; // Fixed
+        public double fieldD3; // Fixed
+        public decimal fieldD4; // Fixed
         public decimal fieldD5 = .2m;
-        public byte b; // Noncompliant
-        public char c; // Noncompliant
-        public bool bo; // Noncompliant
-        public sbyte sb; // Noncompliant
-        public ushort us; // Noncompliant
-        public uint ui; // Noncompliant
-        public ulong ul; // Noncompliant
+        public byte b; // Fixed
+        public char c; // Fixed
+        public bool bo; // Fixed
+        public sbyte sb; // Fixed
+        public ushort us; // Fixed
+        public uint ui; // Fixed
+        public ulong ul; // Fixed
 
-        public static object o; // Noncompliant
-        public object MyProperty { get; set; } // Noncompliant
+        public static object o; // Fixed
+        public object MyProperty { get; set; } // Fixed
         public object MyProperty2 { get { return null; } set { } } = null;
 
-        public event EventHandler MyEvent;  // Noncompliant
+        public event EventHandler MyEvent;  // Fixed
         public event EventHandler MyEvent2 = (s, e) => { };
     }
 }

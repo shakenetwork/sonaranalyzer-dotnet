@@ -6,10 +6,10 @@ namespace Tests.Diagnostics
     class Person
     {
         static int maxAge = 42;
-        int age; // Noncompliant
-        int Age { get; } // Noncompliant
+        int age; // Fixed
+        int Age { get; } // Fixed
         int Age2 { get; } = 0; // we already report on this with S3052
-        event EventHandler myEvent; // Noncompliant
+        event EventHandler myEvent; // Fixed
         public Person(int age)
         {
             var x = nameof(this.Age); // Nameof doesn't matter
@@ -50,7 +50,7 @@ namespace Tests.Diagnostics
 
     class Person2b
     {
-        int age; // Noncompliant
+        int age; // Fixed
         public Person2b(int age)
         {
             this.age = age;
@@ -64,7 +64,7 @@ namespace Tests.Diagnostics
 
     class Person3
     {
-        int age; // Noncompliant
+        int age; // Fixed
         public Person3(int age)
         {
             this.age = age;
@@ -107,8 +107,8 @@ namespace Tests.Diagnostics
 
     class Person6
     {
-        int age, // Noncompliant
-            year; // Noncompliant
+        int age, // Fixed
+            year; // Fixed
         public Person6(bool c)
         {
             if (c)
@@ -127,7 +127,7 @@ namespace Tests.Diagnostics
     class Person7
     {
         int age = 42,
-            year; // Noncompliant
+            year; // Fixed
         public Person7(bool c)
         {
             if (c)
@@ -169,7 +169,7 @@ namespace Tests.Diagnostics
 
     class Person10
     {
-        int year; // Noncompliant
+        int year; // Fixed
         public Person10()
         {
             M(out ((this.year)));

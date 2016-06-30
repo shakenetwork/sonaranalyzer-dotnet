@@ -9,7 +9,7 @@
             catch (ExceptionType1 exc)
             {
                 Console.WriteLine(exc);
-                throw; // Noncompliant; stacktrace is reset
+                throw; // Fixed
                 throw;
             }
             catch (ExceptionType2 exc)
@@ -31,11 +31,11 @@
             {
                 try
                 {
-                    throw; // Noncompliant
+                    throw; // Fixed
                 }
                 catch (Exception exc)
                 {
-                    throw; // Noncompliant
+                    throw; // Fixed
                     throw exception;
                 }
             }

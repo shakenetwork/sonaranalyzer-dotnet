@@ -8,22 +8,22 @@ namespace Tests.Diagnostics
     {
         void foo(long l)
         {
-            var x = new int[] {1, 2, 3}; // Noncompliant
+            var x = new int[] {1, 2, 3}; // Fixed
             x = new int[] {1, 2, 3};
             x = x
-; //Noncompliant
-            x = x; //Noncompliant
+; //Fixed
+            x = x; //Fixed
 
             var y = x.OfType<object>();
 
             var zz = (int) l;
             int i = 0;
-            var z = (int) i; // Noncompliant
-            z = (Int32) i; // Noncompliant
+            var z = (int) i; // Fixed
+            z = (Int32) i; // Fixed
 
             var w = (object) i;
 
-            method(new int[] { 1, 2, 3 }); // Noncompliant
+            method(new int[] { 1, 2, 3 }); // Fixed
         }
         void method(IEnumerable<int> enumerable)
         { }
@@ -31,7 +31,7 @@ namespace Tests.Diagnostics
         void M()
         {
             var o = new object();
-            var oo = o; // Noncompliant
+            var oo = o; // Fixed
             var i = o as RedundantCast; // Compliant
         }
     }

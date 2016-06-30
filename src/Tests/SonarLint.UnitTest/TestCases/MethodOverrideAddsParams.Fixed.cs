@@ -22,7 +22,7 @@ namespace Tests.Diagnostics
     }
     abstract class Derived : Base
     {
-        public override void Method(int[] numbers) // Noncompliant
+        public override void Method(int[] numbers) // Fixed
         {
         }
         public override void Method(string s,
@@ -30,7 +30,7 @@ namespace Tests.Diagnostics
         {
         }
         public override void Method(string s, string s1,
-            int[] numbers) // Noncompliant
+            int[] numbers) // Fixed
         { }
 
         public override void Method(string s, string s1, string s2,

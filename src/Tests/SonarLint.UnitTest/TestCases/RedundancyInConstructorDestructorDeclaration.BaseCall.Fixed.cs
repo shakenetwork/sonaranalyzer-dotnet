@@ -18,11 +18,11 @@ namespace Tests.Diagnostics
 
     class DefaultBaseConstructorCall : MyClass
     {
-        public DefaultBaseConstructorCall() /*c*/   // Noncompliant
+        public DefaultBaseConstructorCall() /*c*/   // Fixed
         {
         }
 
-        public DefaultBaseConstructorCall(double d) /*c*/   // Noncompliant
+        public DefaultBaseConstructorCall(double d) /*c*/   // Fixed
 
 
 
@@ -46,15 +46,15 @@ namespace Tests.Diagnostics
 
     public class MyClass1
     {
-        static MyClass1() // Noncompliant
+        static MyClass1() // Fixed
         {
 
         }
-        public MyClass1() // Noncompliant
+        public MyClass1() // Fixed
         {
 
         }
-        ~MyClass1() // Noncompliant
+        ~MyClass1() // Fixed
         {
             //some comment
         }
@@ -86,7 +86,7 @@ namespace Tests.Diagnostics
 
     public class MyClass5 : MyClass4
     {
-        public MyClass5() : base() // Noncompliant
+        public MyClass5() : base() // Fixed
         {
         }
     }

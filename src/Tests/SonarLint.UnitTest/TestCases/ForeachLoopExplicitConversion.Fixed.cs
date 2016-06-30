@@ -34,7 +34,7 @@ namespace Tests.Diagnostics
             { }
             foreach (var i in enumerable)
             { }
-            foreach (B i in enumerable.OfType<B>()) // Noncompliant
+            foreach (B i in enumerable.OfType<B>()) // Fixed
             { }
         }
         public void M3(A[] array)
@@ -43,7 +43,7 @@ namespace Tests.Diagnostics
             { }
             foreach (I i in array)
             { }
-            foreach (B i in array.OfType<B>()) // Noncompliant
+            foreach (B i in array.OfType<B>()) // Fixed
             { }
         }
         public void M4(A[][] array)
@@ -54,7 +54,7 @@ namespace Tests.Diagnostics
             { }
             foreach (var i in array)
             { }
-            foreach (B[] i in array.OfType<B[]>()) // Noncompliant
+            foreach (B[] i in array.OfType<B[]>()) // Fixed
             { }
         }
         public void M5(ArrayList list)
@@ -92,13 +92,13 @@ namespace Tests.Diagnostics
     {
         public void Test()
         {
-            foreach (Derived x in new Base[12].OfType<Derived>()) { } // Noncompliant
+            foreach (Derived x in new Base[12].OfType<Derived>()) { } // Fixed
             foreach (Derived x in new object[12]) { }
 
-            foreach (Derived x in new List<Base>().OfType<Derived>()) { } // Noncompliant
+            foreach (Derived x in new List<Base>().OfType<Derived>()) { } // Fixed
             foreach (Derived x in new List<object>()) { }
             foreach (Base x in new List<Derived>()) { }
-            foreach (Derived x in new List<IMyInterface>().OfType<Derived>()) { } // Noncompliant
+            foreach (Derived x in new List<IMyInterface>().OfType<Derived>()) { } // Fixed
 
             foreach (Derived x in new ArrayList()) { }
             //We decided to not add the necessary complexity to recognize the following corner case

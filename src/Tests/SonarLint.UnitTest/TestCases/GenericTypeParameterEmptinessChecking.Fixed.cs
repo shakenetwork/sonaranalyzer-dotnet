@@ -22,7 +22,7 @@ namespace Tests.Diagnostics
     {
         public void M<T>(List<T> t)
         {
-            if (object.Equals(t[0], default(T))) // Noncompliant
+            if (object.Equals(t[0], default(T))) // Fixed
             {
             }
         }
@@ -47,10 +47,10 @@ namespace Tests.Diagnostics
         }
         public void M3<T>(T t) where T : Interface
         {
-            if (object.Equals(t, default(T))) // Noncompliant
+            if (object.Equals(t, default(T))) // Fixed
             {
             }
-            if (!object.Equals(t, default(T))) // Noncompliant
+            if (!object.Equals(t, default(T))) // Fixed
             {
             }
         }

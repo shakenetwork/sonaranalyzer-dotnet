@@ -4,14 +4,14 @@
     {
         public virtual void MyNotOverridenMethod() { }
     }
-    internal class Partial1Part //Noncompliant
+    internal class Partial1Part //Fixed
     {
         void Method() { }
     }
-    struct PartialStruct //Noncompliant
+    struct PartialStruct //Fixed
     {
     }
-interface PartialInterface //Noncompliant
+interface PartialInterface //Fixed
     {
     }
 
@@ -30,8 +30,8 @@ interface PartialInterface //Noncompliant
     }
     sealed class SealedClass : Partial2Part
     {
-        public override void MyOverridenMethod() { } //Noncompliant
-        public override int Prop { get; set; } //Noncompliant
+        public override void MyOverridenMethod() { } //Fixed
+        public override int Prop { get; set; } //Fixed
     }
 
     internal class BaseClass<T>
@@ -55,13 +55,13 @@ interface PartialInterface //Noncompliant
         int* pointer;
     }
 
-    class UnsafeClass2 // Noncompliant
+    class UnsafeClass2 // Fixed
     {
         int num;
     }
-    class UnsafeClass3 // Noncompliant
+    class UnsafeClass3 // Fixed
     {
-        void M() // Noncompliant
+        void M() // Fixed
         {
 
         }
@@ -71,15 +71,15 @@ interface PartialInterface //Noncompliant
     {
         unsafe interface MyInterface
         {
-            int* Method(); // Noncompliant
+            int* Method(); // Fixed
         }
 
         private unsafe delegate void MyDelegate(int* p);
-        private delegate void MyDelegate2(int i); // Noncompliant
+        private delegate void MyDelegate2(int i); // Fixed
 
-        class Inner { } // Noncompliant
+        class Inner { } // Fixed
 
-        event MyDelegate MyEvent; // Noncompliant
+        event MyDelegate MyEvent; // Fixed
         unsafe event MyDelegate MyEvent2
         {
             add
@@ -89,7 +89,7 @@ interface PartialInterface //Noncompliant
             remove { }
         }
 
-        ~Class4() // Noncompliant
+        ~Class4() // Fixed
         {
         }
         void M()
@@ -115,7 +115,7 @@ interface PartialInterface //Noncompliant
     {
         public class Bar
         {
-            public class Baz // Noncompliant
+            public class Baz // Fixed
             {
             }
         }
@@ -123,11 +123,11 @@ interface PartialInterface //Noncompliant
 
     public unsafe class Foo2
     {
-        public class Bar // Noncompliant
+        public class Bar // Fixed
         {
             private int* p;
 
-            public class Baz // Noncompliant
+            public class Baz // Fixed
             {
                 private int* p2;
             }
@@ -143,7 +143,7 @@ interface PartialInterface //Noncompliant
                 {
                     var z = 1 + 4;
                     var y = unchecked(1 +
-                        4); // Noncompliant
+                        4); // Fixed
                 }
             }
 
@@ -163,13 +163,13 @@ interface PartialInterface //Noncompliant
             {
                 var f = 5.5;
                 var x = 5 + 4;
-                var y = 5.5 + 4; // Noncompliant
+                var y = 5.5 + 4; // Fixed
             }
 
             unchecked
             {
                 var f = 5.5;
-                var y = 5 + 4; // Noncompliant
+                var y = 5 + 4; // Fixed
             }
 
             checked

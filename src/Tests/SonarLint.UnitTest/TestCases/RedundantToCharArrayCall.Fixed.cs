@@ -12,9 +12,9 @@ namespace Tests.Diagnostics
 
         public void CreateNew2(int propertyValue)
         {
-            var c = "some string"[10]; // Noncompliant, the indexer already returns a char
+            var c = "some string"[10]; // Fixed
             c = "some string".ToCharArray(5, 4)[1];
-            foreach (var v in "some string") // Noncompliant
+            foreach (var v in "some string") // Fixed
             {
                 // ...
             }

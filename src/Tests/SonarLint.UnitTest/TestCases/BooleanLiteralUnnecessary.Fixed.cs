@@ -4,38 +4,38 @@
     {
         public BooleanLiteralUnnecessary(bool a, bool b, bool? c)
         {
-            var z = true;   // Noncompliant
-            z = false;     // Noncompliant
-            z = true;      // Noncompliant
-            z = true;      // Noncompliant
-            z = false;     // Noncompliant
-            z = false;      // Noncompliant
-            z = true;       // Noncompliant
-            z = false;      // Noncompliant
-            z = true;       // Noncompliant
-            z = false;      // Noncompliant
-            z = true;     // Noncompliant
-            z = false;      // Noncompliant
-            z = false;       // Noncompliant
-            z = true;      // Noncompliant
-            z = false;     // Noncompliant
-            z = true;      // Noncompliant
+            var z = true;   // Fixed
+            z = false;     // Fixed
+            z = true;      // Fixed
+            z = true;      // Fixed
+            z = false;     // Fixed
+            z = false;      // Fixed
+            z = true;       // Fixed
+            z = false;      // Fixed
+            z = true;       // Fixed
+            z = false;      // Fixed
+            z = true;     // Fixed
+            z = false;      // Fixed
+            z = false;       // Fixed
+            z = true;      // Fixed
+            z = false;     // Fixed
+            z = true;      // Fixed
 
-            var x = false;                  // Noncompliant
-            x = true;              // Noncompliant
-            x = true;                     // Noncompliant
-            x = (!a)                // Noncompliant
-;                    // Noncompliant
-            x = a;                  // Noncompliant
-            x = a;                 // Noncompliant
-            x = !a;                  // Noncompliant
-            x = !a;                 // Noncompliant
-            x = a;                  // Noncompliant
-            x = a;                 // Noncompliant
-            x = !a;                  // Noncompliant
-            x = false;             // Noncompliant
-            x = true;              // Noncompliant
-            x = a == b;             // Noncompliant
+            var x = false;                  // Fixed
+            x = true;              // Fixed
+            x = true;                     // Fixed
+            x = (!a)                // Fixed
+;                    // Fixed
+            x = a;                  // Fixed
+            x = a;                 // Fixed
+            x = !a;                  // Fixed
+            x = !a;                 // Fixed
+            x = a;                  // Fixed
+            x = a;                 // Fixed
+            x = !a;                  // Fixed
+            x = false;             // Fixed
+            x = true;              // Fixed
+            x = a == b;             // Fixed
 
             x = a == Foo(((true)));             // Compliant
             x = !a;                         // Compliant
@@ -45,18 +45,18 @@
             var exp = true;
             var exp2 = true;
 
-            var booleanVariable = condition || exp; // Noncompliant
-            booleanVariable = !condition && exp; // Noncompliant
-            booleanVariable = !condition || exp; // Noncompliant
-            booleanVariable = condition && exp; // Noncompliant
-            booleanVariable = condition; // Noncompliant
+            var booleanVariable = condition || exp; // Fixed
+            booleanVariable = !condition && exp; // Fixed
+            booleanVariable = !condition || exp; // Fixed
+            booleanVariable = condition && exp; // Fixed
+            booleanVariable = condition; // Fixed
             booleanVariable = condition ? true : true; // Compliant, this triggers another issue S2758
 
             booleanVariable = condition ? exp : exp2;
 
-            b = !(x || booleanVariable); // Noncompliant
+            b = !(x || booleanVariable); // Fixed
 
-            SomeFunc(true); // Noncompliant
+            SomeFunc(true); // Fixed
 
             if (c == true) //Compliant
             {
@@ -85,7 +85,7 @@
 
         private void M()
         {
-            for (int i = 0; ; i++) // Noncompliant
+            for (int i = 0; ; i++) // Fixed
             {
             }
             for (int i = 0; false; i++)

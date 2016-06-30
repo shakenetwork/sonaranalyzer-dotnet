@@ -14,28 +14,28 @@ namespace Tests.Diagnostics
         public static void Test()
         {
             var x = "".ToString();
-            M(1, 5); //Noncompliant, y has the default value
-            M(1, z: 7); //Noncompliant, z has the default value
-            M(1, 5, // Noncompliant
-                7); // Noncompliant, y, z has the default value
+            M(1, 5); //Fixed
+            M(1, z: 7); //Fixed
+            M(1, 5, // Fixed
+                7); // Fixed
             M(1);
             M(1, 2, 4);
             M2(1, 1, 1);
-            5.Ext(5); //Noncompliant
+            5.Ext(5); //Fixed
             5.Ext2(5);
 
-            RedundantArgument.Ext(5, parameters: new[] { 4, 4, 5, 6 }); //Noncompliant
-            RedundantArgument.Ext(5, y: 5, parameters: new int[] { 4, 4, 5, 6 }); //Noncompliant
-            RedundantArgument.Ext(5, 5); //Noncompliant
+            RedundantArgument.Ext(5, parameters: new[] { 4, 4, 5, 6 }); //Fixed
+            RedundantArgument.Ext(5, y: 5, parameters: new int[] { 4, 4, 5, 6 }); //Fixed
+            RedundantArgument.Ext(5, 5); //Fixed
 
-            M3(1,//Noncompliant
-                y: 5,//Noncompliant
-                z: 7);//Noncompliant
+            M3(1,//Fixed
+                y: 5,//Fixed
+                z: 7);//Fixed
 
-            M3(1, y: 4); //Noncompliant
-            M3(x: 1, y: 4); //Noncompliant
+            M3(1, y: 4); //Fixed
+            M3(x: 1, y: 4); //Fixed
 
-            M3(y: 4); //Noncompliant
+            M3(y: 4); //Fixed
         }
     }
 }

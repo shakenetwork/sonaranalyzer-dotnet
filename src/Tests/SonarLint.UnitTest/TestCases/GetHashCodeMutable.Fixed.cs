@@ -24,11 +24,11 @@ namespace Tests.Diagnostics
         public override int GetHashCode()
         {
             int hash = Zero;
-            hash += foo.GetHashCode(); // Noncompliant, can't make readonly in this case
-            hash += age.GetHashCode(); // Noncompliant
-            hash += this.name.GetHashCode(); // Noncompliant
+            hash += foo.GetHashCode(); // Fixed
+            hash += age.GetHashCode(); // Fixed
+            hash += this.name.GetHashCode(); // Fixed
             hash += this.birthday.GetHashCode();
-            hash += SomeMethod(Field); // Noncompliant
+            hash += SomeMethod(Field); // Fixed
             return hash;
         }
         public int SomeMethod(int value)

@@ -25,10 +25,10 @@ namespace Tests.Diagnostics
     {
         void Test()
         {
-            var x = Permissions.Read | Permissions.Write;  // Noncompliant
-            x = Permissions.Read & Permissions.Write;  // Noncompliant
-            x = Permissions.Read ^ Permissions.Write;  // Noncompliant
-            x &= Permissions.Read;  // Noncompliant
+            var x = Permissions.Read | Permissions.Write;  // Fixed
+            x = Permissions.Read & Permissions.Write;  // Fixed
+            x = Permissions.Read ^ Permissions.Write;  // Fixed
+            x &= Permissions.Read;  // Fixed
 
             x = ~Permissions.Read;  // Compliant
 
@@ -38,7 +38,7 @@ namespace Tests.Diagnostics
             var w = 1 | 3;
 
             var v = System.ComponentModel.DesignerSerializationVisibility.Content
-                | System.ComponentModel.DesignerSerializationVisibility.Hidden; // Noncompliant
+                | System.ComponentModel.DesignerSerializationVisibility.Hidden; // Fixed
         }
     }
 }

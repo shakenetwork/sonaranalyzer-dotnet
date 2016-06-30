@@ -13,7 +13,7 @@ namespace Tests.Diagnostics
     {
     }
 
-    class AA  //Noncompliant
+    class AA  //Fixed
     { }
     class AAA
     { }

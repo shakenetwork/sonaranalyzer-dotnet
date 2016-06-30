@@ -178,7 +178,7 @@ namespace Tests.TestCases
     {
         private static void MyMethod5(int arg) { } // Compliant, because of the below assignment
 
-        private static void MyNoncompliantMethod(int arg) { } // Noncompliant
+        private static void MyNonCompliantMethod(int arg) { } // Noncompliant
     }
 
     partial class MethodAssignedToActionFromPartialClass

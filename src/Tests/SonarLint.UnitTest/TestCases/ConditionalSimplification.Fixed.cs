@@ -22,13 +22,13 @@ namespace Tests.TestCases
 
             x = a ?? b/*some other comment*/;
 
-            x = a ?? b;  // Noncompliant; better but could still be simplified
+            x = a ?? b;  // Fixed
             x = a != null ? a : a;  // Compliant, triggers S2758
 
             int i = 5;
             var z = i == null ? 4 : i; //can't be converted
 
-            x = Identity(y ?? new object());  // Noncompliant
+            x = Identity(y ?? new object());  // Fixed
 
             x = a ?? b;
             x = a ?? b;

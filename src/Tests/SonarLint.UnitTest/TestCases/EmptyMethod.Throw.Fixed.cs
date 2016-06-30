@@ -16,7 +16,7 @@ namespace Tests.Diagnostics
         }
 
         [Conditional("DEBUG")]
-        void F4()    // Noncompliant
+        void F4()    // Fixed
         {
             throw new NotSupportedException();
         }
@@ -33,7 +33,7 @@ namespace Tests.Diagnostics
         public void F1()
         {
             throw new NotSupportedException();
-        } // Noncompliant
+        } // Fixed
 
         public abstract void F2();
     }

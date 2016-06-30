@@ -5,11 +5,11 @@ namespace Tests.Diagnostics
 {
     public class OptionalRefOutParameter : Base
     {
-        public void DoStuff(ref int i) // Noncompliant
+        public void DoStuff(ref int i) // Fixed
         {
             Console.WriteLine(i);
         }
-        public void DoStuff2(out int i) // Noncompliant
+        public void DoStuff2(out int i) // Fixed
         {
             Console.WriteLine(i);
         }

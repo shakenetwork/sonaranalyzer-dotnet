@@ -11,7 +11,7 @@ namespace Tests.Diagnostics
 
             Console.WriteLine();
             while (true)
-                ; // Noncompliant
+                ; // Fixed
         }
     }
 }

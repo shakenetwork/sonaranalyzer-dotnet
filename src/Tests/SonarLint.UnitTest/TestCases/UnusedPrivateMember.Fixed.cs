@@ -43,7 +43,7 @@ namespace Tests.Diagnostics
             throw new NotImplementedException();
         }
         private
-            int field3; // Noncompliant;
+            int field3; // Fixed
         private delegate void Delegate();
         private event Delegate MyEvent;
 

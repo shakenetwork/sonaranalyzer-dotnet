@@ -10,13 +10,13 @@ namespace Tests.Diagnostics
         {
             int i = 1;
 
-            int k = i; // Noncompliant; same as i
+            int k = i; // Fixed
             int m = + +i;  // Compliant
 
             bool b = false;
-            bool c = !b; // Noncompliant
+            bool c = !b; // Fixed
 
-            NonComp(!b); // Noncompliant
+            NonComp(!b); // Fixed
         }
 
         static void Comp()

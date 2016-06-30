@@ -8,12 +8,12 @@ namespace Tests.Diagnostics
     {
         class MyClass
         {
-            public void DoStuff([Optional][DefaultParameterValue(4)]int i, int j = 5) // Noncompliant
+            public void DoStuff([Optional][DefaultParameterValue(4)]int i, int j = 5) // Fixed
             {
                 Console.WriteLine(i);
             }
 
-            public void DoStuff1([Optional][DefaultParameterValue(value: 4)]int i, int j = 5) // Noncompliant
+            public void DoStuff1([Optional][DefaultParameterValue(value: 4)]int i, int j = 5) // Fixed
             {
                 Console.WriteLine(i);
             }
@@ -28,7 +28,7 @@ namespace Tests.Diagnostics
                 Console.WriteLine(i);
             }
 
-            public void DoStuff4([Optional][DefaultValue(typeof(int), "1")]int i, int j = 5) // Noncompliant, can't fix
+            public void DoStuff4([Optional][DefaultValue(typeof(int), "1")]int i, int j = 5) // Fixed
             {
                 Console.WriteLine(i);
             }

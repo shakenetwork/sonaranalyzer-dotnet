@@ -10,7 +10,7 @@ namespace Tests.TestCases
     {
         public void Test(long ui)
         {
-            const long b = 0L;      // Noncompliant
+            const long b = 0L;      // Fixed
             const ulong c = 0Ul;
             const ulong d = 0uL;
             const decimal e = 1.2m;
@@ -22,7 +22,7 @@ namespace Tests.TestCases
             const int k = 0; // Compliant
             const int l = 0u;
 
-            Test(45L); // Noncompliant
+            Test(45L); // Fixed
         }
         public void TestOk()
         {
