@@ -49,6 +49,8 @@ namespace SonarLint.UnitTest
 
         private const string EXPECTED_ISSUE_LOCATION_PATTERN = @"^//\s*(\^+)\s*$";
         private const string NONCOMPLIANT_START = "Noncompliant";
+        private const string FIXED_MESSAGE = "Fixed";
+        private const string NONCOMPLIANT_PATTERN = NONCOMPLIANT_START + @".*";
         private const string NONCOMPLIANT_LINE_PATTERN = NONCOMPLIANT_START + @"@([\+|-]?)([0-9]+)";
         private const string NONCOMPLIANT_MESSAGE_PATTERN = NONCOMPLIANT_START + @".*({{.*}}).*";
 
@@ -171,7 +173,7 @@ namespace SonarLint.UnitTest
 
                 foreach (var parseOption in parseOptions)
                 {
-                    var document = GetDocument(file, GeneratedAssemblyName, workspace, removeExpectedLocations: true);
+                    var document = GetDocument(file, GeneratedAssemblyName, workspace, removeAnalysisComments: true);
                     RunCodeFixWhileDocumentChanges(diagnosticAnalyzer, codeFixProvider, codeFixTitle, document, parseOption, pathToExpected);
                 }
             }
@@ -212,21 +214,21 @@ namespace SonarLint.UnitTest
 
                 foreach (var parseOption in parseOptions)
                 {
-                    var document = GetDocument(file, GeneratedAssemblyName, workspace, removeExpectedLocations: true);
+                    var document = GetDocument(file, GeneratedAssemblyName, workspace, removeAnalysisComments: true);
                     RunFixAllProvider(diagnosticAnalyzer, codeFixProvider, codeFixTitle, fixAllProvider, document, parseOption, pathToExpected);
                 }
             }
         }
 
         private static Document GetDocument(string filePath, string assemblyName,
-            AdhocWorkspace workspace, bool removeExpectedLocations = false, params MetadataReference[] additionalReferences)
+            AdhocWorkspace workspace, bool removeAnalysisComments = false, params MetadataReference[] additionalReferences)
         {
             var file = new FileInfo(filePath);
-            return GetDocument(file, assemblyName, workspace, removeExpectedLocations, additionalReferences);
+            return GetDocument(file, assemblyName, workspace, removeAnalysisComments, additionalReferences);
         }
 
         private static Document GetDocument(FileInfo file, string assemblyName,
-            AdhocWorkspace workspace, bool removeExpectedLocations = false, params MetadataReference[] additionalReferences)
+            AdhocWorkspace workspace, bool removeAnalysisComments = false, params MetadataReference[] additionalReferences)
         {
             var language = file.Extension == CSharpFileExtension
                 ? LanguageNames.CSharp
@@ -235,9 +237,14 @@ namespace SonarLint.UnitTest
             var lines = File.ReadAllText(file.FullName, Encoding.UTF8)
                 .Split(new[] { Environment.NewLine}, StringSplitOptions.None);
 
-            if (removeExpectedLocations)
+            if (removeAnalysisComments)
             {
                 lines = lines.Where(l => !Regex.IsMatch(l, EXPECTED_ISSUE_LOCATION_PATTERN)).ToArray();
+                lines = lines.Select(l => {
+                    var match = Regex.Match(l, NONCOMPLIANT_PATTERN);
+                    return match.Success ? l.Replace(match.Groups[0].Value, FIXED_MESSAGE) : l;
+                }).ToArray();
+
             }
 
             var text = string.Join(Environment.NewLine, lines);

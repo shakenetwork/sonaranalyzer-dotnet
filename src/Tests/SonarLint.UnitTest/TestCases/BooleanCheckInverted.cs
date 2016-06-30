@@ -8,7 +8,7 @@ namespace Tests.Diagnostics
         public void Test()
         {
             var a = 2;
-            if (!((a == 2))) // Noncompliant
+            if (!((a == 2))) // Noncompliant {{Use the opposite operator ("!=") instead.}}
 //              ^^^^^^^^^^^
             {
 
