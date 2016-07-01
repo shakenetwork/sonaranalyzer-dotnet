@@ -44,7 +44,7 @@ namespace Tests.TestCases
             catch (ArgumentException)
             {
             }
-            catch (Exception) { } //Noncompliant
+            catch (Exception) { } //Noncompliant {{Handle the exception or explain in a comment why it can be ignored.}}
 //          ^^^^^^^^^^^^^^^^^^^^^
 
             try

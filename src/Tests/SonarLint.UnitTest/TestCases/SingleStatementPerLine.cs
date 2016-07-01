@@ -14,7 +14,7 @@ namespace Tests.Diagnostics
             }
 
             var i = 5;
-            i = 6; i = 7; //Noncompliant
+            i = 6; i = 7; //Noncompliant {{Reformat the code to have only one statement per line.}}
 
             if (someCollection.Any(x=>true))
             {

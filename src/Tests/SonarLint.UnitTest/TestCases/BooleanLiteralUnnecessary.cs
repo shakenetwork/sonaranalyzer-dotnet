@@ -4,7 +4,7 @@
     {
         public BooleanLiteralUnnecessary(bool a, bool b, bool? c)
         {
-            var z = true || ((true));   // Noncompliant
+            var z = true || ((true));   // Noncompliant {{Remove the unnecessary Boolean literal(s).}}
 //                       ^^^^^^^^^^^
             z = false || false;     // Noncompliant
             z = true || false;      // Noncompliant

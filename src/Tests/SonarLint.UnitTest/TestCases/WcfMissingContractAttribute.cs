@@ -12,13 +12,13 @@ namespace Tests.Diagnostics
     }
 
     [System.ServiceModel.ServiceContract]
-    interface IMyService2 // Noncompliant
+    interface IMyService2 // Noncompliant {{Add the "OperationContract" attribute to the methods of this interface.}}
 //            ^^^^^^^^^^^
     {
         int MyServiceMethod();
     }
 
-    class IMyService3 // Noncompliant
+    class IMyService3 // Noncompliant {{Add the "ServiceContract" attribute to  this class.}}
     {
         [System.ServiceModel.OperationContract]
         int MyServiceMethod() { }

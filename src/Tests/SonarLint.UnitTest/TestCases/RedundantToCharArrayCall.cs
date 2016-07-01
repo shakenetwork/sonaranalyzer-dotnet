@@ -15,7 +15,7 @@ namespace Tests.Diagnostics
             var c = "some string".ToCharArray()[10]; // Noncompliant, the indexer already returns a char
 //                                ^^^^^^^^^^^
             c = "some string".ToCharArray(5, 4)[1];
-            foreach (var v in "some string".ToCharArray()) // Noncompliant
+            foreach (var v in "some string".ToCharArray()) // Noncompliant {{Remove this redundant "ToCharArray" call.}}
             {
                 // ...
             }

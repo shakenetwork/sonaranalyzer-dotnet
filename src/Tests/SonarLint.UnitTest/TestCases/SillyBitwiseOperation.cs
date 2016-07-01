@@ -16,7 +16,7 @@ namespace Tests.Diagnostics
             result = bitMask | 0;  // Noncompliant
 //                           ^^^
             result = bitMask ^ 0;  // Noncompliant
-            result = bitMask ^ 0;  // Noncompliant
+            result = bitMask ^ 0;  // Noncompliant {{Remove this silly bit operation.}}
             result &= -1; // Noncompliant
             result |= 0;  // Noncompliant
             result ^= 0;  // Noncompliant

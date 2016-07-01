@@ -12,7 +12,7 @@ namespace Tests.Diagnostics
     delegate Action<T> Deleg5<T>(); //Noncompliant
     delegate T Deleg5<T, U>(int i, int j); //Noncompliant
 
-    interface IConsumer<T> // Noncompliant
+    interface IConsumer<T> // Noncompliant {{Add the "in" keyword to parameter "T" to make it "contravariant".}}
     {
         bool Eat(T fruit);
         void Eat2(T fruit, T fruit1, int fruit2);

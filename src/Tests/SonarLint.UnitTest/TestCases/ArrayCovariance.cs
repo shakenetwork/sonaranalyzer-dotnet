@@ -9,7 +9,7 @@ namespace Tests.Diagnostics
 
     class Program
     {
-        public static object[] os = new int[0]; // Noncompliant
+        public static object[] os = new int[0]; // Noncompliant {{Refactor the code to not rely on potentially unsafe array conversions.}}
 //                                  ^^^^^^^^^^
         public static object[] os2 = new object[0];
 

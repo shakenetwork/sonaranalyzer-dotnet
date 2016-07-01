@@ -19,7 +19,7 @@ namespace Tests.Diagnostics
             }
         }
 
-        private int MyMethod() { return 42; } // Noncompliant
+        private int MyMethod() { return 42; } // Noncompliant {{Change return type to "void"; not a single caller uses the returned value.}}
 //              ^^^
         private int MyMethod1() { return 42; } // Compliant, unused, S1144 also reports on it
         private int MyMethod2() { return 42; }

@@ -10,7 +10,7 @@ namespace Tests.Diagnostics
             object o = null;
             if (condition)
             {
-                M1(o.ToString()); // Noncompliant, always null
+                M1(o.ToString()); // Noncompliant {{"o" is null.}}
 //                 ^
             }
             else

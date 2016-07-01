@@ -20,7 +20,7 @@ namespace Tests.Diagnostics
         public int Count3
         {
             //get { return count; }
-            set //Noncompliant
+            set //Noncompliant {{Use the "value" parameter in this property set accessor declaration.}}
             {
                 var value = 5;
                 count = value;
@@ -52,7 +52,7 @@ namespace Tests.Diagnostics
 
         event EventHandler IDrawingObject.OnDraw
         {
-            add //Noncompliant
+            add //Noncompliant {{Use the "value" parameter in this event accessor declaration.}}
             {
                 lock (PreDrawEvent)
                 {

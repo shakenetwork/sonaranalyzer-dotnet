@@ -22,7 +22,7 @@ namespace Tests.TestCases
             {
                 doSomething();
             }
-            catch (ArgumentException) { throw; } //Noncompliant
+            catch (ArgumentException) { throw; } //Noncompliant {{Add logic to this catch clause or eliminate it and rethrow the exception automatically.}}
 //          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
             try

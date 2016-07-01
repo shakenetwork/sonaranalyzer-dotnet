@@ -50,11 +50,12 @@ namespace Tests.Diagnostics
     {
         public override int MyProperty { get { return base.MyProperty; } set { base.MyProperty = value; } } //Noncompliant
         public override int MyProperty1 { get { return base.MyProperty1; } } //Noncompliant
-        public override int MyProperty2 => base.MyProperty2; //Noncompliant
+        public override int MyProperty2 => base.MyProperty2; //Noncompliant {{Remove this property "MyProperty2" to simply inherit its behavior.}}
+//      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         public override int MyProperty3 => 42;
 
         public Base bbb;
-        public override void Method(int[] numbers) // Noncompliant
+        public override void Method(int[] numbers) // Noncompliant {{Remove this method "Method" to simply inherit its behavior.}}
         {
             base.Method(numbers);
         }

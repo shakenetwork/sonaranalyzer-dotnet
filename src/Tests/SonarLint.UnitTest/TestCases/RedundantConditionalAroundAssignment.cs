@@ -15,7 +15,7 @@ namespace Tests.Diagnostics
                 x = null;
             }
 
-            if (null != x) // Noncompliant
+            if (null != x) // Noncompliant {{Remove this useless conditional.}}
             {
                 x = null;
             }

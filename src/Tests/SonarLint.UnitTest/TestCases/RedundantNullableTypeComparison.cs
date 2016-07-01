@@ -19,7 +19,7 @@ namespace Tests.Diagnostics
             int? nullable = 42;
             bool comparison = nullable.GetType() == typeof(Nullable<int>); // Noncompliant, always false
 //                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-            comparison = nullable.GetType() != typeof(Nullable<int>); // Noncompliant, always true
+            comparison = nullable.GetType() != typeof(Nullable<int>); // Noncompliant {{Remove this redundant type comparison.}}
 
             comparison = new MyClass().GetType() != typeof(Nullable<int>);
             comparison = 42.GetType() != typeof(int);

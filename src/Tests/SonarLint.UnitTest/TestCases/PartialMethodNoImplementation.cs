@@ -6,12 +6,12 @@ namespace Tests.Diagnostics
 {
     public abstract partial class PartialMethodNoImplementation
     {
-        partial void Method(); //Noncompliant
+        partial void Method(); //Noncompliant {{Supply an implementation for this partial method.}}
 //      ^^^^^^^
 
         void OtherM()
         {
-            Method(); //Noncompliant. Will be removed.
+            Method(); //Noncompliant {{Supply an implementation for the partial method, otherwise this call will be ignored.}}
             OkMethod();
             OkMethod2();
             M();

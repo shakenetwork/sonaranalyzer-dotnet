@@ -8,7 +8,7 @@ namespace Tests.Diagnostics
     {
         public CollectionQuerySimplification(List<object> coll)
         {
-            var x = coll.Select(element => element as object).Any(element => element != null);  // Noncompliant use OfType
+            var x = coll.Select(element => element as object).Any(element => element != null);  // Noncompliant {{Use "OfType<object>()" here instead.}}
 //                       ^^^^^^
             x = coll.Select((element) => ((element as object))).Any(element => (element != null) && CheckCondition(element) && true);  // Noncompliant use OfType
             var y = coll.Where(element => element is object).Select(element => element as object); // Noncompliant use OfType
@@ -17,13 +17,13 @@ namespace Tests.Diagnostics
             y = coll.Where(element => element is object).Select(element => (object)element); // Noncompliant use OfType
             x = coll.Where(element => element == null).Any();  // Noncompliant use Any([expression])
 //                   ^^^^^
-            var z = coll.Where(element => element == null).Count();  // Noncompliant use Count([expression])
+            var z = coll.Where(element => element == null).Count();  // Noncompliant {{Drop "Where" and move the condition into the "Count".}}
             z = Enumerable.Count(coll.Where(element => element == null));  // Noncompliant
             z = Enumerable.Count(Enumerable.Where(coll, element => element == null));  // Noncompliant
             y = coll.Select(element => element as object);
             y = coll.ToList().Select(element => element as object); // Noncompliant
             y = coll
-                .ToList()  // Noncompliant
+                .ToList()  // Noncompliant {{Drop "ToList" from the middle of the call chain.}}
 //               ^^^^^^
                 .ToArray() // Noncompliant
                 .Select(element => element as object);

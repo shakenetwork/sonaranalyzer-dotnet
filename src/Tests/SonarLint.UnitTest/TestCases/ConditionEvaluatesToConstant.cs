@@ -8,7 +8,7 @@ namespace Tests.Diagnostics
         public void Method1()
         {
             var b = true;
-            if (b) // Noncompliant
+            if (b) // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
 //              ^
             {
                 Console.WriteLine();
@@ -129,7 +129,7 @@ namespace Tests.Diagnostics
                     break;
             }
 
-            if (b) // Noncompliant b is always false
+            if (b) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
             {
 
             }

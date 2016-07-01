@@ -12,7 +12,7 @@ namespace Tests.Diagnostics
             var s = string.Format("some text"); //Noncompliant
 //                  ^^^^^^^^^^^^^
             s = string.Format(
-                string.Format("some text"));    //Noncompliant
+                string.Format("some text"));    //Noncompliant {{Remove this formatting call and simply use the input string.}}
             s =    string.Format(
                 string.Format("{0}", 1));
 

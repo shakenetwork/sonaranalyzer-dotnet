@@ -24,7 +24,7 @@ namespace Tests.Diagnostics
         public uint ui = +-+-+0U; // Noncompliant
         public ulong ul = 0UL; // Noncompliant
 
-        public static object o = default(object); // Noncompliant
+        public static object o = default(object); // Noncompliant {{Remove this initialization to "o", the compiler will do that for you.}}
         public object MyProperty { get; set; } = null; // Noncompliant
         public object MyProperty2 { get { return null; } set { } } = null;
 

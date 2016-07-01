@@ -10,7 +10,7 @@ namespace Tests.Diagnostics
     }
 }
 
-namespace Tests.Diagnostics // Noncompliant
+namespace Tests.Diagnostics // Noncompliant {{Remove this empty namespace.}}
 {
     /*2*/
     using M = Math;

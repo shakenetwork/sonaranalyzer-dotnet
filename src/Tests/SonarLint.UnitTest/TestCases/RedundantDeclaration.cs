@@ -7,7 +7,7 @@ namespace Tests.Diagnostics
     {
         public RedundantDeclaration()
         {
-            MyEvent += new EventHandler((a, b) => { }); // Noncompliant, needlessly verbose
+            MyEvent += new EventHandler((a, b) => { }); // Noncompliant {{Remove the explicit delegate creation; it is redundant.}}
 //                     ^^^^^^^^^^^^^^^^
             MyEvent += (a, b) => { };
 
@@ -15,23 +15,23 @@ namespace Tests.Diagnostics
 
             MyEvent2 = new MyMethod((i, j) => { }); // Noncompliant
             MyEvent2 = new MyMethod(            // Noncompliant
-                delegate (int i, int j) { });   // Noncompliant
+                delegate (int i, int j) { });   // Noncompliant {{Remove the parameter list; it is redundant.}}
 //                       ^^^^^^^^^^^^^^
 
             MyEvent2 = delegate (int i, int j) { Console.WriteLine(); }; //Noncompliant
             MyEvent = delegate { Console.WriteLine("fdsfs"); };
 
-            var l = new List<int>() { }; // Noncompliant
+            var l = new List<int>() { }; // Noncompliant {{Remove the initializer; it is redundant.}}
 //                                  ^^^
             l = new List<int>();
             var o = new object() { }; // Noncompliant
 //                               ^^^
             o = new object { };
 
-            var ints = new int[] { 1, 2, 3 }; // Noncompliant
+            var ints = new int[] { 1, 2, 3 }; // Noncompliant {{Remove the array type; it is redundant.}}
 //                         ^^^
             ints = new[] { 1, 2, 3 };
-            ints = new int[3] { 1, 2, 3 }; // Noncompliant
+            ints = new int[3] { 1, 2, 3 }; // Noncompliant {{Remove the array size specification; it is redundant.}}
 //                         ^
 
             var ddd = new double[] { 1, 2, 3.0 }; // Compliant the element types are not the same as the specified one
@@ -43,7 +43,7 @@ namespace Tests.Diagnostics
             var zzz = new int[][] { new[] { 1, 2, 3 }, new int[0], new int[0] }; // Noncompliant
             var www = new int[][][] { new[] { new[] { 0 } } }; // Noncompliant
 
-            int? xx = ((new int?(5))); // Noncompliant
+            int? xx = ((new int?(5))); // Noncompliant {{Remove the explicit nullable type creation; it is redundant.}}
 //                      ^^^^^^^^
             xx = new Nullable<int>(5); // Noncompliant
             var rr = new int?(5);
@@ -66,7 +66,7 @@ namespace Tests.Diagnostics
 
             var f2 = new Func<int, int?>(i => i);
 
-            Func<int, int> f1 = (int i) => 1; //Noncompliant
+            Func<int, int> f1 = (int i) => 1; //Noncompliant {{Remove the type specification; it is redundant.}}
 //                               ^^^
             Func<int, int> f3 = (i) => 1;
             var transformer = Funcify((string x) => new { Original = x, Normalized = x.ToLower() });

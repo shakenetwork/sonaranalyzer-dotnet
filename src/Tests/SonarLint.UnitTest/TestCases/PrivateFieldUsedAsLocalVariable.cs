@@ -6,7 +6,7 @@ namespace Tests.Diagnostics
     {
         private int F0 = 0; // Compliant - unused
 
-        private int F1 = 0; // Noncompliant
+        private int F1 = 0; // Noncompliant {{Remove the "F1" field and declare it as a local variable in the relevant methods.}}
 //                  ^^^^^^
         public int F2 = 0; // Compliant - Public
 

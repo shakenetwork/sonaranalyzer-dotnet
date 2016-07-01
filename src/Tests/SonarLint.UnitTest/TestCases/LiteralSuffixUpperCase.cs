@@ -10,7 +10,7 @@ namespace Tests.TestCases
     {
         public void Test(long ui)
         {
-            const long b = 0l;      // Noncompliant
+            const long b = 0l;      // Noncompliant {{Upper case this literal suffix.}}
 //                          ^
             const ulong c = 0Ul;
             const ulong d = 0uL;

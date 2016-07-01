@@ -24,7 +24,7 @@ namespace Tests.Diagnostics
         { }
     }
 
-    public class MoreMath<T> // Noncompliant; <T> is ignored
+    public class MoreMath<T> // Noncompliant {{"T" is not used in the class.}}
 //                        ^
     {
         public int Add<T>(int a, int b) // Noncompliant; <T> is ignored

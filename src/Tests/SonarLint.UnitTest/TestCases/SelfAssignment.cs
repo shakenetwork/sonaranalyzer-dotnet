@@ -26,7 +26,7 @@ namespace Tests.TestCases
             Prop1 = 2*Prop1;
 
             var y = 5;
-            y = /*comment*/ y; //Noncompliant
+            y = /*comment*/ y; //Noncompliant {{Remove or correct this useless self-assignment}}
 
             var x = new SelfAssignment
             {

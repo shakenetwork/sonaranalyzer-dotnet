@@ -19,7 +19,7 @@ namespace Tests.Diagnostics
             var a = b;
             switch (a) { /* This commit doesn't count */ } // Noncompliant
 
-            try { } // Noncompliant
+            try { } // Noncompliant {{Either remove or fill this block of code.}}
             catch (Exception e)
             {
                 // Ignore

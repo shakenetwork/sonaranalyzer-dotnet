@@ -53,7 +53,7 @@ namespace Tests.Diagnostics
         private
             int field3, field4; // Noncompliant;
 //                      ^^^^^^
-        private int Property // Noncompliant
+        private int Property // Noncompliant {{Remove this unused private member.}}
         {
             get; set;
         }

@@ -13,12 +13,12 @@ namespace Tests.Diagnostics
             {
             }
 
-            if (f == 3.14F) //Noncompliant
+            if (f == 3.14F) //Noncompliant {{Do not check floating point equality with exact values, use a range instead.}}
 //                ^^
             {
             }
 
-            if (f != 3.14F) //Noncompliant
+            if (f != 3.14F) //Noncompliant {{Do not check floating point inequality with exact values, use a range instead.}}
             { }
 
             var b = d == 3.14; //Noncompliant

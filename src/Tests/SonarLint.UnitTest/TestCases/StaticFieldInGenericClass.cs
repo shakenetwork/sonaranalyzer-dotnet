@@ -20,7 +20,7 @@ namespace Tests.TestCases
 
         public static string sProp1 { get; set; } //Noncompliant
 //                           ^^^^^^
-        public /*comment */static string sProp2 { get; set; } //Noncompliant
+        public /*comment */static string sProp2 { get; set; } //Noncompliant {{A static field in a generic type is not shared among instances of different close constructed types.}}
         public string sProp3 { get; set; }
 
         public static T tProp { get; set; }

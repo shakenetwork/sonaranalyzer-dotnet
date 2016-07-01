@@ -10,7 +10,7 @@ namespace Tests.Diagnostics
         {
             var s = "";
             s = string.Format("{0} {1} {2}", 1, 2, 3,
-                4, 5); // Noncompliant; too few arguments
+                4, 5); // Noncompliant {{The passed arguments do not match the format string.}}
 //              ^^^^
             s = string.Format("{0}", 10,
                 11); // Noncompliant; too many arguments

@@ -12,7 +12,7 @@ namespace Tests.Diagnostics
             var s = "";
             s = s.ToLower(); // Noncompliant
 //                ^^^^^^^
-            s = s.ToUpper(); // Noncompliant
+            s = s.ToUpper(); // Noncompliant {{Define the locale to be used in this string operation.}}
 
             s = s.ToUpperInvariant();
             s = s.ToUpper(CultureInfo.InvariantCulture);
@@ -34,7 +34,7 @@ namespace Tests.Diagnostics
             s = new DateTime().ToString(); //Noncompliant
             s = 1.8.ToString(CultureInfo.InstalledUICulture);
 
-            i = "".CompareTo(""); // Noncompliant
+            i = "".CompareTo(""); // Noncompliant {{Use "CompareOrdinal" or "Compare" with the locale specified instead of "CompareTo".}}
             object o = "";
             i = "".CompareTo(o); // Noncompliant
 

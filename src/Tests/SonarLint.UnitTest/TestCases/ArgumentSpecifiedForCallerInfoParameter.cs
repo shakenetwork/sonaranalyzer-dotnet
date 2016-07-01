@@ -23,7 +23,7 @@ namespace Tests.Diagnostics
         void TransmitCall2(string message,
           [CallerMemberName] string memberName = "")
         {
-            TraceMessage(message, filePath: memberName); // Noncompliant
+            TraceMessage(message, filePath: memberName); // Noncompliant {{Remove this argument from the method call; it hides the caller information.}}
 //                                ^^^^^^^^^^^^^^^^^^^^
         }
 

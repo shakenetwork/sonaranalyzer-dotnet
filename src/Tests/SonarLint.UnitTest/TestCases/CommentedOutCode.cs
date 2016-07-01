@@ -1,7 +1,7 @@
 ﻿// Copyright © 2011 - Present RealDimensions Software, LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
-// Noncompliant: ;
+// Noncompliant: ; {{Remove this commented out code.}}
 using System;
 
 // Noncompliant: ;

@@ -16,7 +16,7 @@ namespace Tests.Diagnostics
 
             goto A; // Noncompliant
             A:
-            return; // Noncompliant
+            return; // Noncompliant {{Remove this redundant jump.}}
         }
 
         int Prop

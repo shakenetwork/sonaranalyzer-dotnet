@@ -8,7 +8,7 @@
 
     public class Base
     {
-        public abstract void Method4(int[,] a); //Noncompliant
+        public abstract void Method4(int[,] a); //Noncompliant {{Make this method private or simplify its parameters to not use multidimensional arrays.}}
     }
 
     public class PublicMethodWithMultidimensionalArray : Base, IFace

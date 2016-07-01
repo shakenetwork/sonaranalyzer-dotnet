@@ -25,7 +25,7 @@ namespace Tests.TestCases
             else if (a == 1)
                 a *= 3;
 
-                return a; // Noncompliant
+                return a; // Noncompliant {{This line will not be executed conditionally; only the first line of this 3-line block will be. The rest will execute unconditionally.}}
 
             while (true)
                 while (true)
@@ -41,7 +41,7 @@ namespace Tests.TestCases
         {
             while (true)
                 Tests();
-                Tests(); // Noncompliant
+                Tests(); // Noncompliant {{This line will not be executed in a loop; only the first line of this 2-line block will be. The rest will execute only once.}}
 
             while (true)
 Tests();

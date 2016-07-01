@@ -9,7 +9,7 @@
             {
             }
 
-            switch (n) // Noncompliant
+            switch (n) // Noncompliant {{Add a "default" clause to this "switch" statement.}}
             {
                 case 1:
                 case 2:

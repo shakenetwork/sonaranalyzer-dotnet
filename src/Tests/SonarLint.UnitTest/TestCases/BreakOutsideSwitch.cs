@@ -10,7 +10,7 @@ namespace Tests.Diagnostics
             {
                 if (n == 10)
                 {
-                    break; // Noncompliant
+                    break; // Noncompliant {{Refactor the code in order to remove this break statement.}}
 //                  ^^^^^^
                 }
 

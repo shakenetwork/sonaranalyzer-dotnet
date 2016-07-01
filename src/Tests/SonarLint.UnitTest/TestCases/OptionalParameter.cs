@@ -10,7 +10,7 @@ namespace Tests.Diagnostics
 
     public class Base
     {
-        public virtual void Method(int i = 42) //Noncompliant
+        public virtual void Method(int i = 42) //Noncompliant {{Use the overloading mechanism instead of the optional parameters.}}
         { }
     }
 

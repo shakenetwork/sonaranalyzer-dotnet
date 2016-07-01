@@ -7,7 +7,7 @@ namespace Tests.Diagnostics
     {
     }
     enum MyEnum2
-        : int //Noncompliant
+        : int //Noncompliant {{"int" should not be explicitly used as the underlying type.}}
 //      ^^^^^
     {
     }
@@ -15,7 +15,7 @@ namespace Tests.Diagnostics
     {
     }
 
-    class AA : Object //Noncompliant
+    class AA : Object //Noncompliant {{"Object" should not be explicitly extended.}}
     { }
     class AAA://Noncompliant
         Object
@@ -38,7 +38,7 @@ namespace Tests.Diagnostics
     interface IBase { }
     interface IA : IBase { }
     interface IB : IA
-        , IBase //Noncompliant
+        , IBase //Noncompliant {{"IA" implements "IBase" so "IBase" can be removed from the inheritance list.}}
     { }
 
     interface IPrint1

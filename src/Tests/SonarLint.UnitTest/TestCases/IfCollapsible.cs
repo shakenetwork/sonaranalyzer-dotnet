@@ -26,7 +26,7 @@ namespace Tests.TestCases
                 }
             }
             if (cond1)
-                if (cond2 || cond3) // Noncompliant
+                if (cond2 || cond3) // Noncompliant {{Merge this if statement with the enclosing one.}}
                 {
                 }
             if (cond1)

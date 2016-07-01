@@ -13,7 +13,7 @@ namespace Tests.Diagnostics
                 Console.WriteLine(i1.Value);
             }
 
-            Console.WriteLine(i1.Value); // Noncompliant
+            Console.WriteLine(i1.Value); // Noncompliant {{"i1" is null.}}
 //                            ^^^^^^^^
         }
 

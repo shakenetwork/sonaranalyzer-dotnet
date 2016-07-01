@@ -17,7 +17,7 @@ namespace Tests.Diagnostics
 
         static void Main(string[] args)
         {
-            Test(42, null); // Noncompliant
+            Test(42, null); // Noncompliant {{Review this call, which partially matches an overload without "params". The partial match is "void InvocationResolvesToOverrideWithParams.Test(double foo, object p1)".}}
 //          ^^^^^^^^^^^^^^
         }
 

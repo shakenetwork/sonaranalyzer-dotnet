@@ -16,7 +16,7 @@ namespace Tests.TestCases
 
     public class Shape
     {
-        public static Shape Empty = new EmptyShape(); // Noncompliant
+        public static Shape Empty = new EmptyShape(); // Noncompliant {{Change the visibility of "Empty" or make it "const" or "readonly".}}
         public static readonly Shape Empty2 = new EmptyShape();
 
         private class EmptyShape : Shape

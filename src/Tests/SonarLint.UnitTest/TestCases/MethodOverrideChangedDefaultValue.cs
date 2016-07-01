@@ -10,7 +10,7 @@ namespace Tests.Diagnostics
 
     public class Base : IMyInterface
     {
-        public virtual void Write(int i, int j = 0) // Noncompliant
+        public virtual void Write(int i, int j = 0) // Noncompliant {{Use the default parameter value defined in the overridden method.}}
 //                                               ^
         {
             Console.WriteLine(i);
@@ -37,7 +37,7 @@ namespace Tests.Diagnostics
 
     public class Derived3 : Base
     {
-        public override void Write(int i = 5,  // Noncompliant
+        public override void Write(int i = 5,  // Noncompliant {{Remove the default parameter value to match the signature of overridden method.}}
             int j = 0)
         {
             Console.WriteLine(i);

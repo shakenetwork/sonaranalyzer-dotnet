@@ -7,7 +7,7 @@ namespace Tests.Diagnostics
     {
         public async void Test()
         {
-            await Task.Delay(1000); // Noncompliant
+            await Task.Delay(1000); // Noncompliant {{Add ".ConfigureAwait(false)" to this call to allow execution to continue in any thread.}}
 //                ^^^^^^^^^^^^^^^^
             await Task.Delay(1000).ConfigureAwait(false); // Compliant
             await Task.Delay(1000).ConfigureAwait(true); // Compliant, we assume that there is a reason to explicitly specify context switching

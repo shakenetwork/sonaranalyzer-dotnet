@@ -30,7 +30,7 @@ namespace SonarLint.UnitTest.Rules
         [TestCategory("Rule")]
         public void LineLength()
         {
-            var diagnostic = new LineLength {Maximum = 47};
+            var diagnostic = new LineLength {Maximum = 127};
             Verifier.VerifyAnalyzer(@"TestCases\LineLength.cs", diagnostic);
         }
     }

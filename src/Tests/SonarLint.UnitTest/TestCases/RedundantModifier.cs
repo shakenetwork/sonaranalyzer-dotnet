@@ -9,7 +9,7 @@
     {
         void Method() { }
     }
-    partial struct PartialStruct //Noncompliant
+    partial struct PartialStruct //Noncompliant {{"partial" is gratuitous in this context.}}
     {
     }
 partial interface PartialInterface //Noncompliant
@@ -31,7 +31,7 @@ partial interface PartialInterface //Noncompliant
     }
     sealed class SealedClass : Partial2Part
     {
-        public override sealed void MyOverridenMethod() { } //Noncompliant
+        public override sealed void MyOverridenMethod() { } //Noncompliant {{"sealed" is redundant in this context.}}
 //                      ^^^^^^
         public override sealed int Prop { get; set; } //Noncompliant
     }
@@ -62,7 +62,7 @@ partial interface PartialInterface //Noncompliant
     {
         int num;
     }
-    unsafe class UnsafeClass3 // Noncompliant
+    unsafe class UnsafeClass3 // Noncompliant {{"unsafe" is redundant in this context.}}
     {
         unsafe void M() // Noncompliant
 //      ^^^^^^
@@ -160,7 +160,7 @@ partial interface PartialInterface //Noncompliant
                 }
             }
 
-            checked // Noncompliant
+            checked // Noncompliant {{"checked" is redundant in this context.}}
             {
                 var f = 5.5;
                 var y = unchecked(5 + 4);

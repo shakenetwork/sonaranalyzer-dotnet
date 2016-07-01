@@ -1,6 +1,6 @@
 ﻿namespace Tests.Diagnostics
 {
-    class FSM // Noncompliant
+    class FSM // Noncompliant {{Rename class "FSM" to match camel case naming rules, consider using "Fsm".}}
 //        ^^^
     {
     }
@@ -9,15 +9,15 @@
 
     }
 
-    class foo // Noncompliant
+    class foo // Noncompliant {{Rename class "foo" to match camel case naming rules, consider using "Foo".}}
     {
     }
 
-    interface foo // Noncompliant
+    interface foo // Noncompliant {{Rename interface "foo" to match camel case naming rules, consider using "IFoo".}}
     {
     }
 
-    interface Foo // Noncompliant
+    interface Foo // Noncompliant  {{Rename interface "Foo" to match camel case naming rules, consider using "IFoo".}}
     {
     }
 
@@ -37,7 +37,7 @@
     {
     }
 
-    interface IIIFoo // Noncompliant
+    interface IIIFoo // Noncompliant {{Rename interface "IIIFoo" to match camel case naming rules, consider using "IIiFoo".}}
     {
     }
 
@@ -52,7 +52,7 @@
         }
     }
 
-    class IFoo2 // Noncompliant
+    class IFoo2 // Noncompliant {{Rename class "IFoo2" to match camel case naming rules, consider using "Foo2".}}
     {
     }
 
@@ -66,11 +66,11 @@
     }
 
     partial class
-    AbClass_Bar // Noncompliant
+    AbClass_Bar // Noncompliant {{Rename class "AbClass_Bar" to match camel case naming rules, consider using "AbClassBar".}}
     {
     }
 
-    struct ILMarker // Noncompliant, should be IlMarker
+    struct ILMarker // Noncompliant {{Rename struct "ILMarker" to match camel case naming rules, consider using "IlMarker".}}
     {
 
     }
@@ -83,10 +83,10 @@
     class A4 { }
     class AA4 { }
 
-    class AbcDEFgh { } // Noncompliant
+    class AbcDEFgh { } // Noncompliant {{Rename class "AbcDEFgh" to match camel case naming rules, consider using "AbcDeFgh".}}
     class Ab4DEFgh { } // Noncompliant
 
-    class TTTestClassTTT { }// Noncompliant
+    class TTTestClassTTT { }// Noncompliant {{Rename class "TTTestClassTTT" to match camel case naming rules, consider using "TtTestClassTtt".}}
     class TTT44 { }// Noncompliant
     class ABCDEFGHIJK { }// Noncompliant
     class Abcd4a { }// Noncompliant
@@ -95,5 +95,5 @@
 
     class AB { } // Noncompliant, special case
     class AbABaa { }
-    class _AbABaa { } // Noncompliant
+    class _AbABaa { } // Noncompliant {{Rename class "_AbABaa" to match camel case naming rules, trim underscores from the name.}}
 }

@@ -10,16 +10,16 @@ namespace Tests.Diagnostics
             var expr1 = new GetTypeWithIsAssignableFrom();
             var expr2 = new GetTypeWithIsAssignableFrom();
 
-            if (expr1.GetType()/*abcd*/.IsAssignableFrom(expr2.GetType() /*efgh*/)) //Noncompliant
+            if (expr1.GetType()/*abcd*/.IsAssignableFrom(expr2.GetType() /*efgh*/)) //Noncompliant {{Use the "IsInstanceOfType()" method instead.}}
 //              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             { }
             if (expr1.GetType().IsInstanceOfType(expr2)) //Compliant
             { }
 
-            if (!typeof(GetTypeWithIsAssignableFrom).IsAssignableFrom(expr1.GetType())) //Noncompliant
+            if (!typeof(GetTypeWithIsAssignableFrom).IsAssignableFrom(expr1.GetType())) //Noncompliant {{Use the "is" operator instead.}}
             { }
             var x = typeof(GetTypeWithIsAssignableFrom).IsAssignableFrom(expr1.GetType()); //Noncompliant
-            if (expr1 is GetTypeWithIsAssignableFrom) // Noncompliant, should be a null check
+            if (expr1 is GetTypeWithIsAssignableFrom) // Noncompliant  {{Use a "null" check instead.}}
 //              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             { }
 

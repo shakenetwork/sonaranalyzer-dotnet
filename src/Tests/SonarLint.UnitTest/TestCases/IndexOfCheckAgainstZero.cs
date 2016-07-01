@@ -21,7 +21,7 @@ namespace Tests.Diagnostics
             {
                 // ...
             }
-            if (strings.IndexOf(color) > 0) // Noncompliant
+            if (strings.IndexOf(color) > 0) // Noncompliant {{0 is a valid index, but this check ignores it.}}
             {
                 // ...
             }

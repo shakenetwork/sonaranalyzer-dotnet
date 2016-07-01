@@ -25,7 +25,7 @@ namespace Tests.Diagnostics
     {
         static void EntryPoint(IMyInterface interfaceRef)
         {
-            MyClass1 class1 = (MyClass1)interfaceRef;  // Noncompliant
+            MyClass1 class1 = (MyClass1)interfaceRef;  // Noncompliant {{Remove this cast and edit the interface to add the missing functionality.}}
 //                            ^^^^^^^^^^^^^^^^^^^^^^
             int privateData = class1.Data;
 

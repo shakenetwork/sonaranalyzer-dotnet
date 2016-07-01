@@ -22,7 +22,7 @@ namespace Tests.Diagnostics
     }
     abstract class Derived : Base
     {
-        public override void Method(params int[] numbers) // Noncompliant
+        public override void Method(params int[] numbers) // Noncompliant {{"params" should be removed from this override.}}
 //                                  ^^^^^^
         {
         }

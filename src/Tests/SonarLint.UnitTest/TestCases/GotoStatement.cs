@@ -9,7 +9,7 @@ namespace Tests.Diagnostics
         {
             var @goto = 5;
 
-            goto Label; //Noncompliant
+            goto Label; //Noncompliant {{Remove this use of "goto".}}
 //          ^^^^
 
             Label:

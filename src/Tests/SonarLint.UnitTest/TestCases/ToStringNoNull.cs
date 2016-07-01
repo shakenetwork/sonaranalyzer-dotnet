@@ -22,7 +22,7 @@ namespace Tests.Diagnostics
                 // ...
             }
 
-            return null; // Noncompliant
+            return null; // Noncompliant {{Return empty string instead.}}
         }
     }
 

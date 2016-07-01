@@ -15,7 +15,7 @@ namespace Tests.Diagnostics
             }
             catch (Exception exc)
             {
-                exc = new Exception(); // Noncompliant
+                exc = new Exception(); // Noncompliant {{Introduce a new variable instead of reusing the parameter "exc".}}
                 var v = 5;
                 v = 6;
                 throw exc;

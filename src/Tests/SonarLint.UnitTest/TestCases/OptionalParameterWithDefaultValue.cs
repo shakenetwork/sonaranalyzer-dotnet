@@ -14,7 +14,7 @@ namespace Tests.Diagnostics
                 Console.WriteLine(i);
             }
 
-            public void DoStuff1([Optional][DefaultValue(value: 4)]int i, int j = 5) // Noncompliant
+            public void DoStuff1([Optional][DefaultValue(value: 4)]int i, int j = 5) // Noncompliant {{Use "[DefaultParameterValue]" instead.}}
             {
                 Console.WriteLine(i);
             }

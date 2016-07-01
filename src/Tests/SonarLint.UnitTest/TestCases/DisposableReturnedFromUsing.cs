@@ -8,7 +8,7 @@ namespace Tests.Diagnostics
     {
         public FileStream WriteToFile(string path, string text)
         {
-            using (var fs = File.Create(path)) // Noncompliant
+            using (var fs = File.Create(path)) // Noncompliant {{Remove the "using" statement; it will cause automatic disposal of "fs".}}
 //          ^^^^^
             {
                 var bytes = Encoding.UTF8.GetBytes(text);

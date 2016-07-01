@@ -47,7 +47,7 @@ namespace Tests.Diagnostics
         }
 
         private static string _make3;
-        public static string Make3 // Noncompliant
+        public static string Make3 // Noncompliant {{Make this an auto-implemented property and remove its backing field.}}
         {
             get { return _make3; }
             set { PropertyToAutoProperty._make3 = value; }

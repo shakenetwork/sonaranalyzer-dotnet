@@ -8,7 +8,7 @@ namespace Tests.Diagnostics
     {
         private static bool HasContent1(IEnumerable<string> l)
         {
-            return l.Count() > 0; // Noncompliant
+            return l.Count() > 0; // Noncompliant {{Use ".Any()" to test whether this "IEnumerable<string>" is empty or not.}}
 //                   ^^^^^
         }
         private static bool HasContent1b(IEnumerable<string> l)

@@ -2,7 +2,7 @@
 {
     public class A
     {
-        public const int A = 5; // Noncompliant
+        public const int A = 5; // Noncompliant {{Change this constant to a "static" read-only property.}}
 //                       ^
         private const int B = 5;
         public int C = 5;

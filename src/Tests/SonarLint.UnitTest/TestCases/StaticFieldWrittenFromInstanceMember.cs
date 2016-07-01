@@ -15,7 +15,7 @@ namespace Tests.Diagnostics
 //          ^^^^^
             var action = new Action(() =>
             {
-                count++; // Noncompliant
+                count++; // Noncompliant {{Make the enclosing instance method "static" or remove this set on the "static" field.}}
             });
             countInstance++;
         }

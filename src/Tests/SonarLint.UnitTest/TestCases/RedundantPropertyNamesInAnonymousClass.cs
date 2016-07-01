@@ -15,7 +15,7 @@ namespace Tests.Diagnostics
             {
                 X = X, //Noncompliant
 //              ^^^
-                Y = Y  //Noncompliant
+                Y = Y  //Noncompliant {{Remove the redundant "Y =".}}
             };
 
             var anon2 = new

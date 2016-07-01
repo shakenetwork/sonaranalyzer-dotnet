@@ -8,9 +8,9 @@ namespace Tests.Diagnostics
     {
         public AsyncAwaitIdentifier()
         {
-            int async = 42; // Noncompliant
+            int async = 42; // Noncompliant {{Rename "async" to not use a contextual keyword as an identifier.}}
 //              ^^^^^
-            int await = 42; // Noncompliant
+            int await = 42; // Noncompliant {{Rename "await" to not use a contextual keyword as an identifier.}}
 
             await = 42*2;
         }

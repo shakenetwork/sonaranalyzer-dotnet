@@ -10,7 +10,7 @@ namespace Tests.Diagnostics
     {
         public InsecureEncryptionAlgorithm()
         {
-            using (var tripleDES = new MyTripleDESCryptoServiceProvider()) //Noncompliant
+            using (var tripleDES = new MyTripleDESCryptoServiceProvider()) //Noncompliant {{Use the recommended AES (Advanced Encryption Standard) instead.}}
 //                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             {
                 //...

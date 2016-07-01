@@ -6,7 +6,7 @@ namespace Tests.Diagnostics
     class Person
     {
         static int maxAge = 42;
-        int age = 42 /*init*/; // Noncompliant
+        int age = 42 /*init*/; // Noncompliant {{Remove the member initializer, all constructors set an initial value for the member.}}
 //              ^^^^
         int Age { get; } = 42; // Noncompliant
 //                       ^^^^

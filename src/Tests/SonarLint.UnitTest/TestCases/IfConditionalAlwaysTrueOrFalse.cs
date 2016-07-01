@@ -24,13 +24,13 @@ namespace Tests.Diagnostics
                 DoSomething();
             }
 
-            if (true) // Noncompliant
+            if (true) // Noncompliant {{Remove this useless "if" statement.}}
 //          ^^^^^^^^^
             {
                 DoSomething2();
             }
 
-            if (false) // Noncompliant
+            if (false) // Noncompliant {{Remove this useless "if" statement.}}
             {
                 DoSomething();
             }
@@ -39,7 +39,7 @@ namespace Tests.Diagnostics
             {
                 DoSomething();
             }
-            else // Noncompliant
+            else // Noncompliant {{Remove this useless "else" clause.}}
             {
 
             }

@@ -21,7 +21,7 @@ namespace Tests.TestCases
             {
                 doTheThing(b);
             }
-            if (a == b) // Noncompliant
+            if (a == b) // Noncompliant {{This condition was just checked on line 20.}}
 //              ^^^^^^
             {
                 doTheThing(b);
@@ -56,7 +56,7 @@ namespace Tests.TestCases
                 case 1:
                     break;
             }
-            switch (a) // Noncompliant
+            switch (a) // Noncompliant {{This condition was just checked on line 54.}}
             {
                 case 2:
                     break;

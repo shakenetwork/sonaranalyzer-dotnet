@@ -13,7 +13,7 @@ namespace Tests.Diagnostics
 
             i = i++; // Noncompliant; i is still zero
 
-            return j++; // Noncompliant; 0 returned
+            return j++; // Noncompliant {{Remove this increment or correct the code not to waste it.}}
 //                 ^^^
         }
 

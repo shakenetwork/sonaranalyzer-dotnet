@@ -23,7 +23,7 @@ namespace Tests.Diagnostics
             else if (a)
             {
             }
-            else if (a) // Noncompliant
+            else if (a) // Noncompliant {{Add the missing "else" clause.}}
 //          ^^^^^^^
             {
             }

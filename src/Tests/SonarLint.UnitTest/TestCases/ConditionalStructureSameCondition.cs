@@ -18,7 +18,7 @@ namespace Tests.TestCases
             {
 
             }
-            else if (b && condition) // Noncompliant
+            else if (b && condition) // Noncompliant {{This branch duplicates the one on line 17.}}
 //                   ^^^^^^^^^^^^^^
             {
 

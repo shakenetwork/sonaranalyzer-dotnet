@@ -7,7 +7,7 @@ namespace Tests.Diagnostics
         public int MyProperty { get; set; }
     }
 
-    [MyAttribute()] //Noncompliant
+    [MyAttribute()] //Noncompliant {{Remove these redundant parentheses.}}
 //              ^^
     [MyAttribute] //Compliant
     [MyAttribute(MyProperty =5)] //Compliant

@@ -10,7 +10,7 @@ namespace Tests.Diagnostics
 //       ^^^^^^^^^^^^
         private int count1 = 0, count11 = 0;
 
-        [ThreadStatic, X]  // Noncompliant
+        [ThreadStatic, X]  // Noncompliant {{Remove the "ThreadStatic" attribute from this definition.}}
         private int count2 = 0;
 
         [System.ThreadStatic]

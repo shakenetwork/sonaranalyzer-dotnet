@@ -16,7 +16,7 @@ namespace Tests.Diagnostics
         int MyServiceMethod();
 
         [OperationContract(IsOneWay = true)]
-        int MyServiceMethod2(); // Noncompliant
+        int MyServiceMethod2(); // Noncompliant {{This method can't return any values because it is marked as one-way operation.}}
 //      ^^^
 
         [OperationContract(IsOneWay = false)]

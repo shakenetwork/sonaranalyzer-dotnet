@@ -12,13 +12,13 @@ namespace Tests.TestCases
         public void doW() { throw new Exception();}
         public void Test(bool a, bool b)
         {
-            if (a == a) //Noncompliant
+            if (a == a) //Noncompliant {{Identical sub-expressions on both sides of operator "=="}}
 //              ^^^^^^
             {
                 doZ();
             }
 
-            if (a == b || (a == /*comment*/ b)) //Noncompliant
+            if (a == b || (a == /*comment*/ b)) //Noncompliant {{Identical sub-expressions on both sides of operator "||"}}
 //              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             {
                 doW();

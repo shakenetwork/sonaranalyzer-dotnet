@@ -12,7 +12,7 @@
         {
             for (int a2 = 0; a2 < 42; a2++)
             {
-                a2 = 0; // Noncompliant
+                a2 = 0; // Noncompliant {{Do not update the loop counter "a2" within the loop body.}}
 //              ^^
             }
 

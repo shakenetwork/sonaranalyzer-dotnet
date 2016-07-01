@@ -13,7 +13,7 @@ namespace Tests.Diagnostics
     public class MyBase
     {
         public virtual void Print3(string[] messages) { }
-        public virtual void Print3(string[] messages, string delimiter = "\n") { }// Noncompliant;
+        public virtual void Print3(string[] messages, string delimiter = "\n") { }// Noncompliant {{This method signature overlaps the one defined on line 15, the default parameter value can't be used.}}
     }
 
     public class MethodOverloadOptionalParameter : MyBase, IMyInterface
@@ -30,8 +30,8 @@ namespace Tests.Diagnostics
 
         void Print(string[] messages, string delimiter = "\n") {} // Noncompliant;
         void Print(string[] messages,
-            string delimiter = "\n", // Noncompliant;
-            string b = "a" // Noncompliant;
+            string delimiter = "\n", // Noncompliant {{This method signature overlaps the one defined on line 29, the default parameter value can only be used with named arguments.}}
+            string b = "a" // Noncompliant {{This method signature overlaps the one defined on line 31, the default parameter value can't be used.}}
             ) {}
     }
 }

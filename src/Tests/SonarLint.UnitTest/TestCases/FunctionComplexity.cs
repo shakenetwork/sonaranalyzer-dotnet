@@ -4,7 +4,7 @@ namespace Tests.Diagnostics
 {
     public class FunctionComplexity
     {
-        public FunctionComplexity() // Noncompliant
+        public FunctionComplexity() // Noncompliant {{The Cyclomatic Complexity of this method is 4 which is greater than 3 authorized.}}
 //             ^^^^^^^^^^^^^^^^^^
         {
             if (false) { }

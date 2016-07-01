@@ -5,7 +5,7 @@ namespace Tests.Diagnostics
 {
     class UninvokedEventDeclaration<T>
     {
-        public event Action<object, EventArgs> Event1 //Noncompliant
+        public event Action<object, EventArgs> Event1 //Noncompliant {{Remove this unused event or invoke it.}}
         {
             add { }
             remove { }

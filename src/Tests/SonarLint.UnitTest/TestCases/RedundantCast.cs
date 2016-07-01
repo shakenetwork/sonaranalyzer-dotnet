@@ -26,7 +26,7 @@ namespace Tests.Diagnostics
 
             var w = (object) i;
 
-            method(new int[] { 1, 2, 3 }.Cast<int>()); // Noncompliant
+            method(new int[] { 1, 2, 3 }.Cast<int>()); // Noncompliant {{Remove this unnecessary cast to "System.Collections.Generic.IEnumerable<int>".}}
         }
         void method(IEnumerable<int> enumerable)
         { }

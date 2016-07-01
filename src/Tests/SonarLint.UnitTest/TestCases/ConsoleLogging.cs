@@ -8,7 +8,7 @@ namespace Tests.Diagnostics
         private static byte[] GenerateKey(byte[] key)
         {
             GenerateKey2(key);
-            Console.WriteLine("debug key = {0}", BitConverter.ToString(key)); //Noncompliant
+            Console.WriteLine("debug key = {0}", BitConverter.ToString(key)); //Noncompliant {{Remove this logging statement.}}
 //          ^^^^^^^^^^^^^^^^^
             Console.Write("debug key = {0}", BitConverter.ToString(key)); //Noncompliant
             Console.ReadKey();

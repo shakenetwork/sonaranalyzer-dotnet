@@ -67,7 +67,7 @@ namespace Tests.Diagnostics
             divide(dividend, 1 + 1, divisor, other2: 6);  // Noncompliant; operation succeeds, but result is unexpected
 
             divide(divisor, other2, dividend);
-            divide(divisor, other2, dividend, other2: someOther); // Noncompliant;
+            divide(divisor, other2, dividend, other2: someOther); // Noncompliant {{Parameters to "divide" have the same names but not the same order as the method arguments.}}
 
             divide(divisor, someOther, dividend, other2: some, some: other2); // Noncompliant;
 

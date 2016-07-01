@@ -20,7 +20,7 @@ namespace Tests.Diagnostics
         {
             if (true)
             {
-            doSomething();} // Noncompliant
+            doSomething();} // Noncompliant {{Move this closing curly brace to the next line.}}
 
             var f = new Action(delegate {
                                        doSomething();}); // Noncompliant

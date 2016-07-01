@@ -13,7 +13,7 @@
                     break;
             }
 
-            switch (n) // Noncompliant
+            switch (n) // Noncompliant {{Replace this "switch" statement with "if" statements to increase readability.}}
             {
             }
 

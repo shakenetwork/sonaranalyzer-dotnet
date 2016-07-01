@@ -22,7 +22,7 @@ namespace Tests.TestCases
         {
             Console.WriteLine(j);
         }
-        public int this[[DefaultParameterValue(5)]int index] //Noncompliant
+        public int this[[DefaultParameterValue(5)]int index] //Noncompliant {{Add the "[Optional]" attribute to this parameter.}}
         {
             get { return 42; }
         }

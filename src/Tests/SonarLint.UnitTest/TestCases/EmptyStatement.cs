@@ -8,7 +8,7 @@ namespace Tests.Diagnostics
 
         public EmptyStatement()
         {
-            ; // Noncompliant
+            ; // Noncompliant {{Remove this empty statement.}}
             ; // Noncompliant
             ; // Noncompliant
             ; // Noncompliant

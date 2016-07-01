@@ -10,7 +10,7 @@ namespace Tests.Diagnostics
         {
             Console.WriteLine(i);
         }
-        public void DoStuff2([Optional] out int i) // Noncompliant
+        public void DoStuff2([Optional] out int i) // Noncompliant {{Remove the "[Optional]" attribute, it cannot be used with "out"}}
         {
             Console.WriteLine(i);
         }

@@ -11,7 +11,7 @@ namespace Tests.Diagnostics
     {
         public void Hash(byte[] temp)
         {
-            using (var sha1 = new SHA1Managed()) //Noncompliant
+            using (var sha1 = new SHA1Managed()) //Noncompliant {{Use a stronger encryption algorithm than SHA1.}}
 //                                ^^^^^^^^^^^
             {
                 var hash = sha1.ComputeHash(temp);
@@ -30,7 +30,7 @@ namespace Tests.Diagnostics
                 var hash = md5.ComputeHash(temp);
             }
 
-            using (var md5 = (HashAlgorithm)CryptoConfig.CreateFromName("MD5")) //Noncompliant
+            using (var md5 = (HashAlgorithm)CryptoConfig.CreateFromName("MD5")) //Noncompliant {{Use a stronger encryption algorithm than MD5.}}
 //                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
             {
                 var hash = md5.ComputeHash(temp);

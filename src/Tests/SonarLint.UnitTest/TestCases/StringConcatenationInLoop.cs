@@ -14,7 +14,7 @@ namespace Tests.Diagnostics
 
                 s = s + "a";  // Noncompliant
 //              ^^^^^^^^^^^
-                s += "a";     // Noncompliant
+                s += "a";     // Noncompliant {{Use a StringBuilder instead.}}
                 sLoop += "a"; // Compliant
 
                 i += 5;

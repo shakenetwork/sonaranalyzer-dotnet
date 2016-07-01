@@ -11,7 +11,7 @@ namespace Tests.Diagnostics
             return num;  // this is never reached
         }
 
-        void Test1() // Noncompliant
+        void Test1() // Noncompliant {{Add a way to break out of this method's recursion.}}
         {
             var i = 10;
             if (i == 10)
@@ -40,7 +40,7 @@ namespace Tests.Diagnostics
                 case 1:
                     goto default;
                 default:
-                    goto case 1; // Noncompliant
+                    goto case 1; // Noncompliant {{Add a way to break out of this method.}}
             }
         }
 
@@ -70,7 +70,7 @@ namespace Tests.Diagnostics
 
         int Prop
         {
-            get // Noncompliant
+            get // Noncompliant {{Add a way to break out of this property accessor's recursion.}}
             {
                 return Prop;
             }
