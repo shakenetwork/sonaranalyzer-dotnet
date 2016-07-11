@@ -24,7 +24,7 @@ namespace Tests.Diagnostics
     {
         void Test()
         {
-            var x = Permissions.Read | Permissions.Write;  // Noncompliant {{Mark enum "Permissions" with "FlagsAttribute" or remove this bitwise operation.}}
+            var x = Permissions.Read | Permissions.Write;  // Noncompliant {{Mark enum "Permissions" with "Flags" attribute or remove this bitwise operation.}}
 //                                   ^
             x = Permissions.Read & Permissions.Write;  // Noncompliant
             x = Permissions.Read ^ Permissions.Write;  // Noncompliant

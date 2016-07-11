@@ -45,8 +45,8 @@ namespace SonarLint.Rules.CSharp
             "operations can be used on them to combine the values. This is a good way of specifying multiple elements of set with a single value. When " +
             "\"enum\"s are used this way, it is a best practice to mark the \"enum\" with the \"FlagsAttribute\".";
         internal const string MessageFormat = "{0}";
-        internal const string MessageRemove = "Remove this bitwise operation; the enum \"{0}\" is not marked with \"FlagsAttribute\".";
-        internal const string MessageChangeOrRemove = "Mark enum \"{0}\" with \"FlagsAttribute\" or remove this bitwise operation.";
+        internal const string MessageRemove = "Remove this bitwise operation; the enum \"{0}\" is not marked with \"Flags\" attribute.";
+        internal const string MessageChangeOrRemove = "Mark enum \"{0}\" with \"Flags\" attribute or remove this bitwise operation.";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Minor;
         internal const bool IsActivatedByDefault = true;
