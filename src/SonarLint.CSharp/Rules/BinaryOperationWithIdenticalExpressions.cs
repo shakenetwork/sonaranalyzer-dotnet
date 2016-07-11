@@ -45,7 +45,7 @@ namespace SonarLint.Rules.CSharp
             "In the case of bitwise operators and most binary mathematical operators, " +
             "having the same value on both sides of an operator yields predictable results, " +
             "and should be simplified.";
-        internal const string MessageFormat = "Identical sub-expressions on both sides of operator \"{0}\"";
+        internal const string MessageFormat = "Identical sub-expressions on both sides of operator \"{0}\".";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
