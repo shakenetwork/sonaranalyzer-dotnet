@@ -5,7 +5,7 @@ namespace Tests.Diagnostics
 {
     public class VirtualEventField
     {
-        public virtual event EventHandler OnRefueled; // Noncompliant {{Remove this virtual of "OnRefueled".}}
+        public virtual event EventHandler OnRefueled; // Noncompliant {{Remove this "virtual" modifier of "OnRefueled".}}
 //             ^^^^^^^
 
         public virtual event EventHandler Foo

@@ -46,7 +46,7 @@ namespace SonarLint.Rules.CSharp
             "of the C# compiler is to generate a new \"private\" \"delegate\" field in the derived class, separate from the " +
             "parent's field. This results in multiple and separate events being created, which is rarely what's actually " +
             "intended.";
-        internal const string MessageFormat = "Remove this virtual of {0}.";
+        internal const string MessageFormat = "Remove this \"virtual\" modifier of {0}.";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
