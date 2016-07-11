@@ -12,13 +12,13 @@ namespace Tests.Diagnostics
         public void Y();
     }
 
-    public abstract class Empty //Noncompliant {{Convert this "abstract" class to a concrete class with a private constructor}}
+    public abstract class Empty //Noncompliant {{Convert this "abstract" class to a concrete class with a private constructor.}}
 //                        ^^^^^
     {
 
     }
 
-    public abstract class Animal //Noncompliantt {{Convert this "abstract" class to an interface}}
+    public abstract class Animal //Noncompliantt {{Convert this "abstract" class to an interface.}}
     {
         abstract void move();
         abstract void feed();
@@ -32,7 +32,7 @@ namespace Tests.Diagnostics
 
     }
 
-    public abstract class Color //Noncompliant {{Convert this "abstract" class to a concrete class with a private constructor}}
+    public abstract class Color //Noncompliant {{Convert this "abstract" class to a concrete class with a private constructor.}}
     {
         private int red = 0;
         private int green = 0;

@@ -44,7 +44,7 @@ namespace SonarLint.Rules.CSharp
             "implemented by sub-classes. A class with no abstract methods that was made abstract purely to prevent instantiation " +
             "should be converted to a concrete class (i.e. remove the \"abstract\" keyword) with a private constructor. A class " +
             "with only abstract methods and no inheritable behavior should be converted to an interface.";
-        internal const string MessageFormat = "Convert this \"abstract\" class to {0}";
+        internal const string MessageFormat = "Convert this \"abstract\" class to {0}.";
         internal const string MessageToInterface = "an interface";
         internal const string MessageToConcreteClass = "a concrete class with a private constructor";
         internal const string Category = SonarLint.Common.Category.Design;
