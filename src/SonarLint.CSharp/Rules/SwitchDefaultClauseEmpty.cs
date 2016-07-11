@@ -41,7 +41,7 @@ namespace SonarLint.Rules.CSharp
         internal const string Title = "Empty \"default\" clauses in a \"switch\" should be removed";
         internal const string Description =
             "The \"default\" clause should take appropriate action, having an empty \"default\" is a waste of keystrokes.";
-        internal const string MessageFormat = "Remove this empty \"default\" clause";
+        internal const string MessageFormat = "Remove this empty \"default\" clause.";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Minor;
         private const IdeVisibility ideVisibility = IdeVisibility.Hidden;
