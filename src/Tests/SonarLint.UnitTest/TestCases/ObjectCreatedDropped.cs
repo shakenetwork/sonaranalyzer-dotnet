@@ -13,7 +13,7 @@ namespace Tests.TestCases
             new object(); // Noncompliant
 //          ^^^^^^^^^^^^
 
-            new ObjectCreatedDropped(); // Noncompliant {{Either remove this useless object instantiation of class "ObjectCreatedDropped" or use it}}
+            new ObjectCreatedDropped(); // Noncompliant {{Either remove this useless object instantiation of class "ObjectCreatedDropped" or use it.}}
 
             var x = new object();
 
