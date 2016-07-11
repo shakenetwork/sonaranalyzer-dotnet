@@ -44,7 +44,7 @@ namespace SonarLint.Rules.CSharp
             "hierarchy and you'll get confusion at best, chaos at worst. Perhaps even worse is the case where a child class " +
             "field varies from the name of a parent class only by case.";
         internal const string MessageFormat = "{0}";
-        internal const string MessageMatch = "\"{0}\" is the name of a field in \"{1}\"";
+        internal const string MessageMatch = "\"{0}\" is the name of a field in \"{1}\".";
         internal const string MessageSimilar = "\"{0}\" differs only by case from \"{2}\" in \"{1}\".";
         internal const string Category = SonarLint.Common.Category.Design;
         internal const Severity RuleSeverity = Severity.Major;
