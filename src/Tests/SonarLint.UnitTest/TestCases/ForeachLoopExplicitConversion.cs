@@ -33,7 +33,7 @@ namespace Tests.Diagnostics
             { }
             foreach (var i in enumerable)
             { }
-            foreach (B i in enumerable) // Noncompliant {{Either change the type of "i" to "Tests.Diagnostics.A" or iterate on a generic collection of type "B".}}
+            foreach (B i in enumerable) // Noncompliant {{Either change the type of "i" to "A" or iterate on a generic collection of type "B".}}
 //                   ^
             { }
         }

@@ -76,7 +76,7 @@ namespace SonarLint.Rules.CSharp
 
                     c.ReportDiagnostic(Diagnostic.Create(Rule, foreachStatement.Type.GetLocation(),
                         foreachStatement.Identifier.ValueText,
-                        foreachInfo.ElementType.ToDisplayString(),
+                        foreachInfo.ElementType.ToMinimalDisplayString(c.SemanticModel, foreachStatement.Type.SpanStart),
                         foreachStatement.Type.ToString()));
                 },
                 SyntaxKind.ForEachStatement);
