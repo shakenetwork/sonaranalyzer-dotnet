@@ -57,8 +57,6 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        private const string SystemTypeName = "System.Type";
-
         protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
@@ -82,7 +80,7 @@ namespace SonarLint.Rules.CSharp
             SyntaxNodeAnalysisContext context)
         {
             if (methodSymbol.Name != "IsInstanceOfType" ||
-                methodSymbol.ContainingType?.ToDisplayString() != SystemTypeName ||
+                !methodSymbol.ContainingType.Is(KnownType.System_Type) ||
                 !invocation.HasExactlyNArguments(1))
             {
                 return;
@@ -91,7 +89,7 @@ namespace SonarLint.Rules.CSharp
             var argument = invocation.ArgumentList.Arguments.First().Expression;
 
             var typeInfo = context.SemanticModel.GetTypeInfo(argument).Type;
-            if (typeInfo?.ToDisplayString() != SystemTypeName)
+            if (!typeInfo.Is(KnownType.System_Type))
             {
                 return;
             }
@@ -116,7 +114,7 @@ namespace SonarLint.Rules.CSharp
             }
 
             var expressionType = context.SemanticModel.GetTypeInfo(memberCall.Expression).Type;
-            if (expressionType?.ToDisplayString() != SystemTypeName)
+            if (!expressionType.Is(KnownType.System_Type))
             {
                 return;
             }
@@ -136,7 +134,7 @@ namespace SonarLint.Rules.CSharp
         private static bool IsObjectOrType(INamedTypeSymbol namedType)
         {
             return namedType.SpecialType == SpecialType.System_Object ||
-                namedType.ToDisplayString() == SystemTypeName;
+                namedType.Is(KnownType.System_Type);
         }
 
         internal static bool IsGetTypeCall(InvocationExpressionSyntax invocation, SemanticModel semanticModel)
