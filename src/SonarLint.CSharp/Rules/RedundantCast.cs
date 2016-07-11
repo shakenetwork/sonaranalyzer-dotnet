@@ -29,6 +29,7 @@ using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
 using Microsoft.CodeAnalysis.Text;
 using System;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -58,10 +59,9 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        private static readonly string[] CastIEnumerableMethods =
-        {
-            "Cast", "OfType"
-        };
+        private static readonly ISet<string> CastIEnumerableMethods = ImmutableHashSet.Create(
+            "Cast",
+            "OfType");
 
     protected override void Initialize(SonarAnalysisContext context)
         {
@@ -106,7 +106,7 @@ namespace SonarLint.Rules.CSharp
             if (expressionType.Equals(castType))
             {
                 context.ReportDiagnostic(Diagnostic.Create(Rule, location,
-                    castType.ToDisplayString()));
+                    castType.ToMinimalDisplayString(context.SemanticModel, expression.SpanStart)));
             }
         }
 
@@ -140,7 +140,7 @@ namespace SonarLint.Rules.CSharp
             {
                 var methodCalledAsStatic = methodSymbol.MethodKind == MethodKind.Ordinary;
                 context.ReportDiagnostic(Diagnostic.Create(Rule, GetReportLocation(invocation, methodCalledAsStatic),
-                    returnType.ToDisplayString()));
+                    returnType.ToMinimalDisplayString(context.SemanticModel, invocation.SpanStart)));
             }
         }
 
