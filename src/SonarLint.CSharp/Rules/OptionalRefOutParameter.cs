@@ -44,7 +44,7 @@ namespace SonarLint.Rules.CSharp
             "that the parameter doesn't have to be provided, while out and ref mean that the parameter will be used to return data to the " +
             "caller. Thus, making it \"[Optional]\" to provide the parameter in which you will be passing back the method results doesn't " +
             "make sense.";
-        internal const string MessageFormat = "Remove the \"[Optional]\" attribute, it cannot be used with \"{0}\".";
+        internal const string MessageFormat = "Remove the \"Optional\" attribute, it cannot be used with \"{0}\".";
         internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
