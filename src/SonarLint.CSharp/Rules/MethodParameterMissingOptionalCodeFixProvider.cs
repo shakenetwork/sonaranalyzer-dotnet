@@ -35,7 +35,7 @@ namespace SonarLint.Rules.CSharp
     [ExportCodeFixProvider(LanguageNames.CSharp)]
     public class MethodParameterMissingOptionalCodeFixProvider : SonarCodeFixProvider
     {
-        private const string Title = "Add missing \"[Optional]\" attribute";
+        private const string Title = "Add missing \"Optional\" attribute";
 
         public sealed override ImmutableArray<string> FixableDiagnosticIds => ImmutableArray.Create(MethodParameterMissingOptional.DiagnosticId);
 

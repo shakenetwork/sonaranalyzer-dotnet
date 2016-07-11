@@ -42,7 +42,7 @@ namespace SonarLint.Rules.CSharp
         internal const string Description =
             "There is no point in providing a default value for a parameter if callers are required to provide a value for it anyway. Thus, " +
             "\"[DefaultParameterValue]\" should always be used in conjunction with \"[Optional]\".";
-        internal const string MessageFormat = "Add the \"[Optional]\" attribute to this parameter.";
+        internal const string MessageFormat = "Add the \"Optional\" attribute to this parameter.";
         internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = true;
