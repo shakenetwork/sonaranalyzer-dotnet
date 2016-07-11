@@ -42,7 +42,7 @@ namespace SonarLint.Rules.CSharp
         internal const string Description =
            "Nested \"if\", \"switch\", \"for\", \"foreach\", \"while\", \"do\", and \"try\" statements are key ingredients for making what's known as \"Spaghetti code\". " +
            "Such code is hard to read, refactor and therefore maintain.";
-        internal const string MessageFormat = "Refactor this code to not nest more than {0} control flow statements";
+        internal const string MessageFormat = "Refactor this code to not nest more than {0} control flow statements.";
         internal const string Category = SonarLint.Common.Category.Maintainability;
         internal const Severity RuleSeverity = Severity.Major;
         internal const bool IsActivatedByDefault = false;

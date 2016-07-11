@@ -12,7 +12,7 @@ namespace Tests.Diagnostics
                 {
                     while (true)
                     {
-                        if (true) { } // Noncompliant {{Refactor this code to not nest more than 3 control flow statements}}
+                        if (true) { } // Noncompliant {{Refactor this code to not nest more than 3 control flow statements.}}
 //                      ^^
                     }
                 }
