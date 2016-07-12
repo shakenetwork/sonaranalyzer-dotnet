@@ -157,6 +157,16 @@ namespace Tests.Diagnostics
                 Console.WriteLine(item.ToString());
             }
         }
+
+        void Constraint()
+        {
+            object a = new object();
+            var b = a;
+            if (a == null)
+            {
+                var s = b.ToString(); // Noncompliant
+            }
+        }
     }
 
     static class Extensions

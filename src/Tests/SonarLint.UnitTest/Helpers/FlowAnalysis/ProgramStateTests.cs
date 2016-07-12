@@ -18,19 +18,19 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System;
-using System.Collections.Immutable;
-using System.Globalization;
-using System.Threading;
 using Microsoft.CodeAnalysis;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarLint.Helpers.FlowAnalysis.Common;
+using SonarLint.Helpers.FlowAnalysis.CSharp;
 
 namespace SonarLint.UnitTest.Helpers
 {
     [TestClass]
     public class ProgramStateTests
     {
+        private class FakeConstraint : SymbolicValueConstraint
+        { }
+
         private static ISymbol GetSymbol()
         {
             string testInput = "var a = true; var b = false; b = !b; a = (b);";
@@ -47,9 +47,12 @@ namespace SonarLint.UnitTest.Helpers
             var ps2 = new ProgramState();
 
             var sv = new SymbolicValue();
+            var constraint = new FakeConstraint();
             var symbol = GetSymbol();
             ps1 = ps1.SetSymbolicValue(symbol, sv);
+            ps1 = sv.SetConstraint(constraint, ps1);
             ps2 = ps2.SetSymbolicValue(symbol, sv);
+            ps2 = sv.SetConstraint(constraint, ps2);
 
             Assert.AreEqual(ps1, ps2);
             Assert.AreEqual(ps1.GetHashCode(), ps2.GetHashCode());
@@ -72,6 +75,24 @@ namespace SonarLint.UnitTest.Helpers
 
         [TestMethod]
         [TestCategory("Symbolic execution")]
+        public void ProgramState_Diff_Constraint()
+        {
+            var ps1 = new ProgramState();
+            var ps2 = new ProgramState();
+
+            var symbol = GetSymbol();
+            var sv = new SymbolicValue();
+            ps1 = ps1.SetSymbolicValue(symbol, sv);
+            ps1 = sv.SetConstraint(new FakeConstraint(), ps1);
+            ps2 = ps2.SetSymbolicValue(symbol, sv);
+            ps2 = sv.SetConstraint(new FakeConstraint(), ps2);
+
+            Assert.AreNotEqual(ps1, ps2);
+            Assert.AreNotEqual(ps1.GetHashCode(), ps2.GetHashCode());
+        }
+
+        [TestMethod]
+        [TestCategory("Symbolic execution")]
         public void ProgramState_Diff_Symbol()
         {
             var ps1 = new ProgramState();
@@ -83,6 +104,45 @@ namespace SonarLint.UnitTest.Helpers
 
             Assert.AreNotEqual(ps1, ps2);
             Assert.AreNotEqual(ps1.GetHashCode(), ps2.GetHashCode());
+        }
+
+        [TestMethod]
+        [TestCategory("Symbolic execution")]
+        public void ProgramState_Constraint()
+        {
+            var ps = new ProgramState();
+            var sv = new SymbolicValue();
+            var symbol = GetSymbol();
+            var constraint = new FakeConstraint();
+
+            ps = ps.SetSymbolicValue(symbol, sv);
+            ps = sv.SetConstraint(constraint, ps);
+            Assert.IsTrue(symbol.HasConstraint(constraint, ps));
+            Assert.IsFalse(symbol.HasConstraint(new FakeConstraint(), ps));
+        }
+
+        [TestMethod]
+        [TestCategory("Symbolic execution")]
+        public void ProgramState_NotNull_Bool_Constraint()
+        {
+            var ps = new ProgramState();
+            var sv = new SymbolicValue();
+            var symbol = GetSymbol();
+
+            ps = ps.SetSymbolicValue(symbol, sv);
+            ps = sv.SetConstraint(BoolConstraint.True, ps);
+            Assert.IsTrue(symbol.HasConstraint(BoolConstraint.True, ps));
+            Assert.IsTrue(symbol.HasConstraint(ObjectConstraint.NotNull, ps));
+
+            ps = ps.SetSymbolicValue(symbol, sv);
+            ps = sv.SetConstraint(BoolConstraint.False, ps);
+            Assert.IsTrue(symbol.HasConstraint(BoolConstraint.False, ps));
+            Assert.IsTrue(symbol.HasConstraint(ObjectConstraint.NotNull, ps));
+
+            ps = ps.SetSymbolicValue(symbol, sv);
+            ps = sv.SetConstraint(ObjectConstraint.NotNull, ps);
+            Assert.IsFalse(symbol.HasConstraint(BoolConstraint.False, ps));
+            Assert.IsTrue(symbol.HasConstraint(ObjectConstraint.NotNull, ps));
         }
     }
 }

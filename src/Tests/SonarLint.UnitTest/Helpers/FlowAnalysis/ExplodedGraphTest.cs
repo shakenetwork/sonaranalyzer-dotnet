@@ -324,8 +324,8 @@ namespace NS
                     {
                         branchesVisited++;
 
-                        Assert.IsTrue(args.ProgramState.GetSymbolValue(bSymbol) == SymbolicValue.True);
-                        Assert.IsTrue(args.ProgramState.GetSymbolValue(inParameterSymbol) == SymbolicValue.True);
+                        Assert.IsTrue(bSymbol.HasConstraint(BoolConstraint.True, args.ProgramState));
+                        Assert.IsTrue(inParameterSymbol.HasConstraint(BoolConstraint.True, args.ProgramState));
                     }
                     if (args.Instruction.ToString() == "b = !inParameter")
                     {
@@ -333,10 +333,10 @@ namespace NS
 
                         // b has value, but not true or false
                         Assert.IsNotNull(args.ProgramState.GetSymbolValue(bSymbol));
-                        Assert.IsFalse(args.ProgramState.GetSymbolValue(bSymbol) == SymbolicValue.False);
-                        Assert.IsFalse(args.ProgramState.GetSymbolValue(bSymbol) == SymbolicValue.True);
+                        Assert.IsFalse(bSymbol.HasConstraint(BoolConstraint.False, args.ProgramState));
+                        Assert.IsFalse(bSymbol.HasConstraint(BoolConstraint.True, args.ProgramState));
 
-                        Assert.IsTrue(args.ProgramState.GetSymbolValue(inParameterSymbol) == SymbolicValue.False);
+                        Assert.IsTrue(inParameterSymbol.HasConstraint(BoolConstraint.False, args.ProgramState));
                     }
                     if (args.Instruction.ToString() == "a = b")
                     {

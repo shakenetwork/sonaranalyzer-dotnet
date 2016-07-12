@@ -292,19 +292,20 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 return false;
             }
 
-            if (node.ProgramState.GetSymbolValue(symbol) == null)
+            var symbolicValue = node.ProgramState.GetSymbolValue(symbol);
+            if (symbolicValue == null)
             {
                 throw new InvalidOperationException("Symbol without symbolic value");
             }
 
             ProgramState newProgramState;
-            if (node.ProgramState.TrySetSymbolicValue(symbol, SymbolicValue.True, out newProgramState))
+            if (symbolicValue.TrySetConstraint(BoolConstraint.True, node.ProgramState, out newProgramState))
             {
                 OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: true);
                 EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
             }
 
-            if (node.ProgramState.TrySetSymbolicValue(symbol, SymbolicValue.False, out newProgramState))
+            if (symbolicValue.TrySetConstraint(BoolConstraint.False, node.ProgramState, out newProgramState))
             {
                 OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: false);
                 EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
@@ -327,28 +328,29 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 return false;
             }
 
-            if (node.ProgramState.GetSymbolValue(symbol) == null)
+            var symbolicValue = node.ProgramState.GetSymbolValue(symbol);
+            if (symbolicValue == null)
             {
                 throw new InvalidOperationException("Symbol without symbolic value");
             }
 
-            var trueBranchSymbolicValue = SymbolicValue.Null;
-            var falseBranchSymbolicValue = new SymbolicValue(isDefinitlyNotNull: true);
+            var trueBranchConstraint = ObjectConstraint.Null;
+            var falseBranchConstraint = ObjectConstraint.NotNull;
 
             if (instruction.IsKind(SyntaxKind.NotEqualsExpression))
             {
-                falseBranchSymbolicValue = SymbolicValue.Null;
-                trueBranchSymbolicValue = new SymbolicValue(isDefinitlyNotNull: true);
+                falseBranchConstraint = ObjectConstraint.Null;
+                trueBranchConstraint = ObjectConstraint.NotNull;
             }
 
             ProgramState newProgramState;
-            if (node.ProgramState.TrySetSymbolicValue(symbol, trueBranchSymbolicValue, out newProgramState))
+            if (symbolicValue.TrySetConstraint(trueBranchConstraint, node.ProgramState, out newProgramState))
             {
                 OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: true);
                 EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
             }
 
-            if (node.ProgramState.TrySetSymbolicValue(symbol, falseBranchSymbolicValue, out newProgramState))
+            if (symbolicValue.TrySetConstraint(falseBranchConstraint, node.ProgramState, out newProgramState))
             {
                 OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: false);
                 EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
@@ -394,19 +396,20 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 return false;
             }
 
-            if (node.ProgramState.GetSymbolValue(symbol) == null)
+            var symbolicValue = node.ProgramState.GetSymbolValue(symbol);
+            if (symbolicValue == null)
             {
                 throw new InvalidOperationException("Symbol without symbolic value");
             }
 
             ProgramState newProgramState;
-            if (node.ProgramState.TrySetSymbolicValue(symbol, new SymbolicValue(isDefinitlyNotNull: true), out newProgramState))
+            if (symbolicValue.TrySetConstraint(ObjectConstraint.NotNull, node.ProgramState, out newProgramState))
             {
                 OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: true);
                 EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
             }
 
-            if (node.ProgramState.TrySetSymbolicValue(symbol, SymbolicValue.Null, out newProgramState))
+            if (symbolicValue.TrySetConstraint(ObjectConstraint.Null, node.ProgramState, out newProgramState))
             {
                 OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: false);
                 EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
@@ -532,13 +535,24 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
         private ProgramState SetNewSymbolicValueIfLocal(ProgramState programState, ISymbol symbol)
         {
-            var newProgramState = programState;
-            if (IsLocalScoped(symbol))
-            {
-                newProgramState = programState.SetSymbolicValue(symbol, new SymbolicValue(isDefinitlyNotNull: IsNonNullableValueType(symbol)));
-            }
+            return IsLocalScoped(symbol)
+                ? SetNewSymbolicValue(programState, symbol, IsNonNullableValueType(symbol))
+                : programState;
+        }
 
+        private static ProgramState SetNewSymbolicValue(ProgramState programState, ISymbol symbol, SymbolicValue value, bool shouldSetNotNullConstraint)
+        {
+            var newProgramState = programState.SetSymbolicValue(symbol, value);
+            if (shouldSetNotNullConstraint)
+            {
+                newProgramState = value.SetConstraint(ObjectConstraint.NotNull, newProgramState);
+            }
             return newProgramState;
+        }
+
+        private static ProgramState SetNewSymbolicValue(ProgramState programState, ISymbol symbol, bool shouldSetNotNullConstraint)
+        {
+            return SetNewSymbolicValue(programState, symbol, new SymbolicValue(), shouldSetNotNullConstraint);
         }
 
         private ProgramState GetCleanedProgramState(Node node)
@@ -550,7 +564,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
         {
             var liveVariables = lva.GetLiveOut(block)
                 .Union(nonInDeclarationParameters); // LVA excludes out and ref parameters
-            return programState.CleanAndKeepOnly(liveVariables);
+            return programState.Clean(liveVariables);
         }
 
         internal bool IsLocalScoped(ISymbol symbol)
@@ -578,44 +592,59 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
         private static ProgramState GetNewProgramStateForAssignment(ProgramState programState, ISymbol leftSymbol, ISymbol rightSymbol,
             Optional<object> constantValue)
         {
-            var symbolicValue = programState.GetSymbolValue(rightSymbol);
-            if (symbolicValue == null)
+            var rightSideSymbolicValue = programState.GetSymbolValue(rightSymbol);
+            ProgramState newProgramState;
+            if (rightSideSymbolicValue == null)
             {
-                symbolicValue = new SymbolicValue(isDefinitlyNotNull: IsNonNullableValueType(leftSymbol));
+                newProgramState = SetNewSymbolicValue(programState, leftSymbol, IsNonNullableValueType(leftSymbol));
+            }
+            else
+            {
+                var shouldSetNotNullConstraint = IsNonNullableValueType(leftSymbol) &&
+                    !rightSymbol.HasConstraint(ObjectConstraint.NotNull, programState);
+
+                newProgramState = SetNewSymbolicValue(programState, leftSymbol, rightSideSymbolicValue, shouldSetNotNullConstraint);
             }
 
-            var newProgramState = programState.SetSymbolicValue(leftSymbol, symbolicValue);
             if (constantValue.HasValue)
             {
                 var boolConstant = constantValue.Value as bool?;
                 if (boolConstant.HasValue)
                 {
                     newProgramState = newProgramState.SetSymbolicValue(leftSymbol,
-                        boolConstant.Value
-                        ? SymbolicValue.True
-                        : SymbolicValue.False);
+                        boolConstant.Value ? SymbolicValue.True : SymbolicValue.False);
                 }
                 else if (constantValue.Value == null)
                 {
-                    newProgramState = newProgramState.SetSymbolicValue(
-                        leftSymbol,
-                        IsNonNullableValueType(leftSymbol) ? new SymbolicValue(isDefinitlyNotNull: true) : SymbolicValue.Null);
+                    newProgramState = SetSymbolToEitherNullOrNotNull(newProgramState, leftSymbol,
+                        isNull: !IsNonNullableValueType(leftSymbol));
                 }
             }
             else
             {
                 var nullableConstructorCall = rightSymbol as IMethodSymbol;
-                if (nullableConstructorCall != null &&
-                    nullableConstructorCall.MethodKind == MethodKind.Constructor &&
-                    nullableConstructorCall.ReceiverType.OriginalDefinition.Is(KnownType.System_Nullable_T))
+                if (IsNullableConstructorCall(nullableConstructorCall))
                 {
-                    newProgramState = newProgramState.SetSymbolicValue(
-                        leftSymbol,
-                        nullableConstructorCall.Parameters.Any() ? new SymbolicValue(isDefinitlyNotNull: true) : SymbolicValue.Null);
+                    newProgramState = SetSymbolToEitherNullOrNotNull(newProgramState, leftSymbol,
+                        isNull: !nullableConstructorCall.Parameters.Any());
                 }
             }
 
             return newProgramState;
+        }
+
+        private static ProgramState SetSymbolToEitherNullOrNotNull(ProgramState programState, ISymbol symbol, bool isNull)
+        {
+            return isNull
+                ? programState.SetSymbolicValue(symbol, SymbolicValue.Null)
+                : SetNewSymbolicValue(programState, symbol, true);
+        }
+
+        private static bool IsNullableConstructorCall(IMethodSymbol nullableConstructorCall)
+        {
+            return nullableConstructorCall != null &&
+                nullableConstructorCall.MethodKind == MethodKind.Constructor &&
+                nullableConstructorCall.ReceiverType.OriginalDefinition.Is(KnownType.System_Nullable_T);
         }
 
         internal bool IsNullableLocalScoped(ISymbol symbol)
@@ -666,7 +695,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             var initialProgramState = new ProgramState();
             foreach (var parameter in declarationParameters)
             {
-                initialProgramState = initialProgramState.SetSymbolicValue(parameter, new SymbolicValue(isDefinitlyNotNull: false));
+                initialProgramState = initialProgramState.SetSymbolicValue(parameter, new SymbolicValue());
             }
 
             EnqueueNewNode(new ProgramPoint(cfg.EntryBlock), initialProgramState);

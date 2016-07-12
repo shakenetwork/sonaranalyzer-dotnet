@@ -126,5 +126,17 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             var explodedGraph = new ExplodedGraph(cfg, symbol, context.SemanticModel, lva);
             analyze(explodedGraph, context);
         }
+
+        public static bool HasConstraint(this ISymbol symbol, SymbolicValueConstraint constraint, ProgramState programState)
+        {
+            var symbolicValue = programState.GetSymbolValue(symbol);
+            if (symbolicValue == null)
+            {
+                return false;
+            }
+
+            return programState.Constraints.ContainsKey(symbolicValue) &&
+                programState.Constraints[symbolicValue].Implies(constraint);
+        }
     }
 }

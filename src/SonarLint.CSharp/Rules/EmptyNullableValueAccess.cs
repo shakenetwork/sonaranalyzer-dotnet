@@ -154,8 +154,7 @@ namespace SonarLint.Rules.CSharp
                     return programState;
                 }
 
-                var sv = programState.GetSymbolValue(symbol);
-                if (sv == SymbolicValue.Null)
+                if (symbol.HasConstraint(ObjectConstraint.Null, programState))
                 {
                     OnValuePropertyAccessed(identifier, true);
                     return null;

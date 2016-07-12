@@ -183,8 +183,7 @@ namespace SonarLint.Rules.CSharp
                     return programState;
                 }
 
-                var sv = programState.GetSymbolValue(symbol);
-                if (sv == SymbolicValue.Null &&
+                if (symbol.HasConstraint(ObjectConstraint.Null, programState) &&
                     !IsNullableValueType(symbol))
                 {
                     OnMemberAccessed(identifier, isNull: true);
@@ -221,8 +220,7 @@ namespace SonarLint.Rules.CSharp
                     return programState;
                 }
 
-                var sv = programState.GetSymbolValue(symbol);
-                if (sv == SymbolicValue.Null)
+                if (symbol.HasConstraint(ObjectConstraint.Null, programState))
                 {
                     OnMemberAccessed(identifier, isNull: true);
                     return null;

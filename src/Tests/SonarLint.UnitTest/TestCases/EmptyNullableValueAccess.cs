@@ -30,13 +30,13 @@ namespace Tests.Diagnostics
 
         public void TestNullConstructor()
         {
-            int? i1 = new Nullable<int>();
-            if (i1.HasValue)
+            int? i2 = new Nullable<int>();
+            if (i2.HasValue)
             {
-                Console.WriteLine(i1.Value);
+                Console.WriteLine(i2.Value);
             }
 
-            Console.WriteLine(i1.Value); // Noncompliant
+            Console.WriteLine(i2.Value); // Noncompliant
         }
 
         public void TestNonNullConstructor()
@@ -50,26 +50,26 @@ namespace Tests.Diagnostics
             Console.WriteLine(i1.Value);
         }
 
-        public void TestComplexCondition(int? i1)
+        public void TestComplexCondition(int? i3)
         {
-            if (i1.HasValue && i1.Value == 42)
+            if (i3.HasValue && i3.Value == 42)
             {
                 Console.WriteLine();
             }
 
-            if (!i1.HasValue && i1.Value == 42)
+            if (!i3.HasValue && i3.Value == 42)
             {
                 Console.WriteLine();
             }
 
-            if (!i1.HasValue)
+            if (!i3.HasValue)
             {
-                Console.WriteLine(i1.Value); // false negative, i1 has no value here
+                Console.WriteLine(i3.Value); // false negative, i1 has no value here
             }
 
-            if (i1 == null)
+            if (i3 == null)
             {
-                Console.WriteLine(i1.Value); // Noncompliant
+                Console.WriteLine(i3.Value); // Noncompliant
             }
         }
     }

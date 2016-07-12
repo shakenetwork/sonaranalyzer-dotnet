@@ -28,38 +28,67 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 {
     public class ProgramState : IEquatable<ProgramState>
     {
-        private readonly ImmutableDictionary<ISymbol, SymbolicValue> symbolValueAssociations;
-        private readonly ImmutableDictionary<ProgramPoint, int> programPointVisitCounts;
+        internal ImmutableDictionary<ISymbol, SymbolicValue> Values { get; }
+        internal ImmutableDictionary<SymbolicValue, SymbolicValueConstraint> Constraints { get; }
+        internal ImmutableDictionary<ProgramPoint, int> ProgramPointVisitCounts { get; }
+
+        private static ImmutableDictionary<SymbolicValue, SymbolicValueConstraint> InitialConstraints =>
+            new Dictionary<SymbolicValue, SymbolicValueConstraint>
+            {
+                { SymbolicValue.True, BoolConstraint.True },
+                { SymbolicValue.False, BoolConstraint.False },
+                { SymbolicValue.Null, ObjectConstraint.Null }
+            }.ToImmutableDictionary();
+
+        private static readonly ISet<SymbolicValue> ProtectedSymbolicValues = ImmutableHashSet.Create(
+            SymbolicValue.True,
+            SymbolicValue.False,
+            SymbolicValue.Null);
 
         internal ProgramState()
-            : this(ImmutableDictionary<ISymbol, SymbolicValue>.Empty, ImmutableDictionary<ProgramPoint, int>.Empty)
+            : this(ImmutableDictionary<ISymbol, SymbolicValue>.Empty,
+                  InitialConstraints,
+                  ImmutableDictionary<ProgramPoint, int>.Empty)
         {
         }
 
-        private ProgramState(ImmutableDictionary<ISymbol, SymbolicValue> symbolValueAssociations,
+        internal ProgramState(ImmutableDictionary<ISymbol, SymbolicValue> values,
+            ImmutableDictionary<SymbolicValue, SymbolicValueConstraint> constraints,
             ImmutableDictionary<ProgramPoint, int> programPointVisitCounts)
         {
-            this.symbolValueAssociations = symbolValueAssociations;
-            this.programPointVisitCounts = programPointVisitCounts;
+            Values = values;
+            Constraints = constraints;
+            ProgramPointVisitCounts = programPointVisitCounts;
         }
 
         internal ProgramState SetSymbolicValue(ISymbol symbol, SymbolicValue newSymbolicValue)
         {
             return new ProgramState(
-                symbolValueAssociations.SetItem(symbol, newSymbolicValue),
-                programPointVisitCounts);
+                Values.SetItem(symbol, newSymbolicValue),
+                Constraints,
+                ProgramPointVisitCounts);
+        }
+
+        public SymbolicValue GetSymbolValue(ISymbol symbol)
+        {
+            if (symbol != null &&
+                Values.ContainsKey(symbol))
+            {
+                return Values[symbol];
+            }
+            return null;
         }
 
         internal ProgramState AddVisit(ProgramPoint visitedProgramPoint)
         {
             var visitCount = GetVisitedCount(visitedProgramPoint);
-            return new ProgramState(symbolValueAssociations, programPointVisitCounts.SetItem(visitedProgramPoint, visitCount + 1));
+            return new ProgramState(Values, Constraints, ProgramPointVisitCounts.SetItem(visitedProgramPoint, visitCount + 1));
         }
 
         internal int GetVisitedCount(ProgramPoint programPoint)
         {
             int value;
-            if (!programPointVisitCounts.TryGetValue(programPoint, out value))
+            if (!ProgramPointVisitCounts.TryGetValue(programPoint, out value))
             {
                 value = 0;
             }
@@ -67,51 +96,19 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             return value;
         }
 
-        public bool TrySetSymbolicValue(ISymbol symbol, SymbolicValue newSymbolicValue, out ProgramState newProgramState)
+        internal ProgramState Clean(IEnumerable<ISymbol> liveSymbolsToKeep)
         {
-            newProgramState = SetSymbolicValue(symbol, newSymbolicValue);
+            var cleanedValues = Values
+                .Where(sv => liveSymbolsToKeep.Contains(sv.Key))
+                .ToImmutableDictionary();
 
-            SymbolicValue oldSymbolicValue;
-            if (!symbolValueAssociations.TryGetValue(symbol, out oldSymbolicValue))
-            {
-                return true;
-            }
+            var usedSymbolicValues = cleanedValues.Values.ToImmutableHashSet();
 
-            if ((oldSymbolicValue == SymbolicValue.True && newSymbolicValue == SymbolicValue.False) ||
-                (newSymbolicValue == SymbolicValue.True && oldSymbolicValue == SymbolicValue.False))
-            {
-                // Contradicting SymbolicValues
-                return false;
-            }
+            var cleanedConstraints = Constraints
+                .Where(kv => usedSymbolicValues.Contains(kv.Key) || ProtectedSymbolicValues.Contains(kv.Key))
+                .ToImmutableDictionary();
 
-            if ((oldSymbolicValue.IsDefinitlyNotNull && newSymbolicValue == SymbolicValue.Null) ||
-                (newSymbolicValue.IsDefinitlyNotNull && oldSymbolicValue == SymbolicValue.Null))
-            {
-                // Contradicting SymbolicValues
-                return false;
-            }
-
-            return true;
-        }
-
-        public SymbolicValue GetSymbolValue(ISymbol symbol)
-        {
-            if (symbol != null &&
-                symbolValueAssociations.ContainsKey(symbol))
-            {
-                return symbolValueAssociations[symbol];
-            }
-            return null;
-        }
-
-        internal ProgramState CleanAndKeepOnly(IEnumerable<ISymbol> liveSymbolsToKeep)
-        {
-            var deadSymbols = symbolValueAssociations
-                .Where(sv => !liveSymbolsToKeep.Contains(sv.Key))
-                .Select(sv => sv.Key)
-                .ToList();
-
-            return new ProgramState(symbolValueAssociations.RemoveRange(deadSymbols), programPointVisitCounts);
+            return new ProgramState(cleanedValues, cleanedConstraints, ProgramPointVisitCounts);
         }
 
         public override bool Equals(object obj)
@@ -132,7 +129,8 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 return false;
             }
 
-            return DictionaryEquals(symbolValueAssociations, other.symbolValueAssociations);
+            return DictionaryEquals(Values, other.Values) &&
+                DictionaryEquals(Constraints, other.Constraints);
         }
 
         private static bool DictionaryEquals<TKey, TValue>(IDictionary<TKey, TValue> dict1, IDictionary<TKey, TValue> dict2)
@@ -167,10 +165,16 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         {
             var hash = 19;
 
-            foreach (var symbolValueAssociation in symbolValueAssociations)
+            foreach (var symbolValueAssociation in Values)
             {
                 hash = hash * 31 + symbolValueAssociation.Key.GetHashCode();
                 hash = hash * 31 + symbolValueAssociation.Value.GetHashCode();
+            }
+
+            foreach (var constraint in Constraints)
+            {
+                hash = hash * 31 + constraint.Key.GetHashCode();
+                hash = hash * 31 + constraint.Value.GetHashCode();
             }
 
             return hash;

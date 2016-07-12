@@ -18,6 +18,8 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
+
 namespace SonarLint.Helpers.FlowAnalysis.Common
 {
     public class SymbolicValue
@@ -29,7 +31,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         private class BoolLiteralSymbolicValue : SymbolicValue
         {
             internal BoolLiteralSymbolicValue(bool value)
-                : base(true, value)
+                : base(value)
             {
             }
         }
@@ -37,7 +39,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         private class NullSymbolicValue : SymbolicValue
         {
             internal NullSymbolicValue()
-                : base(false, new object())
+                : base(new object())
             {
             }
             public override string ToString()
@@ -47,22 +49,15 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         }
 
         private readonly object identifier;
-        internal bool IsDefinitlyNotNull { get; }
 
         internal SymbolicValue()
-            : this(false)
+            : this(new object())
         {
         }
 
-        internal SymbolicValue(bool isDefinitlyNotNull)
-            : this(isDefinitlyNotNull, new object())
-        {
-        }
-
-        private SymbolicValue(bool isDefinitlyNotNull, object identifier)
+        private SymbolicValue(object identifier)
         {
             this.identifier = identifier;
-            IsDefinitlyNotNull = isDefinitlyNotNull;
         }
 
         public override string ToString()
@@ -73,6 +68,95 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             }
 
             return base.ToString();
+        }
+
+        internal ProgramState SetConstraint(SymbolicValueConstraint constraint, ProgramState programState)
+        {
+            return new ProgramState(
+                programState.Values,
+                programState.Constraints.SetItem(this, constraint),
+                programState.ProgramPointVisitCounts);
+        }
+
+        public bool TrySetConstraint(SymbolicValueConstraint constraint, ProgramState currentProgramState, out ProgramState newProgramState)
+        {
+            newProgramState = null;
+
+            SymbolicValueConstraint oldConstraint;
+            if (!currentProgramState.Constraints.TryGetValue(this, out oldConstraint))
+            {
+                newProgramState = SetConstraint(constraint, currentProgramState);
+                return true;
+            }
+
+            var boolConstraint = constraint as BoolConstraint;
+            if (boolConstraint != null)
+            {
+                return TrySetConstraint(boolConstraint, oldConstraint, currentProgramState, out newProgramState);
+            }
+
+            var objectConstraint = constraint as ObjectConstraint;
+            if (objectConstraint != null)
+            {
+                return TrySetConstraint(objectConstraint, oldConstraint, currentProgramState, out newProgramState);
+            }
+
+            throw new NotSupportedException($"Neither {nameof(BoolConstraint)}, nor {nameof(ObjectConstraint)}");
+        }
+
+        private bool TrySetConstraint(BoolConstraint boolConstraint, SymbolicValueConstraint oldConstraint,
+            ProgramState currentProgramState, out ProgramState newProgramState)
+        {
+            newProgramState = null;
+
+            if (oldConstraint == ObjectConstraint.Null)
+            {
+                // It was null, and now it should be true or false
+                return false;
+            }
+
+            var oldBoolConstraint = oldConstraint as BoolConstraint;
+            if (oldBoolConstraint != null &&
+                oldBoolConstraint != boolConstraint)
+            {
+                return false;
+            }
+
+            // Either same bool constraint, or previously not null, and now a bool constraint
+            newProgramState = SetConstraint(boolConstraint, currentProgramState);
+            return true;
+        }
+
+        private bool TrySetConstraint(ObjectConstraint objectConstraint, SymbolicValueConstraint oldConstraint,
+            ProgramState currentProgramState, out ProgramState newProgramState)
+        {
+            newProgramState = null;
+
+            var oldBoolConstraint = oldConstraint as BoolConstraint;
+            if (oldBoolConstraint != null)
+            {
+                if (objectConstraint == ObjectConstraint.Null)
+                {
+                    return false;
+                }
+
+                newProgramState = currentProgramState;
+                return true;
+            }
+
+            var oldObjectConstraint = oldConstraint as ObjectConstraint;
+            if (oldObjectConstraint != null)
+            {
+                if (oldObjectConstraint != objectConstraint)
+                {
+                    return false;
+                }
+
+                newProgramState = SetConstraint(objectConstraint, currentProgramState);
+                return true;
+            }
+
+            throw new NotSupportedException($"Neither {nameof(BoolConstraint)}, nor {nameof(ObjectConstraint)}");
         }
     }
 }
