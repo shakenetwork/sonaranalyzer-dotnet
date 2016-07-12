@@ -18,19 +18,26 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
+
 namespace SonarLint.Helpers.FlowAnalysis.Common
 {
-    internal sealed class BoolConstraint : SymbolicValueConstraint
+    public class LogicalNotSymbolicValue : UnarySymbolicValue
     {
-        public static readonly BoolConstraint True = new BoolConstraint();
-        public static readonly BoolConstraint False = new BoolConstraint();
-
-        internal override bool Implies(SymbolicValueConstraint constraint)
+        public LogicalNotSymbolicValue(SymbolicValue operand)
+            : base(operand)
         {
-            return base.Implies(constraint) ||
-                constraint == ObjectConstraint.NotNull;
         }
 
-        public BoolConstraint Inverse => True == this ? False : True;
+        public override bool TrySetConstraint(SymbolicValueConstraint constraint, ProgramState currentProgramState, out ProgramState newProgramState)
+        {
+            var boolConstraint = constraint as BoolConstraint;
+            if (boolConstraint == null)
+            {
+                throw new NotSupportedException($"Only a {nameof(BoolConstraint)} can be set on a {nameof(LogicalNotSymbolicValue)}");
+            }
+
+            return operand.TrySetConstraint(boolConstraint.Inverse, currentProgramState, out newProgramState);
+        }
     }
 }

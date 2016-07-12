@@ -120,6 +120,8 @@
     <Compile Include="Helpers\SymbolicExecution\ProgramPoint.cs" />
     <Compile Include="Helpers\SymbolicExecution\ProgramState.cs" />
     <Compile Include="Helpers\SymbolicExecution\Constraints\SymbolicValueConstraint.cs" />
+    <Compile Include="Helpers\SymbolicExecution\SymbolicValues\LogicalNotSymbolicValue.cs" />
+    <Compile Include="Helpers\SymbolicExecution\SymbolicValues\UnarySymbolicValue.cs" />
     <Compile Include="Helpers\SymbolicExecution\SymbolicValues\SymbolicValue.cs" />
     <Compile Include="Helpers\SymbolicExecution\VisitCountExceedLimitEventArgs.cs" />
     <Compile Include="Helpers\TypeHelper.cs" />

@@ -621,7 +621,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                     newProgramState = newProgramState.PushValue(new SymbolicValue());
                     break;
 
-                case SyntaxKind.LogicalNotExpression:
                 case SyntaxKind.BitwiseNotExpression:
                 case SyntaxKind.UnaryMinusExpression:
                 case SyntaxKind.UnaryPlusExpression:
@@ -660,6 +659,13 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
                 case SyntaxKind.ArgListExpression:
                     newProgramState = newProgramState.PushValue(new SymbolicValue());
+                    break;
+                case SyntaxKind.LogicalNotExpression:
+                    {
+                        SymbolicValue sv;
+                        newProgramState = newProgramState.PopValue(out sv);
+                        newProgramState = newProgramState.PushValue(new LogicalNotSymbolicValue(sv));
+                    }
                     break;
 
                 case SyntaxKind.TrueLiteralExpression:

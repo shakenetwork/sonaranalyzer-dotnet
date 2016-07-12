@@ -20,17 +20,13 @@
 
 namespace SonarLint.Helpers.FlowAnalysis.Common
 {
-    internal sealed class BoolConstraint : SymbolicValueConstraint
+    public class UnarySymbolicValue : SymbolicValue
     {
-        public static readonly BoolConstraint True = new BoolConstraint();
-        public static readonly BoolConstraint False = new BoolConstraint();
+        protected readonly SymbolicValue operand;
 
-        internal override bool Implies(SymbolicValueConstraint constraint)
+        public UnarySymbolicValue(SymbolicValue operand)
         {
-            return base.Implies(constraint) ||
-                constraint == ObjectConstraint.NotNull;
+            this.operand = operand;
         }
-
-        public BoolConstraint Inverse => True == this ? False : True;
     }
 }

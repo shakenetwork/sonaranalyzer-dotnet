@@ -321,5 +321,25 @@ namespace Tests.Diagnostics
                 }
             }
         }
+
+        public void Stack(bool cond)
+        {
+            var a = cond;
+            var b = a;
+            if (!a)
+            {
+                if (b) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+                {
+
+                }
+            }
+
+            var fail = false;
+            Action a = new Action(() => { fail = true; });
+            a();
+            if (!fail) // This is compliant, we don't know anything about 'fail'
+            {
+            }
+        }
     }
 }
