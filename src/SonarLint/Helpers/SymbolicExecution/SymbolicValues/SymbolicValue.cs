@@ -75,10 +75,11 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             return new ProgramState(
                 programState.Values,
                 programState.Constraints.SetItem(this, constraint),
-                programState.ProgramPointVisitCounts);
+                programState.ProgramPointVisitCounts,
+                programState.ExpressionStack);
         }
 
-        public bool TrySetConstraint(SymbolicValueConstraint constraint, ProgramState currentProgramState, out ProgramState newProgramState)
+        public virtual bool TrySetConstraint(SymbolicValueConstraint constraint, ProgramState currentProgramState, out ProgramState newProgramState)
         {
             newProgramState = null;
 

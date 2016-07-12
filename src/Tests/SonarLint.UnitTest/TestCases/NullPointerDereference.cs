@@ -160,7 +160,7 @@ namespace Tests.Diagnostics
 
         void Constraint()
         {
-            object a = new object();
+            object a = GetObject();
             var b = a;
             if (a == null)
             {

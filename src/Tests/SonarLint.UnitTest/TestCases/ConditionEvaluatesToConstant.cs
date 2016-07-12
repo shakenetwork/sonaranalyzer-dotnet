@@ -259,7 +259,7 @@ namespace Tests.Diagnostics
 
         public void M()
         {
-            var o1 = new object();
+            var o1 = GetObject();
             var o2 = null;
             if (o1 != null)
             {

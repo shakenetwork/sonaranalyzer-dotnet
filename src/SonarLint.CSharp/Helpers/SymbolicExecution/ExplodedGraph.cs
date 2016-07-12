@@ -45,11 +45,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
         private readonly Common.LiveVariableAnalysis lva;
         private readonly ICollection<ExplodedGraphCheck> explodedGraphChecks;
 
-        private static readonly ISet<SyntaxKind> BinaryBranchingKindsWithNoBoolCondition = ImmutableHashSet.Create(
-            SyntaxKind.ForEachStatement,
-            SyntaxKind.CoalesceExpression,
-            SyntaxKind.ConditionalAccessExpression);
-
         internal SemanticModel SemanticModel { get; }
 
         public event EventHandler ExplorationEnded;
@@ -130,15 +125,80 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                     continue;
                 }
 
-                if (programPoint.Block is BranchBlock ||
-                    programPoint.Block is SimpleBlock)
+                if (programPoint.Block is SimpleBlock)
                 {
                     var newProgramState = GetCleanedProgramState(node);
+
+                    var jumpBlock = programPoint.Block as JumpBlock;
+                    if (jumpBlock != null &&
+                        IsValueConsumingStatement(jumpBlock.JumpNode))
+                    {
+                        newProgramState = newProgramState.PopValue();
+                    }
+
+                    EnqueueAllSuccessors(programPoint.Block, newProgramState);
+                    continue;
+                }
+
+                if (programPoint.Block is BranchBlock)
+                {
+                    // switch:
+                    var newProgramState = node.ProgramState.PopValue();
+                    newProgramState = GetCleanedProgramState(newProgramState, node.ProgramPoint.Block);
                     EnqueueAllSuccessors(programPoint.Block, newProgramState);
                 }
             }
 
             OnExplorationEnded();
+        }
+
+        private static bool IsValueConsumingStatement(SyntaxNode jumpNode)
+        {
+            if (jumpNode.IsKind(SyntaxKind.LockStatement))
+            {
+                return true;
+            }
+
+            var usingStatement = jumpNode as UsingStatementSyntax;
+            if (usingStatement != null)
+            {
+                return usingStatement.Expression != null;
+            }
+
+            var throwStatement = jumpNode as ThrowStatementSyntax;
+            if (throwStatement != null)
+            {
+                return throwStatement.Expression != null;
+            }
+
+            var returnStatement = jumpNode as ReturnStatementSyntax;
+            if (returnStatement != null)
+            {
+                return returnStatement.Expression != null;
+            }
+
+            // goto is not putting the expression to the CFG
+
+            return false;
+        }
+
+        private static bool ShouldConsumeValue(ExpressionSyntax expression)
+        {
+            if (expression == null)
+            {
+                return false;
+            }
+
+            var parent = expression.Parent;
+            var conditionalAccess = parent as ConditionalAccessExpressionSyntax;
+            if (conditionalAccess != null &&
+                conditionalAccess.WhenNotNull == expression)
+            {
+                return ShouldConsumeValue(conditionalAccess.GetSelfOrTopParenthesizedExpression());
+            }
+
+            return parent is ExpressionStatementSyntax ||
+                parent is YieldStatementSyntax;
         }
 
         internal void AddExplodedGraphCheck<T>(T check)
@@ -157,11 +217,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
         }
 
         #region OnEvent*
-
-        private void OnConditionEvaluated(SyntaxNode branchingNode, bool evaluationValue)
-        {
-            OnConditionEvaluated(null, branchingNode, evaluationValue);
-        }
 
         private void OnConditionEvaluated(SyntaxNode condition, SyntaxNode branchingNode, bool evaluationValue)
         {
@@ -216,47 +271,29 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
         {
             var newProgramState = GetCleanedProgramState(node);
 
-            if (BinaryBranchingKindsWithNoBoolCondition.Contains(binaryBranchBlock.BranchingNode.Kind()))
+            switch (binaryBranchBlock.BranchingNode.Kind())
             {
-                // Non-bool branching: foreach, ?., ??
-                if (binaryBranchBlock.BranchingNode.IsKind(SyntaxKind.ForEachStatement))
-                {
-                    // foreach variable is not a VariableDeclarator, so we need to assign a value to it
-                    var foreachVariableSymbol = SemanticModel.GetDeclaredSymbol(binaryBranchBlock.BranchingNode);
-                    newProgramState = SetNewSymbolicValueIfLocal(newProgramState, foreachVariableSymbol);
-                }
-
-                EnqueueAllSuccessors(binaryBranchBlock, newProgramState);
-                return;
+                case SyntaxKind.ForEachStatement:
+                    VisitForeachBinaryBranch(binaryBranchBlock, newProgramState);
+                    return;
+                case SyntaxKind.CoalesceExpression:
+                    VisitCoalesceExpressionBinaryBranch(binaryBranchBlock, newProgramState);
+                    return;
+                case SyntaxKind.ConditionalAccessExpression:
+                    VisitConditionalAccessBinaryBranch(binaryBranchBlock, newProgramState);
+                    return;
             }
 
             var instruction = binaryBranchBlock.Instructions.LastOrDefault();
             if (instruction == null)
             {
-                // Branching bool conditions, like &&
-
-                OnConditionEvaluated(binaryBranchBlock.BranchingNode, true);
-                OnConditionEvaluated(binaryBranchBlock.BranchingNode, false);
-                EnqueueAllSuccessors(binaryBranchBlock, newProgramState);
+                // Todo: instead of the null we should pass the condition of the branching node
+                VisitBinaryBranch(binaryBranchBlock, node, null);
                 return;
             }
 
             switch (instruction.Kind())
             {
-                case SyntaxKind.IdentifierName:
-                    if (TryEnqueueBranchesBasedOn((IdentifierNameSyntax)instruction, binaryBranchBlock, node))
-                    {
-                        return;
-                    }
-                    break;
-                case SyntaxKind.TrueLiteralExpression:
-                    OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: true);
-                    EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), newProgramState);
-                    return;
-                case SyntaxKind.FalseLiteralExpression:
-                    OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: false);
-                    EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), newProgramState);
-                    return;
                 case SyntaxKind.EqualsExpression:
                 case SyntaxKind.NotEqualsExpression:
                     if (TryEnqueueBranchesBasedOn((BinaryExpressionSyntax)instruction, binaryBranchBlock, node))
@@ -271,47 +308,97 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                         return;
                     }
                     break;
-
-                default:
-                    break;
             }
 
-            OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: true);
-            OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: false);
-            EnqueueAllSuccessors(binaryBranchBlock, newProgramState);
+            VisitBinaryBranch(binaryBranchBlock, node, instruction);
         }
 
         #region Handle VisitBinaryBranch cases
 
-        private bool TryEnqueueBranchesBasedOn(IdentifierNameSyntax instruction, BinaryBranchBlock binaryBranchBlock, Node node)
+        private void VisitForeachBinaryBranch(BinaryBranchBlock binaryBranchBlock, ProgramState programState)
         {
-            var symbol = SemanticModel.GetSymbolInfo(instruction).Symbol;
+            var newProgramState = programState.ClearStack();
 
-            if (!IsLocalScoped(symbol))
-            {
-                return false;
-            }
+            // foreach variable is not a VariableDeclarator, so we need to assign a value to it
+            var foreachVariableSymbol = SemanticModel.GetDeclaredSymbol(binaryBranchBlock.BranchingNode);
+            newProgramState = SetNewSymbolicValueIfLocal(newProgramState, foreachVariableSymbol, new SymbolicValue());
 
-            var symbolicValue = node.ProgramState.GetSymbolValue(symbol);
-            if (symbolicValue == null)
-            {
-                throw new InvalidOperationException("Symbol without symbolic value");
-            }
+            EnqueueAllSuccessors(binaryBranchBlock, newProgramState);
+        }
+
+        private void VisitCoalesceExpressionBinaryBranch(BinaryBranchBlock binaryBranchBlock, ProgramState programState)
+        {
+            SymbolicValue sv;
+            var ps = programState.PopValue(out sv);
 
             ProgramState newProgramState;
-            if (symbolicValue.TrySetConstraint(BoolConstraint.True, node.ProgramState, out newProgramState))
+            if (sv.TrySetConstraint(ObjectConstraint.Null, ps, out newProgramState))
+            {
+                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), newProgramState);
+            }
+
+            if (sv.TrySetConstraint(ObjectConstraint.NotNull, ps, out newProgramState))
+            {
+                if (!ShouldConsumeValue((BinaryExpressionSyntax)binaryBranchBlock.BranchingNode))
+                {
+                    newProgramState = newProgramState.PushValue(sv);
+                }
+                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), newProgramState);
+            }
+        }
+
+        private void VisitConditionalAccessBinaryBranch(BinaryBranchBlock binaryBranchBlock, ProgramState programState)
+        {
+            SymbolicValue sv;
+            var ps = programState.PopValue(out sv);
+
+            ProgramState newProgramState;
+            if (sv.TrySetConstraint(ObjectConstraint.Null, ps, out newProgramState))
+            {
+                if (!ShouldConsumeValue((ConditionalAccessExpressionSyntax)binaryBranchBlock.BranchingNode))
+                {
+                    newProgramState = newProgramState.PushValue(SymbolicValue.Null);
+                }
+                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), newProgramState);
+            }
+
+            if (sv.TrySetConstraint(ObjectConstraint.NotNull, ps, out newProgramState))
+            {
+                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), newProgramState);
+            }
+        }
+
+        private void VisitBinaryBranch(BinaryBranchBlock binaryBranchBlock, Node node, SyntaxNode instruction)
+        {
+            var ps = node.ProgramState;
+
+            var forStatement = binaryBranchBlock.BranchingNode as ForStatementSyntax;
+            if (forStatement != null &&
+                forStatement.Condition == null)
+            {
+                ps = ps.PushValue(SymbolicValue.True);
+            }
+
+            SymbolicValue sv;
+            ps = ps.PopValue(out sv);
+            ps = ClearStackForForLoop(binaryBranchBlock.BranchingNode as ForStatementSyntax, ps);
+
+            ProgramState newProgramState;
+            if (sv.TrySetConstraint(BoolConstraint.True, ps, out newProgramState))
             {
                 OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: true);
+
+                newProgramState = FixStackForLogicalOr(binaryBranchBlock, newProgramState);
                 EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
             }
 
-            if (symbolicValue.TrySetConstraint(BoolConstraint.False, node.ProgramState, out newProgramState))
+            if (sv.TrySetConstraint(BoolConstraint.False, ps, out newProgramState))
             {
                 OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: false);
+
+                newProgramState = FixStackForLogicalAnd(binaryBranchBlock, newProgramState);
                 EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
             }
-
-            return true;
         }
 
         private bool TryEnqueueBranchesBasedOn(BinaryExpressionSyntax instruction, BinaryBranchBlock binaryBranchBlock, Node node)
@@ -343,41 +430,28 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 trueBranchConstraint = ObjectConstraint.NotNull;
             }
 
+            ProgramState programState = node.ProgramState;
             ProgramState newProgramState;
-            if (symbolicValue.TrySetConstraint(trueBranchConstraint, node.ProgramState, out newProgramState))
+            programState = programState.PopValue();
+            programState = ClearStackForForLoop(binaryBranchBlock.BranchingNode as ForStatementSyntax, programState);
+
+            if (symbolicValue.TrySetConstraint(trueBranchConstraint, programState, out newProgramState))
             {
                 OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: true);
+
+                newProgramState = FixStackForLogicalOr(binaryBranchBlock, newProgramState);
                 EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
             }
 
-            if (symbolicValue.TrySetConstraint(falseBranchConstraint, node.ProgramState, out newProgramState))
+            if (symbolicValue.TrySetConstraint(falseBranchConstraint, programState, out newProgramState))
             {
                 OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: false);
+
+                newProgramState = FixStackForLogicalAnd(binaryBranchBlock, newProgramState);
                 EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
             }
 
             return true;
-        }
-
-        private static IdentifierNameSyntax GetNullComparedIdentifier(BinaryExpressionSyntax instruction)
-        {
-            var left = instruction.Left.RemoveParentheses();
-            var right = instruction.Right.RemoveParentheses();
-            var isLeftNull = left.IsKind(SyntaxKind.NullLiteralExpression);
-            var isRightNull = right.IsKind(SyntaxKind.NullLiteralExpression);
-
-            if (!isRightNull && !isLeftNull)
-            {
-                return null;
-            }
-
-            var identifier = right as IdentifierNameSyntax;
-            if (isRightNull)
-            {
-                identifier = left as IdentifierNameSyntax;
-            }
-
-            return identifier;
         }
 
         private bool TryEnqueueBranchesBasedOn(MemberAccessExpressionSyntax instruction, BinaryBranchBlock binaryBranchBlock, Node node)
@@ -402,20 +476,70 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 throw new InvalidOperationException("Symbol without symbolic value");
             }
 
+            ProgramState programState = node.ProgramState;
             ProgramState newProgramState;
-            if (symbolicValue.TrySetConstraint(ObjectConstraint.NotNull, node.ProgramState, out newProgramState))
+            programState = programState.PopValue();
+            programState = ClearStackForForLoop(binaryBranchBlock.BranchingNode as ForStatementSyntax, programState);
+
+            if (symbolicValue.TrySetConstraint(ObjectConstraint.NotNull, programState, out newProgramState))
             {
                 OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: true);
+
+                newProgramState = FixStackForLogicalOr(binaryBranchBlock, newProgramState);
                 EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
             }
 
-            if (symbolicValue.TrySetConstraint(ObjectConstraint.Null, node.ProgramState, out newProgramState))
+            if (symbolicValue.TrySetConstraint(ObjectConstraint.Null, programState, out newProgramState))
             {
                 OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: false);
+
+                newProgramState = FixStackForLogicalAnd(binaryBranchBlock, newProgramState);
                 EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
             }
 
             return true;
+        }
+
+        private static ProgramState ClearStackForForLoop(ForStatementSyntax forStatement, ProgramState programState)
+        {
+            return forStatement == null
+                ? programState
+                : programState.ClearStack();
+        }
+
+        private static IdentifierNameSyntax GetNullComparedIdentifier(BinaryExpressionSyntax instruction)
+        {
+            var left = instruction.Left.RemoveParentheses();
+            var right = instruction.Right.RemoveParentheses();
+            var isLeftNull = left.IsKind(SyntaxKind.NullLiteralExpression);
+            var isRightNull = right.IsKind(SyntaxKind.NullLiteralExpression);
+
+            if (!isRightNull && !isLeftNull)
+            {
+                return null;
+            }
+
+            var identifier = right as IdentifierNameSyntax;
+            if (isRightNull)
+            {
+                identifier = left as IdentifierNameSyntax;
+            }
+
+            return identifier;
+        }
+
+        private static ProgramState FixStackForLogicalAnd(BinaryBranchBlock binaryBranchBlock, ProgramState newProgramState)
+        {
+            return binaryBranchBlock.BranchingNode.IsKind(SyntaxKind.LogicalAndExpression)
+                ? newProgramState.PushValue(SymbolicValue.False)
+                : newProgramState;
+        }
+
+        private static ProgramState FixStackForLogicalOr(BinaryBranchBlock binaryBranchBlock, ProgramState newProgramState)
+        {
+            return binaryBranchBlock.BranchingNode.IsKind(SyntaxKind.LogicalOrExpression)
+                ? newProgramState.PushValue(SymbolicValue.True)
+                : newProgramState;
         }
 
         #endregion
@@ -423,6 +547,8 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
         private void VisitInstruction(Node node)
         {
             var instruction = node.ProgramPoint.Block.Instructions[node.ProgramPoint.Offset];
+            var expression = instruction as ExpressionSyntax;
+            var parenthesizedExpression = expression?.GetSelfOrTopParenthesizedExpression();
             var newProgramPoint = new ProgramPoint(node.ProgramPoint.Block, node.ProgramPoint.Offset + 1);
             var newProgramState = node.ProgramState;
 
@@ -438,39 +564,10 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             switch (instruction.Kind())
             {
                 case SyntaxKind.VariableDeclarator:
-                    {
-                        var declarator = (VariableDeclaratorSyntax)instruction;
-                        var leftSymbol = SemanticModel.GetDeclaredSymbol(declarator);
-
-                        if (leftSymbol == null)
-                        {
-                            break;
-                        }
-
-                        ISymbol rightSymbol = null;
-                        Optional<object> constValue = new object();
-                        if (declarator.Initializer?.Value != null)
-                        {
-                            rightSymbol = SemanticModel.GetSymbolInfo(declarator.Initializer.Value).Symbol;
-                            constValue = SemanticModel.GetConstantValue(declarator.Initializer.Value);
-                        }
-
-                        newProgramState = GetNewProgramStateForAssignment(node.ProgramState, leftSymbol, rightSymbol, constValue);
-                    }
+                    newProgramState = VisitVariableDeclarator((VariableDeclaratorSyntax)instruction, newProgramState);
                     break;
                 case SyntaxKind.SimpleAssignmentExpression:
-                    {
-                        var assignment = (AssignmentExpressionSyntax)instruction;
-                        var leftSymbol = SemanticModel.GetSymbolInfo(assignment.Left).Symbol;
-
-                        if (IsLocalScoped(leftSymbol))
-                        {
-                            var rightSymbol = SemanticModel.GetSymbolInfo(assignment.Right).Symbol;
-                            var constValue = SemanticModel.GetConstantValue(assignment.Right);
-
-                            newProgramState = GetNewProgramStateForAssignment(node.ProgramState, leftSymbol, rightSymbol, constValue);
-                        }
-                    }
+                    newProgramState = VisitSimpleAssignment((AssignmentExpressionSyntax)instruction, newProgramState);
                     break;
                 case SyntaxKind.OrAssignmentExpression:
                 case SyntaxKind.AndAssignmentExpression:
@@ -484,59 +581,326 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
                 case SyntaxKind.LeftShiftAssignmentExpression:
                 case SyntaxKind.RightShiftAssignmentExpression:
-                    {
-                        var assignment = (AssignmentExpressionSyntax)instruction;
-                        var leftSymbol = SemanticModel.GetSymbolInfo(assignment.Left).Symbol;
-                        newProgramState = SetNewSymbolicValueIfLocal(newProgramState, leftSymbol);
-                    }
+                    newProgramState = VisitOpAssignment((AssignmentExpressionSyntax)instruction, newProgramState);
                     break;
 
                 case SyntaxKind.PreIncrementExpression:
                 case SyntaxKind.PreDecrementExpression:
-                    {
-                        var unary = (PrefixUnaryExpressionSyntax)instruction;
-                        var leftSymbol = SemanticModel.GetSymbolInfo(unary.Operand).Symbol;
-                        newProgramState = SetNewSymbolicValueIfLocal(newProgramState, leftSymbol);
-                    }
+                    newProgramState = VisitPrefixIncrement((PrefixUnaryExpressionSyntax)instruction, newProgramState);
                     break;
 
                 case SyntaxKind.PostIncrementExpression:
                 case SyntaxKind.PostDecrementExpression:
-                    {
-                        var unary = (PostfixUnaryExpressionSyntax)instruction;
-                        var leftSymbol = SemanticModel.GetSymbolInfo(unary.Operand).Symbol;
-                        newProgramState = SetNewSymbolicValueIfLocal(newProgramState, leftSymbol);
-                    }
+                    newProgramState = VisitPostfixIncrement((PostfixUnaryExpressionSyntax)instruction, newProgramState);
                     break;
 
                 case SyntaxKind.IdentifierName:
-                    {
-                        var identifier = (IdentifierNameSyntax)instruction;
-                        var parenthesized = identifier.GetSelfOrTopParenthesizedExpression();
-                        var argument = parenthesized.Parent as ArgumentSyntax;
-                        if (argument == null ||
-                            argument.RefOrOutKeyword.IsKind(SyntaxKind.None))
-                        {
-                            break;
-                        }
+                    newProgramState = VisitIdentifier((IdentifierNameSyntax)instruction, newProgramState);
+                    break;
 
-                        var symbol = SemanticModel.GetSymbolInfo(identifier).Symbol;
-                        newProgramState = SetNewSymbolicValueIfLocal(newProgramState, symbol);
+                case SyntaxKind.LessThanExpression:
+                case SyntaxKind.LessThanOrEqualExpression:
+                case SyntaxKind.GreaterThanExpression:
+                case SyntaxKind.GreaterThanOrEqualExpression:
+                case SyntaxKind.EqualsExpression:
+                case SyntaxKind.NotEqualsExpression:
+
+                case SyntaxKind.BitwiseOrExpression:
+                case SyntaxKind.BitwiseAndExpression:
+                case SyntaxKind.ExclusiveOrExpression:
+
+                case SyntaxKind.SubtractExpression:
+                case SyntaxKind.AddExpression:
+                case SyntaxKind.DivideExpression:
+                case SyntaxKind.MultiplyExpression:
+                case SyntaxKind.ModuloExpression:
+
+                case SyntaxKind.LeftShiftExpression:
+                case SyntaxKind.RightShiftExpression:
+                    newProgramState = newProgramState.PopValues(2);
+                    newProgramState = newProgramState.PushValue(new SymbolicValue());
+                    break;
+
+                case SyntaxKind.LogicalNotExpression:
+                case SyntaxKind.BitwiseNotExpression:
+                case SyntaxKind.UnaryMinusExpression:
+                case SyntaxKind.UnaryPlusExpression:
+                case SyntaxKind.AddressOfExpression:
+                case SyntaxKind.PointerIndirectionExpression:
+
+                case SyntaxKind.PointerMemberAccessExpression:
+                case SyntaxKind.SimpleMemberAccessExpression:
+
+                case SyntaxKind.MakeRefExpression:
+                case SyntaxKind.RefTypeExpression:
+                case SyntaxKind.RefValueExpression:
+
+                case SyntaxKind.AsExpression:
+                case SyntaxKind.IsExpression:
+                case SyntaxKind.CastExpression:
+
+                case SyntaxKind.MemberBindingExpression:
+                    newProgramState = newProgramState.PopValue();
+                    newProgramState = newProgramState.PushValue(new SymbolicValue());
+                    break;
+
+                case SyntaxKind.GenericName:
+                case SyntaxKind.AliasQualifiedName:
+                case SyntaxKind.QualifiedName:
+
+                case SyntaxKind.PredefinedType:
+                case SyntaxKind.NullableType:
+
+                case SyntaxKind.OmittedArraySizeExpression:
+
+                case SyntaxKind.AnonymousMethodExpression:
+                case SyntaxKind.ParenthesizedLambdaExpression:
+                case SyntaxKind.SimpleLambdaExpression:
+                case SyntaxKind.QueryExpression:
+
+                case SyntaxKind.ArgListExpression:
+                    newProgramState = newProgramState.PushValue(new SymbolicValue());
+                    break;
+
+                case SyntaxKind.TrueLiteralExpression:
+                    newProgramState = newProgramState.PushValue(SymbolicValue.True);
+                    break;
+                case SyntaxKind.FalseLiteralExpression:
+                    newProgramState = newProgramState.PushValue(SymbolicValue.False);
+                    break;
+                case SyntaxKind.NullLiteralExpression:
+                    newProgramState = newProgramState.PushValue(SymbolicValue.Null);
+                    break;
+                case SyntaxKind.CharacterLiteralExpression:
+                case SyntaxKind.StringLiteralExpression:
+                case SyntaxKind.NumericLiteralExpression:
+
+                case SyntaxKind.ThisExpression:
+                case SyntaxKind.BaseExpression:
+
+                case SyntaxKind.DefaultExpression:
+                case SyntaxKind.SizeOfExpression:
+                case SyntaxKind.TypeOfExpression:
+
+                case SyntaxKind.ArrayCreationExpression:
+                case SyntaxKind.ImplicitArrayCreationExpression:
+                case SyntaxKind.StackAllocArrayCreationExpression:
+                    {
+                        var sv = new SymbolicValue();
+                        newProgramState = sv.SetConstraint(ObjectConstraint.NotNull, newProgramState);
+                        newProgramState = newProgramState.PushValue(sv);
                     }
                     break;
 
-                default:
+                case SyntaxKind.AnonymousObjectCreationExpression:
+                    {
+                        var creation = (AnonymousObjectCreationExpressionSyntax)instruction;
+                        newProgramState = newProgramState.PopValues(creation.Initializers.Count);
+
+                        var sv = new SymbolicValue();
+                        newProgramState = sv.SetConstraint(ObjectConstraint.NotNull, newProgramState);
+                        newProgramState = newProgramState.PushValue(sv);
+                    }
                     break;
+
+                case SyntaxKind.AwaitExpression:
+                case SyntaxKind.CheckedExpression:
+                case SyntaxKind.UncheckedExpression:
+                    // Do nothing
+                    break;
+
+                case SyntaxKind.InterpolatedStringExpression:
+                    newProgramState = newProgramState.PopValues(((InterpolatedStringExpressionSyntax)instruction).Contents.OfType<InterpolationSyntax>().Count());
+                    newProgramState = newProgramState.PushValue(new SymbolicValue());
+                    break;
+
+                case SyntaxKind.InvocationExpression:
+                    newProgramState = newProgramState.PopValues((((InvocationExpressionSyntax)instruction).ArgumentList?.Arguments.Count ?? 0) + 1);
+                    newProgramState = newProgramState.PushValue(new SymbolicValue());
+                    break;
+
+                case SyntaxKind.ObjectCreationExpression:
+                    newProgramState = VisitObjectCreation((ObjectCreationExpressionSyntax)instruction, newProgramState);
+                    break;
+
+                case SyntaxKind.ElementAccessExpression:
+                    newProgramState = newProgramState.PopValues((((ElementAccessExpressionSyntax)instruction).ArgumentList?.Arguments.Count ?? 0) + 1);
+                    newProgramState = newProgramState.PushValue(new SymbolicValue());
+                    break;
+
+                case SyntaxKind.ImplicitElementAccess:
+                    newProgramState = newProgramState.PopValues(((ImplicitElementAccessSyntax)instruction).ArgumentList?.Arguments.Count ?? 0);
+                    break;
+
+                case SyntaxKind.ObjectInitializerExpression:
+                case SyntaxKind.ArrayInitializerExpression:
+                case SyntaxKind.CollectionInitializerExpression:
+                case SyntaxKind.ComplexElementInitializerExpression:
+                    newProgramState = VisitInitializer(instruction, parenthesizedExpression, newProgramState);
+                    break;
+
+                case SyntaxKind.ArrayType:
+                    newProgramState = newProgramState.PopValues(((ArrayTypeSyntax)instruction).RankSpecifiers.SelectMany(rs => rs.Sizes).Count());
+                    break;
+
+                case SyntaxKind.ElementBindingExpression:
+                    newProgramState = newProgramState.PopValues(((ElementBindingExpressionSyntax)instruction).ArgumentList?.Arguments.Count ?? 0);
+                    newProgramState = newProgramState.PushValue(new SymbolicValue());
+                    break;
+
+                default:
+                    throw new NotImplementedException($"{instruction.Kind()}");
+            }
+
+            if (ShouldConsumeValue(parenthesizedExpression))
+            {
+                newProgramState = newProgramState.PopValue();
+                System.Diagnostics.Debug.Assert(!newProgramState.HasValue);
             }
 
             EnqueueNewNode(newProgramPoint, newProgramState);
             OnInstructionProcessed(instruction, node.ProgramPoint, newProgramState);
         }
 
-        private ProgramState SetNewSymbolicValueIfLocal(ProgramState programState, ISymbol symbol)
+        #region VisitExpression*
+
+        private ProgramState VisitObjectCreation(ObjectCreationExpressionSyntax ctor, ProgramState programState)
+        {
+            var newProgramState = programState.PopValues(ctor.ArgumentList?.Arguments.Count ?? 0);
+            var sv = new SymbolicValue();
+
+            var ctorSymbol = SemanticModel.GetSymbolInfo(ctor).Symbol as IMethodSymbol;
+            if (ctorSymbol == null)
+            {
+                // Add no constraint
+            }
+            else if (IsEmptyNullableCtorCall(ctorSymbol))
+            {
+                newProgramState = sv.SetConstraint(ObjectConstraint.Null, newProgramState);
+            }
+            else
+            {
+                newProgramState = sv.SetConstraint(ObjectConstraint.NotNull, newProgramState);
+            }
+
+            return newProgramState.PushValue(sv);
+        }
+
+        private static ProgramState VisitInitializer(SyntaxNode instruction, ExpressionSyntax parenthesizedExpression, ProgramState programState)
+        {
+            var init = (InitializerExpressionSyntax)instruction;
+            var newProgramState = programState.PopValues(init.Expressions.Count);
+
+            if (!(parenthesizedExpression.Parent is ObjectCreationExpressionSyntax) &&
+                !(parenthesizedExpression.Parent is ArrayCreationExpressionSyntax) &&
+                !(parenthesizedExpression.Parent is AnonymousObjectCreationExpressionSyntax) &&
+                !(parenthesizedExpression.Parent is ImplicitArrayCreationExpressionSyntax))
+            {
+                newProgramState = newProgramState.PushValue(new SymbolicValue());
+            }
+
+            return newProgramState;
+        }
+
+        private ProgramState VisitIdentifier(IdentifierNameSyntax identifier, ProgramState programState)
+        {
+            var symbol = SemanticModel.GetSymbolInfo(identifier).Symbol;
+            var sv = programState.GetSymbolValue(symbol);
+            if (sv == null)
+            {
+                sv = new SymbolicValue();
+            }
+            var newProgramState = programState.PushValue(sv);
+
+            var parenthesized = identifier.GetSelfOrTopParenthesizedExpression();
+            var argument = parenthesized.Parent as ArgumentSyntax;
+            if (argument == null ||
+                argument.RefOrOutKeyword.IsKind(SyntaxKind.None))
+            {
+                return newProgramState;
+            }
+
+            newProgramState = newProgramState.PopValue();
+            sv = new SymbolicValue();
+            newProgramState = newProgramState.PushValue(sv);
+            return SetNewSymbolicValueIfLocal(newProgramState, symbol, sv);
+        }
+
+        private ProgramState VisitPostfixIncrement(PostfixUnaryExpressionSyntax unary, ProgramState newProgramState)
+        {
+            var leftSymbol = SemanticModel.GetSymbolInfo(unary.Operand).Symbol;
+
+            // Do not change the stacked value
+            var sv = new SymbolicValue();
+            return SetNewSymbolicValueIfLocal(newProgramState, leftSymbol, sv);
+        }
+
+        private ProgramState VisitPrefixIncrement(PrefixUnaryExpressionSyntax unary, ProgramState programState)
+        {
+            var newProgramState = programState;
+            var leftSymbol = SemanticModel.GetSymbolInfo(unary.Operand).Symbol;
+            newProgramState = newProgramState.PopValue();
+
+            var sv = new SymbolicValue();
+            newProgramState = newProgramState.PushValue(sv);
+            return SetNewSymbolicValueIfLocal(newProgramState, leftSymbol, sv);
+        }
+
+        private ProgramState VisitOpAssignment(AssignmentExpressionSyntax assignment, ProgramState programState)
+        {
+            var newProgramState = programState;
+            var leftSymbol = SemanticModel.GetSymbolInfo(assignment.Left).Symbol;
+            newProgramState = newProgramState.PopValues(2);
+
+            var sv = new SymbolicValue();
+            newProgramState = newProgramState.PushValue(sv);
+            newProgramState = SetNewSymbolicValueIfLocal(newProgramState, leftSymbol, sv);
+            return newProgramState;
+        }
+
+        private ProgramState VisitSimpleAssignment(AssignmentExpressionSyntax assignment, ProgramState programState)
+        {
+            var newProgramState = programState;
+            SymbolicValue sv;
+            newProgramState = newProgramState.PopValue(out sv);
+            newProgramState = newProgramState.PopValue();
+
+            var leftSymbol = SemanticModel.GetSymbolInfo(assignment.Left).Symbol;
+            if (leftSymbol != null &&
+                IsLocalScoped(leftSymbol))
+            {
+                newProgramState = newProgramState.SetSymbolicValue(leftSymbol, sv);
+            }
+
+            return newProgramState.PushValue(sv);
+        }
+
+        private ProgramState VisitVariableDeclarator(VariableDeclaratorSyntax declarator, ProgramState programState)
+        {
+            var newProgramState = programState;
+
+            var sv = new SymbolicValue();
+            if (declarator.Initializer?.Value != null)
+            {
+                newProgramState = newProgramState.PopValue(out sv);
+            }
+
+            var leftSymbol = SemanticModel.GetDeclaredSymbol(declarator);
+            if (leftSymbol != null &&
+                 IsLocalScoped(leftSymbol))
+            {
+                newProgramState = newProgramState.SetSymbolicValue(leftSymbol, sv);
+            }
+
+            return newProgramState;
+        }
+
+        #endregion
+
+        private ProgramState SetNewSymbolicValueIfLocal(ProgramState programState, ISymbol symbol, SymbolicValue symbolicValue)
         {
             return IsLocalScoped(symbol)
-                ? SetNewSymbolicValue(programState, symbol, IsNonNullableValueType(symbol))
+                ? SetNewSymbolicValue(programState, symbol, symbolicValue, IsNonNullableValueType(symbol))
                 : programState;
         }
 
@@ -548,11 +912,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 newProgramState = value.SetConstraint(ObjectConstraint.NotNull, newProgramState);
             }
             return newProgramState;
-        }
-
-        private static ProgramState SetNewSymbolicValue(ProgramState programState, ISymbol symbol, bool shouldSetNotNullConstraint)
-        {
-            return SetNewSymbolicValue(programState, symbol, new SymbolicValue(), shouldSetNotNullConstraint);
         }
 
         private ProgramState GetCleanedProgramState(Node node)
@@ -589,70 +948,20 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 symbol.ContainingSymbol.Equals(declaration);
         }
 
-        private static ProgramState GetNewProgramStateForAssignment(ProgramState programState, ISymbol leftSymbol, ISymbol rightSymbol,
-            Optional<object> constantValue)
-        {
-            var rightSideSymbolicValue = programState.GetSymbolValue(rightSymbol);
-            ProgramState newProgramState;
-            if (rightSideSymbolicValue == null)
-            {
-                newProgramState = SetNewSymbolicValue(programState, leftSymbol, IsNonNullableValueType(leftSymbol));
-            }
-            else
-            {
-                var shouldSetNotNullConstraint = IsNonNullableValueType(leftSymbol) &&
-                    !rightSymbol.HasConstraint(ObjectConstraint.NotNull, programState);
-
-                newProgramState = SetNewSymbolicValue(programState, leftSymbol, rightSideSymbolicValue, shouldSetNotNullConstraint);
-            }
-
-            if (constantValue.HasValue)
-            {
-                var boolConstant = constantValue.Value as bool?;
-                if (boolConstant.HasValue)
-                {
-                    newProgramState = newProgramState.SetSymbolicValue(leftSymbol,
-                        boolConstant.Value ? SymbolicValue.True : SymbolicValue.False);
-                }
-                else if (constantValue.Value == null)
-                {
-                    newProgramState = SetSymbolToEitherNullOrNotNull(newProgramState, leftSymbol,
-                        isNull: !IsNonNullableValueType(leftSymbol));
-                }
-            }
-            else
-            {
-                var nullableConstructorCall = rightSymbol as IMethodSymbol;
-                if (IsNullableConstructorCall(nullableConstructorCall))
-                {
-                    newProgramState = SetSymbolToEitherNullOrNotNull(newProgramState, leftSymbol,
-                        isNull: !nullableConstructorCall.Parameters.Any());
-                }
-            }
-
-            return newProgramState;
-        }
-
-        private static ProgramState SetSymbolToEitherNullOrNotNull(ProgramState programState, ISymbol symbol, bool isNull)
-        {
-            return isNull
-                ? programState.SetSymbolicValue(symbol, SymbolicValue.Null)
-                : SetNewSymbolicValue(programState, symbol, true);
-        }
-
-        private static bool IsNullableConstructorCall(IMethodSymbol nullableConstructorCall)
-        {
-            return nullableConstructorCall != null &&
-                nullableConstructorCall.MethodKind == MethodKind.Constructor &&
-                nullableConstructorCall.ReceiverType.OriginalDefinition.Is(KnownType.System_Nullable_T);
-        }
-
         internal bool IsNullableLocalScoped(ISymbol symbol)
         {
             var type = GetTypeOfSymbol(symbol);
             return type != null &&
                 type.OriginalDefinition.Is(KnownType.System_Nullable_T) &&
                 IsLocalScoped(symbol);
+        }
+
+        private static bool IsEmptyNullableCtorCall(IMethodSymbol nullableConstructorCall)
+        {
+            return nullableConstructorCall != null &&
+                nullableConstructorCall.MethodKind == MethodKind.Constructor &&
+                nullableConstructorCall.ReceiverType.OriginalDefinition.Is(KnownType.System_Nullable_T) &&
+                nullableConstructorCall.Parameters.Length == 0;
         }
 
         internal static bool IsValueType(ITypeSymbol type)

@@ -180,7 +180,7 @@ namespace NS
         [TestCategory("Symbolic execution")]
         public void ExplodedGraph_SingleBranchVisited_If()
         {
-            string testInput = "var a = !true; bool b; if (a) { b = true; } else { b = false; } a = b;";
+            string testInput = "var a = false; bool b; if (a) { b = true; } else { b = false; } a = b;";
             SemanticModel semanticModel;
             var method = ControlFlowGraphTest.Compile(string.Format(TestInput, testInput), "Bar", out semanticModel);
             var methodSymbol = semanticModel.GetDeclaredSymbol(method);
@@ -205,9 +205,9 @@ namespace NS
                 (sender, args) =>
                 {
                     numberOfProcessedInstructions++;
-                    if (args.Instruction.ToString() == "a = !true")
+                    if (args.Instruction.ToString() == "a = false")
                     {
-                        Assert.IsTrue(args.ProgramState.GetSymbolValue(aSymbol) == SymbolicValue.False); // Roslyn is clever !true has const value.
+                        Assert.IsTrue(args.ProgramState.GetSymbolValue(aSymbol) == SymbolicValue.False);
                     }
                     if (args.Instruction.ToString() == "b = true")
                     {
@@ -228,7 +228,7 @@ namespace NS
             explodedGraph.Walk();
 
             Assert.IsTrue(explorationEnded);
-            Assert.AreEqual(11, numberOfProcessedInstructions);
+            Assert.AreEqual(10, numberOfProcessedInstructions);
             Assert.AreEqual(1, numberOfExitBlockReached);
             Assert.AreEqual(1, numberOfLastInstructionVisits);
         }
@@ -237,7 +237,7 @@ namespace NS
         [TestCategory("Symbolic execution")]
         public void ExplodedGraph_SingleBranchVisited_And()
         {
-            string testInput = "var a = !true; if (a && !a) { a = true; }";
+            string testInput = "var a = false; if (a && !a) { a = true; }";
             SemanticModel semanticModel;
             var method = ControlFlowGraphTest.Compile(string.Format(TestInput, testInput), "Bar", out semanticModel);
             var methodSymbol = semanticModel.GetDeclaredSymbol(method);
@@ -280,7 +280,7 @@ namespace NS
         [TestCategory("Symbolic execution")]
         public void ExplodedGraph_BothBranchesVisited()
         {
-            string testInput = "var a = !true; bool b; if (inParameter) { b = inParameter; } else { b = !inParameter; } a = b;";
+            string testInput = "var a = false; bool b; if (inParameter) { b = inParameter; } else { b = !inParameter; } a = b;";
             SemanticModel semanticModel;
             var method = ControlFlowGraphTest.Compile(string.Format(TestInput, testInput), "Bar", out semanticModel);
             var methodSymbol = semanticModel.GetDeclaredSymbol(method);
@@ -314,7 +314,7 @@ namespace NS
                     visitedBlocks.Add(args.ProgramPoint.Block);
 
                     numberOfProcessedInstructions++;
-                    if (args.Instruction.ToString() == "a = !true")
+                    if (args.Instruction.ToString() == "a = false")
                     {
                         branchesVisited++;
 

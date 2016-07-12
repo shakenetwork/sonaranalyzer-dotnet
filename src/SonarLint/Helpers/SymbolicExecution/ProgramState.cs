@@ -32,6 +32,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         internal ImmutableDictionary<ISymbol, SymbolicValue> Values { get; }
         internal ImmutableDictionary<SymbolicValue, SymbolicValueConstraint> Constraints { get; }
         internal ImmutableDictionary<ProgramPoint, int> ProgramPointVisitCounts { get; }
+        internal ImmutableStack<SymbolicValue> ExpressionStack { get; }
 
         private static ImmutableDictionary<SymbolicValue, SymbolicValueConstraint> InitialConstraints =>
             new Dictionary<SymbolicValue, SymbolicValueConstraint>
@@ -49,25 +50,81 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         internal ProgramState()
             : this(ImmutableDictionary<ISymbol, SymbolicValue>.Empty,
                   InitialConstraints,
-                  ImmutableDictionary<ProgramPoint, int>.Empty)
+                  ImmutableDictionary<ProgramPoint, int>.Empty,
+                  ImmutableStack<SymbolicValue>.Empty)
         {
         }
 
         internal ProgramState(ImmutableDictionary<ISymbol, SymbolicValue> values,
             ImmutableDictionary<SymbolicValue, SymbolicValueConstraint> constraints,
-            ImmutableDictionary<ProgramPoint, int> programPointVisitCounts)
+            ImmutableDictionary<ProgramPoint, int> programPointVisitCounts,
+            ImmutableStack<SymbolicValue> expressionStack)
         {
             Values = values;
             Constraints = constraints;
             ProgramPointVisitCounts = programPointVisitCounts;
+            ExpressionStack = expressionStack;
         }
+
+        public ProgramState PushValue(SymbolicValue symbolicValue)
+        {
+            return new ProgramState(
+                Values,
+                Constraints,
+                ProgramPointVisitCounts,
+                ExpressionStack.Push(symbolicValue));
+        }
+
+        public ProgramState PopValue()
+        {
+            SymbolicValue poppedValue;
+            return PopValue(out poppedValue);
+        }
+
+        public ProgramState PopValue(out SymbolicValue poppedValue)
+        {
+            return new ProgramState(
+                Values,
+                Constraints,
+                ProgramPointVisitCounts,
+                ExpressionStack.Pop(out poppedValue));
+        }
+
+        public ProgramState PopValues(int numberOfValuesToPop)
+        {
+            if (numberOfValuesToPop <= 0)
+            {
+                return this;
+            }
+
+            var newStack = ImmutableStack.Create(
+                ExpressionStack.Skip(numberOfValuesToPop).ToArray());
+
+            return new ProgramState(
+                Values,
+                Constraints,
+                ProgramPointVisitCounts,
+                newStack);
+        }
+
+        internal ProgramState ClearStack()
+        {
+            return new ProgramState(
+                Values,
+                Constraints,
+                ProgramPointVisitCounts,
+                ImmutableStack<SymbolicValue>.Empty);
+        }
+
+        internal bool HasValue => !ExpressionStack.IsEmpty;
 
         internal ProgramState SetSymbolicValue(ISymbol symbol, SymbolicValue newSymbolicValue)
         {
             return new ProgramState(
                 Values.SetItem(symbol, newSymbolicValue),
                 Constraints,
-                ProgramPointVisitCounts);
+                ProgramPointVisitCounts,
+                ExpressionStack);
         }
 
         public SymbolicValue GetSymbolValue(ISymbol symbol)
@@ -83,7 +140,11 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         internal ProgramState AddVisit(ProgramPoint visitedProgramPoint)
         {
             var visitCount = GetVisitedCount(visitedProgramPoint);
-            return new ProgramState(Values, Constraints, ProgramPointVisitCounts.SetItem(visitedProgramPoint, visitCount + 1));
+            return new ProgramState(
+                Values,
+                Constraints,
+                ProgramPointVisitCounts.SetItem(visitedProgramPoint, visitCount + 1),
+                ExpressionStack);
         }
 
         internal int GetVisitedCount(ProgramPoint programPoint)
@@ -106,10 +167,13 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             var usedSymbolicValues = cleanedValues.Values.ToImmutableHashSet();
 
             var cleanedConstraints = Constraints
-                .Where(kv => usedSymbolicValues.Contains(kv.Key) || ProtectedSymbolicValues.Contains(kv.Key))
+                .Where(kv =>
+                    usedSymbolicValues.Contains(kv.Key) ||
+                    ProtectedSymbolicValues.Contains(kv.Key) ||
+                    ExpressionStack.Contains(kv.Key))
                 .ToImmutableDictionary();
 
-            return new ProgramState(cleanedValues, cleanedConstraints, ProgramPointVisitCounts);
+            return new ProgramState(cleanedValues, cleanedConstraints, ProgramPointVisitCounts, ExpressionStack);
         }
 
         public override bool Equals(object obj)
@@ -131,7 +195,8 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             }
 
             return DictionaryHelper.DictionaryEquals(Values, other.Values) &&
-                DictionaryHelper.DictionaryEquals(Constraints, other.Constraints);
+                DictionaryHelper.DictionaryEquals(Constraints, other.Constraints) &&
+                Enumerable.SequenceEqual(ExpressionStack, other.ExpressionStack);
         }
 
         public override int GetHashCode()
@@ -148,6 +213,11 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             {
                 hash = hash * 31 + constraint.Key.GetHashCode();
                 hash = hash * 31 + constraint.Value.GetHashCode();
+            }
+
+            foreach (var value in ExpressionStack)
+            {
+                hash = hash * 31 + value.GetHashCode();
             }
 
             return hash;
