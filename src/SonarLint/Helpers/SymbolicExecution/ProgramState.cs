@@ -19,6 +19,7 @@
  */
 
 using Microsoft.CodeAnalysis;
+using SonarLint.Common;
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
@@ -129,36 +130,8 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 return false;
             }
 
-            return DictionaryEquals(Values, other.Values) &&
-                DictionaryEquals(Constraints, other.Constraints);
-        }
-
-        private static bool DictionaryEquals<TKey, TValue>(IDictionary<TKey, TValue> dict1, IDictionary<TKey, TValue> dict2)
-        {
-            if (dict1 == dict2)
-            {
-                return true;
-            }
-
-            if (dict1 == null ||
-                dict2 == null ||
-                dict1.Count != dict2.Count)
-            {
-                return false;
-            }
-
-            var valueComparer = EqualityComparer<TValue>.Default;
-
-            foreach (var kvp in dict1)
-            {
-                TValue value2;
-                if (!dict2.TryGetValue(kvp.Key, out value2) ||
-                    !valueComparer.Equals(kvp.Value, value2))
-                {
-                    return false;
-                }
-            }
-            return true;
+            return DictionaryHelper.DictionaryEquals(Values, other.Values) &&
+                DictionaryHelper.DictionaryEquals(Constraints, other.Constraints);
         }
 
         public override int GetHashCode()
