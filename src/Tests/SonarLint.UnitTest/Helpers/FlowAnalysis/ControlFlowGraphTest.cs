@@ -1547,9 +1547,39 @@ namespace NS
             case3.SuccessorBlocks.Should().OnlyContain(defaultCase);
             defaultCase.SuccessorBlocks.Should().OnlyContain(cw2);
 
-            cw1.SuccessorBlocks.Should().OnlyContain(case3);
+            cw1.SuccessorBlocks.Should().OnlyContain(case3 );
             cw2.SuccessorBlocks.Should().OnlyContain(cw3);
             cw3.SuccessorBlocks.Should().OnlyContain(exitBlock);
+        }
+
+        [TestMethod]
+        [TestCategory("CFG")]
+        public void Cfg_Switch_Null()
+        {
+            var cfg = Build("cw0(); switch(a) { case \"\": case null: cw1(); break; case \"a\": cw2(); goto case null; } cw3();");
+            VerifyCfg(cfg, 6);
+
+            var blocks = cfg.Blocks.ToList();
+
+            var cw0 = blocks
+                .First(block => block.Instructions.Any(n => n.ToString() == "cw0")) as BranchBlock;
+            var cw1 = blocks
+                .First(block => block.Instructions.Any(n => n.ToString() == "cw1")) as JumpBlock;
+            var cw2 = blocks
+                .First(block => block.Instructions.Any(n => n.ToString() == "cw2")) as JumpBlock;
+            var cw3 = blocks
+                .First(block => block.Instructions.Any(n => n.ToString() == "cw3"));
+
+            var caseA = blocks[1] as JumpBlock;
+            var caseEmptyString = blocks[2] as JumpBlock;
+            var caseNull = blocks[3] as JumpBlock;
+
+            cw0.Should().BeSameAs(cfg.EntryBlock);
+
+            cw0.SuccessorBlocks.Should().OnlyContainInOrder(caseEmptyString, caseNull, caseA, blocks[4]);
+            caseEmptyString.SuccessorBlocks.Should().OnlyContain(caseNull);
+            caseNull.SuccessorBlocks.Should().OnlyContain(blocks[4]);
+            caseA.SuccessorBlocks.Should().OnlyContain(caseNull);
         }
 
         [TestMethod]

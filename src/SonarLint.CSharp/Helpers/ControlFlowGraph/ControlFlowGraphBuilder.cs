@@ -36,6 +36,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
         private readonly Dictionary<string, List<JumpBlock>> GotoJumpBlocks = new Dictionary<string, List<JumpBlock>>();
         private readonly Dictionary<string, JumpBlock> LabeledStatements = new Dictionary<string, JumpBlock>();
         private static readonly object GotoDefaultEntry = new object();
+        private static readonly object GotoNullEntry = new object();
 
         internal ControlFlowGraphBuilder(CSharpSyntaxNode node, SemanticModel semanticModel)
             : base(node, semanticModel)
@@ -500,19 +501,15 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             var jumpBlock = CreateJumpBlock(statement, CreateTemporaryBlock(), currentBlock);
             currentBlock = jumpBlock;
 
-            var constValue = semanticModel.GetConstantValue(statement.Expression);
-            if (!constValue.HasValue)
-            {
-                throw new InvalidOperationException("Expression has no constant value");
-            }
-
             var currentJumpBlocks = SwitchGotoJumpBlocks.Peek();
-            if (!currentJumpBlocks.ContainsKey(constValue.Value))
+            var indexer = GetCaseIndexer(statement.Expression);
+
+            if (!currentJumpBlocks.ContainsKey(indexer))
             {
-                currentJumpBlocks.Add(constValue.Value, new List<JumpBlock>());
+                currentJumpBlocks.Add(indexer, new List<JumpBlock>());
             }
 
-            currentJumpBlocks[constValue.Value].Add(jumpBlock);
+            currentJumpBlocks[indexer].Add(jumpBlock);
         }
 
         private void BuildGotoStatement(GotoStatementSyntax statement)
@@ -576,13 +573,9 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                     }
                     else
                     {
-                        var caseLabel = label as CaseSwitchLabelSyntax;
-                        var constValue = semanticModel.GetConstantValue(caseLabel.Value);
-                        if (!constValue.HasValue)
-                        {
-                            throw new InvalidOperationException("Expression has no constant value");
-                        }
-                        caseBlocksByValue[constValue.Value] = fallThroughBlock;
+                        var caseLabel = (CaseSwitchLabelSyntax)label;
+                        var indexer = GetCaseIndexer(caseLabel.Value);
+                        caseBlocksByValue[indexer] = fallThroughBlock;
                     }
                 }
 
@@ -601,6 +594,23 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             currentBlock = CreateBranchBlock(switchStatement, caseBlocks);
 
             BuildExpression(switchStatement.Expression);
+        }
+
+        private object GetCaseIndexer(ExpressionSyntax expression)
+        {
+            var constValue = semanticModel.GetConstantValue(expression);
+            if (!constValue.HasValue)
+            {
+                throw new InvalidOperationException("Expression has no constant value");
+            }
+
+            var indexer = constValue.Value;
+            if (indexer == null)
+            {
+                indexer = GotoNullEntry;
+            }
+
+            return indexer;
         }
 
         #endregion
