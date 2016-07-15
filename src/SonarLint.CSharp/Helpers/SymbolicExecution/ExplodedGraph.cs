@@ -324,19 +324,20 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             SymbolicValue sv;
             var ps = programState.PopValue(out sv);
 
-            ProgramState newProgramState;
-            if (sv.TrySetConstraint(ObjectConstraint.Null, ps, out newProgramState))
+            foreach (var newProgramState in sv.TrySetConstraint(ObjectConstraint.Null, ps))
             {
                 EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), newProgramState);
             }
 
-            if (sv.TrySetConstraint(ObjectConstraint.NotNull, ps, out newProgramState))
+            foreach (var newProgramState in sv.TrySetConstraint(ObjectConstraint.NotNull, ps))
             {
+                var nps = newProgramState;
+
                 if (!ShouldConsumeValue((BinaryExpressionSyntax)binaryBranchBlock.BranchingNode))
                 {
-                    newProgramState = newProgramState.PushValue(sv);
+                    nps = nps.PushValue(sv);
                 }
-                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), newProgramState);
+                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), nps);
             }
         }
 
@@ -345,17 +346,18 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             SymbolicValue sv;
             var ps = programState.PopValue(out sv);
 
-            ProgramState newProgramState;
-            if (sv.TrySetConstraint(ObjectConstraint.Null, ps, out newProgramState))
+            foreach (var newProgramState in sv.TrySetConstraint(ObjectConstraint.Null, ps))
             {
+                var nps = newProgramState;
+
                 if (!ShouldConsumeValue((ConditionalAccessExpressionSyntax)binaryBranchBlock.BranchingNode))
                 {
-                    newProgramState = newProgramState.PushValue(SymbolicValue.Null);
+                    nps = nps.PushValue(SymbolicValue.Null);
                 }
-                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), newProgramState);
+                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), nps);
             }
 
-            if (sv.TrySetConstraint(ObjectConstraint.NotNull, ps, out newProgramState))
+            foreach (var newProgramState in sv.TrySetConstraint(ObjectConstraint.NotNull, ps))
             {
                 EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), newProgramState);
             }
@@ -376,21 +378,20 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             ps = ps.PopValue(out sv);
             ps = ClearStackForForLoop(binaryBranchBlock.BranchingNode as ForStatementSyntax, ps);
 
-            ProgramState newProgramState;
-            if (sv.TrySetConstraint(BoolConstraint.True, ps, out newProgramState))
+            foreach (var newProgramState in sv.TrySetConstraint(BoolConstraint.True, ps))
             {
                 OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: true);
 
-                newProgramState = FixStackForLogicalOr(binaryBranchBlock, newProgramState);
-                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
+                var nps = FixStackForLogicalOr(binaryBranchBlock, newProgramState);
+                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), GetCleanedProgramState(nps, node.ProgramPoint.Block));
             }
 
-            if (sv.TrySetConstraint(BoolConstraint.False, ps, out newProgramState))
+            foreach (var newProgramState in sv.TrySetConstraint(BoolConstraint.False, ps))
             {
                 OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: false);
 
-                newProgramState = FixStackForLogicalAnd(binaryBranchBlock, newProgramState);
-                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
+                var nps = FixStackForLogicalAnd(binaryBranchBlock, newProgramState);
+                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), GetCleanedProgramState(nps, node.ProgramPoint.Block));
             }
         }
 
@@ -424,24 +425,23 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             }
 
             ProgramState programState = node.ProgramState;
-            ProgramState newProgramState;
             programState = programState.PopValue();
             programState = ClearStackForForLoop(binaryBranchBlock.BranchingNode as ForStatementSyntax, programState);
 
-            if (symbolicValue.TrySetConstraint(trueBranchConstraint, programState, out newProgramState))
+            foreach (var newProgramState in symbolicValue.TrySetConstraint(trueBranchConstraint, programState))
             {
                 OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: true);
 
-                newProgramState = FixStackForLogicalOr(binaryBranchBlock, newProgramState);
-                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
+                var nps = FixStackForLogicalOr(binaryBranchBlock, newProgramState);
+                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), GetCleanedProgramState(nps, node.ProgramPoint.Block));
             }
 
-            if (symbolicValue.TrySetConstraint(falseBranchConstraint, programState, out newProgramState))
+            foreach (var newProgramState in symbolicValue.TrySetConstraint(falseBranchConstraint, programState))
             {
                 OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: false);
 
-                newProgramState = FixStackForLogicalAnd(binaryBranchBlock, newProgramState);
-                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
+                var nps = FixStackForLogicalAnd(binaryBranchBlock, newProgramState);
+                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), GetCleanedProgramState(nps, node.ProgramPoint.Block));
             }
 
             return true;
@@ -516,9 +516,16 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 case SyntaxKind.SimpleAssignmentExpression:
                     newProgramState = VisitSimpleAssignment((AssignmentExpressionSyntax)instruction, newProgramState);
                     break;
+
                 case SyntaxKind.OrAssignmentExpression:
+                    newProgramState = VisitBooleanBinaryOpAssignment(newProgramState, (AssignmentExpressionSyntax)instruction, (l, r) => new OrSymbolicValue(l, r));
+                    break;
                 case SyntaxKind.AndAssignmentExpression:
+                    newProgramState = VisitBooleanBinaryOpAssignment(newProgramState, (AssignmentExpressionSyntax)instruction, (l, r) => new AndSymbolicValue(l, r));
+                    break;
                 case SyntaxKind.ExclusiveOrAssignmentExpression:
+                    newProgramState = VisitBooleanBinaryOpAssignment(newProgramState, (AssignmentExpressionSyntax)instruction, (l, r) => new XorSymbolicValue(l, r));
+                    break;
 
                 case SyntaxKind.SubtractAssignmentExpression:
                 case SyntaxKind.AddAssignmentExpression:
@@ -545,16 +552,22 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                     newProgramState = VisitIdentifier((IdentifierNameSyntax)instruction, newProgramState);
                     break;
 
+                case SyntaxKind.BitwiseOrExpression:
+                    newProgramState = VisitBooleanBinaryOperator(newProgramState, (l, r) => new OrSymbolicValue(l, r));
+                    break;
+                case SyntaxKind.BitwiseAndExpression:
+                    newProgramState = VisitBooleanBinaryOperator(newProgramState, (l, r) => new AndSymbolicValue(l, r));
+                    break;
+                case SyntaxKind.ExclusiveOrExpression:
+                    newProgramState = VisitBooleanBinaryOperator(newProgramState, (l, r) => new XorSymbolicValue(l, r));
+                    break;
+
                 case SyntaxKind.LessThanExpression:
                 case SyntaxKind.LessThanOrEqualExpression:
                 case SyntaxKind.GreaterThanExpression:
                 case SyntaxKind.GreaterThanOrEqualExpression:
                 case SyntaxKind.EqualsExpression:
                 case SyntaxKind.NotEqualsExpression:
-
-                case SyntaxKind.BitwiseOrExpression:
-                case SyntaxKind.BitwiseAndExpression:
-                case SyntaxKind.ExclusiveOrExpression:
 
                 case SyntaxKind.SubtractExpression:
                 case SyntaxKind.AddExpression:
@@ -728,6 +741,30 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
         }
 
         #region VisitExpression*
+
+        private static ProgramState VisitBooleanBinaryOperator(ProgramState programState, Func<SymbolicValue, SymbolicValue, SymbolicValue> symbolicValueFactory)
+        {
+            SymbolicValue leftSymbol;
+            SymbolicValue rightSymbol;
+            var newProgramState = programState.PopValue(out leftSymbol);
+            newProgramState = newProgramState.PopValue(out rightSymbol);
+            return newProgramState.PushValue(symbolicValueFactory(leftSymbol, rightSymbol));
+        }
+
+        private ProgramState VisitBooleanBinaryOpAssignment(ProgramState programState, AssignmentExpressionSyntax assignment,
+            Func<SymbolicValue, SymbolicValue, SymbolicValue> symbolicValueFactory)
+        {
+            var symbol = SemanticModel.GetSymbolInfo(assignment.Left).Symbol;
+
+            SymbolicValue leftSymbol;
+            SymbolicValue rightSymbol;
+            var newProgramState = programState.PopValue(out leftSymbol);
+            newProgramState = newProgramState.PopValue(out rightSymbol);
+
+            var sv = symbolicValueFactory(leftSymbol, rightSymbol);
+            newProgramState = newProgramState.PushValue(sv);
+            return SetNewSymbolicValueIfLocal(newProgramState, symbol, sv);
+        }
 
         private ProgramState VisitObjectCreation(ObjectCreationExpressionSyntax ctor, ProgramState programState)
         {

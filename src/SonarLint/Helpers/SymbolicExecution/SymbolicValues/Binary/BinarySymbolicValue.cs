@@ -18,26 +18,17 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System;
-
 namespace SonarLint.Helpers.FlowAnalysis.Common
 {
-    public class LogicalNotSymbolicValue : UnarySymbolicValue
+    public class BinarySymbolicValue : SymbolicValue
     {
-        public LogicalNotSymbolicValue(SymbolicValue operand)
-            : base(operand)
-        {
-        }
+        protected readonly SymbolicValue leftOperand;
+        protected readonly SymbolicValue rightOperand;
 
-        public override bool TrySetConstraint(SymbolicValueConstraint constraint, ProgramState currentProgramState, out ProgramState newProgramState)
+        public BinarySymbolicValue(SymbolicValue leftOperand, SymbolicValue rightOperand)
         {
-            var boolConstraint = constraint as BoolConstraint;
-            if (boolConstraint == null)
-            {
-                throw new NotSupportedException($"Only a {nameof(BoolConstraint)} can be set on a {nameof(LogicalNotSymbolicValue)}");
-            }
-
-            return operand.TrySetConstraint(boolConstraint.Inverse, currentProgramState, out newProgramState);
+            this.leftOperand = leftOperand;
+            this.rightOperand = rightOperand;
         }
     }
 }

@@ -196,7 +196,7 @@ namespace SonarLint.Rules.CSharp
                 this.nullable = nullable;
             }
 
-            public override bool TrySetConstraint(SymbolicValueConstraint constraint, ProgramState currentProgramState, out ProgramState newProgramState)
+            public override IEnumerable<ProgramState> TrySetConstraint(SymbolicValueConstraint constraint, ProgramState currentProgramState)
             {
                 var boolConstraint = constraint as BoolConstraint;
                 if (boolConstraint == null)
@@ -208,7 +208,7 @@ namespace SonarLint.Rules.CSharp
                     ? ObjectConstraint.NotNull
                     : ObjectConstraint.Null;
 
-                return nullable.TrySetConstraint(nullabilityConstraint, currentProgramState, out newProgramState);
+                return nullable.TrySetConstraint(nullabilityConstraint, currentProgramState);
             }
         }
     }

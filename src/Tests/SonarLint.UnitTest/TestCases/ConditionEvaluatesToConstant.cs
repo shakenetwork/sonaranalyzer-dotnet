@@ -341,5 +341,39 @@ namespace Tests.Diagnostics
             {
             }
         }
+
+        public void BooleanBinary(bool a, bool b)
+        {
+            if (a & !b)
+            {
+                if (a) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+                if (b) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            }
+
+            if (!(a | b))
+            {
+                if (a) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            }
+
+            if (a ^ b)
+            {
+                if (!a ^ !b) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+            }
+
+            a = false;
+            if (a & b) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+
+            a &= true;
+            if (a) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+
+            a |= true;
+            if (a) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+
+            a ^= true;
+            if (a) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+
+            a ^= true;
+            if (a) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+        }
     }
 }

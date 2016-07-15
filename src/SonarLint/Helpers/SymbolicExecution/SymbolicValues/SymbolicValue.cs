@@ -19,6 +19,8 @@
  */
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SonarLint.Helpers.FlowAnalysis.Common
 {
@@ -79,70 +81,61 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 programState.ExpressionStack);
         }
 
-        public virtual bool TrySetConstraint(SymbolicValueConstraint constraint, ProgramState currentProgramState, out ProgramState newProgramState)
+        public virtual IEnumerable<ProgramState> TrySetConstraint(SymbolicValueConstraint constraint, ProgramState currentProgramState)
         {
-            newProgramState = null;
-
             SymbolicValueConstraint oldConstraint;
             if (!currentProgramState.Constraints.TryGetValue(this, out oldConstraint))
             {
-                newProgramState = SetConstraint(constraint, currentProgramState);
-                return true;
+                return new[] { SetConstraint(constraint, currentProgramState) };
             }
 
             var boolConstraint = constraint as BoolConstraint;
             if (boolConstraint != null)
             {
-                return TrySetConstraint(boolConstraint, oldConstraint, currentProgramState, out newProgramState);
+                return TrySetConstraint(boolConstraint, oldConstraint, currentProgramState);
             }
 
             var objectConstraint = constraint as ObjectConstraint;
             if (objectConstraint != null)
             {
-                return TrySetConstraint(objectConstraint, oldConstraint, currentProgramState, out newProgramState);
+                return TrySetConstraint(objectConstraint, oldConstraint, currentProgramState);
             }
 
             throw new NotSupportedException($"Neither {nameof(BoolConstraint)}, nor {nameof(ObjectConstraint)}");
         }
 
-        private bool TrySetConstraint(BoolConstraint boolConstraint, SymbolicValueConstraint oldConstraint,
-            ProgramState currentProgramState, out ProgramState newProgramState)
+        private IEnumerable<ProgramState> TrySetConstraint(BoolConstraint boolConstraint, SymbolicValueConstraint oldConstraint,
+            ProgramState currentProgramState)
         {
-            newProgramState = null;
-
             if (oldConstraint == ObjectConstraint.Null)
             {
                 // It was null, and now it should be true or false
-                return false;
+                return Enumerable.Empty<ProgramState>();
             }
 
             var oldBoolConstraint = oldConstraint as BoolConstraint;
             if (oldBoolConstraint != null &&
                 oldBoolConstraint != boolConstraint)
             {
-                return false;
+                return Enumerable.Empty<ProgramState>();
             }
 
             // Either same bool constraint, or previously not null, and now a bool constraint
-            newProgramState = SetConstraint(boolConstraint, currentProgramState);
-            return true;
+            return new[] { SetConstraint(boolConstraint, currentProgramState) };
         }
 
-        private bool TrySetConstraint(ObjectConstraint objectConstraint, SymbolicValueConstraint oldConstraint,
-            ProgramState currentProgramState, out ProgramState newProgramState)
+        private IEnumerable<ProgramState> TrySetConstraint(ObjectConstraint objectConstraint, SymbolicValueConstraint oldConstraint,
+            ProgramState currentProgramState)
         {
-            newProgramState = null;
-
             var oldBoolConstraint = oldConstraint as BoolConstraint;
             if (oldBoolConstraint != null)
             {
                 if (objectConstraint == ObjectConstraint.Null)
                 {
-                    return false;
+                    return Enumerable.Empty<ProgramState>();
                 }
 
-                newProgramState = currentProgramState;
-                return true;
+                return new[] { currentProgramState };
             }
 
             var oldObjectConstraint = oldConstraint as ObjectConstraint;
@@ -150,11 +143,10 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             {
                 if (oldObjectConstraint != objectConstraint)
                 {
-                    return false;
+                    return Enumerable.Empty<ProgramState>();
                 }
 
-                newProgramState = SetConstraint(objectConstraint, currentProgramState);
-                return true;
+                return new[] { SetConstraint(objectConstraint, currentProgramState) };
             }
 
             throw new NotSupportedException($"Neither {nameof(BoolConstraint)}, nor {nameof(ObjectConstraint)}");
