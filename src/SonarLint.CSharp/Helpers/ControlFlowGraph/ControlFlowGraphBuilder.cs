@@ -292,6 +292,8 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 case SyntaxKind.ParenthesizedLambdaExpression:
                 case SyntaxKind.SimpleLambdaExpression:
                 case SyntaxKind.QueryExpression:
+
+                case SyntaxKind.ArgListExpression:
                     currentBlock.ReversedInstructions.Add(expression);
                     break;
 
@@ -330,11 +332,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                         var parent = (CastExpressionSyntax)expression;
                         BuildSimpleNestedExpression(parent, parent.Expression);
                     }
-                    break;
-
-                case SyntaxKind.ArgListExpression:
-                    // Nothing to do
-                    // In foo(__arglist(1,2,3)), __arglist doesn't need to be processed, only the arguments
                     break;
 
                 case SyntaxKind.InterpolatedStringExpression:

@@ -1823,7 +1823,7 @@ b = x | 2;  b = x & 2;   b = x ^ 2;  c = ""c"" + 'c';  c = a - b;   c = a * b;  
 
             cfg = Build("var x = await this.Method(__arglist(10,11));");
             VerifyMinimalCfg(cfg);
-            VerifyInstructions(cfg.EntryBlock, 2, "10", "11", "__arglist(10,11)" ,
+            VerifyInstructions(cfg.EntryBlock, 2, "__arglist", "10", "11", "__arglist(10,11)" ,
                 "this.Method(__arglist(10,11))", "await this.Method(__arglist(10,11))");
 
             cfg = Build("var x = 1; var y = __refvalue(__makeref(x), int); var t = __reftype(__makeref(x));");
