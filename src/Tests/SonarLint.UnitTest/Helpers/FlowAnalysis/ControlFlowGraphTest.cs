@@ -1802,10 +1802,16 @@ b = x | 2;  b = x & 2;   b = x ^ 2;  c = ""c"" + 'c';  c = a - b;   c = a * b;  
                 "{ 10, 20 }");
             VerifyInstructions(cfg.EntryBlock, 7, "{ { 10, 20 }, { 10, 20 } }");
 
+            cfg = Build("var x = new int[] { 1 };");
+            VerifyMinimalCfg(cfg);
+            VerifyAllInstructions(cfg.EntryBlock,
+                "", "int[]", "new int[] { 1 }", "1", "{ 1 }", "x = new int[] { 1 }");
+
             cfg = Build("var x = new int [1,2][3]{ 10, 20 };");
             VerifyMinimalCfg(cfg);
             VerifyInstructions(cfg.EntryBlock, 0,
                 "1", "2", "3",
+                "int [1,2][3]",
                 "new int [1,2][3]{ 10, 20 }",
                 "10",
                 "20",
@@ -1827,7 +1833,7 @@ b = x | 2;  b = x & 2;   b = x ^ 2;  c = ""c"" + 'c';  c = a - b;   c = a * b;  
 
             cfg = Build("var x = stackalloc int[10];");
             VerifyMinimalCfg(cfg);
-            VerifyInstructions(cfg.EntryBlock, 0, "10", "stackalloc int[10]");
+            VerifyInstructions(cfg.EntryBlock, 0, "10", "int[10]", "stackalloc int[10]");
 
             cfg = Build("var x = new Action(()=>{}); var y = new Action(i=>{}); var z = new Action(delegate(){});");
             VerifyMinimalCfg(cfg);

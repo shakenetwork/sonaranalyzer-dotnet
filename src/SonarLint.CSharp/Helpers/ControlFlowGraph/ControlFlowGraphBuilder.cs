@@ -285,6 +285,13 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
                 case SyntaxKind.PredefinedType:
                 case SyntaxKind.NullableType:
+
+                case SyntaxKind.OmittedArraySizeExpression:
+
+                case SyntaxKind.AnonymousMethodExpression:
+                case SyntaxKind.ParenthesizedLambdaExpression:
+                case SyntaxKind.SimpleLambdaExpression:
+                case SyntaxKind.QueryExpression:
                     currentBlock.ReversedInstructions.Add(expression);
                     break;
 
@@ -328,8 +335,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 case SyntaxKind.ArgListExpression:
                     // Nothing to do
                     // In foo(__arglist(1,2,3)), __arglist doesn't need to be processed, only the arguments
-                    break;
-                case SyntaxKind.OmittedArraySizeExpression:
                     break;
 
                 case SyntaxKind.InterpolatedStringExpression:
@@ -443,14 +448,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                         var parent = (ElementBindingExpressionSyntax)expression;
                         BuildSimpleNestedExpression(parent, parent.ArgumentList?.Arguments.Select(a => a.Expression));
                     }
-                    break;
-
-                case SyntaxKind.AnonymousMethodExpression:
-                case SyntaxKind.ParenthesizedLambdaExpression:
-                case SyntaxKind.SimpleLambdaExpression:
-                case SyntaxKind.QueryExpression:
-                    // this could have a special block
-                    currentBlock.ReversedInstructions.Add(expression);
                     break;
 
                 default:
@@ -1022,8 +1019,9 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
         private void BuildArrayType(ArrayTypeSyntax arrayType)
         {
-            var arraySizes = arrayType.RankSpecifiers.SelectMany(rs => rs.Sizes);
+            currentBlock.ReversedInstructions.Add(arrayType);
 
+            var arraySizes = arrayType.RankSpecifiers.SelectMany(rs => rs.Sizes);
             foreach (var arraySize in arraySizes.Reverse())
             {
                 BuildExpression(arraySize);
