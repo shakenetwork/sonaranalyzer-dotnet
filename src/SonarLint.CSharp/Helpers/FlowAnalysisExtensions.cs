@@ -115,6 +115,12 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
         private static void Analyze(CSharpSyntaxNode declarationBody, ISymbol symbol,
             Action<ExplodedGraph, SyntaxNodeAnalysisContext> analyze, SyntaxNodeAnalysisContext context)
         {
+            if (declarationBody == null ||
+                declarationBody.ContainsDiagnostics)
+            {
+                return;
+            }
+
             IControlFlowGraph cfg;
             if (!ControlFlowGraph.TryGet(declarationBody, context.SemanticModel, out cfg))
             {
