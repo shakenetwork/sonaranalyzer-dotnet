@@ -752,13 +752,13 @@ namespace NS
             VerifySimpleJumpBlock(cfg, SyntaxKind.CheckedStatement);
 
             VerifyNoInstruction(cfg.EntryBlock);
-            VerifyInstructions(cfg.EntryBlock.SuccessorBlocks.First(), 0, "int.MaxValue");
+            VerifyInstructions(cfg.EntryBlock.SuccessorBlocks.First(), 1, "int.MaxValue");
 
             cfg = Build("unchecked { var i = int.MaxValue + 1; }");
             VerifySimpleJumpBlock(cfg, SyntaxKind.UncheckedStatement);
 
             VerifyNoInstruction(cfg.EntryBlock);
-            VerifyInstructions(cfg.EntryBlock.SuccessorBlocks.First(), 0, "int.MaxValue");
+            VerifyInstructions(cfg.EntryBlock.SuccessorBlocks.First(), 1, "int.MaxValue");
         }
 
         #endregion
@@ -1836,6 +1836,10 @@ b = x | 2;  b = x & 2;   b = x ^ 2;  c = ""c"" + 'c';  c = a - b;   c = a * b;  
             cfg = Build("var x = from t in ts where t > 42;");
             VerifyMinimalCfg(cfg);
             VerifyInstructions(cfg.EntryBlock, 0, "from t in ts where t > 42", "x = from t in ts where t > 42");
+
+            cfg = Build("string.Format(\"\")");
+            VerifyMinimalCfg(cfg);
+            VerifyAllInstructions(cfg.EntryBlock, "string", "string.Format", "\"\"", "string.Format(\"\")");
         }
 
         #endregion

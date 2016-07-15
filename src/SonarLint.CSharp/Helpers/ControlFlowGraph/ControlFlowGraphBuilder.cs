@@ -282,14 +282,14 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 case SyntaxKind.DefaultExpression:
                 case SyntaxKind.SizeOfExpression:
                 case SyntaxKind.TypeOfExpression:
+
+                case SyntaxKind.PredefinedType:
+                case SyntaxKind.NullableType:
                     currentBlock.ReversedInstructions.Add(expression);
                     break;
 
                 case SyntaxKind.PointerType:
                     BuildExpression(((PointerTypeSyntax)expression).ElementType);
-                    break;
-                case SyntaxKind.PredefinedType:
-                case SyntaxKind.NullableType:
                     break;
 
                 case SyntaxKind.ParenthesizedExpression:
