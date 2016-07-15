@@ -130,7 +130,7 @@ namespace SonarLint.UnitTest
                     }
 
                     expectedLocations.Should().BeEmpty();
-                    expectedIssues.Should().BeEmpty();
+                    Assert.AreEqual(0, expectedIssues.Count, $"Issue not found on line {string.Join(",", expectedIssues.Keys)}.");
                 }
             }
         }
