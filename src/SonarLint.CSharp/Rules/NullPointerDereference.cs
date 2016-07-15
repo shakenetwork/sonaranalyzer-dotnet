@@ -135,7 +135,7 @@ namespace SonarLint.Rules.CSharp
                 });
             }
 
-            public override ProgramState ProcessInstruction(ProgramPoint programPoint, ProgramState programState)
+            public override ProgramState PreProcessInstruction(ProgramPoint programPoint, ProgramState programState)
             {
                 var instruction = programPoint.Block.Instructions[programPoint.Offset];
                 switch (instruction.Kind())

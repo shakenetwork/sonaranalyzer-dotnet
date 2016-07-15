@@ -301,13 +301,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                         return;
                     }
                     break;
-
-                case SyntaxKind.SimpleMemberAccessExpression:
-                    if (TryEnqueueBranchesBasedOn((MemberAccessExpressionSyntax)instruction, binaryBranchBlock, node))
-                    {
-                        return;
-                    }
-                    break;
             }
 
             VisitBinaryBranch(binaryBranchBlock, node, instruction);
@@ -454,52 +447,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             return true;
         }
 
-        private bool TryEnqueueBranchesBasedOn(MemberAccessExpressionSyntax instruction, BinaryBranchBlock binaryBranchBlock, Node node)
-        {
-            var identifier = instruction.Expression.RemoveParentheses() as IdentifierNameSyntax;
-
-            if (identifier == null ||
-                instruction.Name.Identifier.ValueText != "HasValue")
-            {
-                return false;
-            }
-
-            var symbol = SemanticModel.GetSymbolInfo(identifier).Symbol;
-            if (!IsNullableLocalScoped(symbol))
-            {
-                return false;
-            }
-
-            var symbolicValue = node.ProgramState.GetSymbolValue(symbol);
-            if (symbolicValue == null)
-            {
-                throw new InvalidOperationException("Symbol without symbolic value");
-            }
-
-            ProgramState programState = node.ProgramState;
-            ProgramState newProgramState;
-            programState = programState.PopValue();
-            programState = ClearStackForForLoop(binaryBranchBlock.BranchingNode as ForStatementSyntax, programState);
-
-            if (symbolicValue.TrySetConstraint(ObjectConstraint.NotNull, programState, out newProgramState))
-            {
-                OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: true);
-
-                newProgramState = FixStackForLogicalOr(binaryBranchBlock, newProgramState);
-                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
-            }
-
-            if (symbolicValue.TrySetConstraint(ObjectConstraint.Null, programState, out newProgramState))
-            {
-                OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: false);
-
-                newProgramState = FixStackForLogicalAnd(binaryBranchBlock, newProgramState);
-                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), GetCleanedProgramState(newProgramState, node.ProgramPoint.Block));
-            }
-
-            return true;
-        }
-
         private static ProgramState ClearStackForForLoop(ForStatementSyntax forStatement, ProgramState programState)
         {
             return forStatement == null
@@ -554,7 +501,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
             foreach (var explodedGraphCheck in explodedGraphChecks)
             {
-                newProgramState = explodedGraphCheck.ProcessInstruction(node.ProgramPoint, newProgramState);
+                newProgramState = explodedGraphCheck.PreProcessInstruction(node.ProgramPoint, newProgramState);
                 if (newProgramState == null)
                 {
                     return;
@@ -628,7 +575,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 case SyntaxKind.PointerIndirectionExpression:
 
                 case SyntaxKind.PointerMemberAccessExpression:
-                case SyntaxKind.SimpleMemberAccessExpression:
 
                 case SyntaxKind.MakeRefExpression:
                 case SyntaxKind.RefTypeExpression:
@@ -641,6 +587,19 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 case SyntaxKind.MemberBindingExpression:
                     newProgramState = newProgramState.PopValue();
                     newProgramState = newProgramState.PushValue(new SymbolicValue());
+                    break;
+
+                case SyntaxKind.SimpleMemberAccessExpression:
+                    {
+                        var check = explodedGraphChecks.OfType<EmptyNullableValueAccess.NullValueAccessedCheck>().FirstOrDefault();
+                        if (check == null ||
+                            !check.TryProcessInstruction((MemberAccessExpressionSyntax)instruction, newProgramState, out newProgramState))
+                        {
+                            // Default behavior
+                            newProgramState = newProgramState.PopValue();
+                            newProgramState = newProgramState.PushValue(new SymbolicValue());
+                        }
+                    }
                     break;
 
                 case SyntaxKind.GenericName:

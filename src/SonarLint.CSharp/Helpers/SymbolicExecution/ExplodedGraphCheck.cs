@@ -34,7 +34,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             this.semanticModel = explodedGraph.SemanticModel;
         }
 
-        public virtual ProgramState ProcessInstruction(ProgramPoint programPoint, ProgramState programState)
+        public virtual ProgramState PreProcessInstruction(ProgramPoint programPoint, ProgramState programState)
         {
             return programState;
         }

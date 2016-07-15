@@ -50,26 +50,27 @@ namespace Tests.Diagnostics
             Console.WriteLine(i1.Value);
         }
 
-        public void TestComplexCondition(int? i3)
+        public void TestComplexCondition(int? i3, double? d3, float? f3)
         {
             if (i3.HasValue && i3.Value == 42)
             {
                 Console.WriteLine();
             }
 
-            if (!i3.HasValue && i3.Value == 42)
+            if (!i3.HasValue && i3.Value == 42) // Noncompliant
+//                              ^^^^^^^^
             {
                 Console.WriteLine();
             }
 
-            if (!i3.HasValue)
+            if (!d3.HasValue)
             {
-                Console.WriteLine(i3.Value); // false negative, i1 has no value here
+                Console.WriteLine(d3.Value); // Noncompliant
             }
 
-            if (i3 == null)
+            if (f3 == null)
             {
-                Console.WriteLine(i3.Value); // Noncompliant
+                Console.WriteLine(f3.Value); // Noncompliant
             }
         }
     }

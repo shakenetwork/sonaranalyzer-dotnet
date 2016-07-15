@@ -129,7 +129,7 @@ namespace SonarLint.Rules.CSharp
                 });
             }
 
-            public override ProgramState ProcessInstruction(ProgramPoint programPoint, ProgramState programState)
+            public override ProgramState PreProcessInstruction(ProgramPoint programPoint, ProgramState programState)
             {
                 var instruction = programPoint.Block.Instructions[programPoint.Offset];
 
@@ -164,6 +164,51 @@ namespace SonarLint.Rules.CSharp
                     OnValuePropertyAccessed(identifier, false);
                     return programState;
                 }
+            }
+
+            private bool IsHasValueAccess(MemberAccessExpressionSyntax memberAccess)
+            {
+                return memberAccess.Name.Identifier.ValueText == "HasValue" &&
+                    semanticModel.GetTypeInfo(memberAccess.Expression).Type.OriginalDefinition.Is(KnownType.System_Nullable_T);
+            }
+
+            internal bool TryProcessInstruction(MemberAccessExpressionSyntax instruction, ProgramState programState, out ProgramState newProgramState)
+            {
+                if (IsHasValueAccess(instruction))
+                {
+                    SymbolicValue nullable;
+                    newProgramState = programState.PopValue(out nullable);
+                    newProgramState = newProgramState.PushValue(new HasValueAccessSymbolicValue(nullable));
+                    return true;
+                }
+
+                newProgramState = programState;
+                return false;
+            }
+        }
+
+        internal sealed class HasValueAccessSymbolicValue : SymbolicValue
+        {
+            private readonly SymbolicValue nullable;
+
+            public HasValueAccessSymbolicValue(SymbolicValue nullable)
+            {
+                this.nullable = nullable;
+            }
+
+            public override bool TrySetConstraint(SymbolicValueConstraint constraint, ProgramState currentProgramState, out ProgramState newProgramState)
+            {
+                var boolConstraint = constraint as BoolConstraint;
+                if (boolConstraint == null)
+                {
+                    throw new NotSupportedException($"Only a {nameof(BoolConstraint)} can be set on a {nameof(HasValueAccessSymbolicValue)}");
+                }
+
+                var nullabilityConstraint = boolConstraint == BoolConstraint.True
+                    ? ObjectConstraint.NotNull
+                    : ObjectConstraint.Null;
+
+                return nullable.TrySetConstraint(nullabilityConstraint, currentProgramState, out newProgramState);
             }
         }
     }
