@@ -388,5 +388,49 @@ namespace Tests.Diagnostics
             oo = o as object;
             if (oo == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
         }
+
+        public void Equals(bool b)
+        {
+            var a = true;
+            if (a == b)
+            {
+                if (b) { }  // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+            }
+            else
+            {
+                if (b) { }  // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            }
+
+            if (!(a == b))
+            {
+                if (b) { }  // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            }
+            else
+            {
+                if (b) { }  // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+            }
+        }
+
+        public void NotEquals(bool b)
+        {
+            var a = true;
+            if (a != b)
+            {
+                if (b) { }  // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            }
+            else
+            {
+                if (b) { }  // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+            }
+
+            if (!(a != b))
+            {
+                if (b) { }  // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+            }
+            else
+            {
+                if (b) { }  // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            }
+        }
     }
 }

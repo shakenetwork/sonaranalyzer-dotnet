@@ -167,6 +167,52 @@ namespace Tests.Diagnostics
                 var s = b.ToString(); // Noncompliant
             }
         }
+
+        void Equals(object b)
+        {
+            object a = null;
+            if (a == b)
+            {
+                b.ToString(); // Noncompliant
+            }
+            else
+            {
+                b.ToString();
+            }
+
+            a = new object();
+            if (a == b)
+            {
+                b.ToString();
+            }
+            else
+            {
+                b.ToString();
+            }
+        }
+
+        void NotEquals(object b)
+        {
+            object a = null;
+            if (a != b)
+            {
+                b.ToString();
+            }
+            else
+            {
+                b.ToString(); // Noncompliant
+            }
+
+            a = new object();
+            if (a != b)
+            {
+                b.ToString();
+            }
+            else
+            {
+                b.ToString();
+            }
+        }
     }
 
     static class Extensions

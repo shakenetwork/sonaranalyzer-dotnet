@@ -120,6 +120,9 @@
     <Compile Include="Helpers\SymbolicExecution\ProgramPoint.cs" />
     <Compile Include="Helpers\SymbolicExecution\ProgramState.cs" />
     <Compile Include="Helpers\SymbolicExecution\Constraints\SymbolicValueConstraint.cs" />
+    <Compile Include="Helpers\SymbolicExecution\SymbolicValues\Binary\EqualsSymbolicValue.cs" />
+    <Compile Include="Helpers\SymbolicExecution\SymbolicValues\Binary\NotEqualsSymbolicValue.cs" />
+    <Compile Include="Helpers\SymbolicExecution\SymbolicValues\Binary\RelationalSymbolicValue.cs" />
     <Compile Include="Helpers\SymbolicExecution\SymbolicValues\Binary\XorSymbolicValue.cs" />
     <Compile Include="Helpers\SymbolicExecution\SymbolicValues\Binary\OrSymbolicValue.cs" />
     <Compile Include="Helpers\SymbolicExecution\SymbolicValues\Binary\AndSymbolicValue.cs" />

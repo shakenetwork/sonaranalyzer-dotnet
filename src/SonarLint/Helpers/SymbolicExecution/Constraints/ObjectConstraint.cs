@@ -28,5 +28,8 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         private ObjectConstraint()
         {
         }
+
+        public override SymbolicValueConstraint OppositeForLogicalNot =>
+            this == Null ? NotNull : null /* not NotNull can be Null or another NotNull */;
     }
 }

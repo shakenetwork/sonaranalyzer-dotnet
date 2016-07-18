@@ -20,13 +20,14 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SonarLint.Helpers.FlowAnalysis.Common
 {
-    public class LogicalNotSymbolicValue : UnarySymbolicValue
+    public class EqualsSymbolicValue : RelationalSymbolicValue
     {
-        public LogicalNotSymbolicValue(SymbolicValue operand)
-            : base(operand)
+        public EqualsSymbolicValue(SymbolicValue leftOperand, SymbolicValue rightOperand)
+            : base(leftOperand, rightOperand)
         {
         }
 
@@ -40,15 +41,32 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             var boolConstraint = constraint as BoolConstraint;
             if (boolConstraint == null)
             {
-                throw new NotSupportedException($"Only a {nameof(BoolConstraint)} can be set on a {nameof(LogicalNotSymbolicValue)}");
+                throw new NotSupportedException($"Only a {nameof(BoolConstraint)} can be set on a {nameof(EqualsSymbolicValue)}");
             }
 
-            return operand.TrySetConstraint(boolConstraint.OppositeForLogicalNot, currentProgramState);
+            SymbolicValueConstraint leftConstraint;
+            var leftHasConstraint = leftOperand.TryGetConstraint(currentProgramState, out leftConstraint);
+            SymbolicValueConstraint rightConstraint;
+            var rightHasConstraint = rightOperand.TryGetConstraint(currentProgramState, out rightConstraint);
+
+            if (!rightHasConstraint && !leftHasConstraint)
+            {
+                return new[] { currentProgramState };
+            }
+
+            if (boolConstraint == BoolConstraint.True)
+            {
+                return rightOperand.TrySetConstraint(leftConstraint, currentProgramState)
+                    .SelectMany(ps => leftOperand.TrySetConstraint(rightConstraint, ps));
+            }
+
+            return rightOperand.TrySetConstraint(leftConstraint?.OppositeForLogicalNot, currentProgramState)
+                .SelectMany(ps => leftOperand.TrySetConstraint(rightConstraint?.OppositeForLogicalNot, ps));
         }
 
         public override string ToString()
         {
-            return "!" + operand;
+            return leftOperand + " == " + rightOperand;
         }
     }
 }

@@ -74,6 +74,11 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 
         internal ProgramState SetConstraint(SymbolicValueConstraint constraint, ProgramState programState)
         {
+            if (constraint == null)
+            {
+                return programState;
+            }
+
             return new ProgramState(
                 programState.Values,
                 programState.Constraints.SetItem(this, constraint),
@@ -87,8 +92,18 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 programState.Constraints[this].Implies(constraint);
         }
 
+        public bool TryGetConstraint(ProgramState programState, out SymbolicValueConstraint constraint)
+        {
+            return programState.Constraints.TryGetValue(this, out constraint);
+        }
+
         public virtual IEnumerable<ProgramState> TrySetConstraint(SymbolicValueConstraint constraint, ProgramState currentProgramState)
         {
+            if (constraint == null)
+            {
+                return new[] { currentProgramState };
+            }
+
             SymbolicValueConstraint oldConstraint;
             if (!currentProgramState.Constraints.TryGetValue(this, out oldConstraint))
             {

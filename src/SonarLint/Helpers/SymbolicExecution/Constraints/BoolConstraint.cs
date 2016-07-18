@@ -31,6 +31,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 constraint == ObjectConstraint.NotNull;
         }
 
-        public BoolConstraint Inverse => True == this ? False : True;
+        public override SymbolicValueConstraint OppositeForLogicalNot =>
+            this == True ? False : True;
     }
 }

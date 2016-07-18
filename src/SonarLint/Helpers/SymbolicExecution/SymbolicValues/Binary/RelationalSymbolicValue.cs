@@ -20,35 +20,15 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SonarLint.Helpers.FlowAnalysis.Common
 {
-    public class LogicalNotSymbolicValue : UnarySymbolicValue
+    public abstract class RelationalSymbolicValue : BinarySymbolicValue
     {
-        public LogicalNotSymbolicValue(SymbolicValue operand)
-            : base(operand)
+        protected RelationalSymbolicValue(SymbolicValue leftOperand, SymbolicValue rightOperand)
+            : base(leftOperand, rightOperand)
         {
-        }
-
-        public override IEnumerable<ProgramState> TrySetConstraint(SymbolicValueConstraint constraint, ProgramState currentProgramState)
-        {
-            if (constraint == null)
-            {
-                return new[] { currentProgramState };
-            }
-
-            var boolConstraint = constraint as BoolConstraint;
-            if (boolConstraint == null)
-            {
-                throw new NotSupportedException($"Only a {nameof(BoolConstraint)} can be set on a {nameof(LogicalNotSymbolicValue)}");
-            }
-
-            return operand.TrySetConstraint(boolConstraint.OppositeForLogicalNot, currentProgramState);
-        }
-
-        public override string ToString()
-        {
-            return "!" + operand;
         }
     }
 }

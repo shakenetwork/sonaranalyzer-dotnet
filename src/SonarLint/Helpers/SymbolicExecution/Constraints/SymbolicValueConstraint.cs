@@ -28,5 +28,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         {
             return this == constraint;
         }
+
+        public virtual SymbolicValueConstraint OppositeForLogicalNot => null;
     }
 }

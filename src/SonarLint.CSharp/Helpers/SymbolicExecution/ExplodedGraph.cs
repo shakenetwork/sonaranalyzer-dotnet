@@ -283,17 +283,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 return;
             }
 
-            switch (instruction.Kind())
-            {
-                case SyntaxKind.EqualsExpression:
-                case SyntaxKind.NotEqualsExpression:
-                    if (TryEnqueueBranchesBasedOn((BinaryExpressionSyntax)instruction, binaryBranchBlock, node))
-                    {
-                        return;
-                    }
-                    break;
-            }
-
             VisitBinaryBranch(binaryBranchBlock, node, instruction);
         }
 
@@ -386,84 +375,11 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             }
         }
 
-        private bool TryEnqueueBranchesBasedOn(BinaryExpressionSyntax instruction, BinaryBranchBlock binaryBranchBlock, ExplodedGraphNode node)
-        {
-            var identifier = GetNullComparedIdentifier(instruction);
-            if (identifier == null)
-            {
-                return false;
-            }
-
-            var symbol = SemanticModel.GetSymbolInfo(identifier).Symbol;
-            if (!IsLocalScoped(symbol))
-            {
-                return false;
-            }
-
-            var symbolicValue = node.ProgramState.GetSymbolValue(symbol);
-            if (symbolicValue == null)
-            {
-                throw new InvalidOperationException("Symbol without symbolic value");
-            }
-
-            var trueBranchConstraint = ObjectConstraint.Null;
-            var falseBranchConstraint = ObjectConstraint.NotNull;
-
-            if (instruction.IsKind(SyntaxKind.NotEqualsExpression))
-            {
-                falseBranchConstraint = ObjectConstraint.Null;
-                trueBranchConstraint = ObjectConstraint.NotNull;
-            }
-
-            ProgramState programState = node.ProgramState;
-            programState = programState.PopValue();
-            programState = ClearStackForForLoop(binaryBranchBlock.BranchingNode as ForStatementSyntax, programState);
-
-            foreach (var newProgramState in symbolicValue.TrySetConstraint(trueBranchConstraint, programState))
-            {
-                OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: true);
-
-                var nps = FixStackForLogicalOr(binaryBranchBlock, newProgramState);
-                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.TrueSuccessorBlock), GetCleanedProgramState(nps, node.ProgramPoint.Block));
-            }
-
-            foreach (var newProgramState in symbolicValue.TrySetConstraint(falseBranchConstraint, programState))
-            {
-                OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: false);
-
-                var nps = FixStackForLogicalAnd(binaryBranchBlock, newProgramState);
-                EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), GetCleanedProgramState(nps, node.ProgramPoint.Block));
-            }
-
-            return true;
-        }
-
         private static ProgramState ClearStackForForLoop(ForStatementSyntax forStatement, ProgramState programState)
         {
             return forStatement == null
                 ? programState
                 : programState.ClearStack();
-        }
-
-        private static IdentifierNameSyntax GetNullComparedIdentifier(BinaryExpressionSyntax instruction)
-        {
-            var left = instruction.Left.RemoveParentheses();
-            var right = instruction.Right.RemoveParentheses();
-            var isLeftNull = left.IsKind(SyntaxKind.NullLiteralExpression);
-            var isRightNull = right.IsKind(SyntaxKind.NullLiteralExpression);
-
-            if (!isRightNull && !isLeftNull)
-            {
-                return null;
-            }
-
-            var identifier = right as IdentifierNameSyntax;
-            if (isRightNull)
-            {
-                identifier = left as IdentifierNameSyntax;
-            }
-
-            return identifier;
         }
 
         private static ProgramState FixStackForLogicalAnd(BinaryBranchBlock binaryBranchBlock, ProgramState newProgramState)
@@ -544,21 +460,19 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                     break;
 
                 case SyntaxKind.BitwiseOrExpression:
-                    newProgramState = VisitBooleanBinaryOperator(newProgramState, (l, r) => new OrSymbolicValue(l, r));
+                    newProgramState = VisitBinaryOperator(newProgramState, (l, r) => new OrSymbolicValue(l, r));
                     break;
                 case SyntaxKind.BitwiseAndExpression:
-                    newProgramState = VisitBooleanBinaryOperator(newProgramState, (l, r) => new AndSymbolicValue(l, r));
+                    newProgramState = VisitBinaryOperator(newProgramState, (l, r) => new AndSymbolicValue(l, r));
                     break;
                 case SyntaxKind.ExclusiveOrExpression:
-                    newProgramState = VisitBooleanBinaryOperator(newProgramState, (l, r) => new XorSymbolicValue(l, r));
+                    newProgramState = VisitBinaryOperator(newProgramState, (l, r) => new XorSymbolicValue(l, r));
                     break;
 
                 case SyntaxKind.LessThanExpression:
                 case SyntaxKind.LessThanOrEqualExpression:
                 case SyntaxKind.GreaterThanExpression:
                 case SyntaxKind.GreaterThanOrEqualExpression:
-                case SyntaxKind.EqualsExpression:
-                case SyntaxKind.NotEqualsExpression:
 
                 case SyntaxKind.SubtractExpression:
                 case SyntaxKind.AddExpression:
@@ -568,8 +482,17 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
                 case SyntaxKind.LeftShiftExpression:
                 case SyntaxKind.RightShiftExpression:
+
                     newProgramState = newProgramState.PopValues(2);
                     newProgramState = newProgramState.PushValue(new SymbolicValue());
+                    break;
+
+                case SyntaxKind.EqualsExpression:
+                    newProgramState = VisitBinaryOperator(newProgramState, (l, r) => new EqualsSymbolicValue(l, r));
+                    break;
+
+                case SyntaxKind.NotEqualsExpression:
+                    newProgramState = VisitBinaryOperator(newProgramState, (l, r) => new NotEqualsSymbolicValue(l, r));
                     break;
 
                 case SyntaxKind.BitwiseNotExpression:
@@ -752,7 +675,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
            return newProgramState.PushValue(resultValue);
         }
 
-        private static ProgramState VisitBooleanBinaryOperator(ProgramState programState, Func<SymbolicValue, SymbolicValue, SymbolicValue> symbolicValueFactory)
+        private static ProgramState VisitBinaryOperator(ProgramState programState, Func<SymbolicValue, SymbolicValue, SymbolicValue> symbolicValueFactory)
         {
             SymbolicValue leftSymbol;
             SymbolicValue rightSymbol;
