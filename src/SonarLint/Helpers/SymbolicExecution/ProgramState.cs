@@ -75,6 +75,20 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 ExpressionStack.Push(symbolicValue));
         }
 
+        public ProgramState PushValues(IEnumerable<SymbolicValue> values)
+        {
+            if (!values.Any())
+            {
+                return this;
+            }
+
+            return new ProgramState(
+                Values,
+                Constraints,
+                ProgramPointVisitCounts,
+                ImmutableStack.Create(ExpressionStack.Concat(values).ToArray()));
+        }
+
         public ProgramState PopValue()
         {
             SymbolicValue poppedValue;
@@ -105,15 +119,6 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 Constraints,
                 ProgramPointVisitCounts,
                 newStack);
-        }
-
-        internal ProgramState ClearStack()
-        {
-            return new ProgramState(
-                Values,
-                Constraints,
-                ProgramPointVisitCounts,
-                ImmutableStack<SymbolicValue>.Empty);
         }
 
         public SymbolicValue PeekValue()

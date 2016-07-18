@@ -25,6 +25,7 @@ using System.Linq;
 using FluentAssertions;
 using Microsoft.CodeAnalysis.CSharp;
 using SonarLint.Helpers.FlowAnalysis.Common;
+using SonarLint.Helpers.FlowAnalysis.CSharp;
 
 namespace SonarLint.UnitTest.Helpers
 {
@@ -323,7 +324,8 @@ namespace NS
         {
             var cfg = Build("foreach (var item in collection) { var x = 10; }");
             VerifyCfg(cfg, 4);
-            var collectionBlock = cfg.EntryBlock;
+            var collectionBlock = cfg.EntryBlock as ForeachCollectionProducerBlock;
+            collectionBlock.Should().NotBeNull();
             var blocks = cfg.Blocks.ToList();
             var foreachBlock = blocks[1] as BinaryBranchBlock;
             var loopBodyBlock = blocks
@@ -404,6 +406,7 @@ namespace NS
 
             cfg = Build("for (i = 0, j = 11; ; i++) { var x = 10; }");
             VerifyForStatement(cfg);
+            Assert.IsTrue(cfg.EntryBlock is ForInitializerBlock);
         }
 
         private static void VerifyForStatement(IControlFlowGraph cfg)
@@ -440,21 +443,24 @@ namespace NS
 
         private static void VerifyForStatementNoInitializer(IControlFlowGraph cfg)
         {
-            VerifyCfg(cfg, 4);
+            VerifyCfg(cfg, 5);
             var blocks = cfg.Blocks.ToList();
-            var branchBlock = cfg.EntryBlock as BinaryBranchBlock;
+            var initializerBlock = cfg.EntryBlock as ForInitializerBlock;
+            var branchBlock = blocks[1] as BinaryBranchBlock;
             var incrementorBlock = blocks
                 .First(b => b.Instructions.Any(n => n.ToString() == "i++"));
             var loopBodyBlock = blocks
                 .First(b => b.Instructions.Any(n => n.ToString() == "x = 10"));
             var exitBlock = cfg.ExitBlock;
 
+            initializerBlock.SuccessorBlock.ShouldBeEquivalentTo(branchBlock);
+
             branchBlock.SuccessorBlocks.Should().OnlyContainInOrder(loopBodyBlock, exitBlock);
             branchBlock.BranchingNode.Kind().Should().Be(SyntaxKind.ForStatement);
 
             loopBodyBlock.SuccessorBlocks.Should().OnlyContain(incrementorBlock);
             incrementorBlock.SuccessorBlocks.Should().OnlyContain(branchBlock);
-            branchBlock.PredecessorBlocks.Should().OnlyContain(incrementorBlock);
+            branchBlock.PredecessorBlocks.Should().OnlyContain(incrementorBlock, initializerBlock);
             exitBlock.PredecessorBlocks.Should().OnlyContain(branchBlock);
         }
 
@@ -504,17 +510,21 @@ namespace NS
 
         private static void VerifyForStatementEmpty(IControlFlowGraph cfg)
         {
-            VerifyCfg(cfg, 3);
-            var branchBlock = cfg.EntryBlock as BinaryBranchBlock;
+            VerifyCfg(cfg, 4);
+            var initializerBlock = cfg.EntryBlock as ForInitializerBlock;
+            var blocks = cfg.Blocks.ToList();
+            var branchBlock = blocks[1] as BinaryBranchBlock;
             var loopBodyBlock = cfg.Blocks
                 .First(b => b.Instructions.Any(n => n.ToString() == "x = 10"));
             var exitBlock = cfg.ExitBlock;
+
+            initializerBlock.SuccessorBlock.ShouldBeEquivalentTo(branchBlock);
 
             branchBlock.SuccessorBlocks.Should().OnlyContainInOrder(loopBodyBlock, exitBlock);
             branchBlock.BranchingNode.Kind().Should().Be(SyntaxKind.ForStatement);
 
             loopBodyBlock.SuccessorBlocks.Should().OnlyContain(branchBlock);
-            branchBlock.PredecessorBlocks.Should().OnlyContain(loopBodyBlock);
+            branchBlock.PredecessorBlocks.Should().OnlyContain(loopBodyBlock, initializerBlock);
             exitBlock.PredecessorBlocks.Should().OnlyContain(branchBlock);
         }
 

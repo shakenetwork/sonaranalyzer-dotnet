@@ -5,6 +5,15 @@ namespace Tests.Diagnostics
 {
     class NullPointerDereference
     {
+        void Test_0()
+        {
+            int i = 0, j = 0;
+            for (i = 0, j = 2; i < 2; i++)
+            {
+                Console.WriteLine();
+            }
+        }
+
         void Test_1(bool condition)
         {
             object o = null;

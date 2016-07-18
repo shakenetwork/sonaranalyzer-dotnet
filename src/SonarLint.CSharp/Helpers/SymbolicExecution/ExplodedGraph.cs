@@ -83,7 +83,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
             EnqueueStartNode();
 
-            while(workList.Any())
+            while (workList.Any())
             {
                 if (steps >= MaxStepCount)
                 {
@@ -116,19 +116,10 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                     continue;
                 }
 
-                if (programPoint.Block is SimpleBlock)
+                var simpleBlock = programPoint.Block as SimpleBlock;
+                if (simpleBlock != null)
                 {
-                    var newProgramState = GetCleanedProgramState(node.ProgramState, node.ProgramPoint.Block);
-
-                    var jumpBlock = programPoint.Block as JumpBlock;
-                    if (jumpBlock != null &&
-                        IsValueConsumingStatement(jumpBlock.JumpNode))
-                    {
-                        newProgramState = newProgramState.PopValue();
-                    }
-
-                    EnqueueAllSuccessors(programPoint.Block, newProgramState);
-                    continue;
+                    VisitSimpleBlock(simpleBlock, node);
                 }
 
                 if (programPoint.Block is BranchBlock)
@@ -141,55 +132,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             }
 
             OnExplorationEnded();
-        }
-
-        private static bool IsValueConsumingStatement(SyntaxNode jumpNode)
-        {
-            if (jumpNode.IsKind(SyntaxKind.LockStatement))
-            {
-                return true;
-            }
-
-            var usingStatement = jumpNode as UsingStatementSyntax;
-            if (usingStatement != null)
-            {
-                return usingStatement.Expression != null;
-            }
-
-            var throwStatement = jumpNode as ThrowStatementSyntax;
-            if (throwStatement != null)
-            {
-                return throwStatement.Expression != null;
-            }
-
-            var returnStatement = jumpNode as ReturnStatementSyntax;
-            if (returnStatement != null)
-            {
-                return returnStatement.Expression != null;
-            }
-
-            // goto is not putting the expression to the CFG
-
-            return false;
-        }
-
-        private static bool ShouldConsumeValue(ExpressionSyntax expression)
-        {
-            if (expression == null)
-            {
-                return false;
-            }
-
-            var parent = expression.Parent;
-            var conditionalAccess = parent as ConditionalAccessExpressionSyntax;
-            if (conditionalAccess != null &&
-                conditionalAccess.WhenNotNull == expression)
-            {
-                return ShouldConsumeValue(conditionalAccess.GetSelfOrTopParenthesizedExpression());
-            }
-
-            return parent is ExpressionStatementSyntax ||
-                parent is YieldStatementSyntax;
         }
 
         internal void AddExplodedGraphCheck<T>(T check)
@@ -258,6 +200,91 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
         #region Visit*
 
+        private void VisitSimpleBlock(SimpleBlock block, ExplodedGraphNode node)
+        {
+            var newProgramState = GetCleanedProgramState(node.ProgramState, block);
+
+            if (block is ForeachCollectionProducerBlock)
+            {
+                newProgramState = newProgramState.PopValue();
+                EnqueueAllSuccessors(block, newProgramState);
+                return;
+            }
+
+            var forInitializerBlock = block as ForInitializerBlock;
+            if (forInitializerBlock != null)
+            {
+                newProgramState = newProgramState.PopValues(
+                    forInitializerBlock.ForNode.Initializers.Count);
+
+                newProgramState = newProgramState.PushValues(
+                    Enumerable
+                        .Range(0, forInitializerBlock.ForNode.Incrementors.Count)
+                        .Select(i => new SymbolicValue()));
+
+                EnqueueAllSuccessors(forInitializerBlock, newProgramState);
+                return;
+            }
+
+            var jumpBlock = block as JumpBlock;
+            if (jumpBlock != null &&
+                IsValueConsumingStatement(jumpBlock.JumpNode))
+            {
+                newProgramState = newProgramState.PopValue();
+            }
+
+            EnqueueAllSuccessors(block, newProgramState);
+        }
+
+        private static bool IsValueConsumingStatement(SyntaxNode jumpNode)
+        {
+            if (jumpNode.IsKind(SyntaxKind.LockStatement))
+            {
+                return true;
+            }
+
+            var usingStatement = jumpNode as UsingStatementSyntax;
+            if (usingStatement != null)
+            {
+                return usingStatement.Expression != null;
+            }
+
+            var throwStatement = jumpNode as ThrowStatementSyntax;
+            if (throwStatement != null)
+            {
+                return throwStatement.Expression != null;
+            }
+
+            var returnStatement = jumpNode as ReturnStatementSyntax;
+            if (returnStatement != null)
+            {
+                return returnStatement.Expression != null;
+            }
+
+            // goto is not putting the expression to the CFG
+
+            return false;
+        }
+
+        private static bool ShouldConsumeValue(ExpressionSyntax expression)
+        {
+            if (expression == null)
+            {
+                return false;
+            }
+
+            var parent = expression.Parent;
+            var conditionalAccess = parent as ConditionalAccessExpressionSyntax;
+            if (conditionalAccess != null &&
+                conditionalAccess.WhenNotNull == expression)
+            {
+                return ShouldConsumeValue(conditionalAccess.GetSelfOrTopParenthesizedExpression());
+            }
+
+            return parent is ExpressionStatementSyntax ||
+                parent is YieldStatementSyntax;
+        }
+
         private void VisitBinaryBranch(BinaryBranchBlock binaryBranchBlock, ExplodedGraphNode node)
         {
             var newProgramState = GetCleanedProgramState(node.ProgramState, node.ProgramPoint.Block);
@@ -307,11 +334,9 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
         private void VisitForeachBinaryBranch(BinaryBranchBlock binaryBranchBlock, ProgramState programState)
         {
-            var newProgramState = programState.ClearStack();
-
             // foreach variable is not a VariableDeclarator, so we need to assign a value to it
             var foreachVariableSymbol = SemanticModel.GetDeclaredSymbol(binaryBranchBlock.BranchingNode);
-            newProgramState = SetNewSymbolicValueIfLocal(newProgramState, foreachVariableSymbol, new SymbolicValue());
+            var newProgramState = SetNewSymbolicValueIfLocal(programState, foreachVariableSymbol, new SymbolicValue());
 
             EnqueueAllSuccessors(binaryBranchBlock, newProgramState);
         }
@@ -363,17 +388,22 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
         private void VisitBinaryBranch(BinaryBranchBlock binaryBranchBlock, ExplodedGraphNode node, SyntaxNode instruction)
         {
             var ps = node.ProgramState;
+            SymbolicValue sv;
 
             var forStatement = binaryBranchBlock.BranchingNode as ForStatementSyntax;
-            if (forStatement != null &&
-                forStatement.Condition == null)
+            if (forStatement != null)
             {
-                ps = ps.PushValue(SymbolicValue.True);
+                if (forStatement.Condition == null)
+                {
+                    ps = ps.PushValue(SymbolicValue.True);
+                }
+                ps = ps.PopValue(out sv);
+                ps = ps.PopValues(forStatement.Incrementors.Count);
             }
-
-            SymbolicValue sv;
-            ps = ps.PopValue(out sv);
-            ps = ClearStackForForLoop(binaryBranchBlock.BranchingNode as ForStatementSyntax, ps);
+            else
+            {
+                ps = ps.PopValue(out sv);
+            }
 
             foreach (var newProgramState in sv.TrySetConstraint(BoolConstraint.True, ps))
             {
@@ -390,13 +420,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 var nps = FixStackForLogicalAnd(binaryBranchBlock, newProgramState);
                 EnqueueNewNode(new ProgramPoint(binaryBranchBlock.FalseSuccessorBlock), GetCleanedProgramState(nps, node.ProgramPoint.Block));
             }
-        }
-
-        private static ProgramState ClearStackForForLoop(ForStatementSyntax forStatement, ProgramState programState)
-        {
-            return forStatement == null
-                ? programState
-                : programState.ClearStack();
         }
 
         private static ProgramState FixStackForLogicalAnd(BinaryBranchBlock binaryBranchBlock, ProgramState newProgramState)

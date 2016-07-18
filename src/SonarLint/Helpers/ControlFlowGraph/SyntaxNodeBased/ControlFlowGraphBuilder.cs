@@ -161,7 +161,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 
         internal TemporaryBlock CreateTemporaryBlock() => AddBlock(new TemporaryBlock());
 
-        private T AddBlock<T>(T block)
+        internal T AddBlock<T>(T block)
             where T : Block
         {
             reversedBlocks.Add(block);

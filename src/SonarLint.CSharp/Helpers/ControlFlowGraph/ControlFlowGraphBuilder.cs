@@ -773,7 +773,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             BuildExpression(forStatement.Condition);
             tempLoopBlock.SuccessorBlock = currentBlock;
 
-            currentBlock = CreateBlock(currentBlock);
+            currentBlock = AddBlock(new ForInitializerBlock(forStatement, currentBlock));
             if (forStatement.Declaration != null)
             {
                 BuildVariableDeclaration(forStatement.Declaration);
@@ -790,12 +790,12 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
         private void BuildForEachStatement(ForEachStatementSyntax foreachStatement)
         {
             var afterBlock = currentBlock;
-            var variableTemporary = CreateTemporaryBlock();
+            var temp = CreateTemporaryBlock();
 
             BreakTarget.Push(afterBlock);
-            ContinueTargets.Push(variableTemporary);
+            ContinueTargets.Push(temp);
 
-            currentBlock = CreateBlock(variableTemporary);
+            currentBlock = CreateBlock(temp);
             BuildStatement(foreachStatement.Statement);
 
             BreakTarget.Pop();
@@ -804,9 +804,9 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             currentBlock = CreateBinaryBranchBlock(foreachStatement, currentBlock, afterBlock);
             // Variable declaration in a foreach statement is not a VariableDeclarator, otherwise it would be added here.
 
-            variableTemporary.SuccessorBlock = currentBlock;
+            temp.SuccessorBlock = currentBlock;
 
-            currentBlock = CreateBlock(variableTemporary);
+            currentBlock = AddBlock(new ForeachCollectionProducerBlock(foreachStatement, temp));
             BuildExpression(foreachStatement.Expression);
         }
 

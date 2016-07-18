@@ -87,6 +87,8 @@
     <Compile Include="..\AssemblyInfo.Shared.cs">
       <Link>Properties\AssemblyInfo.Shared.cs</Link>
     </Compile>
+    <Compile Include="Helpers\ControlFlowGraph\Blocks\ForeachCollectionProducerBlock.cs" />
+    <Compile Include="Helpers\ControlFlowGraph\Blocks\ForInitializerBlock.cs" />
     <Compile Include="Helpers\LiveVariableAnalysis\LiveVariableAnalysis.cs" />
     <Compile Include="Helpers\ControlFlowGraph\ControlFlowGraph.cs" />
     <Compile Include="Helpers\ControlFlowGraph\CfgAllPathValidator.cs" />
