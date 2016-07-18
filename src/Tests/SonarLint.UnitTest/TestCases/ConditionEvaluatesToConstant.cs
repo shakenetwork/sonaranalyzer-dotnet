@@ -375,5 +375,18 @@ namespace Tests.Diagnostics
             a ^= true;
             if (a) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
         }
+
+        public void IsAsExpression()
+        {
+            object o = new object();
+            if (o is object) { }
+            var oo = o as object;
+            if (oo == null) { }
+
+            o = null;
+            if (o is object) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            oo = o as object;
+            if (oo == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+        }
     }
 }

@@ -81,6 +81,12 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 programState.ExpressionStack);
         }
 
+        public bool HasConstraint(SymbolicValueConstraint constraint, ProgramState programState)
+        {
+            return programState.Constraints.ContainsKey(this) &&
+                programState.Constraints[this].Implies(constraint);
+        }
+
         public virtual IEnumerable<ProgramState> TrySetConstraint(SymbolicValueConstraint constraint, ProgramState currentProgramState)
         {
             SymbolicValueConstraint oldConstraint;

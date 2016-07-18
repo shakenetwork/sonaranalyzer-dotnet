@@ -141,8 +141,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 return false;
             }
 
-            return programState.Constraints.ContainsKey(symbolicValue) &&
-                programState.Constraints[symbolicValue].Implies(constraint);
+            return symbolicValue.HasConstraint(constraint, programState);
         }
     }
 }

@@ -593,13 +593,16 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 case SyntaxKind.RefTypeExpression:
                 case SyntaxKind.RefValueExpression:
 
-                case SyntaxKind.AsExpression:
-                case SyntaxKind.IsExpression:
                 case SyntaxKind.CastExpression:
 
                 case SyntaxKind.MemberBindingExpression:
                     newProgramState = newProgramState.PopValue();
                     newProgramState = newProgramState.PushValue(new SymbolicValue());
+                    break;
+
+                case SyntaxKind.AsExpression:
+                case SyntaxKind.IsExpression:
+                    newProgramState = VisitSafeCastExpression((BinaryExpressionSyntax)instruction, newProgramState);
                     break;
 
                 case SyntaxKind.SimpleMemberAccessExpression:
@@ -741,6 +744,22 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
         }
 
         #region VisitExpression*
+
+        private static ProgramState VisitSafeCastExpression(BinaryExpressionSyntax instruction, ProgramState programState)
+        {
+            SymbolicValue sv;
+            var newProgramState = programState.PopValue(out sv);
+            var resultValue = new SymbolicValue();
+            if (sv.HasConstraint(ObjectConstraint.Null, newProgramState))
+            {
+                var constraint = instruction.IsKind(SyntaxKind.IsExpression)
+                    ? (SymbolicValueConstraint)BoolConstraint.False
+                    : ObjectConstraint.Null;
+                newProgramState = resultValue.SetConstraint(constraint, newProgramState);
+            }
+
+           return newProgramState.PushValue(resultValue);
+        }
 
         private static ProgramState VisitBooleanBinaryOperator(ProgramState programState, Func<SymbolicValue, SymbolicValue, SymbolicValue> symbolicValueFactory)
         {
