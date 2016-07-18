@@ -209,7 +209,7 @@ namespace SonarLint.Rules.CSharp
                 var boolConstraint = constraint as BoolConstraint;
                 if (boolConstraint == null)
                 {
-                    throw new NotSupportedException($"Only a {nameof(BoolConstraint)} can be set on a {nameof(HasValueAccessSymbolicValue)}");
+                    return new[] { currentProgramState };
                 }
 
                 var nullabilityConstraint = boolConstraint == BoolConstraint.True

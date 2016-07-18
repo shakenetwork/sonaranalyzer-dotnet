@@ -41,7 +41,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             var boolConstraint = constraint as BoolConstraint;
             if (boolConstraint == null)
             {
-                throw new NotSupportedException($"Only a {nameof(BoolConstraint)} can be set on a {nameof(AndSymbolicValue)}");
+                return new[] { currentProgramState };
             }
 
             if (boolConstraint == BoolConstraint.True)
