@@ -273,17 +273,34 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 case SyntaxKind.ConditionalAccessExpression:
                     VisitConditionalAccessBinaryBranch(binaryBranchBlock, newProgramState);
                     return;
-            }
 
-            var instruction = binaryBranchBlock.Instructions.LastOrDefault();
-            if (instruction == null)
-            {
-                // Todo: instead of the null we should pass the condition of the branching node
-                VisitBinaryBranch(binaryBranchBlock, node, null);
-                return;
-            }
+                case SyntaxKind.LogicalAndExpression:
+                case SyntaxKind.LogicalOrExpression:
+                    VisitBinaryBranch(binaryBranchBlock, node, ((BinaryExpressionSyntax)binaryBranchBlock.BranchingNode).Left);
+                    return;
 
-            VisitBinaryBranch(binaryBranchBlock, node, instruction);
+                case SyntaxKind.WhileStatement:
+                    VisitBinaryBranch(binaryBranchBlock, node, ((WhileStatementSyntax)binaryBranchBlock.BranchingNode).Condition);
+                    return;
+                case SyntaxKind.DoStatement:
+                    VisitBinaryBranch(binaryBranchBlock, node, ((DoStatementSyntax)binaryBranchBlock.BranchingNode).Condition);
+                    return;
+                case SyntaxKind.ForStatement:
+                    VisitBinaryBranch(binaryBranchBlock, node, ((ForStatementSyntax)binaryBranchBlock.BranchingNode).Condition);
+                    return;
+
+                case SyntaxKind.IfStatement:
+                    VisitBinaryBranch(binaryBranchBlock, node, ((IfStatementSyntax)binaryBranchBlock.BranchingNode).Condition);
+                    return;
+                case SyntaxKind.ConditionalExpression:
+                    VisitBinaryBranch(binaryBranchBlock, node, ((ConditionalExpressionSyntax)binaryBranchBlock.BranchingNode).Condition);
+                    return;
+
+                default:
+                    System.Diagnostics.Debug.Fail($"Branch kind '{binaryBranchBlock.BranchingNode.Kind()}' not handled");
+                    VisitBinaryBranch(binaryBranchBlock, node, null);
+                    return;
+            }
         }
 
         #region Handle VisitBinaryBranch cases
