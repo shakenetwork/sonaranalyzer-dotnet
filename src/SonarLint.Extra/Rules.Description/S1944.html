@@ -1,7 +1,7 @@
 <p>
     Inappropriate casts are issues that will lead to unexpected behavior or runtime errors, such as
     <code>InvalidCastException</code>s. The compiler will catch bad casts from one class to another, but not bad casts to
-    interfaces.
+    interfaces. Also, nullable values that are known to be empty can't be cast to their underlying value type.
 </p>
 
 <h2>Noncompliant Code Example</h2>
@@ -22,6 +22,9 @@ public static class Program
     var myclass = new MyClass();
     var x = (MyInterface) myclass; // Noncompliant, InvalidCastException is being thrown
     var b = myclass is MyInterface; // Noncompliant, always false
+
+    int? i = null;
+    var ii = (int)i; // Noncompliant, InvalidOperationException is being thrown
   }
 }
 </pre>

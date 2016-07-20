@@ -76,4 +76,34 @@ namespace Tests.Diagnostics
     }
     public class Node
     { }
+
+    public class NullableTest
+    {
+        public void Test1()
+        {
+            int? i = null;
+            var ii = (int)i; // Noncompliant {{Nullable is known to be empty, this cast throws an exception.}}
+//                   ^^^^^^
+}
+        public void Test2()
+        {
+            int? i = 10;
+            var ii = (int)i;
+        }
+        public void Test3()
+        {
+            int? i = null;
+            var d = (double)i; // Noncompliant
+        }
+        public void Test4()
+        {
+            int? i = null;
+            var n = (NullableTest)i; // don't care, custom cast
+        }
+
+        public static explicit operator NullableTest(int? i)
+        {
+            return null;
+        }
+    }
 }

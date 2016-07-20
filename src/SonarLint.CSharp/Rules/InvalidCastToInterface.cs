@@ -28,6 +28,9 @@ using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
 using System.Linq;
 using System.Collections.Generic;
+using SonarLint.Helpers.FlowAnalysis.CSharp;
+using System;
+using SonarLint.Helpers.FlowAnalysis.Common;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -43,14 +46,16 @@ namespace SonarLint.Rules.CSharp
         internal const string Description =
             "Inappropriate casts are issues that will lead to unexpected behavior or runtime errors, such as " +
             "\"InvalidCastException\"s. The compiler will catch bad casts from one class to another, but not " +
-            "bad casts to interfaces.";
-        internal const string MessageFormat = "Review this cast; in this project there's no type that {0}.";
+            "bad casts to interfaces. Also, nullable values that are known to be empty can't be cast to their " +
+            "underlying value type.";
+        internal const string MessageReviewFormat = "Review this cast; in this project there's no type that {0}.";
+        internal const string MessageDefinite = "Nullable is known to be empty, this cast throws an exception.";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Critical;
         internal const bool IsActivatedByDefault = true;
 
         internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
+            new DiagnosticDescriptor(DiagnosticId, Title, "{0}", Category,
                 RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
                 helpLinkUri: DiagnosticId.GetHelpLink(),
                 description: Description);
@@ -119,6 +124,65 @@ namespace SonarLint.Rules.CSharp
                         SyntaxKind.AsExpression,
                         SyntaxKind.IsExpression);
                 });
+
+            context.RegisterExplodedGraphBasedAnalysis((e, c) => CheckEmptyNullableCast(e, c));
+        }
+
+        private static void CheckEmptyNullableCast(ExplodedGraph explodedGraph, SyntaxNodeAnalysisContext context)
+        {
+            explodedGraph.AddExplodedGraphCheck(new NullableCastCheck(explodedGraph, context));
+            explodedGraph.Walk();
+        }
+
+        internal sealed class NullableCastCheck : ExplodedGraphCheck
+        {
+            private readonly SyntaxNodeAnalysisContext context;
+
+            public NullableCastCheck(ExplodedGraph explodedGraph)
+                : base(explodedGraph)
+            {
+            }
+
+            public NullableCastCheck(ExplodedGraph explodedGraph, SyntaxNodeAnalysisContext context)
+                : this(explodedGraph)
+            {
+                this.context = context;
+            }
+
+            public override ProgramState PreProcessInstruction(ProgramPoint programPoint, ProgramState programState)
+            {
+                var instruction = programPoint.Block.Instructions[programPoint.Offset];
+
+                return instruction.IsKind(SyntaxKind.CastExpression)
+                    ? ProcessCastAccess(programState, (CastExpressionSyntax)instruction)
+                    : programState;
+            }
+
+            private ProgramState ProcessCastAccess(ProgramState programState, CastExpressionSyntax castExpression)
+            {
+                var typeExpression = semanticModel.GetTypeInfo(castExpression.Expression).Type;
+                if (typeExpression == null ||
+                    !typeExpression.OriginalDefinition.Is(KnownType.System_Nullable_T))
+                {
+                    return programState;
+                }
+
+                var type = semanticModel.GetTypeInfo(castExpression.Type).Type;
+
+                if (type == null ||
+                    !semanticModel.Compilation.ClassifyConversion(typeExpression, type).IsNullable ||
+                    !programState.PeekValue().HasConstraint(ObjectConstraint.Null, programState))
+                {
+                    return programState;
+                }
+
+                if (!context.Equals(default(SyntaxNodeAnalysisContext)))
+                {
+                    context.ReportDiagnostic(Diagnostic.Create(Rule, castExpression.GetLocation(), MessageDefinite));
+                }
+
+                return null;
+            }
         }
 
         private static void CheckTypesForInvalidCast(INamedTypeSymbol interfaceType, INamedTypeSymbol expressionType,
@@ -168,7 +232,7 @@ namespace SonarLint.Rules.CSharp
                 ? $"implements both \"{expressionTypeName}\" and \"{interfaceTypeName}\""
                 : $"extends \"{expressionTypeName}\" and implements \"{interfaceTypeName}\"";
 
-            context.ReportDiagnostic(Diagnostic.Create(Rule, issueLocation, messageReasoning));
+            context.ReportDiagnostic(Diagnostic.Create(Rule, issueLocation, string.Format(MessageReviewFormat, messageReasoning)));
         }
     }
 }

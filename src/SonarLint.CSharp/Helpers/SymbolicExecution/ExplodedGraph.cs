@@ -72,7 +72,8 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             {
                 // Add mandatory checks
                 new NullPointerDereference.NullPointerCheck(this),
-                new EmptyNullableValueAccess.NullValueAccessedCheck(this)
+                new EmptyNullableValueAccess.NullValueAccessedCheck(this),
+                new InvalidCastToInterface.NullableCastCheck(this)
             };
         }
 
