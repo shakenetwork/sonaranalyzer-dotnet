@@ -183,5 +183,22 @@ namespace SonarLint.Helpers
             var constructedFrom = receiverType?.ConstructedFrom;
             return constructedFrom.Is(type);
         }
+
+        public static IEnumerable<IParameterSymbol> GetParameters(this ISymbol symbol)
+        {
+            var methodSymbol = symbol as IMethodSymbol;
+            if (methodSymbol != null)
+            {
+                return methodSymbol.Parameters;
+            }
+
+            var propertySymbol = symbol as IPropertySymbol;
+            if (propertySymbol != null)
+            {
+                return propertySymbol.Parameters;
+            }
+
+            return Enumerable.Empty<IParameterSymbol>();
+        }
     }
 }

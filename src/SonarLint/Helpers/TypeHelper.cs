@@ -38,9 +38,14 @@ namespace SonarLint.Helpers
             return self != null && self.TypeKind == TypeKind.Class;
         }
 
+        public static bool IsStruct(this ITypeSymbol self)
+        {
+            return self != null && self.TypeKind == TypeKind.Struct;
+        }
+
         public static bool IsClassOrStruct(this ITypeSymbol self)
         {
-            return self.Is(TypeKind.Struct) || self.IsClass();
+            return self.IsStruct() || self.IsClass();
         }
 
         public static bool Is(this ITypeSymbol self, TypeKind typeKind)
@@ -169,6 +174,41 @@ namespace SonarLint.Helpers
         {
             return type.ImplementsAny(baseTypes) ||
                 type.DerivesFromAny(baseTypes);
+        }
+
+        public static ITypeSymbol GetSymbolType(this ISymbol symbol)
+        {
+            var localSymbol = symbol as ILocalSymbol;
+            if (localSymbol != null)
+            {
+                return localSymbol.Type;
+            }
+
+            var fieldSymbol = symbol as IFieldSymbol;
+            if (fieldSymbol != null)
+            {
+                return fieldSymbol.Type;
+            }
+
+            var propertySymbol = symbol as IPropertySymbol;
+            if (propertySymbol != null)
+            {
+                return propertySymbol.Type;
+            }
+
+            var parameterSymbol = symbol as IParameterSymbol;
+            if (parameterSymbol != null)
+            {
+                return parameterSymbol.Type;
+            }
+
+            var aliasSymbol = symbol as IAliasSymbol;
+            if (aliasSymbol != null)
+            {
+                return aliasSymbol.Target as ITypeSymbol;
+            }
+
+            return symbol as ITypeSymbol;
         }
     }
 }

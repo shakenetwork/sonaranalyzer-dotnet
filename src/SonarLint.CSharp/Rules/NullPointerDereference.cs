@@ -234,8 +234,8 @@ namespace SonarLint.Rules.CSharp
 
             private static bool IsNullableValueType(ISymbol symbol)
             {
-                var type = ExplodedGraph.GetTypeOfSymbol(symbol);
-                return ExplodedGraph.IsValueType(type) &&
+                var type = symbol.GetSymbolType();
+                return type.IsStruct() &&
                     type.OriginalDefinition.Is(KnownType.System_Nullable_T);
             }
 

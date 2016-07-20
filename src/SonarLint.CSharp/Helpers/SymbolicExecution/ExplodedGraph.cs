@@ -35,12 +35,12 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
         internal const int MaxStepCount = 1000;
         private const int MaxProgramPointExecutionCount = 2;
 
-        private readonly List<Node> nodes = new List<Node>();
+        private readonly List<ExplodedGraphNode> nodes = new List<ExplodedGraphNode>();
         private readonly Dictionary<ProgramPoint, ProgramPoint> programPoints = new Dictionary<ProgramPoint, ProgramPoint>();
 
         private readonly IControlFlowGraph cfg;
         private readonly ISymbol declaration;
-        private readonly IEnumerable<IParameterSymbol> declarationParameters = new List<IParameterSymbol>();
+        private readonly IEnumerable<IParameterSymbol> declarationParameters;
         private readonly IEnumerable<IParameterSymbol> nonInDeclarationParameters;
         private readonly Common.LiveVariableAnalysis lva;
         private readonly ICollection<ExplodedGraphCheck> explodedGraphChecks;
@@ -54,28 +54,18 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
         public event EventHandler ExitBlockReached;
         public event EventHandler<ConditionEvaluatedEventArgs> ConditionEvaluated;
 
-        private readonly Queue<Node> workList = new Queue<Node>();
-        private readonly HashSet<Node> nodesAlreadyInGraph = new HashSet<Node>();
+        private readonly Queue<ExplodedGraphNode> workList = new Queue<ExplodedGraphNode>();
+        private readonly HashSet<ExplodedGraphNode> nodesAlreadyInGraph = new HashSet<ExplodedGraphNode>();
 
         public ExplodedGraph(IControlFlowGraph cfg, ISymbol declaration, SemanticModel semanticModel, Common.LiveVariableAnalysis lva)
         {
             this.cfg = cfg;
-            this.SemanticModel = semanticModel;
             this.declaration = declaration;
             this.lva = lva;
 
-            var methodSymbol = declaration as IMethodSymbol;
-            if (methodSymbol != null)
-            {
-                declarationParameters = methodSymbol.Parameters;
-            }
+            SemanticModel = semanticModel;
 
-            var propertySymbol = declaration as IPropertySymbol;
-            if (propertySymbol != null)
-            {
-                declarationParameters = propertySymbol.Parameters;
-            }
-
+            declarationParameters = declaration.GetParameters();
             nonInDeclarationParameters = declarationParameters.Where(p => p.RefKind != RefKind.None);
 
             explodedGraphChecks = new List<ExplodedGraphCheck>
@@ -127,7 +117,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
                 if (programPoint.Block is SimpleBlock)
                 {
-                    var newProgramState = GetCleanedProgramState(node);
+                    var newProgramState = GetCleanedProgramState(node.ProgramState, node.ProgramPoint.Block);
 
                     var jumpBlock = programPoint.Block as JumpBlock;
                     if (jumpBlock != null &&
@@ -267,9 +257,9 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
         #region Visit*
 
-        private void VisitBinaryBranch(BinaryBranchBlock binaryBranchBlock, Node node)
+        private void VisitBinaryBranch(BinaryBranchBlock binaryBranchBlock, ExplodedGraphNode node)
         {
-            var newProgramState = GetCleanedProgramState(node);
+            var newProgramState = GetCleanedProgramState(node.ProgramState, node.ProgramPoint.Block);
 
             switch (binaryBranchBlock.BranchingNode.Kind())
             {
@@ -363,7 +353,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             }
         }
 
-        private void VisitBinaryBranch(BinaryBranchBlock binaryBranchBlock, Node node, SyntaxNode instruction)
+        private void VisitBinaryBranch(BinaryBranchBlock binaryBranchBlock, ExplodedGraphNode node, SyntaxNode instruction)
         {
             var ps = node.ProgramState;
 
@@ -395,7 +385,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             }
         }
 
-        private bool TryEnqueueBranchesBasedOn(BinaryExpressionSyntax instruction, BinaryBranchBlock binaryBranchBlock, Node node)
+        private bool TryEnqueueBranchesBasedOn(BinaryExpressionSyntax instruction, BinaryBranchBlock binaryBranchBlock, ExplodedGraphNode node)
         {
             var identifier = GetNullComparedIdentifier(instruction);
             if (identifier == null)
@@ -491,7 +481,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
         #endregion
 
-        private void VisitInstruction(Node node)
+        private void VisitInstruction(ExplodedGraphNode node)
         {
             var instruction = node.ProgramPoint.Block.Instructions[node.ProgramPoint.Offset];
             var expression = instruction as ExpressionSyntax;
@@ -920,24 +910,17 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
         private ProgramState SetNewSymbolicValueIfLocal(ProgramState programState, ISymbol symbol, SymbolicValue symbolicValue)
         {
-            return IsLocalScoped(symbol)
-                ? SetNewSymbolicValue(programState, symbol, symbolicValue, IsNonNullableValueType(symbol))
-                : programState;
-        }
-
-        private static ProgramState SetNewSymbolicValue(ProgramState programState, ISymbol symbol, SymbolicValue value, bool shouldSetNotNullConstraint)
-        {
-            var newProgramState = programState.SetSymbolicValue(symbol, value);
-            if (shouldSetNotNullConstraint)
+            if (IsLocalScoped(symbol))
             {
-                newProgramState = value.SetConstraint(ObjectConstraint.NotNull, newProgramState);
+                var newProgramState = programState.SetSymbolicValue(symbol, symbolicValue);
+                if (IsNonNullableValueType(symbol))
+                {
+                    newProgramState = symbolicValue.SetConstraint(ObjectConstraint.NotNull, newProgramState);
+                }
+                return newProgramState;
             }
-            return newProgramState;
-        }
 
-        private ProgramState GetCleanedProgramState(Node node)
-        {
-            return GetCleanedProgramState(node.ProgramState, node.ProgramPoint.Block);
+            return programState;
         }
 
         private ProgramState GetCleanedProgramState(ProgramState programState, Block block)
@@ -969,14 +952,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 symbol.ContainingSymbol.Equals(declaration);
         }
 
-        internal bool IsNullableLocalScoped(ISymbol symbol)
-        {
-            var type = GetTypeOfSymbol(symbol);
-            return type != null &&
-                type.OriginalDefinition.Is(KnownType.System_Nullable_T) &&
-                IsLocalScoped(symbol);
-        }
-
         private static bool IsEmptyNullableCtorCall(IMethodSymbol nullableConstructorCall)
         {
             return nullableConstructorCall != null &&
@@ -985,35 +960,11 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 nullableConstructorCall.Parameters.Length == 0;
         }
 
-        internal static bool IsValueType(ITypeSymbol type)
-        {
-            return type != null &&
-                type.TypeKind == TypeKind.Struct;
-        }
-
         internal static bool IsNonNullableValueType(ISymbol symbol)
         {
-            var type = GetTypeOfSymbol(symbol);
-            return IsValueType(type) &&
+            var type = symbol.GetSymbolType();
+            return type.IsStruct() &&
                 !type.OriginalDefinition.Is(KnownType.System_Nullable_T);
-        }
-
-        internal static ITypeSymbol GetTypeOfSymbol(ISymbol symbol)
-        {
-            ITypeSymbol type = null;
-            var local = symbol as ILocalSymbol;
-            if (local != null)
-            {
-                type = local.Type;
-            }
-
-            var parameter = symbol as IParameterSymbol;
-            if (parameter != null)
-            {
-                type = parameter.Type;
-            }
-
-            return type;
         }
 
         #endregion
@@ -1062,7 +1013,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 return;
             }
 
-            var newNode = new Node(pos, programState.AddVisit(pos));
+            var newNode = new ExplodedGraphNode(pos, programState.AddVisit(pos));
             if (nodesAlreadyInGraph.Add(newNode))
             {
                 workList.Enqueue(newNode);
@@ -1070,46 +1021,5 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
         }
 
         #endregion
-
-        private class Node : IEquatable<Node>
-        {
-            public ProgramState ProgramState { get; }
-            public ProgramPoint ProgramPoint { get; }
-
-            public Node(ProgramPoint programPoint, ProgramState programState)
-            {
-                ProgramState = programState;
-                ProgramPoint = programPoint;
-            }
-
-            public override bool Equals(object obj)
-            {
-                if (obj == null)
-                {
-                    return false;
-                }
-
-                Node n = obj as Node;
-                return Equals(n);
-            }
-
-            public bool Equals(Node other)
-            {
-                if (other == null)
-                {
-                    return false;
-                }
-
-                return ProgramState.Equals(other.ProgramState) && ProgramPoint.Equals(other.ProgramPoint);
-            }
-
-            public override int GetHashCode()
-            {
-                var hash = 19;
-                hash = hash * 31 + ProgramState.GetHashCode();
-                hash = hash * 31 + ProgramPoint.GetHashCode();
-                return hash;
-            }
-        }
     }
 }

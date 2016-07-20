@@ -149,7 +149,7 @@ namespace SonarLint.Rules.CSharp
                 }
 
                 var symbol = semanticModel.GetSymbolInfo(identifier).Symbol;
-                if (!explodedGraph.IsNullableLocalScoped(symbol))
+                if (!IsNullableLocalScoped(symbol))
                 {
                     return programState;
                 }
@@ -164,6 +164,14 @@ namespace SonarLint.Rules.CSharp
                     OnValuePropertyAccessed(identifier, false);
                     return programState;
                 }
+            }
+
+            private bool IsNullableLocalScoped(ISymbol symbol)
+            {
+                var type = symbol.GetSymbolType();
+                return type != null &&
+                    type.OriginalDefinition.Is(KnownType.System_Nullable_T) &&
+                    explodedGraph.IsLocalScoped(symbol);
             }
 
             private bool IsHasValueAccess(MemberAccessExpressionSyntax memberAccess)
