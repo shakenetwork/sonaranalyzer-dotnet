@@ -32,6 +32,7 @@ namespace SonarLint.UnitTest.Helpers
 {
     using FluentAssertions;
     using LiveVariableAnalysis = SonarLint.Helpers.FlowAnalysis.CSharp.LiveVariableAnalysis;
+    using ExplodedGraph = SonarLint.Helpers.FlowAnalysis.CSharp.ExplodedGraph;
 
     [TestClass]
     public class ExplodedGraphTest

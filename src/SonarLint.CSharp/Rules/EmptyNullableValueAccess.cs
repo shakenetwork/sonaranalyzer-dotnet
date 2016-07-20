@@ -33,6 +33,8 @@ using SonarLint.Helpers.FlowAnalysis.CSharp;
 
 namespace SonarLint.Rules.CSharp
 {
+    using ExplodedGraph = Helpers.FlowAnalysis.CSharp.ExplodedGraph;
+
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [SqaleConstantRemediation("10min")]

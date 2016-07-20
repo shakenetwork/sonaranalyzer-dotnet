@@ -116,6 +116,8 @@
     <Compile Include="Helpers\SymbolicExecution\ConditionEvaluatedEventArgs.cs" />
     <Compile Include="Helpers\SymbolicExecution\Constraints\ObjectConstraint.cs" />
     <Compile Include="Helpers\SymbolicExecution\Constraints\BoolConstraint.cs" />
+    <Compile Include="Helpers\SymbolicExecution\ExplodedGraph.cs" />
+    <Compile Include="Helpers\SymbolicExecution\ExplodedGraphCheck.cs" />
     <Compile Include="Helpers\SymbolicExecution\InstructionProcessedEventArgs.cs" />
     <Compile Include="Helpers\SymbolicExecution\ProgramPoint.cs" />
     <Compile Include="Helpers\SymbolicExecution\ProgramState.cs" />

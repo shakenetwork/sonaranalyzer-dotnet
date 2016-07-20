@@ -19,9 +19,8 @@
  */
 
 using Microsoft.CodeAnalysis;
-using SonarLint.Helpers.FlowAnalysis.Common;
 
-namespace SonarLint.Helpers.FlowAnalysis.CSharp
+namespace SonarLint.Helpers.FlowAnalysis.Common
 {
     internal class ExplodedGraphCheck
     {
