@@ -32,11 +32,6 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 
         public override IEnumerable<ProgramState> TrySetConstraint(SymbolicValueConstraint constraint, ProgramState currentProgramState)
         {
-            if (constraint == null)
-            {
-                return new[] { currentProgramState };
-            }
-
             var boolConstraint = constraint as BoolConstraint;
             if (boolConstraint == null)
             {

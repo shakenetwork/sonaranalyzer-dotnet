@@ -18,6 +18,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
 using Microsoft.CodeAnalysis;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarLint.Helpers.FlowAnalysis.Common;
@@ -29,7 +30,9 @@ namespace SonarLint.UnitTest.Helpers
     public class ProgramStateTests
     {
         private class FakeConstraint : SymbolicValueConstraint
-        { }
+        {
+            public override SymbolicValueConstraint OppositeForLogicalNot => null;
+        }
 
         private static ISymbol GetSymbol()
         {
