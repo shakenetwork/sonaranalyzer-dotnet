@@ -33,6 +33,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         internal ImmutableDictionary<SymbolicValue, SymbolicValueConstraint> Constraints { get; }
         internal ImmutableDictionary<ProgramPoint, int> ProgramPointVisitCounts { get; }
         internal ImmutableStack<SymbolicValue> ExpressionStack { get; }
+        internal ImmutableHashSet<BinaryRelationship> Relationships { get; }
 
         private static ImmutableDictionary<SymbolicValue, SymbolicValueConstraint> InitialConstraints =>
             new Dictionary<SymbolicValue, SymbolicValueConstraint>
@@ -51,19 +52,55 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             : this(ImmutableDictionary<ISymbol, SymbolicValue>.Empty,
                   InitialConstraints,
                   ImmutableDictionary<ProgramPoint, int>.Empty,
-                  ImmutableStack<SymbolicValue>.Empty)
+                  ImmutableStack<SymbolicValue>.Empty,
+                  ImmutableHashSet<BinaryRelationship>.Empty)
         {
+        }
+
+        internal ProgramState TrySetRelationship(BinaryRelationship relationship)
+        {
+            if (Relationships.Contains(relationship))
+            {
+                return this;
+            }
+
+            var leftOp = relationship.LeftOperand;
+            var rightOp = relationship.RightOperand;
+
+            // TODO if either is a LogicalNotSymbolicValue, then we could drill down and inverse the relationship (SLVS-982)
+
+            // Only add relationships on SV's that belong to a local symbol
+            var localValues = Values.Values.Except(ProtectedSymbolicValues).ToImmutableHashSet();
+            if (!localValues.Contains(leftOp) ||
+                !localValues.Contains(rightOp))
+            {
+                return this;
+            }
+
+            if (relationship.IsContradicting(Relationships))
+            {
+                return null;
+            }
+
+            return new ProgramState(
+                Values,
+                Constraints,
+                ProgramPointVisitCounts,
+                ExpressionStack,
+                Relationships.Add(relationship));
         }
 
         internal ProgramState(ImmutableDictionary<ISymbol, SymbolicValue> values,
             ImmutableDictionary<SymbolicValue, SymbolicValueConstraint> constraints,
             ImmutableDictionary<ProgramPoint, int> programPointVisitCounts,
-            ImmutableStack<SymbolicValue> expressionStack)
+            ImmutableStack<SymbolicValue> expressionStack,
+            ImmutableHashSet<BinaryRelationship> relationships)
         {
             Values = values;
             Constraints = constraints;
             ProgramPointVisitCounts = programPointVisitCounts;
             ExpressionStack = expressionStack;
+            Relationships = relationships;
         }
 
         public ProgramState PushValue(SymbolicValue symbolicValue)
@@ -72,7 +109,8 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 Values,
                 Constraints,
                 ProgramPointVisitCounts,
-                ExpressionStack.Push(symbolicValue));
+                ExpressionStack.Push(symbolicValue),
+                Relationships);
         }
 
         public ProgramState PushValues(IEnumerable<SymbolicValue> values)
@@ -86,7 +124,8 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 Values,
                 Constraints,
                 ProgramPointVisitCounts,
-                ImmutableStack.Create(ExpressionStack.Concat(values).ToArray()));
+                ImmutableStack.Create(ExpressionStack.Concat(values).ToArray()),
+                Relationships);
         }
 
         public ProgramState PopValue()
@@ -101,7 +140,8 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 Values,
                 Constraints,
                 ProgramPointVisitCounts,
-                ExpressionStack.Pop(out poppedValue));
+                ExpressionStack.Pop(out poppedValue),
+                Relationships);
         }
 
         public ProgramState PopValues(int numberOfValuesToPop)
@@ -118,7 +158,8 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 Values,
                 Constraints,
                 ProgramPointVisitCounts,
-                newStack);
+                newStack,
+                Relationships);
         }
 
         public SymbolicValue PeekValue()
@@ -134,7 +175,8 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 Values.SetItem(symbol, newSymbolicValue),
                 Constraints,
                 ProgramPointVisitCounts,
-                ExpressionStack);
+                ExpressionStack,
+                Relationships);
         }
 
         public SymbolicValue GetSymbolValue(ISymbol symbol)
@@ -154,7 +196,8 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 Values,
                 Constraints,
                 ProgramPointVisitCounts.SetItem(visitedProgramPoint, visitCount + 1),
-                ExpressionStack);
+                ExpressionStack,
+                Relationships);
         }
 
         internal int GetVisitedCount(ProgramPoint programPoint)
@@ -174,6 +217,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 .Where(sv => liveSymbolsToKeep.Contains(sv.Key))
                 .ToImmutableDictionary();
 
+            // SVs for live symbols
             var usedSymbolicValues = cleanedValues.Values.ToImmutableHashSet();
 
             var cleanedConstraints = Constraints
@@ -183,7 +227,14 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                     ExpressionStack.Contains(kv.Key))
                 .ToImmutableDictionary();
 
-            return new ProgramState(cleanedValues, cleanedConstraints, ProgramPointVisitCounts, ExpressionStack);
+            // Relationships for live symbols (no transitivity, so both of them need to be live in order to hold any information)
+            var cleanedRelationships = Relationships
+                .Where(r =>
+                    usedSymbolicValues.Contains(r.LeftOperand) &&
+                    usedSymbolicValues.Contains(r.RightOperand))
+                .ToImmutableHashSet();
+
+            return new ProgramState(cleanedValues, cleanedConstraints, ProgramPointVisitCounts, ExpressionStack, cleanedRelationships);
         }
 
         public override bool Equals(object obj)
@@ -206,7 +257,8 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 
             return DictionaryHelper.DictionaryEquals(Values, other.Values) &&
                 DictionaryHelper.DictionaryEquals(Constraints, other.Constraints) &&
-                Enumerable.SequenceEqual(ExpressionStack, other.ExpressionStack);
+                Enumerable.SequenceEqual(ExpressionStack, other.ExpressionStack) &&
+                Relationships.SetEquals(other.Relationships);
         }
 
         public override int GetHashCode()
@@ -228,6 +280,11 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             foreach (var value in ExpressionStack)
             {
                 hash = hash * 31 + value.GetHashCode();
+            }
+
+            foreach (var relationship in Relationships)
+            {
+                hash = hash * 31 + relationship.GetHashCode();
             }
 
             return hash;

@@ -122,6 +122,9 @@
     <Compile Include="Helpers\SymbolicExecution\ProgramPoint.cs" />
     <Compile Include="Helpers\SymbolicExecution\ProgramState.cs" />
     <Compile Include="Helpers\SymbolicExecution\Constraints\SymbolicValueConstraint.cs" />
+    <Compile Include="Helpers\SymbolicExecution\Relationships\NotEqualsRelationship.cs" />
+    <Compile Include="Helpers\SymbolicExecution\Relationships\EqualsRelationship.cs" />
+    <Compile Include="Helpers\SymbolicExecution\Relationships\BinaryRelationship.cs" />
     <Compile Include="Helpers\SymbolicExecution\SymbolicValues\Binary\EqualsSymbolicValue.cs" />
     <Compile Include="Helpers\SymbolicExecution\SymbolicValues\Binary\NotEqualsSymbolicValue.cs" />
     <Compile Include="Helpers\SymbolicExecution\SymbolicValues\Binary\RelationalSymbolicValue.cs" />

@@ -432,5 +432,34 @@ namespace Tests.Diagnostics
                 if (b) { }  // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
             }
         }
+
+        public void EqRelations(object a, ConditionEvaluatesToConstant b)
+        {
+            if (a == b)
+            {
+                if (b == a) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+            }
+            else
+            {
+                if (b != a) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+            }
+
+            if (a != b)
+            {
+                if (b == a) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            }
+            else
+            {
+                if (b != a) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            }
+        }
+
+        public void RelationshipWithConstraint(bool a, bool b)
+        {
+            if (a == b && a) { if (b) { } } // Non-compliant (SLVS-970)
+            if (a && b) { if (a == b) { } } // Noncompliant
+//                            ^^^^^^
+            if (a && b && a == b) {  } // Non-compliant
+        }
     }
 }

@@ -44,18 +44,28 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             SymbolicValueConstraint rightConstraint;
             var rightHasConstraint = rightOperand.TryGetConstraint(currentProgramState, out rightConstraint);
 
+            var relationship = boolConstraint == BoolConstraint.True
+                ? (BinaryRelationship)new EqualsRelationship(leftOperand, rightOperand)
+                : new NotEqualsRelationship(leftOperand, rightOperand);
+
+            var newProgramState = currentProgramState.TrySetRelationship(relationship);
+            if (newProgramState == null)
+            {
+                return Enumerable.Empty<ProgramState>();
+            }
+
             if (!rightHasConstraint && !leftHasConstraint)
             {
-                return new[] { currentProgramState };
+                return new[] { newProgramState };
             }
 
             if (boolConstraint == BoolConstraint.True)
             {
-                return rightOperand.TrySetConstraint(leftConstraint, currentProgramState)
+                return rightOperand.TrySetConstraint(leftConstraint, newProgramState)
                     .SelectMany(ps => leftOperand.TrySetConstraint(rightConstraint, ps));
             }
 
-            return rightOperand.TrySetConstraint(leftConstraint?.OppositeForLogicalNot, currentProgramState)
+            return rightOperand.TrySetConstraint(leftConstraint?.OppositeForLogicalNot, newProgramState)
                 .SelectMany(ps => leftOperand.TrySetConstraint(rightConstraint?.OppositeForLogicalNot, ps));
         }
 

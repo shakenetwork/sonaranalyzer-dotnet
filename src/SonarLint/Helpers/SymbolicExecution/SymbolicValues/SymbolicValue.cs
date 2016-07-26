@@ -66,7 +66,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         {
             if (identifier != null)
             {
-                return "SymbolicValue " + identifier;
+                return "SV " + identifier;
             }
 
             return base.ToString();
@@ -83,7 +83,8 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 programState.Values,
                 programState.Constraints.SetItem(this, constraint),
                 programState.ProgramPointVisitCounts,
-                programState.ExpressionStack);
+                programState.ExpressionStack,
+                programState.Relationships);
         }
 
         public bool HasConstraint(SymbolicValueConstraint constraint, ProgramState programState)
