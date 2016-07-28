@@ -74,5 +74,45 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         {
             return GetNormalizedRelationship(boolConstraint, leftOperand, rightOperand);
         }
+
+        public override IEnumerable<ProgramState> TrySetConstraint(SymbolicValueConstraint constraint, ProgramState currentProgramState)
+        {
+            var boolConstraint = constraint as BoolConstraint;
+            if (boolConstraint == null)
+            {
+                return new[] { currentProgramState };
+            }
+
+            SymbolicValueConstraint oldConstraint;
+            if (TryGetConstraint(currentProgramState, out oldConstraint) &&
+                oldConstraint != constraint)
+            {
+                return Enumerable.Empty<ProgramState>();
+            }
+
+            SymbolicValueConstraint leftConstraint;
+            var leftHasConstraint = leftOperand.TryGetConstraint(currentProgramState, out leftConstraint);
+            SymbolicValueConstraint rightConstraint;
+            var rightHasConstraint = rightOperand.TryGetConstraint(currentProgramState, out rightConstraint);
+
+            var relationship = GetRelationship(boolConstraint);
+
+            var newProgramState = currentProgramState.TrySetRelationship(relationship);
+            if (newProgramState == null)
+            {
+                return Enumerable.Empty<ProgramState>();
+            }
+
+            if (!rightHasConstraint && !leftHasConstraint)
+            {
+                return new[] { newProgramState };
+            }
+
+            return SetConstraint(boolConstraint, leftConstraint, rightConstraint, newProgramState);
+        }
+
+        internal abstract IEnumerable<ProgramState> SetConstraint(BoolConstraint boolConstraint,
+            SymbolicValueConstraint leftConstraint, SymbolicValueConstraint rightConstraint,
+            ProgramState programState);
     }
 }

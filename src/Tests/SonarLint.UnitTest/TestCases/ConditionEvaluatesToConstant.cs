@@ -517,6 +517,35 @@ namespace Tests.Diagnostics
             }
         }
 
+        public void ReferenceEquals(object a, object b)
+        {
+            if (object.ReferenceEquals(a, b)) { }
+
+            if (object.ReferenceEquals(a, a)) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+
+            a = null;
+            if (object.ReferenceEquals(null, a)) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+
+            if (object.ReferenceEquals(null, new object())) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+
+            int i = 10;
+            if (object.ReferenceEquals(i, i)) { } // Noncompliant because of boxing {{Change this condition so that it does not always evaluate to "false".}}
+
+            int? ii = null;
+            int? jj = null;
+            if (object.ReferenceEquals(ii, jj)) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+
+            jj = 10;
+            if (object.ReferenceEquals(ii, jj)) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+        }
+
+        public void ReferenceEqualsNullable(int? ii, int? jj)
+        {
+            if (object.ReferenceEquals(ii, jj)) { } // Compliant, they might be both null
+            jj = 1;
+            if (object.ReferenceEquals(ii, jj)) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+        }
+
         public override bool Equals(object obj)
         {
             return base.Equals(obj);

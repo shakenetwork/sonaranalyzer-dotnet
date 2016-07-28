@@ -30,39 +30,17 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         {
         }
 
-        public override IEnumerable<ProgramState> TrySetConstraint(SymbolicValueConstraint constraint, ProgramState currentProgramState)
+        internal override IEnumerable<ProgramState> SetConstraint(BoolConstraint boolConstraint,
+            SymbolicValueConstraint leftConstraint, SymbolicValueConstraint rightConstraint,
+            ProgramState programState)
         {
-            var boolConstraint = constraint as BoolConstraint;
-            if (boolConstraint == null)
-            {
-                return new[] { currentProgramState };
-            }
-
-            SymbolicValueConstraint leftConstraint;
-            var leftHasConstraint = leftOperand.TryGetConstraint(currentProgramState, out leftConstraint);
-            SymbolicValueConstraint rightConstraint;
-            var rightHasConstraint = rightOperand.TryGetConstraint(currentProgramState, out rightConstraint);
-
-            var relationship = GetRelationship(boolConstraint);
-
-            var newProgramState = currentProgramState.TrySetRelationship(relationship);
-            if (newProgramState == null)
-            {
-                return Enumerable.Empty<ProgramState>();
-            }
-
-            if (!rightHasConstraint && !leftHasConstraint)
-            {
-                return new[] { newProgramState };
-            }
-
             if (boolConstraint == BoolConstraint.True)
             {
-                return rightOperand.TrySetConstraint(leftConstraint, newProgramState)
+                return rightOperand.TrySetConstraint(leftConstraint, programState)
                     .SelectMany(ps => leftOperand.TrySetConstraint(rightConstraint, ps));
             }
 
-            return rightOperand.TrySetConstraint(leftConstraint?.OppositeForLogicalNot, newProgramState)
+            return rightOperand.TrySetConstraint(leftConstraint?.OppositeForLogicalNot, programState)
                 .SelectMany(ps => leftOperand.TrySetConstraint(rightConstraint?.OppositeForLogicalNot, ps));
         }
     }

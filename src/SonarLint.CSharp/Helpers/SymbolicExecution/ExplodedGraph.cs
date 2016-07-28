@@ -332,7 +332,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                     break;
 
                 case SyntaxKind.InvocationExpression:
-                    newProgramState = VisitInvocation((InvocationExpressionSyntax)instruction, newProgramState);
+                    newProgramState = new InvocationVisitor((InvocationExpressionSyntax)instruction, SemanticModel).GetChangedProgramState(newProgramState);
                     break;
 
                 case SyntaxKind.ObjectCreationExpression:
@@ -530,109 +530,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             var sv = symbolicValueFactory(leftSymbol, rightSymbol);
             newProgramState = newProgramState.PushValue(sv);
             return SetNewSymbolicValueIfLocal(symbol, sv, newProgramState);
-        }
-
-        private ProgramState VisitInvocation(InvocationExpressionSyntax invocation, ProgramState programState)
-        {
-            var methodSymbol = SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
-
-            if (IsInstanceEqualsCall(methodSymbol))
-            {
-                return HandleInstanceEqualsCall(programState);
-            }
-
-            if (IsStaticEqualsCall(methodSymbol))
-            {
-                return HandleStaticEqualsCall(programState,
-                    (left, right) => new ValueEqualsSymbolicValue(left, right));
-            }
-
-            if (IsReferenceEqualsCall(methodSymbol))
-            {
-                return HandleStaticEqualsCall(programState,
-                    (left, right) => new ReferenceEqualsSymbolicValue(left, right));
-            }
-
-            return programState
-                .PopValues((invocation.ArgumentList?.Arguments.Count ?? 0) + 1)
-                .PushValue(new SymbolicValue());
-        }
-
-        private static ProgramState HandleStaticEqualsCall(ProgramState programState,
-            Func<SymbolicValue, SymbolicValue, EqualsSymbolicValue> svFactory)
-        {
-            SymbolicValue arg1;
-            SymbolicValue arg2;
-
-            return programState
-                .PopValue(out arg1)
-                .PopValue(out arg2)
-                .PopValue()
-                .PushValue(svFactory(arg1, arg2));
-        }
-
-        private static ProgramState HandleInstanceEqualsCall(ProgramState programState)
-        {
-            SymbolicValue arg1;
-            SymbolicValue expression;
-
-            var newProgramState = programState
-                .PopValue(out arg1)
-                .PopValue(out expression);
-
-            SymbolicValue arg2;
-            var memberAccess = expression as MemberAccessSymbolicValue;
-            if (memberAccess != null)
-            {
-                arg2 = memberAccess.MemberExpression;
-            }
-            else
-            {
-                // "this" reference
-                // "this" should have its own dedicated symbol (SLVS-984)
-                arg2 = new SymbolicValue();
-                newProgramState = arg2.SetConstraint(ObjectConstraint.NotNull, newProgramState);
-            }
-
-            return newProgramState.PushValue(new ValueEqualsSymbolicValue(arg1, arg2));
-        }
-
-        private static bool IsReferenceEqualsCall(IMethodSymbol methodSymbol)
-        {
-            return methodSymbol != null &&
-                methodSymbol.ContainingType.Is(KnownType.System_Object) &&
-                methodSymbol.Name == "ReferenceEquals";
-        }
-
-        private static bool IsInstanceEqualsCall(IMethodSymbol methodSymbol)
-        {
-            if (methodSymbol == null ||
-                methodSymbol.Name != "Equals" ||
-                methodSymbol.Parameters.Length != 1)
-            {
-                return false;
-            }
-
-            var baseMethod = methodSymbol;
-            while (baseMethod != null)
-            {
-                if (baseMethod.ContainingType.Is(KnownType.System_Object))
-                {
-                    return true;
-                }
-
-                baseMethod = baseMethod.OverriddenMethod;
-            }
-
-            return false;
-        }
-
-        private static bool IsStaticEqualsCall(IMethodSymbol methodSymbol)
-        {
-            return methodSymbol != null &&
-                methodSymbol.ContainingType.Is(KnownType.System_Object) &&
-                methodSymbol.IsStatic &&
-                methodSymbol.Name == "Equals";
         }
 
         private ProgramState VisitObjectCreation(ObjectCreationExpressionSyntax ctor, ProgramState programState)
