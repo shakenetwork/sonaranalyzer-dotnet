@@ -19,7 +19,7 @@ namespace Tests.Diagnostics
             object o = null;
             if (condition)
             {
-                M1(o.ToString()); // Noncompliant {{"o" is null.}}
+                M1(o.ToString()); // Noncompliant {{"o" is null on at least one execution path.}}
 //                 ^
             }
             else
@@ -40,7 +40,7 @@ namespace Tests.Diagnostics
             {
                 o = new object();
             }
-            M2(o.ToString()); // Non-compliant, can be null, but we are not reporting on it.
+            M2(o.ToString()); // Noncompliant
         }
 
         void Test_ExtensionMethodWithNull()

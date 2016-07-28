@@ -49,7 +49,7 @@ namespace SonarLint.Rules.CSharp
             "A reference to \"null\" should never be dereferenced/accessed. Doing so will cause a \"NullReferenceException\" to be thrown. " +
             "At best, such an exception will cause abrupt program termination. At worst, it could expose debugging information that would " +
             "be useful to an attacker, or it could allow an attacker to bypass security measures.";
-        internal const string MessageFormat = "\"{0}\" is null{1}.";
+        internal const string MessageFormat = "\"{0}\" is null on at least one execution path.";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Blocker;
         internal const bool IsActivatedByDefault = true;
@@ -73,10 +73,9 @@ namespace SonarLint.Rules.CSharp
             explodedGraph.AddExplodedGraphCheck(nullPointerCheck);
 
             var nullIdentifiers = new HashSet<IdentifierNameSyntax>();
-            var nonNullIdentifiers = new HashSet<IdentifierNameSyntax>();
 
             EventHandler<MemberAccessedEventArgs> memberAccessedHandler =
-                (sender, args) => CollectMemberAccesses(args, nullIdentifiers, nonNullIdentifiers, context.SemanticModel);
+                (sender, args) => CollectMemberAccesses(args, nullIdentifiers, context.SemanticModel);
 
             nullPointerCheck.MemberAccessed += memberAccessedHandler;
 
@@ -91,30 +90,17 @@ namespace SonarLint.Rules.CSharp
 
             foreach (var nullIdentifier in nullIdentifiers)
             {
-                var messageEnd = string.Empty;
-                if (nonNullIdentifiers.Contains(nullIdentifier))
-                {
-                    // Only report on cases where we are (almost) sure
-                    continue;
-                }
-
-                context.ReportDiagnostic(Diagnostic.Create(Rule, nullIdentifier.GetLocation(), nullIdentifier.Identifier.ValueText, messageEnd));
+                context.ReportDiagnostic(Diagnostic.Create(Rule, nullIdentifier.GetLocation(), nullIdentifier.Identifier.ValueText));
             }
         }
 
         private static void CollectMemberAccesses(MemberAccessedEventArgs args, HashSet<IdentifierNameSyntax> nullIdentifiers,
-            HashSet<IdentifierNameSyntax> nonNullIdentifiers, SemanticModel semanticModel)
+            SemanticModel semanticModel)
         {
-            if (args.IsNull)
+            if (args.IsNull &&
+                !NullPointerCheck.IsExtensionMethod(args.Identifier.Parent, semanticModel))
             {
-                if (!NullPointerCheck.IsExtensionMethod(args.Identifier.Parent, semanticModel))
-                {
-                    nullIdentifiers.Add(args.Identifier);
-                }
-            }
-            else
-            {
-                nonNullIdentifiers.Add(args.Identifier);
+                nullIdentifiers.Add(args.Identifier);
             }
         }
 
