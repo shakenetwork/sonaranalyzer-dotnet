@@ -107,7 +107,11 @@ namespace SonarLint.UnitTest
                         var expectedMessage = expectedIssues[line];
                         if (expectedMessage != null)
                         {
-                            diagnostic.GetMessage().ShouldBeEquivalentTo(expectedMessage);
+                            var message = diagnostic.GetMessage();
+
+                            Assert.AreEqual(expectedMessage,
+                                message,
+                                $"Message does not match expected on line {line}");
                         }
 
                         if (expectedLocations.ContainsKey(line))

@@ -23,15 +23,12 @@ using System.Linq;
 
 namespace SonarLint.Helpers.FlowAnalysis.Common
 {
-    public abstract class EqualsSymbolicValue : RelationalSymbolicValue
+    public abstract class EqualsSymbolicValue : EqualityLikeSymbolicValue
     {
         protected EqualsSymbolicValue(SymbolicValue leftOperand, SymbolicValue rightOperand)
             : base(leftOperand, rightOperand)
         {
         }
-
-        protected abstract BinaryRelationship GetTrueRelationship(SymbolicValue left, SymbolicValue right);
-        protected abstract BinaryRelationship GetFalseRelationship(SymbolicValue left, SymbolicValue right);
 
         public override IEnumerable<ProgramState> TrySetConstraint(SymbolicValueConstraint constraint, ProgramState currentProgramState)
         {
@@ -46,9 +43,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             SymbolicValueConstraint rightConstraint;
             var rightHasConstraint = rightOperand.TryGetConstraint(currentProgramState, out rightConstraint);
 
-            var relationship = boolConstraint == BoolConstraint.True
-                ? GetTrueRelationship(leftOperand, rightOperand)
-                : GetFalseRelationship(leftOperand, rightOperand);
+            var relationship = GetRelationship(boolConstraint);
 
             var newProgramState = currentProgramState.TrySetRelationship(relationship);
             if (newProgramState == null)

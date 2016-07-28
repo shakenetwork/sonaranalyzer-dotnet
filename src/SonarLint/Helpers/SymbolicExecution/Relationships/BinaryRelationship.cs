@@ -64,6 +64,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         }
 
         internal abstract bool IsContradicting(IEnumerable<BinaryRelationship> relationships);
+        public abstract BinaryRelationship Negate();
 
         protected bool OperandsMatch(BinaryRelationship rel2)
         {

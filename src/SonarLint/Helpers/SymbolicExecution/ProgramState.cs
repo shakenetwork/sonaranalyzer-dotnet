@@ -67,8 +67,6 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             var leftOp = relationship.LeftOperand;
             var rightOp = relationship.RightOperand;
 
-            // TODO if either is a LogicalNotSymbolicValue, then we could drill down and inverse the relationship (SLVS-982)
-
             // Only add relationships on SV's that belong to a local symbol
             var localValues = Values.Values.Except(ProtectedSymbolicValues).ToImmutableHashSet();
             if (!localValues.Contains(leftOp) ||

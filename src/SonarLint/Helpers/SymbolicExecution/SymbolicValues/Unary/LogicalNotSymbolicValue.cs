@@ -18,7 +18,6 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System;
 using System.Collections.Generic;
 
 namespace SonarLint.Helpers.FlowAnalysis.Common
@@ -38,12 +37,12 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 return new[] { currentProgramState };
             }
 
-            return operand.TrySetConstraint(boolConstraint.OppositeForLogicalNot, currentProgramState);
+            return Operand.TrySetConstraint(boolConstraint.OppositeForLogicalNot, currentProgramState);
         }
 
         public override string ToString()
         {
-            return "!" + operand;
+            return "!" + Operand;
         }
     }
 }

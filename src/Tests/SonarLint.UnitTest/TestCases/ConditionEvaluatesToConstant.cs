@@ -433,15 +433,20 @@ namespace Tests.Diagnostics
             }
         }
 
-        public void EqRelations(object a, ConditionEvaluatesToConstant b)
+        public void EqRelations(bool a, bool b)
         {
             if (a == b)
             {
-                if (b == a) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+                if (b == a) { }    // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+                if (b == !a) { }   // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+                if (!b == !!a) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+                if (!(a == b)) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
             }
             else
             {
-                if (b != a) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+                if (b != a) { }    // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+                if (b != !a) { }   // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+                if (!b != !!a) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
             }
 
             if (a != b)

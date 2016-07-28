@@ -37,6 +37,10 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 .Any(rel => OperandsMatch(rel));
         }
 
+        public override BinaryRelationship Negate()
+        {
+            return new ReferenceEqualsRelationship(LeftOperand, RightOperand);
+        }
         public override bool Equals(object obj)
         {
             if (obj == null)

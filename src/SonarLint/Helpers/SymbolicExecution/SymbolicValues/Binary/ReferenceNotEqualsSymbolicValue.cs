@@ -27,19 +27,14 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         {
         }
 
-        protected override BinaryRelationship GetTrueRelationship(SymbolicValue left, SymbolicValue right)
+        protected override BinaryRelationship GetRelationship(SymbolicValue left, SymbolicValue right)
         {
             return new ReferenceNotEqualsRelationship(left, right);
         }
 
-        protected override BinaryRelationship GetFalseRelationship(SymbolicValue left, SymbolicValue right)
-        {
-            return new ReferenceEqualsRelationship(left, right);
-        }
-
         public override string ToString()
         {
-            return $"RefEq({leftOperand}, {rightOperand})";
+            return $"!RefEq({leftOperand}, {rightOperand})";
         }
     }
 }

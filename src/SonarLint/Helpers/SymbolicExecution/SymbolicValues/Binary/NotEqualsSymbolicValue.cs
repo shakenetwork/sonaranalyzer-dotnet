@@ -23,15 +23,12 @@ using System.Linq;
 
 namespace SonarLint.Helpers.FlowAnalysis.Common
 {
-    public abstract class NotEqualsSymbolicValue : RelationalSymbolicValue
+    public abstract class NotEqualsSymbolicValue : EqualityLikeSymbolicValue
     {
         protected NotEqualsSymbolicValue(SymbolicValue leftOperand, SymbolicValue rightOperand)
             : base(leftOperand, rightOperand)
         {
         }
-
-        protected abstract BinaryRelationship GetTrueRelationship(SymbolicValue left, SymbolicValue right);
-        protected abstract BinaryRelationship GetFalseRelationship(SymbolicValue left, SymbolicValue right);
 
         public override IEnumerable<ProgramState> TrySetConstraint(SymbolicValueConstraint constraint, ProgramState currentProgramState)
         {
@@ -46,9 +43,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             SymbolicValueConstraint rightConstraint;
             var rightHasConstraint = rightOperand.TryGetConstraint(currentProgramState, out rightConstraint);
 
-            var relationship = boolConstraint == BoolConstraint.True
-                ? GetTrueRelationship(leftOperand, rightOperand)
-                : GetFalseRelationship(leftOperand, rightOperand);
+            var relationship = GetRelationship(boolConstraint);
 
             var newProgramState = currentProgramState.TrySetRelationship(relationship);
             if (newProgramState == null)
@@ -69,11 +64,6 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 
             return rightOperand.TrySetConstraint(leftConstraint?.OppositeForLogicalNot, newProgramState)
                 .SelectMany(ps => leftOperand.TrySetConstraint(rightConstraint?.OppositeForLogicalNot, ps));
-        }
-
-        public override string ToString()
-        {
-            return leftOperand + " != " + rightOperand;
         }
     }
 }

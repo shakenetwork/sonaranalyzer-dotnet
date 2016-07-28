@@ -22,11 +22,11 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 {
     public class UnarySymbolicValue : SymbolicValue
     {
-        protected readonly SymbolicValue operand;
+        internal SymbolicValue Operand { get; }
 
         public UnarySymbolicValue(SymbolicValue operand)
         {
-            this.operand = operand;
+            this.Operand = operand;
         }
     }
 }

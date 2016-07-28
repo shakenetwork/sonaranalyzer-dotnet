@@ -18,6 +18,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -35,6 +36,11 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             return relationships
                 .OfType<EqualsRelationship>()
                 .Any(rel => OperandsMatch(rel));
+        }
+
+        public override BinaryRelationship Negate()
+        {
+            return new ValueEqualsRelationship(LeftOperand, RightOperand);
         }
 
         public override bool Equals(object obj)
