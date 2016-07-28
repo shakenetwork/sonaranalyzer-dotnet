@@ -20,24 +20,13 @@
 
 namespace SonarLint.Helpers.FlowAnalysis.Common
 {
-    public abstract class NotEqualsRelationship : BinaryRelationship
+    public class MemberAccessSymbolicValue : SymbolicValue
     {
-        protected NotEqualsRelationship(SymbolicValue leftOperand, SymbolicValue rightOperand)
-            : base(leftOperand, rightOperand)
-        {
-        }
+        public SymbolicValue MemberExpression { get; }
 
-        protected bool Equals(NotEqualsRelationship other)
+        public MemberAccessSymbolicValue(SymbolicValue memberExpression)
         {
-            return other != null && OperandsMatch(other);
-        }
-
-        public sealed override int GetHashCode()
-        {
-            var left = LeftOperand.GetHashCode();
-            var right = RightOperand.GetHashCode();
-
-            return EqualsRelationship.GetHashCodeMinMaxOrdered(left, right, GetType().GetHashCode());
+            MemberExpression = memberExpression;
         }
     }
 }

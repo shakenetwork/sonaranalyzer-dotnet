@@ -20,36 +20,26 @@
 
 namespace SonarLint.Helpers.FlowAnalysis.Common
 {
-    public abstract class EqualsRelationship : BinaryRelationship
+    public class ReferenceEqualsSymbolicValue : EqualsSymbolicValue
     {
-        protected EqualsRelationship(SymbolicValue leftOperand, SymbolicValue rightOperand)
+        public ReferenceEqualsSymbolicValue(SymbolicValue leftOperand, SymbolicValue rightOperand)
             : base(leftOperand, rightOperand)
         {
         }
 
-        protected bool Equals(EqualsRelationship other)
+        protected override BinaryRelationship GetTrueRelationship(SymbolicValue left, SymbolicValue right)
         {
-            return other != null && OperandsMatch(other);
+            return new ReferenceEqualsRelationship(left, right);
         }
 
-        public sealed override int GetHashCode()
+        protected override BinaryRelationship GetFalseRelationship(SymbolicValue left, SymbolicValue right)
         {
-            var left = LeftOperand.GetHashCode();
-            var right = RightOperand.GetHashCode();
-
-            return GetHashCodeMinMaxOrdered(left, right, GetType().GetHashCode());
+            return new ReferenceNotEqualsRelationship(left, right);
         }
 
-        internal static int GetHashCodeMinMaxOrdered(int leftHash, int rightHash, int typeHash)
+        public override string ToString()
         {
-            var min = System.Math.Min(leftHash, rightHash);
-            var max = System.Math.Max(leftHash, rightHash);
-
-            var hash = 19;
-            hash = hash * 31 + typeHash;
-            hash = hash * 31 + min.GetHashCode();
-            hash = hash * 31 + max.GetHashCode();
-            return hash;
+            return $"RefEq({leftOperand}, {rightOperand})";
         }
     }
 }

@@ -18,38 +18,38 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System.Collections.Generic;
+using System.Linq;
+
 namespace SonarLint.Helpers.FlowAnalysis.Common
 {
-    public abstract class EqualsRelationship : BinaryRelationship
+    public sealed class ReferenceEqualsRelationship : EqualsRelationship
     {
-        protected EqualsRelationship(SymbolicValue leftOperand, SymbolicValue rightOperand)
+        public ReferenceEqualsRelationship(SymbolicValue leftOperand, SymbolicValue rightOperand)
             : base(leftOperand, rightOperand)
         {
         }
 
-        protected bool Equals(EqualsRelationship other)
+        internal override bool IsContradicting(IEnumerable<BinaryRelationship> relationships)
         {
-            return other != null && OperandsMatch(other);
+            return relationships
+                .OfType<NotEqualsRelationship>()
+                .Any(rel => OperandsMatch(rel));
         }
 
-        public sealed override int GetHashCode()
+        public override bool Equals(object obj)
         {
-            var left = LeftOperand.GetHashCode();
-            var right = RightOperand.GetHashCode();
+            if (obj == null)
+            {
+                return false;
+            }
 
-            return GetHashCodeMinMaxOrdered(left, right, GetType().GetHashCode());
+            return Equals(obj as ReferenceEqualsRelationship);
         }
 
-        internal static int GetHashCodeMinMaxOrdered(int leftHash, int rightHash, int typeHash)
+        public override string ToString()
         {
-            var min = System.Math.Min(leftHash, rightHash);
-            var max = System.Math.Max(leftHash, rightHash);
-
-            var hash = 19;
-            hash = hash * 31 + typeHash;
-            hash = hash * 31 + min.GetHashCode();
-            hash = hash * 31 + max.GetHashCode();
-            return hash;
+            return $"RefEq({LeftOperand}, {RightOperand})";
         }
     }
 }

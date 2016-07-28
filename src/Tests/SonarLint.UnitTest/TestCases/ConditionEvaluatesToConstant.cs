@@ -260,7 +260,7 @@ namespace Tests.Diagnostics
         public void M()
         {
             var o1 = GetObject();
-            var o2 = null;
+            object o2 = null;
             if (o1 != null)
             {
                 if (o1.ToString() != null)
@@ -460,6 +460,66 @@ namespace Tests.Diagnostics
             if (a && b) { if (a == b) { } } // Noncompliant
 //                            ^^^^^^
             if (a && b && a == b) {  } // Non-compliant
+        }
+
+        public void RefEqualsImpliesValueEquals(object a, object b)
+        {
+            if (object.ReferenceEquals(a, b))
+            {
+                if (object.Equals(a, b)) { }    // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+                if (Equals(a, b)) { }           // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+                if (a.Equals(b)) { }            // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+            }
+
+            if (this == a)
+            {
+                if (this.Equals(a)) { } // Compliant, false negative, "this" generates a new symbolic value each time
+                if (Equals(a)) { } // Compliant, false negative
+            }
+        }
+
+        public void ValueEqualsDoesNotImplyRefEquals(object a, object b)
+        {
+            if (object.Equals(a, b)) // 'a' could override Equals, so this is not a ref equality check
+            {
+                if (a == b) { } // Compliant
+            }
+        }
+
+        public void ReferenceEqualsMethodCalls(object a, object b)
+        {
+            if (object.ReferenceEquals(a, b))
+            {
+                if (a == b) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+            }
+
+            if (a == b)
+            {
+                if (object.ReferenceEquals(a, b)) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+            }
+        }
+
+        public void ReferenceEqualsMethodCallWithOpOverload(ConditionEvaluatesToConstant a, ConditionEvaluatesToConstant b)
+        {
+            if (object.ReferenceEquals(a, b))
+            {
+                if (a == b) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+            }
+
+            if (a == b)
+            {
+                if (object.ReferenceEquals(a, b)) { } // Compliant, == is doing a value comparison above.
+            }
+        }
+
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj);
+        }
+
+        public static bool operator==(ConditionEvaluatesToConstant a, ConditionEvaluatesToConstant b)
+        {
+            return false;
         }
     }
 }

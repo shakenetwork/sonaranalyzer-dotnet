@@ -205,11 +205,15 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                     break;
 
                 case SyntaxKind.EqualsExpression:
-                    newProgramState = VisitBinaryOperator(newProgramState, (l, r) => new EqualsSymbolicValue(l, r));
+                    newProgramState = IsOperatorOnObject(instruction)
+                        ? VisitBinaryOperator(newProgramState, (l, r) => new ReferenceEqualsSymbolicValue(l, r))
+                        : VisitBinaryOperator(newProgramState, (l, r) => new ValueEqualsSymbolicValue(l, r));
                     break;
 
                 case SyntaxKind.NotEqualsExpression:
-                    newProgramState = VisitBinaryOperator(newProgramState, (l, r) => new NotEqualsSymbolicValue(l, r));
+                    newProgramState = IsOperatorOnObject(instruction)
+                        ? VisitBinaryOperator(newProgramState, (l, r) => new ReferenceNotEqualsSymbolicValue(l, r))
+                        : VisitBinaryOperator(newProgramState, (l, r) => new ValueNotEqualsSymbolicValue(l, r));
                     break;
 
                 case SyntaxKind.BitwiseNotExpression:
@@ -243,8 +247,9 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                             !check.TryProcessInstruction((MemberAccessExpressionSyntax)instruction, newProgramState, out newProgramState))
                         {
                             // Default behavior
-                            newProgramState = newProgramState.PopValue();
-                            newProgramState = newProgramState.PushValue(new SymbolicValue());
+                            SymbolicValue memberExpression;
+                            newProgramState = newProgramState.PopValue(out memberExpression);
+                            newProgramState = newProgramState.PushValue(new MemberAccessSymbolicValue(memberExpression));
                         }
                     }
                     break;
@@ -327,8 +332,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                     break;
 
                 case SyntaxKind.InvocationExpression:
-                    newProgramState = newProgramState.PopValues((((InvocationExpressionSyntax)instruction).ArgumentList?.Arguments.Count ?? 0) + 1);
-                    newProgramState = newProgramState.PushValue(new SymbolicValue());
+                    newProgramState = VisitInvocation((InvocationExpressionSyntax)instruction, newProgramState);
                     break;
 
                 case SyntaxKind.ObjectCreationExpression:
@@ -492,13 +496,23 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
            return newProgramState.PushValue(resultValue);
         }
 
-        private static ProgramState VisitBinaryOperator(ProgramState programState, Func<SymbolicValue, SymbolicValue, SymbolicValue> symbolicValueFactory)
+        private bool IsOperatorOnObject(SyntaxNode instruction)
+        {
+            var operatorSymbol = SemanticModel.GetSymbolInfo(instruction).Symbol as IMethodSymbol;
+            return operatorSymbol != null &&
+                operatorSymbol.ContainingType.Is(KnownType.System_Object);
+        }
+
+        private static ProgramState VisitBinaryOperator(ProgramState programState,
+            Func<SymbolicValue, SymbolicValue, SymbolicValue> svFactory)
         {
             SymbolicValue leftSymbol;
             SymbolicValue rightSymbol;
-            var newProgramState = programState.PopValue(out leftSymbol);
-            newProgramState = newProgramState.PopValue(out rightSymbol);
-            return newProgramState.PushValue(symbolicValueFactory(leftSymbol, rightSymbol));
+
+            return programState
+                .PopValue(out leftSymbol)
+                .PopValue(out rightSymbol)
+                .PushValue(svFactory(leftSymbol, rightSymbol));
         }
 
         private ProgramState VisitBooleanBinaryOpAssignment(ProgramState programState, AssignmentExpressionSyntax assignment,
@@ -508,12 +522,117 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
             SymbolicValue leftSymbol;
             SymbolicValue rightSymbol;
-            var newProgramState = programState.PopValue(out leftSymbol);
-            newProgramState = newProgramState.PopValue(out rightSymbol);
+
+            var newProgramState = programState
+                .PopValue(out leftSymbol)
+                .PopValue(out rightSymbol);
 
             var sv = symbolicValueFactory(leftSymbol, rightSymbol);
             newProgramState = newProgramState.PushValue(sv);
             return SetNewSymbolicValueIfLocal(symbol, sv, newProgramState);
+        }
+
+        private ProgramState VisitInvocation(InvocationExpressionSyntax invocation, ProgramState programState)
+        {
+            var methodSymbol = SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
+
+            if (IsInstanceEqualsCall(methodSymbol))
+            {
+                return HandleInstanceEqualsCall(programState);
+            }
+
+            if (IsStaticEqualsCall(methodSymbol))
+            {
+                return HandleStaticEqualsCall(programState,
+                    (left, right) => new ValueEqualsSymbolicValue(left, right));
+            }
+
+            if (IsReferenceEqualsCall(methodSymbol))
+            {
+                return HandleStaticEqualsCall(programState,
+                    (left, right) => new ReferenceEqualsSymbolicValue(left, right));
+            }
+
+            return programState
+                .PopValues((invocation.ArgumentList?.Arguments.Count ?? 0) + 1)
+                .PushValue(new SymbolicValue());
+        }
+
+        private static ProgramState HandleStaticEqualsCall(ProgramState programState,
+            Func<SymbolicValue, SymbolicValue, EqualsSymbolicValue> svFactory)
+        {
+            SymbolicValue arg1;
+            SymbolicValue arg2;
+
+            return programState
+                .PopValue(out arg1)
+                .PopValue(out arg2)
+                .PopValue()
+                .PushValue(svFactory(arg1, arg2));
+        }
+
+        private static ProgramState HandleInstanceEqualsCall(ProgramState programState)
+        {
+            SymbolicValue arg1;
+            SymbolicValue expression;
+
+            var newProgramState = programState
+                .PopValue(out arg1)
+                .PopValue(out expression);
+
+            SymbolicValue arg2;
+            var memberAccess = expression as MemberAccessSymbolicValue;
+            if (memberAccess != null)
+            {
+                arg2 = memberAccess.MemberExpression;
+            }
+            else
+            {
+                // "this" reference
+                // "this" should have its own dedicated symbol (SLVS-984)
+                arg2 = new SymbolicValue();
+                newProgramState = arg2.SetConstraint(ObjectConstraint.NotNull, newProgramState);
+            }
+
+            return newProgramState.PushValue(new ValueEqualsSymbolicValue(arg1, arg2));
+        }
+
+        private static bool IsReferenceEqualsCall(IMethodSymbol methodSymbol)
+        {
+            return methodSymbol != null &&
+                methodSymbol.ContainingType.Is(KnownType.System_Object) &&
+                methodSymbol.Name == "ReferenceEquals";
+        }
+
+        private static bool IsInstanceEqualsCall(IMethodSymbol methodSymbol)
+        {
+            if (methodSymbol == null ||
+                methodSymbol.Name != "Equals" ||
+                methodSymbol.Parameters.Length != 1)
+            {
+                return false;
+            }
+
+            var baseMethod = methodSymbol;
+            while (baseMethod != null)
+            {
+                if (baseMethod.ContainingType.Is(KnownType.System_Object))
+                {
+                    return true;
+                }
+
+                baseMethod = baseMethod.OverriddenMethod;
+            }
+
+            return false;
+        }
+
+        private static bool IsStaticEqualsCall(IMethodSymbol methodSymbol)
+        {
+            return methodSymbol != null &&
+                methodSymbol.ContainingType.Is(KnownType.System_Object) &&
+                methodSymbol.IsStatic &&
+                methodSymbol.Name == "Equals";
         }
 
         private ProgramState VisitObjectCreation(ObjectCreationExpressionSyntax ctor, ProgramState programState)

@@ -54,7 +54,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             return LeftOperand.Equals(other.LeftOperand) && RightOperand.Equals(other.RightOperand);
         }
 
-        public sealed override int GetHashCode()
+        public override int GetHashCode()
         {
             var hash = 19;
             hash = hash * 31 + GetType().GetHashCode();

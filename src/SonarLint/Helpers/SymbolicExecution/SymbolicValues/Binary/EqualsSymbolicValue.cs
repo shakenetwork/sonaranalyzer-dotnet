@@ -18,18 +18,20 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace SonarLint.Helpers.FlowAnalysis.Common
 {
-    public class EqualsSymbolicValue : RelationalSymbolicValue
+    public abstract class EqualsSymbolicValue : RelationalSymbolicValue
     {
-        public EqualsSymbolicValue(SymbolicValue leftOperand, SymbolicValue rightOperand)
+        protected EqualsSymbolicValue(SymbolicValue leftOperand, SymbolicValue rightOperand)
             : base(leftOperand, rightOperand)
         {
         }
+
+        protected abstract BinaryRelationship GetTrueRelationship(SymbolicValue left, SymbolicValue right);
+        protected abstract BinaryRelationship GetFalseRelationship(SymbolicValue left, SymbolicValue right);
 
         public override IEnumerable<ProgramState> TrySetConstraint(SymbolicValueConstraint constraint, ProgramState currentProgramState)
         {
@@ -45,8 +47,8 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             var rightHasConstraint = rightOperand.TryGetConstraint(currentProgramState, out rightConstraint);
 
             var relationship = boolConstraint == BoolConstraint.True
-                ? (BinaryRelationship)new EqualsRelationship(leftOperand, rightOperand)
-                : new NotEqualsRelationship(leftOperand, rightOperand);
+                ? GetTrueRelationship(leftOperand, rightOperand)
+                : GetFalseRelationship(leftOperand, rightOperand);
 
             var newProgramState = currentProgramState.TrySetRelationship(relationship);
             if (newProgramState == null)
@@ -67,11 +69,6 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 
             return rightOperand.TrySetConstraint(leftConstraint?.OppositeForLogicalNot, newProgramState)
                 .SelectMany(ps => leftOperand.TrySetConstraint(rightConstraint?.OppositeForLogicalNot, ps));
-        }
-
-        public override string ToString()
-        {
-            return leftOperand + " == " + rightOperand;
         }
     }
 }
