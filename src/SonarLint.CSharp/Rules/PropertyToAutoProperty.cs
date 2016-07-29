@@ -27,6 +27,8 @@ using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
 using System.Linq;
+using System;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -64,13 +66,16 @@ namespace SonarLint.Rules.CSharp
                     var propertySymbol = c.SemanticModel.GetDeclaredSymbol(propertyDeclaration);
                     if (propertyDeclaration.AccessorList == null ||
                         propertyDeclaration.AccessorList.Accessors.Count != 2 ||
-                        propertySymbol == null)
+                        propertySymbol == null ||
+                        HaveDifferentModifiers(propertyDeclaration.AccessorList.Accessors) ||
+                        HaveAttributes(propertyDeclaration.AccessorList.Accessors))
                     {
                         return;
                     }
 
-                    var getter = propertyDeclaration.AccessorList.Accessors.FirstOrDefault(a => a.IsKind(SyntaxKind.GetAccessorDeclaration));
-                    var setter = propertyDeclaration.AccessorList.Accessors.FirstOrDefault(a => a.IsKind(SyntaxKind.SetAccessorDeclaration));
+                    var accessors = propertyDeclaration.AccessorList.Accessors;
+                    var getter = accessors.FirstOrDefault(a => a.IsKind(SyntaxKind.GetAccessorDeclaration));
+                    var setter = accessors.FirstOrDefault(a => a.IsKind(SyntaxKind.SetAccessorDeclaration));
 
                     if (getter == null || setter == null)
                     {
@@ -90,6 +95,24 @@ namespace SonarLint.Rules.CSharp
                     }
                 },
                 SyntaxKind.PropertyDeclaration);
+        }
+
+        private bool HaveAttributes(SyntaxList<AccessorDeclarationSyntax> accessors)
+        {
+            return accessors.Any(a => a.AttributeLists.Any());
+        }
+
+        private static bool HaveDifferentModifiers(SyntaxList<AccessorDeclarationSyntax> accessors)
+        {
+            var accessor1 = accessors.First();
+            var modifiers = GetModifierKinds(accessor1).ToImmutableHashSet();
+
+            return accessors.Skip(1).Any(a => !modifiers.SetEquals(GetModifierKinds(a)));
+        }
+
+        private static IEnumerable<SyntaxKind> GetModifierKinds(AccessorDeclarationSyntax accessor)
+        {
+            return accessor.Modifiers.Select(m => m.Kind());
         }
 
         private static bool TryGetFieldFromSetter(AccessorDeclarationSyntax setter, SemanticModel semanticModel, out IFieldSymbol setterField)

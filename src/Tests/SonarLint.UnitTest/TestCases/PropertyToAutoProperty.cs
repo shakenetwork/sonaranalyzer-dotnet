@@ -39,6 +39,12 @@ namespace Tests.Diagnostics
             set { this._make = value; }
         }
 
+        public string MakeModif
+        {
+            get { return _make; }
+            private set { this._make = value; }
+        }
+
         PropertyToAutoProperty instance = new PropertyToAutoProperty();
         public string Make5 // Compliant
         {
@@ -50,6 +56,19 @@ namespace Tests.Diagnostics
         public static string Make3 // Noncompliant {{Make this an auto-implemented property and remove its backing field.}}
         {
             get { return _make3; }
+            set { PropertyToAutoProperty._make3 = value; }
+        }
+
+        public static string Make3Modif
+        {
+            get { return _make3; }
+            internal set { PropertyToAutoProperty._make3 = value; }
+        }
+
+        public static string Make3Attr
+        {
+            get { return _make3; }
+            [My]
             set { PropertyToAutoProperty._make3 = value; }
         }
 
