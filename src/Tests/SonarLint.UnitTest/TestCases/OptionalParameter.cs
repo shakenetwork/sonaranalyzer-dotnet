@@ -31,4 +31,9 @@ namespace Tests.Diagnostics
         {
         }
     }
+
+    public class CallerMember
+    {
+        public void Method([System.Runtime.CompilerServices.CallerLineNumberAttribute] int line = 0) { }
+    }
 }

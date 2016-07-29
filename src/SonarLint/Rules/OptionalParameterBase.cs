@@ -80,13 +80,21 @@ namespace SonarLint.Rules.Common
 
                     var parameters = GetParameters(method);
 
-                    foreach (var parameter in parameters.Where(p => IsOptional(p)))
+                    foreach (var parameter in parameters.Where(p => IsOptional(p) && !HasAllowedAttribute(p, c.SemanticModel)))
                     {
                         var location = GetReportLocation(parameter);
                         c.ReportDiagnostic(Diagnostic.Create(Rule, location));
                     }
                 },
                 SyntaxKindsOfInterest.ToArray());
+        }
+
+        private bool HasAllowedAttribute(TParameterSyntax parameterSyntax, SemanticModel semanticModel)
+        {
+            var parameterSymbol = semanticModel.GetDeclaredSymbol(parameterSyntax) as IParameterSymbol;
+
+            return parameterSymbol == null ||
+                parameterSymbol.GetAttributes().Any(attr => attr.AttributeClass.IsAny(KnownType.CallerInfoAttributes));
         }
 
         protected abstract IEnumerable<TParameterSyntax> GetParameters(TMethodSyntax method);

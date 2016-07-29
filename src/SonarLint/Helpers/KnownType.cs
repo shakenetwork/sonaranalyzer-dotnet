@@ -20,6 +20,7 @@
 
 using Microsoft.CodeAnalysis;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 
 namespace SonarLint.Helpers
 {
@@ -51,25 +52,21 @@ namespace SonarLint.Helpers
         public static readonly KnownType System_SByte = new KnownType(SpecialType.System_SByte, "sbyte");
         public static readonly KnownType System_DateTime = new KnownType(SpecialType.System_DateTime, "DateTime");
 
-        public static readonly ISet<KnownType> FloatingPointNumbers = new HashSet<KnownType>(new[]
-        {
+        public static readonly ISet<KnownType> FloatingPointNumbers = ImmutableHashSet.Create(
             System_Single,
-            System_Double
-        });
-        public static readonly ISet<KnownType> NonIntegralNumbers = new HashSet<KnownType>(new[]
-        {
+            System_Double);
+
+        public static readonly ISet<KnownType> NonIntegralNumbers = ImmutableHashSet.Create(
             System_Single,
             System_Double,
-            System_Decimal
-        });
-        public static readonly ISet<KnownType> UnsignedIntegers = new HashSet<KnownType>(new[]
-        {
+            System_Decimal);
+
+        public static readonly ISet<KnownType> UnsignedIntegers = ImmutableHashSet.Create(
             System_UInt64,
             System_UInt32,
-            System_UInt16
-        });
-        public static readonly ISet<KnownType> IntegralNumbers = new HashSet<KnownType>(new[]
-        {
+            System_UInt16);
+
+        public static readonly ISet<KnownType> IntegralNumbers = ImmutableHashSet.Create(
             System_Int16,
             System_Int32,
             System_Int64,
@@ -78,8 +75,7 @@ namespace SonarLint.Helpers
             System_UInt64,
             System_Char,
             System_Byte,
-            System_SByte
-        });
+            System_SByte);
 
         public static readonly KnownType System_Exception = new KnownType("System.Exception");
         public static readonly KnownType System_Type = new KnownType("System.Type");
@@ -154,6 +150,11 @@ namespace SonarLint.Helpers
         public static readonly KnownType System_Runtime_CompilerServices_CallerMemberNameAttribute = new KnownType("System.Runtime.CompilerServices.CallerMemberNameAttribute");
         public static readonly KnownType System_Runtime_CompilerServices_CallerFilePathAttribute = new KnownType("System.Runtime.CompilerServices.CallerFilePathAttribute");
         public static readonly KnownType System_Runtime_CompilerServices_CallerLineNumberAttribute = new KnownType("System.Runtime.CompilerServices.CallerLineNumberAttribute");
+
+        public static readonly ISet<KnownType> CallerInfoAttributes = ImmutableHashSet.Create(
+            System_Runtime_CompilerServices_CallerFilePathAttribute,
+            System_Runtime_CompilerServices_CallerLineNumberAttribute,
+            System_Runtime_CompilerServices_CallerMemberNameAttribute);
 
         public static readonly KnownType System_ServiceModel_ServiceContractAttribute = new KnownType("System.ServiceModel.ServiceContractAttribute");
         public static readonly KnownType System_ServiceModel_OperationContractAttribute = new KnownType("System.ServiceModel.OperationContractAttribute");

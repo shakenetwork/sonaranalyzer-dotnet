@@ -101,13 +101,7 @@ namespace SonarLint.Rules.CSharp
         private static AttributeData GetCallerInfoAttribute(IParameterSymbol parameter)
         {
             return parameter.GetAttributes()
-                .FirstOrDefault(attr => attr.AttributeClass.IsAny(CallerInfoAttributeTypes));
+                .FirstOrDefault(attr => attr.AttributeClass.IsAny(KnownType.CallerInfoAttributes));
         }
-
-        private static readonly ISet<KnownType> CallerInfoAttributeTypes = ImmutableHashSet.Create(
-            KnownType.System_Runtime_CompilerServices_CallerFilePathAttribute,
-            KnownType.System_Runtime_CompilerServices_CallerLineNumberAttribute,
-            KnownType.System_Runtime_CompilerServices_CallerMemberNameAttribute
-        );
     }
 }

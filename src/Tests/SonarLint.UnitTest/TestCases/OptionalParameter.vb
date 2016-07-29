@@ -23,5 +23,11 @@ Namespace Tests.Diagnostics
         Friend Function Fr(Optional ByVal i As Integer = 5) ' Compliant, friend
         End Function
     End Class
+
+    Public Class CallerMember
+        Public Sub Method(<System.Runtime.CompilerServices.CallerLineNumber> Optional line As Integer = 0)
+
+        End Sub
+    End Class
 End Namespace
 
