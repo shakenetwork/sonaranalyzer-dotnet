@@ -34,7 +34,7 @@ namespace SonarLint.Rules.CSharp
     [SqaleConstantRemediation("20min")]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.SynchronizationReliability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
-    [Tags(Tag.Bug, Tag.MultiThreading)]
+    [Tags(Tag.MultiThreading)]
     public class StaticFieldWrittenFromInstanceMember : SonarDiagnosticAnalyzer
     {
         internal const string DiagnosticId = "S2696";
