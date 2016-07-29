@@ -539,6 +539,11 @@ namespace Tests.Diagnostics
             if (object.ReferenceEquals(ii, jj)) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
         }
 
+        public void ReferenceEqualsBool(bool a, bool b)
+        {
+            if (object.ReferenceEquals(a, b)) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+        }
+
         public void ReferenceEqualsNullable(int? ii, int? jj)
         {
             if (object.ReferenceEquals(ii, jj)) { } // Compliant, they might be both null

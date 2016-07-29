@@ -252,7 +252,9 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             var initialProgramState = new ProgramState();
             foreach (var parameter in declarationParameters)
             {
-                initialProgramState = initialProgramState.SetSymbolicValue(parameter, new SymbolicValue());
+                var sv = new SymbolicValue();
+                initialProgramState = initialProgramState.SetSymbolicValue(parameter, sv);
+                initialProgramState = SetNonNullConstraintIfValueType(parameter, sv, initialProgramState);
             }
 
             EnqueueNewNode(new ProgramPoint(cfg.EntryBlock), initialProgramState);
@@ -303,14 +305,17 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             if (IsLocalScoped(symbol))
             {
                 var newProgramState = programState.SetSymbolicValue(symbol, symbolicValue);
-                if (IsNonNullableValueType(symbol))
-                {
-                    newProgramState = symbolicValue.SetConstraint(ObjectConstraint.NotNull, newProgramState);
-                }
-                return newProgramState;
+                return SetNonNullConstraintIfValueType(symbol, symbolicValue, newProgramState);
             }
 
             return programState;
+        }
+
+        private static ProgramState SetNonNullConstraintIfValueType(ISymbol symbol, SymbolicValue symbolicValue, ProgramState programState)
+        {
+            return IsNonNullableValueType(symbol)
+                ? symbolicValue.SetConstraint(ObjectConstraint.NotNull, programState)
+                : programState;
         }
 
         private static bool IsNonNullableValueType(ISymbol symbol)
