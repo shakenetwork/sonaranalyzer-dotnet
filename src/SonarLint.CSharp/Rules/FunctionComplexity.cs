@@ -18,7 +18,6 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -27,7 +26,6 @@ using SonarLint.Common;
 using SonarLint.Common.CSharp;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
-using System;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -36,32 +34,8 @@ namespace SonarLint.Rules.CSharp
     [SqaleSubCharacteristic(SqaleSubCharacteristic.UnitTestability)]
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [Tags(Tag.BrainOverload)]
-    public class FunctionComplexity : ParameterLoadingDiagnosticAnalyzer
+    public class FunctionComplexity : FunctionComplexityBase
     {
-        internal const string DiagnosticId = "S1541";
-        internal const string Title = "Methods should not be too complex";
-        internal const string Description =
-           "The cyclomatic complexity of a function should not exceed a defined threshold. Complex code can perform poorly and will in any case " +
-            "be difficult to understand and therefore to maintain.";
-        internal const string MessageFormat = "The Cyclomatic Complexity of this method is {1} which is greater than {0} authorized.";
-        internal const string Category = SonarLint.Common.Category.Maintainability;
-        internal const Severity RuleSeverity = Severity.Major;
-        internal const bool IsActivatedByDefault = false;
-
-        internal static readonly DiagnosticDescriptor Rule =
-            new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
-                RuleSeverity.ToDiagnosticSeverity(), IsActivatedByDefault,
-                helpLinkUri: DiagnosticId.GetHelpLink(),
-                description: Description);
-
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
-
-        private const int DefaultValueMaximum = 10;
-
-        [RuleParameter("maximumFunctionComplexityThreshold", PropertyType.Integer,
-            "The maximum authorized complexity in function", DefaultValueMaximum)]
-        public int Maximum { get; set; } = DefaultValueMaximum;
-
         protected override void Initialize(ParameterLoadingAnalysisContext context)
         {
             context.RegisterSyntaxNodeActionInNonGenerated(
@@ -88,15 +62,11 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.RemoveAccessorDeclaration);
         }
 
-        private void CheckComplexity<TSyntax>(SyntaxNodeAnalysisContext context, Func<TSyntax, Location> location)
-            where TSyntax : SyntaxNode
+        protected override int GetComplexity(SyntaxNode node)
         {
-            var complexity = new Metrics(context.Node.SyntaxTree).GetComplexity(context.Node);
-            if (complexity > Maximum)
-            {
-                var syntax = (TSyntax)context.Node;
-                context.ReportDiagnostic(Diagnostic.Create(Rule, location(syntax), Maximum, complexity));
-            }
+            return new Metrics(node.SyntaxTree).GetComplexity(node);
         }
+
+        protected sealed override GeneratedCodeRecognizer GeneratedCodeRecognizer => Helpers.CSharp.GeneratedCodeRecognizer.Instance;
     }
 }

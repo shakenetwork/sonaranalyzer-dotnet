@@ -19,7 +19,6 @@
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SonarLint.Rules.CSharp;
 
 namespace SonarLint.UnitTest.Rules
 {
@@ -28,10 +27,18 @@ namespace SonarLint.UnitTest.Rules
     {
         [TestMethod]
         [TestCategory("Rule")]
-        public void FunctionComplexity()
+        public void FunctionComplexity_CSharp()
         {
-            var diagnostic = new FunctionComplexity {Maximum = 3};
+            var diagnostic = new SonarLint.Rules.CSharp.FunctionComplexity { Maximum = 3};
             Verifier.VerifyAnalyzer(@"TestCases\FunctionComplexity.cs", diagnostic);
+        }
+
+        [TestMethod]
+        [TestCategory("Rule")]
+        public void FunctionComplexity_VisualBasic()
+        {
+            var diagnostic = new SonarLint.Rules.VisualBasic.FunctionComplexity { Maximum = 3 };
+            Verifier.VerifyAnalyzer(@"TestCases\FunctionComplexity.vb", diagnostic);
         }
     }
 }
