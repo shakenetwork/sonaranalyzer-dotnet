@@ -13,6 +13,6 @@ MSBuild.SonarQube.Runner begin /k:sonaranalyzer-csharp-vbnet /n:"SonarAnalyzer f
   /d:sonar.scanAllFiles=true
 
 %NUGET_PATH% restore SonarLint.sln
-%MSBUILD_PATH% SonarLint.sln /t:rebuild /p:Configuration=Release
+%MSBUILD_PATH% SonarLint.sln /t:rebuild /p:Configuration=Release /p:DeployExtension=false
 
 MSBuild.SonarQube.Runner end /d:sonar.login=%SONAR_TOKEN%
