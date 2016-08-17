@@ -23,19 +23,22 @@ using System.Linq;
 using Microsoft.CodeAnalysis;
 using SonarLint.Common;
 using SonarLint.Helpers;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules.Common
 {
     public abstract class FlagsEnumWithoutInitializerBase : SonarDiagnosticAnalyzer, IMultiLanguageDiagnosticAnalyzer
     {
+        protected const int AllowedEmptyMemberCount = 3;
+
         protected const string DiagnosticId = "S2345";
         protected const string Title = "Flags enumerations should explicitly initialize all their members";
         protected const string Description =
             "Flags enumerations should not rely on the language to initialize the values of their members. Implicit initialization will set " +
             "the first member to 0, and increment the value by one for each subsequent member. This implicit behavior does not allow members " +
-            "to be combined using the bitwise or operator. Instead, powers of two, i.e. 1, 2, 4, 8, 16, etc. should be used to explicitly " +
+            "to be combined using the bitwise or operator. Instead, 0 and powers of two values, i.e. 1, 2, 4, 8, 16, etc. should be used to explicitly " +
             "initialize all the members.";
-        protected const string MessageFormat = "Initialize all the members of this enumeration.";
+        protected const string MessageFormat = "Initialize all the members of this \"Flags\" enumeration.";
         protected const string Category = SonarLint.Common.Category.Reliability;
         protected const Severity RuleSeverity = Severity.Critical;
         protected const bool IsActivatedByDefault = true;
@@ -60,9 +63,10 @@ namespace SonarLint.Rules.Common
         GeneratedCodeRecognizer IMultiLanguageDiagnosticAnalyzer.GeneratedCodeRecognizer => GeneratedCodeRecognizer;
     }
 
-    public abstract class FlagsEnumWithoutInitializerBase<TLanguageKindEnum, TEnumDeclarationSyntax> : FlagsEnumWithoutInitializerBase
+    public abstract class FlagsEnumWithoutInitializerBase<TLanguageKindEnum, TEnumDeclarationSyntax, TEnumMemberDeclarationSyntax> : FlagsEnumWithoutInitializerBase
         where TLanguageKindEnum : struct
         where TEnumDeclarationSyntax : SyntaxNode
+        where TEnumMemberDeclarationSyntax : SyntaxNode
     {
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -77,7 +81,7 @@ namespace SonarLint.Rules.Common
                         return;
                     }
 
-                    if (!AllMembersAreInitialized(enumDeclaration))
+                    if (!AreAllRequiredMembersInitialized(enumDeclaration))
                     {
                         c.ReportDiagnostic(Diagnostic.Create(Rule, GetIdentifier(enumDeclaration).GetLocation()));
                     }
@@ -87,6 +91,40 @@ namespace SonarLint.Rules.Common
 
         public abstract ImmutableArray<TLanguageKindEnum> SyntaxKindsOfInterest { get; }
         protected abstract SyntaxToken GetIdentifier(TEnumDeclarationSyntax declaration);
-        protected abstract bool AllMembersAreInitialized(TEnumDeclarationSyntax declaration);
+        protected abstract IList<TEnumMemberDeclarationSyntax> GetMembers(TEnumDeclarationSyntax declaration);
+        protected abstract bool IsInitialized(TEnumMemberDeclarationSyntax member);
+
+        private bool AreAllRequiredMembersInitialized(TEnumDeclarationSyntax declaration)
+        {
+            var members = GetMembers(declaration);
+            var firstNonInitialized = members.FirstOrDefault(m => !IsInitialized(m));
+            if (firstNonInitialized == null)
+            {
+                // All members initialized
+                return true;
+            }
+
+            var firstInitialized = members.FirstOrDefault(m => IsInitialized(m));
+            if (firstInitialized == null)
+            {
+                // No members initialized
+                return members.Count <= AllowedEmptyMemberCount;
+            }
+
+            var firstNonInitializedIndex = members.IndexOf(firstNonInitialized);
+            var firstInitializedIndex = members.IndexOf(firstInitialized);
+
+            if (firstNonInitializedIndex > firstInitializedIndex ||
+                firstInitializedIndex >= AllowedEmptyMemberCount)
+            {
+                // Have first uninitialized member after the first initialized member, or
+                // Have too many uninitalized in the beginning
+                return false;
+            }
+
+            return members
+                .Skip(firstInitializedIndex)
+                .All(m => IsInitialized(m));
+        }
     }
 }

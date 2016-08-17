@@ -28,6 +28,8 @@ using SonarLint.Rules.Common;
 using Microsoft.CodeAnalysis.VisualBasic;
 using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 using SonarLint.Helpers;
+using System;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules.VisualBasic
 {
@@ -36,18 +38,27 @@ namespace SonarLint.Rules.VisualBasic
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
     [Tags(Tag.Bug)]
-    public class FlagsEnumWithoutInitializer : FlagsEnumWithoutInitializerBase<SyntaxKind, EnumStatementSyntax>
+    public class FlagsEnumWithoutInitializer : FlagsEnumWithoutInitializerBase<SyntaxKind, EnumStatementSyntax, EnumMemberDeclarationSyntax>
     {
         private static readonly ImmutableArray<SyntaxKind> kindsOfInterest = ImmutableArray.Create(SyntaxKind.EnumStatement);
         public override ImmutableArray<SyntaxKind> SyntaxKindsOfInterest => kindsOfInterest;
 
-        protected override bool AllMembersAreInitialized(EnumStatementSyntax declaration)
+        protected override IList<EnumMemberDeclarationSyntax> GetMembers(EnumStatementSyntax declaration)
         {
             var parent = declaration.Parent as EnumBlockSyntax;
-            return parent == null ||
-                parent.ChildNodes()
-                    .OfType<EnumMemberDeclarationSyntax>()
-                    .All(member => member.Initializer != null);
+            if (parent == null)
+            {
+                return new List<EnumMemberDeclarationSyntax>();
+            }
+
+            return parent.ChildNodes()
+                .OfType<EnumMemberDeclarationSyntax>()
+                .ToList();
+        }
+
+        protected override bool IsInitialized(EnumMemberDeclarationSyntax member)
+        {
+            return member.Initializer != null;
         }
 
         protected override SyntaxToken GetIdentifier(EnumStatementSyntax declaration) => declaration.Identifier;

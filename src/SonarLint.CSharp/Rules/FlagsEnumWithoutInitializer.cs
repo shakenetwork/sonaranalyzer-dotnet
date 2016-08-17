@@ -28,6 +28,8 @@ using SonarLint.Rules.Common;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using SonarLint.Helpers;
+using System;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -36,18 +38,23 @@ namespace SonarLint.Rules.CSharp
     [Rule(DiagnosticId, RuleSeverity, Title, IsActivatedByDefault)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.DataReliability)]
     [Tags(Tag.Bug)]
-    public class FlagsEnumWithoutInitializer : FlagsEnumWithoutInitializerBase<SyntaxKind, EnumDeclarationSyntax>
+    public class FlagsEnumWithoutInitializer : FlagsEnumWithoutInitializerBase<SyntaxKind, EnumDeclarationSyntax, EnumMemberDeclarationSyntax>
     {
         private static readonly ImmutableArray<SyntaxKind> kindsOfInterest = ImmutableArray.Create(SyntaxKind.EnumDeclaration);
         public override ImmutableArray<SyntaxKind> SyntaxKindsOfInterest => kindsOfInterest;
 
-        protected override bool AllMembersAreInitialized(EnumDeclarationSyntax declaration)
-        {
-            return declaration.Members.All(member => member.EqualsValue != null);
-        }
-
         protected override SyntaxToken GetIdentifier(EnumDeclarationSyntax declaration) => declaration.Identifier;
 
         protected sealed override GeneratedCodeRecognizer GeneratedCodeRecognizer => Helpers.CSharp.GeneratedCodeRecognizer.Instance;
+
+        protected override IList<EnumMemberDeclarationSyntax> GetMembers(EnumDeclarationSyntax declaration)
+        {
+            return declaration.Members.ToList();
+        }
+
+        protected override bool IsInitialized(EnumMemberDeclarationSyntax member)
+        {
+            return member.EqualsValue != null;
+        }
     }
 }

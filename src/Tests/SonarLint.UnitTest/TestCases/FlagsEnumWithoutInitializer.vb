@@ -19,4 +19,26 @@
         Orange = 3
         Strawberry = 4
     End Enum
+
+    <System.Flags()>
+    Enum FruitType4
+        Banana
+        Orange
+        Strawberry = 4
+    End Enum
+
+    <System.Flags()>
+    Enum FruitType5
+        Banana
+        Orange
+        Strawberry
+    End Enum
+
+    <System.Flags()>
+    Enum FruitType6 ' Noncompliant
+        None
+        Banana
+        Orange
+        Strawberry
+    End Enum
 End Namespace

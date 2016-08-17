@@ -2,7 +2,7 @@
 namespace Tests.Diagnostics
 {
     [System.Flags]
-    enum FruitType    // Noncompliant {{Initialize all the members of this enumeration.}}
+    enum FruitType    // Noncompliant {{Initialize all the members of this "Flags" enumeration.}}
 //       ^^^^^^^^^
     {
         Banana,
@@ -22,5 +22,30 @@ namespace Tests.Diagnostics
         Banana=1,
         Orange =4,
         Strawberry =5
+    }
+
+    [System.Flags]
+    enum FruitType4
+    {
+        Banana,
+        Orange,
+        Strawberry = 5
+    }
+
+    [System.Flags]
+    enum FruitType5
+    {
+        Banana,
+        Orange,
+        Strawberry
+    }
+
+    [System.Flags]
+    enum FruitType6 // Noncompliant
+    {
+        None,
+        Banana,
+        Orange,
+        Strawberry
     }
 }
