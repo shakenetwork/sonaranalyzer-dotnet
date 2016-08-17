@@ -26,6 +26,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -56,7 +57,7 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
-        private static readonly string[] MethodNames = { GetHashCodeEqualsOverride.EqualsName };
+        private static readonly ISet<string> MethodNames = ImmutableHashSet.Create( GetHashCodeEqualsOverride.EqualsName );
 
         protected override void Initialize(SonarAnalysisContext context)
         {

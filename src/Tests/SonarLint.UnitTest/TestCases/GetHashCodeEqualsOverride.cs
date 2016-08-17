@@ -52,15 +52,34 @@ namespace Tests.Diagnostics
 
             if (true)
             {
-                return base.Equals(obj); //Noncompliant
+                return base.Equals(obj); //Compliant
             }
 
-            return base.Equals(obj); //Noncompliant
+            return base.Equals(obj); //Compliant
         }
 
         public override string ToString()
         {
             return base.ToString();
+        }
+    }
+
+    class GetHashCodeEqualsOverride1
+    {
+        private readonly int x;
+        public GetHashCodeEqualsOverride1(int x)
+        {
+            this.x = x;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (true)
+            {
+                return base.Equals(obj); //Noncompliant
+            }
+
+            return base.Equals(obj); // Compliant
         }
     }
 

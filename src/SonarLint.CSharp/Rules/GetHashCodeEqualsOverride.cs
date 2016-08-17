@@ -27,6 +27,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -57,7 +58,7 @@ namespace SonarLint.Rules.CSharp
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         internal const string EqualsName = "Equals";
-        private static readonly string[] MethodNames = { "GetHashCode", EqualsName };
+        private static readonly ISet<string> MethodNames = ImmutableHashSet.Create( "GetHashCode", EqualsName );
 
         protected override void Initialize(SonarAnalysisContext context)
         {
@@ -77,39 +78,61 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
+                    var locations = new List<Location>();
+
                     cb.RegisterSyntaxNodeAction(
                         c =>
                         {
-                            CheckInvocationInsideMethod(c, methodSymbol);
+                            Location location;
+                            if (TryGetLocationFromInvocationInsideMethod(c, methodSymbol, out location))
+                            {
+                                locations.Add(location);
+                            }
                         },
                         SyntaxKind.InvocationExpression);
+
+                    cb.RegisterCodeBlockEndAction(
+                        c =>
+                        {
+                            if (!locations.Any())
+                            {
+                                return;
+                            }
+
+                            var firstPosition = locations.Select(loc => loc.SourceSpan.Start).Min();
+                            var location = locations.First(loc => loc.SourceSpan.Start == firstPosition);
+                            c.ReportDiagnostic(Diagnostic.Create(Rule, location, methodSymbol.Name));
+                        });
                 });
         }
 
-        private static void CheckInvocationInsideMethod(SyntaxNodeAnalysisContext context,
-            IMethodSymbol methodSymbol)
+        private static bool TryGetLocationFromInvocationInsideMethod(SyntaxNodeAnalysisContext context,
+            IMethodSymbol methodSymbol, out Location location)
         {
+            location = null;
             var invocation = (InvocationExpressionSyntax)context.Node;
             var invokedMethod = context.SemanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
             if (invokedMethod == null ||
                 invokedMethod.Name != methodSymbol.Name)
             {
-                return;
+                return false;
             }
 
             var memberAccess = invocation.Expression as MemberAccessExpressionSyntax;
-
             var baseCall = memberAccess?.Expression as BaseExpressionSyntax;
             if (baseCall == null)
             {
-                return;
+                return false;
             }
 
             if (invokedMethod.IsInType(KnownType.System_Object) &&
                 !IsEqualsCallInGuardCondition(invocation, invokedMethod))
             {
-                context.ReportDiagnostic(Diagnostic.Create(Rule, invocation.GetLocation(), invokedMethod.Name));
+                location = invocation.GetLocation();
+                return true;
             }
+
+            return false;
         }
 
         internal static bool IsEqualsCallInGuardCondition(InvocationExpressionSyntax invocation, IMethodSymbol invokedMethod)
@@ -154,7 +177,7 @@ namespace SonarLint.Rules.CSharp
                 EquivalenceChecker.AreEquivalent(returnStatement.Expression, SyntaxHelper.TrueLiteralExpression);
         }
 
-        internal static bool MethodIsRelevant(IMethodSymbol methodSymbol, string[] methodNames)
+        internal static bool MethodIsRelevant(IMethodSymbol methodSymbol, ISet<string> methodNames)
         {
             return methodNames.Contains(methodSymbol.Name) && methodSymbol.IsOverride;
         }
