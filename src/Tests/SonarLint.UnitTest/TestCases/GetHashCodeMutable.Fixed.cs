@@ -27,6 +27,7 @@ namespace Tests.Diagnostics
             hash += foo.GetHashCode(); // Fixed
             hash += age.GetHashCode(); // Fixed
             hash += this.name.GetHashCode(); // Fixed
+            hash += name.GetHashCode(); // Compliant, we already reported on this symbol
             hash += this.birthday.GetHashCode();
             hash += SomeMethod(Field); // Fixed
             return hash;

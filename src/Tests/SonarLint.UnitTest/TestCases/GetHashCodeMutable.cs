@@ -28,6 +28,7 @@ namespace Tests.Diagnostics
 //                  ^^^
             hash += age.GetHashCode(); // Noncompliant
             hash += this.name.GetHashCode(); // Noncompliant
+            hash += name.GetHashCode(); // Compliant, we already reported on this symbol
             hash += this.birthday.GetHashCode();
             hash += SomeMethod(Field); // Noncompliant
             return hash;

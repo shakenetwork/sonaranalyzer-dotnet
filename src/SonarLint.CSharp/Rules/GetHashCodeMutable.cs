@@ -27,6 +27,7 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Collections.Generic;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -63,7 +64,7 @@ namespace SonarLint.Rules.CSharp
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c =>
                 {
-                    var methodSyntax = (MethodDeclarationSyntax) c.Node;
+                    var methodSyntax = (MethodDeclarationSyntax)c.Node;
                     var methodSymbol = c.SemanticModel.GetDeclaredSymbol(methodSyntax);
 
                     if (methodSymbol == null ||
@@ -93,22 +94,51 @@ namespace SonarLint.Rules.CSharp
                     var identifiers = methodSyntax.DescendantNodes()
                         .OfType<IdentifierNameSyntax>();
 
-                    foreach (var identifier in identifiers)
-                    {
-                        var identifierSymbol = c.SemanticModel.GetSymbolInfo(identifier).Symbol as IFieldSymbol;
-
-                        if (identifierSymbol == null ||
-                            identifierSymbol.IsConst ||
-                            identifierSymbol.IsReadOnly ||
-                            !fieldsOfClass.Contains(identifierSymbol))
-                        {
-                            continue;
-                        }
-
-                        c.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(), identifier.Identifier.Text));
-                    }
+                    ReportOnFirstReferences(c, fieldsOfClass, identifiers);
                 },
                 SyntaxKind.MethodDeclaration);
+        }
+
+        private static void ReportOnFirstReferences(SyntaxNodeAnalysisContext context,
+            ImmutableHashSet<IFieldSymbol> fieldsOfClass, IEnumerable<IdentifierNameSyntax> identifiers)
+        {
+            var syntaxNodes = new Dictionary<IFieldSymbol, List<IdentifierNameSyntax>>();
+
+            foreach (var identifier in identifiers)
+            {
+                var identifierSymbol = context.SemanticModel.GetSymbolInfo(identifier).Symbol as IFieldSymbol;
+                if (identifierSymbol == null)
+                {
+                    continue;
+                }
+
+                if (!syntaxNodes.ContainsKey(identifierSymbol))
+                {
+                    if (!IsFieldRelevant(identifierSymbol, fieldsOfClass))
+                    {
+                        continue;
+                    }
+
+                    syntaxNodes.Add(identifierSymbol, new List<IdentifierNameSyntax>());
+                }
+
+                syntaxNodes[identifierSymbol].Add(identifier);
+            }
+
+            foreach (var identifierReferences in syntaxNodes.Values)
+            {
+                var firstPosition = identifierReferences.Select(id => id.SpanStart).Min();
+                var identifier = identifierReferences.First(id => id.SpanStart == firstPosition);
+                context.ReportDiagnostic(Diagnostic.Create(Rule, identifier.GetLocation(), identifier.Identifier.Text));
+            }
+        }
+
+        private static bool IsFieldRelevant(IFieldSymbol fieldSymbol, ImmutableHashSet<IFieldSymbol> fieldsOfClass)
+        {
+            return fieldSymbol != null &&
+                !fieldSymbol.IsConst &&
+                !fieldSymbol.IsReadOnly &&
+                fieldsOfClass.Contains(fieldSymbol);
         }
     }
 }
