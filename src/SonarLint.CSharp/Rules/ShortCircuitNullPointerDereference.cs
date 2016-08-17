@@ -28,9 +28,11 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System;
 
 namespace SonarLint.Rules.CSharp
 {
+    [Obsolete("This rule is superceded by S2259.")]
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     [SqaleSubCharacteristic(SqaleSubCharacteristic.LogicReliability)]
     [SqaleConstantRemediation("2min")]
@@ -50,7 +52,7 @@ namespace SonarLint.Rules.CSharp
             "Either reverse the equality operator in the \"{0}\" null test, or reverse the logical operator that follows it.";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Blocker;
-        internal const bool IsActivatedByDefault = true;
+        internal const bool IsActivatedByDefault = false;
 
         internal static readonly DiagnosticDescriptor Rule =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category,
