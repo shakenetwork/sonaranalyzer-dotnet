@@ -27,6 +27,8 @@ using Microsoft.CodeAnalysis.Text;
 using SonarLint.Common;
 using SonarLint.Common.Sqale;
 using SonarLint.Helpers;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SonarLint.Rules.CSharp
 {
@@ -81,49 +83,41 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
-                    var messageFormat = methodOrPropertySymbol.IsChangeable()
-                        ? MessageFormatMultipleOptions
-                        : MessageFormatRemoveSet;
+                    var locationsForFields = new Dictionary<IFieldSymbol, List<Location>>();
 
                     cbc.RegisterSyntaxNodeAction(
-                    c =>
-                    {
-                        var assignment = (AssignmentExpressionSyntax)c.Node;
-                        var expression = assignment.Left;
-
-                        if (IsStaticFieldModification(expression, c.SemanticModel))
+                        c =>
                         {
-                            var location = Location.Create(expression.SyntaxTree,
-                                new TextSpan(expression.SpanStart,
-                                    assignment.OperatorToken.Span.End - expression.SpanStart));
+                            var assignment = (AssignmentExpressionSyntax)c.Node;
+                            var expression = assignment.Left;
 
-                            var message = string.Format(messageFormat, declarationType);
-                            c.ReportDiagnostic(Diagnostic.Create(Rule, location, message));
-                        }
-                    },
-                    SyntaxKind.SimpleAssignmentExpression,
-                    SyntaxKind.AddAssignmentExpression,
-                    SyntaxKind.SubtractAssignmentExpression,
-                    SyntaxKind.MultiplyAssignmentExpression,
-                    SyntaxKind.DivideAssignmentExpression,
-                    SyntaxKind.ModuloAssignmentExpression,
-                    SyntaxKind.AndAssignmentExpression,
-                    SyntaxKind.ExclusiveOrAssignmentExpression,
-                    SyntaxKind.OrAssignmentExpression,
-                    SyntaxKind.LeftShiftAssignmentExpression,
-                    SyntaxKind.RightShiftAssignmentExpression);
+                            var fieldSymbol = c.SemanticModel.GetSymbolInfo(expression).Symbol as IFieldSymbol;
+                            if (IsStatic(fieldSymbol))
+                            {
+                                var location = Location.Create(expression.SyntaxTree,
+                                    new TextSpan(expression.SpanStart,
+                                        assignment.OperatorToken.Span.End - expression.SpanStart));
+
+                                AddFieldLocation(fieldSymbol, location, locationsForFields);
+                            }
+                        },
+                        SyntaxKind.SimpleAssignmentExpression,
+                        SyntaxKind.AddAssignmentExpression,
+                        SyntaxKind.SubtractAssignmentExpression,
+                        SyntaxKind.MultiplyAssignmentExpression,
+                        SyntaxKind.DivideAssignmentExpression,
+                        SyntaxKind.ModuloAssignmentExpression,
+                        SyntaxKind.AndAssignmentExpression,
+                        SyntaxKind.ExclusiveOrAssignmentExpression,
+                        SyntaxKind.OrAssignmentExpression,
+                        SyntaxKind.LeftShiftAssignmentExpression,
+                        SyntaxKind.RightShiftAssignmentExpression);
 
                     cbc.RegisterSyntaxNodeAction(
                         c =>
                         {
                             var unary = (PrefixUnaryExpressionSyntax)c.Node;
-                            var expression = unary.Operand;
-
-                            if (IsStaticFieldModification(expression, c.SemanticModel))
-                            {
-                                var message = string.Format(messageFormat, declarationType);
-                                c.ReportDiagnostic(Diagnostic.Create(Rule, expression.GetLocation(), message));
-                            }
+                            CollectLocationOfStaticField(unary.Operand, locationsForFields, c);
                         },
                         SyntaxKind.PreDecrementExpression,
                         SyntaxKind.PreIncrementExpression);
@@ -132,22 +126,50 @@ namespace SonarLint.Rules.CSharp
                         c =>
                         {
                             var unary = (PostfixUnaryExpressionSyntax)c.Node;
-                            var expression = unary.Operand;
-
-                            if (IsStaticFieldModification(expression, c.SemanticModel))
-                            {
-                                var message = string.Format(messageFormat, declarationType);
-                                c.ReportDiagnostic(Diagnostic.Create(Rule, expression.GetLocation(), message));
-                            }
+                            CollectLocationOfStaticField(unary.Operand, locationsForFields, c);
                         },
                         SyntaxKind.PostDecrementExpression,
                         SyntaxKind.PostIncrementExpression);
+
+                    cbc.RegisterCodeBlockEndAction(
+                        c =>
+                        {
+                            var messageFormat = methodOrPropertySymbol.IsChangeable()
+                                ? MessageFormatMultipleOptions
+                                : MessageFormatRemoveSet;
+                            var message = string.Format(messageFormat, declarationType);
+
+                            foreach (var locations in locationsForFields.Values)
+                            {
+                                var firstPosition = locations.Select(loc => loc.SourceSpan.Start).Min();
+                                var location = locations.First(loc => loc.SourceSpan.Start == firstPosition);
+                                c.ReportDiagnostic(Diagnostic.Create(Rule, location, message));
+                            }
+                        });
                 });
         }
 
-        private static bool IsStaticFieldModification(ExpressionSyntax expression, SemanticModel semanticModel)
+        private static void AddFieldLocation(IFieldSymbol fieldSymbol, Location location, Dictionary<IFieldSymbol, List<Location>> locationsForFields)
         {
-            var fieldSymbol = semanticModel.GetSymbolInfo(expression).Symbol as IFieldSymbol;
+            if (!locationsForFields.ContainsKey(fieldSymbol))
+            {
+                locationsForFields.Add(fieldSymbol, new List<Location>());
+            }
+
+            locationsForFields[fieldSymbol].Add(location);
+        }
+
+        private static void CollectLocationOfStaticField(ExpressionSyntax expression, Dictionary<IFieldSymbol, List<Location>> locationsForFields, SyntaxNodeAnalysisContext context)
+        {
+            var fieldSymbol = context.SemanticModel.GetSymbolInfo(expression).Symbol as IFieldSymbol;
+            if (IsStatic(fieldSymbol))
+            {
+                AddFieldLocation(fieldSymbol, expression.GetLocation(), locationsForFields);
+            }
+        }
+
+        private static bool IsStatic(IFieldSymbol fieldSymbol)
+        {
             return fieldSymbol != null &&
                 fieldSymbol.IsStatic;
         }

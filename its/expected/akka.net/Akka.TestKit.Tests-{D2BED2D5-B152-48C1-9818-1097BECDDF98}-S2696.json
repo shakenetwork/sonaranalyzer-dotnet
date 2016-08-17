@@ -43,19 +43,6 @@
 "id":  "S2696",
 "message":  "Remove this set, which updates a \"static\" field from an instance method.",
 "location":  {
-"uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\TestActorRefTests\\SenderActor.cs",
-"region":  {
-"startLine":  39,
-"startColumn":  21,
-"endLine":  39,
-"endColumn":  45
-}
-}
-},
-{
-"id":  "S2696",
-"message":  "Remove this set, which updates a \"static\" field from an instance method.",
-"location":  {
 "uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\TestActorRefTests\\TActorBase.cs",
 "region":  {
 "startLine":  20,
@@ -74,19 +61,6 @@
 "startLine":  85,
 "startColumn":  13,
 "endLine":  85,
-"endColumn":  22
-}
-}
-},
-{
-"id":  "S2696",
-"message":  "Make the enclosing instance method \"static\" or remove this set on the \"static\" field.",
-"location":  {
-"uri":  "akka.net\\src\\core\\Akka.TestKit.Tests\\TestActorRefTests\\TestActorRefSpec.cs",
-"region":  {
-"startLine":  92,
-"startColumn":  13,
-"endLine":  92,
 "endColumn":  22
 }
 }

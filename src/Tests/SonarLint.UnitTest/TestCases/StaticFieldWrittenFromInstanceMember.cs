@@ -11,11 +11,11 @@ namespace Tests.Diagnostics
 
         public void DoSomething()
         {
-            count++;  // Noncompliant
+            count++;  // Noncompliant {{Make the enclosing instance method "static" or remove this set on the "static" field.}}
 //          ^^^^^
             var action = new Action(() =>
             {
-                count++; // Noncompliant {{Make the enclosing instance method "static" or remove this set on the "static" field.}}
+                count++; // Compliant, already reported on this symbol
             });
             countInstance++;
         }
@@ -32,6 +32,7 @@ namespace Tests.Diagnostics
             set
             {
                 count++; // Noncompliant
+                this.count += 42; // Compliant, already reported on this symbol
                 myVar = value;
             }
         }
