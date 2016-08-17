@@ -22,7 +22,7 @@ if ($env:IS_PULLREQUEST -eq "true") {
 	.\MSBuild.SonarQube.Runner end /d:sonar.login=$env:SONAR_TOKEN
 
 } else {
-	if ($env:GITHUB_BRANCH -eq "master") {
+	if (($env:GITHUB_BRANCH -eq "master") -or ($env:GITHUB_BRANCH -eq "refs/heads/master")) {
 		write-host -f green "Building master branch"
 
 		#setup Nuget.config
