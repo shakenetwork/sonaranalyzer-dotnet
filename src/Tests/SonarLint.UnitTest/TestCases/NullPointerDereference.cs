@@ -222,6 +222,18 @@ namespace Tests.Diagnostics
                 b.ToString();
             }
         }
+
+        void ElementAccess(int[,] arr)
+        {
+            if (arr == null)
+            {
+                Console.WriteLine(arr[10, 10]); // Noncompliant
+            }
+            else
+            {
+                Console.WriteLine(arr[10, 10]);
+            }
+        }
     }
 
     static class Extensions

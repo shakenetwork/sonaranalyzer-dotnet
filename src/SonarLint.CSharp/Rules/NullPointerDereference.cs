@@ -132,21 +132,22 @@ namespace SonarLint.Rules.CSharp
                         return ProcessIdentifier(programPoint, programState, (IdentifierNameSyntax)instruction);
 
                     case SyntaxKind.AwaitExpression:
-                        return ProcessAwait(programState, instruction);
+                        return ProcessAwait(programState, (AwaitExpressionSyntax)instruction);
 
                     case SyntaxKind.SimpleMemberAccessExpression:
                     case SyntaxKind.PointerMemberAccessExpression:
-                        return ProcessMemberAccess(programState, instruction);
+                        return ProcessMemberAccess(programState, (MemberAccessExpressionSyntax)instruction);
+
+                    case SyntaxKind.ElementAccessExpression:
+                        return ProcessElementAccess(programState, (ElementAccessExpressionSyntax)instruction);
 
                     default:
                         return programState;
                 }
             }
 
-            private ProgramState ProcessAwait(ProgramState programState, SyntaxNode instruction)
+            private ProgramState ProcessAwait(ProgramState programState, AwaitExpressionSyntax awaitExpression)
             {
-                var awaitExpression = (AwaitExpressionSyntax)instruction;
-
                 var identifier = awaitExpression.Expression as IdentifierNameSyntax;
                 if (identifier == null)
                 {
@@ -156,10 +157,21 @@ namespace SonarLint.Rules.CSharp
                 return GetNewProgramStateFromIdentifier(programState, identifier);
             }
 
-            private ProgramState ProcessMemberAccess(ProgramState programState, SyntaxNode instruction)
+            private ProgramState ProcessElementAccess(ProgramState programState, ElementAccessExpressionSyntax elementAccess)
             {
-                var memberAccess = (MemberAccessExpressionSyntax)instruction;
+                var identifier = elementAccess.Expression as IdentifierNameSyntax;
+                return ProcessAccessedIdentifier(identifier, elementAccess, programState);
+            }
+
+
+            private ProgramState ProcessMemberAccess(ProgramState programState, MemberAccessExpressionSyntax memberAccess)
+            {
                 var identifier = memberAccess.Expression as IdentifierNameSyntax;
+                return ProcessAccessedIdentifier(identifier, memberAccess, programState);
+            }
+
+            private ProgramState ProcessAccessedIdentifier(IdentifierNameSyntax identifier, ExpressionSyntax expression, ProgramState programState)
+            {
                 if (identifier == null)
                 {
                     return programState;
@@ -177,7 +189,7 @@ namespace SonarLint.Rules.CSharp
                     OnMemberAccessed(identifier, isNull: true);
 
                     // Extension methods don't fail on null:
-                    return IsExtensionMethod(memberAccess, semanticModel)
+                    return IsExtensionMethod(expression, semanticModel)
                         ? programState
                         : null;
                 }
@@ -239,9 +251,9 @@ namespace SonarLint.Rules.CSharp
                     successorBlock.BranchingNode.IsKind(SyntaxKind.ForEachStatement);
             }
 
-            internal static bool IsExtensionMethod(SyntaxNode memberAccess, SemanticModel semanticModel)
+            internal static bool IsExtensionMethod(SyntaxNode expression, SemanticModel semanticModel)
             {
-                var memberSymbol = semanticModel.GetSymbolInfo(memberAccess).Symbol as IMethodSymbol;
+                var memberSymbol = semanticModel.GetSymbolInfo(expression).Symbol as IMethodSymbol;
                 return memberSymbol != null && memberSymbol.IsExtensionMethod;
             }
         }
