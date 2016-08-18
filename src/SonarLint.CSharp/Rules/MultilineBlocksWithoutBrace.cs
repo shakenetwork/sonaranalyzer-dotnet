@@ -65,12 +65,15 @@ namespace SonarLint.Rules.CSharp
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckLoop(c, ((WhileStatementSyntax) c.Node).Statement),
                 SyntaxKind.WhileStatement);
+
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckLoop(c, ((ForStatementSyntax) c.Node).Statement),
                 SyntaxKind.ForStatement);
+
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckLoop(c, ((ForEachStatementSyntax) c.Node).Statement),
                 SyntaxKind.ForEachStatement);
+
             context.RegisterSyntaxNodeActionInNonGenerated(
                 c => CheckIf(c, (IfStatementSyntax) c.Node),
                 SyntaxKind.IfStatement);
@@ -78,12 +81,22 @@ namespace SonarLint.Rules.CSharp
 
         private static void CheckLoop(SyntaxNodeAnalysisContext context, StatementSyntax statement)
         {
+            if (IsNestedStatement(statement))
+            {
+                return;
+            }
+
             CheckStatement(context, statement, "in a loop", "only once");
         }
 
         private static void CheckIf(SyntaxNodeAnalysisContext context, IfStatementSyntax ifStatement)
         {
             if (ifStatement.GetPrecedingIfsInConditionChain().Any())
+            {
+                return;
+            }
+
+            if (IsNestedStatement(ifStatement.Statement))
             {
                 return;
             }
@@ -95,6 +108,14 @@ namespace SonarLint.Rules.CSharp
             }
 
             CheckStatement(context, lastStatementInIfChain, "conditionally", "unconditionally");
+        }
+
+        private static bool IsNestedStatement(StatementSyntax nested)
+        {
+            return nested is IfStatementSyntax ||
+                nested is ForStatementSyntax ||
+                nested is ForEachStatementSyntax ||
+                nested is WhileStatementSyntax;
         }
 
         private static StatementSyntax GetLastStatementInIfChain(IfStatementSyntax ifStatement)

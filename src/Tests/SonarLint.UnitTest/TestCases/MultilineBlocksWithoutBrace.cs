@@ -138,5 +138,26 @@ Tests(); // Noncompliant
                 ;
             ; // Compliant
         }
+
+        void TestIfs(bool a, bool b)
+        {
+            if (a)
+            if (b)
+               Console.WriteLine();
+
+            Console.WriteLine();
+
+            if (a)
+            while (b)
+               Console.WriteLine();
+
+            Console.WriteLine();
+
+            while (a)
+            if (b)
+               Console.WriteLine();
+
+            Console.WriteLine();
+        }
     }
 }
