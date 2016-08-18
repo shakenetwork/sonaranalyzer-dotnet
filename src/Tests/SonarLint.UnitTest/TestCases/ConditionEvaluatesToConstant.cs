@@ -478,8 +478,8 @@ namespace Tests.Diagnostics
 
             if (this == a)
             {
-                if (this.Equals(a)) { } // Compliant, false negative, "this" generates a new symbolic value each time
-                if (Equals(a)) { } // Compliant, false negative
+                if (this.Equals(a)) { } // Noncompliant
+                if (Equals(a)) { }      // Noncompliant
             }
         }
 

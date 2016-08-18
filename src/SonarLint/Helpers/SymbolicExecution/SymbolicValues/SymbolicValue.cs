@@ -29,12 +29,38 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         public static readonly SymbolicValue True = new BoolLiteralSymbolicValue(true);
         public static readonly SymbolicValue False = new BoolLiteralSymbolicValue(false);
         public static readonly SymbolicValue Null = new NullSymbolicValue();
+        public static readonly SymbolicValue This = new ThisSymbolicValue();
+        public static readonly SymbolicValue Base = new BaseSymbolicValue();
 
         private class BoolLiteralSymbolicValue : SymbolicValue
         {
             internal BoolLiteralSymbolicValue(bool value)
                 : base(value)
             {
+            }
+        }
+
+        private class ThisSymbolicValue : SymbolicValue
+        {
+            internal ThisSymbolicValue()
+                : base(new object())
+            {
+            }
+            public override string ToString()
+            {
+                return "SV_THIS";
+            }
+        }
+
+        private class BaseSymbolicValue : SymbolicValue
+        {
+            internal BaseSymbolicValue()
+                : base(new object())
+            {
+            }
+            public override string ToString()
+            {
+                return "SV_BASE";
             }
         }
 
@@ -46,14 +72,16 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             }
             public override string ToString()
             {
-                return "SymbolicValue NULL";
+                return "SV_NULL";
             }
         }
 
         private readonly object identifier;
 
+        private static int SymbolicValueCounter = 0;
+
         internal SymbolicValue()
-            : this(new object())
+            : this(SymbolicValueCounter++)
         {
         }
 
@@ -66,7 +94,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         {
             if (identifier != null)
             {
-                return "SV " + identifier;
+                return "SV_" + identifier;
             }
 
             return base.ToString();

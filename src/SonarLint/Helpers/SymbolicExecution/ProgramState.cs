@@ -40,13 +40,21 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             {
                 { SymbolicValue.True, BoolConstraint.True },
                 { SymbolicValue.False, BoolConstraint.False },
-                { SymbolicValue.Null, ObjectConstraint.Null }
+                { SymbolicValue.Null, ObjectConstraint.Null },
+                { SymbolicValue.This, ObjectConstraint.NotNull },
+                { SymbolicValue.Base, ObjectConstraint.NotNull }
             }.ToImmutableDictionary();
 
         private static readonly ISet<SymbolicValue> ProtectedSymbolicValues = ImmutableHashSet.Create(
             SymbolicValue.True,
             SymbolicValue.False,
-            SymbolicValue.Null);
+            SymbolicValue.Null,
+            SymbolicValue.This,
+            SymbolicValue.Base);
+
+        private static readonly ISet<SymbolicValue> DistinguishedReferences = ImmutableHashSet.Create(
+            SymbolicValue.This,
+            SymbolicValue.Base);
 
         internal ProgramState()
             : this(ImmutableDictionary<ISymbol, SymbolicValue>.Empty,
@@ -68,7 +76,11 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             var rightOp = relationship.RightOperand;
 
             // Only add relationships on SV's that belong to a local symbol
-            var localValues = Values.Values.Except(ProtectedSymbolicValues).ToImmutableHashSet();
+            var localValues = Values.Values
+                .Except(ProtectedSymbolicValues)
+                .Concat(DistinguishedReferences)
+                .ToImmutableHashSet();
+
             if (!localValues.Contains(leftOp) ||
                 !localValues.Contains(rightOp))
             {
@@ -216,7 +228,9 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 .ToImmutableDictionary();
 
             // SVs for live symbols
-            var usedSymbolicValues = cleanedValues.Values.ToImmutableHashSet();
+            var usedSymbolicValues = cleanedValues.Values
+                .Concat(DistinguishedReferences)
+                .ToImmutableHashSet();
 
             var cleanedConstraints = Constraints
                 .Where(kv =>

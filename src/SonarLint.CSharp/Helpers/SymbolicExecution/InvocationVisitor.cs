@@ -121,19 +121,11 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 .PopValue(out arg1)
                 .PopValue(out expression);
 
-            SymbolicValue arg2;
             var memberAccess = expression as MemberAccessSymbolicValue;
-            if (memberAccess != null)
-            {
-                arg2 = memberAccess.MemberExpression;
-            }
-            else
-            {
-                // "this" reference
-                // "this" should have its own dedicated symbol (SLVS-984)
-                arg2 = new SymbolicValue();
-                newProgramState = arg2.SetConstraint(ObjectConstraint.NotNull, newProgramState);
-            }
+
+            SymbolicValue arg2 = memberAccess != null
+                ? memberAccess.MemberExpression
+                : SymbolicValue.This;
 
             return newProgramState.PushValue(new ValueEqualsSymbolicValue(arg1, arg2));
         }

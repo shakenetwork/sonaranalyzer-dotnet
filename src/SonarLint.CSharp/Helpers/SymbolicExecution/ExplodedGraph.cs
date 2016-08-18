@@ -288,12 +288,17 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 case SyntaxKind.NullLiteralExpression:
                     newProgramState = newProgramState.PushValue(SymbolicValue.Null);
                     break;
+
+                case SyntaxKind.ThisExpression:
+                    newProgramState = newProgramState.PushValue(SymbolicValue.This);
+                    break;
+                case SyntaxKind.BaseExpression:
+                    newProgramState = newProgramState.PushValue(SymbolicValue.Base);
+                    break;
+
                 case SyntaxKind.CharacterLiteralExpression:
                 case SyntaxKind.StringLiteralExpression:
                 case SyntaxKind.NumericLiteralExpression:
-
-                case SyntaxKind.ThisExpression:
-                case SyntaxKind.BaseExpression:
 
                 case SyntaxKind.DefaultExpression:
                 case SyntaxKind.SizeOfExpression:
