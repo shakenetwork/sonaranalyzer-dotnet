@@ -36,7 +36,7 @@ if ($env:IS_PULLREQUEST -eq "true") {
 		for($i=1; $i -le 5-$env:BUILD_NUMBER.length; $i++){$buildversion = "0"+$buildversion}
 
 		#Append build number to the version
-		(Get-Content .\build\Version.props) -replace 'AssemblyInformationalVersion\)', "AssemblyInformationalVersion).$buildversion" | Set-Content .\build\Version.props
+		(Get-Content .\build\Version.props) -replace 'AssemblyInformationalVersion\)', "AssemblyInformationalVersion).build$buildversion" | Set-Content .\build\Version.props
 		& $env:MSBUILD_PATH  build/ChangeVersion.proj
 
 		#build
@@ -58,7 +58,7 @@ if ($env:IS_PULLREQUEST -eq "true") {
 
 		#get version number
 		[xml]$versionProps = Get-Content .\build\Version.props
-		$version = $versionProps.Project.PropertyGroup.MainVersion+"."+$buildversion
+		$version = $versionProps.Project.PropertyGroup.MainVersion+".build$buildversion"
 
 		#upload packages
 		$files = Get-ChildItem src -recurse *.nupkg
