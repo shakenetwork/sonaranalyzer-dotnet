@@ -20,6 +20,8 @@
 
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis;
+using System;
+using System.Collections.Immutable;
 
 namespace SonarLint.Helpers.FlowAnalysis.Common
 {
@@ -56,9 +58,31 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 return HandleReferenceEqualsCall(invocation, programState);
             }
 
+            if (IsStringNullCheckMethod(methodSymbol))
+            {
+                return HandleStringNullCheckMethod(programState);
+            }
+
             return programState
                 .PopValues((invocation.ArgumentList?.Arguments.Count ?? 0) + 1)
                 .PushValue(new SymbolicValue());
+        }
+
+        private static ProgramState HandleStringNullCheckMethod(ProgramState programState)
+        {
+            SymbolicValue arg1;
+
+            var newProgramState = programState
+                .PopValue(out arg1)
+                .PopValue();
+
+            if (arg1.HasConstraint(ObjectConstraint.Null, newProgramState))
+            {
+                // Value is null, so the result of the call is true
+                return newProgramState.PushValue(SymbolicValue.True);
+            }
+
+            return newProgramState.PushValue(new SymbolicValue());
         }
 
         private static ProgramState HandleStaticEqualsCall(ProgramState programState)
@@ -168,6 +192,18 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         {
             return arg1.HasConstraint(ObjectConstraint.Null, programState) &&
                 arg2.HasConstraint(ObjectConstraint.Null, programState);
+        }
+
+        private static readonly ImmutableHashSet<string> IsNullMethodNames = ImmutableHashSet.Create(
+            nameof(string.IsNullOrEmpty),
+            nameof(string.IsNullOrWhiteSpace));
+
+        private static bool IsStringNullCheckMethod(IMethodSymbol methodSymbol)
+        {
+            return methodSymbol != null &&
+                methodSymbol.ContainingType.Is(KnownType.System_String) &&
+                methodSymbol.IsStatic &&
+                IsNullMethodNames.Contains(methodSymbol.Name);
         }
 
         private static bool IsReferenceEqualsCall(IMethodSymbol methodSymbol)

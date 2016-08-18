@@ -560,5 +560,16 @@ namespace Tests.Diagnostics
         {
             return false;
         }
+
+        public void StringEmpty()
+        {
+            string s = null;
+            if (string.IsNullOrEmpty(s)) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+            if (string.IsNullOrWhiteSpace(s)) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+            if (string.IsInterned(s)) { }
+            s = "";
+            if (string.IsNullOrEmpty(s)) { }
+            if (string.IsNullOrWhiteSpace(s)) { }
+        }
     }
 }
