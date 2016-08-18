@@ -76,6 +76,13 @@ namespace SonarLint.Rules.CSharp
                         return;
                     }
 
+                    var asyncPattern = attribute.NamedArguments.FirstOrDefault(na => na.Key == "AsyncPattern").Value.Value as bool?;
+                    if (asyncPattern.HasValue &&
+                        asyncPattern.Value)
+                    {
+                        return;
+                    }
+
                     var isOneWay = attribute.NamedArguments.FirstOrDefault(na => na.Key == "IsOneWay").Value.Value as bool?;
                     if (isOneWay.HasValue &&
                         isOneWay.Value)

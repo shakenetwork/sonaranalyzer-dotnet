@@ -28,5 +28,8 @@ namespace Tests.Diagnostics
 
         [OperationContract(IsOneWay = "mistake")]
         int MyServiceMethod5();
+
+        [OperationContract(IsOneWay = true, AsyncPattern = true)]
+        IAsyncResult BeginMyServiceMethod6();
     }
 }
