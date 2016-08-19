@@ -242,7 +242,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             // Relationships for live symbols (no transitivity, so both of them need to be live in order to hold any information)
             var cleanedRelationships = Relationships
                 .Where(r =>
-                    usedSymbolicValues.Contains(r.LeftOperand) &&
+                    usedSymbolicValues.Contains(r.LeftOperand) ||
                     usedSymbolicValues.Contains(r.RightOperand))
                 .ToImmutableHashSet();
 

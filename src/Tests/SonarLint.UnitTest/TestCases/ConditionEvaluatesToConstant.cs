@@ -461,10 +461,21 @@ namespace Tests.Diagnostics
 
         public void RelationshipWithConstraint(bool a, bool b)
         {
-            if (a == b && a) { if (b) { } } // Non-compliant (SLVS-970)
+            if (a == b && a) { if (b) { } } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+//                                 ^
+            if (a != b && a) { if (b) { } } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+//                                 ^
             if (a && b) { if (a == b) { } } // Noncompliant
 //                            ^^^^^^
             if (a && b && a == b) {  } // Non-compliant
+        }
+
+        private static void BackPropagation(object a, object b)
+        {
+            if (a == b && b == null)
+            {
+                a.ToString();
+            }
         }
 
         public void RefEqualsImpliesValueEquals(object a, object b)

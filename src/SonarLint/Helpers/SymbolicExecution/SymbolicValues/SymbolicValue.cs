@@ -20,6 +20,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 
 namespace SonarLint.Helpers.FlowAnalysis.Common
@@ -107,12 +108,54 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 return programState;
             }
 
+            var newConstraints = programState.Constraints.SetItem(this, constraint);
+            newConstraints = AddConstraintTo<EqualsRelationship>(constraint, programState, newConstraints);
+
+            if (constraint is BoolConstraint)
+            {
+                newConstraints = AddConstraintTo<NotEqualsRelationship>(constraint.OppositeForLogicalNot, programState, newConstraints);
+            }
+
             return new ProgramState(
                 programState.Values,
-                programState.Constraints.SetItem(this, constraint),
+                newConstraints,
                 programState.ProgramPointVisitCounts,
                 programState.ExpressionStack,
                 programState.Relationships);
+        }
+
+        private ImmutableDictionary<SymbolicValue, SymbolicValueConstraint> AddConstraintTo<TRelationship>(SymbolicValueConstraint constraint,
+            ProgramState programState, ImmutableDictionary<SymbolicValue, SymbolicValueConstraint> constraints)
+            where TRelationship: BinaryRelationship
+        {
+            var newConstraints = constraints;
+            var equalSymbols = programState.Relationships
+                            .OfType<TRelationship>()
+                            .Select(r => GetOtherOperandFromMatchingRelationship(r))
+                            .Where(e => e != null);
+
+            foreach (var equalSymbol in equalSymbols.Where(e => !e.HasConstraint(constraint, programState)))
+            {
+                newConstraints = newConstraints.SetItem(equalSymbol, constraint);
+            }
+
+            return newConstraints;
+        }
+
+        private SymbolicValue GetOtherOperandFromMatchingRelationship(BinaryRelationship relationship)
+        {
+            if (relationship.RightOperand == this)
+            {
+                return relationship.LeftOperand;
+            }
+            else if (relationship.LeftOperand == this)
+            {
+                return relationship.RightOperand;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public bool HasConstraint(SymbolicValueConstraint constraint, ProgramState programState)
