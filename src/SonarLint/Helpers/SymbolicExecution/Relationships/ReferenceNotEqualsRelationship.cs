@@ -34,7 +34,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         {
             return relationships
                 .OfType<ReferenceEqualsRelationship>()
-                .Any(rel => OperandsMatch(rel));
+                .Any(rel => AreOperandsMatching(rel));
         }
 
         public override BinaryRelationship Negate()

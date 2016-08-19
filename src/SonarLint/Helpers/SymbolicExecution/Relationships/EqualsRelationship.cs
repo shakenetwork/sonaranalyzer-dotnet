@@ -29,7 +29,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 
         protected bool Equals(EqualsRelationship other)
         {
-            return other != null && OperandsMatch(other);
+            return other != null && AreOperandsMatching(other);
         }
 
         public sealed override int GetHashCode()

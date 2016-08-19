@@ -187,9 +187,17 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                     break;
 
                 case SyntaxKind.LessThanExpression:
+                    newProgramState = VisitBinaryOperator(newProgramState, (l, r) => new ComparisonSymbolicValue(ComparisonKind.Less, l, r));
+                    break;
                 case SyntaxKind.LessThanOrEqualExpression:
+                    newProgramState = VisitBinaryOperator(newProgramState, (l, r) => new ComparisonSymbolicValue(ComparisonKind.LessOrEqual, l, r));
+                    break;
                 case SyntaxKind.GreaterThanExpression:
+                    newProgramState = VisitBinaryOperator(newProgramState, (l, r) => new ComparisonSymbolicValue(ComparisonKind.Less, r, l));
+                    break;
                 case SyntaxKind.GreaterThanOrEqualExpression:
+                    newProgramState = VisitBinaryOperator(newProgramState, (l, r) => new ComparisonSymbolicValue(ComparisonKind.LessOrEqual, r, l));
+                    break;
 
                 case SyntaxKind.SubtractExpression:
                 case SyntaxKind.AddExpression:

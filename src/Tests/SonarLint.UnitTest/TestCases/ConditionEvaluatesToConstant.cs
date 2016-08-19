@@ -571,5 +571,34 @@ namespace Tests.Diagnostics
             if (string.IsNullOrEmpty(s)) { }
             if (string.IsNullOrWhiteSpace(s)) { }
         }
+
+        public void Comparisons(int i, int j)
+        {
+            if (i < j)
+            {
+                if (j < i) { }  // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+                if (j <= i) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+                if (j == i) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+                if (j != i) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+            }
+
+            if (i <= j)
+            {
+                if (j < i) { }  // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+                if (j <= i)
+                {
+                    if (j == i) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+                    if (j != i) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+                }
+                if (j == i)
+                {
+                    if (i >= j) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+                }
+                if (j != i)
+                {
+                    if (i >= j) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+                }
+            }
+        }
     }
 }

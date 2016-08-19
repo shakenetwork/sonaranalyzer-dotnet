@@ -32,9 +32,21 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 
         internal override bool IsContradicting(IEnumerable<BinaryRelationship> relationships)
         {
-            return relationships
+            var isNotEqContradicting = relationships
                 .OfType<ValueNotEqualsRelationship>()
-                .Any(rel => OperandsMatch(rel));
+                .Any(rel => AreOperandsMatching(rel));
+
+            if (isNotEqContradicting)
+            {
+                return true;
+            }
+
+            var isComparisonContradicting = relationships
+                .OfType<ComparisonRelationship>()
+                .Where(c => c.ComparisonKind == ComparisonKind.Less)
+                .Any(c => AreOperandsMatching(c));
+
+            return isComparisonContradicting;
         }
 
         public override BinaryRelationship Negate()
