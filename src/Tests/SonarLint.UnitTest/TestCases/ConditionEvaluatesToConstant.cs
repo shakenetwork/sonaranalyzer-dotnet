@@ -611,5 +611,14 @@ namespace Tests.Diagnostics
                 }
             }
         }
+
+        int ValueEquals(int i, int j)
+        {
+            if (i == j)
+            {
+                if (Equals(i, j)) { } // Noncompliant
+                if (i.Equals(j)) { }  // Noncompliant
+            }
+        }
     }
 }

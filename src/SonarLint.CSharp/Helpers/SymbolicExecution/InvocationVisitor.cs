@@ -207,25 +207,10 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 
         private static bool IsInstanceEqualsCall(IMethodSymbol methodSymbol)
         {
-            if (methodSymbol == null ||
-                methodSymbol.Name != EqualsLiteral ||
-                methodSymbol.Parameters.Length != 1)
-            {
-                return false;
-            }
-
-            var baseMethod = methodSymbol;
-            while (baseMethod != null)
-            {
-                if (baseMethod.ContainingType.Is(KnownType.System_Object))
-                {
-                    return true;
-                }
-
-                baseMethod = baseMethod.OverriddenMethod;
-            }
-
-            return false;
+            return methodSymbol != null &&
+                methodSymbol.Name == EqualsLiteral &&
+                !methodSymbol.IsStatic &&
+                methodSymbol.Parameters.Length == 1;
         }
 
         private static bool IsStaticEqualsCall(IMethodSymbol methodSymbol)
