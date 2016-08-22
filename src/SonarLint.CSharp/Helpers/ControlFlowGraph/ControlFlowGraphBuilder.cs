@@ -25,6 +25,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.CodeAnalysis;
 using SonarLint.Helpers.FlowAnalysis.Common;
+using System.Collections.Immutable;
 
 namespace SonarLint.Helpers.FlowAnalysis.CSharp
 {
@@ -340,7 +341,18 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                     break;
 
                 case SyntaxKind.InvocationExpression:
-                    BuildInvocationExpression((InvocationExpressionSyntax)expression);
+                    {
+                        var invocation = (InvocationExpressionSyntax)expression;
+                        var symbol = semanticModel.GetSymbolInfo(invocation).Symbol as IMethodSymbol;
+                        if (symbol != null &&
+                            symbol.Name == "Assert" &&
+                            symbol.ContainingType.IsAny(ClassesToOmit))
+                        {
+                            break;
+                        }
+
+                        BuildInvocationExpression(invocation);
+                    }
                     break;
 
                 case SyntaxKind.AnonymousObjectCreationExpression:
@@ -452,6 +464,10 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                     throw new NotImplementedException($"{expression.Kind()}");
             }
         }
+
+        private static readonly ImmutableHashSet<KnownType> ClassesToOmit = ImmutableHashSet.Create(
+            KnownType.System_Diagnostics_Debug,
+            KnownType.System_Diagnostics_Trace);
 
         #endregion
 

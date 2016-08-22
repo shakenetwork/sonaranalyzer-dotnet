@@ -162,6 +162,9 @@ namespace SonarLint.Helpers
         public static readonly KnownType System_Linq_Enumerable = new KnownType("System.Linq.Enumerable");
         public static readonly KnownType System_Linq_ImmutableArrayExtensions = new KnownType("System.Linq.ImmutableArrayExtensions");
 
+        public static readonly KnownType System_Diagnostics_Debug = new KnownType("System.Diagnostics.Debug");
+        public static readonly KnownType System_Diagnostics_Trace = new KnownType("System.Diagnostics.Trace");
+
         #endregion
 
         public string TypeName { get; }

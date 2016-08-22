@@ -1888,6 +1888,24 @@ b = x | 2;  b = x & 2;   b = x ^ 2;  c = ""c"" + 'c';  c = a - b;   c = a * b;  
             VerifyAllInstructions(cfg.EntryBlock, "string", "string.Format", "\"\"", "string.Format(\"\")");
         }
 
+        [TestMethod]
+        [TestCategory("CFG")]
+        public void Cfg_RemovedCalls()
+        {
+            var cfg = Build(@"System.Diagnostics.Debug.Assert(false);");
+            VerifyCfg(cfg, 1);
+            cfg.EntryBlock.Instructions.Should().BeEmpty();
+        }
+
+        [TestMethod]
+        [TestCategory("CFG")]
+        public void Cfg_NonRemovedCalls()
+        {
+            var cfg = Build(@"System.Diagnostics.Debug.Fail("""");");
+            VerifyCfg(cfg, 2);
+            cfg.EntryBlock.Instructions.Should().NotBeEmpty();
+        }
+
         #endregion
 
         #region Helpers to build the CFG for the tests
@@ -1911,6 +1929,7 @@ namespace NS
                 var document = workspace.CurrentSolution.AddProject("foo", "foo.dll", LanguageNames.CSharp)
                     .AddMetadataReference(MetadataReference.CreateFromFile(typeof(object).Assembly.Location))
                     .AddMetadataReference(MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location))
+                    .AddMetadataReference(MetadataReference.CreateFromFile(typeof(System.Diagnostics.Debug).Assembly.Location))
                     .AddDocument("test", input);
                 var compilation = document.Project.GetCompilationAsync().Result;
                 var tree = compilation.SyntaxTrees.First();
@@ -1926,7 +1945,7 @@ namespace NS
         {
             SemanticModel semanticModel;
             var method = Compile(string.Format(TestInput, methodBody), "Bar", out semanticModel);
-            return SonarLint.Helpers.FlowAnalysis.CSharp.ControlFlowGraph.Create(method.Body, semanticModel);
+            return ControlFlowGraph.Create(method.Body, semanticModel);
         }
 
         #endregion
