@@ -308,7 +308,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 case SyntaxKind.StringLiteralExpression:
                 case SyntaxKind.NumericLiteralExpression:
 
-                case SyntaxKind.DefaultExpression:
                 case SyntaxKind.SizeOfExpression:
                 case SyntaxKind.TypeOfExpression:
 
@@ -318,6 +317,20 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                     {
                         var sv = new SymbolicValue();
                         newProgramState = sv.SetConstraint(ObjectConstraint.NotNull, newProgramState);
+                        newProgramState = newProgramState.PushValue(sv);
+                    }
+                    break;
+
+                case SyntaxKind.DefaultExpression:
+                    {
+                        var type = SemanticModel.GetTypeInfo(instruction).Type;
+                        var sv = new SymbolicValue();
+
+                        if (IsNonNullableValueType(type))
+                        {
+                            newProgramState = sv.SetConstraint(ObjectConstraint.NotNull, newProgramState);
+                        }
+
                         newProgramState = newProgramState.PushValue(sv);
                     }
                     break;

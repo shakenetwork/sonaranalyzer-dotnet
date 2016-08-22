@@ -620,5 +620,10 @@ namespace Tests.Diagnostics
                 if (i.Equals(j)) { }  // Noncompliant
             }
         }
+
+        void DefaultExpression(object o)
+        {
+            if (default(o) == null) { } // Compliant
+        }
     }
 }

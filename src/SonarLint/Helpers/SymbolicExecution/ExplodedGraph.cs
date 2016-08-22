@@ -320,7 +320,11 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 
         private static bool IsNonNullableValueType(ISymbol symbol)
         {
-            var type = symbol.GetSymbolType();
+            return IsNonNullableValueType(symbol.GetSymbolType());
+        }
+
+        protected static bool IsNonNullableValueType(ITypeSymbol type)
+        {
             return type.IsStruct() &&
                 !type.OriginalDefinition.Is(KnownType.System_Nullable_T);
         }
