@@ -143,5 +143,17 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
             return symbolicValue.HasConstraint(constraint, programState);
         }
+
+        public static ProgramState SetConstraint(this ISymbol symbol, SymbolicValueConstraint constraint, ProgramState programState)
+        {
+            var symbolicValue = programState.GetSymbolValue(symbol);
+            if (symbolicValue == null ||
+                symbolicValue.HasConstraint(constraint, programState))
+            {
+                return programState;
+            }
+
+            return symbolicValue.SetConstraint(constraint, programState);
+        }
     }
 }

@@ -61,6 +61,9 @@ namespace SonarLint.Rules.CSharp
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
+        private const string ValueLiteral = "Value";
+        private const string HasValueLiteral = "HasValue";
+
         protected override void Initialize(SonarAnalysisContext context)
         {
             context.RegisterExplodedGraphBasedAnalysis((e, c) => CheckEmptyNullableAccess(e, c));
@@ -72,10 +75,9 @@ namespace SonarLint.Rules.CSharp
             explodedGraph.AddExplodedGraphCheck(nullPointerCheck);
 
             var nullIdentifiers = new HashSet<IdentifierNameSyntax>();
-            var nonNullIdentifiers = new HashSet<IdentifierNameSyntax>();
 
             EventHandler<MemberAccessedEventArgs> nullValueAccessedHandler =
-                (sender, args) => CollectMemberAccesses(args, nullIdentifiers, nonNullIdentifiers);
+                (sender, args) => nullIdentifiers.Add(args.Identifier);
 
             nullPointerCheck.ValuePropertyAccessed += nullValueAccessedHandler;
 
@@ -90,26 +92,7 @@ namespace SonarLint.Rules.CSharp
 
             foreach (var nullIdentifier in nullIdentifiers)
             {
-                if (nonNullIdentifiers.Contains(nullIdentifier))
-                {
-                    // Only report on cases where we are (almost) sure
-                    continue;
-                }
-
                 context.ReportDiagnostic(Diagnostic.Create(Rule, nullIdentifier.Parent.GetLocation(), nullIdentifier.Identifier.ValueText));
-            }
-        }
-
-        private static void CollectMemberAccesses(MemberAccessedEventArgs args, HashSet<IdentifierNameSyntax> nullIdentifiers,
-            HashSet<IdentifierNameSyntax> nonNullIdentifiers)
-        {
-            if (args.IsNull)
-            {
-                nullIdentifiers.Add(args.Identifier);
-            }
-            else
-            {
-                nonNullIdentifiers.Add(args.Identifier);
             }
         }
 
@@ -122,12 +105,11 @@ namespace SonarLint.Rules.CSharp
             {
             }
 
-            private void OnValuePropertyAccessed(IdentifierNameSyntax identifier, bool isNull)
+            private void OnValuePropertyAccessed(IdentifierNameSyntax identifier)
             {
                 ValuePropertyAccessed?.Invoke(this, new MemberAccessedEventArgs
                 {
-                    Identifier = identifier,
-                    IsNull = isNull
+                    Identifier = identifier
                 });
             }
 
@@ -136,16 +118,15 @@ namespace SonarLint.Rules.CSharp
                 var instruction = programPoint.Block.Instructions[programPoint.Offset];
 
                 return instruction.IsKind(SyntaxKind.SimpleMemberAccessExpression)
-                    ? ProcessMemberAccess(programState, instruction)
+                    ? ProcessMemberAccess(programState, (MemberAccessExpressionSyntax)instruction)
                     : programState;
             }
 
-            private ProgramState ProcessMemberAccess(ProgramState programState, SyntaxNode instruction)
+            private ProgramState ProcessMemberAccess(ProgramState programState, MemberAccessExpressionSyntax memberAccess)
             {
-                var memberAccess = (MemberAccessExpressionSyntax)instruction;
                 var identifier = memberAccess.Expression.RemoveParentheses() as IdentifierNameSyntax;
                 if (identifier == null ||
-                    memberAccess.Name.Identifier.ValueText != "Value")
+                    memberAccess.Name.Identifier.ValueText != ValueLiteral)
                 {
                     return programState;
                 }
@@ -158,14 +139,11 @@ namespace SonarLint.Rules.CSharp
 
                 if (symbol.HasConstraint(ObjectConstraint.Null, programState))
                 {
-                    OnValuePropertyAccessed(identifier, true);
+                    OnValuePropertyAccessed(identifier);
                     return null;
                 }
-                else
-                {
-                    OnValuePropertyAccessed(identifier, false);
-                    return programState;
-                }
+
+                return programState;
             }
 
             private bool IsNullableLocalScoped(ISymbol symbol)
@@ -178,7 +156,7 @@ namespace SonarLint.Rules.CSharp
 
             private bool IsHasValueAccess(MemberAccessExpressionSyntax memberAccess)
             {
-                return memberAccess.Name.Identifier.ValueText == "HasValue" &&
+                return memberAccess.Name.Identifier.ValueText == HasValueLiteral &&
                     semanticModel.GetTypeInfo(memberAccess.Expression).Type.OriginalDefinition.Is(KnownType.System_Nullable_T);
             }
 
@@ -197,13 +175,11 @@ namespace SonarLint.Rules.CSharp
             }
         }
 
-        internal sealed class HasValueAccessSymbolicValue : SymbolicValue
+        internal sealed class HasValueAccessSymbolicValue : MemberAccessSymbolicValue
         {
-            private readonly SymbolicValue nullable;
-
             public HasValueAccessSymbolicValue(SymbolicValue nullable)
+                : base(nullable, HasValueLiteral)
             {
-                this.nullable = nullable;
             }
 
             public override IEnumerable<ProgramState> TrySetConstraint(SymbolicValueConstraint constraint, ProgramState currentProgramState)
@@ -218,7 +194,7 @@ namespace SonarLint.Rules.CSharp
                     ? ObjectConstraint.NotNull
                     : ObjectConstraint.Null;
 
-                return nullable.TrySetConstraint(nullabilityConstraint, currentProgramState);
+                return MemberExpression.TrySetConstraint(nullabilityConstraint, currentProgramState);
             }
         }
     }

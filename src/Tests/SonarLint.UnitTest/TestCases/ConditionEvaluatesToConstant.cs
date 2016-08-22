@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Tests.Diagnostics
 {
@@ -644,6 +646,23 @@ namespace Tests.Diagnostics
 
             var x = (ConditionEvaluatesToConstant)o; // This would throw and invalid cast exception
             if (x == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+        }
+
+        public async Task NotNullAfterAccess(object o, int[,] arr, IEnumerable<int> coll, Task task)
+        {
+            Console.WriteLine(o.ToString());
+            if (o == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+
+            Console.WriteLine(arr[42, 42]);
+            if (arr == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+
+            foreach (var item in coll)
+            {
+            }
+            if (coll == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+
+            await task;
+            if (task == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
         }
     }
 }

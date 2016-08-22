@@ -27,6 +27,5 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
     internal class MemberAccessedEventArgs : EventArgs
     {
         public IdentifierNameSyntax Identifier { get; set; }
-        public bool IsNull { get; set; }
     }
 }

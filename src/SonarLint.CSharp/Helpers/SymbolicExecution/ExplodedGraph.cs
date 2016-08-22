@@ -230,8 +230,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 case SyntaxKind.AddressOfExpression:
                 case SyntaxKind.PointerIndirectionExpression:
 
-                case SyntaxKind.PointerMemberAccessExpression:
-
                 case SyntaxKind.MakeRefExpression:
                 case SyntaxKind.RefTypeExpression:
                 case SyntaxKind.RefValueExpression:
@@ -248,15 +246,27 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
                 case SyntaxKind.SimpleMemberAccessExpression:
                     {
+                        var memberAccess = (MemberAccessExpressionSyntax)instruction;
                         var check = explodedGraphChecks.OfType<EmptyNullableValueAccess.NullValueAccessedCheck>().FirstOrDefault();
                         if (check == null ||
-                            !check.TryProcessInstruction((MemberAccessExpressionSyntax)instruction, newProgramState, out newProgramState))
+                            !check.TryProcessInstruction(memberAccess, newProgramState, out newProgramState))
                         {
                             // Default behavior
                             SymbolicValue memberExpression;
-                            newProgramState = newProgramState.PopValue(out memberExpression);
-                            newProgramState = newProgramState.PushValue(new MemberAccessSymbolicValue(memberExpression));
+                            newProgramState = newProgramState
+                                .PopValue(out memberExpression)
+                                .PushValue(new MemberAccessSymbolicValue(memberExpression, memberAccess.Name.Identifier.ValueText));
                         }
+                    }
+                    break;
+
+                case SyntaxKind.PointerMemberAccessExpression:
+                    {
+                        var memberAccess = (MemberAccessExpressionSyntax)instruction;
+                        SymbolicValue memberExpression;
+                        newProgramState = newProgramState
+                            .PopValue(out memberExpression)
+                            .PushValue(new MemberAccessSymbolicValue(memberExpression, memberAccess.Name.Identifier.ValueText));
                     }
                     break;
 

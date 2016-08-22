@@ -22,11 +22,19 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 {
     public class MemberAccessSymbolicValue : SymbolicValue
     {
+        private readonly string memberName;
+
         public SymbolicValue MemberExpression { get; }
 
-        public MemberAccessSymbolicValue(SymbolicValue memberExpression)
+        public MemberAccessSymbolicValue(SymbolicValue memberExpression, string memberName)
         {
             MemberExpression = memberExpression;
+            this.memberName = memberName;
+        }
+
+        public override string ToString()
+        {
+            return $"{MemberExpression}.{memberName}";
         }
     }
 }

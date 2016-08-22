@@ -177,6 +177,11 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             return ExpressionStack.Peek();
         }
 
+        public SymbolicValue PeekValue(int nth)
+        {
+            return ExpressionStack.ToList()[nth];
+        }
+
         internal bool HasValue => !ExpressionStack.IsEmpty;
 
         internal ProgramState SetSymbolicValue(ISymbol symbol, SymbolicValue newSymbolicValue)

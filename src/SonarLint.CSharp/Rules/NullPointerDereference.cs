@@ -97,8 +97,7 @@ namespace SonarLint.Rules.CSharp
         private static void CollectMemberAccesses(MemberAccessedEventArgs args, HashSet<IdentifierNameSyntax> nullIdentifiers,
             SemanticModel semanticModel)
         {
-            if (args.IsNull &&
-                !NullPointerCheck.IsExtensionMethod(args.Identifier.Parent, semanticModel))
+            if (!NullPointerCheck.IsExtensionMethod(args.Identifier.Parent, semanticModel))
             {
                 nullIdentifiers.Add(args.Identifier);
             }
@@ -114,12 +113,11 @@ namespace SonarLint.Rules.CSharp
 
             }
 
-            private void OnMemberAccessed(IdentifierNameSyntax identifier, bool isNull)
+            private void OnMemberAccessed(IdentifierNameSyntax identifier)
             {
                 MemberAccessed?.Invoke(this, new MemberAccessedEventArgs
                 {
-                    Identifier = identifier,
-                    IsNull = isNull
+                    Identifier = identifier
                 });
             }
 
@@ -154,23 +152,23 @@ namespace SonarLint.Rules.CSharp
                     return programState;
                 }
 
-                return GetNewProgramStateFromIdentifier(programState, identifier);
+                var symbol = semanticModel.GetSymbolInfo(identifier).Symbol;
+                return ProcessIdentifier(programState, identifier, symbol);
             }
 
             private ProgramState ProcessElementAccess(ProgramState programState, ElementAccessExpressionSyntax elementAccess)
             {
                 var identifier = elementAccess.Expression as IdentifierNameSyntax;
-                return ProcessAccessedIdentifier(identifier, elementAccess, programState);
+                return ProcessAccessExpression(identifier, elementAccess, programState);
             }
-
 
             private ProgramState ProcessMemberAccess(ProgramState programState, MemberAccessExpressionSyntax memberAccess)
             {
                 var identifier = memberAccess.Expression as IdentifierNameSyntax;
-                return ProcessAccessedIdentifier(identifier, memberAccess, programState);
+                return ProcessAccessExpression(identifier, memberAccess, programState);
             }
 
-            private ProgramState ProcessAccessedIdentifier(IdentifierNameSyntax identifier, ExpressionSyntax expression, ProgramState programState)
+            private ProgramState ProcessAccessExpression(IdentifierNameSyntax identifier, ExpressionSyntax expression, ProgramState programState)
             {
                 if (identifier == null)
                 {
@@ -178,26 +176,13 @@ namespace SonarLint.Rules.CSharp
                 }
 
                 var symbol = semanticModel.GetSymbolInfo(identifier).Symbol;
-                if (!explodedGraph.IsLocalScoped(symbol))
+                if (IsNullableValueType(symbol) ||
+                    IsExtensionMethod(expression, semanticModel))
                 {
                     return programState;
                 }
 
-                if (symbol.HasConstraint(ObjectConstraint.Null, programState) &&
-                    !IsNullableValueType(symbol))
-                {
-                    OnMemberAccessed(identifier, isNull: true);
-
-                    // Extension methods don't fail on null:
-                    return IsExtensionMethod(expression, semanticModel)
-                        ? programState
-                        : null;
-                }
-                else
-                {
-                    OnMemberAccessed(identifier, isNull: false);
-                    return programState;
-                }
+                return ProcessIdentifier(programState, identifier, symbol);
             }
 
             private ProgramState ProcessIdentifier(ProgramPoint programPoint, ProgramState programState, IdentifierNameSyntax identifier)
@@ -209,27 +194,40 @@ namespace SonarLint.Rules.CSharp
                     return programState;
                 }
 
-                return GetNewProgramStateFromIdentifier(programState, identifier);
+                var symbol = semanticModel.GetSymbolInfo(identifier).Symbol;
+                return ProcessIdentifier(programState, identifier, symbol);
             }
 
-            private ProgramState GetNewProgramStateFromIdentifier(ProgramState programState, IdentifierNameSyntax identifier)
+            private ProgramState ProcessIdentifier(ProgramState programState, IdentifierNameSyntax identifier, ISymbol symbol)
             {
-                var symbol = semanticModel.GetSymbolInfo(identifier).Symbol;
-                if (!explodedGraph.IsLocalScoped(symbol))
+                if (explodedGraph.IsLocalScoped(symbol) &&
+                    symbol.HasConstraint(ObjectConstraint.Null, programState))
+                {
+                    OnMemberAccessed(identifier);
+                    return null;
+                }
+
+                return SetNotNullConstraintOnSymbol(symbol, programState);
+            }
+
+            private static ProgramState SetNotNullConstraintOnSymbol(ISymbol symbol, ProgramState programState)
+            {
+                if (programState == null)
+                {
+                    return null;
+                }
+
+                if (symbol == null)
                 {
                     return programState;
                 }
 
-                if (symbol.HasConstraint(ObjectConstraint.Null, programState))
+                if (!IsNullableValueType(symbol))
                 {
-                    OnMemberAccessed(identifier, isNull: true);
-                    return null;
+                    return symbol.SetConstraint(ObjectConstraint.NotNull, programState);
                 }
-                else
-                {
-                    OnMemberAccessed(identifier, isNull: false);
-                    return programState;
-                }
+
+                return programState;
             }
 
             private static bool IsNullableValueType(ISymbol symbol)
