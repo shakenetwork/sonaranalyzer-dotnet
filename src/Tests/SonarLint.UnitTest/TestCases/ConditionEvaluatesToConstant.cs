@@ -626,5 +626,14 @@ namespace Tests.Diagnostics
         {
             if (default(o) == null) { } // Compliant
         }
+
+        void ConditionalAccessNullPropagation(object o)
+        {
+            if (o == null)
+            {
+                if (o?.ToString() == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+                if (o?.GetHashCode() == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
+            }
+        }
     }
 }

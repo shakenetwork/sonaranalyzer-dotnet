@@ -282,9 +282,12 @@ namespace SonarLint.UnitTest
         {
             if (fileExtension == CSharpFileExtension)
             {
-                var csOptions = options as CS.CSharpParseOptions ?? new CS.CSharpParseOptions();
-                yield return csOptions.WithLanguageVersion(CS.LanguageVersion.CSharp6);
-                yield return csOptions.WithLanguageVersion(CS.LanguageVersion.CSharp5);
+                if (options == null)
+                {
+                    var csOptions = new CS.CSharpParseOptions();
+                    yield return csOptions.WithLanguageVersion(CS.LanguageVersion.CSharp6);
+                    yield return csOptions.WithLanguageVersion(CS.LanguageVersion.CSharp5);
+                }
                 yield break;
             }
 
