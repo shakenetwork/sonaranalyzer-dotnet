@@ -31,5 +31,12 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 
         public override SymbolicValueConstraint OppositeForLogicalNot =>
             this == Null ? NotNull : null /* not NotNull can be Null or another NotNull */;
+
+        public override string ToString()
+        {
+            return this == Null
+                ? "Null"
+                : "Not null";
+        }
     }
 }

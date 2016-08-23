@@ -467,7 +467,8 @@ namespace Tests.Diagnostics
 //                                 ^
             if (a && b) { if (a == b) { } } // Noncompliant
 //                            ^^^^^^
-            if (a && b && a == b) {  } // Non-compliant
+            if (a && b && a == b) {  } // Noncompliant
+//                        ^^^^^^
         }
 
         private static void BackPropagation(object a, object b)

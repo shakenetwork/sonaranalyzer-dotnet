@@ -930,7 +930,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
         private void BuildLogicalAndExpression(BinaryExpressionSyntax expression)
         {
             var successor = currentBlock;
-            currentBlock = CreateBlock(currentBlock);
+            currentBlock = AddBlock(new BinaryBranchingSimpleBlock(expression.Right, successor));
             BuildExpression(expression.Right);
 
             currentBlock = CreateBinaryBranchBlock(expression, currentBlock, successor);
@@ -940,7 +940,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
         private void BuildLogicalOrExpression(BinaryExpressionSyntax expression)
         {
             var successor = currentBlock;
-            currentBlock = CreateBlock(currentBlock);
+            currentBlock = AddBlock(new BinaryBranchingSimpleBlock(expression.Right, successor));
             BuildExpression(expression.Right);
 
             currentBlock = CreateBinaryBranchBlock(expression, successor, currentBlock);

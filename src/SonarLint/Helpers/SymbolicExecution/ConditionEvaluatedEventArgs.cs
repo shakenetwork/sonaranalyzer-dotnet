@@ -27,7 +27,6 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
     public class ConditionEvaluatedEventArgs : EventArgs
     {
         public SyntaxNode Condition { get; set; }
-        public SyntaxNode BranchingNode { get; set; }
         public bool EvaluationValue { get; set; }
     }
 }

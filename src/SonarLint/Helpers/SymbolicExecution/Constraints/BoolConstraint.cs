@@ -33,5 +33,12 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 
         public override SymbolicValueConstraint OppositeForLogicalNot =>
             this == True ? False : True;
+
+        public override string ToString()
+        {
+            return this == True
+                ? "True"
+                : "False";
+        }
     }
 }

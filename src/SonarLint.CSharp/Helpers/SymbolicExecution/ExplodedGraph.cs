@@ -481,7 +481,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
             foreach (var newProgramState in sv.TrySetConstraint(BoolConstraint.True, ps))
             {
-                OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: true);
+                OnConditionEvaluated(instruction, evaluationValue: true);
 
                 var nps = binaryBranchBlock.BranchingNode.IsKind(SyntaxKind.LogicalOrExpression)
                     ? newProgramState.PushValue(SymbolicValue.True)
@@ -492,7 +492,7 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
             foreach (var newProgramState in sv.TrySetConstraint(BoolConstraint.False, ps))
             {
-                OnConditionEvaluated(instruction, binaryBranchBlock.BranchingNode, evaluationValue: false);
+                OnConditionEvaluated(instruction, evaluationValue: false);
 
                 var nps = binaryBranchBlock.BranchingNode.IsKind(SyntaxKind.LogicalAndExpression)
                     ? newProgramState.PushValue(SymbolicValue.False)

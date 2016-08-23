@@ -19,27 +19,17 @@
  */
 
 using Microsoft.CodeAnalysis;
-using System;
 
 namespace SonarLint.Helpers.FlowAnalysis.Common
 {
-    public class BinaryBranchBlock : BranchBlock
+    public sealed class BinaryBranchingSimpleBlock : SimpleBlock
     {
-        internal BinaryBranchBlock(SyntaxNode branchingNode, Block trueSuccessor, Block falseSuccessor)
-            : base(branchingNode, trueSuccessor, falseSuccessor)
+        internal BinaryBranchingSimpleBlock(SyntaxNode branchingInstruction, Block trueAndFalseSuccessor)
+            : base(trueAndFalseSuccessor)
         {
-            if (trueSuccessor == null)
-            {
-                throw new ArgumentNullException(nameof(trueSuccessor));
-            }
-
-            if (falseSuccessor == null)
-            {
-                throw new ArgumentNullException(nameof(falseSuccessor));
-            }
+            BranchingInstruction = branchingInstruction;
         }
 
-        public Block TrueSuccessorBlock => successors[0];
-        public Block FalseSuccessorBlock => successors[1];
+        public SyntaxNode BranchingInstruction { get; }
     }
 }
