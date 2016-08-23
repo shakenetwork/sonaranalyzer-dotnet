@@ -207,19 +207,21 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 
         protected virtual void VisitSingleSuccessorBinaryBranch(BinaryBranchingSimpleBlock block, ExplodedGraphNode node)
         {
-            var programState = node.ProgramState;
-            var sv = programState.PeekValue();
+            SymbolicValue sv;
+            var programState = node.ProgramState.PopValue(out sv);
 
             foreach (var newProgramState in sv.TrySetConstraint(BoolConstraint.True, programState))
             {
                 OnConditionEvaluated(block.BranchingInstruction, evaluationValue: true);
-                EnqueueNewNode(new ProgramPoint(block.SuccessorBlock), newProgramState);
+                var nps = newProgramState.PushValue(SymbolicValue.True);
+                EnqueueNewNode(new ProgramPoint(block.SuccessorBlock), nps);
             }
 
             foreach (var newProgramState in sv.TrySetConstraint(BoolConstraint.False, programState))
             {
                 OnConditionEvaluated(block.BranchingInstruction, evaluationValue: false);
-                EnqueueNewNode(new ProgramPoint(block.SuccessorBlock), newProgramState);
+                var nps = newProgramState.PushValue(SymbolicValue.False);
+                EnqueueNewNode(new ProgramPoint(block.SuccessorBlock), nps);
             }
         }
 

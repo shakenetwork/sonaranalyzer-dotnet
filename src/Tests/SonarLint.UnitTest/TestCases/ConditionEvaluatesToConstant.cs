@@ -31,6 +31,26 @@ namespace Tests.Diagnostics
                 Console.WriteLine();
             }
 
+            if (!b) // Noncompliant
+            {
+                Console.WriteLine();
+            }
+
+            Console.WriteLine();
+        }
+
+        public void Method2Literals()
+        {
+            if (true) // Compliant
+            {
+                Console.WriteLine();
+            }
+
+            if (false) // Compliant
+            {
+                Console.WriteLine();
+            }
+
             Console.WriteLine();
         }
 
@@ -471,6 +491,13 @@ namespace Tests.Diagnostics
 //                            ^^^^^^
             if (a && b && a == b) {  } // Noncompliant
 //                        ^^^^^^
+
+            a = true;
+            b = false;
+            if (a &&        // Noncompliant
+                b)          // Noncompliant
+            {
+            }
         }
 
         private static void BackPropagation(object a, object b)

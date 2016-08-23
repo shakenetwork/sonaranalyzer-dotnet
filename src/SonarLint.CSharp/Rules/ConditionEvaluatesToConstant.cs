@@ -108,8 +108,7 @@ namespace SonarLint.Rules.CSharp
         private static void CollectConditions(ConditionEvaluatedEventArgs args, HashSet<SyntaxNode> conditionTrue, HashSet<SyntaxNode> conditionFalse)
         {
             if (args.Condition == null ||
-                args.Condition.IsKind(SyntaxKind.TrueLiteralExpression) ||
-                args.Condition.IsKind(SyntaxKind.FalseLiteralExpression))
+                OmittedSyntaxKinds.Contains(args.Condition.Kind()))
             {
                 return;
             }
@@ -123,5 +122,11 @@ namespace SonarLint.Rules.CSharp
                 conditionFalse.Add(args.Condition);
             }
         }
+
+        private static readonly ISet<SyntaxKind> OmittedSyntaxKinds = ImmutableHashSet.Create(
+            SyntaxKind.LogicalAndExpression,
+            SyntaxKind.LogicalOrExpression,
+            SyntaxKind.TrueLiteralExpression,
+            SyntaxKind.FalseLiteralExpression);
     }
 }
