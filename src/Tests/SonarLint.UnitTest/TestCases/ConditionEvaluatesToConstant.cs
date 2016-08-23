@@ -664,5 +664,25 @@ namespace Tests.Diagnostics
             await task;
             if (task == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
         }
+
+        public void EnumMemberAccess()
+        {
+            var m = new MyClass();
+            Console.WriteLine(m.myEnum);
+            m = null;
+            if (m?.myEnum == MyEnum.One) // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+            {
+            }
+        }
+
+        enum MyEnum
+        {
+            One, Two
+        }
+
+        class MyClass
+        {
+            public MyEnum myEnum;
+        }
     }
 }

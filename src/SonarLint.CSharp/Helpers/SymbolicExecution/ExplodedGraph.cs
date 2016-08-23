@@ -252,21 +252,14 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                             !check.TryProcessInstruction(memberAccess, newProgramState, out newProgramState))
                         {
                             // Default behavior
-                            SymbolicValue memberExpression;
-                            newProgramState = newProgramState
-                                .PopValue(out memberExpression)
-                                .PushValue(new MemberAccessSymbolicValue(memberExpression, memberAccess.Name.Identifier.ValueText));
+                            newProgramState = VisitMemberAccess(memberAccess, newProgramState);
                         }
                     }
                     break;
 
                 case SyntaxKind.PointerMemberAccessExpression:
                     {
-                        var memberAccess = (MemberAccessExpressionSyntax)instruction;
-                        SymbolicValue memberExpression;
-                        newProgramState = newProgramState
-                            .PopValue(out memberExpression)
-                            .PushValue(new MemberAccessSymbolicValue(memberExpression, memberAccess.Name.Identifier.ValueText));
+                        newProgramState = VisitMemberAccess((MemberAccessExpressionSyntax)instruction, newProgramState);
                     }
                     break;
 
@@ -515,6 +508,21 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
         #endregion
 
         #region VisitExpression*
+
+        private ProgramState VisitMemberAccess(MemberAccessExpressionSyntax memberAccess, ProgramState programState)
+        {
+            SymbolicValue memberExpression;
+            var newProgramState = programState.PopValue(out memberExpression);
+            var sv = new MemberAccessSymbolicValue(memberExpression, memberAccess.Name.Identifier.ValueText);
+
+            var type = SemanticModel.GetTypeInfo(memberAccess).Type;
+            if (IsNonNullableValueType(type))
+            {
+                newProgramState = sv.SetConstraint(ObjectConstraint.NotNull, newProgramState);
+            }
+
+            return newProgramState.PushValue(sv);
+        }
 
         private static ProgramState VisitSafeCastExpression(BinaryExpressionSyntax instruction, ProgramState programState)
         {
