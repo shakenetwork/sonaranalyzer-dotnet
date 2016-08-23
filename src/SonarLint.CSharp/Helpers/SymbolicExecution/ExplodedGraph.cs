@@ -236,8 +236,6 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                 case SyntaxKind.RefTypeExpression:
                 case SyntaxKind.RefValueExpression:
 
-                case SyntaxKind.CastExpression:
-
                 case SyntaxKind.MemberBindingExpression:
                     newProgramState = newProgramState.PopValue();
                     newProgramState = newProgramState.PushValue(new SymbolicValue());
@@ -345,6 +343,8 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                         newProgramState = newProgramState.PushValue(sv);
                     }
                     break;
+
+                case SyntaxKind.CastExpression:
 
                 case SyntaxKind.AwaitExpression:
                 case SyntaxKind.CheckedExpression:

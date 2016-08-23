@@ -635,5 +635,15 @@ namespace Tests.Diagnostics
                 if (o?.GetHashCode() == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to "true".}}
             }
         }
+
+        void Cast()
+        {
+            var i = 5;
+            var o = (object)i;
+            if (o == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+
+            var x = (ConditionEvaluatesToConstant)o; // This would throw and invalid cast exception
+            if (x == null) { } // Noncompliant {{Change this condition so that it does not always evaluate to "false".}}
+        }
     }
 }
