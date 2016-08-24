@@ -212,6 +212,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 
             foreach (var newProgramState in sv.TrySetConstraint(BoolConstraint.True, programState))
             {
+                // todo we should pop and push a true
                 OnConditionEvaluated(block.BranchingInstruction, evaluationValue: true);
                 var nps = newProgramState.PushValue(SymbolicValue.True);
                 EnqueueNewNode(new ProgramPoint(block.SuccessorBlock), nps);
@@ -219,6 +220,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 
             foreach (var newProgramState in sv.TrySetConstraint(BoolConstraint.False, programState))
             {
+                // todo we should pop and push a false
                 OnConditionEvaluated(block.BranchingInstruction, evaluationValue: false);
                 var nps = newProgramState.PushValue(SymbolicValue.False);
                 EnqueueNewNode(new ProgramPoint(block.SuccessorBlock), nps);

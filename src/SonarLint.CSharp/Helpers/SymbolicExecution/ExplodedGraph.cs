@@ -323,11 +323,19 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
 
                 case SyntaxKind.NumericLiteralExpression:
                     {
-                        var literal = (LiteralExpressionSyntax)instruction;
-                        var value = (int)SemanticModel.GetConstantValue(literal).Value;
-                        var sv = new NumericSymbolicValue(value);
-                        newProgramState = sv.SetConstraint(new NumericConstraint(value), newProgramState);
-                        newProgramState = newProgramState.PushValue(sv);
+                        if (SemanticModel.GetTypeInfo(instruction).Type.Is(KnownType.System_Int32))
+                        {
+                            var intValue = (int)SemanticModel.GetConstantValue(instruction).Value;
+                            var sv = new NumericSymbolicValue(intValue);
+                            newProgramState = sv.SetConstraint(new NumericConstraint(intValue), newProgramState);
+                            newProgramState = newProgramState.PushValue(sv);
+                        }
+                        else
+                        {
+                            var sv = new SymbolicValue();
+                            newProgramState = sv.SetConstraint(ObjectConstraint.NotNull, newProgramState);
+                            newProgramState = newProgramState.PushValue(sv);
+                        }
                     }
                     break;
 

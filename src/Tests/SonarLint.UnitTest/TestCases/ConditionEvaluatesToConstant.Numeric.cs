@@ -5,6 +5,21 @@ namespace Tests.Diagnostics
 {
     public class ConditionEvaluatesToConstant
     {
+        static void FalsePositive(char ch)
+        {
+            if (ch < 32 && // Noncompliant, FALSE POSITIVE
+                ch != 9)   // Noncompliant, FALSE POSITIVE
+            { }
+        }
+
+        void NumericLong(long longValue)
+        {
+            if (longValue == 1L)
+            {
+                if (longValue == 1L) { } // Compliant
+            }
+        }
+
         void Numeric(int j)
         {
             var i = 42;
