@@ -5,10 +5,9 @@ namespace Tests.Diagnostics
 {
     public class ConditionEvaluatesToConstant
     {
-        static void FalsePositive(char ch)
+        static void NotEqualsWithNumericConstraints(char ch)
         {
-            if (ch < 32 && // Noncompliant, FALSE POSITIVE
-                ch != 9)   // Noncompliant, FALSE POSITIVE
+            if (ch < 32 && ch != 9)
             { }
         }
 
