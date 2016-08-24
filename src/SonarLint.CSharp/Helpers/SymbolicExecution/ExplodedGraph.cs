@@ -554,8 +554,8 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             SymbolicValue rightSymbol;
 
             return programState
-                .PopValue(out leftSymbol)
                 .PopValue(out rightSymbol)
+                .PopValue(out leftSymbol)
                 .PushValue(svFactory(leftSymbol, rightSymbol));
         }
 
@@ -568,8 +568,8 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             SymbolicValue rightSymbol;
 
             var newProgramState = programState
-                .PopValue(out leftSymbol)
-                .PopValue(out rightSymbol);
+                .PopValue(out rightSymbol)
+                .PopValue(out leftSymbol);
 
             var sv = symbolicValueFactory(leftSymbol, rightSymbol);
             newProgramState = newProgramState.PushValue(sv);
