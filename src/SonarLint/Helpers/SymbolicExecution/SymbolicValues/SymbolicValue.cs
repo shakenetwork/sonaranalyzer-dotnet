@@ -250,7 +250,8 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         {
             if (oldConstraint == ObjectConstraint.Null)
             {
-                return Enumerable.Empty<ProgramState>();
+                //return Enumerable.Empty<ProgramState>();
+                return new[] { currentProgramState };
             }
 
             if (oldConstraint == ObjectConstraint.NotNull)
