@@ -20,6 +20,7 @@
 
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SonarLint.Helpers.FlowAnalysis.Common;
 using SonarLint.Rules.CSharp;
 
 namespace SonarLint.UnitTest.Rules
@@ -32,6 +33,14 @@ namespace SonarLint.UnitTest.Rules
         public void ConditionEvaluatesToConstant()
         {
             Verifier.VerifyAnalyzer(@"TestCases\ConditionEvaluatesToConstant.cs", new ConditionEvaluatesToConstant(),
+                new CSharpParseOptions(LanguageVersion.CSharp6));
+        }
+
+        [TestMethod]
+        [TestCategory("Rule")]
+        public void ConditionEvaluatesToConstant_Numeric()
+        {
+            Verifier.VerifyAnalyzer(@"TestCases\ConditionEvaluatesToConstant.Numeric.cs", new ConditionEvaluatesToConstant(),
                 new CSharpParseOptions(LanguageVersion.CSharp6));
         }
     }

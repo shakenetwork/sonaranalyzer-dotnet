@@ -194,7 +194,13 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 return TrySetConstraint(objectConstraint, oldConstraint, currentProgramState);
             }
 
-            throw new NotSupportedException($"Neither {nameof(BoolConstraint)}, nor {nameof(ObjectConstraint)}");
+            var numericConstraint = constraint as NumericConstraint;
+            if (numericConstraint != null)
+            {
+                return TrySetConstraint(numericConstraint, oldConstraint, currentProgramState);
+            }
+
+            throw new NotSupportedException();
         }
 
         private IEnumerable<ProgramState> TrySetConstraint(BoolConstraint boolConstraint, SymbolicValueConstraint oldConstraint,
@@ -220,17 +226,6 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         private IEnumerable<ProgramState> TrySetConstraint(ObjectConstraint objectConstraint, SymbolicValueConstraint oldConstraint,
             ProgramState currentProgramState)
         {
-            var oldBoolConstraint = oldConstraint as BoolConstraint;
-            if (oldBoolConstraint != null)
-            {
-                if (objectConstraint == ObjectConstraint.Null)
-                {
-                    return Enumerable.Empty<ProgramState>();
-                }
-
-                return new[] { currentProgramState };
-            }
-
             var oldObjectConstraint = oldConstraint as ObjectConstraint;
             if (oldObjectConstraint != null)
             {
@@ -242,7 +237,40 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 return new[] { SetConstraint(objectConstraint, currentProgramState) };
             }
 
-            throw new NotSupportedException($"Neither {nameof(BoolConstraint)}, nor {nameof(ObjectConstraint)}");
+            if (objectConstraint == ObjectConstraint.Null)
+            {
+                return Enumerable.Empty<ProgramState>();
+            }
+
+            return new[] { currentProgramState };
+        }
+
+        private IEnumerable<ProgramState> TrySetConstraint(NumericConstraint numericConstraint, SymbolicValueConstraint oldConstraint,
+            ProgramState currentProgramState)
+        {
+            if (oldConstraint == ObjectConstraint.Null)
+            {
+                return Enumerable.Empty<ProgramState>();
+            }
+
+            if (oldConstraint == ObjectConstraint.NotNull)
+            {
+                return new[] { SetConstraint(numericConstraint, currentProgramState) };
+            }
+
+            var oldNumericConstraint = oldConstraint as NumericConstraint;
+            if (oldNumericConstraint != null)
+            {
+                var intersect = oldNumericConstraint.intervalSet.Intersect(numericConstraint.intervalSet);
+                if (intersect.IsEmpty)
+                {
+                    return Enumerable.Empty<ProgramState>();
+                }
+
+                return new[] { SetConstraint(new NumericConstraint(intersect), currentProgramState) };
+            }
+
+            throw new NotSupportedException();
         }
     }
 }

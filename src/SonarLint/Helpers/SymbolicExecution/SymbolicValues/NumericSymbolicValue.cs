@@ -20,21 +20,46 @@
 
 namespace SonarLint.Helpers.FlowAnalysis.Common
 {
-    public class ReferenceEqualsSymbolicValue : EqualsSymbolicValue
+    public class NumericSymbolicValue : SymbolicValue
     {
-        public ReferenceEqualsSymbolicValue(SymbolicValue leftOperand, SymbolicValue rightOperand)
-            : base(leftOperand, rightOperand)
+        private readonly int number;
+
+        public NumericSymbolicValue(int number)
         {
+            this.number = number;
         }
 
-        protected override BinaryRelationship GetRelationship(SymbolicValue left, SymbolicValue right)
+        public override bool Equals(object obj)
         {
-            return new ReferenceEqualsRelationship(left, right);
+            if (obj == null)
+            {
+                return false;
+            }
+
+            return Equals(obj as NumericSymbolicValue);
+        }
+
+        private bool Equals(NumericSymbolicValue other)
+        {
+            if (other == null)
+            {
+                return false;
+            }
+
+            return number == other.number;
+        }
+
+        public override int GetHashCode()
+        {
+            var hash = 19;
+            hash = hash * 31 + typeof(NumericSymbolicValue).GetHashCode();
+            hash = hash * 31 + number.GetHashCode();
+            return hash;
         }
 
         public override string ToString()
         {
-            return $"RefEq({leftOperand}, {rightOperand})";
+            return $"NUM({number})";
         }
     }
 }

@@ -152,6 +152,9 @@
     <Compile Include="Common\MetricsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FixAllDiagnosticProvider.cs" />
+    <None Include="TestCases\ConditionEvaluatesToConstant.Numeric.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Compile Include="Verifier.cs" />
     <Compile Include="Rules\*.cs" />
     <None Include="app.config" />

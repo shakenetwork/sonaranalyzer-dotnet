@@ -26,7 +26,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 
         internal virtual bool Implies(SymbolicValueConstraint constraint)
         {
-            return this == constraint;
+            return Equals(constraint);
         }
 
         public abstract SymbolicValueConstraint OppositeForLogicalNot { get; }

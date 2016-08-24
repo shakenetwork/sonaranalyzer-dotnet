@@ -49,7 +49,55 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 return Enumerable.Empty<ProgramState>();
             }
 
-            return new[] { newProgramState };
+            var comparison = this;
+            if (constraint == BoolConstraint.False)
+            {
+                var otherComparisonKind = comparisonKind == ComparisonKind.Less
+                    ? ComparisonKind.LessOrEqual
+                    : ComparisonKind.Less;
+                comparison = new ComparisonSymbolicValue(otherComparisonKind, rightOperand, leftOperand);
+            }
+
+            IEnumerable<ProgramState> newStates = null;
+            SymbolicValueConstraint leftConstraint;
+            if (comparison.leftOperand.TryGetConstraint(newProgramState, out leftConstraint))
+            {
+                var leftNumericConstraint = leftConstraint as NumericConstraint;
+                if (leftNumericConstraint != null)
+                {
+                    var min = leftNumericConstraint.intervalSet.Min;
+                    if (comparison.comparisonKind == ComparisonKind.Less)
+                    {
+                        min++;
+                    }
+                    var newConstraint = new NumericConstraint(
+                        new Interval(min, int.MaxValue));
+
+                    newStates = newStates ?? new[] { newProgramState };
+                    newStates = newStates.SelectMany(ns => comparison.rightOperand.TrySetConstraint(newConstraint, ns));
+                }
+            }
+
+            SymbolicValueConstraint rightConstraint;
+            if (comparison.rightOperand.TryGetConstraint(newProgramState, out rightConstraint))
+            {
+                var rightNumericConstraint = rightConstraint as NumericConstraint;
+                if (rightNumericConstraint != null)
+                {
+                    var max = rightNumericConstraint.intervalSet.Max;
+                    if (comparison.comparisonKind == ComparisonKind.Less)
+                    {
+                        max--;
+                    }
+                    var newConstraint = new NumericConstraint(
+                        new Interval(int.MinValue, max));
+
+                    newStates = newStates ?? new[] { newProgramState };
+                    newStates = newStates.SelectMany(ns => comparison.leftOperand.TrySetConstraint(newConstraint, ns));
+                }
+            }
+
+            return newStates ?? new[] { newProgramState };
         }
 
         private BinaryRelationship GetRelationship(BoolConstraint boolConstraint)

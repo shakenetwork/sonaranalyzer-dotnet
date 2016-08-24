@@ -18,6 +18,9 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
+using System.Collections.Generic;
+using System.Linq;
+
 namespace SonarLint.Helpers.FlowAnalysis.Common
 {
     public class ValueNotEqualsSymbolicValue : NotEqualsSymbolicValue
@@ -25,6 +28,23 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         public ValueNotEqualsSymbolicValue(SymbolicValue leftOperand, SymbolicValue rightOperand)
             : base(leftOperand, rightOperand)
         {
+        }
+
+        public override IEnumerable<ProgramState> TrySetConstraint(SymbolicValueConstraint constraint, ProgramState currentProgramState)
+        {
+            var boolConstraint = constraint as BoolConstraint;
+            if (boolConstraint != null &&
+                leftOperand.Equals(rightOperand))
+            {
+                if (boolConstraint == BoolConstraint.True)
+                {
+                    return Enumerable.Empty<ProgramState>();
+                }
+
+                return new[] { currentProgramState };
+            }
+
+            return base.TrySetConstraint(constraint, currentProgramState);
         }
 
         protected override BinaryRelationship GetRelationship(SymbolicValue left, SymbolicValue right)
