@@ -48,7 +48,7 @@ namespace SonarLint.Rules.CSharp
             "Nullable value types can hold either a value or \"null\". The value held in the nullable type can be accessed with " +
             "the \"Value\" property, but \".Value\" throws an \"InvalidOperationException\" when if the nullable type's value is " +
             "\"null\". To avoid the exception, a nullable type should always be tested before \".Value\" is accessed.";
-        internal const string MessageFormat = "\"{0}\" is null.";
+        internal const string MessageFormat = "\"{0}\" is null on at least one execution path.";
         internal const string Category = SonarLint.Common.Category.Reliability;
         internal const Severity RuleSeverity = Severity.Blocker;
         internal const bool IsActivatedByDefault = true;
