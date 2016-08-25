@@ -11,6 +11,15 @@ namespace Tests.Diagnostics
             { }
         }
 
+        void Increment()
+        {
+            var i = 0;
+            i++;
+            if (i == 1) { }     // Noncompliant
+            if (i++ == 1) { }   // Noncompliant
+            if (i == 2) { }     // Noncompliant
+        }
+
         void NumericLong(long longValue)
         {
             if (longValue == 1L)

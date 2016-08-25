@@ -655,24 +655,81 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
             return SetNewSymbolicValueIfLocal(symbol, sv, newProgramState);
         }
 
-        private ProgramState VisitPostfixIncrement(PostfixUnaryExpressionSyntax unary, ProgramState newProgramState)
+        private ProgramState VisitPostfixIncrement(PostfixUnaryExpressionSyntax unary, ProgramState programState)
         {
-            var leftSymbol = SemanticModel.GetSymbolInfo(unary.Operand).Symbol;
+            if (SemanticModel.GetTypeInfo(unary.Operand).Type.Is(KnownType.System_Int32))
+            {
+                var newProgramState = programState;
+                var leftSymbol = SemanticModel.GetSymbolInfo(unary.Operand).Symbol;
+                SymbolicValue sv = newProgramState.PeekValue();
 
-            // Do not change the stacked value
-            var sv = new SymbolicValue();
-            return SetNewSymbolicValueIfLocal(leftSymbol, sv, newProgramState);
+                SymbolicValueConstraint svc;
+                if (sv.TryGetConstraint(newProgramState, out svc))
+                {
+                    var numericScv = svc as NumericConstraint;
+                    if (numericScv != null)
+                    {
+                        sv = new SymbolicValue();
+
+                        newProgramState = sv.SetConstraint(
+                            new NumericConstraint(
+                                unary.IsKind(SyntaxKind.PostIncrementExpression)
+                                ? numericScv.IntervalSet.Increment
+                                : numericScv.IntervalSet.Decrement),
+                            newProgramState);
+
+                        return SetNewSymbolicValueIfLocal(leftSymbol, sv, newProgramState);
+                    }
+                }
+            }
+
+            {
+                var leftSymbol = SemanticModel.GetSymbolInfo(unary.Operand).Symbol;
+
+                // Do not change the stacked value
+                var sv = new SymbolicValue();
+                return SetNewSymbolicValueIfLocal(leftSymbol, sv, programState);
+            }
         }
 
         private ProgramState VisitPrefixIncrement(PrefixUnaryExpressionSyntax unary, ProgramState programState)
         {
-            var newProgramState = programState;
-            var leftSymbol = SemanticModel.GetSymbolInfo(unary.Operand).Symbol;
-            newProgramState = newProgramState.PopValue();
+            if (SemanticModel.GetTypeInfo(unary.Operand).Type.Is(KnownType.System_Int32))
+            {
+                var newProgramState = programState;
+                var leftSymbol = SemanticModel.GetSymbolInfo(unary.Operand).Symbol;
+                SymbolicValue sv;
+                newProgramState = newProgramState.PopValue(out sv);
 
-            var sv = new SymbolicValue();
-            newProgramState = newProgramState.PushValue(sv);
-            return SetNewSymbolicValueIfLocal(leftSymbol, sv, newProgramState);
+                SymbolicValueConstraint svc;
+                if (sv.TryGetConstraint(newProgramState, out svc))
+                {
+                    var numericScv = svc as NumericConstraint;
+                    if (numericScv != null)
+                    {
+                        sv = new SymbolicValue();
+
+                        newProgramState = sv.SetConstraint(
+                            new NumericConstraint(
+                                unary.IsKind(SyntaxKind.PreIncrementExpression)
+                                ? numericScv.IntervalSet.Increment
+                                : numericScv.IntervalSet.Decrement),
+                            newProgramState);
+                        newProgramState = newProgramState.PushValue(sv);
+                        return SetNewSymbolicValueIfLocal(leftSymbol, sv, newProgramState);
+                    }
+                }
+            }
+
+            {
+                var newProgramState = programState;
+                var leftSymbol = SemanticModel.GetSymbolInfo(unary.Operand).Symbol;
+                newProgramState = newProgramState.PopValue();
+
+                var sv = new SymbolicValue();
+                newProgramState = newProgramState.PushValue(sv);
+                return SetNewSymbolicValueIfLocal(leftSymbol, sv, newProgramState);
+            }
         }
 
         private ProgramState VisitOpAssignment(AssignmentExpressionSyntax assignment, ProgramState programState)

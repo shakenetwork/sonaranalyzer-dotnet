@@ -95,6 +95,12 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
         public int Max => intervals.Max(i => i.max);
         public int Min => intervals.Min(i => i.min);
 
+        public DistinctIntervalSet Increment =>
+            new DistinctIntervalSet(intervals.Select(i => i.Increment));
+
+        public DistinctIntervalSet Decrement =>
+            new DistinctIntervalSet(intervals.Select(i => i.Decrement));
+
         public override bool Equals(object obj)
         {
             if (obj == null)

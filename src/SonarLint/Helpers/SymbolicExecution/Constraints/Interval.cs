@@ -117,5 +117,24 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                     new Interval(max + 1, int.MaxValue));
             }
         }
+
+        public Interval Increment
+        {
+            get
+            {
+                return new Interval(
+                    min == int.MaxValue ? int.MaxValue : min + 1,
+                    max == int.MaxValue ? int.MaxValue : max + 1);
+            }
+        }
+        public Interval Decrement
+        {
+            get
+            {
+                return new Interval(
+                    min == int.MinValue ? int.MinValue : min - 1,
+                    max == int.MinValue ? int.MinValue : max - 1);
+            }
+        }
     }
 }

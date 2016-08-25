@@ -342,7 +342,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
 
         private static ProgramState SetNonNullConstraintIfValueType(ISymbol symbol, SymbolicValue symbolicValue, ProgramState programState)
         {
-            return IsNonNullableValueType(symbol)
+            return IsNonNullableValueType(symbol) && ! symbolicValue.HasConstraint(ObjectConstraint.NotNull, programState)
                 ? symbolicValue.SetConstraint(ObjectConstraint.NotNull, programState)
                 : programState;
         }
