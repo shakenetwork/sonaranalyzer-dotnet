@@ -65,7 +65,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 var leftNumericConstraint = leftConstraint as NumericConstraint;
                 if (leftNumericConstraint != null)
                 {
-                    var min = leftNumericConstraint.intervalSet.Min;
+                    var min = leftNumericConstraint.IntervalSet.Min;
                     if (comparison.comparisonKind == ComparisonKind.Less)
                     {
                         min++;
@@ -84,7 +84,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                 var rightNumericConstraint = rightConstraint as NumericConstraint;
                 if (rightNumericConstraint != null)
                 {
-                    var max = rightNumericConstraint.intervalSet.Max;
+                    var max = rightNumericConstraint.IntervalSet.Max;
                     if (comparison.comparisonKind == ComparisonKind.Less)
                     {
                         max--;

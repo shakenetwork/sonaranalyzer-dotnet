@@ -262,7 +262,7 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
             var oldNumericConstraint = oldConstraint as NumericConstraint;
             if (oldNumericConstraint != null)
             {
-                var intersect = oldNumericConstraint.intervalSet.Intersect(numericConstraint.intervalSet);
+                var intersect = oldNumericConstraint.IntervalSet.Intersect(numericConstraint.IntervalSet);
                 if (intersect.IsEmpty)
                 {
                     return Enumerable.Empty<ProgramState>();

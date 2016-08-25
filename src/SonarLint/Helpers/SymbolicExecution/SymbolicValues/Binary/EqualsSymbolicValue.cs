@@ -40,13 +40,6 @@ namespace SonarLint.Helpers.FlowAnalysis.Common
                     .SelectMany(ps => leftOperand.TrySetConstraint(rightConstraint, ps));
             }
 
-            if (leftConstraint is NumericConstraint &&
-                rightConstraint is NumericConstraint)
-            {
-                return rightOperand.TrySetConstraint(leftConstraint?.OppositeForLogicalNot, programState)
-                    .Concat(leftOperand.TrySetConstraint(rightConstraint?.OppositeForLogicalNot, programState));
-            }
-
             return rightOperand.TrySetConstraint(leftConstraint?.OppositeForLogicalNot, programState)
                 .SelectMany(ps => leftOperand.TrySetConstraint(rightConstraint?.OppositeForLogicalNot, ps));
         }
