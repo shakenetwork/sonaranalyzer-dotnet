@@ -89,7 +89,7 @@ namespace SonarLint.Rules.Common
                 SyntaxKindsOfInterest.ToArray());
         }
 
-        private bool HasAllowedAttribute(TParameterSyntax parameterSyntax, SemanticModel semanticModel)
+        private static bool HasAllowedAttribute(TParameterSyntax parameterSyntax, SemanticModel semanticModel)
         {
             var parameterSymbol = semanticModel.GetDeclaredSymbol(parameterSyntax) as IParameterSymbol;
 

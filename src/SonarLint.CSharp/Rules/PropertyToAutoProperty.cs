@@ -67,8 +67,8 @@ namespace SonarLint.Rules.CSharp
                     if (propertyDeclaration.AccessorList == null ||
                         propertyDeclaration.AccessorList.Accessors.Count != 2 ||
                         propertySymbol == null ||
-                        HaveDifferentModifiers(propertyDeclaration.AccessorList.Accessors) ||
-                        HaveAttributes(propertyDeclaration.AccessorList.Accessors))
+                        HasDifferentModifiers(propertyDeclaration.AccessorList.Accessors) ||
+                        HasAttributes(propertyDeclaration.AccessorList.Accessors))
                     {
                         return;
                     }
@@ -97,12 +97,12 @@ namespace SonarLint.Rules.CSharp
                 SyntaxKind.PropertyDeclaration);
         }
 
-        private bool HaveAttributes(SyntaxList<AccessorDeclarationSyntax> accessors)
+        private static bool HasAttributes(SyntaxList<AccessorDeclarationSyntax> accessors)
         {
             return accessors.Any(a => a.AttributeLists.Any());
         }
 
-        private static bool HaveDifferentModifiers(SyntaxList<AccessorDeclarationSyntax> accessors)
+        private static bool HasDifferentModifiers(SyntaxList<AccessorDeclarationSyntax> accessors)
         {
             var accessor1 = accessors.First();
             var modifiers = GetModifierKinds(accessor1).ToImmutableHashSet();
