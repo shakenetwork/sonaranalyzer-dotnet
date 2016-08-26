@@ -5,6 +5,21 @@ namespace Tests.Diagnostics
 {
     public class ConditionEvaluatesToConstant
     {
+        void MultipleVarRanges(int i, int j)
+        {
+            if (i > 0 && i < 40)
+            {
+                if (j >= 39)
+                {
+                    if (i == j &&
+                        i == 39) // Noncompliant
+                    {
+
+                    }
+                }
+            }
+        }
+
         static void NotEqualsWithNumericConstraints(char ch)
         {
             if (ch < 32 && ch != 9)
