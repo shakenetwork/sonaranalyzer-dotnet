@@ -5,6 +5,17 @@ namespace Tests.Diagnostics
 {
     public class ConditionEvaluatesToConstant
     {
+        void Loops(int length)
+        {
+            if (length > 2)
+            {
+                for (int i = 0; i < length; i++) // False positive
+                {
+                    Console.WriteLine();
+                }
+            }
+        }
+
         void MultipleVarRanges(int i, int j)
         {
             if (i > 0 && i < 40)
