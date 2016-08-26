@@ -30,7 +30,7 @@
     </VsixVersion>
     <VsixReleaseNotes Include="$(SolutionRoot)\src\SonarLint.Vsix\source.extension.vsixmanifest">
       <Find>(?&lt;=&lt;ReleaseNotes&gt;http:\/\/www\.sonarlint\.org\/visualstudio\/rules\/index.html#version=)([^&lt;]*)</Find>
-      <ReplaceWith>$(VsixVersion)</ReplaceWith>
+      <ReplaceWith>$(MainVersion)</ReplaceWith>
       <ExpectedMatchCount>1</ExpectedMatchCount>
     </VsixReleaseNotes>
 
@@ -41,7 +41,7 @@
     </NugetAnalyzer>
     <NugetReleaseNotes Include="$(SolutionRoot)\src\SonarLint.Vsix\SonarAnalyzer.CSharp.nuspec">
       <Find>(?&lt;=&lt;releaseNotes&gt;http:\/\/www\.sonarlint\.org\/visualstudio\/rules\/index.html#version=)([^&lt;]*)</Find>
-      <ReplaceWith>$(VsixVersion)</ReplaceWith>
+      <ReplaceWith>$(MainVersion)</ReplaceWith>
       <ExpectedMatchCount>1</ExpectedMatchCount>
     </NugetReleaseNotes>
     <NugetAnalyzer Include="$(SolutionRoot)\src\SonarLint.Vsix\SonarAnalyzer.VisualBasic.nuspec">
@@ -51,7 +51,7 @@
     </NugetAnalyzer>
     <NugetReleaseNotes Include="$(SolutionRoot)\src\SonarLint.Vsix\SonarAnalyzer.VisualBasic.nuspec">
       <Find>(?&lt;=&lt;releaseNotes&gt;http:\/\/www\.sonarlint\.org\/visualstudio\/rules\/index.html#version=)([^&lt;]*)</Find>
-      <ReplaceWith>$(VsixVersion)</ReplaceWith>
+      <ReplaceWith>$(MainVersion)</ReplaceWith>
       <ExpectedMatchCount>1</ExpectedMatchCount>
     </NugetReleaseNotes>
 

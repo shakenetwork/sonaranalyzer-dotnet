@@ -1,10 +1,12 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <MainVersion>1.17.0</MainVersion>
-    <AssemblyVersion>$(MainVersion).0</AssemblyVersion>
-    <AssemblyFileVersion>$(MainVersion).0</AssemblyFileVersion>
+    <AssemblyVersion>$(MainVersion)</AssemblyVersion>	
     <AssemblyInformationalVersion>$(MainVersion)</AssemblyInformationalVersion>
-    <NugetVersion>$(AssemblyInformationalVersion)</NugetVersion>
-    <VsixVersion>$(MainVersion)</VsixVersion>
+    <!-- The file version is changed by the CI job to contain the build number -->
+    <AssemblyFileVersion>$(MainVersion).0</AssemblyFileVersion>
+    <!-- The NuGet version is changed by the CI job to contain the build number in a NuGet supported way -->
+    <NugetVersion>$(MainVersion)</NugetVersion>
+    <VsixVersion>$(AssemblyFileVersion)</VsixVersion>
   </PropertyGroup>
 </Project>
