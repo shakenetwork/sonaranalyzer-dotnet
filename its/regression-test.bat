@@ -42,6 +42,12 @@ mkdir output\%PROJECT% 2>NUL
 call %PROJECT%\sonarlint-build.bat > output\%PROJECT%.txt
 if not %ERRORLEVEL%==0 goto build_error
 
+echo Building: Ember-MM
+set PROJECT=Ember-MM
+mkdir output\%PROJECT% 2>NUL
+call %PROJECT%\sonarlint-build.bat > output\%PROJECT%.txt
+if not %ERRORLEVEL%==0 goto build_error
+
 REM Normalize SARIF reports
 echo Normalizing the SARIF reports
 powershell.exe -executionpolicy bypass ./CreateIssueReports.ps1
