@@ -46,5 +46,14 @@ namespace SonarLint.UnitTest.TestCasesForRuleFailure
             d.Ext();
             Ext(d);
         }
+
+        public static Dictionary<string, string> GetDict()
+        {
+            return new Dictionary<string, string>
+            {
+                ["a"] = "b"
+            };
+
+        }
     }
 }

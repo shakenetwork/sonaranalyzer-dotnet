@@ -374,7 +374,9 @@ namespace SonarLint.Helpers.FlowAnalysis.CSharp
                     break;
 
                 case SyntaxKind.ImplicitElementAccess:
-                    newProgramState = newProgramState.PopValues(((ImplicitElementAccessSyntax)instruction).ArgumentList?.Arguments.Count ?? 0);
+                    newProgramState = newProgramState
+                        .PopValues(((ImplicitElementAccessSyntax)instruction).ArgumentList?.Arguments.Count ?? 0)
+                        .PushValue(new SymbolicValue());
                     break;
 
                 case SyntaxKind.ObjectInitializerExpression:
