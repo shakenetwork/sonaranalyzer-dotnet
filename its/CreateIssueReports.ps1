@@ -129,6 +129,14 @@ function CreateIssueReports
     $allIssues = $allIssues | %{ GetIssueV3($_) }
   }
 
+  # Change spaces to %20
+  $allIssues.location |
+    Foreach-Object {
+	  If ($_.uri) {
+	    $_.uri = $_.uri.replace(' ', '%20')
+	  }
+    }
+
   # Filter, Sort & Group issues to get a stable SARIF report
   # AD0001's stack traces in the message are unstable
   # CS???? messages are not of interest
